@@ -1,5 +1,19 @@
-In PATH:
- msgfmt
- msgmerge
- intltool-update
+Python 2.2? 2.3? 2.4?
 
+Python modules:
+ o SQLObject for database access
+ o Any of sqlitedb, MySQLdb, postgresdb modules
+ o Cheetah for HTML templating
+
+Programs:
+ o msgfmt
+ o msgmerge
+ o intltool-update
+ o xml2po
+
+intltool-update requirements:
+ o Perl
+ o XML::Parser
+
+xml2po requirements:
+ o libxml2 + Python bindings
