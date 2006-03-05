@@ -1,0 +1,77 @@
+TO DO
+*****
+
+Judging Translation Support Levels:
+-----------------------------------
+- Level 0:
+  not fulfilling even Level 1 requirements
+
+- Level 1:
+  check percentage for every PO file EXCLUDING:
+  - irrelevant modules (gtk+/po-properties, gstreamer, xkeyboard-config, gnome-applets/po-locations ...)
+  - translations exclusively for .schemas.in files
+  - special checks for what we know we can exclude?
+
+- Level 2 (fully usable UI translation: no gconf or non-visible things translated)
+  - xkeyboard-config
+  - iso_codes
+  - gnome-applets/po-locations (at least the relevant part: top-level
+    countries and entries for relevant country for a language)
+  ...
+
+- Level 3 (complete UI translation)
+  - .schemas.in translations as well
+  - gnome-applets/po-locations (full translation)
+  - gtk+/po-properties
+  - gstreamer
+  - scrollkeeper
+  ...
+
+- Level 4 (UI + docs)
+  - Level 2 + docs translation
+
+- Level 5 (full UI+docs translation)
+  - Level 3 + docs translation
+
+Level 0: unsupported
+Level 1: partially supported
+Level 2/3: supported
+Level 4: excellent support
+Level 5: "Gnome badge of honour" or "we owe you a beer" award :)
+
+
+List of messages untranslated but present in POT
+------------------------------------------------
+Extend potdiff.py, stripping untranslated messages so we can inform
+translators what they need to translate without forcing them to look
+at the PO file (stop after eg. 10 differences?)
+
+
+Not regenerating old stuff [DONE]
+--------------------------
+"regenerate" attribute on <branch>: keep branches, but don't regenerate for them
+
+
+Speed optimizations
+-------------------
+
+- check if POT diff is null, when there is no need to go through
+  entire update procedure (in update-stats.py(ui_l10n_status))
+
+- allow to process only a single module/branch on e-mail notifications
+  (procmail + cvs commit notifications): almost ready, only need a
+  short script to start this with module/branch parameters
+
+
+potdiff.py speed testing
+************************
+
+Input data: two random PO files of 833/834 messages with 21 differences
+
+Measured user time using time(1).
+
+USE_DIFFLIB (ms): 94 82 92 88 77 76 87
+  average: 85.2 ~ 80
+
+NO_DIFFLIB(ms)  : 65 59 59 60 67 61 66 61
+  average: 62.3 ~ 60

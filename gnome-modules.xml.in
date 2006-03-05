@@ -1,0 +1,98 @@
+<!--
+  default bugzilla: http://bugzilla.gnome.org/
+  default cvsroot: :pserver:anonymous@anoncvs.gnome.org:/cvs/gnome
+  default bugzilla xmlrpc: http://bugzilla-test.gnome.org/xmlrpc.cgi
+-->
+<gnome-modules>
+
+  <module id="epiphany-full">
+    <_description>Epiphany Web Browser</_description><!-- defaults to ID -->
+    <maintainers>
+	<maintainer><name>Marco Pesenti Gritti</name>
+		    <email>marco@gnome.org</email>
+		    <irc-nickname>mpg</irc-nickname>
+		    <webpage>...</webpage></maintainer>
+	<maintainer><name>Christian Persch</name>
+		    <email>chpe@gnome.org</email>
+		    <irc-nickname>chpe</irc-nickname>
+		    <webpage>...</webpage></maintainer>
+    </maintainers>
+    <bugzilla>
+        <xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</xmlrpc>
+	<baseurl>http://bugzilla.gnome.org/</baseurl>
+        <product>epiphany</product><!-- defaults to ID -->
+	<component>general</component><!-- defaults to "general" -->
+    </bugzilla>
+    <!-- source code access snippet -->
+    <cvs-root>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvs-root>
+    <cvs-module>epiphany</cvs-module><!-- defaults to ID -->
+    <!-- end of source code access snippet -->
+    <branches><!-- defaults only to HEAD -->
+	<branch tag="gnome-2-14" regenerate="0" >
+            <translation-domains><!-- defaults to a single "po" -->
+        	<domain base="epiphany">
+        	    <directory>po</directory>
+        	    <_description>UI translations</_description>
+                </domain>
+            </translation-domains>
+            <documents>
+                <document>
+        	  <directory>help</directory>
+        	  <_description>User Guide</_description>
+                </document>
+            </documents>
+	</branch>
+	<branch tag="HEAD">
+            <translation-domains><!-- defaults to a single "po" -->
+        	<domain base="epiphany">
+        	    <directory>po</directory>
+        	    <_description>UI translations</_description>
+                </domain>
+            </translation-domains>
+            <documents>
+                <document>
+        	  <directory>help</directory>
+        	  <_description>User Guide</_description>
+                </document>
+            </documents>
+        </branch>
+    </branches>
+  </module>
+
+
+  <!-- example of minimal entry (all defaults where applicable, equivalent to above) -->
+  <module id="epiphany">
+    <_description>Epiphany Web Browser</_description><!-- defaults to ID -->
+    <maintainers>
+	<maintainer><name>Marco Pesenti Gritti</name>
+		    <email>marco@gnome.org</email>
+		    <irc-nickname>mpg</irc-nickname>
+		    <webpage>...</webpage></maintainer>
+	<maintainer><name>Christian Persch</name>
+		    <email>chpe@gnome.org</email>
+		    <irc-nickname>chpe</irc-nickname>
+		    <webpage>...</webpage></maintainer>
+    </maintainers>
+    <branches>
+        <branch tag="gnome-2-12" regenerate="0" />
+        <branch tag="HEAD" />
+    </branches>
+  </module>
+
+
+  <!-- example of minimal entry (all defaults where applicable, equivalent to above) -->
+  <module id="rhythmbox">
+    <_description>Rhythmbox Music Player</_description><!-- defaults to ID -->
+    <maintainers>
+	<maintainer><name>James Livingston</name>
+		    <email>jrl@ids.org.au</email>
+		    <irc-nickname>jrl</irc-nickname>
+		    <webpage>...</webpage></maintainer>
+    </maintainers>
+    <branches>
+        <branch tag="HEAD" />
+    </branches>
+  </module>
+
+
+</gnome-modules>
