@@ -27,8 +27,31 @@ import defaults
 import database
 import modules
 
+import sys
+
 import cgi
 import cgitb; cgitb.enable()
 from Cheetah.Template import Template
 
 print "Content-type: text/html; charset=UTF-8\n"
+
+print sys.getenv("HTTP_PATH_INFO")
+
+# form = cgi.FieldStorage()
+
+# if form.getlist("document"):
+#     docid = form.getlist("document")[0]
+#     html = Template(file="templates/document.tmpl")
+#     html.logged_in = login.IsLoggedIn()
+#     doc = Document(id = docid)
+#     if doc:
+#         html.document = doc
+#         print html
+# elif form.getlist("unit"):
+#     unitid = form.getlist("unit")[0]
+#     html = Template(file="templates/show.tmpl")
+#     html.logged_in = login.IsLoggedIn()
+#     unit = EditingUnit(id = unitid)
+#     if unit:
+#         html.unit = unit
+#         print html
