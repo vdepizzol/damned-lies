@@ -1,0 +1,39 @@
+<html>
+<head><title>Module: $module.description</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/unit.css"/>
+  <!--<script src="js/xslt/misc.js" type="text/javascript"/>
+  <script src="js/xslt/dom.js" type="text/javascript"/>
+  <script src="js/xslt/xpath.js" type="text/javascript"/>
+  <script src="js/xslt/xslt.js" type="text/javascript"/>
+  <script src="js/db2html.js" type="text/javascript"/>-->
+  <script src="js/operations.js" type="text/javascript"/>
+  <script src="js/designmode.js" type="text/javascript"/>
+</head>
+<body>
+
+<h1>$module.description</h1>
+<h2>$module.id</h2>
+
+<!--Base document language: $document.Language.Name ($document.Language.Code)-->
+<div class="editbar" style="padding:6px; text-align:center; vertical-align: top;">
+<a href="tag.py?document=$document.id&rev=$document.Data.revision"><img src="toolbar/emblem-cvs-sticky-tag.png" /> Revision Tagging</a> 
+• 
+<a href="history.py?document=$document.id"><img src="toolbar/epiphany-history.png" /> View History</a> 
+• 
+<a href="statistics.py?document=$document.id"><img src="toolbar/epiphany-history.png" /> Statistics</a> 
+• 
+<a href="remove.py?document=$document.id"><img src="toolbar/stock_delete.png" /> Remove Document</a> 
+• 
+<a href="download.py?document=$document.id"><img src="toolbar/epiphany-download.png" /> Download as DocBook</a> 
+</div>
+
+<div id="contents">
+<dl>
+#set global $elem=$document.Data
+#set global $level=0
+#include "templates/show-recurse.tmpl"
+</dl>
+</div>
+</body>
+</html>
