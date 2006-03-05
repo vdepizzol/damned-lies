@@ -27,7 +27,7 @@ import defaults
 import database
 import modules
 
-import sys
+import os, sys
 
 import cgi
 import cgitb; cgitb.enable()
@@ -35,7 +35,7 @@ from Cheetah.Template import Template
 
 print "Content-type: text/html; charset=UTF-8\n"
 
-print sys.getenv("HTTP_PATH_INFO")
+print os.getenv("HTTP_PATH_INFO")
 
 # form = cgi.FieldStorage()
 
