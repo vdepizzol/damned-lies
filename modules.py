@@ -48,14 +48,15 @@ class XmlModules:
             regenerate = 1
             if el.hasAttribute("regenerate"):
                 regenerate = int(el.getAttribute("regenerate"))
-            for dom in trdomains.keys():
-                (desc, pot) = trdomains[dom]
-                if not pot:
-                    trdomains[dom] = (desc, moduleid)
-
-            
+            for dom in trdomains:
+                if not trdomains[dom]['potbase']:
+                    trdomains[dom]['potbase'] = moduleid
+            for doc in documents:
+                if not documents[doc]['potbase']:
+                    documents[doc]['potbase'] = moduleid
+                    
             rc[branch] = {
-                "translation-domains" : trdomains,
+                "translation_domains" : trdomains,
                 "documents" : documents,
                 "regenerate" : regenerate,
                 }
@@ -78,7 +79,8 @@ class XmlModules:
             potname = domain.getAttribute("base")
             if not potname: potname = ""
             
-            rc[dir] = (desc, potname)
+            rc[dir] = { "description" : desc,
+                        "potbase" : potname }
         return rc
 
 
@@ -94,10 +96,15 @@ class XmlModules:
 
         rc = {}
         for doc in nodelist:
+            if doc.hasAttribute("base"):
+                base = doc.getAttribute("base")
+            else:
+                base = ""
             dir = self.getElementText(doc, "directory", "help")
             desc = self.getElementText(doc, "description", "User Guide")
             
-            rc[dir] = desc
+            rc[dir] = { "description" : desc,
+                        "potbase" : base }
         return rc
 
     def getBugzillaDetails(self, module, default = 0):
@@ -128,7 +135,7 @@ class XmlModules:
             maint = {
                 "name" : self.getElementText(el, "name", ""),
                 "email" : self.getElementText(el, "email", ""),
-                "irc-nickname" : self.getElementText(el, "irc-nickname", ""),
+                "irc_nickname" : self.getElementText(el, "irc-nickname", ""),
                 "webpage" : self.getElementText(el, "webpage", ""),
                 }
                 

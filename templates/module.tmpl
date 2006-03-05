@@ -12,28 +12,47 @@
 </head>
 <body>
 
-<h1>$module.description</h1>
-<h2>$module.id</h2>
+<h1>$module.description ($module.id)</h1>
 
-<!--Base document language: $document.Language.Name ($document.Language.Code)-->
-<div class="editbar" style="padding:6px; text-align:center; vertical-align: top;">
-<a href="tag.py?document=$document.id&rev=$document.Data.revision"><img src="toolbar/emblem-cvs-sticky-tag.png" /> Revision Tagging</a> 
-• 
-<a href="history.py?document=$document.id"><img src="toolbar/epiphany-history.png" /> View History</a> 
-• 
-<a href="statistics.py?document=$document.id"><img src="toolbar/epiphany-history.png" /> Statistics</a> 
-• 
-<a href="remove.py?document=$document.id"><img src="toolbar/stock_delete.png" /> Remove Document</a> 
-• 
-<a href="download.py?document=$document.id"><img src="toolbar/epiphany-download.png" /> Download as DocBook</a> 
-</div>
+#if len($module.maintainers)
+<h2>Maintainers</h2>
+<ul>
+#for maintainer in $module.maintainers
+<li>$maintainer.name <a href="mailto:$maintainer.email">&lt;$maintainer.email&gt;</a></li>
+#end for
+</ul>
+#end if
 
-<div id="contents">
-<dl>
-#set global $elem=$document.Data
-#set global $level=0
-#include "templates/show-recurse.tmpl"
-</dl>
-</div>
+#if $module.bugzilla
+<h2>Bug reporting</h2>
+<p>Report bugs to 
+<a href="$module.bugzilla.baseurl/enter_bug.cgi?product=$module.bugzilla.product&component=$module.bugzilla.component">Bugzilla</a>.</p>
+#end if
+
+#if len($module.cvsbranches)
+<h2>Branches</h2>
+#for branch, data in $module.cvsbranches.items()
+<h3>$branch</h3>
+
+
+#if len($data.documents)
+<h4>Documentation</h4>
+#for docdir, doctitle in $data.documents.items()
+<h5>$doctitle</h5>
+#end for
+#end if
+
+
+#if len($data.translation_domains)
+<h4>Translation</h4>
+#for uidir, uititle in $data.translation_domains.items()
+<h5>$uititle</h5>
+#end for
+#end if
+
+
+#end for
+#end if
+
 </body>
 </html>

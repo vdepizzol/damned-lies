@@ -35,7 +35,39 @@ from Cheetah.Template import Template
 
 print "Content-type: text/html; charset=UTF-8\n"
 
-print os.getenv("PATH_INFO")
+#print os.getenv("PATH_INFO")
+
+def TemplateInspector(template):
+    """Inspects all template variables and outputs them in a separate window using JavaScript."""
+    blank = Template("")
+    ignore = dir(blank)
+    full = dir(template)
+    result = {}
+    for single in full:
+        if single not in ignore:
+            value = template.__dict__[single]
+            result[single] = value
+
+    import pprint
+    str = "<pre>" + pprint.pformat(result) + "</pre>"
+
+    return str
+
+moduleid = os.getenv("PATH_INFO")[1:]
+allmodules = modules.XmlModules()
+if moduleid in allmodules:
+    module = allmodules[moduleid]
+
+    for branch in module["cvsbranches"]:
+        for trdomain in module["cvsbranches"][branch]['translation_domains']:
+            here = module["cvsbranches"][branch]['translation_domains'][trdomain]
+            
+
+    html = Template(file="templates/module.tmpl")
+    html.module = module
+    print html
+    print TemplateInspector(html)
+    
 
 # form = cgi.FieldStorage()
 

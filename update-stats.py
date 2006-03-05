@@ -24,8 +24,8 @@ class Statistics:
             if not module["cvsbranches"][branch]["regenerate"]:
                 continue
             
-            for podir in module["cvsbranches"][branch]["translation-domains"]:
-                (desc, potbase) = module["cvsbranches"][branch]["translation-domains"][podir]
+            for podir in module["cvsbranches"][branch]["translation_domains"]:
+                potbase = module["cvsbranches"][branch]["translation_domains"][podir]['potbase']
 
                 self.podir = podir
                 self.potbase = potbase
@@ -41,9 +41,11 @@ class Statistics:
                 self.ui_l10n_stats(CVS.paths[branch], podir, potbase, outputdir, outputdomain)
 
             for doc in module["cvsbranches"][branch]["documents"]:
+                potbase = module["cvsbranches"][branch]["documents"][doc]['potbase']
+
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch, "docs")
 
-                self.doc_l10n_stats(CVS.paths[branch], doc, outputdir)
+                self.doc_l10n_stats(CVS.paths[branch], doc, potbase, outputdir)
 
 
     def notify_list(self, out_domain, diff):
@@ -367,7 +369,7 @@ might be worth investigating.
                 fullline = ""
         return ""
 
-    def doc_l10n_stats(self, checkoutdir, docpath, out_dir):
+    def doc_l10n_stats(self, checkoutdir, docpath, potbase, out_dir):
         sourcedir = os.path.join(checkoutdir, docpath)
         module = self.module
         moduleid = module["id"]
@@ -402,7 +404,7 @@ might be worth investigating.
                 errors.append(("error", "DOC_MODULE doesn't point to a real file, probably a macro."))
                 return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
 
-        out_domain = modulename + "." + self.branch
+        out_domain = potbase + "." + self.branch
 
         # Use two different files so we can introduce diff's if we wish here too
         potname = out_domain + ".pot"

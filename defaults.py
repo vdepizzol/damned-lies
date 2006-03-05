@@ -15,12 +15,12 @@ bugzilla = {
 
 # default to a single "po" directory containing UI translations, and module ID for POT name
 translation_domains = {
-    u"po" : (u"UI translations", "") # description, base potname
+    u"po" : {"description" : u"UI translations", "potbase": ""} # description, base potname
     }
 
 # default to a single "help" document containing User Guide
 documents = {
-    u"help" : u"User Guide"
+    u"help" : {"description" : u"User Guide", "potbase" : "" }
     }
 
 # default to anonyomus Gnome CVS
