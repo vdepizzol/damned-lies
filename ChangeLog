@@ -1,5 +1,14 @@
 2006-03-05  Danilo Šegan  <danilo@gnome.org>
 
+	* update-stats.py (Statistics.doc_l10n_stats)
+	(Statistics.__init__): Sync with modules.py changes.
+
+	* modules.py (XmlModules.getBranches)
+	(XmlModules.getTranslationDomains, XmlModules.getDocuments):
+	Switch to dicts for translation domains and documents as well.
+
+2006-03-05  Danilo Šegan  <danilo@gnome.org>
+
 	* templates/module.tmpl: Added.
 
 2006-03-05  Danilo Šegan  <danilo@gnome.org>
