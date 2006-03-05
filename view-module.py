@@ -36,6 +36,7 @@ from Cheetah.Template import Template
 print "Content-type: text/html; charset=UTF-8\n"
 
 print os.getenv("HTTP_PATH_INFO")
+print os.environ
 
 # form = cgi.FieldStorage()
 
