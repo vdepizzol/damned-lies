@@ -25,8 +25,9 @@ documents = {
 
 # default to anonyomus Gnome CVS
 cvsroot = u":pserver:anonymous@anoncvs.gnome.org:/cvs/gnome"
+cvsweb = u"http://cvs.gnome.org/viewcvs/%(module)s?only_with_tag=%(branch)s"
 cvsbranch = {
-    u"HEAD": { "translation-domains": translation_domains,
+    u"HEAD": { "translation_domains": translation_domains,
                "documents": documents,
                }
     }
@@ -40,6 +41,10 @@ scratchdir = u"/tmp/gnome-stats"
 
 # Directory to hold resulting POT/PO files
 potdir = u"/tmp/gnome-stats/POT/"
+
+
+# Web root directory
+webroot = '/~danilo/damned-lies'
 
 database_connection = 'sqlite:' + scratchdir + '/database.db'
 

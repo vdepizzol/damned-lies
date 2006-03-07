@@ -1,3 +1,24 @@
+2006-03-07  Danilo Šegan  <danilo@gnome.org>
+
+	* database.py:
+	* modules.py:
+	* update-stats.py:
+	* view-module.py: Updates.
+
+	* templates/module.tmpl: Initial stuff.
+	* data/main.css: Added.
+	* data/*.png: Added.
+
+2006-03-06  Danilo Šegan  <danilo@gnome.org>
+
+	* modules.py (XmlModules.getDocuments)
+	(XmlModules.getTranslationDomains): Bug fixes.
+
+2006-03-05  Danilo Šegan  <danilo@gnome.org>
+
+	* modules.py (XmlModules.__init__): Added cvsweb support.
+	* defaults.py (cvsweb): Added.
+
 2006-03-05  Danilo Šegan  <danilo@gnome.org>
 
 	* defaults.py (documents): 

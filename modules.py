@@ -31,46 +31,60 @@ class XmlModules:
             rc.append(self.getElementContents(el))
         return rc
 
+    def getBranch(self, el, moduleid, cvsweb, cvsmodule, branch, default):
+        if not branch: branch = "HEAD"
 
-    def getBranches(self, module, moduleid, default = 0):
+        trdomains = self.getTranslationDomains(el, default = defaults.translation_domains)
+        documents = self.getDocuments(el, default = defaults.documents)
+        regenerate = 1
+        if el.hasAttribute("regenerate"):
+            regenerate = int(el.getAttribute("regenerate"))
+        for dom in trdomains:
+            if not trdomains[dom]['potbase']:
+                trdomains[dom]['potbase'] = moduleid
+        for doc in documents:
+            if not documents[doc]['potbase']:
+                documents[doc]['potbase'] = moduleid
+
+        rc = {
+            "translation_domains" : trdomains,
+            "documents" : documents,
+            "regenerate" : regenerate,
+            "cvsweb" : cvsweb % {'module' : cvsmodule, 'branch' : branch},
+            }
+        return rc
+
+    def getBranches(self, module, moduleid, cvsweb, cvsmodule, default = 0):
         all = module.getElementsByTagName('branches')
         if not all or len(all)<1:
-            return default
+            rc = { }
+            for branch in default:
+                rc[branch] = self.getBranch(module, moduleid, cvsweb, cvsmodule, branch, default)
+            return rc
 
         nodelist = all[0].getElementsByTagName('branch')
         rc = {}
         for el in nodelist:
             branch = el.getAttribute("tag")
             if not branch: branch = "HEAD"
-
-            trdomains = self.getTranslationDomains(el, default = defaults.translation_domains)
-            documents = self.getDocuments(el, default = defaults.documents)
-            regenerate = 1
-            if el.hasAttribute("regenerate"):
-                regenerate = int(el.getAttribute("regenerate"))
-            for dom in trdomains:
-                if not trdomains[dom]['potbase']:
-                    trdomains[dom]['potbase'] = moduleid
-            for doc in documents:
-                if not documents[doc]['potbase']:
-                    documents[doc]['potbase'] = moduleid
-                    
-            rc[branch] = {
-                "translation_domains" : trdomains,
-                "documents" : documents,
-                "regenerate" : regenerate,
-                }
+            rc[branch] = self.getBranch(el, moduleid, cvsweb, cvsmodule, branch, default)
         return rc
 
 
     def getTranslationDomains(self, module, default = 0):
         all = module.getElementsByTagName("translation-domains")
+
+        rc = {}
+        for domain in default:
+            rc[domain] = { "description": default[domain]["description"],
+                           "potbase": default[domain]["potbase"] }
+
         if not all or len(all)<1:
-            return default
+            return rc
 
         nodelist = all[0].getElementsByTagName("domain")
         if not nodelist or len(nodelist)<1:
-            return default
+            return rc
 
         rc = {}
         for domain in nodelist:
@@ -87,12 +101,19 @@ class XmlModules:
 
     def getDocuments(self, module, default = 0):
         all = module.getElementsByTagName("documents")
+
+
+        rc = {}
+        for doc in default:
+            rc[doc] = { "description": default[doc]["description"],
+                        "potbase": default[doc]["potbase"] }
+
         if not all or len(all)<1:
-            return default
+            return rc
 
         nodelist = all[0].getElementsByTagName("document")
         if not nodelist or len(nodelist)<1:
-            return default
+            return rc
 
         rc = {}
         for doc in nodelist:
@@ -107,16 +128,22 @@ class XmlModules:
                         "potbase" : base }
         return rc
 
-    def getBugzillaDetails(self, module, default = 0):
+    def getBugzillaDetails(self, module, moduleid, default = 0):
         all = module.getElementsByTagName("bugzilla")
         if not all or len(all)<1:
-            return default
+            return  {
+                "baseurl" : default["baseurl"],
+                "xmlrpc" : default["xmlrpc"],
+                "product" : moduleid,
+                "component" : default["component"],
+                }
+
         node = all[0]
 
         rc = {
            "baseurl" : self.getElementText(node, "baseurl", default["baseurl"]),
            "xmlrpc" : self.getElementText(node, "xmlrpc", default["xmlrpc"]),
-           "product" : self.getElementText(node, "product", default["product"]),
+           "product" : self.getElementText(node, "product", moduleid),
            "component" : self.getElementText(node, "component", default["component"]),
            }
         return rc
@@ -143,20 +170,25 @@ class XmlModules:
         return rc
 
     
-    def __init__(self, modfile = "gnome-modules.xml"):
+    def __init__(self, modfile = "gnome-modules.xml", module = None):
         self.modules = { }
+        only_module = module
 
         dom = xml.dom.minidom.parse(modfile)
         
         mods = dom.getElementsByTagName("module")
         for module in mods:
             modid = module.getAttribute("id")
+
+            if only_module and modid != only_module:
+                continue
             description = self.getElementText(module, "description", default = modid)
 
             mycvsroot = self.getElementText(module, "cvs-root", default = defaults.cvsroot)
+            mycvsweb = self.getElementText(module, "cvs-web", default = defaults.cvsweb)
             cvsmodule = self.getElementText(module, "cvs-module", default = modid)
-            cvsbranch = self.getBranches(module, modid, default = defaults.cvsbranch )
-            bugzilla = self.getBugzillaDetails(module, default = defaults.bugzilla)
+            cvsbranch = self.getBranches(module, modid, mycvsweb, cvsmodule, default = defaults.cvsbranch )
+            bugzilla = self.getBugzillaDetails(module, modid, default = defaults.bugzilla)
             maintainers = self.getMaintainers(module, default = defaults.maintainers)
 
             if not bugzilla['product']:
@@ -166,6 +198,7 @@ class XmlModules:
                 "id" : modid,
                 "description" : description,
                 "cvsroot" : mycvsroot,
+                "cvsweb" : mycvsweb,
                 "cvsmodule"  : cvsmodule,
                 "cvsbranches" : cvsbranch,
                 "bugzilla" : bugzilla,

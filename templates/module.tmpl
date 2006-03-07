@@ -1,14 +1,14 @@
 <html>
 <head><title>Module: $module.description</title>
-  <link rel="stylesheet" href="css/base.css"/>
-  <link rel="stylesheet" href="css/unit.css"/>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+  <!--<link rel="stylesheet" href="css/unit.css"/>-->
   <!--<script src="js/xslt/misc.js" type="text/javascript"/>
   <script src="js/xslt/dom.js" type="text/javascript"/>
   <script src="js/xslt/xpath.js" type="text/javascript"/>
   <script src="js/xslt/xslt.js" type="text/javascript"/>
   <script src="js/db2html.js" type="text/javascript"/>-->
-  <script src="js/operations.js" type="text/javascript"/>
-  <script src="js/designmode.js" type="text/javascript"/>
+  <!--<script src="js/operations.js" type="text/javascript"/>
+  <script src="js/designmode.js" type="text/javascript"/>-->
 </head>
 <body>
 
@@ -30,23 +30,121 @@
 #end if
 
 #if len($module.cvsbranches)
-<h2>Branches</h2>
 #for branch, data in $module.cvsbranches.items()
-<h3>$branch</h3>
+<h2>$branch (<a href="$data.cvsweb">Browse CVS</a>)</h2>
 
 
 #if len($data.documents)
-<h4>Documentation</h4>
-#for docdir, doctitle in $data.documents.items()
-<h5>$doctitle</h5>
+<h3>Documentation</h3>
+#for docdir, document in $data.documents.items()
+<h4>$document.description</h4>
+
+<a href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.pot">POT file
+#if $document.has_key('pot_size')
+  ($document.pot_size messages)
+#end if
+</a>
+
+#if $document.has_key('pot_messages') and len($document.pot_messages)
+<h4>Notices</h4>
+<table>
+#for $msg in $document.pot_messages
+<tr><td>
+#if $msg.type=="error"
+<img src="$webroot/data/error.png">
+#else if $msg.type=="warn"
+<img src="$webroot/data/warning.png">
+#else if $msg.type=="info"
+<img src="$webroot/data/info.png">
+#end if
+</td><td>$msg.content</td></tr>
+#end for
+</table>
+#end if
+
+#if $document.statistics and len($document.statistics)
+<table class="stats">
+<thead><tr><th>Language</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr></thead>
+#for lstat in $document.statistics
+<tr>
+  <td class="left"><a
+  href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
+  ($lstat.code)</a></td>
+  <td>$lstat.translated</td>
+  <td>$lstat.fuzzy</td>
+  <td>$lstat.untranslated</td>
+  <td><div class="graph">
+      <img src="$webroot/data/green-bar.png" height="14" width="${lstat.percentages.translated}%;" /><!--
+      --><img src="$webroot/data/purple-bar.png" height="14" width="${lstat.percentages.fuzzy}%;"><!--
+      --><img src="$webroot/data/red-bar.png" height="14" width="${lstat.percentages.untranslated}%;">
+     </div>
+   </td>
+</tr>
+#end for
+</table>
+#end if
+</a>
+
+
 #end for
 #end if
 
 
+
+
+
+
 #if len($data.translation_domains)
-<h4>Translation</h4>
-#for uidir, uititle in $data.translation_domains.items()
-<h5>$uititle</h5>
+#if len($data.translation_domains)>1
+<h3>Translation</h3>
+#end if
+#for uidir, domain in $data.translation_domains.items()
+<h3>$domain.description</h3>
+<a href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.pot">POT file
+#if $domain.has_key('pot_size')
+  ($domain.pot_size messages)
+#end if
+</a>
+
+#if $domain.has_key('pot_messages') and len($domain.pot_messages)
+<h4>Notices</h4>
+<table>
+#for $msg in $domain.pot_messages
+<tr><td>
+#if $msg.type=="error"
+<img src="$webroot/data/error.png">
+#else if $msg.type=="warn"
+<img src="$webroot/data/warning.png">
+#else if $msg.type=="info"
+<img src="$webroot/data/info.png">
+#end if
+</td><td>$msg.content</td></tr>
+#end for
+</table>
+#end if
+
+#if $domain.statistics and len($domain.statistics)
+<table class="stats">
+<thead><tr><th>Language</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr></thead>
+#for lstat in $domain.statistics
+<tr>
+  <td class="left"><a
+  href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
+  ($lstat.code)</a></td>
+  <td>$lstat.translated</td>
+  <td>$lstat.fuzzy</td>
+  <td>$lstat.untranslated</td>
+  <td><div class="graph">
+      <img src="$webroot/data/green-bar.png" height="14" width="${lstat.percentages.translated}%;" /><!--
+      --><img src="$webroot/data/purple-bar.png" height="14" width="${lstat.percentages.fuzzy}%;"><!--
+      --><img src="$webroot/data/red-bar.png" height="14" width="${lstat.percentages.untranslated}%;">
+     </div>
+   </td>
+</tr>
+#end for
+</table>
+#end if
+
 #end for
 #end if
 

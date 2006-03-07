@@ -1,0 +1,67 @@
+.stats th { 
+    text-align: left; 
+    background: gray; 
+    color: white;
+    padding-left: 2px;
+    padding-right: 2px; }
+.stats td { 
+    background: #f0f0f0; 
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px; }
+.stats td.left { 
+    text-align: left; }
+ body {
+    background: white; }
+
+
+div.graph {
+  height: 14px;
+  width: 150px;
+  border: 0px solid black; 
+  position: relative;
+}
+
+div.translated {
+  position: absolute; 
+  height:100%%; 
+  left: 0%%; 
+  background: #448844;
+}
+
+div.goodchange {
+  position: absolute; 
+  height:100%%; 
+  background: #55DD55;
+}
+
+div.fuzzy {
+  position: absolute; 
+  height:100%%; 
+  background: #4444AA;
+}
+
+div.untranslated {
+  position: absolute; 
+  height:100%%; 
+  background: #FF4444;
+}
+
+a {
+  text-decoration: none;
+  color: #406080;
+}
+
+a:hover, a:visited {
+  color: #6080a0;
+  text-decoration: underline;
+}
+
+
+table {
+  width: 480px;
+}
+
+img {
+  border: 0px;
+}

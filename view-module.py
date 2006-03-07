@@ -24,7 +24,7 @@
 
 import defaults
 
-import database
+from database import *
 import modules
 
 import os, sys
@@ -37,6 +37,9 @@ print "Content-type: text/html; charset=UTF-8\n"
 
 #print os.getenv("PATH_INFO")
 
+def js_escape(string):
+    return string.replace('"', '\\"')
+
 def TemplateInspector(template):
     """Inspects all template variables and outputs them in a separate window using JavaScript."""
     blank = Template("")
@@ -45,13 +48,87 @@ def TemplateInspector(template):
     result = {}
     for single in full:
         if single not in ignore:
-            value = template.__dict__[single]
-            result[single] = value
+            result[single] = template.__dict__[single]
+
+    output = """<SCRIPT language=javascript>
+	if( self.name == '' ) {
+	   var title = 'Console';
+	}
+	else {
+	   var title = 'Console_' + self.name;
+	}
+	_debug_console = window.open('',title.value,'width=680,height=600,resizable,scrollbars=yes');
+        _debug_console.document.write('<HTML><TITLE>Debug Console_'+self.name+'</TITLE><BODY bgcolor=#ffffff style="font-size:70%;"><PRE>');
+"""
 
     import pprint
-    str = "<pre>" + pprint.pformat(result) + "</pre>"
+    for line in pprint.pformat(result).splitlines():
+        output += '_debug_console.document.write("' + js_escape(line + '\\n') + '");' + "\n"
 
-    return str
+    output += """
+	_debug_console.document.write("</BODY></HTML>");
+	_debug_console.document.close();
+</SCRIPT>"""
+
+    #return ""
+    return output
+
+def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
+    res = Statistics.select(AND(Statistics.q.Module == module["id"],
+                                Statistics.q.Domain == trdomain,
+                                Statistics.q.Branch == branch,
+                                Statistics.q.Language == None,
+                                Statistics.q.Type == type),
+                            orderBy="-date")
+    if res and res.count()>0:
+        pot = res[0]
+        here['pot_size'] = pot.Untranslated
+        here['pot_messages'] = []
+        for msg in pot.Messages:
+            here['pot_messages'].append({'type' : msg.Type, 'content' : msg.Description})
+
+        here['statistics'] = []
+        langres = Language.select(orderBy=sortorder)
+
+        for mylang in langres:
+            statres = Statistics.select(AND(Statistics.q.Module == module["id"],
+                                            Statistics.q.Domain == trdomain,
+                                            Statistics.q.Branch == branch,
+                                            Statistics.q.Language == mylang.Code,
+                                            Statistics.q.Type == type),
+                                        orderBy="-date")
+
+            if statres.count():
+                po = statres[0]
+
+                
+                new = {
+                    'code' : mylang.Code,
+                    'translated' : po.Translated,
+                    'fuzzy' : po.Fuzzy,
+                    'untranslated' : po.Untranslated,
+                    'language_name' : mylang.Name,
+                    }
+                if here['pot_size']:
+                    new['percentages'] = { 'translated' : 100.0*po.Translated/here['pot_size'],
+                                           'untranslated' : 100.0*po.Untranslated/here['pot_size'],
+                                           'fuzzy' : 100.0*po.Fuzzy/here['pot_size'], }
+                    new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
+
+                new['po_messages'] = []
+                for msg in po.Messages:
+                    new['po_messages'].append({'type': msg.Type, 'content': msg.Description})
+
+
+                here['statistics'].append(new)
+
+    else:
+        # Can't find database entries for this branch, unset it
+        del here
+
+
+def compare_stats(a, b):
+    return cmp(b['translated'], a['translated'])
 
 moduleid = os.getenv("PATH_INFO")[1:]
 allmodules = modules.XmlModules()
@@ -59,11 +136,26 @@ if moduleid in allmodules:
     module = allmodules[moduleid]
 
     for branch in module["cvsbranches"]:
-        for trdomain in module["cvsbranches"][branch]['translation_domains']:
+        trdomains = module["cvsbranches"][branch]['translation_domains'].keys()
+        documents = module["cvsbranches"][branch]['documents'].keys()
+        for trdomain in trdomains:
             here = module["cvsbranches"][branch]['translation_domains'][trdomain]
-            
+            here['statistics'] = []
+            get_stats_for(here, module, trdomain, branch, 'ui')
+            here['statistics'].sort(compare_stats)
+            if len(here["statistics"])==0:
+                del module["cvsbranches"][branch]["translation_domains"][trdomain]
+
+        for document in documents:
+            here = module["cvsbranches"][branch]['documents'][document]
+            here['statistics'] = []
+            get_stats_for(here, module, document, branch, 'doc')
+            here['statistics'].sort(compare_stats)
+            if len(here["statistics"])==0:
+                del module["cvsbranches"][branch]["documents"][document]
 
     html = Template(file="templates/module.tmpl")
+    html.webroot = defaults.webroot
     html.module = module
     print html
     print TemplateInspector(html)

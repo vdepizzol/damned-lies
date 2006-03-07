@@ -9,7 +9,7 @@ import potdiff
 
 import os, sys, commands, datetime
 
-class Statistics:
+class LocStatistics:
     """Generate all statistics for provided module and source code path."""
 
     def __init__(self, module, onlybranch = None):
@@ -138,7 +138,7 @@ might be worth investigating.
                                      Fuzzy = 0,
                                      Untranslated = int(pot_stats['untranslated']))
         for (msgtype, message) in pot_stats['errors']:
-            NewInfo = database.Information(Stats = MyStat,
+            NewInfo = database.Information(Statistics = MyStat,
                                            Type = msgtype,
                                            Description = message)
 
@@ -154,12 +154,12 @@ might be worth investigating.
                                          Type = 'ui',
                                          Domain = self.podir,
                                          Date = NOW,
-                                         Language = thislang,
+                                         Language = lang,
                                          Translated = int(postats[lang]['translated']),
                                          Fuzzy = int(postats[lang]['fuzzy']),
                                          Untranslated = int(postats[lang]['untranslated']))
             for (msgtype, message) in postats[lang]['errors']:
-                NewInfo = database.Information(Stats = MyStat,
+                NewInfo = database.Information(Statistics = MyStat,
                                                Type = msgtype,
                                                Description = message)
 
@@ -454,7 +454,7 @@ might be worth investigating.
                                      Fuzzy = 0,
                                      Untranslated = int(pot_stats['untranslated']))
         for (msgtype, message) in pot_stats['errors']:
-            NewInfo = database.Information(Stats = MyStat,
+            NewInfo = database.Information(Statistics = MyStat,
                                            Type = msgtype,
                                            Description = message)
 
@@ -472,12 +472,12 @@ might be worth investigating.
                                          Type = 'doc',
                                          Domain = docpath,
                                          Date = NOW,
-                                         Language = thislang,
+                                         Language = lang,
                                          Translated = int(postats[lang]['translated']),
                                          Fuzzy = int(postats[lang]['fuzzy']),
                                          Untranslated = int(postats[lang]['untranslated']))
             for (msgtype, message) in postats[lang]['errors']:
-                NewInfo = database.Information(Stats = MyStat,
+                NewInfo = database.Information(Statistics = MyStat,
                                                Type = msgtype,
                                                Description = message)
 
@@ -526,6 +526,6 @@ if __name__ == "__main__":
         #else:
         #    m = modules.XmlModules("gnome-modules.xml")
         for modid in m:
-            Statistics(m[modid])
+            LocStatistics(m[modid])
             #cvs = CvsModule(m[modid])
             #print modid, ":\n", m[modid]

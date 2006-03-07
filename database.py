@@ -20,7 +20,7 @@ class Statistics(SQLObject):
     Type = EnumCol(enumValues=['doc', 'ui']) # whether this is about a document or UI translation
     Domain = UnicodeCol()
     Branch = UnicodeCol()
-    Language = ForeignKey('Language', notNone=False) # "en_US" for English US, "en_GB" for British English
+    Language = StringCol() #ForeignKey('Language', notNone=False)
     Date = DateTimeCol(default=datetime.datetime.now)
     Translated = IntCol(default=0)
     Fuzzy = IntCol(default=0)
@@ -32,7 +32,7 @@ class Statistics(SQLObject):
 class Information(SQLObject):
     _cacheValue = False
 
-    Stats = ForeignKey('Statistics', notNone=True)
+    Statistics = ForeignKey('Statistics', notNone=True)
     Type = EnumCol(enumValues=['info', 'warn', 'error']) # priority of a stats message
     Description = UnicodeCol()
 
