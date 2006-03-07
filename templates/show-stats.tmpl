@@ -1,0 +1,40 @@
+<h3>$domain.description</h3>
+<a href="${webdir}.pot">
+<img src="$webroot/data/download.png"> POT file
+#if $domain.has_key('pot_size')
+  ($domain.pot_size messages)
+#end if
+</a>
+
+#if $domain.has_key('pot_messages') and len($domain.pot_messages)
+<h4>Notices</h4>
+<table>
+#for $msg in $domain.pot_messages
+<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
+#end for
+</table>
+#end if
+
+
+#if $domain.statistics and len($domain.statistics)
+<table class="stats">
+<thead><tr><th>Language</th><th>Translated</th><th>Graph</th></tr></thead>
+#for lstat in $domain.statistics
+<tr>
+  <td class="left"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
+#if $lstat.po_error
+    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
+#end if
+  </td>
+  <td>${lstat.supportedness}% ($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: ${lstat.percentages.translated}px;"></div>
+      <div class="fuzzy" style="left:${lstat.percentages.translated}px; width:${lstat.percentages.fuzzy}px;"></div>
+#set upos=$lstat.percentages.translated + $lstat.percentages.fuzzy
+      <div class="untranslated" style="left:${upos}px; width: ${lstat.percentages.untranslated}px;"></div>
+     </div>
+   </td>
+</tr>
+#end for
+</table>
+#end if

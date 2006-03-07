@@ -1,5 +1,5 @@
 <html>
-<head><title>Module: $module.description</title>
+<head><title>$module.id stats</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
   <!--<link rel="stylesheet" href="css/unit.css"/>-->
   <!--<script src="js/xslt/misc.js" type="text/javascript"/>
@@ -15,16 +15,26 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-<h1>$module.description ($module.id)</h1>
-
+<h1>$module.id</h1>
+$module.description
+#if $module.webpage
+<p><a href="$module.webpage">$module.webpage</a></p>
+#end if
 <table><tr><td width="50%" valign="top">
 #if len($module.maintainers)
 <h2>Maintainers</h2>
-<ul>
 #for maintainer in $module.maintainers
-<li>$maintainer.name <a href="mailto:$maintainer.email">&lt;$maintainer.email&gt;</a></li>
+#if $maintainer.hackergotchi
+<div class="maintainer" style="background-image:url('$maintainer.hackergotchi');">
+#else
+<div class="maintainer">
+#end if
+  $maintainer.name <a href="mailto:$maintainer.email">&lt;$maintainer.email&gt;</a>
+  #if $maintainer.webpage
+  <br /><a href="$maintainer.webpage">$maintainer.webpage</a>
+  #end if
+</div>
 #end for
-</ul>
 #end if
 </td><td width="50%" valign="top">
 #if $module.bugzilla
@@ -38,62 +48,30 @@
 #for branch, data in $module.cvsbranches.items()
 <h2>$branch (<a href="$data.cvsweb">Browse CVS</a>)</h2>
 
+#if $data.stringfrozen
+<p>This branch is currently string-frozen.</p>
+#end if
+
+<table><tr><td valign="top"><!-- split to two columns -->
 
 #if len($data.documents)
+#if len($data.documents)>1
 <h3>Documentation</h3>
+#end if
 #for docdir, document in $data.documents.items()
-<h4>$document.description</h4>
 
-<a href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.pot">
-<img src="$webroot/data/download.png"> POT file
-#if $document.has_key('pot_size')
-  ($document.pot_size messages)
-#end if
-</a>
-
-#if $document.has_key('pot_messages') and len($document.pot_messages)
-<h4>Notices</h4>
-<table>
-#for $msg in $document.pot_messages
-<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
-#end for
-</table>
-#end if
-
-#if $document.statistics and len($document.statistics)
-<table class="stats">
-<thead><tr><th>Language</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr></thead>
-#for lstat in $document.statistics
-<tr>
-  <td class="left"><a
-  href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
-  ($lstat.code)</a>
-#if $lstat.po_error
-<img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
-#end if
-  </td>
-  <td>$lstat.translated</td>
-  <td>$lstat.fuzzy</td>
-  <td>$lstat.untranslated</td>
-  <td><div class="graph">
-      <img src="$webroot/data/green-bar.png" height="14" width="${lstat.percentages.translated}%;" /><!--
-      --><img src="$webroot/data/purple-bar.png" height="14" width="${lstat.percentages.fuzzy}%;"><!--
-      --><img src="$webroot/data/red-bar.png" height="14" width="${lstat.percentages.untranslated}%;">
-     </div>
-   </td>
-</tr>
-#end for
-</table>
-#end if
-</a>
-
+#set global webdir=$webroot+"/POT/"+$module.id+"."+$branch+"/docs/"+$document.potbase+"."+$branch
+#set global domain=$document
+#set global uidir=$docdir
+#set global branch=$branch
+#include "templates/show-stats.tmpl"
 
 #end for
 #end if
 
 
 
-
+</td><td valign="top"><!-- split to two columns -->
 
 
 #if len($data.translation_domains)
@@ -101,53 +79,20 @@
 <h3>Translation</h3>
 #end if
 #for uidir, domain in $data.translation_domains.items()
-<h3>$domain.description</h3>
-<a href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.pot">
-<img src="$webroot/data/download.png"> POT file
-#if $domain.has_key('pot_size')
-  ($domain.pot_size messages)
-#end if
-</a>
 
-#if $domain.has_key('pot_messages') and len($domain.pot_messages)
-<h4>Notices</h4>
-<table>
-#for $msg in $domain.pot_messages
-<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
-#end for
-</table>
-#end if
-
-#if $domain.statistics and len($domain.statistics)
-<table class="stats">
-<thead><tr><th>Language</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr></thead>
-#for lstat in $domain.statistics
-<tr>
-  <td class="left"><a
-  href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
-  ($lstat.code)</a>
-#if $lstat.po_error
-    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
-#end if
-  </td>
-  <td>$lstat.translated</td>
-  <td>$lstat.fuzzy</td>
-  <td>$lstat.untranslated</td>
-  <td style="width: 150px;"><div class="graph">
-      <img src="$webroot/data/green-bar.png" height="14" width="${lstat.percentages.translated}%;" /><!--
-      --><img src="$webroot/data/purple-bar.png" height="14" width="${lstat.percentages.fuzzy}%;"><!--
-      --><img src="$webroot/data/red-bar.png" height="14" width="${lstat.percentages.untranslated}%;">
-     </div>
-   </td>
-</tr>
-#end for
-</table>
-#end if
+#set global webdir=$webroot+"/POT/"+$module.id+"."+$branch+"/"+$domain.potbase+"."+$branch
+#set global domain=$domain
+#set global uidir=$uidir
+#set global branch=$branch
+#include "templates/show-stats.tmpl"
 
 #end for
 #end if
 
+</td></tr></table><!-- split to two columns -->
 
+
+<!-- cycle through branhes -->
 #end for
 #end if
 

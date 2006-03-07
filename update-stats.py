@@ -186,8 +186,8 @@ might be worth investigating.
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
 
-                if os.stat(os.path.join(po_path, file))[8] < oldtime and os.access(outpo, os.R_OK):
-                    continue
+                #if os.stat(os.path.join(po_path, file))[8] < oldtime and os.access(outpo, os.R_OK):
+                #    continue
                     
                 realcmd = command % {
                     'outpo' : outpo,
@@ -504,8 +504,8 @@ might be worth investigating.
                 lang = file
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
-                if os.stat(myfile)[8] < oldtime and os.access(outpo, os.R_OK):
-                    continue
+                #if os.stat(myfile)[8] < oldtime and os.access(outpo, os.R_OK):
+                #    continue
 
                 realcmd = command % {
                     'outpo' : outpo,

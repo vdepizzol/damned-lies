@@ -1,5 +1,15 @@
 2006-03-07  Danilo Šegan  <danilo@gnome.org>
 
+	* modules.py (XmlModules.__init__): Added webpage support.
+	(XmlModules.getElementText): Fix to output only direct descendants.
+
+	* gnome-modules.xml.in: Some updates.
+
+	* data/webpage.png: Added.
+	* templates/show-stats.tmpl: Added.
+
+2006-03-07  Danilo Šegan  <danilo@gnome.org>
+
 	* data/main.css: 
 	* templates/module.tmpl: Prettyfying.
 

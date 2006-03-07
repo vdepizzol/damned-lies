@@ -48,7 +48,7 @@ def TemplateInspector(template):
     full = dir(template)
     result = {}
     for single in full:
-        if single not in ignore:
+        if single not in ignore and single[0]!='_':
             result[single] = template.__dict__[single]
 
     output = """<SCRIPT language=javascript>
@@ -108,11 +108,12 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                     'fuzzy' : po.Fuzzy,
                     'untranslated' : po.Untranslated,
                     'language_name' : mylang.Name,
+                    'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S"),
                     }
                 if here['pot_size']:
-                    new['percentages'] = { 'translated' : 100.0*po.Translated/here['pot_size'],
-                                           'untranslated' : 100.0*po.Untranslated/here['pot_size'],
-                                           'fuzzy' : 100.0*po.Fuzzy/here['pot_size'], }
+                    new['percentages'] = { 'translated' : 100*po.Translated/here['pot_size'],
+                                           'untranslated' : 100*po.Untranslated/here['pot_size'], }
+                    new['percentages']['fuzzy'] = 100 - new['percentages']['translated'] - new['percentages']['untranslated']
                     new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
 
                 new['po_error'] = ''
@@ -138,7 +139,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
 
 def compare_stats(a, b):
-    return cmp(b['translated'], a['translated'])
+    return cmp(float(b['supportedness']), float(a['supportedness']))
 
 moduleid = os.getenv("PATH_INFO")[1:]
 allmodules = modules.XmlModules()
@@ -152,7 +153,7 @@ if moduleid in allmodules:
             here = module["cvsbranches"][branch]['translation_domains'][trdomain]
             here['statistics'] = []
             get_stats_for(here, module, trdomain, branch, 'ui')
-            #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+            here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
             
             if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["translation_domains"][trdomain]
@@ -161,7 +162,7 @@ if moduleid in allmodules:
             here = module["cvsbranches"][branch]['documents'][document]
             here['statistics'] = []
             get_stats_for(here, module, document, branch, 'doc')
-            #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+            here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
             if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["documents"][document]

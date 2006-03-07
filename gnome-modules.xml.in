@@ -15,7 +15,7 @@
 	<maintainer><name>Christian Persch</name>
 		    <email>chpe@gnome.org</email>
 		    <irc-nickname>chpe</irc-nickname>
-		    <webpage>...</webpage></maintainer>
+		    <webpage>http://gnome.org/~chpe/</webpage></maintainer>
     </maintainers>
     <bugzilla>
         <xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</xmlrpc>
@@ -66,12 +66,11 @@
     <maintainers>
 	<maintainer><name>Marco Pesenti Gritti</name>
 		    <email>marco@gnome.org</email>
-		    <irc-nickname>mpg</irc-nickname>
-		    <webpage>...</webpage></maintainer>
+		    <irc-nickname>mpg</irc-nickname></maintainer>
 	<maintainer><name>Christian Persch</name>
 		    <email>chpe@gnome.org</email>
 		    <irc-nickname>chpe</irc-nickname>
-		    <webpage>...</webpage></maintainer>
+		    <webpage>http://gnome.org/~chpe/</webpage></maintainer>
     </maintainers>
     <branches>
         <branch tag="gnome-2-12" regenerate="0" />
@@ -81,10 +80,12 @@
 
 
   <module id="gtk+">
-    <_description>Gtk+</_description><!-- defaults to ID -->
+    <_description>GNU's Not Unix Image Manipulation Program ToolKit+ ;)</_description><!-- defaults to ID -->
     <maintainers>
 	<maintainer><name>Owen Taylor</name>
 		    <email>otaylor@redhat.com</email>
+		    <webpage>http://people.redhat.com/otaylor/</webpage>
+		    <hackergotchi>http://planet.gnome.org/heads/owen3.png</hackergotchi>
 		    <irc-nickname>otaylor</irc-nickname></maintainer>
     </maintainers>
     <webpage>http://www.gtk.org/</webpage>
@@ -110,8 +111,8 @@
     <maintainers>
 	<maintainer><name>James Livingston</name>
 		    <email>jrl@ids.org.au</email>
-		    <irc-nickname>jrl</irc-nickname>
-		    <webpage>...</webpage></maintainer>
+		    <irc-nickname>doctau</irc-nickname>
+		    </maintainer>
     </maintainers>
   </module>
 

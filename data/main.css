@@ -27,34 +27,46 @@ h2 {
 
 div.graph {
   height: 14px;
-  width: 150px;
+  width: 100px;
   border: 0px solid black; 
   position: relative;
 }
 
 div.translated {
   position: absolute; 
-  height:100%%; 
-  left: 0%%; 
+  top: 0px;
+  height:100%; 
+  left: 0%; 
   background: #448844;
+  background: url('/~danilo/damned-lies/data/green-bar.png');
+  background-repeat: repeat-x;
 }
 
 div.goodchange {
   position: absolute; 
-  height:100%%; 
+  top: 0px;
+  height:100%; 
   background: #55DD55;
+  background: url('/~danilo/damned-lies/data/cyan-bar.png');
+  background-repeat: repeat-x;
 }
 
 div.fuzzy {
   position: absolute; 
-  height:100%%; 
+  top: 0px;
+  height:100%; 
   background: #4444AA;
+  background: url('/~danilo/damned-lies/data/purple-bar.png');
+  background-repeat: repeat-x;
 }
 
 div.untranslated {
   position: absolute; 
-  height:100%%; 
+  height:100%; 
+  top: 0px;
   background: #FF4444;
+  background: url('/~danilo/damned-lies/data/red-bar.png');
+  background-repeat: repeat-x;
 }
 
 a {
@@ -74,4 +86,12 @@ table {
 
 img {
   border: 0px;
+}
+
+div.maintainer {
+  height: 85px; 
+  padding-left: 85px; 
+  background-image: url('http://planet.gnome.org/heads/nobody.png');
+  background-repeat: no-repeat;
+  background-position: -85px left; 
 }

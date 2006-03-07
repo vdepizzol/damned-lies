@@ -13,12 +13,14 @@ class XmlModules:
         return rc
         
     def getElementText(self, node, element, default = 0):
-        all = node.getElementsByTagName(element)
-        if not all or len(all)<1:
+        if not node.hasChildNodes():
             return default
-
-        rc = self.getElementContents(all[0])
-        return rc
+        child = node.firstChild
+        while child:
+            if child.nodeType == child.ELEMENT_NODE and child.nodeName == element:
+                return self.getElementContents(child)
+            child = child.nextSibling
+        return default
 
     def getElementList(self, node, element, subelement, default = 0):
         all = node.getElementsByTagName(element)
@@ -169,6 +171,7 @@ class XmlModules:
                 "name" : self.getElementText(el, "name", ""),
                 "email" : self.getElementText(el, "email", ""),
                 "irc_nickname" : self.getElementText(el, "irc-nickname", ""),
+                "hackergotchi" : self.getElementText(el, "hackergotchi", ""),
                 "webpage" : self.getElementText(el, "webpage", ""),
                 }
                 
@@ -209,6 +212,7 @@ class XmlModules:
                 "cvsbranches" : cvsbranch,
                 "bugzilla" : bugzilla,
                 "maintainers" : maintainers,
+                "webpage" : self.getElementText(module, "webpage", default = ""),
                 }
 
 
