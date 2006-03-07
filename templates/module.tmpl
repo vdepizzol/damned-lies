@@ -12,8 +12,12 @@
 </head>
 <body>
 
+<center>
+<div style="width:80%; text-align: left;">
+
 <h1>$module.description ($module.id)</h1>
 
+<table><tr><td width="50%" valign="top">
 #if len($module.maintainers)
 <h2>Maintainers</h2>
 <ul>
@@ -22,12 +26,13 @@
 #end for
 </ul>
 #end if
-
+</td><td width="50%" valign="top">
 #if $module.bugzilla
 <h2>Bug reporting</h2>
 <p>Report bugs to 
 <a href="$module.bugzilla.baseurl/enter_bug.cgi?product=$module.bugzilla.product&component=$module.bugzilla.component">Bugzilla</a>.</p>
 #end if
+</td></tr></table>
 
 #if len($module.cvsbranches)
 #for branch, data in $module.cvsbranches.items()
@@ -39,7 +44,8 @@
 #for docdir, document in $data.documents.items()
 <h4>$document.description</h4>
 
-<a href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.pot">POT file
+<a href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.pot">
+<img src="$webroot/data/download.png"> POT file
 #if $document.has_key('pot_size')
   ($document.pot_size messages)
 #end if
@@ -96,7 +102,8 @@
 #end if
 #for uidir, domain in $data.translation_domains.items()
 <h3>$domain.description</h3>
-<a href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.pot">POT file
+<a href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.pot">
+<img src="$webroot/data/download.png"> POT file
 #if $domain.has_key('pot_size')
   ($domain.pot_size messages)
 #end if
@@ -126,7 +133,7 @@
   <td>$lstat.translated</td>
   <td>$lstat.fuzzy</td>
   <td>$lstat.untranslated</td>
-  <td><div class="graph">
+  <td style="width: 150px;"><div class="graph">
       <img src="$webroot/data/green-bar.png" height="14" width="${lstat.percentages.translated}%;" /><!--
       --><img src="$webroot/data/purple-bar.png" height="14" width="${lstat.percentages.fuzzy}%;"><!--
       --><img src="$webroot/data/red-bar.png" height="14" width="${lstat.percentages.untranslated}%;">
@@ -144,5 +151,7 @@
 #end for
 #end if
 
+</div>
+</center>
 </body>
 </html>

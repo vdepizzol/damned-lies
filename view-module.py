@@ -40,6 +40,7 @@ print "Content-type: text/html; charset=UTF-8\n"
 def js_escape(string):
     return string.replace('"', '\\"')
 
+# CheetahTemplate power stuff: similar to Smarty's debug console
 def TemplateInspector(template):
     """Inspects all template variables and outputs them in a separate window using JavaScript."""
     blank = Template("")
@@ -70,7 +71,6 @@ def TemplateInspector(template):
 	_debug_console.document.close();
 </SCRIPT>"""
 
-    #return ""
     return output
 
 def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):

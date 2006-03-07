@@ -11,8 +11,18 @@
     padding-right: 2px; }
 .stats td.left { 
     text-align: left; }
- body {
+body {
     background: white; }
+
+h1 {
+    color: #404070;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 2em;
+    border-bottom: 1px solid gray;
+}
 
 
 div.graph {
@@ -59,7 +69,7 @@ a:hover, a:visited {
 
 
 table {
-  width: 480px;
+  width: 100%;
 }
 
 img {

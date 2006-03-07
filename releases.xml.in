@@ -1,0 +1,50 @@
+<releases>
+
+<release id="gnome-2.14">
+  <_description>Gnome 2.14</_description>
+  <category id="platform">
+    <_description>Development Platform</_description>
+    <module id="gtk+" branch="gtk-2-8" />
+    <!--<module id="glib" branch="glib-2-10" />-->
+  </category>
+  <category id="desktop">
+    <_description>Desktop Applications</_description>
+    <module id="epiphany" />
+    <module id="epiphany-full" />
+  </category>
+  <!--<category id="admin">
+    <_description>System Administration Applications</_description>
+    <module id="sabayon" />
+    <module id="pesselus" />
+  </category>-->
+</release>
+
+<release id="gnome-2.16">
+  <_description>Gnome 2.15 development version</_description>
+  <category id="platform">
+    <_description>Development Platform</_description>
+    <module id="gtk+" />
+    <module id="glib" />
+  </category>
+  <category id="desktop">
+    <_description>Desktop Applications</_description>
+    <module id="epiphany" />
+    <module id="evolution" />
+  </category>
+  <category id="admin">
+    <_description>System Administration Applications</_description>
+    <module id="sabayon" />
+    <module id="pesselus" />
+  </category>
+</release>
+
+<release id="gnome-office">
+  <_description>Gnome-Office Productivity Applications</_description>
+  <module id="abiword" />
+  <module id="criawips" />
+  <module id="dia" />
+  <module id="gnumeric" />
+</release>
+
+
+</releases>
