@@ -83,6 +83,8 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
     if res and res.count()>0:
         pot = res[0]
         here['pot_size'] = pot.Untranslated
+        here['updated'] = pot.Date.strftime("%Y-%m-%d %H:%M:%S")
+
         here['pot_messages'] = []
         for msg in pot.Messages:
             here['pot_messages'].append({'type' : msg.Type, 'content' : msg.Description})

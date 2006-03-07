@@ -1,5 +1,11 @@
 2006-03-07  Danilo Šegan  <danilo@gnome.org>
 
+	* view-module.py (get_stats_for): Set "updated" field for POT file.
+
+	* templates/show-stats.tmpl: Show last update of POT file.
+
+2006-03-07  Danilo Šegan  <danilo@gnome.org>
+
 	* modules.py (XmlModules.__init__): Added webpage support.
 	(XmlModules.getElementText): Fix to output only direct descendants.
 
