@@ -35,6 +35,9 @@ cvsbranch = {
 maintainers = []
 
 
+# whether to generate translated XML documentation (might slow down the process significantly)
+generate_docs = 1
+
 # Directory to checkout source code and dump dead bodies to
 scratchdir = u"/tmp/gnome-stats"
 

@@ -524,6 +524,37 @@ might be worth investigating.
                 if defaults.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
         return stats
 
+    def generate_translated_docs(self, sourcedir, docbase, lang, pofile, out_dir)
+        """Generates translated XML documentation using xml2po.
+
+        sourcedir: base directory for the document (one containing Makefile.am with DOC_MODULE).
+        docbase: base name for the document file, i.e. DOC_MODULE value.
+        lang: language for which we are merging.
+        pofile: PO file with translation to merge.
+        out_dir: directory where to output translation.
+        """
+        # read interesting variables from the Makefile.am
+        makefileam = os.path.join(sourcedir, "Makefile.am")
+        modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
+        includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
+        entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
+        figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
+        languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
+
+        # Generate XML files
+        try: os.makedirs(out_dir)
+        except: pass
+
+        if not figures:
+            allfigs = []
+            for file in os.listdir(os.path.join(docdir,"C","figures")):
+                if file[-4:]==".png":
+                    allfigs.append(file)
+                    
+
+
+        pass
+
 if __name__ == "__main__":
     import sys
     if sys.argv[1]:
