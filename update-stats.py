@@ -12,6 +12,47 @@ import os, sys, commands, datetime
 class LocStatistics:
     """Generate all statistics for provided module and source code path."""
 
+    def update_stats_database(self, module, branch, type, domain, date, language, translated, fuzzy, untranslated, errors):
+        MyArchive = database.ArchivedStatistics(Module = module,
+                                                Branch = branch,
+                                                Type = type,
+                                                Domain = domain,
+                                                Date = date,
+                                                Language = language,
+                                                Translated = translated,
+                                                Fuzzy = fuzzy,
+                                                Untranslated = untranslated)
+        old = database.Statistics.selectBy(Module = module,
+                                           Branch = branch,
+                                           Type = type,
+                                           Domain = domain,
+                                           Language = language)
+        for oldS in old:
+            for msg in oldS.Messages:
+                database.Information.delete(msg.id)
+            database.Statistics.delete(oldS.id)
+
+        MyStat = database.Statistics(Module = module,
+                                     Branch = branch,
+                                     Type = type,
+                                     Domain = domain,
+                                     Date = date,
+                                     Language = language,
+                                     Translated = translated,
+                                     Fuzzy = fuzzy,
+                                     Untranslated = untranslated)
+
+        for (msgtype, message) in errors:
+            NewArchiveInfo = database.ArchivedInformation(Statistics = MyArchive,
+                                                          Type = msgtype,
+                                                          Description = message)
+            NewInfo = database.Information(Statistics = MyStat,
+                                           Type = msgtype,
+                                           Description = message)
+        
+
+        
+
     def __init__(self, module, onlybranch = None):
         self.module = module
         CVS = modules.CvsModule(module, 0)
@@ -133,19 +174,10 @@ might be worth investigating.
         postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, oldtime)
 
         NOW = datetime.datetime.now()
-        MyStat = database.Statistics(Module = self.module["id"],
-                                     Branch = self.branch,
-                                     Type = 'ui',
-                                     Domain = self.podir,
-                                     Date = NOW,
-                                     Language = None,
-                                     Translated = 0,
-                                     Fuzzy = 0,
-                                     Untranslated = int(pot_stats['untranslated']))
-        for (msgtype, message) in pot_stats['errors']:
-            NewInfo = database.Information(Statistics = MyStat,
-                                           Type = msgtype,
-                                           Description = message)
+        self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
+                                   domain = self.podir, date = NOW, language = None,
+                                   translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
+                                   errors = pot_stats['errors'])
 
         for lang in postats:
             if lang and not database.Language.selectBy(Code=lang).count():
@@ -154,20 +186,12 @@ might be worth investigating.
             else:
                 thislang = database.Language.selectBy(Code=lang)[0]
 
-            MyStat = database.Statistics(Module = self.module["id"],
-                                         Branch = self.branch,
-                                         Type = 'ui',
-                                         Domain = self.podir,
-                                         Date = NOW,
-                                         Language = lang,
-                                         Translated = int(postats[lang]['translated']),
-                                         Fuzzy = int(postats[lang]['fuzzy']),
-                                         Untranslated = int(postats[lang]['untranslated']))
-            for (msgtype, message) in postats[lang]['errors']:
-                NewInfo = database.Information(Statistics = MyStat,
-                                               Type = msgtype,
-                                               Description = message)
-
+                self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
+                                           domain = self.podir, date = NOW, language = lang,
+                                           translated = int(postats[lang]['translated']),
+                                           fuzzy = int(postats[lang]['fuzzy']),
+                                           untranslated = int(postats[lang]['untranslated']),
+                                           errors = postats[lang]['errors'])
 
         return pot_stats
 
@@ -449,19 +473,10 @@ might be worth investigating.
         self.copy_file(fullpot, newpot)
 
         NOW = datetime.datetime.now()
-        MyStat = database.Statistics(Module = self.module["id"],
-                                     Branch = self.branch,
-                                     Type = 'doc',
-                                     Domain = docpath,
-                                     Date = NOW,
-                                     Language = None,
-                                     Translated = 0,
-                                     Fuzzy = 0,
-                                     Untranslated = int(pot_stats['untranslated']))
-        for (msgtype, message) in pot_stats['errors']:
-            NewInfo = database.Information(Statistics = MyStat,
-                                           Type = msgtype,
-                                           Description = message)
+        self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
+                                   domain = docpath, date = NOW, language = None,
+                                   translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
+                                   errors = pot_stats['errors'])
 
         postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime)
 
@@ -472,19 +487,13 @@ might be worth investigating.
             else:
                 thislang = database.Language.selectBy(Code=lang)[0]
 
-            MyStat = database.Statistics(Module = self.module["id"],
-                                         Branch = self.branch,
-                                         Type = 'doc',
-                                         Domain = docpath,
-                                         Date = NOW,
-                                         Language = lang,
-                                         Translated = int(postats[lang]['translated']),
-                                         Fuzzy = int(postats[lang]['fuzzy']),
-                                         Untranslated = int(postats[lang]['untranslated']))
-            for (msgtype, message) in postats[lang]['errors']:
-                NewInfo = database.Information(Statistics = MyStat,
-                                               Type = msgtype,
-                                               Description = message)
+            self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
+                                       domain = docpath, date = NOW, language = lang,
+                                       translated = int(postats[lang]['translated']),
+                                       fuzzy = int(postats[lang]['fuzzy']),
+                                       untranslated = int(postats[lang]['untranslated']),
+                                       errors = postats[lang]['errors'])
+
 
 
         return pot_stats
@@ -524,7 +533,7 @@ might be worth investigating.
                 if defaults.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
         return stats
 
-    def generate_translated_docs(self, sourcedir, docbase, lang, pofile, out_dir)
+    def generate_translated_docs(self, sourcedir, docbase, lang, pofile, out_dir):
         """Generates translated XML documentation using xml2po.
 
         sourcedir: base directory for the document (one containing Makefile.am with DOC_MODULE).
@@ -550,10 +559,6 @@ might be worth investigating.
             for file in os.listdir(os.path.join(docdir,"C","figures")):
                 if file[-4:]==".png":
                     allfigs.append(file)
-                    
-
-
-        pass
 
 if __name__ == "__main__":
     import sys

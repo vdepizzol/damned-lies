@@ -28,6 +28,9 @@ class Statistics(SQLObject):
 
     Messages = MultipleJoin('Information')
 
+class ArchivedStatistics(Statistics):
+    Messages = MultipleJoin('ArchivedInformation')
+
 
 class Information(SQLObject):
     _cacheValue = False
@@ -35,6 +38,10 @@ class Information(SQLObject):
     Statistics = ForeignKey('Statistics', notNone=True)
     Type = EnumCol(enumValues=['info', 'warn', 'error']) # priority of a stats message
     Description = UnicodeCol()
+
+
+class ArchivedInformation(Information):
+    Statistics = ForeignKey('ArchivedStatistics', notNone=True)
 
 class Language(SQLObject):
     _cacheValue = True
@@ -44,7 +51,9 @@ class Language(SQLObject):
 
 def init():
     Statistics.createTable(ifNotExists = True)
+    ArchivedStatistics.createTable(ifNotExists = True)
     Information.createTable(ifNotExists = True)
+    ArchivedInformation.createTable(ifNotExists = True)
 
 
     # Initialise language table
