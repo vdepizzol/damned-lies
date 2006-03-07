@@ -1,5 +1,12 @@
 2006-03-07  Danilo Šegan  <danilo@gnome.org>
 
+	* update-stats.py (LocStatistics.ui_l10n_stats): Support for
+	stringfreeze per-module.
+
+	* gnome-modules.xml.in: Added gtk+.
+
+2006-03-07  Danilo Šegan  <danilo@gnome.org>
+
 	* templates/module.tmpl: 
 	* view-module.py (get_stats_for): Added info messages.
 

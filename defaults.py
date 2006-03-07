@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-# When in STRINGFREEZE, set this to 1 to send notifications to gnome-i18n@gnome.org on any POT changes
-STRINGFREEZE = 1
+# When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
 notifications_to = 'danilo@avet.kvota.net'
 

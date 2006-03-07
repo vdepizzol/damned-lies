@@ -152,7 +152,8 @@ if moduleid in allmodules:
             here = module["cvsbranches"][branch]['translation_domains'][trdomain]
             here['statistics'] = []
             get_stats_for(here, module, trdomain, branch, 'ui')
-            here['statistics'].sort(compare_stats)
+            #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+            
             if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["translation_domains"][trdomain]
 
@@ -160,7 +161,8 @@ if moduleid in allmodules:
             here = module["cvsbranches"][branch]['documents'][document]
             here['statistics'] = []
             get_stats_for(here, module, document, branch, 'doc')
-            here['statistics'].sort(compare_stats)
+            #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+
             if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["documents"][document]
 

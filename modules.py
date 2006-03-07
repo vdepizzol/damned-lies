@@ -39,6 +39,11 @@ class XmlModules:
         regenerate = 1
         if el.hasAttribute("regenerate"):
             regenerate = int(el.getAttribute("regenerate"))
+
+        stringfrozen = 0
+        if el.hasAttribute("stringfrozen"):
+            stringfrozen = int(el.getAttribute("stringfrozen"))
+
         for dom in trdomains:
             if not trdomains[dom]['potbase']:
                 trdomains[dom]['potbase'] = moduleid
@@ -50,6 +55,7 @@ class XmlModules:
             "translation_domains" : trdomains,
             "documents" : documents,
             "regenerate" : regenerate,
+            "stringfrozen" : stringfrozen,
             "cvsweb" : cvsweb % {'module' : cvsmodule, 'branch' : branch},
             }
         return rc

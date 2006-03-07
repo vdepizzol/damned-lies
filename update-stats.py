@@ -23,7 +23,12 @@ class LocStatistics:
         for branch in mybranches:
             if not module["cvsbranches"][branch]["regenerate"]:
                 continue
-            
+
+            if module["cvsbranches"][branch]["stringfrozen"]:
+                self.STRINGFREEZE = 1
+            else:
+                self.STRINGFREEZE = 0
+
             for podir in module["cvsbranches"][branch]["translation_domains"]:
                 potbase = module["cvsbranches"][branch]["translation_domains"][podir]['potbase']
 
@@ -110,7 +115,7 @@ might be worth investigating.
 
         # If old pot already exists and we are in string freeze
         if os.access(newpot, os.R_OK):
-            if defaults.STRINGFREEZE:
+            if self.STRINGFREEZE:
                 diff = potdiff.diff(newpot, potfile, 1)
                 if len(diff):
                     self.notify_list(out_domain, diff)
@@ -224,7 +229,7 @@ might be worth investigating.
                     break
             lfile.close()
             if not in_config:
-                errors.append(("error", "Entry for this language is not present in LINGUAS file."))
+                errors.append(("warn", "Entry for this language is not present in LINGUAS file."))
             return errors
         
         import re
@@ -242,7 +247,7 @@ might be worth investigating.
                         break
                 cfile.close()
                 if not in_config:
-                    errors.append(("error", "Entry for this language is not present in ALL_LINGUAS in configure file."))
+                    errors.append(("warn", "Entry for this language is not present in ALL_LINGUAS in configure file."))
                 return errors
                 
         errors.append(("warn", "Don't know where to look if this language is actually used, ask the module maintainer."))
@@ -299,7 +304,7 @@ might be worth investigating.
 
         if error:
             if msgfmt_checks:
-                errors.append(("warn", "PO file '%s' doesn't pass msgfmt check: not updating." % (pofile)))
+                errors.append(("error", "PO file '%s' doesn't pass msgfmt check: not updating." % (pofile)))
             else:
                 errors.append(("error", "Can't get statistics for POT file '%s'." % (pofile)))
         
