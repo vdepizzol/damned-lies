@@ -115,9 +115,19 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                                            'fuzzy' : 100.0*po.Fuzzy/here['pot_size'], }
                     new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
 
+                new['po_error'] = ''
                 new['po_messages'] = []
                 for msg in po.Messages:
                     new['po_messages'].append({'type': msg.Type, 'content': msg.Description})
+                    if msg.Type=='error':
+                        new['po_error'] = 'error'
+                        new['po_error_message'] = msg.Description
+                    elif msg.Type=='warn' and new['po_error'] != 'error':
+                        new['po_error'] = 'warn'
+                        new['po_error_message'] = msg.Description
+                    elif msg.Type=='info' and not new['po_error']:
+                        new['po_error'] = 'info'
+                        new['po_error_message'] = msg.Description
 
 
                 here['statistics'].append(new)
@@ -143,7 +153,7 @@ if moduleid in allmodules:
             here['statistics'] = []
             get_stats_for(here, module, trdomain, branch, 'ui')
             here['statistics'].sort(compare_stats)
-            if len(here["statistics"])==0:
+            if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["translation_domains"][trdomain]
 
         for document in documents:
@@ -151,7 +161,7 @@ if moduleid in allmodules:
             here['statistics'] = []
             get_stats_for(here, module, document, branch, 'doc')
             here['statistics'].sort(compare_stats)
-            if len(here["statistics"])==0:
+            if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                 del module["cvsbranches"][branch]["documents"][document]
 
     html = Template(file="templates/module.tmpl")

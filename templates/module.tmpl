@@ -49,15 +49,7 @@
 <h4>Notices</h4>
 <table>
 #for $msg in $document.pot_messages
-<tr><td>
-#if $msg.type=="error"
-<img src="$webroot/data/error.png">
-#else if $msg.type=="warn"
-<img src="$webroot/data/warning.png">
-#else if $msg.type=="info"
-<img src="$webroot/data/info.png">
-#end if
-</td><td>$msg.content</td></tr>
+<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
 #end for
 </table>
 #end if
@@ -69,7 +61,11 @@
 <tr>
   <td class="left"><a
   href="$webroot/POT/${module.id}.${branch}/${document.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
-  ($lstat.code)</a></td>
+  ($lstat.code)</a>
+#if $lstat.po_error
+<img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
+#end if
+  </td>
   <td>$lstat.translated</td>
   <td>$lstat.fuzzy</td>
   <td>$lstat.untranslated</td>
@@ -110,15 +106,7 @@
 <h4>Notices</h4>
 <table>
 #for $msg in $domain.pot_messages
-<tr><td>
-#if $msg.type=="error"
-<img src="$webroot/data/error.png">
-#else if $msg.type=="warn"
-<img src="$webroot/data/warning.png">
-#else if $msg.type=="info"
-<img src="$webroot/data/info.png">
-#end if
-</td><td>$msg.content</td></tr>
+<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
 #end for
 </table>
 #end if
@@ -130,7 +118,11 @@
 <tr>
   <td class="left"><a
   href="$webroot/POT/${module.id}.${branch}/${domain.potbase}.${branch}.${lstat.code}.po">$lstat.language_name
-  ($lstat.code)</a></td>
+  ($lstat.code)</a>
+#if $lstat.po_error
+    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
+#end if
+  </td>
   <td>$lstat.translated</td>
   <td>$lstat.fuzzy</td>
   <td>$lstat.untranslated</td>
