@@ -43,36 +43,11 @@ class Information(SQLObject):
 class ArchivedInformation(Information):
     Statistics = ForeignKey('ArchivedStatistics', notNone=True)
 
-class Language(SQLObject):
-    _cacheValue = True
-    
-    Code = StringCol(alternateID=True)
-    Name = UnicodeCol()
-
 def init():
     Statistics.createTable(ifNotExists = True)
     ArchivedStatistics.createTable(ifNotExists = True)
     Information.createTable(ifNotExists = True)
     ArchivedInformation.createTable(ifNotExists = True)
-
-
-    # Initialise language table
-    Language.createTable(ifNotExists = True)
-    import xml.dom.minidom
-    dom = xml.dom.minidom.parse('/usr/share/xml/iso-codes/iso_639.xml')
-    
-    langs = dom.getElementsByTagName("iso_639_entry")
-    for lang in langs:
-        code = lang.getAttribute("iso_639_1_code")
-        name = lang.getAttribute("name")
-
-        if code and name and not Language.selectBy(Code=code).count():
-            print u"%s: %s" % (code,name)
-            try:
-                newlang = Language(Code=code, Name=name)
-            except:
-                pass
-    
 
 if __name__ == "__main__":
     init()

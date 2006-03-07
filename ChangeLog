@@ -1,5 +1,15 @@
 2006-03-07  Danilo Šegan  <danilo@gnome.org>
 
+	* view-module.py (get_stats_for): 
+	* update-stats.py: 
+	Move to teams.TranslationLanguages() from database.Language.
+
+	* teams.py: Added teams and language XML database.
+	* database.py: Remove Language database.
+	* translation-teams.xml.in: Imported teams database.
+
+2006-03-07  Danilo Šegan  <danilo@gnome.org>
+
 	* update-stats.py (LocStatistics.update_stats_database): Added
 	(works with both generic databases and archives).
 	(LocStatistics.ui_l10n_stats): Switch to update_stats_database.

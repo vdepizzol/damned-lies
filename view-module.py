@@ -90,13 +90,13 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
             here['pot_messages'].append({'type' : msg.Type, 'content' : msg.Description})
 
         here['statistics'] = []
-        langres = Language.select(orderBy=sortorder)
+        langres = teams.TranslationLanguages()
 
         for mylang in langres:
             statres = Statistics.select(AND(Statistics.q.Module == module["id"],
                                             Statistics.q.Domain == trdomain,
                                             Statistics.q.Branch == branch,
-                                            Statistics.q.Language == mylang.Code,
+                                            Statistics.q.Language == mylang,
                                             Statistics.q.Type == type),
                                         orderBy="-date")
 
@@ -105,11 +105,11 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
                 
                 new = {
-                    'code' : mylang.Code,
+                    'code' : mylang,
                     'translated' : po.Translated,
                     'fuzzy' : po.Fuzzy,
                     'untranslated' : po.Untranslated,
-                    'language_name' : mylang.Name,
+                    'language_name' : langres[mylang],
                     'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S"),
                     }
                 if here['pot_size']:

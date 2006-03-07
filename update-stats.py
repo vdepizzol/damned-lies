@@ -4,6 +4,7 @@ import defaults
 
 import database
 import modules
+import teams
 
 import potdiff
 
@@ -180,18 +181,16 @@ might be worth investigating.
                                    errors = pot_stats['errors'])
 
         for lang in postats:
-            if lang and not database.Language.selectBy(Code=lang).count():
-                thislang = database.Language(Code=lang,
-                                             Name=lang)
-            else:
-                thislang = database.Language.selectBy(Code=lang)[0]
+            langs = teams.TranslationLanguages()
+            if lang and not langs.has_key(lang):
+                postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
 
-                self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
-                                           domain = self.podir, date = NOW, language = lang,
-                                           translated = int(postats[lang]['translated']),
-                                           fuzzy = int(postats[lang]['fuzzy']),
-                                           untranslated = int(postats[lang]['untranslated']),
-                                           errors = postats[lang]['errors'])
+            self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
+                                       domain = self.podir, date = NOW, language = lang,
+                                       translated = int(postats[lang]['translated']),
+                                       fuzzy = int(postats[lang]['fuzzy']),
+                                       untranslated = int(postats[lang]['untranslated']),
+                                       errors = postats[lang]['errors'])
 
         return pot_stats
 
@@ -481,11 +480,8 @@ might be worth investigating.
         postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime)
 
         for lang in postats:
-            if lang and not database.Language.selectBy(Code=lang).count():
-                thislang = database.Language(Code=lang,
-                                             Name=lang)
-            else:
-                thislang = database.Language.selectBy(Code=lang)[0]
+            if lang and not langs.has_key(lang):
+                postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
 
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
                                        domain = docpath, date = NOW, language = lang,
