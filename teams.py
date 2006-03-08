@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
-
 import xml.dom.minidom
 import defaults
 import utils
+
+import os
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
@@ -67,10 +68,11 @@ class TranslationTeams:
             'name' : self.getElementText(el, 'name', ''),
             'irc_nickname' : self.getElementText(el, 'irc-nickname', ''),
             'email' : self.getElementText(el, 'email', ''),
+            'hackergotchi' : self.getElementText(el, 'hackergotchi', ''),
             'webpage' : self.getElementText(el, 'webpage', ''),
-            'cvs-account' : self.getElementText(el, 'cvs-account', ''),
+            'cvs_account' : self.getElementText(el, 'cvs-account', ''),
             }
-        coord['bugzilla-account'] = self.getElementText(el, 'cvs-account', coord['email'])
+        coord['bugzilla_account'] = self.getElementText(el, 'bugzilla-account', coord['email'])
         coord['im'] = []
 
         ims = el.getElementsByTagName("im")
@@ -191,15 +193,25 @@ if __name__=="__main__":
 
     print "Content-type: text/html; charset=UTF-8\n"
 
-    t = TranslationTeams()
-    teams = t.data
-    teams.sort(compare_teams)
+    teamid = os.getenv("PATH_INFO")[1:]
+    if teamid:
+        myteam = TranslationTeams(only_team=teamid)
+        if len(myteam) and myteam[0]['id'] == teamid:
+            html = Template(file="templates/team.tmpl")
+            html.webroot = defaults.webroot
+            html.team = myteam[0]
+            print html
+            print utils.TemplateInspector(html)
+    else:
+        t = TranslationTeams()
+        teams = t.data
+        teams.sort(compare_teams)
 
-    html = Template(file="templates/list-teams.tmpl")
-    html.webroot = defaults.webroot
-    html.teams = teams
-    print html
-    print utils.TemplateInspector(html)
+        html = Template(file="templates/list-teams.tmpl")
+        html.webroot = defaults.webroot
+        html.teams = teams
+        print html
+        print utils.TemplateInspector(html)
 
     #import pprint
     #pprint.pprint(TranslationLanguages())
