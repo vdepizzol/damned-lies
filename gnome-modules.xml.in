@@ -177,7 +177,7 @@
     <!-- source code access snippet -->
     <cvs-root>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvs-root>
     <cvs-module>xkbdesc</cvs-module><!-- defaults to ID -->
-    <cvs-web>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvs-web>
+    <cvs-web>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_tag=%(branch)s</cvs-web>
     <!-- end of source code access snippet -->
     <branches><!-- defaults only to HEAD -->
 	<branch tag="HEAD" >
