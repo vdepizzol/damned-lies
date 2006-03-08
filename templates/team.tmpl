@@ -13,11 +13,11 @@
   <h2>Details</h2>
 
   #if $team.webpage
-  <strong>Team Work Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
+  <strong>${team.firstlanguage} Team Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
   #end if
   
   #if $team.userpage
-  <strong>Page for ${team.firstlanguage} GNOME Users:</strong> <a href="$team.userpage">$team.userpage</a><br />
+  <strong>${team.firstlanguage} GNOME Users Page:</strong> <a href="$team.userpage">$team.userpage</a><br />
   #end if
 
   #if $team.bugzilla
