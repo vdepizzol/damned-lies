@@ -17,6 +17,7 @@
 #end if
 
 #for category in $release.categories
+#if $category.statistics.ui_size != 0
 <tr>
   <td colspan="3" class="left" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
     $category.description (${category.statistics.ui_supportedness}% translated)</td></tr>
@@ -24,5 +25,6 @@
     #set global modules=$category.modules
     #set global release=$release
     #include "templates/language-release-ui-stats-modules.tmpl"
+#end if
 #end for  
 </table>

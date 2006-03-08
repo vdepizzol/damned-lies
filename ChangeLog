@@ -1,5 +1,11 @@
 2006-03-08  Danilo Šegan  <danilo@gnome.org>
 
+	* templates/language-release-ui-stats.tmpl: check if
+	$category.statistics.ui_size!=0, to show only categories with
+	really translatable stuff.
+
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
 	* data/main.css: Clean-ups.
 	* utils.py (not_found_404): Added.
 	* teams.py (TranslationTeams): introduce only_language parameter.
