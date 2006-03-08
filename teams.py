@@ -1,17 +1,14 @@
 #!/usr/bin/python
 
-# real    0m1.391s
-# user    0m0.927s
-# sys     0m0.023s
-
 
 import xml.dom.minidom
 import defaults
+import utils
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
     def __init__(self, teamsfile="translation-teams.xml", only_team=None):
-        result = {}
+        result = []
         
         dom = xml.dom.minidom.parse(teamsfile)
 
@@ -35,13 +32,18 @@ class TranslationTeams:
                     languages[code]['hidden'] = int(lang.getAttribute('hidden'))
                 if not firstlanguage: firstlanguage = languages[code]['name']
 
-            result[teamid] = {
+
+            entry = {
+                'id' : teamid,
                 'webpage' : self.getElementText(team, 'webpage'),
                 'userpage' : self.getElementText(team, 'userpage'),
                 'mailing_list' : self.getMailingList(team),
+                'firstlanguage' : firstlanguage,
+                'languages' : languages,
                 }
-            result[teamid]['coordinator'] = self.getCoordinator(team)
-            result[teamid]['bugzilla'] = self.getBugzillaDetails(team, teamid, firstlanguage, defaults.bugzilla)
+            entry['coordinator'] = self.getCoordinator(team)
+            entry['bugzilla'] = self.getBugzillaDetails(team, teamid, firstlanguage, defaults.bugzilla)
+            result.append(entry)
 
         self.data = result
 
@@ -175,11 +177,29 @@ def TranslationLanguages(teamsfile="translation-teams.xml"):
     return result
 
 
+def compare_teams(a, b):
+    res = cmp(a['firstlanguage'], b['firstlanguage'])
+    if not res:
+        return cmp(a['code'], b['code'])
+    else:
+        return res
+
 if __name__=="__main__":
+    import cgi
+    import cgitb; cgitb.enable()
+    from Cheetah.Template import Template
+
+    print "Content-type: text/html; charset=UTF-8\n"
+
     t = TranslationTeams()
-    for teamid in t:
-        import pprint
-        print teamid, ":\n", pprint.pformat(t[teamid])
+    teams = t.data
+    teams.sort(compare_teams)
+
+    html = Template(file="templates/list-teams.tmpl")
+    html.webroot = defaults.webroot
+    html.teams = teams
+    print html
+    print utils.TemplateInspector(html)
 
     #import pprint
     #pprint.pprint(TranslationLanguages())

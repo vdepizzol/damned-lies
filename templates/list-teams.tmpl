@@ -1,0 +1,36 @@
+<html>
+<head><title>GNOME Translation Teams</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+<h1>GNOME Translation Teams</h1>
+
+#if len($teams)
+<p>Select a team below to see more information about it:</p>
+
+<ul>
+#for team in $teams
+<li style="font-size: 120%;">
+  <a href="${webroot}/teams/${team.id}">${team.firstlanguage}</a>
+  #if $team.has_key('webpage') and $team.webpage
+    — <a href="${team.webpage}">${team.webpage}</a>
+  #end if
+  #if $team.has_key('coordinator')
+    <br /><span style="font-size: 80%;">Coordinated by <a href="mailto:$team.coordinator.email">$team.coordinator.name</a></span>
+  #end if
+</li>
+#end for
+</ul>
+#else
+<p>There are currently no translation teams in GNOME. :(</p>
+#end if
+
+
+</div>
+</center>
+</body>
+</html>

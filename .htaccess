@@ -1,0 +1,22 @@
+Options +FollowSymLinks +ExecCGI -MultiViews
+AcceptPathInfo On
+
+AddHandler cgi-script .py
+AddHandler cgi-script .cgi
+
+DirectoryIndex view-module.py
+
+RewriteEngine On
+RewriteBase /~danilo/damned-lies/
+
+RewriteRule !^data/.*$            -   [C]
+RewriteRule !^data$                -   [C]
+
+RewriteRule !^view-module\.py.*$     -   [C]
+RewriteRule ^module/(.*)$      	     view-module.py/$1
+RewriteRule ^module$           	     view-module.py
+
+RewriteRule !^teams\.py.*$     -   [C]
+RewriteRule ^teams/(.*)$      	     teams.py/$1
+RewriteRule ^teams$           	     teams.py
+
