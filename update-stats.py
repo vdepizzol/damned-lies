@@ -259,7 +259,17 @@ might be worth investigating.
         for configure in [configureac, configurein]:
             if not in_config and os.access(configure, os.R_OK):
                 cfile = open(configure, "r")
+                lines = []
+                prev = ""
                 for line in cfile:
+                    line = prev + line.strip()
+                    if line.count('"') % 2 == 1:
+                        prev = line
+                    else:
+                        lines.append(line)
+                        prev = ""
+                    
+                for line in lines:
                     line = line.strip()
                     test = re.match('ALL_LINGUAS\s*=\s*"([^"]*)"', line)
                     if test:

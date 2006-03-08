@@ -1,5 +1,5 @@
 <html>
-<head><title>${team.firstlanguage} GNOME Translation Team</title>
+<head><title>${team.description}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
 <body>
@@ -7,17 +7,17 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-<h1>${team.firstlanguage} GNOME Translation Team</h1>
+<h1>${team.description}</h1>
 
 <table><tr><td valign="top" width="50%">
   <h2>Details</h2>
 
   #if $team.webpage
-  <strong>${team.firstlanguage} Team Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
+  <strong>${team.description} Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
   #end if
   
   #if $team.userpage
-  <strong>${team.firstlanguage} GNOME Users Page:</strong> <a href="$team.userpage">$team.userpage</a><br />
+  <strong>Users Web Page:</strong> <a href="$team.userpage">$team.userpage</a><br />
   #end if
 
   #if $team.bugzilla
@@ -76,6 +76,18 @@
   </div>
 #end if
 </td></tr></table>
+
+<h2><strong style="color: red;">CYCLE THROUGH LANGUAGES AND GIVE STATS FOR EACH RELEASE SET!</strong></h2>
+
+#if len($releases)
+  <h2>Release Sets</h2>
+
+#for release in $releases
+<h3><a href="${webroot}/teams/${team.id}/${release.id}">${release.id}</a></h3>
+<p>${release.description}</p>
+#end for
+
+#end if
 
 </div>
 </center>

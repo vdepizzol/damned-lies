@@ -44,6 +44,7 @@ class TranslationTeams:
                 }
             entry['coordinator'] = self.getCoordinator(team)
             entry['bugzilla'] = self.getBugzillaDetails(team, teamid, firstlanguage, defaults.bugzilla)
+            entry['description'] = self.getElementText(team, 'description', "%s Translation Team" % (firstlanguage))
             result.append(entry)
 
         self.data = result
@@ -198,8 +199,12 @@ if __name__=="__main__":
         myteam = TranslationTeams(only_team=teamid)
         if len(myteam) and myteam[0]['id'] == teamid:
             html = Template(file="templates/team.tmpl")
+            import releases
+
+            html.releases = releases.Releases(deep=0).data
             html.webroot = defaults.webroot
             html.team = myteam[0]
+            
             print html
             print utils.TemplateInspector(html)
     else:
