@@ -104,6 +104,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
             if not mylang: continue
             if langres.has_key(mylang):
                 langname = langres[mylang]
+                if not langname: continue
             else:
                 langname = ""
 
@@ -144,10 +145,13 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
 
 def compare_stats(a, b):
-    return cmp(float(b['supportedness']), float(a['supportedness']))
+    res = cmp(float(b['supportedness']), float(a['supportedness']))
+    if not res:
+        return cmp(b['language_name'], a['language_name'])
+    else:
+        return res
 
 def go_go():
-
     moduleid = os.getenv("PATH_INFO")[1:]
     allmodules = modules.XmlModules()
     if moduleid in allmodules:
@@ -160,7 +164,7 @@ def go_go():
                 here = module["cvsbranches"][branch]['translation_domains'][trdomain]
                 here['statistics'] = []
                 get_stats_for(here, module, trdomain, branch, 'ui')
-                #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+                here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
                 if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                     del module["cvsbranches"][branch]["translation_domains"][trdomain]
@@ -169,7 +173,7 @@ def go_go():
                 here = module["cvsbranches"][branch]['documents'][document]
                 here['statistics'] = []
                 get_stats_for(here, module, document, branch, 'doc')
-                #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+                here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
                 if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
                     del module["cvsbranches"][branch]["documents"][document]

@@ -1,5 +1,14 @@
 2006-03-08  Danilo Šegan  <danilo@gnome.org>
 
+	* update-stats.py: support updates for single modules.
+
+	* gnome-modules.xml.in: Added xkeyboard-config for testing.
+
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
+	* view-module.py (get_stats_for): Sort by supportedness, then 
+	language.
+
 	* translation-teams.xml.in: Update.
 
 2006-03-08  Danilo Šegan  <danilo@gnome.org>

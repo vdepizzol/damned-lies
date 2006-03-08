@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
   default bugzilla: http://bugzilla.gnome.org/
   default cvsroot: :pserver:anonymous@anoncvs.gnome.org:/cvs/gnome
@@ -29,7 +30,7 @@
     <cvs-module>epiphany</cvs-module><!-- defaults to ID -->
     <!-- end of source code access snippet -->
     <branches><!-- defaults only to HEAD -->
-	<branch tag="gnome-2-14" regenerate="0" >
+	<branch tag="gnome-2-12" regenerate="0" >
             <translation-domains><!-- defaults to a single "po" -->
         	<domain base="epiphany">
         	    <directory>po</directory>
@@ -111,12 +112,50 @@
 
   <module id="rhythmbox">
     <_description>Rhythmbox Music Player</_description><!-- defaults to ID -->
+    <webpage>http://www.rhythmbox.org/</webpage>
     <maintainers>
 	<maintainer><name>James Livingston</name>
 		    <email>jrl@ids.org.au</email>
 		    <irc-nickname>doctau</irc-nickname>
 		    </maintainer>
     </maintainers>
+  </module>
+
+
+
+  <!-- example of non-GNOME-hosted module -->
+  <module id="xkeyboard-config">
+    <_description>XKeyboard-Config</_description><!-- defaults to ID -->
+    <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
+    <maintainers>
+	<maintainer><name>Sergey V. Udaltsov</name>
+		    <email>svu@gnome.org</email>
+		    <irc-nickname>svu</irc-nickname>
+		    <webpage>http://www.advogato.org/person/svu/</webpage></maintainer>
+	<maintainer><name>Ivan U. Pascal</name>
+		    <email>pascal@tsu.ru</email>
+		    <webpage>http://pascal.tsu.ru/</webpage></maintainer>
+    </maintainers>
+    <bugzilla>
+	<baseurl>https://bugs.freedesktop.org/</baseurl>
+        <product>xkeyboard-config</product>
+	<component>General</component>
+    </bugzilla>
+    <!-- source code access snippet -->
+    <cvs-root>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvs-root>
+    <cvs-module>xkbdesc</cvs-module><!-- defaults to ID -->
+    <cvs-web>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvs-web>
+    <!-- end of source code access snippet -->
+    <branches><!-- defaults only to HEAD -->
+	<branch tag="HEAD" >
+            <translation-domains><!-- defaults to a single "po" -->
+        	<domain>
+        	    <directory>po</directory>
+        	    <_description>Layout Descriptions</_description>
+                </domain>
+            </translation-domains>
+	</branch>
+    </branches>
   </module>
 
 
