@@ -26,6 +26,7 @@ import defaults
 
 from database import *
 import modules
+import teams
 
 import os, sys
 
@@ -92,48 +93,49 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
         here['statistics'] = []
         langres = teams.TranslationLanguages()
 
-        for mylang in langres:
-            statres = Statistics.select(AND(Statistics.q.Module == module["id"],
-                                            Statistics.q.Domain == trdomain,
-                                            Statistics.q.Branch == branch,
-                                            Statistics.q.Language == mylang,
-                                            Statistics.q.Type == type),
-                                        orderBy="-date")
+        allstats = Statistics.select(AND(Statistics.q.Module == module["id"],
+                                         Statistics.q.Domain == trdomain,
+                                         Statistics.q.Branch == branch,
+                                         Statistics.q.Type == type),
+                                     orderBy="-translated")
+        for po in allstats:
+            mylang = po.Language
+            if not mylang: continue
+            if langres.has_key(mylang):
+                langname = langres[mylang]
+            else:
+                langname = ""
 
-            if statres.count():
-                po = statres[0]
+            new = {
+                'code' : mylang,
+                'translated' : po.Translated,
+                'fuzzy' : po.Fuzzy,
+                'untranslated' : po.Untranslated,
+                'language_name' : langname,
+                'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S"),
+                }
+            if here['pot_size']:
+                new['percentages'] = { 'translated' : 100*po.Translated/here['pot_size'],
+                                       'untranslated' : 100*po.Untranslated/here['pot_size'], }
+                new['percentages']['fuzzy'] = 100 - new['percentages']['translated'] - new['percentages']['untranslated']
+                new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
 
-                
-                new = {
-                    'code' : mylang,
-                    'translated' : po.Translated,
-                    'fuzzy' : po.Fuzzy,
-                    'untranslated' : po.Untranslated,
-                    'language_name' : langres[mylang],
-                    'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S"),
-                    }
-                if here['pot_size']:
-                    new['percentages'] = { 'translated' : 100*po.Translated/here['pot_size'],
-                                           'untranslated' : 100*po.Untranslated/here['pot_size'], }
-                    new['percentages']['fuzzy'] = 100 - new['percentages']['translated'] - new['percentages']['untranslated']
-                    new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
-
-                new['po_error'] = ''
-                new['po_messages'] = []
-                for msg in po.Messages:
-                    new['po_messages'].append({'type': msg.Type, 'content': msg.Description})
-                    if msg.Type=='error':
-                        new['po_error'] = 'error'
-                        new['po_error_message'] = msg.Description
-                    elif msg.Type=='warn' and new['po_error'] != 'error':
-                        new['po_error'] = 'warn'
-                        new['po_error_message'] = msg.Description
-                    elif msg.Type=='info' and not new['po_error']:
-                        new['po_error'] = 'info'
-                        new['po_error_message'] = msg.Description
+            new['po_error'] = ''
+            new['po_messages'] = []
+            for msg in po.Messages:
+                new['po_messages'].append({'type': msg.Type, 'content': msg.Description})
+                if msg.Type=='error':
+                    new['po_error'] = 'error'
+                    new['po_error_message'] = msg.Description
+                elif msg.Type=='warn' and new['po_error'] != 'error':
+                    new['po_error'] = 'warn'
+                    new['po_error_message'] = msg.Description
+                elif msg.Type=='info' and not new['po_error']:
+                    new['po_error'] = 'info'
+                    new['po_error_message'] = msg.Description
 
 
-                here['statistics'].append(new)
+            here['statistics'].append(new)
 
     else:
         # Can't find database entries for this branch, unset it
@@ -143,38 +145,43 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 def compare_stats(a, b):
     return cmp(float(b['supportedness']), float(a['supportedness']))
 
-moduleid = os.getenv("PATH_INFO")[1:]
-allmodules = modules.XmlModules()
-if moduleid in allmodules:
-    module = allmodules[moduleid]
+def go_go():
 
-    for branch in module["cvsbranches"]:
-        trdomains = module["cvsbranches"][branch]['translation_domains'].keys()
-        documents = module["cvsbranches"][branch]['documents'].keys()
-        for trdomain in trdomains:
-            here = module["cvsbranches"][branch]['translation_domains'][trdomain]
-            here['statistics'] = []
-            get_stats_for(here, module, trdomain, branch, 'ui')
-            here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
-            
-            if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
-                del module["cvsbranches"][branch]["translation_domains"][trdomain]
+    moduleid = os.getenv("PATH_INFO")[1:]
+    allmodules = modules.XmlModules()
+    if moduleid in allmodules:
+        module = allmodules[moduleid]
 
-        for document in documents:
-            here = module["cvsbranches"][branch]['documents'][document]
-            here['statistics'] = []
-            get_stats_for(here, module, document, branch, 'doc')
-            here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+        for branch in module["cvsbranches"]:
+            trdomains = module["cvsbranches"][branch]['translation_domains'].keys()
+            documents = module["cvsbranches"][branch]['documents'].keys()
+            for trdomain in trdomains:
+                here = module["cvsbranches"][branch]['translation_domains'][trdomain]
+                here['statistics'] = []
+                get_stats_for(here, module, trdomain, branch, 'ui')
+                #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
-            if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
-                del module["cvsbranches"][branch]["documents"][document]
+                if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
+                    del module["cvsbranches"][branch]["translation_domains"][trdomain]
 
-    html = Template(file="templates/module.tmpl")
-    html.webroot = defaults.webroot
-    html.module = module
-    print html
-    print TemplateInspector(html)
-    
+            for document in documents:
+                here = module["cvsbranches"][branch]['documents'][document]
+                here['statistics'] = []
+                get_stats_for(here, module, document, branch, 'doc')
+                #here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
+
+                if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
+                    del module["cvsbranches"][branch]["documents"][document]
+
+        html = Template(file="templates/module.tmpl")
+        html.webroot = defaults.webroot
+        html.module = module
+        print html
+        #print TemplateInspector(html)
+
+import profile
+
+profile.run('go_go()', 'profile2-data')
 
 # form = cgi.FieldStorage()
 

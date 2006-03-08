@@ -49,6 +49,7 @@ potdir = u"/tmp/gnome-stats/POT/"
 webroot = '/~danilo/damned-lies'
 
 database_connection = 'sqlite:' + scratchdir + '/database.db'
+database_connection = 'mysql://damned:lozinka@localhost/damned_lies'
 
 DEBUG = 0
 

@@ -28,7 +28,19 @@ class Statistics(SQLObject):
 
     Messages = MultipleJoin('Information')
 
-class ArchivedStatistics(Statistics):
+class ArchivedStatistics(SQLObject):
+    _cacheValue = False
+
+    Module = UnicodeCol()
+    Type = EnumCol(enumValues=['doc', 'ui']) # whether this is about a document or UI translation
+    Domain = UnicodeCol()
+    Branch = UnicodeCol()
+    Language = StringCol() #ForeignKey('Language', notNone=False)
+    Date = DateTimeCol(default=datetime.datetime.now)
+    Translated = IntCol(default=0)
+    Fuzzy = IntCol(default=0)
+    Untranslated = IntCol(default=0)
+
     Messages = MultipleJoin('ArchivedInformation')
 
 
@@ -40,8 +52,12 @@ class Information(SQLObject):
     Description = UnicodeCol()
 
 
-class ArchivedInformation(Information):
+class ArchivedInformation(SQLObject):
+    _cacheValue = False
+
     Statistics = ForeignKey('ArchivedStatistics', notNone=True)
+    Type = EnumCol(enumValues=['info', 'warn', 'error']) # priority of a stats message
+    Description = UnicodeCol()
 
 def init():
     Statistics.createTable(ifNotExists = True)

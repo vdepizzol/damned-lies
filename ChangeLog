@@ -1,3 +1,11 @@
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
+	* defaults.py (database_connection): switch to MySQL.
+
+	* database.py (ArchivedStatistics, ArchivedInformation): 
+	copy&paste from Statistics, Information tables (MySQL can't 
+	handle redefinitions of column names.
+
 2006-03-07  Danilo Šegan  <danilo@gnome.org>
 
 	* view-module.py (get_stats_for): 

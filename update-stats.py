@@ -182,7 +182,7 @@ might be worth investigating.
 
         for lang in postats:
             langs = teams.TranslationLanguages()
-            if lang and not langs.has_key(lang):
+            if not lang or not langs.has_key(lang):
                 postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
 
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
@@ -479,6 +479,7 @@ might be worth investigating.
 
         postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime)
 
+        langs = teams.TranslationLanguages()
         for lang in postats:
             if lang and not langs.has_key(lang):
                 postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
