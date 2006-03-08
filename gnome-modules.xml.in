@@ -6,6 +6,19 @@
 -->
 <gnome-modules>
 
+  <module id="deskbar-applet">
+    <description>Deskbar Applet</description>
+    <webpage>http://raphael.slinckx.net/deskbar/</webpage>
+    <maintainers>
+	<maintainer><name>Raphaël Slinckx</name>
+		    <email>raphael@slinckx.net</email>
+		    <hackergotchi>http://planet.gnome.org/heads/kikidonk.png</hackergotchi>
+		    <irc-nickname>kikidonk</irc-nickname>
+		    <webpage>http://raphael.slinckx.net/</webpage>
+		    </maintainer>
+    </maintainers>
+  </module>
+
   <module id="epiphany-full">
     <_description>Epiphany Web Browser</_description><!-- defaults to ID -->
     <webpage>http://gnome.org/projects/epiphany/</webpage>
@@ -79,6 +92,26 @@
     <branches>
         <branch tag="gnome-2-12" regenerate="0" />
         <branch tag="HEAD" />
+    </branches>
+  </module>
+
+  <module id="glib">
+    <description>GLib</description>
+    <webpage>http://gtk.org/</webpage>
+    <maintainers>
+	<maintainer><name>Matthias Clasen</name>
+		    <email>mclasen@redhat.com</email>
+		    <irc-nickname>mclasen</irc-nickname>
+		    </maintainer>
+	<maintainer><name>Owen Taylor</name>
+		    <email>otaylor@redhat.com</email>
+		    <webpage>http://people.redhat.com/otaylor/</webpage>
+		    <hackergotchi>http://planet.gnome.org/heads/owen3.png</hackergotchi>
+		    <irc-nickname>otaylor</irc-nickname></maintainer>
+    </maintainers>
+    <branches>
+        <branch tag="HEAD" />
+        <branch tag="glib-2-10" stringfrozen="1" />
     </branches>
   </module>
 

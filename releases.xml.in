@@ -1,49 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <releases>
 
 <release id="gnome-2.14">
   <_description>Gnome 2.14</_description>
+  <category id="external">
+    <_description>External Dependencies</_description>
+    <module id="xkeyboard-config" branch="HEAD"/>
+  </category>
+
   <category id="platform">
     <_description>Development Platform</_description>
-    <module id="gtk+" branch="gtk-2-8" />
-    <!--<module id="glib" branch="glib-2-10" />-->
+    <module id="gtk+" branch="gtk-2-8"/>
+    <module id="glib" branch="glib-2-10"/>
   </category>
+
   <category id="desktop">
     <_description>Desktop Applications</_description>
-    <module id="epiphany" />
-    <module id="epiphany-full" />
+    <module id="epiphany"/>
+    <module id="deskbar-applet"/>
   </category>
-  <!--<category id="admin">
+  
+  <category id="admin">
     <_description>System Administration Applications</_description>
-    <module id="sabayon" />
-    <module id="pesselus" />
-  </category>-->
+    <module id="sabayon"/>
+    <module id="pesselus"/>
+  </category>
 </release>
 
-<release id="gnome-2.16">
+<release id="gnome-2.12">
   <_description>Gnome 2.15 development version</_description>
   <category id="platform">
     <_description>Development Platform</_description>
-    <module id="gtk+" />
-    <module id="glib" />
+    <module id="gtk+" branch="gtk-2-8" />
+    <module id="glib" branch="glib-2-8" />
   </category>
   <category id="desktop">
     <_description>Desktop Applications</_description>
-    <module id="epiphany" />
-    <module id="evolution" />
-  </category>
-  <category id="admin">
-    <_description>System Administration Applications</_description>
-    <module id="sabayon" />
-    <module id="pesselus" />
+    <module id="epiphany" branch="gnome-2-12" />
   </category>
 </release>
 
 <release id="gnome-office">
   <_description>Gnome-Office Productivity Applications</_description>
-  <module id="abiword" />
-  <module id="criawips" />
-  <module id="dia" />
-  <module id="gnumeric" />
+  <module id="abiword"/>
+  <module id="criawips"/>
+  <module id="dia"/>
+  <module id="gnumeric"/>
+</release>
+
+<release id="gnome-extras">
+  <_description>Extra Gnome Applications</_description>
+  <module id="rhythmbox"/>
 </release>
 
 
