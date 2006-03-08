@@ -17,6 +17,7 @@ RewriteRule ^module/(.*)$      	     view-module.py/$1
 RewriteRule ^module$           	     view-module.py
 
 RewriteRule !^teams\.py.*$     -   [C]
-RewriteRule ^teams/(.*)$      	     teams.py/$1
-RewriteRule ^teams$           	     teams.py
-
+RewriteRule ^teams/(.*)$      	     teams.py/teams/$1
+RewriteRule ^teams$           	     teams.py/teams/
+RewriteRule ^languages/(.*)$         teams.py/languages/$1
+RewriteRule ^languages$              teams.py/languages/

@@ -9,7 +9,7 @@ import os
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
-    def __init__(self, teamsfile="translation-teams.xml", only_team=None):
+    def __init__(self, teamsfile="translation-teams.xml", only_team=None, only_language=None):
         result = []
         
         dom = xml.dom.minidom.parse(teamsfile)
@@ -46,9 +46,16 @@ class TranslationTeams:
             entry['coordinator'] = self.getCoordinator(team)
             entry['bugzilla'] = self.getBugzillaDetails(team, teamid, firstlanguage, defaults.bugzilla)
             entry['description'] = self.getElementText(team, 'description', "%s Translation Team" % (firstlanguage))
+
+            if only_language and only_language in languages.keys():
+                self.data = [ entry ]
+                return
             result.append(entry)
 
-        self.data = result
+        if only_language:
+            self.data = []
+        else:
+            self.data = result
 
     def getFirstSubnode(self, node, subnode):
         if not node.hasChildNodes():
@@ -188,38 +195,103 @@ def compare_teams(a, b):
     else:
         return res
 
+
 if __name__=="__main__":
-    import cgi
+    import cgi, re
     import cgitb; cgitb.enable()
     from Cheetah.Template import Template
 
-    print "Content-type: text/html; charset=UTF-8\n"
+    print "Content-type: text/html; charset=UTF-8"
 
-    teamid = os.getenv("PATH_INFO")[1:]
-    if teamid:
-        myteam = TranslationTeams(only_team=teamid)
-        if len(myteam) and myteam[0]['id'] == teamid:
-            html = Template(file="templates/team.tmpl")
-            team = myteam[0]
+    request = os.getenv("PATH_INFO")[1:]
+    test = re.match("([^/]+)(/(.+)/?)?", request)
+    if not test:
+        utils.not_found_404()
+    
+    page = test.groups()[0]
+    subrequest = test.groups()[2]
 
-            for lang, ldata in team['languages'].items():
-                team['languages'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+    teamid = langid = release = None
 
+    if page == "teams":
+        teamid = subrequest
+        print ""
+
+        if teamid:
+            myteam = TranslationTeams(only_team=teamid)
+            if len(myteam) and myteam[0]['id'] == teamid:
+                html = Template(file="templates/team.tmpl")
+                team = myteam[0]
+
+                for lang, ldata in team['languages'].items():
+                    team['languages'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+
+                html.webroot = defaults.webroot
+                html.team = team
+
+                print html
+                print utils.TemplateInspector(html)
+        else:
+            t = TranslationTeams()
+            teams = t.data
+            teams.sort(compare_teams)
+
+            html = Template(file="templates/list-teams.tmpl")
             html.webroot = defaults.webroot
-            html.team = team
-            
+            html.teams = teams
             print html
             print utils.TemplateInspector(html)
-    else:
-        t = TranslationTeams()
-        teams = t.data
-        teams.sort(compare_teams)
 
-        html = Template(file="templates/list-teams.tmpl")
-        html.webroot = defaults.webroot
-        html.teams = teams
-        print html
-        print utils.TemplateInspector(html)
+    elif page == "languages":
+        print ""
+
+        test = re.match("([^/]+)(/(.+)/?)?", subrequest)
+        if not test:
+            # List all languages (FIXME)
+            utils.not_found_404()
+
+#             t = TranslationTeams()
+#             teams = t.data
+#             teams.sort(compare_teams)
+
+#             html = Template(file="templates/list-teams.tmpl")
+#             html.webroot = defaults.webroot
+#             html.teams = teams
+#             print html
+#             print utils.TemplateInspector(html)
+
+        else:
+            langid = test.groups()[0]
+            release = test.groups()[2]
+
+            #print "page: %s<br/>langid: %s<br/>release: %s<br/>" % (page, langid, release)
+            myteam = TranslationTeams(only_language=langid)
+            if len(myteam) and myteam[0]['id']:
+                team = myteam[0]
+                teamid = team['id']
+
+                for lang, ldata in team['languages'].items():
+                    if lang != langid:
+                        del team['languages'][lang]
+
+                if release:
+                    html = Template(file="templates/language-release.tmpl")
+                    html.language = langid
+                    html.language_name = team['languages'][langid]['name']
+                    html.release = releases.Releases(deep=1, only_release = release, gather_stats = langid).data[0]
+                    
+                else:
+                    html = Template(file="templates/team.tmpl")
+                    team['languages'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
+                    
+
+                html.webroot = defaults.webroot
+                html.team = team
+
+                print html
+                print utils.TemplateInspector(html)
+            else:
+                print "Error: Can't find translation team for '%s'." % langid
 
     #import pprint
     #pprint.pprint(TranslationLanguages())

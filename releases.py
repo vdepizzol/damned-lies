@@ -69,30 +69,72 @@ class Releases:
 
                     retmodules[modid]['statistics'] = { 'ui_size' : 0, 'ui_translated' : 0, 'ui_fuzzy' : 0, 'ui_untranslated' : 0,
                                                         'doc_size' : 0, 'doc_translated' : 0, 'doc_fuzzy' : 0, 'doc_untranslated' : 0 }
+                    
+                    retmodules[modid]['translation_domains'] = {}
+                    retmodules[modid]['documents'] = {}
 
+                    mytr = myfz = myun = mypot = 0
                     for trdomain in trdomains:
                         (tr, fz, un) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
                         totaltr += tr; totalfz += fz; totalun += un
+                        mytr += tr; myfz += fz; myun += un
 
                         (ig1, ig2, pot_size) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
                         pot += pot_size
+                        mypot += pot_size
 
-                        retmodules[modid]['statistics']['ui_size'] += pot_size
-                        retmodules[modid]['statistics']['ui_translated'] += tr;
-                        retmodules[modid]['statistics']['ui_fuzzy'] += fz;
-                        retmodules[modid]['statistics']['ui_untranslated'] += un;
+                        retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
+                                                                               'fuzzy' : fz,
+                                                                               'untranslated' : pot_size-tr-fz,
+                                                                               'pot_size' : pot_size,
+                                                                               'potbase' : trdomains[trdomain]['potbase'],
+                                                                               'description' : trdomains[trdomain]['description'],
+                                                                               }
+                    if mypot:
+                        myun = mypot - mytr - myfz; ui_supp = "%.0f" % (100.0*mytr/mypot)
+                        ui_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
+                    else:
+                        myun = mypot; ui_supp = "0"
+                        ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
 
+                    retmodules[modid]['statistics']['ui_size'] = mypot
+                    retmodules[modid]['statistics']['ui_translated'] = mytr
+                    retmodules[modid]['statistics']['ui_fuzzy'] = myfz
+                    retmodules[modid]['statistics']['ui_untranslated'] = myun
+                    retmodules[modid]['statistics']['ui_percentages'] = ui_percentages
+                    retmodules[modid]['statistics']['ui_supportedness'] = ui_supp
+
+                    mytr = myfz = myun = mypot = 0
                     for document in documents:
                         (tr, fz, un) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
                         dtotaltr += tr; dtotalfz += fz; dtotalun += un
+                        mytr += tr; myfz += fz; myun += un
 
                         (ig1, ig2, pot_size) = self.get_stats_for_module(modid, document, branch, None, 'doc')
                         dpot += pot_size
+                        mypot += pot_size
 
-                        retmodules[modid]['statistics']['doc_size'] += pot_size
-                        retmodules[modid]['statistics']['doc_translated'] += tr;
-                        retmodules[modid]['statistics']['doc_fuzzy'] += fz;
-                        retmodules[modid]['statistics']['doc_untranslated'] += un;
+                        retmodules[modid]['documents'][document] = { 'translated' : tr,
+                                                                     'fuzzy' : fz,
+                                                                     'untranslated' : pot_size-tr-fz,
+                                                                     'pot_size' : pot_size,
+                                                                     'potbase' : documents[document]['potbase'],
+                                                                     'description' : documents[document]['description'],
+                                                                     }
+                    if mypot:
+                        myun = mypot - mytr - myfz; doc_supp = "%.0f" % (100.0*mytr/mypot)
+                        doc_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
+                    else:
+                        myun = mypot; doc_supp = "0"
+                        doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+
+                    retmodules[modid]['statistics']['doc_size'] = mypot
+                    retmodules[modid]['statistics']['doc_translated'] = mytr
+                    retmodules[modid]['statistics']['doc_fuzzy'] = myfz
+                    retmodules[modid]['statistics']['doc_untranslated'] = myun
+                    retmodules[modid]['statistics']['doc_percentages'] = doc_percentages
+                    retmodules[modid]['statistics']['doc_supportedness'] = doc_supp
+
 
         return (pot, totaltr, totalfz, totalun, dpot, dtotaltr, dtotalfz, dtotalun, retmodules)
 
@@ -129,6 +171,35 @@ class Releases:
                         'description': self.getElementText(cat, 'description'),
                         'modules': catMods,
                         }
+
+                    if pot:
+                        un = pot - tr - fz; ui_supp = "%.0f" % (100.0*tr/pot)
+                        ui_percentages = { 'translated': 100*tr/pot, 'fuzzy': 100*fz/pot, 'untranslated': 100*un/pot }
+                    else:
+                        un = pot; ui_supp = "0"
+                        ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+
+                    if dpot:
+                        dun = dpot - dtr - dfz; doc_supp = "%.0f" % (100.0*dtr/dpot)
+                        doc_percentages = { 'translated': 100*dtr/dpot, 'fuzzy': 100*dfz/dpot, 'untranslated': 100*dun/dpot }
+                    else:
+                        dun = pot; doc_supp = "0"
+                        doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+                    myCat['statistics'] = {
+                        'ui_size' : pot,
+                        'ui_translated' : tr,
+                        'ui_fuzzy' : fz,
+                        'ui_untranslated' : un,
+                        'ui_supportedness' : ui_supp,
+                        'ui_percentages': ui_percentages,
+                        'doc_size' : dpot,
+                        'doc_translated' : dtr,
+                        'doc_fuzzy' : dfz,
+                        'doc_untranslated' : dun,
+                        'doc_supportedness' : doc_supp,
+                        'doc_percentages': doc_percentages,
+                        }
+
                     categories.append(myCat)
 
             if ui_size:

@@ -1,5 +1,28 @@
 2006-03-08  Danilo Šegan  <danilo@gnome.org>
 
+	* data/main.css: Clean-ups.
+	* utils.py (not_found_404): Added.
+	* teams.py (TranslationTeams): introduce only_language parameter.
+
+	* releases.py (Releases.list_modules): More stats.
+
+	* templates/language-release-doc-stats.tmpl: 
+	* templates/language-release-doc-stats-modules.tmpl: 
+	* templates/language-release-ui-stats.tmpl: 
+	* templates/language-release-ui-stats-modules.tmpl: 
+	Added.
+	
+	* templates/language-release.tmpl: Include above templates.
+
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
+	* gnome-modules.xml.in: Edit gtk+ entry.
+
+	* releases.py (Releases.list_modules): 
+	Add stats for each module/category if needed.
+
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
 	* releases.py (Releases.list_modules): 
 	Don't gather stats if module is not available.
 

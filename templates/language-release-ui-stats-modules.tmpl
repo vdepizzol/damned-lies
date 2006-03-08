@@ -1,0 +1,45 @@
+
+   #for moduleid, module in $modules.items()
+   #if $module.has_key('statistics') and $module.statistics.ui_size!=0
+
+    #if len($module.translation_domains.keys()) > 1
+    <tr>
+      <td class="left"><a href="${webroot}/module/${moduleid}" style="font-style: italic;">${module.description}</a></td>
+      <td>${module.statistics.ui_supportedness}%&nbsp;<!--
+	-->($module.statistics.ui_translated/$module.statistics.ui_fuzzy/$module.statistics.ui_untranslated)</td>
+      <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
+          <div class="translated" style="width: ${module.statistics.ui_percentages.translated}px;"></div>
+          <div class="fuzzy" style="left:${module.statistics.ui_percentages.translated}px; width:${module.statistics.ui_percentages.fuzzy}px;"></div>
+          #set upos=$module.statistics.ui_percentages.translated + $module.statistics.ui_percentages.fuzzy
+          <div class="untranslated" style="left:${upos}px; width: ${module.statistics.ui_percentages.untranslated}px;"></div>
+         </div>
+       </td>
+    </tr>
+    #end if
+
+    #for domaindir, domain in $module.translation_domains.items()
+     #if $domain.pot_size==$domain.untranslated
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+".pot"
+     #else
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+"."+$language+".po"
+     #end if
+
+     <tr>
+      #if len($module.translation_domains.keys()) > 1
+       <td class="left" style="padding-left:2em;"><a href="$POFILE">${domain.description}</a></td>
+      #else
+       <td class="left"><a href="$POFILE">${module.description}</a></td>
+      #end if
+       <td>($domain.translated/$domain.fuzzy/$domain.untranslated)</td>
+       <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
+           <div class="translated" style="width: ${module.statistics.ui_percentages.translated}px;"></div>
+           <div class="fuzzy" style="left:${module.statistics.ui_percentages.translated}px; width:${module.statistics.ui_percentages.fuzzy}px;"></div>
+           #set upos=$module.statistics.ui_percentages.translated + $module.statistics.ui_percentages.fuzzy
+           <div class="untranslated" style="left:${upos}px; width: ${module.statistics.ui_percentages.untranslated}px;"></div>
+          </div>
+        </td>
+     </tr>
+    #end for
+   #end if
+ 
+   #end for

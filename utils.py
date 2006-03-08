@@ -37,3 +37,13 @@ def TemplateInspector(template):
 </SCRIPT>"""
 
     return output
+
+
+def not_found_404():
+    import sys
+    print "Content-Type: text/html"
+    print "Status: 404 Not found\n"
+    print "Can't tell what you want from me! :("
+    sys.exit(1)
+
+    
