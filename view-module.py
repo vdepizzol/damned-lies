@@ -182,7 +182,15 @@ def go_go():
         html.webroot = defaults.webroot
         html.module = module
         print html
-        #print TemplateInspector(html)
+        print TemplateInspector(html)
+    else:
+        # List all modules
+        html = Template(file="templates/list-modules.tmpl")
+        html.webroot = defaults.webroot
+        html.modules = allmodules
+        print html
+        print TemplateInspector(html)
+        
 
 import profile
 
