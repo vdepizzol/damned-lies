@@ -1,5 +1,10 @@
 2006-03-08  Danilo Šegan  <danilo@gnome.org>
 
+	* releases.py (Releases.list_modules): 
+	Don't gather stats if module is not available.
+
+2006-03-08  Danilo Šegan  <danilo@gnome.org>
+
 	* releases.py:
 	* teams.py: 
 	* templates/team.tmpl: 
