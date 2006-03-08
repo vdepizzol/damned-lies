@@ -1,0 +1,83 @@
+<html>
+<head><title>${team.firstlanguage} GNOME Translation Team</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+<h1>${team.firstlanguage} GNOME Translation Team</h1>
+
+<table><tr><td valign="top" width="50%">
+  <h2>Details</h2>
+
+  #if $team.webpage
+  <strong>Team Work Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
+  #end if
+  
+  #if $team.userpage
+  <strong>Page for ${team.firstlanguage} GNOME Users:</strong> <a href="$team.userpage">$team.userpage</a><br />
+  #end if
+
+  #if $team.bugzilla
+  <br/><strong>Bugzilla:</strong>
+  <ul>
+    <li><a href="${team.bugzilla.baseurl}enter_bug.cgi?product=$team.bugzilla.product&component=$team.bugzilla.component">Report Bug in Translation</a></li>
+    <li><a href="${team.bugzilla.baseurl}buglists.cgi?product=$team.bugzilla.product&component=$team.bugzilla.component">Show Existing Bugs</a></li>
+  </ul>
+  #end if
+  
+
+  #if $team.mailing_list
+  <br/><strong>Mailing List:</strong>
+  <ul>
+    <li><a href="${team.mailing_list.mail_to}">Send e-mail to the list</a></li>
+    <li><a href="${team.mailing_list.subscribe}">Subscribe</a></li>
+  </ul>
+  #end if
+  
+  
+
+
+</td><td valign="top">
+#if $team.has_key('coordinator')
+  <h2>Coordinator</h2>
+  #if $team.coordinator.hackergotchi
+  <div class="maintainer" style="background-image:url('$team.coordinator.hackergotchi');">
+  #else
+  <div class="maintainer">
+  #end if
+  <a style="font-size: 140%;" href="mailto:$team.coordinator.email">$team.coordinator.name</a><br />
+  #if $team.coordinator.webpage
+  <a href="$team.coordinator.webpage">$team.coordinator.webpage</a><br />
+  #end if
+
+  <br />
+  #if len($team.coordinator.im) or $team.coordinator.irc_nickname
+  <strong>Instant messaging:</strong>
+  <ul>
+  #if $team.coordinator.irc_nickname
+    <li><em>$team.coordinator.irc_nickname</em> (IRC)</li>
+  #end if
+  #for (type, account) in $team.coordinator.im
+    <li><em>$account</em> ($type)</li>
+  #end for
+  </ul>
+  #end if
+
+  #if $team.coordinator.bugzilla_account
+  <strong>Bugzilla account:</strong> $team.coordinator.bugzilla_account<br />
+  #end if
+  #if $team.coordinator.cvs_account
+  <strong>CVS account:</strong> $team.coordinator.cvs_account<br />
+  #end if
+
+  </div>
+#end if
+</td></tr></table>
+
+</div>
+</center>
+</body>
+</html>
