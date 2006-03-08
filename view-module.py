@@ -92,6 +92,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
         here['statistics'] = []
         langres = teams.TranslationLanguages()
+        #langres = {}
 
         allstats = Statistics.select(AND(Statistics.q.Module == module["id"],
                                          Statistics.q.Domain == trdomain,
@@ -181,7 +182,8 @@ def go_go():
 
 import profile
 
-profile.run('go_go()', 'profile2-data')
+go_go()
+#profile.run('go_go()', 'profile2-data')
 
 # form = cgi.FieldStorage()
 
