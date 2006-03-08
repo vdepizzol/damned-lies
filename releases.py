@@ -4,37 +4,106 @@ import xml.dom.minidom
 import defaults
 import utils
 import modules
+from database import *
 
 import os
 
 class Releases:
     """Reads in and returns list of releases, or data for only a single release."""
 
-    def list_modules(self, topnode):
+
+    def get_stats_for_module(self, module, domain, branch, language, type):
+        if language:
+            stats = Statistics.select(AND(Statistics.q.Module == module,
+                                          Statistics.q.Domain == domain,
+                                          Statistics.q.Branch == branch,
+                                          Statistics.q.Language == language,
+                                          Statistics.q.Type == type),
+                                      orderBy="-date")
+        else:
+            stats = Statistics.select(AND(Statistics.q.Module == module,
+                                          Statistics.q.Domain == domain,
+                                          Statistics.q.Branch == branch,
+                                          Statistics.q.Language == None,
+                                          Statistics.q.Type == type),
+                                      orderBy="-date")
+            
+        if stats and stats.count():
+            tr = stats[0].Translated
+            fz = stats[0].Fuzzy
+            un = stats[0].Untranslated
+
+            return (tr,fz,un)
+        else:
+            return (0,0,0)
+
+    def list_modules(self, topnode, gather_stats = None):
+        """Goes through all modules and gathers stats for language gather_stats.
+
+        gather_stats is "None" for no regeneration and
+        language code for specific language."""
         # read modules
         retmodules = {}
+        pot = totaltr = totalfz = totalun = 0
+        dpot = dtotaltr = dtotalfz = dtotalun = 0
+        
         mods = self.getDirectSubnodes(topnode, "module")
         for mod in mods:
             modid = mod.getAttribute('id')
+            branch = mod.getAttribute("branch")
+            if not branch:
+                branch = "HEAD"
             retmodules[modid] = {
                 'id' : modid,
-                'branch': self.getElementAttribute(mod, "branch", "HEAD"),
+                'branch': branch,
                 }
+            
             if modid in self.myModules.keys():
                 myMod = self.myModules[modid]
                 retmodules[modid]['description'] = myMod['description']
                 retmodules[modid]['maintainers'] = myMod['maintainers']
-                #retmodules[modid]['pot_messages'] = myMod['pot_messages']
-        return retmodules
 
-    def __init__(self, releasesfile="releases.xml", only_release=None, deep=1):
+                if gather_stats:
+                    trdomains = myMod['cvsbranches'][branch]['translation_domains']
+                    documents = myMod['cvsbranches'][branch]['documents']
+
+                    retmodules[modid]['statistics'] = { 'ui_size' : 0, 'ui_translated' : 0, 'ui_fuzzy' : 0, 'ui_untranslated' : 0,
+                                                        'doc_size' : 0, 'doc_translated' : 0, 'doc_fuzzy' : 0, 'doc_untranslated' : 0 }
+
+                    for trdomain in trdomains:
+                        (tr, fz, un) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
+                        totaltr += tr; totalfz += fz; totalun += un
+
+                        (ig1, ig2, pot_size) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
+                        pot += pot_size
+
+                        retmodules[modid]['statistics']['ui_size'] += pot_size
+                        retmodules[modid]['statistics']['ui_translated'] += tr;
+                        retmodules[modid]['statistics']['ui_fuzzy'] += fz;
+                        retmodules[modid]['statistics']['ui_untranslated'] += un;
+
+                    for document in documents:
+                        (tr, fz, un) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
+                        dtotaltr += tr; dtotalfz += fz; dtotalun += un
+
+                        (ig1, ig2, pot_size) = self.get_stats_for_module(modid, document, branch, None, 'doc')
+                        dpot += pot_size
+
+                        retmodules[modid]['statistics']['doc_size'] += pot_size
+                        retmodules[modid]['statistics']['doc_translated'] += tr;
+                        retmodules[modid]['statistics']['doc_fuzzy'] += fz;
+                        retmodules[modid]['statistics']['doc_untranslated'] += un;
+
+        return (pot, totaltr, totalfz, totalun, dpot, dtotaltr, dtotalfz, dtotalun, retmodules)
+
+    def __init__(self, releasesfile="releases.xml", only_release=None, deep=1, gather_stats = None):
         result = []
         
         dom = xml.dom.minidom.parse(releasesfile)
 
         myModules = modules.XmlModules("gnome-modules.xml")
         self.myModules = myModules
-        
+
         releases = dom.getElementsByTagName("release")
         for release in releases:
             releaseid = release.getAttribute("id")
@@ -43,24 +112,74 @@ class Releases:
             # read modules
             categories = []
             retmodules = []
+            pot = totaltr = totalfz = totalun = 0
+            dpot = dtotaltr = dtotalfz = dtotalun = 0
+            ui_size = doc_size = 0
+            
             if deep:
-                retmodules = self.list_modules(release)
-
+                (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = self.list_modules(release, gather_stats)
                 cats = self.getDirectSubnodes(release, "category")
                 for cat in cats:
+                    (pot, tr, fz, un, dpot, dtr, dfz, dun, catMods) = self.list_modules(cat, gather_stats)
+                    ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
+                    doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
+
                     myCat = {
                         'id' : cat.getAttribute("id"),
                         'description': self.getElementText(cat, 'description'),
-                        'modules': self.list_modules(cat)
+                        'modules': catMods,
                         }
                     categories.append(myCat)
 
+            if ui_size:
+                totalun = ui_size - totaltr - totalfz
+                ui_supp = "%.0f" % (100.0*totaltr/ui_size)
+                ui_percentages = {
+                    'translated': 100*totaltr/ui_size,
+                    'fuzzy': 100*totalfz/ui_size,
+                    'untranslated': 100*totalun/ui_size,
+                    }
+            else:
+                ui_supp = "0"
+                ui_percentages = {
+                    'translated': 0,
+                    'fuzzy': 0,
+                    'untranslated': 0,
+                    }
+
+            if doc_size:
+                dtotalun = doc_size - dtotaltr - dtotalfz
+                doc_supp = "%.0f" % (100.0*dtotaltr/doc_size)
+                doc_percentages = {
+                    'translated': 100*dtotaltr/doc_size,
+                    'fuzzy': 100*dtotalfz/doc_size,
+                    'untranslated': 100*dtotalun/doc_size,
+                    }
+            else:
+                doc_supp = "0"
+                doc_percentages = {
+                    'translated': 0,
+                    'fuzzy': 0,
+                    'untranslated': 0,
+                    }
 
             entry = {
                 'id' : releaseid,
                 'description' : self.getElementText(release, 'description'),
                 'modules' : retmodules,
                 'categories' : categories,
+                'ui_size' : ui_size,
+                'ui_translated' : totaltr,
+                'ui_fuzzy' : totalfz,
+                'ui_untranslated' : totalun,
+                'ui_supportedness' : ui_supp,
+                'ui_percentages': ui_percentages,
+                'doc_size' : doc_size,
+                'doc_translated' : dtotaltr,
+                'doc_fuzzy' : dtotalfz,
+                'doc_untranslated' : dtotalun,
+                'doc_supportedness' : doc_supp,
+                'doc_percentages': doc_percentages,
                 }
             result.append(entry)
 
@@ -99,7 +218,11 @@ class Releases:
         
     def getElementAttribute(self, node, attribute, default = 0):
         if not node.hasAttribute(attribute):
-            return node.getAttribute(attribute)
+            ret = node.getAttribute(attribute)
+            if ret:
+                return ret
+            else:
+                return default
         else:
             return default
 

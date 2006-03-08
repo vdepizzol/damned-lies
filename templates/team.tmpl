@@ -77,16 +77,43 @@
 #end if
 </td></tr></table>
 
-<h2><strong style="color: red;">CYCLE THROUGH LANGUAGES AND GIVE STATS FOR EACH RELEASE SET!</strong></h2>
+#if len($team.languages)
+#for $lang, $ldata in $team.languages.items()
+<h2>$ldata.name</h2>
 
+#set releases=$ldata.releases
 #if len($releases)
-  <h2>Release Sets</h2>
-
+<table class="stats">
+<thead><tr><th>Release</th><th>Docs</th><th>Graph</th><th>UI</th><th>Graph</th></tr></thead>
 #for release in $releases
-<h3><a href="${webroot}/teams/${team.id}/${release.id}">${release.id}</a></h3>
-<p>${release.description}</p>
+<tr>
+  <td class="left" style="font-size:120%;"><a href="${webroot}/languages/$lang/${release.id}">${release.description}</a>
+  #if $release.has_key('po_error')
+    <img src="$webroot/data/${release.po_error}.png" title="${release.po_error_message}">
+  #end if
+  </td>
+  <td>${release.doc_supportedness}% ($release.doc_translated/$release.doc_fuzzy/$release.doc_untranslated)</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: ${release.doc_percentages.translated}px;"></div>
+      <div class="fuzzy" style="left:${release.doc_percentages.translated}px; width:${release.doc_percentages.fuzzy}px;"></div>
+      #set upos=$release.doc_percentages.translated + $release.doc_percentages.fuzzy
+      <div class="untranslated" style="left:${upos}px; width: ${release.doc_percentages.untranslated}px;"></div>
+     </div>
+   </td>
+  <td>${release.ui_supportedness}% ($release.ui_translated/$release.ui_fuzzy/$release.ui_untranslated)</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: ${release.ui_percentages.translated}px;"></div>
+      <div class="fuzzy" style="left:${release.ui_percentages.translated}px; width:${release.ui_percentages.fuzzy}px;"></div>
+      #set upos=$release.ui_percentages.translated + $release.ui_percentages.fuzzy
+      <div class="untranslated" style="left:${upos}px; width: ${release.ui_percentages.untranslated}px;"></div>
+     </div>
+   </td>
+</tr>
 #end for
+</table>
+#end if
 
+#end for
 #end if
 
 </div>

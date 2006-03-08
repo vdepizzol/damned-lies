@@ -3,6 +3,7 @@
 import xml.dom.minidom
 import defaults
 import utils
+import releases
 
 import os
 
@@ -199,11 +200,13 @@ if __name__=="__main__":
         myteam = TranslationTeams(only_team=teamid)
         if len(myteam) and myteam[0]['id'] == teamid:
             html = Template(file="templates/team.tmpl")
-            import releases
+            team = myteam[0]
 
-            html.releases = releases.Releases(deep=0).data
+            for lang, ldata in team['languages'].items():
+                team['languages'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+
             html.webroot = defaults.webroot
-            html.team = myteam[0]
+            html.team = team
             
             print html
             print utils.TemplateInspector(html)
