@@ -70,7 +70,7 @@
   <strong>Bugzilla account:</strong> $team.coordinator.bugzilla_account<br />
   #end if
   #if $team.coordinator.cvs_account
-  <strong>CVS account:</strong> $team.coordinator.cvs_account<br />
+  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator.cvs_account}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator.cvs_account</a><br />
   #end if
 
   </div>
