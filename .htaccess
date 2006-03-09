@@ -4,7 +4,7 @@ AcceptPathInfo On
 AddHandler cgi-script .py
 AddHandler cgi-script .cgi
 
-DirectoryIndex view-module.py
+DirectoryIndex index.html
 
 RewriteEngine On
 RewriteBase /~danilo/damned-lies/
