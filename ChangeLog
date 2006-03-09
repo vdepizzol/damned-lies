@@ -1,5 +1,17 @@
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
+	* defaults.py: Set modules_xml, releases_xml, teams_xml.
+	* modules.py: Use defaults.modules_xml.
+	* releases.py: Use defaults.modules_xml and default.releases_xml
+	* teams.py: Use defaults.teams_xml.
+
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
+	* gnome-modules.xml.in: Update gtk+ stuff.
+
+	* templates/language-release-doc-stats-modules.tmpl: 
+	* templates/language-release-ui-stats-modules.tmpl: 
+
 	* releases.py (Releases.list_modules): Add percentages for single domains.
 
 2006-03-09  Danilo Šegan  <danilo@gnome.org>

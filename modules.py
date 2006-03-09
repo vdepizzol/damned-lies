@@ -179,7 +179,7 @@ class XmlModules:
         return rc
 
     
-    def __init__(self, modfile = "gnome-modules.xml", module = None):
+    def __init__(self, modfile = defaults.modules_xml, module = None):
         self.modules = { }
         only_module = module
 
@@ -303,7 +303,7 @@ class CvsModule:
 
 
 if __name__=="__main__":
-    m = XmlModules("gnome-modules.xml")
+    m = XmlModules(defaults.modules_xml)
     for modid in m:
         #cvs = CvsModule(m[modid])
         print modid, ":\n", m[modid]

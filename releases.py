@@ -161,12 +161,12 @@ class Releases:
 
         return (pot, totaltr, totalfz, totalun, dpot, dtotaltr, dtotalfz, dtotalun, retmodules)
 
-    def __init__(self, releasesfile="releases.xml", only_release=None, deep=1, gather_stats = None):
+    def __init__(self, releasesfile=defaults.releases_xml, only_release=None, deep=1, gather_stats = None):
         result = []
         
         dom = xml.dom.minidom.parse(releasesfile)
 
-        myModules = modules.XmlModules("gnome-modules.xml")
+        myModules = modules.XmlModules(defaults.modules_xml)
         self.myModules = myModules
 
         releases = dom.getElementsByTagName("release")

@@ -57,3 +57,8 @@ fuzzy_matching = 0
 
 WHEREAREWE = 'http://i18n-status.gnome.org/'
 WHOAREWE = 'danilo@gnome.org'
+
+# Configuration files
+modules_xml = "gnome-modules.xml"
+releases_xml = "releases.xml"
+teams_xml = "translation-teams.xml"

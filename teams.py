@@ -9,7 +9,7 @@ import os
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
-    def __init__(self, teamsfile="translation-teams.xml", only_team=None, only_language=None):
+    def __init__(self, teamsfile=defaults.teams_xml, only_team=None, only_language=None):
         result = []
         
         dom = xml.dom.minidom.parse(teamsfile)
@@ -159,7 +159,7 @@ class TranslationTeams:
 
 
 
-def TranslationLanguages(teamsfile="translation-teams.xml"):
+def TranslationLanguages(teamsfile=defaults.teams_xml):
     """Reads in and returns a list of all languages any team is translating to."""
 
     def getElementContents(node):
