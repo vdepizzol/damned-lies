@@ -27,12 +27,16 @@ INSTALL:
  7. First run of DAMNED_DIR/update-stats.py (may take a long time):
     $ cd DAMNED_DIR && ./update-stats.py gnome-modules.xml
 
- 8. Test how it looks from your browser!
+ 8. Make sure:
+    - os.path.join(defaults.scratchdir, "POT") is available via defaults.webroot + "/POT" and
+    - os.path.join(defaults.scratchdir, "xml") is available via defaults.webroot + "/xml" and
+
+ 9. TEST HOW IT LOOKS FROM YOUR BROWSER!
 
 
 SINGLE MODULE UPDATE (useful for crontab+procmail setup):
 
- - All branches:
+ - All branches for a module:
    $ cd DAMNED_DIR && make && ./update-stats.py gnome-modules.xml MODULEID
 
  - A single branch:

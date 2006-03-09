@@ -64,7 +64,7 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        CVS = modules.CvsModule(module, 0)
+        CVS = modules.CvsModule(module, 1)
 
         mybranches = CVS.paths.keys()
         if onlybranch and onlybranch in mybranches:

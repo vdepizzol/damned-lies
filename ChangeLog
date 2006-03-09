@@ -1,3 +1,17 @@
+
+== Release 0.9 ==
+	
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
+	* INSTALL (INSTALL): Small update.
+
+	* Makefile (FILES): Updated.
+
+	* update-stats.py (LocStatistics.__init__): 
+	Use modules.CvsModule(module, 1) so checkouts are done.
+
+	* defaults.py (WEBDEBUG): Disable for release.
+
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
 	* HACKING: Mark below TODO item as done.

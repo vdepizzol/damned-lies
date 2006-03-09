@@ -33,7 +33,7 @@ fuzzy_matching = 0
 DEBUG = 0
 
 # Set to 1 to show all data passed to CheetahTemplates
-WEBDEBUG = 1
+WEBDEBUG = 0
 
 
 

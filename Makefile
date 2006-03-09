@@ -1,7 +1,9 @@
 VERSION=0.9
 
 FILES=\
+	.htaccess \
 	AUTHORS \
+	ChangeLog \
 	DESIGN \
 	HACKING \
 	INSTALL \
@@ -10,16 +12,17 @@ FILES=\
 	REQUIREMENTS \
 	database.py \
 	defaults.py \
+	gnome-modules.xml.in \
+	index.html \
 	modules.py \
 	potdiff.py \
 	releases.py \
+	releases.xml.in \
 	teams.py \
+	translation-teams.xml.in \
 	update-stats.py \
 	utils.py \
 	view-module.py \
-	gnome-modules.xml.in \
-	releases.xml.in \
-	translation-teams.xml.in \
 	data/cyan-bar.png \
 	data/download.png \
 	data/error.png \
@@ -37,8 +40,10 @@ FILES=\
         templates/language-release.tmpl \
         templates/list-languages.tmpl \
         templates/list-modules.tmpl \
+        templates/list-releases.tmpl \
         templates/list-teams.tmpl \
         templates/module.tmpl \
+        templates/release.tmpl \
         templates/show-stats.tmpl \
         templates/team.tmpl
 
@@ -50,7 +55,7 @@ all: gnome-modules.xml translation-teams.xml releases.xml
 
 dist: $(FILES)
 	@mkdir -p damned-lies-$(VERSION) && \
-	cp -rp $(FILES) damned-lies-$(VERSION) && \
+	for file in $(FILES); do DIR=`dirname "damned-lies-$(VERSION)/$$file"` && mkdir -p $$DIR && cp $$file "damned-lies-$(VERSION)/$$file"; done && \
 	tar cvzf damned-lies-$(VERSION).tar.gz damned-lies-$(VERSION) && \
 	rm -rf damned-lies-$(VERSION)
 
