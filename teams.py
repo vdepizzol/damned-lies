@@ -180,7 +180,7 @@ def TranslationLanguages(teamsfile="translation-teams.xml"):
         title = getElementContents(lang)
 
         if lang.hasAttribute("hidden") and int(lang.getAttribute("hidden")):
-            result[code] = ""
+            #result[code] = ""
             pass
         else:
             result[code] = title
@@ -250,17 +250,15 @@ if __name__=="__main__":
         else: test = None
         if not test:
             # List all languages (FIXME)
-            utils.not_found_404()
 
-#             t = TranslationTeams()
-#             teams = t.data
-#             teams.sort(compare_teams)
+            t = TranslationLanguages()
+            #t.sort()
 
-#             html = Template(file="templates/list-teams.tmpl")
-#             html.webroot = defaults.webroot
-#             html.teams = teams
-#             print html
-#             print utils.TemplateInspector(html)
+            html = Template(file="templates/list-languages.tmpl")
+            html.webroot = defaults.webroot
+            html.languages = t
+            print html
+            print utils.TemplateInspector(html)
 
         else:
             langid = test.groups()[0]
