@@ -1,0 +1,34 @@
+<html>
+<head><title>Gnome Languages</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+<h1>Gnome Languages</h1>
+
+#if len($languages)
+<p>Gnome is being translated to following languages:</p>
+
+<ul>
+#for lang in $languages
+<li style="font-size: 120%;">
+  #if $lang.name
+  <a href="${webroot}/languages/${lang.code}">${lang.name}</a>
+  #else
+  <a href="${webroot}/languages/${lang.code}">${lang.code}</a>
+  #end if
+</li>
+#end for
+</ul>
+#else
+<p>Gnome is currently not being translated to any language. :(</p>
+#end if
+
+
+</div>
+</center>
+</body>
+</html>
