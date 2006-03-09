@@ -23,11 +23,19 @@ class LocStatistics:
                                                 Translated = translated,
                                                 Fuzzy = fuzzy,
                                                 Untranslated = untranslated)
-        old = database.Statistics.selectBy(Module = module,
-                                           Branch = branch,
-                                           Type = type,
-                                           Domain = domain,
-                                           Language = language)
+        if language:
+            old = database.Statistics.selectBy(Module = module,
+                                               Branch = branch,
+                                               Type = type,
+                                               Domain = domain,
+                                               Language = language)
+        else:
+            old = database.Statistics.select(database.AND(database.Statistics.q.Module == module,
+                                                          database.Statistics.q.Domain == domain,
+                                                          database.Statistics.q.Branch == branch,
+                                                          database.Statistics.q.Language == None,
+                                                          database.Statistics.q.Type == type))
+
         for oldS in old:
             for msg in oldS.Messages:
                 database.Information.delete(msg.id)

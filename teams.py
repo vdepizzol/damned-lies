@@ -159,7 +159,7 @@ class TranslationTeams:
 
 
 
-def TranslationLanguages(teamsfile=defaults.teams_xml):
+def TranslationLanguages(teamsfile=defaults.teams_xml, show_hidden=0):
     """Reads in and returns a list of all languages any team is translating to."""
 
     def getElementContents(node):
@@ -179,7 +179,7 @@ def TranslationLanguages(teamsfile=defaults.teams_xml):
         code = lang.getAttribute("code")
         title = getElementContents(lang)
 
-        if lang.hasAttribute("hidden") and int(lang.getAttribute("hidden")):
+        if lang.hasAttribute("hidden") and int(lang.getAttribute("hidden")) and not show_hidden:
             #result[code] = ""
             pass
         else:

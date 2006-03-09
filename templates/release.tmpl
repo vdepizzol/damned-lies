@@ -1,0 +1,51 @@
+<html>
+<head><title>${release.description} Release</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+<h1>${release.description} Release</h1>
+
+
+#if len($status)
+<table class="stats">
+<thead><tr><th>Release</th><th>Docs</th><th>Graph</th><th>UI</th><th>Graph</th></tr></thead>
+#for lstats in $status
+<tr>
+  <td class="left" style="font-size:120%;"><a href="${webroot}/languages/$lstats.code/${release.id}">${lstats.name}</a>
+  #if $lstats.has_key('errors')
+    #for error in $lstats.errors
+    <img src="$webroot/data/${error[0]}.png" title="${error[1]}">
+    #end for
+  #end if
+  </td>
+  <td>${lstats.doc_supportedness}% ($lstats.doc_translated/$lstats.doc_fuzzy/$lstats.doc_untranslated)</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: ${lstats.doc_percentages.translated}px;"></div>
+      <div class="fuzzy" style="left:${lstats.doc_percentages.translated}px; width:${lstats.doc_percentages.fuzzy}px;"></div>
+      #set upos=$lstats.doc_percentages.translated + $lstats.doc_percentages.fuzzy
+      <div class="untranslated" style="left:${upos}px; width: ${lstats.doc_percentages.untranslated}px;"></div>
+     </div>
+   </td>
+  <td>${lstats.ui_supportedness}% ($lstats.ui_translated/$lstats.ui_fuzzy/$lstats.ui_untranslated)</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: ${lstats.ui_percentages.translated}px;"></div>
+      <div class="fuzzy" style="left:${lstats.ui_percentages.translated}px; width:${lstats.ui_percentages.fuzzy}px;"></div>
+      #set upos=$lstats.ui_percentages.translated + $lstats.ui_percentages.fuzzy
+      <div class="untranslated" style="left:${upos}px; width: ${lstats.ui_percentages.untranslated}px;"></div>
+     </div>
+   </td>
+</tr>
+#end for
+</table>
+#end if
+
+
+
+</div>
+</center>
+</body>
+</html>

@@ -1,9 +1,11 @@
 #!/usr/bin/python
 
 import xml.dom.minidom
+
 import defaults
 import utils
 import modules
+import teams
 from database import *
 
 import os
@@ -338,12 +340,126 @@ class Releases:
     def __iter__(self): return self.data.__iter__()
 
 
+def compare_languages(a, b):
+    res = cmp(b['ui_supportedness'], a['ui_supportedness'])
+    if not res:
+        return cmp(a['name'], b['name'])
+    else:
+        return res
+
 def compare_releases(a, b):
     res = cmp(a['firstlanguage'], b['firstlanguage'])
     if not res:
         return cmp(a['code'], b['code'])
     else:
         return res
+
+def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
+    # Initialise modules
+    modules = []
+
+    dom = xml.dom.minidom.parse(releasesfile)
+    releases = dom.getElementsByTagName("release")
+    for myrelease in releases:
+        releaseid = myrelease.getAttribute("id")
+        if release and releaseid == release:
+            module_tags = myrelease.getElementsByTagName("module")
+            for module in module_tags:
+                modid = module.getAttribute("id")
+                branch = module.getAttribute("branch")
+                if not branch: branch = "HEAD"
+                modules.append((modid, branch))
+            break
+
+    stats = { }
+    langs = teams.TranslationLanguages(show_hidden=1)
+    for lang in langs:
+        lname = langs[lang]
+        stats[lang] = {
+            'code' : lang,
+            'name' : lname,
+            'ui_translated' : 0,
+            'ui_fuzzy' : 0,
+            'ui_untranslated' : 0,
+            'doc_translated' : 0,
+            'doc_fuzzy' : 0,
+            'doc_untranslated' : 0,
+            'errors': [],
+            }
+
+    # Initialise POT sizes
+    totalpot = 0; dtotalpot = 0
+    for (modid, branch) in modules:
+        res = Statistics.select(AND(Statistics.q.Module == modid,
+                                    Statistics.q.Branch == branch,
+                                    Statistics.q.Language == None))
+        for stat in list(res):
+            un = stat.Untranslated
+            type = stat.Type
+            if type=='ui': totalpot += un
+            elif type=='doc': dtotalpot += un
+
+    for (modid, branch) in modules:
+        res = Statistics.select(AND(Statistics.q.Module == modid,
+                                    Statistics.q.Branch == branch,
+                                    Statistics.q.Language != None))
+        for stat in list(res):
+            type = stat.Type
+            if type not in ['ui', 'doc']: continue
+
+            lang = stat.Language
+            if lang not in stats:
+                stats[lang] = {
+                    'code' : lang,
+                    'name' : lang,
+                    'ui_translated' : 0,
+                    'ui_fuzzy' : 0,
+                    'ui_untranslated' : 0,
+                    'doc_translated' : 0,
+                    'doc_fuzzy' : 0,
+                    'doc_untranslated' : 0,
+                    'errors': [('error' , "There is no translation team for '%s' in Gnome." % lang)],
+                    }
+
+            tr = stat.Translated
+            fz = stat.Fuzzy
+
+            stats[lang][type + '_translated'] += tr
+            stats[lang][type + '_fuzzy'] += fz
+            stats[lang][type + '_untranslated'] += un
+
+    result = []
+    if totalpot:
+        for lang in stats:
+            for type in ['ui', 'doc']:
+                tr = stats[lang][type+'_translated']
+                fz = stats[lang][type+'_fuzzy']
+                if type=='ui':
+                    fullsize = totalpot
+                else:
+                    fullsize = dtotalpot
+                stats[lang][type+'_untranslated'] = fullsize - tr - fz
+                un = stats[lang][type+'_untranslated']
+
+                supp = 100*tr/fullsize
+                perc = { 'translated' : supp,
+                         'fuzzy' : 100*fz/fullsize,
+                         'untranslated' : 100*un/fullsize }
+                stats[lang][type+'_supportedness'] = supp
+                stats[lang][type+'_percentages'] = perc
+            result.append(stats[lang])
+
+    result.sort(compare_languages)
+    return result
+
+            
+    
+
+    
+            
+    
+    
+    
 
 if __name__=="__main__":
     import cgi
@@ -354,24 +470,24 @@ if __name__=="__main__":
 
     releaseid = os.getenv("PATH_INFO")[1:]
     if releaseid:
-        myrelease = TranslationReleases(only_release=releaseid)
+        myrelease = Releases(only_release=releaseid, deep=0)
         if len(myrelease) and myrelease[0]['id'] == releaseid:
             html = Template(file="templates/release.tmpl")
             html.webroot = defaults.webroot
             html.release = myrelease[0]
+
+            langs = teams.TranslationLanguages()
+            status = get_aggregate_stats(releaseid)
+            html.status = status
             print html
             print utils.TemplateInspector(html)
     else:
-        t = TranslationReleases()
+        t = Releases(deep=0)
         releases = t.data
-        releases.sort(compare_releases)
 
         html = Template(file="templates/list-releases.tmpl")
         html.webroot = defaults.webroot
         html.releases = releases
         print html
         print utils.TemplateInspector(html)
-
-    #import pprint
-    #pprint.pprint(TranslationLanguages())
     

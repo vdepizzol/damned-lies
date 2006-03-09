@@ -1,5 +1,25 @@
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
+	* templates/module.tmpl: Small changes.
+
+	* releases.py (get_aggregate_stats): Added, used.
+	* templates/list-releases.tmpl: Added.
+	* templates/release.tmpl: Added.
+
+	* HACKING: Some runtime notes.
+
+	* Makefile: Add dist and release targets.
+
+	* teams.py (TranslationLanguages): add show_hidden parameter.
+
+	* update-stats.py (LocStatistics.update_stats_database): 
+	Correct POT clean-up stuff (buggy SQLObject?).
+
+	* utils.py (getElementContents, getElementText)
+	(getElementAttribute): Added misc xml.dom.minidom functions.
+
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
 	* HACKING: Add more TODO items.
 
 	* utils.py (TemplateInspector): Use WEBDEBUG.

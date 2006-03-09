@@ -91,3 +91,16 @@ USE_DIFFLIB (ms): 94 82 92 88 77 76 87
 
 NO_DIFFLIB(ms)  : 65 59 59 60 67 61 66 61
   average: 62.3 ~ 60
+
+
+run-time
+********
+
+- fuzzy_matching = 0
+- generate_docs = 0
+
+~16 minutes for 5442 UI strings, 843 documentation strings.
+
+GNOME is in the range of 100K UI strings, 20K doc strings, which is
+roughly 20 times this size, so estimated initial run-time would be
+~5.5 hours.

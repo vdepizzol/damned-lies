@@ -1,0 +1,30 @@
+<html>
+<head><title>GNOME Releases</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+<h1>GNOME Releases</h1>
+
+#if len($releases)
+<p>Select a release or a release set below to see more details about it:</p>
+
+<ul>
+#for release in $releases
+<li style="font-size: 120%;">
+  <a href="${webroot}/releases/${release.id}">${release.description}</a>
+</li>
+#end for
+</ul>
+#else
+<p>There are currently no releases defined in GNOME. :(</p>
+#end if
+
+
+</div>
+</center>
+</body>
+</html>
