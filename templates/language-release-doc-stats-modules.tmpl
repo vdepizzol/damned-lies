@@ -26,19 +26,22 @@
      #end if
 
      <tr>
-      #if len($module.documents.keys()) > 1
-       <td class="left" style="padding-left:2em;"><a href="$POFILE">${document.description}</a>
-       #for pomsgs in $POINFO
-       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
-       #end for
-       </td>
-      #else
-       <td class="left"><a href="$POFILE">${module.description}</a>
-       #for pomsgs in $POINFO
-       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
-       #end for
-       </td>
-      #end if
+       #if len($module.documents.keys()) > 1
+        <td class="left" style="padding-left:2em;">
+         <a href="$POFILE" title="module: '$module.cvsmodule/$docdir', branch: '$module.branch'">${document.description}</a>
+         #for pomsgs in $POINFO
+           <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+         #end for
+        </td>
+       #else
+        <td class="left">
+         <a href="$POFILE" title="module: '$module.cvsmodule/$docdir', branch: '$module.branch'">${module.description}</a>
+         #for pomsgs in $POINFO
+           <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+         #end for
+        </td>
+       #end if
+
       #if len($module.documents.keys()) > 1
        <td>($document.translated/$document.fuzzy/$document.untranslated)</td>
       #else

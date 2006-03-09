@@ -28,13 +28,15 @@
 
      <tr>
       #if len($module.translation_domains.keys()) > 1
-       <td class="left" style="padding-left:2em;"><a href="$POFILE">${domain.description}</a>
+       <td class="left" style="padding-left:2em;" title="module: '$module.cvsmodule/$domaindir', branch: '$module.branch'">
+       	 <a href="$POFILE">${domain.description}</a>
        #for pomsgs in $POINFO
        	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
        #end for
        </td>
       #else
-       <td class="left"><a href="$POFILE">${module.description}</a>
+       <td class="left" title="module: '$module.cvsmodule/$domaindir', branch: '$module.branch'">
+         <a href="$POFILE">${module.description}</a>
        #for pomsgs in $POINFO
        	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
        #end for

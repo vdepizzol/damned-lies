@@ -64,6 +64,7 @@ class Releases:
                 myMod = self.myModules[modid]
                 retmodules[modid]['description'] = myMod['description']
                 retmodules[modid]['maintainers'] = myMod['maintainers']
+                retmodules[modid]['cvsmodule'] = myMod['cvsmodule']
 
                 if gather_stats and myMod['cvsbranches'].has_key(branch):
                     trdomains = myMod['cvsbranches'][branch]['translation_domains']
