@@ -56,7 +56,7 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        CVS = modules.CvsModule(module, 0)
+        CVS = modules.CvsModule(module, 1)
 
         mybranches = CVS.paths.keys()
         if onlybranch and onlybranch in mybranches:
@@ -602,19 +602,23 @@ might be worth investigating.
             
 if __name__ == "__main__":
     import sys, os
-    if len(sys.argv)==2 or len(sys.argv)==4:
+    if len(sys.argv)>=2 and len(sys.argv)<=4:
         if sys.argv[1] and os.access(sys.argv[1], os.R_OK):
             m = modules.XmlModules(sys.argv[1])
             if len(sys.argv)==4:
                 module = sys.argv[2]
                 branch = sys.argv[3]
                 if module in m.keys():
+                    LocStatistics(m[module], only_branch=branch)
+            elif len(sys.argv)==3:
+                module = sys.argv[2]
+                if module in m.keys():
                     LocStatistics(m[module])
             else:
                 for modid in m:
                     LocStatistics(m[modid])
         else:
-            print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID BRANCH]\n" % (sys.argv[0])
+            print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
     else:
-        print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID BRANCH]\n" % (sys.argv[0])
+        print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
 
