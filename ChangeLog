@@ -1,5 +1,13 @@
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
+	* HACKING: Mark below TODO item as done.
+
+	* update-stats.py: Add optimizations (do not regenerate PO files
+	if not needed: both POT hasn't changed and PO files have not been
+	modified since).
+
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
 	* templates/module.tmpl: Small changes.
 
 	* releases.py (get_aggregate_stats): Added, used.

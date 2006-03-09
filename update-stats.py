@@ -64,7 +64,7 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        CVS = modules.CvsModule(module, 1)
+        CVS = modules.CvsModule(module, 0)
 
         mybranches = CVS.paths.keys()
         if onlybranch and onlybranch in mybranches:
@@ -160,8 +160,8 @@ might be worth investigating.
             errors.append(("error", "Can't generate POT file."))
             return {'translated': 0, 'fuzzy': 0, 'untranslated': 0, 'errors': errors}
 
-        # mtime of old POT file
-        oldtime = 0
+        # whether pot has changed
+        potchanged = 1
 
         # If old pot already exists and we are in string freeze
         if os.access(newpot, os.R_OK):
@@ -170,8 +170,10 @@ might be worth investigating.
                 if len(diff):
                     self.notify_list(out_domain, diff)
 
-            # If old pot already exists, lets take note of it's mtime
-            oldtime = os.stat(newpot)[8]
+            # If old pot already exists, lets see if it has changed at all
+            diff = potdiff.diff(newpot, potfile)
+            if len(diff) == 0:
+                potchanged = 0
 
 
         pot_stats = self.po_file_stats(potfile, 0)
@@ -180,7 +182,7 @@ might be worth investigating.
         if not self.copy_file(potfile, newpot):
             pot_stats['errors'].append(('error', "Can't copy new POT file to public location."))
 
-        postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, oldtime)
+        postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, potchanged)
 
         NOW = datetime.datetime.now()
         self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
@@ -203,7 +205,7 @@ might be worth investigating.
         return pot_stats
 
 
-    def update_po_files(self, module_path, po_path, pot_file, out_dir, out_domain, oldtime):
+    def update_po_files(self, module_path, po_path, pot_file, out_dir, out_domain, potchanged):
         if defaults.fuzzy_matching:
             command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
         else:
@@ -217,12 +219,13 @@ might be worth investigating.
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
 
-                #if os.stat(os.path.join(po_path, file))[8] < oldtime and os.access(outpo, os.R_OK):
-                #    continue
+                srcpo = os.path.join(po_path, file)
+                if not potchanged and os.access(outpo,os.R_OK) and os.stat(srcpo)[8] < os.stat(outpo)[8]:
+                    continue
                     
                 realcmd = command % {
                     'outpo' : outpo,
-                    'pofile' : os.path.join(po_path, file),
+                    'pofile' : srcpo,
                     'potfile' : pot_file,
                     }
                 if defaults.DEBUG: print >>sys.stderr, realcmd
@@ -482,10 +485,13 @@ might be worth investigating.
         pot_stats['errors'].extend(errors)
 
         # If old pot already exists, lets take note of it's mtime
-        oldtime = 0
-        if os.access(newpot, os.R_OK):
-            oldtime = os.stat(newpot)[8]
 
+        potchanged = 1
+        if os.access(newpot, os.R_OK):
+            # If old pot already exists, lets see if it has changed at all
+            diff = potdiff.diff(newpot, fullpot)
+            if len(diff) == 0:
+                potchanged = 0
 
         self.copy_file(fullpot, newpot)
 
@@ -495,7 +501,7 @@ might be worth investigating.
                                    translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
                                    errors = pot_stats['errors'])
 
-        postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime, potbase, docpath)
+        postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, potchanged, potbase, docpath)
 
         langs = teams.TranslationLanguages()
         for lang in postats:
@@ -513,7 +519,7 @@ might be worth investigating.
         return pot_stats
 
 
-    def update_doc_po_files(self, docdir, pot_file, out_dir, out_domain, languages, oldtime = 0, potbase = None, docpath = None):
+    def update_doc_po_files(self, docdir, pot_file, out_dir, out_domain, languages, potchanged = 1, potbase = None, docpath = None):
         if defaults.fuzzy_matching:
             command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
         else:
@@ -527,8 +533,8 @@ might be worth investigating.
                 lang = file
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
-                #if os.stat(myfile)[8] < oldtime and os.access(outpo, os.R_OK):
-                #    continue
+                if not potchanged and os.access(outpo, os.R_OK) and os.stat(myfile)[8] < os.stat(outpo)[8]:
+                    continue
 
                 realcmd = command % {
                     'outpo' : outpo,

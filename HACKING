@@ -58,12 +58,12 @@ Not regenerating old stuff [DONE]
 Speed optimizations
 -------------------
 
-- check if POT diff between old and new POT files is null, AND PO file 
-  hasn't changed (compare mtimes), when there is no need to go through 
-  entire update procedure (in update-stats.py(ui_l10n_status))
-
 - update only single module, branch, domain, language (to speed up on 
   PO file CVS commits)
+
+- check if POT diff between old and new POT files is null, AND PO file 
+  hasn't changed (compare mtimes), when there is no need to go through 
+  entire update procedure (in update-stats.py(ui_l10n_status)) [DONE]
 
 - allow to process only a single module/branch on e-mail notifications
   (procmail + cvs commit notifications): almost ready, only need a
