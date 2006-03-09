@@ -20,15 +20,25 @@
     #for domaindir, domain in $module.translation_domains.items()
      #if $domain.pot_size==$domain.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+".pot"
+       #set POINFO=$domain.pot_messages
      #else
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+"."+$language+".po"
+       #set POINFO=$domain.po_messages
      #end if
 
      <tr>
       #if len($module.translation_domains.keys()) > 1
-       <td class="left" style="padding-left:2em;"><a href="$POFILE">${domain.description}</a></td>
+       <td class="left" style="padding-left:2em;"><a href="$POFILE">${domain.description}</a>
+       #for pomsgs in $POINFO
+       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+       #end for
+       </td>
       #else
-       <td class="left"><a href="$POFILE">${module.description}</a></td>
+       <td class="left"><a href="$POFILE">${module.description}</a>
+       #for pomsgs in $POINFO
+       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+       #end for
+       </td>
       #end if
        <td>($domain.translated/$domain.fuzzy/$domain.untranslated)</td>
        <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">

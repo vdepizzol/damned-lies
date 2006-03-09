@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <releases>
 
-<release id="gnome-2.14">
+<release id="gnome-2-14">
   <_description>Gnome 2.14</_description>
   <category id="external">
     <_description>External Dependencies</_description>
-    <module id="xkeyboard-config" branch="HEAD"/>
+    <module id="gstreamer"/>
+    <module id="gst-plugins"/>
+    <module id="iso_codes"/>
+    <module id="scrollkeeper"/>
+    <module id="xkeyboard-config"/>
   </category>
 
   <category id="platform">
     <_description>Development Platform</_description>
+    <module id="atk" />
+    <module id="at-spi" />
     <module id="gtk+" branch="gtk-2-8"/>
     <module id="glib" branch="glib-2-10"/>
   </category>
@@ -27,8 +33,8 @@
   </category>
 </release>
 
-<release id="gnome-2.12">
-  <_description>Gnome 2.15 development version</_description>
+<release id="gnome-2-12">
+  <_description>Gnome 2.12</_description>
   <category id="platform">
     <_description>Development Platform</_description>
     <module id="gtk+" branch="gtk-2-8" />

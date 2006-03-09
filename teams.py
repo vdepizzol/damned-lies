@@ -245,7 +245,9 @@ if __name__=="__main__":
     elif page == "languages":
         print ""
 
-        test = re.match("([^/]+)(/(.+)/?)?", subrequest)
+        if subrequest:
+            test = re.match("([^/]+)(/(.+)/?)?", subrequest)
+        else: test = None
         if not test:
             # List all languages (FIXME)
             utils.not_found_404()

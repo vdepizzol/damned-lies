@@ -1,5 +1,9 @@
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
+	* templates/language-release-doc-stats-modules.tmpl: 
+	* templates/language-release-ui-stats-modules.tmpl: 
+	Display messages as well.
+
 	* releases.py (Releases.get_stats_for_module): Return info
 	messages as well.
 	(Releases.list_modules): Use PO and POT info messages as well.

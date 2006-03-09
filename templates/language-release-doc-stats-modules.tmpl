@@ -19,15 +19,25 @@
     #for docdir, document in $module.documents.items()
      #if $document.pot_size==$document.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+".pot"
+       #set POINFO=$document.pot_messages
      #else
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+"."+$language+".po"
+       #set POINFO=$document.po_messages
      #end if
 
      <tr>
       #if len($module.documents.keys()) > 1
-       <td class="left" style="padding-left:2em;"><a href="$POFILE">${document.description}</a></td>
+       <td class="left" style="padding-left:2em;"><a href="$POFILE">${document.description}</a>
+       #for pomsgs in $POINFO
+       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+       #end for
+       </td>
       #else
-       <td class="left"><a href="$POFILE">${module.description}</a></td>
+       <td class="left"><a href="$POFILE">${module.description}</a>
+       #for pomsgs in $POINFO
+       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+       #end for
+       </td>
       #end if
       #if len($module.documents.keys()) > 1
        <td>($document.translated/$document.fuzzy/$document.untranslated)</td>

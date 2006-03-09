@@ -18,24 +18,26 @@ class Releases:
                                           Statistics.q.Domain == domain,
                                           Statistics.q.Branch == branch,
                                           Statistics.q.Language == language,
-                                          Statistics.q.Type == type),
-                                      orderBy="-date")
+                                          Statistics.q.Type == type))
         else:
             stats = Statistics.select(AND(Statistics.q.Module == module,
                                           Statistics.q.Domain == domain,
                                           Statistics.q.Branch == branch,
                                           Statistics.q.Language == None,
-                                          Statistics.q.Type == type),
-                                      orderBy="-date")
+                                          Statistics.q.Type == type))
             
         if stats and stats.count():
             tr = stats[0].Translated
             fz = stats[0].Fuzzy
             un = stats[0].Untranslated
 
-            return (tr,fz,un)
+            msgs = []
+            for msg in stats[0].Messages:
+                msgs.append( (msg.Type, msg.Description) )
+
+            return (tr,fz,un, msgs)
         else:
-            return (0,0,0)
+            return (0,0,0,[])
 
     def list_modules(self, topnode, gather_stats = None):
         """Goes through all modules and gathers stats for language gather_stats.
@@ -75,11 +77,11 @@ class Releases:
 
                     mytr = myfz = myun = mypot = 0
                     for trdomain in trdomains:
-                        (tr, fz, un) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
+                        (tr, fz, un, msgs) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
                         totaltr += tr; totalfz += fz; totalun += un
                         mytr += tr; myfz += fz; myun += un
 
-                        (ig1, ig2, pot_size) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
+                        (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
                         pot += pot_size
                         mypot += pot_size
 
@@ -87,6 +89,8 @@ class Releases:
                                                                                'fuzzy' : fz,
                                                                                'untranslated' : pot_size-tr-fz,
                                                                                'pot_size' : pot_size,
+                                                                               'pot_messages' : potmsgs,
+                                                                               'po_messages' : msgs,
                                                                                'potbase' : trdomains[trdomain]['potbase'],
                                                                                'description' : trdomains[trdomain]['description'],
                                                                                }
@@ -106,11 +110,11 @@ class Releases:
 
                     mytr = myfz = myun = mypot = 0
                     for document in documents:
-                        (tr, fz, un) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
+                        (tr, fz, un, msgs) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
                         dtotaltr += tr; dtotalfz += fz; dtotalun += un
                         mytr += tr; myfz += fz; myun += un
 
-                        (ig1, ig2, pot_size) = self.get_stats_for_module(modid, document, branch, None, 'doc')
+                        (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, document, branch, None, 'doc')
                         dpot += pot_size
                         mypot += pot_size
 
@@ -118,6 +122,8 @@ class Releases:
                                                                      'fuzzy' : fz,
                                                                      'untranslated' : pot_size-tr-fz,
                                                                      'pot_size' : pot_size,
+                                                                     'pot_messages' : potmsgs,
+                                                                     'po_messages' : msgs,
                                                                      'potbase' : documents[document]['potbase'],
                                                                      'description' : documents[document]['description'],
                                                                      }
