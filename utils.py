@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import defaults
+
 def js_escape(string):
     return string.replace('"', '\\"')
 
@@ -7,6 +9,9 @@ def js_escape(string):
 # CheetahTemplate power stuff: similar to Smarty's debug console
 def TemplateInspector(template):
     """Inspects all template variables and outputs them in a separate window using JavaScript."""
+    if not defaults.WEBDEBUG:
+        return ""
+    
     from Cheetah.Template import Template
     blank = Template("")
     ignore = dir(blank)

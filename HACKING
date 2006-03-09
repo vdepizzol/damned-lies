@@ -58,18 +58,26 @@ Not regenerating old stuff [DONE]
 Speed optimizations
 -------------------
 
-- check if POT diff is null, when there is no need to go through
+- check if POT diff between old and new POT files is null, AND PO file 
+  hasn't changed (compare mtimes), when there is no need to go through 
   entire update procedure (in update-stats.py(ui_l10n_status))
+
+- update only single module, branch, domain, language (to speed up on 
+  PO file CVS commits)
 
 - allow to process only a single module/branch on e-mail notifications
   (procmail + cvs commit notifications): almost ready, only need a
-  short script to start this with module/branch parameters
+  short script to start this with module/branch parameters [DONE]
+
+Better error reporting
+----------------------
+- parse documents looking for mediaobjects, look for missing figures in translations, etc.
 
 
 potdiff.py speed testing
 ************************
 
-Input data: two random PO files of 833/834 messages with 21 differences
+Input data: two random PO files of 833/844 messages with 21 differences
 
 Measured user time using time(1).
 

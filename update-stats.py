@@ -56,7 +56,7 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        CVS = modules.CvsModule(module, 1)
+        CVS = modules.CvsModule(module, 0)
 
         mybranches = CVS.paths.keys()
         if onlybranch and onlybranch in mybranches:
@@ -487,7 +487,7 @@ might be worth investigating.
                                    translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
                                    errors = pot_stats['errors'])
 
-        postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime)
+        postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, oldtime, potbase, docpath)
 
         langs = teams.TranslationLanguages()
         for lang in postats:
@@ -502,11 +502,10 @@ might be worth investigating.
                                        errors = postats[lang]['errors'])
 
 
-
         return pot_stats
 
 
-    def update_doc_po_files(self, docdir, pot_file, out_dir, out_domain, languages, oldtime = 0):
+    def update_doc_po_files(self, docdir, pot_file, out_dir, out_domain, languages, oldtime = 0, potbase = None, docpath = None):
         if defaults.fuzzy_matching:
             command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
         else:
@@ -538,6 +537,11 @@ might be worth investigating.
 
                 stats[lang] = langstats
                 if defaults.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
+
+                if defaults.generate_docs:
+                    self.generate_translated_docs(docdir, potbase, lang, outpo,
+                                                  os.path.join(defaults.scratchdir, "xml", self.module["id"] + "." + self.branch,
+                                                               docpath))
         return stats
 
     def generate_translated_docs(self, sourcedir, docbase, lang, pofile, out_dir):
@@ -557,16 +561,45 @@ might be worth investigating.
         figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
         languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
 
-        # Generate XML files
-        try: os.makedirs(out_dir)
+        try: os.makedirs(os.path.join(out_dir, lang))
         except: pass
 
+        # Copy figures over
         if not figures:
             allfigs = []
             for file in os.listdir(os.path.join(docdir,"C","figures")):
                 if file[-4:]==".png":
-                    allfigs.append(file)
+                    allfigs.append(os.path.join("figures", file))
+        else:
+            allfigs = figures.split()
 
+        for fig in allfigs:
+            newfigpath = os.path.join(out_dir, lang, fig)
+            figdir = os.path.dirname(newfigpath)
+            try: os.makedirs(figdir)
+            except: pass
+            if not self.copy_file(os.path.join(sourcedir, lang, fig), newfigpath):
+                # Fallback to untranslated figures
+                self.copy_file(os.path.join(sourcedir, "C", fig), newfigpath)
+
+        # Generate XML files
+        if not modulename: modulename = docbase
+        files = [ modulename + ".xml" ]
+        for file in includes.split():
+            files.append(file)
+
+        for file in files:
+            command = "cd %(sourcedir)s && xml2po -e -l %(lang)s -p %(pofile)s -o %(outfile)s %(infile)s" % {
+                'sourcedir' : sourcedir,
+                'pofile' : pofile,
+                'outfile' : os.path.join(os.path.join(out_dir, lang, file)),
+                'infile' : os.path.join(os.path.join(sourcedir, "C", file)),
+                'lang' : lang,
+                }
+            if defaults.DEBUG: print >>sys.stderr, command
+            (error, output) = commands.getstatusoutput(command)
+            if defaults.DEBUG: print >> sys.stderr, output
+            
 if __name__ == "__main__":
     import sys, os
     if len(sys.argv)==2 or len(sys.argv)==4:

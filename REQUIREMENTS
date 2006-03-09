@@ -1,11 +1,16 @@
+Short: Apache2 + mod_rewrite, Python + SQLObject + CheetahTemplate, intltool
+
+Long:
+
 Python 2.2? 2.3? 2.4?
 
 Python modules:
- o SQLObject for database access
+ o SQLObject for database access (http://cheeseshop.python.org/pypi/SQLObject)
+   Tested only with 0.6.1
  o Any of sqlitedb, MySQLdb, postgresdb modules
- o Cheetah for HTML templating
+ o Cheetah for HTML templating (http://www.cheetahtemplate.org/)
 
-Programs:
+Programs (need to be in PATH):
  o msgfmt
  o msgmerge
  o intltool-update
@@ -14,6 +19,9 @@ Programs:
 intltool-update requirements:
  o Perl
  o XML::Parser
+ o intltool-extract
+ o xgettext
 
 xml2po requirements:
  o libxml2 + Python bindings
+

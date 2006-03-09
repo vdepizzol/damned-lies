@@ -1,8 +1,50 @@
 #!/usr/bin/env python
 
+# Directory to checkout source code and dump dead bodies to
+scratchdir = u"/tmp/gnome-stats"
+
+# Web root directory
+webroot = '/~danilo/damned-lies'
+
+# SQLObject database connection string
+database_connection = 'sqlite:' + scratchdir + '/database.db'
+database_connection = 'mysql://damned:lozinka@localhost/damned_lies'
+
+# whether to generate translated XML documentation (might slow down the process significantly)
+# they'll be put into os.path.join(scratchdir,"xml")
+generate_docs = 0
+
+WHEREAREWE = 'http://i18n-status.gnome.org/'
+WHOAREWE = 'danilo@gnome.org'
+
+# Configuration files
+modules_xml = "gnome-modules.xml"
+releases_xml = "releases.xml"
+teams_xml = "translation-teams.xml"
+
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
 notifications_to = 'danilo@avet.kvota.net'
+
+# Whether to use fuzzy matching (much slower, but better for translators), use 0 only when testing!
+fuzzy_matching = 0
+
+# Set DEBUG to 1 to print (too) many messages on stderr about progress
+DEBUG = 0
+
+# Set to 1 to show all data passed to CheetahTemplates
+WEBDEBUG = 1
+
+
+
+# WARNING:
+#   You usually don't want to set most of the things below,
+#   unless you are using Damned Lies for something other than GNOME
+
+
+# Directory to hold resulting POT/PO files
+import os.path
+potdir = os.path.join(u"/tmp/gnome-stats", "POT")
 
 # default to Gnome Bugzilla, product same as module ID and component "general"
 bugzilla = {
@@ -34,31 +76,3 @@ cvsbranch = {
 # default to no maintainers for a module
 maintainers = []
 
-
-# whether to generate translated XML documentation (might slow down the process significantly)
-generate_docs = 1
-
-# Directory to checkout source code and dump dead bodies to
-scratchdir = u"/tmp/gnome-stats"
-
-# Directory to hold resulting POT/PO files
-potdir = u"/tmp/gnome-stats/POT/"
-
-
-# Web root directory
-webroot = '/~danilo/damned-lies'
-
-database_connection = 'sqlite:' + scratchdir + '/database.db'
-database_connection = 'mysql://damned:lozinka@localhost/damned_lies'
-
-DEBUG = 0
-
-fuzzy_matching = 0
-
-WHEREAREWE = 'http://i18n-status.gnome.org/'
-WHOAREWE = 'danilo@gnome.org'
-
-# Configuration files
-modules_xml = "gnome-modules.xml"
-releases_xml = "releases.xml"
-teams_xml = "translation-teams.xml"

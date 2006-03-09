@@ -1,0 +1,43 @@
+INSTALL:
+
+ 1. Copy all source code to where you want it to sit, eg. to DAMNED_DIR
+
+ 2. Look at DAMNED_DIR/defaults.py and edit it
+    - scratchdir: where to do CVS checkouts to, put generated documentation, etc.
+    - webroot: where will damned-lies appear on the web, URI is not necessary, 
+      so if it will be on the domain itself, use empty string
+    - database_connection: SQLObject string, given is example for SQLite and MySQL
+    - notifications_to: where to send string freeze break notifications
+    - WHOAREWE: "from" address in any mails sent
+    - WHEREAREWE: mentioned in any automatic notices as where the notice is coming from
+    - modules_xml, releases_xml, teams_xml: Modify if you're not setting it up for Gnome.
+    - fuzzy_matching: 0 - fast, bad for translators; 1 - slow, good for translators.
+    - DEBUG: lots of output on stderr
+
+ 3. Look at DAMNED_DIR/.htaccess and change RewriteBase to defaults.webroot
+
+ 4. Recreate .xml files from .xml.in:
+    $ cd DAMNED_DIR && make
+    
+ 5. Initialise database: "python DAMNED_DIR/database.py"
+
+ 6. Look at DAMNED_DIR/data/main.css replacing any /~danilo/damned-lies/ paths with 
+    your own (defaults.webroot)
+
+ 7. First run of DAMNED_DIR/update-stats.py (may take a long time):
+    $ cd DAMNED_DIR && ./update-stats.py gnome-modules.xml
+
+ 8. Test how it looks from your browser!
+
+
+SINGLE MODULE UPDATE (useful for crontab+procmail setup):
+
+ - All branches:
+   $ cd DAMNED_DIR && make && ./update-stats.py gnome-modules.xml MODULEID
+
+ - A single branch:
+   $ cd DAMNED_DIR && make && ./update-stats.py gnome-modules.xml MODULEID BRANCH
+
+eg.
+  cd ~/public_html/damned-lies && make && ./update-stats.py gnome-modules.xml epiphany gnome-2-12
+  cd ~/public_html/damned-lies && make && ./update-stats.py gnome-modules.xml nautilus

@@ -1,5 +1,21 @@
 2006-03-09  Danilo Šegan  <danilo@gnome.org>
 
+	* utils.py (TemplateInspector): Use WEBDEBUG.
+	* defaults.py (WEBDEBUG): Added.
+
+	* INSTALL: Added.
+
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
+	* defaults.py (generate_docs): disable it (it's too slow).
+
+	* update-stats.py (LocStatistics.doc_l10n_stats): pass potbase as
+	well to update_doc_po_files().
+	(LocStatistics.generate_translated_docs): implement translated doc
+	generation.
+
+2006-03-09  Danilo Šegan  <danilo@gnome.org>
+
 	* defaults.py: Set modules_xml, releases_xml, teams_xml.
 	* modules.py: Use defaults.modules_xml.
 	* releases.py: Use defaults.modules_xml and default.releases_xml
