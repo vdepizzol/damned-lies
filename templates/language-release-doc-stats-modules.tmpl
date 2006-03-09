@@ -43,16 +43,16 @@
        #end if
 
       #if len($module.documents.keys()) > 1
-       <td>($document.translated/$document.fuzzy/$document.untranslated)</td>
+       <td>${document.supportedness}% ($document.translated/$document.fuzzy/$document.untranslated)</td>
       #else
-      <td>${module.statistics.doc_supportedness}%&nbsp;<!--
+      <td>${document.supportedness}%&nbsp;<!--
 	-->($module.statistics.doc_translated/$module.statistics.doc_fuzzy/$module.statistics.doc_untranslated)</td>
       #end if
        <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
-           <div class="translated" style="width: ${module.statistics.doc_percentages.translated}px;"></div>
-           <div class="fuzzy" style="left:${module.statistics.doc_percentages.translated}px; width:${module.statistics.doc_percentages.fuzzy}px;"></div>
-           #set upos=$module.statistics.doc_percentages.translated + $module.statistics.doc_percentages.fuzzy
-           <div class="untranslated" style="left:${upos}px; width: ${module.statistics.doc_percentages.untranslated}px;"></div>
+           <div class="translated" style="width: ${document.percentages.translated}px;"></div>
+           <div class="fuzzy" style="left:${document.percentages.translated}px; width:${document.percentages.fuzzy}px;"></div>
+           #set upos=$document.percentages.translated + $document.percentages.fuzzy
+           <div class="untranslated" style="left:${upos}px; width: ${document.percentages.untranslated}px;"></div>
           </div>
         </td>
      </tr>

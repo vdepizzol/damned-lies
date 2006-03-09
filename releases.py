@@ -86,9 +86,17 @@ class Releases:
                         pot += pot_size
                         mypot += pot_size
 
+                        un = pot_size - tr - fz
+                        if pot_size:
+                            perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                        else:
+                            perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+                            
                         retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
                                                                                'fuzzy' : fz,
                                                                                'untranslated' : pot_size-tr-fz,
+                                                                               'percentages' : perc,
+                                                                               'supportedness' : perc['translated'],
                                                                                'pot_size' : pot_size,
                                                                                'pot_messages' : potmsgs,
                                                                                'po_messages' : msgs,
@@ -119,9 +127,17 @@ class Releases:
                         dpot += pot_size
                         mypot += pot_size
 
+                        un = pot_size - tr - fz
+                        if pot_size:
+                            perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                        else:
+                            perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+
                         retmodules[modid]['documents'][document] = { 'translated' : tr,
                                                                      'fuzzy' : fz,
                                                                      'untranslated' : pot_size-tr-fz,
+                                                                     'percentages' : perc,
+                                                                     'supportedness' : perc['translated'],
                                                                      'pot_size' : pot_size,
                                                                      'pot_messages' : potmsgs,
                                                                      'po_messages' : msgs,

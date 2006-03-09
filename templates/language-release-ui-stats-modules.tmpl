@@ -42,12 +42,12 @@
        #end for
        </td>
       #end if
-       <td>($domain.translated/$domain.fuzzy/$domain.untranslated)</td>
+       <td>${domain.supportedness}% ($domain.translated/$domain.fuzzy/$domain.untranslated)</td>
        <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
-           <div class="translated" style="width: ${module.statistics.ui_percentages.translated}px;"></div>
-           <div class="fuzzy" style="left:${module.statistics.ui_percentages.translated}px; width:${module.statistics.ui_percentages.fuzzy}px;"></div>
-           #set upos=$module.statistics.ui_percentages.translated + $module.statistics.ui_percentages.fuzzy
-           <div class="untranslated" style="left:${upos}px; width: ${module.statistics.ui_percentages.untranslated}px;"></div>
+           <div class="translated" style="width: ${domain.percentages.translated}px;"></div>
+           <div class="fuzzy" style="left:${domain.percentages.translated}px; width:${domain.percentages.fuzzy}px;"></div>
+           #set upos=$domain.percentages.translated + $domain.percentages.fuzzy
+           <div class="untranslated" style="left:${upos}px; width: ${domain.percentages.untranslated}px;"></div>
           </div>
         </td>
      </tr>
