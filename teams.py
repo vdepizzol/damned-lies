@@ -252,11 +252,22 @@ if __name__=="__main__":
             # List all languages (FIXME)
 
             t = TranslationLanguages()
-            #t.sort()
+            langs = []
+            for lang, lname in t.items():
+                langs.append( {'code' : lang, 'name' : lname } )
+
+            def compare_langs(a, b):
+                res = cmp(a['name'], b['name'])
+                if not res:
+                    return cmp(a['code'], b['code'])
+                else:
+                    return res
+
+            langs.sort(compare_langs)
 
             html = Template(file="templates/list-languages.tmpl")
             html.webroot = defaults.webroot
-            html.languages = t
+            html.languages = langs
             print html
             print utils.TemplateInspector(html)
 
