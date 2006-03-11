@@ -14,20 +14,85 @@
 
   <category id="platform">
     <_description>Development Platform</_description>
-    <module id="atk" />
-    <module id="at-spi" />
+    <module id="at-spi"/>
+    <module id="atk"/>
+    <module id="gail"/>
+    <module id="gconf"/>
+    <module id="glib"/>
+    <module id="gnome-vfs"/>
     <module id="gtk+" branch="gtk-2-8"/>
-    <module id="glib" branch="glib-2-10"/>
+    <module id="libbonobo"/>
+    <module id="libbonoboui"/>
+    <module id="libgnome"/>
+    <module id="libgnomecanvas"/>
+    <module id="libgnomeui"/>
   </category>
 
   <category id="desktop">
     <_description>Desktop Applications</_description>
-    <module id="epiphany"/>
-    <module id="deskbar-applet"/>
+    <module id="bug-buddy">
+    <module id="dasher" branch="gnome-2-14">
+    <module id="deskbar-applet">
+    <module id="eel">
+    <module id="ekiga">
+    <module id="eog">
+    <module id="epiphany">
+    <module id="evince">
+    <module id="evolution" branch="gnome-2-14">
+    <module id="evolution-data-server" branch="gnome-2-14">
+    <module id="evolution-exchange" branch="gnome-2-14">
+    <module id="evolution-webcal">
+    <module id="fast-user-switch-applet">
+    <module id="file-roller">
+    <module id="gcalctool">
+    <module id="gconf-editor">
+    <module id="gdm2">
+    <module id="gedit">
+    <module id="gnome-applets">
+    <module id="gnome-backgrounds">
+    <module id="gnome-control-center">
+    <module id="gnome-desktop">
+    <module id="gnome-doc-utils">
+    <module id="gnome-games">
+    <module id="gnome-icon-theme" branch="gnome-2-14">
+    <module id="gnome-keyring">
+    <module id="gnome-keyring-manager">
+    <module id="gnome-mag">
+    <module id="gnome-media">
+    <module id="gnome-menus">
+    <module id="gnome-netstatus">
+    <module id="gnome-nettool">
+    <module id="gnome-panel">
+    <module id="gnome-screensaver">
+    <module id="gnome-session">
+    <module id="gnome-system-monitor">
+    <module id="gnome-system-tools">
+    <module id="gnome-terminal">
+    <module id="gnome-themes">
+    <module id="gnome-utils" branch="gnome-2-14">
+    <module id="gnome-volume-manager">
+    <module id="gnopernicus">
+    <module id="gok">
+    <module id="gtkhtml" branch="gnome-2-14">
+    <module id="gtksourceview">
+    <module id="gucharmap">
+    <module id="libgnomeprint">
+    <module id="libgnomeprintui">
+    <module id="libgtop">
+    <module id="libwnck">
+    <module id="metacity">
+    <module id="nautilus">
+    <module id="nautilus-cd-burner">
+    <module id="sound-juicer">
+    <module id="totem">
+    <module id="vino">
+    <module id="vte">
+    <module id="yelp">
+    <module id="zenity">
   </category>
   
   <category id="admin">
-    <_description>System Administration Applications</_description>
+    <_description>System Administration</_description>
     <module id="sabayon"/>
     <module id="pesselus"/>
   </category>

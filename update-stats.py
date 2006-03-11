@@ -286,7 +286,7 @@ might be worth investigating.
                     if test:
                         value = test.groups(1)[0]
                         if lang in value.split(" "):
-                            if defaults.DEBUG: print >>sys.stderr, "Language '%s' found in %s." % (configure)
+                            if defaults.DEBUG: print >>sys.stderr, "Language '%s' found in %s." % (lang, configure)
                             in_config = 1
                         break
                 cfile.close()
