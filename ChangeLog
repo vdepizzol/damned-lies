@@ -1,5 +1,10 @@
 2006-03-13  Danilo Šegan  <danilo@gnome.org>
 
+	* update-stats.py (LocStatistics.ui_l10n_stats): Use hidden languages when updating.
+	* view-module.py (get_stats_for): List hidden languages in modules as well.
+
+2006-03-13  Danilo Šegan  <danilo@gnome.org>
+
 	* releases.xml.in: branch epiphany, deskbar-applet, yelp, gucharmap.
 	* gnome-modules.xml.in: Branch epiphany.
 

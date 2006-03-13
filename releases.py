@@ -372,7 +372,7 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
             break
 
     stats = { }
-    langs = teams.TranslationLanguages(show_hidden=1)
+    langs = teams.TranslationLanguages(show_hidden="1")
     for lang in langs:
         lname = langs[lang]
         stats[lang] = {

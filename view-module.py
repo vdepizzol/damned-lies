@@ -56,7 +56,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
             here['pot_messages'].append({'type' : msg.Type, 'content' : msg.Description})
 
         here['statistics'] = []
-        langres = teams.TranslationLanguages()
+        langres = teams.TranslationLanguages(show_hidden=1)
         #langres = {}
 
         allstats = Statistics.select(AND(Statistics.q.Module == module["id"],

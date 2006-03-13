@@ -191,7 +191,7 @@ might be worth investigating.
                                    errors = pot_stats['errors'])
 
         for lang in postats:
-            langs = teams.TranslationLanguages()
+            langs = teams.TranslationLanguages(show_hidden=1)
             if not lang or not langs.has_key(lang):
                 postats[lang]['errors'].append(("warn", "There is no translation team in charge of '%s' translation." % (lang)))
 
@@ -623,7 +623,7 @@ if __name__ == "__main__":
                 module = sys.argv[2]
                 branch = sys.argv[3]
                 if module in m.keys():
-                    LocStatistics(m[module], only_branch=branch)
+                    LocStatistics(m[module], onlybranch=branch)
             elif len(sys.argv)==3:
                 module = sys.argv[2]
                 if module in m.keys():
