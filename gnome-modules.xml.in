@@ -1,294 +1,194 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!--
-  default bugzilla: http://bugzilla.gnome.org/
-  default cvsroot: :pserver:anonymous@anoncvs.gnome.org:/cvs/gnome
-  default bugzilla xmlrpc: http://bugzilla-test.gnome.org/xmlrpc.cgi
--->
-<gnome-modules>
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
 
-  <module id="deskbar-applet">
-    <description>Deskbar Applet</description>
-    <webpage>http://raphael.slinckx.net/deskbar/</webpage>
-    <maintainers>
-	<maintainer><name>Raphaël Slinckx</name>
-		    <email>raphael@slinckx.net</email>
-		    <hackergotchi>http://planet.gnome.org/heads/kikidonk.png</hackergotchi>
-		    <irc-nickname>kikidonk</irc-nickname>
-		    <webpage>http://raphael.slinckx.net/</webpage>
-		    </maintainer>
-    </maintainers>
+<defaults>
+  <module>
+    <bugs-xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</bugs-xmlrpc>
+    <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
+    <bugs-product>%(module/id)</bugs-product>
+    <bugs-component>general</bugs-component>
+    <cvs>
+      <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
+      <module>%(module/id)</module>
+      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
+    </cvs>
+    <cvsmodule>%(module/id)</cvsmodule>
   </module>
+  <branch id="HEAD">
+    <cvs-web>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvs-web>
+    <domain id="po" potbase="%(module/id)">
+      <_description>UI translations</_description>
+    </domain>
+    <document id="help">
+      <_description>User Guide</_description>
+    </document>
+  </branch>
+</defaults>
 
-  <module id="epiphany-full">
-    <_description>Epiphany Web Browser</_description><!-- defaults to ID -->
-    <webpage>http://gnome.org/projects/epiphany/</webpage>
-    <maintainers>
-	<maintainer><name>Marco Pesenti Gritti</name>
-		    <email>marco@gnome.org</email>
-		    <irc-nickname>mpg</irc-nickname>
-		    <webpage>http://gnome.org/~marco/</webpage></maintainer>
-	<maintainer><name>Christian Persch</name>
-		    <email>chpe@gnome.org</email>
-		    <irc-nickname>chpe</irc-nickname>
-		    <webpage>http://gnome.org/~chpe/</webpage></maintainer>
-    </maintainers>
-    <bugzilla>
-        <xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</xmlrpc>
-	<baseurl>http://bugzilla.gnome.org/</baseurl>
-        <product>epiphany</product><!-- defaults to ID -->
-	<component>general</component><!-- defaults to "general" -->
-    </bugzilla>
-    <!-- source code access snippet -->
-    <cvs-root>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvs-root>
-    <cvs-module>epiphany</cvs-module><!-- defaults to ID -->
-    <!-- end of source code access snippet -->
-    <branches><!-- defaults only to HEAD -->
-	<branch tag="gnome-2-12" regenerate="0" >
-            <translation-domains><!-- defaults to a single "po" -->
-        	<domain base="epiphany">
-        	    <directory>po</directory>
-        	    <_description>UI translations</_description>
-                </domain>
-            </translation-domains>
-            <documents>
-                <document base="epiphany">
-        	  <directory>help</directory>
-        	  <_description>User Guide</_description>
-                </document>
-            </documents>
-	</branch>
-	<branch tag="HEAD" stringfrozen="1">
-            <translation-domains><!-- defaults to a single "po" -->
-        	<domain base="epiphany">
-        	    <directory>po</directory>
-        	    <_description>UI translations</_description>
-                </domain>
-            </translation-domains>
-            <documents>
-                <document>
-        	  <directory>help</directory>
-        	  <_description>User Guide</_description>
-                </document>
-            </documents>
-        </branch>
-    </branches>
-  </module>
+<module id="deskbar-applet">
+  <description>Deskbar Applet</description>
+  <webpage>http://raphael.slinckx.net/deskbar/</webpage>
+  <maintainer id="rslinckx"/>
+  <branch id="HEAD" />
+</module>
 
+<module id="epiphany">
+  <description>Epiphany Web Browser</description>
+  <webpage>http://gnome.org/projects/epiphany/</webpage>
+  <maintainer id="chpe"/>
+  <cvs-module>epiphany</cvs-module>
+  <branch regenerate="0" id="gnome-2-12">
+    <domain id="po">
+      <description>UI translations</description>
+    </domain>
+    <document id="epiphany">
+      <description>User Guide</description>
+      <directory>help</directory>
+    </document>
+  </branch>
+  <branch stringfrozen="true" id="HEAD">
+    <domain id="po">
+      <description>UI translations</description>
+    </domain>
+    <document id="epiphany">
+      <description>Epiphany Manual</description>
+      <directory>help</directory>
+    </document>
+  </branch>
+</module>
 
-  <!-- example of minimal entry (all defaults where applicable, equivalent to above) -->
-  <module id="epiphany">
-    <_description>Epiphany Web Browser</_description><!-- defaults to ID -->
-    <webpage>http://gnome.org/projects/epiphany/</webpage>
-    <maintainers>
-	<maintainer><name>Marco Pesenti Gritti</name>
-		    <email>marco@gnome.org</email>
-		    <irc-nickname>mpg</irc-nickname>
-		    <webpage>http://gnome.org/~marco/</webpage></maintainer>
-	<maintainer><name>Christian Persch</name>
-		    <email>chpe@gnome.org</email>
-		    <irc-nickname>chpe</irc-nickname>
-		    <webpage>http://gnome.org/~chpe/</webpage></maintainer>
-    </maintainers>
-    <branches>
-        <branch tag="gnome-2-12" regenerate="0" />
-        <branch tag="gnome-2-14" />
-    </branches>
-  </module>
+<module id="gnome-applets">
+  <description>Gnome Applets</description>
+  <maintainer id="davyd"/>
+  <defaults>
+    <branch>
+      <domain id="po">
+	<description>UI translations</description>
+      </domain>
+      <domain id="po-locations" potbase="weather-locations">
+	<description>Weather Applet Locations</description>
+      </domain>
+      <document id="accessx-status">
+	<description>Keyboard Accessibility Monitor Manual</description>
+	<directory>accessx-status/docs</directory>
+      </document>
+      <document id="battstat">
+	<description>Battery Charage Monitor Manual</description>
+	<directory>battstat/docs</directory>
+      </document>
+      <document id="char-palette">
+	<description>Character Palette Manual</description>
+	<directory>charpick/help</directory>
+      </document>
+      <document id="cpufreq-applet">
+	<description>CPU Frequency Scaling Monitor Manual</description>
+	<directory>cpufreq/help</directory>
+      </document>
+      <document id="drivemount">
+	<description>Disk Mounter Manual</description>
+	<directory>drivemount/help</directory>
+      </document>
+      <document id="geyes">
+	<description>Geyes Manual</description>
+	<directory>geyes/docs</directory>
+      </document>
+      <document id="gswitchit">
+	<description>Keyboard Indicator Manual</description>
+	<directory>gswitchit/help</directory>
+      </document>
+      <document id="gtik2_applet2">
+	<description>Stock Ticker Manual</description>
+	<directory>gtik/help</directory>
+      </document>
+      <document id="gweather">
+	<description>Weather Report Manual</description>
+	<directory>gweather/docs</directory>
+      </document>
+      <document id="command-line">
+	<description>Command Line Manual</description>
+	<directory>mini-commander/help</directory>
+      </document>
+      <document id="mixer_applet2">
+	<description>Volume Control Manual</description>
+	<directory>mixer/docs</directory>
+      </document>
+      <document id="multiload">
+	<description>System Monitor Manual</description>
+	<directory>multiload/docs</directory>
+      </document>
+      <document id="stickynotes_applet">
+	<description>Sticky Notes Manual</description>
+	<directory>stickynotes/docs</directory>
+      </document>
+      <document id="trashapplet">
+	<description>Panel Trash Manual</description>
+	<directory>trashapplet/docs</directory>
+      </document>
+    </branch>
+  </defaults>
+  <branch stringfrozen="true" id="HEAD" />
+</module>
 
+<module id="glib">
+  <description>GLib</description>
+  <webpage>http://gtk.org/</webpage>
+  <maintainer id="matthiasc"/>
+  <maintainer id="owen"/>
+  <branch id="HEAD"/>
+  <branch stringfrozen="true" id="glib-2-10"/>
+</module>
 
-  <module id="gnome-applets">
-    <_description>Gnome Applets</_description><!-- defaults to ID -->
-    <maintainers>
-	<maintainer><name>Davyd Madeley</name>
-		    <email>davyd@madeley.id.au</email>
-		    <irc-nickname>davyd</irc-nickname>
-		    <webpage>http://www.davyd.id.au/</webpage>
-		    <hackergotchi>http://planet.gnome.org/heads/riff.png</hackergotchi>
-	 </maintainer>
-    </maintainers>
-    <branches><!-- defaults only to HEAD -->
-	<branch tag="HEAD" stringfrozen="1">
-            <translation-domains><!-- defaults to a single "po" -->
-        	<domain base="gnome-applets">
-        	    <directory>po</directory>
-        	    <_description>UI translations</_description>
-                </domain>
-        	<domain base="weather-locations">
-        	    <directory>po-locations</directory>
-        	    <_description>Weather Applet Locations</_description>
-                </domain>
-            </translation-domains>
-            <documents>
-                <document base="accessx-status">
-        	  <directory>accessx-status/docs</directory>
-        	  <_description>AccessX Status Manual</_description>
-                </document>
-                <document base="battstat">
-        	  <directory>battstat/docs</directory>
-        	  <_description>Battery Status Manual</_description>
-                </document>
-                <document base="charpick">
-        	  <directory>charpick/help</directory>
-        	  <_description>Character Picker Manual</_description>
-                </document>
-                <document base="cpufreq">
-        	  <directory>cpufreq/help</directory>
-        	  <_description>CPU Frequency Monitor Manual</_description>
-                </document>
-                <document base="drivemount">
-        	  <directory>drivemount/help</directory>
-        	  <_description>Drive Mounter Manual</_description>
-                </document>
-                <document base="geyes">
-        	  <directory>geyes/docs</directory>
-        	  <_description>GEyes Manual</_description>
-                </document>
-                <document base="gswitchit">
-        	  <directory>gswitchit/help</directory>
-        	  <_description>Keyboard Preferences Manual</_description>
-                </document>
-                <document base="gtik">
-        	  <directory>gtik/help</directory>
-        	  <_description>Stock Ticker Manual</_description>
-                </document>
-                <document base="gweather">
-        	  <directory>gweather/docs</directory>
-        	  <_description>Weather Applet Manual</_description>
-                </document>
-                <document base="mini-commander">
-        	  <directory>mini-commander/help</directory>
-        	  <_description>Mini Commander Manual</_description>
-                </document>
-                <document base="mixer">
-        	  <directory>mixer/docs</directory>
-        	  <_description>Sound Mixer Manual</_description>
-                </document>
-                <document base="system-monitor">
-        	  <directory>multiload/docs</directory>
-        	  <_description>System Monitor Manual</_description>
-                </document>
-                <document base="stickynotes">
-        	  <directory>stickynotes/docs</directory>
-        	  <_description>Sticky Notes Manual</_description>
-                </document>
-                <document base="trash">
-        	  <directory>trashapplet/docs</directory>
-        	  <_description>Trash Manual</_description>
-                </document>
-            </documents>
-        </branch>
-    </branches>
-  </module>
+<module id="gtk+">
+  <description>Gtk+</description>
+  <maintainer id="owen"/>
+  <webpage>http://www.gtk.org/</webpage>
+  <branch stringfrozen="true" id="gtk-2-8">
+    <domain id="po">
+      <description>Core</description>
+    </domain>
+    <domain id="po-properties" potbase="gtk+-properties">
+      <description>Property Nicks</description>
+    </domain>
+  </branch>
+  <branch id="HEAD">
+    <domain id="po">
+      <description>Core</description>
+    </domain>
+    <domain id="po-properties">
+      <description>Property Nicks</description>
+    </domain>
+  </branch>
+</module>
 
+<module id="rhythmbox">
+  <description>Rhythmbox Music Player</description>
+  <webpage>http://www.rhythmbox.org/</webpage>
+  <maintainer id="jrl"/>
+  <branch id="HEAD"/>
+</module>
 
+<module id="sabayon">
+  <description>Sabayon</description>
+  <maintainer id="veillard"/>
+  <branch id="HEAD"/>
+</module>
 
-  <module id="glib">
-    <description>GLib</description>
-    <webpage>http://gtk.org/</webpage>
-    <maintainers>
-	<maintainer><name>Matthias Clasen</name>
-		    <email>mclasen@redhat.com</email>
-		    <irc-nickname>mclasen</irc-nickname>
-		    </maintainer>
-	<maintainer><name>Owen Taylor</name>
-		    <email>otaylor@redhat.com</email>
-		    <webpage>http://people.redhat.com/otaylor/</webpage>
-		    <hackergotchi>http://planet.gnome.org/heads/owen3.png</hackergotchi>
-		    <irc-nickname>otaylor</irc-nickname></maintainer>
-    </maintainers>
-    <branches>
-        <branch tag="HEAD" />
-        <branch tag="glib-2-10" stringfrozen="1" />
-    </branches>
-  </module>
+<module id="xkeyboard-config">
+  <description>XKeyboard-Config</description>
+  <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
+  <maintainer id="svu"/>
+  <maintainer id="xdg-ivan"/>
+  <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
+  <bugs-product>xkeyboard-config</bugs-product>
+  <bugs-component>General</bugs-component>
+  <cvs-root>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvs-root>
+  <cvs-module>xkbdesc</cvs-module>
+  <cvs-web>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch)</cvs-web>
+  <branch id="HEAD">
+    <domain id="po">
+      <description>Layout Descriptions</description>
+    </domain>
+  </branch>
+</module>
 
-
-  <module id="gtk+">
-    <!-- GNU's Not Unix Image Manipulation Program ToolKit+ ;) -->
-    <_description>Gtk+</_description><!-- defaults to ID -->
-    <maintainers>
-	<maintainer><name>Owen Taylor</name>
-		    <email>otaylor@redhat.com</email>
-		    <webpage>http://people.redhat.com/otaylor/</webpage>
-		    <hackergotchi>http://planet.gnome.org/heads/owen3.png</hackergotchi>
-		    <irc-nickname>otaylor</irc-nickname></maintainer>
-    </maintainers>
-    <webpage>http://www.gtk.org/</webpage>
-    <branches>
-        <branch tag="gtk-2-8" stringfrozen="1">
-            <translation-domains><!-- defaults to a single "po" -->
-        	<domain base="gtk+">
-        	    <directory>po</directory>
-        	    <_description>Core</_description>
-                </domain>
-        	<domain base="gtk+-properties">
-        	    <directory>po-properties</directory>
-        	    <_description>Property Nicks</_description>
-                </domain>
-            </translation-domains>
-	</branch>
-        <branch tag="HEAD" />
-    </branches>
-  </module>
-
-  <module id="rhythmbox">
-    <_description>Rhythmbox Music Player</_description><!-- defaults to ID -->
-    <webpage>http://www.rhythmbox.org/</webpage>
-    <maintainers>
-	<maintainer><name>James Livingston</name>
-		    <email>jrl@ids.org.au</email>
-		    <irc-nickname>doctau</irc-nickname>
-		    </maintainer>
-    </maintainers>
-  </module>
-
-
-  <module id="sabayon">
-    <_description>Sabayon</_description><!-- defaults to ID -->
-    <maintainers>
-	<maintainer><name>Daniel Veillard </name>
-		    <email>veillard@redhat.com</email>
-		    <irc-nickname>DV</irc-nickname>
-		    </maintainer>
-    </maintainers>
-  </module>
-
-
-
-  <!-- example of non-GNOME-hosted module -->
-  <module id="xkeyboard-config">
-    <_description>XKeyboard-Config</_description><!-- defaults to ID -->
-    <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
-    <maintainers>
-	<maintainer><name>Sergey V. Udaltsov</name>
-		    <email>svu@gnome.org</email>
-		    <irc-nickname>svu</irc-nickname>
-		    <webpage>http://www.advogato.org/person/svu/</webpage></maintainer>
-	<maintainer><name>Ivan U. Pascal</name>
-		    <email>pascal@tsu.ru</email>
-		    <webpage>http://pascal.tsu.ru/</webpage></maintainer>
-    </maintainers>
-    <bugzilla>
-	<baseurl>https://bugs.freedesktop.org/</baseurl>
-        <product>xkeyboard-config</product>
-	<component>General</component>
-    </bugzilla>
-    <!-- source code access snippet -->
-    <cvs-root>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvs-root>
-    <cvs-module>xkbdesc</cvs-module><!-- defaults to ID -->
-    <cvs-web>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_tag=%(branch)s</cvs-web>
-    <!-- end of source code access snippet -->
-    <branches><!-- defaults only to HEAD -->
-	<branch tag="HEAD" >
-            <translation-domains><!-- defaults to a single "po" -->
-        	<domain>
-        	    <directory>po</directory>
-        	    <_description>Layout Descriptions</_description>
-                </domain>
-            </translation-domains>
-	</branch>
-    </branches>
-  </module>
-
-
-</gnome-modules>
+</modules>

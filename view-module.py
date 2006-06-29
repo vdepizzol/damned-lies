@@ -40,6 +40,8 @@ print "Content-type: text/html; charset=UTF-8\n"
 
 
 def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
+    if type == 'doc':
+        trdomain = here['directory']
     res = Statistics.select(AND(Statistics.q.Module == module["id"],
                                 Statistics.q.Domain == trdomain,
                                 Statistics.q.Branch == branch,
@@ -47,6 +49,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                                 Statistics.q.Type == type),
                             orderBy="-date")
     if res and res.count()>0:
+        if defaults.DEBUG: print >>sys.stderr, "OVDE: %s!" % (module["id"] + "/" + trdomain)
         pot = res[0]
         here['pot_size'] = pot.Untranslated
         here['updated'] = pot.Date.strftime("%Y-%m-%d %H:%M:%S")
@@ -110,7 +113,11 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
 
 def compare_stats(a, b):
-    res = cmp(float(b['supportedness']), float(a['supportedness']))
+    as = bs = 0.0
+    if a.has_key('supportedness'): as = float(a['supportedness'])
+    if b.has_key('supportedness'): bs = float(b['supportedness'])
+    
+    res = cmp(bs, as)
     if not res:
         return cmp(b['language_name'], a['language_name'])
     else:
@@ -122,26 +129,27 @@ def go_go():
     if moduleid in allmodules:
         module = allmodules[moduleid]
 
-        for branch in module["cvsbranches"]:
-            trdomains = module["cvsbranches"][branch]['translation_domains'].keys()
-            documents = module["cvsbranches"][branch]['documents'].keys()
+        for branch in module["branch"]:
+            trdomains = module["branch"][branch]['domain'].keys()
+            documents = module["branch"][branch]['document'].keys()
             for trdomain in trdomains:
-                here = module["cvsbranches"][branch]['translation_domains'][trdomain]
+                here = module["branch"][branch]['domain'][trdomain]
                 here['statistics'] = []
                 get_stats_for(here, module, trdomain, branch, 'ui')
                 here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
                 if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
-                    del module["cvsbranches"][branch]["translation_domains"][trdomain]
+                    del module["branch"][branch]["domain"][trdomain]
 
             for document in documents:
-                here = module["cvsbranches"][branch]['documents'][document]
+                here = module["branch"][branch]['document'][document]
                 here['statistics'] = []
+                if defaults.DEBUG: print >>sys.stderr, 'get_stats_for(', module["id"], ',', document, ',', branch, ',', 'doc)'
                 get_stats_for(here, module, document, branch, 'doc')
                 here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
                 if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
-                    del module["cvsbranches"][branch]["documents"][document]
+                    del module["branch"][branch]["document"][document]
 
         html = Template(file="templates/module.tmpl")
         html.webroot = defaults.webroot
@@ -157,7 +165,7 @@ def go_go():
         print utils.TemplateInspector(html)
         
 
-import profile
+#import profile
 
 go_go()
 #profile.run('go_go()', 'profile2-data')

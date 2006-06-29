@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<people>
+  <defaults>
+    <person>
+      <email>%(person)@gnome.org</email>
+      <icon>/~danilo/damned-lies/data/nobody.png</icon>
+      <cvs-account>%(person/id)</cvs-account>
+      <webpage></webpage>
+      <im></im>
+      <nick></nick>
+    </person>
+  </defaults>
+
+<!-- Gnome developers -->
+  <person id="chpe">
+    <name>Christian Persch</name>
+    <email>chpe@gnome.org</email>
+    <nick>chpe</nick>
+    <webpage>http://gnome.org/~chpe/</webpage>
+  </person>
+  <person id="davyd">
+    <name>Davyd Madeley</name>
+    <email>davyd@madeley.id.au</email>
+    <nick>davyd</nick>
+    <webpage>http://www.davyd.id.au/</webpage>
+    <icon>http://planet.gnome.org/heads/riff.png</icon>
+  </person>
+  <person id="jrl">
+    <name>James Livingston</name>
+    <email>jrl@ids.org.au</email>
+    <nick>doctau</nick>
+  </person>
+  <person id="marco">
+    <name>Marco Pesenti Gritti</name>
+    <email>marco@gnome.org</email>
+    <nick>mpg</nick>
+    <webpage>http://gnome.org/~marco/</webpage>
+  </person>
+  <person id="matthiasc">
+    <name>Matthias Clasen</name>
+    <email>mclasen@redhat.com</email>
+    <nick>mclasen</nick>
+  </person>
+  <person id="owen">
+    <name>Owen Taylor</name>
+    <email>otaylor@redhat.com</email>
+    <webpage>http://people.redhat.com/otaylor/</webpage>
+    <icon>http://planet.gnome.org/heads/owen3.png</icon>
+    <nick>otaylor</nick>
+  </person>
+  <person id="rslinckx">
+    <name>Raphaël Slinckx</name>
+    <email>raphael@slinckx.net</email>
+    <icon>http://planet.gnome.org/heads/kikidonk.png</icon>
+    <nick>kikidonk</nick>
+    <webpage>http://raphael.slinckx.net/</webpage>
+  </person>
+  <person id="shaunm">
+    <name>Shaun McCance</name>
+    <email>shaunm@gnome.org</email>
+    <icon>http://planet.gnome.org/heads/shaunm.png</icon>
+    <nick>shaunm</nick>
+    <webpage>http://www.gnome.org/~shaunm/</webpage>
+  </person>
+  <person id="svu">
+    <name>Sergey V. Udaltsov</name>
+    <email>svu@gnome.org</email>
+    <nick>svu</nick>
+    <webpage>http://www.advogato.org/person/svu/</webpage>
+  </person>
+  <person id="veillard">
+    <name>Daniel Veillard </name>
+    <email>veillard@redhat.com</email>
+    <nick>DV</nick>
+  </person>
+
+<!-- non-Gnome people -->
+  <person id="xdg-ivan">
+    <name>Ivan U. Pascal</name>
+    <email>pascal@tsu.ru</email>
+    <webpage>http://pascal.tsu.ru/</webpage>
+  </person>
+
+
+<!-- Translators -->
+  <!-- af translation coordinator -->
+  <person id="x-petrijooste">
+    <name>Petri Jooste</name>
+    <email>rkwjpj@puk.ac.za</email>
+  </person>
+  <!-- sq translation coordinator -->
+  <person id="laurenti">
+    <name>Laurent Dhima</name>
+    <email>laurenti@users.sourceforge.net</email>
+  </person>
+  <!-- am translation coordinator -->
+  <person id="yacob">
+    <name>Daniel Yacob</name>
+    <email>locales@geez.org</email>
+  </person>
+  <!-- ar translation coordinator -->
+  <person id="arafetmedini">
+    <name>Arafat Medini</name>
+    <email>lumina@silverpen.de</email>
+  </person>
+  <!-- hy translation coordinator -->
+  <person id="noch">
+    <name>Norayr Chilingaryan</name>
+    <email>asprayama@yahoo.com</email>
+  </person>
+  <!-- as translation coordinator -->
+  <person id="x-suranampatir">
+    <name>Sunaram Patir</name>
+    <email>lkpatir@yahoo.co.in</email>
+  </person>
+  <!-- ast translation coordinator -->
+  <person id="x-mikelgonzalez">
+    <name>Mikel González</name>
+    <email>mikelisimu@yahoo.es</email>
+  </person>
+  <!-- en_AU translation coordinator -->
+  <person id="x-peterlawler">
+    <name>Peter Lawler</name>
+    <email>gnome-i18n@six-by-nine.com.au</email>
+  </person>
+  <!-- az translation coordinator -->
+  <person id="rundll32">
+    <name>Metin Amiroff</name>
+    <email>amiroff@gmail.com</email>
+  </person>
+  <!-- eu translation coordinator -->
+  <person id="dooteo">
+    <name>Iñaki Larrañaga Murgoitio</name>
+    <email>dooteo@euskalgnu.org</email>
+  </person>
+  <!-- be translation coordinator -->
+  <person id="alesnk">
+    <name>Ales Nyakhaychyk</name>
+    <email>nab@mail.by</email>
+  </person>
+  <!-- bn translation coordinator -->
+  <person id="taneem">
+    <!-- FIXME: is Runa Bhattacharjee<runa@bengalinux.org> "runab" or Taneem person? -->
+    <name>Taneem Ahmed</name>
+    <email>taneem@eyetap.org</email>
+  </person>
+  <!-- bs translation coordinator -->
+  <person id="aakagic">
+    <name>Amila Akagić</name>
+    <email>bono@lugbih.org</email>
+  </person>
+  <!-- pt_BR translation coordinator -->
+  <person id="gdvieira">
+    <name>Gustavo Maciel Dias Vieira</name>
+    <email>gustavo@sagui.org</email>
+  </person>
+  <!-- br translation coordinator -->
+  <person id="x-jeremyarfloch">
+    <name>Jérémy Ar Floc'h</name>
+    <email>jeremy.lefloch@gmail.com</email>
+  </person>
+  <!-- bg translation coordinator -->
+  <person id="al_shopov">
+    <name>Alexander Shopov</name>
+    <email>ash@contact.bg</email>
+  </person>
+  <!-- my translation coordinator -->
+  <person id="zawwinaung">
+    <name>Zaw Win Aung</name>
+    <email>zwassdt@yahoo.com</email>
+  </person>
+  <!-- en_GB translation coordinator -->
+  <person id="hadess">
+    <name>Bastien Nocera</name>
+    <email>hadess@hadess.net</email>
+  </person>
+  <!-- en_CA translation coordinator -->
+  <person id="adamw">
+    <name>Adam Weinberger</name>
+    <email>adamw@gnome.org</email>
+  </person>
+  <!-- ca translation coordinator -->
+  <person id="jordim">
+    <name>Jordi Mallach</name>
+    <email>jordi@sindominio.net</email>
+  </person>
+  <!-- zh_CN translation coordinator -->
+  <person id="x-wangjian">
+    <!-- FIXME: is Funda Wang (fwang) a new person? -->
+    <name>Wang Jian</name>
+    <email>lark@linux.net.cn</email>
+  </person>
+  <!-- zh_HK translation coordinator -->
+  <person id="baddog">
+    <name>Abel Cheung</name>
+    <email>abelcheung@gmail.com</email>
+  </person>
+  <!-- hr translation coordinator -->
+  <person id="x-robertsedak">
+    <name>Robert Sedak</name>
+    <email>robert.sedak@sk.htnet.hr</email>
+  </person>
+  <!-- cs translation coordinator -->
+  <person id="x-stanislavbrabec">
+    <!-- FIXME: isn't "mitr" the person? -->
+    <name>Stanislav Brabec</name>
+    <email>utx@penguin.cz</email>
+  </person>
+  <!-- da translation coordinator -->
+  <person id="x-martinwillemoeshansen">
+    <name>Martin Willemoes Hansen</name>
+    <email>mwh@sysrq.dk</email>
+  </person>
+  <!-- nl translation coordinator -->
+  <person id="adrighem">
+    <name>Vincent van Adrighem</name>
+    <email>adrighem@gnome.org</email>
+  </person>
+  <!-- dz translation coordinator -->
+  <person id="pgeyleg">
+    <name>Pema Geyleg</name>
+    <email>pema_geyleg@rediffmail.com</email>
+  </person>
+  <!-- eo translation coordinator -->
+  <person id="x-artempopov">
+    <name>Artem Popov</name>
+    <email>tfwo@mail.ru</email>
+  </person>
+  <!-- et translation coordinator -->
+  <person id="plaes">
+    <name>Priit Laes</name>
+    <email>amd@store20.com</email>
+  </person>
+  <!-- fj translation coordinator -->
+  <person id="x-timocitora">
+    <name>Timoci Tora</name>
+    <email>jim@sopac.org</email>
+  </person>
+  <!-- fi translation coordinator -->
+  <person id="ituohela">
+    <name>Ilkka Tuohela</name>
+    <email>hile@iki.fi</email>
+  </person>
+  <!-- fr translation coordinator -->
+  <person id="redfox">
+    <name>Christophe Merlet (RedFox)</name>
+    <email>redfox@redfoxcenter.org</email>
+  </person>
+  <!-- gl translation coordinator -->
+  <person id="icq">
+    <name>Ignacio Casal Quinteiro</name>
+    <email>nacho.resa@gmail.com</email>
+  </person>
+  <!-- ka translation coordinator -->
+  <person id="vsichi">
+    <name>Vladimer Sichinava</name>
+    <email>alinux@siena.linux.it</email>
+  </person>
+  <!-- de translation coordinator -->
+  <person id="hendrikr">
+    <name>Hendrik Richter</name>
+    <email>hendi@gnome-de.org</email>
+  </person>
+  <!-- el translation coordinator -->
+  <person id="simos">
+    <name>Simos Xenitellis</name>
+    <email>simos74@gmx.net</email>
+  </person>
+  <!-- gn translation coordinator -->
+  <person id="x-morenosaraivamartins">
+    <name>Moreno Saraiva Martins</name>
+    <email>colorido@riseup.net</email>
+  </person>
+  <!-- gu translation coordinator -->
+  <person id="x-niravmehta">
+    <!-- FIXME: "ankitp" does all the CVS commits -->
+    <name>Nirav Mehta</name>
+    <email>nirav@magnet-i.com</email>
+  </person>
+  <!-- ha translation coordinator -->
+  <person id="x-bamiyoodumah">
+    <name>Bamiyo Odumah</name>
+    <email>bodumah@yahoo.com</email>
+  </person>
+  <!-- he translation coordinator -->
+  <person id="yairhr">
+    <name>Yair Hershkovitz</name>
+    <email>yairhr@013.net</email>
+  </person>
+  <!-- hi translation coordinator -->
+  <person id="karunakar">
+    <name>Guntupalli Karunakar</name>
+    <email>karunakar@indlinux.org</email>
+  </person>
+  <!-- hu translation coordinator -->
+  <person id="kelemeng">
+    <name>Gábor Kelemen</name>
+    <email>kelemeng@gnome.hu</email>
+  </person>
+  <!-- jab translation coordinator -->
+  <person id="x-uchennaagbim">
+    <name>Uchenna Agbim</name>
+    <email>nnemanwu@yahoo.com</email>
+  </person>
+  <!-- is translation coordinator -->
+  <person id="x-samueljongunnarsson">
+    <name>Samúel Jón Gunnarsson</name>
+    <email>sammi@techattack.nu</email>
+  </person>
+  <!-- ig translation coordinator -->
+  <person id="x-nwabunwanne">
+    <name>Nwabunwanne</name>
+    <email>abunwanne@yahoo.com</email>
+  </person>
+  <!-- id translation coordinator -->
+  <person id="mdamt">
+    <name>Mohammad Damt</name>
+    <email>mohammad.damt@gmail.com</email>
+  </person>
+  <!-- az_IR translation coordinator -->
+  <person id="x-amirhedayaty">
+    <name>Amir Hedayaty</name>
+    <email>amir@bamdad.org</email>
+  </person>
+  <!-- ga translation coordinator -->
+  <person id="x-paulduffy">
+    <!-- FIXME: Alastair McKinstry <mckinstry@computer.org> seems to be the last committer in 2004. -->
+    <name>Paul Duffy</name>
+    <email>dubhthach@zion.nuigalway.ie</email>
+  </person>
+  <!-- it translation coordinator -->
+  <person id="algol">
+    <name>Alessio Frusciante</name>
+    <email>algol@firenze.linux.it</email>
+  </person>
+  <!-- ja translation coordinator -->
+  <person id="aihana">
+    <name>Takeshi Aihana</name>
+    <email>aihana@gnome.gr.jp</email>
+  </person>
+  <!-- kaj translation coordinator -->
+  <person id="x-uchennaagbim">
+    <name>Uchenna Agbim</name>
+    <email>nnemanwu@yahoo.com</email>
+  </person>
+  <!-- kdm translation coordinator -->
+  <person id="x-uchennaagbim">
+    <name>Uchenna Agbim</name>
+    <email>nnemanwu@yahoo.com</email>
+  </person>
+  <!-- kn translation coordinator -->
+  <person id="x-pramodr">
+    <name>Pramod R</name>
+    <email>pramodleo@yahoo.co.uk</email>
+  </person>
+  <!-- kk translation coordinator -->
+  <person id="x-amrenovkanat">
+    <name>Amrenov Kanat</name>
+    <email>musa@sfek.kz&gt;</email>
+  </person>
+  <!-- km translation coordinator -->
+  <person id="x-javiersola">
+    <name>Javier Sola</name>
+    <email>fjsola@aui.es</email>
+  </person>
+  <!-- rw translation coordinator -->
+  <person id="smurphy">
+    <name>Steve Murphy</name>
+    <email>murf@e-tools.com</email>
+  </person>
+  <!-- ky translation coordinator -->
+  <person id="timurj">
+    <name>Timur Jamakeev</name>
+    <email>ky-li@mail.ru</email>
+  </person>
+  <!-- ko translation coordinator -->
+  <person id="cwryu">
+    <name>Changwoo Ryu</name>
+    <email>cwryu@debian.org</email>
+  </person>
+  <!-- ku translation coordinator -->
+  <person id="x-abdullahulas">
+    <!-- FIXME: commits by someone else -->
+    <name>Abdullah Ulas</name>
+    <email>ulas@sdf.lonestar.org</email>
+  </person>
+  <!-- lo translation coordinator -->
+  <person id="x-anousaksouphavanh">
+    <name>Anousak Souphavanh</name>
+    <email>anousak@muanglao.com</email>
+  </person>
+  <!-- la translation coordinator -->
+  <person id="x-markpolo">
+    <name>Mark Polo</name>
+    <email>MPoloN7@netscape.net</email>
+  </person>
+  <!-- lv translation coordinator -->
+  <person id="x-raivisdejus">
+    <name>Raivis Dejus</name>
+    <email>orvils@gmail.com</email>
+  </person>
+  <!-- li translation coordinator -->
+  <person id="kenneth">
+    <name>Kenneth Rohde Christiansen</name>
+    <email>kenneth@gnu.org</email>
+  </person>
+  <!-- lt translation coordinator -->
+  <person id="zygis">
+    <name>Žygimantas Beručka</name>
+    <email>uid0@akl.lt</email>
+  </person>
+  <!-- nds translation coordinator -->
+  <person id="x-jurgenluters">
+    <name>Jürgen Lüters</name>
+    <email>jlueters@intranet-engineering.de</email>
+  </person>
+  <!-- mk translation coordinator -->
+  <person id="arangela">
+    <name>Arangel Angov</name>
+    <email>ufo@linux.net.mk</email>
+  </person>
+  <!-- mai translation coordinator -->
+  <person id="x-rajeshranjan">
+    <name>Rajesh Ranjan</name>
+    <email>rajeshkajha@yahoo.com</email>
+  </person>
+  <!-- ms translation coordinator -->
+  <person id="sebol">
+    <name>Hasbullah bin Pit</name>
+    <email>sebol@ikhlas.com</email>
+  </person>
+  <!-- ml translation coordinator -->
+  <person id="x-sajithvk">
+    <name>Sajith V.K</name>
+    <email>sajith_vk@linuxmail.org</email>
+  </person>
+  <!-- mt translation coordinator -->
+  <person id="x-ramoncasha">
+    <name>Ramon Casha</name>
+    <email>ramon.casha@linux.org.mt</email>
+  </person>
+  <!-- mi translation coordinator -->
+  <person id="jbarstow">
+    <name>John C Barstow</name>
+    <email>jbowtie@amathaine.com</email>
+  </person>
+  <!-- mr translation coordinator -->
+  <person id="x-jitendrashah">
+    <name>Jitendra Shah</name>
+    <email>jitendras@vsnl.com</email>
+  </person>
+  <!-- myn translation coordinator -->
+  <person id="x-danielespinosa">
+    <name>Daniel Espinosa</name>
+    <email>esodan@yahoo.com.mx</email>
+  </person>
+  <!-- mn translation coordinator -->
+  <person id="badaa">
+    <name>Sanlig Badral</name>
+    <email>badral@chinggis.com</email>
+  </person>
+  <!-- nah translation coordinator -->
+  <person id="x-danielespinosa">
+    <name>Daniel Espinosa</name>
+    <email>esodan@yahoo.com.mx</email>
+  </person>
+  <!-- ne translation coordinator -->
+  <person id="pachimho">
+    <name>Pawan Chitrakar</name>
+    <email>pawan@nplinux.org</email>
+  </person>
+  <!-- nso translation coordinator -->
+  <person id="dbailey">
+    <name>Dwayne Bailey</name>
+    <email>dwayne@translate.org.za</email>
+  </person>
+  <!-- no translation coordinator -->
+  <person id="kmaraas">
+    <name>Kjartan Maraas</name>
+    <email>kmaraas@broadpark.no</email>
+  </person>
+  <!-- oc translation coordinator -->
+  <person id="x-joanluclaborda">
+    <name>Joan Luc Labòrda</name>
+    <email>joanluc.laborda@free.fr</email>
+  </person>
+  <!-- ang translation coordinator -->
+  <person id="x-jamesrjohnson">
+    <name>James R. Johnson</name>
+    <email>modean52@comcast.net</email>
+  </person>
+  <!-- or translation coordinator -->
+  <person id="gmohanty">
+    <name>Gora Mohanty</name>
+    <email>gora_mohanty@yahoo.co.in</email>
+  </person>
+  <!-- sai translation coordinator -->
+  <person id="x-santiagojoseruanorincon">
+    <name>Santiago José Ruano Rincón</name>
+    <email>santiago@unicauca.edu.co</email>
+  </person>
+  <!-- fa translation coordinator -->
+  <person id="roozbeh">
+    <name>Roozbeh Pournader</name>
+    <email>roozbeh@farsiweb.info</email>
+  </person>
+  <!-- pl translation coordinator -->
+  <person id="aflinta">
+    <name>Artur Flinta</name>
+    <email>aflinta@at.kernel.pl</email>
+  </person>
+  <!-- pt translation coordinator -->
+  <person id="dnloreto">
+    <name>Duarte Loreto</name>
+    <email>happyguy_pt@hotmail.com</email>
+  </person>
+  <!-- pa translation coordinator -->
+  <person id="aman">
+    <name>Amanpreet Singh Alam</name>
+    <email>apbrar@gmail.com</email>
+  </person>
+  <!-- ps translation coordinator -->
+  <person id="x-ismailmaskani">
+    <name>Ismail Maskani</name>
+    <email>ismailmaskani@yahoo.com</email>
+  </person>
+  <!-- qu translation coordinator -->
+  <person id="x-angeljavierchulve">
+    <name>Angel Javier Chulve</name>
+    <email>javier.chulve@gmail.com</email>
+  </person>
+  <!-- ro translation coordinator -->
+  <person id="mugurulu">
+    <name>Mugurel Tudor</name>
+    <email>mugurelu@gnome.ro</email>
+  </person>
+  <!-- ru translation coordinator -->
+  <person id="dmitrym">
+    <name>Dmitry G. Mastrukov</name>
+    <email>dmitry@taurussoft.org</email>
+  </person>
+  <!-- sa translation coordinator -->
+  <person id="x-mukeshg">
+    <name>Mukesh G</name>
+    <email>morphius@symonds.net</email>
+  </person>
+  <!-- sc translation coordinator -->
+  <person id="x-antoniopistis">
+    <name>Antonio Pistis</name>
+    <email>antonio.pistis@virgilio.it</email>
+  </person>
+  <!-- sr translation coordinator -->
+  <person id="danilo">
+    <name>Danilo Šegan</name>
+    <nick>danilo</nick>
+    <email>danilo@gnome.org</email>
+    <email>danilo@kvota.net</email>
+    <im id="Jabber">danilo@kvota.net</im>
+    <im id="ICQ">9344053</im>
+    <webpage>http://danilo.segan.org/</webpage>
+    <icon>http://gnome.org/~danilo/mali-cupavi.png</icon>
+    <bugzilla-account>danilo@gnome.org</bugzilla-account>
+    <cvs-account>danilo</cvs-account>
+    <info><something>blah</something>
+      <other>foobar</other>
+    </info>
+    <since>April 2003</since>
+  </person>
+  <!-- si translation coordinator -->
+  <person id="x-anuradharatnaweera">
+    <name>Anuradha Ratnaweera</name>
+    <email>anuradha@linux.lk</email>
+  </person>
+  <!-- sk translation coordinator -->
+  <person id="marcel">
+    <name>Marcel Telka</name>
+    <email>marcel@telka.sk</email>
+  </person>
+  <!-- sl translation coordinator -->
+  <person id="minmax">
+    <name>Matjaz Horvat</name>
+    <email>matjaz@owca.info</email>
+  </person>
+  <!-- es translation coordinator -->
+  <person id="serrador">
+    <name>Francisco Javier F. Serrador</name>
+    <email>serrador@tecknolabs.com</email>
+  </person>
+  <!-- sw translation coordinator -->
+  <person id="x-mturielias">
+    <name>Mturi Elias</name>
+    <email>eliasmturi76@yahoo.com</email>
+  </person>
+  <!-- sv translation coordinator -->
+  <person id="menthos">
+    <name>Christian Rose</name>
+    <email>menthos@gnome.org</email>
+    <irc-nickname>menthos</irc-nickname>
+    <bugzilla-account>menthos@menthos.com</bugzilla-account>
+    <webpage>http://www.advogato.org/person/menthos/</webpage>
+    <icon>http://planet.gnome.org/heads/menthos.png</icon>
+  </person>
+  <!-- tl translation coordinator -->
+  <person id="x-ericpareja">
+    <name>Eric Pareja</name>
+    <email>xenos@upm.edu.ph</email>
+  </person>
+  <!-- tg translation coordinator -->
+  <person id="x-rogerkovacs">
+    <name>Roger Kovacs</name>
+    <email>rkovacs@khujand.org</email>
+  </person>
+  <!-- ta translation coordinator -->
+  <person id="njaya">
+    <name>Jayaradha N.</name>
+    <email>jayaradhaa@gmail.com</email>
+  </person>
+  <!-- tt translation coordinator -->
+  <person id="x-albert-fazli">
+    <name>Albert Fazlí</name>
+    <email>tatarish.l10n@gmail.com</email>
+  </person>
+  <!-- te translation coordinator -->
+  <person id="smohan">
+    <name>Sunil Mohan</name>
+    <email>sunil@atc.tcs.co.in</email>
+  </person>
+  <!-- tet translation coordinator -->
+  <person id="x-petergossner">
+    <name>Peter Gossner</name>
+    <email>gossner@arcom.com.au</email>
+  </person>
+  <!-- th translation coordinator -->
+  <person id="x-krichnasingkun">
+    <!-- FIXME: this guy has never committed anything, but "tkaroonb" seems pretty active -->
+    <name>Krich Nasingkun</name>
+    <email>nong_oos@hotmail.com</email>
+  </person>
+  <!-- bo translation coordinator -->
+  <person id="x-christopherfynn">
+    <name>Christopher Fynn</name>
+    <email>cfynn@gmx.net</email>
+  </person>
+  <!-- ti translation coordinator -->
+  <person id="x-simonmebrahtu">
+    <name>Simon Mebrahtu</name>
+    <email>simesoft@yahoo.com</email>
+  </person>
+  <!-- tr translation coordinator -->
+  <person id="bcicek">
+    <name>Baris Cicek</name>
+    <email>baris@teamforce.name.tr</email>
+  </person>
+  <!-- tk translation coordinator -->
+  <person id="x-ghorbanmtavakoly">
+    <name>Ghorban M. Tavakoly</name>
+    <email>gmtavakkoli@yahoo.com</email>
+  </person>
+  <!-- kcg translation coordinator -->
+  <person id="x-uchennaagbim">
+    <name>Uchenna Agbim</name>
+    <email>nnemanwu@yahoo.com</email>
+  </person>
+  <!-- ug translation coordinator -->
+  <person id="x-abdurixitabduxukur">
+    <name>Abdurixit Abduxukur</name>
+    <email>abduxukur.abdurixit@t-systems.ch</email>
+  </person>
+  <!-- uk translation coordinator -->
+  <person id="mdziumanenko">
+    <name>Maxim V. Dziumanenko</name>
+    <email>mvd@mylinux.com.ua</email>
+  </person>
+  <!-- urd translation coordinator -->
+  <person id="x-shahzadchohan">
+    <name>Shahzad Chohan</name>
+    <email>shaz@linux.net.pk</email>
+  </person>
+  <!-- uz translation coordinator -->
+  <person id="x-mashrabkuvatov">
+    <name>Mashrab Kuvatov</name>
+    <email>kmashrab@sat.physik.uni-bremen.de</email>
+  </person>
+  <!-- vi translation coordinator -->
+  <person id="pclouds">
+    <name>Nguyen Thai Ngoc Duy</name>
+    <email>pclouds@users.sourceforge.net</email>
+  </person>
+  <!-- wa translation coordinator -->
+  <person id="pablo">
+    <name>Pablo Saratxaga</name>
+    <email>pablo@walon.org</email>
+  </person>
+  <!-- cy translation coordinator -->
+  <person id="daf">
+    <name>Dafydd Harries</name>
+    <email>daf@muse.19inch.net</email>
+  </person>
+  <!-- xh translation coordinator -->
+  <person id="aattar">
+    <name>Adi Attar</name>
+    <email>adi@canonical.com</email>
+  </person>
+  <!-- yi translation coordinator -->
+  <person id="RaphaelFinkel">
+    <name>Raphael Finkel</name>
+    <email>raphael@cs.uky.edu</email>
+  </person>
+  <!-- yo translation coordinator -->
+  <person id="x-aboyomimobolajionibudo">
+    <name>Abayomi Mobolaji Onibudo</name>
+    <email>bonibz@hotmail.com</email>
+  </person>
+  <!-- zap translation coordinator -->
+  <person id="x-danielespinosa">
+    <name>Daniel Espinosa</name>
+    <email>esodan@yahoo.com.mx</email>
+  </person>
+  <!-- zu translation coordinator -->
+  <person id="dbailey">
+    <name>Dwayne Bailey</name>
+    <email>dwayne@translate.org.za</email>
+  </person>
+</people>

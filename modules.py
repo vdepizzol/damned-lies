@@ -1,219 +1,44 @@
 #!/usr/bin/env python
 
-import xml.dom.minidom
 import defaults
+import data
 
 class XmlModules:
-    def getElementContents(self, node):
-        nodelist = node.childNodes
-        rc = ""
-        for el in nodelist:
-            if el.nodeType == el.TEXT_NODE:
-                rc = rc + el.data
-        return rc
-        
-    def getElementText(self, node, element, default = 0):
-        if not node.hasChildNodes():
-            return default
-        child = node.firstChild
-        while child:
-            if child.nodeType == child.ELEMENT_NODE and child.nodeName == element:
-                return self.getElementContents(child)
-            child = child.nextSibling
-        return default
-
-    def getElementList(self, node, element, subelement, default = 0):
-        all = node.getElementsByTagName(element)
-        if not all or len(all)<1:
-            return default
-
-        nodelist = all[0].getElementsByTagName(subelement)
-        rc = []
-        for el in nodelist:
-            rc.append(self.getElementContents(el))
-        return rc
-
-    def getBranch(self, el, moduleid, cvsweb, cvsmodule, branch, default):
-        if not branch: branch = "HEAD"
-
-        trdomains = self.getTranslationDomains(el, default = defaults.translation_domains)
-        documents = self.getDocuments(el, default = defaults.documents)
-        regenerate = 1
-        if el.hasAttribute("regenerate"):
-            regenerate = int(el.getAttribute("regenerate"))
-
-        stringfrozen = 0
-        if el.hasAttribute("stringfrozen"):
-            stringfrozen = int(el.getAttribute("stringfrozen"))
-
-        for dom in trdomains:
-            if not trdomains[dom]['potbase']:
-                trdomains[dom]['potbase'] = moduleid
-        for doc in documents:
-            if not documents[doc]['potbase']:
-                documents[doc]['potbase'] = moduleid
-
-        rc = {
-            "translation_domains" : trdomains,
-            "documents" : documents,
-            "regenerate" : regenerate,
-            "stringfrozen" : stringfrozen,
-            "cvsweb" : cvsweb % {'module' : cvsmodule, 'branch' : branch},
-            }
-        return rc
-
-    def getBranches(self, module, moduleid, cvsweb, cvsmodule, default = 0):
-        all = module.getElementsByTagName('branches')
-        if not all or len(all)<1:
-            rc = { }
-            for branch in default:
-                rc[branch] = self.getBranch(module, moduleid, cvsweb, cvsmodule, branch, default)
-            return rc
-
-        nodelist = all[0].getElementsByTagName('branch')
-        rc = {}
-        for el in nodelist:
-            branch = el.getAttribute("tag")
-            if not branch: branch = "HEAD"
-            rc[branch] = self.getBranch(el, moduleid, cvsweb, cvsmodule, branch, default)
-        return rc
-
-
-    def getTranslationDomains(self, module, default = 0):
-        all = module.getElementsByTagName("translation-domains")
-
-        rc = {}
-        for domain in default:
-            rc[domain] = { "description": default[domain]["description"],
-                           "potbase": default[domain]["potbase"] }
-
-        if not all or len(all)<1:
-            return rc
-
-        nodelist = all[0].getElementsByTagName("domain")
-        if not nodelist or len(nodelist)<1:
-            return rc
-
-        rc = {}
-        for domain in nodelist:
-            dir = self.getElementText(domain, "directory", "po")
-            desc = self.getElementText(domain, "description", "UI translations")
-            potname = domain.getAttribute("base")
-            if not potname: potname = ""
-            
-            rc[dir] = { "description" : desc,
-                        "potbase" : potname }
-        return rc
-
-
-
-    def getDocuments(self, module, default = 0):
-        all = module.getElementsByTagName("documents")
-
-
-        rc = {}
-        for doc in default:
-            rc[doc] = { "description": default[doc]["description"],
-                        "potbase": default[doc]["potbase"] }
-
-        if not all or len(all)<1:
-            return rc
-
-        nodelist = all[0].getElementsByTagName("document")
-        if not nodelist or len(nodelist)<1:
-            return rc
-
-        rc = {}
-        for doc in nodelist:
-            if doc.hasAttribute("base"):
-                base = doc.getAttribute("base")
-            else:
-                base = ""
-            dir = self.getElementText(doc, "directory", "help")
-            desc = self.getElementText(doc, "description", "User Guide")
-            
-            rc[dir] = { "description" : desc,
-                        "potbase" : base }
-        return rc
-
-    def getBugzillaDetails(self, module, moduleid, default = 0):
-        all = module.getElementsByTagName("bugzilla")
-        if not all or len(all)<1:
-            return  {
-                "baseurl" : default["baseurl"],
-                "xmlrpc" : default["xmlrpc"],
-                "product" : moduleid,
-                "component" : default["component"],
-                }
-
-        node = all[0]
-
-        rc = {
-           "baseurl" : self.getElementText(node, "baseurl", default["baseurl"]),
-           "xmlrpc" : self.getElementText(node, "xmlrpc", default["xmlrpc"]),
-           "product" : self.getElementText(node, "product", moduleid),
-           "component" : self.getElementText(node, "component", default["component"]),
-           }
-        return rc
-
-    def getMaintainers(self, module, default = 0):
-        all = module.getElementsByTagName("maintainers")
-        if not all or len(all)<1:
-            return default
-
-        nodelist = all[0].getElementsByTagName("maintainer")
-        if not nodelist or len(nodelist)<1:
-            return default
-
-        rc = []
-        for el in nodelist:
-            maint = {
-                "name" : self.getElementText(el, "name", ""),
-                "email" : self.getElementText(el, "email", ""),
-                "irc_nickname" : self.getElementText(el, "irc-nickname", ""),
-                "hackergotchi" : self.getElementText(el, "hackergotchi", ""),
-                "webpage" : self.getElementText(el, "webpage", ""),
-                }
-                
-            rc.append(maint)
-        return rc
-
     
     def __init__(self, modfile = defaults.modules_xml, module = None):
-        self.modules = { }
+        self.modules = data.getModules( only = module)
         only_module = module
 
-        dom = xml.dom.minidom.parse(modfile)
-        
-        mods = dom.getElementsByTagName("module")
-        for module in mods:
-            modid = module.getAttribute("id")
+        people = data.getPeople()
+
+        for module in self.modules:
+            modid = module
 
             if only_module and modid != only_module:
                 continue
-            description = self.getElementText(module, "description", default = modid)
+            #
+            # maintainers = self.getMaintainers(module, default = defaults.maintainers)
+            for maint in self.modules[module]['maintainer']:
+                if people.has_key(maint):
+                    self.modules[module]['maintainer'][maint] = people[maint]
 
-            mycvsroot = self.getElementText(module, "cvs-root", default = defaults.cvsroot)
-            mycvsweb = self.getElementText(module, "cvs-web", default = defaults.cvsweb)
-            cvsmodule = self.getElementText(module, "cvs-module", default = modid)
-            cvsbranch = self.getBranches(module, modid, mycvsweb, cvsmodule, default = defaults.cvsbranch )
-            bugzilla = self.getBugzillaDetails(module, modid, default = defaults.bugzilla)
-            maintainers = self.getMaintainers(module, default = defaults.maintainers)
+            if self.modules[module].has_key('branch'):
+                for branch in self.modules[module]['branch']:
+                    if not self.modules[module]["branch"][branch].has_key('domain'):
+                        self.modules[module]["branch"][branch]['domain'] = {}
+                    trdomains = self.modules[module]["branch"][branch]['domain'].keys()
+                    if not self.modules[module]["branch"][branch].has_key('document'):
+                        self.modules[module]["branch"][branch]['document'] = {}
+                    documents = self.modules[module]["branch"][branch]['document'].keys()
+                    for trdomain in trdomains:
+                        here = self.modules[module]["branch"][branch]['domain'][trdomain]
+                        here['potbase'] = here['id']
 
-            if not bugzilla['product']:
-                bugzilla['product'] = modid
-
-            self.modules[modid] = {
-                "id" : modid,
-                "description" : description,
-                "cvsroot" : mycvsroot,
-                "cvsweb" : mycvsweb,
-                "cvsmodule"  : cvsmodule,
-                "cvsbranches" : cvsbranch,
-                "bugzilla" : bugzilla,
-                "maintainers" : maintainers,
-                "webpage" : self.getElementText(module, "webpage", default = ""),
-                }
+                    for document in documents:
+                        here = self.modules[module]["branch"][branch]['document'][document]
+                        here['potbase'] = document
+                        if not here.has_key('directory'):
+                            here['directory'] = here['id']
 
 
     # Implement dictionary methods
@@ -259,7 +84,7 @@ class CvsModule:
                                    moduledir)
 
                 if not co:
-                    print >> sys.stderr, "Problem with checking out module %s.%s" % (module["id"], branch)
+                    print >> sys.stderr, "Problem checking out module %s.%s" % (module["id"], branch)
                 else:
                     self.paths[branch] = checkoutpath
             else:
@@ -303,7 +128,8 @@ class CvsModule:
 
 
 if __name__=="__main__":
-    m = XmlModules(defaults.modules_xml)
-    for modid in m:
+    m = XmlModules()
+    import pprint
+    for modid in ['gnome-applets']:
         #cvs = CvsModule(m[modid])
-        print modid, ":\n", m[modid]
+        print modid, ":\n", pprint.pprint(m[modid])

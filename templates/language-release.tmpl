@@ -23,17 +23,17 @@
   #if $team.bugzilla
   <br/><strong>Bugzilla:</strong>
   <ul>
-    <li><a href="${team.bugzilla.baseurl}enter_bug.cgi?product=$team.bugzilla.product&component=$team.bugzilla.component">Report Bug in Translation</a></li>
-    <li><a href="${team.bugzilla.baseurl}buglist.cgi?product=$team.bugzilla.product&component=$team.bugzilla.component">Show Existing Bugs</a></li>
+    <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">Report Bug in Translation</a></li>
+    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">Show Existing Bugs</a></li>
   </ul>
   #end if
   
 
-  #if $team.mailing_list
+  #if $team['mailing-list']
   <br/><strong>Mailing List:</strong>
   <ul>
-    <li><a href="mailto:${team.mailing_list.mail_to}">Send e-mail to the list</a></li>
-    <li><a href="${team.mailing_list.subscribe}">Subscribe</a></li>
+    <li><a href="mailto:${team['mailing-list']}">Send e-mail to the list</a></li>
+    <li><a href="${team['mailing-list-subscribe']}">Subscribe</a></li>
   </ul>
   #end if
 
@@ -42,34 +42,34 @@
 </td><td valign="top">
 #if $team.has_key('coordinator')
   <h2>Coordinator</h2>
-  #if $team.coordinator.hackergotchi
-  <div class="maintainer" style="background-image:url('$team.coordinator.hackergotchi');">
+  #if $team.coordinator.icon
+  <div class="maintainer" style="background-image:url('$team.coordinator.icon);">
   #else
   <div class="maintainer">
   #end if
-  <a style="font-size: 140%;" href="mailto:$team.coordinator.email">$team.coordinator.name</a><br />
+  <a style="font-size: 140%;" href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a><br />
   #if $team.coordinator.webpage
   <a href="$team.coordinator.webpage">$team.coordinator.webpage</a><br />
   #end if
 
   <br />
-  #if len($team.coordinator.im) or $team.coordinator.irc_nickname
+  #if len($team.coordinator.im) or $team.coordinator.nick
   <strong>Instant messaging:</strong>
   <ul>
-  #if $team.coordinator.irc_nickname
-    <li><em>$team.coordinator.irc_nickname</em> (IRC)</li>
+  #if $team.coordinator.nick
+    <li><em>$team.coordinator.nick</em> (IRC)</li>
   #end if
-  #for (type, account) in $team.coordinator.im
-    <li><em>$account</em> ($type)</li>
+  #for type, account in $team.coordinator.im.items()
+    <li><em>$account.content</em> ($type)</li>
   #end for
   </ul>
   #end if
 
-  #if $team.coordinator.bugzilla_account
-  <strong>Bugzilla account:</strong> $team.coordinator.bugzilla_account<br />
+  #if $team.coordinator.has_key('bugzilla-account')
+  <strong>Bugzilla account:</strong> $team.coordinator['bugzilla-account']<br />
   #end if
-  #if $team.coordinator.cvs_account
-  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator.cvs_account}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator.cvs_account</a><br />
+  #if $team.coordinator.has_key('cvs-account')
+  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
   #end if
 
   </div>

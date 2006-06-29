@@ -16,48 +16,48 @@
 <div style="width:80%; text-align: left;">
 
 <h1>$module.description</h1>
-#if $module.webpage
+#if $module.has_key('webpage') and $module.webpage
 <p><a href="$module.webpage">$module.webpage</a></p>
 #end if
 <table><tr><td width="50%" valign="top">
-#if len($module.maintainers)
+#if $module.has_key('maintainer') and len($module.maintainer)
 <h2>Maintainers</h2>
-#for maintainer in $module.maintainers
-#if $maintainer.hackergotchi
-<div class="maintainer" style="background-image:url('$maintainer.hackergotchi');">
+#for mid, maintainer in $module.maintainer.items()
+#if $maintainer.icon
+<div class="maintainer" style="background-image:url('$maintainer.icon');">
 #else
 <div class="maintainer">
 #end if
   $maintainer.name <a href="mailto:$maintainer.email">&lt;$maintainer.email&gt;</a>
-  #if $maintainer.webpage
+  #if $maintainer.has_key('webpage')
   <br /><a href="$maintainer.webpage">$maintainer.webpage</a>
   #end if
 </div>
 #end for
 #end if
 </td><td width="50%" valign="top">
-#if $module.bugzilla
+#if $module.has_key('bugzilla')
 <h2>Bug reporting</h2>
 <p>Report bugs to 
-<a href="$module.bugzilla.baseurl/enter_bug.cgi?product=$module.bugzilla.product&component=$module.bugzilla.component">Bugzilla</a>.</p>
+<a href="$module.bugzilla/enter_bug.cgi?product=$module['bugzilla_product']&component=$module['bugzilla-component']">Bugzilla</a>.</p>
 #end if
 </td></tr></table>
 
-#if len($module.cvsbranches)
-#for branch, data in $module.cvsbranches.items()
-<h2>$branch (<a href="$data.cvsweb">Browse CVS</a>)</h2>
+#if len($module.branch)
+#for branch, data in $module.branch.items()
+<h2>$branch (<a href="$data['cvs-web']">Browse CVS</a>)</h2>
 
-#if $data.stringfrozen
+#if $data.has_key('stringfrozen') and $data.stringfrozen
 <p>This branch is currently string-frozen.</p>
 #end if
 
 <table><tr><td valign="top"><!-- split to two columns -->
 
-#if len($data.documents)
-#if len($data.documents)>1
+#if len($data.document)
+#if len($data.document)>1
 <h3>Documentation</h3>
 #end if
-#for docdir, document in $data.documents.items()
+#for docdir, document in $data.document.items()
 
 #set global webdir=$webroot+"/POT/"+$module.id+"."+$branch+"/docs/"+$document.potbase+"."+$branch
 #set global domain=$document
@@ -73,11 +73,11 @@
 </td><td valign="top"><!-- split to two columns -->
 
 
-#if len($data.translation_domains)
-#if len($data.translation_domains)>1
+#if len($data.domain)
+#if len($data.domain)>1
 <h3>Translation</h3>
 #end if
-#for uidir, domain in $data.translation_domains.items()
+#for uidir, domain in $data.domain.items()
 
 #set global webdir=$webroot+"/POT/"+$module.id+"."+$branch+"/"+$domain.potbase+"."+$branch
 #set global domain=$domain

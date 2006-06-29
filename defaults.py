@@ -21,6 +21,7 @@ WHOAREWE = 'danilo@gnome.org'
 modules_xml = "gnome-modules.xml"
 releases_xml = "releases.xml"
 teams_xml = "translation-teams.xml"
+people_xml = "people.xml"
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
@@ -30,10 +31,10 @@ notifications_to = 'danilo@avet.kvota.net'
 fuzzy_matching = 0
 
 # Set DEBUG to 1 to print (too) many messages on stderr about progress
-DEBUG = 0
+DEBUG = 1
 
 # Set to 1 to show all data passed to CheetahTemplates
-WEBDEBUG = 0
+WEBDEBUG = 1
 
 
 

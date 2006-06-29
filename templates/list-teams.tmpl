@@ -20,7 +20,7 @@
     — <a href="${team.webpage}">${team.webpage}</a>
   #end if
   #if $team.has_key('coordinator')
-    <br /><span style="font-size: 80%;">Coordinated by <a href="mailto:$team.coordinator.email">$team.coordinator.name</a></span>
+    <br /><span style="font-size: 80%;">Coordinated by <a href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a></span>
   #end if
 </li>
 #end for

@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
-import xml.dom.minidom
+import sys
 
 import defaults
 import utils
 import modules
 import teams
+import data
 from database import *
 
 import os
@@ -41,7 +42,7 @@ class Releases:
         else:
             return (0,0,0,[])
 
-    def list_modules(self, topnode, gather_stats = None):
+    def list_modules(self, category, gather_stats = None):
         """Goes through all modules and gathers stats for language gather_stats.
 
         gather_stats is "None" for no regeneration and
@@ -50,130 +51,156 @@ class Releases:
         retmodules = {}
         pot = totaltr = totalfz = totalun = 0
         dpot = dtotaltr = dtotalfz = dtotalun = 0
-        
-        mods = self.getDirectSubnodes(topnode, "module")
-        for mod in mods:
-            modid = mod.getAttribute('id')
-            branch = mod.getAttribute("branch")
-            if not branch:
-                branch = "HEAD"
-            retmodules[modid] = {
-                'id' : modid,
-                'branch': branch,
-                }
+
+        if defaults.DEBUG: print >>sys.stderr, "list_modules():" + category['id']
+
+        if category.has_key('category'):
+            if defaults.DEBUG: print >>sys.stderr, "ENTIRE RELEASE ", category['id']
+            # it's a release instead, go through all categories
+            (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, catMods) = (0, 0, 0, 0, 0, 0, 0, 0, None)
+            for catid in category['category']:
+                cat = category['category'][catid]
+                (pot, tr, fz, un, dpot, dtr, dfz, dun, catMods) = self.list_modules(cat, gather_stats)
             
-            if modid in self.myModules.keys():
-                myMod = self.myModules[modid]
-                retmodules[modid]['description'] = myMod['description']
-                retmodules[modid]['maintainers'] = myMod['maintainers']
-                retmodules[modid]['cvsmodule'] = myMod['cvsmodule']
+                ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
+                doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
 
-                if gather_stats and myMod['cvsbranches'].has_key(branch):
-                    trdomains = myMod['cvsbranches'][branch]['translation_domains']
-                    documents = myMod['cvsbranches'][branch]['documents']
+                #if catMods:
+                #    for modid in catMods:
+                #        retmodules[modid] = catMods[modid]
 
-                    retmodules[modid]['statistics'] = { 'ui_size' : 0, 'ui_translated' : 0, 'ui_fuzzy' : 0, 'ui_untranslated' : 0,
-                                                        'doc_size' : 0, 'doc_translated' : 0, 'doc_fuzzy' : 0, 'doc_untranslated' : 0 }
-                    
-                    retmodules[modid]['translation_domains'] = {}
-                    retmodules[modid]['documents'] = {}
+            return (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules)
+        else:
+            if defaults.DEBUG: print >>sys.stderr, "ONLY CATEGORY ", category['id']
+            # you're asking only for single category, go through all the modules and gather stats
+            if category.has_key('module'):
+                mods = category['module']
+            else:
+                mods = []
 
-                    mytr = myfz = myun = mypot = 0
-                    for trdomain in trdomains:
-                        (tr, fz, un, msgs) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
-                        totaltr += tr; totalfz += fz; totalun += un
-                        mytr += tr; myfz += fz; myun += un
+            for modid in mods:
+                if defaults.DEBUG: print >>sys.stderr, "MODULE: '%s'<br/>" % (modid)
+                mod = mods[modid]
+                if mod.has_key("branch"):
+                    branch = mod["branch"]
+                else:
+                    branch = u"HEAD"
+                retmodules[modid] = {
+                    'id' : modid,
+                    'branch': branch,
+                    }
 
-                        (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
-                        pot += pot_size
-                        mypot += pot_size
+                if modid in self.myModules.keys():
+                    myMod = self.myModules[modid]
+                    retmodules[modid]['description'] = myMod['description']
+                    retmodules[modid]['maintainers'] = myMod['maintainer']
+                    retmodules[modid]['cvsmodule'] = myMod['cvsmodule']
 
-                        un = pot_size - tr - fz
-                        if pot_size:
-                            perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                    if gather_stats and myMod.has_key('branch') and myMod['branch'].has_key(branch):
+                        trdomains = myMod['branch'][branch]['domain']
+                        documents = myMod['branch'][branch]['document']
+
+                        retmodules[modid]['statistics'] = { 'ui_size' : 0, 'ui_translated' : 0, 'ui_fuzzy' : 0, 'ui_untranslated' : 0,
+                                                            'doc_size' : 0, 'doc_translated' : 0, 'doc_fuzzy' : 0, 'doc_untranslated' : 0 }
+
+                        retmodules[modid]['translation_domains'] = {}
+                        retmodules[modid]['documents'] = {}
+
+                        mytr = myfz = myun = mypot = 0
+                        for trdomain in trdomains:
+                            if defaults.DEBUG: print >>sys.stderr, "DOMAIN: %s" % (trdomain)
+                            (tr, fz, un, msgs) = self.get_stats_for_module(modid, trdomain, branch, gather_stats, 'ui')
+                            totaltr += tr; totalfz += fz; totalun += un
+                            mytr += tr; myfz += fz; myun += un
+
+                            (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
+                            pot += pot_size
+                            mypot += pot_size
+
+                            un = pot_size - tr - fz
+                            if pot_size:
+                                perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                            else:
+                                perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+
+                            retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
+                                                                                   'fuzzy' : fz,
+                                                                                   'untranslated' : pot_size-tr-fz,
+                                                                                   'percentages' : perc,
+                                                                                   'supportedness' : perc['translated'],
+                                                                                   'pot_size' : pot_size,
+                                                                                   'pot_messages' : potmsgs,
+                                                                                   'po_messages' : msgs,
+                                                                                   'potbase' : trdomains[trdomain]['potbase'],
+                                                                                   'description' : trdomains[trdomain]['description'],
+                                                                                   }
+                        if mypot:
+                            myun = mypot - mytr - myfz; ui_supp = "%.0f" % (100.0*mytr/mypot)
+                            ui_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
-                            perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
-                            
-                        retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
-                                                                               'fuzzy' : fz,
-                                                                               'untranslated' : pot_size-tr-fz,
-                                                                               'percentages' : perc,
-                                                                               'supportedness' : perc['translated'],
-                                                                               'pot_size' : pot_size,
-                                                                               'pot_messages' : potmsgs,
-                                                                               'po_messages' : msgs,
-                                                                               'potbase' : trdomains[trdomain]['potbase'],
-                                                                               'description' : trdomains[trdomain]['description'],
-                                                                               }
-                    if mypot:
-                        myun = mypot - mytr - myfz; ui_supp = "%.0f" % (100.0*mytr/mypot)
-                        ui_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
-                    else:
-                        myun = mypot; ui_supp = "0"
-                        ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+                            myun = mypot; ui_supp = "0"
+                            ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
 
-                    retmodules[modid]['statistics']['ui_size'] = mypot
-                    retmodules[modid]['statistics']['ui_translated'] = mytr
-                    retmodules[modid]['statistics']['ui_fuzzy'] = myfz
-                    retmodules[modid]['statistics']['ui_untranslated'] = myun
-                    retmodules[modid]['statistics']['ui_percentages'] = ui_percentages
-                    retmodules[modid]['statistics']['ui_supportedness'] = ui_supp
+                        retmodules[modid]['statistics']['ui_size'] = mypot
+                        retmodules[modid]['statistics']['ui_translated'] = mytr
+                        retmodules[modid]['statistics']['ui_fuzzy'] = myfz
+                        retmodules[modid]['statistics']['ui_untranslated'] = myun
+                        retmodules[modid]['statistics']['ui_percentages'] = ui_percentages
+                        retmodules[modid]['statistics']['ui_supportedness'] = ui_supp
 
-                    mytr = myfz = myun = mypot = 0
-                    for document in documents:
-                        (tr, fz, un, msgs) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
-                        dtotaltr += tr; dtotalfz += fz; dtotalun += un
-                        mytr += tr; myfz += fz; myun += un
+                        mytr = myfz = myun = mypot = 0
+                        for document in documents:
+                            (tr, fz, un, msgs) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
+                            dtotaltr += tr; dtotalfz += fz; dtotalun += un
+                            mytr += tr; myfz += fz; myun += un
 
-                        (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, document, branch, None, 'doc')
-                        dpot += pot_size
-                        mypot += pot_size
+                            (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, document, branch, None, 'doc')
+                            dpot += pot_size
+                            mypot += pot_size
 
-                        un = pot_size - tr - fz
-                        if pot_size:
-                            perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                            un = pot_size - tr - fz
+                            if pot_size:
+                                perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
+                            else:
+                                perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+
+                            retmodules[modid]['documents'][document] = { 'translated' : tr,
+                                                                         'fuzzy' : fz,
+                                                                         'untranslated' : pot_size-tr-fz,
+                                                                         'percentages' : perc,
+                                                                         'supportedness' : perc['translated'],
+                                                                         'pot_size' : pot_size,
+                                                                         'pot_messages' : potmsgs,
+                                                                         'po_messages' : msgs,
+                                                                         'potbase' : documents[document]['potbase'],
+                                                                         'description' : documents[document]['description'],
+                                                                         }
+                        if mypot:
+                            myun = mypot - mytr - myfz; doc_supp = "%.0f" % (100.0*mytr/mypot)
+                            doc_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
-                            perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+                            myun = mypot; doc_supp = "0"
+                            doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
 
-                        retmodules[modid]['documents'][document] = { 'translated' : tr,
-                                                                     'fuzzy' : fz,
-                                                                     'untranslated' : pot_size-tr-fz,
-                                                                     'percentages' : perc,
-                                                                     'supportedness' : perc['translated'],
-                                                                     'pot_size' : pot_size,
-                                                                     'pot_messages' : potmsgs,
-                                                                     'po_messages' : msgs,
-                                                                     'potbase' : documents[document]['potbase'],
-                                                                     'description' : documents[document]['description'],
-                                                                     }
-                    if mypot:
-                        myun = mypot - mytr - myfz; doc_supp = "%.0f" % (100.0*mytr/mypot)
-                        doc_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
-                    else:
-                        myun = mypot; doc_supp = "0"
-                        doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
-
-                    retmodules[modid]['statistics']['doc_size'] = mypot
-                    retmodules[modid]['statistics']['doc_translated'] = mytr
-                    retmodules[modid]['statistics']['doc_fuzzy'] = myfz
-                    retmodules[modid]['statistics']['doc_untranslated'] = myun
-                    retmodules[modid]['statistics']['doc_percentages'] = doc_percentages
-                    retmodules[modid]['statistics']['doc_supportedness'] = doc_supp
+                        retmodules[modid]['statistics']['doc_size'] = mypot
+                        retmodules[modid]['statistics']['doc_translated'] = mytr
+                        retmodules[modid]['statistics']['doc_fuzzy'] = myfz
+                        retmodules[modid]['statistics']['doc_untranslated'] = myun
+                        retmodules[modid]['statistics']['doc_percentages'] = doc_percentages
+                        retmodules[modid]['statistics']['doc_supportedness'] = doc_supp
 
 
-        return (pot, totaltr, totalfz, totalun, dpot, dtotaltr, dtotalfz, dtotalun, retmodules)
+            return (pot, totaltr, totalfz, totalun, dpot, dtotaltr, dtotalfz, dtotalun, retmodules)
 
     def __init__(self, releasesfile=defaults.releases_xml, only_release=None, deep=1, gather_stats = None):
         result = []
         
-        dom = xml.dom.minidom.parse(releasesfile)
-
         myModules = modules.XmlModules(defaults.modules_xml)
         self.myModules = myModules
 
-        releases = dom.getElementsByTagName("release")
-        for release in releases:
-            releaseid = release.getAttribute("id")
+        releases = data.getReleases(only = only_release)
+        for releaseid in releases:
+            release = releases[releaseid]
             if only_release and releaseid != only_release: continue
 
             # read modules
@@ -185,15 +212,21 @@ class Releases:
             
             if deep:
                 (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = self.list_modules(release, gather_stats)
-                cats = self.getDirectSubnodes(release, "category")
-                for cat in cats:
+                if release.has_key('category'):
+                    cats = release['category']
+                else:
+                    continue
+                (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
+
+                for catid in cats:
+                    cat = cats[catid]
                     (pot, tr, fz, un, dpot, dtr, dfz, dun, catMods) = self.list_modules(cat, gather_stats)
                     ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
                     doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
 
                     myCat = {
-                        'id' : cat.getAttribute("id"),
-                        'description': self.getElementText(cat, 'description'),
+                        'id' : catid,
+                        'description': cat['description'],
                         'modules': catMods,
                         }
 
@@ -261,7 +294,7 @@ class Releases:
 
             entry = {
                 'id' : releaseid,
-                'description' : self.getElementText(release, 'description'),
+                'description' : release['description'],
                 'modules' : retmodules,
                 'categories' : categories,
                 'ui_size' : ui_size,
@@ -281,46 +314,6 @@ class Releases:
 
         self.data = result
         
-    def getDirectSubnodes(self, node, subnode):
-        if not node.hasChildNodes():
-            return None
-        results = []
-        child = node.firstChild
-        while child:
-            if child.nodeType == child.ELEMENT_NODE and child.nodeName == subnode:
-                results.append(child)
-            child = child.nextSibling
-        return results
-        
-
-    def getElementContents(self, node):
-        nodelist = node.childNodes
-        rc = ""
-        for el in nodelist:
-            if el.nodeType == el.TEXT_NODE:
-                rc = rc + el.data
-        return rc
-        
-    def getElementText(self, node, element, default = 0):
-        if not node.hasChildNodes():
-            return default
-        child = node.firstChild
-        while child:
-            if child.nodeType == child.ELEMENT_NODE and child.nodeName == element:
-                return self.getElementContents(child)
-            child = child.nextSibling
-        return default
-        
-        
-    def getElementAttribute(self, node, attribute, default = 0):
-        if not node.hasAttribute(attribute):
-            ret = node.getAttribute(attribute)
-            if ret:
-                return ret
-            else:
-                return default
-        else:
-            return default
 
     # Implement dictionary methods
     def __getitem__(self, key): return self.data[key]
@@ -354,22 +347,30 @@ def compare_releases(a, b):
     else:
         return res
 
+def get_modules_for_release(release):
+    modules = []
+    if release.has_key('category'):
+        for catid in release['category']:
+            catmods = get_modules_for_release(release['category'][catid])
+            for mod in catmods:
+                modules.append(mod)
+
+    if release.has_key('module'):
+        for modid in release['module']:
+            mod = release['module'][modid]
+            branch = 'HEAD'
+            if mod.has_key('branch'): branch = mod['branch']
+            modules.append((modid, branch))
+    return modules
+
 def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
     # Initialise modules
     modules = []
 
-    dom = xml.dom.minidom.parse(releasesfile)
-    releases = dom.getElementsByTagName("release")
-    for myrelease in releases:
-        releaseid = myrelease.getAttribute("id")
-        if release and releaseid == release:
-            module_tags = myrelease.getElementsByTagName("module")
-            for module in module_tags:
-                modid = module.getAttribute("id")
-                branch = module.getAttribute("branch")
-                if not branch: branch = "HEAD"
-                modules.append((modid, branch))
-            break
+    releases = data.getReleases()
+    if releases.has_key(release):
+        myrelease = releases[releaseid]
+        modules = get_modules_for_release(myrelease)
 
     stats = { }
     langs = teams.TranslationLanguages(show_hidden="1")
@@ -390,6 +391,7 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
     # Initialise POT sizes
     totalpot = 0; dtotalpot = 0
     for (modid, branch) in modules:
+        if defaults.DEBUG: print >>sys.stderr, "[module: %s (%s)]<br/>" % (modid, branch)
         res = Statistics.select(AND(Statistics.q.Module == modid,
                                     Statistics.q.Branch == branch,
                                     Statistics.q.Language == None))
@@ -484,7 +486,9 @@ if __name__=="__main__":
     else:
         t = Releases(deep=0)
         releases = t.data
-
+        #import pprint
+        #pprint.pprint(releases)
+        
         html = Template(file="templates/list-releases.tmpl")
         html.webroot = defaults.webroot
         html.releases = releases

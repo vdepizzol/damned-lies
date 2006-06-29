@@ -5,139 +5,41 @@ import defaults
 import utils
 import releases
 
+import data
+
 import os
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
     def __init__(self, teamsfile=defaults.teams_xml, only_team=None, only_language=None):
-        result = []
-        
-        dom = xml.dom.minidom.parse(teamsfile)
 
-        teams = dom.getElementsByTagName("team")
-        for team in teams:
-            teamid = team.getAttribute("id")
-            if only_team and teamid != only_team: continue
+        teams =  data.getTeams(only_team)
+        people =  data.getPeople()
 
-            # read languages
+        for teamid in teams.keys():
             firstlanguage = ""
-            languages = {}
-            langs = team.getElementsByTagName("language")
-            for lang in langs:
-                code = lang.getAttribute('code')
-                languages[code] = {
-                    'code' : code,
-                    'name' : self.getElementContents(lang),
-                    'hidden' : 0,
-                    }
-                if lang.hasAttribute('hidden'):
-                    languages[code]['hidden'] = int(lang.getAttribute('hidden'))
-                if not firstlanguage: firstlanguage = languages[code]['name']
+
+            for lang in teams[teamid]['language'].keys():
+                if not firstlanguage:
+                    firstlanguage = teams[teamid]['language'][lang]['content']
+
+            coordinator = None
+            coordid = teams[teamid]['coordinator'].keys()[0]
+            coordinator = people[coordid]
+            
+            teams[teamid]['firstlanguage'] = firstlanguage
+            teams[teamid]['coordinator'] = coordinator
 
 
-            entry = {
-                'id' : teamid,
-                'webpage' : self.getElementText(team, 'webpage'),
-                'userpage' : self.getElementText(team, 'userpage'),
-                'mailing_list' : self.getMailingList(team),
-                'firstlanguage' : firstlanguage,
-                'languages' : languages,
-                }
-            entry['coordinator'] = self.getCoordinator(team)
-            entry['bugzilla'] = self.getBugzillaDetails(team, teamid, firstlanguage, defaults.bugzilla)
-            entry['description'] = self.getElementText(team, 'description', "%s Translation Team" % (firstlanguage))
-
-            if only_language and only_language in languages.keys():
-                self.data = [ entry ]
+            if only_language and only_language in teams[teamid]['language'].keys():
+                for lang in teams[teamid]['language'].keys():
+                    if lang != only_language:
+                        del teams[teamid]['language'][lang]
+                self.data = { teamid : teams[teamid] }
                 return
-            result.append(entry)
 
-        if only_language:
-            self.data = []
-        else:
-            self.data = result
 
-    def getFirstSubnode(self, node, subnode):
-        if not node.hasChildNodes():
-            return None
-        child = node.firstChild
-        while child:
-            if child.nodeType == child.ELEMENT_NODE and child.nodeName == subnode:
-                return child
-            child = child.nextSibling
-        return None
-        
-
-    def getCoordinator(self, node):
-        el = self.getFirstSubnode(node, "coordinator")
-        if not el:
-            return None
-
-        coord = {
-            'name' : self.getElementText(el, 'name', ''),
-            'irc_nickname' : self.getElementText(el, 'irc-nickname', ''),
-            'email' : self.getElementText(el, 'email', ''),
-            'hackergotchi' : self.getElementText(el, 'hackergotchi', ''),
-            'webpage' : self.getElementText(el, 'webpage', ''),
-            'cvs_account' : self.getElementText(el, 'cvs-account', ''),
-            }
-        coord['bugzilla_account'] = self.getElementText(el, 'bugzilla-account', coord['email'])
-        coord['im'] = []
-
-        ims = el.getElementsByTagName("im")
-        for im in ims:
-            if im.hasAttribute("type"):
-                coord['im'].append( (im.getAttribute("type"), self.getElementContents(im) ) )
-            else:
-                coord['im'].append( ("", self.getElementContents(im) ) )
-        return coord
-        
-    def getBugzillaDetails(self, team, teamid, teamname, default = 0):
-        node = self.getFirstSubnode(team, "bugzilla")
-        if not node:
-            return  {
-                "baseurl" : default["baseurl"],
-                "xmlrpc" : default["xmlrpc"],
-                "product" : "l10n",
-                "component" : "%s [%s]" % (teamname, teamid),
-                }
-
-        return {
-           "baseurl" : self.getElementText(node, "baseurl", default["baseurl"]),
-           "xmlrpc" : self.getElementText(node, "xmlrpc", default["xmlrpc"]),
-           "product" : self.getElementText(node, "product", "l10n"),
-           "component" : self.getElementText(node, "component", "%s [%s]" % (teamname, teamid)),
-           }
-            
-    def getMailingList(self, team):
-        node = self.getFirstSubnode(team, "mailing-list")
-        if not node:
-            return None
-
-        rc = {
-           "mail_to" : self.getElementText(node, "mail-to", ""),
-           "subscribe" : self.getElementText(node, "subscribe", ""),
-           }
-        return rc
-            
-
-    def getElementContents(self, node):
-        nodelist = node.childNodes
-        rc = ""
-        for el in nodelist:
-            if el.nodeType == el.TEXT_NODE:
-                rc = rc + el.data
-        return rc
-        
-    def getElementText(self, node, element, default = 0):
-        if not node.hasChildNodes():
-            return default
-        child = node.firstChild
-        while child:
-            if child.nodeType == child.ELEMENT_NODE and child.nodeName == element:
-                return self.getElementContents(child)
-            child = child.nextSibling
-        return default
+        self.data = teams
         
 
     # Implement dictionary methods
@@ -162,36 +64,27 @@ class TranslationTeams:
 def TranslationLanguages(teamsfile=defaults.teams_xml, show_hidden=0):
     """Reads in and returns a list of all languages any team is translating to."""
 
-    def getElementContents(node):
-        nodelist = node.childNodes
-        rc = ""
-        for el in nodelist:
-            if el.nodeType == el.TEXT_NODE:
-                rc = rc + el.data
-        return rc
+    teams =  data.getTeams()
+    people =  data.getPeople()
 
-    result = {}
+    languages = {}
+    
+    for teamid in teams.keys():
+        firstlanguage = ""
 
-    dom = xml.dom.minidom.parse(teamsfile)
+        for lang in teams[teamid]['language'].keys():
+            hidden = 0
+            if teams[teamid]['language'][lang].has_key('hidden'):
+                hidden = teams[teamid]['language'][lang]['hidden']
+            if not hidden or show_hidden:
+                languages[lang] = teams[teamid]['language'][lang]['content']
 
-    langs = dom.getElementsByTagName("language")
-    for lang in langs:
-        code = lang.getAttribute("code")
-        title = getElementContents(lang)
-
-        if lang.hasAttribute("hidden") and int(lang.getAttribute("hidden")) and not show_hidden:
-            #result[code] = ""
-            pass
-        else:
-            result[code] = title
-
-    return result
-
+    return languages
 
 def compare_teams(a, b):
     res = cmp(a['firstlanguage'], b['firstlanguage'])
     if not res:
-        return cmp(a['code'], b['code'])
+        return cmp(a['id'], b['id'])
     else:
         return res
 
@@ -219,12 +112,12 @@ if __name__=="__main__":
 
         if teamid:
             myteam = TranslationTeams(only_team=teamid)
-            if len(myteam) and myteam[0]['id'] == teamid:
+            if len(myteam) and myteam.data.has_key(teamid):
                 html = Template(file="templates/team.tmpl")
-                team = myteam[0]
+                team = myteam.data[teamid]
 
-                for lang, ldata in team['languages'].items():
-                    team['languages'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+                for lang, ldata in team['language'].items():
+                    team['language'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
 
                 html.webroot = defaults.webroot
                 html.team = team
@@ -233,7 +126,9 @@ if __name__=="__main__":
                 print utils.TemplateInspector(html)
         else:
             t = TranslationTeams()
-            teams = t.data
+            teams = []
+            for tid, team in t.data.items():
+                teams.append(team)
             teams.sort(compare_teams)
 
             html = Template(file="templates/list-teams.tmpl")
@@ -277,31 +172,39 @@ if __name__=="__main__":
 
             #print "page: %s<br/>langid: %s<br/>release: %s<br/>" % (page, langid, release)
             myteam = TranslationTeams(only_language=langid)
-            if len(myteam) and myteam[0]['id']:
-                team = myteam[0]
-                teamid = team['id']
+            # FIXME: get language instead of team
 
-                for lang, ldata in team['languages'].items():
+            if len(myteam):
+                teamid = myteam.data.keys()[0]
+                team = myteam.data[teamid]
+                #teamid = team['id']
+
+                for lang, ldata in team['language'].items():
                     if lang != langid:
-                        del team['languages'][lang]
+                        del team['language'][lang]
 
                 if release:
                     html = Template(file="templates/language-release.tmpl")
                     html.language = langid
-                    html.language_name = team['languages'][langid]['name']
+                    html.language_name = team['language'][langid]['content']
                     html.release = releases.Releases(deep=1, only_release = release, gather_stats = langid).data[0]
                     
                 else:
                     html = Template(file="templates/team.tmpl")
-                    team['languages'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
+                    team['language'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
                     
 
                 html.webroot = defaults.webroot
                 html.team = team
+                if not html.team.has_key('description') and html.language_name:
+                    html.team['description'] = html.language_name + " Translation Team"
+                if not html.team.has_key('bugzilla-component') and html.language_name:
+                    html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
                 print html
                 print utils.TemplateInspector(html)
             else:
+                print myteam.data
                 print "Error: Can't find translation team for '%s'." % langid
 
     #import pprint

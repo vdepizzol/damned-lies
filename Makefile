@@ -51,7 +51,7 @@ FILES=\
 %.xml: %.xml.in
 	intltool-merge -x . $< $@
 
-all: gnome-modules.xml translation-teams.xml releases.xml
+all: gnome-modules.xml translation-teams.xml releases.xml people.xml
 
 dist: $(FILES)
 	@mkdir -p damned-lies-$(VERSION) && \
