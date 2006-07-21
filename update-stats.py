@@ -267,7 +267,7 @@ might be worth investigating.
                 lfile = open(LINGUAS, "r")
                 for line in lfile:
                     line = line.strip()
-                    if line[0]=="#": continue
+                    if len(line) and line[0]=="#": continue
                     if lang in line.split(" "):
                         if defaults.DEBUG: print >>sys.stderr, "Language '%s' found in LINGUAS." % (lang)
                         in_config = 1
