@@ -68,6 +68,8 @@ class LocStatistics:
             COs = modules.SvnModule(module, 0)
         elif module.has_key('cvsroot'):
             COs = modules.CvsModule(module, 1)
+        else:
+            raise Exception("Can't fetch source code for this module.")
 
         mybranches = COs.paths.keys()
         if onlybranch and onlybranch in mybranches:
