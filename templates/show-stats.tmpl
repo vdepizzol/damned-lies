@@ -26,6 +26,7 @@
     <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
 #end if
   </td>
+  #if $lstat.has_key('supportedness')
   <td>${lstat.supportedness}% ($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${lstat.percentages.translated}px;"></div>
@@ -34,6 +35,7 @@
       <div class="untranslated" style="left:${upos}px; width: ${lstat.percentages.untranslated}px;"></div>
      </div>
    </td>
+  #end if
 </tr>
 #end for
 </table>

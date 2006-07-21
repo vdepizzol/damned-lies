@@ -64,23 +64,26 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        CVS = modules.CvsModule(module, 1)
+        if module.has_key('svnroot'):
+            COs = modules.SvnModule(module, 0)
+        elif module.has_key('cvsroot'):
+            COs = modules.CvsModule(module, 1)
 
-        mybranches = CVS.paths.keys()
+        mybranches = COs.paths.keys()
         if onlybranch and onlybranch in mybranches:
             mybranches = [onlybranch]
         
         for branch in mybranches:
-            if not module["cvsbranches"][branch]["regenerate"]:
+            if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]:
                 continue
 
-            if module["cvsbranches"][branch]["stringfrozen"]:
+            if module["branch"][branch].has_key("stringfrozen") and module["branch"][branch]["stringfrozen"]:
                 self.STRINGFREEZE = 1
             else:
                 self.STRINGFREEZE = 0
 
-            for podir in module["cvsbranches"][branch]["translation_domains"]:
-                potbase = module["cvsbranches"][branch]["translation_domains"][podir]['potbase']
+            for podir in module["branch"][branch]["domain"]:
+                potbase = module["branch"][branch]["domain"][podir]['potbase']
 
                 self.podir = podir
                 self.potbase = potbase
@@ -93,14 +96,14 @@ class LocStatistics:
                     os.makedirs(outputdir)
 
                 if defaults.DEBUG: print >>sys.stderr, "%s.%s/%s" % (module["id"],branch,podir)
-                self.ui_l10n_stats(CVS.paths[branch], podir, potbase, outputdir, outputdomain)
+                self.ui_l10n_stats(COs.paths[branch], podir, potbase, outputdir, outputdomain)
 
-            for doc in module["cvsbranches"][branch]["documents"]:
-                potbase = module["cvsbranches"][branch]["documents"][doc]['potbase']
+            for doc in module["branch"][branch]["document"]:
+                potbase = module["branch"][branch]["document"][doc]['potbase']
 
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch, "docs")
 
-                self.doc_l10n_stats(CVS.paths[branch], doc, potbase, outputdir)
+                self.doc_l10n_stats(COs.paths[branch], doc, potbase, outputdir)
 
 
     def notify_list(self, out_domain, diff):
@@ -154,11 +157,18 @@ might be worth investigating.
 
         potfile = os.path.join(popath, pot_base + ".pot")
         newpot = os.path.join(out_dir, out_domain + ".pot")
+        NOW = datetime.datetime.now()
 
         if error or not os.access(potfile, os.R_OK):
             if defaults.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module["id"], po_dir)
             errors.append(("error", "Can't generate POT file."))
-            return {'translated': 0, 'fuzzy': 0, 'untranslated': 0, 'errors': errors}
+            pot_stats = self.po_file_stats(potfile, 0)
+            pot_stats['errors'].extend(errors)
+            self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
+                                       domain = self.podir, date = NOW, language = None,
+                                       translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
+                                       errors = pot_stats['errors'])
+            return {'translated': 0, 'fuzzy': 0, 'untranslated': int(pot_stats['untranslated']), 'errors': errors}
 
         # whether pot has changed
         potchanged = 1
@@ -184,7 +194,6 @@ might be worth investigating.
 
         postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, potchanged)
 
-        NOW = datetime.datetime.now()
         self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
                                    domain = self.podir, date = NOW, language = None,
                                    translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
@@ -244,7 +253,8 @@ might be worth investigating.
     def check_lang_support(self, module_path, po_path, lang):
         "Checks if language is listed in one of po/LINGUAS, configure.ac or configure.in"
 
-        LINGUAS = os.path.join(po_path, "LINGUAS")
+        LINGUAShere = os.path.join(po_path, "LINGUAS")
+        LINGUASpo = os.path.join(module_path, "po", "LINGUAS") # if we're in eg. po-locations/
         configureac = os.path.join(module_path, "configure.ac")
         configurein = os.path.join(module_path, "configure.in")
 
@@ -252,19 +262,20 @@ might be worth investigating.
 
         # is "lang" listed in either of po/LINGUAS, ./configure.ac(ALL_LINGUAS) or ./configure.in(ALL_LINGUAS)
         in_config = 0
-        if os.access(LINGUAS, os.R_OK):
-            lfile = open(LINGUAS, "r")
-            for line in lfile:
-                line = line.strip()
-                if line[0]=="#": continue
-                if lang in line.split(" "):
-                    if defaults.DEBUG: print >>sys.stderr, "Language '%s' found in LINGUAS." % (lang)
-                    in_config = 1
-                    break
-            lfile.close()
-            if not in_config:
-                errors.append(("warn", "Entry for this language is not present in LINGUAS file."))
-            return errors
+        for LINGUAS in [LINGUAShere, LINGUASpo]:
+            if os.access(LINGUAS, os.R_OK):
+                lfile = open(LINGUAS, "r")
+                for line in lfile:
+                    line = line.strip()
+                    if line[0]=="#": continue
+                    if lang in line.split(" "):
+                        if defaults.DEBUG: print >>sys.stderr, "Language '%s' found in LINGUAS." % (lang)
+                        in_config = 1
+                        break
+                lfile.close()
+                if not in_config:
+                    errors.append(("warn", "Entry for this language is not present in LINGUAS file."))
+                return errors
         
         import re
         for configure in [configureac, configurein]:
@@ -616,23 +627,25 @@ might be worth investigating.
             
 if __name__ == "__main__":
     import sys, os
-    if len(sys.argv)>=2 and len(sys.argv)<=4:
-        if sys.argv[1] and os.access(sys.argv[1], os.R_OK):
-            m = modules.XmlModules(sys.argv[1])
-            if len(sys.argv)==4:
-                module = sys.argv[2]
-                branch = sys.argv[3]
+    if len(sys.argv)>=1 and len(sys.argv)<=3:
+        if os.access(defaults.modules_xml, os.R_OK):
+            m = modules.XmlModules(defaults.modules_xml)
+            if len(sys.argv)==3:
+                module = sys.argv[1]
+                branch = sys.argv[2]
+                print "Updating stats for %s.%s..." % (module, branch)
                 if module in m.keys():
                     LocStatistics(m[module], onlybranch=branch)
-            elif len(sys.argv)==3:
-                module = sys.argv[2]
+            elif len(sys.argv)==2:
+                module = sys.argv[1]
+                print "Updating stats for %s..." % (module)
                 if module in m.keys():
                     LocStatistics(m[module])
             else:
                 for modid in m:
                     LocStatistics(m[modid])
         else:
-            print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
+            print "Usage:\n\t%s [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
     else:
-        print "Usage:\n\t%s MODULES_XML_FILE [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
+        print "Usage:\n\t%s [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
 

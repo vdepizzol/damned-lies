@@ -70,7 +70,7 @@ class CvsModule:
         self.module = module
 
         localroot = os.path.join(defaults.scratchdir, "cvs")
-        branches = module["cvsbranches"]
+        branches = module["branch"].keys()
         for branch in branches:
             moduledir = module["id"] + "." + branch
             checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
@@ -126,6 +126,74 @@ class CvsModule:
                 print >> sys.stderr, output
             return 0
 
+
+class SvnModule:
+    """Checks out a module from SVN if necessary to be able to work on it."""
+
+    def __init__(self, module, real_update = 1):
+        if not module: return None
+
+        self.paths = {}
+        self.module = module
+
+        localroot = os.path.join(defaults.scratchdir, "svn")
+        branches = module["branch"].keys()
+        for branch in branches:
+            moduledir = module["id"] + "." + branch
+            checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
+
+            if real_update:
+                if defaults.DEBUG:
+                    print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
+                co = self.checkout(module["svnroot"],
+                                   module["svnmodule"], branch, 
+                                   localroot,
+                                   moduledir)
+
+                if not co:
+                    print >> sys.stderr, "Problem checking out module %s.%s" % (module["id"], branch)
+                else:
+                    self.paths[branch] = checkoutpath
+            else:
+                if os.access(checkoutpath, os.X_OK):
+                    self.paths[branch] = checkoutpath
+
+
+    def checkout(self, svnroot, module, branch, localroot, moduledir):
+
+        import commands
+
+        try: os.makedirs(localroot)
+        except: pass
+
+        if os.access(os.path.join(localroot, moduledir), os.X_OK | os.W_OK):
+            command = "cd %(localdir)s && svn up --non-interactive" % {
+                "localdir" : os.path.join(localroot, moduledir),
+                }
+        else:
+            svnpath = svnroot + "/" + module
+            if branch == "trunk" or branch == "HEAD":
+                svnpath += "/trunk"
+            else:
+                svnpath += "/branches/" + branch
+            command = "cd %(localroot)s && svn co --non-interactive %(svnpath)s %(dir)s" % {
+                "localroot" : localroot,
+                "svnpath" : svnpath,
+                "dir" : moduledir,
+                }
+            
+
+        if defaults.DEBUG:
+            print >>sys.stderr, command
+        (error, output) = commands.getstatusoutput(command)
+        if not error:
+            if defaults.DEBUG:
+                print >> sys.stderr, output
+            return 1
+        else:
+            if defaults.DEBUG:
+                print >> sys.stderr, output
+            return 0
 
 if __name__=="__main__":
     m = XmlModules()

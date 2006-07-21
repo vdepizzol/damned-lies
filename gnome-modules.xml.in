@@ -7,14 +7,11 @@
     <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
     <bugs-product>%(module/id)</bugs-product>
     <bugs-component>general</bugs-component>
-    <cvs>
-      <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
-      <module>%(module/id)</module>
-      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
-    </cvs>
+    <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
     <cvsmodule>%(module/id)</cvsmodule>
+    <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
   </module>
-  <branch id="HEAD">
+  <branch id="HEAD" regenerate="1">
     <cvs-web>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvs-web>
     <domain id="po" potbase="%(module/id)">
       <_description>UI translations</_description>
@@ -41,7 +38,7 @@
     <domain id="po">
       <description>UI translations</description>
     </domain>
-    <document id="epiphany">
+    <document id="help">
       <description>User Guide</description>
       <directory>help</directory>
     </document>
@@ -50,7 +47,7 @@
     <domain id="po">
       <description>UI translations</description>
     </domain>
-    <document id="epiphany">
+    <document id="help">
       <description>Epiphany Manual</description>
       <directory>help</directory>
     </document>
@@ -134,6 +131,9 @@
   <webpage>http://gtk.org/</webpage>
   <maintainer id="matthiasc"/>
   <maintainer id="owen"/>
+  <svnmodule>glib</svnmodule>
+  <svnroot>http://svn.gnome.org/svn</svnroot>
+  <svnweb>http://svn.gnome.org/viewsvn/%(module/id)</svnweb>
   <branch id="HEAD"/>
   <branch stringfrozen="true" id="glib-2-10"/>
 </module>

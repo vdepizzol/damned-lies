@@ -36,17 +36,22 @@
 #end for
 #end if
 </td><td width="50%" valign="top">
-#if $module.has_key('bugzilla')
+#if $module.has_key('bugs-baseurl')
 <h2>Bug reporting</h2>
 <p>Report bugs to 
-<a href="$module.bugzilla/enter_bug.cgi?product=$module['bugzilla_product']&component=$module['bugzilla-component']">Bugzilla</a>.</p>
+<a href="$module['bugs-baseurl']/enter_bug.cgi?product=$module['bugs-product']&component=$module['bugs-component']">Bugzilla</a>.</p>
 #end if
 </td></tr></table>
 
 #if len($module.branch)
 #for branch, data in $module.branch.items()
-<h2>$branch (<a href="$data['cvs-web']">Browse CVS</a>)</h2>
-
+<h2>$branch 
+#if $module.has_key('svnweb')
+(<a href="$module['svnweb']">Browse SVN</a>)</h2>
+#else
+(<a href="$data['cvs-web']">Browse CVS</a>)
+#end if
+</h2>
 #if $data.has_key('stringfrozen') and $data.stringfrozen
 <p>This branch is currently string-frozen.</p>
 #end if

@@ -6,7 +6,7 @@ from sqlobject import *
 import datetime
 
 import os
-if not os.stat(defaults.scratchdir):
+if not os.access(defaults.scratchdir, os.X_OK | os.R_OK | os.W_OK):
     os.makedirs(defaults.scratchdir)
 
 conn = connectionForURI(defaults.database_connection)
