@@ -121,6 +121,12 @@ if __name__=="__main__":
 
                 html.webroot = defaults.webroot
                 html.team = team
+                html.language = lang
+                html.language_name = team['language'][lang]['content']
+                if not html.team.has_key('description') and html.language_name:
+                    html.team['description'] = html.language_name + " Translation Team"
+                if not html.team.has_key('bugzilla-component') and html.language_name:
+                    html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
                 print html
                 print utils.TemplateInspector(html)
@@ -179,9 +185,10 @@ if __name__=="__main__":
                 team = myteam.data[teamid]
                 #teamid = team['id']
 
-                for lang, ldata in team['language'].items():
-                    if lang != langid:
-                        del team['language'][lang]
+                if not langid:
+                    for lang, ldata in team['language'].items():
+                        if lang != langid:
+                            del team['language'][lang]
 
                 if release:
                     html = Template(file="templates/language-release.tmpl")
@@ -191,6 +198,8 @@ if __name__=="__main__":
                     
                 else:
                     html = Template(file="templates/team.tmpl")
+                    html.language = langid
+                    html.language_name = team['language'][langid]['content']
                     team['language'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
                     
 
