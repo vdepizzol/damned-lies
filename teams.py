@@ -194,7 +194,9 @@ if __name__=="__main__":
                     html = Template(file="templates/language-release.tmpl")
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
-                    html.release = releases.Releases(deep=1, only_release = release, gather_stats = langid).data[0]
+                    myreleases = releases.Releases(deep=1, only_release = release, gather_stats = langid).data
+                    if myreleases:
+                        html.release = myreleases[0]
                     
                 else:
                     html = Template(file="templates/team.tmpl")
