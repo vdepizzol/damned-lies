@@ -95,7 +95,7 @@
       <module id="pesselus"/>
     </category>
   </release>
-  <release id="gnome-2-12">
+<!--  <release id="gnome-2-12">
     <_description>Gnome 2.12</_description>
     <category id="platform">
       <_description>Development Platform</_description>
@@ -106,7 +106,7 @@
       <_description>Desktop Applications</_description>
       <module id="epiphany" branch="gnome-2-12"/>
     </category>
-  </release>
+  </release>-->
   <release id="gnome-office">
     <_description>Gnome-Office Productivity Applications</_description>
     <module id="abiword"/>
@@ -246,7 +246,9 @@
     <module id="gnome-alsamixer"/>
   </release>
   <release id="gnome-2-16">
+    <_description>Gnome 2.16</_description>
     <category id="platform">
+      <_description>GNOME developer platform. Essential software.</_description>
       <module id="glib"/>
       <module id="gnome-vfs"/>
       <module id="libbonobo"/>
@@ -259,15 +261,15 @@
       <module id="gconf"/>
       <module id="libbonoboui"/>
     </category>
-    <_description>GNOME developer platform. Essential software.</_description>
     <category id="proposed">
+      <_description>Proposed GNOME desktop and developer platform software.</_description>
       <module id="tomboy"/>
       <module id="gnome-power-manager"/>
       <module id="orca"/>
       <module id="alacarte"/>
     </category>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
     <category id="desktop">
+      <_description>GNOME desktop. Essential software.</_description>
       <module id="gnome-menus"/>
       <module id="gnome-doc-utils"/>
       <module id="nautilus"/>
@@ -330,52 +332,6 @@
       <module id="ekiga" branch="gnome-2-14"/>
       <module id="gtksourceview"/>
     </category>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
-    <_description>GNOME developer platform. Essential software.</_description>
-    <_description>Proposed GNOME desktop and developer platform software.</_description>
-    <_description>GNOME desktop. Essential software.</_description>
   </release>
   <release id="fifth-toe">
     <_description>GNOME Fifth Toe. Extra software.</_description>
