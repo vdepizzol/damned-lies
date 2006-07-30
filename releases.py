@@ -93,7 +93,10 @@ class Releases:
                 if modid in self.myModules.keys():
                     myMod = self.myModules[modid]
                     retmodules[modid]['description'] = myMod['description']
-                    retmodules[modid]['maintainers'] = myMod['maintainer']
+                    if myMod.has_key('maintainer'):
+                        retmodules[modid]['maintainers'] = myMod['maintainer']
+                    else:
+                        retmodules[modid]['maintainers'] = {}
                     retmodules[modid]['cvsmodule'] = myMod['cvsmodule']
 
                     if gather_stats and myMod.has_key('branch') and myMod['branch'].has_key(branch):
