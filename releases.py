@@ -227,9 +227,11 @@ class Releases:
                     ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
                     doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
 
+                    desc = ''
+                    if cat.has_key('description'): desc = cat['description']
                     myCat = {
                         'id' : catid,
-                        'description': cat['description'],
+                        'description': desc,
                         'modules': catMods,
                         }
 
