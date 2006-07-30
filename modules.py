@@ -18,27 +18,28 @@ class XmlModules:
                 continue
             #
             # maintainers = self.getMaintainers(module, default = defaults.maintainers)
-            for maint in self.modules[module]['maintainer']:
-                if people.has_key(maint):
-                    self.modules[module]['maintainer'][maint] = people[maint]
+            if self.modules[module].has_key('maintainer'):
+                for maint in self.modules[module]['maintainer']:
+                    if people.has_key(maint):
+                        self.modules[module]['maintainer'][maint] = people[maint]
 
-            if self.modules[module].has_key('branch'):
-                for branch in self.modules[module]['branch']:
-                    if not self.modules[module]["branch"][branch].has_key('domain'):
-                        self.modules[module]["branch"][branch]['domain'] = {}
-                    trdomains = self.modules[module]["branch"][branch]['domain'].keys()
-                    if not self.modules[module]["branch"][branch].has_key('document'):
-                        self.modules[module]["branch"][branch]['document'] = {}
-                    documents = self.modules[module]["branch"][branch]['document'].keys()
-                    for trdomain in trdomains:
-                        here = self.modules[module]["branch"][branch]['domain'][trdomain]
-                        here['potbase'] = here['id']
+                if self.modules[module].has_key('branch'):
+                    for branch in self.modules[module]['branch']:
+                        if not self.modules[module]["branch"][branch].has_key('domain'):
+                            self.modules[module]["branch"][branch]['domain'] = {}
+                        trdomains = self.modules[module]["branch"][branch]['domain'].keys()
+                        if not self.modules[module]["branch"][branch].has_key('document'):
+                            self.modules[module]["branch"][branch]['document'] = {}
+                        documents = self.modules[module]["branch"][branch]['document'].keys()
+                        for trdomain in trdomains:
+                            here = self.modules[module]["branch"][branch]['domain'][trdomain]
+                            here['potbase'] = here['id']
 
-                    for document in documents:
-                        here = self.modules[module]["branch"][branch]['document'][document]
-                        here['potbase'] = document
-                        if not here.has_key('directory'):
-                            here['directory'] = here['id']
+                        for document in documents:
+                            here = self.modules[module]["branch"][branch]['document'][document]
+                            here['potbase'] = document
+                            if not here.has_key('directory'):
+                                here['directory'] = here['id']
 
 
     # Implement dictionary methods
