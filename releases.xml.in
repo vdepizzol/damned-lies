@@ -1,128 +1,395 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <releases>
-
-<release id="gnome-2-14">
-  <_description>Gnome 2.14</_description>
-  <category id="external">
-    <_description>External Dependencies</_description>
-    <module id="gstreamer"/>
-    <module id="gst-plugins"/>
-    <module id="iso_codes"/>
-    <module id="scrollkeeper"/>
-    <module id="xkeyboard-config"/>
-  </category>
-
-  <category id="platform">
-    <_description>Development Platform</_description>
-    <module id="at-spi"/>
-    <module id="atk"/>
-    <module id="gail"/>
-    <module id="gconf"/>
-    <module id="glib"/>
-    <module id="gnome-vfs"/>
-    <module id="gtk+" branch="gtk-2-8"/>
-    <module id="libbonobo" branch="gnome-2-14" />
-    <module id="libbonoboui"/>
-    <module id="libgnome"/>
-    <module id="libgnomecanvas"/>
-    <module id="libgnomeui"/>
-  </category>
-
-  <category id="desktop">
-    <_description>Desktop Applications</_description>
-    <module id="bug-buddy"/>
-    <module id="dasher" branch="gnome-2-14"/>
-    <module id="deskbar-applet" branch="gnome-2-14"/>
-    <module id="eel"/>
-    <module id="ekiga"/>
-    <module id="eog" branch="gnome-2-14"/>
-    <module id="epiphany"/>
-    <module id="evince" branch="gnome-2-14"/>
-    <module id="evolution" branch="gnome-2-14"/>
-    <module id="evolution-data-server" branch="gnome-2-14"/>
-    <module id="evolution-exchange" branch="gnome-2-14"/>
-    <module id="evolution-webcal"/>
-    <module id="fast-user-switch-applet" branch="gnome-2-14"/>
-    <module id="file-roller"/>
-    <module id="gcalctool"/>
-    <module id="gconf-editor"/>
-    <module id="gdm2"/>
-    <module id="gedit"/>
-    <module id="gnome-applets"/>
-    <module id="gnome-backgrounds"/>
-    <module id="gnome-control-center"/>
-    <module id="gnome-desktop"/>
-    <module id="gnome-doc-utils"/>
-    <module id="gnome-games"/>
-    <module id="gnome-icon-theme" branch="gnome-2-14"/>
-    <module id="gnome-keyring"/>
-    <module id="gnome-keyring-manager"/>
-    <module id="gnome-mag"/>
-    <module id="gnome-media"/>
-    <module id="gnome-menus"/>
-    <module id="gnome-netstatus"/>
-    <module id="gnome-nettool"/>
-    <module id="gnome-panel"/>
-    <module id="gnome-screensaver"/>
-    <module id="gnome-session"/>
-    <module id="gnome-system-monitor"/>
-    <module id="gnome-system-tools"/>
-    <module id="gnome-terminal"/>
-    <module id="gnome-themes"/>
-    <module id="gnome-utils" branch="gnome-2-14"/>
-    <module id="gnome-volume-manager"/>
-    <module id="gnopernicus"/>
-    <module id="gok"/>
-    <module id="gtkhtml" branch="gnome-2-14"/>
-    <module id="gtksourceview"/>
-    <module id="gucharmap" branch="gnome-2-14"/>
-    <module id="libgnomeprint"/>
-    <module id="libgnomeprintui"/>
-    <module id="libgtop"/>
-    <module id="libwnck"/>
-    <module id="metacity" branch="gnome-2-14"/>
-    <module id="nautilus"/>
-    <module id="nautilus-cd-burner"/>
-    <module id="sound-juicer"/>
-    <module id="totem"/>
-    <module id="vino"/>
-    <module id="vte"/>
-    <module id="yelp" branch="gnome-2-14" />
-    <module id="zenity" branch="gnome-2-14"/>
-  </category>
-  
-  <category id="admin">
-    <_description>System Administration</_description>
-    <module id="sabayon"/>
-    <module id="pesselus"/>
-  </category>
-</release>
-
-<release id="gnome-2-12">
-  <_description>Gnome 2.12</_description>
-  <category id="platform">
-    <_description>Development Platform</_description>
-    <module id="gtk+" branch="gtk-2-8" />
-    <module id="glib" branch="glib-2-8" />
-  </category>
-  <category id="desktop">
-    <_description>Desktop Applications</_description>
-    <module id="epiphany" branch="gnome-2-12" />
-  </category>
-</release>
-
-<release id="gnome-office">
-  <_description>Gnome-Office Productivity Applications</_description>
-  <module id="abiword"/>
-  <module id="criawips"/>
-  <module id="dia"/>
-  <module id="gnumeric"/>
-</release>
-
-<release id="gnome-extras">
-  <_description>Extra Gnome Applications</_description>
-  <module id="rhythmbox"/>
-</release>
-
-
+  <release id="gnome-2-14">
+    <_description>Gnome 2.14</_description>
+    <category id="external">
+      <_description>External Dependencies</_description>
+      <module id="gstreamer"/>
+      <module id="gst-plugins"/>
+      <module id="iso_codes"/>
+      <module id="scrollkeeper"/>
+      <module id="xkeyboard-config"/>
+    </category>
+    <category id="platform">
+      <_description>Development Platform</_description>
+      <module id="at-spi"/>
+      <module id="atk" branch="gnome-2-14"/>
+      <module id="gail"/>
+      <module id="gconf" branch="gnome-2-14"/>
+      <module id="glib" branch="glib-2-10"/>
+      <module id="gnome-vfs" branch="gnome-2-14"/>
+      <module id="gtk+" branch="gtk-2-8"/>
+      <module id="libbonobo" branch="gnome-2-14"/>
+      <module id="libbonoboui"/>
+      <module id="libgnome" branch="gnome-2-14"/>
+      <module id="libgnomecanvas"/>
+      <module id="libgnomeui" branch="libgnomeui-2-14"/>
+    </category>
+    <category id="desktop">
+      <_description>Desktop Applications</_description>
+      <module id="bug-buddy" branch="gnome-2-14"/>
+      <module id="dasher" branch="gnome-2-14"/>
+      <module id="deskbar-applet" branch="gnome-2-14"/>
+      <module id="eel" branch="gnome-2-14"/>
+      <module id="ekiga" branch="gnome-2-14"/>
+      <module id="eog" branch="gnome-2-14"/>
+      <module id="epiphany" branch="gnome-2-14"/>
+      <module id="evince" branch="gnome-2-14"/>
+      <module id="evolution" branch="gnome-2-14"/>
+      <module id="evolution-data-server" branch="gnome-2-14"/>
+      <module id="evolution-exchange" branch="gnome-2-14"/>
+      <module id="evolution-webcal" branch="gnome-2-14"/>
+      <module id="fast-user-switch-applet" branch="gnome-2-14"/>
+      <module id="file-roller" branch="gnome-2-14"/>
+      <module id="gcalctool" branch="gnome-2-14"/>
+      <module id="gconf-editor" branch="gnome-2-14"/>
+      <module id="gdm2" branch="gnome-2-14"/>
+      <module id="gedit" branch="gnome-2-14"/>
+      <module id="gnome-applets" branch="gnome-2-14"/>
+      <module id="gnome-backgrounds"/>
+      <module id="gnome-control-center" branch="gnome-2-14"/>
+      <module id="gnome-desktop" branch="gnome-2-14"/>
+      <module id="gnome-doc-utils" branch="gnome-2-14"/>
+      <module id="gnome-games" branch="gnome-2-14"/>
+      <module id="gnome-icon-theme" branch="gnome-2-14"/>
+      <module id="gnome-keyring" branch="gnome-2-14"/>
+      <module id="gnome-keyring-manager"/>
+      <module id="gnome-mag" branch="gnome-2-14"/>
+      <module id="gnome-media"/>
+      <module id="gnome-menus" branch="gnome-2-14"/>
+      <module id="gnome-netstatus"/>
+      <module id="gnome-nettool" branch="gnome-2-14"/>
+      <module id="gnome-panel" branch="gnome-2-14"/>
+      <module id="gnome-screensaver" branch="gnome-2-14"/>
+      <module id="gnome-session" branch="gnome-2-14"/>
+      <module id="gnome-system-monitor" branch="gnome-2-14"/>
+      <module id="gnome-system-tools" branch="gnome-2-14"/>
+      <module id="gnome-terminal" branch="gnome-2-14"/>
+      <module id="gnome-themes" branch="gnome-2-14"/>
+      <module id="gnome-utils" branch="gnome-2-14"/>
+      <module id="gnome-volume-manager"/>
+      <module id="gnopernicus" branch="gnome-2-14"/>
+      <module id="gok" branch="gnome-2-14"/>
+      <module id="gtkhtml" branch="gnome-2-14"/>
+      <module id="gtksourceview" branch="gnome-2-14"/>
+      <module id="gucharmap" branch="gnome-2-14"/>
+      <module id="libgnomeprint"/>
+      <module id="libgnomeprintui"/>
+      <module id="libgtop"/>
+      <module id="libwnck" branch="gnome-2-14"/>
+      <module id="metacity" branch="gnome-2-14"/>
+      <module id="nautilus" branch="gnome-2-14"/>
+      <module id="nautilus-cd-burner" branch="gnome-2-14"/>
+      <module id="sound-juicer" branch="gnome-2-14"/>
+      <module id="totem" branch="gnome-2-14"/>
+      <module id="vino"/>
+      <module id="vte" branch="vte-0-12"/>
+      <module id="yelp" branch="gnome-2-14"/>
+      <module id="zenity" branch="gnome-2-14"/>
+      <module id="sabayon"/>
+      <module id="pessulus" branch="gnome-2-14"/>
+    </category>
+    <category id="admin">
+      <_description>System Administration</_description>
+      <module id="sabayon"/>
+      <module id="pesselus"/>
+    </category>
+  </release>
+  <release id="gnome-2-12">
+    <_description>Gnome 2.12</_description>
+    <category id="platform">
+      <_description>Development Platform</_description>
+      <module id="gtk+" branch="gtk-2-8"/>
+      <module id="glib" branch="glib-2-8"/>
+    </category>
+    <category id="desktop">
+      <_description>Desktop Applications</_description>
+      <module id="epiphany" branch="gnome-2-12"/>
+    </category>
+  </release>
+  <release id="gnome-office">
+    <_description>Gnome-Office Productivity Applications</_description>
+    <module id="abiword"/>
+    <module id="criawips"/>
+    <module id="dia"/>
+    <module id="gnumeric"/>
+    <module id="planner"/>
+    <module id="libgnomedb"/>
+    <module id="libgda"/>
+    <module id="mergeant"/>
+  </release>
+  <release id="gnome-extras">
+    <_description>Extra Gnome Applications</_description>
+    <module id="rhythmbox"/>
+    <module id="resapplet"/>
+    <module id="devhelp"/>
+    <module id="atomix"/>
+    <module id="lsr"/>
+    <module id="gossip"/>
+    <module id="gdl"/>
+    <module id="gnome-sharing"/>
+    <module id="anjuta"/>
+    <module id="gnome-bluetooth"/>
+    <module id="gpdf"/>
+    <module id="ghex"/>
+    <module id="gnome-schedule"/>
+    <module id="cupid"/>
+    <module id="beagle"/>
+    <module id="evolution-jescs"/>
+    <module id="libgircclient"/>
+    <module id="nautilus-vcs"/>
+    <module id="epiphany-extensions" branch="gnome-2-14"/>
+    <module id="gimmie"/>
+    <module id="libgnomecups"/>
+    <module id="gdesklets"/>
+    <module id="red-carpet"/>
+    <module id="mcatalog"/>
+    <module id="gnome-pilot-conduits"/>
+    <module id="gnome-mud"/>
+    <module id="marlin"/>
+    <module id="f-spot"/>
+    <module id="rmm-utils"/>
+    <module id="nautilus-media"/>
+    <module id="nautilus-rpm"/>
+    <module id="libgnomesu"/>
+    <module id="notifier"/>
+    <module id="giftoxic"/>
+    <module id="update-manager"/>
+    <module id="gftp"/>
+    <module id="medusa"/>
+    <module id="banshee"/>
+    <module id="gnome-pim"/>
+    <module id="silky"/>
+    <module id="scaffold"/>
+    <module id="printman"/>
+    <module id="genius"/>
+    <module id="mlview"/>
+    <module id="gnome-user-share"/>
+    <module id="meld"/>
+    <module id="eggcups"/>
+    <module id="uf-view"/>
+    <module id="evolution-brainread"/>
+    <module id="conglomerate"/>
+    <module id="gnome-pkgview"/>
+    <module id="sawfish"/>
+    <module id="contact-lookup-applet"/>
+    <module id="ontv"/>
+    <module id="gedit-plugins"/>
+    <module id="glade"/>
+    <module id="gnome-pilot"/>
+    <module id="gnomechat"/>
+    <module id="nautilus-rc"/>
+    <module id="libmimedir"/>
+    <module id="ooo-build"/>
+    <module id="straw"/>
+    <module id="chronojump"/>
+    <module id="pitivi"/>
+    <module id="muine"/>
+    <module id="drgeo"/>
+    <module id="gtranslator"/>
+    <module id="memprof"/>
+    <module id="battfink"/>
+    <module id="gnome-spell"/>
+    <module id="msm"/>
+    <module id="jumpnbumpmenu"/>
+    <module id="gnome-cups-manager"/>
+    <module id="NetworkManager"/>
+    <module id="goobox"/>
+    <module id="nautilus-gtkhtml"/>
+    <module id="firestarter"/>
+    <module id="gperfmeter"/>
+    <module id="libgnetwork"/>
+    <module id="nautilus-actions"/>
+    <module id="drwright"/>
+    <module id="nautilus-open-terminal"/>
+    <module id="pybliographer" branch="v_1_0_x"/>
+    <module id="webeyes"/>
+    <module id="netapplet"/>
+    <module id="gnome-menu-editor"/>
+    <module id="criawips"/>
+    <module id="optimystic"/>
+    <module id="gwget"/>
+    <module id="gnome-jabber"/>
+    <module id="gnome-mount"/>
+    <module id="gnome-commander"/>
+    <module id="bookmark-applet"/>
+    <module id="gnomeradio"/>
+    <module id="gnome-glossary"/>
+    <module id="sodipodi"/>
+    <module id="gnome-torrent"/>
+    <module id="blam"/>
+    <module id="gnome-app-install"/>
+    <module id="gdesklets-extras"/>
+    <module id="divifund"/>
+    <module id="gnome-themes-extras"/>
+    <module id="istanbul"/>
+    <module id="jamboree"/>
+    <module id="gnome-network"/>
+    <module id="gparted"/>
+    <module id="glade3"/>
+    <module id="guikachu"/>
+    <module id="gimp"/>
+    <module id="gnome-blog"/>
+    <module id="gnome-build"/>
+    <module id="glom"/>
+    <module id="phonemgr"/>
+    <module id="beast"/>
+    <module id="drivel" branch="drivel-2-0"/>
+    <module id="gyrus"/>
+    <module id="gnome-office"/>
+    <module id="monkey-bubble"/>
+    <module id="nautilus-sendto"/>
+    <module id="quick-lounge-applet"/>
+    <module id="bakery"/>
+    <module id="gnome-hello"/>
+    <module id="alleyoop"/>
+    <module id="gnome-alsamixer"/>
+  </release>
+  <release id="gnome-2-16">
+    <category id="platform">
+      <module id="glib"/>
+      <module id="gnome-vfs"/>
+      <module id="libbonobo"/>
+      <module id="gail"/>
+      <module id="atk"/>
+      <module id="libgnomeui"/>
+      <module id="libgnomecanvas"/>
+      <module id="libgnome"/>
+      <module id="gtk+"/>
+      <module id="gconf"/>
+      <module id="libbonoboui"/>
+    </category>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <category id="proposed">
+      <module id="tomboy"/>
+      <module id="gnome-power-manager"/>
+      <module id="orca"/>
+      <module id="alacarte"/>
+    </category>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <category id="desktop">
+      <module id="gnome-menus"/>
+      <module id="gnome-doc-utils"/>
+      <module id="nautilus"/>
+      <module id="vino"/>
+      <module id="gnome-themes"/>
+      <module id="gedit"/>
+      <module id="gucharmap"/>
+      <module id="gtkhtml"/>
+      <module id="evince"/>
+      <module id="gcalctool"/>
+      <module id="gnome-applets"/>
+      <module id="zenity"/>
+      <module id="gnome-backgrounds"/>
+      <module id="gnome-volume-manager"/>
+      <module id="gnome-desktop"/>
+      <module id="gnome-utils"/>
+      <module id="vte"/>
+      <module id="gok"/>
+      <module id="gnome-nettool"/>
+      <module id="gnome-control-center"/>
+      <module id="libgnomeprintui"/>
+      <module id="gnopernicus"/>
+      <module id="nautilus-cd-burner"/>
+      <module id="evolution-exchange"/>
+      <module id="evolution-webcal"/>
+      <module id="libwnck"/>
+      <module id="dasher"/>
+      <module id="sabayon"/>
+      <module id="gnome-netstatus"/>
+      <module id="libgtop"/>
+      <module id="gnome-terminal"/>
+      <module id="bug-buddy"/>
+      <module id="gconf-editor"/>
+      <module id="file-roller"/>
+      <module id="gnome-icon-theme"/>
+      <module id="gnome-panel"/>
+      <module id="gnome-system-tools"/>
+      <module id="gnome-mag"/>
+      <module id="gnome-games"/>
+      <module id="libgnomeprint"/>
+      <module id="pessulus"/>
+      <module id="gnome-keyring-manager"/>
+      <module id="metacity"/>
+      <module id="gnome-screensaver"/>
+      <module id="gnome-keyring"/>
+      <module id="evolution"/>
+      <module id="fast-user-switch-applet"/>
+      <module id="eog"/>
+      <module id="evolution-data-server"/>
+      <module id="yelp"/>
+      <module id="gnome-media"/>
+      <module id="totem"/>
+      <module id="gdm2"/>
+      <module id="eel"/>
+      <module id="epiphany"/>
+      <module id="gnome-system-monitor"/>
+      <module id="gnome-session"/>
+      <module id="sound-juicer"/>
+      <module id="deskbar-applet"/>
+      <module id="ekiga" branch="gnome-2-14"/>
+      <module id="gtksourceview"/>
+    </category>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+    <_description>GNOME developer platform. Essential software.</_description>
+    <_description>Proposed GNOME desktop and developer platform software.</_description>
+    <_description>GNOME desktop. Essential software.</_description>
+  </release>
+  <release id="fifth-toe">
+    <_description>GNOME Fifth Toe. Extra software.</_description>
+    <module id="camorama"/>
+    <module id="hardware-monitor"/>
+    <module id="seahorse" branch="seahorse-0-8"/>
+    <module id="balsa"/>
+    <module id="monster-masher"/>
+    <module id="gcompris"/>
+    <module id="gtetrinet"/>
+    <module id="gnomeicu"/>
+    <module id="gthumb"/>
+    <module id="galeon"/>
+    <module id="regexxer"/>
+    <module id="pan"/>
+  </release>
 </releases>

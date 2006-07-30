@@ -1,194 +1,895 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <modules>
-
-<defaults>
-  <module>
-    <bugs-xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</bugs-xmlrpc>
-    <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
-    <bugs-product>%(module/id)</bugs-product>
-    <bugs-component>general</bugs-component>
-    <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
-    <cvsmodule>%(module/id)</cvsmodule>
-    <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
-  </module>
-  <branch id="HEAD" regenerate="1">
-    <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvsweb>
-    <domain id="po" potbase="%(module/id)">
-      <_description>UI translations</_description>
-    </domain>
-    <document id="help">
-      <_description>User Guide</_description>
-    </document>
-  </branch>
-</defaults>
-
-<module id="deskbar-applet">
-  <description>Deskbar Applet</description>
-  <webpage>http://raphael.slinckx.net/deskbar/</webpage>
-  <maintainer id="rslinckx"/>
-  <branch id="HEAD" />
-</module>
-
-<module id="epiphany">
-  <description>Epiphany Web Browser</description>
-  <webpage>http://gnome.org/projects/epiphany/</webpage>
-  <maintainer id="chpe"/>
-  <cvsmodule>epiphany</cvsmodule>
-  <branch regenerate="0" id="gnome-2-12">
-    <domain id="po">
-      <description>UI translations</description>
-    </domain>
-    <document id="help">
-      <description>User Guide</description>
-      <directory>help</directory>
-    </document>
-  </branch>
-  <branch stringfrozen="true" id="HEAD">
-    <domain id="po">
-      <description>UI translations</description>
-    </domain>
-    <document id="help">
-      <description>Epiphany Manual</description>
-      <directory>help</directory>
-    </document>
-  </branch>
-</module>
-
-<module id="gnome-applets">
-  <description>Gnome Applets</description>
-  <maintainer id="davyd"/>
   <defaults>
-    <branch>
-      <domain id="po">
-	<description>UI translations</description>
+    <module>
+      <bugs-xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</bugs-xmlrpc>
+      <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
+      <bugs-product>%(module/id)</bugs-product>
+      <bugs-component>general</bugs-component>
+      <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
+      <cvsmodule>%(module/id)</cvsmodule>
+      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
+    </module>
+    <branch id="HEAD" regenerate="1">
+      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvsweb>
+      <domain id="po" potbase="%(module/id)">
+        <_description>UI translations</_description>
       </domain>
-      <domain id="po-locations" potbase="weather-locations">
-	<description>Weather Applet Locations</description>
-      </domain>
-      <document id="accessx-status">
-	<description>Keyboard Accessibility Monitor Manual</description>
-	<directory>accessx-status/docs</directory>
-      </document>
-      <document id="battstat">
-	<description>Battery Charage Monitor Manual</description>
-	<directory>battstat/docs</directory>
-      </document>
-      <document id="char-palette">
-	<description>Character Palette Manual</description>
-	<directory>charpick/help</directory>
-      </document>
-      <document id="cpufreq-applet">
-	<description>CPU Frequency Scaling Monitor Manual</description>
-	<directory>cpufreq/help</directory>
-      </document>
-      <document id="drivemount">
-	<description>Disk Mounter Manual</description>
-	<directory>drivemount/help</directory>
-      </document>
-      <document id="geyes">
-	<description>Geyes Manual</description>
-	<directory>geyes/docs</directory>
-      </document>
-      <document id="gswitchit">
-	<description>Keyboard Indicator Manual</description>
-	<directory>gswitchit/help</directory>
-      </document>
-      <document id="gtik2_applet2">
-	<description>Stock Ticker Manual</description>
-	<directory>gtik/help</directory>
-      </document>
-      <document id="gweather">
-	<description>Weather Report Manual</description>
-	<directory>gweather/docs</directory>
-      </document>
-      <document id="command-line">
-	<description>Command Line Manual</description>
-	<directory>mini-commander/help</directory>
-      </document>
-      <document id="mixer_applet2">
-	<description>Volume Control Manual</description>
-	<directory>mixer/docs</directory>
-      </document>
-      <document id="multiload">
-	<description>System Monitor Manual</description>
-	<directory>multiload/docs</directory>
-      </document>
-      <document id="stickynotes_applet">
-	<description>Sticky Notes Manual</description>
-	<directory>stickynotes/docs</directory>
-      </document>
-      <document id="trashapplet">
-	<description>Panel Trash Manual</description>
-	<directory>trashapplet/docs</directory>
+      <document id="help">
+        <_description>User Guide</_description>
       </document>
     </branch>
   </defaults>
-  <branch stringfrozen="true" id="HEAD" />
-</module>
-
-<module id="glib">
-  <description>GLib</description>
-  <webpage>http://gtk.org/</webpage>
-  <maintainer id="matthiasc"/>
-  <maintainer id="owen"/>
-  <svnmodule>glib</svnmodule>
-  <svnroot>http://svn.gnome.org/svn</svnroot>
-  <svnweb>http://svn.gnome.org/viewsvn/%(module/id)</svnweb>
-  <branch id="HEAD"/>
-  <branch stringfrozen="true" id="glib-2-10"/>
-</module>
-
-<module id="gtk+">
-  <description>Gtk+</description>
-  <maintainer id="owen"/>
-  <webpage>http://www.gtk.org/</webpage>
-  <branch stringfrozen="true" id="gtk-2-8">
-    <domain id="po">
-      <description>Core</description>
-    </domain>
-    <domain id="po-properties" potbase="gtk+-properties">
-      <description>Property Nicks</description>
-    </domain>
-  </branch>
-  <branch id="HEAD">
-    <domain id="po">
-      <description>Core</description>
-    </domain>
-    <domain id="po-properties">
-      <description>Property Nicks</description>
-    </domain>
-  </branch>
-</module>
-
-<module id="rhythmbox">
-  <description>Rhythmbox Music Player</description>
-  <webpage>http://www.rhythmbox.org/</webpage>
-  <maintainer id="jrl"/>
-  <branch id="HEAD"/>
-</module>
-
-<module id="sabayon">
-  <description>Sabayon</description>
-  <maintainer id="veillard"/>
-  <branch id="HEAD"/>
-</module>
-
-<module id="xkeyboard-config">
-  <description>XKeyboard-Config</description>
-  <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
-  <maintainer id="svu"/>
-  <maintainer id="xdg-ivan"/>
-  <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
-  <bugs-product>xkeyboard-config</bugs-product>
-  <bugs-component>General</bugs-component>
-  <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvsroot>
-  <cvsmodule>xkbdesc</cvsmodule>
-  <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch)</cvsweb>
-  <branch id="HEAD">
-    <domain id="po">
-      <description>Layout Descriptions</description>
-    </domain>
-  </branch>
-</module>
-
+  <module id="deskbar-applet">
+    <description>Deskbar Applet</description>
+    <webpage>http://raphael.slinckx.net/deskbar/</webpage>
+    <maintainer id="rslinckx"/>
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="epiphany">
+    <description>Epiphany Web Browser</description>
+    <webpage>http://gnome.org/projects/epiphany/</webpage>
+    <maintainer id="chpe"/>
+    <cvsmodule>epiphany</cvsmodule>
+    <branch regenerate="0" id="gnome-2-12">
+      <domain id="po">
+        <description>UI translations</description>
+      </domain>
+      <document id="help">
+        <description>User Guide</description>
+        <directory>help</directory>
+      </document>
+    </branch>
+    <branch stringfrozen="true" id="HEAD">
+      <domain id="po">
+        <description>UI translations</description>
+      </domain>
+      <document id="help">
+        <description>Epiphany Manual</description>
+        <directory>help</directory>
+      </document>
+    </branch>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-applets">
+    <description>Gnome Applets</description>
+    <maintainer id="davyd"/>
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <domain id="po-locations" potbase="weather-locations">
+          <description>Weather Applet Locations</description>
+        </domain>
+        <document id="accessx-status">
+          <description>Keyboard Accessibility Monitor Manual</description>
+          <directory>accessx-status/docs</directory>
+        </document>
+        <document id="battstat">
+          <description>Battery Charage Monitor Manual</description>
+          <directory>battstat/docs</directory>
+        </document>
+        <document id="char-palette">
+          <description>Character Palette Manual</description>
+          <directory>charpick/help</directory>
+        </document>
+        <document id="cpufreq-applet">
+          <description>CPU Frequency Scaling Monitor Manual</description>
+          <directory>cpufreq/help</directory>
+        </document>
+        <document id="drivemount">
+          <description>Disk Mounter Manual</description>
+          <directory>drivemount/help</directory>
+        </document>
+        <document id="geyes">
+          <description>Geyes Manual</description>
+          <directory>geyes/docs</directory>
+        </document>
+        <document id="gswitchit">
+          <description>Keyboard Indicator Manual</description>
+          <directory>gswitchit/help</directory>
+        </document>
+        <document id="gtik2_applet2">
+          <description>Stock Ticker Manual</description>
+          <directory>gtik/help</directory>
+        </document>
+        <document id="gweather">
+          <description>Weather Report Manual</description>
+          <directory>gweather/docs</directory>
+        </document>
+        <document id="command-line">
+          <description>Command Line Manual</description>
+          <directory>mini-commander/help</directory>
+        </document>
+        <document id="mixer_applet2">
+          <description>Volume Control Manual</description>
+          <directory>mixer/docs</directory>
+        </document>
+        <document id="multiload">
+          <description>System Monitor Manual</description>
+          <directory>multiload/docs</directory>
+        </document>
+        <document id="stickynotes_applet">
+          <description>Sticky Notes Manual</description>
+          <directory>stickynotes/docs</directory>
+        </document>
+        <document id="trashapplet">
+          <description>Panel Trash Manual</description>
+          <directory>trashapplet/docs</directory>
+        </document>
+      </branch>
+    </defaults>
+    <branch stringfrozen="true" id="HEAD">
+      <domain id="po-locations" potbase="gnome-applets-locations"/>
+      <domain id="po"/>
+    </branch>
+    <branch id="gnome-2-14">
+      <domain id="po-locations" potbase="gnome-applets-locations"/>
+      <domain id="po"/>
+    </branch>
+  </module>
+  <module id="glib">
+    <description>GLib</description>
+    <webpage>http://gtk.org/</webpage>
+    <maintainer id="matthiasc"/>
+    <maintainer id="owen"/>
+    <svnmodule>glib</svnmodule>
+    <svnroot>http://svn.gnome.org/svn</svnroot>
+    <svnweb>http://svn.gnome.org/viewsvn/%(module/id)</svnweb>
+    <branch id="HEAD"/>
+    <branch stringfrozen="true" id="glib-2-10"/>
+  </module>
+  <module id="gtk+">
+    <description>Gtk+</description>
+    <maintainer id="owen"/>
+    <webpage>http://www.gtk.org/</webpage>
+    <branch stringfrozen="true" id="gtk-2-8">
+      <domain id="po">
+        <description>Core</description>
+      </domain>
+      <domain id="po-properties" potbase="gtk+-properties">
+        <description>Property Nicks</description>
+      </domain>
+    </branch>
+    <branch id="HEAD">
+      <domain id="po">
+        <description>Core</description>
+      </domain>
+      <domain id="po-properties" potbase="gtk+-properties">
+        <description>Property Nicks</description>
+      </domain>
+    </branch>
+  </module>
+  <module id="rhythmbox">
+    <description>Rhythmbox Music Player</description>
+    <webpage>http://www.rhythmbox.org/</webpage>
+    <maintainer id="jrl"/>
+    <branch id="HEAD"/>
+  </module>
+  <module id="sabayon">
+    <description>Sabayon</description>
+    <maintainer id="veillard"/>
+    <branch id="HEAD"/>
+  </module>
+  <module id="xkeyboard-config">
+    <description>XKeyboard-Config</description>
+    <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
+    <maintainer id="svu"/>
+    <maintainer id="xdg-ivan"/>
+    <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
+    <bugs-product>xkeyboard-config</bugs-product>
+    <bugs-component>General</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvsroot>
+    <cvsmodule>xkbdesc</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch)</cvsweb>
+    <branch id="HEAD">
+      <domain id="po">
+        <description>Layout Descriptions</description>
+      </domain>
+    </branch>
+  </module>
+  <module id="tomboy">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-doc-utils">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="medusa">
+    <branch id="HEAD"/>
+  </module>
+  <module id="resapplet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="devhelp">
+    <branch id="HEAD"/>
+  </module>
+  <module id="atomix">
+    <branch id="HEAD"/>
+  </module>
+  <module id="evince">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-system-monitor">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="lsr">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gossip">
+    <branch id="HEAD"/>
+  </module>
+  <module id="regexxer">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gdl">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomeprintui">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-sharing">
+    <branch id="HEAD"/>
+  </module>
+  <module id="anjuta">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-bluetooth">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gpdf">
+    <branch id="HEAD"/>
+  </module>
+  <module id="vte">
+    <branch id="vte-0-12"/>
+    <branch id="HEAD"/>
+  </module>
+  <module id="ghex">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-schedule">
+    <branch id="HEAD"/>
+  </module>
+  <module id="cupid">
+    <branch id="HEAD"/>
+  </module>
+  <module id="beagle">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus-cd-burner">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="metacity">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="evolution-jescs">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgircclient">
+    <branch id="HEAD"/>
+  </module>
+  <module id="evolution-exchange">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="nautilus-vcs">
+    <branch id="HEAD"/>
+  </module>
+  <module id="camorama">
+    <branch id="HEAD"/>
+  </module>
+  <module id="epiphany-extensions">
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gconf-editor">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="evolution">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gimmie">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomecups">
+    <branch id="HEAD"/>
+  </module>
+  <module id="totem">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="nautilus-actions">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gdesklets">
+    <branch id="HEAD"/>
+  </module>
+  <module id="pessulus">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gucharmap">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="monster-masher">
+    <branch id="HEAD"/>
+  </module>
+  <module id="red-carpet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-icon-theme">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="fast-user-switch-applet">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="mcatalog">
+    <branch id="HEAD"/>
+  </module>
+  <module id="pitivi">
+    <branch id="HEAD"/>
+  </module>
+  <module id="giftoxic">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-mud">
+    <branch id="HEAD"/>
+  </module>
+  <module id="dia">
+    <branch id="HEAD"/>
+  </module>
+  <module id="banshee">
+    <branch id="HEAD"/>
+  </module>
+  <module id="f-spot">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-control-center">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gtetrinet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="rmm-utils">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus-media">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus-rpm">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomesu">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-blog">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gtksourceview">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="notifier">
+    <branch id="HEAD"/>
+  </module>
+  <module id="orca">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-pilot-conduits">
+    <branch id="HEAD"/>
+  </module>
+  <module id="vino">
+    <branch id="HEAD"/>
+  </module>
+  <module id="update-manager">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gtkhtml">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-power-manager">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gftp">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnomeicu">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomedb">
+    <branch id="HEAD"/>
+  </module>
+  <module id="marlin">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-pim">
+    <branch id="HEAD"/>
+  </module>
+  <module id="silky">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-desktop">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gok">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="eel">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="scaffold">
+    <branch id="HEAD"/>
+  </module>
+  <module id="printman">
+    <branch id="HEAD"/>
+  </module>
+  <module id="genius">
+    <branch id="HEAD"/>
+  </module>
+  <module id="mlview">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnome">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-user-share">
+    <branch id="HEAD"/>
+  </module>
+  <module id="optimystic">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomeprint">
+    <branch id="HEAD"/>
+  </module>
+  <module id="evolution-webcal">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="meld">
+    <branch id="HEAD"/>
+  </module>
+  <module id="eggcups">
+    <branch id="HEAD"/>
+  </module>
+  <module id="hardware-monitor">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-terminal">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="mergeant">
+    <branch id="HEAD"/>
+  </module>
+  <module id="seahorse">
+    <branch id="seahorse-0-8"/>
+  </module>
+  <module id="gnome-panel">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="evolution-brainread">
+    <branch id="HEAD"/>
+  </module>
+  <module id="conglomerate">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-games">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gconf">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-pkgview">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libbonoboui">
+    <branch id="HEAD"/>
+  </module>
+  <module id="sawfish">
+    <branch id="HEAD"/>
+  </module>
+  <module id="contact-lookup-applet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="planner">
+    <branch id="HEAD"/>
+  </module>
+  <module id="evolution-data-server">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-media">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gedit-plugins">
+    <branch id="HEAD"/>
+  </module>
+  <module id="atk">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="glade">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnomeui">
+    <branch id="HEAD"/>
+    <branch id="libgnomeui-2-14"/>
+  </module>
+  <module id="gnome-pilot">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnomechat">
+    <branch id="HEAD"/>
+  </module>
+  <module id="ekiga">
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="nautilus-rc">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libmimedir">
+    <branch id="HEAD"/>
+  </module>
+  <module id="ooo-build">
+    <branch id="HEAD"/>
+  </module>
+  <module id="straw">
+    <branch id="HEAD"/>
+  </module>
+  <module id="chronojump">
+    <branch id="HEAD"/>
+  </module>
+  <module id="galeon">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gcalctool">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="alacarte">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gcompris">
+    <branch id="HEAD"/>
+  </module>
+  <module id="muine">
+    <branch id="HEAD"/>
+  </module>
+  <module id="drgeo">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-volume-manager">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gtranslator">
+    <branch id="HEAD"/>
+  </module>
+  <module id="monkey-bubble">
+    <branch id="HEAD"/>
+  </module>
+  <module id="memprof">
+    <branch id="HEAD"/>
+  </module>
+  <module id="battfink">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-spell">
+    <branch id="HEAD"/>
+  </module>
+  <module id="msm">
+    <branch id="HEAD"/>
+  </module>
+  <module id="jumpnbumpmenu">
+    <branch id="HEAD"/>
+  </module>
+  <module id="uf-view">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-cups-manager">
+    <branch id="HEAD"/>
+  </module>
+  <module id="NetworkManager">
+    <branch id="HEAD">
+      <domain id="vpn-daemons/openvpn/po" potbase="NetworkManager-openvpn"/>
+      <domain id="vpn-daemons/vpnc/po" potbase="NetworkManager-vpnc"/>
+      <domain id="po"/>
+      <domain id="vpn-daemons/pptp/po" potbase="NetworkManager-pptp"/>
+    </branch>
+  </module>
+  <module id="goobox">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus-gtkhtml">
+    <branch id="HEAD"/>
+  </module>
+  <module id="firestarter">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gperfmeter">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgnetwork">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-netstatus">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgtop">
+    <branch id="HEAD"/>
+  </module>
+  <module id="bug-buddy">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="drwright">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus-open-terminal">
+    <branch id="HEAD"/>
+  </module>
+  <module id="file-roller">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="pybliographer">
+    <branch id="v_1_0_x"/>
+  </module>
+  <module id="gnome-menu-editor">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-mag">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="netapplet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="webeyes">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gail">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-keyring-manager">
+    <branch id="HEAD"/>
+  </module>
+  <module id="criawips">
+    <branch id="HEAD"/>
+  </module>
+  <module id="ontv">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-keyring">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gwget">
+    <branch id="HEAD"/>
+  </module>
+  <module id="yelp">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-jabber">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-mount">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-commander">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-nettool">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="bookmark-applet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gthumb">
+    <branch id="HEAD"/>
+  </module>
+  <module id="sound-juicer">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnomeradio">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-glossary">
+    <branch id="HEAD">
+      <domain id="glossary"/>
+    </branch>
+  </module>
+  <module id="gnome-menus">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="sodipodi">
+    <branch id="HEAD"/>
+  </module>
+  <module id="nautilus">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-vfs">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-themes">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="balsa">
+    <branch id="HEAD"/>
+  </module>
+  <module id="zenity">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-torrent">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gedit">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="blam">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-app-install">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-backgrounds">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gdesklets-extras">
+    <branch id="HEAD"/>
+  </module>
+  <module id="divifund">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-themes-extras">
+    <branch id="HEAD"/>
+  </module>
+  <module id="istanbul">
+    <branch id="HEAD"/>
+  </module>
+  <module id="jamboree">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-network">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gparted">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnopernicus">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="glade3">
+    <branch id="HEAD"/>
+  </module>
+  <module id="guikachu">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gimp">
+    <branch id="HEAD">
+      <domain id="po"/>
+      <domain id="po-libgimp" potbase="gimp-libgimp"/>
+      <domain id="po-plug-ins" potbase="gimp-plug-ins"/>
+      <domain id="po-tips" potbase="gimp-tips"/>
+      <domain id="po-script-fu" potbase="gimp-script-fu"/>
+    </branch>
+  </module>
+  <module id="gnumeric">
+    <branch id="HEAD">
+      <domain id="po"/>
+      <domain id="po-functions" potbase="gnumeric-functions"/>
+    </branch>
+  </module>
+  <module id="pan">
+    <branch id="HEAD"/>
+  </module>
+  <module id="dasher">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-build">
+    <branch id="HEAD"/>
+  </module>
+  <module id="glom">
+    <branch id="HEAD"/>
+  </module>
+  <module id="phonemgr">
+    <branch id="HEAD"/>
+  </module>
+  <module id="beast">
+    <branch id="HEAD"/>
+  </module>
+  <module id="drivel">
+    <branch id="drivel-2-0"/>
+  </module>
+  <module id="gyrus">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-office">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-utils">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="nautilus-sendto">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libwnck">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="eog">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-screensaver">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="quick-lounge-applet">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libbonobo">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gdm2">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="gnome-system-tools">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="libgnomecanvas">
+    <branch id="HEAD"/>
+  </module>
+  <module id="bakery">
+    <branch id="HEAD"/>
+  </module>
+  <module id="libgda">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-hello">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-session">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
+  <module id="alleyoop">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gnome-alsamixer">
+    <branch id="HEAD"/>
+  </module>
 </modules>
