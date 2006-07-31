@@ -594,7 +594,7 @@ might be worth investigating.
         # Copy figures over
         if not figures:
             allfigs = []
-            for file in os.listdir(os.path.join(docdir,"C","figures")):
+            for file in os.listdir(os.path.join(sourcedir, docbase,"C","figures")):
                 if file[-4:]==".png":
                     allfigs.append(os.path.join("figures", file))
         else:
