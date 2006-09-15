@@ -1,3 +1,8 @@
+2006-09-15  Danilo Šegan  <danilo@gnome.org>
+
+	* releases.py (Releases.list_modules): Check for description key
+	before blindly setting it.
+
 2006-07-31  Danilo Šegan  <danilo@gnome.org>
 
 	* update-stats.py (LocStatistics.generate_translated_docs): Use

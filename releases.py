@@ -126,6 +126,10 @@ class Releases:
                             else:
                                 perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
 
+                            desc = trdomain
+                            if trdomains[trdomain].has_key('description'):
+                                desc = trdomains[trdomain]['description']
+
                             retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
                                                                                    'fuzzy' : fz,
                                                                                    'untranslated' : pot_size-tr-fz,
@@ -135,7 +139,7 @@ class Releases:
                                                                                    'pot_messages' : potmsgs,
                                                                                    'po_messages' : msgs,
                                                                                    'potbase' : trdomains[trdomain]['potbase'],
-                                                                                   'description' : trdomains[trdomain]['description'],
+                                                                                   'description' : desc,
                                                                                    }
                         if mypot:
                             myun = mypot - mytr - myfz; ui_supp = "%.0f" % (100.0*mytr/mypot)
