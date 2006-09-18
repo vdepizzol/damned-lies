@@ -57,7 +57,13 @@
   <h3>Translates:</h3>
   <ul>
     #for team in $roles.translates
-    <li>Coordinates <a href="${webroot}/teams/${team.id}">${team.description}</a></li>
+    <li>Coordinates <a href="${webroot}/teams/${team.id}">
+	#if $team.has_key('description')
+	${team.description}
+	#else
+	${team.id}
+	#end if
+    </a></li>
     #end for
   </ul>
 
