@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>GNOME Contributors</title>
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+  <h2>GNOME Contributors</h2>
+
+#if len($people)
+<p>Gnome is being developed by following people:</p>
+
+<ul>
+#for personid in $people
+  #set global person=$people[personid]
+
+  #if $person.icon
+  <div class="maintainer" style="background-image:url('$person.icon');">
+  #else
+  <div class="maintainer">
+  #end if
+  <a style="font-size: 120%;" href="${webroot}/people/$person.id">$person.name</a><br />
+  #if $person.webpage
+  <a href="$person.webpage">$person.webpage</a><br />
+  #end if
+  </div>
+
+#end for
+</ul>
+
+#else
+<p>There are no contributors, GNOME turned itself up from nothing.</p>
+#end if
+
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+  #if $person.has_key('name')
+   <title>${person.name} — GNOME Contributor</title>
+  #else
+   <title>${person.id} — GNOME Contributor</title>
+  #end if
+  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+</head>
+<body>
+
+<center>
+<div style="width:80%; text-align: left;">
+
+  <h2>${person.name} (${person.id})</h2>
+  #if $person.icon
+  <div class="maintainer" style="background-image:url('$person.icon');">
+  #else
+  <div class="maintainer">
+  #end if
+  <a style="font-size: 140%;" href="${webroot}/people/$person.id">$person.name</a><br />
+  #if $person.webpage
+  <a href="$person.webpage">$person.webpage</a><br />
+  #end if
+
+  <br />
+  #if len($person.im) or $person.nick
+  <strong>Instant messaging:</strong>
+  <ul>
+  #if $person.nick
+    <li><em>$person.nick</em> (IRC)</li>
+  #end if
+  #if len($person.im)
+  #for type, account in $person.im.items()
+    <li><em>$account.content</em> ($type)</li>
+  #end for
+  #end if
+  </ul>
+  #end if
+
+  #if $person.has_key('bugzilla-account')
+  <strong>Bugzilla account:</strong> $person['bugzilla-account']<br />
+  #end if
+  #if $person.has_key('cvs-account')
+  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${person['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">${person['cvs-account']}</a><br />
+  #end if
+
+  #if $roles.maintains and len($roles.maintains)
+  <h2>Maintains:</h2>
+    #for module in $roles.maintains
+    <li>Maintains <a href="${webroot}/module/${module.id}">${module.description}</a></li>
+    #end for
+  #end if
+
+
+  #if $roles.translates and len($roles.translates)
+  <h3>Translates:</h3>
+  <ul>
+    #for team in $roles.translates
+    <li>Coordinates <a href="${webroot}/teams/${team.id}">${team.description}</a></li>
+    #end for
+  </ul>
+
+  #end if
+
+</div>
+</center>
+</body>
+</html>

@@ -25,3 +25,7 @@ RewriteRule ^languages$              teams.py/languages/
 RewriteRule !^releases\.py.*$     -   [C]
 RewriteRule ^releases/(.*)$    	     releases.py/$1
 RewriteRule ^releases$        	     releases.py
+
+RewriteRule !^people\.py.*$     -   [C]
+RewriteRule ^people/(.*)$    	     people.py/$1
+RewriteRule ^people$        	     people.py
