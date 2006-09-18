@@ -51,7 +51,7 @@ if __name__=="__main__":
         html = Template(file="templates/person.tmpl")
         html.webroot = defaults.webroot
         html.person = persons[personid]
-        html.roles = get_roles_for(html.person)
+        #html.roles = get_roles_for(html.person)
 
         print html
         print utils.TemplateInspector(html)
