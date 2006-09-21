@@ -81,9 +81,9 @@ class LocStatistics:
     def __init__(self, module, onlybranch = None):
         self.module = module
         if module.has_key('svnroot'):
-            COs = modules.SvnModule(module, 0)
+            COs = modules.SvnModule(module, 1)
         elif module.has_key('cvsroot'):
-            COs = modules.CvsModule(module, 0)
+            COs = modules.CvsModule(module, 1)
         else:
             raise Exception("Can't fetch source code for this module.")
 
@@ -676,6 +676,7 @@ if __name__ == "__main__":
                     LocStatistics(m[module])
             else:
                 for modid in m:
+                    print "Updating stats for %s..." % (modid)
                     LocStatistics(m[modid])
         else:
             print "Usage:\n\t%s [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
