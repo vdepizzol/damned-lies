@@ -52,6 +52,7 @@
       </document>
     </branch>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-applets">
     <description>Gnome Applets</description>
@@ -141,6 +142,7 @@
     <svnweb>http://svn.gnome.org/viewsvn/%(module/id)</svnweb>
     <branch id="HEAD"/>
     <branch stringfrozen="true" id="glib-2-10"/>
+    <branch id="glib-2-12"/>
   </module>
   <module id="gtk+">
     <description>Gtk+</description>
@@ -161,6 +163,10 @@
       <domain id="po-properties" potbase="gtk+-properties">
         <description>Property Nicks</description>
       </domain>
+    </branch>
+    <branch id="gtk-2-10">
+      <domain id="po-properties" potbase="gtk+-properties"/>
+      <domain id="po"/>
     </branch>
   </module>
   <module id="rhythmbox">
@@ -193,6 +199,7 @@
   </module>
   <module id="tomboy">
     <branch id="HEAD"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-doc-utils">
     <branch id="HEAD"/>
@@ -287,6 +294,7 @@
   </module>
   <module id="epiphany-extensions">
     <branch id="gnome-2-14"/>
+    <branch id="HEAD"/>
   </module>
   <module id="gconf-editor">
     <branch id="HEAD"/>
@@ -305,6 +313,7 @@
   <module id="totem">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="nautilus-actions">
     <branch id="HEAD"/>
@@ -358,6 +367,7 @@
   <module id="gnome-control-center">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gtetrinet">
     <branch id="HEAD"/>
@@ -386,6 +396,7 @@
   </module>
   <module id="orca">
     <branch id="HEAD"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-pilot-conduits">
     <branch id="HEAD"/>
@@ -402,6 +413,7 @@
   </module>
   <module id="gnome-power-manager">
     <branch id="HEAD"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gftp">
     <branch id="HEAD"/>
@@ -494,6 +506,7 @@
   <module id="gnome-games">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gconf">
     <branch id="HEAD"/>
@@ -565,6 +578,7 @@
   <module id="gcalctool">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="alacarte">
     <branch id="HEAD"/>
@@ -702,6 +716,7 @@
   <module id="gnome-nettool">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="bookmark-applet">
     <branch id="HEAD"/>
@@ -746,6 +761,7 @@
   <module id="zenity">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-torrent">
     <branch id="HEAD"/>
@@ -796,7 +812,7 @@
   </module>
   <module id="gimp">
     <branch id="HEAD">
-      <domain id="po"/>
+      <domain id="po" potbase="gimp-tiny-fu"/>
       <domain id="po-libgimp" potbase="gimp-libgimp"/>
       <domain id="po-plug-ins" potbase="gimp-plug-ins"/>
       <domain id="po-tips" potbase="gimp-tips"/>
@@ -815,6 +831,7 @@
   <module id="dasher">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-build">
     <branch id="HEAD"/>
@@ -830,6 +847,7 @@
   </module>
   <module id="drivel">
     <branch id="drivel-2-0"/>
+    <branch id="HEAD"/>
   </module>
   <module id="gyrus">
     <branch id="HEAD"/>
@@ -840,6 +858,7 @@
   <module id="gnome-utils">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="nautilus-sendto">
     <branch id="HEAD"/>
@@ -851,6 +870,7 @@
   <module id="eog">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-screensaver">
     <branch id="HEAD"/>
@@ -866,6 +886,7 @@
   <module id="gdm2">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-system-tools">
     <branch id="HEAD"/>
@@ -891,6 +912,12 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-alsamixer">
+    <branch id="HEAD"/>
+  </module>
+  <module id="atomato">
+    <branch id="HEAD"/>
+  </module>
+  <module id="slab">
     <branch id="HEAD"/>
   </module>
 </modules>

@@ -138,7 +138,7 @@
     <module id="evolution-jescs"/>
     <module id="libgircclient"/>
     <module id="nautilus-vcs"/>
-    <module id="epiphany-extensions" branch="gnome-2-14"/>
+    <module id="epiphany-extensions" branch=""/>
     <module id="gimmie"/>
     <module id="libgnomecups"/>
     <module id="gdesklets"/>
@@ -234,7 +234,7 @@
     <module id="glom"/>
     <module id="phonemgr"/>
     <module id="beast"/>
-    <module id="drivel" branch="drivel-2-0"/>
+    <module id="drivel" branch=""/>
     <module id="gyrus"/>
     <module id="gnome-office"/>
     <module id="monkey-bubble"/>
@@ -244,12 +244,14 @@
     <module id="gnome-hello"/>
     <module id="alleyoop"/>
     <module id="gnome-alsamixer"/>
+    <module id="atomato"/>
+    <module id="slab"/>
   </release>
   <release id="gnome-2-16">
     <_description>Gnome 2.16</_description>
     <category id="platform">
       <_description>GNOME developer platform. Essential software.</_description>
-      <module id="glib"/>
+      <module id="glib" branch="glib-2-12"/>
       <module id="gnome-vfs"/>
       <module id="libbonobo"/>
       <module id="gail"/>
@@ -257,7 +259,7 @@
       <module id="libgnomeui"/>
       <module id="libgnomecanvas"/>
       <module id="libgnome"/>
-      <module id="gtk+"/>
+      <module id="gtk+" branch="gtk-2-10"/>
       <module id="gconf"/>
       <module id="libbonoboui"/>
     </category>
@@ -279,24 +281,24 @@
       <module id="gucharmap"/>
       <module id="gtkhtml"/>
       <module id="evince"/>
-      <module id="gcalctool"/>
+      <module id="gcalctool" branch="gnome-2-16"/>
       <module id="gnome-applets"/>
-      <module id="zenity"/>
+      <module id="zenity" branch="gnome-2-16"/>
       <module id="gnome-backgrounds"/>
       <module id="gnome-volume-manager"/>
       <module id="gnome-desktop"/>
-      <module id="gnome-utils"/>
+      <module id="gnome-utils" branch="gnome-2-16"/>
       <module id="vte"/>
       <module id="gok"/>
-      <module id="gnome-nettool"/>
-      <module id="gnome-control-center"/>
+      <module id="gnome-nettool" branch="gnome-2-16"/>
+      <module id="gnome-control-center" branch="gnome-2-16"/>
       <module id="libgnomeprintui"/>
       <module id="gnopernicus"/>
       <module id="nautilus-cd-burner"/>
       <module id="evolution-exchange"/>
       <module id="evolution-webcal"/>
       <module id="libwnck"/>
-      <module id="dasher"/>
+      <module id="dasher" branch="gnome-2-16"/>
       <module id="sabayon"/>
       <module id="gnome-netstatus"/>
       <module id="libgtop"/>
@@ -306,9 +308,9 @@
       <module id="file-roller"/>
       <module id="gnome-icon-theme"/>
       <module id="gnome-panel"/>
-      <module id="gnome-system-tools"/>
+      <module id="gnome-system-tools" branch="gnome-2-14"/>
       <module id="gnome-mag"/>
-      <module id="gnome-games"/>
+      <module id="gnome-games" branch="gnome-2-16"/>
       <module id="libgnomeprint"/>
       <module id="pessulus"/>
       <module id="gnome-keyring-manager"/>
@@ -317,20 +319,24 @@
       <module id="gnome-keyring"/>
       <module id="evolution"/>
       <module id="fast-user-switch-applet"/>
-      <module id="eog"/>
+      <module id="eog" branch="gnome-2-16"/>
       <module id="evolution-data-server"/>
       <module id="yelp"/>
       <module id="gnome-media"/>
-      <module id="totem"/>
-      <module id="gdm2"/>
+      <module id="totem" branch="gnome-2-16"/>
+      <module id="gdm2" branch="gnome-2-16"/>
       <module id="eel"/>
-      <module id="epiphany"/>
+      <module id="epiphany" branch="gnome-2-16"/>
       <module id="gnome-system-monitor"/>
       <module id="gnome-session"/>
       <module id="sound-juicer"/>
       <module id="deskbar-applet"/>
       <module id="ekiga" branch="gnome-2-14"/>
       <module id="gtksourceview"/>
+      <module id="tomboy" branch="gnome-2-16"/>
+      <module id="gnome-power-manager" branch="gnome-2-16"/>
+      <module id="alacarte"/>
+      <module id="orca" branch="gnome-2-16"/>
     </category>
   </release>
   <release id="fifth-toe">
