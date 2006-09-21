@@ -13,6 +13,22 @@ import os, sys, commands, datetime
 class LocStatistics:
     """Generate all statistics for provided module and source code path."""
 
+    def update_pot_errors_in_db(self, module, branch, type, domain, errors):
+        old = database.Statistics.select(database.AND(database.Statistics.q.Module == module,
+                                                      database.Statistics.q.Domain == domain,
+                                                      database.Statistics.q.Branch == branch,
+                                                      database.Statistics.q.Language == None,
+                                                      database.Statistics.q.Type == type))
+
+        for oldS in old:
+            for msg in oldS.Messages:
+                database.Information.delete(msg.id)
+
+            for (msgtype, message) in errors:
+                NewInfo = database.Information(Statistics = oldS,
+                                               Type = msgtype,
+                                               Description = message)
+
     def update_stats_database(self, module, branch, type, domain, date, language, translated, fuzzy, untranslated, errors):
         MyArchive = database.ArchivedStatistics(Module = module,
                                                 Branch = branch,
@@ -67,7 +83,7 @@ class LocStatistics:
         if module.has_key('svnroot'):
             COs = modules.SvnModule(module, 0)
         elif module.has_key('cvsroot'):
-            COs = modules.CvsModule(module, 1)
+            COs = modules.CvsModule(module, 0)
         else:
             raise Exception("Can't fetch source code for this module.")
 
@@ -100,12 +116,17 @@ class LocStatistics:
                 if defaults.DEBUG: print >>sys.stderr, "%s.%s/%s" % (module["id"],branch,podir)
                 self.ui_l10n_stats(COs.paths[branch], podir, potbase, outputdir, outputdomain)
 
+            if defaults.DEBUG: print >>sys.stderr, "DOCUMENTS: ", module["branch"][branch]["document"]
             for doc in module["branch"][branch]["document"]:
                 potbase = module["branch"][branch]["document"][doc]['potbase']
+                docsubdir = module["branch"][branch]["document"][doc]['directory']
 
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch, "docs")
 
-                self.doc_l10n_stats(COs.paths[branch], doc, potbase, outputdir)
+                ret = self.doc_l10n_stats(COs.paths[branch], docsubdir, potbase, outputdir)
+                if len(ret['errors']):
+                    self.update_pot_errors_in_db(module['id'], branch, 'document', potbase, ret['errors'])
+
 
 
     def notify_list(self, out_domain, diff):
@@ -432,6 +453,11 @@ might be worth investigating.
         return ""
 
     def doc_l10n_stats(self, checkoutdir, docpath, potbase, out_dir):
+        if defaults.DEBUG:
+            print >>sys.stderr, "doc_l10n_stats(%s, %s, %s, %s)" % (checkoutdir,
+                                                                    docpath,
+                                                                    potbase,
+                                                                    out_dir)
         sourcedir = os.path.join(checkoutdir, docpath)
         module = self.module
         moduleid = module["id"]
@@ -444,11 +470,16 @@ might be worth investigating.
 
         # read interesting variables from the Makefile.am
         makefileam = os.path.join(sourcedir, "Makefile.am")
-        modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
-        includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
-        entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
-        figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
-        languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
+        try:
+            modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
+            includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
+            entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
+            figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
+            languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
+        except IOError:
+            # probably file not found or unreadable
+            errors.append(("error", "gnome-doc-utils Makefile.am could not be read from %s." % (os.path.join(moduleid, docpath))))
+            return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
 
         # Generate POT file
         try: os.makedirs(out_dir)

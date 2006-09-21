@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Directory to checkout source code and dump dead bodies to
-scratchdir = u"/tmp/gnome-stats"
+scratchdir = u"/home/danilo/cvs/gnom"
 
 # Web root directory
 webroot = '/~danilo/damned-lies'
@@ -45,7 +45,7 @@ WEBDEBUG = 1
 
 # Directory to hold resulting POT/PO files
 import os.path
-potdir = os.path.join(u"/tmp/gnome-stats", "POT")
+potdir = os.path.join(scratchdir, "POT")
 
 # default to Gnome Bugzilla, product same as module ID and component "general"
 bugzilla = {
