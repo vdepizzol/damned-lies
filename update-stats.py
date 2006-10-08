@@ -478,8 +478,7 @@ might be worth investigating.
             languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
         except IOError:
             # probably file not found or unreadable
-            errors.append(("error", "gnome-doc-utils Makefile.am could not be read from %s." % (os.path.join(moduleid, docpath))))
-            return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
+            modulename = None
 
         # Generate POT file
         try: os.makedirs(out_dir)

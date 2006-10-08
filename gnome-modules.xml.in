@@ -27,6 +27,7 @@
     <maintainer id="rslinckx"/>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="epiphany">
     <description>Epiphany Web Browser</description>
@@ -127,7 +128,7 @@
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
-    <branch id="gnome-2-14" regenerate="0">
+    <branch id="gnome-2-14">
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
@@ -275,6 +276,7 @@
   <module id="metacity">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="evolution-jescs">
     <branch id="HEAD"/>
@@ -338,6 +340,7 @@
   <module id="gnome-icon-theme">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="fast-user-switch-applet">
     <branch id="HEAD"/>
@@ -486,6 +489,7 @@
   <module id="gnome-terminal">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2.16"/>
   </module>
   <module id="mergeant">
     <branch id="HEAD"/>
@@ -754,6 +758,7 @@
   <module id="gnome-themes">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="balsa">
     <branch id="HEAD"/>
@@ -806,6 +811,7 @@
   </module>
   <module id="glade3">
     <branch id="HEAD"/>
+    <branch id="glade3-3-0-branch"/>
   </module>
   <module id="guikachu">
     <branch id="HEAD"/>
@@ -912,6 +918,9 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-alsamixer">
+    <branch id="HEAD"/>
+  </module>
+  <module id="pan2">
     <branch id="HEAD"/>
   </module>
   <module id="atomato">

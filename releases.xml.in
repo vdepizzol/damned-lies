@@ -226,7 +226,7 @@
     <module id="jamboree"/>
     <module id="gnome-network"/>
     <module id="gparted"/>
-    <module id="glade3"/>
+    <module id="glade3" branch="glade3-3-0-branch"/>
     <module id="guikachu"/>
     <module id="gimp"/>
     <module id="gnome-blog"/>
@@ -276,7 +276,7 @@
       <module id="gnome-doc-utils"/>
       <module id="nautilus"/>
       <module id="vino"/>
-      <module id="gnome-themes"/>
+      <module id="gnome-themes" branch="gnome-2-16"/>
       <module id="gedit"/>
       <module id="gucharmap"/>
       <module id="gtkhtml"/>
@@ -302,11 +302,11 @@
       <module id="sabayon"/>
       <module id="gnome-netstatus"/>
       <module id="libgtop"/>
-      <module id="gnome-terminal"/>
+      <module id="gnome-terminal" branch="gnome-2.16"/>
       <module id="bug-buddy"/>
       <module id="gconf-editor"/>
       <module id="file-roller"/>
-      <module id="gnome-icon-theme"/>
+      <module id="gnome-icon-theme" branch="gnome-2-16"/>
       <module id="gnome-panel"/>
       <module id="gnome-system-tools" branch="gnome-2-14"/>
       <module id="gnome-mag"/>
@@ -314,7 +314,7 @@
       <module id="libgnomeprint"/>
       <module id="pessulus"/>
       <module id="gnome-keyring-manager"/>
-      <module id="metacity"/>
+      <module id="metacity" branch="gnome-2-16"/>
       <module id="gnome-screensaver"/>
       <module id="gnome-keyring"/>
       <module id="evolution"/>
@@ -330,7 +330,7 @@
       <module id="gnome-system-monitor"/>
       <module id="gnome-session"/>
       <module id="sound-juicer"/>
-      <module id="deskbar-applet"/>
+      <module id="deskbar-applet" branch="gnome-2-16"/>
       <module id="ekiga" branch="gnome-2-14"/>
       <module id="gtksourceview"/>
       <module id="tomboy" branch="gnome-2-16"/>
@@ -353,5 +353,6 @@
     <module id="galeon"/>
     <module id="regexxer"/>
     <module id="pan"/>
+    <module id="pan2"/>
   </release>
 </releases>
