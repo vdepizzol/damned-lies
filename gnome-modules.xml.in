@@ -859,6 +859,14 @@
   </module>
   <module id="glom">
     <maintainer id="murrayc"/>
+    <defaults>
+      <branch>
+        <document id="userguide">
+          <_description>User Guide</_description>
+          <directory>docs/user-guide</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="phonemgr">
