@@ -132,6 +132,10 @@
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
+    <branch id="gnome-2-16">
+      <domain id="po-locations" potbase="gnome-applets-locations"/>
+      <domain id="po"/>
+    </branch>
   </module>
   <module id="glib">
     <description>GLib</description>
@@ -205,6 +209,7 @@
   <module id="gnome-doc-utils">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="medusa">
     <branch id="HEAD"/>
@@ -221,6 +226,7 @@
   <module id="evince">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-system-monitor">
     <branch id="HEAD"/>
@@ -287,6 +293,7 @@
   <module id="evolution-exchange">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="nautilus-vcs">
     <branch id="HEAD"/>
@@ -305,6 +312,7 @@
   <module id="evolution">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gimmie">
     <branch id="HEAD"/>
@@ -406,6 +414,7 @@
   </module>
   <module id="vino">
     <branch id="HEAD"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="update-manager">
     <branch id="HEAD"/>
@@ -413,6 +422,7 @@
   <module id="gtkhtml">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-power-manager">
     <branch id="HEAD"/>
@@ -476,6 +486,7 @@
   <module id="evolution-webcal">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="meld">
     <branch id="HEAD"/>
@@ -490,6 +501,7 @@
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2.16"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="mergeant">
     <branch id="HEAD"/>
@@ -534,6 +546,7 @@
   <module id="evolution-data-server">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-media">
     <branch id="HEAD"/>
@@ -668,6 +681,7 @@
   <module id="file-roller">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
   </module>
   <module id="pybliographer">
     <branch id="v_1_0_x"/>
@@ -727,6 +741,7 @@
   </module>
   <module id="gthumb">
     <branch id="HEAD"/>
+    <branch id="gthumb-2-8"/>
   </module>
   <module id="sound-juicer">
     <branch id="HEAD"/>
@@ -928,6 +943,9 @@
     <branch id="HEAD"/>
   </module>
   <module id="slab">
+    <branch id="HEAD"/>
+  </module>
+  <module id="brasero">
     <branch id="HEAD"/>
   </module>
 </modules>

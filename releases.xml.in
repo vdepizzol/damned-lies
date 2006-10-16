@@ -246,6 +246,7 @@
     <module id="gnome-alsamixer"/>
     <module id="atomato"/>
     <module id="slab"/>
+    <module id="brasero"/>
   </release>
   <release id="gnome-2-16">
     <_description>Gnome 2.16</_description>
@@ -273,16 +274,16 @@
     <category id="desktop">
       <_description>GNOME desktop. Essential software.</_description>
       <module id="gnome-menus"/>
-      <module id="gnome-doc-utils"/>
+      <module id="gnome-doc-utils" branch="gnome-2-16"/>
       <module id="nautilus"/>
-      <module id="vino"/>
+      <module id="vino" branch="gnome-2-16"/>
       <module id="gnome-themes" branch="gnome-2-16"/>
       <module id="gedit"/>
       <module id="gucharmap"/>
-      <module id="gtkhtml"/>
-      <module id="evince"/>
+      <module id="gtkhtml" branch="gnome-2-16"/>
+      <module id="evince" branch="gnome-2-16"/>
       <module id="gcalctool" branch="gnome-2-16"/>
-      <module id="gnome-applets"/>
+      <module id="gnome-applets" branch="gnome-2-16"/>
       <module id="zenity" branch="gnome-2-16"/>
       <module id="gnome-backgrounds"/>
       <module id="gnome-volume-manager"/>
@@ -295,17 +296,17 @@
       <module id="libgnomeprintui"/>
       <module id="gnopernicus"/>
       <module id="nautilus-cd-burner"/>
-      <module id="evolution-exchange"/>
-      <module id="evolution-webcal"/>
+      <module id="evolution-exchange" branch="gnome-2-16"/>
+      <module id="evolution-webcal" branch="gnome-2-16"/>
       <module id="libwnck"/>
       <module id="dasher" branch="gnome-2-16"/>
       <module id="sabayon"/>
       <module id="gnome-netstatus"/>
       <module id="libgtop"/>
-      <module id="gnome-terminal" branch="gnome-2.16"/>
+      <module id="gnome-terminal" branch="gnome-2-16"/>
       <module id="bug-buddy"/>
       <module id="gconf-editor"/>
-      <module id="file-roller"/>
+      <module id="file-roller" branch="gnome-2-16"/>
       <module id="gnome-icon-theme" branch="gnome-2-16"/>
       <module id="gnome-panel"/>
       <module id="gnome-system-tools" branch="gnome-2-14"/>
@@ -317,10 +318,10 @@
       <module id="metacity" branch="gnome-2-16"/>
       <module id="gnome-screensaver"/>
       <module id="gnome-keyring"/>
-      <module id="evolution"/>
+      <module id="evolution" branch="gnome-2-16"/>
       <module id="fast-user-switch-applet"/>
       <module id="eog" branch="gnome-2-16"/>
-      <module id="evolution-data-server"/>
+      <module id="evolution-data-server" branch="gnome-2-16"/>
       <module id="yelp"/>
       <module id="gnome-media"/>
       <module id="totem" branch="gnome-2-16"/>
@@ -349,7 +350,7 @@
     <module id="gcompris"/>
     <module id="gtetrinet"/>
     <module id="gnomeicu"/>
-    <module id="gthumb"/>
+    <module id="gthumb" branch="gthumb-2-8"/>
     <module id="galeon"/>
     <module id="regexxer"/>
     <module id="pan"/>
