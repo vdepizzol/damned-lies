@@ -28,7 +28,7 @@
 #else
 <div class="maintainer">
 #end if
-  $maintainer.name <a href="mailto:$maintainer.email">&lt;$maintainer.email&gt;</a>
+  <a style="font-size: 140%;" href="${webroot}/people/$maintainer.id">$maintainer.name</a>
   #if $maintainer.has_key('webpage')
   <br /><a href="$maintainer.webpage">$maintainer.webpage</a>
   #end if
