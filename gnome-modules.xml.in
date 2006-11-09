@@ -740,6 +740,14 @@
     <branch id="HEAD"/>
   </module>
   <module id="gthumb">
+    <defaults>
+      <branch>
+        <document id="userguide">
+          <_description>User Guide</_description>
+          <directory>doc</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gthumb-2-8"/>
   </module>
