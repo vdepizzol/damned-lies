@@ -13,8 +13,8 @@
 <p>Select a module below to see some of the damned lies about it:</p>
 
 <ul>
-#for modid, module in $modules.items()
-<li><a href="${webroot}/module/${modid}">${module.description}</a></li>
+#for modid in $modids
+<li><a href="${webroot}/module/${modid}">$modules[$modid].description</a></li>
 #end for
 </ul>
 #else

@@ -38,7 +38,6 @@ from Cheetah.Template import Template
 print "Content-type: text/html; charset=UTF-8\n"
 
 
-
 def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
     if type == 'doc':
         trdomain = here['directory']
@@ -111,22 +110,46 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
         # Can't find database entries for this branch, unset it
         del here
 
+def compare_by_fields(a, b, fields, dict = None):
+    af = bf = 0.0
+
+    if dict:
+        a = dict[a]
+        b = dict[b]
+    for field in fields:
+        if a.has_key(field):
+            try: # prefer numerical comparison
+                af = float(a[field])
+            except:
+                af = a[field].lower()
+
+        if b.has_key(field):
+            try: # prefer numerical comparison
+                bf = float(b[field])
+            except:
+                bf = b[field].lower()
+
+        res = cmp(bf, af)
+        if res:
+            return res
+    return res
+
 
 def compare_stats(a, b):
-    as = bs = 0.0
-    if a.has_key('supportedness'): as = float(a['supportedness'])
-    if b.has_key('supportedness'): bs = float(b['supportedness'])
-    
-    res = cmp(bs, as)
-    if not res:
-        return cmp(b['language_name'], a['language_name'])
-    else:
-        return res
+    return compare_by_fields(a, b, ['supportedness', 'language_name'])
+
+def compare_module_names(a, b):
+    global allmodules
+    return -compare_by_fields(a, b, ['description', 'id'], allmodules.modules)
 
 def go_go():
+    global allmodules
     moduleid = os.getenv("PATH_INFO")[1:]
     allmodules = modules.XmlModules()
-    if moduleid in allmodules:
+
+    moduleids = allmodules.keys()
+    moduleids.sort(compare_module_names)
+    if moduleid in moduleids:
         module = allmodules[moduleid]
 
         for branch in module["branch"]:
@@ -160,10 +183,11 @@ def go_go():
         # List all modules
         html = Template(file="templates/list-modules.tmpl")
         html.webroot = defaults.webroot
+        html.modids = moduleids
         html.modules = allmodules
         print html
         print utils.TemplateInspector(html)
-        
+
 
 #import profile
 

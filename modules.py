@@ -51,12 +51,11 @@ class XmlModules:
 
     def keys(self): return self.modules.keys()
 
-    def items(self): return self.modules.items()  
+    def items(self): return self.modules.items()
 
     def values(self): return self.modules.values()
 
     def __iter__(self): return self.modules.__iter__()
-
 
 
 import os.path, sys

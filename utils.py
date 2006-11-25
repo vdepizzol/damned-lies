@@ -51,7 +51,6 @@ def not_found_404():
     print "Can't tell what you want from me! :("
     sys.exit(1)
 
-    
 
 
 def getElementContents(node):

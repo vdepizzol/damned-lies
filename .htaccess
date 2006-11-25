@@ -4,6 +4,8 @@ AcceptPathInfo On
 AddHandler cgi-script .py
 AddHandler cgi-script .cgi
 
+AddDefaultCharset UTF-8
+
 DirectoryIndex index.html
 
 RewriteEngine On
