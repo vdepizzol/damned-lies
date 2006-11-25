@@ -525,6 +525,27 @@
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
   </module>
+  <module id="gnome-user-docs">
+    <description>Gnome 2 User Documentation</description>
+    <defaults>
+      <branch>
+        <document id="user-guide">
+          <_description>User Guide</_description>
+          <directory>gnome2-user-guide</directory>
+        </document>
+        <document id="accessibility-guide">
+          <_description>Accessibility Guide</_description>
+          <directory>gnome2-accessibility-guide</directory>
+        </document>
+        <document id="system-admin-guide">
+          <_description>System Administration Guide</_description>
+          <directory>gnome2-system-admin-guide</directory>
+        </document>
+      </branch>
+    </defaults>
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+  </module>
   <module id="gconf">
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
