@@ -33,7 +33,8 @@ class XmlModules:
                     documents = self.modules[module]["branch"][branch]['document'].keys()
                     for trdomain in trdomains:
                         here = self.modules[module]["branch"][branch]['domain'][trdomain]
-                        here['potbase'] = here['id']
+                        if not here.has_key('potbase'):
+                            here['potbase'] = self.modules[module]['id']
 
                     for document in documents:
                         here = self.modules[module]["branch"][branch]['document'][document]
@@ -198,6 +199,6 @@ class SvnModule:
 if __name__=="__main__":
     m = XmlModules()
     import pprint
-    for modid in ['gnome-applets']:
+    for modid in ['tomboy']:
         #cvs = CvsModule(m[modid])
         print modid, ":\n", pprint.pprint(m[modid])

@@ -13,7 +13,7 @@
     </module>
     <branch id="HEAD" regenerate="1">
       <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvsweb>
-      <domain id="po" potbase="%(module/id)">
+      <domain id="po">
         <_description>UI translations</_description>
       </domain>
       <document id="help">
