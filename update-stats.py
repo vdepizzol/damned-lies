@@ -370,7 +370,7 @@ might be worth investigating.
 
         try: os.stat(pofile)
         except OSError: errors.append(("error", "PO file '%s' doesn't exist." % pofile))
-            
+
         if msgfmt_checks:
             command = "LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % pofile
         else:
@@ -385,7 +385,7 @@ might be worth investigating.
                 errors.append(("error", "PO file '%s' doesn't pass msgfmt check: not updating." % (pofile)))
             else:
                 errors.append(("error", "Can't get statistics for POT file '%s'." % (pofile)))
-        
+
         import re
         r_tr = re.search(r"([0-9]+) translated", output)
         r_un = re.search(r"([0-9]+) untranslated", output)
@@ -397,6 +397,19 @@ might be worth investigating.
         else: untranslated = 0
         if r_fz: fuzzy = r_fz.group(1)
         else: fuzzy = 0
+
+        if msgfmt_checks:
+            # Lets check if PO files are in UTF-8
+            command = ("LC_ALL=C LANG=C LANGUAGE=C " +
+                       "msgconv -t UTF-8 %s |" +
+                       "diff -u %s - >/dev/null") % (pofile,
+                                                     pofile)
+            if defaults.DEBUG: print >>sys.stderr, command
+            (error, output) = commands.getstatusoutput(command)
+            if defaults.DEBUG: print >>sys.stderr, output
+            if error:
+                errors.append(("warn",
+                               "PO file '%s' is not UTF-8 encoded." % (pofile)))
         return {
             'translated' : translated,
             'fuzzy' : fuzzy,
