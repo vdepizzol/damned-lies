@@ -1,5 +1,7 @@
-
-   #for moduleid, module in $modules.items()
+   #set $moduleids=$modules.keys()
+   #silent $moduleids.sort()
+   #for moduleid in $moduleids
+   #set $module=$modules[$moduleid]
    #if $module.has_key('statistics') and $module.statistics.ui_size!=0
 
     #if len($module.translation_domains.keys()) > 1
