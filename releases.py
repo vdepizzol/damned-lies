@@ -157,6 +157,7 @@ class Releases:
 
                         mytr = myfz = myun = mypot = 0
                         for document in documents:
+                            if defaults.DEBUG: print >>sys.stderr, "DOCUMENT: %s" % (document)
                             (tr, fz, un, msgs) = self.get_stats_for_module(modid, document, branch, gather_stats, 'doc')
                             dtotaltr += tr; dtotalfz += fz; dtotalun += un
                             mytr += tr; myfz += fz; myun += un

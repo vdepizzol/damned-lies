@@ -124,7 +124,7 @@ class LocStatistics:
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch, "docs")
 
                 ret = self.doc_l10n_stats(COs.paths[branch], docsubdir, potbase, outputdir)
-                if len(ret['errors']):
+                if len(ret['errors']) and ret['untranslated']:
                     self.update_pot_errors_in_db(module['id'], branch, 'document', potbase, ret['errors'])
 
 
@@ -553,7 +553,7 @@ might be worth investigating.
 
         NOW = datetime.datetime.now()
         self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
-                                   domain = docpath, date = NOW, language = None,
+                                   domain = potbase, date = NOW, language = None,
                                    translated = 0, fuzzy = 0, untranslated = int(pot_stats['untranslated']),
                                    errors = pot_stats['errors'])
 
