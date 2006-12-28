@@ -36,7 +36,7 @@ class XmlModules:
                         if not here.has_key('potbase'):
                             here['potbase'] = self.modules[module]['id']
                         if not here.has_key('description'):
-                            here['description'] = self.modules[module]['id']
+                            here['description'] = here['potbase']
 
                     for document in documents:
                         here = self.modules[module]["branch"][branch]['document'][document]
