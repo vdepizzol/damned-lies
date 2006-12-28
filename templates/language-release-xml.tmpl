@@ -1,0 +1,23 @@
+<stats language="${language}" release="${release.id}">
+
+#if $release.has_key('modules')
+    #set global modules=$release.modules
+    #set global release=$release
+    #include "templates/language-release-doc-xml.tmpl"
+#end if
+
+#for category in $release.categories
+#if $category.statistics.doc_size != 0
+<category id="${category.id}">
+  <translated>${category.statistics.doc_translated}</translated>
+  <fuzzy>${category.statistics.doc_fuzzy}</fuzzy>
+  <untranslated>${category.statistics.doc_untranslated}</untranslated>
+    #set global modules=$category.modules
+    #set global release=$release
+    #include "templates/language-release-doc-xml.tmpl"
+</category>
+<!-- doc_size != 0 -->
+#end if
+#end for
+
+</stats>
