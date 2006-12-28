@@ -35,12 +35,16 @@ class XmlModules:
                         here = self.modules[module]["branch"][branch]['domain'][trdomain]
                         if not here.has_key('potbase'):
                             here['potbase'] = self.modules[module]['id']
+                        if not here.has_key('description'):
+                            here['description'] = self.modules[module]['id']
 
                     for document in documents:
                         here = self.modules[module]["branch"][branch]['document'][document]
                         here['potbase'] = document
                         if not here.has_key('directory'):
                             here['directory'] = here['id']
+                        if not here.has_key('description'):
+                            here['description'] = here['id']
 
 
     # Implement dictionary methods
