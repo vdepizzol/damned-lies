@@ -175,9 +175,12 @@ if __name__=="__main__":
         else:
             langid = test.groups()[0]
             release = test.groups()[2]
-            (t_rel, t_ext) = os.path.splitext(release)
-            if t_ext == '.xml':
-                release = t_rel
+            if release:
+                (t_rel, t_ext) = os.path.splitext(release)
+                if t_ext == '.xml':
+                    release = t_rel
+            else:
+                (t_rel, t_ext) = (None, None)
             #print "page: %s<br/>langid: %s<br/>release: %s<br/>" % (page, langid, release)
             myteam = TranslationTeams(only_language=langid)
             # FIXME: get language instead of team
