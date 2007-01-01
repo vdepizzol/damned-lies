@@ -26,6 +26,7 @@ def mapOldId(old = None):
         'gnome-2.12' : 'gnome-2-12',
         'gnome-2.14' : 'gnome-2-14',
         'gnome-2.16' : 'gnome-2-16',
+        'gnome-2.18' : 'gnome-2-18',
         'developer-libs' : 'platform',
         'desktop' : 'desktop',
         'admin' : 'admin',
