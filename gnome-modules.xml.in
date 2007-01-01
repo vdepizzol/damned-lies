@@ -7,9 +7,9 @@
       <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
       <bugs-product>%(module/id)</bugs-product>
       <bugs-component>general</bugs-component>
-      <cvsroot>:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</cvsroot>
-      <cvsmodule>%(module/id)</cvsmodule>
-      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/</cvsweb>
+      <svnroot>http://svn.gnome.org/svn/%(module/id)</cvsroot>
+      <svnmodule>%(module/id)</cvsmodule>
+      <svnweb>http://svn.gnome.org/viewsvn/%(module/id)/</cvsweb>
     </module>
     <branch id="HEAD" regenerate="1">
       <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvsweb>
@@ -143,8 +143,6 @@
     <maintainer id="matthiasc"/>
     <maintainer id="owen"/>
     <svnmodule>glib</svnmodule>
-    <svnroot>http://svn.gnome.org/svn</svnroot>
-    <svnweb>http://svn.gnome.org/viewsvn/%(module/id)</svnweb>
     <branch id="HEAD"/>
     <branch stringfrozen="true" id="glib-2-10"/>
     <branch id="glib-2-12"/>
