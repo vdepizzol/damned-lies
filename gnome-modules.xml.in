@@ -7,12 +7,12 @@
       <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
       <bugs-product>%(module/id)</bugs-product>
       <bugs-component>general</bugs-component>
-      <svnroot>http://svn.gnome.org/svn/%(module/id)</cvsroot>
-      <svnmodule>%(module/id)</cvsmodule>
-      <svnweb>http://svn.gnome.org/viewsvn/%(module/id)/</cvsweb>
+      <svnroot>http://svn.gnome.org/svn/%(module/id)</svnroot>
+      <svnmodule>%(module/id)</svnmodule>
+      <svnweb>http://svn.gnome.org/viewsvn/%(module/id)/trunk</svnweb>
     </module>
     <branch id="HEAD" regenerate="1">
-      <cvsweb>http://cvs.gnome.org/viewcvs/%(module/id)/?only_with_tag=%(branch/id)</cvsweb>
+      <svnweb>http://svn.gnome.org/viewsvn/%(module/id)/trunk</svnweb>
       <domain id="po">
         <_description>UI translations</_description>
       </domain>
