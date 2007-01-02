@@ -1,5 +1,11 @@
 2007-01-02  Danilo Šegan  <danilo@gnome.org>
 
+	* view-module.py (go_go): Use 'potbase' and correctly check for
+	empty potfiles.
+	* templates/show-stats.tmpl: Show 'updated' only if available.
+
+2007-01-02  Danilo Šegan  <danilo@gnome.org>
+
 	* templates/module.tmpl: Use svnweb.
 
 	* gnome-modules.xml.in: Added docs for gconf-editor,

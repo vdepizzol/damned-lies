@@ -4,7 +4,10 @@
 #if $domain.has_key('pot_size')
   ($domain.pot_size messages)
 #end if
-</a> updated on <strong>${domain.updated}</strong>.
+</a>
+#if $domain.has_key('updated')
+updated on <strong>${domain.updated}</strong>.
+#end if
 
 #if $domain.has_key('pot_messages') and len($domain.pot_messages)
 <h4>Notices</h4>

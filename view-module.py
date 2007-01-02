@@ -40,7 +40,7 @@ print "Content-type: text/html; charset=UTF-8\n"
 
 def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
     if type == 'doc':
-        trdomain = here['directory']
+        trdomain = here['potbase']
     res = Statistics.select(AND(Statistics.q.Module == module["id"],
                                 Statistics.q.Domain == trdomain,
                                 Statistics.q.Branch == branch,
@@ -69,7 +69,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
         for po in allstats:
             mylang = po.Language
             if not mylang: continue
-            if langres.has_key(mylang):
+            if mylang and langres.has_key(mylang):
                 langname = langres[mylang]
                 if not langname: continue
             else:
@@ -171,7 +171,10 @@ def go_go():
                 get_stats_for(here, module, document, branch, 'doc')
                 here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
-                if len(here["statistics"])==0 and (not here.has_key('pot_size') or here['pot_size']==0):
+                if len(here["statistics"])==0 and (not here.has_key('pot_size') or (here.has_key('pot_size') and here['pot_size']==0)):
+                    print >>sys.stderr, "brise %s/%s" % (branch, document)
+                    import pprint
+                    print >>sys.stderr, pprint.pformat(here)
                     del module["branch"][branch]["document"][document]
 
         html = Template(file="templates/module.tmpl")
@@ -192,6 +195,7 @@ def go_go():
 #import profile
 
 go_go()
+
 #profile.run('go_go()', 'profile2-data')
 
 # form = cgi.FieldStorage()
