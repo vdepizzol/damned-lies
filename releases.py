@@ -224,12 +224,12 @@ class Releases:
             pot = totaltr = totalfz = totalun = 0
             dpot = dtotaltr = dtotalfz = dtotalun = 0
             ui_size = doc_size = 0
-            
+
+            #(ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
             if deep:
                 (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = self.list_modules(release, gather_stats)
                 if release.has_key('category'):
                     cats = release['category']
-                #(ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
 
                     for catid in cats:
                         cat = cats[catid]
@@ -330,7 +330,7 @@ class Releases:
             result.append(entry)
 
         self.data = result
-        
+
 
     # Implement dictionary methods
     def __getitem__(self, key): return self.data[key]
@@ -343,7 +343,7 @@ class Releases:
 
     def has_key(self, key): return self.data.has_key(key)
 
-    def items(self): return self.data.items()  
+    def items(self): return self.data.items()
 
     def values(self): return self.data.values()
 

@@ -171,9 +171,10 @@ def go_go():
                 get_stats_for(here, module, document, branch, 'doc')
                 here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
-                if len(here["statistics"])==0 and (not here.has_key('pot_size') or (here.has_key('pot_size') and here['pot_size']==0)):
-                    import pprint
-                    print >>sys.stderr, pprint.pformat(here)
+                if (len(here["statistics"])==0 and
+                    (not here.has_key('pot_size') or (here.has_key('pot_size') and here['pot_size']==0))):
+                    #import pprint
+                    #print >>sys.stderr, pprint.pformat(here)
                     del module["branch"][branch]["document"][document]
 
         html = Template(file="templates/module.tmpl")
