@@ -1,5 +1,12 @@
 2007-01-02  Danilo Šegan  <danilo@gnome.org>
 
+	* teams.py: Fix langid setting for teams.
+
+	* translation-teams.xml.in: Update vi, sl, ar team's data.
+	* people.xml.in: Update pclouds' name, add Matic Žgur, Djihed Afifi.
+
+2007-01-02  Danilo Šegan  <danilo@gnome.org>
+
 	* update-stats.py (LocStatistics.doc_l10n_stats): Use 'potbase'
 	for translations as well.
 	(LocStatistics.__init__): Default to SVN.

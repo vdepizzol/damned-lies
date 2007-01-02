@@ -118,6 +118,7 @@ if __name__=="__main__":
 
                 for lang, ldata in team['language'].items():
                     team['language'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+                    if not langid: langid = lang
 
                 html.webroot = defaults.webroot
                 html.team = team
