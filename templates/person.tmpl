@@ -19,6 +19,9 @@
   <div class="maintainer">
   #end if
   <a style="font-size: 140%;" href="${webroot}/people/$person.id">$person.name</a><br />
+  #if $person.has_key('nospamemail')
+  <a href="mailto:$person.nospamemail">$person.nospamemail</a><br />
+  #end if
   #if $person.webpage
   <a href="$person.webpage">$person.webpage</a><br />
   #end if
