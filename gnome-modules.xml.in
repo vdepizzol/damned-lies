@@ -275,14 +275,15 @@
     <branch id="HEAD"/>
   </module>
   <module id="beagle">
-    <defaults>
-      <branch>
-        <domain id="beagle/po" potbase="beagle">
-          <description>UI translations</description>
-        </domain>
-      </branch>
-    </defaults>
-    <branch id="HEAD"/>
+    <description>Beagle Desktop Search</description>
+    <webpage>http://beagle-project.org/</webpage>
+    <maintainer id="joeshaw"/>
+    <svnmodule>beagle</svnmodule>
+    <branch id="HEAD">
+      <domain id="beagle/po" potbase="beagle">
+        <description>UI translations</description>
+      </domain>
+    </branch>
   </module>
   <module id="nautilus-cd-burner">
     <branch id="HEAD"/>
