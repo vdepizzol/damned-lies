@@ -124,7 +124,7 @@ class Releases:
                             pot += pot_size
                             mypot += pot_size
 
-                            un = pot_size - tr - fz
+                            #un = pot_size - tr - fz
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
@@ -136,7 +136,7 @@ class Releases:
 
                             retmodules[modid]['translation_domains'][trdomain] = { 'translated' : tr,
                                                                                    'fuzzy' : fz,
-                                                                                   'untranslated' : pot_size-tr-fz,
+                                                                                   'untranslated' : un,
                                                                                    'percentages' : perc,
                                                                                    'supportedness' : perc['translated'],
                                                                                    'pot_size' : pot_size,
@@ -146,7 +146,8 @@ class Releases:
                                                                                    'description' : desc,
                                                                                    }
                         if mypot:
-                            myun = mypot - mytr - myfz; ui_supp = "%.0f" % (100.0*mytr/mypot)
+                            #myun = mypot - mytr - myfz
+                            ui_supp = "%.0f" % (100.0*mytr/mypot)
                             ui_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
                             myun = mypot; ui_supp = "0"
@@ -170,7 +171,7 @@ class Releases:
                             dpot += pot_size
                             mypot += pot_size
 
-                            un = pot_size - tr - fz
+                            #un = pot_size - tr - fz
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
@@ -178,7 +179,7 @@ class Releases:
 
                             retmodules[modid]['documents'][document] = { 'translated' : tr,
                                                                          'fuzzy' : fz,
-                                                                         'untranslated' : pot_size-tr-fz,
+                                                                         'untranslated' : un,
                                                                          'percentages' : perc,
                                                                          'supportedness' : perc['translated'],
                                                                          'pot_size' : pot_size,
@@ -188,7 +189,8 @@ class Releases:
                                                                          'description' : documents[document]['description'],
                                                                          }
                         if mypot:
-                            myun = mypot - mytr - myfz; doc_supp = "%.0f" % (100.0*mytr/mypot)
+                            #myun = mypot - mytr - myfz
+                            doc_supp = "%.0f" % (100.0*mytr/mypot)
                             doc_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
                             myun = mypot; doc_supp = "0"
@@ -245,14 +247,16 @@ class Releases:
                         }
 
                     if pot:
-                        un = pot - tr - fz; ui_supp = "%.0f" % (100.0*tr/pot)
+                        #un = pot - tr - fz
+                        ui_supp = "%.0f" % (100.0*tr/pot)
                         ui_percentages = { 'translated': 100*tr/pot, 'fuzzy': 100*fz/pot, 'untranslated': 100*un/pot }
                     else:
                         un = pot; ui_supp = "0"
                         ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
 
                     if dpot:
-                        dun = dpot - dtr - dfz; doc_supp = "%.0f" % (100.0*dtr/dpot)
+                        #dun = dpot - dtr - dfz;
+                        doc_supp = "%.0f" % (100.0*dtr/dpot)
                         doc_percentages = { 'translated': 100*dtr/dpot, 'fuzzy': 100*dfz/dpot, 'untranslated': 100*dun/dpot }
                     else:
                         dun = pot; doc_supp = "0"
@@ -275,7 +279,7 @@ class Releases:
                     categories.append(myCat)
 
             if ui_size:
-                totalun = ui_size - totaltr - totalfz
+                #totalun = ui_size - totaltr - totalfz
                 ui_supp = "%.0f" % (100.0*totaltr/ui_size)
                 ui_percentages = {
                     'translated': 100*totaltr/ui_size,
@@ -291,7 +295,7 @@ class Releases:
                     }
 
             if doc_size:
-                dtotalun = doc_size - dtotaltr - dtotalfz
+                #dtotalun = doc_size - dtotaltr - dtotalfz
                 doc_supp = "%.0f" % (100.0*dtotaltr/doc_size)
                 doc_percentages = {
                     'translated': 100*dtotaltr/doc_size,
@@ -457,6 +461,7 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
                 stats[lang][type+'_untranslated'] = fullsize - tr - fz
                 un = stats[lang][type+'_untranslated']
 
+                if not fullsize: fullsize=1
                 supp = 100*tr/fullsize
                 perc = { 'translated' : supp,
                          'fuzzy' : 100*fz/fullsize,

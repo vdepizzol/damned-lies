@@ -172,7 +172,6 @@ def go_go():
                 here['statistics'].sort(compare_stats) # FIXME: Allow different sorting criteria
 
                 if len(here["statistics"])==0 and (not here.has_key('pot_size') or (here.has_key('pot_size') and here['pot_size']==0)):
-                    print >>sys.stderr, "brise %s/%s" % (branch, document)
                     import pprint
                     print >>sys.stderr, pprint.pformat(here)
                     del module["branch"][branch]["document"][document]
