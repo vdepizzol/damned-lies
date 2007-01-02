@@ -275,6 +275,13 @@
     <branch id="HEAD"/>
   </module>
   <module id="beagle">
+    <defaults>
+      <branch>
+        <domain id="beagle/po" potbase="beagle">
+          <description>UI translations</description>
+        </domain>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="nautilus-cd-burner">
@@ -385,6 +392,13 @@
     <branch id="HEAD"/>
   </module>
   <module id="banshee">
+    <defaults>
+      <branch>
+        <domain id="banshee/po" potbase="banshee">
+          <description>UI translations</description>
+        </domain>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="f-spot">
