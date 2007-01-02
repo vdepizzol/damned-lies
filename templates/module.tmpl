@@ -45,8 +45,10 @@
 
 #if len($module.branch)
 #for branch, data in $module.branch.items()
-<h2>$branch 
-#if $module.has_key('svnweb')
+<h2>$branch
+#if $data.has_key('svnweb') and $branch!='HEAD'
+(<a href="$data['svnweb']">Browse SVN</a>)</h2>
+#elif $module.has_key('svnweb')
 (<a href="$module['svnweb']">Browse SVN</a>)</h2>
 #else
 (<a href="$data['cvsweb']">Browse CVS</a>)

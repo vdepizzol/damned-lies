@@ -203,6 +203,6 @@ class SvnModule:
 if __name__=="__main__":
     m = XmlModules()
     import pprint
-    for modid in ['tomboy']:
+    for modid in ['gnome-desktop']:
         #cvs = CvsModule(m[modid])
         print modid, ":\n", pprint.pprint(m[modid])
