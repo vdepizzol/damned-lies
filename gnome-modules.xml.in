@@ -308,6 +308,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="gconf-editor">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>GConf Editor Manual</description>
+          <directory>docs</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
@@ -451,6 +462,25 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-desktop">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="desktop-gpl">
+          <description>GPL License</description>
+          <directory>desktop-docs/gpl</directory>
+        </document>
+        <document id="desktop-lgpl">
+          <description>LGPL License</description>
+          <directory>desktop-docs/gpl</directory>
+        </document>
+        <document id="desktop-fdl">
+          <description>FDL License</description>
+          <directory>desktop-docs/fdl</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
@@ -519,6 +549,29 @@
     <branch id="seahorse-0-8"/>
   </module>
   <module id="gnome-panel">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="clock">
+          <description>Clock Applet Manual</description>
+          <directory>help/clock</directory>
+        </document>
+        <document id="fish">
+          <description>Fish Applet Manual</description>
+          <directory>help/fish</directory>
+        </document>
+        <document id="windowlist">
+          <description>Window List Applet Manual</description>
+          <directory>help/windowlist</directory>
+        </document>
+        <document id="workspace-switcher">
+          <description>Workspace Switcher Applet Manual</description>
+          <directory>help/workspace-switcher</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
@@ -705,6 +758,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="bug-buddy">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>Bug Buddy Manual</description>
+          <directory>docs</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
@@ -741,6 +805,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-keyring-manager">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>GNOME Keyring Manager Manual</description>
+          <directory>docs</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-16"/>
   </module>
@@ -792,6 +867,17 @@
     <branch id="gthumb-2-8"/>
   </module>
   <module id="sound-juicer">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>Sound Juicer Manual</description>
+          <directory>help/sound-juicer</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
   </module>
@@ -939,6 +1025,29 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-utils">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="baobab">
+          <description>Disk Usage Analyzer Manual</description>
+          <directory>baobab/help</directory>
+        </document>
+        <document id="dictionary">
+          <description>Dictionary Manual</description>
+          <directory>dictionary/help</directory>
+        </document>
+        <document id="gsearchtool">
+          <description>Search Tool Manual</description>
+          <directory>gsearchtool/help</directory>
+        </document>
+        <document id="logview">
+          <description>Log Viewer Manual</description>
+          <directory>logview/help</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
@@ -969,11 +1078,65 @@
     <branch id="gnome-2-16"/>
   </module>
   <module id="gdm2">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>GDM Manual</description>
+          <directory>docs</directory>
+        </document>
+      </branch>
+    </defaults>
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14"/>
+    <branch id="gnome-2-16"/>
+  </module>
+  <module id="gfloppy">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>GFloppy Manual</description>
+          <directory>doc</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
     <branch id="gnome-2-16"/>
   </module>
   <module id="gnome-system-tools">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="gst-boot">
+          <description>GST Boot Setup Manual</description>
+          <directory>doc/boot</directory>
+        </document>
+        <document id="gst-network">
+          <description>GST Network Setup Manual</description>
+          <directory>doc/network</directory>
+        </document>
+        <document id="gst-services">
+          <description>GST Service Management Manual</description>
+          <directory>doc/services</directory>
+        </document>
+        <document id="gst-time">
+          <description>GST Time Setup Manual</description>
+          <directory>doc/time</directory>
+        </document>
+        <document id="gst-users">
+          <description>GST User Management Manual</description>
+          <directory>doc/users</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14"/>
   </module>
@@ -1025,4 +1188,13 @@
     <svnweb>http://svn.gna.org/viewcvs/gnomescan/</svnweb>
     <branch id="HEAD"/>
   </module>
+  <module id="release-notes">
+    <description>GNOME Release Notes</description>
+    <svnmodule>gnomeweb-wml</svnmodule>
+    <branch id="HEAD">
+      <document id="release-notes-2.16">
+        <description>GNOME 2.16 release notes</description>
+        <directory>www.gnome.org/start/2.16/notes/docbook</directory>
+      </document>
+    </branch>
 </modules>
