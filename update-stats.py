@@ -15,7 +15,7 @@ class LocStatistics:
 
     def update_pot_errors_in_db(self, module, branch, type, domain, errors):
         old = database.Statistics.select(database.AND(database.Statistics.q.Module == module,
-                                                      database.Statistics.q.Domain == domain,
+                                                      #database.Statistics.q.Domain == domain,
                                                       database.Statistics.q.Branch == branch,
                                                       database.Statistics.q.Language == None,
                                                       database.Statistics.q.Type == type))
@@ -74,9 +74,9 @@ class LocStatistics:
             NewInfo = database.Information(Statistics = MyStat,
                                            Type = msgtype,
                                            Description = message)
-        
 
-        
+
+
 
     def __init__(self, module, onlybranch = None):
         self.module = module
@@ -90,7 +90,7 @@ class LocStatistics:
         mybranches = COs.paths.keys()
         if onlybranch and onlybranch in mybranches:
             mybranches = [onlybranch]
-        
+
         for branch in mybranches:
             if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]:
                 continue
@@ -102,14 +102,15 @@ class LocStatistics:
 
             for podir in module["branch"][branch]["domain"]:
                 potbase = module["branch"][branch]["domain"][podir]['potbase']
+                print "\tUpdating domain %s" % (potbase)
 
                 self.podir = podir
                 self.potbase = potbase
                 self.branch = branch
-                
+
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch)
                 outputdomain = potbase + "." + branch
-                
+
                 if not os.path.isdir(outputdir):
                     os.makedirs(outputdir)
 
@@ -119,6 +120,7 @@ class LocStatistics:
             if defaults.DEBUG: print >>sys.stderr, "DOCUMENTS: ", module["branch"][branch]["document"]
             for doc in module["branch"][branch]["document"]:
                 potbase = module["branch"][branch]["document"][doc]['potbase']
+                print "\tUpdating document %s" % (potbase)
                 docsubdir = module["branch"][branch]["document"][doc]['directory']
 
                 outputdir = os.path.join(defaults.potdir, module["id"] + "." + branch, "docs")
@@ -149,7 +151,7 @@ might be worth investigating.
 """ % { 'module' : out_domain,
         'ourweb' : defaults.WHEREAREWE,
         'potdiff' : "\n    ".join(diff) }
-        
+
         msg = MIMEText(text)
         msg['Subject'] = "String additions to '%s'" % (out_domain)
         msg['From'] = "Gnome Status Pages <%s>" % (defaults.WHOAREWE)
@@ -160,10 +162,10 @@ might be worth investigating.
         s.sendmail(defaults.WHOAREWE, defaults.notifications_to, msg.as_string())
         s.close()
 
-        
+
     def ui_l10n_stats(self, base_dir, po_dir, pot_base, out_dir, out_domain):
         """Generates translation status for UI elements and updates the database."""
-        
+
         popath = os.path.join(base_dir, po_dir)
 
         # Run intltool-update -m to check for some errors
@@ -254,7 +256,7 @@ might be worth investigating.
                 srcpo = os.path.join(po_path, file)
                 if not potchanged and os.access(outpo,os.R_OK) and os.stat(srcpo)[8] < os.stat(outpo)[8]:
                     continue
-                    
+
                 realcmd = command % {
                     'outpo' : outpo,
                     'pofile' : srcpo,
@@ -270,8 +272,8 @@ might be worth investigating.
                 stats[lang] = langstats
                 if defaults.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
         return stats
-                                             
-                
+
+
 
     def check_lang_support(self, module_path, po_path, lang):
         "Checks if language is listed in one of po/LINGUAS, configure.ac or configure.in"
@@ -299,7 +301,7 @@ might be worth investigating.
                 if not in_config:
                     errors.append(("warn", "Entry for this language is not present in LINGUAS file."))
                 return errors
-        
+
         import re
         for configure in [configureac, configurein]:
             if not in_config and os.access(configure, os.R_OK):
@@ -313,7 +315,7 @@ might be worth investigating.
                     else:
                         lines.append(line)
                         prev = ""
-                    
+
                 for line in lines:
                     line = line.strip()
                     test = re.match('ALL_LINGUAS\s*=\s*"([^"]*)"', line)
@@ -327,7 +329,7 @@ might be worth investigating.
                 if not in_config:
                     errors.append(("warn", "Entry for this language is not present in ALL_LINGUAS in configure file."))
                 return errors
-                
+
         errors.append(("warn", "Don't know where to look if this language is actually used, ask the module maintainer."))
         return errors
 
@@ -351,7 +353,7 @@ might be worth investigating.
                             "There are some missing files from POTFILES.in: <ul><li>"
                             + "</li>\n<li>".join(f.readlines())
                             + "</li>\n</ul>") )
-            
+
         notexist = os.path.join(po_path, "notexist")
         if os.access(notexist, os.R_OK):
             f = open(notexist, "r")
@@ -361,7 +363,7 @@ might be worth investigating.
                            + "</li>\n</ul>"))
         return errors
 
-                   
+
 
 
     def po_file_stats(self, pofile, msgfmt_checks = 1):
@@ -515,7 +517,7 @@ might be worth investigating.
         potname = out_domain + ".pot"
         fullpot = os.path.join(sourcedir, "C", potname)
         newpot = os.path.join(out_dir, potname)
-        
+
         files = [ modulename + ".xml" ]
 
         # Add DOC_INCLUDES to files list
@@ -565,7 +567,7 @@ might be worth investigating.
                 postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
 
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
-                                       domain = docpath, date = NOW, language = lang,
+                                       domain = potbase, date = NOW, language = lang,
                                        translated = int(postats[lang]['translated']),
                                        fuzzy = int(postats[lang]['fuzzy']),
                                        untranslated = int(postats[lang]['untranslated']),
@@ -669,7 +671,7 @@ might be worth investigating.
             if defaults.DEBUG: print >>sys.stderr, command
             (error, output) = commands.getstatusoutput(command)
             if defaults.DEBUG: print >> sys.stderr, output
-            
+
 if __name__ == "__main__":
     import sys, os
     if len(sys.argv)>=1 and len(sys.argv)<=3:

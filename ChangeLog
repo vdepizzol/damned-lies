@@ -1,5 +1,8 @@
 2007-01-02  Danilo Šegan  <danilo@gnome.org>
 
+	* update-stats.py (LocStatistics.doc_l10n_stats): Use 'potbase'
+	for translations as well.
+
 	* view-module.py (go_go): Use 'potbase' and correctly check for
 	empty potfiles.
 	* templates/show-stats.tmpl: Show 'updated' only if available.
