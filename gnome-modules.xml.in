@@ -193,11 +193,12 @@
     <bugs-component>General</bugs-component>
     <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvsroot>
     <cvsmodule>xkbdesc</cvsmodule>
-    <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch)</cvsweb>
+    <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch/id)</cvsweb>
     <branch id="HEAD">
       <domain id="po">
         <description>Layout Descriptions</description>
       </domain>
+      <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvsweb>
     </branch>
   </module>
   <module id="tomboy">
