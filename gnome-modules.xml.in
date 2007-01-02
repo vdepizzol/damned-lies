@@ -821,6 +821,17 @@
     <branch id="gnome-2-16"/>
   </module>
   <module id="criawips">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <description>UI translations</description>
+        </domain>
+        <document id="help">
+          <description>Criawips Manual</description>
+          <directory>help/user-guide</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="ontv">
@@ -1037,7 +1048,7 @@
         </document>
         <document id="dictionary">
           <description>Dictionary Manual</description>
-          <directory>dictionary/help</directory>
+          <directory>gnome-dictionary/help</directory>
         </document>
         <document id="gsearchtool">
           <description>Search Tool Manual</description>
