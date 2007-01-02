@@ -80,10 +80,10 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        if module.has_key('svnroot'):
-            COs = modules.SvnModule(module, 1)
-        elif module.has_key('cvsroot'):
+        if module.has_key('cvsroot'):
             COs = modules.CvsModule(module, 1)
+        elif module.has_key('svnroot'):
+            COs = modules.SvnModule(module, 1)
         else:
             raise Exception("Can't fetch source code for this module.")
 

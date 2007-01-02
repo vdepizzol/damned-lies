@@ -2,6 +2,7 @@
 
 	* update-stats.py (LocStatistics.doc_l10n_stats): Use 'potbase'
 	for translations as well.
+	(LocStatistics.__init__): Default to SVN.
 
 	* view-module.py (go_go): Use 'potbase' and correctly check for
 	empty potfiles.
