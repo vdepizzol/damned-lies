@@ -16,6 +16,7 @@
     #include "templates/language-release-ui-stats-modules.tmpl"
 #end if
 
+#if $release.has_key('categories')
 #for category in $release.categories
 #if $category.statistics.ui_size != 0
 <tr>
@@ -27,4 +28,5 @@
     #include "templates/language-release-ui-stats-modules.tmpl"
 #end if
 #end for  
+#end if
 </table>

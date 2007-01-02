@@ -15,6 +15,7 @@
     #include "templates/language-release-doc-stats-modules.tmpl"
 #end if
 
+#if $release.has_key('categories')
 #for category in $release.categories
 #if $category.statistics.doc_size != 0
 <tr>
@@ -28,4 +29,5 @@
 <!-- doc_size != 0 -->
 #end if
 #end for  
+#end if
 </table>

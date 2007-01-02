@@ -208,15 +208,16 @@ class Releases:
 
     def __init__(self, releasesfile=defaults.releases_xml, only_release=None, deep=1, gather_stats = None):
         result = []
-        
+
+        #print "Releases (only_release=%s, deep=%d, gather_stats=%s)" % (only_release, deep, gather_stats)
         myModules = modules.XmlModules(defaults.modules_xml)
         self.myModules = myModules
 
         releases = data.getReleases(only = only_release)
+
         for releaseid in releases:
             release = releases[releaseid]
             if only_release and releaseid != only_release: continue
-
             # read modules
             categories = []
             retmodules = []
@@ -228,55 +229,53 @@ class Releases:
                 (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = self.list_modules(release, gather_stats)
                 if release.has_key('category'):
                     cats = release['category']
-                else:
-                    continue
-                (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
+                #(ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
 
-                for catid in cats:
-                    cat = cats[catid]
-                    (pot, tr, fz, un, dpot, dtr, dfz, dun, catMods) = self.list_modules(cat, gather_stats)
-                    ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
-                    doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
+                    for catid in cats:
+                        cat = cats[catid]
+                        (pot, tr, fz, un, dpot, dtr, dfz, dun, catMods) = self.list_modules(cat, gather_stats)
+                        ui_size += pot; totaltr += tr; totalfz += fz; totalun += un
+                        doc_size += dpot; dtotaltr += dtr; dtotalfz += dfz; dtotalun += dun
 
-                    desc = ''
-                    if cat.has_key('description'): desc = cat['description']
-                    myCat = {
-                        'id' : catid,
-                        'description': desc,
-                        'modules': catMods,
-                        }
+                        desc = ''
+                        if cat.has_key('description'): desc = cat['description']
+                        myCat = {
+                            'id' : catid,
+                            'description': desc,
+                            'modules': catMods,
+                            }
 
-                    if pot:
-                        #un = pot - tr - fz
-                        ui_supp = "%.0f" % (100.0*tr/pot)
-                        ui_percentages = { 'translated': 100*tr/pot, 'fuzzy': 100*fz/pot, 'untranslated': 100*un/pot }
-                    else:
-                        un = pot; ui_supp = "0"
-                        ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+                        if pot:
+                            #un = pot - tr - fz
+                            ui_supp = "%.0f" % (100.0*tr/pot)
+                            ui_percentages = { 'translated': 100*tr/pot, 'fuzzy': 100*fz/pot, 'untranslated': 100*un/pot }
+                        else:
+                            un = pot; ui_supp = "0"
+                            ui_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
 
-                    if dpot:
-                        #dun = dpot - dtr - dfz;
-                        doc_supp = "%.0f" % (100.0*dtr/dpot)
-                        doc_percentages = { 'translated': 100*dtr/dpot, 'fuzzy': 100*dfz/dpot, 'untranslated': 100*dun/dpot }
-                    else:
-                        dun = pot; doc_supp = "0"
-                        doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
-                    myCat['statistics'] = {
-                        'ui_size' : pot,
-                        'ui_translated' : tr,
-                        'ui_fuzzy' : fz,
-                        'ui_untranslated' : un,
-                        'ui_supportedness' : ui_supp,
-                        'ui_percentages': ui_percentages,
-                        'doc_size' : dpot,
-                        'doc_translated' : dtr,
-                        'doc_fuzzy' : dfz,
-                        'doc_untranslated' : dun,
-                        'doc_supportedness' : doc_supp,
-                        'doc_percentages': doc_percentages,
-                        }
+                        if dpot:
+                            #dun = dpot - dtr - dfz;
+                            doc_supp = "%.0f" % (100.0*dtr/dpot)
+                            doc_percentages = { 'translated': 100*dtr/dpot, 'fuzzy': 100*dfz/dpot, 'untranslated': 100*dun/dpot }
+                        else:
+                            dun = pot; doc_supp = "0"
+                            doc_percentages = { 'translated': 0, 'fuzzy': 0, 'untranslated': 0 }
+                        myCat['statistics'] = {
+                            'ui_size' : pot,
+                            'ui_translated' : tr,
+                            'ui_fuzzy' : fz,
+                            'ui_untranslated' : un,
+                            'ui_supportedness' : ui_supp,
+                            'ui_percentages': ui_percentages,
+                            'doc_size' : dpot,
+                            'doc_translated' : dtr,
+                            'doc_fuzzy' : dfz,
+                            'doc_untranslated' : dun,
+                            'doc_supportedness' : doc_supp,
+                            'doc_percentages': doc_percentages,
+                            }
 
-                    categories.append(myCat)
+                        categories.append(myCat)
 
             if ui_size:
                 #totalun = ui_size - totaltr - totalfz
@@ -473,15 +472,6 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
     result.sort(compare_languages)
     return result
 
-            
-    
-
-    
-            
-    
-    
-    
-
 if __name__=="__main__":
     import cgi
     import cgitb; cgitb.enable()
@@ -507,10 +497,10 @@ if __name__=="__main__":
         releases = t.data
         #import pprint
         #pprint.pprint(releases)
-        
+
         html = Template(file="templates/list-releases.tmpl")
         html.webroot = defaults.webroot
         html.releases = releases
         print html
         print utils.TemplateInspector(html)
-    
+
