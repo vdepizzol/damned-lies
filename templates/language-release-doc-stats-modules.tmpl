@@ -20,7 +20,7 @@
     #end if
 
     #for docdir, document in $module.documents.items()
-    #if $document.pot_size
+    #if $document.pot_size or len($document.pot_messages)
      #if $document.pot_size==$document.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+".pot"
        #set POINFO=$document.pot_messages
