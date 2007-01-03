@@ -225,11 +225,11 @@ class Releases:
             dpot = dtotaltr = dtotalfz = dtotalun = 0
             ui_size = doc_size = 0
 
-            #(ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
             if deep:
                 (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = self.list_modules(release, gather_stats)
                 if release.has_key('category'):
                     cats = release['category']
+                    (ui_size, totaltr, totalfz, totalun, doc_size, dtotaltr, dtotalfz, dtotalun, retmodules) = (0, 0, 0, 0, 0, 0, 0, 0, {})
 
                     for catid in cats:
                         cat = cats[catid]
