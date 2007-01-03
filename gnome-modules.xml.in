@@ -393,14 +393,15 @@
     <branch id="HEAD"/>
   </module>
   <module id="banshee">
-    <defaults>
-      <branch>
-        <domain id="banshee/po" potbase="banshee">
-          <description>UI translations</description>
-        </domain>
-      </branch>
-    </defaults>
-    <branch id="HEAD"/>
+    <description>Banshee Music Player</description>
+    <webpage>http://banshee-project.org/</webpage>
+    <maintainer id="abock"/>
+    <svnmodule>banshee</svnmodule>
+    <branch id="HEAD">
+      <domain id="banshee/po" potbase="banshee">
+        <description>UI translations</description>
+      </domain>
+    </branch>
   </module>
   <module id="f-spot">
     <branch id="HEAD"/>
