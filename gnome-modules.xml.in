@@ -1088,7 +1088,19 @@
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="eog">
-    <branch id="HEAD"/>
+    <description>Eye of GNOME</description>
+    <webpage>http://live.gnome.org/EyeOfGnome</webpage>
+    <maintainer id="lucasr"/>
+    <cvsmodule>eog</cvsmodule>
+    <branch id="HEAD">
+      <domain id="po">
+        <description>UI translations</description>
+      </domain>
+      <document id="help">
+        <description>Eye of GNOME Manual</description>
+        <directory>help</directory>
+      </document>
+    </branch>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
