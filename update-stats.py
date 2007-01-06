@@ -680,6 +680,7 @@ if __name__ == "__main__":
             if len(sys.argv)==3:
                 module = sys.argv[1]
                 branch = sys.argv[2]
+                if branch == "trunk": branch = "HEAD"
                 print "Updating stats for %s.%s..." % (module, branch)
                 if module in m.keys():
                     LocStatistics(m[module], onlybranch=branch)
