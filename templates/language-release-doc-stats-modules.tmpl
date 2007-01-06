@@ -20,14 +20,14 @@
     #end if
 
     #for docdir, document in $module.documents.items()
-    #if $document.pot_size or len($document.pot_messages)
+    #if $document.pot_size
      #if $document.pot_size==$document.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+".pot"
-       #set POINFO=$document.pot_messages
      #else
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+"."+$language+".po"
-       #set POINFO=$document.po_messages
      #end if
+     #set POINFO=$document.po_messages+$document.pot_messages
+
 
      <tr>
        #if len($module.documents.keys()) > 1
