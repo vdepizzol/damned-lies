@@ -410,8 +410,9 @@ might be worth investigating.
             (error, output) = commands.getstatusoutput(command)
             if defaults.DEBUG: print >>sys.stderr, output
             if error:
+                myfile = os.path.basename(pofile)
                 errors.append(("warn",
-                               "PO file '%s' is not UTF-8 encoded." % (pofile)))
+                               "PO file '%s' is not UTF-8 encoded." % (myfile)))
         return {
             'translated' : translated,
             'fuzzy' : fuzzy,

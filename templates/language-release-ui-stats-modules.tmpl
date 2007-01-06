@@ -22,11 +22,10 @@
     #for domaindir, domain in $module.translation_domains.items()
      #if $domain.pot_size==$domain.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+".pot"
-       #set POINFO=$domain.pot_messages
      #else
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+"."+$language+".po"
-       #set POINFO=$domain.po_messages
      #end if
+     #set POINFO=$domain.pot_messages+$domain.po_messages
 
      <tr>
       #if len($module.translation_domains.keys()) > 1
