@@ -410,8 +410,8 @@ might be worth investigating.
             # Lets check if PO files are in UTF-8
             command = ("LC_ALL=C LANG=C LANGUAGE=C " +
                        "msgconv -t UTF-8 %s |" +
-                       "diff -u %s - >/dev/null") % (pofile,
-                                                     pofile)
+                       "diff -i -u %s - >/dev/null") % (pofile,
+                                                        pofile)
             if defaults.DEBUG: print >>sys.stderr, command
             (error, output) = commands.getstatusoutput(command)
             if defaults.DEBUG: print >>sys.stderr, output
