@@ -49,6 +49,14 @@
       	<fuzzy>${domain.fuzzy}</fuzzy>
       	<untranslated>${domain.untranslated}</untranslated>
         <pofile>${POFILE}</pofile>
+        #set branch=$module.branch
+        #if $branch=='HEAD'
+          #set MODROOT='trunk'
+        #else
+          #set MODROOT='branches/$branch'
+        #end if
+	<svnpath>${module.cvsmodule}/$MODROOT/$potid</svnpath>
+
          #for pomsgs in $POINFO
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
          #end for
