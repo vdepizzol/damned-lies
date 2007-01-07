@@ -3,23 +3,26 @@
 #if $release.has_key('modules')
     #set global modules=$release.modules
     #set global release=$release
-    #include "templates/language-release-doc-xml.tmpl"
+    #include "templates/language-release-module-xml.tmpl"
 #end if
 
 #for category in $release.categories
-#if $category.statistics.doc_size != 0
+#if $category.statistics.doc_size != 0 or $category.statistics.ui_size != 0
 <category id="${category.id}">
+ #if $category.statistics.doc_size != 0
   <doctranslated>${category.statistics.doc_translated}</doctranslated>
   <docfuzzy>${category.statistics.doc_fuzzy}</docfuzzy>
   <docuntranslated>${category.statistics.doc_untranslated}</docuntranslated>
+ #end if
+ #if $category.statistics.ui_size != 0
   <translated>${category.statistics.ui_translated}</translated>
   <fuzzy>${category.statistics.ui_fuzzy}</fuzzy>
   <untranslated>${category.statistics.ui_untranslated}</untranslated>
-    #set global modules=$category.modules
-    #set global release=$release
-    #include "templates/language-release-module-xml.tmpl"
+ #end if
+   #set global modules=$category.modules
+   #set global release=$release
+   #include "templates/language-release-module-xml.tmpl"
 </category>
-<!-- doc_size != 0 -->
 #end if
 #end for
 

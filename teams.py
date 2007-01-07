@@ -94,13 +94,17 @@ if __name__=="__main__":
     import cgitb; cgitb.enable()
     from Cheetah.Template import Template
 
-    print "Content-type: text/html; charset=UTF-8"
-
     request = os.getenv("PATH_INFO")[1:]
+
+    if request.endswith('.xml'):
+        print "Content-type: application/xml; charset=UTF-8"
+    else:
+        print "Content-type: text/html; charset=UTF-8"
+
     test = re.match("([^/]+)(/(.+)/?)?", request)
     if not test:
         utils.not_found_404()
-    
+
     page = test.groups()[0]
     subrequest = test.groups()[2]
 
@@ -222,7 +226,8 @@ if __name__=="__main__":
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
                 print html
-                print utils.TemplateInspector(html)
+                if t_ext != '.xml':
+                    print utils.TemplateInspector(html)
             else:
                 print myteam.data
                 print "Error: Can't find translation team for '%s'." % langid
