@@ -59,9 +59,11 @@
   #if $team.coordinator.nick
     <li><em>$team.coordinator.nick</em> (IRC)</li>
   #end if
-  #for type, account in $team.coordinator.im.items()
+  #if len($team.coordinator.im)
+   #for type, account in $team.coordinator.im.items()
     <li><em>$account.content</em> ($type)</li>
-  #end for
+   #end for
+  #end if
   </ul>
   #end if
 
