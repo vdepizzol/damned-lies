@@ -397,6 +397,9 @@ might be worth investigating.
             else:
                 errors.append(("error", "Can't get statistics for POT file '%s'." % (pofile)))
 
+        if msgfmt_checks and os.access(pofile, os.X_OK):
+            errors.append(("warn", "This PO file has an executable bit set."))
+
         import re
         r_tr = re.search(r"([0-9]+) translated", output)
         r_un = re.search(r"([0-9]+) untranslated", output)
