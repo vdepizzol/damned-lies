@@ -184,9 +184,15 @@ might be worth investigating.
         newpot = os.path.join(out_dir, out_domain + ".pot")
         NOW = datetime.datetime.now()
 
-        if error or not os.access(potfile, os.R_OK):
+        if ( (error or not os.access(potfile, os.R_OK)) and
+             os.access(newpot, os.R_OK) ):
+            # Use old POT file
+            potfile = newpot
             if defaults.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module["id"], po_dir)
-            errors.append(("error", "Can't generate POT file."))
+            errors.append(("error", "Can't generate POT file, using old one."))
+        elif error or not os.access(potfile, os.R_OK):
+            if defaults.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module["id"], po_dir)
+            errors.append(("error", "Can't generate POT file, using old one if it exists."))
             pot_stats = self.po_file_stats(potfile, 0)
             pot_stats['errors'].extend(errors)
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
@@ -214,7 +220,7 @@ might be worth investigating.
         pot_stats = self.po_file_stats(potfile, 0)
         pot_stats['errors'].extend(errors)
 
-        if not self.copy_file(potfile, newpot):
+        if potfile!=newpot and not self.copy_file(potfile, newpot):
             pot_stats['errors'].append(('error', "Can't copy new POT file to public location."))
 
         postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, potchanged)
