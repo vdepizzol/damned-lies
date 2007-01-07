@@ -128,6 +128,7 @@ class Releases:
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
+                                continue
                                 perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
 
                             desc = trdomain
@@ -175,6 +176,7 @@ class Releases:
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
+                                continue
                                 perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
 
                             retmodules[modid]['documents'][document] = { 'translated' : tr,

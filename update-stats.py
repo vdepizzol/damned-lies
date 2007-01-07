@@ -167,6 +167,9 @@ might be worth investigating.
         """Generates translation status for UI elements and updates the database."""
 
         popath = os.path.join(base_dir, po_dir)
+        if not os.access(os.path.join(base_dir, po_dir), os.X_OK):
+            return {}
+        print >>sys.stderr, "po_dir: %s; po_dir: %s" % (base_dir, po_dir)
 
         # Run intltool-update -m to check for some errors
         errors = self.check_pot_regeneration(popath)
@@ -253,6 +256,7 @@ might be worth investigating.
 
         stats = {}
 
+        if not os.access(po_path, os.X_OK): return {}
         for file in os.listdir(po_path):
             if file[-3:] == ".po":
                 lang = file[:-3]

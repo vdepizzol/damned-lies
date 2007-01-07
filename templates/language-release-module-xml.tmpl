@@ -16,7 +16,8 @@
       <untranslated>${module.statistics.ui_untranslated}</untranslated>
     #end if
     #for docdir, document in $module.documents.items()
-     #if $document.pot_size==$document.untranslated and $document.pot_size
+    #if $document.pot_size
+     #if $document.pot_size==$document.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+".pot"
        #set POINFO=$document.pot_messages
      #else
@@ -32,10 +33,12 @@
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
          #end for
       </document>
+    #end if
     #end for
 
     #for potid, domain in $module.translation_domains.items()
-     #if $domain.pot_size==$domain.untranslated and $domain.pot_size
+    #if $domain.pot_size
+     #if $domain.pot_size==$domain.untranslated
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+".pot"
      #else
        #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+"."+$language+".po"
@@ -50,6 +53,7 @@
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
          #end for
       </domain>
+    #end if
     #end for
 
     </module>
