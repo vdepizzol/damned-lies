@@ -121,15 +121,15 @@ class Releases:
                             mytr += tr; myfz += fz; myun += un
 
                             (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, trdomain, branch, None, 'ui')
-                            pot += pot_size
-                            mypot += pot_size
-
                             un = pot_size - tr - fz # XXX
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
                                 continue
-                                perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+                            pot += pot_size
+                            mypot += pot_size
+
+
 
                             desc = trdomain
                             if trdomains[trdomain].has_key('description'):
@@ -169,15 +169,14 @@ class Releases:
                             mytr += tr; myfz += fz; myun += un
 
                             (ig1, ig2, pot_size, potmsgs) = self.get_stats_for_module(modid, document, branch, None, 'doc')
-                            dpot += pot_size
-                            mypot += pot_size
-
                             un = pot_size - tr - fz # XXX
                             if pot_size:
                                 perc = { 'translated' : 100*tr/pot_size, 'fuzzy' : 100*fz/pot_size, 'untranslated' : 100*un/pot_size }
                             else:
                                 continue
-                                perc = { 'translated' : 0, 'fuzzy' : 0, 'untranslated' : 0 }
+                            dpot += pot_size
+                            mypot += pot_size
+
 
                             retmodules[modid]['documents'][document] = { 'translated' : tr,
                                                                          'fuzzy' : fz,
