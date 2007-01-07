@@ -169,7 +169,6 @@ might be worth investigating.
         popath = os.path.join(base_dir, po_dir)
         if not os.access(os.path.join(base_dir, po_dir), os.X_OK):
             return {}
-        print >>sys.stderr, "po_dir: %s; po_dir: %s" % (base_dir, po_dir)
 
         # Run intltool-update -m to check for some errors
         errors = self.check_pot_regeneration(popath)
