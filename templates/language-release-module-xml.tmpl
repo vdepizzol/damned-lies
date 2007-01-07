@@ -1,0 +1,56 @@
+   #set $moduleids=$modules.keys()
+   #silent $moduleids.sort()
+   #for moduleid in $moduleids
+   #set $module=$modules[$moduleid]
+   #if $module.has_key('statistics') and $module.statistics.doc_size != 0
+
+    <module id="${moduleid}" branch="${module.branch}">
+      <doctranslated>${module.statistics.doc_translated}</doctranslated>
+      <docfuzzy>${module.statistics.doc_fuzzy}</docfuzzy>
+      <docuntranslated>${module.statistics.doc_untranslated}</docuntranslated>
+      <translated>${module.statistics.ui_translated}</translated>
+      <fuzzy>${module.statistics.ui_fuzzy}</fuzzy>
+      <untranslated>${module.statistics.ui_untranslated}</untranslated>
+
+    #for docdir, document in $module.documents.items()
+     #if $document.pot_size==$document.untranslated
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+".pot"
+       #set POINFO=$document.pot_messages
+     #else
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/docs/"+$document.potbase+"."+$module.branch+"."+$language+".po"
+       #set POINFO=$document.po_messages
+     #end if
+      <document id="${document.potbase}">
+      	<translated>${document.translated}</translated>
+      	<fuzzy>${document.fuzzy}</fuzzy>
+      	<untranslated>${document.untranslated}</untranslated>
+        <pofile>${POFILE}</pofile>
+         #for pomsgs in $POINFO
+           <error type="${pomsgs[0]}">${pomsgs[1]}</error>
+         #end for
+      </document>
+    #end for
+
+
+    #for potid, domain in $module.translation_domains.items()
+     #if $domain.pot_size==$domain.untranslated
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+".pot"
+     #else
+       #set POFILE=$webroot+"/POT/"+$moduleid+"."+$module.branch+"/"+$domain.potbase+"."+$module.branch+"."+$language+".po"
+     #end if
+     #set POINFO=$domain.pot_messages+$domain.po_messages
+      <domain id="${domain.potbase}">
+      	<translated>${domain.translated}</translated>
+      	<fuzzy>${domain.fuzzy}</fuzzy>
+      	<untranslated>${domain.untranslated}</untranslated>
+        <pofile>${POFILE}</pofile>
+         #for pomsgs in $POINFO
+           <error type="${pomsgs[0]}">${pomsgs[1]}</error>
+         #end for
+      </document>
+    #end for
+
+    </module>
+   #end if
+
+   #end for
