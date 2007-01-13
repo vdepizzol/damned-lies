@@ -1,3 +1,15 @@
+2007-01-13  Danilo Šegan  <danilo@gnome.org>
+
+	* accept.py: Import from ViewCVS to handle Accept-Language.
+
+	* templates/, *.py: Added i18n support.
+	* po/: Added i18n infrastructure.
+
+	* l10n.py (gettext, MyFilter): Added template translation and filter.
+	* Makefile (po/%.xml, all): generate translated versions.
+	* defaults.py (language): Added.
+	* data.py (readFromFile): Use translated XML if available.
+
 2007-01-08  Danilo Šegan  <danilo@gnome.org>
 
 	* translation-teams.xml.in: Update Catalan mailing list.

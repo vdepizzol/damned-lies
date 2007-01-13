@@ -1,5 +1,5 @@
 <html>
-<head><title>GNOME Translation Teams</title>
+<head><title>$_("GNOME Translation Teams")</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
 <body>
@@ -7,10 +7,10 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-<h1>GNOME Translation Teams</h1>
+<h1>$_("GNOME Translation Teams")</h1>
 
 #if len($teams)
-<p>Select a team below to see more information about it:</p>
+<p>$_("Select a team below to see more information about it:")</p>
 
 <ul>
 #for team in $teams
@@ -20,13 +20,13 @@
     — <a href="${team.webpage}">${team.webpage}</a>
   #end if
   #if $team.has_key('coordinator')
-    <br /><span style="font-size: 80%;">Coordinated by <a href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a></span>
+    <br /><span style="font-size: 80%;">${_("Coordinated by %(coordinator)s"), coordinator="<a href=\""+$webroot+"/people/"+$team.coordinator.id+"\">"+$team.coordinator.name+"</a>"}</span>
   #end if
 </li>
 #end for
 </ul>
 #else
-<p>There are currently no translation teams in GNOME. :(</p>
+<p>$_("There are currently no translation teams in GNOME. :(")</p>
 #end if
 
 

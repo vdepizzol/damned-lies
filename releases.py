@@ -7,6 +7,7 @@ import utils
 import modules
 import teams
 import data
+import l10n
 from database import *
 
 import os
@@ -478,13 +479,16 @@ if __name__=="__main__":
     import cgitb; cgitb.enable()
     from Cheetah.Template import Template
 
+    l10n.set_language()
     print "Content-type: text/html; charset=UTF-8\n"
 
     releaseid = os.getenv("PATH_INFO")[1:]
     if releaseid:
         myrelease = Releases(only_release=releaseid, deep=0)
         if len(myrelease) and myrelease[0]['id'] == releaseid:
-            html = Template(file="templates/release.tmpl")
+            html = Template(file="templates/release.tmpl",
+                            filter=l10n.MyFilter)
+            html._ = l10n.gettext
             html.webroot = defaults.webroot
             html.release = myrelease[0]
 
@@ -499,7 +503,9 @@ if __name__=="__main__":
         #import pprint
         #pprint.pprint(releases)
 
-        html = Template(file="templates/list-releases.tmpl")
+        html = Template(file="templates/list-releases.tmpl",
+                        filter=l10n.MyFilter)
+        html._ = l10n.gettext
         html.webroot = defaults.webroot
         html.releases = releases
         print html

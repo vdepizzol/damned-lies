@@ -3,7 +3,7 @@
 import copy
 import re
 import libxml2
-
+import os
 import defaults
 
 def getModules(only = None):
@@ -21,6 +21,10 @@ def getReleases(only = None):
 def readFromFile(filename, only_id = None):
     """Reads XML file or pickle-cached copy of it (while also keeping it up-to-date)."""
     import os
+
+    myfilename = filename.replace('po/', 'po/'+defaults.language+'/')
+    if os.access(myfilename, os.R_OK):
+        filename = myfilename
 
     picklefile = filename + ".pickle"
 

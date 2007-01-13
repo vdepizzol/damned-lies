@@ -1,5 +1,5 @@
 <html>
-<head><title>$module.id stats</title>
+<head><title>${_("%(module)s Statistics"), module=$module.id}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
   <!--<link rel="stylesheet" href="css/unit.css"/>-->
   <!--<script src="js/xslt/misc.js" type="text/javascript"/>
@@ -21,7 +21,7 @@
 #end if
 <table><tr><td width="50%" valign="top">
 #if $module.has_key('maintainer') and len($module.maintainer)
-<h2>Maintainers</h2>
+<h2>$_("Maintainers")</h2>
 #for mid, maintainer in $module.maintainer.items()
 #if $maintainer.icon
 <div class="maintainer" style="background-image:url('$maintainer.icon');">
@@ -37,9 +37,8 @@
 #end if
 </td><td width="50%" valign="top">
 #if $module.has_key('bugs-baseurl')
-<h2>Bug reporting</h2>
-<p>Report bugs to 
-<a href="$module['bugs-baseurl']/enter_bug.cgi?product=$module['bugs-product']&component=$module['bugs-component']">Bugzilla</a>.</p>
+<h2>$_("Bug reporting")</h2>
+<p><a href="$module['bugs-baseurl']/enter_bug.cgi?product=$module['bugs-product']&component=$module['bugs-component']">$_("Report bugs to Bugzilla")</a>.</p>
 #end if
 </td></tr></table>
 
@@ -47,22 +46,22 @@
 #for branch, data in $module.branch.items()
 <h2>$branch
 #if $data.has_key('cvsweb')
-(<a href="$data['cvsweb']">Browse CVS</a>)
+(<a href="$data['cvsweb']">$_("Browse CVS")</a>)
 #elif $data.has_key('svnweb') and $branch!='HEAD'
-(<a href="$data['svnweb']">Browse SVN</a>)</h2>
+(<a href="$data['svnweb']">$_("Browse SVN")</a>)</h2>
 #elif $module.has_key('svnweb')
-(<a href="$module['svnweb']">Browse SVN</a>)</h2>
+(<a href="$module['svnweb']">$_("Browse SVN")</a>)</h2>
 #end if
 </h2>
 #if $data.has_key('stringfrozen') and $data.stringfrozen
-<p>This branch is currently string-frozen.</p>
+<p>$_("This branch is currently string-frozen.")</p>
 #end if
 
 <table><tr><td valign="top"><!-- split to two columns -->
 
 #if len($data.document)
 #if len($data.document)>1
-<h3>Documentation</h3>
+<h3>$_("Documentation")</h3>
 #end if
 #for docdir, document in $data.document.items()
 
@@ -82,7 +81,7 @@
 
 #if len($data.domain)
 #if len($data.domain)>1
-<h3>Translation</h3>
+<h3>$_("Translation")</h3>
 #end if
 #for uidir, domain in $data.domain.items()
 

@@ -1,5 +1,5 @@
 <html>
-<head><title>Damned Lies about GNOME modules</title>
+<head><title>$_("Damned Lies about GNOME modules")</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
 <body>
@@ -7,10 +7,10 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-<h1>Damned Lies about GNOME modules</h1>
+<h1>$_("Damned Lies about GNOME modules")</h1>
 
 #if len($modules)
-<p>Select a module below to see some of the damned lies about it:</p>
+<p>$_("Select a module below to see some of the damned lies about it:")</p>
 
 <ul>
 #for modid in $modids
@@ -18,7 +18,7 @@
 #end for
 </ul>
 #else
-<p>There are currently no modules for which I am gathering damned lies for. Poke <a href="danilo@gnome.org">Danilo</a> about it!</p>
+<p>$_("There are currently no modules for which I am gathering damned lies for. Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!")</p>
 #end if
 
 

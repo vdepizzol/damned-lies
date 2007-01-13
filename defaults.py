@@ -18,10 +18,10 @@ WHEREAREWE = 'http://i18n-status.gnome.org/'
 WHOAREWE = 'danilo@gnome.org'
 
 # Configuration files
-modules_xml = "gnome-modules.xml"
-releases_xml = "releases.xml"
-teams_xml = "translation-teams.xml"
-people_xml = "people.xml"
+modules_xml = "po/gnome-modules.xml"
+releases_xml = "po/releases.xml"
+teams_xml = "po/translation-teams.xml"
+people_xml = "po/people.xml"
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
@@ -77,3 +77,5 @@ cvsbranch = {
 # default to no maintainers for a module
 maintainers = []
 
+# Default language to fallback to
+language = 'en'

@@ -1,9 +1,9 @@
 <html>
 <head>
   #if $person.has_key('name')
-   <title>${person.name} — GNOME Contributor</title>
+   <title>${_("%(person)s — GNOME Contributor"), person=$person.name}</title>
   #else
-   <title>${person.id} — GNOME Contributor</title>
+   <title>${_("%(person)s — GNOME Contributor"), person=$person.id}</title>
   #end if
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
@@ -28,7 +28,7 @@
 
   <br />
   #if len($person.im) or $person.nick
-  <strong>Instant messaging:</strong>
+  <strong>${_("Instant messaging:")}</strong>
   <ul>
   #if $person.nick
     <li><em>$person.nick</em> (IRC)</li>
@@ -42,31 +42,32 @@
   #end if
 
   #if $person.has_key('bugzilla-account')
-  <strong>Bugzilla account:</strong> $person['bugzilla-account']<br />
+  <strong>$_("Bugzilla account:")</strong> $person['bugzilla-account']<br />
   #end if
   #if $person.has_key('cvs-account')
-  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${person['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">${person['cvs-account']}</a><br />
+  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${person['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">${person['cvs-account']}</a><br />
   #end if
 
   #if $roles.maintains and len($roles.maintains)
-  <h2>Maintains:</h2>
+  <h2>$_("Maintains:")</h2>
     #for module in $roles.maintains
-    <li>Maintains <a href="${webroot}/module/${module.id}">${module.description}</a></li>
+    <li>${_("Maintains %(module)s"), module="<a href=\""+$webroot+"/module/"+$module.id+"\">"+$module.description+"</a>"}</li>
     #end for
   #end if
 
 
   #if $roles.translates and len($roles.translates)
-  <h3>Translates:</h3>
+  <h3>$_("Translates:")</h3>
   <ul>
     #for team in $roles.translates
-    <li>Coordinates <a href="${webroot}/teams/${team.id}">
-	#if $team.has_key('description')
-	${team.description}
-	#else
-	${team.id}
-	#end if
-    </a></li>
+    #if $team.has_key('description')
+     #set $teamdesc=$team.description
+    #elif $team.has_key('firstlanguage')
+     #set $teamdesc=$team.firstlanguage
+    #else
+     #set $teamdesc=$team.id
+    #end if
+    <li>${_("Coordinates %(team)s"), team="<a href=\""+$webroot+"/teams/"+$team.id+"\">"+$teamdesc+"</a>"}</li>
     #end for
   </ul>
 

@@ -28,6 +28,7 @@ from database import *
 import modules
 import teams
 import utils
+import l10n
 
 import os, sys
 
@@ -35,6 +36,7 @@ import cgi
 import cgitb; cgitb.enable()
 from Cheetah.Template import Template
 
+l10n.set_language()
 print "Content-type: text/html; charset=UTF-8\n"
 
 
@@ -177,14 +179,20 @@ def go_go():
                     #print >>sys.stderr, pprint.pformat(here)
                     del module["branch"][branch]["document"][document]
 
-        html = Template(file="templates/module.tmpl")
+        html = Template(file="templates/module.tmpl",
+                        filter=l10n.MyFilter)
+        html._ = l10n.gettext
+        html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.module = module
         print html
         print utils.TemplateInspector(html)
     else:
         # List all modules
-        html = Template(file="templates/list-modules.tmpl")
+        html = Template(file="templates/list-modules.tmpl",
+                        filter=l10n.MyFilter)
+        html._ = l10n.gettext
+        html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.modids = moduleids
         html.modules = allmodules

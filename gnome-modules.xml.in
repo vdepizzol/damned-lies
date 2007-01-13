@@ -22,7 +22,7 @@
     </branch>
   </defaults>
   <module id="deskbar-applet">
-    <description>Deskbar Applet</description>
+    <_description>Deskbar Applet</_description>
     <webpage>http://raphael.slinckx.net/deskbar/</webpage>
     <maintainer id="rslinckx"/>
     <branch id="HEAD"/>
@@ -30,25 +30,25 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="epiphany">
-    <description>Epiphany Web Browser</description>
+    <_description>Epiphany Web Browser</_description>
     <webpage>http://gnome.org/projects/epiphany/</webpage>
     <maintainer id="chpe"/>
     <svnmodule>epiphany</svnmodule>
     <branch regenerate="0" id="gnome-2-12">
       <domain id="po">
-        <description>UI translations</description>
+        <_description>UI translations</_description>
       </domain>
       <document id="help">
-        <description>User Guide</description>
+        <_description>User Guide</_description>
         <directory>help</directory>
       </document>
     </branch>
     <branch id="HEAD">
       <domain id="po">
-        <description>UI translations</description>
+        <_description>UI translations</_description>
       </domain>
       <document id="help">
-        <description>Epiphany Manual</description>
+        <_description>Epiphany Manual</_description>
         <directory>help</directory>
       </document>
     </branch>
@@ -56,70 +56,70 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-applets">
-    <description>Gnome Applets</description>
+    <_description>Gnome Applets</_description>
     <maintainer id="davyd"/>
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <domain id="po-locations" potbase="weather-locations">
-          <description>Weather Applet Locations</description>
+          <_description>Weather Applet Locations</_description>
         </domain>
         <document id="accessx-status">
-          <description>Keyboard Accessibility Monitor Manual</description>
+          <_description>Keyboard Accessibility Monitor Manual</_description>
           <directory>accessx-status/docs</directory>
         </document>
         <document id="battstat">
-          <description>Battery Charage Monitor Manual</description>
+          <_description>Battery Charge Monitor Manual</_description>
           <directory>battstat/docs</directory>
         </document>
         <document id="char-palette">
-          <description>Character Palette Manual</description>
+          <_description>Character Palette Manual</_description>
           <directory>charpick/help</directory>
         </document>
         <document id="cpufreq-applet">
-          <description>CPU Frequency Scaling Monitor Manual</description>
+          <_description>CPU Frequency Scaling Monitor Manual</_description>
           <directory>cpufreq/help</directory>
         </document>
         <document id="drivemount">
-          <description>Disk Mounter Manual</description>
+          <_description>Disk Mounter Manual</_description>
           <directory>drivemount/help</directory>
         </document>
         <document id="geyes">
-          <description>Geyes Manual</description>
+          <_description>Geyes Manual</_description>
           <directory>geyes/docs</directory>
         </document>
         <document id="gswitchit">
-          <description>Keyboard Indicator Manual</description>
+          <_description>Keyboard Indicator Manual</_description>
           <directory>gswitchit/help</directory>
         </document>
         <document id="gtik2_applet2">
-          <description>Stock Ticker Manual</description>
+          <_description>Stock Ticker Manual</_description>
           <directory>gtik/help</directory>
         </document>
         <document id="gweather">
-          <description>Weather Report Manual</description>
+          <_description>Weather Report Manual</_description>
           <directory>gweather/docs</directory>
         </document>
         <document id="command-line">
-          <description>Command Line Manual</description>
+          <_description>Command Line Manual</_description>
           <directory>mini-commander/help</directory>
         </document>
         <document id="mixer_applet2">
-          <description>Volume Control Manual</description>
+          <_description>Volume Control Manual</_description>
           <directory>mixer/docs</directory>
         </document>
         <document id="multiload">
-          <description>System Monitor Manual</description>
+          <_description>System Monitor Manual</_description>
           <directory>multiload/docs</directory>
         </document>
         <document id="stickynotes_applet">
-          <description>Sticky Notes Manual</description>
+          <_description>Sticky Notes Manual</_description>
           <directory>stickynotes/docs</directory>
         </document>
         <document id="trashapplet">
-          <description>Panel Trash Manual</description>
+          <_description>Panel Trash Manual</_description>
           <directory>trashapplet/docs</directory>
         </document>
       </branch>
@@ -138,7 +138,7 @@
     </branch>
   </module>
   <module id="glib">
-    <description>GLib</description>
+    <_description>GLib</_description>
     <webpage>http://gtk.org/</webpage>
     <maintainer id="matthiasc"/>
     <maintainer id="owen"/>
@@ -148,23 +148,23 @@
     <branch id="glib-2-12"/>
   </module>
   <module id="gtk+">
-    <description>Gtk+</description>
+    <_description>Gtk+</_description>
     <maintainer id="owen"/>
     <webpage>http://www.gtk.org/</webpage>
     <branch stringfrozen="true" id="gtk-2-8">
       <domain id="po">
-        <description>Core</description>
+        <_description>UI translations</_description>
       </domain>
       <domain id="po-properties" potbase="gtk+-properties">
-        <description>Property Nicks</description>
+        <_description>Property Nicks</_description>
       </domain>
     </branch>
     <branch id="HEAD">
       <domain id="po">
-        <description>Core</description>
+        <_description>Core</_description>
       </domain>
       <domain id="po-properties" potbase="gtk+-properties">
-        <description>Property Nicks</description>
+        <_description>Property Nicks</_description>
       </domain>
     </branch>
     <branch stringfrozen="true" id="gtk-2-10">
@@ -173,18 +173,18 @@
     </branch>
   </module>
   <module id="rhythmbox">
-    <description>Rhythmbox Music Player</description>
+    <_description>Rhythmbox Music Player</_description>
     <webpage>http://www.rhythmbox.org/</webpage>
     <maintainer id="jrl"/>
     <branch id="HEAD"/>
   </module>
   <module id="sabayon">
-    <description>Sabayon</description>
+    <_description>Sabayon</_description>
     <maintainer id="veillard"/>
     <branch id="HEAD"/>
   </module>
   <module id="xkeyboard-config">
-    <description>XKeyboard-Config</description>
+    <_description>XKeyboard-Config</_description>
     <webpage>http://freedesktop.org/wiki/Software/XKeyboardConfig</webpage>
     <maintainer id="svu"/>
     <maintainer id="xdg-ivan"/>
@@ -196,7 +196,7 @@
     <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch/id)</cvsweb>
     <branch id="HEAD">
       <domain id="po">
-        <description>Layout Descriptions</description>
+        <_description>Layout Descriptions</_description>
       </domain>
       <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvsweb>
     </branch>
@@ -275,13 +275,13 @@
     <branch id="HEAD"/>
   </module>
   <module id="beagle">
-    <description>Beagle Desktop Search</description>
+    <_description>Beagle Desktop Search</_description>
     <webpage>http://beagle-project.org/</webpage>
     <maintainer id="joeshaw"/>
     <svnmodule>beagle</svnmodule>
     <branch id="HEAD">
       <domain id="beagle/po" potbase="beagle">
-        <description>UI translations</description>
+        <_description>UI translations</_description>
       </domain>
     </branch>
   </module>
@@ -320,10 +320,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>GConf Editor Manual</description>
+          <_description>GConf Editor Manual</_description>
           <directory>docs</directory>
         </document>
       </branch>
@@ -393,13 +393,13 @@
     <branch id="HEAD"/>
   </module>
   <module id="banshee">
-    <description>Banshee Music Player</description>
+    <_description>Banshee Music Player</_description>
     <webpage>http://banshee-project.org/</webpage>
     <maintainer id="abock"/>
     <svnmodule>banshee</svnmodule>
     <branch id="HEAD">
       <domain id="banshee/po" potbase="banshee">
-        <description>UI translations</description>
+        <_description>UI translations</_description>
       </domain>
     </branch>
   </module>
@@ -482,18 +482,18 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="desktop-gpl">
-          <description>GPL License</description>
+          <_description>GPL License</_description>
           <directory>desktop-docs/gpl</directory>
         </document>
         <document id="desktop-lgpl">
-          <description>LGPL License</description>
+          <_description>LGPL License</_description>
           <directory>desktop-docs/gpl</directory>
         </document>
         <document id="desktop-fdl">
-          <description>FDL License</description>
+          <_description>FDL License</_description>
           <directory>desktop-docs/fdl</directory>
         </document>
       </branch>
@@ -569,22 +569,22 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="clock">
-          <description>Clock Applet Manual</description>
+          <_description>Clock Applet Manual</_description>
           <directory>help/clock</directory>
         </document>
         <document id="fish">
-          <description>Fish Applet Manual</description>
+          <_description>Fish Applet Manual</_description>
           <directory>help/fish</directory>
         </document>
         <document id="window-list">
-          <description>Window List Applet Manual</description>
+          <_description>Window List Applet Manual</_description>
           <directory>help/window-list</directory>
         </document>
         <document id="workspace-switcher">
-          <description>Workspace Switcher Applet Manual</description>
+          <_description>Workspace Switcher Applet Manual</_description>
           <directory>help/workspace-switcher</directory>
         </document>
       </branch>
@@ -605,7 +605,7 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-user-docs">
-    <description>Gnome 2 User Documentation</description>
+    <_description>Gnome 2 User Documentation</_description>
     <defaults>
       <branch>
         <document id="user-guide">
@@ -778,10 +778,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>Bug Buddy Manual</description>
+          <_description>Bug Buddy Manual</_description>
           <directory>docs</directory>
         </document>
       </branch>
@@ -825,10 +825,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>GNOME Keyring Manager Manual</description>
+          <_description>GNOME Keyring Manager Manual</_description>
           <directory>docs</directory>
         </document>
       </branch>
@@ -840,10 +840,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>Criawips Manual</description>
+          <_description>Criawips Manual</_description>
           <directory>help/user-guide</directory>
         </document>
       </branch>
@@ -898,10 +898,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>Sound Juicer Manual</description>
+          <_description>Sound Juicer Manual</_description>
           <directory>help/sound-juicer</directory>
         </document>
       </branch>
@@ -1056,22 +1056,22 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="baobab">
-          <description>Disk Usage Analyzer Manual</description>
+          <_description>Disk Usage Analyzer Manual</_description>
           <directory>baobab/help</directory>
         </document>
         <document id="dictionary">
-          <description>Dictionary Manual</description>
+          <_description>Dictionary Manual</_description>
           <directory>gnome-dictionary/help</directory>
         </document>
         <document id="gsearchtool">
-          <description>Search Tool Manual</description>
+          <_description>Search Tool Manual</_description>
           <directory>gsearchtool/help</directory>
         </document>
         <document id="logview">
-          <description>Log Viewer Manual</description>
+          <_description>Log Viewer Manual</_description>
           <directory>logview/help</directory>
         </document>
       </branch>
@@ -1088,16 +1088,16 @@
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="eog">
-    <description>Eye of GNOME</description>
+    <_description>Eye of GNOME</_description>
     <webpage>http://live.gnome.org/EyeOfGnome</webpage>
     <maintainer id="lucasr"/>
     <svnmodule>eog</svnmodule>
     <branch id="HEAD">
       <domain id="po">
-        <description>UI translations</description>
+        <_description>UI translations</_description>
       </domain>
       <document id="help">
-        <description>Eye of GNOME Manual</description>
+        <_description>Eye of GNOME Manual</_description>
         <directory>help</directory>
       </document>
     </branch>
@@ -1121,10 +1121,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>GDM Manual</description>
+          <_description>GDM Manual</_description>
           <directory>docs</directory>
         </document>
       </branch>
@@ -1137,10 +1137,10 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="help">
-          <description>GFloppy Manual</description>
+          <_description>GFloppy Manual</_description>
           <directory>doc</directory>
         </document>
       </branch>
@@ -1153,26 +1153,26 @@
     <defaults>
       <branch>
         <domain id="po">
-          <description>UI translations</description>
+          <_description>UI translations</_description>
         </domain>
         <document id="gst-boot">
-          <description>GST Boot Setup Manual</description>
+          <_description>GST Boot Setup Manual</_description>
           <directory>doc/boot</directory>
         </document>
         <document id="gst-network">
-          <description>GST Network Setup Manual</description>
+          <_description>GST Network Setup Manual</_description>
           <directory>doc/network</directory>
         </document>
         <document id="gst-services">
-          <description>GST Service Management Manual</description>
+          <_description>GST Service Management Manual</_description>
           <directory>doc/services</directory>
         </document>
         <document id="gst-time">
-          <description>GST Time Setup Manual</description>
+          <_description>GST Time Setup Manual</_description>
           <directory>doc/time</directory>
         </document>
         <document id="gst-users">
-          <description>GST User Management Manual</description>
+          <_description>GST User Management Manual</_description>
           <directory>doc/users</directory>
         </document>
       </branch>
@@ -1222,18 +1222,18 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnomescan">
-    <description>GnomeScan</description>
+    <_description>GnomeScan</_description>
     <svnroot>svn://svn.gna.org/svn</svnroot>
     <svnmodule>gnomescan</svnmodule>
     <svnweb>http://svn.gna.org/viewcvs/gnomescan/</svnweb>
     <branch id="HEAD"/>
   </module>
   <module id="release-notes">
-    <description>GNOME Release Notes</description>
+    <_description>GNOME Release Notes</_description>
     <svnmodule>gnomeweb-wml</svnmodule>
     <branch id="HEAD">
       <document id="release-notes-2.16">
-        <description>GNOME 2.16 release notes</description>
+        <_description>GNOME 2.16 release notes</_description>
         <directory>www.gnome.org/start/2.16/notes/docbook</directory>
       </document>
     </branch>

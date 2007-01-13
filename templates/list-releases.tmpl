@@ -1,5 +1,5 @@
 <html>
-<head><title>GNOME Releases</title>
+<head><title>$_("GNOME Releases")</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
 <body>
@@ -7,10 +7,10 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-<h1>GNOME Releases</h1>
+<h1>$_("GNOME Releases")</h1>
 
 #if len($releases)
-<p>Select a release or a release set below to see more details about it:</p>
+<p>$_("Select a release or a release set below to see more details about it:")</p>
 
 <ul>
 #for release in $releases
@@ -20,7 +20,7 @@
 #end for
 </ul>
 #else
-<p>There are currently no releases defined in GNOME. :(</p>
+<p>$_("There are currently no releases defined in GNOME. :(")</p>
 #end if
 
 

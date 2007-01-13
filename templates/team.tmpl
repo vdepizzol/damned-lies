@@ -1,7 +1,7 @@
 <html>
 <head>
   #if $team.has_key('description')
-   <title>${team.description}</title>
+   <title>${team.description, CAPITALIZE=1}</title>
   #else
    <title>${team.id}</title>
   #end if
@@ -13,47 +13,46 @@
 <div style="width:80%; text-align: left;">
 
 #if $team.has_key('description')
-<h1>${team.description}</h1>
+<h1>${team.description, CAPITALIZE=1}</h1>
 #else
 <h1>${team.id}</h1>
 #end if
 
 <table><tr><td valign="top" width="50%">
-  <h2>Details</h2>
+  <h2>$_("Details")</h2>
 
   #if $team.webpage and $team.has_key('description')
-  <strong>${team.description} Page:</strong> <a href="$team.webpage">$team.webpage</a><br />
+  <strong>${_("%(team)s Page:"), team=$team.description}</strong> <a href="$team.webpage">$team.webpage</a><br />
   #end if
-  
+
   #if $team.userpage
-  <strong>Users Web Page:</strong> <a href="$team.userpage">$team.userpage</a><br />
+  <strong>$_("Users Web Page:")</strong> <a href="$team.userpage">$team.userpage</a><br />
   #end if
 
   #if $team.bugzilla and $team.has_key('bugzilla-component')
-  <br/><strong>Bugzilla:</strong>
+  <br/><strong>$_("Bugzilla:")</strong>
   <ul>
-    <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">Report Bug in Translation</a></li>
-    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">Show Existing Bugs</a></li>
+    <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">$_("Report Bug in Translation")</a></li>
+    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">$_("Show Existing Bugs")</a></li>
   </ul>
   #end if
-  
+
 
   #if $team.has_key('mailing-list')
-  <br/><strong>Mailing List:</strong>
+  <br/><strong>$_("Mailing List:")</strong>
   <ul>
-    <li><a href="mailto:${team['mailing-list']}">Send e-mail to the list</a></li>
+    <li><a href="mailto:${team['mailing-list']}">$_("Send e-mail to the list")</a></li>
     #if $team.has_key('mailing-list-subscribe')
-    <li><a href="${team['mailing-list-subscribe']}">Subscribe</a></li>
+    <li><a href="${team['mailing-list-subscribe']}">$_("Subscribe")</a></li>
     #end if
   </ul>
   #end if
-  
-  
+
 
 
 </td><td valign="top">
 #if $team.has_key('coordinator')
-  <h2>Coordinator</h2>
+  <h2>$_("Coordinator")</h2>
   #if $team.coordinator.icon
   <div class="maintainer" style="background-image:url('$team.coordinator.icon');">
   #else
@@ -66,7 +65,7 @@
 
   <br />
   #if len($team.coordinator.im) or $team.coordinator.nick
-  <strong>Instant messaging:</strong>
+  <strong>$_("Instant messaging:")</strong>
   <ul>
   #if $team.coordinator.nick
     <li><em>$team.coordinator.nick</em> (IRC)</li>
@@ -80,10 +79,10 @@
   #end if
 
   #if $team.coordinator.has_key('bugzilla-account')
-  <strong>Bugzilla account:</strong> $team.coordinator['bugzilla-account']<br />
+  <strong>$_("Bugzilla account:")</strong> $team.coordinator['bugzilla-account']<br />
   #end if
   #if $team.coordinator.has_key('cvs-account')
-  <strong>CVS account:</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
+  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
   #end if
 
   </div>
@@ -97,7 +96,7 @@
 #set releases=$ldata.releases
 #if len($releases)
 <table class="stats">
-<thead><tr><th>Release</th><th>Docs</th><th>Graph</th><th>UI</th><th>Graph</th></tr></thead>
+<thead><tr><th>$_("Release")</th><th>$_("Documentation")</th><th>$_("Graph")</th><th>$_("User Interface")</th><th>$_("Graph")</th></tr></thead>
 #for release in $releases
 <tr>
   <td class="left" style="font-size:120%;"><a href="${webroot}/languages/$lang/${release.id}">${release.description}</a>

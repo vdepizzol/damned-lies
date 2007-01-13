@@ -1,5 +1,7 @@
 VERSION=0.9
 
+SUBDIRS = po
+
 FILES=\
 	.htaccess \
 	AUTHORS \
@@ -48,10 +50,11 @@ FILES=\
         templates/team.tmpl
 
 
-%.xml: %.xml.in
-	intltool-merge -x . $< $@
+po/%.xml: %.xml.in po/*.po
+	(cd po && intltool-merge -x -m . ../$< `basename $@`)
 
-all: gnome-modules.xml translation-teams.xml releases.xml people.xml
+all: po/gnome-modules.xml po/translation-teams.xml po/releases.xml po/people.xml
+	(cd po && make)
 
 dist: $(FILES)
 	@mkdir -p damned-lies-$(VERSION) && \

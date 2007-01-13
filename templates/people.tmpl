@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>GNOME Contributors</title>
+  <title>$_("GNOME Contributors")</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
 <body>
@@ -8,10 +8,10 @@
 <center>
 <div style="width:80%; text-align: left;">
 
-  <h2>GNOME Contributors</h2>
+  <h2>$_("GNOME Contributors")</h2>
 
 #if len($people)
-<p>Gnome is being developed by following people:</p>
+<p>$_("Gnome is being developed by following people:")</p>
 
 <ul>
 #for personid in $people
@@ -32,7 +32,7 @@
 </ul>
 
 #else
-<p>There are no contributors, GNOME turned itself up from nothing.</p>
+<p>$_("There are no contributors, GNOME turned itself up from nothing.")</p>
 #end if
 
 </div>

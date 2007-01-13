@@ -4,6 +4,9 @@ import xml.dom.minidom
 import defaults
 import utils
 import releases
+import l10n
+
+_ = l10n.gettext
 
 import data
 
@@ -96,6 +99,7 @@ if __name__=="__main__":
 
     request = os.getenv("PATH_INFO")[1:]
 
+    l10n.set_language()
     if request.endswith('.xml'):
         print "Content-type: application/xml; charset=UTF-8"
     else:
@@ -117,7 +121,9 @@ if __name__=="__main__":
         if teamid:
             myteam = TranslationTeams(only_team=teamid)
             if len(myteam) and myteam.data.has_key(teamid):
-                html = Template(file="templates/team.tmpl")
+                html = Template(file="templates/team.tmpl",
+                                filter=l10n.MyFilter)
+                html._ = l10n.gettext
                 team = myteam.data[teamid]
 
                 for lang, ldata in team['language'].items():
@@ -129,7 +135,9 @@ if __name__=="__main__":
                 html.language = lang
                 html.language_name = team['language'][lang]['content']
                 if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = html.language_name + " Translation Team"
+                    html.team['description'] = ( _(u"%(lang)s Translation Team")
+                                                 % { 'lang' :
+                                                     html.language_name } )
                 if not html.team.has_key('bugzilla-component') and html.language_name:
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
@@ -142,7 +150,9 @@ if __name__=="__main__":
                 teams.append(team)
             teams.sort(compare_teams)
 
-            html = Template(file="templates/list-teams.tmpl")
+            html = Template(file="templates/list-teams.tmpl",
+                            filter=l10n.MyFilter)
+            html._ = l10n.gettext
             html.webroot = defaults.webroot
             html.teams = teams
             print html
@@ -171,7 +181,9 @@ if __name__=="__main__":
 
             langs.sort(compare_langs)
 
-            html = Template(file="templates/list-languages.tmpl")
+            html = Template(file="templates/list-languages.tmpl",
+                            filter=l10n.MyFilter)
+            html._ = l10n.gettext
             html.webroot = defaults.webroot
             html.languages = langs
             print html
@@ -202,26 +214,33 @@ if __name__=="__main__":
 
                 if release:
                     if t_ext == '.xml':
-                        html = Template(file="templates/language-release-xml.tmpl")
+                        html = Template(file="templates/language-release-xml.tmpl",
+                                        filter=l10n.MyFilter)
                     else:
-                        html = Template(file="templates/language-release.tmpl")
+                        html = Template(file="templates/language-release.tmpl",
+                                        filter=l10n.MyFilter)
+                    html._ = l10n.gettext
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     myreleases = releases.Releases(deep=1, only_release = release, gather_stats = langid).data
                     if myreleases:
                         html.release = myreleases[0]
-                    
+
                 else:
-                    html = Template(file="templates/team.tmpl")
+                    html = Template(file="templates/team.tmpl",
+                                    filter=l10n.MyFilter)
+                    html._ = l10n.gettext
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     team['language'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
-                    
+
 
                 html.webroot = defaults.webroot
                 html.team = team
                 if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = html.language_name + " Translation Team"
+                    html.team['description'] = ( _(u"%(lang)s Translation Team")
+                                                 % { 'lang' :
+                                                     html.language_name } )
                 if not html.team.has_key('bugzilla-component') and html.language_name:
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 

@@ -1,16 +1,19 @@
+#from l10n import MyFilter
+#filter $MyFilter
+
 <h3>$domain.description</h3>
 <a href="${webdir}.pot">
-<img src="$webroot/data/download.png"> POT file
+<img src="$webroot/data/download.png">
 #if $domain.has_key('pot_size')
-  ($domain.pot_size messages)
+  ${ngettext("POT file (%(potsize)s message)", "POT file (%(potsize)s messages)", $domain.pot_size),potsize=$domain.pot_size}
 #end if
 </a>
 #if $domain.has_key('updated')
-updated on <strong>${domain.updated}</strong>.
+— ${_("updated on %(date)s"), date="<strong>"+$domain.updated+"</strong>."}
 #end if
 
 #if $domain.has_key('pot_messages') and len($domain.pot_messages)
-<h4>Notices</h4>
+<h4>$_("Notices")</h4>
 <table>
 #for $msg in $domain.pot_messages
 <tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
@@ -21,7 +24,7 @@ updated on <strong>${domain.updated}</strong>.
 
 #if $domain.statistics and len($domain.statistics)
 <table class="stats">
-<thead><tr><th>Language</th><th>Translated</th><th>Graph</th></tr></thead>
+<thead><tr><th>$_("Language")</th><th>$_("Translated")</th><th>$_("Graph")</th></tr></thead>
 #for lstat in $domain.statistics
 <tr>
   <td class="left"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
@@ -43,3 +46,4 @@ updated on <strong>${domain.updated}</strong>.
 #end for
 </table>
 #end if
+#end filter

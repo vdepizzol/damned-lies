@@ -40,8 +40,10 @@ def get_roles_for(person):
 if __name__=="__main__":
     import cgi
     import cgitb; cgitb.enable()
+    import l10n
     from Cheetah.Template import Template
 
+    l10n.set_language()
     print "Content-type: text/html; charset=UTF-8\n"
 
     if os.getenv("PATH_INFO"):
@@ -51,7 +53,9 @@ if __name__=="__main__":
 
     persons = data.getPeople()
     if personid and len(persons) and persons.has_key(personid):
-        html = Template(file="templates/person.tmpl")
+        import l10n
+        html = Template(file="templates/person.tmpl", filter=l10n.MyFilter)
+        html._ = l10n.gettext
         html.webroot = defaults.webroot
         html.person = persons[personid]
         html.roles = get_roles_for(html.person)
@@ -59,7 +63,9 @@ if __name__=="__main__":
         print html
         print utils.TemplateInspector(html)
     else:
-        html = Template(file="templates/people.tmpl")
+        import l10n
+        html = Template(file="templates/people.tmpl", filter=l10n.MyFilter)
+        html._ = l10n.gettext
         html.webroot = defaults.webroot
         html.people = persons
         #html.roles = get_roles_for(html.person)

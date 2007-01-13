@@ -1,3 +1,6 @@
+#from l10n import MyFilter
+#filter $MyFilter
+
 <table>
 <tr style="background: inherit;">
   <td class="left" style="font-size: 120%; background: inherit;" colspan="2">${release.ui_supportedness}% ($release.ui_translated/$release.ui_fuzzy/$release.ui_untranslated)</td>
@@ -21,7 +24,7 @@
 #if $category.statistics.ui_size != 0
 <tr>
   <td colspan="3" class="left" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
-    $category.description (${category.statistics.ui_supportedness}% translated)</td></tr>
+    ${_("%(cat)s (%(percent)s%% translated)"), cat=$category.description, percent=$category.statistics.doc_supportedness}</td></tr>
 
     #set global modules=$category.modules
     #set global release=$release
@@ -30,3 +33,4 @@
 #end for  
 #end if
 </table>
+#end filter
