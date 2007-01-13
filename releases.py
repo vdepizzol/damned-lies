@@ -495,7 +495,7 @@ if __name__=="__main__":
             langs = teams.TranslationLanguages()
             status = get_aggregate_stats(releaseid)
             html.status = status
-            print html
+            print html.encode('utf-8')
             print utils.TemplateInspector(html)
     else:
         t = Releases(deep=0)
@@ -508,6 +508,6 @@ if __name__=="__main__":
         html._ = l10n.gettext
         html.webroot = defaults.webroot
         html.releases = releases
-        print html
+        print html.encode('utf-8')
         print utils.TemplateInspector(html)
 
