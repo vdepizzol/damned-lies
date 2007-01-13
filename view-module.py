@@ -185,7 +185,7 @@ def go_go():
         html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.module = module
-        print html.encode('utf-8')
+        print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
     else:
         # List all modules
@@ -196,7 +196,7 @@ def go_go():
         html.webroot = defaults.webroot
         html.modids = moduleids
         html.modules = allmodules
-        print html.encode('utf-8')
+        print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
 
 

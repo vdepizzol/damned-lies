@@ -60,7 +60,7 @@ if __name__=="__main__":
         html.person = persons[personid]
         html.roles = get_roles_for(html.person)
 
-        print html.encode('utf-8')
+        print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
     else:
         import l10n
@@ -70,6 +70,6 @@ if __name__=="__main__":
         html.people = persons
         #html.roles = get_roles_for(html.person)
 
-        print html.encode('utf-8')
+        print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
 

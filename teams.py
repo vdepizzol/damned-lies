@@ -141,7 +141,7 @@ if __name__=="__main__":
                 if not html.team.has_key('bugzilla-component') and html.language_name:
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
-                print html.encode('utf-8')
+                print unicode(html).encode('utf-8')
                 print utils.TemplateInspector(html)
         else:
             t = TranslationTeams()
@@ -155,7 +155,7 @@ if __name__=="__main__":
             html._ = l10n.gettext
             html.webroot = defaults.webroot
             html.teams = teams
-            print html.encode('utf-8')
+            print unicode(html).encode('utf-8')
             print utils.TemplateInspector(html)
 
     elif page == "languages":
@@ -186,7 +186,7 @@ if __name__=="__main__":
             html._ = l10n.gettext
             html.webroot = defaults.webroot
             html.languages = langs
-            print html.encode('utf-8')
+            print unicode(html).encode('utf-8')
             print utils.TemplateInspector(html)
 
         else:
@@ -244,7 +244,7 @@ if __name__=="__main__":
                 if not html.team.has_key('bugzilla-component') and html.language_name:
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 
-                print html.encode('utf-8')
+                print unicode(html).encode('utf-8')
                 if t_ext != '.xml':
                     print utils.TemplateInspector(html)
             else:
