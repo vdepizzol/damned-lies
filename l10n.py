@@ -22,7 +22,7 @@ def gettext(text):
         trans = GNUTranslations(fp=fp)
     except:
         trans = NullTranslations()
-    return trans.gettext(unicode(text))
+    return trans.ugettext(unicode(text))
 
 
 def ngettext(text, plural, number):
@@ -32,7 +32,7 @@ def ngettext(text, plural, number):
         trans = GNUTranslations(fp=fp)
     except:
         trans = NullTranslations()
-    return trans.ngettext(unicode(text), unicode(plural), number)
+    return trans.ungettext(unicode(text), unicode(plural), number)
 
 class MyFilter(Cheetah.Filters.Filter):
     def filter(self, val, **kw):
