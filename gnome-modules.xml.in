@@ -404,6 +404,17 @@
     </branch>
   </module>
   <module id="f-spot">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="docs">
+          <_description>GConf Editor Manual</_description>
+          <directory>docs</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="gnome-control-center">
@@ -1017,6 +1028,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="dasher">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="help">
+          <_description>Dasher Manual</_description>
+          <directory>Data/Help/Gnome</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
