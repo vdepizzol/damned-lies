@@ -410,7 +410,9 @@
       <module id="metacity"/>
       <module id="nautilus"/>
       <module id="nautilus-cd-burner"/>
+      <module id="NetworkManager"/>
       <module id="orca"/>
+      <module id="seahorse"/>
       <module id="sound-juicer"/>
       <module id="tomboy"/>
       <module id="totem"/>
@@ -424,15 +426,10 @@
       <module id="pessulus"/>
       <module id="sabayon"/>
     </category>
-    <category id="proposed">
-      <_description>New module proposals.</_description>
-      <module id="anjuta"/>
+    <category id="devtools">
+      <_description>Development Tools.</_description>
       <module id="devhelp"/>
       <module id="glade3"/>
-      <module id="gnomescan"/>
-      <module id="NetworkManager"/>
-      <module id="seahorse"/>
-      <module id="tracker"/>
     </category>
   </release>
   <release id="fifth-toe">
