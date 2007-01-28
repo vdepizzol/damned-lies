@@ -1096,6 +1096,10 @@
           <_description>Log Viewer Manual</_description>
           <directory>logview/help</directory>
         </document>
+        <document id="gfloppy">
+          <_description>GFloppy Manual</_description>
+          <directory>gfloppy/doc</directory>
+        </document>
       </branch>
     </defaults>
     <branch id="HEAD"/>
@@ -1149,22 +1153,6 @@
         <document id="help">
           <_description>GDM Manual</_description>
           <directory>docs</directory>
-        </document>
-      </branch>
-    </defaults>
-    <branch id="HEAD"/>
-    <branch id="gnome-2-14" stringfrozen="true"/>
-    <branch id="gnome-2-16" stringfrozen="true"/>
-  </module>
-  <module id="gfloppy">
-    <defaults>
-      <branch>
-        <domain id="po">
-          <_description>UI translations</_description>
-        </domain>
-        <document id="help">
-          <_description>GFloppy Manual</_description>
-          <directory>doc</directory>
         </document>
       </branch>
     </defaults>
