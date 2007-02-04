@@ -24,7 +24,7 @@
 #if $category.statistics.ui_size != 0
 <tr>
   <td colspan="3" class="left" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
-    ${_("%(cat)s (%(percent)s%% translated)"), cat=$category.description, percent=$category.statistics.doc_supportedness}</td></tr>
+    ${_("%(cat)s (%(percent)s%% translated)"), cat=$category.description, percent=$category.statistics.ui_supportedness}</td></tr>
 
     #set global modules=$category.modules
     #set global release=$release
