@@ -29,8 +29,10 @@ def get_roles_for(person):
         if mymod.has_key('maintainer') and person['id'] in mymod['maintainer'].keys():
             maintains.append(mymod)
 
-        if person.has_key('email'):
-            person['nospamemail'] = person['email'].replace('@', ' at ').replace('.', ' dot ')
+        for obfuscate in ['email', 'bugzilla-account']:
+            if person.has_key(obfuscate):
+                person['nospam' + obfuscate] = person[obfuscate].replace(
+                    '@', ' at ').replace('.', ' dot ')
 
     return { 'maintains' : maintains,
              'translates' : translates,

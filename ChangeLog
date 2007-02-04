@@ -1,5 +1,12 @@
 2007-02-05  Danilo Šegan  <danilo@gnome.org>
 
+	Fix #404219.
+
+	* people.py (get_roles_for):
+	* templates/person.tmpl: Use nospam obfuscating for bugzilla account.
+
+2007-02-05  Danilo Šegan  <danilo@gnome.org>
+
 	* .htaccess: Set DirectoryIndex to index.py.
 	* index.py:
 	* templates/index.tmpl: Added.
