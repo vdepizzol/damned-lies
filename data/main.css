@@ -3,18 +3,28 @@
     background: gray; 
     color: white;
     padding-left: 2px;
-    padding-right: 2px; }
+    padding-right: 2px; 
+}
+
 .stats td { 
     background: #f0f0f0; 
     text-align: center;
     padding-left: 2px;
-    padding-right: 2px; }
+    padding-right: 2px;
+    color: black;
+}
+
 .stats td.left { 
-    text-align: left; }
+    text-align: left;
+}
+
 body {
-    background: white; }
+    background: white;
+    color: black;
+}
 
 h1 {
+    background: white;
     color: #404070;
 }
 
@@ -38,8 +48,9 @@ div.translated {
   height:100%; 
   left: 0%; 
   background: #448844;
-  background: url('/~danilo/damned-lies/data/green-bar.png');
+  background: url('/data/green-bar.png');
   background-repeat: repeat-x;
+  color: black;
 }
 
 div.goodchange {
@@ -47,8 +58,9 @@ div.goodchange {
   top: 0px;
   height:100%; 
   background: #55DD55;
-  background: url('/~danilo/damned-lies/data/cyan-bar.png');
+  background: url('/data/cyan-bar.png');
   background-repeat: repeat-x;
+  color: black;
 }
 
 div.fuzzy {
@@ -56,8 +68,9 @@ div.fuzzy {
   top: 0px;
   height:100%; 
   background: #4444AA;
-  background: url('/~danilo/damned-lies/data/purple-bar.png');
+  background: url('/data/purple-bar.png');
   background-repeat: repeat-x;
+  color: black;
 }
 
 div.untranslated {
@@ -65,17 +78,20 @@ div.untranslated {
   height:100%; 
   top: 0px;
   background: #FF4444;
-  background: url('/~danilo/damned-lies/data/red-bar.png');
+  background: url('/data/red-bar.png');
   background-repeat: repeat-x;
+  color: black;
 }
 
 a {
   text-decoration: none;
   color: #406080;
+  background: white;
 }
 
 a:hover, a:visited {
   color: #6080a0;
+  background: white;
 }
 
 a:hover {
@@ -96,5 +112,12 @@ div.maintainer {
   padding-left: 85px; 
   background-image: url('/data/nobody.png');
   background-repeat: no-repeat;
-  background-position: 85px left; 
+  background-position: top left; 
+}
+
+div.mainpage {
+  width:80%;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
 }
