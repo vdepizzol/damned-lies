@@ -2,7 +2,11 @@
 <head><title>${_("%(language)s Translations for %(release)s"), language=$language_name,release=$release.description,CAPITALIZE=1}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 </head>
+#if $rtl
+<body dir="rtl">
+#else
 <body>
+#end if
 
 <center>
 <div style="width:80%; text-align: left;">
