@@ -182,6 +182,7 @@ def go_go():
         html = Template(file="templates/module.tmpl",
                         filter=l10n.MyFilter)
         html._ = l10n.gettext
+        html.rtl = (defaults.language in defaults.rtl_languages)
         html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.module = module
@@ -192,6 +193,7 @@ def go_go():
         html = Template(file="templates/list-modules.tmpl",
                         filter=l10n.MyFilter)
         html._ = l10n.gettext
+        html.rtl = (defaults.language in defaults.rtl_languages)
         html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.modids = moduleids

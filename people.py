@@ -58,6 +58,7 @@ if __name__=="__main__":
         import l10n
         html = Template(file="templates/person.tmpl", filter=l10n.MyFilter)
         html._ = l10n.gettext
+        html.rtl = (defaults.language in defaults.rtl_languages)
         html.webroot = defaults.webroot
         html.person = persons[personid]
         html.roles = get_roles_for(html.person)
@@ -68,6 +69,7 @@ if __name__=="__main__":
         import l10n
         html = Template(file="templates/people.tmpl", filter=l10n.MyFilter)
         html._ = l10n.gettext
+        html.rtl = (defaults.language in defaults.rtl_languages)
         html.webroot = defaults.webroot
         html.people = persons
         #html.roles = get_roles_for(html.person)

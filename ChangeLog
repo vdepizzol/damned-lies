@@ -1,3 +1,25 @@
+2007-02-05  Danilo Šegan  <danilo@gnome.org>
+
+	Added RTL support.
+
+	* templates/language-release.tmpl:
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/list-releases.tmpl:
+	* templates/list-teams.tmpl:
+	* templates/module.tmpl:
+	* templates/people.tmpl:
+	* templates/person.tmpl:
+	* templates/release.tmpl:
+	* templates/team.tmpl:
+	* templates/index.tmpl: Added dir="rtl" for RTL languages.
+
+	* releases.py:
+	* teams.py:
+	* view-module.py:
+	* people.py: Add html.rtl value.
+	* defaults.py (rtl_languages): Added.
+
 2007-02-05  David Lodge <dave@cirt.net>
 
 	* data/main.css: Fixed div.maintainer causing invalid CSS and corrected url

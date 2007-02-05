@@ -489,6 +489,7 @@ if __name__=="__main__":
             html = Template(file="templates/release.tmpl",
                             filter=l10n.MyFilter)
             html._ = l10n.gettext
+            html.rtl = (defaults.language in defaults.rtl_languages)
             html.webroot = defaults.webroot
             html.release = myrelease[0]
 
@@ -506,6 +507,7 @@ if __name__=="__main__":
         html = Template(file="templates/list-releases.tmpl",
                         filter=l10n.MyFilter)
         html._ = l10n.gettext
+        html.rtl = (defaults.language in defaults.rtl_languages)
         html.webroot = defaults.webroot
         html.releases = releases
         print unicode(html).encode('utf-8')

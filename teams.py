@@ -124,6 +124,7 @@ if __name__=="__main__":
                 html = Template(file="templates/team.tmpl",
                                 filter=l10n.MyFilter)
                 html._ = l10n.gettext
+                html.rtl = (defaults.language in defaults.rtl_languages)
                 team = myteam.data[teamid]
 
                 for lang, ldata in team['language'].items():
@@ -153,6 +154,7 @@ if __name__=="__main__":
             html = Template(file="templates/list-teams.tmpl",
                             filter=l10n.MyFilter)
             html._ = l10n.gettext
+            html.rtl = (defaults.language in defaults.rtl_languages)
             html.webroot = defaults.webroot
             html.teams = teams
             print unicode(html).encode('utf-8')
@@ -184,6 +186,7 @@ if __name__=="__main__":
             html = Template(file="templates/list-languages.tmpl",
                             filter=l10n.MyFilter)
             html._ = l10n.gettext
+            html.rtl = (defaults.language in defaults.rtl_languages)
             html.webroot = defaults.webroot
             html.languages = langs
             print unicode(html).encode('utf-8')
@@ -220,6 +223,7 @@ if __name__=="__main__":
                         html = Template(file="templates/language-release.tmpl",
                                         filter=l10n.MyFilter)
                     html._ = l10n.gettext
+                    html.rtl = (defaults.language in defaults.rtl_languages)
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     myreleases = releases.Releases(deep=1, only_release = release, gather_stats = langid).data
@@ -230,6 +234,7 @@ if __name__=="__main__":
                     html = Template(file="templates/team.tmpl",
                                     filter=l10n.MyFilter)
                     html._ = l10n.gettext
+                    html.rtl = (defaults.language in defaults.rtl_languages)
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     team['language'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data

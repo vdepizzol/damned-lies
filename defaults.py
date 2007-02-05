@@ -79,3 +79,6 @@ maintainers = []
 
 # Default language to fallback to
 language = 'en'
+
+# Right-to-left languages
+rtl_languages = [ 'ar', 'fa', 'he', 'urd', 'yi']
