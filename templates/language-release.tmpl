@@ -1,6 +1,11 @@
-<html>
-<head><title>${_("%(language)s Translations for %(release)s"), language=$language_name,release=$release.description,CAPITALIZE=1}</title>
+﻿<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>${_("%(language)s Translations for %(release)s"), language=$language_name,release=$release.description,CAPITALIZE=1}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 #if $rtl
 <body dir="rtl">
@@ -9,7 +14,7 @@
 #end if
 
 <center>
-<div style="width:80%; text-align: left;">
+<div class="mainpage">
 
 <h1>${team.description, CAPITALIZE=1} — ${language_name}</h1>
 
@@ -27,8 +32,8 @@
   #if $team.bugzilla and $team.has_key('bugzilla-component')
   <br/><strong>$_("Bugzilla:")</strong>
   <ul>
-    <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">$_("Report Bug in Translation")</a></li>
-    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&component=$team['bugzilla-component']">$_("Show Existing Bugs")</a></li>
+    <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&amp;component=$team['bugzilla-component']">$_("Report Bug in Translation")</a></li>
+    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&amp;component=$team['bugzilla-component']">$_("Show Existing Bugs")</a></li>
   </ul>
   #end if
 
@@ -76,7 +81,7 @@
   <strong>$_("Bugzilla account:")</strong> $team.coordinator['bugzilla-account']<br />
   #end if
   #if $team.coordinator.has_key('cvs-account')
-  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&module=all&branch=HEAD&branchtype=match&dir=&file=&filetype=match&who=${team.coordinator['cvs-account']}&whotype=match&sortby=Date&hours=2&date=week&mindate=&maxdate=&cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
+  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&amp;module=all&amp;branch=HEAD&amp;branchtype=match&amp;dir=&amp;file=&amp;filetype=match&amp;who=${team.coordinator['cvs-account']}&amp;whotype=match&amp;sortby=Date&amp;hours=2&amp;date=week&amp;mindate=&amp;maxdate=&amp;cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
   #end if
 
   </div>
