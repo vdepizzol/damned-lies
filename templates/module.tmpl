@@ -1,4 +1,7 @@
-<html>
+﻿<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><title>${_("%(module)s Statistics"), module=$module.id}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
   <!--<link rel="stylesheet" href="css/unit.css"/>-->
@@ -9,6 +12,7 @@
   <script src="js/db2html.js" type="text/javascript"/>-->
   <!--<script src="js/operations.js" type="text/javascript"/>
   <script src="js/designmode.js" type="text/javascript"/>-->
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 #if $rtl
 <body dir="rtl">
@@ -16,8 +20,7 @@
 <body>
 #end if
 
-<center>
-<div style="width:80%; text-align: left;">
+<div class="mainpage">
 
 <h1>$module.description</h1>
 #if $module.has_key('webpage') and $module.webpage
@@ -42,7 +45,7 @@
 </td><td width="50%" valign="top">
 #if $module.has_key('bugs-baseurl')
 <h2>$_("Bug reporting")</h2>
-<p><a href="$module['bugs-baseurl']/enter_bug.cgi?product=$module['bugs-product']&component=$module['bugs-component']">$_("Report bugs to Bugzilla")</a>.</p>
+<p><a href="$module['bugs-baseurl']/enter_bug.cgi?product=$module['bugs-product']&amp;component=$module['bugs-component']">$_("Report bugs to Bugzilla")</a>.</p>
 #end if
 </td></tr></table>
 
@@ -106,6 +109,5 @@
 #end if
 
 </div>
-</center>
 </body>
 </html>
