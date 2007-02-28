@@ -2,7 +2,7 @@
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head><title>Gnome Languages</title>
+<head><title>$_("Gnome Languages")</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
 #if $rtl
   <link rel="stylesheet" href="${webroot}/data/rtl.css"/>
@@ -17,7 +17,7 @@
 
 <div class="mainpage">
 
-<h1>Gnome Languages</h1>
+<h1>$_("Gnome Languages")</h1>
 
 #if len($languages)
 <p>$_("Gnome is being translated to following languages:")</p>
@@ -34,7 +34,7 @@
 #end for
 </ul>
 #else
-<p>$_("Gnome is currently not being translated to any language. :\(")</p>
+<p>$_("Gnome is currently not being translated to any language. :(")</p>
 #end if
 
 

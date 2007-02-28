@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-28 13:31+0000\n"
-"PO-Revision-Date: 2007-02-28 14:10+0100\n"
+"POT-Creation-Date: 2007-02-28 15:35+0000\n"
+"PO-Revision-Date: 2007-02-28 15:36+0100\n"
 "Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -256,7 +256,7 @@ msgid "System Monitor Manual"
 msgstr "كتيّب مراقب النظام"
 
 #: ../gnome-modules.xml.in.h:60
-#: ../templates/language-release.tmpl:99
+#: ../templates/language-release.tmpl:103
 msgid "UI translations"
 msgstr "ترجمات الواجهة"
 
@@ -918,67 +918,67 @@ msgid "Zulu"
 msgstr "الزولو"
 
 #: ../templates/index.tmpl:5
-#: ../templates/index.tmpl:21
+#: ../templates/index.tmpl:24
 msgid "Damned Lies about Gnome"
 msgstr "احصائيات جنوم"
 
-#: ../templates/index.tmpl:25
+#: ../templates/index.tmpl:28
 msgid "Teams"
 msgstr "الفرق"
 
-#: ../templates/index.tmpl:26
+#: ../templates/index.tmpl:29
 msgid "List of all Gnome Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
 msgstr "قائمة كل فرق ترجمة جنوم، مع كل المعلومات مثل المشرف، صفحة الإنترنت و الإتصال."
 
-#: ../templates/index.tmpl:27
+#: ../templates/index.tmpl:30
 msgid "If there is no team for your language, you can easily <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
 msgstr "اذا لم يكن هناك أي فريق للغتك، يمكنك بسهولة <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">بدأ فريقك</a>."
 
-#: ../templates/index.tmpl:32
+#: ../templates/index.tmpl:35
 msgid "Languages"
 msgstr "اللغات"
 
-#: ../templates/index.tmpl:33
+#: ../templates/index.tmpl:36
 msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr "قائمة كل اللغات التي لها <a href=\"teams/\">فرق ترجمة</a>."
 
-#: ../templates/index.tmpl:34
+#: ../templates/index.tmpl:37
 msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages Gnome is being translated to."
 msgstr "بعض الفرة تشرف على أكثر من لغة واحدة، هنا يمكنك معاينة كل اللغات التي يتم ترجمة جنوم اليها."
 
-#: ../templates/index.tmpl:38
+#: ../templates/index.tmpl:41
 msgid "Release Sets"
 msgstr "الإصدارات"
 
-#: ../templates/index.tmpl:39
+#: ../templates/index.tmpl:42
 msgid "List of all Gnome release sets and releases we gather stats for."
 msgstr "قائمة اصدارات جنوم باحصائياتها."
 
-#: ../templates/index.tmpl:41
+#: ../templates/index.tmpl:44
 msgid "Examples of release sets are \"Gnome Office\", \"Fifth Toe\" or \"Gnome 2.14\"."
 msgstr "أمثلة لإصدارات: \"جنوم 2.18\" أو \"جنوم 2.14\"."
 
-#: ../templates/index.tmpl:42
+#: ../templates/index.tmpl:45
 msgid "Official Gnome release sets are further divided into categories such as \"Desktop Applications\" and \"Developer Platform\"."
 msgstr "الإصدارات الرسمية لجنوم مقسمة أيضا مثل \"تطبيقات سطح المكتب\" و \"منصّة مطوّري جنوم\"."
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:47
 msgid "Look here if you want to compare language support in any of these release sets."
 msgstr "انظر هنا إذا اردت مقارنة دعم اللغات في أي من الإصدارات."
 
-#: ../templates/index.tmpl:47
+#: ../templates/index.tmpl:50
 msgid "Modules"
 msgstr "الوحدات"
 
-#: ../templates/index.tmpl:48
+#: ../templates/index.tmpl:51
 msgid "List of all modules with statistics in here."
 msgstr "قائمة الوحدات مع احصائياتها."
 
-#: ../templates/index.tmpl:50
+#: ../templates/index.tmpl:53
 msgid "Modules are separate libraries or applications, with one or more branches of development included."
 msgstr "الوحدات هي تطبيقات أو مكاتب منفصلة، مع فرع أو أكثر للتطوير."
 
-#: ../templates/index.tmpl:51
+#: ../templates/index.tmpl:54
 msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
 msgstr "عادة تؤخذ من سي في آس، بالإضافة إلى معلومات ذات صلة (تفاصيل بغزيلا، صفحة الإنترنت، المشرف، ...)"
 
@@ -1007,8 +1007,8 @@ msgid "Translated"
 msgstr "مُتَرجَم"
 
 #: ../templates/show-stats.tmpl:27
-#: ../templates/release.tmpl:22
-#: ../templates/team.tmpl:106
+#: ../templates/release.tmpl:26
+#: ../templates/team.tmpl:110
 msgid "Graph"
 msgstr "رسم بياني"
 
@@ -1017,76 +1017,76 @@ msgstr "رسم بياني"
 msgid "%(person)s — GNOME Contributor"
 msgstr "%(person)s — مساهم جنوم"
 
-#: ../templates/person.tmpl:38
-#: ../templates/language-release.tmpl:67
-#: ../templates/team.tmpl:75
+#: ../templates/person.tmpl:43
+#: ../templates/language-release.tmpl:71
+#: ../templates/team.tmpl:79
 msgid "Instant messaging:"
 msgstr "التراسل الفوري:"
 
-#: ../templates/person.tmpl:52
-#: ../templates/language-release.tmpl:81
-#: ../templates/team.tmpl:89
+#: ../templates/person.tmpl:57
+#: ../templates/language-release.tmpl:85
+#: ../templates/team.tmpl:93
 msgid "Bugzilla account:"
 msgstr "حساب بجزيلا (Bugzilla):"
 
-#: ../templates/person.tmpl:55
-#: ../templates/language-release.tmpl:84
-#: ../templates/team.tmpl:92
+#: ../templates/person.tmpl:60
+#: ../templates/language-release.tmpl:88
+#: ../templates/team.tmpl:96
 msgid "SVN account:"
 msgstr "حساب الـ SVN:"
 
-#: ../templates/person.tmpl:59
+#: ../templates/person.tmpl:64
 msgid "Maintains:"
 msgstr "يُسيِّر:"
 
-#: ../templates/person.tmpl:61
+#: ../templates/person.tmpl:66
 msgid "Maintains %(module)s"
 msgstr "يُسيِّر %(module)s"
 
-#: ../templates/person.tmpl:67
+#: ../templates/person.tmpl:72
 msgid "Translates:"
 msgstr "يُترجِم:"
 
-#: ../templates/person.tmpl:77
+#: ../templates/person.tmpl:82
 msgid "Coordinates %(team)s"
 msgstr "يُنسِّق %(team)s"
 
 #: ../templates/list-teams.tmpl:5
-#: ../templates/list-teams.tmpl:17
+#: ../templates/list-teams.tmpl:21
 msgid "GNOME Translation Teams"
 msgstr "فِرَق ترجمة جنوم"
 
-#: ../templates/list-teams.tmpl:20
+#: ../templates/list-teams.tmpl:24
 msgid "Select a team below to see more information about it:"
 msgstr "اختر فريقا للتعرف على معلومات إضافية عنه:"
 
-#: ../templates/list-teams.tmpl:30
+#: ../templates/list-teams.tmpl:34
 msgid "Coordinated by %(coordinator)s"
 msgstr "تنسيق %(coordinator)s"
 
-#: ../templates/list-teams.tmpl:36
+#: ../templates/list-teams.tmpl:40
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "لا يوجد حاليا أي فريق ترجمة في جنوم. :("
 
 #: ../templates/release.tmpl:5
-#: ../templates/release.tmpl:17
+#: ../templates/release.tmpl:21
 msgid "%(release)s Release"
 msgstr "إصدار %(release)s"
 
-#: ../templates/release.tmpl:22
-#: ../templates/team.tmpl:106
+#: ../templates/release.tmpl:26
+#: ../templates/team.tmpl:110
 msgid "Release"
 msgstr "الإصدار"
 
-#: ../templates/release.tmpl:22
-#: ../templates/language-release.tmpl:94
-#: ../templates/module.tmpl:71
-#: ../templates/team.tmpl:106
+#: ../templates/release.tmpl:26
+#: ../templates/language-release.tmpl:98
+#: ../templates/module.tmpl:75
+#: ../templates/team.tmpl:110
 msgid "Documentation"
 msgstr "التوثيق"
 
-#: ../templates/release.tmpl:22
-#: ../templates/team.tmpl:106
+#: ../templates/release.tmpl:26
+#: ../templates/team.tmpl:110
 msgid "User Interface"
 msgstr "واجهة المستخدم"
 
@@ -1096,95 +1096,108 @@ msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% مُترجم)"
 
 #: ../templates/list-releases.tmpl:5
-#: ../templates/list-releases.tmpl:17
+#: ../templates/list-releases.tmpl:21
 msgid "GNOME Releases"
 msgstr "اصدارات جنوم"
 
-#: ../templates/list-releases.tmpl:20
+#: ../templates/list-releases.tmpl:24
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "اختر إصدارا أو مجموعة إصدار أسفله للتعرف على تفاصيل أكثر:"
 
-#: ../templates/list-releases.tmpl:30
+#: ../templates/list-releases.tmpl:34
 msgid "There are currently no releases defined in GNOME. :("
 msgstr "لا يوجد حاليا أي إصدار محدد في جنوم. :("
+
+#: ../templates/list-languages.tmpl:5
+#: ../templates/list-languages.tmpl:20
+msgid "Gnome Languages"
+msgstr "لغات جنوم"
+
+#: ../templates/list-languages.tmpl:23
+msgid "Gnome is being translated to following languages:"
+msgstr "يتم ترجمة جنوم للغات الآتية:"
+
+#: ../templates/list-languages.tmpl:37
+msgid "Gnome is currently not being translated to any language. :("
+msgstr "لا يتم تورجمة جنوم لأي لغة حاليا."
 
 #: ../templates/language-release.tmpl:6
 msgid "%(language)s Translations for %(release)s"
 msgstr "ترجمة %(language)s لـ %(release)s"
 
-#: ../templates/language-release.tmpl:22
-#: ../templates/team.tmpl:29
+#: ../templates/language-release.tmpl:26
+#: ../templates/team.tmpl:33
 msgid "Details"
 msgstr "التفاصيل"
 
-#: ../templates/language-release.tmpl:25
-#: ../templates/team.tmpl:32
+#: ../templates/language-release.tmpl:29
+#: ../templates/team.tmpl:36
 msgid "%(team)s Page:"
 msgstr "صفحة %(team)s:"
 
-#: ../templates/language-release.tmpl:29
-#: ../templates/team.tmpl:36
+#: ../templates/language-release.tmpl:33
+#: ../templates/team.tmpl:40
 msgid "Users Web Page:"
 msgstr "صفحة وِب المستخدمين:"
 
-#: ../templates/language-release.tmpl:33
-#: ../templates/team.tmpl:40
+#: ../templates/language-release.tmpl:37
+#: ../templates/team.tmpl:44
 msgid "Bugzilla:"
 msgstr "بجزيلا (Bugzilla):"
 
-#: ../templates/language-release.tmpl:35
-#: ../templates/team.tmpl:42
+#: ../templates/language-release.tmpl:39
+#: ../templates/team.tmpl:46
 msgid "Report Bug in Translation"
 msgstr "أرسل تقرير علّة في الترجمة"
 
-#: ../templates/language-release.tmpl:36
-#: ../templates/team.tmpl:43
+#: ../templates/language-release.tmpl:40
+#: ../templates/team.tmpl:47
 msgid "Show Existing Bugs"
 msgstr "اعرض العلل الموجودة"
 
-#: ../templates/language-release.tmpl:41
-#: ../templates/team.tmpl:49
+#: ../templates/language-release.tmpl:45
+#: ../templates/team.tmpl:53
 msgid "Mailing List:"
 msgstr "القائمة البريدية:"
 
-#: ../templates/language-release.tmpl:43
-#: ../templates/team.tmpl:51
+#: ../templates/language-release.tmpl:47
+#: ../templates/team.tmpl:55
 msgid "Send e-mail to the list"
 msgstr "أرسل رسالة بريد إلكتروني للقائمة البريدية"
 
-#: ../templates/language-release.tmpl:45
-#: ../templates/team.tmpl:53
+#: ../templates/language-release.tmpl:49
+#: ../templates/team.tmpl:57
 msgid "Subscribe"
 msgstr "إشترِك"
 
-#: ../templates/language-release.tmpl:54
-#: ../templates/team.tmpl:62
+#: ../templates/language-release.tmpl:58
+#: ../templates/team.tmpl:66
 msgid "Coordinator"
 msgstr "المنسّق"
 
 #: ../templates/list-modules.tmpl:5
-#: ../templates/list-modules.tmpl:17
+#: ../templates/list-modules.tmpl:22
 msgid "Damned Lies about GNOME modules"
 msgstr "إحصائيات حول وحدات جنوم"
 
-#: ../templates/list-modules.tmpl:20
+#: ../templates/list-modules.tmpl:25
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "اختر وحدة أسفله للتعرف على إحصائياتها:"
 
-#: ../templates/list-modules.tmpl:28
+#: ../templates/list-modules.tmpl:33
 msgid "There are currently no modules for which I am gathering damned lies for. Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
 msgstr "لا توجد حاليا أية وحدة يجمع  إحصائياتها. اسأل <a href=\"danilo@gnome.org\">دانيلو</a> عنها!"
 
 #: ../templates/people.tmpl:6
-#: ../templates/people.tmpl:18
+#: ../templates/people.tmpl:23
 msgid "GNOME Contributors"
 msgstr "مساهمو جنوم"
 
-#: ../templates/people.tmpl:21
+#: ../templates/people.tmpl:26
 msgid "Gnome is being developed by following people:"
 msgstr "يطور جنوم الأشخاص التاليون:"
 
-#: ../templates/people.tmpl:42
+#: ../templates/people.tmpl:47
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "لا يوجد أي مساهم، اخترع جنوم نفسه بنفسه."
 
@@ -1192,32 +1205,32 @@ msgstr "لا يوجد أي مساهم، اخترع جنوم نفسه بنفسه.
 msgid "%(module)s Statistics"
 msgstr "إحصائيات %(module)s"
 
-#: ../templates/module.tmpl:31
+#: ../templates/module.tmpl:35
 msgid "Maintainers"
 msgstr "المشرفون"
 
-#: ../templates/module.tmpl:47
+#: ../templates/module.tmpl:51
 msgid "Bug reporting"
 msgstr "تبليغ العلل"
 
-#: ../templates/module.tmpl:48
+#: ../templates/module.tmpl:52
 msgid "Report bugs to Bugzilla"
 msgstr "انشئ تقرير علة لبجزيلا (Bugzilla)"
 
-#: ../templates/module.tmpl:56
+#: ../templates/module.tmpl:60
 msgid "Browse CVS"
 msgstr "تصفح CVS"
 
-#: ../templates/module.tmpl:58
-#: ../templates/module.tmpl:60
+#: ../templates/module.tmpl:62
+#: ../templates/module.tmpl:64
 msgid "Browse SVN"
 msgstr "تصفح SVN"
 
-#: ../templates/module.tmpl:64
+#: ../templates/module.tmpl:68
 msgid "This branch is currently string-frozen."
 msgstr "جُمّدت عبارات الترجمة لهذا الفرع."
 
-#: ../templates/module.tmpl:91
+#: ../templates/module.tmpl:95
 msgid "Translation"
 msgstr "ترجمة"
 
