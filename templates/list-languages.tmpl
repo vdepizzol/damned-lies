@@ -17,7 +17,7 @@
 <h1>Gnome Languages</h1>
 
 #if len($languages)
-<p>Gnome is being translated to following languages:</p>
+<p>$_("Gnome is being translated to following languages:")</p>
 
 <ul>
 #for lang in $languages
@@ -31,7 +31,7 @@
 #end for
 </ul>
 #else
-<p>Gnome is currently not being translated to any language. :(</p>
+<p>$_("Gnome is currently not being translated to any language. :\(")</p>
 #end if
 
 
