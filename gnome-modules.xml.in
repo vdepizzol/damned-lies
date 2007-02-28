@@ -25,7 +25,7 @@
     <_description>Deskbar Applet</_description>
     <webpage>http://raphael.slinckx.net/deskbar/</webpage>
     <maintainer id="rslinckx"/>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -43,7 +43,7 @@
         <directory>help</directory>
       </document>
     </branch>
-    <branch id="HEAD">
+    <branch id="HEAD" stringfrozen="true">
       <domain id="po">
         <_description>UI translations</_description>
       </domain>
@@ -159,7 +159,7 @@
         <_description>Property Nicks</_description>
       </domain>
     </branch>
-    <branch id="HEAD">
+    <branch id="HEAD" >
       <domain id="po">
         <_description>Core</_description>
       </domain>
@@ -203,11 +203,11 @@
     </branch>
   </module>
   <module id="tomboy">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-doc-utils">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -218,18 +218,18 @@
     <branch id="HEAD"/>
   </module>
   <module id="devhelp">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="atomix">
     <branch id="HEAD"/>
   </module>
   <module id="evince">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-system-monitor">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -246,7 +246,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="libgnomeprintui">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-12"/>
   </module>
   <module id="gnome-sharing">
@@ -263,7 +263,7 @@
   </module>
   <module id="vte">
     <branch id="vte-0-12"/>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="ghex">
@@ -287,12 +287,12 @@
     </branch>
   </module>
   <module id="nautilus-cd-burner">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="metacity">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -303,7 +303,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="evolution-exchange">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -334,7 +334,7 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="evolution">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -345,7 +345,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="totem">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -357,7 +357,7 @@
   </module>
   <module id="pessulus">
     <maintainer id="vuntz"/>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="gucharmap">
@@ -376,7 +376,7 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="fast-user-switch-applet">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="mcatalog">
@@ -420,7 +420,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-control-center">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -443,7 +443,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gtksourceview">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -451,7 +451,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="orca">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-pilot-conduits">
@@ -517,11 +517,11 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gok">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="eel">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -535,7 +535,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="libgnome">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -546,11 +546,11 @@
     <branch id="HEAD"/>
   </module>
   <module id="libgnomeprint">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-12"/>
   </module>
   <module id="evolution-webcal">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -564,7 +564,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-terminal">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2.16"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
@@ -601,7 +601,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -612,7 +612,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-games">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -645,7 +645,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="libbonoboui">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="sawfish">
@@ -658,7 +658,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="evolution-data-server">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -670,14 +670,14 @@
     <branch id="HEAD"/>
   </module>
   <module id="atk">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="glade">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="libgnomeui">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="libgnomeui-2-14"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -710,12 +710,12 @@
     <branch id="HEAD"/>
   </module>
   <module id="gcalctool">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="alacarte">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gcompris">
@@ -798,7 +798,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -809,7 +809,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="file-roller">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -866,7 +866,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-keyring">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -874,7 +874,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="yelp">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="gnome-jabber">
@@ -918,7 +918,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="gnomeradio">
@@ -938,17 +938,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="nautilus">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
-  <module id="gnome-vfs">
-    <branch id="HEAD"/>
+  <module id="gnome-vfs" >
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-themes">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -956,7 +956,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="zenity">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -964,7 +964,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gedit">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -999,11 +999,11 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnopernicus">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="glade3">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="glade3-3-0-branch"/>
   </module>
   <module id="guikachu">
@@ -1040,7 +1040,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -1103,7 +1103,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -1121,7 +1121,7 @@
     <webpage>http://live.gnome.org/EyeOfGnome</webpage>
     <maintainer id="lucasr"/>
     <svnmodule>eog</svnmodule>
-    <branch id="HEAD">
+    <branch id="HEAD" stringfrozen="true">
       <domain id="po">
         <_description>UI translations</_description>
       </domain>
@@ -1134,7 +1134,7 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-screensaver">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -1142,7 +1142,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="libbonobo">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -1158,7 +1158,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
@@ -1190,11 +1190,11 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="libgnomecanvas">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="bakery">
     <branch id="HEAD"/>
@@ -1207,7 +1207,7 @@
   </module>
   <module id="gnome-session">
     <maintainer id="vuntz"/>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
