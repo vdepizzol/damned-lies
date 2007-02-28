@@ -4,6 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><title>${_("%(module)s Statistics"), module=$module.id}</title>
   <link rel="stylesheet" href="${webroot}/data/main.css"/>
+#if $rtl
+  <link rel="stylesheet" href="${webroot}/data/rtl.css"/>
+#end if
+ 
   <!--<link rel="stylesheet" href="css/unit.css"/>-->
   <!--<script src="js/xslt/misc.js" type="text/javascript"/>
   <script src="js/xslt/dom.js" type="text/javascript"/>

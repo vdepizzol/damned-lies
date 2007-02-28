@@ -4,6 +4,16 @@
 	* releases.xml.in : mark gnome-2-18 string frozen.
 	* translation-teams.xml.in : Add description for Arabic team.
 	* templates/language-release.tmpl : Marked string for translation.
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/list-releases.tmpl:
+	* templates/list-teams.tmpl:
+	* templates/module.tmpl:
+	* templates/people.tmpl:
+	* templates/person.tmpl:
+	* templates/release.tmpl:
+	* templates/show-stats.tmpl:
+	* templates/team.tmpl: Add condition to include rtl styles. 
 
 2007-02-25  Kjartan Maraas  <kmaraas@gnome.org>
 
