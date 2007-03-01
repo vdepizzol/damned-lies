@@ -253,6 +253,17 @@
     <branch id="HEAD"/>
   </module>
   <module id="anjuta">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="help">
+          <_description>Anjuta Manual</_description>
+          <directory>manuals/anjuta-manual</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="gnome-bluetooth">
@@ -1149,6 +1160,10 @@
         <document id="gst-services">
           <_description>GST Service Management Manual</_description>
           <directory>doc/services</directory>
+        </document>
+        <document id="gst-shares">
+          <_description>GST Shared Folders Manual</_description>
+          <directory>doc/shares</directory>
         </document>
         <document id="gst-time">
           <_description>GST Time Setup Manual</_description>
