@@ -374,6 +374,7 @@
   <module id="gucharmap">
     <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
+    <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="monster-masher">
     <branch id="HEAD"/>
@@ -605,6 +606,25 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-games">
+      <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="glines">
+          <_description>Five or More Manual</_description>
+          <directory>glines/help</directory>
+        </document>
+        <document id="gnect">
+          <_description>Four-in-a-row Manual</_description>
+          <directory>gnect/help</directory>
+        </document>
+        <document id="same-gnome">
+          <_description>Same GNOME Manual</_description>
+          <directory>same-gnome/help</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
