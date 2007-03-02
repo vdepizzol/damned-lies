@@ -1020,13 +1020,25 @@
   </module>
   <module id="gimp">
     <branch id="HEAD">
-      <domain id="po" potbase="gimp-tiny-fu"/>
+      <domain id="po" potbase="gimp"/>
       <domain id="po-libgimp" potbase="gimp-libgimp"/>
       <domain id="po-plug-ins" potbase="gimp-plug-ins"/>
       <domain id="po-tips" potbase="gimp-tips"/>
       <domain id="po-script-fu" potbase="gimp-script-fu"/>
       <domain id="po-python" potbase="gimp-python"/>
     </branch>
+  </module>
+  <module id="gimp-freetype">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gimp-gap">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gimp-ruby">
+    <branch id="HEAD"/>
+  </module>
+  <module id="gimp-tiny-fu">
+    <branch id="HEAD"/>
   </module>
   <module id="gnumeric">
     <branch id="HEAD">
