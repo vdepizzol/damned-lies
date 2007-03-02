@@ -767,13 +767,21 @@
   <module id="gnome-cups-manager">
     <branch id="HEAD"/>
   </module>
+  <module id="network-manager-applet">
+    <branch id="HEAD"/>
+    <branch id="network-manager-applet-0-6"/>
+  </module>
   <module id="NetworkManager">
-    <branch id="HEAD">
-      <domain id="vpn-daemons/openvpn/po" potbase="NetworkManager-openvpn"/>
-      <domain id="vpn-daemons/vpnc/po" potbase="NetworkManager-vpnc"/>
-      <domain id="po"/>
-      <domain id="vpn-daemons/pptp/po" potbase="NetworkManager-pptp"/>
-    </branch>
+    <defaults>
+      <branch>
+        <domain id="vpn-daemons/openvpn/po" potbase="NetworkManager-openvpn"/>
+        <domain id="vpn-daemons/vpnc/po" potbase="NetworkManager-vpnc"/>
+        <domain id="po"/>
+        <domain id="vpn-daemons/pptp/po" potbase="NetworkManager-pptp"/>
+      </branch>
+    </defaults>
+    <branch id="HEAD"/>
+    <branch id="NETWORKMANAGER_0_6_0_RELEASE"/>
   </module>
   <module id="goobox">
     <branch id="HEAD"/>
