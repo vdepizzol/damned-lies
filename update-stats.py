@@ -359,17 +359,17 @@ might be worth investigating.
         if os.access(missing, os.R_OK):
             f = open(missing, "r")
             errors.append( ("warn",
-                            "There are some missing files from POTFILES.in: "
-                            + "\n".join(f.readlines())
-                            + "\n") )
+                            "There are some missing files from POTFILES.in: <ul><li>"
+                            + "</li>\n<li>".join(f.readlines())
+                            + "</li>\n</ul>") )
 
         notexist = os.path.join(po_path, "notexist")
         if os.access(notexist, os.R_OK):
             f = open(notexist, "r")
             errors.append(("error",
-                           "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: "
-                           + "\n".join(f.readlines())
-                           + "\n"))
+                           "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: <ul><li>"
+                           + "</li>\n<li>".join(f.readlines())
+                           + "</li>\n</ul>"))
         return errors
 
 
