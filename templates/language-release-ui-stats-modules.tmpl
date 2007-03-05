@@ -29,7 +29,7 @@
 
      <tr>
       #if len($module.translation_domains.keys()) > 1
-       <td class="left" style="padding-left:2em;" title="module: '$module.cvsmodule/$domaindir', branch: '$module.branch'">
+       <td class="left" style="padding-left:2em; padding-right:2em;" title="module: '$module.cvsmodule/$domaindir', branch: '$module.branch'">
        	 <a href="$POFILE">${domain.description}</a>
        #for pomsgs in $POINFO
        	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />

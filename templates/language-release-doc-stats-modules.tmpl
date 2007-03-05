@@ -31,7 +31,7 @@
 
      <tr>
        #if len($module.documents.keys()) > 1
-        <td class="left" style="padding-left:2em;">
+        <td class="left" style="padding-left:2em; padding-right:2em;">
          <a href="$POFILE" title="module: '$module.cvsmodule/$docdir', branch: '$module.branch'">${document.description}</a>
          #for pomsgs in $POINFO
            <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
