@@ -1017,8 +1017,9 @@
     <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="glade3">
-    <branch id="HEAD" stringfrozen="true"/>
-    <branch id="glade3-3-0-branch"/>
+    <branch id="HEAD"/>
+    <branch id="glade3-3-0-branch" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="guikachu">
     <branch id="HEAD"/>
@@ -1066,9 +1067,10 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-build">
     <branch id="HEAD"/>
