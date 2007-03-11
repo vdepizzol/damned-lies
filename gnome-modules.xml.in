@@ -221,30 +221,16 @@
     <webpage>http://gnome.org/projects/epiphany/</webpage>
     <maintainer id="chpe"/>
     <svnmodule>epiphany</svnmodule>
-    <branch regenerate="0" id="gnome-2-12">
-      <domain id="po">
-        <_description>UI translations</_description>
-      </domain>
-      <document id="help">
-        <_description>User Guide</_description>
-        <directory>help</directory>
-      </document>
-    </branch>
-    <branch id="HEAD" stringfrozen="true">
-      <domain id="po">
-        <_description>UI translations</_description>
-      </domain>
-      <document id="help">
-        <_description>Epiphany Manual</_description>
-        <directory>help</directory>
-      </document>
-    </branch>
+    <branch id="HEAD" />
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="epiphany-extensions">
-    <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="HEAD"/>
+    <branch id="gnome-2-14" stringfrozen="true"/>
+    <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="evince">
     <branch id="HEAD" stringfrozen="true"/>
@@ -864,9 +850,10 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-vfs" >
     <branch id="HEAD" stringfrozen="true"/>
