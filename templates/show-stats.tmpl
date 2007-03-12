@@ -29,7 +29,7 @@
 <tr>
   <td class="left"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
 #if $lstat.po_error
-    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}" />
+    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}" alt="${lstat.po_error}" />
 #end if
   </td>
   #if $lstat.has_key('supportedness')
