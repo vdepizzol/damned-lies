@@ -3,7 +3,7 @@
 
 <h3>$domain.description</h3>
 <a href="${webdir}.pot">
-<img src="$webroot/data/download.png">
+<img src="$webroot/data/download.png" alt="Download POT file" />
 #if $domain.has_key('pot_size')
   ${ngettext("POT file (%(potsize)s message)", "POT file (%(potsize)s messages)", $domain.pot_size),potsize=$domain.pot_size}
 #end if
@@ -16,7 +16,7 @@
 <h4>$_("Notices")</h4>
 <table>
 #for $msg in $domain.pot_messages
-<tr><td valign="top"><img src="$webroot/data/${msg.type}.png"></td><td>$msg.content</td></tr>
+<tr><td valign="top"><img src="$webroot/data/${msg.type}.png" alt="${msg.type}" /></td><td>$msg.content</td></tr>
 #end for
 </table>
 #end if
@@ -29,7 +29,7 @@
 <tr>
   <td class="left"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
 #if $lstat.po_error
-    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}">
+    <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}" />
 #end if
   </td>
   #if $lstat.has_key('supportedness')
