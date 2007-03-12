@@ -12,7 +12,7 @@
     </category>
     <category id="platform">
       <_description>Development Platform</_description>
-      <module id="at-spi"/>
+      <module id="at-spi" branch="gnome-2-14"/>
       <module id="atk" branch="gnome-2-14"/>
       <module id="gail"/>
       <module id="gconf" branch="gnome-2-14"/>
@@ -244,6 +244,7 @@
     <_description>Gnome 2.16</_description>
     <category id="platform">
       <_description>GNOME developer platform. Essential software.</_description>
+      <module id="at-spi"/>
       <module id="atk"/>
       <module id="gail"/>
       <module id="gconf"/>
@@ -330,8 +331,9 @@
     <_description>Gnome 2.18</_description>
     <category id="platform">
       <_description>GNOME developer platform.</_description>
-      <module id="atk"/>
-      <module id="gail"/>
+      <module id="at-spi" branch="gnome-2-18"/>
+      <module id="atk" branch="gnome-2-18"/>
+      <module id="gail" branch="gnome-2-18"/>
       <module id="gconf"/>
       <module id="glib" branch="glib-2-12"/>
       <module id="gnome-vfs"/>
@@ -359,7 +361,7 @@
       <module id="evolution-webcal"/>
       <module id="fast-user-switch-applet"/>
       <module id="file-roller"/>
-      <module id="gcalctool"/>
+      <module id="gcalctool" branch="gnome-2-18"/>
       <module id="gconf-editor"/>
       <module id="gdm2"/>
       <module id="gedit"/>
@@ -369,7 +371,7 @@
       <module id="gnome-desktop"/>
       <module id="gnome-doc-utils"/>
       <module id="gnome-games"/>
-      <module id="gnome-icon-theme"/>
+      <module id="gnome-icon-theme" branch="gnome-2-18"/>
       <module id="gnome-keyring"/>
       <module id="gnome-keyring-manager"/>
       <module id="gnome-mag" branch="gnome-2-18"/>
