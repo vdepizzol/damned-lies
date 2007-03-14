@@ -221,6 +221,7 @@
     <module id="nautilus-sendto"/>
     <module id="nautilus-vcs"/>
     <module id="NetworkManager" branch="NETWORKMANAGER_0_6_0_RELEASE"/>
+    <module id="network-manager-applet" branch="network-manager-applet-0-6"/>
     <module id="ontv"/>
     <module id="ooo-build"/>
     <module id="phonemgr"/>
@@ -355,7 +356,7 @@
       <module id="evolution"/>
       <module id="evolution-data-server"/>
       <module id="evolution-exchange"/>
-      <module id="evolution-webcal"/>
+      <module id="evolution-webcal" branch="gnome-2-18"/>
       <module id="fast-user-switch-applet"/>
       <module id="file-roller"/>
       <module id="gcalctool" branch="gnome-2-18"/>
@@ -399,7 +400,6 @@
       <module id="metacity" branch="gnome-2-18"/>
       <module id="nautilus"/>
       <module id="nautilus-cd-burner"/>
-      <module id="network-manager-applet" branch="network-manager-applet-0-6"/>
       <module id="orca" branch="gnome-2-18"/>
       <module id="seahorse" branch="gnome-2-18"/>
       <module id="sound-juicer"/>
