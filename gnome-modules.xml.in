@@ -189,9 +189,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="eel">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="eggcups">
     <branch id="HEAD"/>
@@ -534,16 +535,11 @@
   <module id="gnome-commander">
     <branch id="HEAD"/>
   </module>
-  <module id="gnome-nettool">
+  <module id="gnome-control-center">
     <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
-  </module>
-  <module id="gnome-control-center">
-    <branch id="HEAD" stringfrozen="true"/>
-    <branch id="gnome-2-14" stringfrozen="true"/>
-    <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-cups-manager">
     <branch id="HEAD"/>
@@ -664,6 +660,12 @@
   </module>
   <module id="gnome-netstatus">
     <branch id="HEAD"/>
+  </module>
+  <module id="gnome-nettool">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14" stringfrozen="true"/>
+    <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-network">
     <branch id="HEAD"/>
@@ -859,9 +861,10 @@
     <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-vfs" >
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-volume-manager">
     <branch id="HEAD"/>
@@ -936,7 +939,7 @@
     </branch>
   </module>
   <module id="gtk-engines">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="gtkhtml">
     <branch id="HEAD"/>
@@ -1078,9 +1081,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="nautilus">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="nautilus-cd-burner">
     <branch id="HEAD" stringfrozen="true"/>
@@ -1233,9 +1237,10 @@
     <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="totem">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="tracker">
     <branch id="HEAD"/>

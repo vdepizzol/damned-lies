@@ -190,7 +190,6 @@
     <module id="gparted"/>
     <module id="gpdf"/>
     <module id="gperfmeter"/>
-    <module id="gtk-engines"/>
     <module id="gtranslator"/>
     <module id="guikachu"/>
     <module id="gwget"/>
@@ -336,7 +335,7 @@
       <module id="gail" branch="gnome-2-18"/>
       <module id="gconf"/>
       <module id="glib" branch="glib-2-12"/>
-      <module id="gnome-vfs"/>
+      <module id="gnome-vfs" branch="gnome-2-18"/>
       <module id="gtk+" branch="gtk-2-10"/>
       <module id="libbonobo"/>
       <module id="libbonoboui"/>
@@ -350,7 +349,7 @@
       <module id="bug-buddy"/>
       <module id="dasher" branch="gnome-2-18"/>
       <module id="deskbar-applet"/>
-      <module id="eel"/>
+      <module id="eel" branch="gnome-2-18"/>
       <module id="ekiga" branch="gnome-2-14"/>
       <module id="eog" branch="gnome-2-18"/>
       <module id="epiphany" branch="gnome-2-18"/>
@@ -367,7 +366,7 @@
       <module id="gedit"/>
       <module id="gnome-applets"/>
       <module id="gnome-backgrounds"/>
-      <module id="gnome-control-center"/>
+      <module id="gnome-control-center" branch="gnome-2-18"/>
       <module id="gnome-desktop"/>
       <module id="gnome-doc-utils"/>
       <module id="gnome-games" branch="gnome-2-18"/>
@@ -392,6 +391,7 @@
       <module id="gnome-volume-manager"/>
       <module id="gnopernicus"/>
       <module id="gok"/>
+    	<module id="gtk-engines"/>
       <module id="gtkhtml" branch="gnome-2-18"/>
       <module id="gtksourceview"/>
       <module id="gucharmap"/>
@@ -400,13 +400,13 @@
       <module id="libgtop"/>
       <module id="libwnck"/>
       <module id="metacity" branch="gnome-2-18"/>
-      <module id="nautilus"/>
+      <module id="nautilus" branch="gnome-2-18"/>
       <module id="nautilus-cd-burner"/>
       <module id="orca" branch="gnome-2-18"/>
       <module id="seahorse" branch="gnome-2-18"/>
       <module id="sound-juicer"/>
       <module id="tomboy" branch="gnome-2-18"/>
-      <module id="totem"/>
+      <module id="totem" branch="gnome-2-18"/>
       <module id="vino"/>
       <module id="vte"/>
       <module id="yelp"/>
