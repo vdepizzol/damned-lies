@@ -569,6 +569,18 @@
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
+  <module id="gnome-devel-docs">
+    <_description>Gnome 2 Development Documentation</_description>
+    <defaults>
+      <branch>
+        <document id="platform-overview">
+          <_description>Platform Overview</_description>
+          <directory>platform-overview</directory>
+        </document>
+      </branch>
+    </defaults>
+    <branch id="HEAD"/>
+  </module>
   <module id="gnome-doc-utils">
     <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
@@ -1009,6 +1021,9 @@
   </module>
   <module id="libgnomedb">
     <branch id="HEAD"/>
+  </module>
+  <module id="libgnomekbd">
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="libgnomeprint">
     <branch id="HEAD" stringfrozen="true"/>
