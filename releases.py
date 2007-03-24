@@ -353,9 +353,13 @@ class Releases:
 
 
 def compare_languages(a, b):
-    res = cmp(b['ui_supportedness'], a['ui_supportedness'])
+    res = cmp(b['ui_translated'], a['ui_translated'])
     if not res:
-        return cmp(a['name'], b['name'])
+        res = cmp(b['doc_translated'], a['doc_translated'])
+        if not res:
+            return cmp(a['name'], b['name'])
+        else:
+            return res
     else:
         return res
 
