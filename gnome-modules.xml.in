@@ -22,6 +22,9 @@
     </branch>
   </defaults>
   <!-- Please keep modules in alphabetic order -->
+  <module id="accerciser">
+    <branch id="HEAD"/>
+  </module>
   <module id="alacarte">
     <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
@@ -925,6 +928,7 @@
     </defaults>
     <branch id="HEAD"/>
     <branch id="gthumb-2-8"/>
+    <branch id="gthumb-2-10"/>
   </module>
   <module id="gtk+">
     <_description>Gtk+</_description>
