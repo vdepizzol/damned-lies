@@ -352,9 +352,9 @@
       <module id="gtk+" branch="gtk-2-10"/>
       <module id="libbonobo"/>
       <module id="libbonoboui"/>
-      <module id="libgnome"/>
+      <module id="libgnome" branch="gnome-2-18"/>
       <module id="libgnomecanvas"/>
-      <module id="libgnomeui"/>
+      <module id="libgnomeui" branch="gnome-2-18"/>
     </category>
     <category id="desktop">
       <_description>GNOME desktop.</_description>
@@ -384,7 +384,7 @@
       <module id="gnome-doc-utils"/>
       <module id="gnome-games" branch="gnome-2-18"/>
       <module id="gnome-icon-theme" branch="gnome-2-18"/>
-      <module id="gnome-keyring"/>
+      <module id="gnome-keyring" branch="gnome-2-18"/>
       <module id="gnome-keyring-manager"/>
       <module id="gnome-mag" branch="gnome-2-18"/>
       <module id="gnome-media"/>
@@ -409,7 +409,7 @@
       <module id="gtksourceview"/>
       <module id="gucharmap"/>
       <module id="libgnomekbd"/>
-      <module id="libgnomeprint"/>
+      <module id="libgnomeprint" branch="gnome-2-18"/>
       <module id="libgnomeprintui"/>
       <module id="libgtop"/>
       <module id="libwnck"/>

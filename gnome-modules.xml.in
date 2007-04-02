@@ -653,9 +653,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-keyring">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-keyring-manager">
     <defaults>
@@ -669,7 +670,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-mag">
@@ -1042,9 +1043,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="libgnome">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="libgnomecanvas">
     <branch id="HEAD" stringfrozen="true"/>
@@ -1059,17 +1061,19 @@
     <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="libgnomeprint">
-    <branch id="HEAD" stringfrozen="true"/>
-    <branch id="gnome-2-12"/>
+    <branch id="HEAD"/>
+    <branch id="gnome-2-12" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="libgnomeprintui">
     <branch id="HEAD" stringfrozen="true"/>
-    <branch id="gnome-2-12"/>
+    <branch id="gnome-2-12" stringfrozen="true"/>
   </module>
   <module id="libgnomeui">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="libgnomeui-2-14"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="libgircclient">
     <branch id="HEAD"/>
