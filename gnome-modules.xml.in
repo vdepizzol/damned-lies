@@ -583,7 +583,7 @@
         </document>
         <document id="desktop-lgpl">
           <_description>LGPL License</_description>
-          <directory>desktop-docs/gpl</directory>
+          <directory>desktop-docs/lgpl</directory>
         </document>
         <document id="desktop-fdl">
           <_description>FDL License</_description>
@@ -829,13 +829,13 @@
   <module id="gnome-terminal">
     <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
-    <branch id="gnome-2.16"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-themes">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-themes-extras">
     <branch id="HEAD"/>
@@ -1305,6 +1305,7 @@
   <module id="vino">
     <branch id="HEAD"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="vte">
     <branch id="vte-0-12"/>
