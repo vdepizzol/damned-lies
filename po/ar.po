@@ -1,4 +1,4 @@
-# translation of damned-lies.ar.po to Arabic
+# translation of damned-lies.HEAD.ar.po to Arabic
 # translation of damned-lies.ar.po to
 # Arabic translations for PACKAGE package.
 # Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-06 10:36+0100\n"
-"PO-Revision-Date: 2007-04-06 10:43+0100\n"
+"POT-Creation-Date: 2007-04-14 16:17+0100\n"
+"PO-Revision-Date: 2007-04-14 16:24+0100\n"
 "Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Arabic\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
 
 #: ../gnome-modules.xml.in.h:2
 #, no-c-format
@@ -89,7 +89,7 @@ msgstr "بريمج شريط المكتب"
 
 #: ../gnome-modules.xml.in.h:18
 msgid "Dictionary Manual"
-msgstr "كتيّب المعجم"
+msgstr "كتيّب القاموس"
 
 #: ../gnome-modules.xml.in.h:19
 msgid "Disk Mounter Manual"
@@ -125,11 +125,11 @@ msgstr "كتيّب بريمج السمكة"
 
 #: ../gnome-modules.xml.in.h:27
 msgid "Five or More Manual"
-msgstr "كتيّب خمسة او اكثر"
+msgstr "كتيّب خمسة أو أكثر"
 
 #: ../gnome-modules.xml.in.h:28
 msgid "Four-in-a-row Manual"
-msgstr "كتيّب اربعة في صف"
+msgstr "كتيّب أربعة في صف"
 
 #: ../gnome-modules.xml.in.h:29
 msgid "GConf Editor Manual"
@@ -205,7 +205,7 @@ msgstr "ماسح جنوم"
 
 #: ../gnome-modules.xml.in.h:47
 msgid "Gtk+"
-msgstr "Gtk+"
+msgstr "جتك+"
 
 #: ../gnome-modules.xml.in.h:48
 msgid "Keyboard Accessibility Monitor Manual"
@@ -233,7 +233,7 @@ msgstr "كتيّب سلة مهملات اللوحة"
 
 #: ../gnome-modules.xml.in.h:54
 msgid "Platform Overview"
-msgstr "عرض عام"
+msgstr "معاينة المنصّة"
 
 #: ../gnome-modules.xml.in.h:55
 msgid "Property Nicks"
@@ -249,7 +249,7 @@ msgstr "Sabayon"
 
 #: ../gnome-modules.xml.in.h:58
 msgid "Same GNOME Manual"
-msgstr "كتيّب نفس جنوم"
+msgstr "كتيّب سام جنوم"
 
 #: ../gnome-modules.xml.in.h:59
 msgid "Search Tool Manual"
@@ -302,7 +302,7 @@ msgstr "كتيّب بريمج قائمة النوافذ"
 
 #: ../gnome-modules.xml.in.h:71
 msgid "Workspace Switcher Applet Manual"
-msgstr "كتيّب بريمج محول فضاءات العمل"
+msgstr "كتيّب بريمج محول مساحات العمل"
 
 #: ../gnome-modules.xml.in.h:72
 msgid "XKeyboard-Config"
@@ -318,7 +318,7 @@ msgstr "تطبيقات المكتب"
 
 #: ../releases.xml.in.h:3
 msgid "Development Platform"
-msgstr "منصّة تطوير"
+msgstr "منصّة التطوير"
 
 #: ../releases.xml.in.h:4
 msgid "Development Tools."
@@ -353,22 +353,30 @@ msgid "GNOME developer platform. Essential software."
 msgstr "برامج أساسية لمنصة مطوّري جنوم."
 
 #: ../releases.xml.in.h:12
-msgid "Gnome 2.14"
-msgstr "جنوم 2.14"
+msgid "Gnome 2.14 (old stable)"
+msgstr "جنوم 2.14 (قديم)"
 
 #: ../releases.xml.in.h:13
-msgid "Gnome 2.16"
-msgstr "جنوم 2.16"
+msgid "Gnome 2.16 (old stable)"
+msgstr "جنوم 2.16 (قديم)"
 
 #: ../releases.xml.in.h:14
-msgid "Gnome 2.18"
-msgstr "جنوم 2.18"
+msgid "Gnome 2.18 (stable)"
+msgstr "جنوم 2.18 (متزن)"
 
 #: ../releases.xml.in.h:15
+msgid "Gnome 2.20 (development)"
+msgstr "جنوم 2.20 (تحت التطوير)"
+
+#: ../releases.xml.in.h:16
 msgid "Gnome-Office Productivity Applications"
 msgstr "تطبيقات مكتبية لجنوم"
 
-#: ../releases.xml.in.h:16
+#: ../releases.xml.in.h:17
+msgid "New module proposals."
+msgstr "اقتراحات لبرامج جديدة"
+
+#: ../releases.xml.in.h:18
 msgid "System Administration"
 msgstr "إدارة النظام"
 
@@ -398,7 +406,7 @@ msgstr "العربيّة"
 
 #: ../translation-teams.xml.in.h:5
 msgid "Arabic Translation Team"
-msgstr "فريق الترجمة العربي"
+msgstr "فريق الترجمة العربية"
 
 #: ../translation-teams.xml.in.h:6
 msgid "Armenian"
@@ -948,7 +956,7 @@ msgstr "الفرق"
 
 #: ../templates/index.tmpl:29
 msgid "List of all Gnome Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
-msgstr "قائمة كل فرق ترجمة جنوم، مع كل المعلومات مثل المشرف، صفحة الإنترنت و الإتصال."
+msgstr "قائمة كل فرق ترجمة جنوم، مع معلومات كاملة مثل المنسِّق، صفحات الوِب ومعلومات القوائم البريدية."
 
 #: ../templates/index.tmpl:30
 msgid "If there is no team for your language, you can easily <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
@@ -960,11 +968,11 @@ msgstr "اللغات"
 
 #: ../templates/index.tmpl:36
 msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
-msgstr "قائمة كل اللغات التي لها <a href=\"teams/\">فرق ترجمة</a>."
+msgstr "قائمة بكل اللغات التي لها <a href=\"teams/\">فرق ترجمة</a>."
 
 #: ../templates/index.tmpl:37
 msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages Gnome is being translated to."
-msgstr "بعض الفرة تشرف على أكثر من لغة واحدة، هنا يمكنك معاينة كل اللغات التي يتم ترجمة جنوم اليها."
+msgstr "بعض الفرق تدير على أكثر من لغة واحدة (عادة مجرد تنويعات بسيطة)، يمكنك هنا معاينة كل اللغات التي تُترجم جنوم اليها."
 
 #: ../templates/index.tmpl:41
 msgid "Release Sets"
@@ -972,19 +980,19 @@ msgstr "الإصدارات"
 
 #: ../templates/index.tmpl:42
 msgid "List of all Gnome release sets and releases we gather stats for."
-msgstr "قائمة اصدارات جنوم باحصائياتها."
+msgstr "قائمة بإصدارات جنوم التي نُجمِّع إحصائياتها."
 
 #: ../templates/index.tmpl:44
 msgid "Examples of release sets are \"Gnome Office\", \"Fifth Toe\" or \"Gnome 2.14\"."
-msgstr "أمثلة لإصدارات: \"جنوم 2.18\" أو \"جنوم 2.14\"."
+msgstr "أمثلة للإصدارات: \"مكتب جنوم\"، أو \"برامج جنوم إضافية\" أو \"جنوم 2.14\"."
 
 #: ../templates/index.tmpl:45
 msgid "Official Gnome release sets are further divided into categories such as \"Desktop Applications\" and \"Developer Platform\"."
-msgstr "الإصدارات الرسمية لجنوم مقسمة أيضا مثل \"تطبيقات سطح المكتب\" و \"منصّة مطوّري جنوم\"."
+msgstr "الإصدارات الرسمية لجنوم مقسمة أيضا مثل \"تطبيقات سطح المكتب\" و \"منصّة المطوّرين\"."
 
 #: ../templates/index.tmpl:47
 msgid "Look here if you want to compare language support in any of these release sets."
-msgstr "انظر هنا إذا اردت مقارنة دعم اللغات في أي من الإصدارات."
+msgstr "انظر هنا إذا أردت مقارنة دعم اللغات في أي من الإصدارات."
 
 #: ../templates/index.tmpl:50
 msgid "Modules"
@@ -992,7 +1000,7 @@ msgstr "الوحدات"
 
 #: ../templates/index.tmpl:51
 msgid "List of all modules with statistics in here."
-msgstr "قائمة الوحدات مع احصائياتها."
+msgstr "قائمة الوحدات مع إحصائياتها."
 
 #: ../templates/index.tmpl:53
 msgid "Modules are separate libraries or applications, with one or more branches of development included."
@@ -1000,7 +1008,7 @@ msgstr "الوحدات هي تطبيقات أو مكاتب منفصلة، مع �
 
 #: ../templates/index.tmpl:54
 msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "عادة تؤخذ من سي في آس، بالإضافة إلى معلومات ذات صلة (تفاصيل بغزيلا، صفحة الإنترنت، المشرف، ...)"
+msgstr "عادة تؤخذ من CVS، بالإضافة إلى معلومات ذات صلة (تفاصيل بجزيلا، صفحة الوِب، المشرف، ...)"
 
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
@@ -1053,7 +1061,7 @@ msgstr "حساب بجزيلا (Bugzilla):"
 #: ../templates/language-release.tmpl:88
 #: ../templates/team.tmpl:96
 msgid "SVN account:"
-msgstr "حساب الـ SVN:"
+msgstr "حساب SVN:"
 
 #: ../templates/person.tmpl:64
 msgid "Maintains:"
@@ -1118,11 +1126,11 @@ msgstr "%(cat)s (%(percent)s%% مُترجم)"
 #: ../templates/list-releases.tmpl:5
 #: ../templates/list-releases.tmpl:21
 msgid "GNOME Releases"
-msgstr "اصدارات جنوم"
+msgstr "إصدارات جنوم"
 
 #: ../templates/list-releases.tmpl:24
 msgid "Select a release or a release set below to see more details about it:"
-msgstr "اختر إصدارا أو مجموعة إصدار أسفله للتعرف على تفاصيل أكثر:"
+msgstr "اختر إصدارا أسفله للتعرف على تفاصيل أكثر حوله:"
 
 #: ../templates/list-releases.tmpl:34
 msgid "There are currently no releases defined in GNOME. :("
@@ -1135,15 +1143,15 @@ msgstr "لغات جنوم"
 
 #: ../templates/list-languages.tmpl:23
 msgid "Gnome is being translated to following languages:"
-msgstr "يتم ترجمة جنوم للغات الآتية:"
+msgstr "تُترجم جنوم للغات الآتية:"
 
 #: ../templates/list-languages.tmpl:37
 msgid "Gnome is currently not being translated to any language. :("
-msgstr "لا يتم تورجمة جنوم لأي لغة حاليا."
+msgstr "لا تٌترجم جنوم لأي لغة حاليا. :("
 
 #: ../templates/language-release.tmpl:6
 msgid "%(language)s Translations for %(release)s"
-msgstr "ترجمة %(language)s لـ %(release)s"
+msgstr "الترجمة %(language)s لـ %(release)s"
 
 #: ../templates/language-release.tmpl:26
 #: ../templates/team.tmpl:33
@@ -1168,7 +1176,7 @@ msgstr "بجزيلا (Bugzilla):"
 #: ../templates/language-release.tmpl:39
 #: ../templates/team.tmpl:46
 msgid "Report Bug in Translation"
-msgstr "أرسل تقرير علّة في الترجمة"
+msgstr "أبلِغ عن علّة في الترجمة"
 
 #: ../templates/language-release.tmpl:40
 #: ../templates/team.tmpl:47
@@ -1188,7 +1196,7 @@ msgstr "أرسل رسالة بريد إلكتروني للقائمة البري�
 #: ../templates/language-release.tmpl:49
 #: ../templates/team.tmpl:57
 msgid "Subscribe"
-msgstr "إشترِك"
+msgstr "اشترِك"
 
 #: ../templates/language-release.tmpl:58
 #: ../templates/team.tmpl:66
@@ -1231,11 +1239,11 @@ msgstr "المشرفون"
 
 #: ../templates/module.tmpl:51
 msgid "Bug reporting"
-msgstr "تبليغ العلل"
+msgstr "الإبلاغ عن العلل"
 
 #: ../templates/module.tmpl:52
 msgid "Report bugs to Bugzilla"
-msgstr "انشئ تقرير علة لبجزيلا (Bugzilla)"
+msgstr "أبلغ عن علة في بجزيلا (Bugzilla)"
 
 #: ../templates/module.tmpl:60
 msgid "Browse CVS"
@@ -1253,13 +1261,4 @@ msgstr "جُمّدت عبارات الترجمة لهذا الفرع."
 #: ../templates/module.tmpl:95
 msgid "Translation"
 msgstr "ترجمة"
-
-#~ msgid "Epiphany Manual"
-#~ msgstr "كتيّب إيبِفَني"
-#~ msgid "GST Boot Setup Manual"
-#~ msgstr "كتيّب إعداد الإقلاع GST"
-#~ msgid "New module proposals."
-#~ msgstr "اقتراحات لوحدات جديدة."
-#~ msgid "Norwegian"
-#~ msgstr "النرويجية"
 
