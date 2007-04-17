@@ -180,7 +180,8 @@
     <branch id="HEAD"/>
   </module>
   <module id="devhelp">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="dia">
     <branch id="HEAD"/>
@@ -249,9 +250,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="evince">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="evolution">
     <branch id="HEAD"/>
@@ -909,7 +911,7 @@
     <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <module id="gnome-volume-manager">
-    <branch id="HEAD"/>
+    <branch id="HEAD" stringfrozen="true"/>
   </module>
   <module id="gnopernicus">
     <branch id="HEAD" stringfrozen="true"/>
@@ -953,7 +955,6 @@
       </branch>
     </defaults>
     <branch id="HEAD"/>
-    <branch id="gthumb-2-8"/>
     <branch id="gthumb-2-10"/>
   </module>
   <module id="gtk+">
