@@ -394,7 +394,7 @@
       <module id="gnome-nettool" branch="gnome-2-18"/>
       <module id="gnome-panel"/>
       <module id="gnome-power-manager" branch="gnome-2-18"/>
-      <module id="gnome-screensaver"/>
+      <module id="gnome-screensaver" branch="gnome-2-18"/>
       <module id="gnome-session"/>
       <module id="gnome-system-monitor" branch="gnome-2-18"/>
       <module id="gnome-system-tools"/>
@@ -402,7 +402,7 @@
       <module id="gnome-themes" branch="gnome-2-18"/>
       <module id="gnome-user-docs"/>
       <module id="gnome-utils" branch="gnome-2-18"/>
-      <module id="gnome-volume-manager"/>
+      <module id="gnome-volume-manager" branch="gnome-2-18"/>
       <module id="gnopernicus"/>
       <module id="gok"/>
     	<module id="gtk-engines"/>
@@ -416,7 +416,7 @@
       <module id="libwnck"/>
       <module id="metacity" branch="gnome-2-18"/>
       <module id="nautilus" branch="gnome-2-18"/>
-      <module id="nautilus-cd-burner"/>
+      <module id="nautilus-cd-burner" branch="gnome-2-18"/>
       <module id="orca" branch="gnome-2-18"/>
       <module id="seahorse" branch="gnome-2-18"/>
       <module id="sound-juicer" branch="gnome-2-16"/>
@@ -537,6 +537,7 @@
     <category id="proposed">
       <_description>New module proposals.</_description>
       <module id="accerciser"/>
+      <module id="gnome-devel-docs"/>
       <module id="lsr"/>
     </category>
   </release>
