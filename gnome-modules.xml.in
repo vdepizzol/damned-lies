@@ -623,6 +623,18 @@
         <domain id="po">
           <_description>UI translations</_description>
         </domain>
+        <document id="aisleriot">
+          <_description>AisleRiot Manual</_description>
+          <directory>aisleriot/help</directory>
+        </document>
+        <document id="blackjack">
+          <_description>Blackjack Manual</_description>
+          <directory>blackjack/help</directory>
+        </document>
+        <document id="glchess">
+          <_description>glChess Manual</_description>
+          <directory>glchess/help</directory>
+        </document>
         <document id="glines">
           <_description>Five or More Manual</_description>
           <directory>glines/help</directory>
@@ -630,6 +642,46 @@
         <document id="gnect">
           <_description>Four-in-a-row Manual</_description>
           <directory>gnect/help</directory>
+        </document>
+        <document id="gnibbles">
+          <_description>Nibbles Manual</_description>
+          <directory>gnibbles/help</directory>
+        </document>
+        <document id="gnobots2">
+          <_description>GNOME Robots Manual</_description>
+          <directory>gnobots2/help</directory>
+        </document>
+        <document id="gnome-sudoku">
+          <_description>GNOME Sudoku Manual</_description>
+          <directory>gnome-sudoku/help</directory>
+        </document>
+        <document id="gnometris">
+          <_description>Gnometris Manual</_description>
+          <directory>gnometris/help</directory>
+        </document>
+        <document id="gnomine">
+          <_description>Mines Manual</_description>
+          <directory>gnomine/help</directory>
+        </document>
+        <document id="gnotravex">
+          <_description>GNOME Tetravex Manual</_description>
+          <directory>gnotravex/help</directory>
+        </document>
+        <document id="gnotski">
+          <_description>GNOME Klotski Manual</_description>
+          <directory>gnotski/help</directory>
+        </document>
+        <document id="gtali">
+          <_description>GNOME Tali Manual</_description>
+          <directory>gtali/help</directory>
+        </document>
+        <document id="iagno">
+          <_description>Iagno Manual</_description>
+          <directory>iagno/help</directory>
+        </document>
+        <document id="mahjongg">
+          <_description>GNOME Mahjongg Manual</_description>
+          <directory>mahjongg/help</directory>
         </document>
         <document id="same-gnome">
           <_description>Same GNOME Manual</_description>
@@ -1083,6 +1135,7 @@
   </module>
   <module id="libgtop">
     <branch id="HEAD"/>
+    <branch id="gnome-2-14" stringfrozen="true"/>
   </module>
   <module id="libmimedir">
     <branch id="HEAD"/>
