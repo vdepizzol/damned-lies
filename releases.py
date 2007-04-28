@@ -314,6 +314,7 @@ class Releases:
             entry = {
                 'id' : releaseid,
                 'description' : release['description'],
+                'status' : release['status'],
                 'modules' : retmodules,
                 'categories' : categories,
                 'ui_size' : ui_size,
@@ -505,6 +506,18 @@ if __name__=="__main__":
     else:
         t = Releases(deep=0)
         releases = t.data
+        # Create two sorted lists of releases
+        officialReleases = []
+        otherReleases = []
+        for release in releases:
+        	if release['status'] == "official":
+        	    officialReleases.append(release)
+        	else:
+        	    otherReleases.append(release)
+        officialReleases.sort()
+        officialReleases.reverse()
+        otherReleases.sort()
+        
         #import pprint
         #pprint.pprint(releases)
 
@@ -514,6 +527,8 @@ if __name__=="__main__":
         html.rtl = (defaults.language in defaults.rtl_languages)
         html.webroot = defaults.webroot
         html.releases = releases
+        html.officialReleases = officialReleases
+        html.otherReleases = otherReleases
         print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
 

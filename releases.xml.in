@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <releases>
-  <release id="gnome-2-14" stringfrozen="true" regenerate="false">
+  <release id="gnome-2-14" status="official" stringfrozen="true" regenerate="false">
     <_description>Gnome 2.14 (old stable)</_description>
     <category id="external">
       <_description>External Dependencies</_description>
@@ -107,7 +107,7 @@
       <module id="epiphany" branch="gnome-2-12"/>
     </category>
   </release>-->
-  <release id="gnome-office">
+  <release id="gnome-office" status="unofficial">
     <_description>Gnome-Office Productivity Applications</_description>
     <module id="abiword"/>
     <module id="dia"/>
@@ -117,7 +117,7 @@
     <module id="mergeant"/>
     <module id="planner"/>
   </release>
-  <release id="gnome-extras">
+  <release id="gnome-extras" status="unofficial">
     <_description>Extra Gnome Applications</_description>
     <module id="accerciser"/>
     <module id="alleyoop"/>
@@ -255,7 +255,7 @@
     <module id="webeyes"/>
     <module id="xchat-gnome"/>
   </release>
-  <release id="gnome-2-16" stringfrozen="true">
+  <release id="gnome-2-16" status="official" stringfrozen="true">
     <_description>Gnome 2.16 (old stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform. Essential software.</_description>
@@ -341,7 +341,7 @@
       <module id="zenity" branch="gnome-2-16"/>
     </category>
   </release>
-  <release id="gnome-2-18" stringfrozen="true">
+  <release id="gnome-2-18" status="official" stringfrozen="true">
     <_description>Gnome 2.18 (stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform.</_description>
@@ -438,7 +438,7 @@
       <module id="glade3" branch="gnome-2-18"/>
     </category>
   </release>
-  <release id="gnome-2-20">
+  <release id="gnome-2-20" status="official">
     <_description>Gnome 2.20 (development)</_description>
     <category id="platform">
       <_description>GNOME developer platform.</_description>
@@ -541,7 +541,7 @@
       <module id="lsr"/>
     </category>
   </release>
-  <release id="fifth-toe">
+  <release id="fifth-toe" status="unofficial">
     <_description>GNOME Fifth Toe. Extra software.</_description>
     <module id="balsa"/>
     <module id="camorama"/>

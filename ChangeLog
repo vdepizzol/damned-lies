@@ -1,3 +1,10 @@
+2007-04-28  Claude Paroz  <claude@2xlibre.net>
+
+	* releases.py: Create two separate lists of releases.
+	* releases.xml.in: Added status property to release tag.
+	* templates/list-releases.tmpl: Display separately official and
+	unofficial relseases.
+
 2007-04-27  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in: Added gnome-games manuals ported to g-d-u.
