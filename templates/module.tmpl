@@ -54,8 +54,23 @@
 </td></tr></table>
 
 #if len($module.branch)
-#for branch, data in $module.branch.items()
-<h2>$branch
+#set branches=$module.branch.keys()
+$branches.sort()
+<!-- Links to branches of module -->
+<p><b>$_("Branches:")</b>
+#set alreadyOne=0
+#for branch in $branches
+#if $alreadyOne
+ - 
+#end if
+<a href="#$branch">$branch</a>
+#set alreadyOne=1
+#end for
+</p>
+<!-- Main loop through branches -->
+#for branch in $branches
+#set data=$module.branch[$branch]
+<h2><a name="$branch"></a>$branch
 #if $data.has_key('cvsweb')
 (<a href="$data['cvsweb']">$_("Browse CVS")</a>)
 #elif $data.has_key('svnweb') and $branch!='HEAD'
