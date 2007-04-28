@@ -55,7 +55,7 @@
 
 #if len($module.branch)
 #set branches=$module.branch.keys()
-$branches.sort()
+#silent $branches.sort()
 <!-- Links to branches of module -->
 <p><b>$_("Branches:")</b>
 #set alreadyOne=0
