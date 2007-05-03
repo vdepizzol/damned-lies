@@ -89,7 +89,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                 new['percentages'] = { 'translated' : 100*po.Translated/here['pot_size'],
                                        'untranslated' : 100*po.Untranslated/here['pot_size'], }
                 new['percentages']['fuzzy'] = 100 - new['percentages']['translated'] - new['percentages']['untranslated']
-                new['supportedness'] = "%.0f" % (100.0*po.Translated/here['pot_size']);
+                new['supportedness'] = 100*po.Translated/here['pot_size'];
 
             new['po_error'] = ''
             new['po_messages'] = []
@@ -138,7 +138,7 @@ def compare_by_fields(a, b, fields, dict = None):
 
 
 def compare_stats(a, b):
-    return compare_by_fields(a, b, ['supportedness', 'language_name'])
+    return compare_by_fields(a, b, ['translated', 'language_name'])
 
 def compare_module_names(a, b):
     global allmodules
