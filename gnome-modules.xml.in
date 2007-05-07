@@ -1283,7 +1283,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="pybliographer">
-    <branch id="v_1_0_x"/>
+    <branch id="HEAD"/>
   </module>
   <module id="quick-lounge-applet">
     <branch id="HEAD"/>
@@ -1380,6 +1380,21 @@
     <branch id="HEAD"/>
   </module>
   <module id="xchat-gnome">
+    <branch id="HEAD"/>
+  </module>
+  <module id="xdg-user-dirs">
+    <webpage>http://freedesktop.org/wiki/Software_2fxdg_2duser_2ddirs</webpage>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</cvsroot>
+    <cvsmodule>xdg-user-dirs</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/?only_with_id=%(branch/id)</cvsweb>
+    <branch id="HEAD">
+      <domain id="po">
+        <_description>User Directories</_description>
+      </domain>
+      <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/</cvsweb>
+    </branch>
+  </module>
+  <module id="xdg-user-dirs-gtk">
     <branch id="HEAD"/>
   </module>
   <module id="xkeyboard-config">
