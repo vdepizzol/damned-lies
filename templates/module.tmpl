@@ -27,6 +27,9 @@
 <div class="mainpage">
 
 <h1>$module.description</h1>
+#if not $module.has_key('svnroot') or $module.svnroot!="http://svn.gnome.org/svn"
+<p><i><img src="${webroot}/data/warn.png" alt="Warning logo" /> $_("This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations.")</i></p>
+#end if
 #if $module.has_key('webpage') and $module.webpage
 <p><a href="$module.webpage">$module.webpage</a></p>
 #end if
