@@ -189,6 +189,7 @@ class Releases:
                                                                          'po_messages' : msgs,
                                                                          'potbase' : documents[document]['potbase'],
                                                                          'description' : documents[document]['description'],
+                                                                         'directory' : documents[document]['directory'],
                                                                          }
                         if mypot:
                             myun = mypot - mytr - myfz # XXX
