@@ -39,7 +39,7 @@
           #set docpath=$document.directory
         #else
           #set docpath='help'
-        #endif
+        #end if
 	<svnpath>${module.cvsmodule}/$MODROOT/$docpath/$language</svnpath>       
          #for pomsgs in $POINFO
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
