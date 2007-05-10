@@ -19,6 +19,9 @@
 <div class="mainpage">
 
 <h1>${_("%(release)s Release"), release=$release.description}</h1>
+#if $release.type=="external"
+<p><i>$_("The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations.")</i></p>
+#end if
 
 
 #if len($status)

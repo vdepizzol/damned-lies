@@ -21,7 +21,7 @@
       </document>
     </branch>
   </defaults>
-  <!-- Please keep modules in alphabetic order -->
+  <!-- Please keep modules in alphabetic order, except for non-GNOME modules (end of list) -->
   <module id="accerciser">
     <branch id="HEAD"/>
   </module>
@@ -1382,6 +1382,35 @@
   <module id="xchat-gnome">
     <branch id="HEAD"/>
   </module>
+  <module id="xdg-user-dirs-gtk">
+    <branch id="HEAD"/>
+  </module>
+  <module id="yelp">
+    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="gnome-2-14" stringfrozen="true"/>
+  </module>
+  <module id="zenity">
+    <branch id="HEAD"/>
+    <branch id="gnome-2-14" stringfrozen="true"/>
+    <branch id="gnome-2-16" stringfrozen="true"/>
+    <branch id="gnome-2-18" stringfrozen="true"/>
+  </module>
+  <!-- Non-GNOME modules -->
+  <module id="shared-mime-info">
+    <_description>Shared MIME Info</_description>
+    <webpage>http://www.freedesktop.org/wiki/Software_2fshared_2dmime_2dinfo</webpage>
+    <maintainer id="hadess"/>
+    <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
+    <bugs-product>shared-mime-info</bugs-product>
+    <bugs-component>general</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/mime</cvsroot>
+    <cvsmodule>shared-mime-info</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/mime/shared-mime-info/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/mime/shared-mime-info/</cvsweb>
+    </branch>
+  </module>
   <module id="xdg-user-dirs">
     <webpage>http://freedesktop.org/wiki/Software_2fxdg_2duser_2ddirs</webpage>
     <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</cvsroot>
@@ -1394,9 +1423,6 @@
       </domain>
       <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/</cvsweb>
     </branch>
-  </module>
-  <module id="xdg-user-dirs-gtk">
-    <branch id="HEAD"/>
   </module>
   <module id="xkeyboard-config">
     <_description>XKeyboard-Config</_description>
@@ -1416,15 +1442,5 @@
       </domain>
       <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvsweb>
     </branch>
-  </module>
-  <module id="yelp">
-    <branch id="HEAD" stringfrozen="true"/>
-    <branch id="gnome-2-14" stringfrozen="true"/>
-  </module>
-  <module id="zenity">
-    <branch id="HEAD"/>
-    <branch id="gnome-2-14" stringfrozen="true"/>
-    <branch id="gnome-2-16" stringfrozen="true"/>
-    <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
 </modules>

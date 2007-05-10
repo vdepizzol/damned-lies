@@ -93,6 +93,9 @@
 </td></tr></table>
 
 <h2>$release.description</h2>
+#if $release.type=="external"
+<p><i>$_("The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations.")</i></p>
+#end if
 
 <table><tr><td valign="top" width="50%"><!-- two columns set-up -->
 <h3>$_("Documentation")</h3>

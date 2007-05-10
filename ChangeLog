@@ -1,3 +1,12 @@
+2007-05-10  Claude Paroz  <claude@2xlibre.net>
+
+	* gnome-modules.xml.in: Add shared-mime-info and put non-GNOME modules
+	at the end of file.
+	* releases.xml.in: Add freedesktop.org release set.
+	* templates/language-release.tmpl: Add a warning for non-GNOME
+	modules.
+	* templates/release.tmpl: Add a warning for non-GNOME release set.
+
 2007-05-08  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in: Cancel the svnroot default property for
