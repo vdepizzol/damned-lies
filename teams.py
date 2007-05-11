@@ -91,6 +91,23 @@ def compare_teams(a, b):
     else:
         return res
 
+def compare_releases(a, b):
+    release_order = {
+        "official": 1,
+        "unofficial": 2,
+        "external":3
+    }
+    a_stat = release_order.get(a['status'])
+    b_stat = release_order.get(b['status'])
+    res = cmp(a_stat, b_stat)
+    if not res:
+        if a_stat==1:
+            return cmp(b['id'], a['id'])
+        else:
+            return cmp(a['id'], b['id'])
+    else:
+        return res
+
 
 if __name__=="__main__":
     import cgi, re
@@ -237,7 +254,9 @@ if __name__=="__main__":
                     html.rtl = (defaults.language in defaults.rtl_languages)
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
-                    team['language'][langid]['releases'] = releases.Releases(deep=1, gather_stats = langid).data
+                    releaselist = releases.Releases(deep=1, gather_stats = langid).data
+                    releaselist.sort(compare_releases)
+                    team['language'][langid]['releases'] = releaselist
 
 
                 html.webroot = defaults.webroot
