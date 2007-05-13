@@ -1396,6 +1396,61 @@
     <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
   <!-- Non-GNOME modules -->
+  <module id="gstreamer">
+    <webpage>http://gstreamer.freedesktop.org</webpage>
+    <bugs-component>gstreamer (core)</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gstreamer</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gstreamer/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gstreamer/</cvsweb>
+    </branch>
+  </module>
+  <module id="gst-plugins-base">
+    <webpage>http://gstreamer.freedesktop.org</webpage>
+    <bugs-component>gst-plugins-base</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-base</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/</cvsweb>
+    </branch>
+  </module>
+  <module id="gst-plugins-good">
+    <webpage>http://gstreamer.freedesktop.org</webpage>
+    <bugs-component>gst-plugins-good</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-good</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/</cvsweb>
+    </branch>
+  </module>
+  <module id="gst-plugins-bad">
+    <webpage>http://gstreamer.freedesktop.org</webpage>
+    <bugs-component>gst-plugins-bad</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-bad</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/</cvsweb>
+    </branch>
+  </module>
+  <module id="gst-plugins-ugly">
+    <webpage>http://gstreamer.freedesktop.org</webpage>
+    <bugs-component>gst-plugins-ugly</bugs-component>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-ugly</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
+    <branch id="HEAD">
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/</cvsweb>
+    </branch>
+  </module>
   <module id="shared-mime-info">
     <_description>Shared MIME Info</_description>
     <webpage>http://www.freedesktop.org/wiki/Software_2fshared_2dmime_2dinfo</webpage>
@@ -1412,7 +1467,7 @@
     </branch>
   </module>
   <module id="xdg-user-dirs">
-    <webpage>http://freedesktop.org/wiki/Software_2fxdg_2duser_2ddirs</webpage>
+    <webpage>http://freedesktop.org/wiki/Software/xdg-user-dirs</webpage>
     <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</cvsroot>
     <cvsmodule>xdg-user-dirs</cvsmodule>
     <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/?only_with_id=%(branch/id)</cvsweb>
