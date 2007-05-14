@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-30 11:50+0200\n"
-"PO-Revision-Date: 2007-04-30 11:57+0100\n"
+"POT-Creation-Date: 2007-05-14 18:13+0200\n"
+"PO-Revision-Date: 2007-05-14 18:15+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -294,59 +294,67 @@ msgid "Search Tool Manual"
 msgstr "Handbok för Sökverktyg"
 
 #: ../gnome-modules.xml.in.h:71
+msgid "Shared MIME Info"
+msgstr "Delad MIME-information"
+
+#: ../gnome-modules.xml.in.h:72
 msgid "Sound Juicer Manual"
 msgstr "Handbok för Sound Juicer"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:73
 msgid "Sticky Notes Manual"
 msgstr "Handbok för Klisterlappar"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:74
 msgid "Stock Ticker Manual"
 msgstr "Handbok för Aktievisare"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:75
 msgid "System Administration Guide"
 msgstr "Systemadministrationsguide"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "System Monitor Manual"
 msgstr "Handbok för Systemövervakare"
 
-#: ../gnome-modules.xml.in.h:76
-#: ../templates/language-release.tmpl:103
+#: ../gnome-modules.xml.in.h:77
+#: ../templates/language-release.tmpl:106
 msgid "UI translations"
 msgstr "Gränssnittsöversättningar"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:78
+msgid "User Directories"
+msgstr "Användarkataloger"
+
+#: ../gnome-modules.xml.in.h:79
 msgid "User Guide"
 msgstr "Användarguide"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:80
 msgid "Volume Control Manual"
 msgstr "Handbok för Volymkontroll"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:81
 msgid "Weather Applet Locations"
 msgstr "Platser för panelprogrammet Väderrapport"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:82
 msgid "Weather Report Manual"
 msgstr "Handbok för Väderrapport"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:83
 msgid "Window List Applet Manual"
 msgstr "Handbok för panelprogrammet Fönsterlista"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:84
 msgid "Workspace Switcher Applet Manual"
 msgstr "Handbok för panelprogrammet Arbetsytebytare"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:85
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:86
 msgid "glChess Manual"
 msgstr "Handbok för glChess"
 
@@ -422,8 +430,12 @@ msgstr "Nya modulförslag."
 msgid "System Administration"
 msgstr "Systemadministration"
 
-#: ../teams.py:139
-#: ../teams.py:246
+#: ../releases.xml.in.h:19
+msgid "freedesktop.org (non-GNOME)."
+msgstr "freedesktop.org (icke-GNOME)."
+
+#: ../teams.py:156
+#: ../teams.py:265
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s översättningsteamet"
@@ -1074,7 +1086,7 @@ msgid "Translated"
 msgstr "Översatt"
 
 #: ../templates/show-stats.tmpl:27
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "Graph"
 msgstr "Diagram"
@@ -1140,19 +1152,24 @@ msgstr "Det finns för närvarande inga översättningsteam i GNOME. :("
 msgid "%(release)s Release"
 msgstr "Utgåva %(release)s"
 
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:23
+#: ../templates/language-release.tmpl:97
+msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
+msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
+
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "Release"
 msgstr "Utgåva"
 
-#: ../templates/release.tmpl:26
-#: ../templates/language-release.tmpl:98
-#: ../templates/module.tmpl:90
+#: ../templates/release.tmpl:29
+#: ../templates/language-release.tmpl:101
+#: ../templates/module.tmpl:93
 #: ../templates/team.tmpl:110
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "User Interface"
 msgstr "Användargränssnitt"
@@ -1272,36 +1289,40 @@ msgstr "Det finns inga bidragsgivare, GNOME kom fram helt på egen hand."
 msgid "%(module)s Statistics"
 msgstr "Statistik för %(module)s"
 
-#: ../templates/module.tmpl:35
+#: ../templates/module.tmpl:31
+msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
+msgstr "Den här modulen är inte en del av GNOME:s SVN-förråd. Kontrollera modulens webbsida för att se var översättningen ska skickas."
+
+#: ../templates/module.tmpl:38
 msgid "Maintainers"
 msgstr "Ansvariga"
 
-#: ../templates/module.tmpl:51
+#: ../templates/module.tmpl:54
 msgid "Bug reporting"
 msgstr "Felrapportering"
 
-#: ../templates/module.tmpl:52
+#: ../templates/module.tmpl:55
 msgid "Report bugs to Bugzilla"
 msgstr "Rapport fel till Bugzilla"
 
-#: ../templates/module.tmpl:60
+#: ../templates/module.tmpl:63
 msgid "Branches:"
 msgstr "Grenar:"
 
-#: ../templates/module.tmpl:75
+#: ../templates/module.tmpl:78
 msgid "Browse CVS"
 msgstr "Bläddra i CVS"
 
-#: ../templates/module.tmpl:77
-#: ../templates/module.tmpl:79
+#: ../templates/module.tmpl:80
+#: ../templates/module.tmpl:82
 msgid "Browse SVN"
 msgstr "Bläddra i SVN"
 
-#: ../templates/module.tmpl:83
+#: ../templates/module.tmpl:86
 msgid "This branch is currently string-frozen."
 msgstr "Den här grenen är för närvarande strängfrusen."
 
-#: ../templates/module.tmpl:110
+#: ../templates/module.tmpl:113
 msgid "Translation"
 msgstr "Översättning"
 
