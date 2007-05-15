@@ -126,6 +126,7 @@
     <module id="atomix"/>
     <module id="bakery"/>
     <module id="banshee"/>
+    <module id="banter"/>
     <module id="beagle"/>
     <module id="beast"/>
     <module id="blam"/>
@@ -561,6 +562,11 @@
   </release>
   <release id="freedesktop.org" status="external">
     <_description>freedesktop.org (non-GNOME).</_description>
+    <module id="gstreamer"/>
+    <module id="gst-plugins-base"/>
+    <module id="gst-plugins-good"/>
+    <module id="gst-plugins-bad"/>
+    <module id="gst-plugins-ugly"/>
     <module id="shared-mime-info"/>
     <module id="xdg-user-dirs"/>
     <module id="xkeyboard-config"/>
