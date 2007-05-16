@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-29 08:42+0100\n"
-"PO-Revision-Date: 2007-04-29 08:42-0000\n"
+"POT-Creation-Date: 2007-05-16 07:31+0100\n"
+"PO-Revision-Date: 2007-05-16 07:31-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: en_GB <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -293,59 +293,67 @@ msgid "Search Tool Manual"
 msgstr "Search Tool Manual"
 
 #: ../gnome-modules.xml.in.h:71
+msgid "Shared MIME Info"
+msgstr "Shared MIME Info"
+
+#: ../gnome-modules.xml.in.h:72
 msgid "Sound Juicer Manual"
 msgstr "Sound Juicer Manual"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:73
 msgid "Sticky Notes Manual"
 msgstr "Sticky Notes Manual"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:74
 msgid "Stock Ticker Manual"
 msgstr "Stock Ticker Manual"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:75
 msgid "System Administration Guide"
 msgstr "System Administration Guide"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "System Monitor Manual"
 msgstr "System Monitor Manual"
 
-#: ../gnome-modules.xml.in.h:76
-#: ../templates/language-release.tmpl:103
+#: ../gnome-modules.xml.in.h:77
+#: ../templates/language-release.tmpl:106
 msgid "UI translations"
 msgstr "UI translations"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:78
+msgid "User Directories"
+msgstr "User Directories"
+
+#: ../gnome-modules.xml.in.h:79
 msgid "User Guide"
 msgstr "User Guide"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:80
 msgid "Volume Control Manual"
 msgstr "Volume Control Manual"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:81
 msgid "Weather Applet Locations"
 msgstr "Weather Applet Locations"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:82
 msgid "Weather Report Manual"
 msgstr "Weather Report Manual"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:83
 msgid "Window List Applet Manual"
 msgstr "Window List Applet Manual"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:84
 msgid "Workspace Switcher Applet Manual"
 msgstr "Workspace Switcher Applet Manual"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:85
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:86
 msgid "glChess Manual"
 msgstr "glChess Manual"
 
@@ -421,8 +429,12 @@ msgstr "New module proposals."
 msgid "System Administration"
 msgstr "System Administration"
 
-#: ../teams.py:139
-#: ../teams.py:246
+#: ../releases.xml.in.h:19
+msgid "freedesktop.org (non-GNOME)."
+msgstr "freedesktop.org (non-GNOME)."
+
+#: ../teams.py:156
+#: ../teams.py:265
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s Translation Team"
@@ -1073,7 +1085,7 @@ msgid "Translated"
 msgstr "Translated"
 
 #: ../templates/show-stats.tmpl:27
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "Graph"
 msgstr "Graph"
@@ -1139,19 +1151,24 @@ msgstr "There are currently no translation teams in GNOME. :("
 msgid "%(release)s Release"
 msgstr "%(release)s Release"
 
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:23
+#: ../templates/language-release.tmpl:97
+msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
+msgstr "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
+
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "Release"
 msgstr "Release"
 
-#: ../templates/release.tmpl:26
-#: ../templates/language-release.tmpl:98
-#: ../templates/module.tmpl:90
+#: ../templates/release.tmpl:29
+#: ../templates/language-release.tmpl:101
+#: ../templates/module.tmpl:93
 #: ../templates/team.tmpl:110
 msgid "Documentation"
 msgstr "Documentation"
 
-#: ../templates/release.tmpl:26
+#: ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "User Interface"
 msgstr "User Interface"
@@ -1271,36 +1288,40 @@ msgstr "There are no contributors, GNOME turned itself up from nothing."
 msgid "%(module)s Statistics"
 msgstr "%(module)s Statistics"
 
-#: ../templates/module.tmpl:35
+#: ../templates/module.tmpl:31
+msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
+msgstr "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
+
+#: ../templates/module.tmpl:38
 msgid "Maintainers"
 msgstr "Maintainers"
 
-#: ../templates/module.tmpl:51
+#: ../templates/module.tmpl:54
 msgid "Bug reporting"
 msgstr "Bug reporting"
 
-#: ../templates/module.tmpl:52
+#: ../templates/module.tmpl:55
 msgid "Report bugs to Bugzilla"
 msgstr "Report bugs to Bugzilla"
 
-#: ../templates/module.tmpl:60
+#: ../templates/module.tmpl:63
 msgid "Branches:"
 msgstr "Branches:"
 
-#: ../templates/module.tmpl:75
+#: ../templates/module.tmpl:78
 msgid "Browse CVS"
 msgstr "Browse CVS"
 
-#: ../templates/module.tmpl:77
-#: ../templates/module.tmpl:79
+#: ../templates/module.tmpl:80
+#: ../templates/module.tmpl:82
 msgid "Browse SVN"
 msgstr "Browse SVN"
 
-#: ../templates/module.tmpl:83
+#: ../templates/module.tmpl:86
 msgid "This branch is currently string-frozen."
 msgstr "This branch is currently string-frozen."
 
-#: ../templates/module.tmpl:110
+#: ../templates/module.tmpl:113
 msgid "Translation"
 msgstr "Translation"
 
