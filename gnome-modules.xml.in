@@ -849,6 +849,9 @@
   <module id="gnome-spell">
     <branch id="HEAD"/>
   </module>
+  <module id="gnome-subtitles">
+    <branch id="HEAD"/>
+  </module>
   <module id="gnome-system-monitor">
     <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
@@ -1474,6 +1477,9 @@
   </module>
   <module id="xdg-user-dirs">
     <webpage>http://freedesktop.org/wiki/Software/xdg-user-dirs</webpage>
+    <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
+    <bugs-product>xdg-user-dirs</bugs-product>
+    <bugs-component>General</bugs-component>
     <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</cvsroot>
     <cvsmodule>xdg-user-dirs</cvsmodule>
     <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/?only_with_id=%(branch/id)</cvsweb>
