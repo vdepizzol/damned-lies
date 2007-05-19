@@ -1,5 +1,22 @@
 2007-05-19  Claude Paroz  <claude@2xlibre.net>
 
+	* l10n.py: Add encoding parameter to unicode function.
+	* po: Add svn:ignore property.
+	* templates/index.tmpl:
+	* templates/language-release.tmpl:
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/list-releases.tmpl:
+	* templates/list-teams.tmpl:
+	* templates/module.tmpl:
+	* templates/people.tmpl:
+	* templates/person.tmpl:
+	* templates/release.tmpl:
+	* templates/team.tmpl: Remove BOM from text files. Move http-equiv
+	before title tag.
+
+2007-05-19  Claude Paroz  <claude@2xlibre.net>
+
 	* gnome-modules.xml.in:
 	* releases.xml.in: Branch gtk-engines (gtk-engines-2-10).
 
