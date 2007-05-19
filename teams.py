@@ -153,7 +153,7 @@ if __name__=="__main__":
                 html.language = lang
                 html.language_name = team['language'][lang]['content']
                 if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = ( _(u"%(lang)s Translation Team")
+                    html.team['description'] = ( _("%(lang)s Translation Team")
                                                  % { 'lang' :
                                                      html.language_name } )
                 if not html.team.has_key('bugzilla-component') and html.language_name:
@@ -262,7 +262,7 @@ if __name__=="__main__":
                 html.webroot = defaults.webroot
                 html.team = team
                 if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = ( _(u"%(lang)s Translation Team")
+                    html.team['description'] = ( _("%(lang)s Translation Team")
                                                  % { 'lang' :
                                                      html.language_name } )
                 if not html.team.has_key('bugzilla-component') and html.language_name:

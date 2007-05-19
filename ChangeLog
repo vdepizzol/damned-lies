@@ -1,5 +1,9 @@
 2007-05-19  Claude Paroz  <claude@2xlibre.net>
 
+	* teams.py: Don't pass utf-8 string to gettext.
+
+2007-05-19  Claude Paroz  <claude@2xlibre.net>
+
 	* l10n.py: Add encoding parameter to unicode function.
 	* po: Add svn:ignore property.
 	* templates/index.tmpl:
