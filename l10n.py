@@ -30,11 +30,11 @@ def set_language():
     get_trans()
 
 def gettext(text):
-    return get_trans().ugettext(unicode(text))
+    return get_trans().ugettext(unicode(text,'utf-8'))
 
 
 def ngettext(text, plural, number):
-    return get_trans().ungettext(unicode(text), unicode(plural), number)
+    return get_trans().ungettext(unicode(text,'utf-8'), unicode(plural,'utf-8'), number)
 
 class MyFilter(Cheetah.Filters.Filter):
     def filter(self, val, **kw):

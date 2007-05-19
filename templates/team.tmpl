@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html
+<!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   #if $team.has_key('description')
    <title>${team.description, CAPITALIZE=1}</title>
   #else
@@ -12,8 +13,6 @@
 #if $rtl
   <link rel="stylesheet" href="${webroot}/data/rtl.css"/>
 #end if
- 
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 #if $rtl
 <body dir="rtl">
