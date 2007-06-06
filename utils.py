@@ -29,7 +29,7 @@ def TemplateInspector(template):
 	   var title = 'Console_' + self.name;
 	}
 	_debug_console = window.open('',title.value,'width=680,height=600,resizable,scrollbars=yes');
-        _debug_console.document.write('<HTML><TITLE>Debug Console_'+self.name+'</TITLE><BODY bgcolor=#ffffff style="font-size:70%;"><PRE>');
+        _debug_console.document.write('<HTML><TITLE>Debug Console'+self.name+'</TITLE><BODY bgcolor=#ffffff style="font-size:70%;"><PRE>');
 """
 
     import pprint

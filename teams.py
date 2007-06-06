@@ -6,6 +6,7 @@ import utils
 import releases
 import l10n
 
+from dispatcher import DamnedTemplate
 _ = l10n.gettext
 
 import data
@@ -111,8 +112,6 @@ def compare_releases(a, b):
 
 if __name__=="__main__":
     import cgi, re
-    import cgitb; cgitb.enable()
-    from Cheetah.Template import Template
 
     request = os.getenv("PATH_INFO")[1:]
 
@@ -138,17 +137,13 @@ if __name__=="__main__":
         if teamid:
             myteam = TranslationTeams(only_team=teamid)
             if len(myteam) and myteam.data.has_key(teamid):
-                html = Template(file="templates/team.tmpl",
-                                filter=l10n.MyFilter)
-                html._ = l10n.gettext
-                html.rtl = (defaults.language in defaults.rtl_languages)
+                html = DamnedTemplate(file="templates/team.tmpl")
                 team = myteam.data[teamid]
 
                 for lang, ldata in team['language'].items():
                     team['language'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
                     if not langid: langid = lang
 
-                html.webroot = defaults.webroot
                 html.team = team
                 html.language = lang
                 html.language_name = team['language'][lang]['content']
@@ -168,11 +163,7 @@ if __name__=="__main__":
                 teams.append(team)
             teams.sort(compare_teams)
 
-            html = Template(file="templates/list-teams.tmpl",
-                            filter=l10n.MyFilter)
-            html._ = l10n.gettext
-            html.rtl = (defaults.language in defaults.rtl_languages)
-            html.webroot = defaults.webroot
+            html = DamnedTemplate(file="templates/list-teams.tmpl")
             html.teams = teams
             print unicode(html).encode('utf-8')
             print utils.TemplateInspector(html)
@@ -200,11 +191,7 @@ if __name__=="__main__":
 
             langs.sort(compare_langs)
 
-            html = Template(file="templates/list-languages.tmpl",
-                            filter=l10n.MyFilter)
-            html._ = l10n.gettext
-            html.rtl = (defaults.language in defaults.rtl_languages)
-            html.webroot = defaults.webroot
+            html = DamnedTemplate(file="templates/list-languages.tmpl")
             html.languages = langs
             print unicode(html).encode('utf-8')
             print utils.TemplateInspector(html)
@@ -225,7 +212,6 @@ if __name__=="__main__":
             if len(myteam):
                 teamid = myteam.data.keys()[0]
                 team = myteam.data[teamid]
-                #teamid = team['id']
 
                 if not langid:
                     for lang, ldata in team['language'].items():
@@ -234,13 +220,11 @@ if __name__=="__main__":
 
                 if release:
                     if t_ext == '.xml':
-                        html = Template(file="templates/language-release-xml.tmpl",
-                                        filter=l10n.MyFilter)
+                        html = DamnedTemplate(
+                            file="templates/language-release-xml.tmpl")
                     else:
-                        html = Template(file="templates/language-release.tmpl",
-                                        filter=l10n.MyFilter)
-                    html._ = l10n.gettext
-                    html.rtl = (defaults.language in defaults.rtl_languages)
+                        html = DamnedTemplate(
+                            file="templates/language-release.tmpl")
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     myreleases = releases.Releases(deep=1, only_release = release, gather_stats = langid).data
@@ -248,18 +232,14 @@ if __name__=="__main__":
                         html.release = myreleases[0]
 
                 else:
-                    html = Template(file="templates/team.tmpl",
-                                    filter=l10n.MyFilter)
-                    html._ = l10n.gettext
-                    html.rtl = (defaults.language in defaults.rtl_languages)
+
+                    html = DamnedTemplate(file="templates/team.tmpl")
                     html.language = langid
                     html.language_name = team['language'][langid]['content']
                     releaselist = releases.Releases(deep=1, gather_stats = langid).data
                     releaselist.sort(compare_releases)
                     team['language'][langid]['releases'] = releaselist
 
-
-                html.webroot = defaults.webroot
                 html.team = team
                 if not html.team.has_key('description') and html.language_name:
                     html.team['description'] = ( _("%(lang)s Translation Team")

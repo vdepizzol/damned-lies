@@ -43,7 +43,7 @@ class MyFilter(Cheetah.Filters.Filter):
             if kw.has_key('CAPITALIZE'):
                 val = unicode(val).capitalize()
                 del kw['CAPITALIZE']
-            val = val.replace('%20', ' ')
+            val = val.replace(u'%20', ' ')
             return val % kw
         else:
             return unicode(val)

@@ -17,6 +17,11 @@ class Releases:
 
 
     def get_stats_for_module(self, module, domain, branch, language, type):
+        if module: module = module.encode('utf-8')
+        if domain: domain = domain.encode('utf-8')
+        if branch: branch = branch.encode('utf-8')
+        if language: language = language.encode('utf-8')
+        if type: type = type.encode('utf-8')
         if language:
             stats = Statistics.select(AND(Statistics.q.Module == module,
                                           Statistics.q.Domain == domain,
