@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-29 03:17+0100\n"
-"PO-Revision-Date: 2007-05-07 19:55+0200\n"
+"POT-Creation-Date: 2007-05-11 03:16+0100\n"
+"PO-Revision-Date: 2007-06-07 21:32+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: ../gnome-modules.xml.in.h:2
 #, no-c-format
 msgid "%(module/id)"
-msgstr ""
+msgstr "%(module/id)"
 
 #: ../gnome-modules.xml.in.h:3
 msgid "Accessibility Guide"
@@ -272,7 +272,7 @@ msgstr "Manual de la Papelera del panel"
 
 #: ../gnome-modules.xml.in.h:65
 msgid "Platform Overview"
-msgstr ""
+msgstr "Visión general de la plataforma"
 
 #: ../gnome-modules.xml.in.h:66
 msgid "Property Nicks"
@@ -295,58 +295,66 @@ msgid "Search Tool Manual"
 msgstr "Manual de la herramienta de búsqueda"
 
 #: ../gnome-modules.xml.in.h:71
+msgid "Shared MIME Info"
+msgstr ""
+
+#: ../gnome-modules.xml.in.h:72
 msgid "Sound Juicer Manual"
 msgstr "Manual de Sound Juicer"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:73
 msgid "Sticky Notes Manual"
 msgstr "Manual de Notas adhesivas"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:74
 msgid "Stock Ticker Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:75
 msgid "System Administration Guide"
 msgstr "Guía de administración del sistema"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "System Monitor Manual"
 msgstr "Manual del monitor del sistema"
 
-#: ../gnome-modules.xml.in.h:76 ../templates/language-release.tmpl:103
+#: ../gnome-modules.xml.in.h:77 ../templates/language-release.tmpl:106
 msgid "UI translations"
 msgstr "Traducción del IU"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:78
+msgid "User Directories"
+msgstr "Directorios del usuario"
+
+#: ../gnome-modules.xml.in.h:79
 msgid "User Guide"
 msgstr "Guía del usuario"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:80
 msgid "Volume Control Manual"
 msgstr "Manual del control de volumen"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:81
 msgid "Weather Applet Locations"
-msgstr ""
+msgstr "Miniaplicación de ubicaciones del clima"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:82
 msgid "Weather Report Manual"
 msgstr "Manual del informe meteorológico"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:83
 msgid "Window List Applet Manual"
 msgstr "Manual de la lista de ventanas"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:84
 msgid "Workspace Switcher Applet Manual"
 msgstr "Manual del selector de áreas de trabajo"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:85
 msgid "XKeyboard-Config"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:86
 msgid "glChess Manual"
 msgstr "Manual de glChess"
 
@@ -421,6 +429,10 @@ msgstr "Nuevos módulos propuestos."
 #: ../releases.xml.in.h:18
 msgid "System Administration"
 msgstr "Administración del sistema"
+
+#: ../releases.xml.in.h:19
+msgid "freedesktop.org (non-GNOME)."
+msgstr "freedesktop.org (no GNOME)."
 
 #: ../teams.py:139 ../teams.py:246
 #, python-format
@@ -1089,8 +1101,8 @@ msgstr ""
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Archivo POT %(potsize)s mensaje)"
+msgstr[1] "Archivo POT %(potsize)s mensajes)"
 
 #: ../templates/show-stats.tmpl:12
 msgid "updated on %(date)s"
@@ -1108,7 +1120,7 @@ msgstr "Idioma"
 msgid "Translated"
 msgstr "Traducido"
 
-#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:26
+#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:29
 #: ../templates/team.tmpl:110
 msgid "Graph"
 msgstr "Gráfico"
@@ -1168,16 +1180,22 @@ msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 msgid "%(release)s Release"
 msgstr "Lanzamiento %(release)s"
 
-#: ../templates/release.tmpl:26 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:23 ../templates/language-release.tmpl:97
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:110
 msgid "Release"
 msgstr "Lanzamiento"
 
-#: ../templates/release.tmpl:26 ../templates/language-release.tmpl:98
-#: ../templates/module.tmpl:90 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:29 ../templates/language-release.tmpl:101
+#: ../templates/module.tmpl:93 ../templates/team.tmpl:110
 msgid "Documentation"
 msgstr "Documentación"
 
-#: ../templates/release.tmpl:26 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:110
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
@@ -1286,35 +1304,41 @@ msgstr "No hay contribuidores, GNOME apareció de la nada."
 msgid "%(module)s Statistics"
 msgstr "Estadísticas de %(module)s"
 
-#: ../templates/module.tmpl:35
+#: ../templates/module.tmpl:31
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr "Este módulo no forma parte del repositorio GNOME SVN. Por favor compruebe la página web del módulo para ver dónde enviar las traducciones."
+
+#: ../templates/module.tmpl:38
 msgid "Maintainers"
 msgstr "Mantenedores"
 
-#: ../templates/module.tmpl:51
+#: ../templates/module.tmpl:54
 msgid "Bug reporting"
 msgstr "Informar de errores"
 
-#: ../templates/module.tmpl:52
+#: ../templates/module.tmpl:55
 msgid "Report bugs to Bugzilla"
 msgstr "Informar de errores a Bugzilla"
 
-#: ../templates/module.tmpl:60
+#: ../templates/module.tmpl:63
 msgid "Branches:"
 msgstr "Ramas:"
 
-#: ../templates/module.tmpl:75
+#: ../templates/module.tmpl:78
 msgid "Browse CVS"
 msgstr "Examinar CVS"
 
-#: ../templates/module.tmpl:77 ../templates/module.tmpl:79
+#: ../templates/module.tmpl:80 ../templates/module.tmpl:82
 msgid "Browse SVN"
 msgstr "Examinar SVN"
 
-#: ../templates/module.tmpl:83
+#: ../templates/module.tmpl:86
 msgid "This branch is currently string-frozen."
 msgstr "Actualmente las cadenas de esta rama están congeladas."
 
-#: ../templates/module.tmpl:110
+#: ../templates/module.tmpl:113
 msgid "Translation"
 msgstr "Traducción"
 
