@@ -40,7 +40,7 @@
         #else
           #set docpath='help'
         #end if
-	<svnpath>${module.cvsmodule}/$MODROOT/$docpath/$language</svnpath>       
+	<svnpath>${module.scmmodule}/$MODROOT/$docpath/$language</svnpath>       
          #for pomsgs in $POINFO
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
          #end for
@@ -67,7 +67,7 @@
         #else
           #set MODROOT="branches/"+$branch
         #end if
-	<svnpath>${module.cvsmodule}/$MODROOT/$potid</svnpath>
+	<svnpath>${module.scmmodule}/$MODROOT/$potid</svnpath>
 
          #for pomsgs in $POINFO
            <error type="${pomsgs[0]}">${pomsgs[1]}</error>
