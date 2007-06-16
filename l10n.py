@@ -25,8 +25,10 @@ def set_language():
     linguas = open('po/LINGUAS', 'r')
     langs = ['en'] + linguas.read().split('\n')
 
+    # in browsers, country code is separated from language with an hyphen
+    langs=[lang.replace('_','-') for lang in langs]
     select = accept.language(os.getenv('HTTP_ACCEPT_LANGUAGE', fallback))
-    defaults.language = select.select_from(langs)
+    defaults.language = select.select_from(langs).replace('-','_')
     get_trans()
 
 def gettext(text):
