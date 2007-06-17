@@ -28,7 +28,7 @@
 <div class="mainpage">
 
 <h1>$module.description</h1>
-#if $module.scmroot.path!="http://svn.gnome.org/svn"
+#if not $module.has_key('svnroot') or $module.svnroot!="http://svn.gnome.org/svn"
 <p><i><img src="${webroot}/data/warn.png" alt="Warning logo" /> $_("This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations.")</i></p>
 #end if
 #if $module.has_key('webpage') and $module.webpage
@@ -75,12 +75,12 @@
 #for branch in $branches
 #set data=$module.branch[$branch]
 <h2><a name="$branch"></a>$branch
-#if $module.scmroot.type == "cvs" and $data.has_key('scmweb')
-(<a href="$data['scmweb']">$_("Browse CVS")</a>)
-#elif $module.scmroot.type == "svn" and $data.has_key('scmweb') and $branch!='HEAD'
-(<a href="$data['scmweb']">$_("Browse SVN")</a>)
-#elif $module.scmroot.type == "svn" and $module.has_key('scmweb')
-(<a href="$module['scmweb']">$_("Browse SVN")</a>)
+#if $data.has_key('cvsweb')
+(<a href="$data['cvsweb']">$_("Browse CVS")</a>)
+#elif $data.has_key('svnweb') and $branch!='HEAD'
+(<a href="$data['svnweb']">$_("Browse SVN")</a>)
+#elif $module.has_key('svnweb')
+(<a href="$module['svnweb']">$_("Browse SVN")</a>)
 #end if
 </h2>
 #if $data.has_key('stringfrozen') and $data.stringfrozen

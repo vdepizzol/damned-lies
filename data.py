@@ -182,10 +182,7 @@ def _applyDefaultsData (data, dataType, defsDict, defsList=(), things={}):
                 if not data.has_key (key):
                     data[key] = pat.sub (subsFunc, val)
             elif type(val) == type({}):
-                if not data.has_key (key): 
-                    # data[key] = {}
-                    #FIXME Just copy the dict, because the copy stuff in the for loop hereunder is buggy
-                    data[key] = copy.copy(val)
+                if not data.has_key (key): data[key] = {}
                 for i in defsDict[key].keys():
                     id = pat.sub (subsFunc, i)
                     if not data[key].has_key (id): data[key][id] = {}

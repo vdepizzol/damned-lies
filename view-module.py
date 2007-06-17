@@ -35,7 +35,6 @@ import os, sys
 import cgi
 import cgitb; cgitb.enable()
 from Cheetah.Template import Template
-from time import tzname
 
 l10n.set_language()
 print "Content-type: text/html; charset=UTF-8\n"
@@ -54,7 +53,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
         if defaults.DEBUG: print >>sys.stderr, "OVDE: %s!" % (module["id"] + "/" + trdomain)
         pot = res[0]
         here['pot_size'] = pot.Untranslated
-        here['updated'] = pot.Date.strftime("%Y-%m-%d %H:%M:%S ")+tzname[0]
+        here['updated'] = pot.Date.strftime("%Y-%m-%d %H:%M:%S")
 
         here['pot_messages'] = []
         for msg in pot.Messages:
@@ -84,7 +83,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                 'fuzzy' : po.Fuzzy,
                 'untranslated' : po.Untranslated,
                 'language_name' : langname,
-                'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S ")+tzname[0],
+                'updated' : po.Date.strftime("%Y-%m-%d %H:%M:%S"),
                 }
             if here['pot_size']:
                 new['percentages'] = { 'translated' : 100*po.Translated/here['pot_size'],

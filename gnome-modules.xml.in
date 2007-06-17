@@ -7,14 +7,12 @@
       <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
       <bugs-product>%(module/id)</bugs-product>
       <bugs-component>general</bugs-component>
-      <scmroot type="svn">
-        <path>http://svn.gnome.org/svn</path>
-      </scmroot>
-      <scmmodule>%(module/id)</scmmodule>
-      <scmweb>http://svn.gnome.org/viewcvs/%(module/id)/trunk</scmweb>
+      <svnroot>http://svn.gnome.org/svn</svnroot>
+      <svnmodule>%(module/id)</svnmodule>
+      <svnweb>http://svn.gnome.org/viewcvs/%(module/id)/trunk</svnweb>
     </module>
     <branch id="HEAD" regenerate="1">
-      <scmweb>http://svn.gnome.org/viewcvs/%(module/id)/branches/%(branch/id)</scmweb>
+      <svnweb>http://svn.gnome.org/viewcvs/%(module/id)/branches/%(branch/id)</svnweb>
       <domain id="po">
         <_description>UI translations</_description>
       </domain>
@@ -69,7 +67,7 @@
     <_description>Banshee Music Player</_description>
     <webpage>http://banshee-project.org/</webpage>
     <maintainer id="abock"/>
-    <scmmodule>banshee</scmmodule>
+    <svnmodule>banshee</svnmodule>
     <branch id="HEAD">
       <domain id="banshee/po" potbase="banshee">
         <_description>UI translations</_description>
@@ -83,7 +81,7 @@
     <_description>Beagle Desktop Search</_description>
     <webpage>http://beagle-project.org/</webpage>
     <maintainer id="joeshaw"/>
-    <scmmodule>beagle</scmmodule>
+    <svnmodule>beagle</svnmodule>
     <branch id="HEAD">
       <domain id="beagle/po" potbase="beagle">
         <_description>UI translations</_description>
@@ -225,7 +223,7 @@
     <_description>Eye of GNOME</_description>
     <webpage>http://live.gnome.org/EyeOfGnome</webpage>
     <maintainer id="lucasr"/>
-    <scmmodule>eog</scmmodule>
+    <svnmodule>eog</svnmodule>
     <branch id="HEAD">
       <domain id="po">
         <_description>UI translations</_description>
@@ -243,7 +241,7 @@
     <_description>Epiphany Web Browser</_description>
     <webpage>http://gnome.org/projects/epiphany/</webpage>
     <maintainer id="chpe"/>
-    <scmmodule>epiphany</scmmodule>
+    <svnmodule>epiphany</svnmodule>
     <branch id="HEAD" />
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
@@ -454,7 +452,7 @@
     <webpage>http://gtk.org/</webpage>
     <maintainer id="matthiasc"/>
     <maintainer id="owen"/>
-    <scmmodule>glib</scmmodule>
+    <svnmodule>glib</svnmodule>
     <branch id="HEAD"/>
     <branch stringfrozen="true" id="glib-2-10"/>
     <branch id="glib-2-12"/>
@@ -1307,7 +1305,7 @@
   </module>
   <module id="release-notes">
     <_description>GNOME Release Notes</_description>
-    <scmmodule>gnomeweb-wml</scmmodule>
+    <svnmodule>gnomeweb-wml</svnmodule>
     <branch id="HEAD">
       <document id="release-notes-2.18">
         <_description>GNOME 2.18 release notes</_description>
@@ -1413,61 +1411,56 @@
   <module id="gstreamer">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gstreamer (core)</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</path>
-    </scmroot>
-    <scmmodule>gstreamer</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/gstreamer/gstreamer/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gstreamer</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gstreamer/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/gstreamer/gstreamer/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gstreamer/</cvsweb>
     </branch>
   </module>
   <module id="gst-plugins-base">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gst-plugins-base</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</path>
-    </scmroot>
-    <scmmodule>gst-plugins-base</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-base</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-base/</cvsweb>
     </branch>
   </module>
   <module id="gst-plugins-good">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gst-plugins-good</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</path>
-    </scmroot>
-    <scmmodule>gst-plugins-good</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-good</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-good/</cvsweb>
     </branch>
   </module>
   <module id="gst-plugins-bad">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gst-plugins-bad</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</path>
-    </scmroot>
-    <scmmodule>gst-plugins-bad</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-bad</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-bad/</cvsweb>
     </branch>
   </module>
   <module id="gst-plugins-ugly">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gst-plugins-ugly</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</path>
-    </scmroot>
-    <scmmodule>gst-plugins-ugly</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer</cvsroot>
+    <cvsmodule>gst-plugins-ugly</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/</cvsweb>
     </branch>
   </module>
   <module id="shared-mime-info">
@@ -1477,13 +1470,12 @@
     <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
     <bugs-product>shared-mime-info</bugs-product>
     <bugs-component>general</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/mime</path>
-    </scmroot>
-    <scmmodule>shared-mime-info</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/mime/shared-mime-info/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/mime</cvsroot>
+    <cvsmodule>shared-mime-info</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/mime/shared-mime-info/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
-      <scmweb>http://cvs.freedesktop.org/mime/shared-mime-info/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/mime/shared-mime-info/</cvsweb>
     </branch>
   </module>
   <module id="xdg-user-dirs">
@@ -1491,16 +1483,15 @@
     <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
     <bugs-product>xdg-user-dirs</bugs-product>
     <bugs-component>General</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</path>
-    </scmroot>
-    <scmmodule>xdg-user-dirs</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/user-dirs</cvsroot>
+    <cvsmodule>xdg-user-dirs</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
       <domain id="po">
         <_description>User Directories</_description>
       </domain>
-      <scmweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/user-dirs/xdg-user-dirs/</cvsweb>
     </branch>
   </module>
   <module id="xkeyboard-config">
@@ -1511,16 +1502,15 @@
     <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
     <bugs-product>xkeyboard-config</bugs-product>
     <bugs-component>General</bugs-component>
-    <scmroot type="cvs">
-      <path>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</path>
-    </scmroot>
-    <scmmodule>xkbdesc</scmmodule>
-    <scmweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch/id)</scmweb>
+    <cvsroot>:pserver:anoncvs@cvs.freedesktop.org:/cvs/xlibs</cvsroot>
+    <cvsmodule>xkbdesc</cvsmodule>
+    <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/?only_with_id=%(branch/id)</cvsweb>
+    <svnroot />
     <branch id="HEAD">
       <domain id="po">
         <_description>Layout Descriptions</_description>
       </domain>
-      <scmweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</scmweb>
+      <cvsweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</cvsweb>
     </branch>
   </module>
 </modules>

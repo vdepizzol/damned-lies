@@ -83,8 +83,8 @@ class CvsModule:
             if real_update:
                 if defaults.DEBUG:
                     print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"]["path"],
-                                   module["scmmodule"], branch, 
+                co = self.checkout(module["cvsroot"],
+                                   module["cvsmodule"], branch, 
                                    localroot,
                                    moduledir)
 
@@ -150,8 +150,8 @@ class SvnModule:
             if real_update:
                 if defaults.DEBUG:
                     print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"]["path"],
-                                   module["scmmodule"], branch, 
+                co = self.checkout(module["svnroot"],
+                                   module["svnmodule"], branch, 
                                    localroot,
                                    moduledir)
 
@@ -199,152 +199,6 @@ class SvnModule:
             if defaults.DEBUG:
                 print >> sys.stderr, output
             return 0
-
-class HgModule:
-    """Checks out a module from Mercurial (hg) if necessary to be able to work on it."""
-
-    def __init__(self, module, real_update = 1):
-        if not module: return None
-
-        self.paths = {}
-        self.module = module
-
-        localroot = os.path.join(defaults.scratchdir, "hg")
-        branches = module["branch"].keys()
-        for branch in branches:
-            moduledir = module["id"] + "." + branch
-            checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
-
-            if real_update:
-                if defaults.DEBUG:
-                    print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"],
-                                   module["scmmodule"], branch, 
-                                   localroot,
-                                   moduledir)
-
-                if not co:
-                    print >> sys.stderr, "Problem checking out module %s.%s" % (module["id"], branch)
-                else:
-                    self.paths[branch] = checkoutpath
-            else:
-                if os.access(checkoutpath, os.X_OK):
-                    self.paths[branch] = checkoutpath
-
-
-    def checkout(self, hgroot, module, branch, localroot, moduledir):
-
-        import commands
-
-        try: os.makedirs(localroot)
-        except: pass
-
-        commandList=[]
-        if os.access(os.path.join(localroot, moduledir), os.X_OK | os.W_OK):
-            commandList.append("cd %(localdir)s && hg update %(branch)s" % {
-                "localdir" : os.path.join(localroot, moduledir),
-                "branch" : branch,
-                })
-        else:
-            hgpath = hgroot + "/" + module
-            commandList.append("cd %(localroot)s && hg clone %(hgpath)s %(dir)s" % {
-                "localroot" : localroot,
-                "hgpath" : hgpath,
-                "dir" : moduledir,
-                })
-            commandList.append("cd %(localdir)s && hg update %(branch)s" % {
-                "localdir" : os.path.join(localroot, moduledir),
-                "hgpath" : hgpath,
-                "branch" : branch,
-                })
-        errorsOccured = 0
-        for command in commandList:
-            if defaults.DEBUG:
-                print >>sys.stdout, command
-            (error, output) = commands.getstatusoutput(command)
-            if defaults.DEBUG:
-                print >> sys.stderr, output
-            if error:
-                errorsOccured = 1
-            if error and defaults.DEBUG:
-                print >> sys.stderr, error
-        if errorsOccured:
-            return 0
-        else:
-            return 1
-            
-class GitModule:
-    """Checks out a module from git if necessary to be able to work on it."""
-
-    def __init__(self, module, real_update = 1):
-        if not module: return None
-
-        self.paths = {}
-        self.module = module
-
-        localroot = os.path.join(defaults.scratchdir, "git")
-        branches = module["branch"].keys()
-        for branch in branches:
-            moduledir = module["id"] + "." + branch
-            checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
-
-            if real_update:
-                if defaults.DEBUG:
-                    print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"],
-                                   module["scmmodule"], branch, 
-                                   localroot,
-                                   moduledir)
-
-                if not co:
-                    print >> sys.stderr, "Problem checking out module %s.%s" % (module["id"], branch)
-                else:
-                    self.paths[branch] = checkoutpath
-            else:
-                if os.access(checkoutpath, os.X_OK):
-                    self.paths[branch] = checkoutpath
-
-
-    def checkout(self, gitroot, module, branch, localroot, moduledir):
-
-        import commands
-
-        try: os.makedirs(localroot)
-        except: pass
-
-        commandList=[]
-        if os.access(os.path.join(localroot, moduledir), os.X_OK | os.W_OK):
-            commandList.append("cd %(localdir)s && git checkout %(branch)s" % {
-                "localdir" : os.path.join(localroot, moduledir),
-                "branch" : branch,
-                })
-        else:
-            gitpath = gitroot + "/" + module
-            commandList.append("cd %(localroot)s && git clone %(gitpath)s %(dir)s" % {
-                "localroot" : localroot,
-                "gitpath" : gitpath,
-                "dir" : moduledir,
-                })
-            commandList.append("cd %(localdir)s && git checkout %(branch)s" % {
-                "localdir" : os.path.join(localroot, moduledir),
-                "gitpath" : gitpath,
-                "branch" : branch,
-                })
-        errorsOccured = 0
-        for command in commandList:
-            if defaults.DEBUG:
-                print >>sys.stdout, command
-            (error, output) = commands.getstatusoutput(command)
-            if defaults.DEBUG:
-                print >> sys.stderr, output
-            if error:
-                errorsOccured = 1
-            if error and defaults.DEBUG:
-                print >> sys.stderr, error
-        if errorsOccured:
-            return 0
-        else:
-            return 1
 
 if __name__=="__main__":
     m = XmlModules()

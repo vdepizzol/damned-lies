@@ -1,25 +1,5 @@
 2007-06-16  Claude Paroz  <claude@2xlibre.net>
 
-	* view-module.py: Add timezone info for updated time of po and pot
-	files. Fixes bug #122870.
-
-2007-06-16  Claude Paroz  <claude@2xlibre.net>
-
-	* data.py: Fixed copy of default dict structure.
-	* gnome-modules.xml.in:
-	* modules.py:
-	* releases.py:
-	* templates/language-release-doc-stats-modules.tmpl:
-	* templates/language-release-module-xml.tmpl:
-	* templates/language-release-ui-stats-modules.tmpl:
-	* update-stats.py: Replaced svn... and cvs... tags by a more generic
-	scm... serie of tags.
-	* templates/module.tmpl: Added support for git and mercurial as source
-	control manager. Patch by Dimitris Glezos <dimitris@glezos.com>. Fixes
-	bug #448168.
-
-2007-06-16  Claude Paroz  <claude@2xlibre.net>
-
 	* l10n.py: Fixed language detection with country codes. Patch by
 	Dimitris Glezos <dimitris@glezos.com>. Fixes bug #447741.
 

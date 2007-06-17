@@ -103,8 +103,11 @@ class Releases:
                         retmodules[modid]['maintainers'] = myMod['maintainer']
                     else:
                         retmodules[modid]['maintainers'] = {}
-                    if myMod.has_key('scmmodule'):
-                        retmodules[modid]['scmmodule'] = myMod['scmmodule']
+                    if myMod.has_key('cvsmodule'):
+                        retmodules[modid]['cvsmodule'] = myMod['cvsmodule']
+                    if myMod.has_key('svnmodule'):
+                        retmodules[modid]['svnmodule'] = myMod['svnmodule']
+                        retmodules[modid]['cvsmodule'] = myMod['svnmodule']
 
                     if gather_stats and myMod.has_key('branch') and myMod['branch'].has_key(branch):
                         trdomains = myMod['branch'][branch]['domain']
