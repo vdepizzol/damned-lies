@@ -32,14 +32,14 @@
      <tr>
        #if len($module.documents.keys()) > 1
         <td class="left" style="padding-left:2em; padding-right:2em;">
-         <a href="$POFILE" title="module: '$module.cvsmodule/$docdir', branch: '$module.branch'"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${document.description}
+         <a href="$POFILE" title="module: '$module.scmmodule/$docdir', branch: '$module.branch'"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${document.description}
          #for pomsgs in $POINFO
            <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
          #end for
         </td>
        #else
         <td class="left">
-         <a href="$POFILE" title="module: '$module.cvsmodule/$docdir', branch: '$module.branch'"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a> <a href="${webroot}/module/${moduleid}" title="branch: '$module.branch'">${module.description}</a>
+         <a href="$POFILE" title="module: '$module.scmmodule/$docdir', branch: '$module.branch'"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a> <a href="${webroot}/module/${moduleid}" title="branch: '$module.branch'">${module.description}</a>
          #for pomsgs in $POINFO
            <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
          #end for

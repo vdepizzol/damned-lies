@@ -185,12 +185,16 @@ def _applyDefaultsData (data, dataType, defsDict, defsList=(), things={}):
                 if not data.has_key (key): data[key] = {}
                 for i in defsDict[key].keys():
                     id = pat.sub (subsFunc, i)
-                    if not data[key].has_key (id): data[key][id] = {}
-                    newThings = copy.copy(things)
-                    newThings[key] = data[key][id]
-                    _applyDefaultsData (data[key][id], key, defsDict[key][i],
+                    if type(val[id]) == type(u''):
+                        if not data[key].has_key (id):
+                            data[key][id] = pat.sub (subsFunc, val[id])
+                    else:
+                        if not data[key].has_key (id): data[key][id] = {}
+                        newThings = copy.copy(things)
+                        newThings[key] = data[key][id]
+                        _applyDefaultsData (data[key][id], key, defsDict[key][i],
                                         defsList=defsList, things=newThings)
-                    _applyDefaultsList (data[key][id], key,
+                        _applyDefaultsList (data[key][id], key,
                                         defsList=defsList, things=newThings)
             else:
                 #FIXME: be stricter
