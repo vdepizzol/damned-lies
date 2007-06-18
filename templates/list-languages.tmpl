@@ -21,9 +21,12 @@
 <h1>$_("Gnome Languages")</h1>
 
 #if len($languages)
-<p>$_("Gnome is being translated to following languages:")</p>
+<p>$_("Gnome is being translated to following languages (%s):" % len($languages))</p>
 
+<div class="col1">
 <ul>
+#set count = 1
+#set col = 1
 #for lang in $languages
 <li style="font-size: 120%;">
   #if $lang.name
@@ -32,8 +35,15 @@
   <a href="${webroot}/languages/${lang.code}">${lang.code}</a>
   #end if
 </li>
+  #set count = $count+1
+  #if $count % (len($languages)/3+1) == 0
+    #set col = $col+1
+    </ul></div>
+    <div class="col${col}"><ul>
+  #end if
 #end for
 </ul>
+</div>
 #else
 <p>$_("Gnome is currently not being translated to any language. :(")</p>
 #end if
