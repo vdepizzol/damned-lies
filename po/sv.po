@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-14 18:13+0200\n"
-"PO-Revision-Date: 2007-05-14 18:15+0100\n"
+"POT-Creation-Date: 2007-06-19 03:16+0100\n"
+"PO-Revision-Date: 2007-06-22 09:45+0200\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;"
 
 #: ../gnome-modules.xml.in.h:2
 #, no-c-format
@@ -317,8 +317,7 @@ msgstr "Systemadministrationsguide"
 msgid "System Monitor Manual"
 msgstr "Handbok för Systemövervakare"
 
-#: ../gnome-modules.xml.in.h:77
-#: ../templates/language-release.tmpl:106
+#: ../gnome-modules.xml.in.h:77 ../templates/language-release.tmpl:106
 msgid "UI translations"
 msgstr "Gränssnittsöversättningar"
 
@@ -434,8 +433,7 @@ msgstr "Systemadministration"
 msgid "freedesktop.org (non-GNOME)."
 msgstr "freedesktop.org (icke-GNOME)."
 
-#: ../teams.py:156
-#: ../teams.py:265
+#: ../teams.py:151 ../teams.py:245
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s översättningsteamet"
@@ -979,89 +977,127 @@ msgid "Welsh"
 msgstr "Walesiska"
 
 #: ../translation-teams.xml.in.h:135
+msgid "Wolof"
+msgstr "Wolof"
+
+#: ../translation-teams.xml.in.h:136
 msgid "Xhosa"
 msgstr "Xhosa"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:137
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:138
 msgid "Yoruba"
 msgstr "Yoruba"
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:139
 msgid "Zapotec"
 msgstr "Zapotec"
 
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:140
 msgid "Zulu"
 msgstr "Zulu"
 
-#: ../templates/index.tmpl:5
-#: ../templates/index.tmpl:24
+#: ../templates/index.tmpl:7 ../templates/index.tmpl:25
 msgid "Damned Lies about Gnome"
 msgstr "Förbannade lögner om GNOME"
 
-#: ../templates/index.tmpl:28
+#: ../templates/index.tmpl:29
 msgid "Teams"
 msgstr "Team"
 
-#: ../templates/index.tmpl:29
-msgid "List of all Gnome Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
-msgstr "Lista över alla Gnome-översättningsteam, med fullständig information som primär kontakt (koordinator), information om webbsidor och sändlistor."
-
 #: ../templates/index.tmpl:30
-msgid "If there is no team for your language, you can easily <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
-msgstr "Om det inte finns något team för ditt språk kan du enkelt <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">starta ditt egna team</a>."
+msgid ""
+"List of all Gnome Translation Teams, with full information such as primary "
+"contact (coordinator), web pages and mailing list information."
+msgstr ""
+"Lista över alla Gnome-översättningsteam, med fullständig information som "
+"primär kontakt (koordinator), information om webbsidor och sändlistor."
 
-#: ../templates/index.tmpl:35
+#: ../templates/index.tmpl:31
+msgid ""
+"If there is no team for your language, you can easily <a href=\"http://live."
+"gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
+msgstr ""
+"Om det inte finns något team för ditt språk kan du enkelt <a href=\"http://"
+"live.gnome.org/TranslationProject/StartingATeam/\">starta ditt egna team</a>."
+
+#: ../templates/index.tmpl:36
 msgid "Languages"
 msgstr "Språk"
 
-#: ../templates/index.tmpl:36
-msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
-msgstr "Lista över alla språk som det finns <a href=\"teams/\">översättningsteam</a> för."
-
 #: ../templates/index.tmpl:37
-msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages Gnome is being translated to."
-msgstr "Några team hanterar fler än ett språk (vanligtvis enkla varianter) och här kan du se alla de språk som Gnome blir översatt till."
+msgid ""
+"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+msgstr ""
+"Lista över alla språk som det finns <a href=\"teams/\">översättningsteam</a> "
+"för."
 
-#: ../templates/index.tmpl:41
+#: ../templates/index.tmpl:38
+msgid ""
+"Some teams manage more than one language (usually just simple variants), and "
+"here you can see all the languages Gnome is being translated to."
+msgstr ""
+"Några team hanterar fler än ett språk (vanligtvis enkla varianter) och här "
+"kan du se alla de språk som Gnome blir översatt till."
+
+#: ../templates/index.tmpl:42
 msgid "Release Sets"
 msgstr "Utgåvesamlingar"
 
-#: ../templates/index.tmpl:42
+#: ../templates/index.tmpl:43
 msgid "List of all Gnome release sets and releases we gather stats for."
-msgstr "Lista över alla Gnome-utgåvesamlingar och utgåvor som vi samlar statistik om."
-
-#: ../templates/index.tmpl:44
-msgid "Examples of release sets are \"Gnome Office\", \"Fifth Toe\" or \"Gnome 2.14\"."
-msgstr "Exempel på utgåvesamlingar är \"Gnome Office\", \"Fifth Toe\" eller \"Gnome 2.14\"."
+msgstr ""
+"Lista över alla Gnome-utgåvesamlingar och utgåvor som vi samlar statistik om."
 
 #: ../templates/index.tmpl:45
-msgid "Official Gnome release sets are further divided into categories such as \"Desktop Applications\" and \"Developer Platform\"."
-msgstr "Officiella Gnome-utgåvesamlingar delas sedan upp i kategorier som \"Skrivbordsprogram\" och \"Utvecklingsplattform\"."
+msgid ""
+"Examples of release sets are \"Gnome Office\", \"Fifth Toe\" or \"Gnome 2.14"
+"\"."
+msgstr ""
+"Exempel på utgåvesamlingar är \"Gnome Office\", \"Fifth Toe\" eller \"Gnome "
+"2.14\"."
 
-#: ../templates/index.tmpl:47
-msgid "Look here if you want to compare language support in any of these release sets."
-msgstr "Se här om du vill jämföra språkstödet i någon av dessa utgåvesamlingar."
+#: ../templates/index.tmpl:46
+msgid ""
+"Official Gnome release sets are further divided into categories such as "
+"\"Desktop Applications\" and \"Developer Platform\"."
+msgstr ""
+"Officiella Gnome-utgåvesamlingar delas sedan upp i kategorier som "
+"\"Skrivbordsprogram\" och \"Utvecklingsplattform\"."
 
-#: ../templates/index.tmpl:50
+#: ../templates/index.tmpl:48
+msgid ""
+"Look here if you want to compare language support in any of these release "
+"sets."
+msgstr ""
+"Se här om du vill jämföra språkstödet i någon av dessa utgåvesamlingar."
+
+#: ../templates/index.tmpl:51
 msgid "Modules"
 msgstr "Moduler"
 
-#: ../templates/index.tmpl:51
+#: ../templates/index.tmpl:52
 msgid "List of all modules with statistics in here."
 msgstr "Lista över alla moduler som har statistik här."
 
-#: ../templates/index.tmpl:53
-msgid "Modules are separate libraries or applications, with one or more branches of development included."
-msgstr "Moduler är separata bibliotek eller program, med en eller flera utvecklingsgrenar inkluderade."
-
 #: ../templates/index.tmpl:54
-msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "De hämtas oftast från CVS, och vi håller alla relevant information om dem (Bugzilla-detaljer, webbsida, underhållare,...)."
+msgid ""
+"Modules are separate libraries or applications, with one or more branches of "
+"development included."
+msgstr ""
+"Moduler är separata bibliotek eller program, med en eller flera "
+"utvecklingsgrenar inkluderade."
+
+#: ../templates/index.tmpl:55
+msgid ""
+"They are usually taken from CVS, and we keep all relevant information on "
+"them (Bugzilla details, web page, maintainer information,...)."
+msgstr ""
+"De hämtas oftast från CVS, och vi håller alla relevant information om dem "
+"(Bugzilla-detaljer, webbsida, underhållare,...)."
 
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
@@ -1085,92 +1121,85 @@ msgstr "Språk"
 msgid "Translated"
 msgstr "Översatt"
 
-#: ../templates/show-stats.tmpl:27
-#: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:110
+#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:29
+#: ../templates/team.tmpl:109
 msgid "Graph"
 msgstr "Diagram"
 
-#: ../templates/person.tmpl:7
-#: ../templates/person.tmpl:9
+#: ../templates/person.tmpl:8 ../templates/person.tmpl:10
 msgid "%(person)s — GNOME Contributor"
 msgstr "%(person)s — GNOME-bidragsgivare"
 
-#: ../templates/person.tmpl:43
-#: ../templates/language-release.tmpl:71
-#: ../templates/team.tmpl:79
+#: ../templates/person.tmpl:41 ../templates/language-release.tmpl:71
+#: ../templates/team.tmpl:78
 msgid "Instant messaging:"
 msgstr "Snabbmeddelande:"
 
-#: ../templates/person.tmpl:57
-#: ../templates/language-release.tmpl:85
-#: ../templates/team.tmpl:93
+#: ../templates/person.tmpl:55 ../templates/language-release.tmpl:85
+#: ../templates/team.tmpl:92
 msgid "Bugzilla account:"
 msgstr "Bugzilla-konto:"
 
-#: ../templates/person.tmpl:60
-#: ../templates/language-release.tmpl:88
-#: ../templates/team.tmpl:96
+#: ../templates/person.tmpl:58 ../templates/language-release.tmpl:88
+#: ../templates/team.tmpl:95
 msgid "SVN account:"
 msgstr "SVN-konto:"
 
-#: ../templates/person.tmpl:64
+#: ../templates/person.tmpl:62
 msgid "Maintains:"
 msgstr "Underhåller:"
 
-#: ../templates/person.tmpl:66
+#: ../templates/person.tmpl:64
 msgid "Maintains %(module)s"
 msgstr "Underhåller %(module)s"
 
-#: ../templates/person.tmpl:72
+#: ../templates/person.tmpl:70
 msgid "Translates:"
 msgstr "Översätter:"
 
-#: ../templates/person.tmpl:82
+#: ../templates/person.tmpl:80
 msgid "Coordinates %(team)s"
 msgstr "Koordinerar %(team)s"
 
-#: ../templates/list-teams.tmpl:5
-#: ../templates/list-teams.tmpl:21
+#: ../templates/list-teams.tmpl:7 ../templates/list-teams.tmpl:22
 msgid "GNOME Translation Teams"
 msgstr "GNOME-översättningsteam"
 
-#: ../templates/list-teams.tmpl:24
+#: ../templates/list-teams.tmpl:25
 msgid "Select a team below to see more information about it:"
 msgstr "Välj ett team nedan för att se mer information om det."
 
-#: ../templates/list-teams.tmpl:34
+#: ../templates/list-teams.tmpl:35
 msgid "Coordinated by %(coordinator)s"
 msgstr "Koordineras av %(coordinator)s"
 
-#: ../templates/list-teams.tmpl:40
+#: ../templates/list-teams.tmpl:41
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Det finns för närvarande inga översättningsteam i GNOME. :("
 
-#: ../templates/release.tmpl:5
-#: ../templates/release.tmpl:21
+#: ../templates/release.tmpl:7 ../templates/release.tmpl:21
 msgid "%(release)s Release"
 msgstr "Utgåva %(release)s"
 
-#: ../templates/release.tmpl:23
-#: ../templates/language-release.tmpl:97
-msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
+#: ../templates/release.tmpl:23 ../templates/language-release.tmpl:97
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. "
+"Kontrollera webbsidan för varje modul för att se var översättningarna ska "
+"skickas."
 
-#: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:110
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:109
 msgid "Release"
 msgstr "Utgåva"
 
-#: ../templates/release.tmpl:29
-#: ../templates/language-release.tmpl:101
-#: ../templates/module.tmpl:93
-#: ../templates/team.tmpl:110
+#: ../templates/release.tmpl:29 ../templates/language-release.tmpl:101
+#: ../templates/module.tmpl:94 ../templates/team.tmpl:109
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:110
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:109
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
@@ -1179,88 +1208,77 @@ msgstr "Användargränssnitt"
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% översatt)"
 
-#: ../templates/list-releases.tmpl:5
-#: ../templates/list-releases.tmpl:21
+#: ../templates/list-releases.tmpl:7 ../templates/list-releases.tmpl:22
 msgid "GNOME Releases"
 msgstr "GNOME-utgåvor"
 
-#: ../templates/list-releases.tmpl:24
+#: ../templates/list-releases.tmpl:25
 msgid "Select a release or a release set below to see more details about it:"
-msgstr "Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer om den:"
+msgstr ""
+"Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer om den:"
 
-#: ../templates/list-releases.tmpl:41
+#: ../templates/list-releases.tmpl:42
 msgid "There are currently no releases defined in GNOME. :("
 msgstr "Det finns för närvarande inga utgåvor definierade i GNOME. :("
 
-#: ../templates/list-languages.tmpl:5
-#: ../templates/list-languages.tmpl:20
+#: ../templates/list-languages.tmpl:7 ../templates/list-languages.tmpl:21
 msgid "Gnome Languages"
 msgstr "Gnome-språk"
 
-#: ../templates/list-languages.tmpl:23
-msgid "Gnome is being translated to following languages:"
-msgstr "Gnome blir översatt till följande språk:"
+#: ../templates/list-languages.tmpl:24
+#, c-format
+msgid "Gnome is being translated to following languages (%s):"
+msgstr "Gnome blir översatt till följande språk (%s):"
 
-#: ../templates/list-languages.tmpl:37
+#: ../templates/list-languages.tmpl:48
 msgid "Gnome is currently not being translated to any language. :("
 msgstr "Gnome blir för närvarande inte översatt till något språk. :("
 
-#: ../templates/language-release.tmpl:6
+#: ../templates/language-release.tmpl:7
 msgid "%(language)s Translations for %(release)s"
 msgstr "%(language)s översättningar för %(release)s"
 
-#: ../templates/language-release.tmpl:26
-#: ../templates/team.tmpl:33
+#: ../templates/language-release.tmpl:26 ../templates/team.tmpl:32
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../templates/language-release.tmpl:29
-#: ../templates/team.tmpl:36
+#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:35
 msgid "%(team)s Page:"
 msgstr "Webbsida för %(team)s:"
 
-#: ../templates/language-release.tmpl:33
-#: ../templates/team.tmpl:40
+#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:39
 msgid "Users Web Page:"
 msgstr "Användarnas webbsida:"
 
-#: ../templates/language-release.tmpl:37
-#: ../templates/team.tmpl:44
+#: ../templates/language-release.tmpl:37 ../templates/team.tmpl:43
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: ../templates/language-release.tmpl:39
-#: ../templates/team.tmpl:46
+#: ../templates/language-release.tmpl:39 ../templates/team.tmpl:45
 msgid "Report Bug in Translation"
 msgstr "Rapportera fel i översättning"
 
-#: ../templates/language-release.tmpl:40
-#: ../templates/team.tmpl:47
+#: ../templates/language-release.tmpl:40 ../templates/team.tmpl:46
 msgid "Show Existing Bugs"
 msgstr "Visa befintliga felrapporter"
 
-#: ../templates/language-release.tmpl:45
-#: ../templates/team.tmpl:53
+#: ../templates/language-release.tmpl:45 ../templates/team.tmpl:52
 msgid "Mailing List:"
 msgstr "Sändlista:"
 
-#: ../templates/language-release.tmpl:47
-#: ../templates/team.tmpl:55
+#: ../templates/language-release.tmpl:47 ../templates/team.tmpl:54
 msgid "Send e-mail to the list"
 msgstr "Skicka e-post till listan"
 
-#: ../templates/language-release.tmpl:49
-#: ../templates/team.tmpl:57
+#: ../templates/language-release.tmpl:49 ../templates/team.tmpl:56
 msgid "Subscribe"
 msgstr "Prenumerera"
 
-#: ../templates/language-release.tmpl:58
-#: ../templates/team.tmpl:66
+#: ../templates/language-release.tmpl:58 ../templates/team.tmpl:65
 msgid "Coordinator"
 msgstr "Koordinator"
 
-#: ../templates/list-modules.tmpl:5
-#: ../templates/list-modules.tmpl:22
+#: ../templates/list-modules.tmpl:7 ../templates/list-modules.tmpl:22
 msgid "Damned Lies about GNOME modules"
 msgstr "Förbannade lögner om GNOME-moduler"
 
@@ -1269,67 +1287,74 @@ msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Välj en modul nedan för att se några förbannade lögner om den:"
 
 #: ../templates/list-modules.tmpl:33
-msgid "There are currently no modules for which I am gathering damned lies for. Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
-msgstr "Det finns för närvarande inga moduler för vilka jag samlar in förbannade lögner för. Peta på <a href=\"danilo@gnome.org\">Danilo</a> om det!"
+msgid ""
+"There are currently no modules for which I am gathering damned lies for. "
+"Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
+msgstr ""
+"Det finns för närvarande inga moduler för vilka jag samlar in förbannade "
+"lögner för. Peta på <a href=\"danilo@gnome.org\">Danilo</a> om det!"
 
-#: ../templates/people.tmpl:6
-#: ../templates/people.tmpl:23
+#: ../templates/people.tmpl:7 ../templates/people.tmpl:21
 msgid "GNOME Contributors"
 msgstr "GNOME-bidragsgivare"
 
-#: ../templates/people.tmpl:26
+#: ../templates/people.tmpl:24
 msgid "Gnome is being developed by following people:"
 msgstr "Gnome utvecklas av följande personer:"
 
-#: ../templates/people.tmpl:47
+#: ../templates/people.tmpl:45
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "Det finns inga bidragsgivare, GNOME kom fram helt på egen hand."
 
-#: ../templates/module.tmpl:5
+#: ../templates/module.tmpl:7
 msgid "%(module)s Statistics"
 msgstr "Statistik för %(module)s"
 
-#: ../templates/module.tmpl:31
-msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
-msgstr "Den här modulen är inte en del av GNOME:s SVN-förråd. Kontrollera modulens webbsida för att se var översättningen ska skickas."
+#: ../templates/module.tmpl:32
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Den här modulen är inte en del av GNOME:s SVN-förråd. Kontrollera modulens "
+"webbsida för att se var översättningen ska skickas."
 
-#: ../templates/module.tmpl:38
+#: ../templates/module.tmpl:39
 msgid "Maintainers"
 msgstr "Ansvariga"
 
-#: ../templates/module.tmpl:54
+#: ../templates/module.tmpl:55
 msgid "Bug reporting"
 msgstr "Felrapportering"
 
-#: ../templates/module.tmpl:55
+#: ../templates/module.tmpl:56
 msgid "Report bugs to Bugzilla"
 msgstr "Rapport fel till Bugzilla"
 
-#: ../templates/module.tmpl:63
+#: ../templates/module.tmpl:64
 msgid "Branches:"
 msgstr "Grenar:"
 
-#: ../templates/module.tmpl:78
+#: ../templates/module.tmpl:79
 msgid "Browse CVS"
 msgstr "Bläddra i CVS"
 
-#: ../templates/module.tmpl:80
-#: ../templates/module.tmpl:82
+#: ../templates/module.tmpl:81 ../templates/module.tmpl:83
 msgid "Browse SVN"
 msgstr "Bläddra i SVN"
 
-#: ../templates/module.tmpl:86
+#: ../templates/module.tmpl:87
 msgid "This branch is currently string-frozen."
 msgstr "Den här grenen är för närvarande strängfrusen."
 
-#: ../templates/module.tmpl:113
+#: ../templates/module.tmpl:114
 msgid "Translation"
 msgstr "Översättning"
 
 #~ msgid "GnomeScan"
 #~ msgstr "GnomeScan"
+
 #~ msgid "GST Boot Setup Manual"
 #~ msgstr "Handbok för Startadministrationsverktyg"
+
 #~ msgid "Norwegian"
 #~ msgstr "Norska"
-
