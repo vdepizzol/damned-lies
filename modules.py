@@ -218,7 +218,7 @@ class HgModule:
             if real_update:
                 if defaults.DEBUG:
                     print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"],
+                co = self.checkout(module["scmroot"]["path"],
                                    module["scmmodule"], branch, 
                                    localroot,
                                    moduledir)
@@ -291,7 +291,7 @@ class GitModule:
             if real_update:
                 if defaults.DEBUG:
                     print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"],
+                co = self.checkout(module["scmroot"]["path"],
                                    module["scmmodule"], branch, 
                                    localroot,
                                    moduledir)
