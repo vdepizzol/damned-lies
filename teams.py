@@ -141,7 +141,9 @@ if __name__=="__main__":
                 team = myteam.data[teamid]
 
                 for lang, ldata in team['language'].items():
-                    team['language'][lang]['releases'] = releases.Releases(deep=1, gather_stats = lang).data
+                    releaselist = releases.Releases(deep=1, gather_stats = lang).data
+                    releaselist.sort(compare_releases)
+                    team['language'][lang]['releases'] = releaselist
                     if not langid: langid = lang
 
                 html.team = team

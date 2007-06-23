@@ -284,7 +284,7 @@ class Releases:
 
             if ui_size:
                 totalun = ui_size - totaltr - totalfz # XXX
-                ui_supp = "%.0f" % (100.0*totaltr/ui_size)
+                ui_supp = 100*totaltr/ui_size
                 ui_percentages = {
                     'translated': 100*totaltr/ui_size,
                     'fuzzy': 100*totalfz/ui_size,
@@ -300,7 +300,7 @@ class Releases:
 
             if doc_size:
                 dtotalun = doc_size - dtotaltr - dtotalfz # XXX
-                doc_supp = "%.0f" % (100.0*dtotaltr/doc_size)
+                doc_supp = 100*dtotaltr/doc_size
                 doc_percentages = {
                     'translated': 100*dtotaltr/doc_size,
                     'fuzzy': 100*dtotalfz/doc_size,
