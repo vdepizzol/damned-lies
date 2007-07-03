@@ -29,6 +29,19 @@ class LocStatistics:
                                                Type = msgtype,
                                                Description = message)
 
+    def check_po_contains_errors_in_db(self, module, branch, type, domain, language):
+        """Check if given po contains errors in database."""
+        MyStat = database.Statistics.selectBy(Module = module,
+                                              Branch = branch,
+                                              Type = type,
+                                              Domain = domain,
+                                              Language = language)
+        MyStat = MyStat.orderBy('-Date')
+        po_errors = database.Information.selectBy(Statistics=MyStat[0])
+        if defaults.DEBUG and po_errors.count(): 
+                print >>sys.stderr, "%s.%s.%s (%s) contains %s error(s)" % (module,branch,language,MyStat[0].Date,po_errors.count())
+        return po_errors.count()
+
     def update_stats_database(self, module, branch, type, domain, date, language, translated, fuzzy, untranslated, errors):
         MyArchive = database.ArchivedStatistics(Module = module,
                                                 Branch = branch,
@@ -269,7 +282,10 @@ might be worth investigating.
 
                 srcpo = os.path.join(po_path, file)
                 if not potchanged and os.access(outpo,os.R_OK) and os.stat(srcpo)[8] < os.stat(outpo)[8]:
-                    continue
+                    # new if clause for saving some database access
+                    if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'ui', self.podir, lang):
+                        # this language doesn't need updating
+                        continue
 
                 realcmd = command % {
                     'outpo' : outpo,
@@ -290,7 +306,7 @@ might be worth investigating.
 
 
     def check_lang_support(self, module_path, po_path, lang):
-        "Checks if language is listed in one of po/LINGUAS, configure.ac or configure.in"
+        """Checks if language is listed in one of po/LINGUAS, configure.ac or configure.in"""
 
         LINGUAShere = os.path.join(po_path, "LINGUAS")
         LINGUASpo = os.path.join(module_path, "po", "LINGUAS") # if we're in eg. po-locations/
@@ -610,7 +626,10 @@ might be worth investigating.
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
                 if not potchanged and os.access(outpo, os.R_OK) and os.stat(myfile)[8] < os.stat(outpo)[8]:
-                    continue
+                    # new if clause for saving some database access
+                    if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'doc', self.podir, lang):
+                        # this language doesn't need updating
+                        continue
 
                 realcmd = command % {
                     'outpo' : outpo,
