@@ -37,10 +37,12 @@ class LocStatistics:
                                               Domain = domain,
                                               Language = language)
         MyStat = MyStat.orderBy('-Date')
-        po_errors = database.Information.selectBy(Statistics=MyStat[0])
-        if defaults.DEBUG and po_errors.count(): 
+        if MyStat.count():
+            po_errors = database.Information.selectBy(Statistics=MyStat[0])
+            if defaults.DEBUG and po_errors.count(): 
                 print >>sys.stderr, "%s.%s.%s (%s) contains %s error(s)" % (module,branch,language,MyStat[0].Date,po_errors.count())
-        return po_errors.count()
+            return po_errors.count()
+        else: return 0
 
     def update_stats_database(self, module, branch, type, domain, date, language, translated, fuzzy, untranslated, errors):
         MyArchive = database.ArchivedStatistics(Module = module,
@@ -348,7 +350,7 @@ might be worth investigating.
 
                 for line in lines:
                     line = line.strip()
-                    test = re.match('ALL_LINGUAS\s*=\s*"([^"]*)"', line)
+                    test = re.search('ALL_LINGUAS\s*[=,]\s*"([^"]*)"', line)
                     if test:
                         value = test.groups(1)[0]
                         if lang in value.split(" "):

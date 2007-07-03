@@ -1,5 +1,11 @@
 2007-07-03  Claude Paroz  <claude@2xlibre.net>
 
+	* update-stats.py: Added a check for empty result in
+	check_po_contains_errors_in_db, extended search for ALL_LINGUAS
+	(especially for gnumeric).
+
+2007-07-03  Claude Paroz  <claude@2xlibre.net>
+
 	* translation-teams.xml.in: Updated Uzbek team web page.
 	* update-stats.py: New check_po_contains_errors_in_db function, to
 	always recompute a po file that contains errors.
