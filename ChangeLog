@@ -1,3 +1,13 @@
+2007-07-06  Claude Paroz  <claude@2xlibre.net>
+
+	* defaults.py: Added N_ function (deferred translation).
+	* l10n.py:
+	* releases.py:
+	* update-stats.py:
+	* view-module.py: Handling of deferred translations for error messages
+	stored in the database.
+	Fixes bug #451858.
+
 2007-07-03  Claude Paroz  <claude@2xlibre.net>
 
 	* update-stats.py: Added a check for empty result in

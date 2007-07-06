@@ -6,6 +6,7 @@ import Cheetah.Filters
 import defaults
 import accept
 import os
+import re
 
 trans = None
 
@@ -32,11 +33,26 @@ def set_language():
     get_trans()
 
 def gettext(text):
-    return get_trans().ugettext(unicode(text,'utf-8'))
+    if type(text) != type(u""):
+        text = unicode(text,'utf-8')
+    matches = re.findall('###([^#]*)###',text) 
+    if matches:
+        text = re.sub('###([^#]*)###', '%s', text)
 
+    text = get_trans().ugettext(text)
+    
+    #FIXME: if multiple substitutions, works only if order of %s is unchanged in translated string
+    for match in matches:
+    	  text = text.replace('%s',match,1)
+    return text
 
 def ngettext(text, plural, number):
-    return get_trans().ungettext(unicode(text,'utf-8'), unicode(plural,'utf-8'), number)
+    if type(text) != type(u""):
+        text = unicode(text,'utf-8')
+    if type(plural) != type(u""):
+        plural = unicode(plural,'utf-8')
+
+    return get_trans().ungettext(text, plural, number)
 
 class MyFilter(Cheetah.Filters.Filter):
     def filter(self, val, **kw):

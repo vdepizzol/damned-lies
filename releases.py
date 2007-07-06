@@ -42,7 +42,7 @@ class Releases:
 
             msgs = []
             for msg in stats[0].Messages:
-                msgs.append( (msg.Type, msg.Description) )
+                msgs.append( (msg.Type, l10n.gettext(msg.Description)) )
 
             return (tr,fz,un, msgs)
         else:

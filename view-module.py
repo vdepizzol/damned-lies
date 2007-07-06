@@ -58,7 +58,7 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
 
         here['pot_messages'] = []
         for msg in pot.Messages:
-            here['pot_messages'].append({'type' : msg.Type, 'content' : msg.Description})
+            here['pot_messages'].append({'type' : msg.Type, 'content' : l10n.gettext(msg.Description)})
 
         here['statistics'] = []
         langres = teams.TranslationLanguages(show_hidden=1)
@@ -98,13 +98,13 @@ def get_stats_for(here, module, trdomain, branch, type, sortorder='name'):
                 new['po_messages'].append({'type': msg.Type, 'content': msg.Description})
                 if msg.Type=='error':
                     new['po_error'] = 'error'
-                    new['po_error_message'] = msg.Description
+                    new['po_error_message'] = l10n.gettext(msg.Description)
                 elif msg.Type=='warn' and new['po_error'] != 'error':
                     new['po_error'] = 'warn'
-                    new['po_error_message'] = msg.Description
+                    new['po_error_message'] = l10n.gettext(msg.Description)
                 elif msg.Type=='info' and not new['po_error']:
                     new['po_error'] = 'info'
-                    new['po_error_message'] = msg.Description
+                    new['po_error_message'] = l10n.gettext(msg.Description)
 
 
             here['statistics'].append(new)

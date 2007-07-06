@@ -211,10 +211,10 @@ might be worth investigating.
             # Use old POT file
             potfile = newpot
             if defaults.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module["id"], po_dir)
-            errors.append(("error", "Can't generate POT file, using old one."))
+            errors.append(("error", defaults.N_("Can't generate POT file, using old one.")))
         elif error or not os.access(potfile, os.R_OK):
             if defaults.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module["id"], po_dir)
-            errors.append(("error", "Can't generate POT file, using old one if it exists."))
+            errors.append(("error", defaults.N_("Can't generate POT file, using old one if it exists.")))
             pot_stats = self.po_file_stats(potfile, 0)
             pot_stats['errors'].extend(errors)
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
@@ -243,7 +243,7 @@ might be worth investigating.
         pot_stats['errors'].extend(errors)
 
         if potfile!=newpot and not self.copy_file(potfile, newpot):
-            pot_stats['errors'].append(('error', "Can't copy new POT file to public location."))
+            pot_stats['errors'].append(('error', defaults.N_("Can't copy new POT file to public location.")))
 
         postats = self.update_po_files(base_dir, popath, potfile, out_dir, out_domain, potchanged)
 
@@ -255,7 +255,7 @@ might be worth investigating.
         for lang in postats:
             langs = teams.TranslationLanguages(show_hidden=1)
             if not lang or not langs.has_key(lang):
-                postats[lang]['errors'].append(("warn", "There is no translation team in charge of '%s' translation." % (lang)))
+                postats[lang]['errors'].append(("warn", defaults.N_("There is no translation team in charge of '%s' translation.") % (lang)))
 
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'ui',
                                        domain = self.podir, date = NOW, language = lang,
@@ -331,7 +331,7 @@ might be worth investigating.
                         break
                 lfile.close()
                 if not in_config:
-                    errors.append(("warn", "Entry for this language is not present in LINGUAS file."))
+                    errors.append(("warn", defaults.N_("Entry for this language is not present in LINGUAS file.")))
                 return errors
 
         import re
@@ -359,10 +359,10 @@ might be worth investigating.
                         break
                 cfile.close()
                 if not in_config:
-                    errors.append(("warn", "Entry for this language is not present in ALL_LINGUAS in configure file."))
+                    errors.append(("warn", defaults.N_("Entry for this language is not present in ALL_LINGUAS in configure file.")))
                 return errors
 
-        errors.append(("warn", "Don't know where to look if this language is actually used, ask the module maintainer."))
+        errors.append(("warn", defaults.N_("Don't know where to look if this language is actually used, ask the module maintainer.")))
         return errors
 
     def check_pot_regeneration(self, po_path):
@@ -376,23 +376,25 @@ might be worth investigating.
 
         if error:
             if defaults.DEBUG: print >> sys.stderr, "Error running 'intltool-update -m' check."
-            errors.append( ("error", "Errors while running 'intltool-update -m' check.") )
+            errors.append( ("error", defaults.N_("Errors while running 'intltool-update -m' check.")) )
 
         missing = os.path.join(po_path, "missing")
         if os.access(missing, os.R_OK):
             f = open(missing, "r")
             errors.append( ("warn",
-                            "There are some missing files from POTFILES.in: <ul><li>"
+                            defaults.N_("There are some missing files from POTFILES.in: %s")
+                            % ("<ul><li>"
                             + "</li>\n<li>".join(f.readlines())
-                            + "</li>\n</ul>") )
+                            + "</li>\n</ul>")) )
 
         notexist = os.path.join(po_path, "notexist")
         if os.access(notexist, os.R_OK):
             f = open(notexist, "r")
             errors.append(("error",
-                           "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: <ul><li>"
+                           defaults.N_("Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s")
+                           % ("<ul><li>"
                            + "</li>\n<li>".join(f.readlines())
-                           + "</li>\n</ul>"))
+                           + "</li>\n</ul>")))
         return errors
 
 
@@ -403,7 +405,7 @@ might be worth investigating.
         errors = []
 
         try: os.stat(pofile)
-        except OSError: errors.append(("error", "PO file '%s' doesn't exist." % pofile))
+        except OSError: errors.append(("error", defaults.N_("PO file '%s' doesn't exist.") % pofile))
 
         if msgfmt_checks:
             command = "LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % pofile
@@ -416,12 +418,12 @@ might be worth investigating.
 
         if error:
             if msgfmt_checks:
-                errors.append(("error", "PO file '%s' doesn't pass msgfmt check: not updating." % (pofile)))
+                errors.append(("error", defaults.N_("PO file '%s' doesn't pass msgfmt check: not updating.") % (pofile)))
             else:
-                errors.append(("error", "Can't get statistics for POT file '%s'." % (pofile)))
+                errors.append(("error", defaults.N_("Can't get statistics for POT file '%s'.") % (pofile)))
 
         if msgfmt_checks and os.access(pofile, os.X_OK):
-            errors.append(("warn", "This PO file has an executable bit set."))
+            errors.append(("warn", defaults.N_("This PO file has an executable bit set.")))
 
         import re
         r_tr = re.search(r"([0-9]+) translated", output)
@@ -447,7 +449,7 @@ might be worth investigating.
             if error:
                 myfile = os.path.basename(pofile)
                 errors.append(("warn",
-                               "PO file '%s' is not UTF-8 encoded." % (myfile)))
+                               defaults.N_("PO file '%s' is not UTF-8 encoded.") % (myfile)))
         return {
             'translated' : translated,
             'fuzzy' : fuzzy,
@@ -516,7 +518,7 @@ might be worth investigating.
         errors = []
 
         if not os.path.isdir(sourcedir):
-            errors.append(("error", "Can't find checkout directory."))
+            errors.append(("error", defaults.N_("Can't find checkout directory.")))
             return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
 
         # read interesting variables from the Makefile.am
@@ -536,15 +538,15 @@ might be worth investigating.
         except: pass
 
         if not modulename:
-            errors.append(("error", "Module %s doesn't look like gnome-doc-utils module." % (moduleid)))
+            errors.append(("error", defaults.N_("Module %s doesn't look like gnome-doc-utils module.") % (moduleid)))
             return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
 
         if not os.access(os.path.join(sourcedir, "C", modulename + ".xml"), os.R_OK):
             if os.access(os.path.join(sourcedir, "C", moduleid + ".xml"), os.R_OK):
-                errors.append(("warn", "DOC_MODULE doesn't resolve to a real file, using '%s.xml'." % (moduleid)))
+                errors.append(("warn", defaults.N_("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
                 modulename = moduleid
             else:
-                errors.append(("error", "DOC_MODULE doesn't point to a real file, probably a macro."))
+                errors.append(("error", defaults.N_("DOC_MODULE doesn't point to a real file, probably a macro.")))
                 return { 'errors' : errors, 'translated' : 0, 'untranslated' : 0, 'fuzzy' : 0 }
 
         out_domain = potbase + "." + self.branch
@@ -570,9 +572,8 @@ might be worth investigating.
         (error, output) = commands.getstatusoutput(command)
         if error:
             errors.append(("error",
-                           "Error regenerating POT file for document %s:\n<pre>%s\n%s</pre>" % (out_domain,
-                                                                                                command,
-                                                                                                output)))
+                           defaults.N_("Error regenerating POT file for document %s:\n<pre>%s\n%s</pre>")
+                           % (out_domain, command, output)))
         if defaults.DEBUG: print >> sys.stderr, output
 
         pot_stats = self.po_file_stats(fullpot,0)
@@ -600,7 +601,7 @@ might be worth investigating.
         langs = teams.TranslationLanguages()
         for lang in postats:
             if lang and not langs.has_key(lang):
-                postats[lang]['errors'].append(("error", "There is no translation team in charge of %s." % (lang)))
+                postats[lang]['errors'].append(("error", defaults.N_("There is no translation team in charge of %s.") % (lang)))
 
             self.update_stats_database(module = self.module["id"], branch = self.branch, type = 'doc',
                                        domain = potbase, date = NOW, language = lang,
@@ -644,7 +645,7 @@ might be worth investigating.
 
                 langstats = self.po_file_stats(outpo, 1)
                 if lang not in languages:
-                    langstats['errors'].append(("warn", "DOC_LINGUAS list doesn't include this language."))
+                    langstats['errors'].append(("warn", defaults.N_("DOC_LINGUAS list doesn't include this language.")))
 
                 stats[lang] = langstats
                 if defaults.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)

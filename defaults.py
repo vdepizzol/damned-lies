@@ -82,3 +82,7 @@ language = 'en'
 
 # Right-to-left languages
 rtl_languages = [ 'ar', 'fa', 'he', 'urd', 'yi']
+
+# Dummy function for deferred translation (error messages)
+# See http://docs.python.org/lib/node742.html
+def N_(message): return message.replace("%s","###%s###")

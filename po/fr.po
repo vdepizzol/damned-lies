@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-25 21:42+0200\n"
-"PO-Revision-Date: 2007-05-25 21:45+0200\n"
+"POT-Creation-Date: 2007-07-06 10:42+0200\n"
+"PO-Revision-Date: 2007-07-06 10:44+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -434,7 +434,7 @@ msgstr "Administration système"
 msgid "freedesktop.org (non-GNOME)."
 msgstr "freedesktop.org (non GNOME)"
 
-#: ../teams.py:156 ../teams.py:265
+#: ../teams.py:153 ../teams.py:247
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Équipe de traduction en %(lang)s"
@@ -978,24 +978,154 @@ msgid "Welsh"
 msgstr "gallois"
 
 #: ../translation-teams.xml.in.h:135
+msgid "Wolof"
+msgstr "wolof"
+
+#: ../translation-teams.xml.in.h:136
 msgid "Xhosa"
 msgstr "xhosa"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:137
 msgid "Yiddish"
 msgstr "yiddish"
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:138
 msgid "Yoruba"
 msgstr "yoruba"
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:139
 msgid "Zapotec"
 msgstr "zapotec"
 
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:140
 msgid "Zulu"
 msgstr "zoulou"
+
+#: ../update-stats.py:214
+msgid "Can't generate POT file, using old one."
+msgstr "Impossible de générer le fichier POT, utilisation de l'ancien."
+
+#: ../update-stats.py:217
+msgid "Can't generate POT file, using old one if it exists."
+msgstr ""
+"Impossible de générer le fichier POT, utilisation de l'ancien s'il existe."
+
+#: ../update-stats.py:246
+msgid "Can't copy new POT file to public location."
+msgstr ""
+"Impossible de copier le nouveau fichier POT vers un emplacement public."
+
+#: ../update-stats.py:258
+#, python-format
+msgid "There is no translation team in charge of '%s' translation."
+msgstr "Il n'existe pas d'équipe de traduction pour la traduction de « %s »."
+
+#: ../update-stats.py:334
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "Le fichier LINGUAS ne contient pas de référence à cette langue."
+
+#: ../update-stats.py:362
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr ""
+"La variable ALL_LINGUAS du fichier « configure » ne contient pas de "
+"référence à cette langue."
+
+#: ../update-stats.py:365
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+"Aucune idée de l'endroit où se trouve la référence aux langues vraiment "
+"utilisées, demandez au mainteneur du module."
+
+#: ../update-stats.py:379
+msgid "Errors while running 'intltool-update -m' check."
+msgstr ""
+"Des erreurs se sont produites lors de la vérification par « intltool-update -"
+"m »."
+
+#: ../update-stats.py:385
+#, python-format
+msgid "There are some missing files from POTFILES.in: %s"
+msgstr "Il manque des fichiers dans POTFILES.in : %s"
+
+#: ../update-stats.py:394
+#, python-format
+msgid ""
+"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
+"they don't exist: %s"
+msgstr ""
+"Les fichiers suivants sont référencés dans POTFILES.in ou dans POTFILES."
+"skip, mais ils n'existent pas : %s"
+
+#: ../update-stats.py:408
+#, python-format
+msgid "PO file '%s' doesn't exist."
+msgstr "Le fichier PO « %s » n'existe pas."
+
+#: ../update-stats.py:421
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr ""
+"Le fichier PO « %s » ne passe pas la vérification par « msgfmt » : pas de "
+"mise à jour."
+
+#: ../update-stats.py:423
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "Impossible d'obtenir les statistiques pour le fichier POT « %s »."
+
+#: ../update-stats.py:426
+msgid "This PO file has an executable bit set."
+msgstr "Le bit d'exécution de ce fichier PO est activé."
+
+#: ../update-stats.py:452
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "Le fichier PO « %s » n'est pas codé en UTF-8."
+
+#: ../update-stats.py:521
+msgid "Can't find checkout directory."
+msgstr "Impossible de trouver le répertoire des fichiers source."
+
+#: ../update-stats.py:541
+#, python-format
+msgid "Module %s doesn't look like gnome-doc-utils module."
+msgstr "Le module %s ne semble pas être conforme à la norme gnome-doc-utils."
+
+#: ../update-stats.py:546
+#, python-format
+msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgstr ""
+"La variable DOC_MODULE ne correspond pas à un fichier réel, utilisation de "
+"« %s.xml »."
+
+#: ../update-stats.py:549
+msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+msgstr ""
+"La variable DOC_MODULE ne correspond pas à un fichier réel, il s'agit "
+"probablement d'une macro."
+
+#: ../update-stats.py:575
+#, python-format
+msgid ""
+"Error regenerating POT file for document %s:\n"
+"<pre>%s\n"
+"%s</pre>"
+msgstr ""
+"Erreur lors de la régénération du fichier POT pour le document %s :\n"
+"<pre>%s\n"
+"%s</pre>"
+
+#: ../update-stats.py:604
+#, python-format
+msgid "There is no translation team in charge of %s."
+msgstr "Il n'existe aucune équipe de traduction responsable de %s."
+
+#: ../update-stats.py:648
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
 #: ../templates/index.tmpl:7 ../templates/index.tmpl:25
 msgid "Damned Lies about Gnome"
@@ -1192,7 +1322,8 @@ msgid ""
 "check each module's web page to see where to send translations."
 msgstr ""
 "Les modules de cette version ne font pas partie du dépôt SVN de GNOME. "
-"Consultez la page Web de chaque module pour savoir où envoyer les traductions."
+"Consultez la page Web de chaque module pour savoir où envoyer les "
+"traductions."
 
 #: ../templates/release.tmpl:29 ../templates/team.tmpl:109
 msgid "Release"
@@ -1231,10 +1362,11 @@ msgid "Gnome Languages"
 msgstr "Langues GNOME"
 
 #: ../templates/list-languages.tmpl:24
-msgid "Gnome is being translated to following languages:"
-msgstr "GNOME est en cours de traduction dans les langues suivantes :"
+#, c-format
+msgid "Gnome is being translated to following languages (%s):"
+msgstr "GNOME est en cours de traduction dans les langues suivantes (%s) :"
 
-#: ../templates/list-languages.tmpl:38
+#: ../templates/list-languages.tmpl:48
 msgid "Gnome is currently not being translated to any language. :("
 msgstr "GNOME n'est actuellement traduit dans aucune langue. :("
 
@@ -1322,8 +1454,8 @@ msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Ce module ne fait pas partie du dépôt SVN de GNOME. "
-"Consultez la page Web du module pour savoir où envoyer les traductions."
+"Ce module ne fait pas partie du dépôt SVN de GNOME. Consultez la page Web du "
+"module pour savoir où envoyer les traductions."
 
 #: ../templates/module.tmpl:39
 msgid "Maintainers"
