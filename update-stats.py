@@ -174,7 +174,7 @@ might be worth investigating.
 
         msg = MIMEText(text)
         msg['Subject'] = "String additions to '%s'" % (out_domain)
-        msg['From'] = "Gnome Status Pages <%s>" % (defaults.WHOAREWE)
+        msg['From'] = "GNOME Status Pages <%s>" % (defaults.WHOAREWE)
         msg['To'] = defaults.notifications_to
 
         s = smtplib.SMTP()
