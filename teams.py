@@ -27,6 +27,9 @@ class TranslationTeams:
                 if not firstlanguage:
                     firstlanguage = teams[teamid]['language'][lang]['content']
 
+            if not teams[teamid].has_key('description'):
+                teams[teamid]['description'] = firstlanguage
+            
             coordinator = None
             coordid = teams[teamid]['coordinator'].keys()[0]
             coordinator = people[coordid]
@@ -149,10 +152,6 @@ if __name__=="__main__":
                 html.team = team
                 html.language = lang
                 html.language_name = team['language'][lang]['content']
-                if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = ( _("%(lang)s Translation Team")
-                                                 % { 'lang' :
-                                                     html.language_name } )
                 if not html.team.has_key('bugzilla-component') and html.language_name:
                     html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
 

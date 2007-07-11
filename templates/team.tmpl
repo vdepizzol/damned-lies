@@ -22,11 +22,7 @@
 
 <div class="mainpage">
 
-#if $team.has_key('description')
-<h1>${team.description, CAPITALIZE=1}</h1>
-#else
-<h1>${team.id}</h1>
-#end if
+<h1>${_("%(lang)s Translation Team"), lang=$team.description}</h1>
 
 <table><tr><td valign="top" width="50%">
   <h2>$_("Details")</h2>

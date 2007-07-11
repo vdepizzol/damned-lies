@@ -27,7 +27,7 @@
 <ul>
 #for team in $teams
 <li style="font-size: 120%;">
-  <a href="${webroot}/teams/${team.id}">${team.firstlanguage}</a>
+  <a href="${webroot}/teams/${team.id}">${team.description}</a>
   #if $team.has_key('webpage') and $team.webpage
     — <a href="${team.webpage}">${team.webpage}</a>
   #end if
