@@ -1,3 +1,4 @@
+#from defaults import language
 #set global pageTitle=$_("Damned Lies about GNOME")
 #include "templates/header.tmpl"
 
@@ -36,6 +37,14 @@
   $_("They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...).")</p>
 
 </td></tr></table>
+
+<p class="footnote">
+## Comment on translators
+#* Second type of comment *#
+#if $language != 'en' and $_("translator-credits") != 'translator-credits'
+  $_("Translated by:") $_("translator-credits").replace("\n", ", ").replace("<", "&lt;").replace(">", "&gt;")
+#end if
+</p>
 
 </div>
 #include "templates/footer.tmpl"
