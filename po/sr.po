@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Проклетиња\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-20 11:59+0200\n"
-"PO-Revision-Date: 2007-07-20 12:01+0200\n"
+"POT-Creation-Date: 2007-07-20 12:08+0200\n"
+"PO-Revision-Date: 2007-07-20 12:09+0200\n"
 "Last-Translator: Данило Шеган <danilo@gnome.org>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -1108,7 +1108,7 @@ msgstr "DOC_LINGUAS списак не садржи овај језик."
 msgid "Damned Lies about GNOME"
 msgstr "Проклете лажи о Гному"
 
-#: ../templates/index.tmpl:11
+#: ../templates/index.tmpl:11 ../templates/header.tmpl:32
 msgid "Teams"
 msgstr "Тимови"
 
@@ -1128,7 +1128,7 @@ msgstr ""
 "Уколико нема тима за ваш језик, лако можете <a href=\"http://live.gnome.org/"
 "TranslationProject/StartingATeam/\">направити нови тим</a>."
 
-#: ../templates/index.tmpl:18
+#: ../templates/index.tmpl:18 ../templates/header.tmpl:33
 msgid "Languages"
 msgstr "Језици"
 
@@ -1178,7 +1178,7 @@ msgstr ""
 "Погледајте овде ако желите да упоредите језичку подршку за било који од "
 "скупова издања."
 
-#: ../templates/index.tmpl:33
+#: ../templates/index.tmpl:33 ../templates/header.tmpl:35
 msgid "Modules"
 msgstr "Модули"
 
@@ -1209,6 +1209,14 @@ msgstr "Преведео:"
 #: ../templates/index.tmpl:43
 msgid "translator-credits"
 msgstr "Данило Шеган"
+
+#: ../templates/header.tmpl:27
+msgid "Home"
+msgstr "Почетак"
+
+#: ../templates/header.tmpl:34
+msgid "Release sets"
+msgstr "Издања"
 
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
@@ -1335,9 +1343,9 @@ msgstr "Језици Гнома"
 #: ../templates/list-languages.tmpl:10
 msgid "GNOME is being translated to following %(count)s language:"
 msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] "Гном се преводи на наредни %s језик:"
-msgstr[1] "Гном се преводи на наредних %s језика:"
-msgstr[2] "Гном се преводи на наредних %s језика:"
+msgstr[0] "Гном се преводи на наредни %(count)s језик:"
+msgstr[1] "Гном се преводи на наредних %(count)s језика:"
+msgstr[2] "Гном се преводи на наредних %(count)s језика:"
 
 #: ../templates/list-languages.tmpl:34
 msgid "GNOME is currently not being translated to any language. :("
