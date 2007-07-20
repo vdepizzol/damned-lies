@@ -11,9 +11,9 @@
   #set pageTitle=$_("Damned Lies about GNOME")
 #end try
   <title>$pageTitle</title>
-  <link rel="stylesheet" href="${webroot}/data/main.css"/>
+  <link rel="stylesheet" href="${defaults.webroot}/data/main.css"/>
 #if $rtl
-  <link rel="stylesheet" href="${webroot}/data/rtl.css"/>
+  <link rel="stylesheet" href="${defaults.webroot}/data/rtl.css"/>
 #end if
 </head>
 #if $rtl
@@ -23,15 +23,15 @@
 #end if
 
 <div id="hdr">
-  <a href="${webroot}/"><img id="logo"
-src="${webroot}/data/gnome-64.png" alt=$_("Home")
+  <a href="${defaults.webroot}/"><img id="logo"
+src="${defaults.webroot}/data/gnome-64.png" alt=$_("Home")
 title="$_("Back to Damned Lies home page")" /></a>
 
   <div id="hdrNavTop">Damned Lies</div>
   <div id="hdrNav">
-    <a href="${webroot}/teams/">$_("Teams")</a> &middot; 
-    <a href="${webroot}/languages/">$_("Languages")</a> &middot; 
-    <a href="${webroot}/releases/">$_("Release sets")</a> &middot; 
-    <a href="${webroot}/module/">$_("Modules")</a>
+    <a href="${defaults.webroot}/teams/">$_("Teams")</a> &middot; 
+    <a href="${defaults.webroot}/languages/">$_("Languages")</a> &middot; 
+    <a href="${defaults.webroot}/releases/">$_("Release sets")</a> &middot; 
+    <a href="${defaults.webroot}/module/">$_("Modules")</a>
   </div>
 </div>
