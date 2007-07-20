@@ -1,5 +1,11 @@
 2007-07-20  Danilo Šegan  <danilo@gnome.org>
 
+	* translation-teams.xml.in: Fix Serbian team name.
+
+	* dispatcher.py: Export ngettext call.
+
+	* templates/list-languages.tmpl: Use ngettext where needed.
+
 	* templates/header.tmpl: Fix webroot usage.
 
 2007-07-20  Claude Paroz  <claude@2xlibre.net>

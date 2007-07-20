@@ -21,6 +21,7 @@ class DamnedTemplate(Template):
         del kw['file']
         Template.__init__(self, *args, **kw)
         self._ = l10n.gettext
+        self.ngettext = l10n.ngettext
         self.rtl = (defaults.language in defaults.rtl_languages)
         self.webroot = defaults.webroot
 

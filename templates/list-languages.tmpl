@@ -5,8 +5,9 @@
 
 <h1>$_("GNOME Languages")</h1>
 
+#set languagecount=len($languages)
 #if len($languages)
-<p>$_("GNOME is being translated to following languages (%s):" % len($languages))</p>
+  <p>${ngettext("GNOME is being translated to following %(count)s language:", "GNOME is being translated to following %(count)s languages:", $languagecount),count=$languagecount}</p>
 
 <div class="col1">
 <ul>
