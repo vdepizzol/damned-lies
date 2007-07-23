@@ -630,7 +630,7 @@ might be worth investigating.
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
                 if not potchanged and os.access(outpo, os.R_OK) and os.stat(myfile)[8] < os.stat(outpo)[8]:
                     # new if clause for saving some database access
-                    if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'doc', self.podir, lang):
+                    if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'doc', potbase, lang):
                         # this language doesn't need updating
                         continue
 
