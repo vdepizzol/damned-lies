@@ -263,7 +263,7 @@
   <release id="gnome-2-16" status="official" stringfrozen="true">
     <_description>GNOME 2.16 (old stable)</_description>
     <category id="platform">
-      <_description>GNOME developer platform. Essential software.</_description>
+      <_description>GNOME developer platform</_description>
       <module id="atk"/>
       <module id="gail"/>
       <module id="gconf" branch="gnome-2-18"/>
@@ -277,7 +277,7 @@
       <module id="libgnomeui" branch="gnome-2-16"/>
     </category>
     <category id="desktop">
-      <_description>GNOME desktop. Essential software.</_description>
+      <_description>GNOME desktop</_description>
       <module id="alacarte" branch="gnome-2-16"/>
       <module id="bug-buddy" branch="gnome-2-16"/>
       <module id="dasher" branch="gnome-2-16"/>
@@ -349,7 +349,7 @@
   <release id="gnome-2-18" status="official" stringfrozen="true">
     <_description>GNOME 2.18 (stable)</_description>
     <category id="platform">
-      <_description>GNOME developer platform.</_description>
+      <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-18"/>
       <module id="gail" branch="gnome-2-18"/>
       <module id="gconf" branch="gnome-2-18"/>
@@ -363,7 +363,7 @@
       <module id="libgnomeui" branch="gnome-2-18"/>
     </category>
     <category id="desktop">
-      <_description>GNOME desktop.</_description>
+      <_description>GNOME desktop</_description>
       <module id="alacarte"/>
       <module id="bug-buddy"/>
       <module id="dasher" branch="gnome-2-18"/>
@@ -433,12 +433,12 @@
       <module id="zenity" branch="gnome-2-18"/>
     </category>
     <category id="admin">
-      <_description>Administration Tools.</_description>
+      <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon" branch="gnome-2-18" />
     </category>
     <category id="devtools">
-      <_description>Development Tools.</_description>
+      <_description>Development Tools</_description>
       <module id="devhelp" branch="gnome-2-18"/>
       <module id="glade3" branch="gnome-2-18"/>
     </category>
@@ -446,7 +446,7 @@
   <release id="gnome-2-20" status="official">
     <_description>GNOME 2.20 (development)</_description>
     <category id="platform">
-      <_description>GNOME developer platform.</_description>
+      <_description>GNOME developer platform</_description>
       <module id="atk"/>
       <module id="gail"/>
       <module id="gconf"/>
@@ -460,7 +460,7 @@
       <module id="libgnomeui"/>
     </category>
     <category id="desktop">
-      <_description>GNOME desktop.</_description>
+      <_description>GNOME desktop</_description>
       <module id="alacarte"/>
       <module id="bug-buddy"/>
       <module id="dasher"/>
@@ -530,24 +530,24 @@
       <module id="zenity"/>
     </category>
     <category id="admin">
-      <_description>Administration Tools.</_description>
+      <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon" />
     </category>
     <category id="devtools">
-      <_description>Development Tools.</_description>
+      <_description>Development Tools</_description>
       <module id="devhelp"/>
       <module id="glade3"/>
     </category>
     <category id="proposed">
-      <_description>New module proposals.</_description>
+      <_description>New module proposals</_description>
       <module id="accerciser"/>
       <module id="gnome-devel-docs"/>
       <!-- <module id="lsr"/> -->
     </category>
   </release>
   <release id="fifth-toe" status="unofficial">
-    <_description>GNOME Fifth Toe. Extra software.</_description>
+    <_description>GNOME Fifth Toe (Extra software)</_description>
     <module id="balsa"/>
     <module id="camorama"/>
     <module id="galeon"/>
@@ -562,7 +562,7 @@
     <module id="regexxer"/>
   </release>
   <release id="freedesktop.org" status="external">
-    <_description>freedesktop.org (non-GNOME).</_description>
+    <_description>freedesktop.org (non-GNOME)</_description>
     <module id="gstreamer"/>
     <module id="gst-plugins-base"/>
     <module id="gst-plugins-good"/>
