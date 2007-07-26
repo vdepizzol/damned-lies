@@ -11,23 +11,23 @@ DirectoryIndex index.py
 RewriteEngine On
 RewriteBase /~danilo/damned-lies/
 
-RewriteRule !^data/.*$              - [C]
-RewriteRule !^data/?$               - [C]
+RewriteRule !^data/.*$            -   [C]
+RewriteRule !^data$                -   [C]
 
-RewriteRule !^view-module\.py.*$    - [C]
-RewriteRule ^module/(.*)$      	    view-module.py/$1
-RewriteRule ^module/?$              view-module.py
+RewriteRule !^view-module\.py.*$     -   [C]
+RewriteRule ^module/(.*)$      	     view-module.py/$1
+RewriteRule ^module$           	     view-module.py
 
-RewriteRule !^teams\.py.*$          - [C]
-RewriteRule ^teams/(.*)$      	    teams.py/teams/$1
-RewriteRule ^teams/?$           	teams.py/teams/
-RewriteRule ^languages/(.*)$        teams.py/languages/$1
-RewriteRule ^languages/?$           teams.py/languages/
+RewriteRule !^teams\.py.*$     -   [C]
+RewriteRule ^teams/(.*)$      	     teams.py/teams/$1
+RewriteRule ^teams$           	     teams.py/teams/
+RewriteRule ^languages/(.*)$         teams.py/languages/$1
+RewriteRule ^languages$              teams.py/languages/
 
-RewriteRule !^releases\.py.*$       - [C]
-RewriteRule ^releases/(.*)$    	    releases.py/$1
-RewriteRule ^releases/?$        	releases.py
+RewriteRule !^releases\.py.*$     -   [C]
+RewriteRule ^releases/(.*)$    	     releases.py/$1
+RewriteRule ^releases$        	     releases.py
 
-RewriteRule !^people\.py.*$         - [C]
-RewriteRule ^people/(.*)$    	    people.py/$1
-RewriteRule ^people/?$        	    people.py
+RewriteRule !^people\.py.*$     -   [C]
+RewriteRule ^people/(.*)$    	     people.py/$1
+RewriteRule ^people$        	     people.py

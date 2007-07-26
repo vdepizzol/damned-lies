@@ -147,10 +147,7 @@ def compare_module_names(a, b):
 
 def go_go():
     global allmodules
-    if os.getenv("PATH_INFO"):
-        moduleid = os.getenv("PATH_INFO")[1:]
-    else:
-        moduleid = None
+    moduleid = os.getenv("PATH_INFO")[1:]
     allmodules = modules.XmlModules()
 
     moduleids = allmodules.keys()
