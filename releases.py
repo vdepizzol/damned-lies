@@ -490,7 +490,10 @@ if __name__=="__main__":
     l10n.set_language()
     print "Content-type: text/html; charset=UTF-8\n"
 
-    releaseid = os.getenv("PATH_INFO")[1:]
+    if os.getenv("PATH_INFO"):
+        releaseid = os.getenv("PATH_INFO")[1:]
+    else:
+        releaseid = None
     if releaseid:
         myrelease = Releases(only_release=releaseid, deep=0)
         if len(myrelease) and myrelease[0]['id'] == releaseid:
