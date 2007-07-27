@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-20 11:09+0100\n"
-"PO-Revision-Date: 2007-07-23 14:43+0200\n"
+"POT-Creation-Date: 2007-07-26 03:18+0100\n"
+"PO-Revision-Date: 2007-07-27 21:21+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgstr "Núcleo"
 msgid "Criawips Manual"
 msgstr "Manual de Criawips"
 
-#: ../gnome-modules.xml.in.h:17
+#: ../gnome-modules.xml.in.h:17 ../templates/header.tmpl:30
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
@@ -360,7 +360,7 @@ msgid "glChess Manual"
 msgstr "Manual de glChess"
 
 #: ../releases.xml.in.h:1
-msgid "Administration Tools."
+msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
 #: ../releases.xml.in.h:2
@@ -372,7 +372,7 @@ msgid "Development Platform"
 msgstr "Plataforma de desarrollo"
 
 #: ../releases.xml.in.h:4
-msgid "Development Tools."
+msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
 #: ../releases.xml.in.h:5
@@ -400,39 +400,31 @@ msgid "GNOME 2.20 (development)"
 msgstr "GNOME 2.20 (desarrollo)"
 
 #: ../releases.xml.in.h:11
-msgid "GNOME Fifth Toe. Extra software."
+msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software extra"
 
 #: ../releases.xml.in.h:12
-msgid "GNOME desktop."
+msgid "GNOME desktop"
 msgstr "Escritorio GNOME"
 
 #: ../releases.xml.in.h:13
-msgid "GNOME desktop. Essential software."
-msgstr "Escritorio GNOME: Software Esencial"
-
-#: ../releases.xml.in.h:14
-msgid "GNOME developer platform."
+msgid "GNOME developer platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: ../releases.xml.in.h:15
-msgid "GNOME developer platform. Essential software."
-msgstr "Plataforma de desarrollo de GNOME: Software esencial"
-
-#: ../releases.xml.in.h:16
+#: ../releases.xml.in.h:14
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: ../releases.xml.in.h:17
-msgid "New module proposals."
+#: ../releases.xml.in.h:15
+msgid "New module proposals"
 msgstr "Nuevos módulos propuestos"
 
-#: ../releases.xml.in.h:18
+#: ../releases.xml.in.h:16
 msgid "System Administration"
 msgstr "Administración del sistema"
 
-#: ../releases.xml.in.h:19
-msgid "freedesktop.org (non-GNOME)."
+#: ../releases.xml.in.h:17
+msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
 #: ../teams.py:246 ../templates/language-release.tmpl:6
@@ -1230,8 +1222,8 @@ msgstr "Lanzamientos"
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] "Archivo POT %(potsize)s mensaje)"
-msgstr[1] "Archivo POT %(potsize)s mensajes)"
+msgstr[0] "Archivo POT (%(potsize)s mensaje)"
+msgstr[1] "Archivo POT (%(potsize)s mensajes)"
 
 #: ../templates/show-stats.tmpl:12
 msgid "updated on %(date)s"
