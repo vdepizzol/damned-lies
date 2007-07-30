@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-29 03:17+0100\n"
-"PO-Revision-Date: 2007-05-23 13:07+0100\n"
+"POT-Creation-Date: 2007-07-30 21:56+0200\n"
+"PO-Revision-Date: 2007-07-30 21:59+0200\n"
 "Last-Translator: Sílvia Miranda <silviamira@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +80,7 @@ msgstr "Nucli"
 msgid "Criawips Manual"
 msgstr "Manual del Criawips"
 
-#: ../gnome-modules.xml.in.h:17
+#: ../gnome-modules.xml.in.h:17 ../templates/header.tmpl:30
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
@@ -153,80 +153,80 @@ msgid "GLib"
 msgstr "GLib"
 
 #: ../gnome-modules.xml.in.h:35
+msgid "GNOME 2 Development Documentation"
+msgstr "Documentació de desenvolupament del GNOME 2"
+
+#: ../gnome-modules.xml.in.h:36
+msgid "GNOME 2 User Documentation"
+msgstr "Documentació d'usuari del GNOME 2"
+
+#: ../gnome-modules.xml.in.h:37
 msgid "GNOME 2.18 release notes"
 msgstr "Notes de llançament del GNOME 2.18"
 
-#: ../gnome-modules.xml.in.h:36
+#: ../gnome-modules.xml.in.h:38
+msgid "GNOME Applets"
+msgstr "Miniaplicacions del GNOME"
+
+#: ../gnome-modules.xml.in.h:39
 msgid "GNOME Keyring Manager Manual"
 msgstr "Manual del gestor de l'anell de claus del GNOME"
 
-#: ../gnome-modules.xml.in.h:37
+#: ../gnome-modules.xml.in.h:40
 msgid "GNOME Klotski Manual"
 msgstr "Manual del GNOME Klotski"
 
-#: ../gnome-modules.xml.in.h:38
+#: ../gnome-modules.xml.in.h:41
 msgid "GNOME Mahjongg Manual"
 msgstr "Manual del GNOME Mahjongg"
 
-#: ../gnome-modules.xml.in.h:39
+#: ../gnome-modules.xml.in.h:42
 msgid "GNOME Release Notes"
 msgstr "Notes de llançament del GNOME"
 
-#: ../gnome-modules.xml.in.h:40
+#: ../gnome-modules.xml.in.h:43
 msgid "GNOME Robots Manual"
 msgstr "Manual del GNOME Robots"
 
-#: ../gnome-modules.xml.in.h:41
+#: ../gnome-modules.xml.in.h:44
 msgid "GNOME Sudoku Manual"
 msgstr "Manual del GNOME Sudoku"
 
-#: ../gnome-modules.xml.in.h:42
+#: ../gnome-modules.xml.in.h:45
 msgid "GNOME Tali Manual"
 msgstr "Manual del GNOME Tali"
 
-#: ../gnome-modules.xml.in.h:43
+#: ../gnome-modules.xml.in.h:46
 msgid "GNOME Tetravex Manual"
 msgstr "Manual del GNOME Tetravex"
 
-#: ../gnome-modules.xml.in.h:44
+#: ../gnome-modules.xml.in.h:47
 msgid "GPL License"
 msgstr "Llicència GPL"
 
-#: ../gnome-modules.xml.in.h:45
+#: ../gnome-modules.xml.in.h:48
 msgid "GST Network Setup Manual"
 msgstr "Manual d'instal·lació de xarxa del GST"
 
-#: ../gnome-modules.xml.in.h:46
+#: ../gnome-modules.xml.in.h:49
 msgid "GST Service Management Manual"
 msgstr "Manual de gestionar serveis del GST"
 
-#: ../gnome-modules.xml.in.h:47
+#: ../gnome-modules.xml.in.h:50
 msgid "GST Shared Folders Manual"
 msgstr "Manual d'instal·lació de les carpetes compartides del GST"
 
-#: ../gnome-modules.xml.in.h:48
+#: ../gnome-modules.xml.in.h:51
 msgid "GST Time Setup Manual"
 msgstr "Manual d'instal·lació del temps del GST"
 
-#: ../gnome-modules.xml.in.h:49
+#: ../gnome-modules.xml.in.h:52
 msgid "GST User Management Manual"
 msgstr "Manual de gestió d'usuaris del GST"
 
-#: ../gnome-modules.xml.in.h:50
+#: ../gnome-modules.xml.in.h:53
 msgid "Geyes Manual"
 msgstr "Manual del geyes"
-
-#: ../gnome-modules.xml.in.h:51
-msgid "Gnome 2 Development Documentation"
-msgstr "Documentació de desenvolupament del Gnome 2"
-
-#: ../gnome-modules.xml.in.h:52
-msgid "Gnome 2 User Documentation"
-msgstr "Documentació d'usuari del Gnome 2"
-
-#: ../gnome-modules.xml.in.h:53
-msgid "Gnome Applets"
-msgstr "Miniaplicacions del Gnome"
 
 #: ../gnome-modules.xml.in.h:54
 msgid "Gnometris Manual"
@@ -297,63 +297,71 @@ msgid "Search Tool Manual"
 msgstr "Manual de l'eina de cerca"
 
 #: ../gnome-modules.xml.in.h:71
+msgid "Shared MIME Info"
+msgstr "Informació compartida MIME"
+
+#: ../gnome-modules.xml.in.h:72
 msgid "Sound Juicer Manual"
 msgstr "Manual del Sound Juicer"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:73
 msgid "Sticky Notes Manual"
 msgstr "Manual de les notes enganxoses"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:74
 msgid "Stock Ticker Manual"
 msgstr "Manual del teletip de borsa"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:75
 msgid "System Administration Guide"
 msgstr "Guia de l'administració del sistema"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "System Monitor Manual"
 msgstr "Manual del monitor del sistema"
 
-#: ../gnome-modules.xml.in.h:76 ../templates/language-release.tmpl:103
+#: ../gnome-modules.xml.in.h:77 ../templates/language-release.tmpl:89
 msgid "UI translations"
 msgstr "Traduccions de la interfície d'usuari"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:78
+msgid "User Directories"
+msgstr "Directoris d'usuari"
+
+#: ../gnome-modules.xml.in.h:79
 msgid "User Guide"
 msgstr "Guia de l'usuari"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:80
 msgid "Volume Control Manual"
 msgstr "Manual del controlador de volum"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:81
 msgid "Weather Applet Locations"
 msgstr "Ubicacions de la miniaplicació de l'oratge"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:82
 msgid "Weather Report Manual"
 msgstr "Manual de l'informe de l'oratge"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:83
 msgid "Window List Applet Manual"
 msgstr "Manual de la miniaplicació de llista de finestres"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:84
 msgid "Workspace Switcher Applet Manual"
 msgstr "Manual de la miniaplicació del canviador d'espais de treball"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:85
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:86
 msgid "glChess Manual"
 msgstr "Manual del glChess"
 
 #: ../releases.xml.in.h:1
-msgid "Administration Tools."
+msgid "Administration Tools"
 msgstr "Eines d'administració"
 
 #: ../releases.xml.in.h:2
@@ -365,7 +373,7 @@ msgid "Development Platform"
 msgstr "Plataforma de desenvolupament"
 
 #: ../releases.xml.in.h:4
-msgid "Development Tools."
+msgid "Development Tools"
 msgstr "Eines de desenvolupament"
 
 #: ../releases.xml.in.h:5
@@ -373,58 +381,55 @@ msgid "External Dependencies"
 msgstr "Dependències externes"
 
 #: ../releases.xml.in.h:6
-msgid "Extra Gnome Applications"
-msgstr "Aplicacions extra del Gnome"
+msgid "Extra GNOME Applications"
+msgstr "Aplicacions extra del GNOME"
 
 #: ../releases.xml.in.h:7
-msgid "GNOME Fifth Toe. Extra software."
-msgstr "El GNOME Fifth Toe. Programari addicional."
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (antiga estable)"
 
 #: ../releases.xml.in.h:8
-msgid "GNOME desktop."
-msgstr "Escriptori del GNOME"
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (antiga estable)"
 
 #: ../releases.xml.in.h:9
-msgid "GNOME desktop. Essential software."
-msgstr "Escriptori del GNOME. Programari essencial."
+msgid "GNOME 2.18 (stable)"
+msgstr "GNOME 2.18 (estable)"
 
 #: ../releases.xml.in.h:10
-msgid "GNOME developer platform."
-msgstr "Plataforma de desenvolupament del GNOME"
+msgid "GNOME 2.20 (development)"
+msgstr "GNOME 2.20 (desenvolupament)"
 
 #: ../releases.xml.in.h:11
-msgid "GNOME developer platform. Essential software."
-msgstr "Plataforma de desenvolupament del GNOME. Programari essencial."
+msgid "GNOME Fifth Toe (Extra software)"
+msgstr "El GNOME Fifth Toe (programari addicional)"
 
 #: ../releases.xml.in.h:12
-msgid "Gnome 2.14 (old stable)"
-msgstr "Gnome 2.14 (antiga estable)"
+msgid "GNOME desktop"
+msgstr "Escriptori del GNOME"
 
 #: ../releases.xml.in.h:13
-msgid "Gnome 2.16 (old stable)"
-msgstr "Gnome 2.16 (antiga estable)"
+msgid "GNOME developer platform"
+msgstr "Plataforma de desenvolupament del GNOME"
 
 #: ../releases.xml.in.h:14
-msgid "Gnome 2.18 (stable)"
-msgstr "Gnome 2.18 (estable)"
+msgid "GNOME-Office Productivity Applications"
+msgstr "Aplicacions de productivitat del GNOME-Office"
 
 #: ../releases.xml.in.h:15
-msgid "Gnome 2.20 (development)"
-msgstr "Gnome 2.20 (desenvolupament)"
+msgid "New module proposals"
+msgstr "Mòduls nous proposats"
 
 #: ../releases.xml.in.h:16
-msgid "Gnome-Office Productivity Applications"
-msgstr "Aplicacions de productivitat del Gnome-Office"
-
-#: ../releases.xml.in.h:17
-msgid "New module proposals."
-msgstr "Mòduls nous proposats."
-
-#: ../releases.xml.in.h:18
 msgid "System Administration"
 msgstr "Administració del sistema"
 
-#: ../teams.py:139 ../teams.py:246
+#: ../releases.xml.in.h:17
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (no del GNOME)"
+
+#: ../teams.py:246 ../templates/language-release.tmpl:6
+#: ../templates/team.tmpl:6
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equip de traducció del %(lang)s"
@@ -448,332 +453,332 @@ msgid "Arabic"
 msgstr "Àrab"
 
 #: ../translation-teams.xml.in.h:5
-msgid "Arabic Translation Team"
-msgstr "Equip de traducció a l'àrab"
-
-#: ../translation-teams.xml.in.h:6
 msgid "Armenian"
 msgstr "Armeni"
 
-#: ../translation-teams.xml.in.h:7
+#: ../translation-teams.xml.in.h:6
 msgid "Assamese"
 msgstr "Assamès"
 
-#: ../translation-teams.xml.in.h:8
+#: ../translation-teams.xml.in.h:7
 msgid "Asturian"
 msgstr "Asturià"
 
-#: ../translation-teams.xml.in.h:9
+#: ../translation-teams.xml.in.h:8
 msgid "Australian English"
 msgstr "Anglès australià"
 
-#: ../translation-teams.xml.in.h:10
+#: ../translation-teams.xml.in.h:9
 msgid "Azerbaijani"
 msgstr "Àzeri"
 
-#: ../translation-teams.xml.in.h:11
+#: ../translation-teams.xml.in.h:10
 msgid "Basque"
 msgstr "Basc"
 
-#: ../translation-teams.xml.in.h:12
+#: ../translation-teams.xml.in.h:11
 msgid "Belarusian"
 msgstr "Bielorús"
 
-#: ../translation-teams.xml.in.h:13
+#: ../translation-teams.xml.in.h:12
 msgid "Belarusian Latin"
 msgstr "Bielorús (llatí)"
 
-#: ../translation-teams.xml.in.h:14
-msgid "Belarusian Translation Team"
-msgstr "Equip de traducció al bielorús"
-
-#: ../translation-teams.xml.in.h:15
+#: ../translation-teams.xml.in.h:13
 msgid "Bengali"
 msgstr "Bengalí"
 
-#: ../translation-teams.xml.in.h:16
+#: ../translation-teams.xml.in.h:14
 msgid "Bengali (India)"
 msgstr "Bengalí (Índia)"
 
-#: ../translation-teams.xml.in.h:17
+#: ../translation-teams.xml.in.h:15
 msgid "Bosnian"
 msgstr "Bosnià"
 
-#: ../translation-teams.xml.in.h:18
+#: ../translation-teams.xml.in.h:16
 msgid "Brazilian Portuguese"
 msgstr "Brasiler"
 
-#: ../translation-teams.xml.in.h:19
+#: ../translation-teams.xml.in.h:17
 msgid "Breton"
 msgstr "Bretó"
 
-#: ../translation-teams.xml.in.h:20
+#: ../translation-teams.xml.in.h:18
 msgid "British English"
 msgstr "Anglès britànic"
 
-#: ../translation-teams.xml.in.h:21
+#: ../translation-teams.xml.in.h:19
 msgid "Bulgarian"
 msgstr "Búlgar"
 
-#: ../translation-teams.xml.in.h:22
+#: ../translation-teams.xml.in.h:20
 msgid "Burmese"
 msgstr "Birmà"
 
-#: ../translation-teams.xml.in.h:23
+#: ../translation-teams.xml.in.h:21
 msgid "Canadian English"
 msgstr "Anglès del Canadà"
 
-#: ../translation-teams.xml.in.h:24
+#: ../translation-teams.xml.in.h:22
 msgid "Catalan"
 msgstr "Català"
 
-#: ../translation-teams.xml.in.h:25
+#: ../translation-teams.xml.in.h:23
 msgid "Chinese (China)"
 msgstr "Xinès (Xina)"
 
-#: ../translation-teams.xml.in.h:26
+#: ../translation-teams.xml.in.h:24
 msgid "Chinese (Hong Kong)"
 msgstr "Xinès (Hong Kong)"
 
-#: ../translation-teams.xml.in.h:27
+#: ../translation-teams.xml.in.h:25
 msgid "Chinese (Taiwan)"
 msgstr "Xinès (Taiwan)"
 
-#: ../translation-teams.xml.in.h:28
-msgid "Chinese Traditional Translation Team"
-msgstr "Equip de traducció al xinès tradicional"
+#: ../translation-teams.xml.in.h:26
+msgid "Chinese Traditional"
+msgstr "Xinès tradicional"
 
-#: ../translation-teams.xml.in.h:29
+#: ../translation-teams.xml.in.h:27
 msgid "Croatian"
 msgstr "Croat"
 
-#: ../translation-teams.xml.in.h:30
+#: ../translation-teams.xml.in.h:28
 msgid "Czech"
 msgstr "Txec"
 
-#: ../translation-teams.xml.in.h:31
+#: ../translation-teams.xml.in.h:29
 msgid "Danish"
 msgstr "Danès"
 
-#: ../translation-teams.xml.in.h:32
+#: ../translation-teams.xml.in.h:30
 msgid "Divehi"
 msgstr "Divehi"
 
-#: ../translation-teams.xml.in.h:33
+#: ../translation-teams.xml.in.h:31
 msgid "Dutch"
 msgstr "Holandès"
 
-#: ../translation-teams.xml.in.h:34
+#: ../translation-teams.xml.in.h:32
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: ../translation-teams.xml.in.h:35
+#: ../translation-teams.xml.in.h:33
 msgid "Esperanto"
 msgstr "Esperanto"
 
-#: ../translation-teams.xml.in.h:36
+#: ../translation-teams.xml.in.h:34
 msgid "Estonian"
 msgstr "Estonià"
 
-#: ../translation-teams.xml.in.h:37
+#: ../translation-teams.xml.in.h:35
 msgid "Fijian"
 msgstr "Fijià"
 
-#: ../translation-teams.xml.in.h:38
+#: ../translation-teams.xml.in.h:36
 msgid "Finnish"
 msgstr "Finès"
 
-#: ../translation-teams.xml.in.h:39
+#: ../translation-teams.xml.in.h:37
 msgid "French"
 msgstr "Francès"
 
-#: ../translation-teams.xml.in.h:40
+#: ../translation-teams.xml.in.h:38
 msgid "Galician"
 msgstr "Gallec"
 
-#: ../translation-teams.xml.in.h:41
+#: ../translation-teams.xml.in.h:39
 msgid "Georgian"
 msgstr "Georgià"
 
-#: ../translation-teams.xml.in.h:42
+#: ../translation-teams.xml.in.h:40
 msgid "German"
 msgstr "Alemany"
 
-#: ../translation-teams.xml.in.h:43
+#: ../translation-teams.xml.in.h:41
 msgid "Greek"
 msgstr "Grec"
 
-#: ../translation-teams.xml.in.h:44
+#: ../translation-teams.xml.in.h:42
 msgid "Guarani"
 msgstr "Guaraní"
 
-#: ../translation-teams.xml.in.h:45
+#: ../translation-teams.xml.in.h:43
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: ../translation-teams.xml.in.h:46
+#: ../translation-teams.xml.in.h:44
 msgid "Hausa"
 msgstr "Haussa"
 
-#: ../translation-teams.xml.in.h:47
+#: ../translation-teams.xml.in.h:45
 msgid "Hebrew"
 msgstr "Hebreu"
 
-#: ../translation-teams.xml.in.h:48
+#: ../translation-teams.xml.in.h:46
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../translation-teams.xml.in.h:49
+#: ../translation-teams.xml.in.h:47
 msgid "Hungarian"
 msgstr "Hongarès"
 
-#: ../translation-teams.xml.in.h:50
+#: ../translation-teams.xml.in.h:48
 msgid "Hyam"
 msgstr "Hyam"
 
-#: ../translation-teams.xml.in.h:51
+#: ../translation-teams.xml.in.h:49
 msgid "Icelandic"
 msgstr "Islandès"
 
-#: ../translation-teams.xml.in.h:52
+#: ../translation-teams.xml.in.h:50
 msgid "Igbo"
 msgstr "Ibo"
 
-#: ../translation-teams.xml.in.h:53
+#: ../translation-teams.xml.in.h:51
 msgid "Indonesian"
 msgstr "Indonesi"
 
-#: ../translation-teams.xml.in.h:54
+#: ../translation-teams.xml.in.h:52
 msgid "Iranian Azerbaijani"
 msgstr "Àzeri iranià"
 
-#: ../translation-teams.xml.in.h:55
+#: ../translation-teams.xml.in.h:53
 msgid "Irish"
 msgstr "Irlandès"
 
-#: ../translation-teams.xml.in.h:56
+#: ../translation-teams.xml.in.h:54
 msgid "Italian"
 msgstr "Italià"
 
-#: ../translation-teams.xml.in.h:57
+#: ../translation-teams.xml.in.h:55
 msgid "Japanese"
 msgstr "Japonès"
 
-#: ../translation-teams.xml.in.h:58
+#: ../translation-teams.xml.in.h:56
 msgid "Jju"
 msgstr "Jju"
 
-#: ../translation-teams.xml.in.h:59
+#: ../translation-teams.xml.in.h:57
 msgid "Kagoma"
 msgstr "Kagoma"
 
-#: ../translation-teams.xml.in.h:60
+#: ../translation-teams.xml.in.h:58
 msgid "Kannada"
 msgstr "Kanarès"
 
-#: ../translation-teams.xml.in.h:61
+#: ../translation-teams.xml.in.h:59
 msgid "Kazakh"
 msgstr "Kazakh"
 
-#: ../translation-teams.xml.in.h:62
+#: ../translation-teams.xml.in.h:60
 msgid "Khmer"
 msgstr "Khmer"
 
-#: ../translation-teams.xml.in.h:63
+#: ../translation-teams.xml.in.h:61
 msgid "Kinyarwanda"
 msgstr "Kinyarwanda"
 
-#: ../translation-teams.xml.in.h:64
+#: ../translation-teams.xml.in.h:62
 msgid "Kirghiz"
 msgstr "Kirguís"
 
-#: ../translation-teams.xml.in.h:65
+#: ../translation-teams.xml.in.h:63
 msgid "Korean"
 msgstr "Coreà"
 
-#: ../translation-teams.xml.in.h:66
+#: ../translation-teams.xml.in.h:64
 msgid "Kurdish"
 msgstr "Kurd"
 
-#: ../translation-teams.xml.in.h:67
+#: ../translation-teams.xml.in.h:65
 msgid "Lao"
 msgstr "Laosià"
 
-#: ../translation-teams.xml.in.h:68
+#: ../translation-teams.xml.in.h:66
 msgid "Latin"
 msgstr "Llatí"
 
-#: ../translation-teams.xml.in.h:69
+#: ../translation-teams.xml.in.h:67
 msgid "Latvian"
 msgstr "Letó"
 
-#: ../translation-teams.xml.in.h:70
+#: ../translation-teams.xml.in.h:68
 msgid "Limburgian"
 msgstr "Limburguès"
 
-#: ../translation-teams.xml.in.h:71
+#: ../translation-teams.xml.in.h:69
 msgid "Lithuanian"
 msgstr "Lituà"
 
-#: ../translation-teams.xml.in.h:72
+#: ../translation-teams.xml.in.h:70
 msgid "Low German"
 msgstr "Baix Alemany"
 
-#: ../translation-teams.xml.in.h:73
+#: ../translation-teams.xml.in.h:71
+msgid "Low German and Saxon"
+msgstr "Baix Alemany i saxó"
+
+#: ../translation-teams.xml.in.h:72
 msgid "Low Saxon, Germany"
 msgstr "Baix saxó, Alemanya"
 
-#: ../translation-teams.xml.in.h:74
+#: ../translation-teams.xml.in.h:73
 msgid "Macedonian"
 msgstr "Macedoni"
 
-#: ../translation-teams.xml.in.h:75
+#: ../translation-teams.xml.in.h:74
 msgid "Maithili"
 msgstr "Maithili"
 
-#: ../translation-teams.xml.in.h:76
+#: ../translation-teams.xml.in.h:75
 msgid "Malagasy"
 msgstr "Malgaix"
 
-#: ../translation-teams.xml.in.h:77
+#: ../translation-teams.xml.in.h:76
 msgid "Malay"
 msgstr "Malai"
 
-#: ../translation-teams.xml.in.h:78
+#: ../translation-teams.xml.in.h:77
 msgid "Malayalam"
 msgstr "Malaialam"
 
-#: ../translation-teams.xml.in.h:79
+#: ../translation-teams.xml.in.h:78
 msgid "Maltese"
 msgstr "Maltès"
 
-#: ../translation-teams.xml.in.h:80
+#: ../translation-teams.xml.in.h:79
 msgid "Maori"
 msgstr "Maori"
 
-#: ../translation-teams.xml.in.h:81
+#: ../translation-teams.xml.in.h:80
 msgid "Marathi"
 msgstr "Marathi"
 
-#: ../translation-teams.xml.in.h:82
+#: ../translation-teams.xml.in.h:81
 msgid "Mayan"
 msgstr "Maia"
 
-#: ../translation-teams.xml.in.h:83
+#: ../translation-teams.xml.in.h:82
 msgid "Mongolian"
 msgstr "Mongol"
 
-#: ../translation-teams.xml.in.h:84
+#: ../translation-teams.xml.in.h:83
 msgid "Nahuatl"
 msgstr "Nàhuatl"
 
-#: ../translation-teams.xml.in.h:85
+#: ../translation-teams.xml.in.h:84
 msgid "Nepali"
 msgstr "Nepalès"
 
-#: ../translation-teams.xml.in.h:86
+#: ../translation-teams.xml.in.h:85
 msgid "Northern Sotho"
 msgstr "Sotho del nord"
+
+#: ../translation-teams.xml.in.h:86
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Noruec (bokmål i nynorsk) "
 
 #: ../translation-teams.xml.in.h:87
 msgid "Norwegian Bokmål"
@@ -852,159 +857,276 @@ msgid "Serbian Latin"
 msgstr "Llatí serbi"
 
 #: ../translation-teams.xml.in.h:106
-msgid "Serbian Translation Team"
-msgstr "Equip de traducció serbi"
-
-#: ../translation-teams.xml.in.h:107
 msgid "Sinhala"
 msgstr "Singalès"
 
-#: ../translation-teams.xml.in.h:108
+#: ../translation-teams.xml.in.h:107
 msgid "Slovak"
 msgstr "Eslovac"
 
-#: ../translation-teams.xml.in.h:109
+#: ../translation-teams.xml.in.h:108
 msgid "Slovenian"
 msgstr "Eslovè"
 
-#: ../translation-teams.xml.in.h:110
-msgid "Slovenian GNOME Translation Team"
-msgstr "Equip de traducció del GNOME a l'eslovè"
-
-#: ../translation-teams.xml.in.h:111
+#: ../translation-teams.xml.in.h:109
 msgid "Spanish"
 msgstr "Espanyol"
 
-#: ../translation-teams.xml.in.h:112
+#: ../translation-teams.xml.in.h:110
 msgid "Swahili"
 msgstr "Suahili"
 
-#: ../translation-teams.xml.in.h:113
+#: ../translation-teams.xml.in.h:111
 msgid "Swedish"
 msgstr "Suec"
 
-#: ../translation-teams.xml.in.h:114
-msgid "Swedish Translation Team"
-msgstr "Equip de traducció al suec"
-
-#: ../translation-teams.xml.in.h:115
+#: ../translation-teams.xml.in.h:112
 msgid "Tagalog"
 msgstr "Tagàlog"
 
-#: ../translation-teams.xml.in.h:116
+#: ../translation-teams.xml.in.h:113
 msgid "Tajik"
 msgstr "Tadjik"
 
-#: ../translation-teams.xml.in.h:117
+#: ../translation-teams.xml.in.h:114
 msgid "Tamil"
 msgstr "Tàmil"
 
-#: ../translation-teams.xml.in.h:118
+#: ../translation-teams.xml.in.h:115
 msgid "Tatar"
 msgstr "Tàtar"
 
-#: ../translation-teams.xml.in.h:119
+#: ../translation-teams.xml.in.h:116
 msgid "Telugu"
 msgstr "Telugu"
 
-#: ../translation-teams.xml.in.h:120
+#: ../translation-teams.xml.in.h:117
 msgid "Tetum"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:121
+#: ../translation-teams.xml.in.h:118
 msgid "Thai"
 msgstr "Thai"
 
-#: ../translation-teams.xml.in.h:122
+#: ../translation-teams.xml.in.h:119
 msgid "Tibetan"
 msgstr "Tibetà"
 
-#: ../translation-teams.xml.in.h:123
+#: ../translation-teams.xml.in.h:120
 msgid "Tigrinya"
 msgstr "Tigrinya"
 
-#: ../translation-teams.xml.in.h:124
+#: ../translation-teams.xml.in.h:121
 msgid "Turkish"
 msgstr "Turc"
 
-#: ../translation-teams.xml.in.h:125
+#: ../translation-teams.xml.in.h:122
 msgid "Turkmen"
 msgstr "Turcman"
 
-#: ../translation-teams.xml.in.h:126
+#: ../translation-teams.xml.in.h:123
 msgid "Tyap"
 msgstr "Tyap"
 
-#: ../translation-teams.xml.in.h:127
+#: ../translation-teams.xml.in.h:124
 msgid "Uighur"
 msgstr "Uigur"
 
-#: ../translation-teams.xml.in.h:128
+#: ../translation-teams.xml.in.h:125
 msgid "Ukrainian"
 msgstr "Ucraïnès"
 
-#: ../translation-teams.xml.in.h:129
+#: ../translation-teams.xml.in.h:126
 msgid "Urdu"
 msgstr "Urdú"
 
-#: ../translation-teams.xml.in.h:130
+#: ../translation-teams.xml.in.h:127
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: ../translation-teams.xml.in.h:131
+#: ../translation-teams.xml.in.h:128
+msgid "Uzbek (Cyrillic)"
+msgstr "Uzbek (ciríl·lic)"
+
+#: ../translation-teams.xml.in.h:129
 msgid "Uzbek (Latin)"
 msgstr "Uzbek (llatí)"
 
-#: ../translation-teams.xml.in.h:132
+#: ../translation-teams.xml.in.h:130
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../translation-teams.xml.in.h:133
+#: ../translation-teams.xml.in.h:131
 msgid "Walloon"
 msgstr "Való"
 
-#: ../translation-teams.xml.in.h:134
+#: ../translation-teams.xml.in.h:132
 msgid "Welsh"
 msgstr "Gal·lès"
 
-#: ../translation-teams.xml.in.h:135
+#: ../translation-teams.xml.in.h:133
+msgid "Wolof"
+msgstr ""
+
+#: ../translation-teams.xml.in.h:134
 msgid "Xhosa"
 msgstr "Xosa"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:135
 msgid "Yiddish"
 msgstr "Jiddisch"
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:136
 msgid "Yoruba"
 msgstr "Yoruba"
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:137
 msgid "Zapotec"
 msgstr "Zapoteca"
 
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:138
 msgid "Zulu"
 msgstr "Zulu"
 
-#: ../templates/index.tmpl:5 ../templates/index.tmpl:24
-msgid "Damned Lies about Gnome"
+#: ../update-stats.py:214
+msgid "Can't generate POT file, using old one."
+msgstr "No s'ha pogut generar el fitxer POT; s'utilitza l'antic."
+
+#: ../update-stats.py:217
+msgid "Can't generate POT file, using old one if it exists."
+msgstr ""
+"No s'ha pogut generar el fitxer POT; s'utilitza l'antic, si n'hi ha un."
+
+#: ../update-stats.py:246
+msgid "Can't copy new POT file to public location."
+msgstr "No s'ha pogut copiar el fitxer POT al lloc públic."
+
+#: ../update-stats.py:258
+#, python-format
+msgid "There is no translation team in charge of '%s' translation."
+msgstr ""
+"No hi ha cap equip de traducció que s'encarregui de la traducció al '%s'."
+
+#: ../update-stats.py:334
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "No hi ha cap entrada per a aquesta llengua al fitxer LINGUAS"
+
+#: ../update-stats.py:362
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr ""
+"No hi ha cap entrada per a aquesta llengua al fitxer de configuració "
+"ALL_LINGUAS."
+
+#: ../update-stats.py:365
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+"No se sap on cercar si aquesta llengua s'utilitza; demaneu-ho al mantenidor "
+"del mòdul."
+
+#: ../update-stats.py:379
+msgid "Errors while running 'intltool-update -m' check."
+msgstr ""
+"S'han produït errors mentre s'executava la verificació 'intltool-update -m'."
+
+#: ../update-stats.py:385
+#, python-format
+msgid "There are some missing files from POTFILES.in: %s"
+msgstr "Falten alguns fitxers al POTFILES.in: %s"
+
+#: ../update-stats.py:394
+#, python-format
+msgid ""
+"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
+"they don't exist: %s"
+msgstr ""
+"El POTFILES.in o el POTFILES.skip fan referència a alguns fitxers que no "
+"existeixen: %s"
+
+#: ../update-stats.py:408
+#, python-format
+msgid "PO file '%s' doesn't exist."
+msgstr "El fitxer PO «%s» no existeix."
+
+#: ../update-stats.py:421
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr ""
+"El fitxer PO «%s» no ha superat la verificació msgfmt: no s'actualitza."
+
+#: ../update-stats.py:423
+#, fuzzy, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "No es poden obtenir les estadístiques del fitxer POT «%s»."
+
+#: ../update-stats.py:426
+msgid "This PO file has an executable bit set."
+msgstr "El bit d'execució d'aquest fitxer PO està activat."
+
+#: ../update-stats.py:452
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "El fitxer PO «%s» no està codificat en UTF-8."
+
+#: ../update-stats.py:521
+#, fuzzy
+msgid "Can't find checkout directory."
+msgstr "No s'ha pogut trobar el directori dels fitxers de pujada."
+
+#: ../update-stats.py:541
+#, python-format
+msgid "Module %s doesn't look like gnome-doc-utils module."
+msgstr "El mòdul %s no s'assembla al mòdul gnome-doc-utils."
+
+#: ../update-stats.py:546
+#, python-format
+msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgstr "El DOC_MODULE no correspon a cap fitxer real; s'utilitza «%s.xml»."
+
+#: ../update-stats.py:549
+msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+msgstr "El DOC_MODULE no correspon a cap fitxer real; segurament és una macro."
+
+#: ../update-stats.py:575
+#, python-format
+msgid ""
+"Error regenerating POT file for document %s:\n"
+"<pre>%s\n"
+"%s</pre>"
+msgstr ""
+"S'ha produït un error en tornar a generar el fitxer POT del document %s:\n"
+"<pre>%s\n"
+"%s</pre>"
+
+#: ../update-stats.py:604
+#, python-format
+msgid "There is no translation team in charge of %s."
+msgstr "Ara mateix no hi ha cap equip de traducció al %s."
+
+#: ../update-stats.py:648
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "La llista DOC_LINGUAS no inclou aquesta llengua."
+
+#: ../templates/index.tmpl:7
+msgid "Damned Lies about GNOME"
 msgstr "Estadístiques del GNOME"
 
-#: ../templates/index.tmpl:28
+#: ../templates/index.tmpl:11 ../templates/header.tmpl:32
 msgid "Teams"
 msgstr "Equips"
 
-#: ../templates/index.tmpl:29
+#: ../templates/index.tmpl:12
 msgid ""
-"List of all Gnome Translation Teams, with full information such as primary "
+"List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
-"Llista de tots els equips de traducció del Gnome, amb informació completa "
+"Llista de tots els equips de traducció del GNOME, amb informació completa "
 "sobre cada equip: contacte principal (coordinador), pàgines web, informació "
 "sobre la llista de distribució..."
 
-#: ../templates/index.tmpl:30
+#: ../templates/index.tmpl:13
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
@@ -1012,70 +1134,70 @@ msgstr ""
 "Si no hi ha cap equip per a la vostra llengua, podeu <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">crear un equip</a> fàcilment."
 
-#: ../templates/index.tmpl:35
+#: ../templates/index.tmpl:18 ../templates/header.tmpl:33
 msgid "Languages"
 msgstr "Llengües"
 
-#: ../templates/index.tmpl:36
+#: ../templates/index.tmpl:19
 msgid ""
 "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr ""
 "Llista de totes les llengües que tenen un <a href=\"teams\">equip de "
 "traducció</a>."
 
-#: ../templates/index.tmpl:37
+#: ../templates/index.tmpl:20
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
-"here you can see all the languages Gnome is being translated to."
+"here you can see all the languages GNOME is being translated to."
 msgstr ""
 "Alguns equips gestionen més d'una llengua (normalment, variants o "
 "dialectes); aquí podeu veure totes les llengües a les quals es tradueix el "
-"Gnome. "
+"GNOME. "
 
 # FIXME
-#: ../templates/index.tmpl:41
+#: ../templates/index.tmpl:24
 msgid "Release Sets"
 msgstr "Versions"
 
-#: ../templates/index.tmpl:42
-msgid "List of all Gnome release sets and releases we gather stats for."
+#: ../templates/index.tmpl:25
+msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
-"Llista de totes les versions i conjunts de versions dels quals tenim "
-"estadístiques."
+"Llista de totes les versions i conjunts de versions del GNOME dels quals "
+"tenim estadístiques."
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:27
 msgid ""
-"Examples of release sets are \"Gnome Office\", \"Fifth Toe\" or \"Gnome 2.14"
+"Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
 "\"."
 msgstr ""
-"Són exemples de conjunts de versions el «Gnome Office», el «Fifth Toe» o el "
-"«Gnome 2.14»."
+"Són exemples de conjunts de versions el «GNOME Office», el «Fifth Toe» o el "
+"«GNOME 2.14»."
 
-#: ../templates/index.tmpl:45
+#: ../templates/index.tmpl:28
 msgid ""
-"Official Gnome release sets are further divided into categories such as "
+"Official GNOME release sets are further divided into categories such as "
 "\"Desktop Applications\" and \"Developer Platform\"."
 msgstr ""
-"Les versions oficials del Gnome es divideixen en categories com ara "
+"Les versions oficials del GNOME es divideixen en categories com ara "
 "«Aplicacions de l'escriptori» i «Plataforma de desenvolupament»."
 
-#: ../templates/index.tmpl:47
+#: ../templates/index.tmpl:30
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr ""
-"Aquí podeu comparar la disponibilitat de les llengües en qualsevol "
-"d'aquests conjunts de versions."
+"Aquí podeu comparar la disponibilitat de les llengües en qualsevol d'aquests "
+"conjunts de versions."
 
-#: ../templates/index.tmpl:50
+#: ../templates/index.tmpl:33 ../templates/header.tmpl:35
 msgid "Modules"
 msgstr "Mòduls"
 
-#: ../templates/index.tmpl:51
+#: ../templates/index.tmpl:34
 msgid "List of all modules with statistics in here."
 msgstr "Llista de tots els mòduls que tenen estadístiques."
 
-#: ../templates/index.tmpl:53
+#: ../templates/index.tmpl:36
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1083,13 +1205,30 @@ msgstr ""
 "Els mòduls són llibreries o aplicacions separades, que inclouen una branca "
 "de desenvolupament o més d'una."
 
-#: ../templates/index.tmpl:54
+#: ../templates/index.tmpl:37
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
 "Normalment els agafem del CVS, i en conservem la informació rellevant "
 "(detalls del Bugzilla, pàgina web, informació sobre el mantenidor...)"
+
+#: ../templates/index.tmpl:43
+msgid "Translated by:"
+msgstr "Traduït per:"
+
+#: ../templates/index.tmpl:43
+msgid "translator-credits"
+msgstr "Sílvia Miranda <silvia.gnome@gmail.com>, 2007."
+
+#: ../templates/header.tmpl:27
+msgid "Home"
+msgstr "Inici"
+
+# FIXME
+#: ../templates/header.tmpl:34
+msgid "Release sets"
+msgstr "Versions"
 
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
@@ -1113,76 +1252,80 @@ msgstr "Llengua"
 msgid "Translated"
 msgstr "Traduït"
 
-#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:26
-#: ../templates/team.tmpl:110
+#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:14
+#: ../templates/team.tmpl:86
 msgid "Graph"
 msgstr "Gràfic"
 
-#: ../templates/person.tmpl:7 ../templates/person.tmpl:9
-msgid "%(person)s — GNOME Contributor"
-msgstr "%(person)s - Col·laborador del GNOME"
-
-#: ../templates/person.tmpl:43 ../templates/language-release.tmpl:71
-#: ../templates/team.tmpl:79
+#: ../templates/person.tmpl:22 ../templates/language-release.tmpl:54
+#: ../templates/team.tmpl:55
 msgid "Instant messaging:"
 msgstr "Missatgeria instantània:"
 
-#: ../templates/person.tmpl:57 ../templates/language-release.tmpl:85
-#: ../templates/team.tmpl:93
+#: ../templates/person.tmpl:36 ../templates/language-release.tmpl:68
+#: ../templates/team.tmpl:69
 msgid "Bugzilla account:"
 msgstr "Compte del Bugzilla:"
 
-#: ../templates/person.tmpl:60 ../templates/language-release.tmpl:88
-#: ../templates/team.tmpl:96
+#: ../templates/person.tmpl:39 ../templates/language-release.tmpl:71
+#: ../templates/team.tmpl:72
 msgid "SVN account:"
 msgstr "Compte de l'SVN:"
 
-#: ../templates/person.tmpl:64
+#: ../templates/person.tmpl:43
 msgid "Maintains:"
 msgstr "Manté:"
 
-#: ../templates/person.tmpl:66
+#: ../templates/person.tmpl:45
 msgid "Maintains %(module)s"
 msgstr "Manté el %(module)s"
 
-#: ../templates/person.tmpl:72
+#: ../templates/person.tmpl:51
 msgid "Translates:"
 msgstr "Tradueix:"
 
-#: ../templates/person.tmpl:82
+#: ../templates/person.tmpl:61
 msgid "Coordinates %(team)s"
 msgstr "Coordina %(team)s"
 
-#: ../templates/list-teams.tmpl:5 ../templates/list-teams.tmpl:21
+#: ../templates/list-teams.tmpl:6
 msgid "GNOME Translation Teams"
 msgstr "Equips de traducció del GNOME"
 
-#: ../templates/list-teams.tmpl:24
+#: ../templates/list-teams.tmpl:9
 msgid "Select a team below to see more information about it:"
 msgstr "Seleccioneu un equip d'aquí sota per a obtenir-ne més informació:"
 
-#: ../templates/list-teams.tmpl:34
+#: ../templates/list-teams.tmpl:19
 msgid "Coordinated by %(coordinator)s"
 msgstr "Coordinat per %(coordinator)s"
 
-#: ../templates/list-teams.tmpl:40
+#: ../templates/list-teams.tmpl:25
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Ara mateix no hi ha cap equip de traducció del GNOME. :("
 
-#: ../templates/release.tmpl:5 ../templates/release.tmpl:21
+#: ../templates/release.tmpl:6
 msgid "%(release)s Release"
 msgstr "Versió %(release)s"
 
-#: ../templates/release.tmpl:26 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:8 ../templates/language-release.tmpl:80
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"Els mòduls d'aquesta versió no són al repositori SVN del GNOME. Aneu a les "
+"pàgines de cada mòdul per a comprovar a on heu d'enviar les traduccions."
+
+#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
 msgid "Release"
 msgstr "Versió"
 
-#: ../templates/release.tmpl:26 ../templates/language-release.tmpl:98
-#: ../templates/module.tmpl:90 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:14 ../templates/language-release.tmpl:84
+#: ../templates/module.tmpl:70 ../templates/team.tmpl:86
 msgid "Documentation"
 msgstr "Documentació"
 
-#: ../templates/release.tmpl:26 ../templates/team.tmpl:110
+#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
 msgid "User Interface"
 msgstr "Interfície d'usuari"
 
@@ -1191,86 +1334,83 @@ msgstr "Interfície d'usuari"
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% traduït)"
 
-#: ../templates/list-releases.tmpl:5 ../templates/list-releases.tmpl:21
+#: ../templates/list-releases.tmpl:6
 msgid "GNOME Releases"
 msgstr "Versions del GNOME"
 
-#: ../templates/list-releases.tmpl:24
+#: ../templates/list-releases.tmpl:9
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 "Seleccioneu una versió o un conjunt de versions per a obtenir-ne més "
 "informació:"
 
-#: ../templates/list-releases.tmpl:41
+#: ../templates/list-releases.tmpl:26
 msgid "There are currently no releases defined in GNOME. :("
 msgstr "Ara mateix no hi ha cap versió definida al GNOME. :("
 
-#: ../templates/list-languages.tmpl:5 ../templates/list-languages.tmpl:20
-msgid "Gnome Languages"
-msgstr "Llengües del Gnome"
+#: ../templates/list-languages.tmpl:6
+msgid "GNOME Languages"
+msgstr "Llengües del GNOME"
 
-#: ../templates/list-languages.tmpl:23
-msgid "Gnome is being translated to following languages:"
-msgstr "El Gnome es tradueix a aquestes llengües:"
+#: ../templates/list-languages.tmpl:10
+msgid "GNOME is being translated to following %(count)s language:"
+msgid_plural "GNOME is being translated to following %(count)s languages:"
+msgstr[0] "El GNOME es tradueix a aquesta llengua:"
+msgstr[1] "El GNOME es tradueix a aquestes %(count)s llengües:"
 
-#: ../templates/list-languages.tmpl:37
-msgid "Gnome is currently not being translated to any language. :("
-msgstr "El Gnome no s'està traduint a cap llengua ara mateix. :("
+#: ../templates/list-languages.tmpl:34
+msgid "GNOME is currently not being translated to any language. :("
+msgstr "El GNOME no s'està traduint a cap llengua ara mateix. :("
 
-#: ../templates/language-release.tmpl:6
-msgid "%(language)s Translations for %(release)s"
-msgstr "Traduccions al %(language)s: %(release)s"
-
-#: ../templates/language-release.tmpl:26 ../templates/team.tmpl:33
+#: ../templates/language-release.tmpl:9 ../templates/team.tmpl:9
 msgid "Details"
 msgstr "Detalls"
 
-# FIXME
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:36
-msgid "%(team)s Page:"
-msgstr "Pàgina de l'%(team)s:"
+#: ../templates/language-release.tmpl:12
+msgid "%(lang)s Translation Team Page:"
+msgstr "Pàgina de l'equip de traducció al %(lang)s:"
 
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:40
+#: ../templates/language-release.tmpl:16 ../templates/team.tmpl:16
 msgid "Users Web Page:"
 msgstr "Pàgina dels usuaris:"
 
-#: ../templates/language-release.tmpl:37 ../templates/team.tmpl:44
+#: ../templates/language-release.tmpl:20 ../templates/team.tmpl:20
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: ../templates/language-release.tmpl:39 ../templates/team.tmpl:46
+#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
 msgid "Report Bug in Translation"
 msgstr "Envieu un informe d'error de la traducció"
 
-#: ../templates/language-release.tmpl:40 ../templates/team.tmpl:47
+#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
 msgid "Show Existing Bugs"
 msgstr "Mostra els errors actuals"
 
-#: ../templates/language-release.tmpl:45 ../templates/team.tmpl:53
+#: ../templates/language-release.tmpl:28 ../templates/team.tmpl:29
 msgid "Mailing List:"
 msgstr "Llista de distribució:"
 
-#: ../templates/language-release.tmpl:47 ../templates/team.tmpl:55
+#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:31
 msgid "Send e-mail to the list"
 msgstr "Envieu un correu a la llista"
 
-#: ../templates/language-release.tmpl:49 ../templates/team.tmpl:57
+#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:33
 msgid "Subscribe"
 msgstr "Subscriviu-vos"
 
-#: ../templates/language-release.tmpl:58 ../templates/team.tmpl:66
+#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:42
 msgid "Coordinator"
 msgstr "Coordinador"
 
-#: ../templates/list-modules.tmpl:5 ../templates/list-modules.tmpl:22
-msgid "Damned Lies about GNOME modules"
-msgstr "Estadístiques dels mòduls del GNOME"
+#: ../templates/list-modules.tmpl:6
+msgid "GNOME modules"
+msgstr "Mòduls del GNOME"
 
-#: ../templates/list-modules.tmpl:25
+#: ../templates/list-modules.tmpl:9
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Seleccioneu un mòdul d'aquí sota per a veure'n les estadístiques:"
 
-#: ../templates/list-modules.tmpl:33
+#: ../templates/list-modules.tmpl:17
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
@@ -1278,55 +1418,100 @@ msgstr ""
 "Ara mateix no tinc estadístiques de cap mòdul.\n"
 "Informeu-ne en <a href=\"danilo@gnome.org\">Danilo</a>!"
 
-#: ../templates/people.tmpl:6 ../templates/people.tmpl:23
+#: ../templates/people.tmpl:6
 msgid "GNOME Contributors"
 msgstr "Col·laboradors del GNOME"
 
-#: ../templates/people.tmpl:26
-msgid "Gnome is being developed by following people:"
-msgstr "El Gnome el desenvolupen aquesta gent:"
+#: ../templates/people.tmpl:9
+msgid "GNOME is being developed by following people:"
+msgstr "El GNOME el desenvolupen aquesta gent:"
 
-#: ../templates/people.tmpl:47
+#: ../templates/people.tmpl:30
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "No hi ha col·laboradors, el GNOME va aparèixer del no res."
 
-#: ../templates/module.tmpl:5
-msgid "%(module)s Statistics"
-msgstr "Estadístiques del %(module)s"
+#: ../templates/module.tmpl:8
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Aquest mòdul no és al repositori SVN del GNOME. Aneu a la pàgina del mòdul "
+"per a comprovar a on podeu enviar les traduccions."
 
-#: ../templates/module.tmpl:35
+#: ../templates/module.tmpl:15
 msgid "Maintainers"
 msgstr "Mantenidors"
 
 # FIXME
-#: ../templates/module.tmpl:51
+#: ../templates/module.tmpl:31
 msgid "Bug reporting"
 msgstr "Enviament d'informes d'error"
 
-#: ../templates/module.tmpl:52
+#: ../templates/module.tmpl:32
 msgid "Report bugs to Bugzilla"
 msgstr "Envieu informes d'error al bugzilla"
 
-#: ../templates/module.tmpl:60
+#: ../templates/module.tmpl:40
 msgid "Branches:"
-msgstr ""
+msgstr "Branques:"
 
-#: ../templates/module.tmpl:75
+#: ../templates/module.tmpl:55
 msgid "Browse CVS"
 msgstr "Navegueu el CVS"
 
-#: ../templates/module.tmpl:77 ../templates/module.tmpl:79
+#: ../templates/module.tmpl:57 ../templates/module.tmpl:59
 msgid "Browse SVN"
 msgstr "Navegueu l'SVN"
 
 # FIXME: "cadenes congelades"? (josep)
-#: ../templates/module.tmpl:83
+#: ../templates/module.tmpl:63
 msgid "This branch is currently string-frozen."
 msgstr "Aquesta branca té les cadenes congelades"
 
-#: ../templates/module.tmpl:110
+#: ../templates/module.tmpl:90
 msgid "Translation"
 msgstr "Traducció"
+
+# FIXME
+#: ../templates/team.tmpl:12
+msgid "%(team)s Page:"
+msgstr "Pàgina de l'%(team)s:"
+
+#~ msgid "GNOME desktop. Essential software."
+#~ msgstr "Escriptori del GNOME. Programari essencial."
+
+#~ msgid "GNOME developer platform. Essential software."
+#~ msgstr "Plataforma de desenvolupament del GNOME. Programari essencial."
+
+#~ msgid "Arabic Translation Team"
+#~ msgstr "Equip de traducció a l'àrab"
+
+#~ msgid "Belarusian Translation Team"
+#~ msgstr "Equip de traducció al bielorús"
+
+#~ msgid "Serbian Translation Team"
+#~ msgstr "Equip de traducció serbi"
+
+#~ msgid "Slovenian GNOME Translation Team"
+#~ msgstr "Equip de traducció del GNOME a l'eslovè"
+
+#~ msgid "Swedish Translation Team"
+#~ msgstr "Equip de traducció al suec"
+
+#~ msgid "Damned Lies about Gnome"
+#~ msgstr "Estadístiques del GNOME"
+
+#~ msgid "%(person)s — GNOME Contributor"
+#~ msgstr "%(person)s - Col·laborador del GNOME"
+
+#~ msgid "Gnome Languages"
+#~ msgstr "Llengües del Gnome"
+
+#~ msgid "%(language)s Translations for %(release)s"
+#~ msgstr "Traduccions al %(language)s: %(release)s"
+
+#~ msgid "%(module)s Statistics"
+#~ msgstr "Estadístiques del %(module)s"
 
 #~ msgid "GnomeScan"
 #~ msgstr "GnomeScan"
