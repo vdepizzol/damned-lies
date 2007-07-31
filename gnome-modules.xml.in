@@ -1166,6 +1166,17 @@
   <module id="libmimedir">
     <branch id="HEAD"/>
   </module>
+  <module id="library-web">
+    <_description>GNOME Library Web site</_description>
+    <webpage>http://library.gnome.org/</webpage>
+    <branch id="HEAD">
+        <domain id="po"/>
+        <document id="help">
+          <_description>GNOME Library help</_description>
+          <directory>data/pages</directory>
+        </document>
+    </branch>
+  </module>
   <module id="libwnck">
     <maintainer id="vuntz"/>
     <branch id="HEAD"/>
