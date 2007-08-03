@@ -138,7 +138,6 @@
     <module id="contact-lookup-applet"/>
     <module id="criawips"/>
     <module id="cupid"/>
-    <module id="damned-lies"/>
     <module id="deskscribe"/>
     <module id="divifund"/>
     <module id="drgeo"/>
@@ -217,7 +216,6 @@
     <module id="libgnetwork"/>
     <module id="libgnomecups"/>
     <module id="libmimedir"/>
-    <module id="library-web"/>
     <!-- <module id="lsr"/> -->
     <module id="marlin"/>
     <module id="mcatalog"/>
@@ -246,7 +244,6 @@
     <module id="pitivi"/>
     <module id="pybliographer"/>
     <module id="quick-lounge-applet"/>
-    <module id="release-notes"/>
     <module id="resapplet"/>
     <module id="rhythmbox" branch="RHYTHMBOX-0_10"/>
     <!-- waiting resolution of #414938 
@@ -260,6 +257,12 @@
     <module id="webeyes"/>
     <module id="xchat-gnome"/>
     <module id="xdg-user-dirs-gtk"/>
+  </release>
+  <release id="gnome-infrastructure" status="unofficial">
+    <_description>GNOME Infrastructure</_description>
+    <module id="damned-lies"/>
+    <module id="library-web"/>
+    <module id="release-notes"/>
   </release>
   <release id="gnome-2-16" status="official" stringfrozen="true">
     <_description>GNOME 2.16 (old stable)</_description>
@@ -324,7 +327,7 @@
       <module id="gnome-utils" branch="gnome-2-16"/>
       <module id="gnome-volume-manager" branch="gnome-2-18"/>
       <module id="gnopernicus"/>
-      <module id="gok"/>
+      <module id="gok" branch="gnome-2-18"/>
       <module id="gtkhtml" branch="gnome-2-16"/>
       <module id="gtksourceview" branch="gnome-2-16"/>
       <module id="gucharmap" branch="gnome-2-16"/>
@@ -410,7 +413,7 @@
       <module id="gnome-utils" branch="gnome-2-18"/>
       <module id="gnome-volume-manager" branch="gnome-2-18"/>
       <module id="gnopernicus"/>
-      <module id="gok"/>
+      <module id="gok" branch="gnome-2-18"/>
       <module id="gtk-engines" branch="gtk-engines-2-10"/>
       <module id="gtkhtml" branch="gnome-2-18"/>
       <module id="gtksourceview" branch="gnome-2-18"/>
