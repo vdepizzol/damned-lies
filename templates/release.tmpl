@@ -21,7 +21,13 @@
     #end for
   #end if
   </td>
+  
+  #if $lstats.doc_translated+$lstats.doc_fuzzy+$lstats.doc_untranslated > 0
   <td>${lstats.doc_supportedness}% ($lstats.doc_translated/$lstats.doc_fuzzy/$lstats.doc_untranslated)</td>
+  #else
+  <td>$_("-")</td>
+  #end if
+  
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${lstats.doc_percentages.translated}px;"></div>
       <div class="fuzzy" style="left:${lstats.doc_percentages.translated}px; width:${lstats.doc_percentages.fuzzy}px;"></div>

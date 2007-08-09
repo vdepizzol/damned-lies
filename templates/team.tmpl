@@ -91,7 +91,13 @@
     <img src="$webroot/data/${release.po_error}.png" title="${release.po_error_message}">
   #end if
   </td>
+  
+  #if $release.doc_translated+$release.doc_fuzzy+$release.doc_untranslated > 0  
   <td>${release.doc_supportedness}% ($release.doc_translated/$release.doc_fuzzy/$release.doc_untranslated)</td>
+  #else
+  <td>$_("-")</td>
+  #end if
+
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${release.doc_percentages.translated}px;"></div>
       <div class="fuzzy" style="left:${release.doc_percentages.translated}px; width:${release.doc_percentages.fuzzy}px;"></div>
