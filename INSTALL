@@ -21,27 +21,24 @@ INSTALL:
     
  5. Initialise database: "python DAMNED_DIR/database.py"
 
- 6. Look at DAMNED_DIR/data/main.css replacing any /~danilo/damned-lies/ paths with 
-    your own (defaults.webroot)
+ 6. First run of DAMNED_DIR/update-stats.py (may take a long time and eat at least 20Gb be sure you have enough space):
+    $ cd DAMNED_DIR && python ./update-stats.py
 
- 7. First run of DAMNED_DIR/update-stats.py (may take a long time):
-    $ cd DAMNED_DIR && ./update-stats.py gnome-modules.xml
-
- 8. Make sure:
+ 7. Make sure:
     - os.path.join(defaults.scratchdir, "POT") is available via defaults.webroot + "/POT" and
     - os.path.join(defaults.scratchdir, "xml") is available via defaults.webroot + "/xml" and
 
- 9. TEST HOW IT LOOKS FROM YOUR BROWSER!
+ 8. TEST HOW IT LOOKS FROM YOUR BROWSER!
 
 
 SINGLE MODULE UPDATE (useful for crontab+procmail setup):
 
  - All branches for a module:
-   $ cd DAMNED_DIR && make && ./update-stats.py gnome-modules.xml MODULEID
+   $ cd DAMNED_DIR && make && python ./update-stats.py MODULEID
 
  - A single branch:
-   $ cd DAMNED_DIR && make && ./update-stats.py gnome-modules.xml MODULEID BRANCH
+   $ cd DAMNED_DIR && make && python ./update-stats.py MODULEID BRANCH
 
 eg.
-  cd ~/public_html/damned-lies && make && ./update-stats.py gnome-modules.xml epiphany gnome-2-12
-  cd ~/public_html/damned-lies && make && ./update-stats.py gnome-modules.xml nautilus
+  cd ~/public_html/damned-lies && make && python ./update-stats.py epiphany gnome-2-12
+  cd ~/public_html/damned-lies && make && python ./update-stats.py nautilus
