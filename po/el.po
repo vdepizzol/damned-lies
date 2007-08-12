@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-12 22:49+0100\n"
-"PO-Revision-Date: 2007-08-12 23:30+0100\n"
+"PO-Revision-Date: 2007-08-12 23:34+0100\n"
 "Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
@@ -1631,7 +1631,7 @@ msgstr "Γράφημα"
 #: ../templates/person.tmpl:22 ../templates/language-release.tmpl:54
 #: ../templates/team.tmpl:55
 msgid "Instant messaging:"
-msgstr ""
+msgstr "Άμεσα μηνύματα:"
 
 #: ../templates/person.tmpl:36 ../templates/language-release.tmpl:68
 #: ../templates/team.tmpl:69
@@ -1644,23 +1644,20 @@ msgid "SVN account:"
 msgstr "Λογαριασμός SVN:"
 
 #: ../templates/person.tmpl:43
-#, fuzzy
 msgid "Maintains:"
-msgstr "περιέχει"
+msgstr "Είναι υπεύθυνος για:"
 
 #: ../templates/person.tmpl:45
 msgid "Maintains %(module)s"
 msgstr ""
 
 #: ../templates/person.tmpl:51
-#, fuzzy
 msgid "Translates:"
-msgstr "Μεταφράσιμο"
+msgstr "Μεταφράζει:"
 
 #: ../templates/person.tmpl:61
-#, fuzzy
 msgid "Coordinates %(team)s"
-msgstr "Συντεταγμένες"
+msgstr "Συντονίζει την ομάδα για %(team)s"
 
 #: ../templates/list-teams.tmpl:6
 msgid "GNOME Translation Teams"
@@ -1753,7 +1750,6 @@ msgid "Details"
 msgstr "Λεπτομέρειες"
 
 #: ../templates/language-release.tmpl:12
-#, fuzzy
 msgid "%(lang)s Translation Team Page:"
 msgstr "Σελίδα μεταφραστικής ομάδας για %(lang)s: "
 
