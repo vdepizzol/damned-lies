@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-12 22:49+0100\n"
-"PO-Revision-Date: 2007-08-12 23:11+0100\n"
+"PO-Revision-Date: 2007-08-12 23:26+0100\n"
 "Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../gnome-modules.xml.in.h:3
 msgid "Accessibility Guide"
-msgstr "Εγχειρίδιο προσιτότητας"
+msgstr "Οδηγός προσιτότητας"
 
 #: ../gnome-modules.xml.in.h:4
 msgid "AisleRiot Manual"
@@ -250,14 +250,12 @@ msgid "GNOME Tali Manual"
 msgstr "GNOME Tali"
 
 #: ../gnome-modules.xml.in.h:48
-#, fuzzy
 msgid "GNOME Tetravex Manual"
-msgstr "Τεκμηρίωση GNOME Tetravex V2.10"
+msgstr "Τεκμηρίωση GNOME Tetravex"
 
 #: ../gnome-modules.xml.in.h:49
-#, fuzzy
 msgid "GPL License"
-msgstr "Άδεια χρήσης"
+msgstr "Άδεια διάθεσης GPL"
 
 # #-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#
 #
@@ -294,13 +292,12 @@ msgstr ""
 "Χειρωνακτική"
 
 #: ../gnome-modules.xml.in.h:56
-#, fuzzy
 msgid "Gnometris Manual"
-msgstr "Τεκμηρίωση Gnometris V2.8"
+msgstr "Εγχειρίδιο Gnometris"
 
 #: ../gnome-modules.xml.in.h:57
 msgid "Gtk+"
-msgstr ""
+msgstr "Gtk+"
 
 #: ../gnome-modules.xml.in.h:58
 #, fuzzy
@@ -412,9 +409,8 @@ msgstr ""
 "Παρακολούθηση συστήματος"
 
 #: ../gnome-modules.xml.in.h:79 ../templates/language-release.tmpl:92
-#, fuzzy
 msgid "UI translations"
-msgstr "Μετάφραση IP "
+msgstr "Μεταφράσεις γραφικού περιβάλλοντος"
 
 #
 #: ../gnome-modules.xml.in.h:80
@@ -471,50 +467,44 @@ msgstr ""
 "Χειρωνακτική"
 
 #: ../releases.xml.in.h:1
-#, fuzzy
 msgid "Administration Tools"
-msgstr "Διαχείριση συστήματος"
+msgstr "Εργαλεία διαχείρισης"
 
 #: ../releases.xml.in.h:2
-#, fuzzy
 msgid "Desktop Applications"
-msgstr "Εφαρμογές X"
+msgstr "Εφαρμογές επιφάνειας εργασίας"
 
 #: ../releases.xml.in.h:3
-#, fuzzy
 msgid "Development Platform"
-msgstr "Ανάπτυξη Εφαρμογών"
+msgstr "Περιβάλλον ανάπτυξης"
 
 #: ../releases.xml.in.h:4
-#, fuzzy
 msgid "Development Tools"
-msgstr "Ανάπτυξη Εφαρμογών"
+msgstr "Εργαλεία ανάπτυξης"
 
 #: ../releases.xml.in.h:5
-#, fuzzy
 msgid "External Dependencies"
-msgstr "Εξα_ρτήσεις"
+msgstr "Εξωτερικές εξαρτήσεις"
 
 #: ../releases.xml.in.h:6
-#, fuzzy
 msgid "Extra GNOME Applications"
-msgstr "Άλλες εφαρμογές"
+msgstr "Άλλες εφαρμογές GNOME"
 
 #: ../releases.xml.in.h:7
 msgid "GNOME 2.14 (old stable)"
-msgstr ""
+msgstr "GNOME 2.14 (παλαιό σταθερό)"
 
 #: ../releases.xml.in.h:8
 msgid "GNOME 2.16 (old stable)"
-msgstr ""
+msgstr "GNOME 2.16 (παλαιό σταθερό)"
 
 #: ../releases.xml.in.h:9
 msgid "GNOME 2.18 (stable)"
-msgstr ""
+msgstr "GNOME 2.18 (σταθερό)"
 
 #: ../releases.xml.in.h:10
 msgid "GNOME 2.20 (development)"
-msgstr ""
+msgstr "GNOME 2.20 (σε ανάπτυξη)"
 
 #: ../releases.xml.in.h:11
 #, fuzzy
@@ -540,9 +530,8 @@ msgid "GNOME-Office Productivity Applications"
 msgstr "Εφαρμογές Γραφείου"
 
 #: ../releases.xml.in.h:16
-#, fuzzy
 msgid "New module proposals"
-msgstr "Αντιπρόταση"
+msgstr ""
 
 #: ../releases.xml.in.h:17
 msgid "System Administration"
@@ -554,9 +543,9 @@ msgstr "freedesktop.org (μη-GNOME)"
 
 #: ../teams.py:246 ../templates/language-release.tmpl:6
 #: ../templates/team.tmpl:6
-#, fuzzy, python-format
+#, python-format
 msgid "%(lang)s Translation Team"
-msgstr "_2 Πίνακας Μετάφρασης"
+msgstr "Μεταφραστική ομάδα για %(lang)s"
 
 #. import pprint
 #. pprint.pprint(TranslationLanguages())
@@ -1406,12 +1395,12 @@ msgstr ""
 
 #: ../update-stats.py:379
 msgid "Errors while running 'intltool-update -m' check."
-msgstr ""
+msgstr "Σφάλματα κατά την εκτέλεση του ελέγχου 'intltool-update -m'."
 
 #: ../update-stats.py:385
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
-msgstr ""
+msgstr "Υπάρχουν κάποια αρχεία που λείπουν από το POTFILES.in: %s"
 
 #: ../update-stats.py:394
 #, python-format
@@ -1679,11 +1668,11 @@ msgstr "Μεταφραστικές ομάδες GNOME"
 
 #: ../templates/list-teams.tmpl:9
 msgid "Select a team below to see more information about it:"
-msgstr ""
+msgstr "Επιλέξτε μια ομάδα για να δείτε περισσότερες πληροφορίες:"
 
 #: ../templates/list-teams.tmpl:19
 msgid "Coordinated by %(coordinator)s"
-msgstr ""
+msgstr "Συντονίζεται από %(coordinator)s"
 
 #: ../templates/list-teams.tmpl:25
 msgid "There are currently no translation teams in GNOME. :("
@@ -1769,13 +1758,12 @@ msgid "%(lang)s Translation Team Page:"
 msgstr "Σελίδα μεταφραστικής ομάδας για %(lang)s: "
 
 #: ../templates/language-release.tmpl:16 ../templates/team.tmpl:16
-#, fuzzy
 msgid "Users Web Page:"
-msgstr "Ιστοσελίδα:"
+msgstr "Ιστοσελίδα χρήστη:"
 
 #: ../templates/language-release.tmpl:20 ../templates/team.tmpl:20
 msgid "Bugzilla:"
-msgstr "Bugzilla:"
+msgstr "Bugzilla (παρακολούθηση σφαλμάτων):"
 
 #: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
 msgid "Report Bug in Translation"
@@ -1783,7 +1771,7 @@ msgstr "Αναφορά σφάλματος σε μετάφραση"
 
 #: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
 msgid "Show Existing Bugs"
-msgstr ""
+msgstr "Προβολή υπαρχόντων σφαλμάτων"
 
 #: ../templates/language-release.tmpl:28 ../templates/team.tmpl:29
 msgid "Mailing List:"
