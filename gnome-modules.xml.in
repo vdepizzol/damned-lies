@@ -549,7 +549,7 @@
         </document>
       </branch>
     </defaults>
-    <branch stringfrozen="true" id="HEAD">
+    <branch id="HEAD">
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
@@ -558,6 +558,10 @@
       <domain id="po"/>
     </branch>
     <branch id="gnome-2-16" stringfrozen="true">
+      <domain id="po-locations" potbase="gnome-applets-locations"/>
+      <domain id="po"/>
+    </branch>
+    <branch id="gnome-2-18" stringfrozen="true">
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
