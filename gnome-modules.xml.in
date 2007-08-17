@@ -761,7 +761,30 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-media">
-    <branch id="HEAD"/>
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="gnome-cd">
+          <_description>CD Player Manual</_description>
+          <directory>gnome-cd/doc</directory>
+        </document>
+        <document id="grecord">
+          <_description>Sound Recorder Manual</_description>
+          <directory>grecord/doc</directory>
+        </document>
+        <document id="gst-mixer">
+          <_description>GNOME Volume Control Manual</_description>
+          <directory>gst-mixer/doc</directory>
+        </document>
+        <document id="gstreamer-properties">
+          <_description>GStreamer Properties Manual</_description>
+          <directory>gstreamer-properties/help</directory>
+        </document>
+      </branch>
+    </defaults>
+    <branch id="HEAD" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-menus">
