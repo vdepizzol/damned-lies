@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-07 08:43+0200\n"
-"PO-Revision-Date: 2007-08-07 08:43+0100\n"
+"POT-Creation-Date: 2007-08-09 20:15+0100\n"
+"PO-Revision-Date: 2007-08-17 10:46+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -327,7 +327,7 @@ msgid "System Monitor Manual"
 msgstr "Handbok för Systemövervakare"
 
 #: ../gnome-modules.xml.in.h:79
-#: ../templates/language-release.tmpl:89
+#: ../templates/language-release.tmpl:92
 msgid "UI translations"
 msgstr "Gränssnittsöversättningar"
 
@@ -1281,7 +1281,7 @@ msgid "Release"
 msgstr "Utgåva"
 
 #: ../templates/release.tmpl:14
-#: ../templates/language-release.tmpl:84
+#: ../templates/language-release.tmpl:86
 #: ../templates/module.tmpl:70
 #: ../templates/team.tmpl:86
 msgid "Documentation"
@@ -1291,6 +1291,11 @@ msgstr "Dokumentation"
 #: ../templates/team.tmpl:86
 msgid "User Interface"
 msgstr "Användargränssnitt"
+
+#: ../templates/release.tmpl:28
+#: ../templates/team.tmpl:98
+msgid "-"
+msgstr "-"
 
 #: ../templates/language-release-ui-stats.tmpl:27
 #: ../templates/language-release-doc-stats.tmpl:26
