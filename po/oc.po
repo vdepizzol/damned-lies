@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 21:01+0200\n"
-"PO-Revision-Date: 2007-07-16 22:10+0200\n"
+"PO-Revision-Date: 2007-08-19 16:59+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);"
 
 #: ../gnome-modules.xml.in.h:2
 #, no-c-format
 msgid "%(module/id)"
-msgstr "%(modul/id)"
+msgstr "%(module/id)"
 
 #: ../gnome-modules.xml.in.h:3
 msgid "Accessibility Guide"
@@ -1204,9 +1204,7 @@ msgstr "Grops de versions"
 
 #: ../templates/show-stats.tmpl:8
 msgid "POT file (%(potsize)s message)"
-msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: ../templates/show-stats.tmpl:12
 msgid "updated on %(date)s"
@@ -1254,7 +1252,7 @@ msgstr ""
 
 #: ../templates/person.tmpl:51
 msgid "Translates:"
-msgstr "Revira :" 
+msgstr "Revira :"
 
 #: ../templates/person.tmpl:61
 msgid "Coordinates %(team)s"
@@ -1326,9 +1324,7 @@ msgstr "Lengas GNOME"
 
 #: ../templates/list-languages.tmpl:10
 msgid "GNOME is being translated to following %(count)s language:"
-msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: ../templates/list-languages.tmpl:34
 msgid "GNOME is currently not being translated to any language. :("
@@ -1441,3 +1437,4 @@ msgstr "Revirada"
 #: ../templates/team.tmpl:12
 msgid "%(team)s Page:"
 msgstr ""
+
