@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-20 16:01+0200\n"
-"PO-Revision-Date: 2007-08-20 16:06+0200\n"
+"PO-Revision-Date: 2007-08-20 20:55+0200\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -1121,7 +1121,7 @@ msgstr ""
 #: ../update-stats.py:604
 #, python-format
 msgid "There is no translation team in charge of %s."
-msgstr "Al momento non vi è alcun team di traduzione in carica per %s."
+msgstr "Al momento non vi è alcun gruppo di traduzione in carica per %s."
 
 #: ../update-stats.py:648
 msgid "DOC_LINGUAS list doesn't include this language."
@@ -1147,10 +1147,7 @@ msgstr ""
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
-msgstr ""
-"Se non è presente alcun team per la propria lingua, è possibile <a href="
-"\"http://live.gnome.org/TranslationProject/StartingATeam/\">dare vita a un "
-"proprio team</a> con semplicità."
+msgstr "Se non è presente alcun gruppo per la propria lingua, è possibile <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">dare vita a un proprio gruppo/a> con semplicità."
 
 #: ../templates/index.tmpl:18 ../templates/header.tmpl:33
 msgid "Languages"
@@ -1167,9 +1164,7 @@ msgstr ""
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
-msgstr ""
-"Alcuni team gestiscono più di una lingua (di solito semplici varianti): qui "
-"è possibile vedere tutte le lingue in cui GNOME è tradotto."
+msgstr "Alcuni gruppi gestiscono più di una lingua (di solito semplici varianti): qui è possibile vedere tutte le lingue in cui GNOME è tradotto."
 
 #: ../templates/index.tmpl:24
 msgid "Release Sets"
@@ -1309,8 +1304,7 @@ msgstr "Gruppi di traduzione di GNOME"
 
 #: ../templates/list-teams.tmpl:9
 msgid "Select a team below to see more information about it:"
-msgstr ""
-"Selezionare un team qui elencato per vedere maggiori informazioni su di esso:"
+msgstr "Selezionare un gruppo qui elencato per vedere maggiori informazioni su di esso:"
 
 #: ../templates/list-teams.tmpl:19
 msgid "Coordinated by %(coordinator)s"
@@ -1318,7 +1312,7 @@ msgstr "Coordinato da %(coordinator)s"
 
 #: ../templates/list-teams.tmpl:25
 msgid "There are currently no translation teams in GNOME. :("
-msgstr "Al momento non vi è alcun team di traduzione in GNOME :-("
+msgstr "Al momento non vi è alcun gruppo di traduzione in GNOME :-("
 
 #: ../templates/release.tmpl:6
 msgid "%(release)s Release"
