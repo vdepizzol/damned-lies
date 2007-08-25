@@ -1391,6 +1391,21 @@
     <branch id="HEAD"/>
   </module>
   <module id="seahorse">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <document id="help">
+          <_description>Seahorse Manual</_description>
+          <directory>help</directory>
+        </document>
+        <document id="applet-help">
+          <_description>Encryption Applet Manual</_description>
+          <directory>plugins/applet/docs</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
   </module>
