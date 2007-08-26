@@ -145,6 +145,14 @@ def compare_module_names(a, b):
     global allmodules
     return -compare_by_fields(a, b, ['description', 'id'], allmodules.modules)
 
+def compare_branches(a, b):
+    if a=="HEAD":
+        return -1
+    elif b=="HEAD":
+        return 1
+    else:
+        return cmp(a, b)*-1
+
 def go_go():
     global allmodules
     moduleid = os.getenv("PATH_INFO")[1:]
@@ -187,6 +195,8 @@ def go_go():
         html.ngettext = l10n.ngettext
         html.webroot = defaults.webroot
         html.module = module
+        html.branches = module["branch"].keys()
+        html.branches.sort(compare_branches)
         print unicode(html).encode('utf-8')
         print utils.TemplateInspector(html)
     else:
