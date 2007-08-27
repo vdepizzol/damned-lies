@@ -15,4 +15,18 @@ RewriteRule !^data/.*$            -   [C]
 RewriteRule !^data$                -   [C]
 
 RewriteRule !^index\.py.*$     -   [C]
-RewriteRule ^(.*)$             index.py/$1
+
+RewriteRule ^module/(.+)$      	     index.py/module/$1
+RewriteRule ^modules?/?$             index.py/modules
+
+RewriteRule ^people/(.*)$    	     index.py/people/$1
+RewriteRule ^people/?$        	     index.py/people/
+
+RewriteRule ^teams$           	     index.py/teams/
+RewriteRule ^teams/(.*)$      	     index.py/teams/$1
+
+RewriteRule ^languages$              index.py/languages/
+RewriteRule ^languages/(.*)$         index.py/languages/$1
+
+RewriteRule ^releases$        	     index.py/releases/
+RewriteRule ^releases/(.*)$    	     index.py/releases/$1
