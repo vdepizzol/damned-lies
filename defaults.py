@@ -25,7 +25,7 @@ people_xml = "po/people.xml"
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
-notifications_to = 'danilo@avet.kvota.net'
+notifications_to = 'danilo@smorisa.kvota.net'
 
 # Whether to use fuzzy matching (much slower, but better for translators), use 0 only when testing!
 fuzzy_matching = 0

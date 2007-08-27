@@ -11,7 +11,7 @@ _ = l10n.gettext
 
 import data
 
-import os
+import os, re
 
 class TranslationTeams:
     """Reads in and returns list of translation teams, or data for only a single team."""
@@ -29,11 +29,11 @@ class TranslationTeams:
 
             if not teams[teamid].has_key('description'):
                 teams[teamid]['description'] = firstlanguage
-            
+
             coordinator = None
             coordid = teams[teamid]['coordinator'].keys()[0]
             coordinator = people[coordid]
-            
+
             teams[teamid]['firstlanguage'] = firstlanguage
             teams[teamid]['coordinator'] = coordinator
 
@@ -47,7 +47,7 @@ class TranslationTeams:
 
 
         self.data = teams
-        
+
 
     # Implement dictionary methods
     def __getitem__(self, key): return self.data[key]
@@ -60,12 +60,11 @@ class TranslationTeams:
 
     def has_key(self, key): return self.data.has_key(key)
 
-    def items(self): return self.data.items()  
+    def items(self): return self.data.items()
 
     def values(self): return self.data.values()
 
     def __iter__(self): return self.data.__iter__()
-
 
 
 def TranslationLanguages(teamsfile=defaults.teams_xml, show_hidden=0):
@@ -113,35 +112,26 @@ def compare_releases(a, b):
         return res
 
 
-if __name__=="__main__":
-    import cgi, re
+from dispatcher import DamnedRequest
+class ListTeamsRequest(DamnedRequest):
+    def render(self, type='html'):
+        t = TranslationTeams()
+        teams = []
+        for tid, team in t.data.items():
+            teams.append(team)
+        teams.sort(compare_teams)
+        self.teams = teams
 
-    request = os.getenv("PATH_INFO")[1:]
+        DamnedRequest.render(self, type)
 
-    l10n.set_language()
-    if request.endswith('.xml'):
-        print "Content-type: application/xml; charset=UTF-8"
-    else:
-        print "Content-type: text/html; charset=UTF-8"
-
-    test = re.match("([^/]+)(/(.+)/?)?", request)
-    if not test:
-        utils.not_found_404()
-
-    page = test.groups()[0]
-    subrequest = test.groups()[2]
-
-    teamid = langid = release = None
-
-    if page == "teams":
-        teamid = subrequest
-        print ""
-
+class TeamRequest(DamnedRequest):
+    def render(self, type='html'):
+        teamid = self.request
+        langid = None
         if teamid:
-            myteam = TranslationTeams(only_team=teamid)
-            if len(myteam) and myteam.data.has_key(teamid):
-                html = DamnedTemplate(file="templates/team.tmpl")
-                team = myteam.data[teamid]
+            teams = TranslationTeams(only_team=teamid)
+            if len(teams) and teams.data.has_key(teamid):
+                team = teams.data[teamid]
 
                 for lang, ldata in team['language'].items():
                     releaselist = releases.Releases(deep=1, gather_stats = lang).data
@@ -149,113 +139,102 @@ if __name__=="__main__":
                     team['language'][lang]['releases'] = releaselist
                     if not langid: langid = lang
 
-                html.team = team
-                html.language = lang
-                html.language_name = team['language'][lang]['content']
-                if not html.team.has_key('bugzilla-component') and html.language_name:
-                    html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
+                language_name = team['language'][lang]['content']
+                if not team.has_key('bugzilla-component') and language_name:
+                    team['bugzilla-component'] = (language_name
+                                                  + " [%s]" % (langid))
+                self.team = team
+                self.language = lang
+                self.language_name = language_name
 
-                print unicode(html).encode('utf-8')
-                print utils.TemplateInspector(html)
-        else:
-            t = TranslationTeams()
-            teams = []
-            for tid, team in t.data.items():
-                teams.append(team)
-            teams.sort(compare_teams)
+        DamnedRequest.render(self, type)
 
-            html = DamnedTemplate(file="templates/list-teams.tmpl")
-            html.teams = teams
-            print unicode(html).encode('utf-8')
-            print utils.TemplateInspector(html)
+class ListLanguagesRequest(DamnedRequest):
+    def render(self, type='html'):
+        t = TranslationLanguages()
+        langs = []
+        for lang, lname in t.items():
+            langs.append( {'code' : lang, 'name' : lname } )
 
-    elif page == "languages":
-        print ""
+        def compare_langs(a, b):
+            res = cmp(a['name'], b['name'])
+            if not res:
+                return cmp(a['code'], b['code'])
+            else:
+                return res
 
-        if subrequest:
-            test = re.match("([^/]+)(/(.+)/?)?", subrequest)
+        langs.sort(compare_langs)
+
+        self.languages = langs
+
+        DamnedRequest.render(self, type)
+
+class LanguageReleaseRequest(DamnedRequest):
+    def render(self, type='html'):
+        if self.request:
+            test = re.match("([^/]+)(/(.+)/?)?", self.request)
         else: test = None
-        if not test:
-            # List all languages (FIXME)
 
-            t = TranslationLanguages()
-            langs = []
-            for lang, lname in t.items():
-                langs.append( {'code' : lang, 'name' : lname } )
-
-            def compare_langs(a, b):
-                res = cmp(a['name'], b['name'])
-                if not res:
-                    return cmp(a['code'], b['code'])
-                else:
-                    return res
-
-            langs.sort(compare_langs)
-
-            html = DamnedTemplate(file="templates/list-languages.tmpl")
-            html.languages = langs
-            print unicode(html).encode('utf-8')
-            print utils.TemplateInspector(html)
-
+        langid = test.groups()[0]
+        release = test.groups()[2]
+        if release:
+            (t_rel, t_ext) = os.path.splitext(release)
+            if t_ext == '.xml':
+                release = t_rel
         else:
-            langid = test.groups()[0]
-            release = test.groups()[2]
+            (t_rel, t_ext) = (None, None)
+
+        myteam = TranslationTeams(only_language=langid)
+        if len(myteam):
+            teamid = myteam.data.keys()[0]
+            team = myteam.data[teamid]
+
+            if not langid:
+                for lang, ldata in team['language'].items():
+                    if lang != langid:
+                        del team['language'][lang]
+
             if release:
-                (t_rel, t_ext) = os.path.splitext(release)
-                if t_ext == '.xml':
-                    release = t_rel
-            else:
-                (t_rel, t_ext) = (None, None)
-            #print "page: %s<br/>langid: %s<br/>release: %s<br/>" % (page, langid, release)
-            myteam = TranslationTeams(only_language=langid)
-            # FIXME: get language instead of team
-
-            if len(myteam):
-                teamid = myteam.data.keys()[0]
-                team = myteam.data[teamid]
-
-                if not langid:
-                    for lang, ldata in team['language'].items():
-                        if lang != langid:
-                            del team['language'][lang]
-
-                if release:
-                    if t_ext == '.xml':
-                        html = DamnedTemplate(
-                            file="templates/language-release-xml.tmpl")
-                    else:
-                        html = DamnedTemplate(
-                            file="templates/language-release.tmpl")
-                    html.language = langid
-                    html.language_name = team['language'][langid]['content']
-                    myreleases = releases.Releases(deep=1, only_release = release, gather_stats = langid).data
-                    if myreleases:
-                        html.release = myreleases[0]
-
+                self.language = langid
+                language_name = team['language'][langid]['content']
+                myreleases = releases.Releases(deep=1, only_release=release,
+                                               gather_stats=langid).data
+                if myreleases:
+                    self.release = myreleases[0]
                 else:
+                    print "Release not found!!"
+                if not team.has_key('description') and language_name:
+                    team['description'] = ( _("%(lang)s Translation Team")
+                                            % { 'lang' : language_name } )
+                if not team.has_key('bugzilla-component') and language_name:
+                    team['bugzilla-component'] = "%s [%s]" % (language_name,
+                                                              langid)
+                self.language_name = language_name
+                self.team = team
 
-                    html = DamnedTemplate(file="templates/team.tmpl")
-                    html.language = langid
-                    html.language_name = team['language'][langid]['content']
-                    releaselist = releases.Releases(deep=1, gather_stats = langid).data
-                    releaselist.sort(compare_releases)
-                    team['language'][langid]['releases'] = releaselist
-
-                html.team = team
-                if not html.team.has_key('description') and html.language_name:
-                    html.team['description'] = ( _("%(lang)s Translation Team")
-                                                 % { 'lang' :
-                                                     html.language_name } )
-                if not html.team.has_key('bugzilla-component') and html.language_name:
-                    html.team['bugzilla-component'] = html.language_name + " [%s]" % (langid)
-
-                print unicode(html).encode('utf-8')
-                if t_ext != '.xml':
-                    print utils.TemplateInspector(html)
+                DamnedRequest.render(self, type)
             else:
-                print myteam.data
-                print "Error: Can't find translation team for '%s'." % langid
+                print "Release not found!"
 
-    #import pprint
-    #pprint.pprint(TranslationLanguages())
-    
+class LanguageRequest(DamnedRequest):
+    def render(self, type='html'):
+        langid = self.request
+        myteam = TranslationTeams(only_language=langid)
+        if len(myteam):
+            teamid = myteam.data.keys()[0]
+            team = myteam.data[teamid]
+
+            if not langid:
+                for lang, ldata in team['language'].items():
+                    if lang != langid:
+                        del team['language'][lang]
+
+            self.language = langid
+            self.language_name = team['language'][langid]['content']
+            releaselist = releases.Releases(deep=1, gather_stats = langid).data
+            releaselist.sort(compare_releases)
+            team['language'][langid]['releases'] = releaselist
+            self.team = team
+
+            DamnedRequest.render(self, type)
+

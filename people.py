@@ -7,21 +7,21 @@ import modules
 import teams
 import data
 
-from dispatcher import DamnedHttpRequest
+from dispatcher import DamnedRequest
 
-class DamnedPeople(DamnedHttpRequest):
-    def __init__(self):
-        DamnedHttpRequest.__init__(self)
-        personid = self.request or None
-        persons = data.getPeople()
+class ListPeopleRequest(DamnedRequest):
+    def __init__(self, template=None, xmltemplate=None):
+        DamnedRequest.__init__(self, template, xmltemplate)
+        self.people = data.getPeople()
 
-        if personid and len(persons) and persons.has_key(personid):
-            self.read_template("templates/person.tmpl")
-            self.template.person = persons[personid]
-            self.template.roles = self.get_roles_for(self.template.person)
-        else:
-            self.read_template("templates/people.tmpl")
-            self.template.people = persons
+class PersonRequest(DamnedRequest):
+    def render(self, type='html'):
+        personid = self.request
+        people = data.getPeople()
+        person = people[personid]
+        self.roles = self.get_roles_for(person)
+        self.person = person
+        DamnedRequest.render(self, type)
 
     def get_roles_for(self, person):
 
@@ -49,7 +49,6 @@ class DamnedPeople(DamnedHttpRequest):
         return { 'maintains' : maintains,
                  'translates' : translates,
                  'special' : special }
-
 
 if __name__=="__main__":
     import cgi

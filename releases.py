@@ -9,6 +9,7 @@ import teams
 import data
 import l10n
 from database import *
+from dispatcher import DamnedRequest
 
 import os
 
@@ -396,7 +397,7 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
 
     releases = data.getReleases()
     if releases.has_key(release):
-        myrelease = releases[releaseid]
+        myrelease = releases[release]
         modules = get_modules_for_release(myrelease)
 
     stats = { }
@@ -482,31 +483,8 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
     result.sort(compare_languages)
     return result
 
-if __name__=="__main__":
-    import cgi
-    import cgitb; cgitb.enable()
-    from Cheetah.Template import Template
-
-    l10n.set_language()
-    print "Content-type: text/html; charset=UTF-8\n"
-
-    releaseid = os.getenv("PATH_INFO")[1:]
-    if releaseid:
-        myrelease = Releases(only_release=releaseid, deep=0)
-        if len(myrelease) and myrelease[0]['id'] == releaseid:
-            html = Template(file="templates/release.tmpl",
-                            filter=l10n.MyFilter)
-            html._ = l10n.gettext
-            html.rtl = (defaults.language in defaults.rtl_languages)
-            html.webroot = defaults.webroot
-            html.release = myrelease[0]
-
-            langs = teams.TranslationLanguages()
-            status = get_aggregate_stats(releaseid)
-            html.status = status
-            print unicode(html).encode('utf-8')
-            print utils.TemplateInspector(html)
-    else:
+class ListReleasesRequest(DamnedRequest):
+    def render(self, type='html'):
         t = Releases(deep=0)
         releases = t.data
         # Create two sorted lists of releases
@@ -520,18 +498,23 @@ if __name__=="__main__":
         officialReleases.sort()
         officialReleases.reverse()
         otherReleases.sort()
-        
-        #import pprint
-        #pprint.pprint(releases)
 
-        html = Template(file="templates/list-releases.tmpl",
-                        filter=l10n.MyFilter)
-        html._ = l10n.gettext
-        html.rtl = (defaults.language in defaults.rtl_languages)
-        html.webroot = defaults.webroot
-        html.releases = releases
-        html.officialReleases = officialReleases
-        html.otherReleases = otherReleases
-        print unicode(html).encode('utf-8')
-        print utils.TemplateInspector(html)
+        self.releases = releases
+        self.officialReleases = officialReleases
+        self.otherReleases = otherReleases
+
+        DamnedRequest.render(self,type)
+
+class ReleaseRequest(DamnedRequest):
+    def render(self, type='html'):
+        releaseid = self.request
+
+        myrelease = Releases(only_release=releaseid, deep=0)
+
+        if len(myrelease) and myrelease[0]['id'] == releaseid:
+            self.release = myrelease[0]
+            status = get_aggregate_stats(releaseid)
+            self.status = status
+
+        DamnedRequest.render(self,type)
 

@@ -51,8 +51,6 @@ def not_found_404():
     print "Can't tell what you want from me! :("
     sys.exit(1)
 
-
-
 def getElementContents(node):
     nodelist = node.childNodes
     rc = ""
@@ -81,3 +79,28 @@ def getElementAttribute(node, attribute, default = 0):
             return default
     else:
         return default
+
+def compare_by_fields(a, b, fields, dict = None):
+    af = bf = 0.0
+
+    if dict:
+        a = dict[a]
+        b = dict[b]
+    for field in fields:
+        if a.has_key(field):
+            try: # prefer numerical comparison
+                af = float(a[field])
+            except:
+                af = a[field].lower()
+
+        if b.has_key(field):
+            try: # prefer numerical comparison
+                bf = float(b[field])
+            except:
+                bf = b[field].lower()
+
+        res = cmp(bf, af)
+        if res:
+            return res
+    return res
+
