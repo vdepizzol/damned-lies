@@ -99,6 +99,9 @@ class _AcceptItem:
     return s
 
 class _LanguageRange(_AcceptItem):
+  def __repr__(self):
+    return self.name
+
   def matches(self, tag):
     "Match the tag against self. Returns the qvalue, or None if non-matching."
     if tag == self.name:
@@ -155,7 +158,7 @@ class _LanguageSelector:
 
       # check this tag against the requests from the user
       for want in self.requested:
-        qvalue = want.matches(tag)
+        qvalue = want.matches(tag.lower())
         #print 'have %s. want %s. qvalue=%s' % (tag, want.name, qvalue)
         if qvalue is not None and len(want.name) > longest:
           # we have a match and it is longer than any we may have had.

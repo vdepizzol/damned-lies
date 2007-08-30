@@ -7,6 +7,7 @@ import defaults
 import accept
 import os
 import re
+import sys
 
 trans = None
 
