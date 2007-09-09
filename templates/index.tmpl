@@ -1,3 +1,4 @@
+#import commands
 #from defaults import language
 #set global pageTitle=$_("Damned Lies about GNOME")
 #include "templates/header.tmpl"
@@ -45,4 +46,10 @@
 </p>
 
 </div>
+#set gettext_version=commands.getoutput('gettext --version | grep gettext')
+#set intltool_version=commands.getoutput('intltool-update --version | grep intltool')
+<!-- 
+  ${gettext_version} 
+  ${intltool_version}
+-->
 #include "templates/footer.tmpl"
