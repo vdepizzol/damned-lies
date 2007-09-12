@@ -63,7 +63,8 @@ if __name__=="__main__":
     list_releases = ListReleasesRequest(template="templates/list-releases.tmpl")
     mapper.addRequest('releases/?$', list_releases)
 
-    show_release = ReleaseRequest(template="templates/release.tmpl")
+    show_release = ReleaseRequest(template="templates/release.tmpl",
+                                  xmltemplate="templates/release-xml.tmpl")
     mapper.addRequest('releases/(.+)/?$', show_release)
 
     mapper.handleAll()

@@ -515,6 +515,5 @@ class ReleaseRequest(DamnedRequest):
             self.release = myrelease[0]
             status = get_aggregate_stats(releaseid)
             self.status = status
-
         DamnedRequest.render(self,type)
 

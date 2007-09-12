@@ -51,6 +51,7 @@ class DamnedRequest:
 
     def render_by_request(self):
         if self.request.endswith('.xml'):
+            self.request = self.request[:-4]
             self.render('xml')
         else:
             self.render('html')

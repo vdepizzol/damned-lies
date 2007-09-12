@@ -225,5 +225,5 @@ def _node_is_text_only(node):
         
 
 if __name__=='__main__':
-    print getPeople()
+    print getReleases()['gnome-2-20']
     
