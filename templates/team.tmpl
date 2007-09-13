@@ -9,7 +9,7 @@
   <h2>$_("Details")</h2>
 
   #if $team.webpage and $team.has_key('description')
-  <strong>${_("%(team)s Page:"), team=$team.description}</strong> <a href="$team.webpage">$team.webpage</a><br />
+  <strong>${_("%(lang)s Translation Team Page:"), lang=$team.description}</strong> <a href="$team.webpage">$team.webpage</a><br />
   #end if
 
   #if $team.userpage
