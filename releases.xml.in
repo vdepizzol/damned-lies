@@ -453,8 +453,8 @@
     <_description>GNOME 2.20 (development)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
-      <module id="atk"/>
-      <module id="gail"/>
+      <module id="atk" branch="gnome-2-20"/>
+      <module id="gail" branch="gnome-2-20"/>
       <module id="gconf"/>
       <module id="glib"/>
       <module id="gnome-vfs"/>
@@ -528,7 +528,7 @@
       <module id="orca" branch="gnome-2-20"/>
       <module id="seahorse"/>
       <module id="sound-juicer"/>
-      <module id="tomboy"/>
+      <module id="tomboy" branch="gnome-2-20"/>
       <module id="totem" branch="gnome-2-20"/>
       <module id="vino"/>
       <module id="vte"/>
