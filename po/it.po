@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-10 11:14+0200\n"
-"PO-Revision-Date: 2007-09-10 17:55+0200\n"
+"POT-Creation-Date: 2007-09-18 11:46+0200\n"
+"PO-Revision-Date: 2007-09-18 12:09+0200\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Manuale di Carica batteria"
 
 #: ../gnome-modules.xml.in.h:8
 msgid "Beagle Desktop Search"
-msgstr "Ricerca desktop Beable"
+msgstr "Ricerca desktop Beagle"
 
 #: ../gnome-modules.xml.in.h:9
 msgid "Blackjack Manual"
@@ -74,9 +74,10 @@ msgstr "Manuale dell'applet Orologio"
 msgid "Command Line Manual"
 msgstr "Manuale di Riga di comadno"
 
+# è gtk+/po, ossia la parte UI
 #: ../gnome-modules.xml.in.h:16
 msgid "Core"
-msgstr ""
+msgstr "Nucleo"
 
 #: ../gnome-modules.xml.in.h:17
 msgid "Criawips Manual"
@@ -139,7 +140,6 @@ msgid "Five or More Manual"
 msgstr "Manuale di Cinque o più"
 
 #: ../gnome-modules.xml.in.h:32
-#, fuzzy
 msgid "Four-in-a-row Manual"
 msgstr "Manuale di Forza 4"
 
@@ -229,23 +229,23 @@ msgstr "Licenza GPL"
 
 #: ../gnome-modules.xml.in.h:54
 msgid "GST Network Setup Manual"
-msgstr "Manuale di Impostazione rete GST"
+msgstr "Manuale di GST - Impostazione rete"
 
 #: ../gnome-modules.xml.in.h:55
 msgid "GST Service Management Manual"
-msgstr "Manuale di Gestione servizi GST"
+msgstr "Manuale di GST - Gestione servizi"
 
 #: ../gnome-modules.xml.in.h:56
 msgid "GST Shared Folders Manual"
-msgstr "Manuale di Cartelle condivise GST"
+msgstr "Manuale di GST - Cartelle condivise"
 
 #: ../gnome-modules.xml.in.h:57
 msgid "GST Time Setup Manual"
-msgstr "Manuale di Impostazione ora GST"
+msgstr "Manuale di GST - Impostazione ora"
 
 #: ../gnome-modules.xml.in.h:58
 msgid "GST User Management Manual"
-msgstr "Manuale di Gestione utenti GST"
+msgstr "Manuale di GST - Gestione utenti"
 
 #: ../gnome-modules.xml.in.h:59
 msgid "GStreamer Properties Manual"
@@ -269,11 +269,11 @@ msgstr "Manuale di Iagno"
 
 #: ../gnome-modules.xml.in.h:64
 msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Manuale di monitor accessibilità tastiera"
+msgstr "Manuale di Monitor accessibilità tastiera"
 
 #: ../gnome-modules.xml.in.h:65
 msgid "Keyboard Indicator Manual"
-msgstr "Manuale di indicatore tastiera"
+msgstr "Manuale di Indicatore tastiera"
 
 #: ../gnome-modules.xml.in.h:66
 msgid "LGPL License"
@@ -283,14 +283,14 @@ msgstr "Licenza LGPL"
 msgid "Layout Descriptions"
 msgstr "Descrizioni delle disposizioni"
 
-# NON SICURO
+# Usato nome come in Applicazioni -> Sistema
 #: ../gnome-modules.xml.in.h:68
 msgid "Log Viewer Manual"
-msgstr "Manuale di visualizzatore log"
+msgstr "Manuale di Registro di sistema"
 
 #: ../gnome-modules.xml.in.h:69
 msgid "Mines Manual"
-msgstr ""
+msgstr "Manuale di Mine"
 
 #: ../gnome-modules.xml.in.h:70
 msgid "Nibbles Manual"
@@ -304,9 +304,10 @@ msgstr "Manuale di cestino da pannello"
 msgid "Platform Overview"
 msgstr "Panoramica della piattaforma"
 
+# sarebbe gtk+/po-properties ....
 #: ../gnome-modules.xml.in.h:73
 msgid "Property Nicks"
-msgstr ""
+msgstr "Accenni di proprietà"
 
 #: ../gnome-modules.xml.in.h:74
 msgid "Rhythmbox Music Player"
@@ -326,11 +327,11 @@ msgstr "Manuale di Seahorse"
 
 #: ../gnome-modules.xml.in.h:78
 msgid "Search Tool Manual"
-msgstr "Manuale di strumento di ricerca"
+msgstr "Manuale di Strumento di ricerca"
 
 #: ../gnome-modules.xml.in.h:79
 msgid "Shared MIME Info"
-msgstr "Shared MIME Info"
+msgstr "Informazioni MIME condivise"
 
 #: ../gnome-modules.xml.in.h:80
 msgid "Sound Juicer Manual"
@@ -354,11 +355,11 @@ msgstr "Guida di amministrazione del sistema"
 
 #: ../gnome-modules.xml.in.h:85
 msgid "System Monitor Manual"
-msgstr "Manuale di monitor di sistema"
+msgstr "Manuale di Monitor di sistema"
 
 #: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:92
 msgid "UI translations"
-msgstr "Traduzioni UI"
+msgstr "Traduzioni interfaccia grafica"
 
 #: ../gnome-modules.xml.in.h:87
 msgid "User Directories"
@@ -366,7 +367,7 @@ msgstr "Directory utente"
 
 #: ../gnome-modules.xml.in.h:88
 msgid "User Guide"
-msgstr "Guide utente"
+msgstr "Guida per l'utente"
 
 #: ../gnome-modules.xml.in.h:89
 msgid "Volume Control Manual"
@@ -382,11 +383,11 @@ msgstr ""
 
 #: ../gnome-modules.xml.in.h:92
 msgid "Window List Applet Manual"
-msgstr "Manuale applet elenco finestre"
+msgstr "Manuale applet Elenco finestre"
 
 #: ../gnome-modules.xml.in.h:93
 msgid "Workspace Switcher Applet Manual"
-msgstr "Manuale applet selettore area di lavoro"
+msgstr "Manuale applet Selettore area di lavoro"
 
 #: ../gnome-modules.xml.in.h:94
 msgid "XKeyboard-Config"
@@ -480,7 +481,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:2
 msgid "Albanian"
-msgstr ""
+msgstr "Albanese"
 
 #: ../translation-teams.xml.in.h:3
 msgid "Amharic"
@@ -488,11 +489,11 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:4
 msgid "Arabic"
-msgstr ""
+msgstr "Arabo"
 
 #: ../translation-teams.xml.in.h:5
 msgid "Armenian"
-msgstr ""
+msgstr "Armeno"
 
 #: ../translation-teams.xml.in.h:6
 msgid "Assamese"
@@ -504,7 +505,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:8
 msgid "Australian English"
-msgstr ""
+msgstr "Inglese australiano"
 
 #: ../translation-teams.xml.in.h:9
 msgid "Azerbaijani"
@@ -512,11 +513,11 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:10
 msgid "Basque"
-msgstr ""
+msgstr "Basco"
 
 #: ../translation-teams.xml.in.h:11
 msgid "Belarusian"
-msgstr ""
+msgstr "Bielorusso"
 
 #: ../translation-teams.xml.in.h:12
 msgid "Belarusian Latin"
@@ -524,15 +525,15 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:13
 msgid "Bengali"
-msgstr ""
+msgstr "Bengali"
 
 #: ../translation-teams.xml.in.h:14
 msgid "Bengali (India)"
-msgstr ""
+msgstr "Bengali (India)"
 
 #: ../translation-teams.xml.in.h:15
 msgid "Bosnian"
-msgstr ""
+msgstr "Bosniaco"
 
 #: ../translation-teams.xml.in.h:16
 msgid "Brazilian Portuguese"
@@ -548,7 +549,7 @@ msgstr "Inglese britannico"
 
 #: ../translation-teams.xml.in.h:19
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgaro"
 
 #: ../translation-teams.xml.in.h:20
 msgid "Burmese"
@@ -671,358 +672,362 @@ msgid "Icelandic"
 msgstr "Islandese"
 
 #: ../translation-teams.xml.in.h:50
-msgid "Igbo"
+msgid "Ido"
 msgstr ""
 
 #: ../translation-teams.xml.in.h:51
+msgid "Igbo"
+msgstr ""
+
+#: ../translation-teams.xml.in.h:52
 msgid "Indonesian"
 msgstr "Indonesiano"
 
-#: ../translation-teams.xml.in.h:52
+#: ../translation-teams.xml.in.h:53
 msgid "Iranian Azerbaijani"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:53
+#: ../translation-teams.xml.in.h:54
 msgid "Irish"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:54
+#: ../translation-teams.xml.in.h:55
 msgid "Italian"
 msgstr "Italiano"
 
-#: ../translation-teams.xml.in.h:55
+#: ../translation-teams.xml.in.h:56
 msgid "Japanese"
 msgstr "Giapponese"
 
-#: ../translation-teams.xml.in.h:56
+#: ../translation-teams.xml.in.h:57
 msgid "Jju"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:57
+#: ../translation-teams.xml.in.h:58
 msgid "Kagoma"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:58
+#: ../translation-teams.xml.in.h:59
 msgid "Kannada"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:59
+#: ../translation-teams.xml.in.h:60
 msgid "Kazakh"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:60
+#: ../translation-teams.xml.in.h:61
 msgid "Khmer"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:61
+#: ../translation-teams.xml.in.h:62
 msgid "Kinyarwanda"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:62
+#: ../translation-teams.xml.in.h:63
 msgid "Kirghiz"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:63
+#: ../translation-teams.xml.in.h:64
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../translation-teams.xml.in.h:64
+#: ../translation-teams.xml.in.h:65
 msgid "Kurdish"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:65
+#: ../translation-teams.xml.in.h:66
 msgid "Lao"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:66
+#: ../translation-teams.xml.in.h:67
 msgid "Latin"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:67
+#: ../translation-teams.xml.in.h:68
 msgid "Latvian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:68
+#: ../translation-teams.xml.in.h:69
 msgid "Limburgian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:69
+#: ../translation-teams.xml.in.h:70
 msgid "Lithuanian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:70
+#: ../translation-teams.xml.in.h:71
 msgid "Low German"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:71
+#: ../translation-teams.xml.in.h:72
 msgid "Low German and Saxon"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:72
+#: ../translation-teams.xml.in.h:73
 msgid "Low Saxon, Germany"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:73
+#: ../translation-teams.xml.in.h:74
 msgid "Macedonian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:74
+#: ../translation-teams.xml.in.h:75
 msgid "Maithili"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:75
+#: ../translation-teams.xml.in.h:76
 msgid "Malagasy"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:76
+#: ../translation-teams.xml.in.h:77
 msgid "Malay"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:77
+#: ../translation-teams.xml.in.h:78
 msgid "Malayalam"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:78
+#: ../translation-teams.xml.in.h:79
 msgid "Maltese"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:79
+#: ../translation-teams.xml.in.h:80
 msgid "Maori"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:80
+#: ../translation-teams.xml.in.h:81
 msgid "Marathi"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:81
+#: ../translation-teams.xml.in.h:82
 msgid "Mayan"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:82
+#: ../translation-teams.xml.in.h:83
 msgid "Mongolian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:83
+#: ../translation-teams.xml.in.h:84
 msgid "Nahuatl"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:84
+#: ../translation-teams.xml.in.h:85
 msgid "Nepali"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:85
+#: ../translation-teams.xml.in.h:86
 msgid "Northern Sotho"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:86
+#: ../translation-teams.xml.in.h:87
 msgid "Norwegian (Bokmål and Nynorsk)"
 msgstr "Norvegese (Bokmål and Nynorsk)"
 
-#: ../translation-teams.xml.in.h:87
+#: ../translation-teams.xml.in.h:88
 msgid "Norwegian Bokmål"
 msgstr "Norvegese Bokmål"
 
-#: ../translation-teams.xml.in.h:88
+#: ../translation-teams.xml.in.h:89
 msgid "Norwegian Nynorsk"
 msgstr "Norvegese Nynorsk"
 
-#: ../translation-teams.xml.in.h:89
+#: ../translation-teams.xml.in.h:90
 msgid "Occitan"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:90
+#: ../translation-teams.xml.in.h:91
 msgid "Old English"
 msgstr "Inglese antico"
 
-#: ../translation-teams.xml.in.h:91
+#: ../translation-teams.xml.in.h:92
 msgid "Oriya"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:92
+#: ../translation-teams.xml.in.h:93
 msgid "Persian"
 msgstr "Persiano"
 
-#: ../translation-teams.xml.in.h:93
+#: ../translation-teams.xml.in.h:94
 msgid "Polish"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:94
+#: ../translation-teams.xml.in.h:95
 msgid "Portuguese"
 msgstr "Portoghese"
 
-#: ../translation-teams.xml.in.h:95
+#: ../translation-teams.xml.in.h:96
 msgid "Punjabi"
 msgstr "Punjabi"
 
-#: ../translation-teams.xml.in.h:96
+#: ../translation-teams.xml.in.h:97
 msgid "Pushto"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:97
+#: ../translation-teams.xml.in.h:98
 msgid "Páez"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:98
+#: ../translation-teams.xml.in.h:99
 msgid "Quechua"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:99
+#: ../translation-teams.xml.in.h:100
 msgid "Romanian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:100
+#: ../translation-teams.xml.in.h:101
 msgid "Russian"
 msgstr "Russo"
 
-#: ../translation-teams.xml.in.h:101
+#: ../translation-teams.xml.in.h:102
 msgid "Sanskrit"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:102
+#: ../translation-teams.xml.in.h:103
 msgid "Sardinian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:103
+#: ../translation-teams.xml.in.h:104
 msgid "Serbian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:104
+#: ../translation-teams.xml.in.h:105
 msgid "Serbian Jekavian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:105
+#: ../translation-teams.xml.in.h:106
 msgid "Serbian Latin"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:106
+#: ../translation-teams.xml.in.h:107
 msgid "Sinhala"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:107
+#: ../translation-teams.xml.in.h:108
 msgid "Slovak"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:108
+#: ../translation-teams.xml.in.h:109
 msgid "Slovenian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:109
+#: ../translation-teams.xml.in.h:110
 msgid "Spanish"
 msgstr "Spagnolo"
 
-#: ../translation-teams.xml.in.h:110
+#: ../translation-teams.xml.in.h:111
 msgid "Swahili"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:111
+#: ../translation-teams.xml.in.h:112
 msgid "Swedish"
 msgstr "Svedese"
 
-#: ../translation-teams.xml.in.h:112
+#: ../translation-teams.xml.in.h:113
 msgid "Tagalog"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:113
+#: ../translation-teams.xml.in.h:114
 msgid "Tajik"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:114
+#: ../translation-teams.xml.in.h:115
 msgid "Tamil"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:115
+#: ../translation-teams.xml.in.h:116
 msgid "Tatar"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:116
+#: ../translation-teams.xml.in.h:117
 msgid "Telugu"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:117
+#: ../translation-teams.xml.in.h:118
 msgid "Tetum"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:118
+#: ../translation-teams.xml.in.h:119
 msgid "Thai"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:119
+#: ../translation-teams.xml.in.h:120
 msgid "Tibetan"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:120
+#: ../translation-teams.xml.in.h:121
 msgid "Tigrinya"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:121
+#: ../translation-teams.xml.in.h:122
 msgid "Turkish"
 msgstr "Turco"
 
-#: ../translation-teams.xml.in.h:122
+#: ../translation-teams.xml.in.h:123
 msgid "Turkmen"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:123
+#: ../translation-teams.xml.in.h:124
 msgid "Tyap"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:124
+#: ../translation-teams.xml.in.h:125
 msgid "Uighur"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:125
+#: ../translation-teams.xml.in.h:126
 msgid "Ukrainian"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:126
+#: ../translation-teams.xml.in.h:127
 msgid "Urdu"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:127
+#: ../translation-teams.xml.in.h:128
 msgid "Uzbek"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:128
+#: ../translation-teams.xml.in.h:129
 msgid "Uzbek (Cyrillic)"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:129
+#: ../translation-teams.xml.in.h:130
 msgid "Uzbek (Latin)"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:130
+#: ../translation-teams.xml.in.h:131
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: ../translation-teams.xml.in.h:131
+#: ../translation-teams.xml.in.h:132
 msgid "Walloon"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:132
+#: ../translation-teams.xml.in.h:133
 msgid "Welsh"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:133
+#: ../translation-teams.xml.in.h:134
 msgid "Wolof"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:134
+#: ../translation-teams.xml.in.h:135
 msgid "Xhosa"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:135
+#: ../translation-teams.xml.in.h:136
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:137
 msgid "Yoruba"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:138
 msgid "Zapotec"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:139
 msgid "Zulu"
 msgstr "Zulu"
 
@@ -1114,11 +1119,11 @@ msgstr "Il modulo %s non sembra essere un modulo gnome-doc-utils."
 #: ../update-stats.py:546
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr ""
+msgstr "DOC_MODULE non ha risoluzione su un file reale, usato \"%s.xml\"."
 
 #: ../update-stats.py:549
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr ""
+msgstr "DOC_MODULE non punta a un file reale, probabilemnte è una macro."
 
 #: ../update-stats.py:575
 #, python-format
@@ -1127,6 +1132,9 @@ msgid ""
 "<pre>%s\n"
 "%s</pre>"
 msgstr ""
+"Errore nel rigenerare il file POT per il documento %s:\n"
+"<pre>%s\n"
+"%s</pre>"
 
 # Da vedere nell'uso reale
 #: ../update-stats.py:604
@@ -1158,7 +1166,10 @@ msgstr ""
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
-msgstr "Se non è presente alcun gruppo per la propria lingua, è possibile <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">dare vita a un proprio gruppo</a> con semplicità."
+msgstr ""
+"Se non è presente alcun gruppo per la propria lingua, è possibile <a href="
+"\"http://live.gnome.org/TranslationProject/StartingATeam/\">dare vita a un "
+"proprio gruppo</a> con semplicità."
 
 #: ../templates/index.tmpl:19 ../templates/header.tmpl:34
 msgid "Languages"
@@ -1297,11 +1308,11 @@ msgstr "Account SVN:"
 
 #: ../templates/person.tmpl:43
 msgid "Maintains:"
-msgstr ""
+msgstr "Mantiene:"
 
 #: ../templates/person.tmpl:45
 msgid "Maintains %(module)s"
-msgstr ""
+msgstr "Mantiene %(module)s"
 
 #: ../templates/person.tmpl:51
 msgid "Translates:"
@@ -1337,7 +1348,7 @@ msgstr "Rilascio %(release)s"
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
-msgstr ""
+msgstr "I moduli di questo rilascio non sopo parte del repository SVN di GNOME. Verificare presso la pagina web di ciascun modulo le modalità di invio delle traduzioni."
 
 #: ../templates/release.tmpl:14 ../templates/team.tmpl:86
 msgid "Release"
@@ -1393,7 +1404,7 @@ msgstr "Al momento GNOME non è tradotto in alcuna possibile lingua :-("
 msgid "Details"
 msgstr "Dettagli"
 
-#: ../templates/language-release.tmpl:12
+#: ../templates/language-release.tmpl:12 ../templates/team.tmpl:12
 msgid "%(lang)s Translation Team Page:"
 msgstr "Pagina del gruppo di traduzione %(lang)s"
 
@@ -1467,7 +1478,7 @@ msgstr ""
 
 #: ../templates/module.tmpl:15
 msgid "Maintainers"
-msgstr ""
+msgstr "Manutentori"
 
 #: ../templates/module.tmpl:31
 msgid "Bug reporting"
@@ -1497,9 +1508,8 @@ msgstr "Per questo branch vale al momento lo string-freeze."
 msgid "Translation"
 msgstr "Traduzione"
 
-#: ../templates/team.tmpl:12
-msgid "%(team)s Page:"
-msgstr "Pagina del %(team)s"
+#~ msgid "%(team)s Page:"
+#~ msgstr "Pagina del %(team)s"
 
 #~ msgid "GNOME desktop. Essential software."
 #~ msgstr "GNOME Desktop. Software essenziale."
