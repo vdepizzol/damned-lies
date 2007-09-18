@@ -112,10 +112,10 @@ class LocStatistics:
             mybranches = [onlybranch]
 
         for branch in mybranches:
-            if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]:
+            if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]=="true":
                 continue
 
-            if module["branch"][branch].has_key("stringfrozen") and module["branch"][branch]["stringfrozen"]:
+            if module["branch"][branch].has_key("stringfrozen") and module["branch"][branch]["stringfrozen"]=="true":
                 self.STRINGFREEZE = 1
             else:
                 self.STRINGFREEZE = 0
