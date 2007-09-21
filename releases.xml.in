@@ -353,7 +353,7 @@
     </category>
   </release>
   <release id="gnome-2-18" status="official" stringfrozen="true">
-    <_description>GNOME 2.18 (stable)</_description>
+    <_description>GNOME 2.18 (old stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-18"/>
@@ -450,7 +450,7 @@
     </category>
   </release>
   <release id="gnome-2-20" status="official">
-    <_description>GNOME 2.20 (development)</_description>
+    <_description>GNOME 2.20 (stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-20"/>
@@ -538,7 +538,7 @@
     <category id="admin">
       <_description>Administration Tools</_description>
       <module id="pessulus"/>
-      <module id="sabayon" />
+      <module id="sabayon" branch="gnome-2-20"/>
     </category>
     <category id="devtools">
       <_description>Development Tools</_description>
