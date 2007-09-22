@@ -20,6 +20,7 @@
 
 body {
     background: white;
+    font-family: sans-serif;
     color: black;
     margin: 0px;
     padding: 0px;
@@ -166,6 +167,12 @@ div.mainpage {
 div.col1 { float: left }
 div.col2 { float: left }
 div.col3 { float: left }
+
+.path {
+  font-size: x-small;
+  font-style: italic;
+  color: #666666;
+}
 
 .footnote {
   text-align: center;

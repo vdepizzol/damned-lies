@@ -1,7 +1,11 @@
 #from l10n import MyFilter
 #filter $MyFilter
 
-<h3>$domain.description</h3>
+<h3>$domain.description
+#if $domain.has_key('directory')
+<br /><span class='path'>$domain.directory</span>
+#end if
+</h3>
 <a href="${webdir}.pot">
 <img src="$webroot/data/download.png" alt="Download POT file" />
 #if $domain.has_key('pot_size')
