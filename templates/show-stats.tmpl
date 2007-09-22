@@ -2,7 +2,7 @@
 #filter $MyFilter
 
 <h3>$domain.description
-#if $domain.has_key('directory')
+#if $domain.has_key('directory') and $domain.directory!='help'
 <br /><span class='path'>$domain.directory</span>
 #end if
 </h3>

@@ -1,5 +1,9 @@
 2007-09-22  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/show-stats.tmpl: Show SVN path only if non standard.
+
+2007-09-22  Claude Paroz  <claude@2xlibre.net>
+
 	* data/main.css: Add 'path' class. Change default font to sans-serif.
 	* templates/show-stats.tmpl: Add SVN path for documentation whenever
 	directory property is present.
