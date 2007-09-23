@@ -34,7 +34,7 @@
        	 <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${domain.description}
        #for pomsgs in $POINFO
          #set txt=utils.stripHTML(pomsgs[1])
-         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" />
+         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" alt="Error or warning icon" />
        #end for
        </td>
       #else
@@ -42,7 +42,7 @@
          <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a> <a href="${webroot}/module/${moduleid}">${module.description}</a>
        #for pomsgs in $POINFO
          #set txt=utils.stripHTML(pomsgs[1])
-         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" />
+         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" alt="Error or warning icon" />
        #end for
        </td>
       #end if

@@ -11,7 +11,7 @@ def multiple_replace(dct, text):
     return regex.sub(lambda mo: dct[mo.string[mo.start():mo.end()]], text)
 
 def stripHTML(string):
-    replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "</li>": ""}
+    replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
 # CheetahTemplate power stuff: similar to Smarty's debug console

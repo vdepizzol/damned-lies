@@ -1,5 +1,13 @@
 2007-09-23  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/header.tmpl: Added missing quotes around alt attribute.
+	* templates/language-release-ui-stats-modules.tmpl: Added alt
+	attribute to error/warning icons for XHTML compliance.
+	* utils.py: Added one more replacement for stripHTML, removing
+	unneeded linespace in result.
+
+2007-09-23  Claude Paroz  <claude@2xlibre.net>
+
 	* gnome-modules.xml.in: Updated shared-mime-info URL.
 	* templates/language-release-ui-stats-modules.tmpl: Strip HTML tags
 	from URL title to make the page XHTML compliant.
