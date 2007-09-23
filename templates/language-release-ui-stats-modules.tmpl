@@ -1,3 +1,4 @@
+   #import utils
    #set $moduleids=$modules.keys()
    #silent $moduleids.sort()
    #for moduleid in $moduleids
@@ -32,14 +33,16 @@
        <td class="left" style="padding-left:2em; padding-right:2em;" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
        	 <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${domain.description}
        #for pomsgs in $POINFO
-       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+         #set txt=utils.stripHTML(pomsgs[1])
+         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" />
        #end for
        </td>
       #else
        <td class="left" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
          <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a> <a href="${webroot}/module/${moduleid}">${module.description}</a>
        #for pomsgs in $POINFO
-       	 <img src="${webroot}/data/${pomsgs[0]}.png" title="${pomsgs[1]}" />
+         #set txt=utils.stripHTML(pomsgs[1])
+         <img src="${webroot}/data/${pomsgs[0]}.png" title="$txt" />
        #end for
        </td>
       #end if

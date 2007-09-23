@@ -1,3 +1,11 @@
+2007-09-23  Claude Paroz  <claude@2xlibre.net>
+
+	* gnome-modules.xml.in: Updated shared-mime-info URL.
+	* templates/language-release-ui-stats-modules.tmpl: Strip HTML tags
+	from URL title to make the page XHTML compliant.
+	* utils.py: Added two new functions to remove HTML tags from a string.
+	Fixes #405675.
+
 2007-09-22  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/show-stats.tmpl: Show SVN path only if non standard.

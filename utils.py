@@ -1,10 +1,18 @@
 #!/usr/bin/env python
 
 import defaults
+import re
 
 def js_escape(string):
     return string.replace('"', '\\"')
 
+def multiple_replace(dct, text):
+    regex = re.compile("(%s)" % "|".join(map(re.escape, dct.keys())))
+    return regex.sub(lambda mo: dct[mo.string[mo.start():mo.end()]], text)
+
+def stripHTML(string):
+    replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "</li>": ""}
+    return multiple_replace(replacements, string)
 
 # CheetahTemplate power stuff: similar to Smarty's debug console
 def TemplateInspector(template):
