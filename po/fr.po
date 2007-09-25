@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 16:49+0200\n"
-"PO-Revision-Date: 2007-09-17 16:52+0200\n"
+"POT-Creation-Date: 2007-09-25 19:26+0200\n"
+"PO-Revision-Date: 2007-09-25 19:34+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -427,12 +427,12 @@ msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (ancienne stable)"
 
 #: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (stable)"
-msgstr "GNOME 2.18 (stable)"
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (ancienne stable)"
 
 #: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (development)"
-msgstr "GNOME 2.20 (développement)"
+msgid "GNOME 2.20 (stable)"
+msgstr "GNOME 2.20 (stable)"
 
 #: ../releases.xml.in.h:11
 msgid "GNOME Fifth Toe (Extra software)"
@@ -1267,37 +1267,33 @@ msgstr "Traduit par :"
 msgid "translator-credits"
 msgstr "Claude Paroz <claude chez 2xlibre.net>"
 
-#: ../templates/header.tmpl:28
-msgid "Home"
-msgstr "Accueil"
-
 #: ../templates/header.tmpl:35
 msgid "Release sets"
 msgstr "Groupes de versions"
 
-#: ../templates/show-stats.tmpl:8
+#: ../templates/show-stats.tmpl:12
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
 msgstr[0] "Fichier POT (%(potsize)s message)"
 msgstr[1] "Fichier POT (%(potsize)s messages)"
 
-#: ../templates/show-stats.tmpl:12
+#: ../templates/show-stats.tmpl:16
 msgid "updated on %(date)s"
 msgstr "mis à jour le %(date)s"
 
-#: ../templates/show-stats.tmpl:16
+#: ../templates/show-stats.tmpl:20
 msgid "Notices"
 msgstr "Remarques"
 
-#: ../templates/show-stats.tmpl:27
+#: ../templates/show-stats.tmpl:31
 msgid "Language"
 msgstr "Langue"
 
-#: ../templates/show-stats.tmpl:27
+#: ../templates/show-stats.tmpl:31
 msgid "Translated"
 msgstr "Traduit"
 
-#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:14
+#: ../templates/show-stats.tmpl:31 ../templates/release.tmpl:14
 #: ../templates/team.tmpl:86
 msgid "Graph"
 msgstr "Graphique"
@@ -1407,8 +1403,10 @@ msgstr "Langues GNOME"
 #: ../templates/list-languages.tmpl:10
 msgid "GNOME is being translated to following %(count)s language:"
 msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] "GNOME est en cours de traduction dans la langue suivante (%(count)s) :"
-msgstr[1] "GNOME est en cours de traduction dans les %(count)s langues suivantes :"
+msgstr[0] ""
+"GNOME est en cours de traduction dans la langue suivante (%(count)s) :"
+msgstr[1] ""
+"GNOME est en cours de traduction dans les %(count)s langues suivantes :"
 
 #: ../templates/list-languages.tmpl:34
 msgid "GNOME is currently not being translated to any language. :("
@@ -1524,3 +1522,9 @@ msgstr "Les chaînes sont actuellement gelées pour cette branche."
 #: ../templates/module.tmpl:88
 msgid "Translation"
 msgstr "Traduction"
+
+#~ msgid "GNOME 2.20 (development)"
+#~ msgstr "GNOME 2.20 (développement)"
+
+#~ msgid "Home"
+#~ msgstr "Accueil"
