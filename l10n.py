@@ -7,6 +7,7 @@ import defaults
 import accept
 import os
 import re
+from utils import multiple_replace
 
 trans = None
 
@@ -27,9 +28,10 @@ def set_language():
     langs = ['en'] + linguas.read().split('\n')
 
     # in browsers, country code is separated from language with an hyphen
-    langs=[lang.replace('_','-') for lang in langs]
+    langsIANA=[multiple_replace({'_':'-', '@latin':'-Latn', '@cyrillic':'-Cyrl'}, lang) for lang in langs]
     select = accept.language(os.getenv('HTTP_ACCEPT_LANGUAGE', fallback))
-    defaults.language = select.select_from(langs).replace('-','_')
+    selectedlang = select.select_from(langsIANA)
+    defaults.language = langs[langsIANA.index(selectedlang)]
     get_trans()
 
 def gettext(text):
