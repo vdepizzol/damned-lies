@@ -57,28 +57,28 @@
           <li
 #if $pageSection == 'home'
 	  class="selected"
-#endif
+#end if
             ><a href="${defaults.webroot}/" title="$_("Back to Damned Lies home page")"><span>Home</span></a>
           </li>
 	  <li
 #if $pageSection == 'teams'
 	  class="selected"
-#endif
+#end if
 	   ><a href="${defaults.webroot}/teams/"><span>$_("Teams")</span></a></li>
 	  <li
 #if $pageSection == 'languages'
 	  class="selected"
-#endif
+#end if
 	   ><a href="${defaults.webroot}/languages/"><span>$_("Languages")</span></a></li>
 	  <li
 #if $pageSection == 'releases'
 	  class="selected"
-#endif
+#end if
 	   ><a href="${defaults.webroot}/releases/"><span>$_("Release sets")</span></a></li>
 	  <li
 #if $pageSection == 'module'
 	  class="selected"
-#endif
+#end if
 	   ><a href="${defaults.webroot}/module/"><span>$_("Modules")</span></a></li>
         </ul>
       </div> <!-- end of #tabs -->
