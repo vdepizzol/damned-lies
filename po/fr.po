@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-25 19:26+0200\n"
-"PO-Revision-Date: 2007-09-25 19:34+0200\n"
+"POT-Creation-Date: 2007-10-10 23:33+0200\n"
+"PO-Revision-Date: 2007-10-10 23:40+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "Noyau"
 msgid "Criawips Manual"
 msgstr "Manuel de Criawips"
 
-#: ../gnome-modules.xml.in.h:18 ../templates/header.tmpl:31
+#: ../gnome-modules.xml.in.h:18 ../templates/header.tmpl:54
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
@@ -354,7 +354,7 @@ msgstr "Guide d'administration système"
 msgid "System Monitor Manual"
 msgstr "Manuel du Moniteur système"
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:92
+#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:93
 msgid "UI translations"
 msgstr "Traductions de l'interface utilisateur"
 
@@ -466,8 +466,8 @@ msgstr "Administration système"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non GNOME)"
 
-#: ../teams.py:207 ../templates/language-release.tmpl:6
-#: ../templates/team.tmpl:6
+#: ../teams.py:207 ../templates/language-release.tmpl:7
+#: ../templates/team.tmpl:7
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Équipe de traduction en %(lang)s"
@@ -1154,15 +1154,15 @@ msgstr "Il n'existe aucune équipe de traduction responsable de %s."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
-#: ../templates/index.tmpl:8
+#: ../templates/index.tmpl:9
 msgid "Damned Lies about GNOME"
 msgstr "Damnés mensonges au sujet de GNOME"
 
-#: ../templates/index.tmpl:12 ../templates/header.tmpl:33
+#: ../templates/index.tmpl:13 ../templates/header.tmpl:67
 msgid "Teams"
 msgstr "Équipes"
 
-#: ../templates/index.tmpl:13
+#: ../templates/index.tmpl:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -1171,7 +1171,7 @@ msgstr ""
 "complètes comme le contact principal (coordinateur), les pages Web et les "
 "informations sur la liste de diffusion."
 
-#: ../templates/index.tmpl:14
+#: ../templates/index.tmpl:15
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
@@ -1179,18 +1179,18 @@ msgstr ""
 "S'il n'existe pas d'équipe pour votre langue, vous pouvez facilement <a href="
 "\"http://live.gnome.org/TranslationProject/StartingATeam/\">en créer une</a>."
 
-#: ../templates/index.tmpl:19 ../templates/header.tmpl:34
+#: ../templates/index.tmpl:20 ../templates/header.tmpl:72
 msgid "Languages"
 msgstr "Langues"
 
-#: ../templates/index.tmpl:20
+#: ../templates/index.tmpl:21
 msgid ""
 "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr ""
 "Liste de toutes les langues pour lesquelles il existe une <a href=\"teams/"
 "\">équipe de traduction</a>."
 
-#: ../templates/index.tmpl:21
+#: ../templates/index.tmpl:22
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1199,17 +1199,17 @@ msgstr ""
 "variantes), et vous pouvez voir ici toutes les langues dans lesquelles GNOME "
 "est en cours de traduction."
 
-#: ../templates/index.tmpl:25
+#: ../templates/index.tmpl:26
 msgid "Release Sets"
 msgstr "Groupes de versions"
 
-#: ../templates/index.tmpl:26
+#: ../templates/index.tmpl:27
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
 "Liste de toutes les versions et groupes de versions GNOME pour lesquelles "
 "nous tenons à jour des statistiques."
 
-#: ../templates/index.tmpl:28
+#: ../templates/index.tmpl:29
 msgid ""
 "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
 "\"."
@@ -1217,7 +1217,7 @@ msgstr ""
 "Voici des exemples de groupes de versions : « GNOME Office », « Fifth Toe » "
 "ou « GNOME 2.14 »."
 
-#: ../templates/index.tmpl:29
+#: ../templates/index.tmpl:30
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "\"Desktop Applications\" and \"Developer Platform\"."
@@ -1226,7 +1226,7 @@ msgstr ""
 "catégories, telles que « Applications de bureau » et « Plate-forme de "
 "développement »."
 
-#: ../templates/index.tmpl:31
+#: ../templates/index.tmpl:32
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -1234,15 +1234,15 @@ msgstr ""
 "C'est ici que vous pouvez comparer la prise en charge des langues dans "
 "n'importe quel groupe de versions."
 
-#: ../templates/index.tmpl:34 ../templates/header.tmpl:36
+#: ../templates/index.tmpl:35 ../templates/header.tmpl:82
 msgid "Modules"
 msgstr "Modules"
 
-#: ../templates/index.tmpl:35
+#: ../templates/index.tmpl:36
 msgid "List of all modules with statistics in here."
 msgstr "Liste de tous les modules disposant de statistiques."
 
-#: ../templates/index.tmpl:37
+#: ../templates/index.tmpl:38
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1250,7 +1250,7 @@ msgstr ""
 "Les modules sont des applications ou des bibliothèques distinctes, "
 "comprenant une ou plusieurs branches de développement."
 
-#: ../templates/index.tmpl:38
+#: ../templates/index.tmpl:39
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
@@ -1259,15 +1259,43 @@ msgstr ""
 "conservons un certain nombre d'informations à leur sujet (détails Bugzilla, "
 "page Web, informations sur le mainteneur, etc.)."
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:45
 msgid "Translated by:"
 msgstr "Traduit par :"
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:45
 msgid "translator-credits"
 msgstr "Claude Paroz <claude chez 2xlibre.net>"
 
+#: ../templates/header.tmpl:32 ../templates/header.tmpl:61
+msgid "Home"
+msgstr "Accueil"
+
 #: ../templates/header.tmpl:35
+msgid "News"
+msgstr "Actualités"
+
+#: ../templates/header.tmpl:38
+msgid "Projects"
+msgstr "Projets"
+
+#: ../templates/header.tmpl:41
+msgid "Art"
+msgstr "Art"
+
+#: ../templates/header.tmpl:44
+msgid "Support"
+msgstr "Assistance"
+
+#: ../templates/header.tmpl:47
+msgid "Development"
+msgstr "Développement"
+
+#: ../templates/header.tmpl:50
+msgid "Community"
+msgstr "Communauté"
+
+#: ../templates/header.tmpl:77
 msgid "Release sets"
 msgstr "Groupes de versions"
 
@@ -1293,65 +1321,65 @@ msgstr "Langue"
 msgid "Translated"
 msgstr "Traduit"
 
-#: ../templates/show-stats.tmpl:31 ../templates/release.tmpl:14
-#: ../templates/team.tmpl:86
+#: ../templates/show-stats.tmpl:31 ../templates/release.tmpl:15
+#: ../templates/team.tmpl:87
 msgid "Graph"
 msgstr "Graphique"
 
-#: ../templates/person.tmpl:22 ../templates/language-release.tmpl:54
-#: ../templates/team.tmpl:55
+#: ../templates/person.tmpl:23 ../templates/language-release.tmpl:55
+#: ../templates/team.tmpl:56
 msgid "Instant messaging:"
 msgstr "Messagerie instantanée :"
 
-#: ../templates/person.tmpl:36 ../templates/language-release.tmpl:68
-#: ../templates/team.tmpl:69
+#: ../templates/person.tmpl:37 ../templates/language-release.tmpl:69
+#: ../templates/team.tmpl:70
 msgid "Bugzilla account:"
 msgstr "Compte Bugzilla :"
 
-#: ../templates/person.tmpl:39 ../templates/language-release.tmpl:71
-#: ../templates/team.tmpl:72
+#: ../templates/person.tmpl:40 ../templates/language-release.tmpl:72
+#: ../templates/team.tmpl:73
 msgid "SVN account:"
 msgstr "Compte SVN :"
 
-#: ../templates/person.tmpl:43
+#: ../templates/person.tmpl:44
 msgid "Maintains:"
 msgstr "Maintient :"
 
-#: ../templates/person.tmpl:45
+#: ../templates/person.tmpl:46
 msgid "Maintains %(module)s"
 msgstr "Maintient %(module)s"
 
-#: ../templates/person.tmpl:51
+#: ../templates/person.tmpl:52
 msgid "Translates:"
 msgstr "Traduit :"
 
-#: ../templates/person.tmpl:61
+#: ../templates/person.tmpl:62
 msgid "Coordinates %(team)s"
 msgstr "Coordonne %(team)s"
 
-#: ../templates/list-teams.tmpl:6
+#: ../templates/list-teams.tmpl:7
 msgid "GNOME Translation Teams"
 msgstr "Équipes de traduction GNOME"
 
-#: ../templates/list-teams.tmpl:9
+#: ../templates/list-teams.tmpl:10
 msgid "Select a team below to see more information about it:"
 msgstr ""
 "Sélectionnez une équipe ci-dessous pour afficher de plus amples informations "
 "à son sujet :"
 
-#: ../templates/list-teams.tmpl:19
+#: ../templates/list-teams.tmpl:20
 msgid "Coordinated by %(coordinator)s"
 msgstr "Coordonnée par %(coordinator)s"
 
-#: ../templates/list-teams.tmpl:25
+#: ../templates/list-teams.tmpl:26
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Il n'y a actuellement aucune équipe de traduction dans GNOME. :("
 
-#: ../templates/release.tmpl:6
+#: ../templates/release.tmpl:7
 msgid "%(release)s Release"
 msgstr "Version %(release)s"
 
-#: ../templates/release.tmpl:8 ../templates/language-release.tmpl:80
+#: ../templates/release.tmpl:9 ../templates/language-release.tmpl:81
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1360,20 +1388,20 @@ msgstr ""
 "Consultez la page Web de chaque module pour savoir où envoyer les "
 "traductions."
 
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:87
 msgid "Release"
 msgstr "Version"
 
-#: ../templates/release.tmpl:14 ../templates/language-release.tmpl:86
-#: ../templates/module.tmpl:68 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/language-release.tmpl:87
+#: ../templates/module.tmpl:69 ../templates/team.tmpl:87
 msgid "Documentation"
 msgstr "Documentation"
 
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:87
 msgid "User Interface"
 msgstr "Interface utilisateur"
 
-#: ../templates/release.tmpl:28 ../templates/team.tmpl:98
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:99
 msgid "-"
 msgstr "-"
 
@@ -1382,25 +1410,25 @@ msgstr "-"
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% traduit)"
 
-#: ../templates/list-releases.tmpl:6
+#: ../templates/list-releases.tmpl:7
 msgid "GNOME Releases"
 msgstr "Versions GNOME"
 
-#: ../templates/list-releases.tmpl:9
+#: ../templates/list-releases.tmpl:10
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 "Sélectionnez une version ou un groupe de versions ci-dessous pour afficher "
 "de plus amples informations à son sujet :"
 
-#: ../templates/list-releases.tmpl:26
+#: ../templates/list-releases.tmpl:27
 msgid "There are currently no releases defined in GNOME. :("
 msgstr "Il n'y a actuellement aucune version définie dans GNOME. :("
 
-#: ../templates/list-languages.tmpl:6
+#: ../templates/list-languages.tmpl:7
 msgid "GNOME Languages"
 msgstr "Langues GNOME"
 
-#: ../templates/list-languages.tmpl:10
+#: ../templates/list-languages.tmpl:11
 msgid "GNOME is being translated to following %(count)s language:"
 msgid_plural "GNOME is being translated to following %(count)s languages:"
 msgstr[0] ""
@@ -1408,61 +1436,61 @@ msgstr[0] ""
 msgstr[1] ""
 "GNOME est en cours de traduction dans les %(count)s langues suivantes :"
 
-#: ../templates/list-languages.tmpl:34
+#: ../templates/list-languages.tmpl:35
 msgid "GNOME is currently not being translated to any language. :("
 msgstr "GNOME n'est actuellement traduit dans aucune langue. :("
 
-#: ../templates/language-release.tmpl:9 ../templates/team.tmpl:9
+#: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
 msgid "Details"
 msgstr "Détails"
 
-#: ../templates/language-release.tmpl:12 ../templates/team.tmpl:12
+#: ../templates/language-release.tmpl:13 ../templates/team.tmpl:13
 msgid "%(lang)s Translation Team Page:"
 msgstr "Page de l'équipe de traduction en %(lang)s :"
 
-#: ../templates/language-release.tmpl:16 ../templates/team.tmpl:16
+#: ../templates/language-release.tmpl:17 ../templates/team.tmpl:17
 msgid "Users Web Page:"
 msgstr "Page Web des utilisateurs :"
 
-#: ../templates/language-release.tmpl:20 ../templates/team.tmpl:20
+#: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
 msgid "Bugzilla:"
 msgstr "Bugzilla :"
 
-#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
+#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
 msgid "Report Bug in Translation"
 msgstr "Rapporter un bogue de la traduction"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
+#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
 msgid "Show Existing Bugs"
 msgstr "Afficher les bogues existants"
 
-#: ../templates/language-release.tmpl:28 ../templates/team.tmpl:29
+#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
 msgid "Mailing List:"
 msgstr "Liste de diffusion :"
 
-#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:31
+#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
 msgid "Send e-mail to the list"
 msgstr "Envoyer un courriel à la liste"
 
-#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:33
+#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
 msgid "Subscribe"
 msgstr "Abonnement"
 
-#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:42
+#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
 msgid "Coordinator"
 msgstr "Coordinateur"
 
-#: ../templates/list-modules.tmpl:6
+#: ../templates/list-modules.tmpl:7
 msgid "GNOME modules"
 msgstr "Modules GNOME"
 
-#: ../templates/list-modules.tmpl:9
+#: ../templates/list-modules.tmpl:10
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Sélectionnez un module ci-dessous pour afficher les statistiques "
 "correspondantes :"
 
-#: ../templates/list-modules.tmpl:17
+#: ../templates/list-modules.tmpl:18
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
@@ -1470,20 +1498,20 @@ msgstr ""
 "Il n'y a actuellement aucun module pour lequel nous rassemblons des "
 "statistiques. Blâmez <a href=\"danilo@gnome.org\">Danilo</a> à ce propos !"
 
-#: ../templates/people.tmpl:6
+#: ../templates/people.tmpl:7
 msgid "GNOME Contributors"
 msgstr "Contributeurs GNOME"
 
-#: ../templates/people.tmpl:9
+#: ../templates/people.tmpl:10
 msgid "GNOME is being developed by following people:"
 msgstr "GNOME est développé par les personnes suivantes :"
 
-#: ../templates/people.tmpl:30
+#: ../templates/people.tmpl:31
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr ""
 "Il n'y a aucun contributeur, GNOME s'est créé lui-même de toutes pièces."
 
-#: ../templates/module.tmpl:8
+#: ../templates/module.tmpl:9
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1491,40 +1519,37 @@ msgstr ""
 "Ce module ne fait pas partie du dépôt SVN de GNOME. Consultez la page Web du "
 "module pour savoir où envoyer les traductions."
 
-#: ../templates/module.tmpl:15
+#: ../templates/module.tmpl:16
 msgid "Maintainers"
 msgstr "Mainteneurs"
 
-#: ../templates/module.tmpl:31
+#: ../templates/module.tmpl:32
 msgid "Bug reporting"
 msgstr "Rapport de bogues"
 
-#: ../templates/module.tmpl:32
+#: ../templates/module.tmpl:33
 msgid "Report bugs to Bugzilla"
 msgstr "Rapportez les bogues dans Bugzilla"
 
-#: ../templates/module.tmpl:38
+#: ../templates/module.tmpl:39
 msgid "Branches:"
 msgstr "Branches :"
 
-#: ../templates/module.tmpl:53
+#: ../templates/module.tmpl:54
 msgid "Browse CVS"
 msgstr "Navigation CVS"
 
-#: ../templates/module.tmpl:55 ../templates/module.tmpl:57
+#: ../templates/module.tmpl:56 ../templates/module.tmpl:58
 msgid "Browse SVN"
 msgstr "Navigation SVN"
 
-#: ../templates/module.tmpl:61
+#: ../templates/module.tmpl:62
 msgid "This branch is currently string-frozen."
 msgstr "Les chaînes sont actuellement gelées pour cette branche."
 
-#: ../templates/module.tmpl:88
+#: ../templates/module.tmpl:89
 msgid "Translation"
 msgstr "Traduction"
 
 #~ msgid "GNOME 2.20 (development)"
 #~ msgstr "GNOME 2.20 (développement)"
-
-#~ msgid "Home"
-#~ msgstr "Accueil"
