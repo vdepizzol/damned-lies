@@ -1,4 +1,5 @@
 #set global pageTitle=$team.description
+#set global pageSection="teams"
 #include "templates/header.tmpl"
 
 <div class="mainpage">
@@ -86,7 +87,7 @@
 <thead><tr><th>$_("Release")</th><th>$_("Documentation")</th><th>$_("Graph")</th><th>$_("User Interface")</th><th>$_("Graph")</th></tr></thead>
 #for release in $releases
 <tr>
-  <td class="left" style="font-size:120%;"><a href="${webroot}/languages/$lang/${release.id}">${release.description}</a>
+  <td class="leftcell" style="font-size:120%;"><a href="${webroot}/languages/$lang/${release.id}">${release.description}</a>
   #if $release.has_key('po_error')
     <img src="$webroot/data/${release.po_error}.png" title="${release.po_error_message}">
   #end if

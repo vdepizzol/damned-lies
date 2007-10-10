@@ -7,7 +7,7 @@
 
     #if len($module.translation_domains.keys()) > 1
     <tr>
-      <td class="left"><a href="${webroot}/module/${moduleid}" style="font-style: italic;">${module.description}</a></td>
+      <td class="leftcell"><a href="${webroot}/module/${moduleid}" style="font-style: italic;">${module.description}</a></td>
       <td>${module.statistics.ui_supportedness}%&nbsp;<!--
 	-->($module.statistics.ui_translated/$module.statistics.ui_fuzzy/$module.statistics.ui_untranslated)</td>
       <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
@@ -30,7 +30,7 @@
 
      <tr>
       #if len($module.translation_domains.keys()) > 1
-       <td class="left" style="padding-left:2em; padding-right:2em;" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
+       <td class="leftcell" style="padding-left:2em; padding-right:2em;" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
        	 <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${domain.description}
        #for pomsgs in $POINFO
          #set txt=utils.stripHTML(pomsgs[1])
@@ -38,7 +38,7 @@
        #end for
        </td>
       #else
-       <td class="left" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
+       <td class="leftcell" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
          <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a> <a href="${webroot}/module/${moduleid}">${module.description}</a>
        #for pomsgs in $POINFO
          #set txt=utils.stripHTML(pomsgs[1])

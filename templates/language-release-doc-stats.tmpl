@@ -3,7 +3,7 @@
 
 <table>
 <tr style="background: inherit;">
-  <td class="left" style="font-size: 120%; background: inherit;" colspan="2">${release.doc_supportedness}% ($release.doc_translated/$release.doc_fuzzy/$release.doc_untranslated)</td>
+  <td class="leftcell" style="font-size: 120%; background: inherit;" colspan="2">${release.doc_supportedness}% ($release.doc_translated/$release.doc_fuzzy/$release.doc_untranslated)</td>
   <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
       <div class="translated" style="width: ${release.doc_percentages.translated}px;"></div>
       <div class="fuzzy" style="left:${release.doc_percentages.translated}px; width:${release.doc_percentages.fuzzy}px;"></div>
@@ -22,7 +22,7 @@
 #for category in $release.categories
 #if $category.statistics.doc_size != 0
 <tr>
-  <td colspan="3" class="left" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
+  <td colspan="3" class="leftcell" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
     ${_("%(cat)s (%(percent)s%% translated)"), cat=$category.description, percent=$category.statistics.doc_supportedness}</td></tr>
 
     #set global modules=$category.modules

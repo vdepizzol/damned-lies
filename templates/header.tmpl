@@ -13,6 +13,8 @@
   <title>$pageTitle</title>
   <link rel="icon" type="image/png" href="${defaults.webroot}/data/foot-16.png"/>
   <link rel="stylesheet" href="${defaults.webroot}/data/main.css"/>
+  <link rel="stylesheet" href="${defaults.webroot}/data/layout.css"/>
+  <link rel="stylesheet" href="${defaults.webroot}/data/style.css"/>
 #if $rtl
   <link rel="stylesheet" href="${defaults.webroot}/data/rtl.css"/>
 #end if
@@ -23,16 +25,67 @@
 <body>
 #end if
 
-<div id="hdr">
-  <a href="${defaults.webroot}/"><img id="logo"
-src="${defaults.webroot}/data/gnome-64.png" alt="$_("Home")"
-title="$_("Back to Damned Lies home page")" /></a>
-
-  <div id="hdrNavTop">$_("Damned Lies")</div>
-  <div id="hdrNav">
-    <a href="${defaults.webroot}/teams/">$_("Teams")</a> &middot; 
-    <a href="${defaults.webroot}/languages/">$_("Languages")</a> &middot; 
-    <a href="${defaults.webroot}/releases/">$_("Release sets")</a> &middot; 
-    <a href="${defaults.webroot}/module/">$_("Modules")</a>
+<!-- Site header -->
+  <div id="page">
+    <ul id="general">
+      <li id="siteaction-gnome_home" class="home">
+        <a href="http://www.gnome.org/">$_("Home")</a>
+      </li>
+      <li id="siteaction-gnome_news">
+        <a href="http://news.gnome.org">$_("News")</a>
+      </li>
+      <li id="siteaction-gnome_projects">
+        <a href="http://www.gnome.org/projects/">$("Projects")</a>
+      </li>
+      <li id="siteaction-gnome_art">
+        <a href="http://art.gnome.org">$("Art")</a>
+      </li>
+      <li id="siteaction-gnome_support">
+        <a href="http://www.gnome.org/support/">$("Support")</a>
+      </li>
+      <li id="siteaction-gnome_development">
+        <a href="http://developer.gnome.org">$("Development")</a>
+      </li>
+      <li id="siteaction-gnome_community">
+        <a href="http://www.gnome.org/community/">$("Community")</a>
+      </li>
+    </ul>
+    <div id="header">
+      <h1>$_("Damned Lies")</h1>
+      <div id="tabs">
+        <ul id="portal-globalnav">
+          <li
+#if $pageSection == 'home'
+	  class="selected"
+#endif
+            ><a href="${defaults.webroot}/" title="$_("Back to Damned Lies home page")"><span>Home</span></a>
+          </li>
+	  <li
+#if $pageSection == 'teams'
+	  class="selected"
+#endif
+	   ><a href="${defaults.webroot}/teams/"><span>$_("Teams")</span></a></li>
+	  <li
+#if $pageSection == 'languages'
+	  class="selected"
+#endif
+	   ><a href="${defaults.webroot}/languages/"><span>$_("Languages")</span></a></li>
+	  <li
+#if $pageSection == 'releases'
+	  class="selected"
+#endif
+	   ><a href="${defaults.webroot}/releases/"><span>$_("Release sets")</span></a></li>
+	  <li
+#if $pageSection == 'module'
+	  class="selected"
+#endif
+	   ><a href="${defaults.webroot}/module/"><span>$_("Modules")</span></a></li>
+        </ul>
+      </div> <!-- end of #tabs -->
+    </div> <!-- end of #header -->
   </div>
-</div>
+<!-- end site header -->
+
+  <div class="body">
+    <div id="content">
+

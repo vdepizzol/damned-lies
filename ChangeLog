@@ -1,3 +1,30 @@
+2007-10-10  Claude Paroz  <claude@2xlibre.net>
+
+	* data/main.css:
+	* data/style.css:
+	* data/layout.css:
+	* data/*.png:
+	* templates/footer.tmpl:
+	* templates/header.tmpl:
+	* templates/index.tmpl:
+	* templates/language-release-doc-stats-modules.tmpl:
+	* templates/language-release-doc-stats.tmpl:
+	* templates/language-release-ui-stats-modules.tmpl:
+	* templates/language-release-ui-stats.tmpl:
+	* templates/language-release.tmpl:
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/list-releases.tmpl:
+	* templates/list-teams.tmpl:
+	* templates/module.tmpl:
+	* templates/people.tmpl:
+	* templates/person.tmpl:
+	* templates/release.tmpl:
+	* templates/show-stats.tmpl:
+	* templates/team.tmpl: Revised layout according to new gnome.org
+	design. Thanks to Frederic Peters for most of patch.
+	Fixes bug #485120.
+
 2007-10-08  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in:

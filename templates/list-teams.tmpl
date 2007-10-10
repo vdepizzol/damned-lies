@@ -1,4 +1,5 @@
 #set global pageTitle=$_("GNOME Translation Teams")
+#set global pageSection="teams"
 #include "templates/header.tmpl"
 
 <div class="mainpage">
@@ -13,7 +14,7 @@
 <li style="font-size: 120%;">
   <a href="${webroot}/teams/${team.id}">${team.description}</a>
   #if $team.has_key('webpage') and $team.webpage
-    — <a href="${team.webpage}">${team.webpage}</a>
+    &mdash; <a href="${team.webpage}">${team.webpage}</a>
   #end if
   #if $team.has_key('coordinator')
     <br /><span style="font-size: 80%;">${_("Coordinated by %(coordinator)s"), coordinator="<a href=\""+$webroot+"/people/"+$team.coordinator.id+"\">"+$team.coordinator.name+"</a>"}</span>

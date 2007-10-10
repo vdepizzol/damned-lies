@@ -13,7 +13,7 @@
 #end if
 </a>
 #if $domain.has_key('updated')
-— ${_("updated on %(date)s"), date="<strong>"+$domain.updated+"</strong>."}
+&mdash; ${_("updated on %(date)s"), date="<strong>"+$domain.updated+"</strong>."}
 #end if
 
 #if $domain.has_key('pot_messages') and len($domain.pot_messages)
@@ -31,13 +31,13 @@
 <thead><tr><th>$_("Language")</th><th>$_("Translated")</th><th>$_("Graph")</th></tr></thead>
 #for lstat in $domain.statistics
 <tr>
-  <td class="left"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
+  <td class="leftcell"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
 #if $lstat.po_error
     <img src="$webroot/data/${lstat.po_error}.png" title="${lstat.po_error_message}" alt="${lstat.po_error}" />
 #end if
   </td>
   #if $lstat.has_key('supportedness')
-  <td>${lstat.supportedness}% ($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
+  <td>${lstat.supportedness}%&nbsp;($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${lstat.percentages.translated}px;"></div>
       <div class="fuzzy" style="left:${lstat.percentages.translated}px; width:${lstat.percentages.fuzzy}px;"></div>
