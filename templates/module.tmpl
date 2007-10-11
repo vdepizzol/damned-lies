@@ -15,11 +15,11 @@
 #if $module.has_key('maintainer') and len($module.maintainer)
 <h2>$_("Maintainers")</h2>
 #for mid, maintainer in $module.maintainer.items()
-#if $maintainer.icon
-<div class="maintainer" style="background-image:url('$maintainer.icon');">
-#else
-<div class="maintainer">
-#end if
+  <div class="maintainer">
+  #if not $maintainer.has_key('icon')
+    #set $maintainer.icon = "${webroot}/data/nobody.png"
+  #end if
+  <img class="people" src="$maintainer.icon" alt="person's face" />
   <a style="font-size: 140%;" href="${webroot}/people/$maintainer.id">$maintainer.name</a>
   #if $maintainer.has_key('webpage')
   <br /><a href="$maintainer.webpage">$maintainer.webpage</a>

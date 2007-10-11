@@ -1,3 +1,13 @@
+2007-10-11  Claude Paroz  <claude@2xlibre.net>
+
+	* data/main.css: Adapted styles to manage 'maintainer' icons.
+	* templates/language-release.tmpl:
+	* templates/module.tmpl:
+	* templates/people.tmpl:
+	* templates/person.tmpl:
+	* templates/team.tmpl: Put 'maintainer' icons in <img> tag instead of
+	background with style.
+
 2007-10-10  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in:

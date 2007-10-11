@@ -40,11 +40,11 @@
 </td><td valign="top">
 #if $team.has_key('coordinator')
   <h2>$_("Coordinator")</h2>
-  #if $team.coordinator.icon
-  <div class="maintainer" style="background-image:url('$team.coordinator.icon');">
-  #else
   <div class="maintainer">
+  #if not $team.coordinator.has_key('icon')
+    #set $team.coordinator.icon = "${webroot}/data/nobody.png"
   #end if
+  <img class="people" src="$team.coordinator.icon" alt="person's face" />
   <a style="font-size: 140%;" href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a><br />
   #if $team.coordinator.webpage
   <a href="$team.coordinator.webpage">$team.coordinator.webpage</a><br />
