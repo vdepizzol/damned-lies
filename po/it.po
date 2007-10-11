@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-11 08:38+0200\n"
-"PO-Revision-Date: 2007-10-11 08:47+0200\n"
+"POT-Creation-Date: 2007-10-11 22:50+0200\n"
+"PO-Revision-Date: 2007-10-11 22:48+0200\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -1088,17 +1088,17 @@ msgstr ""
 #: ../update-stats.py:408
 #, python-format
 msgid "PO file '%s' doesn't exist."
-msgstr "Il file PO '%s' non esiste."
+msgstr "Il file PO «%s» non esiste."
 
 #: ../update-stats.py:421
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr "Il file PO \"%s\" non passa il controllo di msgfmt: non aggiornato."
+msgstr "Il file PO «%s» non passa il controllo di msgfmt: non aggiornato."
 
 #: ../update-stats.py:423
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
-msgstr "Impossibile ottenere le statistiche per il file POT \"%s\"."
+msgstr "Impossibile ottenere le statistiche per il file POT «%s»."
 
 #: ../update-stats.py:426
 msgid "This PO file has an executable bit set."
@@ -1107,7 +1107,7 @@ msgstr "Questo file PO ha un bit eseguibile impostato."
 #: ../update-stats.py:452
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "Il file PO \"%s\" non è codificato in UTF-8."
+msgstr "Il file PO «%s» non è codificato in UTF-8."
 
 #: ../update-stats.py:521
 msgid "Can't find checkout directory."
@@ -1121,7 +1121,7 @@ msgstr "Il modulo %s non sembra essere un modulo gnome-doc-utils."
 #: ../update-stats.py:546
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr "DOC_MODULE non ha risoluzione su un file reale, usato \"%s.xml\"."
+msgstr "DOC_MODULE non ha risoluzione su un file reale, usato «%s.xml»."
 
 #: ../update-stats.py:549
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
