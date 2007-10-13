@@ -19,7 +19,7 @@
   #if not $maintainer.has_key('icon')
     #set $maintainer.icon = "${webroot}/data/nobody.png"
   #end if
-  <img class="people" src="$maintainer.icon" alt="person's face" />
+  <img class="people" src="$maintainer.icon" alt="" />
   <a style="font-size: 140%;" href="${webroot}/people/$maintainer.id">$maintainer.name</a>
   #if $maintainer.has_key('webpage')
   <br /><a href="$maintainer.webpage">$maintainer.webpage</a>

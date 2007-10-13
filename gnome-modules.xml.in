@@ -843,6 +843,9 @@
   <module id="gnome-office">
     <branch id="HEAD"/>
   </module>
+  <module id="gnome-packagekit">
+    <branch id="HEAD"/>
+  </module>
   <module id="gnome-panel">
     <maintainer id="vuntz"/>
     <defaults>
@@ -1045,8 +1048,9 @@
     <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-volume-manager">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnopernicus">
     <branch id="HEAD" stringfrozen="true"/>

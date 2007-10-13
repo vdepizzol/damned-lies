@@ -44,7 +44,7 @@
   #if not $team.coordinator.has_key('icon')
     #set $team.coordinator.icon = "${webroot}/data/nobody.png"
   #end if
-  <img class="people" src="$team.coordinator.icon" alt="person's face" />
+  <img class="people" src="$team.coordinator.icon" alt="" />
   <a style="font-size: 140%;" href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a><br />
   #if $team.coordinator.webpage
   <a href="$team.coordinator.webpage">$team.coordinator.webpage</a><br />
