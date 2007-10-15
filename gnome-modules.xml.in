@@ -181,10 +181,11 @@
     <_description>Deskbar Applet</_description>
     <webpage>http://raphael.slinckx.net/deskbar/</webpage>
     <maintainer id="rslinckx"/>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="deskscribe">
     <branch id="HEAD"/>
@@ -971,10 +972,11 @@
     <branch id="gnome-2-16" stringfrozen="true"/>
   </module>
   <module id="gnome-themes">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-themes-extras">
     <branch id="HEAD"/>
@@ -1382,6 +1384,9 @@
   <module id="pan2">
     <branch id="HEAD"/>
   </module>
+  <module id="paperbox">
+    <branch id="HEAD"/>
+  </module>
   <module id="pessulus">
     <maintainer id="vuntz"/>
     <branch id="HEAD" stringfrozen="true"/>
@@ -1508,9 +1513,10 @@
     <branch id="HEAD"/>
   </module>
   <module id="vino">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="vte">
     <branch id="vte-0-12"/>
