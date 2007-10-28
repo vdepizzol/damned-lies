@@ -238,8 +238,8 @@
     <module id="nautilus-share"/>
     <module id="nautilus-vcs"/>
     <module id="nemiver"/>
-    <module id="NetworkManager" branch="NETWORKMANAGER_0_6_0_RELEASE"/>
-    <module id="network-manager-applet" branch="network-manager-applet-0-6"/>
+    <module id="NetworkManager"/>
+    <module id="network-manager-applet"/>
     <module id="ontv"/>
     <module id="ooo-build"/>
     <module id="paperbox"/>
@@ -491,7 +491,7 @@
       <module id="gnome-applets" branch="gnome-2-20"/>
       <module id="gnome-backgrounds"/>
       <module id="gnome-control-center" branch="gnome-2-20"/>
-      <module id="gnome-desktop"/>
+      <module id="gnome-desktop" branch="gnome-2-20"/>
       <module id="gnome-doc-utils"/>
       <module id="gnome-games" branch="gnome-2-20"/>
       <module id="gnome-icon-theme" branch="gnome-2-20"/>
@@ -499,14 +499,14 @@
       <module id="gnome-keyring-manager"/>
       <module id="gnome-mag"/>
       <module id="gnome-media"/>
-      <module id="gnome-menus"/>
+      <module id="gnome-menus" branch="gnome-2-20"/>
       <module id="gnome-netstatus"/>
       <module id="gnome-nettool"/>
-      <module id="gnome-panel"/>
+      <module id="gnome-panel" branch="gnome-2-20"/>
       <module id="gnome-power-manager"/>
       <module id="gnome-screensaver"/>
-      <module id="gnome-session"/>
-      <module id="gnome-system-monitor"/>
+      <module id="gnome-session" branch="gnome-2-20"/>
+      <module id="gnome-system-monitor" branch="gnome-2-20"/>
       <module id="gnome-system-tools" branch="gnome-2-20"/>
       <module id="gnome-terminal"/>
       <module id="gnome-themes" branch="gnome-2-20"/>
@@ -523,7 +523,7 @@
       <module id="libgnomeprint"/>
       <module id="libgnomeprintui"/>
       <module id="libgtop" branch="gnome-2-20"/>
-      <module id="libwnck"/>
+      <module id="libwnck" branch="gnome-2-20"/>
       <module id="metacity" branch="gnome-2-20"/>
       <module id="nautilus" branch="gnome-2-20"/>
       <module id="nautilus-cd-burner"/>

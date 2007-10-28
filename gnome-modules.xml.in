@@ -644,10 +644,11 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-devel-docs">
     <_description>GNOME 2 Development Documentation</_description>
@@ -820,10 +821,11 @@
   </module>
   <module id="gnome-menus">
     <maintainer id="vuntz"/>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-mount">
     <branch id="HEAD"/>
@@ -874,10 +876,11 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-pilot">
     <branch id="HEAD"/>
@@ -910,10 +913,11 @@
   </module>
   <module id="gnome-session">
     <maintainer id="vuntz"/>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-sharing">
     <branch id="HEAD"/>
@@ -925,10 +929,11 @@
     <branch id="HEAD"/>
   </module>
   <module id="gnome-system-monitor">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="gnome-system-tools">
     <defaults>
@@ -1261,10 +1266,11 @@
   </module>
   <module id="libwnck">
     <maintainer id="vuntz"/>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="lsr">
     <branch id="HEAD"/>
@@ -1354,7 +1360,7 @@
   </module>
   <module id="network-manager-applet">
     <branch id="HEAD"/>
-    <branch id="network-manager-applet-0-6"/>
+    <branch id="network-manager-applet-0-6" stringfrozen="true"/>
   </module>
   <module id="NetworkManager">
     <defaults>
@@ -1366,7 +1372,7 @@
       </branch>
     </defaults>
     <branch id="HEAD"/>
-    <branch id="NETWORKMANAGER_0_6_0_RELEASE"/>
+    <branch id="NETWORKMANAGER_0_6_0_RELEASE" stringfrozen="true"/>
   </module>
   <module id="ontv">
     <branch id="HEAD"/>
