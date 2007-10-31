@@ -450,14 +450,18 @@
     <branch id="HEAD"/>
   </module>
   <module id="gimp">
+    <defaults>
+      <branch>
+        <domain id="po" potbase="gimp"/>
+        <domain id="po-libgimp" potbase="gimp-libgimp"/>
+        <domain id="po-plug-ins" potbase="gimp-plug-ins"/>
+        <domain id="po-tips" potbase="gimp-tips"/>
+        <domain id="po-script-fu" potbase="gimp-script-fu"/>
+        <domain id="po-python" potbase="gimp-python"/>
+      </branch>
+    </defaults>
     <branch id="HEAD">
-      <domain id="po" potbase="gimp"/>
-      <domain id="po-libgimp" potbase="gimp-libgimp"/>
-      <domain id="po-plug-ins" potbase="gimp-plug-ins"/>
-      <domain id="po-tips" potbase="gimp-tips"/>
-      <domain id="po-script-fu" potbase="gimp-script-fu"/>
-      <domain id="po-python" potbase="gimp-python"/>
-    </branch>
+    <branch id="gimp-2-4">
   </module>
   <module id="gimp-freetype">
     <branch id="HEAD"/>
@@ -1359,6 +1363,8 @@
     <branch id="HEAD"/>
   </module>
   <module id="network-manager-applet">
+    <bugs-product>NetworkManager</bugs-product>
+    <bugs-component>nm-applet</bugs-component>
     <branch id="HEAD"/>
     <branch id="network-manager-applet-0-6" stringfrozen="true"/>
   </module>
