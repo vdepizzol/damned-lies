@@ -41,11 +41,6 @@ class PersonRequest(DamnedRequest):
             if mymod.has_key('maintainer') and person['id'] in mymod['maintainer'].keys():
                 maintains.append(mymod)
 
-            for obfuscate in ['email', 'bugzilla-account']:
-                if person.has_key(obfuscate):
-                    person['nospam' + obfuscate] = person[obfuscate].replace(
-                        '@', ' at ').replace('.', ' dot ')
-
         return { 'maintains' : maintains,
                  'translates' : translates,
                  'special' : special }

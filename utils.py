@@ -14,6 +14,12 @@ def stripHTML(string):
     replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
+def obfuscateEmail(person):
+    for obfuscate in ['email', 'bugzilla-account']:
+        if person.has_key(obfuscate):
+            person['nospam' + obfuscate] = person[obfuscate].replace(
+                   '@', ' at ').replace('.', ' dot ')
+
 # CheetahTemplate power stuff: similar to Smarty's debug console
 def TemplateInspector(template):
     """Inspects all template variables and outputs them in a separate window using JavaScript."""

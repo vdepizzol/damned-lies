@@ -5,65 +5,7 @@
 <div class="mainpage">
 
   <h2>${person.name} (${person.id})</h2>
-  <div class="maintainer">
-  #if not $person.has_key('icon')
-    #set $person.icon = "${webroot}/data/nobody.png"
-  #end if
-  <img class="people" src="$person.icon" alt="" />
-  <a style="font-size: 140%;" href="${webroot}/people/$person.id">$person.name</a><br />
-  #if $person.has_key('nospamemail')
-  <a href="mailto:$person.nospamemail">$person.nospamemail</a><br />
-  #end if
-  #if $person.webpage
-  <a href="$person.webpage">$person.webpage</a><br />
-  #end if
+  #set global printroles=1
+  #include "templates/person-base.tmpl"
 
-  <br />
-  #if len($person.im) or $person.nick
-  <strong>${_("Instant messaging:")}</strong>
-  <ul>
-  #if $person.nick
-    <li><em>$person.nick</em> (IRC)</li>
-  #end if
-  #if len($person.im)
-  #for type, account in $person.im.items()
-    <li><em>$account.content</em> ($type)</li>
-  #end for
-  #end if
-  </ul>
-  #end if
-
-  #if $person.has_key('nospambugzilla-account')
-  <strong>$_("Bugzilla account:")</strong> $person['nospambugzilla-account']<br />
-  #end if
-  #if $person.has_key('cvs-account')
-  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&amp;module=all&amp;branch=HEAD&amp;branchtype=match&amp;dir=&amp;file=&amp;filetype=match&amp;who=${person['cvs-account']}&amp;whotype=match&amp;sortby=Date&amp;hours=2&amp;date=week&amp;mindate=&amp;maxdate=&amp;cvsroot=%2Fcvs%2Fgnome">${person['cvs-account']}</a><br />
-  #end if
-
-  #if $roles.maintains and len($roles.maintains)
-  <h2>$_("Maintains:")</h2>
-    #for module in $roles.maintains
-    <li>${_("Maintains %(module)s"), module="<a href=\""+$webroot+"/module/"+$module.id+"\">"+$module.description+"</a>"}</li>
-    #end for
-  #end if
-
-
-  #if $roles.translates and len($roles.translates)
-  <h3>$_("Translates:")</h3>
-  <ul>
-    #for team in $roles.translates
-    #if $team.has_key('description')
-     #set $teamdesc=$team.description
-    #elif $team.has_key('firstlanguage')
-     #set $teamdesc=$team.firstlanguage
-    #else
-     #set $teamdesc=$team.id
-    #end if
-    <li>${_("Coordinates %(team)s"), team="<a href=\""+$webroot+"/teams/"+$team.id+"\">"+$teamdesc+"</a>"}</li>
-    #end for
-  </ul>
-
-  #end if
-
-</div>
 #include "templates/footer.tmpl"

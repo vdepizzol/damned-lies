@@ -36,7 +36,7 @@ class Releases:
                                           Statistics.q.Language == None,
                                           Statistics.q.Type == type))
             
-        if stats and stats.count():
+        if stats.count():
             tr = stats[0].Translated
             fz = stats[0].Fuzzy
             un = stats[0].Untranslated

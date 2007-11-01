@@ -1,0 +1,72 @@
+## Variables $person and $printroles must be defined prior to calling this template
+## If $printroles !=0 $roles must also be defined
+## This template is included in person.tmpl, team.tmpl and language-release.tmpl
+
+#from l10n import MyFilter
+#from utils import obfuscateEmail
+#filter $MyFilter
+#silent obfuscateEmail($person)
+  
+  <div class="maintainer">
+  #if not $person.has_key('icon')
+    #set $person.icon = "${webroot}/data/nobody.png"
+  #end if
+  <img class="people" src="$person.icon" alt="" />
+  <a style="font-size: 140%;" href="${webroot}/people/$person.id">$person.name</a><br />
+  #if $person.has_key('nospamemail')
+  <a href="mailto:$person.nospamemail">$person.nospamemail</a><br />
+  #end if
+  #if $person.webpage
+  <a href="$person.webpage">$person.webpage</a><br />
+  #end if
+
+  <br />
+  #if len($person.im) or $person.nick
+  <strong>${_("Instant messaging:")}</strong>
+  <ul>
+  #if $person.nick
+    <li><em>$person.nick</em> (IRC)</li>
+  #end if
+  #if len($person.im)
+  #for type, account in $person.im.items()
+    <li><em>$account.content</em> ($type)</li>
+  #end for
+  #end if
+  </ul>
+  #end if
+
+  #if $person.has_key('nospambugzilla-account')
+  <strong>$_("Bugzilla account:")</strong> $person['nospambugzilla-account']<br />
+  #end if
+  #if $person.has_key('cvs-account') and $person['cvs-account'][0:2]!='x-'
+  <strong>$_("SVN account:")</strong> <a href="http://cia.vc/stats/author/${person['cvs-account']}">${person['cvs-account']}</a><br />
+  #end if
+
+  #if $printroles and $roles.maintains and len($roles.maintains)
+  <h2>$_("Maintains:")</h2>
+    #for module in $roles.maintains
+    <li>${_("Maintains %(module)s"), module="<a href=\""+$webroot+"/module/"+$module.id+"\">"+$module.description+"</a>"}</li>
+    #end for
+  #end if
+
+
+  #if $printroles and $roles.translates and len($roles.translates)
+  <h3>$_("Translates:")</h3>
+  <ul>
+    #for team in $roles.translates
+    #if $team.has_key('description')
+     #set $teamdesc=$team.description
+    #elif $team.has_key('firstlanguage')
+     #set $teamdesc=$team.firstlanguage
+    #else
+     #set $teamdesc=$team.id
+    #end if
+    <li>${_("Coordinates %(team)s"), team="<a href=\""+$webroot+"/teams/"+$team.id+"\">"+$teamdesc+"</a>"}</li>
+    #end for
+  </ul>
+
+  #end if
+
+</div>
+#end filter
+

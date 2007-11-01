@@ -40,39 +40,9 @@
 </td><td valign="top">
 #if $team.has_key('coordinator')
   <h2>$_("Coordinator")</h2>
-  <div class="maintainer">
-  #if not $team.coordinator.has_key('icon')
-    #set $team.coordinator.icon = "${webroot}/data/nobody.png"
-  #end if
-  <img class="people" src="$team.coordinator.icon" alt="" />
-  <a style="font-size: 140%;" href="${webroot}/people/$team.coordinator.id">$team.coordinator.name</a><br />
-  #if $team.coordinator.webpage
-  <a href="$team.coordinator.webpage">$team.coordinator.webpage</a><br />
-  #end if
-
-  <br />
-  #if len($team.coordinator.im) or $team.coordinator.nick
-  <strong>$_("Instant messaging:")</strong>
-  <ul>
-  #if $team.coordinator.nick
-    <li><em>$team.coordinator.nick</em> (IRC)</li>
-  #end if
-  #if len($team.coordinator.im)
-   #for type, account in $team.coordinator.im.items()
-    <li><em>$account.content</em> ($type)</li>
-   #end for
-  #end if
-  </ul>
-  #end if
-
-  #if $team.coordinator.has_key('bugzilla-account')
-  <strong>$_("Bugzilla account:")</strong> $team.coordinator['bugzilla-account']<br />
-  #end if
-  #if $team.coordinator.has_key('cvs-account')
-  <strong>$_("SVN account:")</strong> <a href="http://cvs.gnome.org/bonsai/cvsquery.cgi?treeid=default&amp;module=all&amp;branch=HEAD&amp;branchtype=match&amp;dir=&amp;file=&amp;filetype=match&amp;who=${team.coordinator['cvs-account']}&amp;whotype=match&amp;sortby=Date&amp;hours=2&amp;date=week&amp;mindate=&amp;maxdate=&amp;cvsroot=%2Fcvs%2Fgnome">$team.coordinator['cvs-account']</a><br />
-  #end if
-
-  </div>
+  #set global person=$team.coordinator
+  #set global printroles=0
+  #include "templates/person-base.tmpl"
 #end if
 </td></tr></table>
 
