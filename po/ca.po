@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-16 23:37+0200\n"
-"PO-Revision-Date: 2007-09-16 21:59+0200\n"
+"POT-Creation-Date: 2007-11-01 20:52+0100\n"
+"PO-Revision-Date: 2007-10-10 21:59+0200\n"
 "Last-Translator: Sílvia Miranda <silviamira@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,7 +84,7 @@ msgstr "Nucli"
 msgid "Criawips Manual"
 msgstr "Manual del Criawips"
 
-#: ../gnome-modules.xml.in.h:18 ../templates/header.tmpl:31
+#: ../gnome-modules.xml.in.h:18 ../templates/header.tmpl:54
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
@@ -356,7 +356,7 @@ msgstr "Guia de l'administració del sistema"
 msgid "System Monitor Manual"
 msgstr "Manual del monitor del sistema"
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:92
+#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:63
 msgid "UI translations"
 msgstr "Traduccions de la interfície d'usuari"
 
@@ -429,47 +429,51 @@ msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (antiga estable)"
 
 #: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (stable)"
-msgstr "GNOME 2.18 (estable)"
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.14 (antiga estable)"
 
 #: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (development)"
-msgstr "GNOME 2.20 (desenvolupament)"
+msgid "GNOME 2.20 (stable)"
+msgstr "GNOME 2.18 (estable)"
 
 #: ../releases.xml.in.h:11
+msgid "GNOME 2.22 (development)"
+msgstr "GNOME 2.22 (desenvolupament)"
+
+#: ../releases.xml.in.h:12
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "El cinquè dit del GNOME (programari addicional)"
 
-#: ../releases.xml.in.h:12
+#: ../releases.xml.in.h:13
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura del GNOME"
 
-#: ../releases.xml.in.h:13
+#: ../releases.xml.in.h:14
 msgid "GNOME desktop"
 msgstr "Escriptori GNOME"
 
-#: ../releases.xml.in.h:14
+#: ../releases.xml.in.h:15
 msgid "GNOME developer platform"
 msgstr "Plataforma de desenvolupament del GNOME"
 
-#: ../releases.xml.in.h:15
+#: ../releases.xml.in.h:16
 msgid "GNOME-Office Productivity Applications"
 msgstr "Aplicacions de productivitat del GNOME-Office"
 
-#: ../releases.xml.in.h:16
+#: ../releases.xml.in.h:17
 msgid "New module proposals"
 msgstr "Mòduls nous proposats"
 
-#: ../releases.xml.in.h:17
+#: ../releases.xml.in.h:18
 msgid "System Administration"
 msgstr "Administració del sistema"
 
-#: ../releases.xml.in.h:18
+#: ../releases.xml.in.h:19
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no del GNOME)"
 
-#: ../teams.py:207 ../templates/language-release.tmpl:6
-#: ../templates/team.tmpl:6
+#: ../teams.py:207 ../templates/language-release.tmpl:7
+#: ../templates/team.tmpl:7
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equip de traducció del %(lang)s"
@@ -670,9 +674,10 @@ msgstr "Hyam"
 msgid "Icelandic"
 msgstr "Islandès"
 
+# FIXME
 #: ../translation-teams.xml.in.h:50
 msgid "Ido"
-msgstr ""
+msgstr "Ido"
 
 #: ../translation-teams.xml.in.h:51
 msgid "Igbo"
@@ -942,9 +947,10 @@ msgstr "Tàtar"
 msgid "Telugu"
 msgstr "Telugu"
 
+# FIXME
 #: ../translation-teams.xml.in.h:118
 msgid "Tetum"
-msgstr ""
+msgstr "Tetum"
 
 #: ../translation-teams.xml.in.h:119
 msgid "Thai"
@@ -1006,9 +1012,10 @@ msgstr "Való"
 msgid "Welsh"
 msgstr "Gal·lès"
 
+# FIXME
 #: ../translation-teams.xml.in.h:134
 msgid "Wolof"
-msgstr ""
+msgstr "Wolof"
 
 #: ../translation-teams.xml.in.h:135
 msgid "Xhosa"
@@ -1150,15 +1157,15 @@ msgstr "Ara mateix no hi ha cap equip de traducció al %s."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La llista DOC_LINGUAS no inclou aquesta llengua."
 
-#: ../templates/index.tmpl:8
+#: ../templates/index.tmpl:9
 msgid "Damned Lies about GNOME"
 msgstr "Estadístiques del GNOME"
 
-#: ../templates/index.tmpl:12 ../templates/header.tmpl:33
+#: ../templates/index.tmpl:13 ../templates/header.tmpl:67
 msgid "Teams"
 msgstr "Equips"
 
-#: ../templates/index.tmpl:13
+#: ../templates/index.tmpl:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -1167,7 +1174,7 @@ msgstr ""
 "sobre cada equip: contacte principal (coordinador), pàgines web, informació "
 "sobre la llista de distribució..."
 
-#: ../templates/index.tmpl:14
+#: ../templates/index.tmpl:15
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
@@ -1175,18 +1182,18 @@ msgstr ""
 "Si no hi ha cap equip per a la vostra llengua, podeu <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">crear un equip</a> fàcilment."
 
-#: ../templates/index.tmpl:19 ../templates/header.tmpl:34
+#: ../templates/index.tmpl:20 ../templates/header.tmpl:72
 msgid "Languages"
 msgstr "Llengües"
 
-#: ../templates/index.tmpl:20
+#: ../templates/index.tmpl:21
 msgid ""
 "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr ""
 "Llista de totes les llengües que tenen un <a href=\"teams\">equip de "
 "traducció</a>."
 
-#: ../templates/index.tmpl:21
+#: ../templates/index.tmpl:22
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1196,17 +1203,17 @@ msgstr ""
 "GNOME. "
 
 # FIXME
-#: ../templates/index.tmpl:25
+#: ../templates/index.tmpl:26
 msgid "Release Sets"
 msgstr "Conjunts de versions"
 
-#: ../templates/index.tmpl:26
+#: ../templates/index.tmpl:27
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
 "Llista de totes les versions i conjunts de versions del GNOME de què tenim "
 "estadístiques."
 
-#: ../templates/index.tmpl:28
+#: ../templates/index.tmpl:29
 msgid ""
 "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
 "\"."
@@ -1214,7 +1221,7 @@ msgstr ""
 "Són exemples de conjunts de versions el «GNOME Office», el «Fifth Toe» o el "
 "«GNOME 2.14»."
 
-#: ../templates/index.tmpl:29
+#: ../templates/index.tmpl:30
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "\"Desktop Applications\" and \"Developer Platform\"."
@@ -1222,7 +1229,7 @@ msgstr ""
 "Les versions oficials del GNOME es divideixen en categories com ara "
 "«Aplicacions de l'escriptori» i «Plataforma de desenvolupament»."
 
-#: ../templates/index.tmpl:31
+#: ../templates/index.tmpl:32
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -1230,15 +1237,15 @@ msgstr ""
 "Aquí podeu comparar la disponibilitat de les llengües en qualsevol d'aquests "
 "conjunts de versions."
 
-#: ../templates/index.tmpl:34 ../templates/header.tmpl:36
+#: ../templates/index.tmpl:35 ../templates/header.tmpl:82
 msgid "Modules"
 msgstr "Mòduls"
 
-#: ../templates/index.tmpl:35
+#: ../templates/index.tmpl:36
 msgid "List of all modules with statistics in here."
 msgstr "Llista de tots els mòduls que tenen estadístiques."
 
-#: ../templates/index.tmpl:37
+#: ../templates/index.tmpl:38
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1246,7 +1253,7 @@ msgstr ""
 "Els mòduls són biblioteques o aplicacions separades, que inclouen una branca "
 "de desenvolupament o més d'una."
 
-#: ../templates/index.tmpl:38
+#: ../templates/index.tmpl:39
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
@@ -1254,122 +1261,115 @@ msgstr ""
 "Normalment els agafem del CVS, i en conservem la informació rellevant "
 "(detalls del Bugzilla, pàgina web, informació sobre el mantenidor...)"
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:45
 msgid "Translated by:"
 msgstr "Traduït per:"
 
-#: ../templates/index.tmpl:44
+#: ../templates/index.tmpl:45
 msgid "translator-credits"
 msgstr "Sílvia Miranda <silvia.gnome@gmail.com>, 2007."
 
-#: ../templates/header.tmpl:28
+#: ../templates/header.tmpl:32 ../templates/header.tmpl:61
 msgid "Home"
 msgstr "Inici"
 
 #: ../templates/header.tmpl:35
+msgid "News"
+msgstr "Notícies"
+
+#: ../templates/header.tmpl:38
+msgid "Projects"
+msgstr "Projectes"
+
+#: ../templates/header.tmpl:41
+msgid "Art"
+msgstr "Art"
+
+#: ../templates/header.tmpl:44
+msgid "Support"
+msgstr "Ajuda"
+
+#: ../templates/header.tmpl:47
+msgid "Development"
+msgstr "Desenvolupament"
+
+#: ../templates/header.tmpl:50
+msgid "Community"
+msgstr "Comunitat"
+
+#: ../templates/header.tmpl:77
 msgid "Release sets"
 msgstr "Conjunts de versions"
 
-#: ../templates/show-stats.tmpl:8
+#: ../templates/show-stats.tmpl:12
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
 msgstr[0] "Fitxer POT (%(potsize)s missatge)"
 msgstr[1] "Fitxer POT (%(potsize)s missatges)"
 
-#: ../templates/show-stats.tmpl:12
+#: ../templates/show-stats.tmpl:16
 msgid "updated on %(date)s"
 msgstr "actualitzat el %(date)s"
 
-#: ../templates/show-stats.tmpl:16
+#: ../templates/show-stats.tmpl:20
 msgid "Notices"
 msgstr "Notícies"
 
-#: ../templates/show-stats.tmpl:27
+#: ../templates/show-stats.tmpl:31
 msgid "Language"
 msgstr "Llengua"
 
-#: ../templates/show-stats.tmpl:27
+#: ../templates/show-stats.tmpl:31
 msgid "Translated"
 msgstr "Traduït"
 
-#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:14
-#: ../templates/team.tmpl:86
+#: ../templates/show-stats.tmpl:31 ../templates/release.tmpl:15
+#: ../templates/team.tmpl:57
 msgid "Graph"
 msgstr "Gràfic"
 
-#: ../templates/person.tmpl:22 ../templates/language-release.tmpl:54
-#: ../templates/team.tmpl:55
-msgid "Instant messaging:"
-msgstr "Missatgeria instantània:"
-
-#: ../templates/person.tmpl:36 ../templates/language-release.tmpl:68
-#: ../templates/team.tmpl:69
-msgid "Bugzilla account:"
-msgstr "Compte del Bugzilla:"
-
-#: ../templates/person.tmpl:39 ../templates/language-release.tmpl:71
-#: ../templates/team.tmpl:72
-msgid "SVN account:"
-msgstr "Compte de l'SVN:"
-
-#: ../templates/person.tmpl:43
-msgid "Maintains:"
-msgstr "Manté:"
-
-#: ../templates/person.tmpl:45
-msgid "Maintains %(module)s"
-msgstr "Manté el %(module)s"
-
-#: ../templates/person.tmpl:51
-msgid "Translates:"
-msgstr "Tradueix:"
-
-#: ../templates/person.tmpl:61
-msgid "Coordinates %(team)s"
-msgstr "Coordina %(team)s"
-
-#: ../templates/list-teams.tmpl:6
+#: ../templates/list-teams.tmpl:7
 msgid "GNOME Translation Teams"
 msgstr "Equips de traducció del GNOME"
 
-#: ../templates/list-teams.tmpl:9
+#: ../templates/list-teams.tmpl:10
 msgid "Select a team below to see more information about it:"
 msgstr "Seleccioneu un equip d'aquí sota per a obtenir-ne més informació:"
 
-#: ../templates/list-teams.tmpl:19
+#: ../templates/list-teams.tmpl:20
 msgid "Coordinated by %(coordinator)s"
 msgstr "Coordinat per %(coordinator)s"
 
-#: ../templates/list-teams.tmpl:25
+#: ../templates/list-teams.tmpl:26
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Ara mateix no hi ha cap equip de traducció del GNOME. :("
 
-#: ../templates/release.tmpl:6
+#: ../templates/release.tmpl:7
 msgid "%(release)s Release"
 msgstr "Versió %(release)s"
 
-#: ../templates/release.tmpl:8 ../templates/language-release.tmpl:80
+#: ../templates/release.tmpl:9 ../templates/language-release.tmpl:51
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"Els mòduls d'aquesta versió no són al repositori SVN del GNOME. Aneu a les "
+"Els mòduls d'aquesta versió no són al dipòsit SVN del GNOME. Aneu a les "
 "pàgines de cada mòdul per a comprovar a on heu d'enviar les traduccions."
 
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
 msgid "Release"
 msgstr "Versió"
 
-#: ../templates/release.tmpl:14 ../templates/language-release.tmpl:86
-#: ../templates/module.tmpl:68 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/language-release.tmpl:57
+#: ../templates/module.tmpl:69 ../templates/team.tmpl:57
 msgid "Documentation"
 msgstr "Documentació"
 
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
 msgid "User Interface"
 msgstr "Interfície d'usuari"
 
-#: ../templates/release.tmpl:28 ../templates/team.tmpl:98
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:69
 msgid "-"
 msgstr "-"
 
@@ -1378,84 +1378,84 @@ msgstr "-"
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% traduït)"
 
-#: ../templates/list-releases.tmpl:6
+#: ../templates/list-releases.tmpl:7
 msgid "GNOME Releases"
 msgstr "Versions del GNOME"
 
-#: ../templates/list-releases.tmpl:9
+#: ../templates/list-releases.tmpl:10
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 "Seleccioneu una versió o un conjunt de versions per a obtenir-ne més "
 "informació:"
 
-#: ../templates/list-releases.tmpl:26
+#: ../templates/list-releases.tmpl:27
 msgid "There are currently no releases defined in GNOME. :("
 msgstr "Ara mateix no hi ha cap versió definida al GNOME. :("
 
-#: ../templates/list-languages.tmpl:6
+#: ../templates/list-languages.tmpl:7
 msgid "GNOME Languages"
 msgstr "Llengües del GNOME"
 
-#: ../templates/list-languages.tmpl:10
+#: ../templates/list-languages.tmpl:11
 msgid "GNOME is being translated to following %(count)s language:"
 msgid_plural "GNOME is being translated to following %(count)s languages:"
 msgstr[0] "El GNOME es tradueix a aquesta llengua:"
 msgstr[1] "El GNOME es tradueix a aquestes %(count)s llengües:"
 
-#: ../templates/list-languages.tmpl:34
+#: ../templates/list-languages.tmpl:35
 msgid "GNOME is currently not being translated to any language. :("
 msgstr "El GNOME no s'està traduint a cap llengua ara mateix. :("
 
-#: ../templates/language-release.tmpl:9 ../templates/team.tmpl:9
+#: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
 msgid "Details"
 msgstr "Detalls"
 
-#: ../templates/language-release.tmpl:12 ../templates/team.tmpl:12
+#: ../templates/language-release.tmpl:13 ../templates/team.tmpl:13
 msgid "%(lang)s Translation Team Page:"
 msgstr "Pàgina de l'equip de traducció al %(lang)s:"
 
-#: ../templates/language-release.tmpl:16 ../templates/team.tmpl:16
+#: ../templates/language-release.tmpl:17 ../templates/team.tmpl:17
 msgid "Users Web Page:"
 msgstr "Pàgina dels usuaris:"
 
-#: ../templates/language-release.tmpl:20 ../templates/team.tmpl:20
+#: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
+#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
 msgid "Report Bug in Translation"
 msgstr "Informeu d'un error a la traducció"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
+#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
 msgid "Show Existing Bugs"
 msgstr "Mostra els errors actuals"
 
-#: ../templates/language-release.tmpl:28 ../templates/team.tmpl:29
+#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
 msgid "Mailing List:"
 msgstr "Llista de distribució:"
 
-#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:31
+#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
 msgid "Send e-mail to the list"
 msgstr "Envieu un correu a la llista"
 
 # Nota: fa referència a la la llista de distribució. (Sílvia)
-#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:33
+#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
 msgid "Subscribe"
 msgstr "Subscriviu-vos-hi"
 
-#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:42
+#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
 msgid "Coordinator"
 msgstr "Coordinador"
 
-#: ../templates/list-modules.tmpl:6
+#: ../templates/list-modules.tmpl:7
 msgid "GNOME modules"
 msgstr "Mòduls del GNOME"
 
-#: ../templates/list-modules.tmpl:9
+#: ../templates/list-modules.tmpl:10
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Seleccioneu un mòdul d'aquí sota per a veure'n les estadístiques:"
 
-#: ../templates/list-modules.tmpl:17
+#: ../templates/list-modules.tmpl:18
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
@@ -1463,59 +1463,80 @@ msgstr ""
 "Ara mateix no tinc estadístiques de cap mòdul.\n"
 "Informeu-ne en <a href=\"danilo@gnome.org\">Danilo</a>!"
 
-#: ../templates/people.tmpl:6
+#: ../templates/people.tmpl:7
 msgid "GNOME Contributors"
 msgstr "Col·laboradors del GNOME"
 
-#: ../templates/people.tmpl:9
+#: ../templates/people.tmpl:10
 msgid "GNOME is being developed by following people:"
 msgstr "El GNOME el desenvolupen aquesta gent:"
 
-#: ../templates/people.tmpl:30
+#: ../templates/people.tmpl:31
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "No hi ha col·laboradors, el GNOME va aparèixer del no res."
 
-#: ../templates/module.tmpl:8
+#: ../templates/module.tmpl:9
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Aquest mòdul no és al repositori SVN del GNOME. Aneu a la pàgina del mòdul "
-"per a comprovar a on podeu enviar les traduccions."
+"Aquest mòdul no és al dipòsit SVN del GNOME. Aneu a la pàgina del mòdul per "
+"a comprovar a on podeu enviar les traduccions."
 
-#: ../templates/module.tmpl:15
+#: ../templates/module.tmpl:16
 msgid "Maintainers"
 msgstr "Mantenidors"
 
 # FIXME
-#: ../templates/module.tmpl:31
+#: ../templates/module.tmpl:32
 msgid "Bug reporting"
 msgstr "Enviament d'informes d'error"
 
-#: ../templates/module.tmpl:32
+#: ../templates/module.tmpl:33
 msgid "Report bugs to Bugzilla"
 msgstr "Envieu informes d'error al bugzilla"
 
-#: ../templates/module.tmpl:38
+#: ../templates/module.tmpl:39
 msgid "Branches:"
 msgstr "Branques:"
 
-#: ../templates/module.tmpl:53
+#: ../templates/module.tmpl:54
 msgid "Browse CVS"
 msgstr "Navegueu el CVS"
 
-#: ../templates/module.tmpl:55 ../templates/module.tmpl:57
+#: ../templates/module.tmpl:56 ../templates/module.tmpl:58
 msgid "Browse SVN"
 msgstr "Navegueu l'SVN"
 
 # FIXME: "cadenes congelades"? (josep)
-#: ../templates/module.tmpl:61
+#: ../templates/module.tmpl:62
 msgid "This branch is currently string-frozen."
 msgstr "Aquesta branca té les cadenes congelades"
 
-#: ../templates/module.tmpl:88
+#: ../templates/module.tmpl:89
 msgid "Translation"
 msgstr "Traducció"
+
+#~ msgid "Instant messaging:"
+#~ msgstr "Missatgeria instantània:"
+
+#~ msgid "Bugzilla account:"
+#~ msgstr "Compte del Bugzilla:"
+
+#~ msgid "SVN account:"
+#~ msgstr "Compte de l'SVN:"
+
+#~ msgid "Maintains:"
+#~ msgstr "Manté:"
+
+#~ msgid "Maintains %(module)s"
+#~ msgstr "Manté el %(module)s"
+
+#~ msgid "Translates:"
+#~ msgstr "Tradueix:"
+
+#~ msgid "Coordinates %(team)s"
+#~ msgstr "Coordina %(team)s"
 
 # FIXME
 #~ msgid "%(team)s Page:"
