@@ -1,3 +1,16 @@
+2007-11-01  Claude Paroz  <claude@2xlibre.net>
+
+	* people.py: Obfuscation moved to template.
+	* releases.py: SelectResult testing of nonzero is no more supported in
+	recent versions of sqlobject.
+	* templates/language-release.tmpl:
+	* templates/person.tmpl:
+	* templates/team.tmpl: Replaced person details by new template
+	person-base.tmpl
+	* templates/person-base.tmpl: New template for person details.
+	* utils.py: Added function obfuscateEmail().
+	Fixes #491913.
+
 2007-10-31  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in: Corrected malformed tag.
