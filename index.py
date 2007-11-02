@@ -14,7 +14,7 @@ from dispatcher import DamnedRequest, RequestMapper
 
 allmodules = None
 
-from module import ListModulesRequest, ModulePageRequest
+from module import ListModulesRequest, ModulePageRequest, ModuleImagesPageRequest
 from people import ListPeopleRequest, PersonRequest
 from teams import (ListTeamsRequest, TeamRequest,
                    ListLanguagesRequest, LanguageRequest,
@@ -36,6 +36,9 @@ if __name__=="__main__":
 
     module_page = ModulePageRequest(template="templates/module.tmpl")
     mapper.addRequest('module/(.+)$', module_page)
+
+    module_images_page = ModuleImagesPageRequest(template="templates/module-images.tmpl")
+    mapper.addRequest('module/([^/]+/[^/]+/[^/]+/[^/]+)/images$', module_images_page)
 
     list_people = ListPeopleRequest(template="templates/people.tmpl")
     mapper.addRequest('people/?$', list_people)

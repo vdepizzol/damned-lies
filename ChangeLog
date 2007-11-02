@@ -1,3 +1,13 @@
+2007-11-02  Claude Paroz  <claude@2xlibre.net>
+
+	* data/main.css: Two new classes for new template.
+	* data/emptyimg.png: Logo representing non existing image.
+	* index.py: Handle new template (doc figures stats).
+	* module.py: Added new class for displaying doc figures stats.
+	* templates/module-images.tmpl: New template.
+	This is work for bug #394862. Still not finished, need some more
+	testing before linking from main module stats page.
+
 2007-11-02  Johannes Schmid <jhs@gnome.org>
 
 	* gnome-modules.xml.in: Added "anjuta-2-2" (stable) branch just to make

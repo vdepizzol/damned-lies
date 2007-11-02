@@ -29,7 +29,7 @@ import modules
 import teams
 import utils
 import l10n
-import os, sys
+import os, sys, commands, re
 
 from dispatcher import DamnedRequest
 
@@ -115,7 +115,7 @@ class ModulePageRequest(DamnedRequest):
                                     Statistics.q.Language == None,
                                     Statistics.q.Type == type),
                                 orderBy="-date")
-        if res and res.count()>0:
+        if res.count():
             pot = res[0]
             here['pot_size'] = pot.Untranslated
             here['updated'] = pot.Date.strftime("%Y-%m-%d %H:%M:%S ")+tzname[0]
@@ -176,3 +176,61 @@ class ModulePageRequest(DamnedRequest):
         else:
             # Can't find database entries for this branch, unset it
             del here
+
+class ModuleImagesPageRequest(DamnedRequest):
+    def render(self, type='html'):
+        allmodules = modules.XmlModules()
+        moduleid = self.request.split('/')[0]
+        docid = self.request.split('/')[1]
+        branch = self.request.split('/')[2]
+        langid = self.request.split('/')[3]
+        
+        # Get language name
+        tl = teams.TranslationLanguages()
+        language = tl[langid]
+        
+        module = allmodules[moduleid]
+        document = module['branch'][branch]['document']
+        if branch=='HEAD':
+            branchpath = '/trunk'
+        else:
+            branchpath = '/branches/'+branch
+        svnpath = module['scmroot']['path']+'/'+module['id']+branchpath+'/'+document[docid]['directory']
+        
+        # Get po file
+        podir = os.path.join("POT",module['id']+"."+branch,"docs")
+        podoc = os.path.join(defaults.scratchdir,podir,document[docid]['id']+'.'+branch+'.'+langid+'.po')
+        
+        # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
+        command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 'msgid \"@@image:'" % { 'pofile': podoc }
+        (error, output) = commands.getstatusoutput(command)
+        lines = output.split('\n')
+        re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
+        figures = []
+        stats = {'fuzzy':0, 'translated':0, 'total':0}
+        i = 0
+        while i < len(lines):
+            fig = {}
+            fig['fuzzy'] = lines[i]=='#, fuzzy'
+            path_match = re_path.match(lines[i+1])
+            if path_match and len(path_match.groups()):
+                fig['path'] = path_match.group(1)
+            else:
+                fig['path'] = '' # This should not happen
+            fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
+            figures.append(fig)
+            # Stats
+            stats['total']+=1
+            if fig['fuzzy']: stats['fuzzy']+=1
+            else:
+                if fig['translated']: stats['translated']+=1
+            i += 4
+        stats['prc'] = 100*stats['translated']/stats['total']
+        self.document = document
+        self.module = module
+        self.langid = langid
+        self.language = language
+        self.figures = figures
+        self.stats = stats
+        self.svnpath = svnpath
+        DamnedRequest.render(self, type)

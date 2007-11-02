@@ -1,0 +1,38 @@
+#set global pageTitle=$_("Module Doc Figure Status")
+#set global pageSection="module"
+#include "templates/header.tmpl"
+
+<div class="mainpage">
+
+<h1><a href="${webroot}/module/$module.id">$module.description</a> $document.help.description ($language)</h1>
+
+<h2>Figures translation status &mdash; <small>$(stats.prc)% ($stats.translated/$stats.fuzzy/${$stats.total-$stats.translated-$stats.fuzzy})</small></h2>
+
+<table class="stats">
+<thead><tr><th width="50%">$_("Original")</th><th width="50%">$language</th></tr></thead>
+#for fig in $figures
+  #set tdclass=""
+  #if $fig['fuzzy']
+  #set tdclass="fuzzy"
+  #end if
+<tr><td valign="top">
+    <span class="path">$fig['path']</span><br>
+    <a href="$svnpath/C/$fig['path']"><img class="screenshot" src="$svnpath/C/$fig['path']"/></a>
+    </td>
+    <td valign="top" class="$tdclass">
+    #if $fig['translated']
+    <br/><a href="$svnpath/$langid/$fig['path']"><img class="screenshot" src="$svnpath/$langid/$fig['path']"/></a>
+    #elif $fig['fuzzy']
+    <em>Fuzzy</em><br/>
+    <a href="$svnpath/$langid/$fig['path']"><img class="screenshot" src="$svnpath/$langid/$fig['path']"/></a>
+    #else
+    <em>Not translated</em><br/>
+    <img src="${webroot}/data/emptyimg.png">
+    #end if
+    </td>
+</tr>
+#end for
+</table>
+
+</div>
+#include "templates/footer.tmpl"

@@ -90,6 +90,10 @@ table {
   width: 100%;
 }
 
+td.fuzzy {
+  background: #c98e7f;
+}
+
 img {
   border: 0px;
 }
@@ -97,6 +101,11 @@ img {
 img.people {
   float: left;
   margin-left: -85px;
+}
+
+img.screenshot {
+  max-width: 550px;
+  border: 0;
 }
 
 div.maintainer {
