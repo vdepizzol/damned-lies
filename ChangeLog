@@ -1,5 +1,11 @@
 2007-11-02  Claude Paroz  <claude@2xlibre.net>
 
+	* modules.py: Unified cvs/svn/hg/git classes in ScmModule.
+	Fixed #451094.
+	* update-stats.py: Use new ScmModule.
+
+2007-11-02  Claude Paroz  <claude@2xlibre.net>
+
 	* data/main.css: Two new classes for new template.
 	* data/emptyimg.png: Logo representing non existing image.
 	* index.py: Handle new template (doc figures stats).

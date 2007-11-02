@@ -96,16 +96,7 @@ class LocStatistics:
     def __init__(self, module, onlybranch = None):
         self.module = module
         scmtype = module["scmroot"]["type"]
-        if scmtype=="cvs":
-            COs = modules.CvsModule(module, 1)
-        elif scmtype=="svn":
-            COs = modules.SvnModule(module, 1)
-        elif scmtype=="git":
-            COs = modules.GitModule(module, 1)
-        elif scmtype=="hg":
-            COs = modules.HgModule(module, 1)
-        else:
-            raise Exception("Can't fetch source code for this module.")
+        COs = modules.ScmModule(module, scmtype, 1)
 
         mybranches = COs.paths.keys()
         if onlybranch and onlybranch in mybranches:
