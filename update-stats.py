@@ -95,8 +95,7 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        scmtype = module["scmroot"]["type"]
-        COs = modules.ScmModule(module, scmtype, 1)
+        COs = modules.ScmModule(module, 1)
 
         mybranches = COs.paths.keys()
         if onlybranch and onlybranch in mybranches:

@@ -1,5 +1,11 @@
 2007-11-02  Claude Paroz  <claude@2xlibre.net>
 
+	* modules.py:
+	* update-stats.py: Not useful to pass scmtype to ScmModule, as this
+	information is already in module.
+
+2007-11-02  Claude Paroz  <claude@2xlibre.net>
+
 	* modules.py: Unified cvs/svn/hg/git classes in ScmModule.
 	Fixed #451094.
 	* update-stats.py: Use new ScmModule.

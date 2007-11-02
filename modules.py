@@ -68,16 +68,16 @@ import os.path, sys
 class ScmModule:
     """Checks out a module from CVS/SVN/HG/GIT if necessary to be able to work on it."""
     
-    def __init__(self, module, scmtype, real_update = 1):
+    def __init__(self, module, real_update = 1):
         if not module: return None
 
         self.paths = {}
         self.module = module
-        if scmtype not in ('cvs','svn','hg','git'):
-            raise Exception("Source code manager of type '%s' non supported." % scmtype)
-        self.type = scmtype
+        self.type = module["scmroot"]["type"]
+        if self.type not in ('cvs','svn','hg','git'):
+            raise Exception("Source code manager of type '%s' non supported." % self.type)
 
-        localroot = os.path.join(defaults.scratchdir, scmtype)
+        localroot = os.path.join(defaults.scratchdir, self.type)
         branches = module["branch"].keys()
         for branch in branches:
             moduledir = module["id"] + "." + branch
