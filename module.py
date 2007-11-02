@@ -196,6 +196,8 @@ class ModuleImagesPageRequest(DamnedRequest):
         else:
             branchpath = '/branches/'+branch
         svnpath = module['scmroot']['path']+'/'+module['id']+branchpath+'/'+document[docid]['directory']
+        copath = os.path.join(defaults.scratchdir, module["scmroot"]["type"], module["id"] + "." + branch)
+        docsubdir = document[docid]['directory']
         
         # Get po file
         podir = os.path.join("POT",module['id']+"."+branch,"docs")
@@ -218,6 +220,10 @@ class ModuleImagesPageRequest(DamnedRequest):
             else:
                 fig['path'] = '' # This should not happen
             fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
+            # Check if a translated figure really exists or if the English one is used
+            if os.path.exists(os.path.join(copath, docsubdir,langid,fig['path'])):
+                fig['translated_file'] = True
+            else: fig['translated_file'] = False
             figures.append(fig)
             # Stats
             stats['total']+=1
@@ -226,6 +232,7 @@ class ModuleImagesPageRequest(DamnedRequest):
                 if fig['translated']: stats['translated']+=1
             i += 4
         stats['prc'] = 100*stats['translated']/stats['total']
+        stats['untranslated'] = stats['total']-stats['translated']-stats['fuzzy']
         self.document = document
         self.module = module
         self.langid = langid

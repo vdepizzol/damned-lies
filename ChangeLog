@@ -1,5 +1,12 @@
 2007-11-02  Claude Paroz  <claude@2xlibre.net>
 
+	* module.py:
+	* templates/module-images.tmpl: Improved two cases: translated, but
+	uses original figure (no string to translate in figure) and fuzzy, but
+	no real file exists.
+
+2007-11-02  Claude Paroz  <claude@2xlibre.net>
+
 	* modules.py:
 	* update-stats.py: Not useful to pass scmtype to ScmModule, as this
 	information is already in module.
