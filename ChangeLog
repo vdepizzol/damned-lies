@@ -1,3 +1,12 @@
+2007-11-07  Claude Paroz  <claude@2xlibre.net>
+
+	* modules.py: Limit parameters to checkout() function, so as to be
+	externally callable. Added new get_branches() function.
+	* update-stats.py: Don't automatically checkout all branches of
+	modules, so as to be able to checkout and generate only for a specific
+	branch.
+	Fixes bug #494526.
+
 2007-11-07  Gil Forcada  <gforcada@svn.gnome.org>
 
 	* templates/module.tmpl: Reverted previous fix.

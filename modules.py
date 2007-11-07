@@ -80,34 +80,31 @@ class ScmModule:
         localroot = os.path.join(defaults.scratchdir, self.type)
         branches = module["branch"].keys()
         for branch in branches:
-            moduledir = module["id"] + "." + branch
             checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
 
             if real_update:
-                if defaults.DEBUG:
-                    print >>sys.stderr, "Checking '%s.%s' out to '%s'..." % (module["id"], branch, checkoutpath)
-                co = self.checkout(module["scmroot"]["path"],
-                                   module["scmmodule"], branch, 
-                                   localroot,
-                                   moduledir)
+                co = self.checkout(branch)
 
-                if not co:
-                    print >> sys.stderr, "Problem checking out module %s.%s" % (module["id"], branch)
-                else:
-                    self.paths[branch] = checkoutpath
-            else:
-                if os.access(checkoutpath, os.X_OK):
-                    self.paths[branch] = checkoutpath
+            if os.access(checkoutpath, os.X_OK):
+                self.paths[branch] = checkoutpath
     
-    def checkout(self, scmroot, module, branch, localroot, moduledir):
-        """Checks out a module from CVS if necessary to be able to work on it."""
+    def get_branches(self):
+        return self.module["branch"].keys()
+    
+    def checkout(self, branch):
+        """Checks out a specific branch of the module."""
         
         import os, commands
         
+        module = self.module["scmmodule"]
+        localroot = os.path.join(defaults.scratchdir, self.type)
+        moduledir = self.module["id"] + "." + branch
+        modulepath = os.path.join(localroot, moduledir)
+        scmroot = self.module["scmroot"]["path"]
+
         try: os.makedirs(localroot)
         except: pass
         
-        modulepath = os.path.join(localroot, moduledir)
         commandList = []
         if os.access(modulepath, os.X_OK | os.W_OK):
             # Path exists, update repos
@@ -174,6 +171,8 @@ class ScmModule:
         
         # Run command(s)
         errorsOccured = 0
+        if defaults.DEBUG:
+            print >>sys.stdout, "Checking '%s.%s' out to '%s'..." % (module, branch, modulepath)
         for command in commandList:
             if defaults.DEBUG:
                 print >>sys.stdout, command
@@ -185,6 +184,7 @@ class ScmModule:
             if error and defaults.DEBUG:
                 print >> sys.stderr, error
         if errorsOccured:
+            print >> sys.stderr, "Problem checking out module %s.%s" % (module, branch)
             return 0
         else:
             return 1

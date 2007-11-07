@@ -95,13 +95,14 @@ class LocStatistics:
 
     def __init__(self, module, onlybranch = None):
         self.module = module
-        COs = modules.ScmModule(module, 1)
+        COs = modules.ScmModule(module, 0)
 
-        mybranches = COs.paths.keys()
+        mybranches = COs.get_branches()
         if onlybranch and onlybranch in mybranches:
             mybranches = [onlybranch]
 
         for branch in mybranches:
+            COs.checkout(branch)
             if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]=="true":
                 continue
 
