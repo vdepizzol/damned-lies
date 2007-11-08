@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-16 22:46+0200\n"
-"PO-Revision-Date: 2007-10-16 22:46+0100\n"
+"POT-Creation-Date: 2007-11-08 17:29+0100\n"
+"PO-Revision-Date: 2007-11-08 17:29+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -355,7 +355,7 @@ msgid "System Monitor Manual"
 msgstr "Handbok för Systemövervakare"
 
 #: ../gnome-modules.xml.in.h:86
-#: ../templates/language-release.tmpl:93
+#: ../templates/language-release.tmpl:63
 msgid "UI translations"
 msgstr "Gränssnittsöversättningar"
 
@@ -385,7 +385,7 @@ msgstr "Handbok för panelprogrammet Fönsterlista"
 
 #: ../gnome-modules.xml.in.h:93
 msgid "Workspace Switcher Applet Manual"
-msgstr "Handbok för panelprogrammet Arbetsytebytare"
+msgstr "Handbok för panelprogrammet Arbetsyteväxlare"
 
 #: ../gnome-modules.xml.in.h:94
 msgid "XKeyboard-Config"
@@ -1034,92 +1034,92 @@ msgstr "Zapotec"
 msgid "Zulu"
 msgstr "Zulu"
 
-#: ../update-stats.py:214
+#: ../update-stats.py:205
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
-#: ../update-stats.py:217
+#: ../update-stats.py:208
 msgid "Can't generate POT file, using old one if it exists."
 msgstr "Kan inte generera POT-fil, använder den gamla om möjligt."
 
-#: ../update-stats.py:246
+#: ../update-stats.py:237
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: ../update-stats.py:258
+#: ../update-stats.py:249
 #, python-format
 msgid "There is no translation team in charge of '%s' translation."
 msgstr "Det finns inget översättningsteam som ansvarar för översättningen till \"%s\"."
 
-#: ../update-stats.py:334
+#: ../update-stats.py:325
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
-#: ../update-stats.py:362
+#: ../update-stats.py:353
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
-#: ../update-stats.py:365
+#: ../update-stats.py:356
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
-#: ../update-stats.py:379
+#: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fel vid körning av \"intltool-update -m\"."
 
-#: ../update-stats.py:385
+#: ../update-stats.py:376
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Det saknas filer i POTFILES.in: %s"
 
-#: ../update-stats.py:394
+#: ../update-stats.py:385
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, men de finns ännu inte: %s"
 
-#: ../update-stats.py:408
+#: ../update-stats.py:399
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "PO-filen \"%s\" finns inte."
 
-#: ../update-stats.py:421
+#: ../update-stats.py:412
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
-#: ../update-stats.py:423
+#: ../update-stats.py:414
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
-#: ../update-stats.py:426
+#: ../update-stats.py:417
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
-#: ../update-stats.py:452
+#: ../update-stats.py:443
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
-#: ../update-stats.py:521
+#: ../update-stats.py:512
 msgid "Can't find checkout directory."
 msgstr "Kan inte hitta utcheckningskatalogen."
 
-#: ../update-stats.py:541
+#: ../update-stats.py:532
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
-#: ../update-stats.py:546
+#: ../update-stats.py:537
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
 
-#: ../update-stats.py:549
+#: ../update-stats.py:540
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE pekar inte till en verklig fil, antagligen ett makro."
 
-#: ../update-stats.py:575
+#: ../update-stats.py:566
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1130,12 +1130,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:604
+#: ../update-stats.py:595
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "Det finns inget översättningsteam som ansvarar för %s."
 
-#: ../update-stats.py:648
+#: ../update-stats.py:639
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
@@ -1271,43 +1271,9 @@ msgstr "Översatt"
 
 #: ../templates/show-stats.tmpl:31
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:87
+#: ../templates/team.tmpl:57
 msgid "Graph"
 msgstr "Diagram"
-
-#: ../templates/person.tmpl:23
-#: ../templates/language-release.tmpl:55
-#: ../templates/team.tmpl:56
-msgid "Instant messaging:"
-msgstr "Snabbmeddelande:"
-
-#: ../templates/person.tmpl:37
-#: ../templates/language-release.tmpl:69
-#: ../templates/team.tmpl:70
-msgid "Bugzilla account:"
-msgstr "Bugzilla-konto:"
-
-#: ../templates/person.tmpl:40
-#: ../templates/language-release.tmpl:72
-#: ../templates/team.tmpl:73
-msgid "SVN account:"
-msgstr "SVN-konto:"
-
-#: ../templates/person.tmpl:44
-msgid "Maintains:"
-msgstr "Underhåller:"
-
-#: ../templates/person.tmpl:46
-msgid "Maintains %(module)s"
-msgstr "Underhåller %(module)s"
-
-#: ../templates/person.tmpl:52
-msgid "Translates:"
-msgstr "Översätter:"
-
-#: ../templates/person.tmpl:62
-msgid "Coordinates %(team)s"
-msgstr "Koordinerar %(team)s"
 
 #: ../templates/list-teams.tmpl:7
 msgid "GNOME Translation Teams"
@@ -1330,29 +1296,29 @@ msgid "%(release)s Release"
 msgstr "Utgåva %(release)s"
 
 #: ../templates/release.tmpl:9
-#: ../templates/language-release.tmpl:81
+#: ../templates/language-release.tmpl:51
 msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:87
+#: ../templates/team.tmpl:57
 msgid "Release"
 msgstr "Utgåva"
 
 #: ../templates/release.tmpl:15
-#: ../templates/language-release.tmpl:87
+#: ../templates/language-release.tmpl:57
 #: ../templates/module.tmpl:69
-#: ../templates/team.tmpl:87
+#: ../templates/team.tmpl:57
 msgid "Documentation"
 msgstr "Dokumentation"
 
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:87
+#: ../templates/team.tmpl:57
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
 #: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:99
+#: ../templates/team.tmpl:69
 msgid "-"
 msgstr "-"
 
@@ -1498,6 +1464,20 @@ msgstr "Den här grenen är för närvarande strängfrusen."
 msgid "Translation"
 msgstr "Översättning"
 
+#~ msgid "Instant messaging:"
+#~ msgstr "Snabbmeddelande:"
+#~ msgid "Bugzilla account:"
+#~ msgstr "Bugzilla-konto:"
+#~ msgid "SVN account:"
+#~ msgstr "SVN-konto:"
+#~ msgid "Maintains:"
+#~ msgstr "Underhåller:"
+#~ msgid "Maintains %(module)s"
+#~ msgstr "Underhåller %(module)s"
+#~ msgid "Translates:"
+#~ msgstr "Översätter:"
+#~ msgid "Coordinates %(team)s"
+#~ msgstr "Koordinerar %(team)s"
 #~ msgid "%(team)s Page:"
 #~ msgstr "Webbsida för %(team)s:"
 #~ msgid "GNOME desktop. Essential software."
