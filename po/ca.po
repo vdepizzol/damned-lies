@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-01 20:52+0100\n"
+"POT-Creation-Date: 2007-11-08 10:43+0100\n"
 "PO-Revision-Date: 2007-10-10 21:59+0200\n"
 "Last-Translator: Sílvia Miranda <silviamira@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -430,11 +430,11 @@ msgstr "GNOME 2.16 (antiga estable)"
 
 #: ../releases.xml.in.h:9
 msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.14 (antiga estable)"
+msgstr "GNOME 2.18 (antiga estable)"
 
 #: ../releases.xml.in.h:10
 msgid "GNOME 2.20 (stable)"
-msgstr "GNOME 2.18 (estable)"
+msgstr "GNOME 2.20 (estable)"
 
 #: ../releases.xml.in.h:11
 msgid "GNOME 2.22 (development)"
@@ -1037,37 +1037,37 @@ msgstr "Zapoteca"
 msgid "Zulu"
 msgstr "Zulu"
 
-#: ../update-stats.py:214
+#: ../update-stats.py:205
 msgid "Can't generate POT file, using old one."
 msgstr "No s'ha pogut generar el fitxer POT; s'utilitza l'antic."
 
-#: ../update-stats.py:217
+#: ../update-stats.py:208
 msgid "Can't generate POT file, using old one if it exists."
 msgstr ""
 "No s'ha pogut generar el fitxer POT; s'utilitza l'antic, si n'hi ha un."
 
-#: ../update-stats.py:246
+#: ../update-stats.py:237
 msgid "Can't copy new POT file to public location."
 msgstr "No s'ha pogut copiar el fitxer POT al lloc públic."
 
-#: ../update-stats.py:258
+#: ../update-stats.py:249
 #, python-format
 msgid "There is no translation team in charge of '%s' translation."
 msgstr ""
 "No hi ha cap equip de traducció que s'encarregui de la traducció al '%s'."
 
-#: ../update-stats.py:334
+#: ../update-stats.py:325
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "No hi ha cap entrada per a aquesta llengua al fitxer LINGUAS"
 
-#: ../update-stats.py:362
+#: ../update-stats.py:353
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "No hi ha cap entrada per a aquesta llengua al fitxer de configuració "
 "ALL_LINGUAS."
 
-#: ../update-stats.py:365
+#: ../update-stats.py:356
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1075,17 +1075,17 @@ msgstr ""
 "No se sap on cercar si aquesta llengua s'utilitza; demaneu-ho al mantenidor "
 "del mòdul."
 
-#: ../update-stats.py:379
+#: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
 msgstr ""
 "S'han produït errors mentre s'executava la verificació 'intltool-update -m'."
 
-#: ../update-stats.py:385
+#: ../update-stats.py:376
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Falten alguns fitxers al POTFILES.in: %s"
 
-#: ../update-stats.py:394
+#: ../update-stats.py:385
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1094,50 +1094,50 @@ msgstr ""
 "El POTFILES.in o el POTFILES.skip fan referència a alguns fitxers que no "
 "existeixen: %s"
 
-#: ../update-stats.py:408
+#: ../update-stats.py:399
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "El fitxer PO «%s» no existeix."
 
-#: ../update-stats.py:421
+#: ../update-stats.py:412
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "El fitxer PO «%s» no ha superat la verificació msgfmt: no s'actualitza."
 
-#: ../update-stats.py:423
+#: ../update-stats.py:414
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No es poden obtenir les estadístiques del fitxer POT «%s»."
 
-#: ../update-stats.py:426
+#: ../update-stats.py:417
 msgid "This PO file has an executable bit set."
 msgstr "El bit d'execució d'aquest fitxer PO està activat."
 
-#: ../update-stats.py:452
+#: ../update-stats.py:443
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El fitxer PO «%s» no està codificat en UTF-8."
 
-#: ../update-stats.py:521
+#: ../update-stats.py:512
 msgid "Can't find checkout directory."
 msgstr "No s'ha pogut trobar el directori dels fitxers de pujada."
 
-#: ../update-stats.py:541
+#: ../update-stats.py:532
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El mòdul %s no s'assembla al mòdul gnome-doc-utils."
 
-#: ../update-stats.py:546
+#: ../update-stats.py:537
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "El DOC_MODULE no correspon a cap fitxer real; s'utilitza «%s.xml»."
 
-#: ../update-stats.py:549
+#: ../update-stats.py:540
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "El DOC_MODULE no correspon a cap fitxer real; segurament és una macro."
 
-#: ../update-stats.py:575
+#: ../update-stats.py:566
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1148,12 +1148,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:604
+#: ../update-stats.py:595
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "Ara mateix no hi ha cap equip de traducció al %s."
 
-#: ../update-stats.py:648
+#: ../update-stats.py:639
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La llista DOC_LINGUAS no inclou aquesta llengua."
 
