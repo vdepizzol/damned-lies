@@ -102,7 +102,8 @@ class LocStatistics:
             mybranches = [onlybranch]
 
         for branch in mybranches:
-            COs.checkout(branch)
+            if not COs.checkout(branch):
+                continue
             if module["branch"][branch].has_key('regenerate') and not module["branch"][branch]["regenerate"]=="true":
                 continue
 

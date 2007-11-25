@@ -76,17 +76,11 @@ class ScmModule:
         self.type = module["scmroot"]["type"]
         if self.type not in ('cvs','svn','hg','git'):
             raise Exception("Source code manager of type '%s' non supported." % self.type)
-
-        localroot = os.path.join(defaults.scratchdir, self.type)
-        branches = module["branch"].keys()
-        for branch in branches:
-            checkoutpath = os.path.join(localroot, module["id"] + "." + branch)
-
-            if real_update:
+        
+        if real_update:
+            branches = module["branch"].keys()
+            for branch in branches:
                 co = self.checkout(branch)
-
-            if os.access(checkoutpath, os.X_OK):
-                self.paths[branch] = checkoutpath
     
     def get_branches(self):
         return self.module["branch"].keys()
@@ -181,12 +175,13 @@ class ScmModule:
                 print >> sys.stderr, output
             if error:
                 errorsOccured = 1
-            if error and defaults.DEBUG:
-                print >> sys.stderr, error
+                if defaults.DEBUG:
+                    print >> sys.stderr, error
         if errorsOccured:
             print >> sys.stderr, "Problem checking out module %s.%s" % (module, branch)
             return 0
         else:
+            self.paths[branch] = modulepath
             return 1
 
 
