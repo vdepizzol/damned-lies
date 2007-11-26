@@ -1129,26 +1129,20 @@
     <_description>Gtk+</_description>
     <maintainer id="owen"/>
     <webpage>http://www.gtk.org/</webpage>
-    <branch stringfrozen="true" id="gtk-2-8">
-      <domain id="po">
-        <_description>UI translations</_description>
-      </domain>
-      <domain id="po-properties" potbase="gtk+-properties">
-        <_description>Property Nicks</_description>
-      </domain>
-    </branch>
-    <branch stringfrozen="true" id="HEAD" >
-      <domain id="po">
-        <_description>Core</_description>
-      </domain>
-      <domain id="po-properties" potbase="gtk+-properties">
-        <_description>Property Nicks</_description>
-      </domain>
-    </branch>
-    <branch stringfrozen="true" id="gtk-2-10">
-      <domain id="po-properties" potbase="gtk+-properties"/>
-      <domain id="po"/>
-    </branch>
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <domain id="po-properties" potbase="gtk+-properties">
+          <_description>Property Nicks</_description>
+        </domain>
+      </branch>
+    </defaults>
+    <branch id="HEAD"/>
+    <branch stringfrozen="true" id="gtk-2-8"/>
+    <branch stringfrozen="true" id="gtk-2-10"/>
+    <branch stringfrozen="true" id="gtk-2-12"/>
   </module>
   <module id="gtk-engines">
     <branch id="HEAD"/>
