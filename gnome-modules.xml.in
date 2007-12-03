@@ -1529,11 +1529,18 @@
     <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="totem">
+    <maintainer id="hadess"/>
     <branch id="HEAD"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
+  </module>
+  <module id="totem-pl-parser">
+    <maintainer id="hadess"/>
+    <bugs-product>totem</bugs-product>
+    <bugs-component>playlist parser</bugs-component>
+    <brach id="HEAD"/>
   </module>
   <module id="tracker">
     <branch id="HEAD"/>
