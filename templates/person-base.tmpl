@@ -44,9 +44,11 @@
 
   #if $printroles and $roles.maintains and len($roles.maintains)
   <h2>$_("Maintains:")</h2>
+  <ul>
     #for module in $roles.maintains
     <li>${_("Maintains %(module)s"), module="<a href=\""+$webroot+"/module/"+$module.id+"\">"+$module.description+"</a>"}</li>
     #end for
+  </ul>
   #end if
 
 
