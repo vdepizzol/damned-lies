@@ -9,15 +9,15 @@
 #if len($people)
 <p>$_("GNOME is being developed by following people:")</p>
 
-<ul>
 #for personid in $people
   #set global person=$people[personid]
 
   <div class="maintainer">
-  #if not $person.has_key('icon')
-    #set $person.icon = "${webroot}/data/nobody.png"
+  #if $person.icon != '/data/nobody.png'
+    <img class="people" src="$person.icon" alt="$person.name" />
+  #else
+  <img class="people" src="${webroot}/data/nobody.png" alt="" />
   #end if
-  <img class="people" src="$person.icon" alt="" />
   <a style="font-size: 120%;" href="${webroot}/people/$person.id">$person.name</a><br />
   #if $person.webpage
   <a href="$person.webpage">$person.webpage</a><br />
@@ -25,7 +25,6 @@
   </div>
 
 #end for
-</ul>
 
 #else
 <p>$_("There are no contributors, GNOME turned itself up from nothing.")</p>

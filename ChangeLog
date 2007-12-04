@@ -1,5 +1,11 @@
 2007-12-04  Gil Forcada  <gforcada@svn.gnome.org>
 
+	* templates/people.tmpl:
+	Make it xhtml compliant and fixed an issue that prevents to show the
+	/data/nobody.png (the if condition was wrong)
+
+2007-12-04  Gil Forcada  <gforcada@svn.gnome.org>
+
 	* gnome-modules.xml.in:
 	* releases.xml.in:
 	gnome-terminal branched for gnome-2-20
