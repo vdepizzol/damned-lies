@@ -1,3 +1,11 @@
+2007-12-15  Gil Forcada  <gforcada@svn.gnome.org>
+
+	* templates/list-languages.tmpl:
+	fixed a corner case where it wasn't xhtml compliant
+	* templates/list-modules.tmpl: display modules a-la languages (3 columns)
+	* templates/people.tmpl: display modules a-la languages (3 columns)
+
+
 2007-12-12  Gil Forcada  <gforcada@svn.gnome.org>
 
 	* gnome-modules.xml.in:

@@ -22,12 +22,12 @@
   <a href="${webroot}/languages/${lang.code}">${lang.code}</a>
   #end if
 </li>
-  #set count = $count+1
   #if $count % (len($languages)/3+1) == 0
     #set col = $col+1
     </ul></div>
     <div class="col${col}"><ul>
   #end if
+  #set count += 1
 #end for
 </ul>
 </div>

@@ -9,6 +9,9 @@
 #if len($people)
 <p>$_("GNOME is being developed by following people:")</p>
 
+<div class="col1">
+#set count = 1
+#set col = 1
 #for personid in $people
   #set global person=$people[personid]
 
@@ -24,7 +27,14 @@
   #end if
   </div>
 
+  #if $count % (len($people)/2+1) == 0
+    #set col += 1
+    </div><div class="col${col}">
+  #end if
+  #set count += 1
+
 #end for
+</div>
 
 #else
 <p>$_("There are no contributors, GNOME turned itself up from nothing.")</p>

@@ -9,11 +9,22 @@
 #if len($modules)
 <p>$_("Select a module below to see some of the damned lies about it:")</p>
 
+<div class="col1">
 <ul>
+#set count = 1
+#set col = 1
 #for modid in $modids
-<li><a href="${webroot}/module/${modid}">$modules[$modid].description</a></li>
+  <li><a href="${webroot}/module/${modid}">$modules[$modid].description</a></li>
+  #if $count % (len($modids)/3+1) == 0
+    #set col += 1
+    </ul></div>
+    <div class="col${col}"><ul>
+  #end if
+  #set count += 1
 #end for
 </ul>
+</div>
+
 #else
 <p>$_("There are currently no modules for which I am gathering damned lies for. Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!")</p>
 #end if
