@@ -9,14 +9,14 @@
 #if len($releases)
 <p>$_("Select a release or a release set below to see more details about it:")</p>
 
-<ul>
+<ul class="foot">
 #for release in $officialReleases
 <li style="font-size: 120%;">
   <a href="${webroot}/releases/${release.id}">${release.description}</a>
 </li>
 #end for
 </ul>
-<ul>
+<ul class="foot">
 #for release in $otherReleases
 <li style="font-size: 120%;">
   <a href="${webroot}/releases/${release.id}">${release.description}</a>

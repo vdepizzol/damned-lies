@@ -9,7 +9,7 @@
 #if len($teams)
 <p>$_("Select a team below to see more information about it:")</p>
 
-<ul>
+<ul class="foot">
 #for team in $teams
 <li style="font-size: 120%;">
   <a href="${webroot}/teams/${team.id}">${team.description}</a>

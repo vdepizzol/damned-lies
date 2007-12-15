@@ -436,3 +436,7 @@ div#content {
 	margin: 1em;
 }
 
+/*show a foot logo instead of dots in some lists*/
+ul.foot li {
+   list-style-image: url('foot-16.png');
+}

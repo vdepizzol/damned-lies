@@ -1,5 +1,15 @@
 2007-12-15  Gil Forcada  <gforcada@svn.gnome.org>
 
+	* data/main.css:
+	Added a new class that puts a GNOME foot in the lists
+	* templates/list-releases.tmpl:
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/list-teams.tmpl:
+	Updated the lists to show the foot logo instead of a dot
+
+2007-12-15  Gil Forcada  <gforcada@svn.gnome.org>
+
 	* templates/list-languages.tmpl:
 	fixed a corner case where it wasn't xhtml compliant
 	* templates/list-modules.tmpl: display modules a-la languages (3 columns)
