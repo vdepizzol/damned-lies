@@ -12,19 +12,20 @@ def getModules(only = None):
 def getPeople(only = None): 
     return readFromFile(defaults.people_xml, only)
 
-def getTeams(only = None): 
-    return readFromFile(defaults.teams_xml, only)
+def getTeams(only = None, en = False): 
+    return readFromFile(defaults.teams_xml, only, en)
 
 def getReleases(only = None): 
     return readFromFile(defaults.releases_xml, only)
 
-def readFromFile(filename, only_id = None):
+def readFromFile(filename, only_id = None, force_en = False):
     """Reads XML file or pickle-cached copy of it (while also keeping it up-to-date)."""
     import os
 
-    myfilename = filename.replace('po/', 'po/'+defaults.language+'/')
-    if os.access(myfilename, os.R_OK):
-        filename = myfilename
+    if not force_en:
+        myfilename = filename.replace('po/', 'po/'+defaults.language+'/')
+        if os.access(myfilename, os.R_OK):
+            filename = myfilename
 
     picklefile = filename + ".pickle"
 

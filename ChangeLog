@@ -1,3 +1,11 @@
+2007-12-26  Claude Paroz  <claude@2xlibre.net>
+
+	* data.py: Added the possibility to request the original English xml
+	file.
+	* teams.py: bugzilla-component is now computed in __init__ from the
+	original English file.
+	Fixes #474014.
+
 2007-12-22  Johannes Schmid <jhs@gnome.org>
 
 	* releases.xml.in:

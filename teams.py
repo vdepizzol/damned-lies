@@ -18,17 +18,24 @@ class TranslationTeams:
     def __init__(self, teamsfile=defaults.teams_xml, only_team=None, only_language=None):
 
         teams =  data.getTeams(only_team)
+        # Need to read original English file to be able to compute Bugzilla component name
+        teams_en = data.getTeams(only_team,en=True)
         people =  data.getPeople()
 
         for teamid in teams.keys():
-            firstlanguage = ""
+            firstlanguage = firstlanguage_en = ""
 
             for lang in teams[teamid]['language'].keys():
                 if not firstlanguage:
                     firstlanguage = teams[teamid]['language'][lang]['content']
+                    firstlanguage_en = teams_en[teamid]['language'][lang]['content']
 
             if not teams[teamid].has_key('description'):
                 teams[teamid]['description'] = firstlanguage
+            
+            if not teams[teamid].has_key('bugzilla-component'):
+                teams[teamid]['bugzilla-component'] = (firstlanguage_en
+                                                  + " [%s]" % (teamid))
 
             coordinator = None
             coordid = teams[teamid]['coordinator'].keys()[0]
@@ -140,9 +147,6 @@ class TeamRequest(DamnedRequest):
                     if not langid: langid = lang
 
                 language_name = team['language'][lang]['content']
-                if not team.has_key('bugzilla-component') and language_name:
-                    team['bugzilla-component'] = (language_name
-                                                  + " [%s]" % (langid))
                 self.team = team
                 self.language = lang
                 self.language_name = language_name
