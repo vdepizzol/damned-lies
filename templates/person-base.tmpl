@@ -8,10 +8,11 @@
 #silent obfuscateEmail($person)
   
   <div class="maintainer">
-  #if not $person.has_key('icon')
-    #set $person.icon = "${webroot}/data/nobody.png"
+  #if $person.icon != '/data/nobody.png'
+    <img class="people" src="$person.icon" alt="$person.name" />
+  #else
+    <img class="people" src="${webroot}/data/nobody.png" alt="" />
   #end if
-  <img class="people" src="$person.icon" alt="" />
   <a style="font-size: 140%;" href="${webroot}/people/$person.id">$person.name</a><br />
   #if $person.has_key('nospamemail')
   <a href="mailto:$person.nospamemail">$person.nospamemail</a><br />
