@@ -554,6 +554,7 @@
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
       <module id="bug-buddy"/>
+      <module id="cheese"/>
       <module id="dasher"/>
       <module id="deskbar-applet"/>
       <module id="eel"/>
@@ -569,10 +570,12 @@
       <module id="file-roller"/>
       <module id="gcalctool"/>
       <module id="gconf-editor"/>
+      <module id="gdl"/>
       <module id="gdm"/>
       <module id="gedit"/>
       <module id="gnome-applets"/>
       <module id="gnome-backgrounds"/>
+      <module id="gnome-build"/>
       <module id="gnome-control-center"/>
       <module id="gnome-desktop"/>
       <module id="gnome-doc-utils"/>
@@ -602,6 +605,7 @@
       <module id="gtkhtml"/>
       <module id="gtksourceview"/>
       <module id="gucharmap" branch="gnome-2-22"/>
+      <module id="gvfs"/>
       <module id="libgnomekbd"/>
       <module id="libgnomeprint"/>
       <module id="libgnomeprintui"/>
@@ -617,6 +621,7 @@
       <module id="tomboy"/>
       <module id="totem"/>
       <module id="totem-pl-parser"/>
+      <module id="vinagre"/>
       <module id="vino"/>
       <module id="vte"/>
       <module id="yelp"/>
@@ -630,20 +635,10 @@
     <category id="devtools">
       <_description>Development Tools</_description>
       <module id="accerciser"/>
+      <module id="anjuta"/>
       <module id="devhelp"/>
       <module id="glade3"/>
       <module id="gnome-devel-docs"/>
-    </category>
-    <category id="proposed">
-      <_description>New module proposals</_description>
-      <module id="anjuta"/>
-      <module id="cheese"/>
-      <module id="empathy"/>
-      <module id="gdl"/>
-      <module id="gimmie"/>
-      <module id="gnome-build"/>
-      <module id="gvfs"/>
-      <module id="vinagre"/>
     </category>
   </release>
   <release id="fifth-toe" status="unofficial">
