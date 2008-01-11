@@ -148,7 +148,6 @@
     <module id="gbrainy"/>
     <module id="gdesklets"/>
     <module id="gdesklets-extras"/>
-    <module id="gdl"/>
     <module id="gedit-plugins"/>
     <module id="genius"/>
     <module id="gftp"/>
@@ -164,7 +163,6 @@
     <module id="gnome-alsamixer"/>
     <module id="gnome-blog"/>
     <module id="gnome-bluetooth"/>
-    <module id="gnome-build"/>
     <module id="gnome-commander"/>
     <module id="gnome-cups-manager"/>
     <module id="gnome-hello"/>
@@ -485,7 +483,7 @@
       <module id="gnome-media"/>
       <module id="gnome-menus" branch="gnome-2-20"/>
       <module id="gnome-netstatus"/>
-      <module id="gnome-nettool"/>
+      <module id="gnome-nettool" branch="gnome-2-20"/>
       <module id="gnome-panel" branch="gnome-2-20"/>
       <module id="gnome-power-manager" branch="gnome-2-20"/>
       <module id="gnome-screensaver" branch="gnome-2-20"/>
@@ -637,7 +635,9 @@
       <module id="accerciser"/>
       <module id="anjuta"/>
       <module id="devhelp"/>
+      <module id="gdl"/>
       <module id="glade3"/>
+      <module id="gnome-build"/>
       <module id="gnome-devel-docs"/>
     </category>
   </release>
