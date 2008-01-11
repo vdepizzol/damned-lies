@@ -524,12 +524,6 @@
     <maintainer id="davyd"/>
     <defaults>
       <branch>
-        <domain id="po">
-          <_description>UI translations</_description>
-        </domain>
-        <domain id="po-locations" potbase="weather-locations">
-          <_description>Weather Applet Locations</_description>
-        </domain>
         <document id="accessx-status">
           <_description>Keyboard Accessibility Monitor Manual</_description>
           <directory>accessx-status/docs</directory>
@@ -589,7 +583,6 @@
       </branch>
     </defaults>
     <branch id="HEAD">
-      <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
     <branch id="gnome-2-14" stringfrozen="true">
@@ -1267,6 +1260,16 @@
     <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="libgweather">
+    <defaults>
+      <branch>
+        <domain id="po">
+          <_description>UI translations</_description>
+        </domain>
+        <domain id="po-locations" potbase="weather-locations">
+          <_description>Weather Applet Locations</_description>
+        </domain>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="libmimedir">
