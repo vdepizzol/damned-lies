@@ -47,14 +47,14 @@
   <h2>$_("Maintains:")</h2>
   <ul>
     #for module in $roles.maintains
-    <li>${_("Maintains %(module)s"), module="<a href=\""+$webroot+"/module/"+$module.id+"\">"+$module.description+"</a>"}</li>
+    <li><a href="$webroot/module/$module.id">$module.description</a></li>
     #end for
   </ul>
   #end if
 
 
   #if $printroles and $roles.translates and len($roles.translates)
-  <h3>$_("Translates:")</h3>
+  <h2>$_("Translates:")</h2>
   <ul>
     #for team in $roles.translates
     #if $team.has_key('description')
