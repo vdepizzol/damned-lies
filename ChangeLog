@@ -1,5 +1,12 @@
 2008-01-12  Claude Paroz  <claude@2xlibre.net>
 
+	* modules.py: Handle 'subpath' property, if available.
+	* gnome-modules.xml.in:
+	* releases.xml.in: Use new 'subpath' property for Release Notes, and
+	split module. Fixes #508116.
+
+2008-01-12  Claude Paroz  <claude@2xlibre.net>
+
 	* modules.py:
 	* update-stats.py: Escaped paths in system commands.
 	Fixes #475599.
