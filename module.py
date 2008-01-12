@@ -96,6 +96,13 @@ class ModulePageRequest(DamnedRequest):
                     #import pprint
                     #print >>sys.stderr, pprint.pformat(here)
                     del module["branch"][branch]["document"][document]
+                else:
+                    #Test if document contains figures
+                    pot = os.path.join(defaults.potdir, module['id']+'.'+branch,'docs',here['potbase']+'.'+branch+'.pot')
+                    command = "grep 'msgid \"@@image:' %(potfile)s | wc -l" % { 'potfile': pot }
+                    (error, output) = commands.getstatusoutput(command)
+                    here['fig_count'] = int(output)
+                    
         self.module = module
         branches = module["branch"].keys()
         branches.sort(compare_branches)
@@ -240,4 +247,5 @@ class ModuleImagesPageRequest(DamnedRequest):
         self.figures = figures
         self.stats = stats
         self.svnpath = svnpath
+        self.svnwebpath = module['scmweb']+'/'+document[docid]['directory']
         DamnedRequest.render(self, type)

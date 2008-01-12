@@ -1,3 +1,11 @@
+2008-01-12  Claude Paroz  <claude@2xlibre.net>
+
+	* module.py: Get the number of figures in a document.
+	* templates/module-images.tmpl: Properly i18n-ized.
+	* templates/show-stats.tmpl: Add figure count and figure column in
+	stats where appropriate.
+	Fixes #394862.
+
 1008-01-12  Gil Forcada  <gforcada@svn.gnome.org>
 
 	* templates/person-base.tmpl:

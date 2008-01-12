@@ -9,7 +9,13 @@
 <a href="${webdir}.pot">
 <img src="$webroot/data/download.png" alt="Download POT file" />
 #if $domain.has_key('pot_size')
-  ${ngettext("POT file (%(potsize)s message)", "POT file (%(potsize)s messages)", $domain.pot_size),potsize=$domain.pot_size}
+  #set fig_text = ""
+  #if $domain.has_key('fig_count') and $domain.fig_count>0
+    #set fig_text = $ngettext("figure", "figures", $domain.fig_count)
+    ${ngettext("POT file (%(potsize)s message, %(number)s %(figures)s)", "POT file (%(potsize)s messages, %(number)s %(figures)s)", $domain.pot_size),potsize=$domain.pot_size, number=$domain.fig_count, figures=$fig_text}
+  #else
+    ${ngettext("POT file (%(potsize)s message)", "POT file (%(potsize)s messages)", $domain.pot_size),potsize=$domain.pot_size}
+  #end if
 #end if
 </a>
 #if $domain.has_key('updated')
@@ -28,7 +34,11 @@
 
 #if $domain.statistics and len($domain.statistics)
 <table class="stats">
-<thead><tr><th>$_("Language")</th><th>$_("Translated")</th><th>$_("Graph")</th></tr></thead>
+<thead><tr><th>$_("Language")</th><th>$_("Translated")</th>
+#if $domain.has_key('fig_count') and $domain.fig_count>0
+    <th></th>
+#end if
+<th>$_("Graph")</th></tr></thead>
 #for lstat in $domain.statistics
 <tr>
   <td class="leftcell"><a href="${webdir}.${lstat.code}.po">$lstat.language_name ($lstat.code)</a>
@@ -38,6 +48,9 @@
   </td>
   #if $lstat.has_key('supportedness')
   <td>${lstat.supportedness}%&nbsp;($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
+  #if $domain.has_key('fig_count') and $domain.fig_count>0
+  <td><a href="$module.id/$domain.potbase/$branch/$lstat.code/images"><img src="$webroot/data/figure.png" alt="$_("Display document figures")"></a></td>
+  #end if
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${lstat.percentages.translated}px;"></div>
       <div class="fuzzy" style="left:${lstat.percentages.translated}px; width:${lstat.percentages.fuzzy}px;"></div>
