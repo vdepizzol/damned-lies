@@ -1,5 +1,10 @@
 2008-01-12  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/show-stats.tmpl: Compute more precisely the link to figure
+	status, to prevent some problems with ending slash.
+
+2008-01-12  Claude Paroz  <claude@2xlibre.net>
+
 	* data/figure.png: New icon proposed by Djihed Afifi (Tango's
 	preferences-system-windows.png).
 

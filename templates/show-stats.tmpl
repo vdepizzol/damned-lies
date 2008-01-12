@@ -49,7 +49,7 @@
   #if $lstat.has_key('supportedness')
   <td>${lstat.supportedness}%&nbsp;($lstat.translated/$lstat.fuzzy/$lstat.untranslated)</td>
   #if $domain.has_key('fig_count') and $domain.fig_count>0
-  <td><a href="$module.id/$domain.potbase/$branch/$lstat.code/images"><img src="$webroot/data/figure.png" alt="$_("Display document figures")"></a></td>
+  <td><a href="$webroot/module/$module.id/$domain.potbase/$branch/$lstat.code/images"><img src="$webroot/data/figure.png" alt="$_("Display document figures")"></a></td>
   #end if
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: ${lstat.percentages.translated}px;"></div>
