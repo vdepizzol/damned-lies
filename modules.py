@@ -103,26 +103,26 @@ class ScmModule:
         if os.access(modulepath, os.X_OK | os.W_OK):
             # Path exists, update repos
             if self.type == "cvs":
-                commandList.append("cd %(localdir)s && cvs -z4 up -Pd" % {
+                commandList.append("cd \"%(localdir)s\" && cvs -z4 up -Pd" % {
                     "localdir" : modulepath,
                     })
             elif self.type == "svn":
-                commandList.append("cd %(localdir)s && svn up --non-interactive" % {
+                commandList.append("cd \"%(localdir)s\" && svn up --non-interactive" % {
                     "localdir" : modulepath,
                     })
             elif self.type == "hg":
-                commandList.append("cd %(localdir)s && hg revert --all" % {
+                commandList.append("cd \"%(localdir)s\" && hg revert --all" % {
                     "localdir" : modulepath,
                     })
             elif self.type == "git":
-                commandList.append("cd %(localdir)s && git checkout %(branch)s && git reset --hard && git clean -d" % {
+                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git reset --hard && git clean -d" % {
                     "localdir" : modulepath,
                     "branch" : branch,
                     })
         else:
             # Checkout
             if self.type == "cvs":
-                commandList.append("cd %(localroot)s && cvs -d%(cvsroot)s -z4 co -d%(dir)s -r%(branch)s %(module)s" % {
+                commandList.append("cd \"%(localroot)s\" && cvs -d%(cvsroot)s -z4 co -d%(dir)s -r%(branch)s %(module)s" % {
                 "localroot" : localroot,
                 "cvsroot" : scmroot,
                 "dir" : moduledir,
@@ -135,30 +135,30 @@ class ScmModule:
                     svnpath += "/trunk"
                 else:
                     svnpath += "/branches/" + branch
-                commandList.append("cd %(localroot)s && svn co --non-interactive %(svnpath)s %(dir)s" % {
+                commandList.append("cd \"%(localroot)s\" && svn co --non-interactive %(svnpath)s \"%(dir)s\"" % {
                     "localroot" : localroot,
                     "svnpath" : svnpath,
                     "dir" : moduledir,
                     })
             elif self.type == "hg":
                 hgpath = scmroot + "/" + module
-                commandList.append("cd %(localroot)s && hg clone %(hgpath)s %(dir)s" % {
+                commandList.append("cd \"%(localroot)s\" && hg clone %(hgpath)s \"%(dir)s\"" % {
                     "localroot" : localroot,
                     "hgpath" : hgpath,
                     "dir" : moduledir,
                     })
-                commandList.append("cd %(localdir)s && hg update %(branch)s" % {
+                commandList.append("cd \"%(localdir)s\" && hg update %(branch)s" % {
                     "localdir" : modulepath,
                     "branch" : branch,
                     })
             elif self.type == "git":
                 gitpath = scmroot + "/" + module
-                commandList.append("cd %(localroot)s && git clone %(gitpath)s %(dir)s" % {
+                commandList.append("cd \"%(localroot)s\" && git clone %(gitpath)s \"%(dir)s\"" % {
                     "localroot" : localroot,
                     "gitpath" : gitpath,
                     "dir" : moduledir,
                     })
-                commandList.append("cd %(localdir)s && git checkout %(branch)s" % {
+                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s" % {
                     "localdir" : modulepath,
                     "branch" : branch,
                     })

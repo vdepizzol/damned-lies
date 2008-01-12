@@ -186,7 +186,7 @@ might be worth investigating.
         errors = self.check_pot_regeneration(popath)
 
         # Generate PO template (POT) file
-        command = "cd %(dir)s && intltool-update -g '%(domain)s' -p" % {
+        command = "cd \"%(dir)s\" && intltool-update -g '%(domain)s' -p" % {
             "dir" : popath,
             "domain" : pot_base,
             }
@@ -361,7 +361,7 @@ might be worth investigating.
         """Check if there were any problems regenerating a POT file."""
         errors = []
 
-        command = "cd %(dir)s && rm -f missing notexist && intltool-update -m" % { "dir" : po_path, }
+        command = "cd \"%(dir)s\" && rm -f missing notexist && intltool-update -m" % { "dir" : po_path, }
         if defaults.DEBUG: print >>sys.stderr, command
         (error, output) = commands.getstatusoutput(command)
         if defaults.DEBUG: print >> sys.stderr, output
@@ -558,7 +558,7 @@ might be worth investigating.
         allfiles = ""
         for file in files:
             allfiles += " " + os.path.join("C", file)
-        command = "cd %s && xml2po -o %s -e %s" % (sourcedir, fullpot, allfiles)
+        command = "cd \"%s\" && xml2po -o %s -e %s" % (sourcedir, fullpot, allfiles)
 
         if defaults.DEBUG: print >>sys.stderr, command
         (error, output) = commands.getstatusoutput(command)
@@ -693,7 +693,7 @@ might be worth investigating.
             files.append(file)
 
         for file in files:
-            command = "cd %(sourcedir)s && xml2po -e -l %(lang)s -p %(pofile)s -o %(outfile)s %(infile)s" % {
+            command = "cd \"%(sourcedir)s\" && xml2po -e -l %(lang)s -p %(pofile)s -o \"%(outfile)s\" \"%(infile)s\"" % {
                 'sourcedir' : sourcedir,
                 'pofile' : pofile,
                 'outfile' : os.path.join(os.path.join(out_dir, lang, file)),
