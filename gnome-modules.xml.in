@@ -1261,6 +1261,8 @@
     <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <module id="libgweather">
+    <bugs-product>gnome-applets</bugs-product>
+    <bugs-component>gweather</bugs-component>
     <defaults>
       <branch>
         <domain id="po">
