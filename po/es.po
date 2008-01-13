@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-12 15:18+0000\n"
-"PO-Revision-Date: 2008-01-12 21:32+0100\n"
+"POT-Creation-Date: 2008-01-12 21:50+0000\n"
+"PO-Revision-Date: 2008-01-13 17:56+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <<gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1423,9 +1423,27 @@ msgstr "Coordinado por %(coordinator)s"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 
+#: ../templates/module-images.tmpl:9
+msgid "Figures translation status"
+msgstr "Estado de la traducción de las imágenes"
+
 #: ../templates/module-images.tmpl:12
 msgid "Original"
 msgstr "Original"
+
+#: ../templates/module-images.tmpl:28
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr "Traducido pero usa la original (quizá la imagen no contiene ninguna cadena que traducir)"
+
+#: ../templates/module-images.tmpl:36
+msgid "No existing file (\"Technical\" fuzzy)"
+msgstr "El archivo no existe («técnicamente» difusa)"
+
+#: ../templates/module-images.tmpl:39
+msgid "Not translated"
+msgstr "No traducido"
 
 #: ../templates/module.tmpl:9
 msgid ""
@@ -1511,7 +1529,7 @@ msgstr "Lanzamiento %(release)s"
 msgid "Release"
 msgstr "Lanzamiento"
 
-#: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:31
+#: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:41
 #: ../templates/team.tmpl:57
 msgid "Graph"
 msgstr "Gráfico"
@@ -1524,25 +1542,31 @@ msgstr "Interfaz de usuario"
 msgid "-"
 msgstr "-"
 
-#: ../templates/show-stats.tmpl:12
+#: ../templates/show-stats.tmpl:15
+msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
+msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
+msgstr[0] "Archivo POT (%(potsize)s mensaje), %(number)s %(figures)s)"
+msgstr[1] "Archivo POT (%(potsize)s mensajes), %(number)s %(figures)s)"
+
+#: ../templates/show-stats.tmpl:17
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
 msgstr[0] "Archivo POT (%(potsize)s mensaje)"
 msgstr[1] "Archivo POT (%(potsize)s mensajes)"
 
-#: ../templates/show-stats.tmpl:16
+#: ../templates/show-stats.tmpl:22
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: ../templates/show-stats.tmpl:20
+#: ../templates/show-stats.tmpl:26
 msgid "Notices"
 msgstr "Notas"
 
-#: ../templates/show-stats.tmpl:31
+#: ../templates/show-stats.tmpl:37
 msgid "Language"
 msgstr "Idioma"
 
-#: ../templates/show-stats.tmpl:31
+#: ../templates/show-stats.tmpl:37
 msgid "Translated"
 msgstr "Traducido"
 
