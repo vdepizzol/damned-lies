@@ -1606,6 +1606,16 @@
     <branch id="gnome-2-20" stringfrozen="true"/>
   </module>
   <!-- Non-GNOME modules -->
+  <module id="gnucash">
+    <description>GNUCash</description>
+    <_comment>GNUCash is not part of the GNOME SVN repository. Please check <a href="http://wiki.gnucash.org/wiki/Translation#Submitting">the GNUCash Wiki</a> to see where to send translations.</_comment>
+    <webpage>http://www.gnucash.org</webpage>
+    <scmroot type="svn">
+      <path>http://svn.gnucash.org/repo</path>
+    </scmroot>
+    <scmweb>http://svn.gnucash.org/viewcvs/gnucash/trunk</scmweb>
+    <branch id="2.2"/>
+  </module>
   <module id="gstreamer">
     <webpage>http://gstreamer.freedesktop.org</webpage>
     <bugs-component>gstreamer (core)</bugs-component>

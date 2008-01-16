@@ -205,7 +205,7 @@ def _getString(node):
     s = u''
     child = node.children
     while child:
-        if child.type == 'text':
+        if child.type == 'text' or (child.type == 'element' and child.hasProp('href')):
             s += child.serialize('utf-8').decode('utf-8')
         child = child.next
     return s
@@ -217,7 +217,7 @@ def _node_is_text_only(node):
         child = node.children
         while child and child.isText():
             child = child.next
-        if child and not child.isText():
+        if child and not child.isText() and child.name != 'a'::
             return 0
         else:
             return 1
