@@ -217,7 +217,7 @@ def _node_is_text_only(node):
         child = node.children
         while child and child.isText():
             child = child.next
-        if child and not child.isText() and child.name != 'a'::
+        if child and not child.isText() and child.name != 'a':
             return 0
         else:
             return 1
