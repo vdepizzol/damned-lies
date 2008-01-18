@@ -60,7 +60,8 @@ def readFromFile(filename, only_id = None, force_en = False):
             except:
                 # ignore if we can't write out picklefile, it will only be slower
                 import sys
-                print >>sys.stderr, "Warning: can't write out pickle file '%s' for '%s'. Performance will suffer." % (picklefile, filename)
+                if defaults.DEBUG:
+                    print >>sys.stderr, "Warning: can't write out pickle file '%s' for '%s'. Performance will suffer." % (picklefile, filename)
 
         return dict
 

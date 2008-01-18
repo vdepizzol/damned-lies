@@ -489,7 +489,8 @@ might be worth investigating.
                         import os.path
                         incfile = os.path.join(os.path.dirname(file), os.path.basename(match.group(1)))
                         if incfile.find("gnome-doc-utils.make")==-1:
-                            print >>sys.stderr, "Reading file %s..." % (incfile)
+                            if defaults.DEBUG:
+                                print >>sys.stderr, "Reading file %s..." % (incfile)
                             var = self.read_makefile_variable(incfile, variable)
                             if var != "":
                                 return var
