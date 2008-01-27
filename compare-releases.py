@@ -28,7 +28,7 @@ if __name__ == "__main__":
                         total = mytotal
                 print "%s: %d langs, %d msgs" % (release, languages, total)
         else:
-            print "Usage:\n\t%s RELEASE1 [RELEASE2]...\n" % (sys.argv[0])
+            print "Sorry, unable to read file '%s' (modules_xml from defaults.py)" %defaults.modules_xml
     else:
         print "Usage:\n\t%s RELEASE1 [RELEASE2]...\n" % (sys.argv[0])
 
