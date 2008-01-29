@@ -8,7 +8,7 @@ import teams
 
 import potdiff
 
-import os, sys, commands, datetime
+import os, sys, re, commands, datetime
 
 class LocStatistics:
     """Generate all statistics for provided module and source code path."""
@@ -326,7 +326,6 @@ might be worth investigating.
                     errors.append(("warn", defaults.N_("Entry for this language is not present in LINGUAS file.")))
                 return errors
 
-        import re
         for configure in [configureac, configurein]:
             if not in_config and os.access(configure, os.R_OK):
                 cfile = open(configure, "r")
@@ -417,7 +416,6 @@ might be worth investigating.
         if msgfmt_checks and os.access(pofile, os.X_OK):
             errors.append(("warn", defaults.N_("This PO file has an executable bit set.")))
 
-        import re
         r_tr = re.search(r"([0-9]+) translated", output)
         r_un = re.search(r"([0-9]+) untranslated", output)
         r_fz = re.search(r"([0-9]+) fuzzy", output)
@@ -470,8 +468,11 @@ might be worth investigating.
 
 
     def read_makefile_variable(self, file, variable):
-        import re
-        fin = open(file, "r")
+        try:
+            fin = open(file, "r")
+        except IOError:
+            # probably file not found or unreadable
+            return None
 
         fullline = ""
         for line in fin:
@@ -516,15 +517,27 @@ might be worth investigating.
 
         # read interesting variables from the Makefile.am
         makefileam = os.path.join(sourcedir, "Makefile.am")
-        try:
+        if os.access(makefileam, os.R_OK):
             modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
             includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
-            entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
-            figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
+            # DOC_ENTITIES and DOC_FIGURES not used yet in this function
+        else:
+            modulename = moduleid
+            includes = "" # No support yet for includes for non-automake modules
+        
+        # Try to get languages from LINGUAS first, then from DOC_LINGUAS var in Makefile.am
+        linguasfile = os.path.join(sourcedir, "LINGUAS")
+        if os.access(linguasfile, os.R_OK):
+            languages = [] 
+            lfile = open(linguasfile, "r")
+            for line in lfile:
+                line = line.strip()
+                if len(line) and line[0]=="#": continue
+                for lang in line.split(" "):
+                    languages.append(lang)
+            lfile.close()
+        else:
             languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
-        except IOError:
-            # probably file not found or unreadable
-            modulename = None
 
         # Generate POT file
         try: os.makedirs(out_dir)
@@ -660,11 +673,17 @@ might be worth investigating.
         """
         # read interesting variables from the Makefile.am
         makefileam = os.path.join(sourcedir, "Makefile.am")
-        modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
-        includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
-        entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
-        figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
-        languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
+        if os.access(makefileam, os.R_OK):
+            modulename = self.read_makefile_variable(makefileam, "DOC_MODULE")
+            includes = self.read_makefile_variable(makefileam, "DOC_INCLUDES")
+            # entities and languages variables not used yet in this function
+            #entitites = self.read_makefile_variable(makefileam, "DOC_ENTITIES")
+            #languages = self.read_makefile_variable(makefileam, "DOC_LINGUAS")
+            figures = self.read_makefile_variable(makefileam, "DOC_FIGURES")
+        else:
+            modulename = docbase
+            includes = "" # No support yet for includes for non-automake modules
+            figures = extract_figure_list(self, pofile)
 
         try: os.makedirs(os.path.join(out_dir, lang))
         except: pass
@@ -704,6 +723,18 @@ might be worth investigating.
             if defaults.DEBUG: print >>sys.stderr, command
             (error, output) = commands.getstatusoutput(command)
             if defaults.DEBUG: print >> sys.stderr, output
+
+    def extract_figure_list(self, pofile):
+        figlist = []
+        command = "grep %(pofile)s '^msgid \"@@image:'" % { 'pofile': pofile }
+        (error, output) = commands.getstatusoutput(command)
+        lines = output.split('\n')
+        re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
+        for line in lines:
+            path_match = re_path.match(line)
+            if path_match and len(path_match.groups()):
+                figlist.append(path_match.group(1))
+        return figlist
 
 if __name__ == "__main__":
     import sys, os

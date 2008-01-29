@@ -334,6 +334,13 @@
     <branch id="HEAD"/>
   </module>
   <module id="fantasdic">
+    <defaults>
+      <branch>
+        <document id="help">
+          <directory>data/gnome/help/fantasdic</directory>
+        </document>
+      </branch>
+    </defaults>
     <branch id="HEAD"/>
   </module>
   <module id="fast-user-switch-applet">
