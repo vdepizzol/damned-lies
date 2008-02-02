@@ -73,11 +73,11 @@
     <_description>Banshee Music Player</_description>
     <webpage>http://banshee-project.org/</webpage>
     <maintainer id="abock"/>
-    <scmmodule>banshee</scmmodule>
     <branch id="HEAD">
-      <domain id="banshee/po" potbase="banshee">
-        <_description>UI translations</_description>
-      </domain>
+      <subpath>banshee</subpath>
+    </branch>
+    <branch id="banshee">
+      <subpath>stable</subpath>
     </branch>
   </module>
   <module id="banter">
@@ -1473,12 +1473,9 @@
   <module id="release-notes-2-18">
     <_description>GNOME 2.18 Release Notes</_description>
     <scmmodule>gnomeweb-wml</scmmodule>
-    <scmroot type="svn">
-      <path>http://svn.gnome.org/svn</path>
-      <subpath>www.gnome.org/start/2.18/notes</subpath>
-    </scmroot>
     <scmweb>http://svn.gnome.org/viewcvs/gnomeweb-wml/trunk/www.gnome.org/start/2.18/notes</scmweb>
     <branch id="HEAD">
+      <subpath>www.gnome.org/start/2.18/notes</subpath>
       <document id="release-notes-2.18">
         <_description>GNOME 2.18 Release Notes</_description>
         <directory>docbook</directory>
@@ -1488,12 +1485,9 @@
   <module id="release-notes-2-20">
     <_description>GNOME 2.20 Release Notes</_description>
     <scmmodule>gnomeweb-wml</scmmodule>
-    <scmroot type="svn">
-      <path>http://svn.gnome.org/svn</path>
-      <subpath>www.gnome.org/start/2.20/notes</subpath>
-    </scmroot>
     <scmweb>http://svn.gnome.org/viewcvs/gnomeweb-wml/trunk/www.gnome.org/start/2.20/notes</scmweb>
     <branch id="HEAD">
+      <subpath>www.gnome.org/start/2.20/notes</subpath>
       <document id="release-notes-2.20">
         <_description>GNOME 2.20 Release Notes</_description>
         <directory>docbook</directory>

@@ -135,8 +135,8 @@ class ScmModule:
                     svnpath += "/trunk"
                 else:
                     svnpath += "/branches/" + branch
-                if self.module["scmroot"].has_key("subpath"):
-                    svnpath += "/%s" % self.module["scmroot"]["subpath"]
+                if self.module["branch"][branch].has_key("subpath"):
+                    svnpath += "/%s" % self.module["branch"][branch]["subpath"]
                 commandList.append("cd \"%(localroot)s\" && svn co --non-interactive %(svnpath)s \"%(dir)s\"" % {
                     "localroot" : localroot,
                     "svnpath" : svnpath,

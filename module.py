@@ -211,7 +211,7 @@ class ModuleImagesPageRequest(DamnedRequest):
         podoc = os.path.join(defaults.scratchdir,podir,document[docid]['id']+'.'+branch+'.'+langid+'.po')
         
         # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
-        command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 'msgid \"@@image:'" % { 'pofile': podoc }
+        command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % { 'pofile': podoc }
         (error, output) = commands.getstatusoutput(command)
         lines = output.split('\n')
         re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
