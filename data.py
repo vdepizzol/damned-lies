@@ -20,7 +20,6 @@ def getReleases(only = None):
 
 def readFromFile(filename, only_id = None, force_en = False):
     """Reads XML file or pickle-cached copy of it (while also keeping it up-to-date)."""
-    import os
 
     if not force_en:
         myfilename = filename.replace('po/', 'po/'+defaults.language+'/')
