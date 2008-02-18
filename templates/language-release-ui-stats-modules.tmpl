@@ -28,7 +28,11 @@
      #end if
      #set POINFO=$domain.pot_messages+$domain.po_messages
 
-     <tr>
+    #if $domain.supportedness == 100
+    <tr id="${moduleid}-${domain.potbase}-complete">
+    #else
+    <tr>
+    #end if
       #if len($module.translation_domains.keys()) > 1
        <td class="leftcell" style="padding-left:2em; padding-right:2em;" title="module: '$module.scmmodule/$domaindir', branch: '$module.branch'">
        	 <a href="$POFILE"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${domain.description}

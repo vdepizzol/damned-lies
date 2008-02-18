@@ -1,3 +1,18 @@
+2008-02-18  Claude Paroz  <claude@2xlibre.net>
+
+	* people.xml.in: Updated French guys.
+	* data/main.css:
+	* data/main.js:
+	* templates/header.tmpl:
+	* templates/language-release-doc-stats-modules.tmpl:
+	* templates/language-release-doc-stats.tmpl:
+	* templates/language-release-ui-stats-modules.tmpl:
+	* templates/language-release-ui-stats.tmpl:
+	* templates/language-release.tmpl:
+	Added patch from Gil Forcada to show/hide completed modules on language
+	release pages.
+	Fixes #106779.
+
 2008-02-14  Claude Paroz  <claude@2xlibre.net>
 
 	* people.xml.in: Updated Nepali coordinator address.

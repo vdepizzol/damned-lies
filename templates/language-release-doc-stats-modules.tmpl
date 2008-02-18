@@ -28,8 +28,11 @@
      #end if
      #set POINFO=$document.po_messages+$document.pot_messages
 
-
+     #if $document.supportedness == 100
+     <tr id="${moduleid}-${$document.potbase}-complete">
+     #else
      <tr>
+     #end if
        #if len($module.documents.keys()) > 1
         <td class="leftcell" style="padding-left:2em; padding-right:2em;">
          <a href="$POFILE" title="module: '$module.scmmodule/$docdir', branch: '$module.branch'"><img src="${webroot}/data/download.png" alt="$_("Download po file")"/></a>${document.description}

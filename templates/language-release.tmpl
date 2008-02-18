@@ -47,6 +47,15 @@
 </td></tr></table>
 
 <h2>$release.description</h2>
+
+<p id="hide">
+   <a href="#" onclick="return showHideCompleted();">$_("Hide completed modules")</a>
+</p>
+
+<p id="show" style="display:none">
+   <a href="#" onclick="return showHideCompleted();">$_("Show completed modules")</a>
+</p>
+
 #if $release.status=="external"
 <p><i>$_("The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations.")</i></p>
 #end if
