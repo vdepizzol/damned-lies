@@ -6,17 +6,19 @@ function showHideCompleted() {
     var regex = /complete$/i;
 
     var doc = document.getElementById("documentation");
-    var translations = doc.getElementsByTagName("tr");
+    if (doc) {
+        var translations = doc.getElementsByTagName("tr");
 
-    for(var i=0;i<translations.length;i++) {
-        if ( regex.exec(translations[i].id) ) {
-            if ( translations[i].style.display != 'none' ) {
-                translations[i].style.display = 'none';
+        for(var i=0;i<translations.length;i++) {
+            if ( regex.exec(translations[i].id) ) {
+                if ( translations[i].style.display != 'none' ) {
+                    translations[i].style.display = 'none';
+                }
+                else {
+                    translations[i].style.display = '';
+                }
             }
-            else {
-                translations[i].style.display = '';
-            }
-        }
+	    }
 	}
 	
     var ui = document.getElementById("user-interface");

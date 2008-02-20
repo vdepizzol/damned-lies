@@ -152,7 +152,7 @@ class Releases:
                                                                                    }
                         if mypot:
                             myun = mypot - mytr - myfz # XXX
-                            ui_supp = "%.0f" % (100.0*mytr/mypot)
+                            ui_supp = 100*mytr/mypot
                             ui_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
                             myun = mypot; ui_supp = "0"
@@ -196,7 +196,7 @@ class Releases:
                                                                          }
                         if mypot:
                             myun = mypot - mytr - myfz # XXX
-                            doc_supp = "%.0f" % (100.0*mytr/mypot)
+                            doc_supp = 100*mytr/mypot
                             doc_percentages = { 'translated': 100*mytr/mypot, 'fuzzy': 100*myfz/mypot, 'untranslated': 100*myun/mypot }
                         else:
                             myun = mypot; doc_supp = "0"

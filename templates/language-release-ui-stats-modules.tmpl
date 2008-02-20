@@ -6,7 +6,11 @@
    #if $module.has_key('statistics') and $module.statistics.ui_size!=0
 
     #if len($module.translation_domains.keys()) > 1
+    #if $module.statistics.ui_supportedness == 100
+    <tr id="${moduleid}-ui-complete">
+    #else
     <tr>
+    #end if
       <td class="leftcell"><a href="${webroot}/module/${moduleid}" style="font-style: italic;">${module.description}</a></td>
       <td>${module.statistics.ui_supportedness}%&nbsp;<!--
 	-->($module.statistics.ui_translated/$module.statistics.ui_fuzzy/$module.statistics.ui_untranslated)</td>

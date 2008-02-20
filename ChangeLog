@@ -1,3 +1,11 @@
+2008-02-20  Claude Paroz  <claude@2xlibre.net>
+
+	* data/main.js: Check if doc returned any result (if no docs on page).
+	* releases.py: Supportedness floor-rounded.
+	* templates/language-release-doc-stats-modules.tmpl:
+	* templates/language-release-ui-stats-modules.tmpl: Also set <tr> id for
+	module group headers.
+
 2008-02-20  Johannes Schmid <jhs@gnome.org>
 
 	* gnome-modules.xml.in: gdm trunk is NOT stringfrozen anymore
