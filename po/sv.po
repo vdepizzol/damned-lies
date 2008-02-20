@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-19 16:15+0100\n"
-"PO-Revision-Date: 2008-01-19 16:16+0100\n"
+"POT-Creation-Date: 2008-02-20 19:10+0100\n"
+"PO-Revision-Date: 2008-02-20 19:11+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgid "Criawips Manual"
 msgstr "Handbok för Criawips"
 
 #: ../gnome-modules.xml.in.h:17
-#: ../templates/header.tmpl:54
+#: ../templates/header.tmpl:56
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
 
@@ -355,7 +355,7 @@ msgid "System Monitor Manual"
 msgstr "Handbok för Systemövervakare"
 
 #: ../gnome-modules.xml.in.h:86
-#: ../templates/language-release.tmpl:63
+#: ../templates/language-release.tmpl:72
 msgid "UI translations"
 msgstr "Gränssnittsöversättningar"
 
@@ -1063,71 +1063,71 @@ msgstr "Det finns inget översättningsteam som ansvarar för översättningen t
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
-#: ../update-stats.py:354
+#: ../update-stats.py:353
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
-#: ../update-stats.py:357
+#: ../update-stats.py:356
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
-#: ../update-stats.py:371
+#: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fel vid körning av \"intltool-update -m\"."
 
-#: ../update-stats.py:377
+#: ../update-stats.py:376
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Det saknas filer i POTFILES.in: %s"
 
-#: ../update-stats.py:386
+#: ../update-stats.py:385
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, men de finns ännu inte: %s"
 
-#: ../update-stats.py:400
+#: ../update-stats.py:399
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "PO-filen \"%s\" finns inte."
 
-#: ../update-stats.py:413
+#: ../update-stats.py:412
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
-#: ../update-stats.py:415
+#: ../update-stats.py:414
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
-#: ../update-stats.py:418
+#: ../update-stats.py:417
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
-#: ../update-stats.py:444
+#: ../update-stats.py:442
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
-#: ../update-stats.py:514
+#: ../update-stats.py:515
 msgid "Can't find checkout directory."
 msgstr "Kan inte hitta utcheckningskatalogen."
 
-#: ../update-stats.py:534
+#: ../update-stats.py:547
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
-#: ../update-stats.py:539
+#: ../update-stats.py:552
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
 
-#: ../update-stats.py:542
+#: ../update-stats.py:555
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE pekar inte till en verklig fil, antagligen ett makro."
 
-#: ../update-stats.py:568
+#: ../update-stats.py:581
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1138,12 +1138,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:597
+#: ../update-stats.py:610
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "Det finns inget översättningsteam som ansvarar för %s."
 
-#: ../update-stats.py:641
+#: ../update-stats.py:654
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
@@ -1159,50 +1159,50 @@ msgstr "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/
 msgid "Hosted by"
 msgstr "Driftas av"
 
-#: ../templates/header.tmpl:32
-#: ../templates/header.tmpl:61
+#: ../templates/header.tmpl:34
+#: ../templates/header.tmpl:63
 msgid "Home"
 msgstr "Hem"
 
-#: ../templates/header.tmpl:35
+#: ../templates/header.tmpl:37
 msgid "News"
 msgstr "Nyheter"
 
-#: ../templates/header.tmpl:38
+#: ../templates/header.tmpl:40
 msgid "Projects"
 msgstr "Projekt"
 
-#: ../templates/header.tmpl:41
+#: ../templates/header.tmpl:43
 msgid "Art"
 msgstr "Grafik"
 
-#: ../templates/header.tmpl:44
+#: ../templates/header.tmpl:46
 msgid "Support"
 msgstr "Support"
 
-#: ../templates/header.tmpl:47
+#: ../templates/header.tmpl:49
 msgid "Development"
 msgstr "Utveckling"
 
-#: ../templates/header.tmpl:50
+#: ../templates/header.tmpl:52
 msgid "Community"
 msgstr "Gemenskap"
 
-#: ../templates/header.tmpl:67
+#: ../templates/header.tmpl:69
 #: ../templates/index.tmpl:13
 msgid "Teams"
 msgstr "Team"
 
-#: ../templates/header.tmpl:72
+#: ../templates/header.tmpl:74
 #: ../templates/index.tmpl:20
 msgid "Languages"
 msgstr "Språk"
 
-#: ../templates/header.tmpl:77
+#: ../templates/header.tmpl:79
 msgid "Release sets"
 msgstr "Utgåvesamlingar"
 
-#: ../templates/header.tmpl:82
+#: ../templates/header.tmpl:84
 #: ../templates/index.tmpl:35
 msgid "Modules"
 msgstr "Moduler"
@@ -1322,12 +1322,20 @@ msgstr "Prenumerera"
 msgid "Coordinator"
 msgstr "Koordinator"
 
-#: ../templates/language-release.tmpl:51
+#: ../templates/language-release.tmpl:52
+msgid "Hide completed modules"
+msgstr "Dölj färdiga moduler"
+
+#: ../templates/language-release.tmpl:56
+msgid "Show completed modules"
+msgstr "Visa färdiga moduler"
+
+#: ../templates/language-release.tmpl:60
 #: ../templates/release.tmpl:9
 msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
-#: ../templates/language-release.tmpl:57
+#: ../templates/language-release.tmpl:66
 #: ../templates/module.tmpl:73
 #: ../templates/release.tmpl:15
 #: ../templates/team.tmpl:57
