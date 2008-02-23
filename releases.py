@@ -392,9 +392,11 @@ def get_modules_for_release(release):
     return modules
 
 def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
+    """ release is the id of a release (e.g. 'gnome-2-20') """
     # Initialise modules
     modules = []
 
+    allmodules = data.getModules()
     releases = data.getReleases()
     if releases.has_key(release):
         myrelease = releases[release]
@@ -424,39 +426,41 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
                                     Statistics.q.Branch == branch,
                                     Statistics.q.Language == None))
         for stat in list(res):
-            un = stat.Untranslated
-            type = stat.Type
-            if type=='ui': totalpot += un
-            elif type=='doc': dtotalpot += un
+            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain):
+                un = stat.Untranslated
+                type = stat.Type
+                if type=='ui': totalpot += un
+                elif type=='doc': dtotalpot += un
 
     for (modid, branch) in modules:
         res = Statistics.select(AND(Statistics.q.Module == modid,
                                     Statistics.q.Branch == branch,
                                     Statistics.q.Language != None))
         for stat in list(res):
-            type = stat.Type
-            if type not in ['ui', 'doc']: continue
+            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain):
+                type = stat.Type
+                if type not in ['ui', 'doc']: continue
 
-            lang = stat.Language
-            if lang not in stats:
-                stats[lang] = {
-                    'code' : lang,
-                    'name' : lang,
-                    'ui_translated' : 0,
-                    'ui_fuzzy' : 0,
-                    'ui_untranslated' : 0,
-                    'doc_translated' : 0,
-                    'doc_fuzzy' : 0,
-                    'doc_untranslated' : 0,
-                    'errors': [('error' , "There is no translation team for '%s' in Gnome." % lang)],
-                    }
+                lang = stat.Language
+                if lang not in stats:
+                    stats[lang] = {
+                        'code' : lang,
+                        'name' : lang,
+                        'ui_translated' : 0,
+                        'ui_fuzzy' : 0,
+                        'ui_untranslated' : 0,
+                        'doc_translated' : 0,
+                        'doc_fuzzy' : 0,
+                        'doc_untranslated' : 0,
+                        'errors': [('error' , "There is no translation team for '%s' in Gnome." % lang)],
+                        }
 
-            tr = stat.Translated
-            fz = stat.Fuzzy
+                tr = stat.Translated
+                fz = stat.Fuzzy
 
-            stats[lang][type + '_translated'] += tr
-            stats[lang][type + '_fuzzy'] += fz
-            stats[lang][type + '_untranslated'] += un
+                stats[lang][type + '_translated'] += tr
+                stats[lang][type + '_fuzzy'] += fz
+                stats[lang][type + '_untranslated'] += un
 
     result = []
     if totalpot:
