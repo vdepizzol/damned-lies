@@ -426,7 +426,8 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
                                     Statistics.q.Branch == branch,
                                     Statistics.q.Language == None))
         for stat in list(res):
-            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain):
+            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain) or \
+               allmodules[stat.Module]['branch'][stat.Branch]['document'].has_key(stat.Domain):
                 un = stat.Untranslated
                 type = stat.Type
                 if type=='ui': totalpot += un
@@ -437,7 +438,8 @@ def get_aggregate_stats(release, releasesfile = defaults.releases_xml):
                                     Statistics.q.Branch == branch,
                                     Statistics.q.Language != None))
         for stat in list(res):
-            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain):
+            if allmodules[stat.Module]['branch'][stat.Branch]['domain'].has_key(stat.Domain) or \
+               allmodules[stat.Module]['branch'][stat.Branch]['document'].has_key(stat.Domain):
                 type = stat.Type
                 if type not in ['ui', 'doc']: continue
 

@@ -1,5 +1,10 @@
 2008-02-23  Claude Paroz  <claude@2xlibre.net>
 
+	* releases.py: Omitted in previous commit to test also the 'document' key
+	for docs.
+
+2008-02-23  Claude Paroz  <claude@2xlibre.net>
+
 	* releases.py: Check in get_aggregate_stats that all domains retrieved
 	from database are valid domains.
 	Fixes (hopefully!) #416009.
