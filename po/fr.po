@@ -1,5 +1,5 @@
 # French translation of damned-lies.
-# Copyright (C) 2007 Free Software Foundation, Inc.
+# Copyright (C) 2007-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the damned-lies package.
 #
 # Claude Paroz <claude@2xlibre.net>, 2007-2008.
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-20 21:43+0100\n"
-"PO-Revision-Date: 2008-01-20 21:45+0100\n"
+"POT-Creation-Date: 2008-02-23 10:24+0100\n"
+"PO-Revision-Date: 2008-02-23 10:28+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr "Manuel de la Ligne de commande"
 msgid "Criawips Manual"
 msgstr "Manuel de Criawips"
 
-#: ../gnome-modules.xml.in.h:17 ../templates/header.tmpl:54
+#: ../gnome-modules.xml.in.h:17 ../templates/header.tmpl:56
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
@@ -360,7 +360,7 @@ msgstr "Guide d'administration système"
 msgid "System Monitor Manual"
 msgstr "Manuel du Moniteur système"
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:63
+#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:72
 msgid "UI translations"
 msgstr "Traductions de l'interface utilisateur"
 
@@ -1069,14 +1069,14 @@ msgstr "Il n'existe pas d'équipe de traduction pour la traduction de « %s »
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Le fichier LINGUAS ne contient pas de référence à cette langue."
 
-#: ../update-stats.py:354
+#: ../update-stats.py:353
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La variable ALL_LINGUAS du fichier « configure » ne contient pas de "
 "référence à cette langue."
 
-#: ../update-stats.py:357
+#: ../update-stats.py:356
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1084,18 +1084,18 @@ msgstr ""
 "Aucune idée de l'endroit où se trouve la référence aux langues vraiment "
 "utilisées, demandez au mainteneur du module."
 
-#: ../update-stats.py:371
+#: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
 msgstr ""
 "Des erreurs se sont produites lors de la vérification par « intltool-update -"
 "m »."
 
-#: ../update-stats.py:377
+#: ../update-stats.py:376
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Il manque des fichiers dans POTFILES.in : %s"
 
-#: ../update-stats.py:386
+#: ../update-stats.py:385
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1104,55 +1104,55 @@ msgstr ""
 "Les fichiers suivants sont référencés dans POTFILES.in ou dans POTFILES."
 "skip, mais ils n'existent pas : %s"
 
-#: ../update-stats.py:400
+#: ../update-stats.py:399
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "Le fichier PO « %s » n'existe pas."
 
-#: ../update-stats.py:413
+#: ../update-stats.py:412
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "Le fichier PO « %s » ne passe pas la vérification par « msgfmt » : pas de "
 "mise à jour."
 
-#: ../update-stats.py:415
+#: ../update-stats.py:414
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Impossible d'obtenir les statistiques pour le fichier POT « %s »."
 
-#: ../update-stats.py:418
+#: ../update-stats.py:417
 msgid "This PO file has an executable bit set."
 msgstr "Le bit d'exécution de ce fichier PO est activé."
 
-#: ../update-stats.py:444
+#: ../update-stats.py:442
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Le fichier PO « %s » n'est pas codé en UTF-8."
 
-#: ../update-stats.py:513
+#: ../update-stats.py:515
 msgid "Can't find checkout directory."
 msgstr "Impossible de trouver le répertoire des fichiers source."
 
-#: ../update-stats.py:533
+#: ../update-stats.py:547
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Le module %s ne semble pas être conforme à la norme gnome-doc-utils."
 
-#: ../update-stats.py:538
+#: ../update-stats.py:552
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "La variable DOC_MODULE ne correspond pas à un fichier réel, utilisation de "
 "« %s.xml »."
 
-#: ../update-stats.py:541
+#: ../update-stats.py:555
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr ""
 "La variable DOC_MODULE ne correspond pas à un fichier réel, il s'agit "
 "probablement d'une macro."
 
-#: ../update-stats.py:567
+#: ../update-stats.py:581
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1163,12 +1163,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:596
+#: ../update-stats.py:610
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "Il n'existe aucune équipe de traduction responsable de %s."
 
-#: ../update-stats.py:640
+#: ../update-stats.py:654
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
@@ -1190,47 +1190,47 @@ msgstr ""
 msgid "Hosted by"
 msgstr "Hébergé par"
 
-#: ../templates/header.tmpl:32 ../templates/header.tmpl:61
+#: ../templates/header.tmpl:34 ../templates/header.tmpl:63
 msgid "Home"
 msgstr "Accueil"
 
-#: ../templates/header.tmpl:35
+#: ../templates/header.tmpl:37
 msgid "News"
 msgstr "Actualités"
 
-#: ../templates/header.tmpl:38
+#: ../templates/header.tmpl:40
 msgid "Projects"
 msgstr "Projets"
 
-#: ../templates/header.tmpl:41
+#: ../templates/header.tmpl:43
 msgid "Art"
 msgstr "Art"
 
-#: ../templates/header.tmpl:44
+#: ../templates/header.tmpl:46
 msgid "Support"
 msgstr "Assistance"
 
-#: ../templates/header.tmpl:47
+#: ../templates/header.tmpl:49
 msgid "Development"
 msgstr "Développement"
 
-#: ../templates/header.tmpl:50
+#: ../templates/header.tmpl:52
 msgid "Community"
 msgstr "Communauté"
 
-#: ../templates/header.tmpl:67 ../templates/index.tmpl:13
+#: ../templates/header.tmpl:69 ../templates/index.tmpl:13
 msgid "Teams"
 msgstr "Équipes"
 
-#: ../templates/header.tmpl:72 ../templates/index.tmpl:20
+#: ../templates/header.tmpl:74 ../templates/index.tmpl:20
 msgid "Languages"
 msgstr "Langues"
 
-#: ../templates/header.tmpl:77
+#: ../templates/header.tmpl:79
 msgid "Release sets"
 msgstr "Groupes de versions"
 
-#: ../templates/header.tmpl:82 ../templates/index.tmpl:35
+#: ../templates/header.tmpl:84 ../templates/index.tmpl:35
 msgid "Modules"
 msgstr "Modules"
 
@@ -1380,7 +1380,15 @@ msgstr "Abonnement"
 msgid "Coordinator"
 msgstr "Coordinateur"
 
-#: ../templates/language-release.tmpl:51 ../templates/release.tmpl:9
+#: ../templates/language-release.tmpl:52
+msgid "Hide completed modules"
+msgstr "Masquer les modules entièrement traduits"
+
+#: ../templates/language-release.tmpl:56
+msgid "Show completed modules"
+msgstr "Afficher les modules entièrement traduits"
+
+#: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1389,7 +1397,7 @@ msgstr ""
 "Consultez la page Web de chaque module pour savoir où envoyer les "
 "traductions."
 
-#: ../templates/language-release.tmpl:57 ../templates/module.tmpl:73
+#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:57
 msgid "Documentation"
 msgstr "Documentation"
@@ -1618,6 +1626,3 @@ msgstr "Traduit"
 
 #~ msgid "New module proposals"
 #~ msgstr "Propositions de nouveaux modules"
-
-#~ msgid "Core"
-#~ msgstr "Noyau"
