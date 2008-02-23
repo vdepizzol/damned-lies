@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-23 21:56+0100\n"
-"PO-Revision-Date: 2008-02-23 22:57+0100\n"
+"POT-Creation-Date: 2008-02-23 23:24+0100\n"
+"PO-Revision-Date: 2008-02-23 23:24+0100\n"
 "Last-Translator: Åsmund Skjæveland <aasmunds@ulrik.uio.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -31,12 +31,10 @@ msgid "AisleRiot Manual"
 msgstr "AisleRiot-rettleiing"
 
 #: ../gnome-modules.xml.in.h:5
-#, fuzzy
 msgid "Anjuta Manual"
-msgstr "Manuell"
+msgstr "Anjuta-rettleiing"
 
 #: ../gnome-modules.xml.in.h:6
-#, fuzzy
 msgid "Banshee Music Player"
 msgstr "Banshee musikkavspelar"
 
@@ -259,7 +257,9 @@ msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
-msgstr "er lik ikkje av GNOME<a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\"></a>."
+msgstr ""
+"er lik ikkje av GNOME<a href=\"http://wiki.gnucash.org/wiki/"
+"Translation#Submitting\"></a>."
 
 #: ../gnome-modules.xml.in.h:52
 msgid "GPL License"
@@ -1162,7 +1162,8 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Dette språket er ikkje ført opp i LINGUAS-fila."
 
 #: ../update-stats.py:353
-msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Dette språket er ikkje ført opp i ALL_LINGUAS i configure-fila."
 
 #: ../update-stats.py:356
@@ -1182,8 +1183,7 @@ msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Det manglar nokre filer frå POTFILES.in: %s"
 
 #: ../update-stats.py:385
-#, python-format
-#, fuzzy
+#, fuzzy, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
 "they don't exist: %s"
@@ -1261,7 +1261,9 @@ msgid ""
 "Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
 "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
 "org</a>"
-msgstr "tm<a href=\"http://svn.gnome.org/viewvc/damned-lies/\"></a> på<a href=\"http://svn.gnome.org/\"></a>"
+msgstr ""
+"tm<a href=\"http://svn.gnome.org/viewvc/damned-lies/\"></a> på<a href="
+"\"http://svn.gnome.org/\"></a>"
 
 #: ../templates/footer.tmpl:8
 msgid "Hosted by"
@@ -1321,24 +1323,31 @@ msgstr "Fordømte løgner om GNOME"
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
-msgstr "Liste over alle GNOME-omsetjingslag, med full informasjon så som hovudkontakt (koordinator), nettsider og e-post-listeinformasjon."
+msgstr ""
+"Liste over alle GNOME-omsetjingslag, med full informasjon så som "
+"hovudkontakt (koordinator), nettsider og e-post-listeinformasjon."
 
 #: ../templates/index.tmpl:15
 #, fuzzy
 msgid ""
 "If there is no team for your language, you can easily <a href=\"http://live."
 "gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
-msgstr "er lik nei i<a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\"></a>."
+msgstr ""
+"er lik nei i<a href=\"http://live.gnome.org/TranslationProject/StartingATeam/"
+"\"></a>."
 
 #: ../templates/index.tmpl:21
-msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+msgid ""
+"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr "Liste over alle språka som har <a href=\"teams/\">omsetjingslag</a>."
 
 #: ../templates/index.tmpl:22
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
-msgstr "Somme lag arbeider med meir enn eitt språk (vanlegvis enkle variantar), og her kan du sjå alle språka GNOME vert omsett til."
+msgstr ""
+"Somme lag arbeider med meir enn eitt språk (vanlegvis enkle variantar), og "
+"her kan du sjå alle språka GNOME vert omsett til."
 
 #: ../templates/index.tmpl:26
 msgid "Release Sets"
@@ -1404,10 +1413,9 @@ msgstr ""
 #: ../templates/language-release-doc-stats.tmpl:26
 #: ../templates/language-release-ui-stats.tmpl:27
 msgid "%(cat)s (%(percent)s%% translated)"
-msgstr ""
+msgstr "%(cat)s (%(percent)s %% omsett)"
 
 #: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
-#, fuzzy
 msgid "Details"
 msgstr "Detaljar"
 
@@ -1423,7 +1431,7 @@ msgstr "Brukarar Vev Side:"
 
 #: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
 msgid "Bugzilla:"
-msgstr ""
+msgstr "Bugzilla:"
 
 #: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
 #, fuzzy
@@ -1436,17 +1444,14 @@ msgid "Show Existing Bugs"
 msgstr "Vis"
 
 #: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
-#, fuzzy
 msgid "Mailing List:"
-msgstr "Liste:"
+msgstr "E-postliste:"
 
 #: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
-#, fuzzy
 msgid "Send e-mail to the list"
-msgstr "Send e e-post liste"
+msgstr "Send e-post til lista"
 
 #: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
-#, fuzzy
 msgid "Subscribe"
 msgstr "Abonnér"
 
@@ -1456,12 +1461,11 @@ msgstr ""
 
 #: ../templates/language-release.tmpl:52
 msgid "Hide completed modules"
-msgstr ""
+msgstr "Gøym ferdige modular"
 
 #: ../templates/language-release.tmpl:56
-#, fuzzy
 msgid "Show completed modules"
-msgstr "Vis"
+msgstr "Vis ferdige modular"
 
 #: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
 #, fuzzy
@@ -1473,12 +1477,11 @@ msgstr "av ikkje av GNOME side."
 #: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:57
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentasjon"
 
 #: ../templates/list-languages.tmpl:7
-#, fuzzy
 msgid "GNOME Languages"
-msgstr "GNOME Språk"
+msgstr "GNOME-språk"
 
 #: ../templates/list-languages.tmpl:11
 #, fuzzy
@@ -1565,7 +1568,7 @@ msgstr "Nei fil"
 
 #: ../templates/module-images.tmpl:39
 msgid "Not translated"
-msgstr ""
+msgstr "Ikkje omsett"
 
 #: ../templates/module.tmpl:12
 #, fuzzy
@@ -1703,4 +1706,3 @@ msgstr "Språk"
 #: ../templates/show-stats.tmpl:37
 msgid "Translated"
 msgstr ""
-
