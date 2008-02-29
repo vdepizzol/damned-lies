@@ -22,7 +22,7 @@ def readFromFile(filename, only_id = None, force_en = False):
     """Reads XML file or pickle-cached copy of it (while also keeping it up-to-date)."""
 
     if not force_en:
-        myfilename = filename.replace('po/', 'po/'+defaults.language+'/')
+        myfilename = filename.replace('po/C/', 'po/'+defaults.language+'/')
         if os.access(myfilename, os.R_OK):
             filename = myfilename
 

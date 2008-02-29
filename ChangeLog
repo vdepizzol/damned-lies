@@ -1,5 +1,8 @@
 2008-02-29  Danilo Šegan  <danilo@gnome.org>
 
+	* data.py (readFromFile): use 'po/C/' as default path for
+	multi-merge (because of intltool change).
+
 	* potdiff.py (_parse_contents): Fix crash when empty contents.
 
 2008-02-28  Claude Paroz  <claude@2xlibre.net>
