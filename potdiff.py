@@ -54,7 +54,7 @@ def _parse_contents(contents):
 
          [msgctxt::]msgid[/msgid_plural]"""
 
-    if contents[-1] != "\n": contents += "\n"
+    if len(contents) and contents[-1] != "\n": contents += "\n"
 
     # state machine for parsing PO files
     msgid = ""; msgstr = ""; msgctxt = ""; comment = ""; plural = ""; 
