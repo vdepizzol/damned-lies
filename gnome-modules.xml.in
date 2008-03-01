@@ -1477,29 +1477,19 @@
   <module id="regexxer">
     <branch id="HEAD"/>
   </module>
-  <module id="release-notes-2-18">
-    <_description>GNOME 2.18 Release Notes</_description>
-    <scmmodule>gnomeweb-wml</scmmodule>
-    <scmweb>http://svn.gnome.org/viewcvs/gnomeweb-wml/trunk/www.gnome.org/start/2.18/notes</scmweb>
-    <branch id="HEAD">
-      <subpath>www.gnome.org/start/2.18/notes</subpath>
-      <document id="release-notes-2.18">
-        <_description>GNOME 2.18 Release Notes</_description>
-        <directory>docbook</directory>
-      </document>
-    </branch>
-  </module>
-  <module id="release-notes-2-20">
-    <_description>GNOME 2.20 Release Notes</_description>
-    <scmmodule>gnomeweb-wml</scmmodule>
-    <scmweb>http://svn.gnome.org/viewcvs/gnomeweb-wml/trunk/www.gnome.org/start/2.20/notes</scmweb>
-    <branch id="HEAD">
-      <subpath>www.gnome.org/start/2.20/notes</subpath>
-      <document id="release-notes-2.20">
-        <_description>GNOME 2.20 Release Notes</_description>
-        <directory>docbook</directory>
-      </document>
-    </branch>
+  <module id="release-notes">
+    <_description>GNOME Release Notes</_description>
+    <webpage>http://library.gnome.org/misc/release-notes/</webpage>
+    <bugs-product>website</bugs-product>
+    <defaults>
+      <branch>
+        <document id="help">
+          <_description>Release Notes</_description>
+        </document>
+      </branch>
+    </defaults>
+    <branch id="gnome-2-22"/>
+    <branch id="gnome-2-20"/>
   </module>
   <module id="resapplet">
     <branch id="HEAD"/>
