@@ -53,7 +53,7 @@ FILES=\
 po/%.xml: %.xml.in po/*.po
 	(cd po && intltool-merge -x -m . ../$< `basename $@`)
 
-all: po/gnome-modules.xml po/translation-teams.xml po/releases.xml po/people.xml
+all: po/C/gnome-modules.xml po/C/translation-teams.xml po/C/releases.xml po/C/people.xml
 	(cd po && make)
 
 dist: $(FILES)
