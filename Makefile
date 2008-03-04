@@ -50,7 +50,7 @@ FILES=\
         templates/team.tmpl
 
 
-po/%.xml: %.xml.in po/*.po
+po/C/%.xml: %.xml.in po/*.po
 	(cd po && intltool-merge -x -m . ../$< `basename $@`)
 
 all: po/C/gnome-modules.xml po/C/translation-teams.xml po/C/releases.xml po/C/people.xml
