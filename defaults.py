@@ -18,10 +18,10 @@ WHEREAREWE = 'http://i18n-status.gnome.org/'
 WHOAREWE = 'danilo@gnome.org'
 
 # Configuration files
-modules_xml = "po/gnome-modules.xml"
-releases_xml = "po/releases.xml"
-teams_xml = "po/translation-teams.xml"
-people_xml = "po/people.xml"
+modules_xml = "po/C/gnome-modules.xml"
+releases_xml = "po/C/releases.xml"
+teams_xml = "po/C/translation-teams.xml"
+people_xml = "po/C/people.xml"
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 notifications_to = 'gnome-i18n@gnome.org'
