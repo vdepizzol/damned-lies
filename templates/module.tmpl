@@ -62,7 +62,7 @@
 (<a href="$module['scmweb']">$_("Browse SVN")</a>)
 #end if
 </h2>
-#if $data.has_key('stringfrozen') and $data.stringfrozen
+#if $data.has_key('stringfrozen') and $data.stringfrozen=='true'
 <p>$_("This branch is currently string-frozen.")</p>
 #end if
 
