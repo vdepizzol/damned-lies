@@ -598,7 +598,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true">
+    <branch id="HEAD">
       <domain id="po"/>
     </branch>
     <branch id="gnome-2-14" stringfrozen="true">
@@ -616,6 +616,10 @@
     <branch id="gnome-2-20" stringfrozen="true">
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
+    </branch>
+    <branch id="gnome-2-22" stringfrozen="true">
+      <domain id="po-locations" potbase="gnome-applets-locations"/>
+      <domain id="po">
     </branch>
   </module>
   <module id="gnome-backgrounds">
