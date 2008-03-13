@@ -434,7 +434,7 @@
     </category>
   </release>
   <release id="gnome-2-20" status="official">
-    <_description>GNOME 2.20 (stable)</_description>
+    <_description>GNOME 2.20 (old stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-20"/>
@@ -532,13 +532,13 @@
     </category>
   </release>
   <release id="gnome-2-22" status="official">
-    <_description>GNOME 2.22 (development)</_description>
+    <_description>GNOME 2.22 (stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk"/>
       <module id="gail"/>
       <module id="gconf"/>
-      <module id="glib"/>
+      <module id="glib" branch="glib-2-16"/>
       <module id="gnome-vfs"/>
       <module id="gtk+" branch="gtk-2-12"/>
       <module id="libbonobo"/>
