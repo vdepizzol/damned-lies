@@ -13,7 +13,7 @@
     <category id="platform">
       <_description>Development Platform</_description>
       <module id="atk" branch="gnome-2-14"/>
-      <module id="gail"/>
+      <module id="gail" branch="gnome-2-18"/>
       <module id="gconf" branch="gnome-2-14"/>
       <module id="glib" branch="glib-2-10"/>
       <module id="gnome-vfs" branch="gnome-2-14"/>
@@ -256,8 +256,8 @@
     <_description>GNOME 2.16 (old stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
-      <module id="atk"/>
-      <module id="gail"/>
+      <module id="atk" branch="gnome-2-18"/>
+      <module id="gail" branch="gnome-2-18"/>
       <module id="gconf" branch="gnome-2-18"/>
       <module id="glib" branch="glib-2-12"/>
       <module id="gnome-vfs" branch="gnome-2-16"/>
@@ -535,8 +535,8 @@
     <_description>GNOME 2.22 (stable)</_description>
     <category id="platform">
       <_description>GNOME developer platform</_description>
-      <module id="atk"/>
-      <module id="gail"/>
+      <module id="atk" branch="gnome-2-22"/>
+      <module id="gail" branch="gnome-2-22"/>
       <module id="gconf"/>
       <module id="glib" branch="glib-2-16"/>
       <module id="gnome-vfs"/>
@@ -555,7 +555,7 @@
       <module id="dasher"/>
       <module id="deskbar-applet"/>
       <module id="eel"/>
-      <module id="ekiga" branch="gnome-2-20"/>
+      <module id="ekiga" branch="gnome-2-22"/>
       <module id="eog" branch="gnome-2-22"/>
       <module id="epiphany" branch="gnome-2-22"/>
       <module id="evince"/>
