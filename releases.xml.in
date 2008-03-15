@@ -438,6 +438,7 @@
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-20"/>
+      <module id="at-spi" branch="gnome-2-20"/>
       <module id="gail" branch="gnome-2-20"/>
       <module id="gconf" branch="gnome-2-20"/>
       <module id="glib" branch="glib-2-14"/>
@@ -536,6 +537,7 @@
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-22"/>
+      <module id="at-spi" branch="gnome-2-22"/>
       <module id="gail" branch="gnome-2-22"/>
       <module id="gconf"/>
       <module id="glib" branch="glib-2-16"/>
@@ -607,7 +609,7 @@
       <module id="libgweather"/>
       <module id="libwnck"/>
       <module id="metacity" branch="gnome-2-22"/>
-      <module id="mousetweaks"/>
+      <module id="mousetweaks" branch="gnome-2-22"/>
       <module id="nautilus"/>
       <module id="nautilus-cd-burner"/>
       <module id="orca" branch="gnome-2-22"/>

@@ -66,6 +66,11 @@
   <module id="atomix">
     <branch id="HEAD"/>
   </module>
+  <module id="at-spi">
+    <branch id="HEAD" stringfrozen="false"/>
+    <branch id="gnome-2-20" stringfrozen="true"/>
+    <branch id="gnome-2-22" stringfrozen="true"/>
+  </module>
   <module id="bakery">
     <branch id="HEAD"/>
   </module>
@@ -1380,7 +1385,8 @@
     <branch id="HEAD"/>
   </module>
   <module id="mousetweaks">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
+    <branch id="gnome-2-22" stringfrozen="true"/>
   </module>
   <module id="msm">
     <branch id="HEAD"/>
