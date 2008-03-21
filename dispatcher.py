@@ -54,7 +54,10 @@ class DamnedRequest:
             self.request = self.request[:-4]
             self.render('xml')
         else:
-            self.render('html')
+            try:
+                self.render('html')
+            except Exception, e:
+                self.render_html_error(e)
 
     def render(self, type='html', parameter=None):
         if type=='xml':
@@ -74,6 +77,17 @@ class DamnedRequest:
         global utils
         if type == 'html':
             print utils.TemplateInspector(tmpl)
+    
+    def render_html_error(self, err):
+        print "Content-type: text/html; charset=UTF-8\n"
+        print "<html><head><title>Damned Lies error</title><link rel='stylesheet' href='%s/data/layout.css'/></head>\n" % defaults.webroot
+        print "<body><div id='header'><h1>Damned Lies</h1><p>&nbsp;</p></div>"
+        print "<div id='content'><p>Sorry, an error occurred while processing the Web page.</p>\n"
+        print "<p>Error: %s</p>" % str(err)
+        if defaults.DEBUG:
+            print "<pre>%s</pre>" % traceback.format_exc()
+        print "<p>Return to <a href='%s'>Home page</a></p>" % defaults.webroot
+        print "</div></body></html>"
 
 class RequestMapper:
     def __init__(self, base='/'):

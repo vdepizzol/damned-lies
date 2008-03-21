@@ -391,6 +391,7 @@
     <branch id="HEAD"/>
   </module>
   <module id="gail">
+    <_comment>From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more.</_comment>
     <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
