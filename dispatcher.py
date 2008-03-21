@@ -2,6 +2,7 @@
 
 import os
 import re
+import traceback
 import utils
 import defaults
 import l10n
