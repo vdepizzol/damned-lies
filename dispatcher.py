@@ -87,7 +87,7 @@ class DamnedRequest:
         print "<p>Error: %s</p>" % str(err)
         if defaults.DEBUG:
             print "<pre>%s</pre>" % traceback.format_exc()
-        print "<p>Return to <a href='%s'>Home page</a></p>" % defaults.webroot
+        print "<p>Return to <a href='%s/'>Home page</a></p>" % defaults.webroot
         print "</div></body></html>"
 
 class RequestMapper:
