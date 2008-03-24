@@ -1,3 +1,14 @@
+2008-03-24  Claude Paroz  <claude@2xlibre.net>
+
+	* dispatcher.py: Deferred printing of page so as header is not printed in
+	case of errors. 
+	* gnome-modules.xml.in:
+	* releases.xml.in: gnome-session branched for 2.22.
+	Added gswitchit_plugins module to Extra release.
+	* people.xml.in:
+	* translation-teams.xml.in: Danish coordinatorship changed.
+	http://mail.gnome.org/archives/gnome-i18n/2008-March/msg00404.html
+
 2008-03-23  Claude Paroz  <claude@2xlibre.net>
 
 	* gnome-modules.xml.in:

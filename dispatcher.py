@@ -73,9 +73,9 @@ class DamnedRequest:
         for var in self._variables:
             tmpl.__dict__[var] = self._variables[var]
 
-        print "Content-type: %s; charset=UTF-8\n" % (content_type)
-        print unicode(tmpl).encode('utf-8')
-        global utils
+        header = "Content-type: %s; charset=UTF-8\n" % (content_type)
+        page = unicode(tmpl).encode('utf-8')
+        print "%s\n%s" % (header, page)
         if type == 'html':
             print utils.TemplateInspector(tmpl)
     
