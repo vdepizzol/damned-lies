@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-28 10:44+0100\n"
-"PO-Revision-Date: 2008-02-28 10:50+0100\n"
+"POT-Creation-Date: 2008-03-24 12:38+0100\n"
+"PO-Revision-Date: 2008-03-24 12:55+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -139,60 +139,62 @@ msgid "Four-in-a-row Manual"
 msgstr "Manuale di Forza 4"
 
 #: ../gnome-modules.xml.in.h:32
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr "A partire da GNOME 2.23, GAIL è integrato nelle GTK+. Non eseguire più commit sul branch \"trunk\"."
+
+#: ../gnome-modules.xml.in.h:33
 msgid "GConf Editor Manual"
 msgstr "Manuale di Editor GConf"
 
-#: ../gnome-modules.xml.in.h:33
+#: ../gnome-modules.xml.in.h:34
 msgid "GDM Manual"
 msgstr "Manuale di GDM"
 
-#: ../gnome-modules.xml.in.h:34
-msgid "GFloppy Manual"
-msgstr "Manuale di GFloppu"
-
 #: ../gnome-modules.xml.in.h:35
+msgid "GFloppy Manual"
+msgstr "Manuale di GFloppy"
+
+#: ../gnome-modules.xml.in.h:36
 msgid "GLib"
 msgstr "GLib"
 
-#: ../gnome-modules.xml.in.h:36
+#: ../gnome-modules.xml.in.h:37
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentazione di sviluppo per GNOME 2"
 
-#: ../gnome-modules.xml.in.h:37
+#: ../gnome-modules.xml.in.h:38
 msgid "GNOME 2 User Documentation"
 msgstr "Documentazione utente per GNOME 2"
 
-#: ../gnome-modules.xml.in.h:38
-msgid "GNOME 2.18 Release Notes"
-msgstr "Note di rilascio di GNOME 2.18"
-
 #: ../gnome-modules.xml.in.h:39
-msgid "GNOME 2.20 Release Notes"
-msgstr "Note di rilascio di GNOME 2.20"
-
-#: ../gnome-modules.xml.in.h:40
 msgid "GNOME Applets"
 msgstr "Applet di GNOME"
 
-#: ../gnome-modules.xml.in.h:41
+#: ../gnome-modules.xml.in.h:40
 msgid "GNOME Keyring Manager Manual"
 msgstr "Manuale di Gestore portachiavi di GNOME"
 
-#: ../gnome-modules.xml.in.h:42
+#: ../gnome-modules.xml.in.h:41
 msgid "GNOME Klotski Manual"
 msgstr "Manuale di GNOME Klotski"
 
-#: ../gnome-modules.xml.in.h:43
+#: ../gnome-modules.xml.in.h:42
 msgid "GNOME Library Web site"
 msgstr "Manuale del sito web Biblioteca di GNOME"
 
-#: ../gnome-modules.xml.in.h:44
+#: ../gnome-modules.xml.in.h:43
 msgid "GNOME Library help"
 msgstr "Aiuto per Biblioteca di GNOME"
 
-#: ../gnome-modules.xml.in.h:45
+#: ../gnome-modules.xml.in.h:44
 msgid "GNOME Mahjongg Manual"
 msgstr "Manuale di GNOME Mahjongg"
+
+#: ../gnome-modules.xml.in.h:45
+msgid "GNOME Release Notes"
+msgstr "Note di rilascio di GNOME"
 
 #: ../gnome-modules.xml.in.h:46
 msgid "GNOME Robots Manual"
@@ -219,7 +221,10 @@ msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
-msgstr "GNUCash non fa parte del repository SVN di GNOME. Consultare il  <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">Wiki di GNUCash</a> per sapere dove inviare le traduzioni."
+msgstr ""
+"GNUCash non fa parte del repository SVN di GNOME. Consultare il  <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">Wiki di GNUCash</a> "
+"per sapere dove inviare le traduzioni."
 
 #: ../gnome-modules.xml.in.h:52
 msgid "GPL License"
@@ -312,92 +317,103 @@ msgid "Property Nicks"
 msgstr "Accenni di proprietà"
 
 #: ../gnome-modules.xml.in.h:74
+msgid "Release Notes"
+msgstr "Note di rilascio"
+
+#: ../gnome-modules.xml.in.h:75
 msgid "Rhythmbox Music Player"
 msgstr "Lettore musicale Rhythmbox"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "Sabayon"
 msgstr "Sabayon"
 
-#: ../gnome-modules.xml.in.h:76
+#: ../gnome-modules.xml.in.h:77
 msgid "Same GNOME Manual"
 msgstr "Manuale di Same GNOME"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:78
 msgid "Seahorse Manual"
 msgstr "Manuale di Seahorse"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:79
 msgid "Search Tool Manual"
 msgstr "Manuale di Strumento di ricerca"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:80
 msgid "Shared MIME Info"
 msgstr "Informazioni MIME condivise"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:81
 msgid "Sound Juicer Manual"
 msgstr "Manuale di Sound Juicer"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:82
 msgid "Sound Recorder Manual"
 msgstr "Manuale di Registratore di suoni"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:83
 msgid "Sticky Notes Manual"
 msgstr "Manuale di Note adesive"
 
-#: ../gnome-modules.xml.in.h:83
-msgid "Stock Ticker Manual"
-msgstr ""
-
 #: ../gnome-modules.xml.in.h:84
+msgid "Stock Ticker Manual"
+msgstr "Manuale di Ticker azionario"
+
+#: ../gnome-modules.xml.in.h:85
 msgid "System Administration Guide"
 msgstr "Guida di amministrazione del sistema"
 
-#: ../gnome-modules.xml.in.h:85
+#: ../gnome-modules.xml.in.h:86
 msgid "System Monitor Manual"
 msgstr "Manuale di Monitor di sistema"
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:72
+#: ../gnome-modules.xml.in.h:87
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation by "
+"attaching it to a new bug report in freedesktop.org's Bugzilla (see link "
+"below)."
+msgstr "Questo modulo non è specifico di GNOME. Inviare le proprie traduzioni allegandole a una segnalazione di bug sul sito Bugzilla di freedesktop.org (cfr collegamento)."
+
+#: ../gnome-modules.xml.in.h:88 ../templates/language-release.tmpl:72
 msgid "UI translations"
 msgstr "Traduzioni interfaccia grafica"
 
-#: ../gnome-modules.xml.in.h:87
+#: ../gnome-modules.xml.in.h:89
 msgid "User Directories"
 msgstr "Directory utente"
 
-#: ../gnome-modules.xml.in.h:88
+#: ../gnome-modules.xml.in.h:90
 msgid "User Guide"
 msgstr "Guida per l'utente"
 
 # Control rimosso dalla traduzione italiana
 # aggiunto (applet) per differenziare da Regolazione volume
-#: ../gnome-modules.xml.in.h:89
+#: ../gnome-modules.xml.in.h:91
 msgid "Volume Control Manual"
 msgstr "Manuale di Volume (applet)"
 
-#: ../gnome-modules.xml.in.h:90
+#: ../gnome-modules.xml.in.h:92
 msgid "Weather Applet Locations"
 msgstr "Località applet Meteo"
 
-#: ../gnome-modules.xml.in.h:91
+#: ../gnome-modules.xml.in.h:93
 msgid "Weather Report Manual"
 msgstr "Manuale di Condizioni meteo"
 
-#: ../gnome-modules.xml.in.h:92
+#: ../gnome-modules.xml.in.h:94
 msgid "Window List Applet Manual"
 msgstr "Manuale applet Elenco finestre"
 
-#: ../gnome-modules.xml.in.h:93
+#: ../gnome-modules.xml.in.h:95
 msgid "Workspace Switcher Applet Manual"
 msgstr "Manuale applet Selettore area di lavoro"
 
-#: ../gnome-modules.xml.in.h:94
+#: ../gnome-modules.xml.in.h:96
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:95
+#: ../gnome-modules.xml.in.h:97
 msgid "glChess Manual"
 msgstr "Manuale di glChess"
 
@@ -438,16 +454,16 @@ msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
 #: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (stable)"
-msgstr "GNOME 2.20 (stabile)"
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (vecchia stabile)"
 
 #: ../releases.xml.in.h:11
-msgid "GNOME 2.22 (development)"
-msgstr "GNOME 2.22 (sviluppo)"
+msgid "GNOME 2.22 (stable)"
+msgstr "GNOME 2.22 (stabile)"
 
 #: ../releases.xml.in.h:12
 msgid "GNOME Fifth Toe (Extra software)"
-msgstr "GNOME Fifth Toe (Software aggiuntivo)"
+msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
 #: ../releases.xml.in.h:13
 msgid "GNOME Infrastructure"
@@ -481,7 +497,7 @@ msgstr "Gruppo di traduzione %(lang)s"
 
 #: ../translation-teams.xml.in.h:1
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 #: ../translation-teams.xml.in.h:2
 msgid "Albanian"
@@ -489,7 +505,7 @@ msgstr "Albanese"
 
 #: ../translation-teams.xml.in.h:3
 msgid "Amharic"
-msgstr ""
+msgstr "Amarico"
 
 #: ../translation-teams.xml.in.h:4
 msgid "Arabic"
@@ -513,7 +529,7 @@ msgstr "Inglese australiano"
 
 #: ../translation-teams.xml.in.h:9
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azero"
 
 #: ../translation-teams.xml.in.h:10
 msgid "Basque"
@@ -525,7 +541,7 @@ msgstr "Bielorusso"
 
 #: ../translation-teams.xml.in.h:12
 msgid "Belarusian Latin"
-msgstr ""
+msgstr "Latino bielorusso"
 
 #: ../translation-teams.xml.in.h:13
 msgid "Bengali"
@@ -541,7 +557,7 @@ msgstr "Bosniaco"
 
 #: ../translation-teams.xml.in.h:16
 msgid "Brazilian Portuguese"
-msgstr "Portoghese brasilinao"
+msgstr "Portoghese brasiliano"
 
 #: ../translation-teams.xml.in.h:17
 msgid "Breton"
@@ -557,7 +573,7 @@ msgstr "Bulgaro"
 
 #: ../translation-teams.xml.in.h:20
 msgid "Burmese"
-msgstr ""
+msgstr "Birmano"
 
 #: ../translation-teams.xml.in.h:21
 msgid "Canadian English"
@@ -613,7 +629,7 @@ msgstr "Esperanto"
 
 #: ../translation-teams.xml.in.h:34
 msgid "Estonian"
-msgstr ""
+msgstr "Estone"
 
 #: ../translation-teams.xml.in.h:35
 msgid "Fijian"
@@ -621,7 +637,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:36
 msgid "Finnish"
-msgstr ""
+msgstr "Finnico"
 
 #: ../translation-teams.xml.in.h:37
 msgid "French"
@@ -633,11 +649,11 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:39
 msgid "Galician"
-msgstr ""
+msgstr "Galiziano"
 
 #: ../translation-teams.xml.in.h:40
 msgid "Georgian"
-msgstr ""
+msgstr "Georgiano"
 
 #: ../translation-teams.xml.in.h:41
 msgid "German"
@@ -657,7 +673,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:45
 msgid "Haitian Creole"
-msgstr ""
+msgstr "Creolo haitiano"
 
 #: ../translation-teams.xml.in.h:46
 msgid "Hausa"
@@ -697,11 +713,11 @@ msgstr "Indonesiano"
 
 #: ../translation-teams.xml.in.h:55
 msgid "Iranian Azerbaijani"
-msgstr ""
+msgstr "Azero iraniano"
 
 #: ../translation-teams.xml.in.h:56
 msgid "Irish"
-msgstr ""
+msgstr "Irlandese"
 
 #: ../translation-teams.xml.in.h:57
 msgid "Italian"
@@ -729,7 +745,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:63
 msgid "Kazakh"
-msgstr ""
+msgstr "Kazako"
 
 #: ../translation-teams.xml.in.h:64
 msgid "Khmer"
@@ -741,7 +757,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:66
 msgid "Kirghiz"
-msgstr ""
+msgstr "kirghiso"
 
 #: ../translation-teams.xml.in.h:67
 msgid "Korean"
@@ -749,19 +765,19 @@ msgstr "Coreano"
 
 #: ../translation-teams.xml.in.h:68
 msgid "Kurdish"
-msgstr ""
+msgstr "Curdo"
 
 #: ../translation-teams.xml.in.h:69
 msgid "Lao"
-msgstr ""
+msgstr "Laotiano"
 
 #: ../translation-teams.xml.in.h:70
 msgid "Latin"
-msgstr ""
+msgstr "Latino"
 
 #: ../translation-teams.xml.in.h:71
 msgid "Latvian"
-msgstr ""
+msgstr "Lettone"
 
 #: ../translation-teams.xml.in.h:72
 msgid "Limburgian"
@@ -769,7 +785,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:73
 msgid "Lithuanian"
-msgstr ""
+msgstr "Lituano"
 
 #: ../translation-teams.xml.in.h:74
 msgid "Low German"
@@ -785,7 +801,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:77
 msgid "Macedonian"
-msgstr ""
+msgstr "Macedone"
 
 #: ../translation-teams.xml.in.h:78
 msgid "Maithili"
@@ -809,7 +825,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:83
 msgid "Maori"
-msgstr ""
+msgstr "Maori"
 
 #: ../translation-teams.xml.in.h:84
 msgid "Marathi"
@@ -821,7 +837,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:86
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongolo"
 
 #: ../translation-teams.xml.in.h:87
 msgid "Nahuatl"
@@ -869,7 +885,7 @@ msgstr "Persiano"
 
 #: ../translation-teams.xml.in.h:98
 msgid "Polish"
-msgstr ""
+msgstr "Polacco"
 
 #: ../translation-teams.xml.in.h:99
 msgid "Portuguese"
@@ -889,7 +905,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:103
 msgid "Romanian"
-msgstr ""
+msgstr "Romeno"
 
 #: ../translation-teams.xml.in.h:104
 msgid "Russian"
@@ -897,7 +913,7 @@ msgstr "Russo"
 
 #: ../translation-teams.xml.in.h:105
 msgid "Sanskrit"
-msgstr ""
+msgstr "Sanscrito"
 
 #: ../translation-teams.xml.in.h:106
 msgid "Sardinian"
@@ -933,7 +949,7 @@ msgstr "Spagnolo"
 
 #: ../translation-teams.xml.in.h:114
 msgid "Swahili"
-msgstr ""
+msgstr "Swahili"
 
 #: ../translation-teams.xml.in.h:115
 msgid "Swedish"
@@ -969,7 +985,7 @@ msgstr ""
 
 #: ../translation-teams.xml.in.h:123
 msgid "Tibetan"
-msgstr ""
+msgstr "Tibetano"
 
 #: ../translation-teams.xml.in.h:124
 msgid "Tigrinya"
@@ -996,54 +1012,58 @@ msgid "Ukrainian"
 msgstr ""
 
 #: ../translation-teams.xml.in.h:130
-msgid "Urdu"
+msgid "Upper Sorbian"
 msgstr ""
 
 #: ../translation-teams.xml.in.h:131
-msgid "Uzbek"
+msgid "Urdu"
 msgstr ""
 
 #: ../translation-teams.xml.in.h:132
-msgid "Uzbek (Cyrillic)"
-msgstr ""
+msgid "Uzbek"
+msgstr "Uzbeco"
 
 #: ../translation-teams.xml.in.h:133
-msgid "Uzbek (Latin)"
-msgstr ""
+msgid "Uzbek (Cyrillic)"
+msgstr "Uzbeco (cirillico)"
 
 #: ../translation-teams.xml.in.h:134
+msgid "Uzbek (Latin)"
+msgstr "Uzbeco (latino)"
+
+#: ../translation-teams.xml.in.h:135
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: ../translation-teams.xml.in.h:135
-msgid "Walloon"
-msgstr ""
-
 #: ../translation-teams.xml.in.h:136
-msgid "Welsh"
-msgstr ""
+msgid "Walloon"
+msgstr "Vallone"
 
 #: ../translation-teams.xml.in.h:137
+msgid "Welsh"
+msgstr "Gallese"
+
+#: ../translation-teams.xml.in.h:138
 msgid "Wolof"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:139
 msgid "Xhosa"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:140
 msgid "Yiddish"
 msgstr "Yiddish"
 
-#: ../translation-teams.xml.in.h:140
+#: ../translation-teams.xml.in.h:141
 msgid "Yoruba"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:141
+#: ../translation-teams.xml.in.h:142
 msgid "Zapotec"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:142
+#: ../translation-teams.xml.in.h:143
 msgid "Zulu"
 msgstr "Zulu"
 
@@ -1079,7 +1099,7 @@ msgstr ""
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
-msgstr ""
+msgstr "Non sono disponibili indicazioni per verificare se questa lingua è realmente usata, chiedere al maintainer del modulo."
 
 #: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
@@ -1171,7 +1191,9 @@ msgid ""
 "Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
 "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
 "org</a>"
-msgstr "Mantenuto nel modulo <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> su <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>"
+msgstr ""
+"Mantenuto nel modulo <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
+"\">damned-lies</a> su <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>"
 
 #: ../templates/footer.tmpl:8
 msgid "Hosted by"
@@ -1426,7 +1448,7 @@ msgstr ""
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
-msgstr ""
+msgstr "Al momento non è disponibile alcun modulo per il quale raccontare maledette bugie. Date la colpa a <a href=\\\"danilo@gnome.org\\\">Danilo</a>..."
 
 #: ../templates/list-releases.tmpl:7
 msgid "GNOME Releases"
@@ -1473,7 +1495,9 @@ msgstr "Originale"
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
-msgstr "Tradotta, ma usa quella originale (forse la figura non contiene alcuna stringa da tradurre)"
+msgstr ""
+"Tradotta, ma usa quella originale (forse la figura non contiene alcuna "
+"stringa da tradurre)"
 
 #: ../templates/module-images.tmpl:36
 msgid "No existing file (\"Technical\" fuzzy)"
@@ -1488,7 +1512,9 @@ msgstr "Non tradotta"
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's  web page to see where to send translations."
-msgstr "Questo modulo non fa parte del repository SVN di GNOME. Consultare la pagina web del modulo per sapere dove inviare le traduzioni."
+msgstr ""
+"Questo modulo non fa parte del repository SVN di GNOME. Consultare la pagina "
+"web del modulo per sapere dove inviare le traduzioni."
 
 #: ../templates/module.tmpl:20
 msgid "Maintainers"
@@ -1606,16 +1632,3 @@ msgstr "Lingua"
 #: ../templates/show-stats.tmpl:37
 msgid "Translated"
 msgstr "Tradotto"
-
-# è gtk+/po, ossia la parte UI
-#~ msgid "Core"
-#~ msgstr "Nucleo"
-
-#~ msgid "GNOME Release Notes"
-#~ msgstr "Note di rilascio di GNOME"
-
-#~ msgid "New module proposals"
-#~ msgstr "Nuovi moduli proposti"
-
-#~ msgid "Maintains %(module)s"
-#~ msgstr "Mantiene %(module)s"
