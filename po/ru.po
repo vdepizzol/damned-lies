@@ -369,7 +369,7 @@ msgid ""
 "attaching it to a new bug report in freedesktop.org's Bugzilla (see link "
 "below)."
 msgstr ""
-"Этот модуль не ориентирован на GNOME. Представьте свой перевод как "
+"Этот пакет не ориентирован на GNOME. Представьте свой перевод как "
 "приложение к новому сообщению об ошибке в  Bugzilla freedesktop.org'а (см. "
 "ссылку ниже)."
 
@@ -1096,7 +1096,7 @@ msgid ""
 "maintainer."
 msgstr ""
 "Не удалось узнать, используется ли этот язык. Спросите об этом "
-"сопровождающего модуль."
+"сопровождающего пакет."
 
 #: ../update-stats.py:370
 msgid "Errors while running 'intltool-update -m' check."
@@ -1147,7 +1147,7 @@ msgstr "Не удалось загрузить каталог из svn."
 #: ../update-stats.py:547
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
-msgstr "Модуль %s похоже, не является модулем gnome-doc-utils."
+msgstr "Пакет %s похоже, не поддерживает gnome-doc-utils."
 
 #: ../update-stats.py:552
 #, python-format
@@ -1190,7 +1190,7 @@ msgid ""
 "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
 "org</a>"
 msgstr ""
-"Поддерживается модулем <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
+"Поддерживается пакетом <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
 "\">damned-lies</a>, который можно найти на <a href=\"http://svn.gnome.org/"
 "\">svn.gnome.org</a>"
 
@@ -1240,7 +1240,7 @@ msgstr "Выпуски"
 
 #: ../templates/header.tmpl:84 ../templates/index.tmpl:35
 msgid "Modules"
-msgstr "Модули"
+msgstr "Пакеты"
 
 #: ../templates/index.tmpl:9
 msgid "Damned Lies about GNOME"
@@ -1280,12 +1280,12 @@ msgstr ""
 
 #: ../templates/index.tmpl:26
 msgid "Release Sets"
-msgstr "Выпуски наборов"
+msgstr "Выпуски"
 
 #: ../templates/index.tmpl:27
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
-"Список всех выпусков наборов и выпусков GNOME, для которых собрана "
+"Список всех модулей и выпусков GNOME, для которых собрана "
 "статистика."
 
 #: ../templates/index.tmpl:29
@@ -1293,7 +1293,7 @@ msgid ""
 "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
 "\"."
 msgstr ""
-"Примеры выпусков наборов - это \"GNOME Office\", \"Fifth Toe\" или \"GNOME "
+"Примеры модулей - это \"GNOME Office\", \"Fifth Toe\" или \"GNOME "
 "2.14\"."
 
 #: ../templates/index.tmpl:30
@@ -1301,7 +1301,7 @@ msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "\"Desktop Applications\" and \"Developer Platform\"."
 msgstr ""
-"Официальные выпуски наборов делятся на категории, например, такие как  "
+"Официальные выпуски делятся на модули, например, такие как  "
 "\"Desktop Applications\" и \"Developer Platform\"."
 
 #: ../templates/index.tmpl:32
@@ -1309,20 +1309,20 @@ msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr ""
-"Здесь вы можете сравнить, если хотите, поддержку языков в разничных выпусках "
+"Здесь вы можете сравнить, если хотите, поддержку языков в различных выпусках "
 "наборов."
 
 #: ../templates/index.tmpl:36
 msgid "List of all modules with statistics in here."
-msgstr "Список всех модулей со статистикой."
+msgstr "Список всех пакетов со статистикой."
 
 #: ../templates/index.tmpl:38
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
 msgstr ""
-"Модули - это отдельные библиотеки или приложения, которые включют одно или "
-"несколько направлений разработки"
+"Пакеты - это отдельные библиотеки или приложения, в рамках которых "
+"ведётся несколько ветвей разработки"
 
 #: ../templates/index.tmpl:39
 msgid ""
@@ -1388,19 +1388,19 @@ msgstr "Координатор"
 
 #: ../templates/language-release.tmpl:52
 msgid "Hide completed modules"
-msgstr "Скрыть переведённые модули"
+msgstr "Скрыть переведённые пакеты"
 
 #: ../templates/language-release.tmpl:56
 msgid "Show completed modules"
-msgstr "Показать переведённые модули"
+msgstr "Показать переведённые пакеты"
 
 #: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"Модули этого выпуска не являются частью репозитория GNOME SVN. Посетите веб-"
-"страницу каждого модуля, чтобы узнать, куда отправлять переводы."
+"Пакеты этого выпуска не являются частью репозитория GNOME SVN. Посетите веб-"
+"страницу каждого пакета, чтобы узнать, куда отправлять переводы."
 
 #: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:57
@@ -1424,18 +1424,18 @@ msgstr "GNOME в данный момент не переведён ни на о�
 
 #: ../templates/list-modules.tmpl:7
 msgid "GNOME modules"
-msgstr "Модули GNOME"
+msgstr "Пакеты GNOME"
 
 #: ../templates/list-modules.tmpl:10
 msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Выберите модуль внизу для просмотра информации о нём"
+msgstr "Выберите пакет внизу для просмотра информации о нём"
 
 #: ../templates/list-modules.tmpl:30
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
 msgstr ""
-"Пока нет модулей, о которых собирается статистика. Спросите <a href="
+"Пока нет пакетов, о которых собирается статистика. Спросите <a href="
 "\"danilo@gnome.org\">Данило</a> о подробностях!"
 
 #: ../templates/list-releases.tmpl:7
@@ -1496,8 +1496,8 @@ msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Этот модуль не являются частью репозитория GNOME SVN. Посетите веб-страницу "
-"модуля, чтобы узнать, куда отправлять переводы."
+"Этот пакет не являются частью репозитория GNOME SVN. Посетите веб-страницу "
+"пакета, чтобы узнать, куда отправлять переводы."
 
 #: ../templates/module.tmpl:20
 msgid "Maintainers"
