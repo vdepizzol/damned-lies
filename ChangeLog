@@ -1,3 +1,12 @@
+2008-03-25  Claude Paroz  <claude@2xlibre.net>
+
+	* gnome-modules.xml.in: Removed unnecessary translation for variable.
+	* templates/index.tmpl: Add translator comment for translator-credits.
+	* templates/module.tmpl: Removed extra space.
+	Fixes bug #524215.
+	* templates/show-stats.tmpl: Added translator comments.
+	Fixes bug #475579.
+
 2008-03-24  Claude Paroz  <claude@2xlibre.net>
 
 	* dispatcher.py: Deferred printing of page so as header is not printed in

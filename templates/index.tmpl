@@ -42,6 +42,7 @@
 
 <p class="footnote">
 #if $language != 'en' and $_("translator-credits") != 'translator-credits'
+  <!-- /* The list of translators appears in the footer of the Damned Lies translated home page */ -->
   $_("Translated by:") $_("translator-credits").replace("\n", ", ").replace("<", "&lt;").replace(">", "&gt;")
 #end if
 </p>

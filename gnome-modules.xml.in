@@ -2,7 +2,7 @@
 <modules>
   <defaults>
     <module>
-      <_description>%(module/id)</_description>
+      <description>%(module/id)</description>
       <bugs-xmlrpc>http://bugzilla-test.gnome.org/xmlrpc.cgi</bugs-xmlrpc>
       <bugs-baseurl>http://bugzilla.gnome.org/</bugs-baseurl>
       <bugs-product>%(module/id)</bugs-product>

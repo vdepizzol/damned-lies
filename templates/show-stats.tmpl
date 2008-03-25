@@ -19,16 +19,18 @@
 #end if
 </a>
 #if $domain.has_key('updated')
-&mdash; ${_("updated on %(date)s"), date="<strong>"+$domain.updated+"</strong>."}
+  <!-- /* The date format is fixed to "%Y-%m-%d %H:%M:%S timezone" */ -->
+  &mdash; ${_("updated on %(date)s"), date="<strong>"+$domain.updated+"</strong>."}
 #end if
 
 #if $domain.has_key('pot_messages') and len($domain.pot_messages)
-<h4>$_("Notices")</h4>
-<table>
-#for $msg in $domain.pot_messages
-<tr><td valign="top"><img src="$webroot/data/${msg.type}.png" alt="${msg.type}" /></td><td>$msg.content</td></tr>
-#end for
-</table>
+  <!-- /* This is the title of the section that lists notices about a module */ -->
+  <h4>$_("Notices")</h4>
+  <table>
+  #for $msg in $domain.pot_messages
+    <tr><td valign="top"><img src="$webroot/data/${msg.type}.png" alt="${msg.type}" /></td><td>$msg.content</td></tr>
+  #end for
+  </table>
 #end if
 
 
