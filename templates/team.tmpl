@@ -21,10 +21,9 @@
   <br/><strong>$_("Bugzilla:")</strong>
   <ul>
     <li><a href="${team.bugzilla}enter_bug.cgi?product=$team['bugzilla-product']&amp;component=$team['bugzilla-component']">$_("Report Bug in Translation")</a></li>
-    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&amp;component=$team['bugzilla-component']">$_("Show Existing Bugs")</a></li>
+    <li><a href="${team.bugzilla}buglist.cgi?product=$team['bugzilla-product']&amp;component=$team['bugzilla-component']&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED">$_("Show Existing Bugs")</a></li>
   </ul>
   #end if
-
 
   #if $team.has_key('mailing-list')
   <br/><strong>$_("Mailing List:")</strong>
