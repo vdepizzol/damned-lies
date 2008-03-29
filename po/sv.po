@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-25 19:10+0100\n"
-"PO-Revision-Date: 2008-03-25 19:11+0100\n"
+"POT-Creation-Date: 2008-03-29 09:40+0100\n"
+"PO-Revision-Date: 2008-03-29 09:41+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1311,22 +1311,22 @@ msgid "Show Existing Bugs"
 msgstr "Visa befintliga felrapporter"
 
 #: ../templates/language-release.tmpl:29
-#: ../templates/team.tmpl:30
+#: ../templates/team.tmpl:29
 msgid "Mailing List:"
 msgstr "Sändlista:"
 
 #: ../templates/language-release.tmpl:31
-#: ../templates/team.tmpl:32
+#: ../templates/team.tmpl:31
 msgid "Send e-mail to the list"
 msgstr "Skicka e-post till listan"
 
 #: ../templates/language-release.tmpl:33
-#: ../templates/team.tmpl:34
+#: ../templates/team.tmpl:33
 msgid "Subscribe"
 msgstr "Prenumerera"
 
 #: ../templates/language-release.tmpl:42
-#: ../templates/team.tmpl:43
+#: ../templates/team.tmpl:42
 msgid "Coordinator"
 msgstr "Koordinator"
 
@@ -1344,9 +1344,9 @@ msgid "The modules of this release are not part of the GNOME SVN repository. Ple
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
 #: ../templates/language-release.tmpl:66
-#: ../templates/module.tmpl:73
+#: ../templates/module.tmpl:76
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -1436,28 +1436,32 @@ msgstr "Ansvariga"
 msgid "Bug reporting"
 msgstr "Felrapportering"
 
-#: ../templates/module.tmpl:37
+#: ../templates/module.tmpl:38
+msgid "Show existing i18n and l10n bugs"
+msgstr "Visa befintliga felrapporter (i18n och l10n)"
+
+#: ../templates/module.tmpl:39
 msgid "Report bugs to Bugzilla"
 msgstr "Rapportera fel via Bugzilla"
 
-#: ../templates/module.tmpl:43
+#: ../templates/module.tmpl:46
 msgid "Branches:"
 msgstr "Grenar:"
 
-#: ../templates/module.tmpl:58
+#: ../templates/module.tmpl:61
 msgid "Browse CVS"
 msgstr "Bläddra i CVS"
 
-#: ../templates/module.tmpl:60
-#: ../templates/module.tmpl:62
+#: ../templates/module.tmpl:63
+#: ../templates/module.tmpl:65
 msgid "Browse SVN"
 msgstr "Bläddra i SVN"
 
-#: ../templates/module.tmpl:66
+#: ../templates/module.tmpl:69
 msgid "This branch is currently string-frozen."
 msgstr "Den här grenen är för närvarande strängfrusen."
 
-#: ../templates/module.tmpl:93
+#: ../templates/module.tmpl:96
 msgid "Translation"
 msgstr "Översättning"
 
@@ -1502,23 +1506,23 @@ msgid "%(release)s Release"
 msgstr "Utgåva %(release)s"
 
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "Release"
 msgstr "Utgåva"
 
 #: ../templates/release.tmpl:15
 #: ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "Graph"
 msgstr "Diagram"
 
 #: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
 #: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:69
+#: ../templates/team.tmpl:68
 msgid "-"
 msgstr "-"
 
