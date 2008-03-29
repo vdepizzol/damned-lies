@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-25 08:48+0000\n"
-"PO-Revision-Date: 2008-03-28 20:27+0100\n"
+"POT-Creation-Date: 2008-03-28 23:54+0000\n"
+"PO-Revision-Date: 2008-03-29 12:08+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,9 @@ msgstr "Manual de Cuatro en raya"
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
-msgstr "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre el «trunk»."
+msgstr ""
+"Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
+"el «trunk»."
 
 #: ../gnome-modules.xml.in.h:31
 msgid "GConf Editor Manual"
@@ -1365,19 +1367,19 @@ msgstr "Informar de un error en la traducción"
 msgid "Show Existing Bugs"
 msgstr "Mostrar errores existentes"
 
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
+#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:29
 msgid "Mailing List:"
 msgstr "Lista de correo:"
 
-#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
+#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:31
 msgid "Send e-mail to the list"
 msgstr "Enviar un correo electrónico a la lista"
 
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
+#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:33
 msgid "Subscribe"
 msgstr "Suscribirse"
 
-#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
+#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:42
 msgid "Coordinator"
 msgstr "Coordinador"
 
@@ -1398,8 +1400,8 @@ msgstr ""
 "GNOME. Comprueba la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
-#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:76
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -1501,27 +1503,31 @@ msgstr "Mantenedores"
 msgid "Bug reporting"
 msgstr "Informar de errores"
 
-#: ../templates/module.tmpl:37
+#: ../templates/module.tmpl:38
+msgid "Show existing i18n and l10n bugs"
+msgstr "Mostrar los errores de i18n y l10n existentes"
+
+#: ../templates/module.tmpl:39
 msgid "Report bugs to Bugzilla"
 msgstr "Informar de errores a Bugzilla"
 
-#: ../templates/module.tmpl:43
+#: ../templates/module.tmpl:46
 msgid "Branches:"
 msgstr "Ramas:"
 
-#: ../templates/module.tmpl:58
+#: ../templates/module.tmpl:61
 msgid "Browse CVS"
 msgstr "Examinar CVS"
 
-#: ../templates/module.tmpl:60 ../templates/module.tmpl:62
+#: ../templates/module.tmpl:63 ../templates/module.tmpl:65
 msgid "Browse SVN"
 msgstr "Examinar SVN"
 
-#: ../templates/module.tmpl:66
+#: ../templates/module.tmpl:69
 msgid "This branch is currently string-frozen."
 msgstr "Actualmente las cadenas de esta rama están congeladas."
 
-#: ../templates/module.tmpl:93
+#: ../templates/module.tmpl:96
 msgid "Translation"
 msgstr "Traducción"
 
@@ -1565,20 +1571,20 @@ msgstr "Coordina el %(team)s"
 msgid "%(release)s Release"
 msgstr "Lanzamiento %(release)s"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "Release"
 msgstr "Lanzamiento"
 
 #: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "Graph"
 msgstr "Gráfico"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:69
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:68
 msgid "-"
 msgstr "-"
 
