@@ -1372,7 +1372,12 @@
     <branch id="HEAD"/>
   </module>
   <module id="meld">
-    <branch id="HEAD"/>
+    <branch id="HEAD">
+        <document id="help">
+          <!-- Unsetting help dir because it's not gnome-doc-utils compliant -->
+          <directory>/</directory>
+        </document>
+    </branch>
   </module>
   <module id="memprof">
     <branch id="HEAD"/>
@@ -1512,6 +1517,9 @@
     <branch id="HEAD"/>
   </module>
   <module id="planner">
+    <branch id="HEAD"/>
+  </module>
+  <module id="policykit-gnome">
     <branch id="HEAD"/>
   </module>
   <module id="pybliographer">
