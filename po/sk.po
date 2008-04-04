@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-28 09:11+0100\n"
-"PO-Revision-Date: 2008-03-27 23:25+0100\n"
+"POT-Creation-Date: 2008-04-04 07:00+0200\n"
+"PO-Revision-Date: 2008-04-03 22:33+0200\n"
 "Last-Translator: Pavol Šimo <palo.simo@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -365,13 +365,11 @@ msgstr "Manuál Monitoru systému"
 
 #: ../gnome-modules.xml.in.h:85
 msgid ""
-"This is not a GNOME-specific module. Please submit your translation by "
-"attaching it to a new bug report in freedesktop.org's Bugzilla (see link "
-"below)."
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
-"Toto nie je modul patriaci GNOME. Preklady odosielajte ich pripojením k "
-"novému hláseniu o chybe v systéme Bugzilla pre freedesktop.org (odkaz je "
-"uvedený nižšie)."
+"Toto nie je modul patriaci GNOME. Preklady odosielajte prostredníctvom <a "
+"href=\"http://translationproject.org\">Prekladateľského projektu</a>."
 
 #: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:72
 msgid "UI translations"
@@ -1364,19 +1362,19 @@ msgstr "Ohlásiť chybu v preklade"
 msgid "Show Existing Bugs"
 msgstr "Zobraziť existujúce chyby"
 
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
+#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:29
 msgid "Mailing List:"
 msgstr "Mailing list:"
 
-#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
+#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:31
 msgid "Send e-mail to the list"
 msgstr "Odoslať e-mail do mailing listu"
 
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
+#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:33
 msgid "Subscribe"
 msgstr "Prihlásiť sa"
 
-#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
+#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:42
 msgid "Coordinator"
 msgstr "Koordinátor"
 
@@ -1396,8 +1394,8 @@ msgstr ""
 "Moduly tohto vydania nie sú súčasťou SVN repozitára GNOME. Ak chcete zistiť, "
 "kam posielať preklady, skontrolujte WWW stránku každého z modulov."
 
-#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:76
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "Documentation"
 msgstr "Dokumentácia"
 
@@ -1502,27 +1500,31 @@ msgstr "Správcovia"
 msgid "Bug reporting"
 msgstr "Hlásenie chýb"
 
-#: ../templates/module.tmpl:37
+#: ../templates/module.tmpl:38
+msgid "Show existing i18n and l10n bugs"
+msgstr "Zobraziť existujúce chyby v prekladoch"
+
+#: ../templates/module.tmpl:39
 msgid "Report bugs to Bugzilla"
 msgstr "Nahlásiť chybu do systému Bugzilla"
 
-#: ../templates/module.tmpl:43
+#: ../templates/module.tmpl:46
 msgid "Branches:"
 msgstr "Vetvy:"
 
-#: ../templates/module.tmpl:58
+#: ../templates/module.tmpl:61
 msgid "Browse CVS"
 msgstr "Prehliadať CVS"
 
-#: ../templates/module.tmpl:60 ../templates/module.tmpl:62
+#: ../templates/module.tmpl:63 ../templates/module.tmpl:65
 msgid "Browse SVN"
 msgstr "Prehliadať SVN"
 
-#: ../templates/module.tmpl:66
+#: ../templates/module.tmpl:69
 msgid "This branch is currently string-frozen."
 msgstr "Táto vetva je momentálne zmrazená pre reťazce"
 
-#: ../templates/module.tmpl:93
+#: ../templates/module.tmpl:96
 msgid "Translation"
 msgstr "Preklad"
 
@@ -1566,20 +1568,20 @@ msgstr "Koordinuje %(team)s"
 msgid "%(release)s Release"
 msgstr "Vydanie %(release)s"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "Release"
 msgstr "Vydanie"
 
 #: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:56
 msgid "Graph"
 msgstr "Graf"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
 msgid "User Interface"
 msgstr "Používateľské rozhranie"
 
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:69
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:68
 msgid "-"
 msgstr "-"
 
