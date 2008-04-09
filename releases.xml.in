@@ -644,6 +644,120 @@
       <module id="gnome-devel-docs"/>
     </category>
   </release>
+  <release id="gnome-2-24" status="official">
+    <_description>GNOME 2.24 (development)</_description>
+    <category id="platform">
+      <_description>GNOME developer platform</_description>
+      <module id="atk"/>
+      <module id="at-spi"/>
+      <module id="gail"/>
+      <module id="gconf"/>
+      <module id="glib"/>
+      <module id="gnome-vfs"/>
+      <module id="gtk+"/>
+      <module id="libbonobo"/>
+      <module id="libbonoboui"/>
+      <module id="libgnome"/>
+      <module id="libgnomecanvas"/>
+      <module id="libgnomeui"/>
+    </category>
+    <category id="desktop">
+      <_description>GNOME desktop</_description>
+      <module id="alacarte"/>
+      <module id="bug-buddy"/>
+      <module id="cheese"/>
+      <module id="dasher"/>
+      <module id="deskbar-applet"/>
+      <module id="eel"/>
+      <module id="ekiga"/>
+      <module id="eog"/>
+      <module id="epiphany"/>
+      <module id="evince"/>
+      <module id="evolution"/>
+      <module id="evolution-data-server"/>
+      <module id="evolution-exchange"/>
+      <module id="evolution-webcal"/>
+      <module id="fast-user-switch-applet"/>
+      <module id="file-roller"/>
+      <module id="gcalctool"/>
+      <module id="gconf-editor"/>
+      <module id="gdm"/>
+      <module id="gedit"/>
+      <module id="gnome-applets"/>
+      <module id="gnome-backgrounds"/>
+      <module id="gnome-control-center"/>
+      <module id="gnome-desktop"/>
+      <module id="gnome-doc-utils"/>
+      <module id="gnome-games"/>
+      <module id="gnome-icon-theme"/>
+      <module id="gnome-keyring"/>
+      <module id="gnome-mag"/>
+      <module id="gnome-media"/>
+      <module id="gnome-menus"/>
+      <module id="gnome-netstatus"/>
+      <module id="gnome-nettool"/>
+      <module id="gnome-panel"/>
+      <module id="gnome-power-manager"/>
+      <module id="gnome-screensaver"/>
+      <module id="gnome-session"/>
+      <module id="gnome-settings-daemon"/>
+      <module id="gnome-system-monitor"/>
+      <module id="gnome-system-tools"/>
+      <module id="gnome-terminal"/>
+      <module id="gnome-themes"/>
+      <module id="gnome-user-docs"/>
+      <module id="gnome-utils"/>
+      <module id="gnome-volume-manager"/>
+      <module id="gok"/>
+      <module id="gtk-engines"/>
+      <module id="gtkhtml"/>
+      <module id="gtksourceview"/>
+      <module id="gucharmap"/>
+      <module id="gvfs"/>
+      <module id="libgnomekbd"/>
+      <module id="libgnomeprint"/>
+      <module id="libgnomeprintui"/>
+      <module id="libgtop"/>
+      <module id="libgweather"/>
+      <module id="libwnck"/>
+      <module id="metacity"/>
+      <module id="mousetweaks"/>
+      <module id="nautilus"/>
+      <module id="nautilus-cd-burner"/>
+      <module id="orca"/>
+      <module id="seahorse"/>
+      <module id="sound-juicer"/>
+      <module id="swfdec-gnome"/>
+      <module id="tomboy"/>
+      <module id="totem"/>
+      <module id="totem-pl-parser"/>
+      <module id="vinagre"/>
+      <module id="vino"/>
+      <module id="vte"/>
+      <module id="yelp"/>
+      <module id="zenity"/>
+    </category>
+    <category id="admin">
+      <_description>Administration Tools</_description>
+      <module id="pessulus"/>
+      <module id="sabayon"/>
+    </category>
+    <category id="devtools">
+      <_description>Development Tools</_description>
+      <module id="accerciser"/>
+      <module id="anjuta"/>
+      <module id="devhelp"/>
+      <module id="gdl"/>
+      <module id="glade3"/>
+      <module id="gnome-build"/>
+      <module id="gnome-devel-docs"/>
+    </category>
+    <category id="proposed">
+      <_description>New module proposals</_description>
+      <module id="empathy"/>
+      <module id="conduit"/>
+    </category>
+  </release>
   <release id="fifth-toe" status="unofficial">
     <_description>GNOME Fifth Toe (Extra software)</_description>
     <module id="balsa"/>
