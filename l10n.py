@@ -64,6 +64,11 @@ class MyFilter(Cheetah.Filters.Filter):
                 val = unicode(val).capitalize()
                 del kw['CAPITALIZE']
             val = val.replace(u'%20', ' ')
-            return val % kw
+            try:
+                val = val % kw
+            except:
+                # FIXME:It may happen that val contains %s/%d placeholders by accident (e.g. in an error message)
+                pass
+            return val
         else:
             return unicode(val)
