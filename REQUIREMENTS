@@ -15,6 +15,8 @@ Programs (need to be in PATH):
  o msgmerge
  o intltool-update (>= 0.37)
  o xml2po
+ o vcs programs depending on module repositories (currently supported: cvs,
+   subversion, hg, git)
 
 intltool-update requirements:
  o Perl
