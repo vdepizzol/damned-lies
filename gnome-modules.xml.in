@@ -1777,6 +1777,19 @@
       <scmweb>http://cvs.freedesktop.org/gstreamer/gst-plugins-ugly/</scmweb>
     </branch>
   </module>
+  <module id="packagekit">
+    <webpage>http://www.packagekit.org/</webpage>
+    <maintainer id="hughsie"/>
+    <bugs-baseurl>https://bugs.freedesktop.org/</bugs-baseurl>
+    <bugs-product>PackageKit</bugs-product>
+    <bugs-component>General</bugs-component>
+    <scmroot type="git">
+      <path>git://anongit.freedesktop.org/git</path>
+    </scmroot>
+    <scmmodule>packagekit</scmmodule>
+    <scmweb>http://gitweb.freedesktop.org/?p=packagekit.git;a=tree</scmweb>
+    <branch id="master"/>
+  </module>
   <module id="shared-mime-info">
     <_description>Shared MIME Info</_description>
     <webpage>http://www.freedesktop.org/wiki/Software/shared-mime-info</webpage>
