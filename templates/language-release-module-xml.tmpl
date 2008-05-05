@@ -44,6 +44,7 @@
          #for pomsgs in $POINFO
            #filter WebSafe
            <error type="${pomsgs[0]}">${pomsgs[1], escape=True}</error>
+           #end filter
          #end for
       </document>
     #end if
