@@ -42,7 +42,7 @@
         #end if
 	<svnpath>${module.scmmodule}/$MODROOT/$docpath/$language</svnpath>       
          #for pomsgs in $POINFO
-           <error type="${pomsgs[0]}">${pomsgs[1]}</error>
+           <error type="${pomsgs[0]}">${pomsgs[1], escape=True}</error>
          #end for
       </document>
     #end if
