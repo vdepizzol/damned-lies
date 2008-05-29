@@ -93,8 +93,9 @@ class LocStatistics:
 
 
 
-    def __init__(self, module, onlybranch = None):
+    def __init__(self, module, onlybranch = None, force = False):
         self.module = module
+        self.force = force
         COs = modules.ScmModule(module, 0)
 
         mybranches = COs.get_branches()
@@ -150,7 +151,7 @@ class LocStatistics:
         defaults.WHOAREWE as "from" address, and sends
         using SMTP on localhost:25."""
         import smtplib
-        from email.MIMEText import MIMEText
+        from email.mime.text import MIMEText
         text = """This is an automatic notification from status generation scripts on:
     %(ourweb)s.
 
@@ -275,7 +276,7 @@ might be worth investigating.
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
 
                 srcpo = os.path.join(po_path, file)
-                if not potchanged and os.access(outpo,os.R_OK) and os.stat(srcpo)[8] < os.stat(outpo)[8]:
+                if not self.force and not potchanged and os.access(outpo,os.R_OK) and os.stat(srcpo)[8] < os.stat(outpo)[8]:
                     # new if clause for saving some database access
                     if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'ui', self.podir, lang):
                         # this language doesn't need updating
@@ -634,7 +635,7 @@ might be worth investigating.
                 lang = file
 
                 outpo = os.path.join(out_dir, out_domain + "." + lang + ".po")
-                if not potchanged and os.access(outpo, os.R_OK) and os.stat(myfile)[8] < os.stat(outpo)[8]:
+                if not self.force and not potchanged and os.access(outpo, os.R_OK) and os.stat(myfile)[8] < os.stat(outpo)[8]:
                     # new if clause for saving some database access
                     if not self.check_po_contains_errors_in_db(self.module["id"], self.branch, 'doc', potbase, lang):
                         # this language doesn't need updating
@@ -683,7 +684,7 @@ might be worth investigating.
         else:
             modulename = docbase
             includes = "" # No support yet for includes for non-automake modules
-            figures = extract_figure_list(self, pofile)
+            figures = self.extract_figure_list(self, pofile)
 
         try: os.makedirs(os.path.join(out_dir, lang))
         except: pass
@@ -737,28 +738,38 @@ might be worth investigating.
         return figlist
 
 if __name__ == "__main__":
-    import sys, os
-    if len(sys.argv)>=1 and len(sys.argv)<=3:
+    import os
+    from optparse import OptionParser
+    
+    parser = OptionParser(
+        usage='%prog [ --force ] [MODULE_ID [BRANCH]]',
+        description='Update statistics about translations in modules.')
+    parser.add_option("-f", "--force",
+                  action="store_true", dest="force", default=False,
+                  help="force statistics generation, even if files didn't change")
+    (options, args) = parser.parse_args()
+
+    if len(args)<=2:
         if os.access(defaults.modules_xml, os.R_OK):
             m = modules.XmlModules(defaults.modules_xml)
-            if len(sys.argv)==3:
-                module = sys.argv[1]
-                branch = sys.argv[2]
+            if len(args)==2:
+                module = args[0]
+                branch = args[1]
                 if branch == "trunk": branch = "HEAD"
                 print "Updating stats for %s.%s..." % (module, branch)
                 if module in m.keys():
-                    LocStatistics(m[module], onlybranch=branch)
-            elif len(sys.argv)==2:
-                module = sys.argv[1]
+                    LocStatistics(m[module], onlybranch=branch, force=options.force)
+            elif len(args)==1:
+                module = args[0]
                 print "Updating stats for %s..." % (module)
                 if module in m.keys():
-                    LocStatistics(m[module])
+                    LocStatistics(m[module], force=options.force)
             else:
                 for modid in m:
                     print "Updating stats for %s..." % (modid)
-                    LocStatistics(m[modid])
+                    LocStatistics(m[modid], force=options.force)
         else:
-            print "Usage:\n\t%s [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
+            parser.error("Unable to read XML module definitions (%s)" % defaults.modules_xml)
     else:
-        print "Usage:\n\t%s [MODULE_ID [BRANCH]]\n" % (sys.argv[0])
+        parser.error("Too much command line arguments")
 
