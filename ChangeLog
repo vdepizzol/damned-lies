@@ -1,3 +1,12 @@
+2008-06-14  Gil Forcada  <gforcada@gnome.org>
+
+	* templates/list-languages.tmpl:
+	* templates/list-modules.tmpl:
+	* templates/people.tmpl:
+	Removed the hack to create a three columns to a css property.
+	Fixes #534174.
+
+
 2008-06-09  Gil Forcada  <gforcada@gnome.org>
 
 	* templates/header.tmpl: Added javascript type, so it passes xhtml

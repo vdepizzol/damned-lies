@@ -10,10 +10,8 @@
 #if len($languages)
   <p>${ngettext("GNOME is being translated to following %(count)s language:", "GNOME is being translated to following %(count)s languages:", $languagecount),count=$languagecount}</p>
 
-<div class="col1">
+<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 <ul class="foot">
-#set count = 1
-#set col = 1
 #for lang in $languages
 <li style="font-size: 120%;">
   #if $lang.name
@@ -22,12 +20,6 @@
   <a href="${webroot}/languages/${lang.code}">${lang.code}</a>
   #end if
 </li>
-  #if $count % (len($languages)/3+1) == 0
-    #set col = $col+1
-    </ul></div>
-    <div class="col${col}"><ul class="foot">
-  #end if
-  #set count += 1
 #end for
 </ul>
 </div>

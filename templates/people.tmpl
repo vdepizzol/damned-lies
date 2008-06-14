@@ -9,9 +9,7 @@
 #if len($people)
 <p>$_("GNOME is being developed by following people:")</p>
 
-<div class="col1">
-#set count = 1
-#set col = 1
+<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 #for personid in $people
   #set global person=$people[personid]
 
@@ -26,12 +24,6 @@
   <a href="$person.webpage">$person.webpage</a><br />
   #end if
   </div>
-
-  #if $count % (len($people)/2+1) == 0
-    #set col += 1
-    </div><div class="col${col}">
-  #end if
-  #set count += 1
 
 #end for
 </div>

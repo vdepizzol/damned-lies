@@ -9,19 +9,10 @@
 #if len($modules)
 <p>$_("Select a module below to see some of the damned lies about it:")</p>
 
-<div class="col1">
+<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 <ul class="foot">
-
-#set count = 1
-#set col = 1
 #for modid in $modids
   <li><a href="${webroot}/module/${modid}">$modules[$modid].description</a></li>
-  #if $count % (len($modids)/3+1) == 0
-    #set col += 1
-    </ul></div>
-    <div class="col${col}"><ul class="foot">
-  #end if
-  #set count += 1
 #end for
 </ul>
 </div>
