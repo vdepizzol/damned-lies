@@ -52,8 +52,10 @@ class TranslationTeams:
                 self.data = { teamid : teams[teamid] }
                 return
 
-
-        self.data = teams
+        if only_language:
+            self.data = {} # No team found
+        else:
+            self.data = teams # All teams
 
 
     # Implement dictionary methods
@@ -187,7 +189,9 @@ class LanguageReleaseRequest(DamnedRequest):
                 release = t_rel
         else:
             (t_rel, t_ext) = (None, None)
-
+            print "Release not found!"
+            return
+        
         myteam = TranslationTeams(only_language=langid)
         if len(myteam):
             teamid = myteam.data.keys()[0]
@@ -198,27 +202,29 @@ class LanguageReleaseRequest(DamnedRequest):
                     if lang != langid:
                         del team['language'][lang]
 
-            if release:
-                self.language = langid
-                language_name = team['language'][langid]['content']
-                myreleases = releases.Releases(deep=1, only_release=release,
-                                               gather_stats=langid).data
-                if myreleases:
-                    self.release = myreleases[0]
-                else:
-                    print "Release not found!!"
-                if not team.has_key('description') and language_name:
-                    team['description'] = ( _("%(lang)s Translation Team")
-                                            % { 'lang' : language_name } )
-                if not team.has_key('bugzilla-component') and language_name:
-                    team['bugzilla-component'] = "%s [%s]" % (language_name,
-                                                              langid)
-                self.language_name = language_name
-                self.team = team
+            language_name = team['language'][langid]['content']
 
-                DamnedRequest.render(self, type)
-            else:
-                print "Release not found!"
+            if not team.has_key('description') and language_name:
+                team['description'] = ( _("%(lang)s Translation Team")
+                                        % { 'lang' : language_name } )
+            if not team.has_key('bugzilla-component') and language_name:
+                team['bugzilla-component'] = "%s [%s]" % (language_name,
+                                                          langid)
+
+            self.language_name = language_name
+            self.team = team
+        else:
+            self.team = None
+        
+        myreleases = releases.Releases(deep=1, only_release=release,
+                                       gather_stats=langid).data
+        if myreleases:
+            self.release = myreleases[0]
+        else:
+            print "Release not found!!"
+        self.language = langid
+
+        DamnedRequest.render(self, type)
 
 class LanguageRequest(DamnedRequest):
     def render(self, type='html'):
