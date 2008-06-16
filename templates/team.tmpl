@@ -1,9 +1,10 @@
-#set global pageTitle=$team.description
+#set global pageTitle=$language_name
 #set global pageSection="teams"
 #include "templates/header.tmpl"
 
 <div class="mainpage">
 
+#if $team
 <h1>${_("%(lang)s Translation Team"), lang=$team.description}</h1>
 
 <table><tr><td valign="top" width="50%">
@@ -35,19 +36,22 @@
   </ul>
   #end if
 
-
-
-</td><td valign="top">
-#if $team.has_key('coordinator')
-  <h2>$_("Coordinator")</h2>
-  #set global person=$team.coordinator
-  #set global printroles=0
-  #include "templates/person-base.tmpl"
-#end if
+  </td><td valign="top">
+  #if $team.has_key('coordinator')
+    <h2>$_("Coordinator")</h2>
+    #set global person=$team.coordinator
+    #set global printroles=0
+    #include "templates/person-base.tmpl"
+  #end if
 </td></tr></table>
+  #set languageDict = $team.language
+#else
+  <h1>${_("Language code: %s") % $language}</h1>
+  #set languageDict = $langstats
+#end if
 
-#if len($team.language)
-#for $lang, $ldata in $team.language.items()
+#if len($languageDict)
+#for $lang, $ldata in $languageDict.items()
 <h2>$ldata.content</h2>
 
 #set releases=$ldata.releases

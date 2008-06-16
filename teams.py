@@ -229,6 +229,8 @@ class LanguageReleaseRequest(DamnedRequest):
 class LanguageRequest(DamnedRequest):
     def render(self, type='html'):
         langid = self.request
+        releaselist = releases.Releases(deep=1, gather_stats = langid).data
+        releaselist.sort(compare_releases)
         myteam = TranslationTeams(only_language=langid)
         if len(myteam):
             teamid = myteam.data.keys()[0]
@@ -239,12 +241,14 @@ class LanguageRequest(DamnedRequest):
                     if lang != langid:
                         del team['language'][lang]
 
-            self.language = langid
             self.language_name = team['language'][langid]['content']
-            releaselist = releases.Releases(deep=1, gather_stats = langid).data
-            releaselist.sort(compare_releases)
             team['language'][langid]['releases'] = releaselist
             self.team = team
-
-            DamnedRequest.render(self, type)
+        else:
+            self.language_name = langid
+            self.langstats = { langid: {'content':langid, 'releases': releaselist} }
+            self.team = None
+        
+        self.language = langid
+        DamnedRequest.render(self, type)
 
