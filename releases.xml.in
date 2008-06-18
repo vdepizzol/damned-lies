@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <releases>
+
   <release id="gnome-2-14" status="official" stringfrozen="true" regenerate="false">
     <_description>GNOME 2.14 (old stable)</_description>
+
     <category id="external">
       <_description>External Dependencies</_description>
+
       <module id="gst-plugins"/>
       <module id="gstreamer"/>
       <module id="iso_codes"/>
       <module id="scrollkeeper"/>
       <module id="xkeyboard-config"/>
     </category>
+
     <category id="platform">
       <_description>Development Platform</_description>
+
       <module id="atk" branch="gnome-2-14"/>
       <module id="gail" branch="gnome-2-18"/>
       <module id="gconf" branch="gnome-2-14"/>
@@ -24,8 +29,10 @@
       <module id="libgnomecanvas" branch="gnome-2-20"/>
       <module id="libgnomeui" branch="libgnomeui-2-14"/>
     </category>
+
     <category id="desktop">
       <_description>Desktop Applications</_description>
+
       <module id="bug-buddy" branch="gnome-2-14"/>
       <module id="dasher" branch="gnome-2-14"/>
       <module id="deskbar-applet" branch="gnome-2-14"/>
@@ -89,12 +96,14 @@
       <module id="yelp" branch="gnome-2-14"/>
       <module id="zenity" branch="gnome-2-14"/>
     </category>
+
     <category id="admin">
       <_description>System Administration</_description>
       <module id="pesselus"/>
       <module id="sabayon"/>
     </category>
   </release>
+
   <release id="gnome-office" status="unofficial">
     <_description>GNOME-Office Productivity Applications</_description>
     <module id="abiword"/>
@@ -106,6 +115,7 @@
     <module id="mergeant"/>
     <module id="planner"/>
   </release>
+
   <release id="gnome-extras" status="unofficial">
     <_description>Extra GNOME Applications</_description>
     <module id="alleyoop"/>
@@ -249,15 +259,19 @@
     <module id="xchat-gnome"/>
     <module id="xdg-user-dirs-gtk"/>
   </release>
+
   <release id="gnome-infrastructure" status="unofficial">
     <_description>GNOME Infrastructure</_description>
+
     <module id="damned-lies"/>
     <module id="jhbuild"/>
     <module id="library-web"/>
     <module id="release-notes" branch="gnome-2-22"/>
   </release>
+
   <release id="gnome-2-16" status="official" stringfrozen="true">
     <_description>GNOME 2.16 (old stable)</_description>
+
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-18"/>
@@ -272,6 +286,7 @@
       <module id="libgnomecanvas" branch="gnome-2-20"/>
       <module id="libgnomeui" branch="gnome-2-16"/>
     </category>
+
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte" branch="gnome-2-16"/>
@@ -341,8 +356,10 @@
       <module id="zenity" branch="gnome-2-16"/>
     </category>
   </release>
+
   <release id="gnome-2-18" status="official" stringfrozen="true">
     <_description>GNOME 2.18 (old stable)</_description>
+
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-18"/>
@@ -357,6 +374,7 @@
       <module id="libgnomecanvas" branch="gnome-2-20"/>
       <module id="libgnomeui" branch="gnome-2-18"/>
     </category>
+
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
@@ -426,19 +444,23 @@
       <module id="yelp" branch="gnome-2-18"/>
       <module id="zenity" branch="gnome-2-18"/>
     </category>
+
     <category id="admin">
       <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon" branch="gnome-2-18" />
     </category>
+
     <category id="devtools">
       <_description>Development Tools</_description>
       <module id="devhelp" branch="gnome-2-18"/>
       <module id="glade3" branch="gnome-2-18"/>
     </category>
   </release>
+
   <release id="gnome-2-20" status="official">
     <_description>GNOME 2.20 (old stable)</_description>
+
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-20"/>
@@ -454,6 +476,7 @@
       <module id="libgnomecanvas" branch="gnome-2-20"/>
       <module id="libgnomeui" branch="gnome-2-20"/>
     </category>
+
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
@@ -523,11 +546,13 @@
       <module id="yelp" branch="gnome-2-20"/>
       <module id="zenity" branch="gnome-2-20"/>
     </category>
+
     <category id="admin">
       <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon" branch="gnome-2-20"/>
     </category>
+
     <category id="devtools">
       <_description>Development Tools</_description>
       <module id="accerciser" branch="gnome-2-20"/>
@@ -536,8 +561,10 @@
       <module id="gnome-devel-docs"/>
     </category>
   </release>
+
   <release id="gnome-2-22" status="official">
     <_description>GNOME 2.22 (stable)</_description>
+
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk" branch="gnome-2-22"/>
@@ -553,6 +580,7 @@
       <module id="libgnomecanvas"/>
       <module id="libgnomeui" branch="gnome-2-22"/>
     </category>
+
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
@@ -629,11 +657,13 @@
       <module id="yelp" branch="gnome-2-22"/>
       <module id="zenity" branch="gnome-2-22"/>
     </category>
+
     <category id="admin">
       <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon"/>
     </category>
+
     <category id="devtools">
       <_description>Development Tools</_description>
       <module id="accerciser" branch="gnome-2-22"/>
@@ -645,8 +675,10 @@
       <module id="gnome-devel-docs"/>
     </category>
   </release>
+
   <release id="gnome-2-24" status="official">
     <_description>GNOME 2.24 (development)</_description>
+
     <category id="platform">
       <_description>GNOME developer platform</_description>
       <module id="atk"/>
@@ -661,6 +693,7 @@
       <module id="libgnomecanvas"/>
       <module id="libgnomeui"/>
     </category>
+
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
@@ -737,11 +770,13 @@
       <module id="yelp"/>
       <module id="zenity"/>
     </category>
+
     <category id="admin">
       <_description>Administration Tools</_description>
       <module id="pessulus"/>
       <module id="sabayon"/>
     </category>
+
     <category id="devtools">
       <_description>Development Tools</_description>
       <module id="accerciser"/>
@@ -752,14 +787,17 @@
       <module id="gnome-build"/>
       <module id="gnome-devel-docs"/>
     </category>
+
     <category id="proposed">
       <_description>New module proposals</_description>
       <module id="empathy"/>
       <module id="conduit"/>
     </category>
   </release>
+
   <release id="fifth-toe" status="unofficial">
     <_description>GNOME Fifth Toe (Extra software)</_description>
+
     <module id="balsa"/>
     <module id="camorama"/>
     <module id="galeon"/>
@@ -773,8 +811,10 @@
     <module id="pan2"/>
     <module id="regexxer"/>
   </release>
+
   <release id="freedesktop.org" status="external">
     <_description>freedesktop.org (non-GNOME)</_description>
+
     <module id="gstreamer"/>
     <module id="gst-plugins-base"/>
     <module id="gst-plugins-good"/>
@@ -785,4 +825,5 @@
     <module id="xdg-user-dirs"/>
     <module id="xkeyboard-config"/>
   </release>
+
 </releases>
