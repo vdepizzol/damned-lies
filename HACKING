@@ -1,3 +1,14 @@
+HOW TO DEBUG
+************
+
+To debug this web application on the command line with the Python debugger,
+insert "import pdb; pdb.set_trace()" where you want the program to enter the 
+debugger, go to the app root directory and type:
+$ export PATH_INFO=/url/you/want/to/debug
+$ python index.py
+
+PATH_INFO should not include the domain name.
+
 TO DO
 *****
 
