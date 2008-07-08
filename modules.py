@@ -74,7 +74,7 @@ class ScmModule:
         self.paths = {}
         self.module = module
         self.type = module["scmroot"]["type"]
-        if self.type not in ('cvs','svn','hg','git'):
+        if self.type not in ('cvs','svn','hg','git', 'bzr'):
             raise Exception("Source code manager of type '%s' non supported." % self.type)
         
         if real_update:
@@ -118,6 +118,10 @@ class ScmModule:
                 commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git reset --hard && git clean -d" % {
                     "localdir" : modulepath,
                     "branch" : branch,
+                    })
+            elif self.type == "bzr":
+                commandList.append("cd \"%(localdir)s\" && bzr up" % {
+                    "localdir" : modulepath,
                     })
         else:
             # Checkout
@@ -163,6 +167,19 @@ class ScmModule:
                 commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s" % {
                     "localdir" : modulepath,
                     "branch" : branch,
+                    })
+            elif self.type == "bzr":
+                bzrpath = scmroot + "/" + module
+                if branch == "trunk" or branch == "HEAD":
+                    bzrpath += "/trunk"
+                else:
+                    bzrpath += "/branches/" + branch
+                if self.module["branch"][branch].has_key("subpath"):
+                    bzrpath += "/%s" % self.module["branch"][branch]["subpath"]
+                commandList.append("cd \"%(localroot)s\" && bzr co --lightweight %(bzrpath)s \"%(dir)s\"" % {
+                    "localroot" : localroot,
+                    "bzrpath" : bzrpath,
+                    "dir" : moduledir,
                     })
         
         # Run command(s)
