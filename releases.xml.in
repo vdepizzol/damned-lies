@@ -178,6 +178,7 @@
     <module id="gnome-hello"/>
     <module id="gnome-jabber"/>
     <module id="gnome-keyring-manager"/>
+    <module id="gnome-launch-box"/>
     <module id="gnome-lirc-properties"/>
     <module id="gnome-main-menu"/>
     <module id="gnome-mount"/>
@@ -585,7 +586,7 @@
     <category id="desktop">
       <_description>GNOME desktop</_description>
       <module id="alacarte"/>
-      <module id="bug-buddy"/>
+      <module id="bug-buddy" branch="gnome-2-22"/>
       <module id="cheese" branch="gnome-2-22"/>
       <module id="dasher" branch="gnome-2-22"/>
       <module id="deskbar-applet" branch="gnome-2-22"/>
