@@ -1,5 +1,15 @@
 2008-07-25  Gil Forcada  <gforcada@gnome.org>
 
+	* index.py:
+	* people.py:
+	* dispatcher.py:
+	* releases.py
+	* teams.py:
+	Updated all shebangs to the most common one to ensure python is always
+	found.
+
+2008-07-25  Gil Forcada  <gforcada@gnome.org>
+
 	* gnome-modules.xml.in: Fixed some miss spellings found by Asgeir
 	Frimannsson.
 	* releases.xml.in: Fixed pessulus name, and commented some non-working
