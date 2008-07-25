@@ -2148,13 +2148,11 @@
     </scmroot>
     <scmmodule>xkeyboard-config</scmmodule>
     <scmweb>http://gitweb.freedesktop.org/?p=xkeyboard-config.git;a=tree</scmweb>
-    <branch id="master"/>
     <_comment>This is not a GNOME-specific module. Please submit your translation through the <a href="http://translationproject.org">Translation Project</a>.</_comment>
-    <branch id="HEAD">
+    <branch id="master">
       <domain id="po">
         <_description>Layout Descriptions</_description>
-      </domain>
-      <scmweb>http://cvs.freedesktop.org/xlibs/xkbdesc/</scmweb>
+      </domain>    
     </branch>
   </module>
 </modules>

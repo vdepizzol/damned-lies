@@ -115,7 +115,7 @@ class ScmModule:
                     "localdir" : modulepath,
                     })
             elif self.type == "git":
-                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git reset --hard && git clean -d" % {
+                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git reset --hard && git clean -df" % {
                     "localdir" : modulepath,
                     "branch" : branch,
                     })
