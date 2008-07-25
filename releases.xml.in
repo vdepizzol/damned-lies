@@ -7,10 +7,13 @@
     <category id="external">
       <_description>External Dependencies</_description>
 
-      <module id="gst-plugins"/>
+      <module id="gst-plugins-base"/>
+      <module id="gst-plugins-good"/>
+      <module id="gst-plugins-bad"/>
+      <module id="gst-plugins-ugly"/>
       <module id="gstreamer"/>
-      <module id="iso_codes"/>
-      <module id="scrollkeeper"/>
+      <!--<module id="iso_codes"/>
+      <module id="scrollkeeper"/>--!>
       <module id="xkeyboard-config"/>
     </category>
 
@@ -99,7 +102,7 @@
 
     <category id="admin">
       <_description>System Administration</_description>
-      <module id="pesselus"/>
+      <module id="pessulus"/>
       <module id="sabayon"/>
     </category>
   </release>
