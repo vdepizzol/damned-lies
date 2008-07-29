@@ -775,7 +775,11 @@
   </module>
 
   <module id="gnome-commander">
-    <branch id="HEAD"/>
+    <branch id="HEAD">
+      <document id="help">
+        <directory>doc</directory>
+      </document>
+    </branch>
   </module>
 
   <module id="gnome-control-center">
