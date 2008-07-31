@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-25 08:48+0000\n"
+"POT-Creation-Date: 2008-07-31 11:06+0100\n"
 "PO-Revision-Date: 2008-03-26 17:20+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -20,8 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Arabic\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n>=3 && n<=10 ? 3 : n>=11 && n<=99 ? 4 : 5;\n"
-"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n>=3 && "
+"n<=10 ? 3 : n>=11 && n<=99 ? 4 : 5;\n"
+"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? "
+"3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../gnome-modules.xml.in.h:1
 msgid "Accessibility Guide"
@@ -79,7 +81,7 @@ msgstr "كتيّب سطر الأوامر"
 msgid "Criawips Manual"
 msgstr "كتيّب كرياوبس"
 
-#: ../gnome-modules.xml.in.h:15 ../templates/header.tmpl:56
+#: ../gnome-modules.xml.in.h:15 ../templates/header.tmpl:57
 msgid "Damned Lies"
 msgstr "الأكاذيب اللعينة"
 
@@ -143,7 +145,8 @@ msgstr "كتيّب أربعة في صف"
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
-msgstr "بداية من جنوم 2.23، تم دمج GAIL في GTK+. لذا لا تُرسِل إلى الجذغ بعد الآن."
+msgstr ""
+"بداية من جنوم 2.23، تم دمج GAIL في GTK+. لذا لا تُرسِل إلى الجذغ بعد الآن."
 
 #: ../gnome-modules.xml.in.h:31
 msgid "GConf Editor Manual"
@@ -222,7 +225,10 @@ msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
-msgstr "‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">ويكي GNUCash</a> لمزيد من المعلومات عن طريقة إرسال الترجمة."
+msgstr ""
+"‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a href=\"http://wiki.gnucash."
+"org/wiki/Translation#Submitting\">ويكي GNUCash</a> لمزيد من المعلومات عن "
+"طريقة إرسال الترجمة."
 
 #: ../gnome-modules.xml.in.h:50
 msgid "GPL License"
@@ -257,157 +263,168 @@ msgid "Geyes Manual"
 msgstr "كتيّب عيون جنوم"
 
 #: ../gnome-modules.xml.in.h:58
+msgid "Gnome Specimen"
+msgstr ""
+
+#: ../gnome-modules.xml.in.h:59
 msgid "Gnometris Manual"
 msgstr "كتيّب Gnometris"
 
-#: ../gnome-modules.xml.in.h:59
+#: ../gnome-modules.xml.in.h:60
 msgid "Gtk+"
 msgstr "جتك+"
 
-#: ../gnome-modules.xml.in.h:60
+#: ../gnome-modules.xml.in.h:61
 msgid "Iagno Manual"
 msgstr "كتيّب إيانجو"
 
-#: ../gnome-modules.xml.in.h:61
+#: ../gnome-modules.xml.in.h:62
+#, fuzzy
+msgid "Invest Applet Manual"
+msgstr "كتيّب بريمج السمكة"
+
+#: ../gnome-modules.xml.in.h:63
 msgid "JHBuild Documentation"
 msgstr "توثيق JHBuild"
 
-#: ../gnome-modules.xml.in.h:62
+#: ../gnome-modules.xml.in.h:64
 msgid "Keyboard Accessibility Monitor Manual"
 msgstr "كتيّب مراقب إعانة لوحة المفاتيح"
 
-#: ../gnome-modules.xml.in.h:63
+#: ../gnome-modules.xml.in.h:65
 msgid "Keyboard Indicator Manual"
 msgstr "كتيّب مؤشر لوحة المفاتيح"
 
-#: ../gnome-modules.xml.in.h:64
+#: ../gnome-modules.xml.in.h:66
 msgid "LGPL License"
 msgstr "ترخيص LGPL"
 
-#: ../gnome-modules.xml.in.h:65
+#: ../gnome-modules.xml.in.h:67
 msgid "Layout Descriptions"
 msgstr "أوصاف التصميم"
 
-#: ../gnome-modules.xml.in.h:66
+#: ../gnome-modules.xml.in.h:68
 msgid "Log Viewer Manual"
 msgstr "كتيّب معاين السجلّ"
 
-#: ../gnome-modules.xml.in.h:67
+#: ../gnome-modules.xml.in.h:69
 msgid "Mines Manual"
 msgstr "كتيّب لعبة الألغام"
 
-#: ../gnome-modules.xml.in.h:68
+#: ../gnome-modules.xml.in.h:70
 msgid "Nibbles Manual"
 msgstr "كتيّب نبلس"
 
-#: ../gnome-modules.xml.in.h:69
+#: ../gnome-modules.xml.in.h:71
 msgid "Panel Trash Manual"
 msgstr "كتيّب سلة مهملات اللوحة"
 
-#: ../gnome-modules.xml.in.h:70
+#: ../gnome-modules.xml.in.h:72
 msgid "Platform Overview"
 msgstr "معاينة المنصّة"
 
-#: ../gnome-modules.xml.in.h:71
+#: ../gnome-modules.xml.in.h:73
 msgid "Property Nicks"
 msgstr "أسماء الخصائص"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:74
 msgid "Release Notes"
 msgstr "ملاحظات الإصدار"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:75
 msgid "Rhythmbox Music Player"
 msgstr "عازف الموسيقى أنغام"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:76
 msgid "Sabayon"
 msgstr "سابايون"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:77
 msgid "Same GNOME Manual"
 msgstr "كتيّب سام جنوم"
 
-#: ../gnome-modules.xml.in.h:76
+#: ../gnome-modules.xml.in.h:78
 msgid "Seahorse Manual"
 msgstr "كتيّب حصان البحر"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:79
 msgid "Search Tool Manual"
 msgstr "كتيّب أداة البحث"
 
-#: ../gnome-modules.xml.in.h:78
+#: ../gnome-modules.xml.in.h:80
 msgid "Shared MIME Info"
 msgstr "معلومات MIME مشتركة"
 
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:81
 msgid "Sound Juicer Manual"
 msgstr "كتيّب مستخرج الصوتيات"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:82
 msgid "Sound Recorder Manual"
 msgstr "كتيّب مسجّل الصوت"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:83
 msgid "Sticky Notes Manual"
 msgstr "كتيّب الملاحظات اللاصقة"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:84
 msgid "Stock Ticker Manual"
 msgstr "كتيّب كشك التذاكر"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:85
 msgid "System Administration Guide"
 msgstr "دليل إدارة النظام"
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:86
 msgid "System Monitor Manual"
 msgstr "كتيّب مراقب النظام"
 
-#: ../gnome-modules.xml.in.h:85
+#: ../gnome-modules.xml.in.h:87
+#, fuzzy
 msgid ""
-"This is not a GNOME-specific module. Please submit your translation by "
-"attaching it to a new bug report in freedesktop.org's Bugzilla (see link "
-"below)."
-msgstr "ليست هذه وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عن طريق إرفاقها إلى بلاغ علّة جديد في بجزيلا freedesktop.org (راجع الوصلة أسفل)"
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr ""
+"ليست هذه وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عن طريق إرفاقها إلى بلاغ علّة "
+"جديد في بجزيلا freedesktop.org (راجع الوصلة أسفل)"
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:72
+#: ../gnome-modules.xml.in.h:88 ../templates/language-release.tmpl:75
 msgid "UI translations"
 msgstr "ترجمات الواجهة"
 
-#: ../gnome-modules.xml.in.h:87
+#: ../gnome-modules.xml.in.h:89
 msgid "User Directories"
 msgstr "دلائل المستخدمين"
 
-#: ../gnome-modules.xml.in.h:88
+#: ../gnome-modules.xml.in.h:90
 msgid "User Guide"
 msgstr "دليل المستخدم"
 
-#: ../gnome-modules.xml.in.h:89
+#: ../gnome-modules.xml.in.h:91
 msgid "Volume Control Manual"
 msgstr "كتيّب متحكم شدة الصوت"
 
-#: ../gnome-modules.xml.in.h:90
+#: ../gnome-modules.xml.in.h:92
 msgid "Weather Applet Locations"
 msgstr "مواقع بريمج الطقس"
 
-#: ../gnome-modules.xml.in.h:91
+#: ../gnome-modules.xml.in.h:93
 msgid "Weather Report Manual"
 msgstr "كتيّب حالة الطقس"
 
-#: ../gnome-modules.xml.in.h:92
+#: ../gnome-modules.xml.in.h:94
 msgid "Window List Applet Manual"
 msgstr "كتيّب بريمج قائمة النوافذ"
 
-#: ../gnome-modules.xml.in.h:93
+#: ../gnome-modules.xml.in.h:95
 msgid "Workspace Switcher Applet Manual"
 msgstr "كتيّب بريمج محول مساحات العمل"
 
-#: ../gnome-modules.xml.in.h:94
+#: ../gnome-modules.xml.in.h:96
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:95
+#: ../gnome-modules.xml.in.h:97
 msgid "glChess Manual"
 msgstr "كتيّب لعبة الشطرنج"
 
@@ -456,35 +473,44 @@ msgid "GNOME 2.22 (stable)"
 msgstr "جنوم 2.22 (مُستقر)"
 
 #: ../releases.xml.in.h:12
+#, fuzzy
+msgid "GNOME 2.24 (development)"
+msgstr "جنوم 2.22 (مُستقر)"
+
+#: ../releases.xml.in.h:13
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "أصبع جنوم الخامس (برمجيات إضافية)"
 
-#: ../releases.xml.in.h:13
+#: ../releases.xml.in.h:14
 msgid "GNOME Infrastructure"
 msgstr "بنية جنوم التحتيّة"
 
-#: ../releases.xml.in.h:14
+#: ../releases.xml.in.h:15
 msgid "GNOME desktop"
 msgstr "سطح مكتب جنوم"
 
-#: ../releases.xml.in.h:15
+#: ../releases.xml.in.h:16
 msgid "GNOME developer platform"
 msgstr "منصّة مطوّري جنوم"
 
-#: ../releases.xml.in.h:16
+#: ../releases.xml.in.h:17
 msgid "GNOME-Office Productivity Applications"
 msgstr "تطبيقات جنوم للأعمال المكتبيّة"
 
-#: ../releases.xml.in.h:17
+#: ../releases.xml.in.h:18
+msgid "New module proposals"
+msgstr ""
+
+#: ../releases.xml.in.h:19
 msgid "System Administration"
 msgstr "إدارة النظام"
 
-#: ../releases.xml.in.h:18
+#: ../releases.xml.in.h:20
 msgid "freedesktop.org (non-GNOME)"
 msgstr "المكتب الحر (ليس جنوم)"
 
-#: ../teams.py:211 ../templates/language-release.tmpl:7
-#: ../templates/team.tmpl:7
+#: ../teams.py:208 ../templates/language-release.tmpl:8
+#: ../templates/team.tmpl:8
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "فريق ترجمة %(lang)s"
@@ -514,16 +540,16 @@ msgid "Assamese"
 msgstr "الأسامية"
 
 #: ../translation-teams.xml.in.h:7
-msgid "Asturian"
-msgstr "الإستوريانية"
-
-#: ../translation-teams.xml.in.h:8
 msgid "Australian English"
 msgstr "الإنجليزية الإسترالية"
 
-#: ../translation-teams.xml.in.h:9
+#: ../translation-teams.xml.in.h:8
 msgid "Azerbaijani"
 msgstr "الأذريبيجانيّة"
+
+#: ../translation-teams.xml.in.h:9
+msgid "Balochi"
+msgstr ""
 
 #: ../translation-teams.xml.in.h:10
 msgid "Basque"
@@ -566,543 +592,445 @@ msgid "Bulgarian"
 msgstr "البلغارية"
 
 #: ../translation-teams.xml.in.h:20
-msgid "Burmese"
-msgstr "البورميّة"
-
-#: ../translation-teams.xml.in.h:21
 msgid "Canadian English"
 msgstr "الإنجليزية الكندية"
 
-#: ../translation-teams.xml.in.h:22
+#: ../translation-teams.xml.in.h:21
 msgid "Catalan"
 msgstr "الكاتالونية"
 
-#: ../translation-teams.xml.in.h:23
+#: ../translation-teams.xml.in.h:22
 msgid "Chinese (China)"
 msgstr "الصينية (الصين)"
 
-#: ../translation-teams.xml.in.h:24
+#: ../translation-teams.xml.in.h:23
 msgid "Chinese (Hong Kong)"
 msgstr "الصينية (هونج كونج)"
 
-#: ../translation-teams.xml.in.h:25
+#: ../translation-teams.xml.in.h:24
 msgid "Chinese (Taiwan)"
 msgstr "الصينية (تايوان)"
 
-#: ../translation-teams.xml.in.h:26
+#: ../translation-teams.xml.in.h:25
 msgid "Chinese Traditional"
 msgstr "الصينية التقليدية"
 
-#: ../translation-teams.xml.in.h:27
+#: ../translation-teams.xml.in.h:26
 msgid "Croatian"
 msgstr "الكرواتية"
 
-#: ../translation-teams.xml.in.h:28
+#: ../translation-teams.xml.in.h:27
 msgid "Czech"
 msgstr "التشيكية"
 
-#: ../translation-teams.xml.in.h:29
+#: ../translation-teams.xml.in.h:28
 msgid "Danish"
 msgstr "الدانماركية"
 
-#: ../translation-teams.xml.in.h:30
-msgid "Divehi"
-msgstr "الدويهية"
-
-#: ../translation-teams.xml.in.h:31
+#: ../translation-teams.xml.in.h:29
 msgid "Dutch"
 msgstr "الهولندية"
 
-#: ../translation-teams.xml.in.h:32
+#: ../translation-teams.xml.in.h:30
 msgid "Dzongkha"
 msgstr "الدزونخية"
 
-#: ../translation-teams.xml.in.h:33
+#: ../translation-teams.xml.in.h:31
 msgid "Esperanto"
 msgstr "الإسبرانتو"
 
-#: ../translation-teams.xml.in.h:34
+#: ../translation-teams.xml.in.h:32
 msgid "Estonian"
 msgstr "الإستونيّة"
 
-#: ../translation-teams.xml.in.h:35
-msgid "Fijian"
-msgstr "الفيجية"
-
-#: ../translation-teams.xml.in.h:36
+#: ../translation-teams.xml.in.h:33
 msgid "Finnish"
 msgstr "الفنلندية"
 
-#: ../translation-teams.xml.in.h:37
+#: ../translation-teams.xml.in.h:34
 msgid "French"
 msgstr "الفرنسية"
 
-#: ../translation-teams.xml.in.h:38
+#: ../translation-teams.xml.in.h:35
 msgid "Friulian"
 msgstr "الفرايليانية"
 
-#: ../translation-teams.xml.in.h:39
+#: ../translation-teams.xml.in.h:36
+#, fuzzy
+msgid "Fula"
+msgstr "الفرايليانية"
+
+#: ../translation-teams.xml.in.h:37
 msgid "Galician"
 msgstr "الغاليتشية"
 
-#: ../translation-teams.xml.in.h:40
+#: ../translation-teams.xml.in.h:38
 msgid "Georgian"
 msgstr "الجيورجية"
 
-#: ../translation-teams.xml.in.h:41
+#: ../translation-teams.xml.in.h:39
 msgid "German"
 msgstr "الألمانية"
 
-#: ../translation-teams.xml.in.h:42
+#: ../translation-teams.xml.in.h:40
 msgid "Greek"
 msgstr "اليونانيّة"
 
-#: ../translation-teams.xml.in.h:43
+#: ../translation-teams.xml.in.h:41
 msgid "Guarani"
 msgstr "الجوارانية"
 
-#: ../translation-teams.xml.in.h:44
+#: ../translation-teams.xml.in.h:42
 msgid "Gujarati"
 msgstr "الكوجراتية"
 
-#: ../translation-teams.xml.in.h:45
-msgid "Haitian Creole"
-msgstr "الكريولية الهاييتية"
-
-#: ../translation-teams.xml.in.h:46
-msgid "Hausa"
-msgstr "الهوسية"
-
-#: ../translation-teams.xml.in.h:47
+#: ../translation-teams.xml.in.h:43
 msgid "Hebrew"
 msgstr "العبريّة"
 
-#: ../translation-teams.xml.in.h:48
+#: ../translation-teams.xml.in.h:44
 msgid "Hindi"
 msgstr "الهندية"
 
-#: ../translation-teams.xml.in.h:49
+#: ../translation-teams.xml.in.h:45
 msgid "Hungarian"
 msgstr "المجرية"
 
-#: ../translation-teams.xml.in.h:50
-msgid "Hyam"
-msgstr "الهيرنية"
-
-#: ../translation-teams.xml.in.h:51
+#: ../translation-teams.xml.in.h:46
 msgid "Icelandic"
 msgstr "الأيسلندية"
 
-#: ../translation-teams.xml.in.h:52
+#: ../translation-teams.xml.in.h:47
 msgid "Ido"
 msgstr "الإيدو"
 
-#: ../translation-teams.xml.in.h:53
-msgid "Igbo"
-msgstr "الإجبوية"
-
-#: ../translation-teams.xml.in.h:54
+#: ../translation-teams.xml.in.h:48
 msgid "Indonesian"
 msgstr "الإندونيسية"
 
-#: ../translation-teams.xml.in.h:55
+#: ../translation-teams.xml.in.h:49
 msgid "Iranian Azerbaijani"
 msgstr "الأذربيجانية الإيرانية"
 
-#: ../translation-teams.xml.in.h:56
+#: ../translation-teams.xml.in.h:50
 msgid "Irish"
 msgstr "الإيرلندية"
 
-#: ../translation-teams.xml.in.h:57
+#: ../translation-teams.xml.in.h:51
 msgid "Italian"
 msgstr "الإيطالية"
 
-#: ../translation-teams.xml.in.h:58
+#: ../translation-teams.xml.in.h:52
 msgid "Japanese"
 msgstr "اليابانية"
 
-#: ../translation-teams.xml.in.h:59
-msgid "Jju"
-msgstr "الجوية"
-
-#: ../translation-teams.xml.in.h:60
-msgid "Kagoma"
-msgstr "الكاجومية"
-
-#: ../translation-teams.xml.in.h:61
+#: ../translation-teams.xml.in.h:53
 msgid "Kannada"
 msgstr "الكنّادية"
 
-#: ../translation-teams.xml.in.h:62
+#: ../translation-teams.xml.in.h:54
 msgid "Kashmiri"
 msgstr "الكشميرية"
 
-#: ../translation-teams.xml.in.h:63
-msgid "Kazakh"
-msgstr "الكازاخستانية"
-
-#: ../translation-teams.xml.in.h:64
+#: ../translation-teams.xml.in.h:55
 msgid "Khmer"
 msgstr "الكامبودجية"
 
-#: ../translation-teams.xml.in.h:65
+#: ../translation-teams.xml.in.h:56
 msgid "Kinyarwanda"
 msgstr "الكنيارونداوية"
 
-#: ../translation-teams.xml.in.h:66
+#: ../translation-teams.xml.in.h:57
 msgid "Kirghiz"
 msgstr "الكرغيزية"
 
-#: ../translation-teams.xml.in.h:67
+#: ../translation-teams.xml.in.h:58
 msgid "Korean"
 msgstr "الكوريّة"
 
-#: ../translation-teams.xml.in.h:68
+#: ../translation-teams.xml.in.h:59
 msgid "Kurdish"
 msgstr "الكردية"
 
-#: ../translation-teams.xml.in.h:69
-msgid "Lao"
-msgstr "اللاوية"
-
-#: ../translation-teams.xml.in.h:70
-msgid "Latin"
-msgstr "اللاتينية"
-
-#: ../translation-teams.xml.in.h:71
+#: ../translation-teams.xml.in.h:60
 msgid "Latvian"
 msgstr "اللتفية"
 
-#: ../translation-teams.xml.in.h:72
+#: ../translation-teams.xml.in.h:61
 msgid "Limburgian"
 msgstr "الليمبرجية"
 
-#: ../translation-teams.xml.in.h:73
+#: ../translation-teams.xml.in.h:62
 msgid "Lithuanian"
 msgstr "اللتوانية"
 
-#: ../translation-teams.xml.in.h:74
+#: ../translation-teams.xml.in.h:63
 msgid "Low German"
 msgstr "الألمانية السفلى"
 
-#: ../translation-teams.xml.in.h:75
+#: ../translation-teams.xml.in.h:64
 msgid "Low German and Saxon"
 msgstr "الألمانية السفلى والساكسون"
 
-#: ../translation-teams.xml.in.h:76
+#: ../translation-teams.xml.in.h:65
 msgid "Low Saxon, Germany"
 msgstr "الساكسونية السفلى، ألمانيا"
 
-#: ../translation-teams.xml.in.h:77
+#: ../translation-teams.xml.in.h:66
 msgid "Macedonian"
 msgstr "المقدونية"
 
-#: ../translation-teams.xml.in.h:78
+#: ../translation-teams.xml.in.h:67
 msgid "Maithili"
 msgstr "الميثيلية"
 
-#: ../translation-teams.xml.in.h:79
+#: ../translation-teams.xml.in.h:68
 msgid "Malagasy"
 msgstr "الملغاسية"
 
-#: ../translation-teams.xml.in.h:80
+#: ../translation-teams.xml.in.h:69
 msgid "Malay"
 msgstr "الماليزية"
 
-#: ../translation-teams.xml.in.h:81
+#: ../translation-teams.xml.in.h:70
 msgid "Malayalam"
 msgstr "الملايلامية"
 
-#: ../translation-teams.xml.in.h:82
-msgid "Maltese"
-msgstr "المالطيّة"
-
-#: ../translation-teams.xml.in.h:83
+#: ../translation-teams.xml.in.h:71
 msgid "Maori"
 msgstr "الماورية"
 
-#: ../translation-teams.xml.in.h:84
+#: ../translation-teams.xml.in.h:72
 msgid "Marathi"
 msgstr "الماراتية"
 
-#: ../translation-teams.xml.in.h:85
-msgid "Mayan"
-msgstr "الميانية"
-
-#: ../translation-teams.xml.in.h:86
+#: ../translation-teams.xml.in.h:73
 msgid "Mongolian"
 msgstr "المنغولية"
 
-#: ../translation-teams.xml.in.h:87
-msgid "Nahuatl"
-msgstr "الناوتلية"
-
 # نيبال
-#: ../translation-teams.xml.in.h:88
+#: ../translation-teams.xml.in.h:74
 msgid "Nepali"
 msgstr "النيبالية"
 
-#: ../translation-teams.xml.in.h:89
+#: ../translation-teams.xml.in.h:75
 msgid "Northern Sotho"
 msgstr "السوثو الشمالي"
 
-#: ../translation-teams.xml.in.h:90
+#: ../translation-teams.xml.in.h:76
 msgid "Norwegian (Bokmål and Nynorsk)"
 msgstr "النرويجية (بكمالية و نيروساك)"
 
-#: ../translation-teams.xml.in.h:91
+#: ../translation-teams.xml.in.h:77
 msgid "Norwegian Bokmål"
 msgstr "النرويجية البكمالية"
 
-#: ../translation-teams.xml.in.h:92
+#: ../translation-teams.xml.in.h:78
 msgid "Norwegian Nynorsk"
 msgstr "النرويجية النينورسكية"
 
-#: ../translation-teams.xml.in.h:93
+#: ../translation-teams.xml.in.h:79
 msgid "Occitan"
 msgstr "الأوكسيتانية"
 
-#: ../translation-teams.xml.in.h:94
+#: ../translation-teams.xml.in.h:80
 msgid "Old English"
 msgstr "الإنجليزية القديمة"
 
-#: ../translation-teams.xml.in.h:95
+#: ../translation-teams.xml.in.h:81
 msgid "Oriya"
 msgstr "الأورياوية"
 
-#: ../translation-teams.xml.in.h:96
+#: ../translation-teams.xml.in.h:82
 msgid "Pashto"
 msgstr "الباشتو"
 
-#: ../translation-teams.xml.in.h:97
+#: ../translation-teams.xml.in.h:83
 msgid "Persian"
 msgstr "الفارسية"
 
-#: ../translation-teams.xml.in.h:98
+#: ../translation-teams.xml.in.h:84
 msgid "Polish"
 msgstr "البولندية"
 
-#: ../translation-teams.xml.in.h:99
+#: ../translation-teams.xml.in.h:85
 msgid "Portuguese"
 msgstr "البرتغالية"
 
-#: ../translation-teams.xml.in.h:100
+#: ../translation-teams.xml.in.h:86
 msgid "Punjabi"
 msgstr "البنجابية"
 
-#: ../translation-teams.xml.in.h:101
-msgid "Páez"
-msgstr "البايسية"
-
-#: ../translation-teams.xml.in.h:102
-msgid "Quechua"
-msgstr "الكشوائية"
-
-#: ../translation-teams.xml.in.h:103
+#: ../translation-teams.xml.in.h:87
 msgid "Romanian"
 msgstr "الرومانية"
 
-#: ../translation-teams.xml.in.h:104
+#: ../translation-teams.xml.in.h:88
 msgid "Russian"
 msgstr "الروسية"
 
-#: ../translation-teams.xml.in.h:105
-msgid "Sanskrit"
-msgstr "السنسكريتية"
-
-#: ../translation-teams.xml.in.h:106
-msgid "Sardinian"
-msgstr "السردينية"
-
-#: ../translation-teams.xml.in.h:107
+#: ../translation-teams.xml.in.h:89
 msgid "Serbian"
 msgstr "الصربية"
 
-#: ../translation-teams.xml.in.h:108
+#: ../translation-teams.xml.in.h:90
 msgid "Serbian Jekavian"
 msgstr "الصربية الجيكافيانية"
 
-#: ../translation-teams.xml.in.h:109
+#: ../translation-teams.xml.in.h:91
 msgid "Serbian Latin"
 msgstr "اللاتينية الصربية"
 
-#: ../translation-teams.xml.in.h:110
+#: ../translation-teams.xml.in.h:92
 msgid "Sinhala"
 msgstr "الصنهالاوية"
 
-#: ../translation-teams.xml.in.h:111
+#: ../translation-teams.xml.in.h:93
 msgid "Slovak"
 msgstr "السلوفاكية"
 
-#: ../translation-teams.xml.in.h:112
+#: ../translation-teams.xml.in.h:94
 msgid "Slovenian"
 msgstr "السلوفينية"
 
-#: ../translation-teams.xml.in.h:113
+#: ../translation-teams.xml.in.h:95
 msgid "Spanish"
 msgstr "الإسبانية"
 
-#: ../translation-teams.xml.in.h:114
-msgid "Swahili"
-msgstr "السواحيلية"
-
-#: ../translation-teams.xml.in.h:115
+#: ../translation-teams.xml.in.h:96
 msgid "Swedish"
 msgstr "السويدية"
 
-#: ../translation-teams.xml.in.h:116
+#: ../translation-teams.xml.in.h:97
 msgid "Tagalog"
 msgstr "التجالوقية"
 
-#: ../translation-teams.xml.in.h:117
+#: ../translation-teams.xml.in.h:98
 msgid "Tajik"
 msgstr "الطاجكستانية"
 
-#: ../translation-teams.xml.in.h:118
+#: ../translation-teams.xml.in.h:99
 msgid "Tamil"
 msgstr "التاميلية"
 
-#: ../translation-teams.xml.in.h:119
+#: ../translation-teams.xml.in.h:100
 msgid "Tatar"
 msgstr "التتارية"
 
-#: ../translation-teams.xml.in.h:120
+#: ../translation-teams.xml.in.h:101
 msgid "Telugu"
 msgstr "التلوجوية"
 
-#: ../translation-teams.xml.in.h:121
-msgid "Tetum"
-msgstr "التيتومية"
-
-#: ../translation-teams.xml.in.h:122
+#: ../translation-teams.xml.in.h:102
 msgid "Thai"
 msgstr "التايلندية"
 
-#: ../translation-teams.xml.in.h:123
-msgid "Tibetan"
-msgstr "التبيتية"
-
-#: ../translation-teams.xml.in.h:124
-msgid "Tigrinya"
-msgstr "التيجرينياوية"
-
-#: ../translation-teams.xml.in.h:125
+#: ../translation-teams.xml.in.h:103
 msgid "Turkish"
 msgstr "التركيّة"
 
-#: ../translation-teams.xml.in.h:126
+#: ../translation-teams.xml.in.h:104
 msgid "Turkmen"
 msgstr "التركمانية"
 
-#: ../translation-teams.xml.in.h:127
-msgid "Tyap"
-msgstr "التيابية"
-
-#: ../translation-teams.xml.in.h:128
+#: ../translation-teams.xml.in.h:105
 msgid "Uighur"
 msgstr "الأيغورية"
 
-#: ../translation-teams.xml.in.h:129
+#: ../translation-teams.xml.in.h:106
 msgid "Ukrainian"
 msgstr "الأكرانية"
 
-#: ../translation-teams.xml.in.h:130
-msgid "Upper Sorbian"
-msgstr "الصربية العليا"
-
-#: ../translation-teams.xml.in.h:131
+#: ../translation-teams.xml.in.h:107
 msgid "Urdu"
 msgstr "الأردية"
 
-#: ../translation-teams.xml.in.h:132
+#: ../translation-teams.xml.in.h:108
 msgid "Uzbek"
 msgstr "الأزبكية"
 
-#: ../translation-teams.xml.in.h:133
+#: ../translation-teams.xml.in.h:109
 msgid "Uzbek (Cyrillic)"
 msgstr "الأزبكية (سريلي)"
 
-#: ../translation-teams.xml.in.h:134
+#: ../translation-teams.xml.in.h:110
 msgid "Uzbek (Latin)"
 msgstr "الأزبكية (لاتيني)"
 
-#: ../translation-teams.xml.in.h:135
+#: ../translation-teams.xml.in.h:111
+msgid "Valencian-Catalan"
+msgstr ""
+
+#: ../translation-teams.xml.in.h:112
 msgid "Vietnamese"
 msgstr "الفيتنامية"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:113
 msgid "Walloon"
 msgstr "الوالونية"
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:114
 msgid "Welsh"
 msgstr "الغالية"
 
-#: ../translation-teams.xml.in.h:138
-msgid "Wolof"
-msgstr "وولف"
-
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:115
 msgid "Xhosa"
 msgstr "الزوشاوية"
 
-#: ../translation-teams.xml.in.h:140
+#: ../translation-teams.xml.in.h:116
 msgid "Yiddish"
 msgstr "اليديشية"
 
-#: ../translation-teams.xml.in.h:141
+#: ../translation-teams.xml.in.h:117
 msgid "Yoruba"
 msgstr "اليوروباوية"
 
-#: ../translation-teams.xml.in.h:142
-msgid "Zapotec"
-msgstr "الزابوتيكية"
-
-#: ../translation-teams.xml.in.h:143
+#: ../translation-teams.xml.in.h:118
 msgid "Zulu"
 msgstr "الزولو"
 
-#: ../update-stats.py:206
+#: ../update-stats.py:207
 msgid "Can't generate POT file, using old one."
 msgstr "لم أستطع توليد ملف POT، أستخدم القديم."
 
-#: ../update-stats.py:209
+#: ../update-stats.py:210
 msgid "Can't generate POT file, using old one if it exists."
 msgstr "لم أستطع توليد ملف POT، أستخدم القديم ان كان موجودا."
 
-#: ../update-stats.py:238
+#: ../update-stats.py:239
 msgid "Can't copy new POT file to public location."
 msgstr "لم أستطع نسخ ملف POT الجديد للمكان العام."
 
-#: ../update-stats.py:250
-#, python-format
+#: ../update-stats.py:251 ../templates/language-release.tmpl:49
+#, c-format, python-format
 msgid "There is no translation team in charge of '%s' translation."
 msgstr "لا يوجد فريق ترجمة مسؤل عن ترجمة %s."
 
-#: ../update-stats.py:326
+#: ../update-stats.py:327
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "لا يوجد خانة لهذه اللغة في ملف LINGUAS."
 
-#: ../update-stats.py:353
-msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
+#: ../update-stats.py:354
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "لا يوجد خانة لهذه اللغة في ALL_LINGUAS في ملف configure."
 
-#: ../update-stats.py:356
+#: ../update-stats.py:357
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
 msgstr "لا أعرف أن أنظر هل هذه اللغة مستخدمة حقيقة، اسأل المسؤول عن الوحدة."
 
-#: ../update-stats.py:370
+#: ../update-stats.py:371
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "خطأ أثناء تشغيل فحص 'intltool-update -m'."
 
-#: ../update-stats.py:376
+#: ../update-stats.py:377
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "هناك بعض الملفات المفقودة من POTFILES.in: %s"
 
-#: ../update-stats.py:385
+#: ../update-stats.py:386
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1111,49 +1039,49 @@ msgstr ""
 "الملفات التالية مشار إليها في POTFILES.in أو POTFILES.skip، لكن لا وجود لها: "
 "%s"
 
-#: ../update-stats.py:399
+#: ../update-stats.py:400
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "ملف PO '%s' لا وجود له."
 
-#: ../update-stats.py:412
+#: ../update-stats.py:413
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "لم يجتز ملف PO '%s' فحص msgfmt: لن أُحدِّثه."
 
-#: ../update-stats.py:414
+#: ../update-stats.py:415
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "لم أستطع الحصول على إحصائيات ملف POT '%s'."
 
-#: ../update-stats.py:417
+#: ../update-stats.py:418
 msgid "This PO file has an executable bit set."
 msgstr "ملف PO هذا مضبوط كملف تنفيذي."
 
-#: ../update-stats.py:442
+#: ../update-stats.py:443
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "ملف PO '%s' ليس مرمّزا UTF-8."
 
-#: ../update-stats.py:515
+#: ../update-stats.py:516
 msgid "Can't find checkout directory."
 msgstr "لم أعثر على مجلد checkout."
 
-#: ../update-stats.py:547
+#: ../update-stats.py:548
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "لا تبدو الوحدة %s كوحدة gnome-doc-utils."
 
-#: ../update-stats.py:552
+#: ../update-stats.py:553
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE لا يؤدي إلى ملف حقيقي، سأستخدم '%s.xml'."
 
-#: ../update-stats.py:555
+#: ../update-stats.py:556
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE لا يشير إلى ملف حقيقي، ربما ماكرو."
 
-#: ../update-stats.py:581
+#: ../update-stats.py:582
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1164,12 +1092,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:610
+#: ../update-stats.py:611
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "لا يوجد فريق ترجمة مسؤل عن %s."
 
-#: ../update-stats.py:654
+#: ../update-stats.py:655
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "قائمة DOC_LINGUAS لا تحتوي هذه اللغة."
 
@@ -1182,53 +1110,55 @@ msgid ""
 "Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
 "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
 "org</a>"
-msgstr "يُدار في وحدة <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> في <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>"
+msgstr ""
+"يُدار في وحدة <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-"
+"lies</a> في <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>"
 
 #: ../templates/footer.tmpl:8
 msgid "Hosted by"
 msgstr "تستضيفها"
 
-#: ../templates/header.tmpl:34 ../templates/header.tmpl:63
+#: ../templates/header.tmpl:35 ../templates/header.tmpl:64
 msgid "Home"
 msgstr "البداية"
 
-#: ../templates/header.tmpl:37
+#: ../templates/header.tmpl:38
 msgid "News"
 msgstr "أخبار"
 
-#: ../templates/header.tmpl:40
+#: ../templates/header.tmpl:41
 msgid "Projects"
 msgstr "مشاريع"
 
-#: ../templates/header.tmpl:43
+#: ../templates/header.tmpl:44
 msgid "Art"
 msgstr "فن"
 
-#: ../templates/header.tmpl:46
+#: ../templates/header.tmpl:47
 msgid "Support"
 msgstr "دعم"
 
-#: ../templates/header.tmpl:49
+#: ../templates/header.tmpl:50
 msgid "Development"
 msgstr "تطوير"
 
-#: ../templates/header.tmpl:52
+#: ../templates/header.tmpl:53
 msgid "Community"
 msgstr "مجتمع"
 
-#: ../templates/header.tmpl:69 ../templates/index.tmpl:13
+#: ../templates/header.tmpl:70 ../templates/index.tmpl:13
 msgid "Teams"
 msgstr "الفرق"
 
-#: ../templates/header.tmpl:74 ../templates/index.tmpl:20
+#: ../templates/header.tmpl:75 ../templates/index.tmpl:20
 msgid "Languages"
 msgstr "اللغات"
 
-#: ../templates/header.tmpl:79
+#: ../templates/header.tmpl:80
 msgid "Release sets"
 msgstr "أطقم الإصدارات"
 
-#: ../templates/header.tmpl:84 ../templates/index.tmpl:35
+#: ../templates/header.tmpl:85 ../templates/index.tmpl:35
 msgid "Modules"
 msgstr "الوحدات"
 
@@ -1253,7 +1183,8 @@ msgstr ""
 "TranslationProject/StartingATeam/\">بدأ فريقك</a>."
 
 #: ../templates/index.tmpl:21
-msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+msgid ""
+"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
 msgstr "قائمة بكل اللغات التي لها <a href=\"teams/\">فرق ترجمة</a>."
 
 #: ../templates/index.tmpl:22
@@ -1327,62 +1258,69 @@ msgstr ""
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% مُترجم)"
 
-#: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
+#: ../templates/language-release.tmpl:11 ../templates/team.tmpl:11
 msgid "Details"
 msgstr "التفاصيل"
 
-#: ../templates/language-release.tmpl:13 ../templates/team.tmpl:13
+#: ../templates/language-release.tmpl:14 ../templates/team.tmpl:14
 msgid "%(lang)s Translation Team Page:"
 msgstr "صفحة فريق الترجمة %(lang)s:"
 
-#: ../templates/language-release.tmpl:17 ../templates/team.tmpl:17
+#: ../templates/language-release.tmpl:18 ../templates/team.tmpl:18
 msgid "Users Web Page:"
 msgstr "صفحة وِب المستخدمين:"
 
-#: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
+#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
 msgid "Bugzilla:"
 msgstr "بجزيلا (Bugzilla):"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
+#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
 msgid "Report Bug in Translation"
 msgstr "أبلِغ عن علّة في الترجمة"
 
-#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
+#: ../templates/language-release.tmpl:25 ../templates/team.tmpl:25
 msgid "Show Existing Bugs"
 msgstr "اعرض العلل الموجودة"
 
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
+#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:30
 msgid "Mailing List:"
 msgstr "القائمة البريدية:"
 
-#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
+#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:32
 msgid "Send e-mail to the list"
 msgstr "أرسل رسالة بريد إلكتروني للقائمة البريدية"
 
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
+#: ../templates/language-release.tmpl:34 ../templates/team.tmpl:34
 msgid "Subscribe"
 msgstr "اشترِك"
 
-#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
+#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:41
 msgid "Coordinator"
 msgstr "المنسّق"
 
-#: ../templates/language-release.tmpl:52
+#: ../templates/language-release.tmpl:48 ../templates/team.tmpl:49
+#, fuzzy, c-format
+msgid "Language code: %s"
+msgstr "اللغات"
+
+#: ../templates/language-release.tmpl:55
 msgid "Hide completed modules"
 msgstr "أخفِ الوحدات المكتملة"
 
-#: ../templates/language-release.tmpl:56
+#: ../templates/language-release.tmpl:59
 msgid "Show completed modules"
 msgstr "أظهر الوحدات المكتملة"
 
-#: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
+#: ../templates/language-release.tmpl:63 ../templates/release.tmpl:9
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
-msgstr "الوحدات في هذه ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة لتعرف إلى أين ترسل الترجمات."
+msgstr ""
+"الوحدات في هذه ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة لتعرف إلى "
+"أين ترسل الترجمات."
 
-#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/language-release.tmpl:69 ../templates/module.tmpl:76
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "Documentation"
 msgstr "التوثيق"
 
@@ -1400,7 +1338,7 @@ msgstr[3] "تُترجم جنوم للغات ال‍ %(count)s التالية:"
 msgstr[4] "تُترجم جنوم للغات ال‍ %(count)s التالية:"
 msgstr[5] "تُترجم جنوم للغات ال‍ %(count)s التالية:"
 
-#: ../templates/list-languages.tmpl:35
+#: ../templates/list-languages.tmpl:27
 msgid "GNOME is currently not being translated to any language. :("
 msgstr "لا تٌترجم جنوم لأي لغة حاليا. :("
 
@@ -1412,7 +1350,7 @@ msgstr "وحدات جنوم"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "اختر وحدة أسفله لترى بعض الأكاذيب اللعينة عنها:"
 
-#: ../templates/list-modules.tmpl:30
+#: ../templates/list-modules.tmpl:21
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
@@ -1474,7 +1412,9 @@ msgstr "غير مُتَرجَم"
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
-msgstr "هذه الوحدة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة الوحدة لترى إلى أين ترسل الترجمات."
+msgstr ""
+"هذه الوحدة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة الوحدة لترى إلى أين "
+"ترسل الترجمات."
 
 #: ../templates/module.tmpl:20
 msgid "Maintainers"
@@ -1484,27 +1424,32 @@ msgstr "المشرفون"
 msgid "Bug reporting"
 msgstr "الإبلاغ عن العلل"
 
-#: ../templates/module.tmpl:37
+#: ../templates/module.tmpl:38
+#, fuzzy
+msgid "Show existing i18n and l10n bugs"
+msgstr "اعرض العلل الموجودة"
+
+#: ../templates/module.tmpl:39
 msgid "Report bugs to Bugzilla"
 msgstr "أبلغ عن علة في بجزيلا (Bugzilla)"
 
-#: ../templates/module.tmpl:43
+#: ../templates/module.tmpl:46
 msgid "Branches:"
 msgstr "الفروع:"
 
-#: ../templates/module.tmpl:58
+#: ../templates/module.tmpl:61
 msgid "Browse CVS"
 msgstr "تصفح CVS"
 
-#: ../templates/module.tmpl:60 ../templates/module.tmpl:62
+#: ../templates/module.tmpl:63 ../templates/module.tmpl:65
 msgid "Browse SVN"
 msgstr "تصفح SVN"
 
-#: ../templates/module.tmpl:66
+#: ../templates/module.tmpl:69
 msgid "This branch is currently string-frozen."
 msgstr "جُمّدت عبارات الترجمة لهذا الفرع."
 
-#: ../templates/module.tmpl:93
+#: ../templates/module.tmpl:96
 msgid "Translation"
 msgstr "ترجمة"
 
@@ -1516,7 +1461,7 @@ msgstr "مساهمو جنوم"
 msgid "GNOME is being developed by following people:"
 msgstr "يطور جنوم الأشخاص التاليون:"
 
-#: ../templates/people.tmpl:40
+#: ../templates/people.tmpl:32
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "لا يوجد أي مساهم، اخترع جنوم نفسه بنفسه."
 
@@ -1548,20 +1493,20 @@ msgstr "يُنسّق %(team)s"
 msgid "%(release)s Release"
 msgstr "إصدار %(release)s"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "Release"
 msgstr "الإصدار"
 
 #: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:57
+#: ../templates/team.tmpl:60
 msgid "Graph"
 msgstr "رسم بياني"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "User Interface"
 msgstr "واجهة المستخدم"
 
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:69
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:72
 msgid "-"
 msgstr "-"
 
@@ -1603,3 +1548,86 @@ msgstr "اللغة"
 msgid "Translated"
 msgstr "مُتَرجَم"
 
+#~ msgid "Asturian"
+#~ msgstr "الإستوريانية"
+
+#~ msgid "Burmese"
+#~ msgstr "البورميّة"
+
+#~ msgid "Divehi"
+#~ msgstr "الدويهية"
+
+#~ msgid "Fijian"
+#~ msgstr "الفيجية"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "الكريولية الهاييتية"
+
+#~ msgid "Hausa"
+#~ msgstr "الهوسية"
+
+#~ msgid "Hyam"
+#~ msgstr "الهيرنية"
+
+#~ msgid "Igbo"
+#~ msgstr "الإجبوية"
+
+#~ msgid "Jju"
+#~ msgstr "الجوية"
+
+#~ msgid "Kagoma"
+#~ msgstr "الكاجومية"
+
+#~ msgid "Kazakh"
+#~ msgstr "الكازاخستانية"
+
+#~ msgid "Lao"
+#~ msgstr "اللاوية"
+
+#~ msgid "Latin"
+#~ msgstr "اللاتينية"
+
+#~ msgid "Maltese"
+#~ msgstr "المالطيّة"
+
+#~ msgid "Mayan"
+#~ msgstr "الميانية"
+
+#~ msgid "Nahuatl"
+#~ msgstr "الناوتلية"
+
+#~ msgid "Páez"
+#~ msgstr "البايسية"
+
+#~ msgid "Quechua"
+#~ msgstr "الكشوائية"
+
+#~ msgid "Sanskrit"
+#~ msgstr "السنسكريتية"
+
+#~ msgid "Sardinian"
+#~ msgstr "السردينية"
+
+#~ msgid "Swahili"
+#~ msgstr "السواحيلية"
+
+#~ msgid "Tetum"
+#~ msgstr "التيتومية"
+
+#~ msgid "Tibetan"
+#~ msgstr "التبيتية"
+
+#~ msgid "Tigrinya"
+#~ msgstr "التيجرينياوية"
+
+#~ msgid "Tyap"
+#~ msgstr "التيابية"
+
+#~ msgid "Upper Sorbian"
+#~ msgstr "الصربية العليا"
+
+#~ msgid "Wolof"
+#~ msgstr "وولف"
+
+#~ msgid "Zapotec"
+#~ msgstr "الزابوتيكية"
