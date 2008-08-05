@@ -313,6 +313,8 @@
   </module>
 
   <module id="empathy">
+    <webpage>http://live.gnome.org/Empathy</webpage>
+    <maintainer id="xclaesse"/>
     <branch id="HEAD"/>
   </module>
 
@@ -1307,11 +1309,12 @@
   </module>
 
   <module id="gnome-vfs" >
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
+    <branch id="gnome-2-22" stringfrozen="true"/>
   </module>
 
   <module id="gnome-volume-manager">
@@ -1415,11 +1418,12 @@
   </module>
 
   <module id="gtksourceview">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
+    <branch id="gnome-2-22" stringfrozen="true"/>
   </module>
 
   <module id="gtranslator">
