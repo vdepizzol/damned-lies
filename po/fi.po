@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-20 12:07+0300\n"
-"PO-Revision-Date: 2008-08-20 12:07+0300\n"
+"POT-Creation-Date: 2008-08-21 13:23+0300\n"
+"PO-Revision-Date: 2008-08-21 13:25+0300\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -990,7 +990,7 @@ msgstr "Uutta POT-tiedostoa ei voi kopioida julkiselle alueelle."
 #: ../update-stats.py:251 ../templates/language-release.tmpl:49
 #, c-format, python-format
 msgid "There is no translation team in charge of '%s' translation."
-msgstr "Kielen \"%s\" käännöksille ei ole vastuullista käännösryhmää."
+msgstr "Kielen '%s' käännöksille ei ole vastuullista käännösryhmää."
 
 #: ../update-stats.py:327
 msgid "Entry for this language is not present in LINGUAS file."
@@ -1030,17 +1030,17 @@ msgstr ""
 #: ../update-stats.py:400
 #, python-format
 msgid "PO file '%s' doesn't exist."
-msgstr "PO-tiedostoa \"%s \" ei ole olemassa."
+msgstr "PO-tiedostoa '%s' ei ole olemassa."
 
 #: ../update-stats.py:413
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr "PO-tiedosto \"%s\" ei läpäise msgfmt-tarkastusta: ei päivitetä."
+msgstr "PO-tiedosto '%s' ei läpäise msgfmt-tarkastusta: ei päivitetä."
 
 #: ../update-stats.py:415
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
-msgstr "POT-tiedostolle \"%s\" ei saatu tilastotietoja."
+msgstr "POT-tiedostolle '%s' ei saatu tilastotietoja."
 
 #: ../update-stats.py:418
 msgid "This PO file has an executable bit set."
@@ -1049,7 +1049,7 @@ msgstr "PO-tiedostolla on suoritusbitti asetettuna."
 #: ../update-stats.py:443
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "PO-tiedosto \"%s\" ei ole UTF-8 merkistössä."
+msgstr "PO-tiedosto '%s' ei ole UTF-8 merkistössä."
 
 #: ../update-stats.py:516
 msgid "Can't find checkout directory."
@@ -1063,7 +1063,7 @@ msgstr "Moduuli %s ei näytä gnome-doc-utils-moduulilta."
 #: ../update-stats.py:553
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr "DOC_MODULE ei viittaa oikeaan tiedostoon, käytetään \"%s.xml\"."
+msgstr "DOC_MODULE ei viittaa oikeaan tiedostoon, käytetään '%s.xml'."
 
 #: ../update-stats.py:556
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
