@@ -10,36 +10,43 @@ class XmlModules:
         only_module = module
 
         people = data.getPeople()
-
-        for module in self.modules:
-            modid = module
+        
+        for modid, module in self.modules.items():
 
             if only_module and modid != only_module:
                 continue
             #
             # maintainers = self.getMaintainers(module, default = defaults.maintainers)
-            if self.modules[module].has_key('maintainer'):
-                for maint in self.modules[module]['maintainer']:
+            if module.has_key('maintainer'):
+                for maint in module['maintainer']:
                     if people.has_key(maint):
-                        self.modules[module]['maintainer'][maint] = people[maint]
+                        module['maintainer'][maint] = people[maint]
 
-            if self.modules[module].has_key('branch'):
-                for branch in self.modules[module]['branch']:
-                    if not self.modules[module]["branch"][branch].has_key('domain'):
-                        self.modules[module]["branch"][branch]['domain'] = {}
-                    trdomains = self.modules[module]["branch"][branch]['domain'].keys()
-                    if not self.modules[module]["branch"][branch].has_key('document'):
-                        self.modules[module]["branch"][branch]['document'] = {}
-                    documents = self.modules[module]["branch"][branch]['document'].keys()
+            if module.has_key('bugs-baseurl'):
+                if module['bugs-baseurl'].find("bugzilla") != -1 or \
+                   module['bugs-baseurl'].find("freedesktop") != -1:
+                    module['bugs-enterurl'] = "%senter_bug.cgi?product=%s&amp;component=%s" % (module['bugs-baseurl'], module['bugs-product'], module['bugs-component'])
+                    module['bugs-i18nurl'] = "%sbuglist.cgi?product=%s&amp;component=%s&amp;keywords_type=anywords&amp;keywords=I18N+L10N&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO" % (module['bugs-baseurl'], module['bugs-product'], module['bugs-component'])
+                else:
+                    module['bugs-enterurl'] = module['bugs-baseurl']
+
+            if module.has_key('branch'):
+                for branch in module['branch']:
+                    if not module["branch"][branch].has_key('domain'):
+                        module["branch"][branch]['domain'] = {}
+                    trdomains = module["branch"][branch]['domain'].keys()
+                    if not module["branch"][branch].has_key('document'):
+                        module["branch"][branch]['document'] = {}
+                    documents = module["branch"][branch]['document'].keys()
                     for trdomain in trdomains:
-                        here = self.modules[module]["branch"][branch]['domain'][trdomain]
+                        here = module["branch"][branch]['domain'][trdomain]
                         if not here.has_key('potbase'):
-                            here['potbase'] = self.modules[module]['id']
+                            here['potbase'] = module['id']
                         if not here.has_key('description'):
                             here['description'] = here['potbase']
 
                     for document in documents:
-                        here = self.modules[module]["branch"][branch]['document'][document]
+                        here = module["branch"][branch]['document'][document]
                         here['potbase'] = document
                         if not here.has_key('directory'):
                             here['directory'] = here['id']

@@ -1,3 +1,13 @@
+2008-08-30  Claude Paroz  <claude@2xlibre.net>
+
+	* gnome-modules.xml.in:
+	* releases.xml.in: gok branched for 2.22, added avahi module in
+	freedesktop.
+	* people.xml.in: Added Lennart.
+	* modules.py: Defines "Enter bug" and "i18n bugs" URLs depending on bug
+	tracking type.
+	* templates/module.tmpl: Use the URLs defined in modules.py.
+
 2008-08-26 Gil Forcada <gforcada@gnome.org>
 
 	* gnome-modules.xml.in:

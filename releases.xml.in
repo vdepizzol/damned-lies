@@ -529,7 +529,7 @@
       <module id="gnome-user-docs" branch="gnome-2-22"/>
       <module id="gnome-utils" branch="gnome-2-20"/>
       <module id="gnome-volume-manager" branch="gnome-2-20"/>
-      <module id="gok"/>
+      <module id="gok" branch="gnome-2-22"/>
       <module id="gtk-engines" branch="gtk-engines-2-12"/>
       <module id="gtkhtml" branch="gnome-2-20"/>
       <module id="gtksourceview" branch="gnome-2-20"/>
@@ -634,7 +634,7 @@
       <module id="gnome-user-docs" branch="gnome-2-22"/>
       <module id="gnome-utils" branch="gnome-2-20"/>
       <module id="gnome-volume-manager"/>
-      <module id="gok"/>
+      <module id="gok" branch="gnome-2-22"/>
       <module id="gtk-engines" branch="gtk-engines-2-14"/>
       <module id="gtkhtml" branch="gnome-2-22"/>
       <module id="gtksourceview" branch="gnome-2-22"/>
@@ -824,6 +824,7 @@
   <release id="freedesktop.org" status="external">
     <_description>freedesktop.org (non-GNOME)</_description>
 
+    <module id="avahi"/>
     <module id="gstreamer"/>
     <module id="gst-plugins-base"/>
     <module id="gst-plugins-good"/>
