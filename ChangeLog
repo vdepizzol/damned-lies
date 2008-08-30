@@ -1,5 +1,11 @@
 2008-08-30  Claude Paroz  <claude@2xlibre.net>
 
+	* module.py: Do computation in render() instead of __init__() for
+	ListModulesRequest, so as XmlModules are only loaded once.
+	* releases.xml.in: Added 'master' branch to avahi.
+
+2008-08-30  Claude Paroz  <claude@2xlibre.net>
+
 	* gnome-modules.xml.in:
 	* releases.xml.in: gok branched for 2.22, added avahi module in
 	freedesktop.

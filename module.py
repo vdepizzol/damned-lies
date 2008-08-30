@@ -53,14 +53,14 @@ def compare_branches(a, b):
         return cmp(a, b)*-1
 
 class ListModulesRequest(DamnedRequest):
-    def __init__(self, template=None, xmltemplate=None):
-        global allmodules
-        DamnedRequest.__init__(self, template, xmltemplate)
+    def render(self, type='html'):
+        global allmodules 
         allmodules = modules.XmlModules()
         moduleids = allmodules.keys()
         moduleids.sort(compare_module_names)
         self.modids = moduleids
         self.modules = allmodules
+        DamnedRequest.render(self, type)
 
 class ModulePageRequest(DamnedRequest):
     def render(self, type='html'):
