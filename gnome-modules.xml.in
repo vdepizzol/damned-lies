@@ -164,7 +164,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true">
       <document id="help">
         <directory>docs</directory>
@@ -186,6 +186,11 @@
       </document>
     </branch>
     <branch id="gnome-2-22" stringfrozen="true">
+      <document id="help">
+        <directory>docs</directory>
+      </document>
+    </branch>
+    <branch id="gnome-2-24" stringfrozen="true">
       <document id="help">
         <directory>docs</directory>
       </document>
