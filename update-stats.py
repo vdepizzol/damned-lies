@@ -152,7 +152,7 @@ class LocStatistics:
         using SMTP on localhost:25."""
         import smtplib
         from email.mime.text import MIMEText
-        text = """This is an automatic notification from status generation scripts on:
+        text = u"""This is an automatic notification from status generation scripts on:
     %(ourweb)s.
 
 There have been following string additions to module '%(module)s':
@@ -163,9 +163,9 @@ Note that this doesn't directly indicate a string freeze break, but it
 might be worth investigating.
 """ % { 'module' : out_domain,
         'ourweb' : defaults.WHEREAREWE,
-        'potdiff' : "\n    ".join(diff) }
+        'potdiff' : "\n    ".join(diff).decode('utf-8') }
 
-        msg = MIMEText(text)
+        msg = MIMEText(text.encode('utf-8'), 'plain', 'utf-8')
         msg['Subject'] = "String additions to '%s'" % (out_domain)
         msg['From'] = "GNOME Status Pages <%s>" % (defaults.WHOAREWE)
         msg['To'] = defaults.notifications_to
