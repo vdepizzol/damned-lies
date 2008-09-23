@@ -135,8 +135,9 @@
   </module>
 
   <module id="billreminder">
-     <maintainer id="ogmaciel" />
-     <branch id="HEAD"/>
+    <maintainer id="ogmaciel" />
+    <branch id="HEAD"/>
+    <branch id="billreminder-0.3.2"/>
   </module>
 
   <module id="blam">
@@ -773,7 +774,7 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true">
+    <branch id="HEAD" stringfrozen="false">
       <domain id="po"/>
     </branch>
     <branch id="gnome-2-14" stringfrozen="true">
@@ -796,6 +797,7 @@
       <domain id="po-locations" potbase="gnome-applets-locations"/>
       <domain id="po"/>
     </branch>
+    <branch id="gnome-2-24" stringfrozen="true"/>
   </module>
 
   <module id="gnome-backgrounds">
