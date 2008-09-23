@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies Head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-09 23:42+0200\n"
-"PO-Revision-Date: 2008-05-09 23:43+0200\n"
+"POT-Creation-Date: 2008-08-06 18:28+0000\n"
+"PO-Revision-Date: 2008-09-23 02:09+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -254,84 +254,84 @@ msgid "Geyes Manual"
 msgstr "Geyes kézikönyve"
 
 #: ../gnome-modules.xml.in.h:58
+msgid "Gnome Specimen"
+msgstr "Gnome Specimen"
+
+#: ../gnome-modules.xml.in.h:59
 msgid "Gnometris Manual"
 msgstr "Gnometris kézikönyve"
 
-#: ../gnome-modules.xml.in.h:59
+#: ../gnome-modules.xml.in.h:60
 msgid "Gtk+"
 msgstr "Gtk+"
 
-#: ../gnome-modules.xml.in.h:60
+#: ../gnome-modules.xml.in.h:61
 msgid "Iagno Manual"
 msgstr "Iagno kézikönyve"
 
-#: ../gnome-modules.xml.in.h:61
+#: ../gnome-modules.xml.in.h:62
 msgid "Invest Applet Manual"
 msgstr "Invest kisalkalmazás kézikönyve"
 
-#: ../gnome-modules.xml.in.h:62
+#: ../gnome-modules.xml.in.h:63
 msgid "JHBuild Documentation"
 msgstr "JHBuild dokumentáció"
 
-#: ../gnome-modules.xml.in.h:63
+#: ../gnome-modules.xml.in.h:64
 msgid "Keyboard Accessibility Monitor Manual"
 msgstr "Billentyűzet akadálymentesítés-figyelőjének kézikönyve"
 
-#: ../gnome-modules.xml.in.h:64
+#: ../gnome-modules.xml.in.h:65
 msgid "Keyboard Indicator Manual"
 msgstr "Billentyűzetjelző kézikönyve"
 
-#: ../gnome-modules.xml.in.h:65
+#: ../gnome-modules.xml.in.h:66
 msgid "LGPL License"
 msgstr "LGPL licenc"
 
-#: ../gnome-modules.xml.in.h:66
+#: ../gnome-modules.xml.in.h:67
 msgid "Layout Descriptions"
 msgstr "Kiosztásleírások"
 
-#: ../gnome-modules.xml.in.h:67
+#: ../gnome-modules.xml.in.h:68
 msgid "Log Viewer Manual"
 msgstr "Naplómegjelenítő kézikönyve"
 
-#: ../gnome-modules.xml.in.h:68
+#: ../gnome-modules.xml.in.h:69
 msgid "Mines Manual"
 msgstr "Aknakereső kézikönyve"
 
-#: ../gnome-modules.xml.in.h:69
+#: ../gnome-modules.xml.in.h:70
 msgid "Nibbles Manual"
 msgstr "Kukacok kézikönyve"
 
-#: ../gnome-modules.xml.in.h:70
+#: ../gnome-modules.xml.in.h:71
 msgid "Panel Trash Manual"
 msgstr "Panel kuka kézikönyve"
 
-#: ../gnome-modules.xml.in.h:71
+#: ../gnome-modules.xml.in.h:72
 msgid "Platform Overview"
 msgstr "Platform bemutatása"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:73
 msgid "Property Nicks"
 msgstr "Tulajdonságálnevek"
 
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:74
 msgid "Release Notes"
 msgstr "Kiadási megjegyzések"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:75
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox zenelejátszó"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:76
 msgid "Sabayon"
 msgstr "Sabayon"
 
-#: ../gnome-modules.xml.in.h:76
+#: ../gnome-modules.xml.in.h:77
 msgid "Same GNOME Manual"
 msgstr "Same GNOME kézikönyve"
-
-#: ../gnome-modules.xml.in.h:77
-msgid "Seahorse Manual"
-msgstr "Seahorse kézikönyve"
 
 #: ../gnome-modules.xml.in.h:78
 msgid "Search Tool Manual"
@@ -373,7 +373,7 @@ msgstr ""
 "Ez nem GNOME-specifikus modul. A fordításokat a <a href=\"http://"
 "translationproject.org\">Translation Project</a> használatával küldje el."
 
-#: ../gnome-modules.xml.in.h:87 ../templates/language-release.tmpl:72
+#: ../gnome-modules.xml.in.h:87 ../templates/language-release.tmpl:75
 msgid "UI translations"
 msgstr "Felhasználói felület fordításai"
 
@@ -482,19 +482,15 @@ msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office irodai alkalmazások"
 
 #: ../releases.xml.in.h:18
-msgid "New module proposals"
-msgstr "Újonnan javasolt modulok"
-
-#: ../releases.xml.in.h:19
 msgid "System Administration"
 msgstr "Rendszeradminisztráció"
 
-#: ../releases.xml.in.h:20
+#: ../releases.xml.in.h:19
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nem-GNOME)"
 
-#: ../teams.py:211 ../templates/language-release.tmpl:7
-#: ../templates/team.tmpl:7
+#: ../teams.py:208 ../templates/language-release.tmpl:8
+#: ../templates/team.tmpl:8
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s fordítócsapat"
@@ -524,591 +520,483 @@ msgid "Assamese"
 msgstr "Asszami"
 
 #: ../translation-teams.xml.in.h:7
-msgid "Asturian"
-msgstr "Asztúri"
-
-#: ../translation-teams.xml.in.h:8
 msgid "Australian English"
 msgstr "Ausztrál angol"
 
-#: ../translation-teams.xml.in.h:9
+#: ../translation-teams.xml.in.h:8
 msgid "Azerbaijani"
 msgstr "Azeri"
 
-#: ../translation-teams.xml.in.h:10
+#: ../translation-teams.xml.in.h:9
 msgid "Balochi"
 msgstr "Balochi"
 
-#: ../translation-teams.xml.in.h:11
+#: ../translation-teams.xml.in.h:10
 msgid "Basque"
 msgstr "Baszk"
 
-#: ../translation-teams.xml.in.h:12
+#: ../translation-teams.xml.in.h:11
 msgid "Belarusian"
 msgstr "Belorusz"
 
-#: ../translation-teams.xml.in.h:13
+#: ../translation-teams.xml.in.h:12
 msgid "Belarusian Latin"
 msgstr "Belorusz latin"
 
-#: ../translation-teams.xml.in.h:14
+#: ../translation-teams.xml.in.h:13
 msgid "Bengali"
 msgstr "Bengáli"
 
-#: ../translation-teams.xml.in.h:15
+#: ../translation-teams.xml.in.h:14
 msgid "Bengali (India)"
 msgstr "Bengáli (India)"
 
-#: ../translation-teams.xml.in.h:16
+#: ../translation-teams.xml.in.h:15
 msgid "Bosnian"
 msgstr "Bosnyák"
 
-#: ../translation-teams.xml.in.h:17
+#: ../translation-teams.xml.in.h:16
 msgid "Brazilian Portuguese"
 msgstr "Brazíliai portugál"
 
-#: ../translation-teams.xml.in.h:18
+#: ../translation-teams.xml.in.h:17
 msgid "Breton"
 msgstr "Breton"
 
-#: ../translation-teams.xml.in.h:19
+#: ../translation-teams.xml.in.h:18
 msgid "British English"
 msgstr "Brit angol"
 
-#: ../translation-teams.xml.in.h:20
+#: ../translation-teams.xml.in.h:19
 msgid "Bulgarian"
 msgstr "Bolgár"
 
-#: ../translation-teams.xml.in.h:21
-msgid "Burmese"
-msgstr "Burmai"
-
-#: ../translation-teams.xml.in.h:22
+#: ../translation-teams.xml.in.h:20
 msgid "Canadian English"
 msgstr "Kanadai angol"
 
-#: ../translation-teams.xml.in.h:23
+#: ../translation-teams.xml.in.h:21
 msgid "Catalan"
 msgstr "Katalán"
 
-#: ../translation-teams.xml.in.h:24
+#: ../translation-teams.xml.in.h:22
 msgid "Chinese (China)"
 msgstr "Kínai (Kína)"
 
-#: ../translation-teams.xml.in.h:25
+#: ../translation-teams.xml.in.h:23
 msgid "Chinese (Hong Kong)"
 msgstr "Kínai (Hong Kong)"
 
-#: ../translation-teams.xml.in.h:26
+#: ../translation-teams.xml.in.h:24
 msgid "Chinese (Taiwan)"
 msgstr "Kínai (Tajvan)"
 
-#: ../translation-teams.xml.in.h:27
+#: ../translation-teams.xml.in.h:25
 msgid "Chinese Traditional"
 msgstr "Hagyományos kínai"
 
-#: ../translation-teams.xml.in.h:28
+#: ../translation-teams.xml.in.h:26
 msgid "Crimean Tatar"
 msgstr "Krími tatár"
 
-#: ../translation-teams.xml.in.h:29
+#: ../translation-teams.xml.in.h:27
 msgid "Croatian"
 msgstr "Horvát"
 
-#: ../translation-teams.xml.in.h:30
+#: ../translation-teams.xml.in.h:28
 msgid "Czech"
 msgstr "Cseh"
 
-#: ../translation-teams.xml.in.h:31
+#: ../translation-teams.xml.in.h:29
 msgid "Danish"
 msgstr "Dán"
 
-#: ../translation-teams.xml.in.h:32
-msgid "Divehi"
-msgstr "Divehi"
-
-#: ../translation-teams.xml.in.h:33
+#: ../translation-teams.xml.in.h:30
 msgid "Dutch"
 msgstr "Holland"
 
-#: ../translation-teams.xml.in.h:34
+#: ../translation-teams.xml.in.h:31
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: ../translation-teams.xml.in.h:35
+#: ../translation-teams.xml.in.h:32
 msgid "Esperanto"
 msgstr "Eszperantó"
 
-#: ../translation-teams.xml.in.h:36
+#: ../translation-teams.xml.in.h:33
 msgid "Estonian"
 msgstr "Észt"
 
-#: ../translation-teams.xml.in.h:37
-msgid "Fijian"
-msgstr "Fidzsi"
-
-#: ../translation-teams.xml.in.h:38
+#: ../translation-teams.xml.in.h:34
 msgid "Finnish"
 msgstr "Finn"
 
-#: ../translation-teams.xml.in.h:39
+#: ../translation-teams.xml.in.h:35
 msgid "French"
 msgstr "Francia"
 
-#: ../translation-teams.xml.in.h:40
+#: ../translation-teams.xml.in.h:36
 msgid "Friulian"
 msgstr "Friuli"
 
-#: ../translation-teams.xml.in.h:41
+#: ../translation-teams.xml.in.h:37
+msgid "Fula"
+msgstr "Fula"
+
+#: ../translation-teams.xml.in.h:38
 msgid "Galician"
 msgstr "Galíciai"
 
-#: ../translation-teams.xml.in.h:42
+#: ../translation-teams.xml.in.h:39
 msgid "Georgian"
 msgstr "Grúz"
 
-#: ../translation-teams.xml.in.h:43
+#: ../translation-teams.xml.in.h:40
 msgid "German"
 msgstr "Német"
 
-#: ../translation-teams.xml.in.h:44
+#: ../translation-teams.xml.in.h:41
 msgid "Greek"
 msgstr "Görög"
 
-#: ../translation-teams.xml.in.h:45
+#: ../translation-teams.xml.in.h:42
 msgid "Guarani"
 msgstr "Guarani"
 
-#: ../translation-teams.xml.in.h:46
+#: ../translation-teams.xml.in.h:43
 msgid "Gujarati"
 msgstr "Gudzsaráti"
 
-#: ../translation-teams.xml.in.h:47
-msgid "Haitian Creole"
-msgstr "Haiti kreol"
-
-#: ../translation-teams.xml.in.h:48
-msgid "Hausa"
-msgstr "Hausza"
-
-#: ../translation-teams.xml.in.h:49
+#: ../translation-teams.xml.in.h:44
 msgid "Hebrew"
 msgstr "Héber"
 
-#: ../translation-teams.xml.in.h:50
+#: ../translation-teams.xml.in.h:45
 msgid "Hindi"
 msgstr "Hindi"
 
-#: ../translation-teams.xml.in.h:51
+#: ../translation-teams.xml.in.h:46
 msgid "Hungarian"
 msgstr "Magyar"
 
-#: ../translation-teams.xml.in.h:52
-msgid "Hyam"
-msgstr "Hyam"
-
-#: ../translation-teams.xml.in.h:53
+#: ../translation-teams.xml.in.h:47
 msgid "Icelandic"
 msgstr "Izlandi"
 
-#: ../translation-teams.xml.in.h:54
+#: ../translation-teams.xml.in.h:48
 msgid "Ido"
 msgstr "Ido"
 
-#: ../translation-teams.xml.in.h:55
-msgid "Igbo"
-msgstr "Igbo"
-
-#: ../translation-teams.xml.in.h:56
+#: ../translation-teams.xml.in.h:49
 msgid "Indonesian"
 msgstr "Indonéz"
 
-#: ../translation-teams.xml.in.h:57
+#: ../translation-teams.xml.in.h:50
 msgid "Iranian Azerbaijani"
 msgstr "Iráni azeri"
 
-#: ../translation-teams.xml.in.h:58
+#: ../translation-teams.xml.in.h:51
 msgid "Irish"
 msgstr "Ír"
 
-#: ../translation-teams.xml.in.h:59
+#: ../translation-teams.xml.in.h:52
 msgid "Italian"
 msgstr "Olasz"
 
-#: ../translation-teams.xml.in.h:60
+#: ../translation-teams.xml.in.h:53
 msgid "Japanese"
 msgstr "Japán"
 
-#: ../translation-teams.xml.in.h:61
-msgid "Jju"
-msgstr "Jju"
-
-#: ../translation-teams.xml.in.h:62
-msgid "Kagoma"
-msgstr "Kagoma"
-
-#: ../translation-teams.xml.in.h:63
+#: ../translation-teams.xml.in.h:54
 msgid "Kannada"
 msgstr "Kannada"
 
-#: ../translation-teams.xml.in.h:64
+#: ../translation-teams.xml.in.h:55
 msgid "Kashmiri"
 msgstr "Kasmíri"
 
-#: ../translation-teams.xml.in.h:65
-msgid "Kazakh"
-msgstr "Kazak"
-
-#: ../translation-teams.xml.in.h:66
+#: ../translation-teams.xml.in.h:56
 msgid "Khmer"
 msgstr "Khmer"
 
-#: ../translation-teams.xml.in.h:67
+#: ../translation-teams.xml.in.h:57
 msgid "Kinyarwanda"
 msgstr "Kinyarvanda"
 
-#: ../translation-teams.xml.in.h:68
+#: ../translation-teams.xml.in.h:58
 msgid "Kirghiz"
 msgstr "Kirgiz"
 
-#: ../translation-teams.xml.in.h:69
+#: ../translation-teams.xml.in.h:59
 msgid "Korean"
 msgstr "Koreai"
 
-#: ../translation-teams.xml.in.h:70
+#: ../translation-teams.xml.in.h:60
 msgid "Kurdish"
 msgstr "Kurd"
 
-#: ../translation-teams.xml.in.h:71
-msgid "Lao"
-msgstr "Lao"
-
-#: ../translation-teams.xml.in.h:72
-msgid "Latin"
-msgstr "Latin"
-
-#: ../translation-teams.xml.in.h:73
+#: ../translation-teams.xml.in.h:61
 msgid "Latvian"
 msgstr "Lett"
 
-#: ../translation-teams.xml.in.h:74
+#: ../translation-teams.xml.in.h:62
 msgid "Limburgian"
 msgstr "Limburgi"
 
-#: ../translation-teams.xml.in.h:75
+#: ../translation-teams.xml.in.h:63
 msgid "Lithuanian"
 msgstr "Litván"
 
-#: ../translation-teams.xml.in.h:76
+#: ../translation-teams.xml.in.h:64
 msgid "Low German"
 msgstr "Délnémet"
 
-#: ../translation-teams.xml.in.h:77
+#: ../translation-teams.xml.in.h:65
 msgid "Low German and Saxon"
 msgstr "Délnémet és szász"
 
-#: ../translation-teams.xml.in.h:78
+#: ../translation-teams.xml.in.h:66
 msgid "Low Saxon, Germany"
 msgstr "Délszász, német"
 
-#: ../translation-teams.xml.in.h:79
+#: ../translation-teams.xml.in.h:67
 msgid "Macedonian"
 msgstr "Macedón"
 
-#: ../translation-teams.xml.in.h:80
+#: ../translation-teams.xml.in.h:68
 msgid "Maithili"
 msgstr "Maithili"
 
-#: ../translation-teams.xml.in.h:81
+#: ../translation-teams.xml.in.h:69
 msgid "Malagasy"
 msgstr "Malagas"
 
-#: ../translation-teams.xml.in.h:82
+#: ../translation-teams.xml.in.h:70
 msgid "Malay"
 msgstr "Maláj"
 
-#: ../translation-teams.xml.in.h:83
+#: ../translation-teams.xml.in.h:71
 msgid "Malayalam"
 msgstr "Malajálam"
 
-#: ../translation-teams.xml.in.h:84
-msgid "Maltese"
-msgstr "Máltai"
-
-#: ../translation-teams.xml.in.h:85
+#: ../translation-teams.xml.in.h:72
 msgid "Maori"
 msgstr "Maori"
 
-#: ../translation-teams.xml.in.h:86
+#: ../translation-teams.xml.in.h:73
 msgid "Marathi"
 msgstr "Maráthi"
 
-#: ../translation-teams.xml.in.h:87
-msgid "Mayan"
-msgstr "Maja"
-
-#: ../translation-teams.xml.in.h:88
+#: ../translation-teams.xml.in.h:74
 msgid "Mongolian"
 msgstr "Mongol"
 
-#: ../translation-teams.xml.in.h:89
-msgid "Nahuatl"
-msgstr "Nahuatl"
-
-#: ../translation-teams.xml.in.h:90
+#: ../translation-teams.xml.in.h:75
 msgid "Nepali"
 msgstr "Nepáli"
 
-#: ../translation-teams.xml.in.h:91
+#: ../translation-teams.xml.in.h:76
 msgid "Northern Sotho"
 msgstr "Északi Sotho"
 
-#: ../translation-teams.xml.in.h:92
+#: ../translation-teams.xml.in.h:77
 msgid "Norwegian (Bokmål and Nynorsk)"
 msgstr "Norvég (Bokmål és Nynorsk)"
 
-#: ../translation-teams.xml.in.h:93
+#: ../translation-teams.xml.in.h:78
 msgid "Norwegian Bokmål"
 msgstr "Norvég Bokmål"
 
-#: ../translation-teams.xml.in.h:94
+#: ../translation-teams.xml.in.h:79
 msgid "Norwegian Nynorsk"
 msgstr "Norvég Nynorsk"
 
-#: ../translation-teams.xml.in.h:95
+#: ../translation-teams.xml.in.h:80
 msgid "Occitan"
 msgstr "Okcitán"
 
-#: ../translation-teams.xml.in.h:96
+#: ../translation-teams.xml.in.h:81
 msgid "Old English"
 msgstr "Régi angol"
 
-#: ../translation-teams.xml.in.h:97
+#: ../translation-teams.xml.in.h:82
 msgid "Oriya"
 msgstr "Orija"
 
-#: ../translation-teams.xml.in.h:98
+#: ../translation-teams.xml.in.h:83
 msgid "Pashto"
 msgstr "Pastu"
 
-#: ../translation-teams.xml.in.h:99
+#: ../translation-teams.xml.in.h:84
 msgid "Persian"
 msgstr "Perzsa"
 
-#: ../translation-teams.xml.in.h:100
+#: ../translation-teams.xml.in.h:85
 msgid "Polish"
 msgstr "Lengyel"
 
-#: ../translation-teams.xml.in.h:101
+#: ../translation-teams.xml.in.h:86
 msgid "Portuguese"
 msgstr "Portugál"
 
-#: ../translation-teams.xml.in.h:102
+#: ../translation-teams.xml.in.h:87
 msgid "Punjabi"
 msgstr "Pandzsábi"
 
-#: ../translation-teams.xml.in.h:103
-msgid "Páez"
-msgstr "Páez"
-
-#: ../translation-teams.xml.in.h:104
-msgid "Quechua"
-msgstr "Kecsua"
-
-#: ../translation-teams.xml.in.h:105
+#: ../translation-teams.xml.in.h:88
 msgid "Romanian"
 msgstr "Román"
 
-#: ../translation-teams.xml.in.h:106
+#: ../translation-teams.xml.in.h:89
 msgid "Russian"
 msgstr "Orosz"
 
-#: ../translation-teams.xml.in.h:107
-msgid "Sanskrit"
-msgstr "Szankszrit"
-
-#: ../translation-teams.xml.in.h:108
-msgid "Sardinian"
-msgstr "Szárd"
-
-#: ../translation-teams.xml.in.h:109
+#: ../translation-teams.xml.in.h:90
 msgid "Serbian"
 msgstr "Szerb"
 
-#: ../translation-teams.xml.in.h:110
+#: ../translation-teams.xml.in.h:91
 msgid "Serbian Jekavian"
 msgstr "Szerb jekáv"
 
-#: ../translation-teams.xml.in.h:111
+#: ../translation-teams.xml.in.h:92
 msgid "Serbian Latin"
 msgstr "Szerb latin"
 
-#: ../translation-teams.xml.in.h:112
+#: ../translation-teams.xml.in.h:93
 msgid "Sinhala"
 msgstr "Szingaléz"
 
-#: ../translation-teams.xml.in.h:113
+#: ../translation-teams.xml.in.h:94
 msgid "Slovak"
 msgstr "Szlovák"
 
-#: ../translation-teams.xml.in.h:114
+#: ../translation-teams.xml.in.h:95
 msgid "Slovenian"
 msgstr "Szlovén"
 
-#: ../translation-teams.xml.in.h:115
+#: ../translation-teams.xml.in.h:96
 msgid "Spanish"
 msgstr "Spanyol"
 
-#: ../translation-teams.xml.in.h:116
-msgid "Swahili"
-msgstr "Szuahéli"
-
-#: ../translation-teams.xml.in.h:117
+#: ../translation-teams.xml.in.h:97
 msgid "Swedish"
 msgstr "Svéd"
 
-#: ../translation-teams.xml.in.h:118
+#: ../translation-teams.xml.in.h:98
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#: ../translation-teams.xml.in.h:119
+#: ../translation-teams.xml.in.h:99
 msgid "Tajik"
 msgstr "Tádzsik"
 
-#: ../translation-teams.xml.in.h:120
+#: ../translation-teams.xml.in.h:100
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../translation-teams.xml.in.h:121
+#: ../translation-teams.xml.in.h:101
 msgid "Tatar"
 msgstr "Tatár"
 
-#: ../translation-teams.xml.in.h:122
+#: ../translation-teams.xml.in.h:102
 msgid "Telugu"
 msgstr "Telugu"
 
-#: ../translation-teams.xml.in.h:123
-msgid "Tetum"
-msgstr "Tetum"
-
-#: ../translation-teams.xml.in.h:124
+#: ../translation-teams.xml.in.h:103
 msgid "Thai"
 msgstr "Thai"
 
-#: ../translation-teams.xml.in.h:125
-msgid "Tibetan"
-msgstr "Tibeti"
-
-#: ../translation-teams.xml.in.h:126
-msgid "Tigrinya"
-msgstr "Tigrinya"
-
-#: ../translation-teams.xml.in.h:127
+#: ../translation-teams.xml.in.h:104
 msgid "Turkish"
 msgstr "Török"
 
-#: ../translation-teams.xml.in.h:128
+#: ../translation-teams.xml.in.h:105
 msgid "Turkmen"
 msgstr "Türkmén"
 
-#: ../translation-teams.xml.in.h:129
-msgid "Tyap"
-msgstr "Tyap"
-
-#: ../translation-teams.xml.in.h:130
+#: ../translation-teams.xml.in.h:106
 msgid "Uighur"
 msgstr "Ujgur"
 
-#: ../translation-teams.xml.in.h:131
+#: ../translation-teams.xml.in.h:107
 msgid "Ukrainian"
 msgstr "Ukrán"
 
-#: ../translation-teams.xml.in.h:132
-msgid "Upper Sorbian"
-msgstr "Felső szorb"
-
-#: ../translation-teams.xml.in.h:133
+#: ../translation-teams.xml.in.h:108
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../translation-teams.xml.in.h:134
+#: ../translation-teams.xml.in.h:109
 msgid "Uzbek"
 msgstr "Üzbég"
 
-#: ../translation-teams.xml.in.h:135
+#: ../translation-teams.xml.in.h:110
 msgid "Uzbek (Cyrillic)"
 msgstr "Üzbég (cirill)"
 
-#: ../translation-teams.xml.in.h:136
+#: ../translation-teams.xml.in.h:111
 msgid "Uzbek (Latin)"
 msgstr "Üzbég (latin)"
 
-#: ../translation-teams.xml.in.h:137
+#: ../translation-teams.xml.in.h:112
 msgid "Valencian-Catalan"
 msgstr "Valenciai katalán"
 
-#: ../translation-teams.xml.in.h:138
+#: ../translation-teams.xml.in.h:113
 msgid "Vietnamese"
 msgstr "Vietnami"
 
-#: ../translation-teams.xml.in.h:139
+#: ../translation-teams.xml.in.h:114
 msgid "Walloon"
 msgstr "Vallon"
 
-#: ../translation-teams.xml.in.h:140
+#: ../translation-teams.xml.in.h:115
 msgid "Welsh"
 msgstr "Walesi"
 
-#: ../translation-teams.xml.in.h:141
-msgid "Wolof"
-msgstr "Wolof"
-
-#: ../translation-teams.xml.in.h:142
+#: ../translation-teams.xml.in.h:116
 msgid "Xhosa"
 msgstr "Xhosza"
 
-#: ../translation-teams.xml.in.h:143
+#: ../translation-teams.xml.in.h:117
 msgid "Yiddish"
 msgstr "Jiddis"
 
-#: ../translation-teams.xml.in.h:144
+#: ../translation-teams.xml.in.h:118
 msgid "Yoruba"
 msgstr "Joruba"
 
-#: ../translation-teams.xml.in.h:145
-msgid "Zapotec"
-msgstr "Zapoték"
-
-#: ../translation-teams.xml.in.h:146
+#: ../translation-teams.xml.in.h:119
 msgid "Zulu"
 msgstr "Zulu"
 
-#: ../update-stats.py:206
+#: ../update-stats.py:207
 msgid "Can't generate POT file, using old one."
 msgstr "Nem készíthető POT fájl, a régi használata."
 
-#: ../update-stats.py:209
+#: ../update-stats.py:210
 msgid "Can't generate POT file, using old one if it exists."
 msgstr "Nem készíthető POT fájl, a régi használata (ha létezik)."
 
-#: ../update-stats.py:238
+#: ../update-stats.py:239
 msgid "Can't copy new POT file to public location."
 msgstr "Az új POT fájl nem másolható nyilvános helyre."
 
-#: ../update-stats.py:250
-#, python-format
+#: ../update-stats.py:251 ../templates/language-release.tmpl:49
+#, c-format, python-format
 msgid "There is no translation team in charge of '%s' translation."
 msgstr "Nincs fordítócsapat a(z) „%s” nyelvű fordításhoz."
 
-#: ../update-stats.py:326
+#: ../update-stats.py:327
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a LINGUAS fájlban."
 
-#: ../update-stats.py:353
+#: ../update-stats.py:354
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a configure fájl ALL_LINGUAS értékében."
 
-#: ../update-stats.py:356
+#: ../update-stats.py:357
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1116,16 +1004,16 @@ msgstr ""
 "Nem határozható meg, hogy ez a nyelv ténylegesen használatban van-e, "
 "kérdezze a modul karbantartóját."
 
-#: ../update-stats.py:370
+#: ../update-stats.py:371
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hibák az 'intltool-update -m' ellenőrzés futtatásakor."
 
-#: ../update-stats.py:376
+#: ../update-stats.py:377
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Néhány fájl hiányzik a POTFILES.in fájlból: %s"
 
-#: ../update-stats.py:385
+#: ../update-stats.py:386
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1134,51 +1022,51 @@ msgstr ""
 "A POTFILES.in vagy POTFILES.skip a következő fájlokra hivatkozik, noha ezek "
 "nem léteznek: %s"
 
-#: ../update-stats.py:399
+#: ../update-stats.py:400
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "A(z) „%s PO fájl nem létezik."
 
-#: ../update-stats.py:412
+#: ../update-stats.py:413
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "A(z) „%s” PO fájl nem megy át az msgfmt ellenőrzésen: nem frissül."
 
-#: ../update-stats.py:414
+#: ../update-stats.py:415
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "A(z) „%s” POT fájl statisztikái nem érhetők el."
 
-#: ../update-stats.py:417
+#: ../update-stats.py:418
 msgid "This PO file has an executable bit set."
 msgstr "Ezen a PO fájlon be van állítva egy végrehajtható bit."
 
-#: ../update-stats.py:442
+#: ../update-stats.py:443
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "A(z) „%s” PO fájl nem UTF-8 kódolású."
 
-#: ../update-stats.py:515
+#: ../update-stats.py:516
 msgid "Can't find checkout directory."
 msgstr "Nem található a helyi másolat könyvtára."
 
-#: ../update-stats.py:547
+#: ../update-stats.py:548
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "A(z) %s modul nem tűnik gnome-doc-utils modulnak."
 
-#: ../update-stats.py:552
+#: ../update-stats.py:553
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "A DOC_MODULE nem oldható fel valódi fájlra, a(z) „%s.xml” kerül "
 "felhasználásra."
 
-#: ../update-stats.py:555
+#: ../update-stats.py:556
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "A DOC_MODULE nem egy valódi fájlra mutat, valószínűleg egy makró."
 
-#: ../update-stats.py:581
+#: ../update-stats.py:582
 #, python-format
 msgid ""
 "Error regenerating POT file for document %s:\n"
@@ -1189,12 +1077,12 @@ msgstr ""
 "<pre>%s\n"
 "%s</pre>"
 
-#: ../update-stats.py:610
+#: ../update-stats.py:611
 #, python-format
 msgid "There is no translation team in charge of %s."
 msgstr "Nincs fordítócsapat a következőhöz: %s."
 
-#: ../update-stats.py:654
+#: ../update-stats.py:655
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "A DOC_LINGUAS lista jelenleg nem tartalmazza ezt a nyelvet."
 
@@ -1360,55 +1248,60 @@ msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 msgid "%(cat)s (%(percent)s%% translated)"
 msgstr "%(cat)s (%(percent)s%% lefordítva)"
 
-#: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
+#: ../templates/language-release.tmpl:11 ../templates/team.tmpl:11
 msgid "Details"
 msgstr "Részletek"
 
-#: ../templates/language-release.tmpl:13 ../templates/team.tmpl:13
+#: ../templates/language-release.tmpl:14 ../templates/team.tmpl:14
 msgid "%(lang)s Translation Team Page:"
 msgstr "%(lang)s fordítócsapat oldala:"
 
-#: ../templates/language-release.tmpl:17 ../templates/team.tmpl:17
+#: ../templates/language-release.tmpl:18 ../templates/team.tmpl:18
 msgid "Users Web Page:"
 msgstr "Felhasználók weboldala:"
 
-#: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
+#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
+#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
 msgid "Report Bug in Translation"
 msgstr "Fordítási hiba jelentése"
 
-#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
+#: ../templates/language-release.tmpl:25 ../templates/team.tmpl:25
 msgid "Show Existing Bugs"
 msgstr "Meglévő hibák megjelenítése"
 
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:29
+#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:30
 msgid "Mailing List:"
 msgstr "Levelezőlista:"
 
-#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:31
+#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:32
 msgid "Send e-mail to the list"
 msgstr "E-mail küldése a listának"
 
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:33
+#: ../templates/language-release.tmpl:34 ../templates/team.tmpl:34
 msgid "Subscribe"
 msgstr "Feliratkozás"
 
-#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:42
+#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:41
 msgid "Coordinator"
 msgstr "Koordinátor"
 
-#: ../templates/language-release.tmpl:52
+#: ../templates/language-release.tmpl:48 ../templates/team.tmpl:49
+#, c-format
+msgid "Language code: %s"
+msgstr "Nyelvi kód: %s"
+
+#: ../templates/language-release.tmpl:55
 msgid "Hide completed modules"
 msgstr "Befejezett modulok elrejtése"
 
-#: ../templates/language-release.tmpl:56
+#: ../templates/language-release.tmpl:59
 msgid "Show completed modules"
 msgstr "Befejezett modulok megjelenítése"
 
-#: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
+#: ../templates/language-release.tmpl:63 ../templates/release.tmpl:9
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1416,8 +1309,8 @@ msgstr ""
 "Ezen kiadás moduljai nem részei a GNOME SVN tárolónak. A fordítások "
 "beküldésével kapcsolatban nézze meg az egyes modulok weboldalát."
 
-#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:76
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
+#: ../templates/language-release.tmpl:69 ../templates/module.tmpl:76
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "Documentation"
 msgstr "Dokumentáció"
 
@@ -1431,7 +1324,7 @@ msgid_plural "GNOME is being translated to following %(count)s languages:"
 msgstr[0] "A GNOME-ot a következő %(count)s nyelvre fordítják:"
 msgstr[1] "A GNOME-ot a következő %(count)s nyelvre fordítják:"
 
-#: ../templates/list-languages.tmpl:35
+#: ../templates/list-languages.tmpl:27
 msgid "GNOME is currently not being translated to any language. :("
 msgstr "A GNOME-ot a jelenleg egy nyelvre sem fordítják :("
 
@@ -1443,7 +1336,7 @@ msgstr "GNOME modulok"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Válassza ki a modult, amelyről szemenszedett hazugságokat kíván látni:"
 
-#: ../templates/list-modules.tmpl:30
+#: ../templates/list-modules.tmpl:21
 msgid ""
 "There are currently no modules for which I am gathering damned lies for. "
 "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
@@ -1555,7 +1448,7 @@ msgstr "GNOME közreműködők"
 msgid "GNOME is being developed by following people:"
 msgstr "A GNOME-ot a következő személyek fejlesztik:"
 
-#: ../templates/people.tmpl:40
+#: ../templates/people.tmpl:32
 msgid "There are no contributors, GNOME turned itself up from nothing."
 msgstr "Nincsenek közreműködők, a GNOME a semmiből építette fel magát."
 
@@ -1587,20 +1480,20 @@ msgstr "%(team)s koordinálója"
 msgid "%(release)s Release"
 msgstr "%(release)s kiadás"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "Release"
 msgstr "Kiadás"
 
 #: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:56
+#: ../templates/team.tmpl:60
 msgid "Graph"
 msgstr "Grafikon"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:56
+#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "User Interface"
 msgstr "Felhasználói felület"
 
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:68
+#: ../templates/release.tmpl:29 ../templates/team.tmpl:72
 msgid "-"
 msgstr "–"
 
