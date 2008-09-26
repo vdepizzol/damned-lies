@@ -724,8 +724,8 @@
       <module id="gedit"/>
       <module id="gnome-applets" branch="gnome-2-24"/>
       <module id="gnome-backgrounds"/>
-      <module id="gnome-control-center"/>
-      <module id="gnome-desktop"/>
+      <module id="gnome-control-center" branch="gnome-2-24"/>
+      <module id="gnome-desktop" branch="gnome-2-24"/>
       <module id="gnome-doc-utils"/>
       <module id="gnome-games" branch="gnome-2-24"/>
       <module id="gnome-icon-theme"/>
@@ -739,7 +739,7 @@
       <module id="gnome-power-manager" branch="gnome-2-24"/>
       <module id="gnome-screensaver"/>
       <module id="gnome-session"/>
-      <module id="gnome-settings-daemon"/>
+      <module id="gnome-settings-daemon" branch="gnome-2-24"/>
       <module id="gnome-system-monitor"/>
       <module id="gnome-system-tools"/>
       <module id="gnome-terminal" branch="gnome-2-24"/>
@@ -748,12 +748,12 @@
       <module id="gnome-utils"/>
       <module id="gnome-volume-manager"/>
       <module id="gok" branch="gnome-2-24"/>
-      <module id="gtk-engines"/>
+      <module id="gtk-engines" branch="gtk-engines-2-16"/>
       <module id="gtkhtml" branch="gnome-2-24"/>
       <module id="gtksourceview"/>
       <module id="gucharmap" branch="gnome-2-24"/>
       <module id="gvfs" branch="gnome-2-24"/>
-      <module id="hamster-applet"/>
+      <module id="hamster-applet" branch="gnome-2-24"/>
       <module id="libgnomekbd"/>
       <module id="libgnomeprint"/>
       <module id="libgnomeprintui"/>

@@ -829,12 +829,13 @@
   </module>
 
   <module id="gnome-control-center">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
     <branch id="gnome-2-22" stringfrozen="true"/>
+    <branch id="gnome-2-24" stringfrozen="true"/>
   </module>
 
   <module id="gnome-cups-manager">
@@ -862,12 +863,13 @@
         </document>
       </branch>
     </defaults>
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
     <branch id="gnome-2-18" stringfrozen="true"/>
     <branch id="gnome-2-20" stringfrozen="true"/>
     <branch id="gnome-2-22" stringfrozen="true"/>
+    <branch id="gnome-2-24" stringfrozen="true"/>
   </module>
 
   <module id="gnome-devel-docs">
@@ -1193,8 +1195,9 @@
   </module>
 
   <module id="gnome-settings-daemon">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-22" stringfrozen="true"/>
+    <branch id="gnome-2-24" stringfrozen="true"/>
   </module>
 
   <module id="gnome-sharing">
@@ -1446,10 +1449,11 @@
   </module>
 
   <module id="gtk-engines">
-    <branch id="HEAD" stringfrozen="true"/>
+    <branch id="HEAD" stringfrozen="false"/>
     <branch id="gtk-engines-2-10" stringfrozen="true"/>
     <branch id="gtk-engines-2-12" stringfrozen="true"/>
     <branch id="gtk-engines-2-14" stringfrozen="true"/>
+    <branch id="gtk-engines-2-16" stringfrozen="true"/>
   </module>
 
   <module id="gtkhtml">
@@ -1508,7 +1512,8 @@
   </module>
 
   <module id="hamster-applet">
-     <branch id="HEAD" stringfrozen="true"/>
+     <branch id="HEAD" stringfrozen="false"/>
+     <branch id="gnome-2-24" stringfrozen="true"/>
   </module>
 
   <module id="hardware-monitor">
