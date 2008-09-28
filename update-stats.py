@@ -605,7 +605,7 @@ might be worth investigating.
 
         postats = self.update_doc_po_files(sourcedir, fullpot, out_dir, out_domain, languages, potchanged, potbase, docpath)
 
-        langs = teams.TranslationLanguages()
+        langs = teams.TranslationLanguages(show_hidden=1)
         for lang in postats:
             if lang and not langs.has_key(lang):
                 postats[lang]['errors'].append(("error", defaults.N_("There is no translation team in charge of %s.") % (lang)))
