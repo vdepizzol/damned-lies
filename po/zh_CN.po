@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-13 19:55+0800\n"
-"PO-Revision-Date: 2008-09-29 00:20+0800\n"
+"PO-Revision-Date: 2008-09-29 00:44+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.om>\n"
 "Language-Team: zh_CN <i18n@linux.net.cn>\n"
 "MIME-Version: 1.0\n"
@@ -1381,7 +1381,7 @@ msgstr "GNOME 语言"
 #: ../templates/list-languages.tmpl:11
 msgid "GNOME is being translated to following %(count)s language:"
 msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] "GNOME 已被翻译为 %(count) 个语言："
+msgstr[0] "GNOME 已被翻译为 %(count)s 个语言："
 
 #: ../templates/list-languages.tmpl:35
 msgid "GNOME is currently not being translated to any language. :("
@@ -1424,7 +1424,7 @@ msgstr "选择下列的某个小组以查看关于它的更多信息："
 
 #: ../templates/list-teams.tmpl:20
 msgid "Coordinated by %(coordinator)s"
-msgstr "协调由 %(coordinator)"
+msgstr "协调由 %(coordinator)s"
 
 #: ../templates/list-teams.tmpl:26
 msgid "There are currently no translation teams in GNOME. :("
@@ -1525,11 +1525,11 @@ msgstr "翻译："
 
 #: ../templates/person-base.tmpl:67
 msgid "Coordinates %(team)s"
-msgstr "协调 %(team)"
+msgstr "协调 %(team)s"
 
 #: ../templates/release.tmpl:7
 msgid "%(release)s Release"
-msgstr "%(release) 发行"
+msgstr "%(release)s 发行"
 
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:57
 msgid "Release"
@@ -1551,16 +1551,16 @@ msgstr "-"
 #: ../templates/show-stats.tmpl:15
 msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
 msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
-msgstr[0] "POT 文档 (%(potsize) 个信息， %(number) %(figures))"
+msgstr[0] "POT 文档 (%(potsize)s 个信息， %(number)s %(figures)s)"
 
 #: ../templates/show-stats.tmpl:17
 msgid "POT file (%(potsize)s message)"
 msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] "POT 文档 (%(potsize) 个信息"
+msgstr[0] "POT 文档 (%(potsize)s 个信息"
 
 #: ../templates/show-stats.tmpl:22
 msgid "updated on %(date)s"
-msgstr "更新于 %(date)"
+msgstr "更新于 %(date)s"
 
 #: ../templates/show-stats.tmpl:26
 msgid "Notices"
