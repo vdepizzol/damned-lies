@@ -155,17 +155,6 @@
   </module>
 
   <module id="bug-buddy">
-    <defaults>
-      <branch>
-        <domain id="po">
-          <_description>UI translations</_description>
-        </domain>
-        <document id="help">
-          <_description>Bug Buddy Manual</_description>
-          <directory>help</directory>
-        </document>
-      </branch>
-    </defaults>
     <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true">
       <document id="help">
@@ -193,9 +182,6 @@
       </document>
     </branch>
     <branch id="gnome-2-24" stringfrozen="true">
-      <document id="help">
-        <directory>docs</directory>
-      </document>
     </branch>
   </module>
 
