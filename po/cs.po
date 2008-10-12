@@ -1,21 +1,23 @@
 # Czech translation of damned-lies.
-# Copyright (C) 2008 Pavel Šefránek.
+# Copyright (C) 2008 Pavel Šefránek et al.
 # This file is distributed under the same license as the damned-lies package.
 # Pavel Šefránek <ps@pjoul.cz>, 2008.
 # Petr Kovar <pknbe@volny.cz>, 2008.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-03 02:23+0200\n"
-"PO-Revision-Date: 2008-07-03 02:12+0100\n"
+"POT-Creation-Date: 2008-10-12 18:26+0200\n"
+"PO-Revision-Date: 2008-10-12 18:24+0200\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../gnome-modules.xml.in.h:1
 msgid "Accessibility Guide"
@@ -46,94 +48,90 @@ msgid "Blackjack Manual"
 msgstr "Příručka k BlackJack"
 
 #: ../gnome-modules.xml.in.h:8
-msgid "Bug Buddy Manual"
-msgstr "Příručka k Bug Buddy"
-
-#: ../gnome-modules.xml.in.h:9
 msgid "CD Player Manual"
 msgstr "Příručka k Přehrávači CD"
 
-#: ../gnome-modules.xml.in.h:10
+#: ../gnome-modules.xml.in.h:9
 msgid "CPU Frequency Scaling Monitor Manual"
 msgstr "Příručka k appletu Sledování změny frekvence CPU"
 
-#: ../gnome-modules.xml.in.h:11
+#: ../gnome-modules.xml.in.h:10
 msgid "Character Palette Manual"
 msgstr "Příručka k appletu Paleta znaků"
 
-#: ../gnome-modules.xml.in.h:12
+#: ../gnome-modules.xml.in.h:11
 msgid "Clock Applet Manual"
 msgstr "Příručka k appletu Hodiny"
 
-#: ../gnome-modules.xml.in.h:13
+#: ../gnome-modules.xml.in.h:12
 msgid "Command Line Manual"
 msgstr "Příručka k appletu Příkazový řádek"
 
-#: ../gnome-modules.xml.in.h:14
+#: ../gnome-modules.xml.in.h:13
 msgid "Criawips Manual"
 msgstr "Příručka ke Criawips"
 
-#: ../gnome-modules.xml.in.h:15 ../templates/header.tmpl:57
+#: ../gnome-modules.xml.in.h:14 ../templates/header.tmpl:57
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: ../gnome-modules.xml.in.h:16
+#: ../gnome-modules.xml.in.h:15
 msgid "Dasher Manual"
 msgstr "Příručka k Dasher"
 
-#: ../gnome-modules.xml.in.h:17
+#: ../gnome-modules.xml.in.h:16
 msgid "Deskbar Applet"
 msgstr "Applet Deskbar"
 
-#: ../gnome-modules.xml.in.h:18
+#: ../gnome-modules.xml.in.h:17
 msgid "Dictionary Manual"
 msgstr "Příručka ke Slovníku"
 
-#: ../gnome-modules.xml.in.h:19
+#: ../gnome-modules.xml.in.h:18
 msgid "Disk Mounter Manual"
 msgstr "Příručka k appletu Připojování disků"
 
-#: ../gnome-modules.xml.in.h:20
+#: ../gnome-modules.xml.in.h:19
 msgid "Disk Usage Analyzer Manual"
 msgstr "Příručka k Analyzátoru využití disku"
 
-#: ../gnome-modules.xml.in.h:21
+#: ../gnome-modules.xml.in.h:20
 msgid "Encryption Applet Manual"
 msgstr "Příručka k appletu Šifrováni"
 
-#: ../gnome-modules.xml.in.h:22
+#: ../gnome-modules.xml.in.h:21
 msgid "Epiphany Web Browser"
 msgstr "Webový prohlížeč Epiphany"
 
-#: ../gnome-modules.xml.in.h:23
+#: ../gnome-modules.xml.in.h:22
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: ../gnome-modules.xml.in.h:24
+#: ../gnome-modules.xml.in.h:23
 msgid "Eye of GNOME Manual"
 msgstr "Příručka k Eye of GNOME"
 
-#: ../gnome-modules.xml.in.h:25
+#: ../gnome-modules.xml.in.h:24
 msgid "F-Spot Manual"
 msgstr "Příručka k F-Spot"
 
-#: ../gnome-modules.xml.in.h:26
+#: ../gnome-modules.xml.in.h:25
 msgid "FDL License"
 msgstr "Licence FDL"
 
-#: ../gnome-modules.xml.in.h:27
+#: ../gnome-modules.xml.in.h:26
 msgid "Fish Applet Manual"
 msgstr "Příručka k appletu Ryby"
 
-#: ../gnome-modules.xml.in.h:28
+#: ../gnome-modules.xml.in.h:27
 msgid "Five or More Manual"
 msgstr "Příručka k Pěti nebo víc"
 
-#: ../gnome-modules.xml.in.h:29
+#: ../gnome-modules.xml.in.h:28
 msgid "Four-in-a-row Manual"
 msgstr "Příručka ke Čtyřem-v-řadě"
 
-#: ../gnome-modules.xml.in.h:30
+#: ../gnome-modules.xml.in.h:29
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -141,238 +139,234 @@ msgstr ""
 "Od GNOME 2.23 je GAIL obsažen přímo v GTK+. Od této chvíle ho už prosím "
 "nepublikujte do větve trunk."
 
-#: ../gnome-modules.xml.in.h:31
+#: ../gnome-modules.xml.in.h:30
 msgid "GConf Editor Manual"
 msgstr "Příručka k GConf editoru"
 
-#: ../gnome-modules.xml.in.h:32
+#: ../gnome-modules.xml.in.h:31
 msgid "GDM Manual"
 msgstr "Příručka k GDM"
 
-#: ../gnome-modules.xml.in.h:33
+#: ../gnome-modules.xml.in.h:32
 msgid "GFloppy Manual"
 msgstr "Příručka k GFloppy"
 
-#: ../gnome-modules.xml.in.h:34
+#: ../gnome-modules.xml.in.h:33
 msgid "GLib"
 msgstr "GLib"
 
-#: ../gnome-modules.xml.in.h:35
+#: ../gnome-modules.xml.in.h:34
 msgid "GNOME 2 Development Documentation"
 msgstr "Vývojářská dokumentace ke GNOME 2"
 
-#: ../gnome-modules.xml.in.h:36
+#: ../gnome-modules.xml.in.h:35
 msgid "GNOME 2 User Documentation"
 msgstr "Uživatelská dokumentace ke GNOME 2"
 
-#: ../gnome-modules.xml.in.h:37
+#: ../gnome-modules.xml.in.h:36
 msgid "GNOME Applets"
 msgstr "Applety GNOME"
 
-#: ../gnome-modules.xml.in.h:38
+#: ../gnome-modules.xml.in.h:37
 msgid "GNOME Keyring Manager Manual"
 msgstr "Příručka ke Keyring Manager"
 
-#: ../gnome-modules.xml.in.h:39
+#: ../gnome-modules.xml.in.h:38
 msgid "GNOME Klotski Manual"
 msgstr "Příručka ke Klotski"
 
-#: ../gnome-modules.xml.in.h:40
+#: ../gnome-modules.xml.in.h:39
 msgid "GNOME Library Web site"
 msgstr "Knihovna GNOME"
 
-#: ../gnome-modules.xml.in.h:41
+#: ../gnome-modules.xml.in.h:40
 msgid "GNOME Library help"
 msgstr "Nápověda ke Knihovně GNOME"
 
-#: ../gnome-modules.xml.in.h:42
+#: ../gnome-modules.xml.in.h:41
 msgid "GNOME Mahjongg Manual"
 msgstr "Příručka k Mahjongg"
 
-#: ../gnome-modules.xml.in.h:43
+#: ../gnome-modules.xml.in.h:42
 msgid "GNOME Release Notes"
 msgstr "Poznámky k vydání GNOME"
 
-#: ../gnome-modules.xml.in.h:44
+#: ../gnome-modules.xml.in.h:43
 msgid "GNOME Robots Manual"
 msgstr "Příručka k Robotům"
 
-#: ../gnome-modules.xml.in.h:45
+#: ../gnome-modules.xml.in.h:44
 msgid "GNOME Sudoku Manual"
 msgstr "Příručka k Sudoku"
 
-#: ../gnome-modules.xml.in.h:46
+#: ../gnome-modules.xml.in.h:45
 msgid "GNOME Tali Manual"
 msgstr "Příručka k Tali"
 
-#: ../gnome-modules.xml.in.h:47
+#: ../gnome-modules.xml.in.h:46
 msgid "GNOME Tetravex Manual"
 msgstr "Příručka k Tetravex"
 
-#: ../gnome-modules.xml.in.h:48
+#: ../gnome-modules.xml.in.h:47
 msgid "GNOME Volume Control Manual"
 msgstr "Příručka k Ovládání hlasitosti"
 
-#: ../gnome-modules.xml.in.h:49
+#: ../gnome-modules.xml.in.h:48
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
 msgstr ""
 "GNUCash není součástí repositáře GNOME SVN. Prosím podívejte se na <a href="
-"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
-"pro informace, kam zasílat překlady."
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> pro "
+"informace, kam zasílat překlady."
 
-#: ../gnome-modules.xml.in.h:50
+#: ../gnome-modules.xml.in.h:49
 msgid "GPL License"
 msgstr "Licence GPL"
 
-#: ../gnome-modules.xml.in.h:51
+#: ../gnome-modules.xml.in.h:50
 msgid "GST Network Setup Manual"
 msgstr "Příručka k GST Network Setup"
 
-#: ../gnome-modules.xml.in.h:52
+#: ../gnome-modules.xml.in.h:51
 msgid "GST Service Management Manual"
 msgstr "Příručka k GST Service Management"
 
-#: ../gnome-modules.xml.in.h:53
+#: ../gnome-modules.xml.in.h:52
 msgid "GST Shared Folders Manual"
 msgstr "Příručka k GST Shared Folders"
 
-#: ../gnome-modules.xml.in.h:54
+#: ../gnome-modules.xml.in.h:53
 msgid "GST Time Setup Manual"
 msgstr "Příručka k GST Time Setup"
 
-#: ../gnome-modules.xml.in.h:55
+#: ../gnome-modules.xml.in.h:54
 msgid "GST User Management Manual"
 msgstr "Příručka k GST User Management"
 
-#: ../gnome-modules.xml.in.h:56
+#: ../gnome-modules.xml.in.h:55
 msgid "GStreamer Properties Manual"
 msgstr "Příručka k GStreamer Properties"
 
-#: ../gnome-modules.xml.in.h:57
+#: ../gnome-modules.xml.in.h:56
 msgid "Geyes Manual"
 msgstr "Příručka k appletu Oči"
 
-#: ../gnome-modules.xml.in.h:58
+#: ../gnome-modules.xml.in.h:57
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: ../gnome-modules.xml.in.h:59
+#: ../gnome-modules.xml.in.h:58
 msgid "Gnometris Manual"
 msgstr "Příručka k Gnometris"
 
-#: ../gnome-modules.xml.in.h:60
+#: ../gnome-modules.xml.in.h:59
 msgid "Gtk+"
 msgstr "Gtk+"
 
-#: ../gnome-modules.xml.in.h:61
+#: ../gnome-modules.xml.in.h:60
 msgid "Iagno Manual"
 msgstr "Příručka k Iagno"
 
-#: ../gnome-modules.xml.in.h:62
+#: ../gnome-modules.xml.in.h:61
 msgid "Invest Applet Manual"
 msgstr "Příručka k appletu Investice"
 
-#: ../gnome-modules.xml.in.h:63
+#: ../gnome-modules.xml.in.h:62
 msgid "JHBuild Documentation"
 msgstr "Dokumentace k JHBuild"
 
-#: ../gnome-modules.xml.in.h:64
+#: ../gnome-modules.xml.in.h:63
 msgid "Keyboard Accessibility Monitor Manual"
 msgstr "Příručka k appletu Stav zpřístupnění klávesnice"
 
-#: ../gnome-modules.xml.in.h:65
+#: ../gnome-modules.xml.in.h:64
 msgid "Keyboard Indicator Manual"
 msgstr "Příručka k appletu Indikátor klávesnice"
 
-#: ../gnome-modules.xml.in.h:66
+#: ../gnome-modules.xml.in.h:65
 msgid "LGPL License"
 msgstr "Licence LGPL"
 
-#: ../gnome-modules.xml.in.h:67
+#: ../gnome-modules.xml.in.h:66
 msgid "Layout Descriptions"
 msgstr "Popisy rozvržení"
 
-#: ../gnome-modules.xml.in.h:68
+#: ../gnome-modules.xml.in.h:67
 msgid "Log Viewer Manual"
 msgstr "Příručka k Prohlížeči systémového protokolu"
 
-#: ../gnome-modules.xml.in.h:69
+#: ../gnome-modules.xml.in.h:68
 msgid "Mines Manual"
 msgstr "Příručka k Minám"
 
-#: ../gnome-modules.xml.in.h:70
+#: ../gnome-modules.xml.in.h:69
 msgid "Nibbles Manual"
 msgstr "Příručka k Červíkům"
 
-#: ../gnome-modules.xml.in.h:71
+#: ../gnome-modules.xml.in.h:70
 msgid "Panel Trash Manual"
 msgstr "Příručka k appletu Koše"
 
-#: ../gnome-modules.xml.in.h:72
+#: ../gnome-modules.xml.in.h:71
 msgid "Platform Overview"
 msgstr "Přehled platformy"
 
 # takhle se mi to zdá nejlepší - frantíci i španělé to takhle překládaj
-#: ../gnome-modules.xml.in.h:73
+#: ../gnome-modules.xml.in.h:72
 msgid "Property Nicks"
 msgstr "Názvy vlastností"
 
-#: ../gnome-modules.xml.in.h:74
+#: ../gnome-modules.xml.in.h:73
 msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
-#: ../gnome-modules.xml.in.h:75
+#: ../gnome-modules.xml.in.h:74
 msgid "Rhythmbox Music Player"
 msgstr "Hudební přehrávač Rhythmbox"
 
-#: ../gnome-modules.xml.in.h:76
+#: ../gnome-modules.xml.in.h:75
 msgid "Sabayon"
 msgstr "Sabayon"
 
-#: ../gnome-modules.xml.in.h:77
+#: ../gnome-modules.xml.in.h:76
 msgid "Same GNOME Manual"
 msgstr "Příručka ke Stejnému GNOME"
 
-#: ../gnome-modules.xml.in.h:78
-msgid "Seahorse Manual"
-msgstr "Příručka k Seahorse"
-
-#: ../gnome-modules.xml.in.h:79
+#: ../gnome-modules.xml.in.h:77
 msgid "Search Tool Manual"
 msgstr "Příručka k Prohledávači Tracker"
 
-#: ../gnome-modules.xml.in.h:80
+#: ../gnome-modules.xml.in.h:78
 msgid "Shared MIME Info"
 msgstr "Sdílené informace MIME"
 
-#: ../gnome-modules.xml.in.h:81
+#: ../gnome-modules.xml.in.h:79
 msgid "Sound Juicer Manual"
 msgstr "Příručka k Sound Juicer"
 
-#: ../gnome-modules.xml.in.h:82
+#: ../gnome-modules.xml.in.h:80
 msgid "Sound Recorder Manual"
 msgstr "Příručka k Záznamu zvuku"
 
-#: ../gnome-modules.xml.in.h:83
+#: ../gnome-modules.xml.in.h:81
 msgid "Sticky Notes Manual"
 msgstr "Příručka k appletu Lepící poznámky"
 
-#: ../gnome-modules.xml.in.h:84
+#: ../gnome-modules.xml.in.h:82
 msgid "Stock Ticker Manual"
 msgstr "Příručka k appletu Sledování burzy"
 
-#: ../gnome-modules.xml.in.h:85
+#: ../gnome-modules.xml.in.h:83
 msgid "System Administration Guide"
 msgstr "Příručka systémové správy"
 
-#: ../gnome-modules.xml.in.h:86
+#: ../gnome-modules.xml.in.h:84
 msgid "System Monitor Manual"
 msgstr "Příručka ke Sledování systému"
 
-#: ../gnome-modules.xml.in.h:87
+#: ../gnome-modules.xml.in.h:85
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -380,43 +374,43 @@ msgstr ""
 "Toto není projekt GNOME. Prosím zašlete svůj překlad do <a href=\"http://"
 "translationproject.org\">Translation Project</a>."
 
-#: ../gnome-modules.xml.in.h:88 ../templates/language-release.tmpl:75
+#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:75
 msgid "UI translations"
 msgstr "Uživatelské rozhraní"
 
-#: ../gnome-modules.xml.in.h:89
+#: ../gnome-modules.xml.in.h:87
 msgid "User Directories"
 msgstr "Uživatelské adresáře"
 
-#: ../gnome-modules.xml.in.h:90
+#: ../gnome-modules.xml.in.h:88
 msgid "User Guide"
 msgstr "Uživatelská příručka"
 
-#: ../gnome-modules.xml.in.h:91
+#: ../gnome-modules.xml.in.h:89
 msgid "Volume Control Manual"
 msgstr "Příručka k appletu Ovládání hlasitosti"
 
-#: ../gnome-modules.xml.in.h:92
+#: ../gnome-modules.xml.in.h:90
 msgid "Weather Applet Locations"
 msgstr "Seznam zeměpisných míst pro Zprávy o počasí"
 
-#: ../gnome-modules.xml.in.h:93
+#: ../gnome-modules.xml.in.h:91
 msgid "Weather Report Manual"
 msgstr "Příručka k appletu Zprávy o počasí"
 
-#: ../gnome-modules.xml.in.h:94
+#: ../gnome-modules.xml.in.h:92
 msgid "Window List Applet Manual"
 msgstr "Příručka k appletu Seznam oken"
 
-#: ../gnome-modules.xml.in.h:95
+#: ../gnome-modules.xml.in.h:93
 msgid "Workspace Switcher Applet Manual"
 msgstr "Příručka k appletu Přepínač pracovních ploch"
 
-#: ../gnome-modules.xml.in.h:96
+#: ../gnome-modules.xml.in.h:94
 msgid "XKeyboard-Config"
 msgstr "XKeyboard-Config"
 
-#: ../gnome-modules.xml.in.h:97
+#: ../gnome-modules.xml.in.h:95
 msgid "glChess Manual"
 msgstr "Příručka k Šachům"
 
@@ -461,12 +455,12 @@ msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (zastaralé)"
 
 #: ../releases.xml.in.h:11
-msgid "GNOME 2.22 (stable)"
-msgstr "GNOME 2.22 (stabilní)"
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (zastaralé)"
 
 #: ../releases.xml.in.h:12
-msgid "GNOME 2.24 (development)"
-msgstr "GNOME 2.24 (vývojové)"
+msgid "GNOME 2.24 (stable)"
+msgstr "GNOME 2.24 (stabilní)"
 
 #: ../releases.xml.in.h:13
 msgid "GNOME Fifth Toe (Extra software)"
@@ -489,14 +483,10 @@ msgid "GNOME-Office Productivity Applications"
 msgstr "Kancelářské aplikace GNOME"
 
 #: ../releases.xml.in.h:18
-msgid "New module proposals"
-msgstr "Žádosti o zařazení nového modulu"
-
-#: ../releases.xml.in.h:19
 msgid "System Administration"
 msgstr "Správa systému"
 
-#: ../releases.xml.in.h:20
+#: ../releases.xml.in.h:19
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
@@ -608,370 +598,383 @@ msgid "Chinese Traditional"
 msgstr "čínština (tradiční)"
 
 #: ../translation-teams.xml.in.h:26
+msgid "Crimean Tatar"
+msgstr "Krymská tatarština"
+
+#: ../translation-teams.xml.in.h:27
 msgid "Croatian"
 msgstr "chorvatština"
 
-#: ../translation-teams.xml.in.h:27
+#: ../translation-teams.xml.in.h:28
 msgid "Czech"
 msgstr "čeština"
 
-#: ../translation-teams.xml.in.h:28
+#: ../translation-teams.xml.in.h:29
 msgid "Danish"
 msgstr "dánština"
 
-#: ../translation-teams.xml.in.h:29
+#: ../translation-teams.xml.in.h:30
 msgid "Dutch"
 msgstr "holandština"
 
-#: ../translation-teams.xml.in.h:30
+#: ../translation-teams.xml.in.h:31
 msgid "Dzongkha"
 msgstr "dzongkä"
 
-#: ../translation-teams.xml.in.h:31
+#: ../translation-teams.xml.in.h:32
 msgid "Esperanto"
 msgstr "esperanto"
 
-#: ../translation-teams.xml.in.h:32
+#: ../translation-teams.xml.in.h:33
 msgid "Estonian"
 msgstr "estonština"
 
-#: ../translation-teams.xml.in.h:33
+#: ../translation-teams.xml.in.h:34
 msgid "Finnish"
 msgstr "finština"
 
-#: ../translation-teams.xml.in.h:34
+#: ../translation-teams.xml.in.h:35
 msgid "French"
 msgstr "francouzština"
 
-#: ../translation-teams.xml.in.h:35
+#: ../translation-teams.xml.in.h:36
 msgid "Friulian"
 msgstr "furlanština"
 
-#: ../translation-teams.xml.in.h:36
+#: ../translation-teams.xml.in.h:37
 msgid "Fula"
 msgstr "fula"
 
-#: ../translation-teams.xml.in.h:37
+#: ../translation-teams.xml.in.h:38
 msgid "Galician"
 msgstr "galicijština"
 
-#: ../translation-teams.xml.in.h:38
+#: ../translation-teams.xml.in.h:39
 msgid "Georgian"
 msgstr "gruzínština"
 
-#: ../translation-teams.xml.in.h:39
+#: ../translation-teams.xml.in.h:40
 msgid "German"
 msgstr "němčina"
 
-#: ../translation-teams.xml.in.h:40
+#: ../translation-teams.xml.in.h:41
 msgid "Greek"
 msgstr "řečtina"
 
-#: ../translation-teams.xml.in.h:41
+#: ../translation-teams.xml.in.h:42
 msgid "Guarani"
 msgstr "guaranština"
 
-#: ../translation-teams.xml.in.h:42
+#: ../translation-teams.xml.in.h:43
 msgid "Gujarati"
 msgstr "gudžarátština"
 
-#: ../translation-teams.xml.in.h:43
+#: ../translation-teams.xml.in.h:44
 msgid "Hebrew"
 msgstr "hebrejština"
 
-#: ../translation-teams.xml.in.h:44
+#: ../translation-teams.xml.in.h:45
 msgid "Hindi"
 msgstr "hindština"
 
-#: ../translation-teams.xml.in.h:45
+#: ../translation-teams.xml.in.h:46
 msgid "Hungarian"
 msgstr "maďarština"
 
-#: ../translation-teams.xml.in.h:46
+#: ../translation-teams.xml.in.h:47
 msgid "Icelandic"
 msgstr "islandština"
 
-#: ../translation-teams.xml.in.h:47
+#: ../translation-teams.xml.in.h:48
 msgid "Ido"
 msgstr "ido"
 
-#: ../translation-teams.xml.in.h:48
+#: ../translation-teams.xml.in.h:49
 msgid "Indonesian"
 msgstr "indonéština"
 
-#: ../translation-teams.xml.in.h:49
+#: ../translation-teams.xml.in.h:50
 msgid "Iranian Azerbaijani"
 msgstr "íránská ázerbájdžánština"
 
-#: ../translation-teams.xml.in.h:50
+#: ../translation-teams.xml.in.h:51
 msgid "Irish"
 msgstr "irština"
 
-#: ../translation-teams.xml.in.h:51
+#: ../translation-teams.xml.in.h:52
 msgid "Italian"
 msgstr "italština"
 
-#: ../translation-teams.xml.in.h:52
+#: ../translation-teams.xml.in.h:53
 msgid "Japanese"
 msgstr "japonština"
 
-#: ../translation-teams.xml.in.h:53
+#: ../translation-teams.xml.in.h:54
 msgid "Kannada"
 msgstr "kannadština"
 
-#: ../translation-teams.xml.in.h:54
+#: ../translation-teams.xml.in.h:55
+msgid "Kashmiri"
+msgstr "kašmírština"
+
+#: ../translation-teams.xml.in.h:56
+msgid "Kazakh"
+msgstr "kazaština"
+
+#: ../translation-teams.xml.in.h:57
 msgid "Khmer"
 msgstr "khmerština"
 
-#: ../translation-teams.xml.in.h:55
+#: ../translation-teams.xml.in.h:58
 msgid "Kinyarwanda"
 msgstr "rwandština"
 
-#: ../translation-teams.xml.in.h:56
+#: ../translation-teams.xml.in.h:59
 msgid "Kirghiz"
 msgstr "kyrgyzština"
 
-#: ../translation-teams.xml.in.h:57
+#: ../translation-teams.xml.in.h:60
 msgid "Korean"
 msgstr "korejština"
 
-#: ../translation-teams.xml.in.h:58
+#: ../translation-teams.xml.in.h:61
 msgid "Kurdish"
 msgstr "kurdština"
 
-#: ../translation-teams.xml.in.h:59
+#: ../translation-teams.xml.in.h:62
 msgid "Latvian"
 msgstr "lotyština"
 
-#: ../translation-teams.xml.in.h:60
+#: ../translation-teams.xml.in.h:63
 msgid "Limburgian"
 msgstr "limburština"
 
-#: ../translation-teams.xml.in.h:61
+#: ../translation-teams.xml.in.h:64
 msgid "Lithuanian"
 msgstr "litevština"
 
-#: ../translation-teams.xml.in.h:62
+#: ../translation-teams.xml.in.h:65
 msgid "Low German"
 msgstr "dolnoněmčina"
 
-#: ../translation-teams.xml.in.h:63
+#: ../translation-teams.xml.in.h:66
 msgid "Low German and Saxon"
 msgstr "dolnoněmčina a saština"
 
-#: ../translation-teams.xml.in.h:64
+#: ../translation-teams.xml.in.h:67
 msgid "Low Saxon, Germany"
 msgstr "dolnosaština (Německo)"
 
-#: ../translation-teams.xml.in.h:65
+#: ../translation-teams.xml.in.h:68
 msgid "Macedonian"
 msgstr "makedonština"
 
-#: ../translation-teams.xml.in.h:66
+#: ../translation-teams.xml.in.h:69
 msgid "Maithili"
 msgstr "maithilština"
 
-#: ../translation-teams.xml.in.h:67
+#: ../translation-teams.xml.in.h:70
 msgid "Malagasy"
 msgstr "malagasy"
 
-#: ../translation-teams.xml.in.h:68
+#: ../translation-teams.xml.in.h:71
 msgid "Malay"
 msgstr "malajština"
 
-#: ../translation-teams.xml.in.h:69
+#: ../translation-teams.xml.in.h:72
 msgid "Malayalam"
 msgstr "malajálamština"
 
-#: ../translation-teams.xml.in.h:70
+#: ../translation-teams.xml.in.h:73
 msgid "Maori"
 msgstr "maorština"
 
-#: ../translation-teams.xml.in.h:71
+#: ../translation-teams.xml.in.h:74
 msgid "Marathi"
 msgstr "maráthština"
 
-#: ../translation-teams.xml.in.h:72
+#: ../translation-teams.xml.in.h:75
 msgid "Mongolian"
 msgstr "mongolština"
 
-#: ../translation-teams.xml.in.h:73
+#: ../translation-teams.xml.in.h:76
 msgid "Nepali"
 msgstr "nepálština"
 
-#: ../translation-teams.xml.in.h:74
+#: ../translation-teams.xml.in.h:77
 msgid "Northern Sotho"
 msgstr "severní sothoština"
 
-#: ../translation-teams.xml.in.h:75
+#: ../translation-teams.xml.in.h:78
 msgid "Norwegian (Bokmål and Nynorsk)"
 msgstr "norština (bokmål a nynorsk)"
 
-#: ../translation-teams.xml.in.h:76
+#: ../translation-teams.xml.in.h:79
 msgid "Norwegian Bokmål"
 msgstr "bokmål"
 
-#: ../translation-teams.xml.in.h:77
+#: ../translation-teams.xml.in.h:80
 msgid "Norwegian Nynorsk"
 msgstr "nynorsk"
 
-#: ../translation-teams.xml.in.h:78
+#: ../translation-teams.xml.in.h:81
 msgid "Occitan"
 msgstr "okcitánština"
 
-#: ../translation-teams.xml.in.h:79
+#: ../translation-teams.xml.in.h:82
 msgid "Old English"
 msgstr "stará angličtina"
 
-#: ../translation-teams.xml.in.h:80
+#: ../translation-teams.xml.in.h:83
 msgid "Oriya"
 msgstr "urijština"
 
-#: ../translation-teams.xml.in.h:81
+#: ../translation-teams.xml.in.h:84
 msgid "Pashto"
 msgstr "paštština"
 
-#: ../translation-teams.xml.in.h:82
+#: ../translation-teams.xml.in.h:85
 msgid "Persian"
 msgstr "perština"
 
-#: ../translation-teams.xml.in.h:83
+#: ../translation-teams.xml.in.h:86
 msgid "Polish"
 msgstr "polština"
 
-#: ../translation-teams.xml.in.h:84
+#: ../translation-teams.xml.in.h:87
 msgid "Portuguese"
 msgstr "portugalština"
 
-#: ../translation-teams.xml.in.h:85
+#: ../translation-teams.xml.in.h:88
 msgid "Punjabi"
 msgstr "paňdžábština"
 
-#: ../translation-teams.xml.in.h:86
+#: ../translation-teams.xml.in.h:89
 msgid "Romanian"
 msgstr "rumunština"
 
-#: ../translation-teams.xml.in.h:87
+#: ../translation-teams.xml.in.h:90
 msgid "Russian"
 msgstr "ruština"
 
-#: ../translation-teams.xml.in.h:88
+#: ../translation-teams.xml.in.h:91
 msgid "Serbian"
 msgstr "srbština"
 
-#: ../translation-teams.xml.in.h:89
+#: ../translation-teams.xml.in.h:92
 msgid "Serbian Jekavian"
 msgstr "srbská jekavština"
 
-#: ../translation-teams.xml.in.h:90
+#. deprecated id
+#: ../translation-teams.xml.in.h:94
 msgid "Serbian Latin"
 msgstr "srbština (latinka)"
 
-#: ../translation-teams.xml.in.h:91
+#: ../translation-teams.xml.in.h:95
 msgid "Sinhala"
 msgstr "sinhálština"
 
-#: ../translation-teams.xml.in.h:92
+#: ../translation-teams.xml.in.h:96
 msgid "Slovak"
 msgstr "slovenština"
 
-#: ../translation-teams.xml.in.h:93
+#: ../translation-teams.xml.in.h:97
 msgid "Slovenian"
 msgstr "slovinština"
 
-#: ../translation-teams.xml.in.h:94
+#: ../translation-teams.xml.in.h:98
 msgid "Spanish"
 msgstr "španělština"
 
-#: ../translation-teams.xml.in.h:95
+#: ../translation-teams.xml.in.h:99
 msgid "Swedish"
 msgstr "švédština"
 
-#: ../translation-teams.xml.in.h:96
+#: ../translation-teams.xml.in.h:100
 msgid "Tagalog"
 msgstr "tagalogština"
 
-#: ../translation-teams.xml.in.h:97
+#: ../translation-teams.xml.in.h:101
 msgid "Tajik"
 msgstr "tádžičtina"
 
-#: ../translation-teams.xml.in.h:98
+#: ../translation-teams.xml.in.h:102
 msgid "Tamil"
 msgstr "tamilština"
 
-#: ../translation-teams.xml.in.h:99
+#: ../translation-teams.xml.in.h:103
 msgid "Tatar"
 msgstr "tatarština"
 
-#: ../translation-teams.xml.in.h:100
+#: ../translation-teams.xml.in.h:104
 msgid "Telugu"
 msgstr "telugština"
 
-#: ../translation-teams.xml.in.h:101
+#: ../translation-teams.xml.in.h:105
 msgid "Thai"
 msgstr "thajština"
 
-#: ../translation-teams.xml.in.h:102
+#: ../translation-teams.xml.in.h:106
 msgid "Turkish"
 msgstr "turečtina"
 
-#: ../translation-teams.xml.in.h:103
+#: ../translation-teams.xml.in.h:107
 msgid "Turkmen"
 msgstr "turkmenština"
 
-#: ../translation-teams.xml.in.h:104
+#: ../translation-teams.xml.in.h:108
 msgid "Uighur"
 msgstr "ujgurština"
 
-#: ../translation-teams.xml.in.h:105
+#: ../translation-teams.xml.in.h:109
 msgid "Ukrainian"
 msgstr "ukrajinština"
 
-#: ../translation-teams.xml.in.h:106
+#: ../translation-teams.xml.in.h:110
 msgid "Urdu"
 msgstr "urdština"
 
-#: ../translation-teams.xml.in.h:107
+#: ../translation-teams.xml.in.h:111
 msgid "Uzbek"
 msgstr "uzbečtina"
 
-#: ../translation-teams.xml.in.h:108
+#: ../translation-teams.xml.in.h:112
 msgid "Uzbek (Cyrillic)"
 msgstr "uzbečtina (cyrilice)"
 
-#: ../translation-teams.xml.in.h:109
+#: ../translation-teams.xml.in.h:113
 msgid "Uzbek (Latin)"
 msgstr "uzbečtina (latinka)"
 
-#: ../translation-teams.xml.in.h:110
+#: ../translation-teams.xml.in.h:114
 msgid "Valencian-Catalan"
 msgstr "valencijská katalánština"
 
-#: ../translation-teams.xml.in.h:111
+#: ../translation-teams.xml.in.h:115
 msgid "Vietnamese"
 msgstr "vietnamština"
 
-#: ../translation-teams.xml.in.h:112
+#: ../translation-teams.xml.in.h:116
 msgid "Walloon"
 msgstr "valonština"
 
-#: ../translation-teams.xml.in.h:113
+#: ../translation-teams.xml.in.h:117
 msgid "Welsh"
 msgstr "velština"
 
-#: ../translation-teams.xml.in.h:114
+#: ../translation-teams.xml.in.h:118
 msgid "Xhosa"
 msgstr "xhosa"
 
-#: ../translation-teams.xml.in.h:115
+#: ../translation-teams.xml.in.h:119
 msgid "Yiddish"
 msgstr "jidiš"
 
-#: ../translation-teams.xml.in.h:116
+#: ../translation-teams.xml.in.h:120
 msgid "Yoruba"
 msgstr "joruba"
 
-#: ../translation-teams.xml.in.h:117
+#: ../translation-teams.xml.in.h:121
 msgid "Zulu"
 msgstr "zulu"
 
@@ -1318,7 +1321,7 @@ msgstr ""
 "prosím stránku patřičného modulu, chcete-li získat informace, kam zasílat "
 "překlady."
 
-#: ../templates/language-release.tmpl:69 ../templates/module.tmpl:76
+#: ../templates/language-release.tmpl:69 ../templates/module.tmpl:78
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "Documentation"
 msgstr "Dokumentace"
@@ -1425,31 +1428,31 @@ msgstr "Správci"
 msgid "Bug reporting"
 msgstr "Hlášení chyb"
 
-#: ../templates/module.tmpl:38
+#: ../templates/module.tmpl:39
 msgid "Show existing i18n and l10n bugs"
 msgstr "Zobrazit existující chyby v internacionalizaci a lokalizaci"
 
-#: ../templates/module.tmpl:39
+#: ../templates/module.tmpl:41
 msgid "Report bugs to Bugzilla"
 msgstr "Nahlásit chybu do Bugzilly"
 
-#: ../templates/module.tmpl:46
+#: ../templates/module.tmpl:48
 msgid "Branches:"
 msgstr "Větve:"
 
-#: ../templates/module.tmpl:61
+#: ../templates/module.tmpl:63
 msgid "Browse CVS"
 msgstr "Procházet CVS"
 
-#: ../templates/module.tmpl:63 ../templates/module.tmpl:65
+#: ../templates/module.tmpl:65 ../templates/module.tmpl:67
 msgid "Browse SVN"
 msgstr "Procházet SVN"
 
-#: ../templates/module.tmpl:69
+#: ../templates/module.tmpl:71
 msgid "This branch is currently string-frozen."
 msgstr "Tato větev je v současné době zmrazena."
 
-#: ../templates/module.tmpl:96
+#: ../templates/module.tmpl:98
 msgid "Translation"
 msgstr "Překlad"
 
@@ -1542,3 +1545,15 @@ msgstr "Jazyk"
 #: ../templates/show-stats.tmpl:39
 msgid "Translated"
 msgstr "Přeloženo"
+
+#~ msgid "Bug Buddy Manual"
+#~ msgstr "Příručka k Bug Buddy"
+
+#~ msgid "Seahorse Manual"
+#~ msgstr "Příručka k Seahorse"
+
+#~ msgid "GNOME 2.24 (development)"
+#~ msgstr "GNOME 2.24 (vývojové)"
+
+#~ msgid "New module proposals"
+#~ msgstr "Žádosti o zařazení nového modulu"
