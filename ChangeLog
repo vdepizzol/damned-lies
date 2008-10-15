@@ -1,5 +1,11 @@
 2008-10-15  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/language-release.tmpl: Include the mdash in the translatable
+	string.
+	Fixes #541683.
+
+2008-10-15  Claude Paroz  <claude@2xlibre.net>
+
 	* people.xml.in:
 	* translation-teams.xml.in: New Latin translation team.
 
