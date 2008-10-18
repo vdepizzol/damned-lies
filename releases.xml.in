@@ -688,8 +688,8 @@
 
     <category id="platform">
       <_description>GNOME developer platform</_description>
-      <module id="atk"/>
-      <module id="at-spi"/>
+      <module id="atk" branch="gnome-2-24""/>
+      <module id="at-spi" branch="gnome-2-24" />
       <module id="gconf"/>
       <module id="glib" branch="glib-2-18"/>
       <module id="gnome-vfs"/>
@@ -730,7 +730,7 @@
       <module id="gnome-desktop" branch="gnome-2-24"/>
       <module id="gnome-doc-utils"/>
       <module id="gnome-games" branch="gnome-2-24"/>
-      <module id="gnome-icon-theme"/>
+      <module id="gnome-icon-theme" branch="gnome-2-24"/>
       <module id="gnome-keyring"/>
       <module id="gnome-mag"/>
       <module id="gnome-media"/>
