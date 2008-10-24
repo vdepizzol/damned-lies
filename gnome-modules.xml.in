@@ -128,7 +128,6 @@
     <_description>Beagle Desktop Search</_description>
     <webpage>http://beagle-project.org/</webpage>
     <maintainer id="joeshaw"/>
-    <scmmodule>beagle</scmmodule>
     <branch id="HEAD">
       <domain id="beagle/po" potbase="beagle">
         <_description>UI translations</_description>
@@ -365,7 +364,6 @@
     <_description>Eye of GNOME</_description>
     <webpage>http://live.gnome.org/EyeOfGnome</webpage>
     <maintainer id="lucasr"/>
-    <scmmodule>eog</scmmodule>
     <branch id="HEAD" stringfrozen="false">
       <domain id="po">
         <_description>UI translations</_description>
@@ -391,7 +389,6 @@
     <_description>Epiphany Web Browser</_description>
     <webpage>http://gnome.org/projects/epiphany/</webpage>
     <maintainer id="chpe"/>
-    <scmmodule>epiphany</scmmodule>
     <branch id="HEAD" stringfrozen="false"/>
     <branch id="gnome-2-14" stringfrozen="true"/>
     <branch id="gnome-2-16" stringfrozen="true"/>
@@ -696,7 +693,6 @@
     <webpage>http://gtk.org/</webpage>
     <maintainer id="matthiasc"/>
     <maintainer id="owen"/>
-    <scmmodule>glib</scmmodule>
     <branch id="HEAD" stringfrozen="false"/>
     <branch id="glib-2-10" stringfrozen="true"/>
     <branch id="glib-2-12" stringfrozen="true"/>
@@ -893,6 +889,10 @@
         <document id="platform-overview">
           <_description>Platform Overview</_description>
           <directory>platform-overview</directory>
+        </document>
+        <document id="integration-guide">
+          <_description>Integration Guide</_description>
+          <directory>integration-guide</directory>
         </document>
       </branch>
     </defaults>
