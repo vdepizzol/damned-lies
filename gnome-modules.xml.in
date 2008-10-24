@@ -105,7 +105,11 @@
   </module>
 
   <module id="balsa">
-    <branch id="HEAD"/>
+    <branch id="HEAD">
+      <document id="help">
+        <directory>doc</directory>
+      </document>
+    </branch>
   </module>
 
   <module id="banshee">
