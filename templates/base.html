@@ -1,0 +1,97 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>{% block title %}page title{% endblock %}</title>
+  <link rel="icon" type="image/png" href="/media/img/foot-16.png"/>
+  <link rel="stylesheet" href="/media/css/main.css"/>
+  <link rel="stylesheet" href="/media/css/layout.css"/>
+  <link rel="stylesheet" href="/media/css/style.css"/>
+{% if rtl %}
+  <link rel="stylesheet" href="/media/css/rtl.css"/>
+{% endif %}
+  <script src="/media/js/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page">
+    <ul id="general">
+      <li id="siteaction-gnome_home" class="home">
+        <a href="http://www.gnome.org/">{% trans "Home" %}</a>
+      </li>
+      <li id="siteaction-gnome_news">
+        <a href="http://news.gnome.org">{% trans "News" %}</a>
+      </li>
+      <li id="siteaction-gnome_projects">
+        <a href="http://www.gnome.org/projects/">{% trans "Projects" %}</a>
+      </li>
+      <li id="siteaction-gnome_art">
+        <a href="http://art.gnome.org">{% trans "Art" %}</a>
+      </li>
+      <li id="siteaction-gnome_support">
+        <a href="http://www.gnome.org/support/">{% trans "Support" %}</a>
+      </li>
+      <li id="siteaction-gnome_development">
+        <a href="http://developer.gnome.org">{% trans "Development" %}</a>
+      </li>
+      <li id="siteaction-gnome_community">
+        <a href="http://www.gnome.org/community/">{% trans "Community" %}</a>
+      </li>
+    </ul>
+    <div id="header">
+      <h1>{% trans "Damned Lies" %}</h1>
+      <div id="tabs">
+        <ul id="portal-globalnav">
+          <li
+{% ifequal pageSection "home" %}
+	  class="selected"
+{% endifequal %}
+            ><a href="{% url home %}" title="{% trans "Back to Damned Lies home page" %}"><span>{% trans "Home" %}</span></a>
+          </li>
+	  <li
+{% ifequal pageSection "teams" %}
+	  class="selected"
+{% endifequal %}
+	   ><a href="{% url teams %}"><span>{% trans "Teams" %}</span></a></li>
+	  <li
+{% ifequal pageSection "languages" %}
+	  class="selected"
+{% endifequal %}
+	   ><a href="{% url languages %}"><span>{% trans "Languages" %}</span></a></li>
+	  <li
+{% ifequal pageSection "releases" %}
+	  class="selected"
+{% endifequal %}
+	   ><a href="{% url releases %}"><span>{% trans "Release sets" %}</span></a></li>
+	  <li
+{% ifequal pageSection "module" %}
+	  class="selected"
+{% endifequal %}
+	   ><a href="{% url modules %}"><span>{% trans "Modules" %}</span></a></li>
+        </ul>
+      </div> <!-- end of #tabs -->
+    </div> <!-- end of #header -->
+  </div>
+<!-- end site header -->
+
+  <div class="body">
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+  <div id="footer">
+    Copyright &copy; 2006-2008 <a href="http://www.gnome.org/">{% trans "The GNOME Project" %}</a>.
+    <br /> 
+{% trans "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>" %}
+ <br />
+    {% trans "Hosted by" %} <a href="http://www.canonical.com/">Canonical</a>.
+  </div>
+
+</div> <!-- end of div.body -->
+</body>
+</html>

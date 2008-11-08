@@ -1,0 +1,146 @@
+.stats th { 
+    text-align: left; 
+    background: gray; 
+    color: white;
+    padding-left: 2px;
+    padding-right: 2px; 
+}
+
+.stats td { 
+    background: #f0f0f0; 
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: black;
+}
+
+.stats td.leftcell { 
+    text-align: left;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 2em;
+    border-bottom: 1px solid gray;
+}
+
+div.graph {
+  height: 14px;
+  width: 100px;
+  border: 0px solid black; 
+  position: relative;
+}
+
+div.translated {
+  position: absolute; 
+  top: 0px;
+  height:100%; 
+  left: 0%; 
+  background: #448844;
+  background: url(/media/img/green-bar.png);
+  background-repeat: repeat-x;
+  color: black;
+}
+
+div.goodchange {
+  position: absolute; 
+  top: 0px;
+  height:100%; 
+  background: #55DD55;
+  background: url(/media/img/cyan-bar.png);
+  background-repeat: repeat-x;
+  color: black;
+}
+
+div.fuzzy {
+  position: absolute; 
+  top: 0px;
+  height:100%; 
+  background: #4444AA;
+  background: url(/media/img/purple-bar.png);
+  background-repeat: repeat-x;
+  color: black;
+}
+
+div.untranslated {
+  position: absolute; 
+  height:100%; 
+  top: 0px;
+  background: #FF4444;
+  background: url(/media/img/red-bar.png);
+  background-repeat: repeat-x;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #406080;
+}
+
+a:hover, a:visited {
+  color: #6080a0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+table {
+  width: 100%;
+}
+
+td.fuzzy {
+  background: #c98e7f;
+}
+
+img {
+  border: 0px;
+}
+
+img.people {
+  float: left;
+  margin-left: -85px;
+}
+
+img.screenshot {
+  max-width: 550px;
+  border: 0;
+}
+
+div.maintainer {
+  padding-left: 85px;
+  margin-bottom: 12px;
+  clear: both;
+}
+
+div.mainpage {
+  width:80%;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.col1 { float: left }
+div.col2 { float: left }
+div.col3 { float: left }
+
+p#show, p#hide {
+  text-align: right;
+  font-style: italic;
+}
+
+.path {
+  font-size: x-small;
+  font-style: italic;
+  color: #666666;
+}
+
+.footnote {
+  text-align: center;
+  font-size: small;
+  clear: both;
+  margin-top: 20px;
+  color: #aaaaaa;
+}
+

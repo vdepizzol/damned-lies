@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "GNOME Contributor" %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+  <h2>{{ person.name }}</h2>
+  {% with 1 as printroles %}
+  {% include "person_base.html" %}
+  {% endwith %}
+</div>
+{% endblock %}

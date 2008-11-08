@@ -1,0 +1,61 @@
+{% load i18n %}
+
+{% for dname, stat in stats.items %}
+  {% with stat|first as stat1 %} 
+  <h3>{% trans stat1.domain.get_description %}
+  {% ifnotequal stat1.domain.directory 'help' %}
+    {% ifnotequal stat1.domain.directory 'po' %}
+    <br /><span class='path'>{{ stat1.domain.directory }}</span>
+    {% endifnotequal %}
+  {% endifnotequal %}</h3>
+  <a href="{{ stat1.po_url }}"><img src="/media/img/download.png" alt="Download POT file" /></a>
+  {{ stat1.pot_text }}
+  
+  <!-- /* This is the title of the section that lists notices about a module */ -->
+  {% if stat1.information_set.all %}
+    <h4>{% trans "Notices" %}</h4>
+    <table>
+    {% for msg in stat1.information_set.all %}
+      <tr><td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.Type }}" /></td><td>{{ msg.get_description|safe }}</td></tr>
+    {% endfor %}
+    </table>
+  {% endif %}
+
+<table class="stats">
+<thead><tr><th>{% trans "Language" %}</th><th>{% trans "Translated" %}</th>
+ {% if stat1.fig_count %}
+    <th></th>
+ {% endif %}
+<th>{% trans "Graph" %}</th></tr></thead>
+
+    {% for line in stat %}
+      {% if not forloop.first %}
+      <tr>
+      <td class="leftcell"><a href="{{ line.po_url }}">{{ line.get_lang }}</a>
+      {% with line.most_important_message as msg %} 
+      {% if msg %}
+      <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.Type }}" />
+      {% endif %}
+      {% endwith %}
+      </td>
+      <td>{{ line.get_translationstat|safe }}</td>
+      {% if stat1.fig_count %}
+       <td><a href="{{ webroot }}module/{{ module.name }}/{{ stat1.domain.name }}/{{ branch.name }}/{{ line.language.locale}}/images">
+           <img src="/media/img/figure.png" alt="{% trans "Display document figures" %}"></a></td>
+      {% endif %}
+      <td style="width: 108px; text-align: center;"><div class="graph">
+        <div class="translated" style="width: {{ line.tr_percentage }}px;"></div>
+        <div class="fuzzy" style="left:{{ line.tr_percentage }}px; width:{{ line.fu_percentage }}px;"></div>
+        <div class="untranslated" style="left:{{ line.tr_percentage|add:line.fu_percentage }}px; width: {{ line.un_percentage }}px;"></div>
+        </div>
+      </td>
+      </tr>
+      
+      {% endif %}
+    {% endfor %}
+  {% endwith %}
+
+</table>
+
+{% endfor %}
+

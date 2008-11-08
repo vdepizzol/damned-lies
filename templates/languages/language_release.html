@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans release.description %} - {% trans language.name %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+{% with language.locale as locale %}
+{% if language.team %}
+  <h1>{% blocktrans with language.team.description as lang %}{{ lang }} Translation Team — {{ locale }}{% endblocktrans %}</h1>
+
+<table><tr><td valign="top" width="50%">
+  <h2>{% trans "Details" %}</h2>
+
+  {% if language.team.webpage_url %}
+  <strong>{% blocktrans with language.team.description as lang %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
+  <a href="{{ language.team.webpage_url }}">{{ language.team.webpage_url }}</a><br />
+  {% endif %}
+
+  <br/><strong>{% trans "Bugzilla:" %}</strong>
+  <ul>
+    <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
+    <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
+  </ul>
+
+  {% if language.team.mailing_list %}
+  <br/><strong>{% trans "Mailing List:" %}</strong>
+  <ul>
+    <li><a href="mailto:{{ language.team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
+    {% if language.team.mailing_list_subscribe %}
+    <li><a href="{{ language.team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+
+  </td><td valign="top">
+  {% if language.team.coordinator %}
+    <h2>{% trans "Coordinator" %}</h2>
+    {% with language.team.coordinator as person %}
+    {% with 0 as printroles %}
+    {% include "person_base.html" %}
+    {% endwith %}
+    {% endwith %}
+  {% endif %}
+</td></tr></table>
+{% else %}
+  <h1>{% blocktrans %}Language code: {{ locale }}{% endblocktrans %}</h1>
+  <p>{% blocktrans %}There is no translation team in charge of '{{ locale }}' translation.{% endblocktrans %}</p>
+{% endif %}
+{% endwith %}
+
+<h2>{% trans release.description %}</h2>
+
+<p id="hide">
+   <a href="#" onclick="return showHideCompleted();">{% trans "Hide completed modules" %}</a>
+</p>
+
+<p id="show" style="display:none">
+   <a href="#" onclick="return showHideCompleted();">{% trans "Show completed modules" %}</a>
+</p>
+
+{% ifequal release.status "external" %}
+<p><i>{% trans "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations." %}</i></p>
+{% endifequal %}
+
+<table><tr>
+{% if stats.doc.total %}
+  <td valign="top" width="50%"><!-- two columns set-up -->
+  <h3>{% trans "Documentation" %}</h3>
+  {% with stats.doc as modstats %}
+    {% include "languages/language_release_stats.html" %}
+  {% endwith %}
+  </td>
+{% endif %}  
+  <td valign="top"><!-- second column -->
+
+  <h3>{% trans "UI translations" %}</h3>
+  {% with stats.ui as modstats %}
+    {% include "languages/language_release_stats.html" %}
+  {% endwith %}
+</td></tr></table><!-- end two column layout -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "GNOME Translation Teams" %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "GNOME Translation Teams" %}</h1>
+
+{% if teams %}
+<p>{% trans "Select a team below to see more information about it:" %}</p>
+
+    <ul class="foot">
+    {% for team in teams %}
+    <li style="font-size: 120%;">
+      <a href="{{ team.get_absolute_url }}">{{ team.translated_name }}</a>
+      {% if team.webpage_url %}
+        &mdash; <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a>
+      {% endif %}
+      {% if team.coordinator.get_absolute_url %}
+        <br />
+        <span style="font-size: 80%;">
+          {% blocktrans with team.coordinator.get_absolute_url|safe as url and team.coordinator.name as name %}
+          Coordinated by <a href="{{ url }}">{{ name }}</a>
+          {% endblocktrans %}
+        </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+<p>{% trans "There are currently no translation teams in GNOME. :(" %}</p>
+{% endif %}
+
+</div>
+{% endblock %}

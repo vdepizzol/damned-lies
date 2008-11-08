@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "GNOME Languages" %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "GNOME Languages" %}</h1>
+
+{% blocktrans count languages|length as numb %}
+GNOME is being translated to following {{ numb }} language.
+{% plural %}
+GNOME is being translated to following {{ numb }} languages.
+{% endblocktrans %}
+
+<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
+<ul class="foot">
+{% for lang in languages %}
+<li style="font-size: 120%;">
+  <a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+</div>
+{% endblock %}

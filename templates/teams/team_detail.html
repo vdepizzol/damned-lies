@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans team.description %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+{% if not team.fake %}
+<h1>{% blocktrans with team.description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
+
+<table><tr><td valign="top" width="50%">
+  <h2>{% trans "Details" %}</h2>
+
+  {% if team.webpage_url %}
+  <strong>{% blocktrans with team.description as lang %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
+  <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a><br />
+  {% endif %}
+
+  <br/><strong>{% trans "Bugzilla:" %}</strong>
+  <ul>
+    {% with team.get_languages.0 as language %}
+    <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
+    <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
+    {% endwith %}
+  </ul>
+
+  {% if team.mailing_list %}
+  <br/><strong>{% trans "Mailing List:" %}</strong>
+  <ul>
+    <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
+    {% if team.mailing_list_subscribe %}
+    <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+  
+  </td><td valign="top">
+  {% if team.coordinator %}
+    <h2>{% trans "Coordinator" %}</h2>
+    {% with team.coordinator as person %}
+    {% with 0 as printroles %}
+    {% include "person_base.html" %}
+    {% endwith %}
+    {% endwith %}
+  {% endif %}
+</td></tr></table>
+{% else %}
+<h1>{{ team.description }}</h1>
+{% endif %}
+
+{% for lang in team.get_languages %}
+  <h2>{% trans lang.name %}</h2>
+  <table class="stats">
+  <thead><tr><th>{% trans "Release" %}</th><th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th>
+         <th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th></tr></thead>
+  {% for stat in lang.get_release_stats %}
+    <tr>
+      <td class="leftcell" style="font-size:120%;">
+        <a href="{% url language_release lang.locale,stat.name %}">{{ stat.description }}</a>
+      </td>
+  
+    {% if stat.doctotal %}
+      <td>{{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</td>
+      <td style="width: 108px; text-align: center;"><div class="graph">
+        <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
+        <div class="fuzzy" style="left:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
+        {% with stat.doctransperc|add:stat.docfuzzyperc as upos %}
+        <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
+        {% endwith %}
+        </div>
+      </td>
+    {% else %}
+      <td>-</td><td></td>
+    {% endif %}
+
+    <td>{{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</td>
+    <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
+      <div class="fuzzy" style="left:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
+      {% with stat.uitransperc|add:stat.uifuzzyperc as upos %}
+      <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
+      {% endwith %}
+      </div>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endfor %}
+
+</div>
+{% endblock %}

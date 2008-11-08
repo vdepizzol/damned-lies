@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "GNOME Releases" %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "GNOME Releases" %}</h1>
+
+<p>{% trans "Select a release or a release set below to see more details about it:" %}</p>
+
+<ul class="foot">
+{% for rel in releases %}
+  {% ifchanged rel.status %}
+    </ul>
+    <ul class="foot">
+  {% endifchanged %}
+  <li style="font-size: 120%;">
+    <a href="{% url stats.views.release rel.name %}">{% trans rel.description %}</a>
+  </li>
+{% endfor %}
+
+</div>
+{% endblock %}

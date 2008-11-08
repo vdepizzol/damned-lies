@@ -1,0 +1,70 @@
+This is a re-implementation of the Damned-Lies application
+in a Django app. Damned-Lies has been originally written by
+Danilo Segan (danilo@gnome.org). This implementation has been
+written by Claude Paroz (claude@2xlibre.net).
+
+The former XML files (modules, releases, people, translation
+teams) have been replaced by a database.
+
+The Data model is in the /docs directory.
+
+The middle-term objective is to merge this code with the Transifex 
+application (http://transifex.org).
+
+Installation
+============
+
+1 - Rename settings_sample.py in settings.py
+
+2 - Review and fill in settings in stats/conf/settings_sample.py and
+    rename it to settings.py (please refer to Database configuration
+    below for more informations).
+
+3 - Run 'python manage.py syncdb'
+
+4 - Configure Sites in admin interface to define the 'View on site'
+    link.
+
+
+Databases
+=========
+
+It's important to use the Unix Domain Socket connection to obtain good
+performances.
+
+PostgreSQL
+----------
+
+You just need to define DATABASE_ENGINE = 'postgresql_psycopg2' and DATABASE_NAME. Leave DATABASE_HOST setting empty to use UDS.
+
+MySQL
+-----
+
+Create a database in UTF8, either with default-character-set = utf8
+under [mysqld] section in the my.cnf file or with an explicit 'create
+database bla charset=utf8;'
+
+In settings.py:
+
+DATABASE_HOST = '/var/run/mysqld/mysqld.sock'
+
+DATABASE_OPTIONS = {
+    'read_default_file': '/etc/mysql/my.cnf',
+    "init_command": "SET storage_engine=INNODB"
+}
+
+Grep for ANSI_QUOTES in the source code to find the models.py which
+use a hack to workaround the double quotes interpretation in MySQL.
+The best solution is to run the MySQL server with the ANSI_QUOTES
+mode: http://dev.mysql.com/doc/refman/5.0/en/server-sql-mode.html
+(sql-mode="ANSI_QUOTES" in my.cnf) but it can be dangerous for other
+applications.
+
+Running as CGI
+==============
+
+If you don't won't to setup Django with mod_python, there is a tutorial
+on the Django Wiki:
+http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/
+
+You'll also file a sample init script in the /docs directory.

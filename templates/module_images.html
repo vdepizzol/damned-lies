@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% blocktrans with module.description as name %}Module Doc Figure Status: {{ name }}{% endblocktrans %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1><a href="{% url stats.views.module module.name %}">{{ module.description }}</a> {{ stat.domain.description }} ({% trans stat.language.name %})</h1>
+
+{% with stat.fig_stats as figstat %}
+<h2>{% trans "Figures translation status" %} &mdash; 
+    <small>{{ figstat.prc }}% ({{ figstat.translated }}/{{ figstat.fuzzy}}/{{ figstat.untranslated }})</small></h2>
+{% endwith %}
+
+<table class="stats">
+<thead><tr><th width="50%">{% trans "Original" %}</th><th width="50%">{% trans stat.language.name %}</th></tr></thead>
+{% for fig in stat.get_figures %}
+  {% with stat.language.locale as locale %}
+  {% with stat.vcs_web_path as vcs_web_path %}
+  {% with stat.vcs_path as vcs_path %}
+  <tr><td valign="top">
+    <a href="{{ vcs_web_path }}/C/{{ fig.path }}"><span class="path">C/{{ fig.path }}</span><br/></a>
+    <a href="{{ vcs_path }}/C/{{ fig.path }}"><img class="screenshot" src="{{ vcs_path }}/C/{{ fig.path }}"/></a>
+    </td>
+    <td valign="top" class="$tdclass">
+    {% if fig.translated %}
+      {% if fig.translated_file %}
+      <a href="{{ vcs_web_path }}/{{ locale }}/{{ fig.path }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
+      <a href="{{ vcs_path }}/{{ locale }}/{{ fig.path }}"><img class="screenshot" src="{{ vcs_path }}/{{ locale }}/{{ fig.path }}"/></a>
+      {% else %}
+      <p><em>{% trans "Translated, but uses original one (maybe the figure doesn't contain any string to translate)" %}</em></p>
+      {% endif %}
+    {% else %}
+      {% if fig.fuzzy %}
+        <em>{% trans "Fuzzy" %}</em><br/>
+        {% if fig.translated_file %}
+      <a href="{{ vcs_web_path }}/{{ locale }}/{{ fig.path }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
+      <a href="{{ vcs_path }}/{{ locale }}/{{ fig.path }}"><img class="screenshot" src="{{ vcs_path }}/{{ locale }}/{{ fig.path }}"/></a>
+        {% else %}
+      <p><em><small>{% trans "No existing file (&quot;Technical&quot; fuzzy)" %}</small></em></p>
+        {% endif %}
+      {% else %}
+        <em>{% trans "Not translated" %}</em><br/>
+        <img src="/media/img/emptyimg.png">
+      {% endif %}
+    {% endif %}
+    </td>
+  </tr>
+  {% endwith %}
+  {% endwith %}
+  {% endwith %}
+{% endfor %}
+</table>
+
+</div>
+
+{% endblock %}

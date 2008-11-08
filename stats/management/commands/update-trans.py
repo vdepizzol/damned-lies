@@ -1,0 +1,60 @@
+from django.core.management.base import BaseCommand
+from django.core.management.commands import makemessages
+from django.db import connection
+from optparse import make_option
+import os
+import shutil
+
+class Command(BaseCommand):
+    help = "Update translations of djamnedlies"
+    args = "LANG_CODE"
+    
+    #option_list = BaseCommand.option_list + (
+    #    make_option('--pot', action='store_true', dest='pot', default=False,
+    #        help="create a pot file"),
+    #)        
+
+    output_transaction = False
+
+    def handle(self, *args, **options):
+        if len(args)!=1:
+            return "You have to specify language code as first and only argument."
+        lang_code = args[0]
+
+        # Copy po/ll.po in locale/ll/LC_MESSAGES/django.po
+        podir = os.path.abspath('po')
+        pofile = os.path.join(podir, '%s.po' % lang_code)
+        if os.path.exists(pofile):
+            localedir = os.path.join(os.path.abspath('locale'), lang_code, 'LC_MESSAGES')
+            if not os.path.isdir(localedir):
+                os.makedirs(localedir)
+            shutil.copy(pofile, os.path.join(localedir, 'django.po'))
+        
+        # Extract DB translatable strings into database-content.py
+        dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
+        f=open(dbfile, 'w')
+        query = """SELECT description FROM team UNION DISTINCT
+                   SELECT name from `language` UNION DISTINCT
+                   SELECT description FROM domain UNION DISTINCT
+                   SELECT description FROM module UNION DISTINCT
+                   SELECT category FROM category UNION DISTINCT
+                   SELECT name from `release`;"""
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor.fetchall():
+            if row[0] is not None:
+                f.write("_(u'%s')\n" % row[0].encode('utf-8'))
+        f.close()
+
+        # Run makemessages -l ll
+        makemessages.make_messages(lang_code, verbosity=2, extensions=['.html'])
+        
+        # Delete database-content.py
+        os.unlink(dbfile)
+        
+        # Copy locale/ll/LC_MESSAGES/django.po to po/ll.po
+        shutil.copy(os.path.join(localedir, 'django.po'), pofile)
+        
+        return "po file for language '%s' updated." % lang_code
+
+
