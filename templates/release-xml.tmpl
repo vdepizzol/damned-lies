@@ -1,9 +1,0 @@
-<release id="${release.id}">
-#if len($status)
-<itemizedlist>
-#for lstats in $status
-  <!-- ${lstats.ui_supportedness}% --><listitem><para>${lstats.name}</para></listitem>
-#end for
-</itemizedlist>
-#end if
-</release>
