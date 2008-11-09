@@ -50,9 +50,7 @@
       <ul>
         {% for team in person.coordinates_teams.all %}
           <li>
-            {% blocktrans with team.get_absolute_url as team_url and team.description as team_desc %}
-            Coordinates <a href="{{ team_url }}">{{ team_desc }}</a>
-            {% endblocktrans %}
+            {% blocktrans with team.get_absolute_url as team_url and team.description as team_desc %}Coordinates <a href="{{ team_url }}">{{ team_desc }}</a>{% endblocktrans %}
           </li>
         {% endfor %}
       </ul>

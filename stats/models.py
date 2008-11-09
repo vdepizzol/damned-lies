@@ -739,7 +739,8 @@ CATEGORY_CHOICES = (
     ('admin-tools', ugettext_noop('Administration Tools')),
     ('dev-tools', ugettext_noop('Development Tools')),
     ('desktop', ugettext_noop('GNOME Desktop')),
-    ('dev-platform', ugettext_noop('GNOME developer platform')),
+    ('dev-platform', ugettext_noop('GNOME Developer Platform')),
+    ('proposed', ugettext_noop('New Module Proposals')),
 )
 class Category(models.Model):
     release = models.ForeignKey(Release)

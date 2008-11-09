@@ -40,6 +40,7 @@ class Command(BaseCommand):
                    SELECT name from `language` WHERE name <> locale UNION DISTINCT
                    SELECT description FROM domain UNION DISTINCT
                    SELECT description FROM module WHERE description <> name UNION DISTINCT
+                   SELECT comment FROM module WHERE comment IS NOT NULL UNION DISTINCT
                    SELECT description FROM `release`;"""
         cursor = connection.cursor()
         cursor.execute(query)

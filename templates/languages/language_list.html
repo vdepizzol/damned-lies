@@ -8,10 +8,8 @@
 
 <h1>{% trans "GNOME Languages" %}</h1>
 
-{% blocktrans count languages|length as numb %}
-GNOME is being translated to following {{ numb }} language.
-{% plural %}
-GNOME is being translated to following {{ numb }} languages.
+{% blocktrans count languages|length as numb %}GNOME is being translated to following {{ numb }} language.
+{% plural %}GNOME is being translated to following {{ numb }} languages.
 {% endblocktrans %}
 
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">

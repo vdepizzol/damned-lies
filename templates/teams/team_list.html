@@ -21,9 +21,7 @@
       {% if team.coordinator.get_absolute_url %}
         <br />
         <span style="font-size: 80%;">
-          {% blocktrans with team.coordinator.get_absolute_url|safe as url and team.coordinator.name as name %}
-          Coordinated by <a href="{{ url }}">{{ name }}</a>
-          {% endblocktrans %}
+          {% blocktrans with team.coordinator.get_absolute_url|safe as url and team.coordinator.name as name %}Coordinated by <a href="{{ url }}">{{ name }}</a>{% endblocktrans %}
         </span>
       {% endif %}
     </li>

@@ -1,3 +1,14 @@
+2008-11-09  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/management/commands/update-trans.py: Extract module.comment for
+	translation.
+	* stats/models.py: Added 'proposed' in category choices. 
+	* templates/languages/language_list.html:
+	* templates/person_base.html:
+	* templates/teams/team_list.html: Compacted blocktrans for a more nicer
+	output in .po files (avoid unnecessary newlines).
+	* templates/module_list.html: Fixed capitalization.
+
 2008-11-08  Claude Paroz  <claude@2xlibre.net>
 
 	* .cvsignore/.htaccess: Remove old files.
