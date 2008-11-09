@@ -45,6 +45,9 @@ class Team(Group):
     def get_absolute_url(self):
         return ('team_slug', [self.name])
     
+    def get_description(self):
+        return _(self.description)
+    
     def get_languages(self):
         return self.language_set.all()
 
@@ -61,6 +64,9 @@ class FakeTeam(object):
         # FIXME: try to avoid using a hard-coded link 
         return "/teams/%s" % self.language.locale
     
+    def get_description(self):
+        return self.language.locale
+
     def get_languages(self):
         return (self.language,)
 

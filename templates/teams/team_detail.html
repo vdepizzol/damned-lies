@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans team.description %}{% endblock %}
+{% block title %}{{ team.get_description }}{% endblock %}
 
 {% block content %}
 <div class="mainpage">
 
+{% with team.get_description as lang %}
 {% if not team.fake %}
-<h1>{% blocktrans with team.description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
+<h1>{% blocktrans %}{{ lang }} Translation Team{% endblocktrans %}</h1>
 
 <table><tr><td valign="top" width="50%">
   <h2>{% trans "Details" %}</h2>
 
   {% if team.webpage_url %}
-  <strong>{% blocktrans with team.description as lang %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
+  <strong>{% blocktrans %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
   <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a><br />
   {% endif %}
 
@@ -46,8 +47,9 @@
   {% endif %}
 </td></tr></table>
 {% else %}
-<h1>{{ team.description }}</h1>
+<h1>{{ lang }}</h1>
 {% endif %}
+{% endwith %}
 
 {% for lang in team.get_languages %}
   <h2>{% trans lang.name %}</h2>

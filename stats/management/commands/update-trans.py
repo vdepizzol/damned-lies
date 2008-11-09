@@ -40,13 +40,13 @@ class Command(BaseCommand):
                    SELECT name from `language` WHERE name <> locale UNION DISTINCT
                    SELECT description FROM domain UNION DISTINCT
                    SELECT description FROM module WHERE description <> name UNION DISTINCT
-                   SELECT comment FROM module WHERE comment IS NOT NULL UNION DISTINCT
+                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment<>'' UNION DISTINCT
                    SELECT description FROM `release`;"""
         cursor = connection.cursor()
         cursor.execute(query)
         for row in cursor.fetchall():
             if row[0] is not None:
-                f.write("_(u'%s')\n" % row[0].encode('utf-8'))
+                f.write("_(u\"\"\"%s\"\"\")\n" % row[0].encode('utf-8'))
         f.close()
 
         # Run makemessages -l ll

@@ -1,3 +1,11 @@
+2008-11-10  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/management/commands/update-trans.py: Triple quotes strings to
+	avoid quote escaping.
+	* teams/models.py: Add get_description (translated description).
+	* templates/teams/team_detail.html: Use get_description for correct team
+	lang translation.
+
 2008-11-09  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/management/commands/update-trans.py: Extract module.comment for
