@@ -201,23 +201,31 @@ class Branch(models.Model):
         domains = Domain.objects.filter(module=self.module)
         string_freezed = self.has_string_freezed()
         for dom in domains.all():
+            # 1. Initial settings
+            # *******************
             domain_path = os.path.join(self.co_path(), dom.directory)
             if not os.access(domain_path, os.X_OK):
                 # TODO: should check if existing stats, and delete (archive) them in this case
                 continue
             errors = []
-            if dom.dtype == 'ui':
+            
+            # 2. Pre-check, if available (intltool-update -m)
+            # **************************
+            if dom.dtype == 'ui'and not dom.pot_method:
                 # Run intltool-update -m to check for some errors
                 errors.extend(utils.check_potfiles(domain_path))
             
-            # Update pot file
+            # 3. Generate a fresh pot file
+            # ****************************
             if dom.dtype == 'ui':
-                potfile, errs = utils.generate_ui_pot_file(domain_path, dom.potbase(), settings.DEBUG)
-            elif dom.dtype == 'doc':
+                potfile, errs = dom.generate_pot_file(domain_path)
+            elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
                 potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
                 doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
             errors.extend(errs)
             
+            # 4. Compare with old pot files, various checks
+            # *****************************
             previous_pot = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + ".pot")
             if not potfile:
                 if settings.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module.name, dom.directory)
@@ -242,7 +250,9 @@ class Branch(models.Model):
                 diff = potdiff.diff(previous_pot, potfile)
                 if not len(diff):
                     pot_has_changed = False
-                    
+            
+            # 5. Generate pot stats and update DB
+            # ***********************************
             pot_stats = utils.po_file_stats(potfile, 0)
             errors.extend(pot_stats['errors'])
 
@@ -260,8 +270,9 @@ class Branch(models.Model):
             stat.save()
             for err in errors:
                 stat.information_set.add(Information(Type=err[0], Description=err[1]))
-                
-            # Update po files and update DB with new stats
+            
+            # 6. Update language po files and update DB
+            # *****************************************
             command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
             for lang, pofile in self.get_lang_files(dom, domain_path):
                 outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
@@ -436,6 +447,10 @@ class Domain(models.Model):
     description = models.TextField(null=True, blank=True)
     dtype = models.CharField(max_length=5, choices=DOMAIN_TYPE_CHOICES, default='ui')
     directory = models.CharField(max_length=50)
+    # The pot_method is a command who chould produce a potfile in the po directory of
+    # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot). If blank, method is 
+    # intltool for UI and gnome-doc-utils for DOC
+    pot_method = models.CharField(max_length=50, null=True, blank=True)
 
     class Meta:
         db_table = 'domain'
@@ -451,6 +466,36 @@ class Domain(models.Model):
     
     def get_description(self):
         return self.description or self.potbase()
+    
+    def generate_pot_file(self, vcs_path):
+        """ Return the pot file generated, and the error if any """
+        
+        pot_command = self.pot_method
+        podir = vcs_path
+        if not self.pot_method: # default is intltool
+            pot_command = "intltool-update -g '%(domain)s' -p" % {'domain': self.potbase()}
+        elif self.module.name == 'damned-lies':
+            # special case for d-l, pot file should be generated from running instance dir
+            podir = "."
+            vcs_path = "./po"
+        command = "cd \"%(dir)s\" && %(pot_command)s" % {
+            "dir" : podir,
+            "pot_command" : pot_command,
+            }
+        if settings.DEBUG: print >>sys.stderr, command
+        (error, output) = commands.getstatusoutput(command)
+        if settings.DEBUG: print >> sys.stderr, output
+
+        potfile = os.path.join(vcs_path, self.potbase() + ".pot")
+
+        if error or not os.access(potfile, os.R_OK):
+            return "", (("error", ugettext_noop("Error regenerating POT file for %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
+                                 % {'file': self.potbase(),
+                                    'cmd': command,
+                                    'output': output})
+                       )
+        else:
+            return potfile, ()
     
 RELEASE_STATUS_CHOICES = (
     ('official', 'Official'),
@@ -691,10 +736,10 @@ class Release(models.Model):
 
 CATEGORY_CHOICES = (
     ('default', 'Default'),
-    ('admin-tools', 'Administration Tools'),
-    ('dev-tools', 'Development Tools'),
-    ('desktop', 'GNOME Desktop'),
-    ('dev-platform', 'GNOME developer platform'),
+    ('admin-tools', ugettext_noop('Administration Tools')),
+    ('dev-tools', ugettext_noop('Development Tools')),
+    ('desktop', ugettext_noop('GNOME Desktop')),
+    ('dev-platform', ugettext_noop('GNOME developer platform')),
 )
 class Category(models.Model):
     release = models.ForeignKey(Release)

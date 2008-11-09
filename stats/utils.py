@@ -72,26 +72,6 @@ def check_potfiles(po_path):
                        + "</li>\n</ul>")))
     return errors
 
-def generate_ui_pot_file(vcs_path, potbase, verbose):
-    """ Return the pot file generated, and the error if any """
-    
-    command = "cd \"%(dir)s\" && intltool-update -g '%(domain)s' -p" % {
-        "dir" : vcs_path,
-        "domain" : potbase,
-        }
-    if verbose: print >>sys.stderr, command
-    (error, output) = commands.getstatusoutput(command)
-    if verbose: print >> sys.stderr, output
-
-    potfile = os.path.join(vcs_path, potbase + ".pot")
-
-    if error or not os.access(potfile, os.R_OK):
-        return "", (("error", ugettext_noop("Error regenerating POT file for %s:\n<pre>%s\n%s</pre>")
-                             % (potbase, command, output))
-                   )
-    else:
-        return potfile, ()
-
 def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
     
@@ -119,8 +99,11 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     (error, output) = commands.getstatusoutput(command)
     if error:
         errors.append(("error",
-                       ugettext_noop("Error regenerating POT file for document %s:\n<pre>%s\n%s</pre>")
-                       % (potbase, command, output)))
+                       ugettext_noop("Error regenerating POT file for document %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
+                             % {'file': potbase,
+                                'cmd': command,
+                                'output': output})
+                     )
     if verbose: print >> sys.stderr, output
     
     if error or not os.access(potfile, os.R_OK):

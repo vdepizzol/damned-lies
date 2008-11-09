@@ -4,6 +4,19 @@
 
 2008-11-08  Claude Paroz  <claude@2xlibre.net>
 
+	* po/README.translators: Added explanation about special translation
+	process of D-L.
+	* people/admin.py: Improve People browsing.
+	* stats/management/commands/update-trans.py: When language is 'en',
+	generate a pot file. Updated database queries for translatable strings.
+	* stats/models.py: Document the update_stats method and add support for
+	custom pot generation.
+	Added new Domain.pot_method field.
+	* stats/utils.py: Move the generic pot generation function in Domain
+	class.
+
+2008-11-08  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/admin.py: Enrich Release editing in admin, allowing branch choice.
 
 2008-11-08  Claude Paroz  <claude@2xlibre.net>

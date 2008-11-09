@@ -6,7 +6,7 @@ import os
 import shutil
 
 class Command(BaseCommand):
-    help = "Update translations of djamnedlies"
+    help = "Update translations of djamnedlies ('en' is a special case, and generate damned-lies.pot)"
     args = "LANG_CODE"
     
     #option_list = BaseCommand.option_list + (
@@ -23,22 +23,24 @@ class Command(BaseCommand):
 
         # Copy po/ll.po in locale/ll/LC_MESSAGES/django.po
         podir = os.path.abspath('po')
-        pofile = os.path.join(podir, '%s.po' % lang_code)
-        if os.path.exists(pofile):
-            localedir = os.path.join(os.path.abspath('locale'), lang_code, 'LC_MESSAGES')
-            if not os.path.isdir(localedir):
-                os.makedirs(localedir)
-            shutil.copy(pofile, os.path.join(localedir, 'django.po'))
+        localedir = os.path.join(os.path.abspath('locale'), lang_code, 'LC_MESSAGES')
+        if lang_code != 'en':
+            pofile = os.path.join(podir, '%s.po' % lang_code)
+            if os.path.exists(pofile):
+                if not os.path.isdir(localedir):
+                    os.makedirs(localedir)
+                shutil.copy(pofile, os.path.join(localedir, 'django.po'))
+        else:
+            pofile = os.path.join(podir, 'damned-lies.pot')
         
         # Extract DB translatable strings into database-content.py
         dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
         f=open(dbfile, 'w')
         query = """SELECT description FROM team UNION DISTINCT
-                   SELECT name from `language` UNION DISTINCT
+                   SELECT name from `language` WHERE name <> locale UNION DISTINCT
                    SELECT description FROM domain UNION DISTINCT
-                   SELECT description FROM module UNION DISTINCT
-                   SELECT category FROM category UNION DISTINCT
-                   SELECT name from `release`;"""
+                   SELECT description FROM module WHERE description <> name UNION DISTINCT
+                   SELECT description FROM `release`;"""
         cursor = connection.cursor()
         cursor.execute(query)
         for row in cursor.fetchall():
