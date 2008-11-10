@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-08 23:03+0000\n"
-"PO-Revision-Date: 2008-11-09 12:41+0100\n"
+"POT-Creation-Date: 2008-11-09 22:27+0000\n"
+"PO-Revision-Date: 2008-11-10 22:01+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -895,50 +895,76 @@ msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
 #: database-content.py:220
+msgid ""
+"GNUCash is not part of the GNOME SVN repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
+msgstr ""
+"GNUCash no forma parte del repositorio GNOME SVN. Por favor compruebe <a "
+"href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
+"GNUCash</a> para para ver dónde enviar las traducciones."
+
+#: database-content.py:221
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr ""
+"Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
+"través de <a href=\"http://translationproject.org\">Translation Project</a>."
+
+#: database-content.py:222
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr ""
+"Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
+"el «trunk»."
+
+#: database-content.py:223
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:221
+#: database-content.py:224
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:222
+#: database-content.py:225
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:223
+#: database-content.py:226
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:224
+#: database-content.py:227
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:225
+#: database-content.py:228
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:226
+#: database-content.py:229
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:227
+#: database-content.py:230
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (estable)"
 
-#: database-content.py:228
+#: database-content.py:231
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:229
+#: database-content.py:232
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:230
+#: database-content.py:233
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:231
+#: database-content.py:234
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (desarrollo)"
 
@@ -982,39 +1008,43 @@ msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
 #: stats/models.py:742
-msgid "GNOME developer platform"
+msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:812
+#: stats/models.py:743
+msgid "New Module Proposals"
+msgstr "Nuevas propuestas de módulos"
+
+#: stats/models.py:813
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:842
+#: stats/models.py:843
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:843
+#: stats/models.py:844
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:845
+#: stats/models.py:846
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:846
+#: stats/models.py:847
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:849
+#: stats/models.py:850
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1359,12 +1389,8 @@ msgstr "El archivo no existe (&quot;técnicamente&quot; difuso)"
 msgid "Not translated"
 msgstr "No traducido"
 
-#: templates/module_list.html:4
+#: templates/module_list.html:4 templates/module_list.html.py:9
 msgid "GNOME Modules"
-msgstr "Módulos de GNOME"
-
-#: templates/module_list.html:9
-msgid "GNOME modules"
 msgstr "Módulos de GNOME"
 
 #: templates/module_list.html:11
@@ -1394,14 +1420,8 @@ msgstr "Coordina:"
 
 #: templates/person_base.html:53
 #, python-format
-msgid ""
-"\n"
-"            Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>\n"
-"            "
-msgstr ""
-"\n"
-"            Coordina el <a href=\"%(team_url)s\">%(team_desc)s</a>\n"
-"            "
+msgid "Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>"
+msgstr "Coordina el <a href=\"%(team_url)s\">%(team_desc)s</a>"
 
 #: templates/release.html:10
 #, python-format
@@ -1461,18 +1481,10 @@ msgstr "Idiomas de GNOME"
 
 #: templates/languages/language_list.html:11
 #, python-format
-msgid ""
-"\n"
-"GNOME is being translated to following %(numb)s language.\n"
-msgid_plural ""
-"\n"
-"GNOME is being translated to following %(numb)s languages.\n"
-msgstr[0] ""
-"\n"
-"GNOME se está traduciendo al %(numb)s idioma:\n"
-msgstr[1] ""
-"\n"
-"GNOME se está traduciendo a los siguientes %(numb)s idiomas:\n"
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "GNOME se está traduciendo a %(numb)s idioma:\n"
+msgstr[1] "GNOME se está traduciendo a los siguientes %(numb)s idiomas:\n"
 
 #: templates/languages/language_release.html:11
 #, python-format
@@ -1580,52 +1592,24 @@ msgstr "Seleccione un equipo para ver más información acerca de él:"
 
 #: templates/teams/team_list.html:24
 #, python-format
-msgid ""
-"\n"
-"          Coordinated by <a href=\"%(url)s\">%(name)s</a>\n"
-"          "
-msgstr ""
-"\n"
-"          Coordinado por <a href=\"%(url)s\">%(name)s</a>\n"
-"          "
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Coordinado por <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:32
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 
-#~ msgid ""
-#~ "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
-#~ "more."
-#~ msgstr ""
-#~ "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones "
-#~ "sobre el «trunk»."
+#~ msgid "GNOME modules"
+#~ msgstr "Módulos de GNOME"
 
 #~ msgid "GLib"
 #~ msgstr "GLib"
-
-#~ msgid ""
-#~ "GNUCash is not part of the GNOME SVN repository. Please check <a href="
-#~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
-#~ "a> to see where to send translations."
-#~ msgstr ""
-#~ "GNUCash no forma parte del repositorio GNOME SVN. Por favor compruebe <a "
-#~ "href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
-#~ "GNUCash</a> para para ver dónde enviar las traducciones."
 
 #~ msgid "Gtk+"
 #~ msgstr "Gtk+"
 
 #~ msgid "Sabayon"
 #~ msgstr "Sabayon"
-
-#~ msgid ""
-#~ "This is not a GNOME-specific module. Please submit your translation "
-#~ "through the <a href=\"http://translationproject.org\">Translation "
-#~ "Project</a>."
-#~ msgstr ""
-#~ "Este no es un módulo específico de GNOME. Por favor, envíe su traducción "
-#~ "a través de <a href=\"http://translationproject.org\">Translation "
-#~ "Project</a>."
 
 #~ msgid "XKeyboard-Config"
 #~ msgstr "XKeyboard-Config"
@@ -1692,6 +1676,3 @@ msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 
 #~ msgid "Seahorse Manual"
 #~ msgstr "Manual de Contraseñas y claves de cifrado"
-
-#~ msgid "New module proposals"
-#~ msgstr "Nuevas propuestas de módulos"
