@@ -40,7 +40,7 @@
       </td>
       <td>{{ line.get_translationstat|safe }}</td>
       {% if stat1.fig_count %}
-       <td><a href="{{ webroot }}module/{{ module.name }}/{{ stat1.domain.name }}/{{ branch.name }}/{{ line.language.locale}}/images">
+       <td><a href="{% url stats.views.docimages module_name=module.name,potbase=stat1.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
            <img src="/media/img/figure.png" alt="{% trans "Display document figures" %}"></a></td>
       {% endif %}
       <td style="width: 108px; text-align: center;"><div class="graph">

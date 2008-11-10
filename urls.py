@@ -16,7 +16,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('stats.views',
     url(r'^module/$', 'modules', name='modules'),
-    (r'^module/(?P<module_name>[\w\-\+]+)$', 'module'),
+    (r'^module/(?P<module_name>[\w\-\+]+)/$', 'module'),
     (r'^module/(?P<module_name>[\w\-\+]+)/(?P<potbase>\w+)/(?P<branch_name>[\w-]+)/(?P<langcode>\w+)/images/$', 'docimages'),
     url(r'^releases/(?P<format>(html|json|xml))?/?$', 'releases', name='releases'),
     (r'^releases/(?P<release_name>[\w-]+)$', 'release'),

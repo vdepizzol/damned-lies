@@ -6,50 +6,15 @@
 {% block content %}
 <div class="mainpage">
 
-{% with team.get_description as lang %}
 {% if not team.fake %}
-<h1>{% blocktrans %}{{ lang }} Translation Team{% endblocktrans %}</h1>
+  <h1>{% blocktrans with team.get_description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
 
-<table><tr><td valign="top" width="50%">
-  <h2>{% trans "Details" %}</h2>
-
-  {% if team.webpage_url %}
-  <strong>{% blocktrans %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
-  <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a><br />
-  {% endif %}
-
-  <br/><strong>{% trans "Bugzilla:" %}</strong>
-  <ul>
-    {% with team.get_languages.0 as language %}
-    <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
-    <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
-    {% endwith %}
-  </ul>
-
-  {% if team.mailing_list %}
-  <br/><strong>{% trans "Mailing List:" %}</strong>
-  <ul>
-    <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
-    {% if team.mailing_list_subscribe %}
-    <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
-    {% endif %}
-  </ul>
-  {% endif %}
-  
-  </td><td valign="top">
-  {% if team.coordinator %}
-    <h2>{% trans "Coordinator" %}</h2>
-    {% with team.coordinator as person %}
-    {% with 0 as printroles %}
-    {% include "person_base.html" %}
-    {% endwith %}
-    {% endwith %}
-  {% endif %}
-</td></tr></table>
+  {% with team.get_languages.0 as language %}
+  {% include "teams/team_base.html" %}
+  {% endwith %}
 {% else %}
-<h1>{{ lang }}</h1>
+  <h1>{{ team.get_description }}</h1>
 {% endif %}
-{% endwith %}
 
 {% for lang in team.get_languages %}
   <h2>{% trans lang.name %}</h2>

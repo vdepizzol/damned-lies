@@ -42,7 +42,6 @@ def module(request, module_name):
     mod.translated_name = _(mod.description)
     context = {
         'pageSection':  "module",
-        'webroot': settings.WEBROOT,
         'module': mod,
         'prof': utils.Profiler()
     }
@@ -63,7 +62,7 @@ def docimages(request, module_name, potbase, branch_name, langcode):
 
 def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')
-    if format != 'html':
+    if format in ('json', 'xml'):
         data = serializers.serialize(format, all_releases)
         return HttpResponse(data, mimetype=MIME_TYPES[format])
     else:

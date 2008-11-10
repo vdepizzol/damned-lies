@@ -4,7 +4,6 @@ import os
 DATABASE_ENGINE = getattr(settings, "DATABASE_ENGINE")
 DEBUG = getattr(settings, "DEBUG", True)
 WHEREAREWE = 'http://l10n.gnome.org/'
-WEBROOT = "/stats"
 WHOAREWE = 'danilo@gnome.org'
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
@@ -14,12 +13,3 @@ NOTIFICATIONS_TO = 'gnome-i18n@gnome.org'
 SCRATCHDIR = ""
 POTDIR = os.path.join(SCRATCHDIR, "POT")
 
-# Used for migration
-OLD_DAMNEDLIES = ""
-
-# Uncomment to migrate the old_statistics table from an external MySQL
-# database.
-# MYSQL_SETTINGS = dict(db='db',
-#                       user='user',
-#                       host='localhost',
-#                       passwd='pwd')

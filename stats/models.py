@@ -615,7 +615,7 @@ class Release(models.Model):
                    ON br.id = stat.branch_id
             LEFT JOIN category
                    ON category.branch_id = br.id
-            WHERE category.release_id = %s
+            WHERE category.release_id = %s AND stat.language_id IS NOT NULL
             GROUP BY domain.dtype, stat.language_id
             ORDER BY domain.dtype, trans DESC"""
         cursor = connection.cursor()

@@ -1,0 +1,40 @@
+{# Variables 'team' and 'language' must be defined prior to calling this template #}
+{% load i18n %}
+
+{% with team.get_description as lang %}
+<table><tr><td valign="top" width="50%">
+  <h2>{% trans "Details" %}</h2>
+
+  {% if team.webpage_url %}
+  <strong>{% blocktrans %}{{ lang }} Translation Team Page:{% endblocktrans %}</strong> 
+  <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a><br />
+  {% endif %}
+
+  <br/><strong>{% trans "Bugzilla:" %}</strong>
+  <ul>
+    <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
+    <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
+  </ul>
+
+  {% if team.mailing_list %}
+  <br/><strong>{% trans "Mailing List:" %}</strong>
+  <ul>
+    <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
+    {% if team.mailing_list_subscribe %}
+    <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
+    {% endif %}
+  </ul>
+  {% endif %}
+  
+  </td><td valign="top">
+  {% if team.coordinator %}
+    <h2>{% trans "Coordinator" %}</h2>
+    {% with team.coordinator as person %}
+    {% with 0 as printroles %}
+    {% include "person_base.html" %}
+    {% endwith %}
+    {% endwith %}
+  {% endif %}
+</td></tr></table>
+{% endwith %}
+

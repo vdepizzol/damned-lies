@@ -1,5 +1,17 @@
 2008-11-10  Claude Paroz  <claude@2xlibre.net>
 
+	* TODO: Updated.
+	* stats/conf/settings_sample.py: Remove obsolete variables.
+	* stats/models.py: Don't select POT files in get_global_stats.
+	* stats/views.py: webroot now unused.
+	* templates/stats_show.html: Hard-coded link replaced by url tag.
+	* templates/teams/team_base.html: New factorized team basic display.
+	* templates/languages/language_release.html:
+	* templates/teams/team_detail.html: Use team_base.html.
+	* urls.py: Added ending slash.
+
+2008-11-10  Claude Paroz  <claude@2xlibre.net>
+
 	* README: Fixed typos.
 	* TODO: i18n done.
 	* stats/models.py: Set msgid-bugs-address in pot files.
