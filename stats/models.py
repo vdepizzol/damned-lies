@@ -473,7 +473,10 @@ class Domain(models.Model):
         pot_command = self.pot_method
         podir = vcs_path
         if not self.pot_method: # default is intltool
-            pot_command = "intltool-update -g '%(domain)s' -p" % {'domain': self.potbase()}
+            pot_command = r"""XGETTEXT_ARGS="\"--msgid-bugs-address=%(bugs_enterurl)s\"" intltool-update -g '%(domain)s' -p""" % {
+                               'bugs_enterurl': self.module.get_bugs_enter_url(),
+                               'domain': self.potbase()
+                               }
         elif self.module.name == 'damned-lies':
             # special case for d-l, pot file should be generated from running instance dir
             podir = "."

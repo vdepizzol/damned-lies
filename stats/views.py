@@ -22,9 +22,13 @@ from django.shortcuts import render_to_response
 from stats.models import Statistics, Module, Release
 from stats.conf import settings
 from djamnedlies.stats import utils
+from django.core import serializers
 from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 
+MIME_TYPES = {'json': 'application/json',
+              'xml':  'text/xml'
+             }
 def modules(request):
     all_modules = Module.objects.all()
     context = {
@@ -57,13 +61,17 @@ def docimages(request, module_name, potbase, branch_name, langcode):
     }
     return render_to_response('module_images.html', context)
 
-def releases(request):
+def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')
-    context = {
-        'pageSection':  "releases",
-        'releases': all_releases
-    }
-    return render_to_response('release_list.html', context)
+    if format != 'html':
+        data = serializers.serialize(format, all_releases)
+        return HttpResponse(data, mimetype=MIME_TYPES[format])
+    else:
+        context = {
+            'pageSection':  "releases",
+            'releases': all_releases
+        }
+        return render_to_response('release_list.html', context)
 
 def release(request, release_name):
     rel = Release.objects.get(name=release_name)

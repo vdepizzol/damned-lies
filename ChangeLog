@@ -1,5 +1,14 @@
 2008-11-10  Claude Paroz  <claude@2xlibre.net>
 
+	* README: Fixed typos.
+	* TODO: i18n done.
+	* stats/models.py: Set msgid-bugs-address in pot files.
+	Fixes #555456.
+	* stats/views.py: Allow serving release list in JSON and XML.
+	* urls.py: Add format specifying in URLs for releases.
+
+2008-11-10  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/management/commands/update-trans.py: Triple quotes strings to
 	avoid quote escaping.
 	* teams/models.py: Add get_description (translated description).
