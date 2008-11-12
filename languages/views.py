@@ -54,7 +54,7 @@ def language_release_tar(request, locale, release_name, dtype):
     language = Language.objects.get(locale=locale)
     last_modif, file_list = release.get_lang_files(language, dtype)
 
-    tar_filename = '%s.%s.tar.gz' % (release.name, language.locale)
+    tar_filename = '%s.%s.%s.tar.gz' % (release.name, dtype, language.locale)
     tar_directory = os.path.join(settings.POTDIR, 'tar')
     if not os.access(tar_directory, os.R_OK):
         os.mkdir(tar_directory)
