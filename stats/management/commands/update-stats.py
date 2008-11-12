@@ -1,6 +1,7 @@
-import os
+import os, traceback
 from optparse import make_option
 from django.core.management.base import BaseCommand
+from django.core.mail import mail_admins
 from stats.models import Module, Branch
 
 class Command(BaseCommand):
@@ -27,7 +28,13 @@ class Command(BaseCommand):
                     print "Unable to find branch '%s' for module '%s' in the database." % (branch_arg, module_arg)
                     return "Update unsuccessful."
                 print "Updating stats for %s.%s..." % (module_arg, branch_arg)
-                branch.update_stats(options['force'])
+                try:
+                    branch.update_stats(options['force'])
+                except:
+                    tbtext = traceback.format_exc()
+                    mail_admins("Error while updating %s %s" % (module_arg, branch_arg), tbtext)
+                    print "Error during updating, mail sent to admins"
+                    
             elif len(args) == 1:
                 module_arg = args[0]
                 print "Updating stats for %s..." % (module_arg)

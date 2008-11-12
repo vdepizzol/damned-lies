@@ -13,6 +13,9 @@ ADMINS = (
     ('Stephane Raimbault', 'stephane.raimbault@gmail.com'),
 )
 
+SERVER_EMAIL = 'gnomeweb@gnome.org'
+EMAIL_SUBJECT_PREFIX = '[Damned Lies] '
+
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.

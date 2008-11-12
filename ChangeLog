@@ -1,5 +1,14 @@
 2008-11-12  Claude Paroz  <claude@2xlibre.net>
 
+	* settings_sample.py: Add SERVER_EMAIL and EMAIL_SUBJECT_PREFIX for
+	sending mail.
+	* stats/management/commands/update-stats.py: Send mail to admins when
+	something go wrong during module update.
+	* stats/models.py: Fixed trivial error.
+	* urls.py: Support '-' in potbase name.
+
+2008-11-12  Claude Paroz  <claude@2xlibre.net>
+
 	* media/css/main.css: Add style for error listing.
 	* stats/admin.py: Add Information inline on Statistics admin detail.
 	* stats/utils.py: Missing comma in unique tuple. No need to output entire

@@ -244,7 +244,7 @@ class Branch(models.Model):
                 if string_freezed and dom.dtype == 'ui':
                     diff = potdiff.diff(previous_pot, potfile, 1)
                     if len(diff):
-                        self.notify_list(out_domain, diff)
+                        utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
 
                 # If old pot already exists, lets see if it has changed at all
                 diff = potdiff.diff(previous_pot, potfile)
