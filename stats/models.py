@@ -665,8 +665,8 @@ class Release(models.Model):
         
         # Sorted by module to allow grouping ('fake' stats)
         pot_stats = Statistics.objects.filter(language=None, branch__releases=self).order_by('domain__module__id', 'domain__dtype')
-        stats = {'doc':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}, 
-                 'ui':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]} 
+        stats = {'doc':{'dtype':'doc', 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}, 
+                 'ui':{'dtype':'ui', 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]} 
                 }
         for stat in pot_stats:
             dtype = stat.domain.dtype
@@ -737,6 +737,26 @@ class Release(models.Model):
             # Sort errors
             stats[dtype]['all_errors'].sort()
         return stats
+
+    def get_lang_files(self, lang, dtype):
+        """ Return a list of all po files of a lang for this release, preceded by the more recent modification date
+            It uses the POT file if there is no po for a module """
+        pot_stats = Statistics.objects.filter(language=None, branch__releases=self, domain__dtype=dtype)
+        po_stats = Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)
+        lang_files = []
+        last_modif_date = datetime(1970, 01, 01)
+        # Create list of files
+        for stat in pot_stats:
+            if stat.date > last_modif_date:
+                last_modif_date = stat.date
+            try:
+                lang_stat = po_stats.get(branch = stat.branch, domain = stat.domain)
+            except Statistics.DoesNotExist:
+                lang_stat = stat
+            file_path = lang_stat.po_path()
+            if os.access(file_path, os.R_OK):
+                lang_files.append(file_path)
+        return last_modif_date, lang_files
 
 
 CATEGORY_CHOICES = (

@@ -83,3 +83,6 @@
   {% endfor %}
   </ul>
 {% endif %}
+<hr />
+<p><a href="{% url languages.views.language_release_tar locale=language.locale release_name=release.name dtype=modstats.dtype %}"><img src="/media/img/download.png" /> {% trans "Download all po files" %}</a></p>
+
