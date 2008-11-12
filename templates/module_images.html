@@ -6,7 +6,7 @@
 {% block content %}
 <div class="mainpage">
 
-<h1><a href="{% url stats.views.module module.name %}">{{ module.description }}</a> {{ stat.domain.description }} ({% trans stat.language.name %})</h1>
+<h1><a href="{% url stats.views.module module.name %}">{{ module.description }}</a> {% trans stat.domain.description %} ({% trans stat.language.name %})</h1>
 
 {% with stat.fig_stats as figstat %}
 <h2>{% trans "Figures translation status" %} &mdash; 

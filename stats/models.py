@@ -255,7 +255,6 @@ class Branch(models.Model):
             # ***********************************
             pot_stats = utils.po_file_stats(potfile, 0)
             errors.extend(pot_stats['errors'])
-
             if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
                 errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
 
@@ -494,8 +493,8 @@ class Domain(models.Model):
         if error or not os.access(potfile, os.R_OK):
             return "", (("error", ugettext_noop("Error regenerating POT file for %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                                  % {'file': self.potbase(),
-                                    'cmd': command,
-                                    'output': output})
+                                    'cmd': pot_command,
+                                    'output': output.decode('utf-8')}),
                        )
         else:
             return potfile, ()
@@ -666,8 +665,8 @@ class Release(models.Model):
         
         # Sorted by module to allow grouping ('fake' stats)
         pot_stats = Statistics.objects.filter(language=None, branch__releases=self).order_by('domain__module__id', 'domain__dtype')
-        stats = {'doc':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}}, 
-                 'ui':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}} 
+        stats = {'doc':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}, 
+                 'ui':{'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]} 
                 }
         for stat in pot_stats:
             dtype = stat.domain.dtype
@@ -709,6 +708,7 @@ class Release(models.Model):
                 stats[dtype]['categs'][categdescr]['modules'][modname][' fake'].trans(stat)
             # Replace POT stat by translated stat
             stats[dtype]['categs'][categdescr]['modules'][modname][domname] = stat
+            stats[dtype]['all_errors'].extend(stat.information_set.all())
         
         # Compute percentages and sorting
         for dtype in ['ui', 'doc']:
@@ -734,6 +734,8 @@ class Release(models.Model):
                     doms = [(name,dom) for name, dom in mod[1].items()]
                     doms.sort()
                     mod[1] = doms
+            # Sort errors
+            stats[dtype]['all_errors'].sort()
         return stats
 
 
@@ -842,7 +844,6 @@ class Statistics(models.Model):
     
     def pot_text(self):
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
-        #import pdb; pdb.set_trace()
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", self.pot_size()) % {'count': self.pot_size()}
         upd_text = _(u"updated on %(date)s") % {'date': self.date.strftime("%Y-%m-%d %H:%M:%S ")+tzname[0]}
         if self.fig_count():
@@ -1009,6 +1010,9 @@ class Information(models.Model):
 
     class Meta:
         db_table = 'information'
+
+    def __cmp__(self, other):
+        return cmp(self.Statistics.module_name(), other.Statistics.module_name())
 
     def get_icon(self):
         return "/media/img/%s.png" % self.Type

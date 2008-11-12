@@ -50,7 +50,11 @@
             {% else %}
               <a href="{% url stats.views.module modname %}" style="font-style: italic;">
             {% endif %}
-            {{ dom.1.module_description }}</a></td>
+            {{ dom.1.module_description }}</a>
+            {% for err in dom.1.information_set.all %}
+              <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.Type }}" />
+            {% endfor %}
+            </td>
           {% endif %}
           <td>{{ dom.1.tr_percentage }}%&nbsp;({{ dom.1.translated }}/{{ dom.1.fuzzy }}/{{ dom.1.untranslated }})</td>
           <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
@@ -70,3 +74,12 @@
 {% endfor %}
 </table>
 
+{% if modstats.all_errors %}
+  <h3>{% trans "Error summary" %}</h3>
+  <ul>
+  {% for err in modstats.all_errors %}
+    <li><img src="{{ err.get_icon }}" alt="{{ err.Type }}" /> {{ err.Statistics.module_name }}:<br />
+        <span class="error">{{ err.get_description }}</span></li>
+  {% endfor %}
+  </ul>
+{% endif %}

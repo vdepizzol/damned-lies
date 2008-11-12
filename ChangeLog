@@ -1,3 +1,16 @@
+2008-11-12  Claude Paroz  <claude@2xlibre.net>
+
+	* media/css/main.css: Add style for error listing.
+	* stats/admin.py: Add Information inline on Statistics admin detail.
+	* stats/utils.py: Missing comma in unique tuple. No need to output entire
+	path in error message.
+	* stats/models.py: Add 'all_errors' in language stats, so as we can output
+	an error summary.
+	Fixes #411248.
+	* templates/languages/language_release_stats.html: Display errors in stats
+	and an error summary at the bottom.
+	* templates/module_images.html: Translate domain description.
+
 2008-11-10  Claude Paroz  <claude@2xlibre.net>
 
 	* TODO: Updated.

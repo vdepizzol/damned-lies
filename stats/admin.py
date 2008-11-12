@@ -19,7 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.contrib import admin
-from stats.models import Statistics, Module, Branch, Domain, Category, Release
+from stats.models import Statistics, Information, Module, Branch, Domain, Category, Release
 
 class BranchInline(admin.TabularInline):
     model = Branch
@@ -72,8 +72,13 @@ class ReleaseAdmin(admin.ModelAdmin):
     list_display = ('name', 'status', 'stringfrozen')
     inlines = [ CategoryInline ]
 
+class InformationInline(admin.TabularInline):
+    model = Information
+    extra = 0
+
 class StatisticsAdmin(admin.ModelAdmin):
     search_fields = ('language__name', 'branch__module__name')
+    inlines = [ InformationInline ]
 
 admin.site.register(Statistics, StatisticsAdmin)
 admin.site.register(Branch, BranchAdmin)

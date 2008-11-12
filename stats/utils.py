@@ -78,7 +78,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     errors = []
     modulename = read_makefile_variable(vcs_path, "DOC_MODULE")
     if not modulename:
-        return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid))
+        return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),)
     if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
         if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
             errors.append(("warn", ugettext_noop("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
@@ -162,7 +162,7 @@ def po_file_stats(pofile, msgfmt_checks = 1):
 
     if error:
         if msgfmt_checks:
-            errors.append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (pofile)))
+            errors.append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (os.path.basename(pofile))))
         else:
             errors.append(("error", ugettext_noop("Can't get statistics for POT file '%s'.") % (pofile)))
 
