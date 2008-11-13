@@ -39,7 +39,6 @@ def modules(request):
 
 def module(request, module_name):
     mod = Module.objects.get(name = module_name)
-    mod.translated_name = _(mod.description)
     context = {
         'pageSection':  "module",
         'module': mod,

@@ -47,7 +47,7 @@ class Module(models.Model):
     bugs_product = models.CharField(max_length=50)
     bugs_component = models.CharField(max_length=50)
     vcs_type = models.CharField(max_length=5, choices=VCS_TYPE_CHOICES)
-    vcs_root = models.URLField()
+    vcs_root = models.URLField(verify_exists=False)
     vcs_web = models.URLField()
     
     maintainers = models.ManyToManyField(Person, db_table='module_maintainer',
@@ -64,6 +64,12 @@ class Module(models.Model):
     def get_absolute_url(self):
         return ('stats.views.module', [self.name])
 
+    def get_description(self):
+        if self.description:
+            return _(self.description)
+        else:
+            return self.name
+    
     def get_bugs_i18n_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
             return "%sbuglist.cgi?product=%s&amp;component=%s&amp;keywords_type=anywords&amp;keywords=I18N+L10N&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO" % (self.bugs_base, self.bugs_product, self.bugs_component)
@@ -263,7 +269,7 @@ class Branch(models.Model):
                 stat.untranslated = int(pot_stats['untranslated'])
                 stat.date = datetime.now()
                 Information.objects.filter(Statistics=stat).delete()
-            except:
+            except Statistics.DoesNotExist:
                 stat = Statistics(language = None, branch = self, domain = dom, translated = 0,
                                   fuzzy = 0, untranslated = int(pot_stats['untranslated']))
             stat.save()
@@ -304,10 +310,10 @@ class Branch(models.Model):
                     stat.untranslated = int(langstats['untranslated'])
                     stat.date = datetime.now()
                     Information.objects.filter(Statistics=stat).delete()
-                except:
+                except Statistics.DoesNotExist:
                     try:
                         language = Language.objects.get(locale=lang)
-                    except:
+                    except Language.DoesNotExist:
                         language = Language(name=lang, locale=lang)
                         language.save()
                     stat = Statistics(language = language, branch = self, domain = dom, translated = int(langstats['translated']),
@@ -459,7 +465,10 @@ class Domain(models.Model):
 
     def potbase(self):
         if self.name[:2] == 'po':
+            # e.g. replace po by gimp (for ui), or po-plugins by gimp-plugins
             return self.module.name + self.name[2:]
+        elif self.name == 'help':
+            return "%s-help" % self.module.name
         else:
             return self.name
     
@@ -943,7 +952,6 @@ class Statistics(models.Model):
             subdir = "docs/"
         else:
             subdir = ""
-        #return self.filename()
         return "/POT/%s.%s/%s%s" % (self.module_name(), self.branch.name, subdir, self.filename())
         
     def most_important_message(self):

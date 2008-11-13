@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %} {% blocktrans with module.description as name %}Module Statistics: {{ name }}{% endblocktrans %} {% endblock %}
+{% block title %} {% blocktrans with module.get_description as name %}Module Statistics: {{ name }}{% endblocktrans %} {% endblock %}
 
 {% block content %}
 <div class="mainpage">
 
-<h1>{{ module.translated_name }}</h1>
+<h1>{{ module.get_description }}</h1>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
