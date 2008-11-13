@@ -23,7 +23,7 @@ import os
 import tarfile
 from datetime import datetime
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from stats.conf import settings
 from common import utils
 from languages.models import Language
@@ -67,4 +67,60 @@ def language_release_tar(request, locale, release_name, dtype):
         tar_file.close()
     
     return HttpResponseRedirect("/POT/tar/%s" % tar_filename)
+
+def language_release_xml(request, locale, release_name):
+    """ This view create the same XML output than the previous Damned-Lies, so as
+        apps which depend on it (like Vertimus) don't break.
+        This view may be suppressed when Vertimus will be integrated in D-L. """
+    language = Language.objects.get(locale=Language.unslug_locale(locale))
+    release = Release.objects.get(name=release_name)
+    stats = release.get_lang_stats(language)
+    content = "<stats language=\"%s\" release=\"%s\">\n" % (locale, release_name)
+    for catname, categ in stats['ui']['categs'].items():
+        if catname != 'default':
+            content += "<category id=\"%s\">" % catname
+            # totals for category
+            if stats['doc']['categs'].has_key(catname):
+                content += "<doctranslated>%s</doctranslated>" % stats['doc']['categs'][catname]['cattrans']
+                content += "<docfuzzy>%s</docfuzzy>" % stats['doc']['categs'][catname]['catfuzzy']
+                content += "<docuntranslated>%s</docuntranslated>" % stats['doc']['categs'][catname]['catuntrans']
+            content += "<translated>%s</translated>" % categ['cattrans']
+            content += "<fuzzy>%s</fuzzy>" % categ['catfuzzy']
+            content += "<untranslated>%s</untranslated>" % categ['catuntrans']
+        # Modules
+        for modname, mod in categ['modules']:
+            content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod[1][1].branch.name)
+            # find and iterate doc domains
+            if stats['doc']['categs'].has_key(catname) and stats['doc']['categs'][catname]['modules']:
+                for docmod in stats['doc']['categs'][catname]['modules']:
+                    if docmod[0] == modname:
+                        for doc_dom in docmod[1]:
+                            if doc_dom[0] == ' fake':
+                                continue
+                            stat = doc_dom[1]
+                            content += "<document id=\"%s\">" % stat.domain.name
+                            content += "<translated>%s</translated>" % stat.translated
+                            content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
+                            content += "<untranslated>%s</untranslated>" % stat.untranslated
+                            content += "<pofile>%s</pofile>" % stat.po_url()
+                            content += "<svnpath>%s</svnpath>" % stat.vcs_path()
+                            content += "</document>"
+            # iterate ui domains
+            for ui_dom in mod:
+                if ui_dom[0] == ' fake':
+                    continue
+                stat = ui_dom[1]
+                content += "<domain id=\"%s\">" % stat.domain.name
+                content += "<translated>%s</translated>" % stat.translated
+                content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
+                content += "<untranslated>%s</untranslated>" % stat.untranslated
+                content += "<pofile>%s</pofile>" % stat.po_url()
+                content += "<svnpath>%s</svnpath>" % stat.vcs_path()
+                content += "</domain>"
+            content += "</module>"
+        
+        if catname != 'default':
+            content += "</category>"
+    content += "</stats>"
+    return HttpResponse(content, content_type='text/xml')
 

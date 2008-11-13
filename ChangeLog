@@ -1,5 +1,11 @@
 2008-11-13  Claude Paroz  <claude@2xlibre.net>
 
+	* languages/urls.py:
+	* languages/views.py: Restore previous damned-lies XML functionality for
+	parsing with external apps like Vertimus.
+
+2008-11-13  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: New module.get_description, potbase name changed for
 	help pot files (eog-head.HEAD.fr.po instead of help.HEAD.fr.po). Various
 	small improvements.
