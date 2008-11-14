@@ -79,14 +79,14 @@ def language_release_xml(request, locale, release_name):
     for catname, categ in stats['ui']['categs'].items():
         if catname != 'default':
             content += "<category id=\"%s\">" % catname
-            # totals for category
-            if stats['doc']['categs'].has_key(catname):
-                content += "<doctranslated>%s</doctranslated>" % stats['doc']['categs'][catname]['cattrans']
-                content += "<docfuzzy>%s</docfuzzy>" % stats['doc']['categs'][catname]['catfuzzy']
-                content += "<docuntranslated>%s</docuntranslated>" % stats['doc']['categs'][catname]['catuntrans']
-            content += "<translated>%s</translated>" % categ['cattrans']
-            content += "<fuzzy>%s</fuzzy>" % categ['catfuzzy']
-            content += "<untranslated>%s</untranslated>" % categ['catuntrans']
+        # totals for category
+        if stats['doc']['categs'].has_key(catname):
+            content += "<doctranslated>%s</doctranslated>" % stats['doc']['categs'][catname]['cattrans']
+            content += "<docfuzzy>%s</docfuzzy>" % stats['doc']['categs'][catname]['catfuzzy']
+            content += "<docuntranslated>%s</docuntranslated>" % stats['doc']['categs'][catname]['catuntrans']
+        content += "<translated>%s</translated>" % categ['cattrans']
+        content += "<fuzzy>%s</fuzzy>" % categ['catfuzzy']
+        content += "<untranslated>%s</untranslated>" % categ['catuntrans']
         # Modules
         for modname, mod in categ['modules']:
             content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod[1][1].branch.name)
@@ -103,7 +103,7 @@ def language_release_xml(request, locale, release_name):
                             content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
                             content += "<untranslated>%s</untranslated>" % stat.untranslated
                             content += "<pofile>%s</pofile>" % stat.po_url()
-                            content += "<svnpath>%s</svnpath>" % stat.vcs_path()
+                            content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
                             content += "</document>"
             # iterate ui domains
             for ui_dom in mod:
@@ -115,7 +115,7 @@ def language_release_xml(request, locale, release_name):
                 content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
                 content += "<untranslated>%s</untranslated>" % stat.untranslated
                 content += "<pofile>%s</pofile>" % stat.po_url()
-                content += "<svnpath>%s</svnpath>" % stat.vcs_path()
+                content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
                 content += "</domain>"
             content += "</module>"
         

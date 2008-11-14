@@ -27,7 +27,7 @@ class Language(models.Model):
         return None
     
     def get_name(self):
-        if self.name:
+        if self.name != self.locale:
             return _(self.name)
         else:
             return self.locale

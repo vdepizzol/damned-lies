@@ -1,5 +1,13 @@
 2008-11-14  Claude Paroz  <claude@2xlibre.net>
 
+	* languages/models.py: Provide summary stats for default categ. Corrected
+	link for svn_path.
+	* languages/views.py:
+	* templates/teams/team_detail.html: Don't try to translate the language
+	locale (only if human-readable name).
+
+2008-11-14  Claude Paroz  <claude@2xlibre.net>
+
 	* languages/views.py: Add current date in tar.gz filename.
 	* urls.py: Permit @ in locale in url.
 
