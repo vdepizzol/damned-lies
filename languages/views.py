@@ -22,7 +22,7 @@
 import os
 import tarfile
 from datetime import datetime
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from stats.conf import settings
 from common import utils
@@ -38,8 +38,8 @@ def languages(request):
     return render_to_response('languages/language_list.html', context)
 
 def language_release(request, locale, release_name):
-    language = Language.objects.get(locale=Language.unslug_locale(locale))
-    release = Release.objects.get(name=release_name)
+    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    release = get_object_or_404(Release, name=release_name)
     stats = release.get_lang_stats(language)
     context = {
         'pageSection': "languages",
@@ -50,8 +50,8 @@ def language_release(request, locale, release_name):
     return render_to_response('languages/language_release.html', context)
 
 def language_release_tar(request, locale, release_name, dtype):
-    release = Release.objects.get(name=release_name)
-    language = Language.objects.get(locale=locale)
+    release = get_object_or_404(Release, name=release_name)
+    language = get_object_or_404(Language, locale=locale)
     last_modif, file_list = release.get_lang_files(language, dtype)
 
     tar_filename = '%s.%s.%s.tar.gz' % (release.name, dtype, language.locale)
@@ -72,8 +72,8 @@ def language_release_xml(request, locale, release_name):
     """ This view create the same XML output than the previous Damned-Lies, so as
         apps which depend on it (like Vertimus) don't break.
         This view may be suppressed when Vertimus will be integrated in D-L. """
-    language = Language.objects.get(locale=Language.unslug_locale(locale))
-    release = Release.objects.get(name=release_name)
+    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    release = get_object_or_404(Release, name=release_name)
     stats = release.get_lang_stats(language)
     content = "<stats language=\"%s\" release=\"%s\">\n" % (locale, release_name)
     for catname, categ in stats['ui']['categs'].items():

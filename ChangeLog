@@ -1,5 +1,13 @@
 2008-11-14  Claude Paroz  <claude@2xlibre.net>
 
+	* languages/views.py:
+	* stats/views.py:
+	* teams/views.py: Use get_object_or_404 shortcut for retrieving objects.
+	* stats/models.py: Get rid of warning messages from msgcat. Improve
+	iteration algorithm with islice.
+
+2008-11-14  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/404.html: Add a 404 template.
 
 2008-11-13  Claude Paroz  <claude@2xlibre.net>

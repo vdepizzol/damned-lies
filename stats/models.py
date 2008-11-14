@@ -21,6 +21,7 @@
 import os, sys, re, commands
 from datetime import datetime
 from time import tzname
+from itertools import islice
 from django.db import models, connection
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from stats.conf import settings
@@ -893,13 +894,14 @@ class Statistics(models.Model):
                 # FIXME: something should be logged here
                 return []
             lines = output.split('\n')
+            while lines[0][0] != "#":
+                lines = lines[1:] # skip warning messages at the top of the output
             re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
             self.figures = []
             
-            i = 0
-            while i < len(lines):
+            for i, line in islice(enumerate(lines), 0, None, 4):
                 fig = {}
-                fig['fuzzy'] = lines[i]=='#, fuzzy'
+                fig['fuzzy'] = line=='#, fuzzy'
                 path_match = re_path.match(lines[i+1])
                 if path_match and len(path_match.groups()):
                     fig['path'] = path_match.group(1)
@@ -912,7 +914,6 @@ class Statistics(models.Model):
                     if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
                         fig['translated_file'] = True
                 self.figures.append(fig)
-                i += 4
         return self.figures
     
     def fig_count(self):

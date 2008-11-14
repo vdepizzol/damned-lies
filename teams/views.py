@@ -19,7 +19,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from common import utils
 from teams.models import Team, FakeTeam
 from languages.models import Language
@@ -37,7 +37,7 @@ def team(request, team_slug):
     try:
         team = Team.objects.get(name=team_slug)
     except:
-        lang = Language.objects.get(locale=team_slug)
+        lang = get_object_or_404(Language, locale=team_slug)
         team = FakeTeam(lang)
     
     context = {

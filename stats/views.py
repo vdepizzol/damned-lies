@@ -18,7 +18,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from stats.models import Statistics, Module, Release
 from stats.conf import settings
 from djamnedlies.stats import utils
@@ -38,7 +38,7 @@ def modules(request):
     return render_to_response('module_list.html', context)
 
 def module(request, module_name):
-    mod = Module.objects.get(name = module_name)
+    mod = get_object_or_404(Module, name=module_name)
     context = {
         'pageSection':  "module",
         'module': mod,
@@ -47,7 +47,7 @@ def module(request, module_name):
     return render_to_response('module.html', context)
 
 def docimages(request, module_name, potbase, branch_name, langcode):
-    mod = Module.objects.get(name = module_name)
+    mod = get_object_or_404(Module, name=module_name)
     stat = Statistics.objects.get(branch__module=mod.id, 
                                   branch__name=branch_name,
                                   domain__name=potbase,
@@ -72,7 +72,7 @@ def releases(request, format='html'):
         return render_to_response('release_list.html', context)
 
 def release(request, release_name):
-    rel = Release.objects.get(name=release_name)
+    rel = get_object_or_404(Release, name=release_name)
     context = {
         'pageSection': "releases",
         'release': rel
