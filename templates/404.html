@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Error: page not found" %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "Error: page not found" %}</h1>
+
+<p>{% trans "The page you requested has not been found on this server." %}
+
+</div>
+{% endblock %}
