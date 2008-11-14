@@ -1,5 +1,10 @@
 2008-11-14  Claude Paroz  <claude@2xlibre.net>
 
+	* languages/views.py: Add current date in tar.gz filename.
+	* urls.py: Permit @ in locale in url.
+
+2008-11-14  Claude Paroz  <claude@2xlibre.net>
+
 	* languages/views.py:
 	* stats/views.py:
 	* teams/views.py: Use get_object_or_404 shortcut for retrieving objects.
