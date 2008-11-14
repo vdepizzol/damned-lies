@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-09 22:27+0000\n"
-"PO-Revision-Date: 2008-11-10 22:01+0100\n"
+"POT-Creation-Date: 2008-11-14 11:12+0000\n"
+"PO-Revision-Date: 2008-11-14 20:59+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -506,7 +506,7 @@ msgstr "Serbio latino"
 msgid "Serbian Jekavian"
 msgstr "Serbio jekavian"
 
-#: database-content.py:123 templates/languages/language_release.html:78
+#: database-content.py:123 templates/languages/language_release.html:48
 msgid "UI translations"
 msgstr "Traducción del IU"
 
@@ -972,19 +972,19 @@ msgstr "GNOME 2.26 (desarrollo)"
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
-#: stats/models.py:235
+#: stats/models.py:241
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: stats/models.py:260
+#: stats/models.py:265
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:297
+#: stats/models.py:302
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: stats/models.py:492
+#: stats/models.py:503
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -995,56 +995,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:739
+#: stats/models.py:773
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:740
+#: stats/models.py:774
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:741
+#: stats/models.py:775
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:742
+#: stats/models.py:776
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:743
+#: stats/models.py:777
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:813
+#: stats/models.py:847
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:843
+#: stats/models.py:876
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:844
+#: stats/models.py:877
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:846
+#: stats/models.py:879
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:847
+#: stats/models.py:880
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:850
+#: stats/models.py:883
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1135,10 +1135,18 @@ msgstr ""
 "No se sabe dónde mirar si este idioma se usa actualmente, pregunta al "
 "mantenedor del módulo."
 
-#: teams/models.py:58
+#: teams/models.py:61
 #, python-format
 msgid "No team for locale %s"
 msgstr "No existe un equipo para el idioma %s"
+
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Error: página no encontrada"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "No se encontró en el servidor la página que solicitó."
 
 #: templates/base.html:24 templates/base.html.py:53
 msgid "Home"
@@ -1347,8 +1355,8 @@ msgid "This branch is currently string-frozen."
 msgstr "Actualmente las cadenas de esta rama están congeladas."
 
 #: templates/module.html:77 templates/release.html:17
-#: templates/languages/language_release.html:70
-#: templates/teams/team_detail.html:55
+#: templates/languages/language_release.html:40
+#: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -1428,7 +1436,7 @@ msgstr "Coordina el <a href=\"%(team_url)s\">%(team_desc)s</a>"
 msgid "%(name)s Release"
 msgstr "Lanzamiento %(name)s"
 
-#: templates/release.html:13 templates/languages/language_release.html:64
+#: templates/release.html:13 templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1437,16 +1445,16 @@ msgstr ""
 "GNOME. Comprueba la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
-#: templates/release.html:17 templates/teams/team_detail.html:55
+#: templates/release.html:17 templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Lanzamiento"
 
 #: templates/release.html:17 templates/stats_show.html:29
-#: templates/teams/team_detail.html:55 templates/teams/team_detail.html:56
+#: templates/teams/team_detail.html:22 templates/teams/team_detail.html:23
 msgid "Graph"
 msgstr "Gráfico"
 
-#: templates/release.html:17 templates/teams/team_detail.html:56
+#: templates/release.html:17 templates/teams/team_detail.html:23
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
@@ -1486,73 +1494,27 @@ msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME se está traduciendo a %(numb)s idioma:\n"
 msgstr[1] "GNOME se está traduciendo a los siguientes %(numb)s idiomas:\n"
 
-#: templates/languages/language_release.html:11
+#: templates/languages/language_release.html:12
 #, python-format
 msgid "%(lang)s Translation Team — %(locale)s"
 msgstr "Equipo de traducción al %(lang)s: %(locale)s"
 
-#: templates/languages/language_release.html:14
-#: templates/teams/team_detail.html:13
-msgid "Details"
-msgstr "Detalles"
-
 #: templates/languages/language_release.html:17
-#: templates/teams/team_detail.html:16
-#, python-format
-msgid "%(lang)s Translation Team Page:"
-msgstr "Página del equipo de traducción al %(lang)s:"
-
-#: templates/languages/language_release.html:21
-#: templates/teams/team_detail.html:20
-msgid "Bugzilla:"
-msgstr "Bugzilla:"
-
-#: templates/languages/language_release.html:23
-#: templates/teams/team_detail.html:23
-msgid "Report Bug in Translation"
-msgstr "Informar de un error en la traducción"
-
-#: templates/languages/language_release.html:24
-#: templates/teams/team_detail.html:24
-msgid "Show Existing Bugs"
-msgstr "Mostrar errores existentes"
-
-#: templates/languages/language_release.html:28
-#: templates/teams/team_detail.html:29
-msgid "Mailing List:"
-msgstr "Lista de correo:"
-
-#: templates/languages/language_release.html:30
-#: templates/teams/team_detail.html:31
-msgid "Send e-mail to the list"
-msgstr "Enviar un correo electrónico a la lista"
-
-#: templates/languages/language_release.html:32
-#: templates/teams/team_detail.html:33
-msgid "Subscribe"
-msgstr "Suscribirse"
-
-#: templates/languages/language_release.html:39
-#: templates/teams/team_detail.html:40
-msgid "Coordinator"
-msgstr "Coordinador"
-
-#: templates/languages/language_release.html:48
 #, python-format
 msgid "Language code: %(locale)s"
 msgstr "Código de idioma: %(locale)s"
 
-#: templates/languages/language_release.html:49
+#: templates/languages/language_release.html:18
 #, python-format
 msgid "There is no translation team in charge of '%(locale)s' translation."
 msgstr ""
 "No hay un equipo de traducción encargado de la traducción al «%(locale)s»."
 
-#: templates/languages/language_release.html:56
+#: templates/languages/language_release.html:26
 msgid "Hide completed modules"
 msgstr "Ocultar los módulos completados"
 
-#: templates/languages/language_release.html:60
+#: templates/languages/language_release.html:30
 msgid "Show completed modules"
 msgstr "Mostrar los módulos completados"
 
@@ -1565,6 +1527,14 @@ msgstr "%(categname)s (%(percentage)s% traducido)"
 msgid "Download po file"
 msgstr "Descargar el archivo po"
 
+#: templates/languages/language_release_stats.html:78
+msgid "Error summary"
+msgstr "Resumen del error"
+
+#: templates/languages/language_release_stats.html:87
+msgid "Download all po files"
+msgstr "Descargar todos los archivos po"
+
 #: templates/people/person_detail.html:4
 msgid "GNOME Contributor"
 msgstr "Contribuidor de GNOME"
@@ -1576,6 +1546,43 @@ msgstr "Contribuidores de GNOME"
 #: templates/people/person_list.html:11
 msgid "GNOME is being developed by following people:"
 msgstr "Las siguientes personas están desarrollando GNOME:"
+
+#: templates/teams/team_base.html:6
+msgid "Details"
+msgstr "Detalles"
+
+#: templates/teams/team_base.html:9
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Página del equipo de traducción al %(lang)s:"
+
+#: templates/teams/team_base.html:13
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: templates/teams/team_base.html:15
+msgid "Report Bug in Translation"
+msgstr "Informar de un error en la traducción"
+
+#: templates/teams/team_base.html:16
+msgid "Show Existing Bugs"
+msgstr "Mostrar errores existentes"
+
+#: templates/teams/team_base.html:20
+msgid "Mailing List:"
+msgstr "Lista de correo:"
+
+#: templates/teams/team_base.html:22
+msgid "Send e-mail to the list"
+msgstr "Enviar un correo electrónico a la lista"
+
+#: templates/teams/team_base.html:24
+msgid "Subscribe"
+msgstr "Suscribirse"
+
+#: templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Coordinador"
 
 #: templates/teams/team_detail.html:10
 #, python-format
