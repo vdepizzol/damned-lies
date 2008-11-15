@@ -66,7 +66,7 @@
       (<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse SVN" %}</a>)
     {% endifequal %}
     </h2>
-    {% if branch.release_cat.release.stringfrozen %}
+    {% if branch.release_cat.release.string_frozen %}
       <p>{% trans "This branch is currently string-frozen." %}</p>
     {% endif %}
 

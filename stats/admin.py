@@ -66,10 +66,10 @@ class CategoryInline(admin.TabularInline):
     extra = 1
 
 class CategoryAdmin(admin.ModelAdmin):
-    search_fields = ('category', 'branch__module__name')
+    search_fields = ('name', 'branch__module__name')
 
 class ReleaseAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status', 'stringfrozen')
+    list_display = ('name', 'status', 'string_frozen')
     inlines = [ CategoryInline ]
 
 class InformationInline(admin.TabularInline):

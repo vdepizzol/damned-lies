@@ -35,6 +35,7 @@ class WorkflowState(object):
     def get_code(self):
         return self.code
 
+
 class WorkflowStateNone(WorkflowState):
     def __init__(self):
         super(WorkflowStateNone, self).__init__('None', 'Inactive')
@@ -55,15 +56,15 @@ class WorkflowStateCommitting(WorkflowState):
     def __init__(self):
         super(WorkflowStateCommitting, self).__init__('Committing', 'Committing')
         
-    def get_actions(self, module, user):
+    def get_actions(self, module, person):
         action_codes = []
 
-        if user.is_commiter:
+        if person.is_commiter:
             # FIXME Not imple
-            last_user = module.get_last_user()
-            # if (type(last_user) is User):
+            last_person = module.get_last_person()
+            # if (type(last_person) is Person):
             if (True):
-                if (user.id == last_user.id):
+                if (person.id == last_person.id):
                     action_codes = ['IC', 'TR', 'TC', 'UNDO']
             
         return self.common_get_actions(action_codes)
@@ -73,8 +74,8 @@ class WorkflowStateProofread(WorkflowState):
     def __init__(self):
         super(WorkflowStateProofread, self).__init__('Proofread', 'Proofread')
 
-    def get_actions(self, module, user):
-        if user.is_reviewer:
+    def get_actions(self, module, person):
+        if person.is_reviewer:
             action_codes = ['TC', 'TR']
         else:
             action_codes = []
@@ -84,14 +85,14 @@ class WorkflowStateProofreading(WorkflowState):
     def __init__(self):
         super(WorkflowStateProofreading, self).__init__('Proofreading', 'Proofreading')
 
-    def get_actions(self, module, user):
+    def get_actions(self, module, person):
         action_codes = []
         
-        if user.is_commiter:
+        if person.is_commiter:
             # FIXME Not implemented
-            last_user = module.get_last_user()
-            if type(last_user) is User:
-                if user.id == last_user.id:
+            last_person = module.get_last_person()
+            if type(last_person) is Person:
+                if person.id == last_person.id:
                     action_codes = ['UP', 'TR', 'TC', 'UNDO']
                     
         return self.common_get_actions(action_codes)
@@ -101,8 +102,8 @@ class WorkflowStateToCommit(WorkflowState):
     def __init__(self):
         super(WorkflowStateToCommit, self).__init__('ToCommit', 'To Commit')
 
-    def get_actions(self, module, user):
-        if user.is_commiter:
+    def get_actions(self, module, person):
+        if person.is_commiter:
             action_codes = ['RC', 'TR']
         else:
             action_codes = []
@@ -115,7 +116,7 @@ class WorkflowStateToReview(WorkflowState):
         super(WorkflowStateToReview, self).__init__('ToReview', 'To Review')
         self.color = 'needswork';
 
-    def get_actions(self, module, user):
+    def get_actions(self, module, person):
         return self.common_get_actions(['RT'])
 
 
@@ -123,8 +124,8 @@ class WorkflowStateTranslated(WorkflowState):
     def __init__(self):
         super(WorkflowStateTranslated, self).__init__('Translated', 'Translated')
 
-    def get_actions(self, module, user):
-        if user.is_reviewer:
+    def get_actions(self, module, person):
+        if person.is_reviewer:
             action_codes = ['RP']
         else:
             action_codes = []
@@ -137,11 +138,11 @@ class WorkflowStateTranslating(WorkflowState):
     def __init__(self):
         super(WorkflowStateTranslating, self).__init__('Translating', 'Translating')
 
-    def get_actions(self, module, user):
+    def get_actions(self, module, person):
         action_codes = []
-        last_user = module.get_last_user()
-        if type(last_user) is User:
-            if user.id == last_user.id:
+        last_person = module.get_last_person()
+        if type(last_person) is Person:
+            if person.id == last_person.id:
                 action_codes = ['UT', 'UNDO']
                     
         return self.common_get_actions(action_codes)

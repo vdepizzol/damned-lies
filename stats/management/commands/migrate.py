@@ -151,7 +151,7 @@ class Command(BaseCommand):
             try:
                 new_r = Release.objects.get(name=release['_description'])
             except:
-                new_r = Release(name=release['_description'], stringfrozen=False, status=release['status'])
+                new_r = Release(name=release['_description'], string_frozen=False, status=release['status'])
                 new_r.save()
             if release.has_key('category'):
                 for catname, catcontent in release['category'].items():
@@ -167,7 +167,7 @@ class Command(BaseCommand):
                                 branch_name = u'HEAD'
                         try:
                             branch = Branch.objects.get(module__name=mod, name=branch_name)
-                            cat = Category(release=new_r, branch=branch, category=catcontent['_description'])
+                            cat = Category(release=new_r, branch=branch, name=catcontent['_description'])
                             cat.save()
                         except:
                             print "Unable to find branch '%s' of module '%s' for release '%s'" % (branch_name, mod, release['_description'])
@@ -183,7 +183,7 @@ class Command(BaseCommand):
                             branch_name = u'HEAD'
                     try:
                         branch = Branch.objects.get(module__name=mod, name=branch_name)
-                        cat = Category(release=new_r, branch=branch, category='default')
+                        cat = Category(release=new_r, branch=branch, name='default')
                         cat.save()
                     except:
                         print "Unable to find branch '%s' of module '%s' for release '%s'" % (branch_name, mod, release['_description'])

@@ -11,6 +11,22 @@ The Data model is in the /docs directory.
 The middle-term objective is to merge this code with the Transifex 
 application (http://transifex.org).
 
+Requirements
+============
+
+1 - Django 1.0.X
+
+2 - [Optional] Django Evolution is an extension to Django that allows
+    you to track changes in your models over time, and to update the
+    database to reflect those changes.
+
+    svn checkout http://django-evolution.googlecode.com/svn/trunk/
+    
+    Define USE_DJANGO_EVOLUTION to True in settings.py to use it.
+
+    Run './manage.py syncdb' before any model changes and './manage.py
+    evolve --hint --execute' after.
+
 Installation
 ============
 
@@ -24,7 +40,6 @@ Installation
 
 4 - Configure Sites in admin interface to define the 'View on site'
     link.
-
 
 Databases
 =========

@@ -36,7 +36,7 @@ class Command(BaseCommand):
         except:
             raise CommandError("No release named '%s'" % args[0])
         
-        new_rel = Release(name=args[1], description=args[1], stringfrozen=False, status=rel_to_copy.status)
+        new_rel = Release(name=args[1], description=args[1], string_frozen=False, status=rel_to_copy.status)
         new_rel.save()
         
         for cat in rel_to_copy.category_set.all():
@@ -45,7 +45,7 @@ class Command(BaseCommand):
                 branch = mod.get_head_branch()
             else:
                 branch = cat.branch
-            new_rel.category_set.add(Category(release=new_rel, branch=branch, category=cat.category))
+            new_rel.category_set.add(Category(release=new_rel, branch=branch, name=cat.name))
         
         print "New release '%s' created" % args[1]
 

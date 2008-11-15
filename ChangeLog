@@ -1,3 +1,18 @@
+2008-11-16  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* README: Added note about django-evolution.
+	* settings_sample.py: Added django-evolution settings and move
+	  MANAGERS nearer to ADMINS.
+	* stats/admin.py:
+	* stats/management/commands/copy-release.py:
+	* stats/management/commands/copy-release:
+	* stats/models.py: Fixed freezed -> frozen.
+	* templates/module.html: Renamed category.category into
+	  category.name and stringfrozen into string_frozen	
+	* vertimus/models.py: Adjustments.
+	* vertimus/workflow_state.py: Fix tests.
+	* vertimus/templates: Deleted.
+
 2008-11-14  Claude Paroz  <claude@2xlibre.net>
 
 	* languages/models.py: Provide summary stats for default categ. Corrected

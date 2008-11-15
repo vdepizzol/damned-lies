@@ -28,8 +28,8 @@ from workflow_state import *
 ACTION_CODES = (
     'WC', 
     'RT', 'UT',
-    'RP', 'UP', 
-    'TC', 'RC', 
+    'RP', 'UP',
+    'TC', 'RC',
     'IC', 'TR',
     'BA', 'UNDO')
 
@@ -46,6 +46,7 @@ class WorkflowAction(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ('created',)
         get_latest_by = 'created'
 
     def get_all(self):
@@ -86,17 +87,20 @@ class WorkflowActionWC(WorkflowAction):
 
 class WorkflowActionRT(WorkflowAction):
     """
-    >>> from stats.models import Person, Release, Category, Module, Branch, Domain, Team, Language
-    >>> p = Person(_old_id=1, name=u'Gérard Martin', email='gm@mail.com')
+    >>> from people.models import Person
+    >>> from teams.models import Team
+    >>> from languages.models import Language
+    >>> from stats.models import Release, Category, Module, Branch, Domain
+    >>> p = Person(name=u'Gérard Martin', email='gm@mail.com')
     >>> p.save()
-    >>> r = Release(name='gnome-2-24', stringfrozen=True, status='official')
+    >>> r = Release(name='gnome-2-24', string_frozen=True, status='official')
     >>> r.save()
-    >>> c = Category(release=r, description='desktop')
-    >>> c.save()
     >>> m = Module(name='gedit', bugs_base='nd', bugs_product='d', bugs_component='d', vcs_type='svn', vcs_root='d', vcs_web='d')
     >>> m.save()
-    >>> b = Branch(name='trunk', module=m, category=c)
+    >>> b = Branch(name='trunk', module=m)
     >>> b.save()
+    >>> c = Category(release=r, branch=b, name='desktop')
+    >>> c.save()
     >>> d = Domain(module=m, name='ihm', dtype='ui', directory='dir')
     >>> d.save()
     >>> t = Team(name='fr', description='GNOME French Team', coordinator=p)

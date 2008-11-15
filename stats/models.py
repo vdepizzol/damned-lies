@@ -132,10 +132,10 @@ class Branch(models.Model):
             return True
         return False
 
-    def has_string_freezed(self):
-        """ Returns true if the branch is contained in at least one stringfreezed release """
+    def has_string_frozen(self):
+        """ Returns true if the branch is contained in at least one string frozen release """
         for rel in self.releases.all():
-            if rel.stringfrozen:
+            if rel.string_frozen:
                 return True
         return False
            
@@ -206,7 +206,7 @@ class Branch(models.Model):
         """ Update statistics for all po files from the branch """
         self.checkout()
         domains = Domain.objects.filter(module=self.module)
-        string_freezed = self.has_string_freezed()
+        string_frozen = self.has_string_frozen()
         for dom in domains.all():
             # 1. Initial settings
             # *******************
@@ -248,7 +248,7 @@ class Branch(models.Model):
 
             # If old pot already exists and we are in string freeze
             if os.access(previous_pot, os.R_OK):
-                if string_freezed and dom.dtype == 'ui':
+                if string_frozen and dom.dtype == 'ui':
                     diff = potdiff.diff(previous_pot, potfile, 1)
                     if len(diff):
                         utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
@@ -517,7 +517,7 @@ RELEASE_STATUS_CHOICES = (
 class Release(models.Model):
     name = models.SlugField(max_length=20)
     description = models.CharField(max_length=50)
-    stringfrozen = models.BooleanField(default=False)
+    string_frozen = models.BooleanField(default=False)
     status = models.CharField(max_length=12, choices=RELEASE_STATUS_CHOICES)
     branches = models.ManyToManyField(Branch, through='Category', related_name='releases')
 
@@ -680,7 +680,7 @@ class Release(models.Model):
                 }
         for stat in pot_stats:
             dtype = stat.domain.dtype
-            categdescr = stat.branch.category_set.get(release=self).category
+            categdescr = stat.branch.category_set.get(release=self).name
             domname = _(stat.domain.description)
             modname = stat.domain.module.name
             if not stats[dtype]['categs'].has_key(categdescr):
@@ -705,7 +705,7 @@ class Release(models.Model):
         tr_stats = Statistics.objects.filter(language=lang, branch__releases=self).order_by('domain__module__id')
         for stat in tr_stats:
             dtype = stat.domain.dtype
-            categdescr = stat.branch.category_set.get(release=self).category
+            categdescr = stat.branch.category_set.get(release=self).name
             domname = _(stat.domain.description)
             modname = stat.domain.module.name
             stats[dtype]['totaltrans'] += stat.translated
@@ -780,14 +780,14 @@ CATEGORY_CHOICES = (
 class Category(models.Model):
     release = models.ForeignKey(Release)
     branch = models.ForeignKey(Branch)
-    category = models.CharField(max_length=30, choices=CATEGORY_CHOICES, default='default')
+    name = models.CharField(max_length=30, choices=CATEGORY_CHOICES, default='default')
 
     class Meta:
         db_table = 'category'
         verbose_name_plural = 'categories'
 
     def __unicode__(self):
-        return "%s (%s, %s)" % (self.get_category_display(), self.release, self.branch)
+        return "%s (%s, %s)" % (self.get_name_display(), self.release, self.branch)
     
     @classmethod
     def get_cat_name(cls, key):

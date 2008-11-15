@@ -5,6 +5,7 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 STATIC_SERVE = True
+USE_DJANGO_EVOLUTION = False
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,10 +14,10 @@ ADMINS = (
     ('Stephane Raimbault', 'stephane.raimbault@gmail.com'),
 )
 
+MANAGERS = ADMINS
+
 SERVER_EMAIL = 'gnomeweb@gnome.org'
 EMAIL_SUBJECT_PREFIX = '[Damned Lies] '
-
-MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = os.path.join(PROJECT_PATH,'database.db')            # Or path to database file if using sqlite3.
@@ -102,3 +103,7 @@ INSTALLED_APPS = (
     'teams',
     'vertimus'
 )
+
+if USE_DJANGO_EVOLUTION:
+    INSTALLED_APPS = list(INSTALLED_APPS)
+    INSTALLED_APPS += ['django_evolution']
