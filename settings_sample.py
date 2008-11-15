@@ -6,6 +6,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 STATIC_SERVE = True
 USE_DJANGO_EVOLUTION = False
+USE_DEBUG_TOOLBAR = False
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -104,6 +105,11 @@ INSTALLED_APPS = (
     'vertimus'
 )
 
+INTERNAL_IPS=('127.0.0.1',)
+
 if USE_DJANGO_EVOLUTION:
-    INSTALLED_APPS = list(INSTALLED_APPS)
-    INSTALLED_APPS += ['django_evolution']
+    INSTALLED_APPS += ('django_evolution',)
+
+if USE_DEBUG_TOOLBAR:
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',) 
+    INSTALLED_APPS += ('debug_toolbar',)
