@@ -3,213 +3,898 @@
 # Copyright (C) 2008 Free Software Foundation, Inc
 # This file is distributed under the same license as the damned-lies package.
 # Pavol Šimo <palo.simo@gmail.com>, 2008.
-#
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-17 00:29+0200\n"
-"PO-Revision-Date: 2008-09-18 14:43+0200\n"
+"POT-Creation-Date: 2008-11-09 22:27+0000\n"
+"PO-Revision-Date: 2008-11-11 16:52+0100\n"
 "Last-Translator: Pavol Šimo <palo.simo@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural= (n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"Plural-Forms: nplurals=3; plural= (n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;"
 
-#: ../gnome-modules.xml.in.h:1
+#: database-content.py:1
+msgid "Gujarati"
+msgstr "gudžarátsky"
+
+#: database-content.py:2
+msgid "Irish"
+msgstr "írsky"
+
+#: database-content.py:3
+msgid "Guarani"
+msgstr "guaraníjsky"
+
+#: database-content.py:4
+msgid "Galician"
+msgstr "galícijský"
+
+#: database-content.py:5
+msgid "Latin"
+msgstr "latinský"
+
+#: database-content.py:6
+msgid "Tatar"
+msgstr "tatársky"
+
+#: database-content.py:7
+msgid "Turkish"
+msgstr "turecký"
+
+#: database-content.py:8
+msgid "Limburgian"
+msgstr "limburský"
+
+#: database-content.py:9
+msgid "Latvian"
+msgstr "lotyšský"
+
+#: database-content.py:10
+msgid "Tagalog"
+msgstr "tagalský"
+
+#: database-content.py:11
+msgid "Turkmen"
+msgstr "turkménsky"
+
+#: database-content.py:12
+msgid "Thai"
+msgstr "thajský"
+
+#: database-content.py:13
+msgid "Tajik"
+msgstr "tadžiský"
+
+#: database-content.py:14
+msgid "Telugu"
+msgstr "telúgsky"
+
+#: database-content.py:15
+msgid "Tamil"
+msgstr "tamilský"
+
+#: database-content.py:16
+msgid "Yiddish"
+msgstr "jidišský"
+
+#: database-content.py:17
+msgid "Brazilian Portuguese"
+msgstr "portugalský (Brazília)"
+
+#: database-content.py:18
+msgid "German"
+msgstr "nemecký"
+
+#: database-content.py:19
+msgid "Danish"
+msgstr "dánsky"
+
+#: database-content.py:20
+msgid "Dzongkha"
+msgstr "dzongkä"
+
+#: database-content.py:21
+msgid "Chinese (China)"
+msgstr "čínsky (Čína)"
+
+#: database-content.py:22
+msgid "Balochi"
+msgstr "balúcky"
+
+#: database-content.py:23
+msgid "Crimean Tatar"
+msgstr "tatársky (Krym)"
+
+#: database-content.py:24
+msgid "Greek"
+msgstr "grécky"
+
+#: database-content.py:25
+msgid "Esperanto"
+msgstr "esperanto"
+
+#: database-content.py:26
+msgid "Belarusian"
+msgstr "bieloruský"
+
+#: database-content.py:27
+msgid "Basque"
+msgstr "baskický"
+
+#: database-content.py:28
+msgid "Estonian"
+msgstr "estónsky"
+
+#: database-content.py:29
+msgid "Spanish"
+msgstr "španielsky"
+
+#: database-content.py:30
+msgid "Russian"
+msgstr "ruský"
+
+#: database-content.py:31
+msgid "Kinyarwanda"
+msgstr "rwandský"
+
+#: database-content.py:32
+msgid "Romanian"
+msgstr "rumunský"
+
+#: database-content.py:33
+msgid "Canadian English"
+msgstr "anglický (Kanada)"
+
+#: database-content.py:34
+msgid "Bulgarian"
+msgstr "bulharský"
+
+#: database-content.py:35
+msgid "Ukrainian"
+msgstr "ukrajinský"
+
+#: database-content.py:36
+msgid "Walloon"
+msgstr "walónsky"
+
+#: database-content.py:37
+msgid "Asturian"
+msgstr "astúrsky"
+
+#: database-content.py:38
+msgid "Bengali"
+msgstr "bengálsky"
+
+#: database-content.py:39
+msgid "Breton"
+msgstr "bretónsky"
+
+#: database-content.py:40
+msgid "Bosnian"
+msgstr "bosniansky"
+
+#: database-content.py:41
+msgid "Japanese"
+msgstr "japonský"
+
+#: database-content.py:42
+msgid "Occitan"
+msgstr "okcitánsky"
+
+#: database-content.py:43
+msgid "Low German and Saxon"
+msgstr "dolnonemecký a dolnosaský"
+
+#: database-content.py:44
+msgid "Oriya"
+msgstr "urijský"
+
+#: database-content.py:45
+msgid "Xhosa"
+msgstr "xhoský"
+
+#: database-content.py:46
+msgid "Northern Sotho"
+msgstr "sothský - severný"
+
+#: database-content.py:47
+msgid "Iranian Azerbaijani"
+msgstr "azerbajdžanský (Irán)"
+
+#: database-content.py:48
+msgid "Catalan"
+msgstr "katalánsky"
+
+#: database-content.py:49
+msgid "Welsh"
+msgstr "waleský"
+
+#: database-content.py:50
+msgid "Czech"
+msgstr "český"
+
+#: database-content.py:51
+msgid "Pashto"
+msgstr "paštúnsky"
+
+#: database-content.py:52
+msgid "Portuguese"
+msgstr "portugalský"
+
+#: database-content.py:53
+msgid "Lithuanian"
+msgstr "litovský"
+
+#: database-content.py:54
+msgid "Punjabi"
+msgstr "pandžábsky"
+
+#: database-content.py:55
+msgid "British English"
+msgstr "anglický (Veľká Británia)"
+
+#: database-content.py:56
+msgid "Armenian"
+msgstr "arménsky"
+
+#: database-content.py:57
+msgid "Croatian"
+msgstr "chorvátsky"
+
+#: database-content.py:58
+msgid "Hungarian"
+msgstr "maďarský"
+
+#: database-content.py:59
+msgid "Hindi"
+msgstr "hindský"
+
+#: database-content.py:60
+msgid "Hebrew"
+msgstr "hebrejský"
+
+#: database-content.py:61
+msgid "Malagasy"
+msgstr "malgaský"
+
+#: database-content.py:62
+msgid "Friulian"
+msgstr "friulský"
+
+#: database-content.py:63
+msgid "Uzbek"
+msgstr "uzbecký"
+
+#: database-content.py:64
+msgid "Malayalam"
+msgstr "malajalámsky"
+
+#: database-content.py:65
+msgid "Mongolian"
+msgstr "mongolský"
+
+#: database-content.py:66
+msgid "Maori"
+msgstr "maorijský"
+
+#: database-content.py:67
+msgid "Macedonian"
+msgstr "macedónsky"
+
+#: database-content.py:68
+msgid "Urdu"
+msgstr "urdský"
+
+#: database-content.py:69
+msgid "Polish"
+msgstr "poľský"
+
+#: database-content.py:70
+msgid "Malay"
+msgstr "malajský"
+
+#: database-content.py:71
+msgid "Marathi"
+msgstr "maráthsky"
+
+#: database-content.py:72
+msgid "Uighur"
+msgstr "ujgurský"
+
+#: database-content.py:73
+msgid "Old English"
+msgstr "staroanglický"
+
+#: database-content.py:74
+msgid "Afrikaans"
+msgstr "afrikánsky"
+
+#: database-content.py:75
+msgid "Vietnamese"
+msgstr "vietnamský"
+
+#: database-content.py:76
+msgid "Icelandic"
+msgstr "islandský"
+
+#: database-content.py:77
+msgid "Amharic"
+msgstr "amhársky"
+
+#: database-content.py:78
+msgid "Italian"
+msgstr "taliansky"
+
+#: database-content.py:79
+msgid "Kannada"
+msgstr "kannadský"
+
+#: database-content.py:80
+msgid "Assamese"
+msgstr "asamský"
+
+#: database-content.py:81
+msgid "Arabic"
+msgstr "arabský"
+
+#: database-content.py:82
+msgid "Ido"
+msgstr "ido"
+
+#: database-content.py:83
+msgid "Zulu"
+msgstr "zuluský"
+
+#: database-content.py:84
+msgid "Azerbaijani"
+msgstr "azerbajdžanský"
+
+#: database-content.py:85
+msgid "Indonesian"
+msgstr "indonézsky"
+
+#: database-content.py:86
+msgid "Bengali (India)"
+msgstr "bengálsky (India)"
+
+#: database-content.py:87
+msgid "Kashmiri"
+msgstr "kašmírsky"
+
+#: database-content.py:88
+msgid "Chinese Traditional"
+msgstr "čínsky - tradičný"
+
+#: database-content.py:89
+msgid "Dutch"
+msgstr "holandský"
+
+#: database-content.py:90
+msgid "Yoruba"
+msgstr "jorubský"
+
+#: database-content.py:91
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "nórsky"
+
+#: database-content.py:92
+msgid "Nepali"
+msgstr "nepálsky"
+
+#: database-content.py:93
+msgid "Australian English"
+msgstr "anglický (Austrália)"
+
+#: database-content.py:94
+msgid "French"
+msgstr "francúzsky"
+
+#: database-content.py:95
+msgid "Persian"
+msgstr "perzský"
+
+#: database-content.py:96
+msgid "Fula"
+msgstr "fulbský"
+
+#: database-content.py:97
+msgid "Maithili"
+msgstr "maithilsky"
+
+#: database-content.py:98
+msgid "Finnish"
+msgstr "fínsky"
+
+#: database-content.py:99
+msgid "Georgian"
+msgstr "gruzínsky"
+
+#: database-content.py:100
+msgid "Kazakh"
+msgstr "kazašský"
+
+#: database-content.py:101
+msgid "Serbian"
+msgstr "srbský"
+
+#: database-content.py:102
+msgid "Albanian"
+msgstr "albánsky"
+
+#: database-content.py:103
+msgid "Korean"
+msgstr "kórejský"
+
+#: database-content.py:104
+msgid "Swedish"
+msgstr "švédsky"
+
+#: database-content.py:105
+msgid "Khmer"
+msgstr "kmérsky"
+
+#: database-content.py:106
+msgid "Slovak"
+msgstr "slovenský"
+
+#: database-content.py:107
+msgid "Sinhala"
+msgstr "sinhalský"
+
+#: database-content.py:108
+msgid "Kurdish"
+msgstr "kurdský"
+
+#: database-content.py:109
+msgid "Slovenian"
+msgstr "slovinský"
+
+#: database-content.py:110
+msgid "Kirghiz"
+msgstr "kirgizský"
+
+#: database-content.py:111
+msgid "Belarusian Latin"
+msgstr "bieloruský - latinka"
+
+#: database-content.py:112
+msgid "Low German"
+msgstr "dolnosaský"
+
+#: database-content.py:113
+msgid "Low Saxon, Germany"
+msgstr "dolnosaský (Nemecko)"
+
+#: database-content.py:114
+msgid "Valencian (Southern Catalan)"
+msgstr "valencijský - juhokatalánsky"
+
+#: database-content.py:115
+msgid "Uzbek (Cyrillic)"
+msgstr "uzbecký - cyrilika"
+
+#: database-content.py:116
+msgid "Uzbek (Latin)"
+msgstr "uzbecký - latinka"
+
+#: database-content.py:117
+msgid "Chinese (Hong Kong)"
+msgstr "čínsky (Hong Kong)"
+
+#: database-content.py:118
+msgid "Chinese (Taiwan)"
+msgstr "čínsky (Taiwan)"
+
+#: database-content.py:119
+msgid "Norwegian Bokmål"
+msgstr "nórsky - bokmål"
+
+#: database-content.py:120
+msgid "Norwegian Nynorsk"
+msgstr "nórsky - nynorsk"
+
+#: database-content.py:121
+msgid "Serbian Latin"
+msgstr "srbský - latinka"
+
+#: database-content.py:122
+msgid "Serbian Jekavian"
+msgstr "srbský - jekavský"
+
+#: database-content.py:123 templates/languages/language_release.html:78
+msgid "UI translations"
+msgstr "Preklady UI"
+
+#: database-content.py:124
+msgid "User Guide"
+msgstr "Používateľská príručka"
+
+#: database-content.py:125
 msgid "Accessibility Guide"
 msgstr "Príručka prístupnosti"
 
-#: ../gnome-modules.xml.in.h:2
-msgid "AisleRiot Manual"
-msgstr "Manuál AisleRiot"
+#: database-content.py:126
+msgid "System Administration Guide"
+msgstr "Príručka spravovania systému"
 
-#: ../gnome-modules.xml.in.h:3
-msgid "Anjuta Manual"
-msgstr "Manuál Anjuta"
-
-#: ../gnome-modules.xml.in.h:4
-msgid "Banshee Music Player"
-msgstr "Hudobný prehrávač Banshee"
-
-#: ../gnome-modules.xml.in.h:5
-msgid "Battery Charge Monitor Manual"
-msgstr "Manuál Sledovania stavu napájania"
-
-#: ../gnome-modules.xml.in.h:6
-msgid "Beagle Desktop Search"
-msgstr "Vyhľadávanie na ploche Beagle"
-
-#: ../gnome-modules.xml.in.h:7
-msgid "Blackjack Manual"
-msgstr "Manuál Blackjack"
-
-#: ../gnome-modules.xml.in.h:8
-msgid "CD Player Manual"
-msgstr "Manuál Prehrávača CD"
-
-#: ../gnome-modules.xml.in.h:9
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "Manuál Sledovania škálovania frekvencie procesora"
-
-#: ../gnome-modules.xml.in.h:10
-msgid "Character Palette Manual"
-msgstr "Manuál Mapy znakov"
-
-#: ../gnome-modules.xml.in.h:11
-msgid "Clock Applet Manual"
-msgstr "Manuál apletu Hodiny"
-
-#: ../gnome-modules.xml.in.h:12
-msgid "Command Line Manual"
-msgstr "Manuál Príkazového riadku"
-
-#: ../gnome-modules.xml.in.h:13
-msgid "Criawips Manual"
-msgstr "Manuál Criawips"
-
-#: ../gnome-modules.xml.in.h:14 ../templates/header.tmpl:57
-msgid "Damned Lies"
-msgstr "Damned Lies"
-
-#: ../gnome-modules.xml.in.h:15
-msgid "Dasher Manual"
-msgstr "Manuál Dasher"
-
-#: ../gnome-modules.xml.in.h:16
-msgid "Deskbar Applet"
-msgstr "Aplet Deskbar"
-
-#: ../gnome-modules.xml.in.h:17
-msgid "Dictionary Manual"
-msgstr "Manuál Slovníka"
-
-#: ../gnome-modules.xml.in.h:18
-msgid "Disk Mounter Manual"
-msgstr "Manuál Pripojenia diskov"
-
-#: ../gnome-modules.xml.in.h:19
-msgid "Disk Usage Analyzer Manual"
-msgstr "Manuál Využitia diskového priestoru"
-
-#: ../gnome-modules.xml.in.h:20
-msgid "Encryption Applet Manual"
-msgstr "Manuál apletu Šifrovanie"
-
-#: ../gnome-modules.xml.in.h:21
-msgid "Epiphany Web Browser"
-msgstr "WWW prehliadač Epiphany"
-
-#: ../gnome-modules.xml.in.h:22
-msgid "Eye of GNOME"
-msgstr "Oko GNOME"
-
-#: ../gnome-modules.xml.in.h:23
-msgid "Eye of GNOME Manual"
-msgstr "Manuál Oka GNOME"
-
-#: ../gnome-modules.xml.in.h:24
-msgid "F-Spot Manual"
-msgstr "Manuál F-Spot"
-
-#: ../gnome-modules.xml.in.h:25
-msgid "FDL License"
-msgstr "Licencia FDL"
-
-#: ../gnome-modules.xml.in.h:26
-msgid "Fish Applet Manual"
-msgstr "Manuál apletu Ryba"
-
-#: ../gnome-modules.xml.in.h:27
-msgid "Five or More Manual"
-msgstr "Manuál Päť a viac"
-
-#: ../gnome-modules.xml.in.h:28
-msgid "Four-in-a-row Manual"
-msgstr "Manuál Štyri v rade"
-
-#: ../gnome-modules.xml.in.h:29
-msgid ""
-"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
-"more."
-msgstr ""
-"Počínajúc GNOME 2.23 je GAIL začlenený do GTK+. Do hlavnej vetvy už viac "
-"neprispievajte."
-
-#: ../gnome-modules.xml.in.h:30
-msgid "GConf Editor Manual"
-msgstr "Manuál Editora konfigurácie"
-
-#: ../gnome-modules.xml.in.h:31
+#: database-content.py:127
 msgid "GDM Manual"
 msgstr "Manuál GDM"
 
-#: ../gnome-modules.xml.in.h:32
-msgid "GFloppy Manual"
-msgstr "Manuál GFloppy"
+#: database-content.py:128
+msgid "Anjuta Manual"
+msgstr "Manuál Anjuta"
 
-#: ../gnome-modules.xml.in.h:33
-msgid "GLib"
-msgstr "GLib"
+#: database-content.py:129
+msgid "GConf Editor Manual"
+msgstr "Manuál Editora konfigurácie"
 
-#: ../gnome-modules.xml.in.h:34
-msgid "GNOME 2 Development Documentation"
-msgstr "Vývojárska dokumentácia GNOME 2"
+#: database-content.py:130
+msgid "F-Spot Manual"
+msgstr "Manuál F-Spot"
 
-#: ../gnome-modules.xml.in.h:35
-msgid "GNOME 2 User Documentation"
-msgstr "Používateľská dokumentácia GNOME 2"
+#: database-content.py:131
+msgid "FDL License"
+msgstr "Licencia FDL"
 
-#: ../gnome-modules.xml.in.h:36
-msgid "GNOME Applets"
-msgstr "Aplety GNOME"
+#: database-content.py:132
+msgid "LGPL License"
+msgstr "Licencia LGPL"
 
-#: ../gnome-modules.xml.in.h:37
-msgid "GNOME Keyring Manager Manual"
-msgstr "Manuál Správcu zväzku kľúčov"
+#: database-content.py:133
+msgid "GPL License"
+msgstr "Licencia GPL"
 
-#: ../gnome-modules.xml.in.h:38
-msgid "GNOME Klotski Manual"
-msgstr "Manuál GNOME Klotski"
+#: database-content.py:134
+msgid "Fish Applet Manual"
+msgstr "Manuál apletu Ryba"
 
-#: ../gnome-modules.xml.in.h:39
-msgid "GNOME Library Web site"
-msgstr "WWW stránky Knižnice GNOME"
+#: database-content.py:135
+msgid "Workspace Switcher Applet Manual"
+msgstr "Manuál apletu Prepínanie plôch"
 
-#: ../gnome-modules.xml.in.h:40
-msgid "GNOME Library help"
-msgstr "Pomocník Knižnice GNOME"
+#: database-content.py:136
+msgid "Window List Applet Manual"
+msgstr "Manuál apletu Zoznam okien"
 
-#: ../gnome-modules.xml.in.h:41
-msgid "GNOME Mahjongg Manual"
-msgstr "Manuál GNOME Mahjongg"
+#: database-content.py:137
+msgid "Clock Applet Manual"
+msgstr "Manuál apletu Hodiny"
 
-#: ../gnome-modules.xml.in.h:42
-msgid "GNOME Release Notes"
-msgstr "Poznámky k vydaniu GNOME"
+#: database-content.py:138
+msgid "Iagno Manual"
+msgstr "Manuál Iagno"
 
-#: ../gnome-modules.xml.in.h:43
+#: database-content.py:139
+msgid "Five or More Manual"
+msgstr "Manuál Päť a viac"
+
+#: database-content.py:140
+msgid "Nibbles Manual"
+msgstr "Manuál Červíkov"
+
+#: database-content.py:141
 msgid "GNOME Robots Manual"
 msgstr "Manuál GNOME Robots"
 
-#: ../gnome-modules.xml.in.h:44
+#: database-content.py:142
+msgid "Four-in-a-row Manual"
+msgstr "Manuál Štyri v rade"
+
+#: database-content.py:143
 msgid "GNOME Sudoku Manual"
 msgstr "Manuál GNOME Sudoku"
 
-#: ../gnome-modules.xml.in.h:45
+#: database-content.py:144
+msgid "glChess Manual"
+msgstr "Manuál glChess"
+
+#: database-content.py:145
 msgid "GNOME Tali Manual"
 msgstr "Manuál GNOME Tali"
 
-#: ../gnome-modules.xml.in.h:46
+#: database-content.py:146
+msgid "Gnometris Manual"
+msgstr "Manuál Gnometris"
+
+#: database-content.py:147
+msgid "GNOME Klotski Manual"
+msgstr "Manuál GNOME Klotski"
+
+#: database-content.py:148
 msgid "GNOME Tetravex Manual"
 msgstr "Manuál GNOME Tetravex"
 
-#: ../gnome-modules.xml.in.h:47
+#: database-content.py:149
+msgid "GNOME Mahjongg Manual"
+msgstr "Manuál GNOME Mahjongg"
+
+#: database-content.py:150
+msgid "AisleRiot Manual"
+msgstr "Manuál AisleRiot"
+
+#: database-content.py:151
+msgid "Mines Manual"
+msgstr "Manuál Mín"
+
+#: database-content.py:152
+msgid "Same GNOME Manual"
+msgstr "Manuál Same GNOME"
+
+#: database-content.py:153
+msgid "Blackjack Manual"
+msgstr "Manuál Blackjack"
+
+#: database-content.py:154
+msgid "CD Player Manual"
+msgstr "Manuál Prehrávača CD"
+
+#: database-content.py:155
+msgid "Sound Recorder Manual"
+msgstr "Manuál Nahrávania zvuku"
+
+#: database-content.py:156
+msgid "GStreamer Properties Manual"
+msgstr "Manuál vlastností GStreamer"
+
+#: database-content.py:157
 msgid "GNOME Volume Control Manual"
 msgstr "Manuál Ovládania hlasitosti GNOME"
 
-#: ../gnome-modules.xml.in.h:48
+#: database-content.py:158
+msgid "Layout Descriptions"
+msgstr "Popisy rozloženia"
+
+#: database-content.py:159
+msgid "Keyboard Indicator Manual"
+msgstr "Manuál Indikátora klávesnice"
+
+#: database-content.py:160
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "Manuál Sledovania škálovania frekvencie procesora"
+
+#: database-content.py:161
+msgid "Command Line Manual"
+msgstr "Manuál Príkazového riadku"
+
+#: database-content.py:162
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "Manuál Sledovania prístupnosti klávesnice"
+
+#: database-content.py:163
+msgid "Invest Applet Manual"
+msgstr "Manuál apletu Invest"
+
+#: database-content.py:164
+msgid "System Monitor Manual"
+msgstr "Manuál Monitoru systému"
+
+#: database-content.py:165
+msgid "Stock Ticker Manual"
+msgstr "Manuál Stock Ticker"
+
+#: database-content.py:166
+msgid "Geyes Manual"
+msgstr "Manuál Geyes"
+
+#: database-content.py:167
+msgid "Panel Trash Manual"
+msgstr "Manuál apletu Kôš"
+
+#: database-content.py:168
+msgid "Character Palette Manual"
+msgstr "Manuál Mapy znakov"
+
+#: database-content.py:169
+msgid "Volume Control Manual"
+msgstr "Manuál Ovládania hlasitosti"
+
+#: database-content.py:170
+msgid "Weather Report Manual"
+msgstr "Manuál Sledovania počasia"
+
+#: database-content.py:171
+msgid "Sticky Notes Manual"
+msgstr "Manuál Poznámkových papierikov"
+
+#: database-content.py:172
+msgid "Disk Mounter Manual"
+msgstr "Manuál Pripojenia diskov"
+
+#: database-content.py:173
+msgid "Battery Charge Monitor Manual"
+msgstr "Manuál Sledovania stavu napájania"
+
+#: database-content.py:174
+msgid "User Directories"
+msgstr "Používateľské priečinky"
+
+#: database-content.py:175
+msgid "openVPN"
+msgstr "openVPN"
+
+#: database-content.py:176
+msgid "vpnc"
+msgstr "vpnc"
+
+#: database-content.py:177
+msgid "pptp"
+msgstr "pptp"
+
+#: database-content.py:178
+msgid "Integration Guide"
+msgstr "Integračná príručka"
+
+#: database-content.py:179
+msgid "Platform Overview"
+msgstr "Prehľad platformy"
+
+#: database-content.py:180
+msgid "Encryption Applet Manual"
+msgstr "Manuál apletu Šifrovanie"
+
+#: database-content.py:181
+msgid "Release Notes"
+msgstr "Poznámky k vydaniu"
+
+#: database-content.py:182
+msgid "GNOME Keyring Manager Manual"
+msgstr "Manuál Správcu zväzku kľúčov"
+
+#: database-content.py:183
+msgid "Criawips Manual"
+msgstr "Manuál Criawips"
+
+#: database-content.py:184
+msgid "Sound Juicer Manual"
+msgstr "Manuál Sound Juicer"
+
+#: database-content.py:185
+msgid "Property Nicks"
+msgstr "Názvy vlastností"
+
+#: database-content.py:186
+msgid "tips"
+msgstr "tipy"
+
+#: database-content.py:187
+msgid "script-fu"
+msgstr "script-fu"
+
+#: database-content.py:188
+msgid "libgimp"
+msgstr "libgimp"
+
+#: database-content.py:189
+msgid "python"
+msgstr "python"
+
+#: database-content.py:190
+msgid "plug-ins"
+msgstr "zásuvné moduly"
+
+#: database-content.py:191
+msgid "Dasher Manual"
+msgstr "Manuál Dasher"
+
+#: database-content.py:192
+msgid "Weather Applet Locations"
+msgstr "Umiestnenia pre aplet Počasie"
+
+#: database-content.py:193
+msgid "Dictionary Manual"
+msgstr "Manuál Slovníka"
+
+#: database-content.py:194
+msgid "Disk Usage Analyzer Manual"
+msgstr "Manuál Využitia diskového priestoru"
+
+#: database-content.py:195
+msgid "Log Viewer Manual"
+msgstr "Manuál Prehliadača systémových záznamov"
+
+#: database-content.py:196
+msgid "Search Tool Manual"
+msgstr "Manuál Vyhľadávania súborov"
+
+#: database-content.py:197
+msgid "GFloppy Manual"
+msgstr "Manuál GFloppy"
+
+#: database-content.py:198
+msgid "GNOME Library help"
+msgstr "Pomocník Knižnice GNOME"
+
+#: database-content.py:199
+msgid "Eye of GNOME Manual"
+msgstr "Manuál Oka GNOME"
+
+#: database-content.py:200
+msgid "GST User Management Manual"
+msgstr "Manuál Správy používateľov GST"
+
+#: database-content.py:201
+msgid "GST Service Management Manual"
+msgstr "Manuál Správy služieb GST"
+
+#: database-content.py:202
+msgid "GST Network Setup Manual"
+msgstr "Manuál Nastavenia sieťovania GST"
+
+#: database-content.py:203
+msgid "GST Shared Folders Manual"
+msgstr "Manuál Zdieľaných priečinkov GST"
+
+#: database-content.py:204
+msgid "GST Time Setup Manual"
+msgstr "Manuál Nastavenia hodín GST"
+
+#: database-content.py:205
+msgid "GNOME 2 User Documentation"
+msgstr "Používateľská dokumentácia GNOME 2"
+
+#: database-content.py:206
+msgid "Beagle Desktop Search"
+msgstr "Vyhľadávanie na ploche Beagle"
+
+#: database-content.py:207 templates/base.html:46
+msgid "Damned Lies"
+msgstr "Damned Lies"
+
+#: database-content.py:208
+msgid "Banshee Music Player"
+msgstr "Hudobný prehrávač Banshee"
+
+#: database-content.py:209
+msgid "Shared MIME Info"
+msgstr "Zdieľané MIME informácie"
+
+#: database-content.py:210
+msgid "GNOME Applets"
+msgstr "Aplety GNOME"
+
+#: database-content.py:211
+msgid "JHBuild Documentation"
+msgstr "Dokumentácia JHBuild"
+
+#: database-content.py:212
+msgid "GNOME 2 Development Documentation"
+msgstr "Vývojárska dokumentácia GNOME 2"
+
+#: database-content.py:213
+msgid "GNOME Release Notes"
+msgstr "Poznámky k vydaniu GNOME"
+
+#: database-content.py:214
+msgid "Rhythmbox Music Player"
+msgstr "Hudobný prehrávač Rhythmbox"
+
+#: database-content.py:215
+msgid "Epiphany Web Browser"
+msgstr "WWW prehliadač Epiphany"
+
+#: database-content.py:216
+msgid "GNOME Library Web site"
+msgstr "WWW stránky Knižnice GNOME"
+
+#: database-content.py:217
+msgid "Eye of GNOME"
+msgstr "Oko GNOME"
+
+#: database-content.py:218
+msgid "Gnome Specimen"
+msgstr "Gnome Specimen"
+
+#: database-content.py:219
+msgid "Deskbar Applet"
+msgstr "Aplet Deskbar"
+
+#: database-content.py:220
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -219,151 +904,7 @@ msgstr ""
 "odosielať preklady, overte prosím <a href=\"http://wiki.gnucash.org/wiki/"
 "Translation#Submitting\">Wiki GNUCash</a>."
 
-#: ../gnome-modules.xml.in.h:49
-msgid "GPL License"
-msgstr "Licencia GPL"
-
-#: ../gnome-modules.xml.in.h:50
-msgid "GST Network Setup Manual"
-msgstr "Manuál Nastavenia sieťovania GST"
-
-#: ../gnome-modules.xml.in.h:51
-msgid "GST Service Management Manual"
-msgstr "Manuál Správy služieb GST"
-
-#: ../gnome-modules.xml.in.h:52
-msgid "GST Shared Folders Manual"
-msgstr "Manuál Zdieľaných priečinkov GST"
-
-#: ../gnome-modules.xml.in.h:53
-msgid "GST Time Setup Manual"
-msgstr "Manuál Nastavenia hodín GST"
-
-#: ../gnome-modules.xml.in.h:54
-msgid "GST User Management Manual"
-msgstr "Manuál Správy používateľov GST"
-
-#: ../gnome-modules.xml.in.h:55
-msgid "GStreamer Properties Manual"
-msgstr "Manuál vlastností GStreamer"
-
-#: ../gnome-modules.xml.in.h:56
-msgid "Geyes Manual"
-msgstr "Manuál Geyes"
-
-#: ../gnome-modules.xml.in.h:57
-msgid "Gnome Specimen"
-msgstr "Gnome Specimen"
-
-#: ../gnome-modules.xml.in.h:58
-msgid "Gnometris Manual"
-msgstr "Manuál Gnometris"
-
-#: ../gnome-modules.xml.in.h:59
-msgid "Gtk+"
-msgstr "Gtk+"
-
-#: ../gnome-modules.xml.in.h:60
-msgid "Iagno Manual"
-msgstr "Manuál Iagno"
-
-#: ../gnome-modules.xml.in.h:61
-msgid "Invest Applet Manual"
-msgstr "Manuál apletu Invest"
-
-#: ../gnome-modules.xml.in.h:62
-msgid "JHBuild Documentation"
-msgstr "Dokumentácia JHBuild"
-
-#: ../gnome-modules.xml.in.h:63
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Manuál Sledovania prístupnosti klávesnice"
-
-#: ../gnome-modules.xml.in.h:64
-msgid "Keyboard Indicator Manual"
-msgstr "Manuál Indikátora klávesnice"
-
-#: ../gnome-modules.xml.in.h:65
-msgid "LGPL License"
-msgstr "Licencia LGPL"
-
-#: ../gnome-modules.xml.in.h:66
-msgid "Layout Descriptions"
-msgstr "Popisy rozloženia"
-
-#: ../gnome-modules.xml.in.h:67
-msgid "Log Viewer Manual"
-msgstr "Manuál Prehliadača systémových záznamov"
-
-#: ../gnome-modules.xml.in.h:68
-msgid "Mines Manual"
-msgstr "Manuál Mín"
-
-#: ../gnome-modules.xml.in.h:69
-msgid "Nibbles Manual"
-msgstr "Manuál Červíkov"
-
-#: ../gnome-modules.xml.in.h:70
-msgid "Panel Trash Manual"
-msgstr "Manuál apletu Kôš"
-
-#: ../gnome-modules.xml.in.h:71
-msgid "Platform Overview"
-msgstr "Prehľad platformy"
-
-#: ../gnome-modules.xml.in.h:72
-msgid "Property Nicks"
-msgstr "Názvy vlastností"
-
-#: ../gnome-modules.xml.in.h:73
-msgid "Release Notes"
-msgstr "Poznámky k vydaniu"
-
-#: ../gnome-modules.xml.in.h:74
-msgid "Rhythmbox Music Player"
-msgstr "Hudobný prehrávač Rhythmbox"
-
-#: ../gnome-modules.xml.in.h:75
-msgid "Sabayon"
-msgstr "Sabayon"
-
-#: ../gnome-modules.xml.in.h:76
-msgid "Same GNOME Manual"
-msgstr "Manuál Same GNOME"
-
-#: ../gnome-modules.xml.in.h:77
-msgid "Search Tool Manual"
-msgstr "Manuál Vyhľadávania súborov"
-
-#: ../gnome-modules.xml.in.h:78
-msgid "Shared MIME Info"
-msgstr "Zdieľané MIME informácie"
-
-#: ../gnome-modules.xml.in.h:79
-msgid "Sound Juicer Manual"
-msgstr "Manuál Sound Juicer"
-
-#: ../gnome-modules.xml.in.h:80
-msgid "Sound Recorder Manual"
-msgstr "Manuál Nahrávania zvuku"
-
-#: ../gnome-modules.xml.in.h:81
-msgid "Sticky Notes Manual"
-msgstr "Manuál Poznámkových papierikov"
-
-#: ../gnome-modules.xml.in.h:82
-msgid "Stock Ticker Manual"
-msgstr "Manuál Stock Ticker"
-
-#: ../gnome-modules.xml.in.h:83
-msgid "System Administration Guide"
-msgstr "Príručka spravovania systému"
-
-#: ../gnome-modules.xml.in.h:84
-msgid "System Monitor Manual"
-msgstr "Manuál Monitoru systému"
-
-#: ../gnome-modules.xml.in.h:85
+#: database-content.py:221
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -371,659 +912,155 @@ msgstr ""
 "Toto nie je modul patriaci GNOME. Preklady odosielajte prostredníctvom <a "
 "href=\"http://translationproject.org\">Prekladateľského projektu</a>."
 
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:75
-msgid "UI translations"
-msgstr "Preklady UI"
+#: database-content.py:222
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr ""
+"Počínajúc GNOME 2.23 je GAIL začlenený do GTK+. Do hlavnej vetvy už viac "
+"neprispievajte."
 
-#: ../gnome-modules.xml.in.h:87
-msgid "User Directories"
-msgstr "Používateľské priečinky"
-
-#: ../gnome-modules.xml.in.h:88
-msgid "User Guide"
-msgstr "Používateľská príručka"
-
-#: ../gnome-modules.xml.in.h:89
-msgid "Volume Control Manual"
-msgstr "Manuál Ovládania hlasitosti"
-
-#: ../gnome-modules.xml.in.h:90
-msgid "Weather Applet Locations"
-msgstr "Umiestnenia pre aplet Počasie"
-
-#: ../gnome-modules.xml.in.h:91
-msgid "Weather Report Manual"
-msgstr "Manuál Sledovania počasia"
-
-#: ../gnome-modules.xml.in.h:92
-msgid "Window List Applet Manual"
-msgstr "Manuál apletu Zoznam okien"
-
-#: ../gnome-modules.xml.in.h:93
-msgid "Workspace Switcher Applet Manual"
-msgstr "Manuál apletu Prepínanie plôch"
-
-#: ../gnome-modules.xml.in.h:94
-msgid "XKeyboard-Config"
-msgstr "XKeyboard-Config"
-
-#: ../gnome-modules.xml.in.h:95
-msgid "glChess Manual"
-msgstr "Manuál glChess"
-
-#: ../releases.xml.in.h:1
-msgid "Administration Tools"
-msgstr "Nástroje na spravovanie"
-
-#: ../releases.xml.in.h:2
-msgid "Desktop Applications"
-msgstr "Aplikácie prostredia"
-
-#: ../releases.xml.in.h:3
-msgid "Development Platform"
-msgstr "Vývojárska platforma"
-
-#: ../releases.xml.in.h:4
-msgid "Development Tools"
-msgstr "Vývojárske nástroje"
-
-#: ../releases.xml.in.h:5
-msgid "External Dependencies"
-msgstr "Externé závislosti"
-
-#: ../releases.xml.in.h:6
-msgid "Extra GNOME Applications"
-msgstr "Extra aplikácie GNOME"
-
-#: ../releases.xml.in.h:7
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (staré stabilné)"
-
-#: ../releases.xml.in.h:8
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (staré stabilné)"
-
-#: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (staré stabilné)"
-
-#: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (old stable)"
-msgstr "GNOME 2.20 (staré stabilné)"
-
-#: ../releases.xml.in.h:11
-#, fuzzy
-msgid "GNOME 2.22 (old stable)"
-msgstr "GNOME 2.20 (staré stabilné)"
-
-#: ../releases.xml.in.h:12
-#, fuzzy
-msgid "GNOME 2.24 (stable)"
-msgstr "GNOME 2.22 (stabilné)"
-
-#: ../releases.xml.in.h:13
+#: database-content.py:223
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (Extra softvér)"
 
-#: ../releases.xml.in.h:14
+#: database-content.py:224
+msgid "Extra GNOME Applications"
+msgstr "Extra aplikácie GNOME"
+
+#: database-content.py:225
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (staré stabilné)"
+
+#: database-content.py:226
 msgid "GNOME Infrastructure"
 msgstr "Infraštruktúra GNOME"
 
-#: ../releases.xml.in.h:15
-msgid "GNOME desktop"
-msgstr "Prostredie GNOME"
+#: database-content.py:227
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (staré stabilné)"
 
-#: ../releases.xml.in.h:16
-msgid "GNOME developer platform"
-msgstr "Vývojárska platforma GNOME"
+#: database-content.py:228
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (staré stabilné)"
 
-#: ../releases.xml.in.h:17
-msgid "GNOME-Office Productivity Applications"
-msgstr "Kancelárske aplikácie GNOME"
-
-#: ../releases.xml.in.h:18
-msgid "System Administration"
-msgstr "Spravovanie systému"
-
-#: ../releases.xml.in.h:19
+#: database-content.py:229
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (ne-GNOME)"
 
-#: ../teams.py:208 ../templates/team.tmpl:8
-#, python-format
-msgid "%(lang)s Translation Team"
-msgstr "%(lang)s lokalizačný tím"
-
-#: ../translation-teams.xml.in.h:1
-msgid "Afrikaans"
-msgstr "afrikánsky"
-
-#: ../translation-teams.xml.in.h:2
-msgid "Albanian"
-msgstr "albánsky"
-
-#: ../translation-teams.xml.in.h:3
-msgid "Amharic"
-msgstr "amhársky"
-
-#: ../translation-teams.xml.in.h:4
-msgid "Arabic"
-msgstr "arabský"
-
-#: ../translation-teams.xml.in.h:5
-msgid "Armenian"
-msgstr "arménsky"
-
-#: ../translation-teams.xml.in.h:6
-msgid "Assamese"
-msgstr "asamský"
-
-#: ../translation-teams.xml.in.h:7
-msgid "Australian English"
-msgstr "anglický (Austrália)"
-
-#: ../translation-teams.xml.in.h:8
-msgid "Azerbaijani"
-msgstr "azerbajdžanský"
-
-#: ../translation-teams.xml.in.h:9
-msgid "Balochi"
-msgstr "balúcky"
-
-#: ../translation-teams.xml.in.h:10
-msgid "Basque"
-msgstr "baskický"
-
-#: ../translation-teams.xml.in.h:11
-msgid "Belarusian"
-msgstr "bieloruský"
-
-#: ../translation-teams.xml.in.h:12
-msgid "Belarusian Latin"
-msgstr "bieloruský - latinka"
-
-#: ../translation-teams.xml.in.h:13
-msgid "Bengali"
-msgstr "bengálsky"
-
-#: ../translation-teams.xml.in.h:14
-msgid "Bengali (India)"
-msgstr "bengálsky (India)"
-
-#: ../translation-teams.xml.in.h:15
-msgid "Bosnian"
-msgstr "bosniansky"
-
-#: ../translation-teams.xml.in.h:16
-msgid "Brazilian Portuguese"
-msgstr "portugalský (Brazília)"
-
-#: ../translation-teams.xml.in.h:17
-msgid "Breton"
-msgstr "bretónsky"
-
-#: ../translation-teams.xml.in.h:18
-msgid "British English"
-msgstr "anglický (Veľká Británia)"
-
-#: ../translation-teams.xml.in.h:19
-msgid "Bulgarian"
-msgstr "bulharský"
-
-#: ../translation-teams.xml.in.h:20
-msgid "Canadian English"
-msgstr "anglický (Kanada)"
-
-#: ../translation-teams.xml.in.h:21
-msgid "Catalan"
-msgstr "katalánsky"
-
-#: ../translation-teams.xml.in.h:22
-msgid "Chinese (China)"
-msgstr "čínsky (Čína)"
-
-#: ../translation-teams.xml.in.h:23
-msgid "Chinese (Hong Kong)"
-msgstr "čínsky (Hong Kong)"
-
-#: ../translation-teams.xml.in.h:24
-msgid "Chinese (Taiwan)"
-msgstr "čínsky (Taiwan)"
-
-#: ../translation-teams.xml.in.h:25
-msgid "Chinese Traditional"
-msgstr "čínsky - tradičný"
-
-#: ../translation-teams.xml.in.h:26
-msgid "Crimean Tatar"
-msgstr "tatársky (Krym)"
-
-#: ../translation-teams.xml.in.h:27
-msgid "Croatian"
-msgstr "chorvátsky"
-
-#: ../translation-teams.xml.in.h:28
-msgid "Czech"
-msgstr "český"
-
-#: ../translation-teams.xml.in.h:29
-msgid "Danish"
-msgstr "dánsky"
-
-#: ../translation-teams.xml.in.h:30
-msgid "Dutch"
-msgstr "holandský"
-
-#: ../translation-teams.xml.in.h:31
-msgid "Dzongkha"
-msgstr "dzongkä"
-
-#: ../translation-teams.xml.in.h:32
-msgid "Esperanto"
-msgstr "esperanto"
-
-#: ../translation-teams.xml.in.h:33
-msgid "Estonian"
-msgstr "estónsky"
-
-#: ../translation-teams.xml.in.h:34
-msgid "Finnish"
-msgstr "fínsky"
-
-#: ../translation-teams.xml.in.h:35
-msgid "French"
-msgstr "francúzsky"
-
-#: ../translation-teams.xml.in.h:36
-msgid "Friulian"
-msgstr "friulský"
-
-#: ../translation-teams.xml.in.h:37
-msgid "Fula"
-msgstr "fulbský"
-
-#: ../translation-teams.xml.in.h:38
-msgid "Galician"
-msgstr "galícijský"
-
-#: ../translation-teams.xml.in.h:39
-msgid "Georgian"
-msgstr "gruzínsky"
-
-#: ../translation-teams.xml.in.h:40
-msgid "German"
-msgstr "nemecký"
-
-#: ../translation-teams.xml.in.h:41
-msgid "Greek"
-msgstr "grécky"
-
-#: ../translation-teams.xml.in.h:42
-msgid "Guarani"
-msgstr "guaraníjsky"
-
-#: ../translation-teams.xml.in.h:43
-msgid "Gujarati"
-msgstr "gudžarátsky"
-
-#: ../translation-teams.xml.in.h:44
-msgid "Hebrew"
-msgstr "hebrejský"
-
-#: ../translation-teams.xml.in.h:45
-msgid "Hindi"
-msgstr "hindský"
-
-#: ../translation-teams.xml.in.h:46
-msgid "Hungarian"
-msgstr "maďarský"
-
-#: ../translation-teams.xml.in.h:47
-msgid "Icelandic"
-msgstr "islandský"
-
-#: ../translation-teams.xml.in.h:48
-msgid "Ido"
-msgstr "ido"
-
-#: ../translation-teams.xml.in.h:49
-msgid "Indonesian"
-msgstr "indonézsky"
-
-#: ../translation-teams.xml.in.h:50
-msgid "Iranian Azerbaijani"
-msgstr "azerbajdžanský (Irán)"
-
-#: ../translation-teams.xml.in.h:51
-msgid "Irish"
-msgstr "írsky"
-
-#: ../translation-teams.xml.in.h:52
-msgid "Italian"
-msgstr "taliansky"
-
-#: ../translation-teams.xml.in.h:53
-msgid "Japanese"
-msgstr "japonský"
-
-#: ../translation-teams.xml.in.h:54
-msgid "Kannada"
-msgstr "kannadský"
-
-#: ../translation-teams.xml.in.h:55
-msgid "Kashmiri"
-msgstr "kašmírsky"
-
-#: ../translation-teams.xml.in.h:56
-msgid "Kazakh"
-msgstr "kazašský"
-
-#: ../translation-teams.xml.in.h:57
-msgid "Khmer"
-msgstr "kmérsky"
-
-#: ../translation-teams.xml.in.h:58
-msgid "Kinyarwanda"
-msgstr "rwandský"
-
-#: ../translation-teams.xml.in.h:59
-msgid "Kirghiz"
-msgstr "kirgizský"
-
-#: ../translation-teams.xml.in.h:60
-msgid "Korean"
-msgstr "kórejský"
-
-#: ../translation-teams.xml.in.h:61
-msgid "Kurdish"
-msgstr "kurdský"
-
-#: ../translation-teams.xml.in.h:62
-msgid "Latin"
-msgstr "latinský"
-
-#: ../translation-teams.xml.in.h:63
-msgid "Latvian"
-msgstr "lotyšský"
-
-#: ../translation-teams.xml.in.h:64
-msgid "Limburgian"
-msgstr "limburský"
-
-#: ../translation-teams.xml.in.h:65
-msgid "Lithuanian"
-msgstr "litovský"
-
-#: ../translation-teams.xml.in.h:66
-msgid "Low German"
-msgstr "dolnosaský"
-
-#: ../translation-teams.xml.in.h:67
-msgid "Low German and Saxon"
-msgstr "dolnonemecký a dolnosaský"
-
-#: ../translation-teams.xml.in.h:68
-msgid "Low Saxon, Germany"
-msgstr "dolnosaský (Nemecko)"
-
-#: ../translation-teams.xml.in.h:69
-msgid "Macedonian"
-msgstr "macedónsky"
-
-#: ../translation-teams.xml.in.h:70
-msgid "Maithili"
-msgstr "maithilsky"
-
-#: ../translation-teams.xml.in.h:71
-msgid "Malagasy"
-msgstr "malgaský"
-
-#: ../translation-teams.xml.in.h:72
-msgid "Malay"
-msgstr "malajský"
-
-#: ../translation-teams.xml.in.h:73
-msgid "Malayalam"
-msgstr "malajalámsky"
-
-#: ../translation-teams.xml.in.h:74
-msgid "Maori"
-msgstr "maorijský"
-
-#: ../translation-teams.xml.in.h:75
-msgid "Marathi"
-msgstr "maráthsky"
-
-#: ../translation-teams.xml.in.h:76
-msgid "Mongolian"
-msgstr "mongolský"
-
-#: ../translation-teams.xml.in.h:77
-msgid "Nepali"
-msgstr "nepálsky"
-
-#: ../translation-teams.xml.in.h:78
-msgid "Northern Sotho"
-msgstr "sothský - severný"
-
-#: ../translation-teams.xml.in.h:79
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "nórsky"
-
-#: ../translation-teams.xml.in.h:80
-msgid "Norwegian Bokmål"
-msgstr "nórsky - bokmål"
-
-#: ../translation-teams.xml.in.h:81
-msgid "Norwegian Nynorsk"
-msgstr "nórsky - nynorsk"
-
-#: ../translation-teams.xml.in.h:82
-msgid "Occitan"
-msgstr "okcitánsky"
-
-#: ../translation-teams.xml.in.h:83
-msgid "Old English"
-msgstr "staroanglický"
-
-#: ../translation-teams.xml.in.h:84
-msgid "Oriya"
-msgstr "urijský"
-
-#: ../translation-teams.xml.in.h:85
-msgid "Pashto"
-msgstr "paštúnsky"
-
-#: ../translation-teams.xml.in.h:86
-msgid "Persian"
-msgstr "perzský"
-
-#: ../translation-teams.xml.in.h:87
-msgid "Polish"
-msgstr "poľský"
-
-#: ../translation-teams.xml.in.h:88
-msgid "Portuguese"
-msgstr "portugalský"
-
-#: ../translation-teams.xml.in.h:89
-msgid "Punjabi"
-msgstr "pandžábsky"
-
-#: ../translation-teams.xml.in.h:90
-msgid "Romanian"
-msgstr "rumunský"
-
-#: ../translation-teams.xml.in.h:91
-msgid "Russian"
-msgstr "ruský"
-
-#: ../translation-teams.xml.in.h:92
-msgid "Serbian"
-msgstr "srbský"
-
-#: ../translation-teams.xml.in.h:93
-msgid "Serbian Jekavian"
-msgstr "srbský - jekavský"
-
-#. deprecated id
-#: ../translation-teams.xml.in.h:95
-msgid "Serbian Latin"
-msgstr "srbský - latinka"
-
-#: ../translation-teams.xml.in.h:96
-msgid "Sinhala"
-msgstr "sinhalský"
-
-#: ../translation-teams.xml.in.h:97
-msgid "Slovak"
-msgstr "slovenský"
-
-#: ../translation-teams.xml.in.h:98
-msgid "Slovenian"
-msgstr "slovinský"
-
-#: ../translation-teams.xml.in.h:99
-msgid "Spanish"
-msgstr "španielsky"
-
-#: ../translation-teams.xml.in.h:100
-msgid "Swedish"
-msgstr "švédsky"
-
-#: ../translation-teams.xml.in.h:101
-msgid "Tagalog"
-msgstr "tagalský"
-
-#: ../translation-teams.xml.in.h:102
-msgid "Tajik"
-msgstr "tadžiský"
-
-#: ../translation-teams.xml.in.h:103
-msgid "Tamil"
-msgstr "tamilský"
-
-#: ../translation-teams.xml.in.h:104
-msgid "Tatar"
-msgstr "tatársky"
-
-#: ../translation-teams.xml.in.h:105
-msgid "Telugu"
-msgstr "telúgsky"
-
-#: ../translation-teams.xml.in.h:106
-msgid "Thai"
-msgstr "thajský"
-
-#: ../translation-teams.xml.in.h:107
-msgid "Turkish"
-msgstr "turecký"
-
-#: ../translation-teams.xml.in.h:108
-msgid "Turkmen"
-msgstr "turkménsky"
-
-#: ../translation-teams.xml.in.h:109
-msgid "Uighur"
-msgstr "ujgurský"
-
-#: ../translation-teams.xml.in.h:110
-msgid "Ukrainian"
-msgstr "ukrajinský"
-
-#: ../translation-teams.xml.in.h:111
-msgid "Urdu"
-msgstr "urdský"
-
-#: ../translation-teams.xml.in.h:112
-msgid "Uzbek"
-msgstr "uzbecký"
-
-#: ../translation-teams.xml.in.h:113
-msgid "Uzbek (Cyrillic)"
-msgstr "uzbecký - cyrilika"
-
-#: ../translation-teams.xml.in.h:114
-msgid "Uzbek (Latin)"
-msgstr "uzbecký - latinka"
-
-#: ../translation-teams.xml.in.h:115
-msgid "Valencian-Catalan"
-msgstr "katalánsky - valencijský"
-
-#: ../translation-teams.xml.in.h:116
-msgid "Vietnamese"
-msgstr "vietnamský"
-
-#: ../translation-teams.xml.in.h:117
-msgid "Walloon"
-msgstr "walónsky"
-
-#: ../translation-teams.xml.in.h:118
-msgid "Welsh"
-msgstr "waleský"
-
-#: ../translation-teams.xml.in.h:119
-msgid "Xhosa"
-msgstr "xhoský"
-
-#: ../translation-teams.xml.in.h:120
-msgid "Yiddish"
-msgstr "jidišský"
-
-#: ../translation-teams.xml.in.h:121
-msgid "Yoruba"
-msgstr "jorubský"
-
-#: ../translation-teams.xml.in.h:122
-msgid "Zulu"
-msgstr "zuluský"
-
-#: ../update-stats.py:207
+#: database-content.py:230
+msgid "GNOME 2.24 (stable)"
+msgstr "GNOME 2.24 (stabilné)"
+
+#: database-content.py:231
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (staré stabilné)"
+
+#: database-content.py:232
+msgid "GNOME-Office Productivity Applications"
+msgstr "Kancelárske aplikácie GNOME"
+
+#: database-content.py:233
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (staré stabilné)"
+
+#: database-content.py:234
+msgid "GNOME 2.26 (Development)"
+msgstr "GNOME 2.26 (vývojové)"
+
+#: common/views.py:25
+msgid "translator-credits"
+msgstr "Pavol Šimo <palo.simo@gmail.com>"
+
+#: stats/models.py:235
 msgid "Can't generate POT file, using old one."
 msgstr "Nedá sa vygenerovať POT súbor, použil sa starý."
 
-#: ../update-stats.py:210
-msgid "Can't generate POT file, using old one if it exists."
-msgstr "Nedá sa vygenerovať POT súbor, ak existuje, použije sa starý."
-
-#: ../update-stats.py:239
+#: stats/models.py:260
 msgid "Can't copy new POT file to public location."
 msgstr "Nepodarilo sa skopírovať nový POT súbor na verejné miesto."
 
-#: ../update-stats.py:251 ../templates/language-release.tmpl:49
-#, c-format, python-format
-msgid "There is no translation team in charge of '%s' translation."
-msgstr "Žiaden tím nie je zodpovedný za preklad '%s'."
+#: stats/models.py:297
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "Zoznam DOC_LINGUAS neobsahuje tento jazyk."
 
-#: ../update-stats.py:327
-msgid "Entry for this language is not present in LINGUAS file."
-msgstr "V súbore LINGUAS sa nenachádza záznam pre tento jazyk."
-
-#: ../update-stats.py:354
+#: stats/models.py:492
+#, python-format
 msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
+"Error regenerating POT file for %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
-"Záznam pre tento jazyk sa nenachádza medzi ALL_LINGUAS v súbore configure."
+"Chyba obnovenia POT súboru pre %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 
-#: ../update-stats.py:357
-msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr ""
-"Nie je známe, kde zistiť, či sa tento jazyk v skutočnosti používa, spýtajte "
-"sa správcu modulu."
+#: stats/models.py:739
+msgid "Administration Tools"
+msgstr "Nástroje na spravovanie"
 
-#: ../update-stats.py:371
+#: stats/models.py:740
+msgid "Development Tools"
+msgstr "Vývojárske nástroje"
+
+#: stats/models.py:741
+msgid "GNOME Desktop"
+msgstr "Prostredie GNOME"
+
+#: stats/models.py:742
+msgid "GNOME Developer Platform"
+msgstr "Vývojárska platforma GNOME"
+
+#: stats/models.py:743
+msgid "New Module Proposals"
+msgstr "Návrhy na nové moduly"
+
+#: stats/models.py:813
+#, python-format
+msgid "%(lang_name)s (%(lang_locale)s)"
+msgstr "%(lang_name)s (%(lang_locale)s)"
+
+#: stats/models.py:843
+#, python-format
+msgid "%(count)s message"
+msgid_plural "%(count)s messages"
+msgstr[0] "%(count)s správ"
+msgstr[1] "%(count)s správa"
+msgstr[2] "%(count)s správy"
+
+#: stats/models.py:844
+#, python-format
+msgid "updated on %(date)s"
+msgstr "posledná aktualizácia %(date)s"
+
+#: stats/models.py:846
+#, python-format
+msgid "%(count)s figure"
+msgid_plural "%(count)s figures"
+msgstr[0] "%(count)s obrázkov"
+msgstr[1] "%(count)s obrázok"
+msgstr[2] "%(count)s obrázky"
+
+#: stats/models.py:847
+#, python-format
+msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgstr "POT súbor (%(messages)s, %(figures)s) — %(updated)s"
+
+#: stats/models.py:850
+#, python-format
+msgid "POT file (%(messages)s) — %(updated)s"
+msgstr "POT súbor (%(messages)s) — %(updated)s"
+
+#: stats/utils.py:54
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Chyby počas behu kontroly 'intltool-update -m'."
 
-#: ../update-stats.py:377
+#: stats/utils.py:60
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Niektoré súbory nie sú uvedené v POTFILES.in: %s"
 
-#: ../update-stats.py:386
+#: stats/utils.py:69
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1032,134 +1069,147 @@ msgstr ""
 "Nasledujúce súbory sú odkazované buď z POTFILES.in alebo z POTFILES.skip, "
 "ale neexistujú: %s"
 
-#: ../update-stats.py:400
-#, python-format
-msgid "PO file '%s' doesn't exist."
-msgstr "PO súbor '%s' neexistuje."
-
-#: ../update-stats.py:413
-#, python-format
-msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr "PO súbor '%s' neprešiel testom msgfmt: neaktualizuje sa."
-
-#: ../update-stats.py:415
-#, python-format
-msgid "Can't get statistics for POT file '%s'."
-msgstr "Nepodarilo sa získať štatistiky pre POT súbor '%s'."
-
-#: ../update-stats.py:418
-msgid "This PO file has an executable bit set."
-msgstr "Tento PO súbor má nastavený spustiteľný príznak."
-
-#: ../update-stats.py:443
-#, python-format
-msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "PO súbor '%s' nemá kódovanie UTF-8."
-
-#: ../update-stats.py:516
-msgid "Can't find checkout directory."
-msgstr "Nenašiel sa adresár pre checkout."
-
-#: ../update-stats.py:548
+#: stats/utils.py:81
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s nevyzerá ako modul pre gnome-doc-utils."
 
-#: ../update-stats.py:553
+#: stats/utils.py:84
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE sa nerozvinul na reálny súbor, použije sa '%s.xml'."
 
-#: ../update-stats.py:556
+#: stats/utils.py:87
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE neukazuje na reálny súbor, možno je to makro."
 
-#: ../update-stats.py:582
+#: stats/utils.py:102
 #, python-format
 msgid ""
-"Error regenerating POT file for document %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"Error regenerating POT file for document %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
-"Chyba obnovenia POT súboru pre dokument %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"Chyba obnovenia POT súboru pre dokument %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 
-#: ../update-stats.py:611
+#: stats/utils.py:152
 #, python-format
-msgid "There is no translation team in charge of %s."
-msgstr "Žiaden tím nie je zodpovedný za preklad '%s'."
+msgid "PO file '%s' doesn't exist."
+msgstr "PO súbor '%s' neexistuje."
 
-#: ../update-stats.py:655
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "Zoznam DOC_LINGUAS neobsahuje tento jazyk."
+#: stats/utils.py:165
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr "PO súbor '%s' neprešiel testom msgfmt: neaktualizuje sa."
 
-#: ../templates/footer.tmpl:4
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
+#: stats/utils.py:167
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "Nepodarilo sa získať štatistiky pre POT súbor '%s'."
 
-#: ../templates/footer.tmpl:6
+#: stats/utils.py:170
+msgid "This PO file has an executable bit set."
+msgstr "Tento PO súbor má nastavený spustiteľný príznak."
+
+#: stats/utils.py:195
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "PO súbor '%s' nemá kódovanie UTF-8."
+
+#: stats/utils.py:228
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "V súbore LINGUAS sa nenachádza záznam pre tento jazyk."
+
+#: stats/utils.py:255
 msgid ""
-"Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-"\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
-"org</a>"
+"Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
-"Spravované v module <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-"\">damned-lies</a> na <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>"
+"Záznam pre tento jazyk sa nenachádza medzi ALL_LINGUAS v súbore configure."
 
-#: ../templates/footer.tmpl:8
-msgid "Hosted by"
-msgstr "Hosťovanie od"
+#: stats/utils.py:258
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+"Nie je známe, kde zistiť, či sa tento jazyk v skutočnosti používa, spýtajte "
+"sa správcu modulu."
 
-#: ../templates/header.tmpl:35 ../templates/header.tmpl:64
+#: teams/models.py:58
+#, python-format
+msgid "No team for locale %s"
+msgstr "Žiaden tím pre jazyk %s"
+
+#: templates/base.html:24 templates/base.html.py:53
 msgid "Home"
 msgstr "Domov"
 
-#: ../templates/header.tmpl:38
+#: templates/base.html:27
 msgid "News"
 msgstr "Novinky"
 
-#: ../templates/header.tmpl:41
+#: templates/base.html:30
 msgid "Projects"
 msgstr "Projekty"
 
-#: ../templates/header.tmpl:44
+#: templates/base.html:33
 msgid "Art"
 msgstr "Umenie"
 
-#: ../templates/header.tmpl:47
+#: templates/base.html:36
 msgid "Support"
 msgstr "Podpora"
 
-#: ../templates/header.tmpl:50
+#: templates/base.html:39
 msgid "Development"
 msgstr "Vývoj"
 
-#: ../templates/header.tmpl:53
+#: templates/base.html:42
 msgid "Community"
 msgstr "Komunita"
 
-#: ../templates/header.tmpl:70 ../templates/index.tmpl:13
+#: templates/base.html:53
+msgid "Back to Damned Lies home page"
+msgstr "Späť na domovskú stránku Damned Lies"
+
+#: templates/base.html:59 templates/index.html:13
 msgid "Teams"
 msgstr "Tímy"
 
-#: ../templates/header.tmpl:75 ../templates/index.tmpl:20
+#: templates/base.html:64 templates/index.html:20
 msgid "Languages"
 msgstr "Jazyky"
 
-#: ../templates/header.tmpl:80
+#: templates/base.html:69
 msgid "Release sets"
 msgstr "Zostavy vydaní"
 
-#: ../templates/header.tmpl:85 ../templates/index.tmpl:35
+#: templates/base.html:74 templates/index.html:36
 msgid "Modules"
 msgstr "Moduly"
 
-#: ../templates/index.tmpl:9
+#: templates/base.html:88
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
+#: templates/base.html:90
+msgid ""
+"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgstr ""
+"Spravované v module <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
+"\">damned-lies</a> na <a href=\"http://svn.gnome.org/\">svn.gnome.org</a>."
+
+#: templates/base.html:92
+msgid "Hosted by"
+msgstr "Hosťovanie od"
+
+#: templates/index.html:4 templates/index.html.py:9
 msgid "Damned Lies about GNOME"
 msgstr "Prekliate lži o GNOME"
 
-#: ../templates/index.tmpl:14
+#: templates/index.html:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -1167,22 +1217,24 @@ msgstr ""
 "Zoznam lokalizačných tímov GNOME, s plnými informáciami o každom, ako "
 "napríklad primárny kontakt (na koordinátora), WWW stránky a mailing list."
 
-#: ../templates/index.tmpl:15
+#: templates/index.html:15
 msgid ""
-"If there is no team for your language, you can easily <a href=\"http://live."
-"gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
 "Ak tím pre váš jazyk neexistuje, poľahky môžete <a href=\"http://live.gnome."
 "org/TranslationProject/StartingATeam/\">založiť vlastný tím</a>."
 
-#: ../templates/index.tmpl:21
+#: templates/index.html:22
+#, python-format
 msgid ""
-"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
 msgstr ""
-"Zoznam všetkých jazykov spravovaných <a href=\"teams/\">lokalizačnými "
+"Zoznam všetkých jazykov spravovaných <a href='%(teams_url)s'>lokalizačnými "
 "tímami</a>."
 
-#: ../templates/index.tmpl:22
+#: templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1190,31 +1242,31 @@ msgstr ""
 "Niektoré tímy spravujú viac ako jeden jazyk (väčšinou jednoduché varianty). "
 "Tu sa nachádzajú všetky jazyky, do ktorých je GNOME preložené."
 
-#: ../templates/index.tmpl:26
+#: templates/index.html:27
 msgid "Release Sets"
 msgstr "Zostavy vydaní"
 
-#: ../templates/index.tmpl:27
+#: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr "Zoznam všetkých zostáv vydaní a vydaní, ku ktorým zbierame štatistiky."
 
-#: ../templates/index.tmpl:29
+#: templates/index.html:30
 msgid ""
-"Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
-"\"."
+"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"or &quot;GNOME 2.14&quot;."
 msgstr ""
-"Príklady zostáv vydaní sú \"GNOME Office\", \"Fifth Toe\" alebo \"GNOME 2.14"
-"\"."
+"Príklady zostáv vydaní sú &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"alebo &quot;GNOME 2.14&quot;."
 
-#: ../templates/index.tmpl:30
+#: templates/index.html:31
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
-"\"Desktop Applications\" and \"Developer Platform\"."
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
 "Oficiálne zostavy vydaní GNOME sa ďalej delia do kategórií, ako napríklad "
-"\"Aplikácie prostredia\" a \"Vývojárska platforma\"."
+"&quot;Aplikácie prostredia&quot; a &quot;Vývojárska platforma&quot;."
 
-#: ../templates/index.tmpl:32
+#: templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -1222,11 +1274,11 @@ msgstr ""
 "Pozrite sa sem na porovnanie jazykovej podpory v jednotlivých zostavách "
 "vydaní."
 
-#: ../templates/index.tmpl:36
+#: templates/index.html:37
 msgid "List of all modules with statistics in here."
 msgstr "Tu sa nachádzajú štatistiky pre všetky moduly."
 
-#: ../templates/index.tmpl:38
+#: templates/index.html:39
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1234,7 +1286,7 @@ msgstr ""
 "Moduly sú oddelené knižnice alebo aplikácie, vrátane jednej alebo viacerých "
 "vetiev vývoja."
 
-#: ../templates/index.tmpl:39
+#: templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
@@ -1242,177 +1294,16 @@ msgstr ""
 "Väčšinou sú získavané z CVS a obsahujú príslušné informácie o nich (detaily "
 "z Bugzily, WWW stránky, informácie o správcovi, atď.)."
 
-#. The list of translators appears in the footer of the Damned Lies translated home page
-#: ../templates/index.tmpl:46
+#: templates/index.html:46
 msgid "Translated by:"
 msgstr "Prekladatelia:"
 
-#: ../templates/index.tmpl:46
-msgid "translator-credits"
-msgstr "Pavol Šimo <palo.simo@gmail.com>"
+#: templates/module.html:4
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "Štatistiky pre modul: %(name)s"
 
-#: ../templates/language-release-doc-stats.tmpl:26
-#: ../templates/language-release-ui-stats.tmpl:27
-msgid "%(cat)s (%(percent)s%% translated)"
-msgstr "%(cat)s (preložených %(percent)s%%)"
-
-#: ../templates/language-release.tmpl:8
-#, fuzzy
-msgid "%(lang)s Translation Team — %(language)s"
-msgstr "Stránka pre %(lang)s lokalizačný tím"
-
-#: ../templates/language-release.tmpl:11 ../templates/team.tmpl:11
-msgid "Details"
-msgstr "Detaily"
-
-#: ../templates/language-release.tmpl:14 ../templates/team.tmpl:14
-msgid "%(lang)s Translation Team Page:"
-msgstr "Stránka pre %(lang)s lokalizačný tím"
-
-#: ../templates/language-release.tmpl:18 ../templates/team.tmpl:18
-msgid "Users Web Page:"
-msgstr "WWW stránka používateľa:"
-
-#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
-msgid "Bugzilla:"
-msgstr "Bugzilla:"
-
-#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
-msgid "Report Bug in Translation"
-msgstr "Ohlásiť chybu v preklade"
-
-#: ../templates/language-release.tmpl:25 ../templates/team.tmpl:25
-msgid "Show Existing Bugs"
-msgstr "Zobraziť existujúce chyby"
-
-#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:30
-msgid "Mailing List:"
-msgstr "Mailing list:"
-
-#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:32
-msgid "Send e-mail to the list"
-msgstr "Odoslať e-mail do mailing listu"
-
-#: ../templates/language-release.tmpl:34 ../templates/team.tmpl:34
-msgid "Subscribe"
-msgstr "Prihlásiť sa"
-
-#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:41
-msgid "Coordinator"
-msgstr "Koordinátor"
-
-#: ../templates/language-release.tmpl:48 ../templates/team.tmpl:49
-#, c-format
-msgid "Language code: %s"
-msgstr "Kód jazyka: %s"
-
-#: ../templates/language-release.tmpl:55
-msgid "Hide completed modules"
-msgstr "Skryť dokončené moduly"
-
-#: ../templates/language-release.tmpl:59
-msgid "Show completed modules"
-msgstr "Ukázať dokončené moduly"
-
-#: ../templates/language-release.tmpl:63 ../templates/release.tmpl:9
-msgid ""
-"The modules of this release are not part of the GNOME SVN repository. Please "
-"check each module's web page to see where to send translations."
-msgstr ""
-"Moduly tohto vydania nie sú súčasťou SVN repozitára GNOME. Ak chcete zistiť, "
-"kam posielať preklady, skontrolujte WWW stránku každého z modulov."
-
-#: ../templates/language-release.tmpl:69 ../templates/module.tmpl:78
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
-msgid "Documentation"
-msgstr "Dokumentácia"
-
-#: ../templates/list-languages.tmpl:7
-msgid "GNOME Languages"
-msgstr "Jazyky GNOME"
-
-#: ../templates/list-languages.tmpl:11
-msgid "GNOME is being translated to following %(count)s language:"
-msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] "GNOME je prekladané do nasledujúcich %(count)s jazykov:"
-msgstr[1] "GNOME je prekladané do nasledujúceho %(count)s jazyka:"
-msgstr[2] "GNOME je prekladané do nasledujúcich %(count)s jazykov:"
-
-#: ../templates/list-languages.tmpl:27
-msgid "GNOME is currently not being translated to any language. :("
-msgstr "GNOME nie je momentálne preložené do žiadneho jazyka. :-("
-
-#: ../templates/list-modules.tmpl:7
-msgid "GNOME modules"
-msgstr "Moduly GNOME"
-
-#: ../templates/list-modules.tmpl:10
-msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Zvolením modulu nižšie sa zobrazí viac informácií o ňom:"
-
-#: ../templates/list-modules.tmpl:21
-msgid ""
-"There are currently no modules for which I am gathering damned lies for. "
-"Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
-msgstr ""
-"Momentálne tu nie sú žiadne moduly, pre ktoré sa zbierajú štatistiky.Dajte o "
-"tom vedieť vedieť <a href=\"danilo@gnome.org\">Danilovi</a>!"
-
-#: ../templates/list-releases.tmpl:7
-msgid "GNOME Releases"
-msgstr "Vydania GNOME"
-
-#: ../templates/list-releases.tmpl:10
-msgid "Select a release or a release set below to see more details about it:"
-msgstr ""
-"Zvolením vydania alebo zostavy vydaní nižšie sa zobrazí viac informácií o "
-"nej:"
-
-#: ../templates/list-releases.tmpl:27
-msgid "There are currently no releases defined in GNOME. :("
-msgstr "Momentálne nie sú definované žiadne vydania GNOME. :-("
-
-#: ../templates/list-teams.tmpl:7
-msgid "GNOME Translation Teams"
-msgstr "Lokalizačné tímy GNOME"
-
-#: ../templates/list-teams.tmpl:10
-msgid "Select a team below to see more information about it:"
-msgstr "Zvolením tímu nižšie sa zobrazí viac informácií o ňom:"
-
-#: ../templates/list-teams.tmpl:20
-msgid "Coordinated by %(coordinator)s"
-msgstr "Koordinátor: %(coordinator)s"
-
-#: ../templates/list-teams.tmpl:26
-msgid "There are currently no translation teams in GNOME. :("
-msgstr "Momentálne v GNOME nie sú žiadne prekladateľské tímy. :-("
-
-#: ../templates/module-images.tmpl:9
-msgid "Figures translation status"
-msgstr "Zisťuje stav prekladu"
-
-#: ../templates/module-images.tmpl:12
-msgid "Original"
-msgstr "Pôvodný"
-
-#: ../templates/module-images.tmpl:28
-msgid ""
-"Translated, but uses original one (maybe the figure doesn't contain any "
-"string to translate)"
-msgstr ""
-"Preložené, ale používa pôvodné (možno obrázok neobsahuje žiadne preložiteľné "
-"reťazce)"
-
-#: ../templates/module-images.tmpl:36
-msgid "No existing file (\"Technical\" fuzzy)"
-msgstr "Súbor neexistuje (\"technicky\" nepresný)"
-
-#: ../templates/module-images.tmpl:39
-msgid "Not translated"
-msgstr "Nepreložené"
-
-#: ../templates/module.tmpl:12
+#: templates/module.html:15
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1420,145 +1311,366 @@ msgstr ""
 "Tento modul nie je súčasťou SVN repozitára GNOME. Ak chcete zistiť, kam "
 "posielať preklady, prezrite si WWW stránku modulu."
 
-#: ../templates/module.tmpl:20
+#: templates/module.html:26
 msgid "Maintainers"
 msgstr "Správcovia"
 
-#: ../templates/module.tmpl:36
+#: templates/module.html:37
 msgid "Bug reporting"
 msgstr "Hlásenie chýb"
 
-#: ../templates/module.tmpl:39
+#: templates/module.html:40
 msgid "Show existing i18n and l10n bugs"
 msgstr "Zobraziť existujúce chyby v prekladoch"
 
-#: ../templates/module.tmpl:41
+#: templates/module.html:42
 msgid "Report bugs to Bugzilla"
 msgstr "Nahlásiť chybu do systému Bugzilla"
 
-#: ../templates/module.tmpl:48
+#: templates/module.html:50
 msgid "Branches:"
 msgstr "Vetvy:"
 
-#: ../templates/module.tmpl:63
+#: templates/module.html:63
 msgid "Browse CVS"
 msgstr "Prehliadať CVS"
 
-#: ../templates/module.tmpl:65 ../templates/module.tmpl:67
+#: templates/module.html:66
 msgid "Browse SVN"
 msgstr "Prehliadať SVN"
 
-#: ../templates/module.tmpl:71
+#: templates/module.html:70
 msgid "This branch is currently string-frozen."
 msgstr "Táto vetva je momentálne zmrazená pre reťazce"
 
-#: ../templates/module.tmpl:98
+#: templates/module.html:77 templates/release.html:17
+#: templates/languages/language_release.html:70
+#: templates/teams/team_detail.html:55
+msgid "Documentation"
+msgstr "Dokumentácia"
+
+#: templates/module.html:87
 msgid "Translation"
 msgstr "Preklad"
 
-#: ../templates/people.tmpl:7
-msgid "GNOME Contributors"
-msgstr "Prispievatelia do GNOME"
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
+msgstr "Stav obrázkovej dokumentácie modulu: %(name)s"
 
-#: ../templates/people.tmpl:10
-msgid "GNOME is being developed by following people:"
-msgstr "GNOME je vyvíjané týmito ľuďmi:"
+#: templates/module_images.html:12
+msgid "Figures translation status"
+msgstr "Zisťuje stav prekladu"
 
-#: ../templates/people.tmpl:32
-msgid "There are no contributors, GNOME turned itself up from nothing."
-msgstr "Nie sú tu žiadni prispievatelia, GNOME sa vytvorilo z ničoho."
+#: templates/module_images.html:17
+msgid "Original"
+msgstr "Pôvodný"
 
-#: ../templates/person-base.tmpl:26
+#: templates/module_images.html:32
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr ""
+"Preložené, ale používa pôvodné (možno obrázok neobsahuje žiadne preložiteľné "
+"reťazce)"
+
+#: templates/module_images.html:36
+msgid "Fuzzy"
+msgstr "Nepresné"
+
+#: templates/module_images.html:41
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
+msgstr "Súbor neexistuje (&quot;technicky&quot; nepresný)"
+
+#: templates/module_images.html:44
+msgid "Not translated"
+msgstr "Nepreložené"
+
+#: templates/module_list.html:4 templates/module_list.html.py:9
+msgid "GNOME Modules"
+msgstr "Moduly GNOME"
+
+#: templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr "Zvolením modulu nižšie sa zobrazí viac informácií o ňom:"
+
+#: templates/person_base.html:24
 msgid "Instant messaging:"
 msgstr "Okamžité správy:"
 
-#: ../templates/person-base.tmpl:40
+#: templates/person_base.html:31
 msgid "Bugzilla account:"
 msgstr "Bugzilla účet:"
 
-#: ../templates/person-base.tmpl:43
+#: templates/person_base.html:35
 msgid "SVN account:"
 msgstr "SVN účet:"
 
-#: ../templates/person-base.tmpl:47
+#: templates/person_base.html:40
 msgid "Maintains:"
 msgstr "Spravuje:"
 
-#: ../templates/person-base.tmpl:57
-msgid "Translates:"
-msgstr "Prekladá:"
+#: templates/person_base.html:49
+msgid "Coordinates:"
+msgstr "Koordinuje:"
 
-#: ../templates/person-base.tmpl:67
-msgid "Coordinates %(team)s"
-msgstr "Koordinuje %(team)s"
+#: templates/person_base.html:53
+#, python-format
+msgid "Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>"
+msgstr "Koordinuje <a href=\"%(team_url)s\">%(team_desc)s</a>"
 
-#: ../templates/release.tmpl:7
-msgid "%(release)s Release"
-msgstr "Vydanie %(release)s"
+#: templates/release.html:10
+#, python-format
+msgid "%(name)s Release"
+msgstr "Vydanie %(name)s"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
+#: templates/release.html:13 templates/languages/language_release.html:64
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"Moduly tohto vydania nie sú súčasťou SVN repozitára GNOME. Ak chcete zistiť, "
+"kam posielať preklady, skontrolujte WWW stránku každého z modulov."
+
+#: templates/release.html:17 templates/teams/team_detail.html:55
 msgid "Release"
 msgstr "Vydanie"
 
-#: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
-#: ../templates/team.tmpl:60
+#: templates/release.html:17 templates/stats_show.html:29
+#: templates/teams/team_detail.html:55 templates/teams/team_detail.html:56
 msgid "Graph"
 msgstr "Graf"
 
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:60
+#: templates/release.html:17 templates/teams/team_detail.html:56
 msgid "User Interface"
 msgstr "Používateľské rozhranie"
 
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:72
-msgid "-"
-msgstr "-"
+#: templates/release_list.html:4 templates/release_list.html.py:9
+msgid "GNOME Releases"
+msgstr "Vydania GNOME"
 
-#: ../templates/show-stats.tmpl:15
-msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
-msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
-msgstr[0] "POT súbor (%(potsize)s reťazcov, %(number)s %(figures)s)"
-msgstr[1] "POT súbor (%(potsize)s reťazec, %(number)s %(figures)s)"
-msgstr[2] "POT súbor (%(potsize)s reťazce, %(number)s %(figures)s)"
+#: templates/release_list.html:11
+msgid "Select a release or a release set below to see more details about it:"
+msgstr ""
+"Zvolením vydania alebo zostavy vydaní nižšie sa zobrazí viac informácií o "
+"nej:"
 
-#: ../templates/show-stats.tmpl:17
-msgid "POT file (%(potsize)s message)"
-msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] "POT súbor (%(potsize)s reťazcov)"
-msgstr[1] "POT súbor (%(potsize)s reťazec)"
-msgstr[2] "POT súbor (%(potsize)s reťazce)"
-
-#. The date format is fixed to "%Y-%m-%d %H:%M:%S timezone"
-#: ../templates/show-stats.tmpl:23
-msgid "updated on %(date)s"
-msgstr "posledná aktualizácia %(date)s"
-
-#. This is the title of the section that lists notices about a module
-#: ../templates/show-stats.tmpl:28
+#: templates/stats_show.html:16
 msgid "Notices"
 msgstr "Oznamy"
 
-#: ../templates/show-stats.tmpl:39
+#: templates/stats_show.html:25
 msgid "Language"
 msgstr "Jazyk"
 
-#: ../templates/show-stats.tmpl:39
+#: templates/stats_show.html:25
 msgid "Translated"
 msgstr "Preložené"
+
+#: templates/stats_show.html:44
+msgid "Display document figures"
+msgstr "Zobraziť obrázky dokumentov"
+
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
+msgid "GNOME Languages"
+msgstr "Jazyky GNOME"
+
+#: templates/languages/language_list.html:11
+#, python-format
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "GNOME je prekladané do nasledujúcich %(numb)s jazykov.\n"
+msgstr[1] "GNOME je prekladané do nasledujúceho %(numb)s jazyka.\n"
+msgstr[2] "GNOME je prekladané do nasledujúcich %(numb)s jazykov\n"
+
+#: templates/languages/language_release.html:11
+#, python-format
+msgid "%(lang)s Translation Team — %(locale)s"
+msgstr "%(lang)s lokalizačný tím — %(locale)s"
+
+#: templates/languages/language_release.html:14
+#: templates/teams/team_detail.html:13
+msgid "Details"
+msgstr "Detaily"
+
+#: templates/languages/language_release.html:17
+#: templates/teams/team_detail.html:16
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Stránka pre %(lang)s lokalizačný tím:"
+
+#: templates/languages/language_release.html:21
+#: templates/teams/team_detail.html:20
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: templates/languages/language_release.html:23
+#: templates/teams/team_detail.html:23
+msgid "Report Bug in Translation"
+msgstr "Ohlásiť chybu v preklade"
+
+#: templates/languages/language_release.html:24
+#: templates/teams/team_detail.html:24
+msgid "Show Existing Bugs"
+msgstr "Zobraziť existujúce chyby"
+
+#: templates/languages/language_release.html:28
+#: templates/teams/team_detail.html:29
+msgid "Mailing List:"
+msgstr "Mailing list:"
+
+#: templates/languages/language_release.html:30
+#: templates/teams/team_detail.html:31
+msgid "Send e-mail to the list"
+msgstr "Odoslať e-mail do mailing listu"
+
+#: templates/languages/language_release.html:32
+#: templates/teams/team_detail.html:33
+msgid "Subscribe"
+msgstr "Prihlásiť sa"
+
+#: templates/languages/language_release.html:39
+#: templates/teams/team_detail.html:40
+msgid "Coordinator"
+msgstr "Koordinátor"
+
+#: templates/languages/language_release.html:48
+#, python-format
+msgid "Language code: %(locale)s"
+msgstr "Kód jazyka: %(locale)s"
+
+#: templates/languages/language_release.html:49
+#, python-format
+msgid "There is no translation team in charge of '%(locale)s' translation."
+msgstr "Žiaden tím nie je zodpovedný za preklad '%(locale)s'."
+
+#: templates/languages/language_release.html:56
+msgid "Hide completed modules"
+msgstr "Skryť dokončené moduly"
+
+#: templates/languages/language_release.html:60
+msgid "Show completed modules"
+msgstr "Ukázať dokončené moduly"
+
+#: templates/languages/language_release_stats.html:23
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr "%(categname)s (preložených %(percentage)s%%)"
+
+#: templates/languages/language_release_stats.html:42
+#: templates/languages/language_release_stats.html:48
+msgid "Download po file"
+msgstr "Stiahnuť \"po\" súbor"
+
+#: templates/people/person_detail.html:4
+msgid "GNOME Contributor"
+msgstr "Prispievateľ do GNOME"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:9
+msgid "GNOME Contributors"
+msgstr "Prispievatelia do GNOME"
+
+#: templates/people/person_list.html:11
+msgid "GNOME is being developed by following people:"
+msgstr "GNOME je vyvíjané týmito ľuďmi:"
+
+#: templates/teams/team_detail.html:10
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "%(lang)s lokalizačný tím"
+
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "Lokalizačné tímy GNOME"
+
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "Zvolením tímu nižšie sa zobrazí viac informácií o ňom:"
+
+#: templates/teams/team_list.html:24
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Koordinátorom je <a href=\"%(url)s\">%(name)s</a>"
+
+#: templates/teams/team_list.html:32
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "Momentálne v GNOME nie sú žiadne prekladateľské tímy. :-("
+
+#~ msgid "GLib"
+#~ msgstr "GLib"
+
+#~ msgid "Gtk+"
+#~ msgstr "Gtk+"
+
+#~ msgid "Sabayon"
+#~ msgstr "Sabayon"
+
+#~ msgid "XKeyboard-Config"
+#~ msgstr "XKeyboard-Config"
+
+#~ msgid "Desktop Applications"
+#~ msgstr "Aplikácie prostredia"
+
+#~ msgid "Development Platform"
+#~ msgstr "Vývojárska platforma"
+
+#~ msgid "External Dependencies"
+#~ msgstr "Externé závislosti"
+
+#~ msgid "System Administration"
+#~ msgstr "Spravovanie systému"
+
+#~ msgid "Can't generate POT file, using old one if it exists."
+#~ msgstr "Nedá sa vygenerovať POT súbor, ak existuje, použije sa starý."
+
+#~ msgid "Can't find checkout directory."
+#~ msgstr "Nenašiel sa adresár pre checkout."
+
+#~ msgid "There is no translation team in charge of %s."
+#~ msgstr "Žiaden tím nie je zodpovedný za preklad '%s'."
+
+#~ msgid "Users Web Page:"
+#~ msgstr "WWW stránka používateľa:"
+
+#~ msgid "GNOME is currently not being translated to any language. :("
+#~ msgstr "GNOME nie je momentálne preložené do žiadneho jazyka. :-("
+
+#~ msgid ""
+#~ "There are currently no modules for which I am gathering damned lies for. "
+#~ "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
+#~ msgstr ""
+#~ "Momentálne tu nie sú žiadne moduly, pre ktoré sa zbierajú štatistiky."
+#~ "Dajte o tom vedieť vedieť <a href=\"danilo@gnome.org\">Danilovi</a>!"
+
+#~ msgid "There are currently no releases defined in GNOME. :("
+#~ msgstr "Momentálne nie sú definované žiadne vydania GNOME. :-("
+
+#~ msgid "Coordinated by %(coordinator)s"
+#~ msgstr "Koordinátor: %(coordinator)s"
+
+#~ msgid "There are no contributors, GNOME turned itself up from nothing."
+#~ msgstr "Nie sú tu žiadni prispievatelia, GNOME sa vytvorilo z ničoho."
+
+#~ msgid "Translates:"
+#~ msgstr "Prekladá:"
+
+#~ msgid "Coordinates %(team)s"
+#~ msgstr "Koordinuje %(team)s"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "POT file (%(potsize)s message)"
+#~ msgid_plural "POT file (%(potsize)s messages)"
+#~ msgstr[0] "POT súbor (%(potsize)s reťazcov)"
+#~ msgstr[1] "POT súbor (%(potsize)s reťazec)"
+#~ msgstr[2] "POT súbor (%(potsize)s reťazce)"
 
 #~ msgid "Bug Buddy Manual"
 #~ msgstr "Manuál Bug Buddy"
 
-#~ msgid "GNOME 2.24 (development)"
-#~ msgstr "GNOME 2.24 (vývojové)"
-
 #~ msgid "Seahorse Manual"
 #~ msgstr "Manuál Seahorse"
-
-#~ msgid "New module proposals"
-#~ msgstr "Návrhy na nové moduly"
-
-#~ msgid "Asturian"
-#~ msgstr "astúrsky"
 
 #~ msgid "Burmese"
 #~ msgstr "barmský"

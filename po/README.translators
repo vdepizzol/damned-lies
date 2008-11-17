@@ -10,15 +10,3 @@ For the curious, the pot file is generated with a special
 wrapper script ('python manage.py update-trans en') and it needs
 a running Damned-Lies instance to get all strings (some are 
 in the database).
-Damned-Lies is based on the Django framework. Thus it
-is not compatible with standard GNOME intltool toolchain.
-
-If you want to update a translation or begin a translation
-for a new language, pick the respective po/pot file
-through the Damned-Lies web interface.
-http://l10n.gnome.org/module/damned-lies
-
-For the curious, the pot file is generated with a special 
-wrapper script ('python manage.py update-trans en') and it needs
-a running Damned-Lies instance to get all strings (some are 
-in the database).
