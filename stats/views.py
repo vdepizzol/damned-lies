@@ -48,10 +48,11 @@ def module(request, module_name):
 
 def docimages(request, module_name, potbase, branch_name, langcode):
     mod = get_object_or_404(Module, name=module_name)
-    stat = Statistics.objects.get(branch__module=mod.id, 
-                                  branch__name=branch_name,
-                                  domain__name=potbase,
-                                  language__locale=langcode)
+    stat = get_object_or_404(Statistics,
+                             branch__module=mod.id, 
+                             branch__name=branch_name,
+                             domain__name=potbase,
+                             language__locale=langcode)
     context = {
         'pageSection':  "module",
         'module': mod,
