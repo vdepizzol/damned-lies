@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-09 22:30+0000\n"
-"PO-Revision-Date: 2008-11-09 22:30+0100\n"
+"POT-Creation-Date: 2008-11-14 11:12+0000\n"
+"PO-Revision-Date: 2008-11-18 09:01+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -505,7 +505,7 @@ msgstr "serbe latin"
 msgid "Serbian Jekavian"
 msgstr "serbe jekavien"
 
-#: database-content.py:123 templates/languages/language_release.html:78
+#: database-content.py:123 templates/languages/language_release.html:48
 msgid "UI translations"
 msgstr "Traductions de l'interface utilisateur"
 
@@ -972,20 +972,20 @@ msgstr "GNOME 2.26 (développement)"
 msgid "translator-credits"
 msgstr "Claude Paroz <claude chez 2xlibre.net>"
 
-#: stats/models.py:235
+#: stats/models.py:241
 msgid "Can't generate POT file, using old one."
 msgstr "Impossible de générer le fichier POT, utilisation de l'ancien."
 
-#: stats/models.py:260
+#: stats/models.py:265
 msgid "Can't copy new POT file to public location."
 msgstr ""
 "Impossible de copier le nouveau fichier POT vers un emplacement public."
 
-#: stats/models.py:297
+#: stats/models.py:302
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
-#: stats/models.py:492
+#: stats/models.py:503
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -996,56 +996,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:739
+#: stats/models.py:773
 msgid "Administration Tools"
 msgstr "Outils d'administration"
 
-#: stats/models.py:740
+#: stats/models.py:774
 msgid "Development Tools"
 msgstr "Outils de développement"
 
-#: stats/models.py:741
+#: stats/models.py:775
 msgid "GNOME Desktop"
 msgstr "Bureau GNOME"
 
-#: stats/models.py:742
+#: stats/models.py:776
 msgid "GNOME Developer Platform"
 msgstr "Plate-forme de développement GNOME"
 
-#: stats/models.py:743
+#: stats/models.py:777
 msgid "New Module Proposals"
 msgstr "Propositions de nouveaux modules"
 
-#: stats/models.py:813
+#: stats/models.py:847
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:843
+#: stats/models.py:876
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s message"
 msgstr[1] "%(count)s messages"
 
-#: stats/models.py:844
+#: stats/models.py:877
 #, python-format
 msgid "updated on %(date)s"
 msgstr "mis à jour le %(date)s"
 
-#: stats/models.py:846
+#: stats/models.py:879
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figure"
 msgstr[1] "%(count)s figures"
 
-#: stats/models.py:847
+#: stats/models.py:880
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:850
+#: stats/models.py:883
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s) — %(updated)s"
@@ -1144,10 +1144,18 @@ msgstr ""
 "Aucune idée de l'endroit où se trouve la référence aux langues vraiment "
 "utilisées, demandez au mainteneur du module."
 
-#: teams/models.py:58
+#: teams/models.py:61
 #, python-format
 msgid "No team for locale %s"
 msgstr "Aucune équipe pour la langue %s"
+
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Erreur : page introuvable"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "La page demandée n'a pas été trouvée sur ce serveur."
 
 #: templates/base.html:24 templates/base.html.py:53
 msgid "Home"
@@ -1317,7 +1325,7 @@ msgstr "Traduit par :"
 #: templates/module.html:4
 #, python-format
 msgid "Module Statistics: %(name)s"
-msgstr "Stastiques de module : %(name)s"
+msgstr "Statistiques de module : %(name)s"
 
 #: templates/module.html:15
 msgid ""
@@ -1360,8 +1368,8 @@ msgid "This branch is currently string-frozen."
 msgstr "Les chaînes sont actuellement gelées pour cette branche."
 
 #: templates/module.html:77 templates/release.html:17
-#: templates/languages/language_release.html:70
-#: templates/teams/team_detail.html:55
+#: templates/languages/language_release.html:40
+#: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -1442,7 +1450,7 @@ msgstr "Coordonne <a href=\"%(team_url)s\">%(team_desc)s</a>"
 msgid "%(name)s Release"
 msgstr "Version %(name)s"
 
-#: templates/release.html:13 templates/languages/language_release.html:64
+#: templates/release.html:13 templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1451,16 +1459,16 @@ msgstr ""
 "Consultez la page Web de chaque module pour savoir où envoyer les "
 "traductions."
 
-#: templates/release.html:17 templates/teams/team_detail.html:55
+#: templates/release.html:17 templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Version"
 
 #: templates/release.html:17 templates/stats_show.html:29
-#: templates/teams/team_detail.html:55 templates/teams/team_detail.html:56
+#: templates/teams/team_detail.html:22 templates/teams/team_detail.html:23
 msgid "Graph"
 msgstr "Graphique"
 
-#: templates/release.html:17 templates/teams/team_detail.html:56
+#: templates/release.html:17 templates/teams/team_detail.html:23
 msgid "User Interface"
 msgstr "Interface utilisateur"
 
@@ -1500,75 +1508,30 @@ msgstr "Langues GNOME"
 msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME est en cours de traduction dans la langue suivante :\n"
-msgstr[1] "GNOME est en cours de traduction dans les %(numb)s langues suivantes :\n"
+msgstr[1] ""
+"GNOME est en cours de traduction dans les %(numb)s langues suivantes :\n"
 
-#: templates/languages/language_release.html:11
+#: templates/languages/language_release.html:12
 #, python-format
 msgid "%(lang)s Translation Team — %(locale)s"
 msgstr "Équipe de traduction en %(lang)s (%(locale)s)"
 
-#: templates/languages/language_release.html:14
-#: templates/teams/team_detail.html:13
-msgid "Details"
-msgstr "Détails"
-
 #: templates/languages/language_release.html:17
-#: templates/teams/team_detail.html:16
-#, python-format
-msgid "%(lang)s Translation Team Page:"
-msgstr "Page de l'équipe de traduction en %(lang)s :"
-
-#: templates/languages/language_release.html:21
-#: templates/teams/team_detail.html:20
-msgid "Bugzilla:"
-msgstr "Bugzilla :"
-
-#: templates/languages/language_release.html:23
-#: templates/teams/team_detail.html:23
-msgid "Report Bug in Translation"
-msgstr "Rapporter un bogue de la traduction"
-
-#: templates/languages/language_release.html:24
-#: templates/teams/team_detail.html:24
-msgid "Show Existing Bugs"
-msgstr "Afficher les bogues existants"
-
-#: templates/languages/language_release.html:28
-#: templates/teams/team_detail.html:29
-msgid "Mailing List:"
-msgstr "Liste de diffusion :"
-
-#: templates/languages/language_release.html:30
-#: templates/teams/team_detail.html:31
-msgid "Send e-mail to the list"
-msgstr "Envoyer un courriel à la liste"
-
-#: templates/languages/language_release.html:32
-#: templates/teams/team_detail.html:33
-msgid "Subscribe"
-msgstr "Abonnement"
-
-#: templates/languages/language_release.html:39
-#: templates/teams/team_detail.html:40
-msgid "Coordinator"
-msgstr "Coordinateur"
-
-#: templates/languages/language_release.html:48
 #, python-format
 msgid "Language code: %(locale)s"
 msgstr "Code de langue : %(locale)s"
 
-#: templates/languages/language_release.html:49
+#: templates/languages/language_release.html:18
 #, python-format
 msgid "There is no translation team in charge of '%(locale)s' translation."
 msgstr ""
 "Il n'existe pas d'équipe de traduction pour la traduction de « %(locale)s »."
 
-#: templates/languages/language_release.html:56
+#: templates/languages/language_release.html:26
 msgid "Hide completed modules"
 msgstr "Masquer les modules entièrement traduits"
 
-#: templates/languages/language_release.html:60
+#: templates/languages/language_release.html:30
 msgid "Show completed modules"
 msgstr "Afficher les modules entièrement traduits"
 
@@ -1581,6 +1544,14 @@ msgstr "%(categname)s (%(percentage)s% traduit)"
 msgid "Download po file"
 msgstr "Télécharger le fichier po"
 
+#: templates/languages/language_release_stats.html:78
+msgid "Error summary"
+msgstr "Liste des erreurs"
+
+#: templates/languages/language_release_stats.html:87
+msgid "Download all po files"
+msgstr "Télécharger tous les fichiers po"
+
 #: templates/people/person_detail.html:4
 msgid "GNOME Contributor"
 msgstr "Contributeur GNOME"
@@ -1592,6 +1563,43 @@ msgstr "Contributeurs GNOME"
 #: templates/people/person_list.html:11
 msgid "GNOME is being developed by following people:"
 msgstr "GNOME est développé par les personnes suivantes :"
+
+#: templates/teams/team_base.html:6
+msgid "Details"
+msgstr "Détails"
+
+#: templates/teams/team_base.html:9
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Page de l'équipe de traduction en %(lang)s :"
+
+#: templates/teams/team_base.html:13
+msgid "Bugzilla:"
+msgstr "Bugzilla :"
+
+#: templates/teams/team_base.html:15
+msgid "Report Bug in Translation"
+msgstr "Rapporter un bogue de la traduction"
+
+#: templates/teams/team_base.html:16
+msgid "Show Existing Bugs"
+msgstr "Afficher les bogues existants"
+
+#: templates/teams/team_base.html:20
+msgid "Mailing List:"
+msgstr "Liste de diffusion :"
+
+#: templates/teams/team_base.html:22
+msgid "Send e-mail to the list"
+msgstr "Envoyer un courriel à la liste"
+
+#: templates/teams/team_base.html:24
+msgid "Subscribe"
+msgstr "Abonnement"
+
+#: templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Coordinateur"
 
 #: templates/teams/team_detail.html:10
 #, python-format
@@ -1679,4 +1687,3 @@ msgstr "Il n'y a actuellement aucune équipe de traduction dans GNOME. :("
 
 #~ msgid "Zapotec"
 #~ msgstr "zapotec"
-
