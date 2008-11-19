@@ -13,7 +13,7 @@
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 <ul class="foot">
 {% for mod in modules %}
-  <li><a href="{% url stats.views.module mod.name %}">{{ mod.translated_name }} </a></li>
+  <li><a href="{% url stats.views.module mod.name %}">{{ mod.get_description }} </a></li>
 {% endfor %}
 </ul>
 </div>

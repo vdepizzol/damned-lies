@@ -23,11 +23,9 @@ from django.utils.translation import ugettext as _, ugettext_noop
 from stats.conf import settings
 import sys, os, re, time, commands
 
-def sortObjectList(lst, tr_field):
-    """ Sort an object list with translated_name """
-    for l in lst:
-        l.translated_name = _(getattr(l, tr_field))
-    templist = [(obj_.translated_name.lower(), obj_) for obj_ in lst]
+def sortObjectList(lst, sort_meth):
+    """ Sort an object list with sort_meth (which should return a translated string) """
+    templist = [(getattr(obj_, sort_meth)().lower(), obj_) for obj_ in lst]
     templist.sort()
     return [obj_ for (key1, obj_) in templist]
 

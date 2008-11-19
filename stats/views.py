@@ -33,7 +33,7 @@ def modules(request):
     all_modules = Module.objects.all()
     context = {
         'pageSection':  "module",
-        'modules': utils.sortObjectList(all_modules, 'description')
+        'modules': utils.sortObjectList(all_modules, 'get_description')
     }
     return render_to_response('module_list.html', context)
 
