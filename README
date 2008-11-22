@@ -52,6 +52,8 @@ package (WIP, part of django-openid, not confuse!):
 svn co http://django-openid.googlecode.com/svn/trunk/django_openid
 Put it somewhere in your Python path and uncomment 'django_openid' in your
 settings.py INSTALLED_APPS.
+This package is dependant on the python-openid package to be installed on
+your system.
 Run 'python manage.py syncdb' and here we go!
 
 Databases
@@ -96,3 +98,17 @@ on the Django Wiki:
 http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/
 
 You'll also find a sample init script in the /docs directory.
+
+Translations
+============
+
+To be able to also extract strings from various database fields, a wrapper
+script has been created around standard Django make_messages. The script also
+copy po files in /po directory.
+Run 'python manage.py update-trans' to update translations when there are
+string changes.
+
+After translation files in po directory have been updated, there is another script
+to put back po files in locale/<ll>/LC_MESSAGES/django.po and call Django's
+compile_messages command.
+Run 'python manage.py compile-trans'
