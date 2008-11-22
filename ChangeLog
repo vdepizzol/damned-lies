@@ -1,3 +1,12 @@
+2008-11-22  Claude Paroz  <claude@2xlibre.net>
+
+	* common/views.py: Use RequestContext to be able to access user object in
+	template.
+	* media/css/main.css: Style for div#authenticated.
+	* templates/500.html: The server error template was missing.
+	* templates/base.html: Show username if logged in.
+	* urls.py: Add URLs path if django_openid is installed.
+
 2008-11-19  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/utils.py: sortObjectList uses a method to get sorting key, which

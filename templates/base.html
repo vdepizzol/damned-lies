@@ -77,6 +77,11 @@
     </div> <!-- end of #header -->
   </div>
 <!-- end site header -->
+  <div id="authenticated">
+  {% if user.is_authenticated %}
+  {% blocktrans with user.username as username %} Logged in as: {{ username }}{% endblocktrans %}
+  {% endif %}
+  </div>
 
   <div class="body">
     <div id="content">

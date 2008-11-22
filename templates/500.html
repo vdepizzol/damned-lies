@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Error: server error (500)" %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "Server Error" %}</h1>
+
+<p>{% trans "We're sorry but a server error has occurred." %}
+
+</div>
+{% endblock %}

@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.utils.translation import ugettext_lazy as _
 
 def index(request):
@@ -33,4 +34,4 @@ def index(request):
         'pageSection': 'home',
         'translator_credits': translator_credits
     }
-    return render_to_response('index.html', context)
+    return render_to_response('index.html', context, context_instance=RequestContext(request))

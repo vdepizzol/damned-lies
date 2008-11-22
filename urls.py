@@ -22,6 +22,14 @@ urlpatterns += patterns('stats.views',
     (r'^releases/(?P<release_name>[\w-]+)$', 'release'),
 )
 
+if 'django_openid' in settings.INSTALLED_APPS:
+    from django_openid.auth import AuthConsumer
+    
+    urlpatterns += patterns('',
+        # ...
+        (r'^openid/(.*)', AuthConsumer()),
+    )
+
 if settings.STATIC_SERVE:
     urlpatterns += patterns('',
         (r'^media/(?P<path>.*)$', 'django.views.static.serve',
