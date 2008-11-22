@@ -23,6 +23,7 @@ import os
 import tarfile
 from datetime import date, datetime
 from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from stats.conf import settings
 from common import utils
@@ -35,7 +36,7 @@ def languages(request):
         'pageSection': "languages",
         'languages': utils.trans_sort_object_list(languages, 'name')
     }
-    return render_to_response('languages/language_list.html', context)
+    return render_to_response('languages/language_list.html', context, context_instance=RequestContext(request))
 
 def language_release(request, locale, release_name):
     language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
@@ -47,7 +48,7 @@ def language_release(request, locale, release_name):
         'release': release,
         'stats': stats
     }
-    return render_to_response('languages/language_release.html', context)
+    return render_to_response('languages/language_release.html', context, context_instance=RequestContext(request))
 
 def language_release_tar(request, locale, release_name, dtype):
     release = get_object_or_404(Release, name=release_name)

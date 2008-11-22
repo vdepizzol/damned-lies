@@ -45,6 +45,15 @@ Installation
 4 - Configure Sites in admin interface to define the 'View on site'
     link.
 
+OpenID support
+==============
+If you want OpenID support, checkout Simon Willison's django_openid
+package (WIP, part of django-openid, not confuse!): 
+svn co http://django-openid.googlecode.com/svn/trunk/django_openid
+Put it somewhere in your Python path and uncomment 'django_openid' in your
+settings.py INSTALLED_APPS.
+Run 'python manage.py syncdb' and here we go!
+
 Databases
 =========
 

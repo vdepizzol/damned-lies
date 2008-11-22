@@ -69,6 +69,8 @@ MEDIA_URL = 'media'
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/admin/'
 
+LOGIN_URL = '/login/'
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'zk!^92901p458c8lo0(fox-&k7jj(aple76_k%eva7b1)xjo8-'
 
@@ -98,6 +100,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+#    'django_openid',
     'languages',
     'people',
     'stats',

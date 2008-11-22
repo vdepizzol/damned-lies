@@ -1,5 +1,22 @@
 2008-11-22  Claude Paroz  <claude@2xlibre.net>
 
+	* README: Add note about OpenID optional support.
+	* common/views.py: site_login view handles the login process.
+	* media/css/login.css: New css specific to login.html.
+	* media/css/main.css: Add errornote style for showing messages.
+	* settings_sample.py: Add LOGIN_URL variable (may be used by
+	login_required decorator).
+	* languages/views.py:
+	* stats/views.py:
+	* teams/views.py: Use more complete RequestContext to be able to access
+	user variable in templates.
+	* templates/base.html: Add support for showing user messages and for
+	adding extra headers (css, js, etc.).
+	* templates/login.html: New template for login.
+	* urls.py: Add login view.
+
+2008-11-22  Claude Paroz  <claude@2xlibre.net>
+
 	* common/views.py: Use RequestContext to be able to access user object in
 	template.
 	* media/css/main.css: Style for div#authenticated.

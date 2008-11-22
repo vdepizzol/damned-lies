@@ -21,9 +21,10 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from stats.models import Statistics, Module, Release
 from stats.conf import settings
-from djamnedlies.stats import utils
+from stats import utils
 from django.core import serializers
 from django.http import HttpResponse
+from django.template import RequestContext
 from django.utils.translation import ugettext_lazy as _
 
 MIME_TYPES = {'json': 'application/json',
@@ -35,7 +36,7 @@ def modules(request):
         'pageSection':  "module",
         'modules': utils.sortObjectList(all_modules, 'get_description')
     }
-    return render_to_response('module_list.html', context)
+    return render_to_response('module_list.html', context, context_instance=RequestContext(request))
 
 def module(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
@@ -44,7 +45,7 @@ def module(request, module_name):
         'module': mod,
         'prof': utils.Profiler()
     }
-    return render_to_response('module.html', context)
+    return render_to_response('module.html', context, context_instance=RequestContext(request))
 
 def docimages(request, module_name, potbase, branch_name, langcode):
     mod = get_object_or_404(Module, name=module_name)
@@ -58,7 +59,7 @@ def docimages(request, module_name, potbase, branch_name, langcode):
         'module': mod,
         'stat': stat
     }
-    return render_to_response('module_images.html', context)
+    return render_to_response('module_images.html', context, context_instance=RequestContext(request))
 
 def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')
@@ -70,7 +71,7 @@ def releases(request, format='html'):
             'pageSection':  "releases",
             'releases': all_releases
         }
-        return render_to_response('release_list.html', context)
+        return render_to_response('release_list.html', context, context_instance=RequestContext(request))
 
 def release(request, release_name):
     rel = get_object_or_404(Release, name=release_name)
@@ -78,5 +79,5 @@ def release(request, release_name):
         'pageSection': "releases",
         'release': rel
     }
-    return render_to_response('release.html', context)
+    return render_to_response('release.html', context, context_instance=RequestContext(request))
 

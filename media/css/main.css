@@ -123,6 +123,7 @@ div.mainpage {
 
 div#authenticated {
   text-align: right;
+  margin-right: 4px;
   font-size: small;
   font-style: italic;
   color: #aaaaaa;
@@ -146,6 +147,12 @@ p#show, p#hide {
 .error {
   font-style: italic;
   color: #666666;
+}
+
+.errornote {
+  border: 1px solid;
+  padding: 5px;
+  background: #FAE28E;
 }
 
 .footnote {

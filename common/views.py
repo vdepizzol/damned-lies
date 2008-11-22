@@ -19,8 +19,13 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.template import RequestContext
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
+from django.contrib.auth import login, authenticate, logout
+from django.conf import settings
+
 
 def index(request):
     translator_credits = _("translator-credits")
@@ -35,3 +40,42 @@ def index(request):
         'translator_credits': translator_credits
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
+
+def site_login(request):
+    """ Site-specific login page. Not named 'login' to not confuse with auth.login """
+    messages = []
+    referer = None
+    openid_path = ''
+    if request.method == 'POST':
+        if request.POST.has_key('logout') and request.POST['logout']:
+            logout(request)
+            messages.append(_("You have been logged out."))
+        elif request.POST.has_key('username'):
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    message = _("You have been successfully logged in.")
+                    user.message_set.create(message=message)
+                    if request.POST['referer']:
+                        return HttpResponseRedirect(request.POST['referer'])
+                    else:
+                        return HttpResponseRedirect(reverse("home"))
+                else:
+                    messages.append(_("We're sorry, but your account has been disabled."))
+            else:
+                messages.append(_("Login unsuccessful. Please verify your username and password."))
+    else:
+        referer = request.META.get('HTTP_REFERER', None)
+
+    if 'django_openid' in settings.INSTALLED_APPS:
+        openid_path = '/openid/'
+    context = {
+        'pageSection': 'home',
+        'openid_path': openid_path,
+        'messages': messages,
+        'referer': referer,
+    }
+    return render_to_response('login.html', context, context_instance=RequestContext(request))
