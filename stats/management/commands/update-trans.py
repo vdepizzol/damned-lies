@@ -45,7 +45,7 @@ class Command(BaseCommand):
         cursor = connection.cursor()
         cursor.execute(query)
         for row in cursor.fetchall():
-            if row[0] is not None:
+            if row[0] is not None and row[0] != '':
                 f.write("_(u\"\"\"%s\"\"\")\n" % row[0].encode('utf-8'))
         f.close()
 
