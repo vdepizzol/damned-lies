@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-14 11:12+0000\n"
+"POT-Creation-Date: 2008-11-22 22:48+0000\n"
 "PO-Revision-Date: 2008-11-18 09:01+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -841,7 +841,7 @@ msgstr "Documentation d'utilisation de GNOME 2"
 msgid "Beagle Desktop Search"
 msgstr "Recherche dans le bureau Beagle"
 
-#: database-content.py:207 templates/base.html:46
+#: database-content.py:207 templates/base.html:48
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
@@ -968,24 +968,40 @@ msgstr "GNOME 2.20 (ancienne stable)"
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (développement)"
 
-#: common/views.py:25
+#: common/views.py:31
 msgid "translator-credits"
 msgstr "Claude Paroz <claude chez 2xlibre.net>"
 
-#: stats/models.py:241
+#: common/views.py:52
+msgid "You have been logged out."
+msgstr "Vous avez été déconnecté."
+
+#: common/views.py:60
+msgid "You have been successfully logged in."
+msgstr "Vous êtes maintenant connecté."
+
+#: common/views.py:67
+msgid "We're sorry, but your account has been disabled."
+msgstr "Désolé, votre compte a été désactivé."
+
+#: common/views.py:69
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "Échec de connexion. Vérifiez votre nom d'utilisateur et votre mot de passe."
+
+#: stats/models.py:242
 msgid "Can't generate POT file, using old one."
 msgstr "Impossible de générer le fichier POT, utilisation de l'ancien."
 
-#: stats/models.py:265
+#: stats/models.py:266
 msgid "Can't copy new POT file to public location."
 msgstr ""
 "Impossible de copier le nouveau fichier POT vers un emplacement public."
 
-#: stats/models.py:302
+#: stats/models.py:303
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
-#: stats/models.py:503
+#: stats/models.py:504
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -996,72 +1012,72 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:773
+#: stats/models.py:774
 msgid "Administration Tools"
 msgstr "Outils d'administration"
 
-#: stats/models.py:774
+#: stats/models.py:775
 msgid "Development Tools"
 msgstr "Outils de développement"
 
-#: stats/models.py:775
+#: stats/models.py:776
 msgid "GNOME Desktop"
 msgstr "Bureau GNOME"
 
-#: stats/models.py:776
+#: stats/models.py:777
 msgid "GNOME Developer Platform"
 msgstr "Plate-forme de développement GNOME"
 
-#: stats/models.py:777
+#: stats/models.py:778
 msgid "New Module Proposals"
 msgstr "Propositions de nouveaux modules"
 
-#: stats/models.py:847
+#: stats/models.py:848
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:876
+#: stats/models.py:877
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s message"
 msgstr[1] "%(count)s messages"
 
-#: stats/models.py:877
+#: stats/models.py:878
 #, python-format
 msgid "updated on %(date)s"
 msgstr "mis à jour le %(date)s"
 
-#: stats/models.py:879
+#: stats/models.py:880
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figure"
 msgstr[1] "%(count)s figures"
 
-#: stats/models.py:880
+#: stats/models.py:881
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:883
+#: stats/models.py:884
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:54
+#: stats/utils.py:52
 msgid "Errors while running 'intltool-update -m' check."
 msgstr ""
 "Des erreurs se sont produites lors de la vérification par « intltool-update -"
 "m »."
 
-#: stats/utils.py:60
+#: stats/utils.py:58
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Il manque des fichiers dans POTFILES.in : %s"
 
-#: stats/utils.py:69
+#: stats/utils.py:67
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1070,25 +1086,25 @@ msgstr ""
 "Les fichiers suivants sont référencés dans POTFILES.in ou dans POTFILES."
 "skip, mais ils n'existent pas : %s"
 
-#: stats/utils.py:81
+#: stats/utils.py:79
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Le module %s ne semble pas être conforme à la norme gnome-doc-utils."
 
-#: stats/utils.py:84
+#: stats/utils.py:82
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "La variable DOC_MODULE ne correspond pas à un fichier réel, utilisation de « %"
 "s.xml »."
 
-#: stats/utils.py:87
+#: stats/utils.py:85
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr ""
 "La variable DOC_MODULE ne correspond pas à un fichier réel, il s'agit "
 "probablement d'une macro."
 
-#: stats/utils.py:102
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1099,44 +1115,44 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:152
+#: stats/utils.py:150
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "Le fichier PO « %s » n'existe pas."
 
-#: stats/utils.py:165
+#: stats/utils.py:163
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "Le fichier PO « %s » ne passe pas la vérification par « msgfmt » : pas de mise "
 "à jour."
 
-#: stats/utils.py:167
+#: stats/utils.py:165
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Impossible d'obtenir les statistiques pour le fichier POT « %s »."
 
-#: stats/utils.py:170
+#: stats/utils.py:168
 msgid "This PO file has an executable bit set."
 msgstr "Le bit d'exécution de ce fichier PO est activé."
 
-#: stats/utils.py:195
+#: stats/utils.py:193
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Le fichier PO « %s » n'est pas codé en UTF-8."
 
-#: stats/utils.py:228
+#: stats/utils.py:226
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Le fichier LINGUAS ne contient pas de référence à cette langue."
 
-#: stats/utils.py:255
+#: stats/utils.py:253
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La variable ALL_LINGUAS du fichier « configure » ne contient pas de référence "
 "à cette langue."
 
-#: stats/utils.py:258
+#: stats/utils.py:256
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1157,59 +1173,80 @@ msgstr "Erreur : page introuvable"
 msgid "The page you requested has not been found on this server."
 msgstr "La page demandée n'a pas été trouvée sur ce serveur."
 
-#: templates/base.html:24 templates/base.html.py:53
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Erreur : erreur de serveur (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Erreur de serveur"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Désolé, une erreur de serveur est survenue."
+
+#: templates/base.html:26 templates/base.html.py:55
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:27
+#: templates/base.html:29
 msgid "News"
 msgstr "Actualités"
 
-#: templates/base.html:30
+#: templates/base.html:32
 msgid "Projects"
 msgstr "Projets"
 
-#: templates/base.html:33
+#: templates/base.html:35
 msgid "Art"
 msgstr "Art"
 
-#: templates/base.html:36
+#: templates/base.html:38
 msgid "Support"
 msgstr "Assistance"
 
-#: templates/base.html:39
+#: templates/base.html:41
 msgid "Development"
 msgstr "Développement"
 
-#: templates/base.html:42
+#: templates/base.html:44
 msgid "Community"
 msgstr "Communauté"
 
-#: templates/base.html:53
+#: templates/base.html:55
 msgid "Back to Damned Lies home page"
 msgstr "Retour à la page d'accueil de Damned Lies"
 
-#: templates/base.html:59 templates/index.html:13
+#: templates/base.html:61 templates/index.html:13
 msgid "Teams"
 msgstr "Équipes"
 
-#: templates/base.html:64 templates/index.html:20
+#: templates/base.html:66 templates/index.html:20
 msgid "Languages"
 msgstr "Langues"
 
-#: templates/base.html:69
+#: templates/base.html:71
 msgid "Release sets"
 msgstr "Groupes de versions"
 
-#: templates/base.html:74 templates/index.html:36
+#: templates/base.html:76 templates/index.html:36
 msgid "Modules"
 msgstr "Modules"
 
-#: templates/base.html:88
+#: templates/base.html:84
+#, python-format
+msgid " Logged in as: %(username)s"
+msgstr "Connecté en tant que %(username)s" 
+
+#: templates/base.html:86
+msgid "Login"
+msgstr "Se connecter"
+
+#: templates/base.html:103
 msgid "The GNOME Project"
 msgstr "Le projet GNOME"
 
-#: templates/base.html:90
+#: templates/base.html:105
 msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
@@ -1218,11 +1255,11 @@ msgstr ""
 "viewvc/damned-lies/'>damned-lies</a> de <a href='http://svn.gnome.org'>svn."
 "gnome.org</a>"
 
-#: templates/base.html:92
+#: templates/base.html:107
 msgid "Hosted by"
 msgstr "Hébergé par"
 
-#: templates/index.html:4 templates/index.html.py:9
+#: templates/index.html:4 templates/index.html.py:9 templates/login.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Damnés mensonges au sujet de GNOME"
 
@@ -1321,6 +1358,43 @@ msgstr ""
 #: templates/index.html:46
 msgid "Translated by:"
 msgstr "Traduit par :"
+
+#: templates/login.html:10
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Vous être déjà connecté en tant que %(username)s."
+
+#: templates/login.html:14
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "Connectez-vous avec votre nom d'utilisateur et votre mot de passe :"
+
+#: templates/login.html:21
+msgid "Username:"
+msgstr "Nom d'utilisateur :"
+
+#: templates/login.html:24
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: templates/login.html:30
+msgid "Log in"
+msgstr "Se connecter"
+
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "Ou utilisez votre OpenID :"
+
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID :"
+
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Se connecter par OpenID"
 
 #: templates/module.html:4
 #, python-format
