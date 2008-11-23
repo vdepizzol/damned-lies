@@ -20,10 +20,9 @@
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from people.models import Person
-from languages.models import Language
 from stats.models import Branch, Domain
-from workflow_state import *
+from languages.models import Language
+from people.models import Person
 
 ACTION_CODES = (
     'WC', 
@@ -33,34 +32,40 @@ ACTION_CODES = (
     'IC', 'TR',
     'BA', 'UNDO')
 
-class WorkflowAction(models.Model):
-    """Abstract class"""
-    person = models.ForeignKey(Person)
+class VtmAction(models.Model):
     branch = models.ForeignKey(Branch)
     domain = models.ForeignKey(Domain)
     language = models.ForeignKey(Language)
+    person = models.ForeignKey(Person)
+
     code = models.CharField(max_length=8)
     created = models.DateField(auto_now_add=True, editable=False)
-    comment = models.TextField(null=True)
-    # FIXME filename in child or here
+    comment = models.TextField(blank=True, null=True)
+    file = models.FileField(upload_to='vertimus/%Y/%m/', blank=True, null=True)
 
     class Meta:
-        abstract = True
+        db_table = 'vtm_action'
         ordering = ('created',)
         get_latest_by = 'created'
 
-    def get_all(self):
+    @classmethod
+    def get_all(cls):
         actions = []
         for code in ACTION_CODES:
-            actions.append(eval('WorkflowAction' + code + '()'))
+            actions.append(eval('VtmAction' + code + '()'))
+    
+    @classmethod
+    def get_last_action(cls, branch, domain, language):
+        return VtmAction.objects.filter(
+            branch=branch, domain=domain, language=language).order_by('-created')[0]
 
-    # FIXME Apply parent/child call
-    def apply(self, person, branch, domain, language, comment=None):
-        self.person = person
+    def apply(self, branch, domain, language, person, comment=None, file=None):
         self.branch = branch
         self.domain = domain
         self.language = language
+        self.person = person
         self.comment = comment
+        self.file = file
         self.save()
 
         return self._apply_child()
@@ -68,14 +73,162 @@ class WorkflowAction(models.Model):
     def __unicode__(self):
         return self.name
 
+#
+# States
+#
 
-class WorkflowActionWC(WorkflowAction):
-    class Meta:
-        db_table = 'workflow_action_wc'
+class VtmState(object):
+    """Abstract class"""
+    def __init__(self, code, name):
+        self.code = code
+        self.name = name
+        self.color = ''
 
+    def __unicode__(self):
+        return self.name
+
+    def get_code(self):
+        return self.code
+
+    @classmethod
+    def get_actions(cls, action_codes=[]):
+        action_codes.append('WC')
+        return [ eval('VtmAction' + action_code)() for action_code in action_codes ]
+
+    def apply_action(self, action, branch, domain, language, person, comment=None, file=None):
+        new_state = action.apply(branch, domain, language, person, comment, file)
+        if new_state == None:
+            return self
+        else:
+            return new_state
+
+    def apply_action_code(self, action_code, branch, domain, language, person, comment=None, file=None):
+        action = eval('VtmAction' + action_code)()
+        self.apply_action(action, branch, domain, language, person, comment, file)
+
+
+class VtmStateNone(VtmState):
     def __init__(self):
+        super(VtmStateNone, self).__init__('None', 'Inactive')
+
+    def get_actions(self, branch, domain, language, person):
+        return super(VtmStateNone, self).get_actions(['RT'])
+
+
+class VtmStateTranslating(VtmState):
+    def __init__(self):
+        super(VtmStateTranslating, self).__init__('Translating', 'Translating')
+
+    def get_actions(self, branch, domain, language, person):
+        action_codes = []
+
+        last_action = VtmAction.get_last_action(branch, domain, language)
+        if (last_action.person == person):
+            action_codes = ['UT', 'UNDO']
+                    
+        return super(VtmStateTranslating, self).get_actions(action_codes)
+
+
+class VtmStateTranslated(VtmState):
+    def __init__(self):
+        super(VtmStateTranslated, self).__init__('Translated', 'Translated')
+
+    def get_actions(self, branch, domain, language, person):
+        # FIXME
+        if person.is_reviewer:
+            action_codes = ['RP']
+        else:
+            action_codes = []
+
+        action_codes.append('RT')
+        return super(VtmStateTranslated, self).get_actions(action_codes)
+
+
+class VtmStateToReview(VtmState):
+    def __init__(self):
+        super(VtmStateToReview, self).__init__('ToReview', 'To Review')
+        self.color = 'needswork';
+
+    def get_actions(self, branch, domain, language, person):
+        return super(VtmStateToReview, self).get_actions(['RT'])
+
+
+class VtmStateProofreading(VtmState):
+    def __init__(self):
+        super(VtmStateProofreading, self).__init__('Proofreading', 'Proofreading')
+
+    def get_actions(self, branch, domain, language, person):
+        action_codes = []
+        
+        # FIXME
+        if person.is_commiter:
+            last_action = VtmAction.get_last_action(branch, domain, language)
+            if last_action.person == person:
+                action_codes = ['UP', 'TR', 'TC', 'UNDO']
+                    
+        return super(VtmStateProofreading, self).get_actions(action_codes)
+
+
+class VtmStateProofread(VtmState):
+    def __init__(self):
+        super(VtmStateProofread, self).__init__('Proofread', 'Proofread')
+
+    def get_actions(self, branch, domain, language, person):
+        if person.is_reviewer:
+            action_codes = ['TC', 'TR']
+        else:
+            action_codes = []
+
+        return super(VtmStateProofread, self).get_actions(action_codes)
+
+
+class VtmStateToCommit(VtmState):
+    def __init__(self):
+        super(VtmStateToCommit, self).__init__('ToCommit', 'To Commit')
+
+    def get_actions(self, branch, domain, language, person):
+        if person.is_commiter:
+            action_codes = ['RC', 'TR']
+        else:
+            action_codes = []
+            
+        return super(VtmStateToCommit, self).get_actions(action_codes)
+
+
+class VtmStateCommitting(VtmState):
+    def __init__(self):
+        super(VtmStateCommitting, self).__init__('Committing', 'Committing')
+        
+    def get_actions(self, branch, domain, language, person):
+        action_codes = []
+
+        # FIXME
+        if person.is_commiter:
+            last_action = VtmAction.get_last_action(branch, domain, language)
+            if (last_action.person == person):
+                action_codes = ['IC', 'TR', 'TC', 'UNDO']
+            
+        return super(VtmStateCommitting, self).get_actions(action_codes)
+
+
+class VtmStateCommitted(VtmState):
+    def __init__(self):
+        super(VtmStateCommitted, self).__init__('Committed', 'Committed')
+
+    def get_actions(self, branch, domain, language, person):
+        return super(VtmStateCommitted, self).get_actions()
+
+#
+# Actions 
+#
+
+class VtmActionWC(VtmAction):
+    class Meta:
+        db_table = 'vtm_action_wc'
+
+    def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
-        self.code = 'RT'
+        self.code = 'WC'
         self.name = 'Write a comment'
         
     def _new_state(self):
@@ -85,37 +238,9 @@ class WorkflowActionWC(WorkflowAction):
         return self._new_state()
 
 
-class WorkflowActionRT(WorkflowAction):
-    """
-    >>> from people.models import Person
-    >>> from teams.models import Team
-    >>> from languages.models import Language
-    >>> from stats.models import Release, Category, Module, Branch, Domain
-    >>> p = Person(name=u'Gérard Martin', email='gm@mail.com')
-    >>> p.save()
-    >>> r = Release(name='gnome-2-24', string_frozen=True, status='official')
-    >>> r.save()
-    >>> m = Module(name='gedit', bugs_base='nd', bugs_product='d', bugs_component='d', vcs_type='svn', vcs_root='d', vcs_web='d')
-    >>> m.save()
-    >>> b = Branch(name='trunk', module=m)
-    >>> b.save()
-    >>> c = Category(release=r, branch=b, name='desktop')
-    >>> c.save()
-    >>> d = Domain(module=m, name='ihm', dtype='ui', directory='dir')
-    >>> d.save()
-    >>> t = Team(name='fr', description='GNOME French Team', coordinator=p)
-    >>> t.save()
-    >>> l = Language(name='french', locale='fr', team=t)
-    >>> l.save()
-    >>> ma = WorkflowActionRT()
-    >>> ma.name
-    'Reserve for translation'
-    >>> ms_next = ma.apply(p, b, d, l, 'Hi')
-    >>> ms_next.get_code()
-    'Translating'
-    """
+class VtmActionRT(VtmAction):
     class Meta:
-        db_table = 'workflow_action_rc'
+        db_table = 'vtm_action_rt'
 
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
@@ -123,23 +248,41 @@ class WorkflowActionRT(WorkflowAction):
         self.name = 'Reserve for translation'
         
     def _new_state(self):
-        return WorkflowStateTranslating()
+        return VtmStateTranslating()
 
     def _apply_child(self):
         return self._new_state()
 
 
-class WorkflowActionUT(WorkflowAction):
+class VtmActionUT(VtmAction):
     class Meta:
-        db_table = 'workflow_action_ut'
+        db_table = 'vtm_action_ut'
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
         self.code = 'UT'
         self.name = 'Upload the new translation'
         
     def _new_state(self):
-        return WorkflowStateTranslated()
+        return VtmStateTranslated()
 
     def _apply_child(self):
         return self._new_state()
+
+
+class VtmActionRP(VtmAction):
+    class Meta:
+        db_table = 'vtm_action_rp'
+        
+    def __init__(self, *args, **kwargs):
+        models.Model.__init__(self, *args, **kwargs)
+        self.code = 'RP'
+        self.name = 'Reserve for proofreading'
+
+    def _new_state(self):
+        return VtmStateProofreading()
+
+    def _apply_child(self, branch, domain, language, person):
+        return self._new_state()
+
+    
