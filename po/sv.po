@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-14 11:12+0000\n"
-"PO-Revision-Date: 2008-11-20 08:03+0100\n"
+"POT-Creation-Date: 2008-11-22 22:48+0000\n"
+"PO-Revision-Date: 2008-11-24 22:14+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -842,7 +842,7 @@ msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
 #: database-content.py:207
-#: templates/base.html:46
+#: templates/base.html:48
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
 
@@ -954,23 +954,39 @@ msgstr "GNOME 2.20 (gammal stabil)"
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (utveckling)"
 
-#: common/views.py:25
+#: common/views.py:31
 msgid "translator-credits"
 msgstr "Daniel Nylander <po@danielnylander.se>"
 
-#: stats/models.py:241
+#: common/views.py:52
+msgid "You have been logged out."
+msgstr "Du har loggats ut."
+
+#: common/views.py:60
+msgid "You have been successfully logged in."
+msgstr "Du är nu inloggad."
+
+#: common/views.py:67
+msgid "We're sorry, but your account has been disabled."
+msgstr "Vi är ledsna men ditt konto har inaktiverats."
+
+#: common/views.py:69
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "Inloggningen misslyckades. Verifiera ditt användarnamn och lösenord."
+
+#: stats/models.py:242
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
-#: stats/models.py:265
+#: stats/models.py:266
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: stats/models.py:302
+#: stats/models.py:303
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:503
+#: stats/models.py:504
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -981,89 +997,89 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:773
+#: stats/models.py:774
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:774
+#: stats/models.py:775
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:775
+#: stats/models.py:776
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:776
+#: stats/models.py:777
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:777
+#: stats/models.py:778
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:847
+#: stats/models.py:848
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:876
+#: stats/models.py:877
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:877
+#: stats/models.py:878
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:879
+#: stats/models.py:880
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:880
+#: stats/models.py:881
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:883
+#: stats/models.py:884
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:54
+#: stats/utils.py:52
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fel vid körning av \"intltool-update -m\"."
 
-#: stats/utils.py:60
+#: stats/utils.py:58
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Det saknas filer i POTFILES.in: %s"
 
-#: stats/utils.py:69
+#: stats/utils.py:67
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, men de finns ännu inte: %s"
 
-#: stats/utils.py:81
+#: stats/utils.py:79
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
-#: stats/utils.py:84
+#: stats/utils.py:82
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
 
-#: stats/utils.py:87
+#: stats/utils.py:85
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE pekar inte till en verklig fil, antagligen ett makro."
 
-#: stats/utils.py:102
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1074,39 +1090,39 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:152
+#: stats/utils.py:150
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "PO-filen \"%s\" finns inte."
 
-#: stats/utils.py:165
+#: stats/utils.py:163
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
-#: stats/utils.py:167
+#: stats/utils.py:165
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
-#: stats/utils.py:170
+#: stats/utils.py:168
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
-#: stats/utils.py:195
+#: stats/utils.py:193
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
-#: stats/utils.py:228
+#: stats/utils.py:226
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
-#: stats/utils.py:255
+#: stats/utils.py:253
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
-#: stats/utils.py:258
+#: stats/utils.py:256
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
@@ -1124,72 +1140,94 @@ msgstr "Fel: sidan hittades inte"
 msgid "The page you requested has not been found on this server."
 msgstr "Sidan som du begärde hittades inte på denna server."
 
-#: templates/base.html:24
-#: templates/base.html.py:53
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Fel: serverfel (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Serverfel"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Vi är ledsna men ett serverfel har inträffat."
+
+#: templates/base.html:26
+#: templates/base.html.py:55
 msgid "Home"
 msgstr "Hem"
 
-#: templates/base.html:27
+#: templates/base.html:29
 msgid "News"
 msgstr "Nyheter"
 
-#: templates/base.html:30
+#: templates/base.html:32
 msgid "Projects"
 msgstr "Projekt"
 
-#: templates/base.html:33
+#: templates/base.html:35
 msgid "Art"
 msgstr "Grafik"
 
-#: templates/base.html:36
+#: templates/base.html:38
 msgid "Support"
 msgstr "Support"
 
-#: templates/base.html:39
+#: templates/base.html:41
 msgid "Development"
 msgstr "Utveckling"
 
-#: templates/base.html:42
+#: templates/base.html:44
 msgid "Community"
 msgstr "Gemenskap"
 
-#: templates/base.html:53
+#: templates/base.html:55
 msgid "Back to Damned Lies home page"
 msgstr "Tillbaka till Förbannade lögner"
 
-#: templates/base.html:59
+#: templates/base.html:61
 #: templates/index.html:13
 msgid "Teams"
 msgstr "Grupper"
 
-#: templates/base.html:64
+#: templates/base.html:66
 #: templates/index.html:20
 msgid "Languages"
 msgstr "Språk"
 
-#: templates/base.html:69
+#: templates/base.html:71
 msgid "Release sets"
 msgstr "Utgåvesamlingar"
 
-#: templates/base.html:74
+#: templates/base.html:76
 #: templates/index.html:36
 msgid "Modules"
 msgstr "Moduler"
 
-#: templates/base.html:88
+#: templates/base.html:84
+#, python-format
+msgid " Logged in as: %(username)s"
+msgstr " Inloggad som: %(username)s"
+
+#: templates/base.html:86
+msgid "Login"
+msgstr "Logga in"
+
+#: templates/base.html:103
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: templates/base.html:90
+#: templates/base.html:105
 msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
-#: templates/base.html:92
+#: templates/base.html:107
 msgid "Hosted by"
 msgstr "Driftas av"
 
 #: templates/index.html:4
 #: templates/index.html.py:9
+#: templates/login.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Förbannade lögner om GNOME"
 
@@ -1245,6 +1283,43 @@ msgstr "De hämtas oftast från CVS, och vi håller alla relevant information om
 #: templates/index.html:46
 msgid "Translated by:"
 msgstr "Översatt av:"
+
+#: templates/login.html:10
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Du är redan inloggad som %(username)s."
+
+#: templates/login.html:14
+msgid "Log out"
+msgstr "Logga ut"
+
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "Logga in med ditt användarnamn och lösenord:"
+
+#: templates/login.html:21
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: templates/login.html:24
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: templates/login.html:30
+msgid "Log in"
+msgstr "Logga in"
+
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "eller använd ditt OpenID:"
+
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Logga in med OpenID"
 
 #: templates/module.html:4
 #, python-format
