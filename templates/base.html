@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load stats_extras %}
 {% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -81,9 +82,9 @@
 <!-- end site header -->
   <div id="authenticated">
   {% if user.is_authenticated %}
-  {% blocktrans with user.username as username %} Logged in as: {{ username }}{% endblocktrans %}
+    {% blocktrans with user|linked_with:user.username|safe as username %}Logged in as: {{ username }}{% endblocktrans %}
   {% else %}
-  <!-- Not useful right now <a href="{% url login %}">{% trans "Login" %}</a> -->
+  <!-- Not useful right now <a href="{% url login %}">{% trans "Log in" %}</a> -->
   {% endif %}
   </div>
 

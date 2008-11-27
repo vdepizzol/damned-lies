@@ -102,11 +102,25 @@ class Module(models.Model):
             if branch.name in ('HEAD', 'trunk', 'master'):
                 return branch
         return None
+    
+    def can_edit_branches(self, user):
+        """ Returns True for superusers, users with adequate permissions or maintainers of the module """ 
+        if user.is_superuser or \
+           user.has_perms(['stats.delete_branch', 'stats.add_branch', 'stats.change_branch']) or \
+           user.username in [p.username for p in self.maintainers.all()]:
+            return True
+        return False
 
+class BranchCharField(models.CharField):
+    def pre_save(self, model_instance, add):
+        """ Check if branch is valid before saving the instance """
+        if not model_instance.checkout():
+            raise Exception, "Branch not valid: error while checking out the branch."
+        return getattr(model_instance, self.attname)
 
 class Branch(models.Model):
     """ Branch of a module """
-    name = models.CharField(max_length=50)
+    name = BranchCharField(max_length=50)
     #description = models.TextField(null=True)
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module = models.ForeignKey(Module)
@@ -116,6 +130,7 @@ class Branch(models.Model):
         db_table = 'branch'
         verbose_name_plural = 'branches'
         ordering = ('name',)
+        unique_together = ("name", "module")
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
@@ -218,7 +233,7 @@ class Branch(models.Model):
             
             # 2. Pre-check, if available (intltool-update -m)
             # **************************
-            if dom.dtype == 'ui'and not dom.pot_method:
+            if dom.dtype == 'ui' and not dom.pot_method:
                 # Run intltool-update -m to check for some errors
                 errors.extend(utils.check_potfiles(domain_path))
             
@@ -785,6 +800,7 @@ class Category(models.Model):
     class Meta:
         db_table = 'category'
         verbose_name_plural = 'categories'
+        unique_together = ("release", "branch")
 
     def __unicode__(self):
         return "%s (%s, %s)" % (self.get_name_display(), self.release, self.branch)

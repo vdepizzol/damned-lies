@@ -54,6 +54,9 @@
     {% endifnotequal %}
     <a href="#{{ branch.name }}">{{ branch.name }}</a>
   {% endfor %}
+  {% if can_edit_branches %}
+    <a href="{% url stats.views.module_edit_branches module_name=module.name %}"><img src="/media/img/edit.png" alt="Edit" /></a>
+  {% endif %}
   </p>
 
   <!-- Main loop through branches -->
@@ -73,9 +76,9 @@
     <table><tr><td valign="top"><!-- split to two columns -->
     {% with branch.get_doc_stats as stats %}
     {% if stats|length %}
-      {% ifnotequal stats|length 1 %}
+      {% if not stats|length_is:"1" %}
         <h3>{% trans "Documentation" %}</h3>
-      {% endifnotequal %}
+      {% endif %}
       {% include "stats_show.html" %}
     {% endif %}
     {% endwith %}
@@ -83,9 +86,9 @@
     </td><td valign="top"><!-- split to two columns -->
     {% with branch.get_ui_stats as stats %}
     {% if stats|length %}
-      {% ifnotequal stats|length 1 %}
+      {% if not stats|length_is:"1" %}
         <h3>{% trans "Translation" %}</h3>
-      {% endifnotequal %}
+      {% endif %}
       {% include "stats_show.html" %}
     {% endif %}
     {% endwith %}
