@@ -13,11 +13,11 @@
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
 {% for person in person_list %}
   <div class="maintainer">
-  {% ifnotequal person.image '/media/img/nobody.png' %}
+  {% if person.image %}
     <img class="people" src="{{ person.image }}" alt="{{ person.name }}" />
   {% else %}
     <img class="people" src="/media/img/nobody.png" alt="" />
-  {% endifnotequal %}
+  {% endif %}
   <a style="font-size: 120%;" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
   {% if person.webpage_url %}
   <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
