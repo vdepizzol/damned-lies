@@ -4,15 +4,17 @@
 # 甘露(Lu Gan) <rhythm.gan@gmail.com>, 2008.
 # Aron Xu <aronmalache@163.com>, 2008.
 # Funda Wang <fundawang@gmail.com>, 2008.
-#
+# Funda Wang <fundawang@gmail.com>, 2008.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-15 23:58+0000\n"
-"PO-Revision-Date: 2008-11-16 09:59+0800\n"
-"Last-Translator: Funda Wang <fundawang@gmail.com>\n"
-"Language-Team: zh_CN <i18n@linux.net.cn>\n"
+"POT-Creation-Date: 2008-11-27 21:44+0000\n"
+"PO-Revision-Date: 2008-11-28 14:29+0800\n"
+"Last-Translator: Aron Xu <aronmalache@163.com>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -842,7 +844,7 @@ msgstr "GNOME 2 用户文档"
 msgid "Beagle Desktop Search"
 msgstr "Beagle 桌面搜索"
 
-#: database-content.py:207 templates/base.html:46
+#: database-content.py:207 templates/base.html:49
 msgid "Damned Lies"
 msgstr "胡言乱语"
 
@@ -966,23 +968,74 @@ msgstr "GNOME 2.20 (老的稳定版本)"
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (开发版本)"
 
-#: common/views.py:25
+#: common/views.py:31
 msgid "translator-credits"
 msgstr "Aron Xu <aronmalache@163.com>"
 
-#: stats/models.py:242
+#: common/views.py:52
+msgid "You have been logged out."
+msgstr "您的登录已注销。"
+
+#: common/views.py:60
+msgid "You have been successfully logged in."
+msgstr "您已成功登录。"
+
+#: common/views.py:67
+msgid "We're sorry, but your account has been disabled."
+msgstr "抱歉，您的帐户已被禁用。"
+
+#: common/views.py:69
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "登录成功，请校验您的用户名和密码。"
+
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "使用用户名和密码登录："
+
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:21
+msgid "Username:"
+msgstr "用户名"
+
+#: django_openid/templates/django_openid/admin_login.html:23
+#: templates/login.html:24
+msgid "Password:"
+msgstr "密码"
+
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:87 templates/login.html:30
+msgid "Log in"
+msgstr "登录"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "或者使用您的 OpenID："
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID："
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "使用 OpenID 登录"
+
+#: stats/models.py:257
 msgid "Can't generate POT file, using old one."
 msgstr "无法生成 POT 文档，改用旧的。"
 
-#: stats/models.py:266
+#: stats/models.py:281
 msgid "Can't copy new POT file to public location."
 msgstr "无法复制新的 POT 文档到公开位置"
 
-#: stats/models.py:303
+#: stats/models.py:318
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 清单没有包括该语言。"
 
-#: stats/models.py:504
+#: stats/models.py:519
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -993,68 +1046,68 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:774
+#: stats/models.py:789
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:775
+#: stats/models.py:790
 msgid "Development Tools"
 msgstr "开发工具"
 
-#: stats/models.py:776
+#: stats/models.py:791
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:777
+#: stats/models.py:792
 msgid "GNOME Developer Platform"
 msgstr "GNOME 开发者平台"
 
-#: stats/models.py:778
+#: stats/models.py:793
 msgid "New Module Proposals"
 msgstr "新模块提案"
 
-#: stats/models.py:848
+#: stats/models.py:864
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:877
+#: stats/models.py:893
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 条消息"
 
-#: stats/models.py:878
+#: stats/models.py:894
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新于 %(date)s"
 
-#: stats/models.py:880
+#: stats/models.py:896
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 个图片"
 
-#: stats/models.py:881
+#: stats/models.py:897
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 文档 (%(messages)s,·%(figures)s)·—·%(updated)s"
 
-#: stats/models.py:884
+#: stats/models.py:900
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 文档 (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:54
+#: stats/utils.py:52
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "运行 'intltool-update -m' 检查时出错。"
 
-#: stats/utils.py:60
+#: stats/utils.py:58
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "在 POTFILES.in 中缺少部分文件: %s"
 
-#: stats/utils.py:69
+#: stats/utils.py:67
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1062,21 +1115,21 @@ msgid ""
 msgstr ""
 "下列文件在·POTFILES.in 或者 OTFILES.skip 中涉及到，然而他们并不存在：·%s"
 
-#: stats/utils.py:81
+#: stats/utils.py:79
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "模块 %s 不像是 gnome-doc-utils 模块。"
 
-#: stats/utils.py:84
+#: stats/utils.py:82
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE 没有解析到某个真实文件，请使用 '%s.xml'。"
 
-#: stats/utils.py:87
+#: stats/utils.py:85
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE 没有指向某个真实文件，也许是某个宏。"
 
-#: stats/utils.py:102
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1087,40 +1140,40 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:152
+#: stats/utils.py:150
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "PO 文档 '%s' 不存在。"
 
-#: stats/utils.py:165
+#: stats/utils.py:163
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO·文件·'%s'·没有通过·msgfmt·检查：不能更新。"
 
-#: stats/utils.py:167
+#: stats/utils.py:165
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "无法得到 POT 文档 '%s' 的统计数据。"
 
-#: stats/utils.py:170
+#: stats/utils.py:168
 msgid "This PO file has an executable bit set."
 msgstr "该 PO 文件设置为可执行属性。"
 
-#: stats/utils.py:195
+#: stats/utils.py:193
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO 文档 '%s' 并不是 UTF-8 编码。"
 
-#: stats/utils.py:228
+#: stats/utils.py:226
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "在 LINGUAS 文件内没有该语言的条目。"
 
-#: stats/utils.py:255
+#: stats/utils.py:253
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "在配置文件的 ALL_LINGUAS 内没有该语言的条目。"
 
-#: stats/utils.py:258
+#: stats/utils.py:256
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1139,70 +1192,88 @@ msgstr "错误：页面未找到"
 msgid "The page you requested has not been found on this server."
 msgstr "未在此服务器上找到您请求的页面。"
 
-#: templates/base.html:24 templates/base.html.py:53
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "错误：服务器错误 (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "服务器错误"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "对不起，服务器出现了错误。"
+
+#: templates/base.html:27 templates/base.html.py:56
 msgid "Home"
 msgstr "主页"
 
-#: templates/base.html:27
+#: templates/base.html:30
 msgid "News"
 msgstr "新闻"
 
-#: templates/base.html:30
+#: templates/base.html:33
 msgid "Projects"
 msgstr "项目"
 
-#: templates/base.html:33
+#: templates/base.html:36
 msgid "Art"
 msgstr "美工"
 
-#: templates/base.html:36
+#: templates/base.html:39
 msgid "Support"
 msgstr "支持"
 
-#: templates/base.html:39
+#: templates/base.html:42
 msgid "Development"
 msgstr "开发"
 
-#: templates/base.html:42
+#: templates/base.html:45
 msgid "Community"
 msgstr "社区"
 
-#: templates/base.html:53
+#: templates/base.html:56
 msgid "Back to Damned Lies home page"
 msgstr "返回胡言乱语首页"
 
-#: templates/base.html:59 templates/index.html:13
+#: templates/base.html:62 templates/index.html:13
 msgid "Teams"
 msgstr "队伍"
 
-#: templates/base.html:64 templates/index.html:20
+#: templates/base.html:67 templates/index.html:20
 msgid "Languages"
 msgstr "语言"
 
-#: templates/base.html:69
+#: templates/base.html:72
 msgid "Release sets"
 msgstr "发行套件"
 
-#: templates/base.html:74 templates/index.html:36
+#: templates/base.html:77 templates/index.html:36
 msgid "Modules"
 msgstr "模块"
 
-#: templates/base.html:88
+#: templates/base.html:85
+#, python-format
+msgid "Logged in as: %(username)s"
+msgstr "登录为 %(username)s"
+
+#: templates/base.html:104
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: templates/base.html:90
+#: templates/base.html:106
 msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr ""
-"在 <a href='http://svn.gnome.org/'>svn.gnome.org</a> 中的 <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> 模块维护。"
+"在 <a href='http://svn.gnome.org/'>svn.gnome.org</a> 中的 <a href='http://"
+"svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> 模块维护。"
 
-#: templates/base.html:92
+#: templates/base.html:108
 msgid "Hosted by"
 msgstr "主机提供"
 
-#: templates/index.html:4 templates/index.html.py:9
+#: templates/index.html:4 templates/index.html.py:9 templates/login.html:4
 msgid "Damned Lies about GNOME"
 msgstr "关于 GNOME 的胡言乱语"
 
@@ -1227,8 +1298,7 @@ msgstr ""
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
-msgstr ""
-"这里是所有<a href='%(teams_url)s'>翻译小组</a>的语言清单"
+msgstr "这里是所有<a href='%(teams_url)s'>翻译小组</a>的语言清单"
 
 #: templates/index.html:23
 msgid ""
@@ -1251,15 +1321,14 @@ msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
 msgstr ""
-"发行系列的例子有·&quot;GNOME·办公&quot;,·&quot;第五脚趾&quot;·"
-"和·&quot;GNOME·2.14&quot;."
+"发行系列的例子有·&quot;GNOME·办公&quot;,·&quot;第五脚趾&quot;·和·&quot;"
+"GNOME·2.14&quot;."
 
 #: templates/index.html:31
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr ""
-"正式的 GNOME 发行套件将分为各个类别，诸如“桌面程序”和“开发平台”。"
+msgstr "正式的 GNOME 发行套件将分为各个类别，诸如“桌面程序”和“开发平台”。"
 
 #: templates/index.html:33
 msgid ""
@@ -1288,6 +1357,15 @@ msgstr ""
 #: templates/index.html:46
 msgid "Translated by:"
 msgstr "翻译由："
+
+#: templates/login.html:10
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "您已登录为 %(username)s。"
+
+#: templates/login.html:14
+msgid "Log out"
+msgstr "注销"
 
 #: templates/module.html:4
 #, python-format
@@ -1321,25 +1399,25 @@ msgstr "报告 Bug 到 Bugzilla"
 msgid "Branches:"
 msgstr "分支："
 
-#: templates/module.html:63
+#: templates/module.html:66
 msgid "Browse CVS"
 msgstr "浏览 CVS"
 
-#: templates/module.html:66
+#: templates/module.html:69
 msgid "Browse SVN"
 msgstr "浏览 SVN"
 
-#: templates/module.html:70
+#: templates/module.html:73
 msgid "This branch is currently string-frozen."
 msgstr "该分支当前处于字符串冻结期。"
 
-#: templates/module.html:77 templates/release.html:17
+#: templates/module.html:80 templates/release.html:17
 #: templates/languages/language_release.html:40
 #: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "文档"
 
-#: templates/module.html:87
+#: templates/module.html:90
 msgid "Translation"
 msgstr "翻译"
 
@@ -1636,9 +1714,6 @@ msgstr "当前在 GNOME 中没有翻译小组，:("
 
 #~ msgid "Translates:"
 #~ msgstr "翻译："
-
-#~ msgid "Coordinates %(team)s"
-#~ msgstr "协调 %(team)s"
 
 #~ msgid "-"
 #~ msgstr "-"
