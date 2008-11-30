@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
 #    'django_openid',
+    'common',
     'languages',
     'people',
     'stats',

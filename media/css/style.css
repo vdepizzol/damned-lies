@@ -7,18 +7,19 @@
  *  Decoration
  *  Separators
  */
+
 body * {
   font-family: verdana, arial, sans-serif;
 }
 
 div#content a {
-	color: #3465a4;
-	border-bottom: 1px dotted #888;
-	text-decoration: none;
+  color: #3465a4;
+  border-bottom: 1px dotted #888;
+  text-decoration: none;
 }
 
 div#content a:hover {
-	border-bottom: 1px solid #888;
+  border-bottom: 1px solid #888;
 }
 
 
@@ -86,18 +87,18 @@ h3 {
 /* styling page content */
 
 h1 {
-	font-size: 1.5em;
-	color: #3f3f3f;
+  font-size: 1.5em;
+  color: #3f3f3f;
 }
 
 /* styling form widgets like bugzilla.gnome.org */
 input,textarea {
- border: 1px solid #6f6f6f;
+  border: 1px solid #6f6f6f;
 /* background: #dddddd; */
 }
 
 input.login_small {
- border-style: none;
+  border-style: none;
 }
 
 input:focus,textarea:focus {
@@ -105,12 +106,8 @@ input:focus,textarea:focus {
   color: #000000;
 }
 
-/* select {
- border: groove
-} */
-
 option {
- border: 0px none #ffffff;
+  border: 0px none #ffffff;
 }
 
 input[type=radio] {
@@ -120,32 +117,58 @@ input[type=radio] {
 /* footer */
 
 #footer {
-	text-align: center;
-	margin: 3em 3em 1em 3em;
-	border-top: 1px solid gray;
-	padding-top: 1.5em;
-	color: #888;
-	font-size: 80%;
-	clear: both;
+  text-align: center;
+  margin: 3em 3em 1em 3em;
+  border-top: 1px solid gray;
+  padding-top: 1.5em;
+  color: #888;
+  font-size: 80%;
+  clear: both;
 }
 
 #footer ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #footer li {
-	display: inline;
-	padding: 0 1em;
+  display: inline;
+  padding: 0 1em;
 }
 
 #footer a {
-	color: #3465a4;
-	border-bottom: 1px dotted #888;
-	text-decoration: none;
+  color: #3465a4;
+  border-bottom: 1px dotted #888;
+  text-decoration: none;
 }
 
 #footer a:hover {
-	border-bottom: 1px solid #888
+ border-bottom: 1px solid #888
 }
 
+.col3_container {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.col3_container ul {
+  margin-top: 0;
+}
+
+.col3_left {
+  float: left;
+  margin: 0;
+  width: 33.3%;
+}
+
+.col3_middle {
+  margin-left: 33.3%;
+  margin-right: 33.3%;
+}
+
+.col3_right {
+  float: right;
+  margin: 0;
+  width: 33.3%;
+}

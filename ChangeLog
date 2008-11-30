@@ -1,5 +1,20 @@
 2008-11-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	Replace the CSS 3 attribute 'column-count' (and relatives) by a
+	more ordinary CSS layout (fix strange behaviour with FF3 and works
+	with IE).
+	
+	* common/templatetags:
+	* common/templatetags/__init__.py:
+	* common/templatetags/list_to_three_columns.py: New template tag
+	to split a list into 3 columns.	
+	* media/css/style.css: Added 3 columns layout.
+	* settings_sample.py: Added common app.
+	* templates/languages/language_list.html: 
+	* templates/module_list.html: Use the new template tag.
+
+2008-11-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* templates/admin/base_site.html: Link to the Home page and admin
 	interface title.
 

@@ -10,12 +10,18 @@
 
 <p>{% trans "Select a module below to see some of the damned lies about it:" %}</p>
 
-<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
-<ul class="foot">
-{% for mod in modules %}
-  <li><a href="{% url stats.views.module mod.name %}">{{ mod.get_description }} </a></li>
-{% endfor %}
-</ul>
+{% load list_to_three_columns %}
+<div class="col3_container">
+  {% list_to_three_columns modules as columns %}
+  {% for l in columns %}
+  <div class="{% cycle 'col3_left' 'col3_right' 'col3_middle' %}">
+    <ul class="foot">
+      {% for m in l %}
+      <li><a href="{% url stats.views.module m.name %}">{{ m.get_description }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
 </div>
 
 </div>

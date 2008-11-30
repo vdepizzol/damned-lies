@@ -8,18 +8,22 @@
 
 <h1>{% trans "GNOME Languages" %}</h1>
 
-{% blocktrans count languages|length as numb %}GNOME is being translated to following {{ numb }} language.
+<p>{% blocktrans count languages|length as numb %}GNOME is being translated to following {{ numb }} language.
 {% plural %}GNOME is being translated to following {{ numb }} languages.
-{% endblocktrans %}
+{% endblocktrans %}</p>
 
-<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
-<ul class="foot">
-{% for lang in languages %}
-<li style="font-size: 120%;">
-  <a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a>
-</li>
-{% endfor %}
-</ul>
+{% load list_to_three_columns %}
+<div class="col3_container">
+  {% list_to_three_columns languages as columns %}
+  {% for column in columns %}
+  <div class="{% cycle 'col3_left' 'col3_right' 'col3_middle' %}">
+    <ul class="foot">
+      {% for lang in column %}
+      <li><a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
 </div>
 
 </div>
