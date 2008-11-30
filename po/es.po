@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-22 22:48+0000\n"
-"PO-Revision-Date: 2008-11-24 10:30+0100\n"
+"POT-Creation-Date: 2008-11-27 21:34+0000\n"
+"PO-Revision-Date: 2008-11-30 12:50+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -842,7 +842,7 @@ msgstr "Documentación del usuario de GNOME 2"
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:207 templates/base.html:48
+#: database-content.py:207 templates/base.html:49
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
@@ -988,19 +988,54 @@ msgstr "Su cuenta ha sido desactivada."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Ha fallado el inicio de sesión. Compruebe su usuario y su contraseña."
 
-#: stats/models.py:242
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "Iniciar sesión con su usuario y contraseña:"
+
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:21
+msgid "Username:"
+msgstr "Nombre de usuario:"
+
+#: django_openid/templates/django_openid/admin_login.html:23
+#: templates/login.html:24
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:87 templates/login.html:30
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "O usar su OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Iniciar sesión con OpenID"
+
+#: stats/models.py:257
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: stats/models.py:266
+#: stats/models.py:281
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:303
+#: stats/models.py:318
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: stats/models.py:504
+#: stats/models.py:519
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1011,56 +1046,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:774
+#: stats/models.py:789
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:775
+#: stats/models.py:790
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:776
+#: stats/models.py:791
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:777
+#: stats/models.py:792
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:778
+#: stats/models.py:793
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:848
+#: stats/models.py:864
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:877
+#: stats/models.py:893
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:878
+#: stats/models.py:894
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:880
+#: stats/models.py:896
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:881
+#: stats/models.py:897
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:884
+#: stats/models.py:900
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1176,68 +1211,64 @@ msgstr "Error del servidor"
 msgid "We're sorry but a server error has occurred."
 msgstr "Ocurrió un error en el servidor."
 
-#: templates/base.html:26 templates/base.html.py:55
+#: templates/base.html:27 templates/base.html.py:56
 msgid "Home"
 msgstr "Principal"
 
-#: templates/base.html:29
+#: templates/base.html:30
 msgid "News"
 msgstr "Noticias"
 
-#: templates/base.html:32
+#: templates/base.html:33
 msgid "Projects"
 msgstr "Proyectos"
 
-#: templates/base.html:35
+#: templates/base.html:36
 msgid "Art"
 msgstr "Arte"
 
-#: templates/base.html:38
+#: templates/base.html:39
 msgid "Support"
 msgstr "Soporte"
 
-#: templates/base.html:41
+#: templates/base.html:42
 msgid "Development"
 msgstr "Desarrollo"
 
-#: templates/base.html:44
+#: templates/base.html:45
 msgid "Community"
 msgstr "Comunidad"
 
-#: templates/base.html:55
+#: templates/base.html:56
 msgid "Back to Damned Lies home page"
 msgstr "Volver a la página principal de Malditas Mentiras"
 
-#: templates/base.html:61 templates/index.html:13
+#: templates/base.html:62 templates/index.html:13
 msgid "Teams"
 msgstr "Equipos"
 
-#: templates/base.html:66 templates/index.html:20
+#: templates/base.html:67 templates/index.html:20
 msgid "Languages"
 msgstr "Idiomas"
 
-#: templates/base.html:71
+#: templates/base.html:72
 msgid "Release sets"
 msgstr "Lanzamientos"
 
-#: templates/base.html:76 templates/index.html:36
+#: templates/base.html:77 templates/index.html:36
 msgid "Modules"
 msgstr "Módulos"
 
-#: templates/base.html:84
+#: templates/base.html:85
 #, python-format
-msgid " Logged in as: %(username)s"
-msgstr " Registrado como: %(username)s"
+msgid "Logged in as: %(username)s"
+msgstr "Registrado como: %(username)s"
 
-#: templates/base.html:86
-msgid "Login"
-msgstr "Iniciar sesión"
-
-#: templates/base.html:103
+#: templates/base.html:104
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
-#: templates/base.html:105
+#: templates/base.html:106
 msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
@@ -1245,7 +1276,7 @@ msgstr ""
 "Mantenido en el módulo <a href='http://svn.gnome.org/viewvc/damned-"
 "lies/'>damned-lies</a> en <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
-#: templates/base.html:107
+#: templates/base.html:108
 msgid "Hosted by"
 msgstr "Hospedado por"
 
@@ -1355,34 +1386,6 @@ msgstr "Está registrado como %(username)s."
 msgid "Log out"
 msgstr "Salir de la sesión"
 
-#: templates/login.html:18
-msgid "Log in with your username and password:"
-msgstr "Iniciar sesión con su usuario y contraseña:"
-
-#: templates/login.html:21
-msgid "Username:"
-msgstr "Nombre de usuario:"
-
-#: templates/login.html:24
-msgid "Password:"
-msgstr "Contraseña:"
-
-#: templates/login.html:30
-msgid "Log in"
-msgstr "Iniciar sesión"
-
-#: templates/login.html:35
-msgid "Or use your OpenID:"
-msgstr "O usar su OpenID:"
-
-#: templates/login.html:38
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "Iniciar sesión con OpenID"
-
 #: templates/module.html:4
 #, python-format
 msgid "Module Statistics: %(name)s"
@@ -1416,25 +1419,25 @@ msgstr "Informar de errores a Bugzilla"
 msgid "Branches:"
 msgstr "Ramas:"
 
-#: templates/module.html:63
+#: templates/module.html:66
 msgid "Browse CVS"
 msgstr "Examinar CVS"
 
-#: templates/module.html:66
+#: templates/module.html:69
 msgid "Browse SVN"
 msgstr "Examinar SVN"
 
-#: templates/module.html:70
+#: templates/module.html:73
 msgid "This branch is currently string-frozen."
 msgstr "Actualmente las cadenas de esta rama están congeladas."
 
-#: templates/module.html:77 templates/release.html:17
+#: templates/module.html:80 templates/release.html:17
 #: templates/languages/language_release.html:40
 #: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "Documentación"
 
-#: templates/module.html:87
+#: templates/module.html:90
 msgid "Translation"
 msgstr "Traducción"
 
@@ -1679,6 +1682,9 @@ msgstr "Coordinado por <a href=\"%(url)s\">%(name)s</a>"
 #: templates/teams/team_list.html:32
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Actualmente no hay equipos de traducción para GNOME. :("
+
+#~ msgid "Login"
+#~ msgstr "Iniciar sesión"
 
 #~ msgid "GNOME modules"
 #~ msgstr "Módulos de GNOME"
