@@ -19,37 +19,34 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-"""Splits query results list into multiple sublists for template display.
-   The order is column 1, then 3 and 2 to respect the CSS order."""
-from django import template
 
+from django import template
+     
 register = template.Library()
 
 class SplitListNode(template.Node):
-    def __init__(self, list, new_list):
+    def __init__(self, list, cols, new_list):
         self.list = list
+        self.cols = cols
         self.new_list = new_list
 
-    def split_seq(self, list):
-        # Simpler as a loop (KISS)
-        len_col1 = len(list[0::3])
-        len_col2 = len(list[1::3])
-        len_col3 = len(list[2::3])
-        # Column 1
-        yield list[0:len_col1]
-        # Column 3
-        yield list[len_col1+len_col2:len_col1+len_col2+len_col3]
-        # Column 2
-        yield list[len_col1:len_col1+len_col2]
+    def split_seq(self, list, cols=2):
+        start = 0 
+        for i in xrange(cols): 
+            stop = start + len(list[i::cols]) 
+            yield list[start:stop] 
+            start = stop
 
     def render(self, context):
-        context[self.new_list] = self.split_seq(context[self.list])
+        context[self.new_list] = self.split_seq(context[self.list], int(self.cols))
         return ''
 
-def list_to_three_columns(parser, token):
-    """Parse template tag: {% list_to_three_columns list as columns %}"""
+def list_to_columns(parser, token):
+    """Parse template tag: {% list_to_columns list as new_list 2 %}"""
     bits = token.contents.split()
+    if len(bits) != 5:
+        raise template.TemplateSyntaxError, "list_to_columns list as new_list 2"
     if bits[2] != 'as':
-        raise TemplateSyntaxError, "second argument to the list_to_three_columns tag must be 'as'"
-    return SplitListNode(bits[1], bits[3])
-list_to_three_columns = register.tag(list_to_three_columns)
+        raise template.TemplateSyntaxError, "second argument to the list_to_columns tag must be 'as'"
+    return SplitListNode(bits[1], bits[4], bits[3])
+list_to_columns = register.tag(list_to_columns)

@@ -146,29 +146,12 @@ input[type=radio] {
  border-bottom: 1px solid #888
 }
 
-.col3_container {
-  float: left;
-  width: 100%;
-  overflow: hidden;
-}
-
 .col3_container ul {
   margin-top: 0;
 }
 
-.col3_left {
+.col3_column {
   float: left;
-  margin: 0;
-  width: 33.3%;
+  width: 33.3%
 }
 
-.col3_middle {
-  margin-left: 33.3%;
-  margin-right: 33.3%;
-}
-
-.col3_right {
-  float: right;
-  margin: 0;
-  width: 33.3%;
-}

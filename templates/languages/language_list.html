@@ -12,11 +12,11 @@
 {% plural %}GNOME is being translated to following {{ numb }} languages.
 {% endblocktrans %}</p>
 
-{% load list_to_three_columns %}
+{% load list_to_columns %}
 <div class="col3_container">
-  {% list_to_three_columns languages as columns %}
+  {% list_to_columns languages as columns 3 %}
   {% for column in columns %}
-  <div class="{% cycle 'col3_left' 'col3_right' 'col3_middle' %}">
+  <div class="col3_column">
     <ul class="foot">
       {% for lang in column %}
       <li><a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a></li>

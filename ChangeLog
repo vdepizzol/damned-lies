@@ -1,3 +1,13 @@
+2008-12-01  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	Same feature as previous commit, just more simple!
+	
+	* common/templatetags/list_to_columns.py: New name and updated.
+	* common/templatetags/list_to_three_columns.py:
+	* media/css/style.css: Only one column definition.
+	* templates/module_list.html:
+	* templates/languages/language_list.html: Natural column order.
+	
 2008-11-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	Replace the CSS 3 attribute 'column-count' (and relatives) by a
