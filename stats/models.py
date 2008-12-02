@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os, sys, re, commands
+import threading
 from datetime import datetime
 from time import tzname
 from itertools import islice
@@ -137,8 +138,9 @@ class Branch(models.Model):
 
     def save(self):
         super(Branch, self).save()
-        #FIXME: this command should be run in a separate thread
-        self.update_stats(force=True)
+        # The update command is launched asynchronously in a separate thread
+        upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
+        upd_thread.start()
 
     def is_head(self):
         if self.module.vcs_type in ('cvs', 'svn') and self.name == "HEAD":

@@ -1,3 +1,8 @@
+2008-12-02  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/models.py: Launch the update_stats method asynchronously when
+	creating a new branch.
+
 2008-12-01  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	Same feature as previous commit, just more simple!
