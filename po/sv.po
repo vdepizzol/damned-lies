@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-22 22:48+0000\n"
-"PO-Revision-Date: 2008-11-24 22:14+0100\n"
+"POT-Creation-Date: 2008-12-01 18:22+0000\n"
+"PO-Revision-Date: 2008-12-03 03:09+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -842,7 +842,8 @@ msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
 #: database-content.py:207
-#: templates/base.html:48
+#: templates/base.html:49
+#: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
 
@@ -974,19 +975,55 @@ msgstr "Vi är ledsna men ditt konto har inaktiverats."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Inloggningen misslyckades. Verifiera ditt användarnamn och lösenord."
 
-#: stats/models.py:242
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "Logga in med ditt användarnamn och lösenord:"
+
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:21
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: django_openid/templates/django_openid/admin_login.html:23
+#: templates/login.html:24
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:87
+#: templates/login.html:30
+msgid "Log in"
+msgstr "Logga in"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "eller använd ditt OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Logga in med OpenID"
+
+#: stats/models.py:257
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
-#: stats/models.py:266
+#: stats/models.py:281
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: stats/models.py:303
+#: stats/models.py:318
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:504
+#: stats/models.py:519
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -997,56 +1034,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:774
+#: stats/models.py:789
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:775
+#: stats/models.py:790
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:776
+#: stats/models.py:791
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:777
+#: stats/models.py:792
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:778
+#: stats/models.py:793
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:848
+#: stats/models.py:864
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:877
+#: stats/models.py:893
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:878
+#: stats/models.py:894
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:880
+#: stats/models.py:896
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:881
+#: stats/models.py:897
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:884
+#: stats/models.py:900
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -1152,76 +1189,72 @@ msgstr "Serverfel"
 msgid "We're sorry but a server error has occurred."
 msgstr "Vi är ledsna men ett serverfel har inträffat."
 
-#: templates/base.html:26
-#: templates/base.html.py:55
+#: templates/base.html:27
+#: templates/base.html.py:56
 msgid "Home"
 msgstr "Hem"
 
-#: templates/base.html:29
+#: templates/base.html:30
 msgid "News"
 msgstr "Nyheter"
 
-#: templates/base.html:32
+#: templates/base.html:33
 msgid "Projects"
 msgstr "Projekt"
 
-#: templates/base.html:35
+#: templates/base.html:36
 msgid "Art"
 msgstr "Grafik"
 
-#: templates/base.html:38
+#: templates/base.html:39
 msgid "Support"
 msgstr "Support"
 
-#: templates/base.html:41
+#: templates/base.html:42
 msgid "Development"
 msgstr "Utveckling"
 
-#: templates/base.html:44
+#: templates/base.html:45
 msgid "Community"
 msgstr "Gemenskap"
 
-#: templates/base.html:55
+#: templates/base.html:56
 msgid "Back to Damned Lies home page"
 msgstr "Tillbaka till Förbannade lögner"
 
-#: templates/base.html:61
+#: templates/base.html:62
 #: templates/index.html:13
 msgid "Teams"
 msgstr "Grupper"
 
-#: templates/base.html:66
+#: templates/base.html:67
 #: templates/index.html:20
 msgid "Languages"
 msgstr "Språk"
 
-#: templates/base.html:71
+#: templates/base.html:72
 msgid "Release sets"
 msgstr "Utgåvesamlingar"
 
-#: templates/base.html:76
+#: templates/base.html:77
 #: templates/index.html:36
 msgid "Modules"
 msgstr "Moduler"
 
-#: templates/base.html:84
+#: templates/base.html:85
 #, python-format
-msgid " Logged in as: %(username)s"
-msgstr " Inloggad som: %(username)s"
+msgid "Logged in as: %(username)s"
+msgstr "Inloggad som: %(username)s"
 
-#: templates/base.html:86
-msgid "Login"
-msgstr "Logga in"
-
-#: templates/base.html:103
+#: templates/base.html:104
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: templates/base.html:105
+#: templates/base.html:106
 msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
-#: templates/base.html:107
+#: templates/base.html:108
 msgid "Hosted by"
 msgstr "Driftas av"
 
@@ -1293,34 +1326,6 @@ msgstr "Du är redan inloggad som %(username)s."
 msgid "Log out"
 msgstr "Logga ut"
 
-#: templates/login.html:18
-msgid "Log in with your username and password:"
-msgstr "Logga in med ditt användarnamn och lösenord:"
-
-#: templates/login.html:21
-msgid "Username:"
-msgstr "Användarnamn:"
-
-#: templates/login.html:24
-msgid "Password:"
-msgstr "Lösenord:"
-
-#: templates/login.html:30
-msgid "Log in"
-msgstr "Logga in"
-
-#: templates/login.html:35
-msgid "Or use your OpenID:"
-msgstr "eller använd ditt OpenID:"
-
-#: templates/login.html:38
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "Logga in med OpenID"
-
 #: templates/module.html:4
 #, python-format
 msgid "Module Statistics: %(name)s"
@@ -1350,26 +1355,26 @@ msgstr "Rapportera fel via Bugzilla"
 msgid "Branches:"
 msgstr "Grenar:"
 
-#: templates/module.html:63
+#: templates/module.html:66
 msgid "Browse CVS"
 msgstr "Bläddra i CVS"
 
-#: templates/module.html:66
+#: templates/module.html:69
 msgid "Browse SVN"
 msgstr "Bläddra i SVN"
 
-#: templates/module.html:70
+#: templates/module.html:73
 msgid "This branch is currently string-frozen."
 msgstr "Den här grenen är för närvarande strängfrusen."
 
-#: templates/module.html:77
+#: templates/module.html:80
 #: templates/release.html:17
 #: templates/languages/language_release.html:40
 #: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: templates/module.html:87
+#: templates/module.html:90
 msgid "Translation"
 msgstr "Översättning"
 
@@ -1487,6 +1492,10 @@ msgstr "Översatt"
 #: templates/stats_show.html:44
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
+
+#: templates/admin/base_site.html:4
+msgid "Damned Lies site admin"
+msgstr "Admin för Förbannade lögner"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -1613,6 +1622,8 @@ msgstr "Koordineras av <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Det finns för närvarande inga översättningsgrupper i GNOME. :("
 
+#~ msgid "Login"
+#~ msgstr "Logga in"
 #~ msgid "GNOME modules"
 #~ msgstr "GNOME-moduler"
 #~ msgid "GLib"
