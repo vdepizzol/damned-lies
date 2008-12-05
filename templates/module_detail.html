@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% blocktrans with module.get_description as name %}Module Statistics: {{ name }}{% endblocktrans %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{{ module.get_description }}</h1>
+
+{% if module.comment %}
+  <p>{{ module.comment|safe }}</p>
+{% else %}
+  {% ifnotequal module.vcs_root "http://svn.gnome.org/svn" %}
+  <p><i><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</i></p>
+  {% endifnotequal %}
+{% endif %}
+
+{% if module.homepage %}
+  <p><a href="{{ module.homepage }}">{{ module.homepage }}</a></p>
+{% endif %}
+
+<table><tr><td width="50%" valign="top">
+
+{% if module.maintainers.all %}
+  <h2>{% trans "Maintainers" %}</h2>
+  {% for person in module.maintainers.all %}
+    {% with 0 as printroles %}
+    {% include "person_base.html" %}
+    {% endwith %}
+  {% endfor %}
+{% endif %}
+
+</td><td width="50%" valign="top">
+
+{% if module.bugs_base %}
+  <h2>{% trans "Bug reporting" %}</h2>
+  <ul>
+  {% if module.get_bugs_i18n_url %}
+    <li><a href="{{ module.get_bugs_i18n_url }}">{% trans "Show existing i18n and l10n bugs" %}</li>
+  {% endif %}
+  <li><a href="{{ module.get_bugs_enter_url }}">{% trans "Report bugs to Bugzilla" %}</a></li>
+  </ul>
+{% endif %}
+
+</td></tr></table>
+
+{% if module.branch_set.all %}
+  <!-- Links to branches of module -->
+  <p><b>{% trans "Branches:" %}</b>
+  {% for branch in module.get_branches %}
+    {% ifnotequal forloop.counter 1 %} 
+    - 
+    {% endifnotequal %}
+    <a href="#{{ branch.name }}">{{ branch.name }}</a>
+  {% endfor %}
+  {% if can_edit_branches %}
+    <a href="{% url stats.views.module_edit_branches module_name=module.name %}"><img src="/media/img/edit.png" alt="Edit" /></a>
+  {% endif %}
+  </p>
+
+  <!-- Main loop through branches -->
+  {% for branch in module.get_branches %}
+    <h2><a name="{{ branch.name }}"></a>{{ branch.name }}
+    {% ifequal module.vcs_type "cvs" %}
+      (<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse CVS" %}</a>)
+    {% endifequal %}
+    {% ifequal module.vcs_type "svn" %}
+      (<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse SVN" %}</a>)
+    {% endifequal %}
+    </h2>
+    {% if branch.release_cat.release.string_frozen %}
+      <p>{% trans "This branch is currently string-frozen." %}</p>
+    {% endif %}
+
+    <table><tr><td valign="top"><!-- split to two columns -->
+    {% with branch.get_doc_stats as stats %}
+    {% if stats|length %}
+      {% if not stats|length_is:"1" %}
+        <h3>{% trans "Documentation" %}</h3>
+      {% endif %}
+      {% include "stats_show.html" %}
+    {% endif %}
+    {% endwith %}
+
+    </td><td valign="top"><!-- split to two columns -->
+    {% with branch.get_ui_stats as stats %}
+    {% if stats|length %}
+      {% if not stats|length_is:"1" %}
+        <h3>{% trans "Translation" %}</h3>
+      {% endif %}
+      {% include "stats_show.html" %}
+    {% endif %}
+    {% endwith %}
+
+    </td></tr></table>
+
+  {% endfor %}
+{% endif %}
+
+</div>
+{% endblock %}

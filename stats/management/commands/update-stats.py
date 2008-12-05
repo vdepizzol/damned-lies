@@ -18,6 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         if len(args) <= 2:
             if len(args) == 2:
+                # Update the specific branch of a module
                 module_arg = args[0]
                 branch_arg = args[1]
                 if branch_arg == "trunk":
@@ -36,12 +37,14 @@ class Command(BaseCommand):
                     print "Error during updating, mail sent to admins"
                     
             elif len(args) == 1:
+                # Update all branches of a module
                 module_arg = args[0]
                 print "Updating stats for %s..." % (module_arg)
                 branches = Branch.objects.filter(module__name=module_arg)
                 for branch in branches.all():
                     branch.update_stats(options['force'])
             else:
+                # Update all modules
                 modules = Module.objects.all()
                 for mod in modules:
                     print "Updating stats for %s..." % (mod.name)

@@ -37,7 +37,7 @@ def modules(request):
     all_modules = Module.objects.all()
     context = {
         'pageSection':  "module",
-        'modules': utils.sortObjectList(all_modules, 'get_description')
+        'modules': utils.sort_object_list(all_modules, 'get_description')
     }
     return render_to_response('module_list.html', context, context_instance=RequestContext(request))
 
@@ -49,7 +49,7 @@ def module(request, module_name):
         'can_edit_branches': mod.can_edit_branches(request.user),
         'prof': utils.Profiler()
     }
-    return render_to_response('module.html', context, context_instance=RequestContext(request))
+    return render_to_response('module_detail.html', context, context_instance=RequestContext(request))
 
 @login_required
 def module_edit_branches(request, module_name):
@@ -148,5 +148,5 @@ def release(request, release_name):
         'pageSection': "releases",
         'release': rel
     }
-    return render_to_response('release.html', context, context_instance=RequestContext(request))
+    return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
 

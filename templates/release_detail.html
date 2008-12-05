@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans release.description %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+
+<h1>{% blocktrans with release.description as name %}{{ name }} Release{% endblocktrans %}</h1>
+
+{% ifequal release.status "external" %}
+  <p><i>{% trans "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations." %}</i></p>
+{% endifequal %}
+
+<table class="stats">
+<thead><tr><th>{% trans "Release" %}</th><th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th><th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th></tr></thead>
+
+{% for lstats in release.get_global_stats %}
+<tr>
+  <td class="leftcell" style="font-size:120%;">
+    <a href="{% url language_release locale=lstats.lang_locale release_name=release.name %}">{% trans lstats.lang_name %}</a>
+  </td>
+  
+  {% ifnotequal lstats.doc_trans|add:lstats.doc_fuzzy "0" %}
+  <td>{{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</td>
+  {% else %}
+  <td>-</td>
+  {% endifnotequal %}
+  
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: {{ lstats.doc_percent }}px;"></div>
+      <div class="fuzzy" style="left:{{ lstats.doc_percent }}px; width:{{ lstats.doc_percentfuzzy }}px;"></div>
+      {% with lstats.doc_percent|add:lstats.doc_percentfuzzy as upos %}
+      <div class="untranslated" style="left:{{ upos }}px; width: {{ lstats.doc_percentuntrans }}px;"></div>
+      {% endwith %}
+     </div>
+   </td>
+  
+  <td>{{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width: {{ lstats.ui_percent }}px;"></div>
+      <div class="fuzzy" style="left:{{ lstats.ui_percent }}px; width:{{ lstats.ui_percentfuzzy }}px;"></div>
+      {% with lstats.ui_percent|add:lstats.ui_percentfuzzy as upos %}
+      <div class="untranslated" style="left:{{ upos }}px; width: {{ lstats.ui_percentuntrans }}px;"></div>
+      {% endwith %}
+     </div>
+   </td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+{% endblock %}

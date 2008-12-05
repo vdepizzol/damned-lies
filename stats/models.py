@@ -222,9 +222,9 @@ class Branch(models.Model):
     def update_stats(self, force):
         """ Update statistics for all po files from the branch """
         self.checkout()
-        domains = Domain.objects.filter(module=self.module)
+        domains = Domain.objects.filter(module=self.module).all()
         string_frozen = self.has_string_frozen()
-        for dom in domains.all():
+        for dom in domains:
             # 1. Initial settings
             # *******************
             domain_path = os.path.join(self.co_path(), dom.directory)
@@ -246,6 +246,7 @@ class Branch(models.Model):
             elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
                 potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
                 doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
+            # else, so what?
             errors.extend(errs)
             
             # 4. Compare with old pot files, various checks

@@ -1,3 +1,13 @@
+2008-12-05  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* stats/management/commands/update-stats.py: Added comments.
+	* stats/models.py: Added comments.
+	* stats/utils.py: Minor PEP-8.
+	* stats/views.py: *_detail as generic views.
+	* templates/module_detail.html: 
+	* templates/release_detail.html: New names.
+	* stats/management/commands/migrate.py: Removed (migrated).
+	
 2008-12-02  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: Launch the update_stats method asynchronously when
