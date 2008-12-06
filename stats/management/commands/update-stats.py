@@ -1,4 +1,4 @@
-import os, traceback
+import sys, os, traceback
 from optparse import make_option
 from django.core.management.base import BaseCommand
 from django.core.mail import mail_admins
@@ -26,7 +26,7 @@ class Command(BaseCommand):
                 try:
                     branch = Branch.objects.get(module__name=module_arg, name=branch_arg)
                 except:
-                    print "Unable to find branch '%s' for module '%s' in the database." % (branch_arg, module_arg)
+                    print >> sys.stderr, "Unable to find branch '%s' for module '%s' in the database." % (branch_arg, module_arg)
                     return "Update unsuccessful."
                 print "Updating stats for %s.%s..." % (module_arg, branch_arg)
                 try:
@@ -34,7 +34,7 @@ class Command(BaseCommand):
                 except:
                     tbtext = traceback.format_exc()
                     mail_admins("Error while updating %s %s" % (module_arg, branch_arg), tbtext)
-                    print "Error during updating, mail sent to admins"
+                    print >> sys.stderr, "Error during updating, mail sent to admins"
                     
             elif len(args) == 1:
                 # Update all branches of a module

@@ -246,7 +246,9 @@ class Branch(models.Model):
             elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
                 potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
                 doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
-            # else, so what?
+            else:
+                print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
+                continue 
             errors.extend(errs)
             
             # 4. Compare with old pot files, various checks
