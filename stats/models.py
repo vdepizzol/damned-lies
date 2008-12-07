@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008 Stephane Raimbault <stephane.raimbault@gmail.com>.
 #
 # This file is part of Damned Lies.
 #
@@ -38,6 +39,12 @@ VCS_TYPE_CHOICES = (
     ('git', 'Git'),
     ('hg', 'Mercurial'),
     ('bzr', 'Bazaar')
+)
+
+BRANCH_HEAD_NAMES = (
+    'HEAD',
+    'trunk',
+    'master'
 )
 
 class Module(models.Model):
@@ -82,33 +89,27 @@ class Module(models.Model):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
             return "%senter_bug.cgi?product=%s&amp;component=%s" % (self.bugs_base, self.bugs_product, self.bugs_component)
         else:
-            return self.bugs_base
-    
-    def compare_branches(self, a, b):
-        if a.name in ('HEAD', 'master'):
-            return -1
-        elif b.name in ('HEAD', 'master'):
-            return 1
-        else:
-            return cmp(a.name, b.name)*-1    
+            return self.bugs_base 
     
     def get_branches(self):
-        branches = [b for b in self.branch_set.all()]
-        branches.sort(self.compare_branches)
+        branches = list(self.branch_set.all())
+        branches.sort()
         return branches
     
     def get_head_branch(self):
         """ Returns the HEAD (trunk, master, ...) branch of the module """
-        for branch in self.branch_set.all():
-            if branch.name in ('HEAD', 'trunk', 'master'):
-                return branch
-        return None
+        branch = self.branch_set.filter(name__in = BRANCH_HEAD_NAMES)
+        if branch:
+            # First one (if many something is wrong :-/)
+            return branch[0]
+        else:
+            return None
     
     def can_edit_branches(self, user):
         """ Returns True for superusers, users with adequate permissions or maintainers of the module """ 
         if user.is_superuser or \
            user.has_perms(['stats.delete_branch', 'stats.add_branch', 'stats.change_branch']) or \
-           user.username in [p.username for p in self.maintainers.all()]:
+           user.username in [ p.username for p in self.maintainers.all() ]:
             return True
         return False
 
@@ -142,19 +143,20 @@ class Branch(models.Model):
         upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
         upd_thread.start()
 
+    def __cmp__(self, other):
+        if self.name in BRANCH_HEAD_NAMES:
+            return -1
+        elif other.name in BRANCH_HEAD_NAMES:
+            return 1
+        else:
+            return -cmp(self.name, other.name)
+
     def is_head(self):
-        if self.module.vcs_type in ('cvs', 'svn') and self.name == "HEAD":
-            return True
-        elif self.module.vcs_type == 'git' and self.name == "master":
-            return True
-        return False
+        return self.name in BRANCH_HEAD_NAMES
 
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
-        for rel in self.releases.all():
-            if rel.string_frozen:
-                return True
-        return False
+        return self.releases.filter(string_frozen=True).count() and True or False
            
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
@@ -677,7 +679,8 @@ class Release(models.Model):
                     stats[row[1]]['ui_percentfuzzy'] = int(100*row[4]/total_uistrings)
                     stats[row[1]]['ui_percentuntrans'] = int(100*stats[row[1]]['ui_untrans']/total_uistrings)
         cursor.close()
-        results = [stat for key, stat in stats.items()]
+
+        results = stats.values()
         results.sort(self.compare_stats)
         return results 
     
@@ -1033,15 +1036,15 @@ class FakeStatistics(object):
        
 
 class ArchivedStatistics(models.Model):
-    Module = models.TextField(db_column='module')
-    Type = models.CharField(db_column='type', max_length=3, choices=DOMAIN_TYPE_CHOICES)
-    Domain = models.TextField(db_column='domain')
-    Branch = models.TextField(db_column='branch')
-    Language = models.CharField(db_column='language', max_length=15)
-    Date = models.DateTimeField(db_column='date')
-    Translated = models.IntegerField(db_column='translated', default=0)
-    Fuzzy = models.IntegerField(db_column='fuzzy', default=0)
-    Untranslated = models.IntegerField(db_column='untranslated', default=0)
+    module = models.TextField()
+    type = models.CharField(max_length=3, choices=DOMAIN_TYPE_CHOICES)
+    domain = models.TextField()
+    branch = models.TextField()
+    language = models.CharField(max_length=15)
+    date = models.DateTimeField()
+    translated = models.IntegerField(default=0)
+    fuzzy = models.IntegerField(default=0)
+    untranslated = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'archived_statistics'
@@ -1052,23 +1055,22 @@ INFORMATION_TYPE_CHOICES = (
     ('error','Error')
 )
 class Information(models.Model):
-    Statistics = models.ForeignKey('Statistics', db_column='statistics_id')
+    statistics = models.ForeignKey('Statistics')
     # Priority of a stats message
-    Type = models.CharField(db_column='type', max_length=5,
-                            choices=INFORMATION_TYPE_CHOICES)
-    Description = models.TextField(db_column='description')
+    type = models.CharField(max_length=5, choices=INFORMATION_TYPE_CHOICES)
+    description = models.TextField()
 
     class Meta:
         db_table = 'information'
 
     def __cmp__(self, other):
-        return cmp(self.Statistics.module_name(), other.Statistics.module_name())
+        return cmp(self.statistics.module_name(), other.statistics.module_name())
 
     def get_icon(self):
-        return "/media/img/%s.png" % self.Type
+        return "/media/img/%s.png" % self.type
     
     def get_description(self):
-        text = self.Description
+        text = self.description
         matches = re.findall('###([^#]*)###',text) 
         if matches:
             text = re.sub('###([^#]*)###', '%s', text)
@@ -1081,11 +1083,10 @@ class Information(models.Model):
         return text
 
 class ArchivedInformation(models.Model):
-    Statistics = models.ForeignKey('ArchivedStatistics', db_column='statistics_id')
+    statistics = models.ForeignKey('ArchivedStatistics')
     # Priority of a stats message
-    Type = models.CharField(db_column='type', max_length=5, 
-                            choices=INFORMATION_TYPE_CHOICES)
-    Description = models.TextField(db_column='description')
+    type = models.CharField(max_length=5, choices=INFORMATION_TYPE_CHOICES)
+    description = models.TextField()
 
     class Meta:
         db_table = 'archived_information'

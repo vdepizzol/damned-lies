@@ -52,7 +52,7 @@
             {% endif %}
             {{ dom.1.module_description }}</a>
             {% for err in dom.1.information_set.all %}
-              <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.Type }}" />
+              <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.type }}" />
             {% endfor %}
             </td>
           {% endif %}
@@ -78,7 +78,7 @@
   <h3>{% trans "Error summary" %}</h3>
   <ul>
   {% for err in modstats.all_errors %}
-    <li><img src="{{ err.get_icon }}" alt="{{ err.Type }}" /> {{ err.Statistics.module_name }}:<br />
+    <li><img src="{{ err.get_icon }}" alt="{{ err.type }}" /> {{ err.statistics.module_name }}:<br />
         <span class="error">{{ err.get_description }}</span></li>
   {% endfor %}
   </ul>

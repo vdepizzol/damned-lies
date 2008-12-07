@@ -1,3 +1,19 @@
+2008-12-07  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* stats/models.py: Remove a loop with a better SQL query in
+	Module.get_head_branch(). More simple is_head function (looks for
+	SVN/trunk too). Module.compare_branches is now a __cmp__ method of
+	Branch. Faster Branch.has_string_frozen(). Use a simple list() in
+	get_branches to avoid the list comprehension.  New
+	BRANCH_HEAD_NAMES tuple to respect the DRY principle. Remove a
+	list comprehension on dict.items() whereas dict.values returns the
+	same result. PEP-8 on Information, ArchivedInformation and
+	ArchivedStatistics.
+	* templates/module_detail.html: Replaced 'i' by 'em' and 'b' by 'strong'
+	Fix missing </a>. HTML indent.
+	* templates/languages/language_release_stats.html
+	* templates/stats_show.html: PEP-8 on Information.
+
 2008-12-06  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/management/commands/update-stats.py: Redirect error messages to

@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %} {% blocktrans with module.get_description as name %}Module Statistics: {{ name }}{% endblocktrans %} {% endblock %}
+{% block title %}
+{% blocktrans with module.get_description as name %}Module Statistics: {{ name }}
+{% endblocktrans %}
+{% endblock %}
 
 {% block content %}
 <div class="mainpage">
@@ -12,7 +15,7 @@
   <p>{{ module.comment|safe }}</p>
 {% else %}
   {% ifnotequal module.vcs_root "http://svn.gnome.org/svn" %}
-  <p><i><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</i></p>
+  <p><em><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</em></p>
   {% endifnotequal %}
 {% endif %}
 
@@ -20,38 +23,37 @@
   <p><a href="{{ module.homepage }}">{{ module.homepage }}</a></p>
 {% endif %}
 
-<table><tr><td width="50%" valign="top">
-
-{% if module.maintainers.all %}
-  <h2>{% trans "Maintainers" %}</h2>
-  {% for person in module.maintainers.all %}
-    {% with 0 as printroles %}
-    {% include "person_base.html" %}
-    {% endwith %}
-  {% endfor %}
-{% endif %}
-
-</td><td width="50%" valign="top">
-
-{% if module.bugs_base %}
-  <h2>{% trans "Bug reporting" %}</h2>
-  <ul>
-  {% if module.get_bugs_i18n_url %}
-    <li><a href="{{ module.get_bugs_i18n_url }}">{% trans "Show existing i18n and l10n bugs" %}</li>
-  {% endif %}
-  <li><a href="{{ module.get_bugs_enter_url }}">{% trans "Report bugs to Bugzilla" %}</a></li>
-  </ul>
-{% endif %}
-
-</td></tr></table>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      {% if module.maintainers.all %}
+      <h2>{% trans "Maintainers" %}</h2>
+      {% for person in module.maintainers.all %}
+        {% with 0 as printroles %}
+        {% include "person_base.html" %}
+        {% endwith %}
+      {% endfor %}
+      {% endif %}
+    </td>
+    <td width="50%" valign="top">
+      {% if module.bugs_base %}
+      <h2>{% trans "Bug reporting" %}</h2>
+      <ul>
+        {% if module.get_bugs_i18n_url %}
+        <li><a href="{{ module.get_bugs_i18n_url }}">{% trans "Show existing i18n and l10n bugs" %}</a></li>
+        {% endif %}
+        <li><a href="{{ module.get_bugs_enter_url }}">{% trans "Report bugs to Bugzilla" %}</a></li>
+      </ul>
+      {% endif %}
+    </td>
+  </tr>
+</table>
 
 {% if module.branch_set.all %}
   <!-- Links to branches of module -->
-  <p><b>{% trans "Branches:" %}</b>
+  <p><strong>{% trans "Branches:" %}</strong>
   {% for branch in module.get_branches %}
-    {% ifnotequal forloop.counter 1 %} 
-    - 
-    {% endifnotequal %}
+    {% ifnotequal forloop.counter 1 %} - {% endifnotequal %}
     <a href="#{{ branch.name }}">{{ branch.name }}</a>
   {% endfor %}
   {% if can_edit_branches %}

@@ -16,7 +16,7 @@
     <h4>{% trans "Notices" %}</h4>
     <table>
     {% for msg in stat1.information_set.all %}
-      <tr><td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.Type }}" /></td><td>{{ msg.get_description|safe }}</td></tr>
+      <tr><td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.type }}" /></td><td>{{ msg.get_description|safe }}</td></tr>
     {% endfor %}
     </table>
   {% endif %}
@@ -34,7 +34,7 @@
       <td class="leftcell"><a href="{{ line.po_url }}">{{ line.get_lang }}</a>
       {% with line.most_important_message as msg %} 
       {% if msg %}
-      <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.Type }}" />
+      <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.type }}" />
       {% endif %}
       {% endwith %}
       </td>
