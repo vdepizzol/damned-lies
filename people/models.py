@@ -13,7 +13,7 @@ class Person(User):
     image = models.URLField(null=True, blank=True)
     webpage_url = models.URLField(null=True, blank=True)
     irc_nick = models.SlugField(max_length=20, null=True, blank=True)
-    bugzilla_account = models.SlugField(null=True, blank=True)
+    bugzilla_account = models.EmailField(null=True, blank=True)
 
     # Use UserManager to get the create_user method, etc.
     objects = UserManager()

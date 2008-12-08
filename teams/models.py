@@ -31,7 +31,7 @@ class Team(Group):
     # Don't confuse this relation with the 'groups' one
     coordinator = models.ForeignKey(Person, related_name='coordinates_teams')
     webpage_url = models.URLField(null=True, blank=True)
-    mailing_list = models.URLField(null=True, blank=True)
+    mailing_list = models.EmailField(null=True, blank=True)
     mailing_list_subscribe = models.URLField(null=True, blank=True)
 
     class Meta:

@@ -12,8 +12,8 @@
 
   <a style="font-size: 140%;" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
 
-  {% if person.nospamemail %}
-    <a href="mailto:{{ person.nospamemail }}">{{ person.nospamemail }}</a><br />
+  {% if person.no_spam_email %}
+    <a href="mailto:{{ person.no_spam_email }}">{{ person.no_spam_email }}</a><br />
   {% endif %}
   {% if person.webpage_url %}
     <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
@@ -27,8 +27,8 @@
     </ul>
   {% endif %}
 
-  {% if person.nospambugzillaaccount %}
-    <strong>{% trans "Bugzilla account:" %}</strong> {{ person.nospambugzillaaccount }}<br />
+  {% if person.no_spam_bugzilla_account %}
+    <strong>{% trans "Bugzilla account:" %}</strong> {{ person.no_spam_bugzilla_account }}<br />
   {% endif %}
 
   {% if person.svn_account %}
