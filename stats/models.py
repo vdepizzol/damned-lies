@@ -291,13 +291,13 @@ class Branch(models.Model):
                 stat = Statistics.objects.get(language=None, branch=self, domain=dom)
                 stat.untranslated = int(pot_stats['untranslated'])
                 stat.date = datetime.now()
-                Information.objects.filter(Statistics=stat).delete()
+                Information.objects.filter(statistics=stat).delete()
             except Statistics.DoesNotExist:
                 stat = Statistics(language = None, branch = self, domain = dom, translated = 0,
                                   fuzzy = 0, untranslated = int(pot_stats['untranslated']))
             stat.save()
             for err in errors:
-                stat.information_set.add(Information(Type=err[0], Description=err[1]))
+                stat.information_set.add(Information(type=err[0], description=err[1]))
             
             # 6. Update language po files and update DB
             # *****************************************
@@ -332,7 +332,7 @@ class Branch(models.Model):
                     stat.fuzzy = int(langstats['fuzzy'])
                     stat.untranslated = int(langstats['untranslated'])
                     stat.date = datetime.now()
-                    Information.objects.filter(Statistics=stat).delete()
+                    Information.objects.filter(statistics=stat).delete()
                 except Statistics.DoesNotExist:
                     try:
                         language = Language.objects.get(locale=lang)
@@ -343,7 +343,7 @@ class Branch(models.Model):
                                       fuzzy = int(langstats['fuzzy']), untranslated = int(langstats['untranslated']))
                 stat.save()
                 for err in langstats['errors']:
-                    stat.information_set.add(Information(Type=err[0], Description=err[1])) 
+                    stat.information_set.add(Information(type=err[0], description=err[1])) 
     
     def get_lang_files(self, domain, dom_path):
         """ Returns a list of language files on filesystem, as tuple (lang, lang_file) -> lang_file with complete path """
@@ -983,7 +983,7 @@ class Statistics(models.Model):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """
         error = None
         for e in self.information_set.all():
-            if not error or e.Type == 'error' or (e.Type == 'warn' and error.Type == 'info'):
+            if not error or e.type == 'error' or (e.type == 'warn' and error.type == 'info'):
                 error = e
         return error
         
