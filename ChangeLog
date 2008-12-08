@@ -1,3 +1,8 @@
+2008-12-08  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/module_detail.html: Don't insert newlines inside blocktrans
+	unless '\n' appears in the msgstr.
+
 2008-12-07  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* stats/models.py: Remove a loop with a better SQL query in

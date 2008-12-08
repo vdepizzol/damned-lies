@@ -2,8 +2,7 @@
 {% load i18n %}
 
 {% block title %}
-{% blocktrans with module.get_description as name %}Module Statistics: {{ name }}
-{% endblocktrans %}
+{% blocktrans with module.get_description as name %}Module Statistics: {{ name }}{% endblocktrans %}
 {% endblock %}
 
 {% block content %}
