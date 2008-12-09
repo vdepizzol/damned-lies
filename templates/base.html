@@ -1,6 +1,5 @@
 {% load i18n %}
 {% load stats_extras %}
-{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,7 +11,7 @@
   <link rel="stylesheet" href="/media/css/main.css"/>
   <link rel="stylesheet" href="/media/css/layout.css"/>
   <link rel="stylesheet" href="/media/css/style.css"/>
-{% if rtl %}
+{% if LANGUAGE_BIDI %}
   <link rel="stylesheet" href="/media/css/rtl.css"/>
 {% endif %}
   <script src="/media/js/main.js" type="text/javascript"></script>
