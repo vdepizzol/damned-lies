@@ -870,7 +870,7 @@ class Statistics(models.Model):
     def get_lang(self):
         if self.language:
             return _("%(lang_name)s (%(lang_locale)s)") % { 
-                'lang_name': self.language.name,
+                'lang_name': _(self.language.name),
                 'lang_locale': self.language.locale
             }
         else:

@@ -45,8 +45,8 @@
       {% endif %}
       <td style="width: 108px; text-align: center;"><div class="graph">
         <div class="translated" style="width: {{ line.tr_percentage }}px;"></div>
-        <div class="fuzzy" style="left:{{ line.tr_percentage }}px; width:{{ line.fu_percentage }}px;"></div>
-        <div class="untranslated" style="left:{{ line.tr_percentage|add:line.fu_percentage }}px; width: {{ line.un_percentage }}px;"></div>
+        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ line.tr_percentage }}px; width:{{ line.fu_percentage }}px;"></div>
+        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ line.tr_percentage|add:line.fu_percentage }}px; width: {{ line.un_percentage }}px;"></div>
         </div>
       </td>
       </tr>

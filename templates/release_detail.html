@@ -30,9 +30,9 @@
   
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ lstats.doc_percent }}px;"></div>
-      <div class="fuzzy" style="left:{{ lstats.doc_percent }}px; width:{{ lstats.doc_percentfuzzy }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ lstats.doc_percent }}px; width:{{ lstats.doc_percentfuzzy }}px;"></div>
       {% with lstats.doc_percent|add:lstats.doc_percentfuzzy as upos %}
-      <div class="untranslated" style="left:{{ upos }}px; width: {{ lstats.doc_percentuntrans }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width: {{ lstats.doc_percentuntrans }}px;"></div>
       {% endwith %}
      </div>
    </td>
@@ -40,9 +40,9 @@
   <td>{{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ lstats.ui_percent }}px;"></div>
-      <div class="fuzzy" style="left:{{ lstats.ui_percent }}px; width:{{ lstats.ui_percentfuzzy }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ lstats.ui_percent }}px; width:{{ lstats.ui_percentfuzzy }}px;"></div>
       {% with lstats.ui_percent|add:lstats.ui_percentfuzzy as upos %}
-      <div class="untranslated" style="left:{{ upos }}px; width: {{ lstats.ui_percentuntrans }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width: {{ lstats.ui_percentuntrans }}px;"></div>
       {% endwith %}
      </div>
    </td>

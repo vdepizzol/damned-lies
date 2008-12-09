@@ -1,5 +1,13 @@
 2008-12-09  Claude Paroz  <claude@2xlibre.net>
 
+	* media/css/rtl.css: Improved RTL display.
+	* stats/models.py: get_lang() was not fully translated.
+	* templates/release_detail.html:
+	* templates/stats_show.html: graphs alignment depends on language
+	direction.
+
+2008-12-09  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/base.html: LANGUAGE_CODE and LANGUAGE_BIDI are offered
 	through RequestContext.
 

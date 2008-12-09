@@ -1,10 +1,14 @@
+body {
+    direction: rtl;
+}
+
 .stats th { 
     text-align: right; 
     padding-right: 2px;
     padding-left: 2px; 
 }
 
-.stats td { 
+.stats td {
     padding-right: 2px;
     padding-left: 2px;
 }
@@ -28,3 +32,9 @@ div.mainpage {
   margin-left: auto;
   margin-right: auto;
 }
+
+img.people {
+  float: right;
+  margin-right: -85px;
+}
+
