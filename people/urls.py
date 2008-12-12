@@ -1,7 +1,6 @@
 from django.conf.urls.defaults import *
 from people.models import Person
 
-
 info_dict_list = {
     'queryset': Person.objects.all(),
     'template_object_name': 'person',
@@ -9,15 +8,10 @@ info_dict_list = {
         'pageSection': "teams"
     }
 }
-
-info_dict_detail = dict(
-    info_dict_list,
-    slug_field = 'username'
-)
     
-urlpatterns = patterns('django.views.generic.list_detail',
-    url(r'^$', 'object_list', dict(info_dict_list), 'persons'),                    
-    url(r'(?P<object_id>\d+)/$', 'object_detail', dict(info_dict_detail), 'person'),
+urlpatterns = patterns('',
+    url(r'^$', 'django.views.generic.list_detail.object_list', dict(info_dict_list), 'persons'),                    
+    url(r'(?P<object_id>\d+)/$', 'people.views.person_detail_from_id', name='person'),
     # equivalent to the previous, but using username instead of user pk
-    url(r'(?P<slug>\w+)/$', 'object_detail', dict(info_dict_detail), 'person'),
+    url(r'(?P<slug>\w+)/$', 'people.views.person_detail_from_username', name='person'),
 )

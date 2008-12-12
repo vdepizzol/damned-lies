@@ -19,10 +19,12 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from common import utils
-from teams.models import Team, FakeTeam
+from teams.models import Team, FakeTeam, Role
+from teams.forms import EditMemberRoleForm
 from languages.models import Language
 
 def teams(request):
@@ -40,10 +42,52 @@ def team(request, team_slug):
     except:
         lang = get_object_or_404(Language, locale=team_slug)
         team = FakeTeam(lang)
-    
+    mem_groups = ( {'title': _("Commiters"),
+                'members': team.get_commiters(),
+                'form': None,
+                'no_member': _("No commiters")
+               },
+               {'title': _("Reviewers"),
+                'members': team.get_reviewers(),
+                'form': None,
+                'no_member': _("No reviewers")
+               },
+               {'title': _("Translators"),
+                'members': team.get_translators(),
+                'form': None,
+                'no_member': _("No translators")
+               },
+    )
+
+    if request.user.is_authenticated() and request.user == team.coordinator:
+        if request.method == 'POST':
+            form_type = request.POST['form_type']
+            roles = Role.objects.filter(team=team, role=form_type)
+            form = EditMemberRoleForm(roles, request.POST)
+            if form.is_valid():
+                for key, field in form.fields.items():
+                    form_value = form.cleaned_data[key]
+                    if field.initial != form_value:
+                        role = Role.objects.get(pk=key)
+                        if form_value == "remove":
+                            role.delete()
+                        else:
+                            role.role = form_value
+                            role.save()
+        # Create forms for template
+        commit_roles = Role.objects.filter(team=team, role='commiter')
+        if commit_roles:
+            mem_groups[0]['form'] = EditMemberRoleForm(commit_roles)
+        review_roles = Role.objects.filter(team=team, role='reviewer')
+        if review_roles:
+            mem_groups[1]['form'] = EditMemberRoleForm(review_roles)
+        translate_roles = Role.objects.filter(team=team, role='translator')
+        if translate_roles:
+            mem_groups[2]['form'] = EditMemberRoleForm(translate_roles)
     context = {
         'pageSection': 'teams',
-        'team': team
+        'team': team,
+        'mem_groups': mem_groups
     }
     return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
        

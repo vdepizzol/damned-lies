@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load stats_extras %}
 
 {% block title %}{% trans "GNOME Contributor" %}{% endblock %}
 
@@ -9,5 +10,28 @@
   {% with 1 as printroles %}
   {% include "person_base.html" %}
   {% endwith %}
+
+  <div class="maintainer">
+  {% if person.role_set.all %}
+    <h2>{% trans "Team membership" %}</h2>
+    <ul>
+    {% for role in person.role_set.all %}
+      {% with role.role as role_name %}
+      <li>{% blocktrans with role.team|linked_with:role.team.description|safe as team_name %}Member of {{ team_name }} team ({{ role_name }}){% endblocktrans %}
+      </li>
+      {% endwith %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+    
+  {% if user.is_authenticated %}
+    {% ifequal user.username person.username %}
+      <form action="#" method="POST">
+      <p><em>{% trans "I would like to join the following team as 'translator':" %}</em><br />
+       {{ form.teams }}  <input type="submit" value="{% trans "Join" %}">
+      </form>
+    {% endifequal %}
+  {% endif %}
+  </div>
 </div>
 {% endblock %}

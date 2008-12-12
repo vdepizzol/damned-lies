@@ -1,3 +1,18 @@
+2008-12-12  Claude Paroz  <claude@2xlibre.net>
+
+	* people/forms.py: Form to enable a person to join a team as translator.
+	* people/urls.py:
+	* people/views.py: Replace generic view for 'person' to be able to handle
+	team membership form.
+	* stats/models.py: Typo in comment.
+	* teams/forms.py: Form to edit membership status.
+	* teams/models.py: Enrich team API with membership functions. Add new Role
+	class to store membership info.
+	* teams/views.py: Prepare team membership content and handle form post
+	(change membership).
+	* templates/people/person_detail.html: Add team membership and join form.
+	* templates/teams/team_detail.html: Add team membership display and form.
+
 2008-12-09  Claude Paroz  <claude@2xlibre.net>
 
 	* media/css/rtl.css: Improved RTL display.

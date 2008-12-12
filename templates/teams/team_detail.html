@@ -55,5 +55,31 @@
 </table>
 {% endfor %}
 
+<h2>{% trans "Team membership" %}</h2>
+{% for group in mem_groups %}
+    <h3>{{ group.title }}</h3>
+    {% if group.form %}
+        <form action="#" method="POST">
+        <ul>
+        {% for field in group.form.get_fields %}
+          <li>{{ field.label }} {{ field }}</li>
+        {% endfor %}
+        </ul>
+        {{ group.form.form_type }}
+        <input type="submit" value="Apply modifications">
+        </form>
+    {% else %}
+      {% if not group.members %}
+          <p><em>{{ group.no_member }}</em></p>
+      {% else %}
+        <ul>
+        {% for member in group.members %}
+          <li><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+{% endfor %}
+
 </div>
 {% endblock %}

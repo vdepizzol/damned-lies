@@ -475,7 +475,7 @@ class Domain(models.Model):
     description = models.TextField(null=True, blank=True)
     dtype = models.CharField(max_length=5, choices=DOMAIN_TYPE_CHOICES, default='ui')
     directory = models.CharField(max_length=50)
-    # The pot_method is a command who chould produce a potfile in the po directory of
+    # The pot_method is a command who should produce a potfile in the po directory of
     # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot). If blank, method is 
     # intltool for UI and gnome-doc-utils for DOC
     pot_method = models.CharField(max_length=50, null=True, blank=True)

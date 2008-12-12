@@ -30,6 +30,7 @@ class Team(Group):
     description = models.TextField()
     # Don't confuse this relation with the 'groups' one
     coordinator = models.ForeignKey(Person, related_name='coordinates_teams')
+    members = models.ManyToManyField(Person, through='Role', related_name='teams')
     webpage_url = models.URLField(null=True, blank=True)
     mailing_list = models.EmailField(null=True, blank=True)
     mailing_list_subscribe = models.URLField(null=True, blank=True)
@@ -50,6 +51,19 @@ class Team(Group):
     
     def get_languages(self):
         return self.language_set.all()
+    
+    def get_members_by_role(self, role):
+        members = Person.objects.filter(role__team=self, role__role=role)
+        return members
+        
+    def get_commiters(self):
+        return self.get_members_by_role('commiter')
+
+    def get_reviewers(self):
+        return self.get_members_by_role('reviewer')
+
+    def get_translators(self):
+        return self.get_members_by_role('translator')
 
 class FakeTeam(object):
     """ This is a class replacing a Team object when a language
@@ -69,4 +83,23 @@ class FakeTeam(object):
 
     def get_languages(self):
         return (self.language,)
+
+
+ROLE_CHOICES = (
+    ('translator', 'Translator'),
+    ('reviewer', 'Reviewer'),
+    ('commiter', 'Commiter'),
+)
+
+class Role(models.Model):
+    """ This is the intermediary class between Person and Team to attribute
+        roles to Team members. """
+    
+    team = models.ForeignKey(Team)
+    person = models.ForeignKey(Person)
+    role = models.CharField(max_length=15, choices=ROLE_CHOICES, default='translator')
+
+    class Meta:
+        db_table = 'role'
+        unique_together = ('team', 'person')
 
