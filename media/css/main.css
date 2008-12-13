@@ -144,6 +144,11 @@ p#show, p#hide {
   color: #666666;
 }
 
+.help {
+  font-size:10px;
+  color:#999;
+}
+
 .error {
   font-style: italic;
   color: #666666;
@@ -154,6 +159,8 @@ p#show, p#hide {
   padding: 5px;
   background: #FAE28E;
 }
+
+.errorlist li { font-size:12px !important; display:block; padding:4px 5px 4px 25px; margin:0 0 3px 0; border:1px solid red; color:white; background:red url(../img/admin/icon_alert.gif) 5px .3em no-repeat; }
 
 .footnote {
   text-align: center;

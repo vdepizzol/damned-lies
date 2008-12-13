@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Damned Lies about GNOME" %} {% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "Error:" %}</h1>
+
+<p class="errornote">{{ error }}</p>
+
+</div>
+{% endblock %}

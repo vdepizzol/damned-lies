@@ -25,6 +25,8 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
+from people.models import Person
+from people.forms import RegistrationForm 
 
 
 def index(request):
@@ -41,9 +43,8 @@ def index(request):
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
 
-def site_login(request):
+def site_login(request, messages=[]):
     """ Site-specific login page. Not named 'login' to not confuse with auth.login """
-    messages = []
     referer = None
     openid_path = ''
     if request.method == 'POST':
@@ -79,3 +80,32 @@ def site_login(request):
         'referer': referer,
     }
     return render_to_response('login.html', context, context_instance=RequestContext(request))
+
+def site_register(request):
+    openid_path = ''
+    if request.method == 'POST':
+        form = RegistrationForm(data = request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            return HttpResponseRedirect(reverse('register_success'))
+    else:
+        form = RegistrationForm()
+    if 'django_openid' in settings.INSTALLED_APPS:
+        openid_path = '/openid/'
+    context = {
+        'pageSection': 'home',
+        'form': form,
+        'openid_path': openid_path,
+    }
+    return render_to_response('register.html', context, context_instance=RequestContext(request))
+
+def activate_account(request, key):
+    """ Activate an account through the link a requestor has received by email """
+    try:
+        person = Person.objects.get(activation_key=key)
+    except Person.DoesNotExist:
+        return render_to_response('error.html', {'error':"Sorry, the key you provided is not valid."})
+    person.activate()
+    Person.clean_unactivated_accounts()
+    return site_login(request, messages=[_("Your account has been activated.")])
+

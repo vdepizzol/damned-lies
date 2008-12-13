@@ -1,3 +1,20 @@
+2008-12-13  Claude Paroz  <claude@2xlibre.net>
+
+	* common/views.py: Add site_register and activate_account views to support
+	registration.
+	* media/css/main.css: Add help and errorlist classes for forms display.
+	* people/forms.py: New RegistrationForm class.
+	* people/models.py: New activation_key field to support registration.
+	* people/urls.py: More precise matches with 'begin of line' (^).
+	* templates/error.html: Added general-purpose error template.
+	* templates/login.html:
+	* templates/logout_form.html: Externalize logout form.
+	* templates/people/person_detail.html: Allow logout from 'profile'
+	template.
+	* templates/register.html:
+	* templates/register_success.html: New templates for registration.
+	* urls.py: Add registration urls.
+
 2008-12-12  Claude Paroz  <claude@2xlibre.net>
 
 	* people/forms.py: Form to enable a person to join a team as translator.

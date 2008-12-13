@@ -8,6 +8,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'common.views.index', name='home'),
     url(r'^login/$', 'common.views.site_login', name='login'),
+    url(r'^register/$', 'common.views.site_register', name='register'),
+    url(r'^register/success$', 'django.views.generic.simple.direct_to_template', {'template': 'register_success.html'}, name='register_success'),
+    url(r'^register/activate/(?P<key>\w+)$', 'common.views.activate_account', name='register_activation'),
     (r'^teams/', include('teams.urls')),
     (r'^people/', include('people.urls')),
     # users is the hardcoded url in the contrib.auth User class, making it identical to /people

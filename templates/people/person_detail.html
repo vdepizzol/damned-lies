@@ -7,6 +7,12 @@
 {% block content %}
 <div class="mainpage">
   <h2>{{ person.name }}</h2>
+  {% if user.is_authenticated %}
+    {% ifequal user.username person.username %}
+      <div style="float: right">{% include "logout_form.html" %}</div>
+    {% endifequal %}
+  {% endif %}
+
   {% with 1 as printroles %}
   {% include "person_base.html" %}
   {% endwith %}

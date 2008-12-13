@@ -8,15 +8,13 @@
 
 {% if user.is_authenticated %}
   <p>{% blocktrans with user.username as username %}You are already logged in as {{ username }}.{% endblocktrans %}</p>
-  <form action="" method="post">
-    <input type="hidden" name="logout" value="1" />
-    <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="{% trans 'Log out' %}" />
-    </div>
-  </form>
+  {% include "logout_form.html" %}
 {% else %}
+{% url register as link %}
+<p>{% blocktrans %}If you do not own an account on this site, you can <a href='{{ link }}'>register</a> for a new account.{% endblocktrans %}</p>
+
 <p>{% trans 'Log in with your username and password:' %}</p>
-<form action="{{ app_path }}" method="post" id="login-form" class="login">
+<form action="{% url login %}" method="post" id="login-form" class="login">
   <div class="form-row">
     <label for="id_username">{% trans 'Username:' %}</label> <input type="text" name="username" id="id_username" />
   </div>

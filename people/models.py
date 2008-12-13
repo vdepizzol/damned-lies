@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.contrib.auth.models import User, UserManager
 
@@ -14,19 +16,32 @@ class Person(User):
     webpage_url = models.URLField(null=True, blank=True)
     irc_nick = models.SlugField(max_length=20, null=True, blank=True)
     bugzilla_account = models.EmailField(null=True, blank=True)
+    activation_key = models.CharField(max_length=40, null=True, blank=True)
 
     # Use UserManager to get the create_user method, etc.
     objects = UserManager()
-    
+       
     class Meta:
         db_table = 'person'
         ordering = ('username',)
+
+    @classmethod
+    def clean_unactivated_accounts(cls):
+        accounts = cls.objects.filter(activation_key__isnull=False)
+        for account in accounts:
+            if account.date_joined + datetime.timedelta(days=5) <= datetime.datetime.now():
+                account.delete()
 
     def save(self):
         if not self.password or self.password == "!":
             self.password = None
             self.set_unusable_password()
         super(User, self).save()
+    
+    def activate(self):
+        self.activation_key = None
+        self.is_active = True
+        self.save()
         
     def no_spam_email(self):
         return obfuscate_email(self.email)

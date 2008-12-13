@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "Damned Lies about GNOME" %} {% endblock %}
+{% block extrahead %} <link rel="stylesheet" href="/media/css/login.css"/> {% endblock %}
+{% block content %}
+<div class="mainpage">
+
+<h2>{% trans "Account Registration" %}</h2>
+{% if user.is_authenticated %}
+  <p>{% blocktrans with user.username as username %}You are already logged in as {{ username }}.{% endblocktrans %}</p>
+  {% include "logout_form.html" %}
+{% else %}
+<p>{% trans "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations." %}</p>
+<p>{% trans "After registration and connection, you will be able to join an existing team from your profile page." %}</p>
+
+<form action="{{ app_path }}" method="post" id="login-form" class="login">
+  <div class="form-row">
+    {{ form.username.errors }}
+    <label for="id_username">{{ form.username.label }}</label> {{ form.username }} <span class="help">{{ form.username.help_text }}</span>
+  </div>
+  <div class="form-row">
+    {{ form.email.errors }}
+    <label for="id_email">{{ form.email.label }}</label> {{ form.email }}
+  </div>
+  <table style="clear:both"><tr><td colspan="2">
+    <div style="clear:both">{{ form.non_field_errors }}</div>
+{% if openid_path %}
+    <p>Authenticate via OpenID <strong>or</strong> password:</p></td></tr><tr><td valign="bottom">
+  <div>
+    {{ form.openid_url.errors }}
+    <label for="id_openid"><img src="{{ openid_path }}logo/" alt=""> {{ form.openid_url.label }}</label> {{ form.openid_url }}
+  </div>
+  <div style="text-align:center; padding-top:8px;">
+    <label>&nbsp;</label><input type="submit" value="{% trans 'Register with OpenId' %}" />
+  </div>
+  </td><td valign="bottom">
+{% endif %}
+  <div class="form-row">
+    {{ form.password1.errors }}
+    <label for="id_password">{{ form.password1.label }}</label> {{ form.password1 }} <span class="help">{{ form.password1.help_text }}</span>
+  </div>
+  <div class="form-row">
+    <label for="id_password">{{ form.password2.label }}</label> {{ form.password2 }}
+  </div>
+  <div style="text-align:center; padding-top:8px;">
+    <label>&nbsp;</label><input type="submit" value="{% trans 'Register with password' %}" />
+  </div>
+  </td></tr></table>
+</form>
+
+<script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+{% endif %}
+</div>
+{% endblock %}

@@ -11,7 +11,7 @@ info_dict_list = {
     
 urlpatterns = patterns('',
     url(r'^$', 'django.views.generic.list_detail.object_list', dict(info_dict_list), 'persons'),                    
-    url(r'(?P<object_id>\d+)/$', 'people.views.person_detail_from_id', name='person'),
+    url(r'^(?P<object_id>\d+)/$', 'people.views.person_detail_from_id', name='person'),
     # equivalent to the previous, but using username instead of user pk
-    url(r'(?P<slug>\w+)/$', 'people.views.person_detail_from_username', name='person'),
+    url(r'^(?P<slug>\w+)/$', 'people.views.person_detail_from_username', name='person'),
 )
