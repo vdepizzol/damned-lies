@@ -88,7 +88,7 @@ class FakeTeam(object):
 ROLE_CHOICES = (
     ('translator', 'Translator'),
     ('reviewer', 'Reviewer'),
-    ('commiter', 'Commiter'),
+    ('committer', 'Committer'),
 )
 
 class Role(models.Model):
