@@ -36,7 +36,8 @@ def languages(request):
         'pageSection': "languages",
         'languages': utils.trans_sort_object_list(languages, 'name')
     }
-    return render_to_response('languages/language_list.html', context, context_instance=RequestContext(request))
+    return render_to_response('languages/language_list.html', context,
+                              context_instance=RequestContext(request))
 
 def language_release(request, locale, release_name):
     language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
@@ -48,7 +49,8 @@ def language_release(request, locale, release_name):
         'release': release,
         'stats': stats
     }
-    return render_to_response('languages/language_release.html', context, context_instance=RequestContext(request))
+    return render_to_response('languages/language_release.html', context,
+                              context_instance=RequestContext(request))
 
 def language_release_tar(request, locale, release_name, dtype):
     release = get_object_or_404(Release, name=release_name)

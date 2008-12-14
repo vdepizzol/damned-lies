@@ -1,3 +1,14 @@
+2008-12-15  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* languages/views.py: Just a \n!
+	* people/models.py: Added is_committer, is_reviewer and
+	is_translator methods.	
+	* people/urls.py: Add a FIXME
+	* stats/views.py: Removed profiler loading (time_spent not called)
+	* teams/models.py:
+	* teams/views.py: Fix typo commiter -> committer
+	* templates/module_list.html: Removed spaces
+
 2008-12-13  Claude Paroz  <claude@2xlibre.net>
 
 	* common/views.py: Add site_register and activate_account views to support

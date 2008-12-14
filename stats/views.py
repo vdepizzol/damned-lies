@@ -47,7 +47,6 @@ def module(request, module_name):
         'pageSection':  "module",
         'module': mod,
         'can_edit_branches': mod.can_edit_branches(request.user),
-        'prof': utils.Profiler()
     }
     return render_to_response('module_detail.html', context, context_instance=RequestContext(request))
 

@@ -56,8 +56,8 @@ class Team(Group):
         members = Person.objects.filter(role__team=self, role__role=role)
         return members
         
-    def get_commiters(self):
-        return self.get_members_by_role('commiter')
+    def get_committers(self):
+        return self.get_members_by_role('committer')
 
     def get_reviewers(self):
         return self.get_members_by_role('reviewer')
@@ -102,4 +102,3 @@ class Role(models.Model):
     class Meta:
         db_table = 'role'
         unique_together = ('team', 'person')
-

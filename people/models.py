@@ -20,7 +20,7 @@ class Person(User):
 
     # Use UserManager to get the create_user method, etc.
     objects = UserManager()
-       
+
     class Meta:
         db_table = 'person'
         ordering = ('username',)
@@ -56,6 +56,27 @@ class Person(User):
     @models.permalink
     def get_absolute_url(self):
         return ('person', [str(self.id)])
+
+    def is_committer(self, team):
+        try:
+            self.role_set.get(team=team, role='committer')
+            return True
+        except:
+            return False
+
+    def is_reviewer(self, team):
+        try:
+            self.role_set.get(team=team, role='reviewer')
+            return True
+        except:
+            return False
+
+    def is_translator(self, team):
+        try:
+            self.role_set.get(team=team, role='translator')
+            return True
+        except:
+            return False
 
     # Related names
     # - module: maintains_modules

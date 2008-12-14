@@ -42,10 +42,10 @@ def team(request, team_slug):
     except:
         lang = get_object_or_404(Language, locale=team_slug)
         team = FakeTeam(lang)
-    mem_groups = ( {'title': _("Commiters"),
-                'members': team.get_commiters(),
+    mem_groups = ( {'title': _("Committers"),
+                'members': team.get_committers(),
                 'form': None,
-                'no_member': _("No commiters")
+                'no_member': _("No committers")
                },
                {'title': _("Reviewers"),
                 'members': team.get_reviewers(),
@@ -75,7 +75,7 @@ def team(request, team_slug):
                             role.role = form_value
                             role.save()
         # Create forms for template
-        commit_roles = Role.objects.filter(team=team, role='commiter')
+        commit_roles = Role.objects.filter(team=team, role='committer')
         if commit_roles:
             mem_groups[0]['form'] = EditMemberRoleForm(commit_roles)
         review_roles = Role.objects.filter(team=team, role='reviewer')
