@@ -55,7 +55,7 @@ class Person(User):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('person', [str(self.id)])
+        return ('person', [self.username])
 
     def is_committer(self, team):
         try:
