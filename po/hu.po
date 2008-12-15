@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies Head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-14 11:12+0000\n"
-"PO-Revision-Date: 2008-12-15 02:12+0100\n"
+"POT-Creation-Date: 2008-12-15 01:13+0000\n"
+"PO-Revision-Date: 2008-12-15 02:18+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -841,7 +841,8 @@ msgstr "GNOME 2 felhasználói dokumentáció"
 msgid "Beagle Desktop Search"
 msgstr "Beagle asztali kereső"
 
-#: database-content.py:207 templates/base.html:46
+#: database-content.py:207 templates/base.html:48
+#: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Szemenszedett hazugságok"
 
@@ -965,23 +966,74 @@ msgstr "GNOME 2.20 (régi stabil)"
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (fejlesztői)"
 
-#: common/views.py:25
+#: common/views.py:31
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: stats/models.py:241
+#: common/views.py:52
+msgid "You have been logged out."
+msgstr "Kijelentkezett."
+
+#: common/views.py:60
+msgid "You have been successfully logged in."
+msgstr "Sikeresen bejelentkezett."
+
+#: common/views.py:67
+msgid "We're sorry, but your account has been disabled."
+msgstr "Elnézést, a fiókját letiltották."
+
+#: common/views.py:69
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "A bejelentkezés meghiúsult. Ellenőrizze a felhasználónevét és jelszavát."
+
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:18
+msgid "Log in with your username and password:"
+msgstr "Bejelentkezés felhasználónévvel és jelszóval:"
+
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:21
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#: django_openid/templates/django_openid/admin_login.html:23
+#: templates/login.html:24
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:86 templates/login.html:30
+msgid "Log in"
+msgstr "Bejelentkezés"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:35
+msgid "Or use your OpenID:"
+msgstr "Vagy használjon OpenID-t:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: templates/login.html:38
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Bejelentkezés OpenID-val"
+
+#: stats/models.py:264
 msgid "Can't generate POT file, using old one."
 msgstr "Nem készíthető POT fájl, a régi használata."
 
-#: stats/models.py:265
+#: stats/models.py:288
 msgid "Can't copy new POT file to public location."
 msgstr "Az új POT fájl nem másolható nyilvános helyre."
 
-#: stats/models.py:302
+#: stats/models.py:325
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "A DOC_LINGUAS lista jelenleg nem tartalmazza ezt a nyelvet."
 
-#: stats/models.py:503
+#: stats/models.py:526
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -992,70 +1044,70 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:773
+#: stats/models.py:797
 msgid "Administration Tools"
 msgstr "Adminisztrációs eszközök"
 
-#: stats/models.py:774
+#: stats/models.py:798
 msgid "Development Tools"
 msgstr "Fejlesztőeszközök"
 
-#: stats/models.py:775
+#: stats/models.py:799
 msgid "GNOME Desktop"
 msgstr "GNOME asztali környezet"
 
-#: stats/models.py:776
+#: stats/models.py:800
 msgid "GNOME Developer Platform"
 msgstr "GNOME fejlesztői környezet"
 
-#: stats/models.py:777
+#: stats/models.py:801
 msgid "New Module Proposals"
 msgstr "Új moduljavaslatok"
 
-#: stats/models.py:847
+#: stats/models.py:872
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:876
+#: stats/models.py:901
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s üzenet"
 msgstr[1] "%(count)s üzenet"
 
-#: stats/models.py:877
+#: stats/models.py:902
 #, python-format
 msgid "updated on %(date)s"
 msgstr "frissítve: %(date)s"
 
-#: stats/models.py:879
+#: stats/models.py:904
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s ábra"
 msgstr[1] "%(count)s ábra"
 
-#: stats/models.py:880
+#: stats/models.py:905
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:883
+#: stats/models.py:908
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:54
+#: stats/utils.py:52
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hibák az 'intltool-update -m' ellenőrzés futtatásakor."
 
-#: stats/utils.py:60
+#: stats/utils.py:58
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Néhány fájl hiányzik a POTFILES.in fájlból: %s"
 
-#: stats/utils.py:69
+#: stats/utils.py:67
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1064,23 +1116,23 @@ msgstr ""
 "A POTFILES.in vagy POTFILES.skip a következő fájlokra hivatkozik, noha ezek "
 "nem léteznek: %s"
 
-#: stats/utils.py:81
+#: stats/utils.py:79
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "A(z) %s modul nem tűnik gnome-doc-utils modulnak."
 
-#: stats/utils.py:84
+#: stats/utils.py:82
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "A DOC_MODULE nem oldható fel valódi fájlra, a(z) „%s.xml” kerül "
 "felhasználásra."
 
-#: stats/utils.py:87
+#: stats/utils.py:85
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "A DOC_MODULE nem egy valódi fájlra mutat, valószínűleg egy makró."
 
-#: stats/utils.py:102
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1091,39 +1143,39 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:152
+#: stats/utils.py:150
 #, python-format
 msgid "PO file '%s' doesn't exist."
 msgstr "A(z) „%s PO fájl nem létezik."
 
-#: stats/utils.py:165
+#: stats/utils.py:163
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "A(z) „%s” PO fájl nem megy át az msgfmt ellenőrzésen: nem frissül."
 
-#: stats/utils.py:167
+#: stats/utils.py:165
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "A(z) „%s” POT fájl statisztikái nem érhetők el."
 
-#: stats/utils.py:170
+#: stats/utils.py:168
 msgid "This PO file has an executable bit set."
 msgstr "Ezen a PO fájlon be van állítva egy végrehajtható bit."
 
-#: stats/utils.py:195
+#: stats/utils.py:193
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "A(z) „%s” PO fájl nem UTF-8 kódolású."
 
-#: stats/utils.py:228
+#: stats/utils.py:226
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a LINGUAS fájlban."
 
-#: stats/utils.py:255
+#: stats/utils.py:253
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a configure fájl ALL_LINGUAS értékében."
 
-#: stats/utils.py:258
+#: stats/utils.py:256
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1144,69 +1196,88 @@ msgstr "Hiba: az oldal nem található"
 msgid "The page you requested has not been found on this server."
 msgstr "A kért oldal nem található meg a kiszolgálón."
 
-#: templates/base.html:24 templates/base.html.py:53
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Hiba: kiszolgálóhiba (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Kiszolgálóhiba"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Elnézést, kiszolgálóhiba történt."
+
+#: templates/base.html:26 templates/base.html.py:55
 msgid "Home"
 msgstr "Kezdőlap"
 
-#: templates/base.html:27
+#: templates/base.html:29
 msgid "News"
 msgstr "Hírek"
 
-#: templates/base.html:30
+#: templates/base.html:32
 msgid "Projects"
 msgstr "Projektek"
 
-#: templates/base.html:33
+#: templates/base.html:35
 msgid "Art"
 msgstr "Grafika"
 
-#: templates/base.html:36
+#: templates/base.html:38
 msgid "Support"
 msgstr "Támogatás"
 
-#: templates/base.html:39
+#: templates/base.html:41
 msgid "Development"
 msgstr "Fejlesztés"
 
-#: templates/base.html:42
+#: templates/base.html:44
 msgid "Community"
 msgstr "Közösség"
 
-#: templates/base.html:53
+#: templates/base.html:55
 msgid "Back to Damned Lies home page"
 msgstr "Vissza a Szemenszedett hazugságok kezdőoldalára"
 
-#: templates/base.html:59 templates/index.html:13
+#: templates/base.html:61 templates/index.html:13
 msgid "Teams"
 msgstr "Csapatok"
 
-#: templates/base.html:64 templates/index.html:20
+#: templates/base.html:66 templates/index.html:20
 msgid "Languages"
 msgstr "Nyelvek"
 
-#: templates/base.html:69
+#: templates/base.html:71
 msgid "Release sets"
 msgstr "Kiadáscsoportok"
 
-#: templates/base.html:74 templates/index.html:36
+#: templates/base.html:76 templates/index.html:36
 msgid "Modules"
 msgstr "Modulok"
 
-#: templates/base.html:88
+#: templates/base.html:84
+#, python-format
+msgid "Logged in as: %(username)s"
+msgstr "Bejelentkezve mint: %(username)s"
+
+#: templates/base.html:103
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
-#: templates/base.html:90
+#: templates/base.html:105
 msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-msgstr "Karbantartva az <a href='http://svn.gnome.org/'>svn.gnome.org</a> <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> moduljában."
+msgstr ""
+"Karbantartva az <a href='http://svn.gnome.org/'>svn.gnome.org</a> <a "
+"href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> moduljában."
 
-#: templates/base.html:92
+#: templates/base.html:107
 msgid "Hosted by"
 msgstr "Üzemelteti:"
 
-#: templates/index.html:4 templates/index.html.py:9
+#: templates/index.html:4 templates/index.html.py:9 templates/login.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Szemenszedett hazugságok a GNOME-ról"
 
@@ -1232,7 +1303,9 @@ msgstr ""
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
-msgstr "Az összes nyelv listája, amelyhez létezik <a href='%(teams_url)s'>fordítócsapat</a>."
+msgstr ""
+"Az összes nyelv listája, amelyhez létezik <a href='%(teams_url)"
+"s'>fordítócsapat</a>."
 
 #: templates/index.html:23
 msgid ""
@@ -1256,7 +1329,9 @@ msgstr ""
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
-msgstr "Kiadáscsoportnak nevezzük például a következőket: &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; vagy &quot;GNOME 2.14&quot;."
+msgstr ""
+"Kiadáscsoportnak nevezzük például a következőket: &quot;GNOME Office&quot;, "
+"&quot;Fifth Toe&quot; vagy &quot;GNOME 2.14&quot;."
 
 #: templates/index.html:31
 msgid ""
@@ -1296,12 +1371,21 @@ msgstr ""
 msgid "Translated by:"
 msgstr "Fordította:"
 
-#: templates/module.html:4
+#: templates/login.html:10
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Már bejelentkezett mint %(username)s."
+
+#: templates/login.html:14
+msgid "Log out"
+msgstr "Kijelentkezés"
+
+#: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Modulstatisztika: %(name)s"
 
-#: templates/module.html:15
+#: templates/module_detail.html:17
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1309,45 +1393,45 @@ msgstr ""
 "Ez a modul nem része a GNOME SVN tárolónak. A fordítások beküldésével "
 "kapcsolatban nézze meg a modul weboldalát."
 
-#: templates/module.html:26
+#: templates/module_detail.html:29
 msgid "Maintainers"
 msgstr "Karbantartók"
 
-#: templates/module.html:37
+#: templates/module_detail.html:39
 msgid "Bug reporting"
 msgstr "Hibajelentés"
 
-#: templates/module.html:40
+#: templates/module_detail.html:42
 msgid "Show existing i18n and l10n bugs"
 msgstr "Meglévő i18n és l10n hibák megjelenítése"
 
-#: templates/module.html:42
+#: templates/module_detail.html:44
 msgid "Report bugs to Bugzilla"
 msgstr "Hibák jelentése a Bugzilla-ba"
 
-#: templates/module.html:50
+#: templates/module_detail.html:53
 msgid "Branches:"
 msgstr "Ágak:"
 
-#: templates/module.html:63
+#: templates/module_detail.html:67
 msgid "Browse CVS"
 msgstr "CVS böngészése"
 
-#: templates/module.html:66
+#: templates/module_detail.html:70
 msgid "Browse SVN"
 msgstr "SVN böngészése"
 
-#: templates/module.html:70
+#: templates/module_detail.html:74
 msgid "This branch is currently string-frozen."
 msgstr "Ez az ág jelenleg fagyasztva van."
 
-#: templates/module.html:77 templates/release.html:17
+#: templates/module_detail.html:81 templates/release_detail.html:17
 #: templates/languages/language_release.html:40
 #: templates/teams/team_detail.html:22
 msgid "Documentation"
 msgstr "Dokumentáció"
 
-#: templates/module.html:87
+#: templates/module_detail.html:91
 msgid "Translation"
 msgstr "Fordítás"
 
@@ -1417,12 +1501,13 @@ msgstr "Koordinálja:"
 msgid "Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>"
 msgstr "Koordinálja: <a href=\"%(team_url)s\">%(team_desc)s</a>"
 
-#: templates/release.html:10
+#: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
 msgstr "%(name)s kiadás"
 
-#: templates/release.html:13 templates/languages/language_release.html:34
+#: templates/release_detail.html:13
+#: templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1430,16 +1515,16 @@ msgstr ""
 "Ezen kiadás moduljai nem részei a GNOME SVN tárolónak. A fordítások "
 "beküldésével kapcsolatban nézze meg az egyes modulok weboldalát."
 
-#: templates/release.html:17 templates/teams/team_detail.html:22
+#: templates/release_detail.html:17 templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Kiadás"
 
-#: templates/release.html:17 templates/stats_show.html:29
+#: templates/release_detail.html:17 templates/stats_show.html:29
 #: templates/teams/team_detail.html:22 templates/teams/team_detail.html:23
 msgid "Graph"
 msgstr "Grafikon"
 
-#: templates/release.html:17 templates/teams/team_detail.html:23
+#: templates/release_detail.html:17 templates/teams/team_detail.html:23
 msgid "User Interface"
 msgstr "Felhasználói felület"
 
@@ -1466,6 +1551,10 @@ msgstr "Lefordított"
 #: templates/stats_show.html:44
 msgid "Display document figures"
 msgstr "Dokumentációs ábrák megjelenítése"
+
+#: templates/admin/base_site.html:4
+msgid "Damned Lies site admin"
+msgstr "Szemenszedett hazugságok admin"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
