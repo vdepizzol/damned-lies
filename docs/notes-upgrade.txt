@@ -1,0 +1,13 @@
+r1226
+
+./manage.py shell
+from teams.models import *
+from people.models import *
+
+for t in Team.objects.all():
+    p = t.coordinator
+    r = Role(team=t, person=p, role='coordinator')
+    r.save()
+
+SQL command
+ALTER TABLE team DROP coordinator_id;
