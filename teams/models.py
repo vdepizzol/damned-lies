@@ -86,6 +86,9 @@ class FakeTeam(object):
 
     def get_languages(self):
         return (self.language,)
+    
+    def get_coordinator(self):
+        return None
 
 
 ROLE_CHOICES = (

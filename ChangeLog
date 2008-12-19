@@ -1,5 +1,10 @@
 2008-12-19  Claude Paroz  <claude@2xlibre.net>
 
+	* teams/models.py: Add get_coordinator for FakeTeam.
+	* teams/views.py: Add empty mem_groups tuple for FakeTeam.
+
+2008-12-19  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/people/person_detail.html:
 	* templates/person_base.html: Role display moved from base to detail.
 	* templates/module_detail.html:

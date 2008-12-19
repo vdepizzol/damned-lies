@@ -39,10 +39,8 @@ def teams(request):
 def team(request, team_slug):
     try:
         team = Team.objects.get(name=team_slug)
-    except:
-        lang = get_object_or_404(Language, locale=team_slug)
-        team = FakeTeam(lang)
-    mem_groups = ( {'title': _("Committers"),
+        mem_groups = ( 
+               {'title': _("Committers"),
                 'members': team.get_committers(),
                 'form': None,
                 'no_member': _("No committers")
@@ -57,7 +55,11 @@ def team(request, team_slug):
                 'form': None,
                 'no_member': _("No translators")
                },
-    )
+        )
+    except Team.DoesNotExist:
+        lang = get_object_or_404(Language, locale=team_slug)
+        team = FakeTeam(lang)
+        mem_groups = ()
 
     if request.user.is_authenticated() and request.user == team.get_coordinator():
         if request.method == 'POST':
