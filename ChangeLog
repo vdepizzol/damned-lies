@@ -1,3 +1,7 @@
+2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* stats/views.py: Removed useless ugettext_lazy import.
+
 2008-12-15  Claude Paroz  <claude@2xlibre.net>
 
 	* people/models.py: Use username (slug) instead of id for get_absolute_url.

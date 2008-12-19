@@ -23,7 +23,6 @@ from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.http import HttpResponse
 from django.template import RequestContext
-from django.utils.translation import ugettext_lazy as _
 
 from stats.models import Statistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
