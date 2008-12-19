@@ -13,11 +13,18 @@
     {% endifequal %}
   {% endif %}
 
-  {% with 1 as printroles %}
   {% include "person_base.html" %}
-  {% endwith %}
-
+  
   <div class="maintainer">
+  {% if person.maintains_modules.all %}
+      <h2>{% trans "Maintains:" %}</h2>
+      <ul>
+        {% for module in person.maintains_modules.all %}
+        <li><a href="{{ module.get_absolute_url }} ">{{ module.description }}</a></li>
+        {% endfor %}
+      </ul>
+  {% endif %}
+
   {% if person.role_set.all %}
     <h2>{% trans "Team membership" %}</h2>
     <ul>

@@ -35,26 +35,4 @@
   <strong>{% trans "SVN account:" %}</strong> <a href="http://cia.vc/stats/author/{{ person.svn_account }}">{{ person.svn_account}}</a><br />
   {% endif %}
 
-  {% if printroles %}
-      {% if person.maintains_modules.all %}
-      <h2>{% trans "Maintains:" %}</h2>
-      <ul>
-        {% for module in person.maintains_modules.all %}
-        <li><a href="{{ module.get_absolute_url }} ">{{ module.description }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-
-      {% if person.coordinates_teams.all %}
-      <h2>{% trans "Coordinates:" %}</h2>
-      <ul>
-        {% for team in person.coordinates_teams.all %}
-          <li>
-            {% blocktrans with team.get_absolute_url as team_url and team.description as team_desc %}Coordinates <a href="{{ team_url }}">{{ team_desc }}</a>{% endblocktrans %}
-          </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-  {% endif %}
-
 </div>

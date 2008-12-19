@@ -1,3 +1,12 @@
+2008-12-19  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/people/person_detail.html:
+	* templates/person_base.html: Role display moved from base to detail.
+	* templates/module_detail.html:
+	* templates/teams/team_base.html: printroles variable no more useful.
+	* templates/teams/team_detail.html: Temporarily deactivated team
+	membership listing.
+
 2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* docs/notes-upgrade.txt: Added note.
