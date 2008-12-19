@@ -132,7 +132,7 @@ class Branch(models.Model):
         db_table = 'branch'
         verbose_name_plural = 'branches'
         ordering = ('name',)
-        unique_together = ("name", "module")
+        unique_together = ('name', 'module')
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
@@ -808,7 +808,7 @@ class Category(models.Model):
     class Meta:
         db_table = 'category'
         verbose_name_plural = 'categories'
-        unique_together = ("release", "branch")
+        unique_together = ('release', 'branch')
 
     def __unicode__(self):
         return "%s (%s, %s)" % (self.get_name_display(), self.release, self.branch)
@@ -834,6 +834,7 @@ class Statistics(models.Model):
         db_table = 'statistics'
         verbose_name = "statistics"
         verbose_name_plural = verbose_name
+        unique_together = ('branch', 'domain', 'language')
 
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)

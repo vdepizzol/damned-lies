@@ -1,6 +1,5 @@
-r1226
-
-Add this relation to Team to be able to run the snippet
+# r1226
+Add this attribute to Team to be able to run the snippet:
 coordinator = models.ForeignKey(Person)
 
 ./manage.py shell
@@ -12,7 +11,11 @@ for t in Team.objects.all():
     r = Role(team=t, person=p, role='coordinator')
     r.save()
 
-Remove the previous attribute.
+Remove the previous added attribute.
 
 SQL command
 ALTER TABLE team DROP coordinator_id;
+
+
+# r1229
+ALTER TABLE statistics ADD UNIQUE ("branch_id", "domain_id", "language_id");

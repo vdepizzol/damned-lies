@@ -1,5 +1,11 @@
 2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* docs/notes-upgrade.txt: Added note.
+	* stats/models.py: Added unique constraint on (branch, domain,
+	language) to Statistics table.
+
+2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* docs/notes-upgrade.txt: Added information.
 
 2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
