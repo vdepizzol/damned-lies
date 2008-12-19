@@ -16,7 +16,9 @@ Requirements
 
 1 - Django 1.0.X
 
-2 - [Optional] Django Evolution is an extension to Django that allows
+2 - Python 2.4 (for set built-in).
+
+3 - [Optional] Django Evolution is an extension to Django that allows
     you to track changes in your models over time, and to update the
     database to reflect those changes.
 
@@ -27,7 +29,7 @@ Requirements
     Run './manage.py syncdb' before any model changes and './manage.py
     evolve --hint --execute' after.
 
-3 - [Optional] Django Debug Toolbar
+4 - [Optional] Django Debug Toolbar
     git clone git://github.com/dcramer/django-debug-toolbar.git
     Define USE_DEBUG_TOOLBAR to True in settings.py to use it.
 
