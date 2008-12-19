@@ -18,12 +18,14 @@
       {% if team.webpage_url %}
         &mdash; <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a>
       {% endif %}
-      {% if team.coordinator.get_absolute_url %}
-        <br />
-        <span style="font-size: 80%;">
-          {% blocktrans with team.coordinator.get_absolute_url|safe as url and team.coordinator.name as name %}Coordinated by <a href="{{ url }}">{{ name }}</a>{% endblocktrans %}
-        </span>
+      {% with team.get_coordinator as coordinator %}
+      {% if coordinator %}
+      <br />
+      <span style="font-size: 80%;">
+        {% blocktrans with coordinator.get_absolute_url|safe as url and coordinator.name as name %}Coordinated by <a href="{{ url }}">{{ name }}</a>{% endblocktrans %}
+      </span>
       {% endif %}
+      {% endwith %}
     </li>
     {% endfor %}
     </ul>

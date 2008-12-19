@@ -27,9 +27,9 @@
   {% endif %}
   
   </td><td valign="top">
-  {% if team.coordinator %}
+  {% if team.get_coordinator %}
     <h2>{% trans "Coordinator" %}</h2>
-    {% with team.coordinator as person %}
+    {% with team.get_coordinator as person %}
     {% with 0 as printroles %}
     {% include "person_base.html" %}
     {% endwith %}

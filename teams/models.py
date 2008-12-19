@@ -28,8 +28,6 @@ class Team(Group):
        The lang_code is generally used."""
 
     description = models.TextField()
-    # Don't confuse this relation with the 'groups' one
-    coordinator = models.ForeignKey(Person, related_name='coordinates_teams')
     members = models.ManyToManyField(Person, through='Role', related_name='teams')
     webpage_url = models.URLField(null=True, blank=True)
     mailing_list = models.EmailField(null=True, blank=True)
@@ -51,9 +49,14 @@ class Team(Group):
     
     def get_languages(self):
         return self.language_set.all()
-    
+
+    def get_coordinator(self):
+        # The join by role__team__id generates only one query and
+        # the same one by role__team=self two queries!
+        return Person.objects.get(role__team__id=self.id, role__role='coordinator')
+
     def get_members_by_role(self, role):
-        members = Person.objects.filter(role__team=self, role__role=role)
+        members = Person.objects.filter(role__team__id=self.id, role__role=role)
         return members
         
     def get_committers(self):

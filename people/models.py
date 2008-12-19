@@ -1,5 +1,25 @@
-import datetime
+# -*- coding: utf-8 -*-
+#
+# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>.
+#
+# This file is part of Damned Lies.
+#
+# Damned Lies is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# Damned Lies is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
+# 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import datetime
 from django.db import models
 from django.contrib.auth.models import User, UserManager
 
@@ -57,27 +77,37 @@ class Person(User):
     def get_absolute_url(self):
         return ('person', [self.username])
 
+    def coordinates_teams(self):
+        from teams.models import Team
+        return Team.objects.filter(role__person__id=self.id).all()
+
+    def is_coordinator(self, team):
+        try:
+            self.role_set.get(team__id=team.id, role='coordinator')
+            return True
+        except:
+            return False
+        
     def is_committer(self, team):
         try:
-            self.role_set.get(team=team, role='committer')
+            self.role_set.get(team__id=team.id, role__in=['committer', 'coordinator'])
             return True
         except:
             return False
 
     def is_reviewer(self, team):
         try:
-            self.role_set.get(team=team, role='reviewer')
+            self.role_set.get(team__id=team.id, role__in=['reviewer', 'committer', 'coordinator'])
             return True
         except:
             return False
 
     def is_translator(self, team):
         try:
-            self.role_set.get(team=team, role='translator')
+            self.role_set.get(team__id=team.id)
             return True
         except:
             return False
 
     # Related names
     # - module: maintains_modules
-    # - team: coordinates_teams

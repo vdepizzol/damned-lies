@@ -1,5 +1,15 @@
 2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* people/models.py: Added missing copyright and new methods for
+	the committer.	
+	* teams/models.py: Tips to keep the current performance.
+	* teams/views.py:
+	* templates/teams/team_base.html:
+	* templates/teams/team_list.html: A coordinator is a usual team
+	member with a different role.
+
+2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* README: Bump requirement to Python 2.4
 
 2008-12-19  Stéphane Raimbault  <stephane.raimbault@gmail.com>

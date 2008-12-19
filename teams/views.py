@@ -59,7 +59,7 @@ def team(request, team_slug):
                },
     )
 
-    if request.user.is_authenticated() and request.user == team.coordinator:
+    if request.user.is_authenticated() and request.user == team.get_coordinator():
         if request.method == 'POST':
             form_type = request.POST['form_type']
             roles = Role.objects.filter(team=team, role=form_type)
