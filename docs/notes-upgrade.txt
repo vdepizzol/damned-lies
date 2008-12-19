@@ -1,5 +1,8 @@
 r1226
 
+Add this relation to Team to be able to run the snippet
+coordinator = models.ForeignKey(Person)
+
 ./manage.py shell
 from teams.models import *
 from people.models import *
@@ -8,6 +11,8 @@ for t in Team.objects.all():
     p = t.coordinator
     r = Role(team=t, person=p, role='coordinator')
     r.save()
+
+Remove the previous attribute.
 
 SQL command
 ALTER TABLE team DROP coordinator_id;
