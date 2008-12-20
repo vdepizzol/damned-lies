@@ -21,6 +21,7 @@
 
 import datetime
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User, UserManager
 
 def obfuscate_email(email):
@@ -32,10 +33,12 @@ class Person(User):
     """ The User class of D-L. """
 
     svn_account = models.SlugField(max_length=20, null=True, blank=True)
-    image = models.URLField(null=True, blank=True)
-    webpage_url = models.URLField(null=True, blank=True)
-    irc_nick = models.SlugField(max_length=20, null=True, blank=True)
-    bugzilla_account = models.EmailField(null=True, blank=True)
+    image = models.URLField(_("Image"), null=True, blank=True,
+                            help_text=_("URL to an image file (.jpg, .png, ...) of an hackergotchi"))
+    webpage_url = models.URLField(_("Web page"), null=True, blank=True)
+    irc_nick = models.SlugField(_("IRC nickname"), max_length=20, null=True, blank=True)
+    bugzilla_account = models.EmailField(_("Bugzilla account"), null=True, blank=True,
+                                         help_text=_("This shoud be an email, useful if not equal to 'email' field"))
     activation_key = models.CharField(max_length=40, null=True, blank=True)
 
     # Use UserManager to get the create_user method, etc.

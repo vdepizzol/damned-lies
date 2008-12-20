@@ -22,32 +22,51 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from people.models import Person
 from teams.models import Role
-from people.forms import JoinTeamForm
+from people.forms import JoinTeamForm, EditProfileForm
 
-def person_detail_from_username(request, slug):
+def person_detail_from_username(request, slug, edit_profile=False):
     person = get_object_or_404(Person, username=slug)
-    return person_detail(request, person)
+    return person_detail(request, person, edit_profile)
 
-def person_detail_from_id(request, object_id):
+def person_detail_from_id(request, object_id, edit_profile=False):
     person = get_object_or_404(Person, pk=object_id)
-    return person_detail(request, person)
+    return person_detail(request, person, edit_profile)
 
-def person_detail(request, person):
-    if request.method == 'POST':
-        form = JoinTeamForm(request.POST)
-        if form.is_valid():
+def person_detail(request, person, edit_profile):
+    messages = []
+    # Handle the form to join a team
+    if request.method == 'POST' and request.POST.get('join_team_form',None):
+        join_form = JoinTeamForm(request.POST)
+        if join_form.is_valid():
             if request.user.username == person.username:
-                team = form.cleaned_data['teams']
+                team = join_form.cleaned_data['teams']
                 new_role = Role(team=team, person=person) # role default to translator
                 new_role.save()
             else:
-                messages.append("Sorry, you're not allowed to modify this user.")
+                messages.append(_("Sorry, you're not allowed to modify this user."))
     else:
-        form = JoinTeamForm()
+        join_form = JoinTeamForm()
+    # Handle the form to edit profile
+    profile_form = None
+    if request.method == 'POST' and request.POST.get('edit_profile_form',None):
+        form = EditProfileForm(request.POST, instance=person)
+        if form.is_valid():
+            if request.user.username == person.username:
+                form.save()
+            else:
+                messages.append(_("Sorry, you're not allowed to modify this user."))
+        else:
+            messages.append("Sorry, the form is not valid.")
+            profile_form = form
+    elif edit_profile:
+        profile_form = EditProfileForm(instance=person)
+        
     context = {
         'pageSection': "teams",
         'person': person,
-        'form': form
+        'join_form': join_form,
+        'profile_form': profile_form,
+        'messages': messages
     }
     return render_to_response('people/person_detail.html', context, context_instance=RequestContext(request))
 

@@ -1,3 +1,7 @@
+table.stats {
+  width: 100%;
+}
+
 .stats th { 
     text-align: left; 
     background: gray; 
@@ -86,10 +90,6 @@ a:hover {
 }
 
 
-table {
-  width: 100%;
-}
-
 td.fuzzy {
   background: #c98e7f;
 }
@@ -111,7 +111,7 @@ img.screenshot {
 div.maintainer {
   padding-left: 85px;
   margin-bottom: 12px;
-  clear: both;
+  clear: left;
 }
 
 div.mainpage {
@@ -127,6 +127,13 @@ div#authenticated {
   font-size: small;
   font-style: italic;
   color: #aaaaaa;
+}
+
+div.right_actions {
+ float: right;
+ text-align: right;
+ padding: 5px;
+ background: #DCEAF7;
 }
 
 div.col1 { float: left }
@@ -149,6 +156,14 @@ p#show, p#hide {
   color:#999;
 }
 
+.djform td  {
+  font-size:10px;
+  color:#999;
+}
+.djform th {
+  vertical-align: top;
+}
+
 .error {
   font-style: italic;
   color: #666666;
@@ -160,6 +175,7 @@ p#show, p#hide {
   background: #FAE28E;
 }
 
+ul.errorlist { list-style: none; margin-left:0; padding:0; }
 .errorlist li { font-size:12px !important; display:block; padding:4px 5px 4px 25px; margin:0 0 3px 0; border:1px solid red; color:white; background:red url(../img/admin/icon_alert.gif) 5px .3em no-repeat; }
 
 .footnote {

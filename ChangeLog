@@ -1,3 +1,17 @@
+2008-12-20  Claude Paroz  <claude@2xlibre.net>
+
+	* media/css/main.css: Various CSS improvements.
+	* people/forms.py: New form to edit profile.
+	* templates/people/person_detail.html:
+	* people/urls.py:
+	* people/views.py: Add the possibility to edit personal profile from
+	person_detail template.
+	* people/models.py: Add translatable help_text and field names because
+	they are used in profile form.
+	* templates/module_detail.html: Small adjustments to adapt main.css
+	changes.
+	* stats/models.py: Minor fixes.
+
 2008-12-19  Claude Paroz  <claude@2xlibre.net>
 
 	* teams/models.py: Add get_coordinator for FakeTeam.

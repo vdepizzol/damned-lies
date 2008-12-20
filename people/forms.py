@@ -76,4 +76,9 @@ class RegistrationForm(forms.Form):
                   (email,), fail_silently=False)
 
         return new_user
-                           
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = Person
+        fields = ('first_name', 'last_name', 'email', 'image', 'webpage_url', 'irc_nick', 'bugzilla_account')
+

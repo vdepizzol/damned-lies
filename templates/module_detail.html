@@ -22,7 +22,7 @@
   <p><a href="{{ module.homepage }}">{{ module.homepage }}</a></p>
 {% endif %}
 
-<table>
+<table width="100%">
   <tr>
     <td width="50%" valign="top">
       {% if module.maintainers.all %}
@@ -72,7 +72,7 @@
       <p>{% trans "This branch is currently string-frozen." %}</p>
     {% endif %}
 
-    <table><tr><td valign="top"><!-- split to two columns -->
+    <table width="100%"><tr><td valign="top"><!-- split to two columns -->
     {% with branch.get_doc_stats as stats %}
     {% if stats|length %}
       {% if not stats|length_is:"1" %}

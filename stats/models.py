@@ -117,7 +117,7 @@ class BranchCharField(models.CharField):
     def pre_save(self, model_instance, add):
         """ Check if branch is valid before saving the instance """
         if not model_instance.checkout():
-            raise Exception, "Branch not valid: error while checking out the branch."
+            raise ValueError("Branch not valid: error while checking out the branch.")
         return getattr(model_instance, self.attname)
 
 class Branch(models.Model):
@@ -883,7 +883,7 @@ class Statistics(models.Model):
         return self.modname
     
     def module_description(self):
-        return self.branch.module.description
+        return self.branch.module.description or self.branch.module.name
         
     def get_translationstat(self):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
