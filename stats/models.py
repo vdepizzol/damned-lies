@@ -116,7 +116,9 @@ class Module(models.Model):
 class BranchCharField(models.CharField):
     def pre_save(self, model_instance, add):
         """ Check if branch is valid before saving the instance """
-        if not model_instance.checkout():
+        try:
+            model_instance.checkout()
+        except:
             raise ValueError("Branch not valid: error while checking out the branch.")
         return getattr(model_instance, self.attname)
 
@@ -134,14 +136,26 @@ class Branch(models.Model):
         ordering = ('name',)
         unique_together = ('name', 'module')
 
+    def __init__(self, *args, **kwargs):
+        models.Model.__init__(self, *args, **kwargs)
+        self.checkout_lock = threading.Lock()
+
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
 
-    def save(self):
-        super(Branch, self).save()
+    def save(self, force_insert=False, force_update=False):
+        super(Branch, self).save(force_insert, force_update)
         # The update command is launched asynchronously in a separate thread
         upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
         upd_thread.start()
+    
+    def delete(self):
+        # Remove the repo checkout
+        localdir = os.path.join(settings.SCRATCHDIR, self.module.vcs_type, self.module.name + "." + self.name)
+        if os.access(localdir, os.W_OK):
+            import shutil # os.rmdir cannot delete non-empty dirs
+            shutil.rmtree(localdir)
+        models.Model.delete(self)
 
     def __cmp__(self, other):
         if self.name in BRANCH_HEAD_NAMES:
@@ -444,24 +458,22 @@ class Branch(models.Model):
                     })
         
         # Run command(s)
-        errorsOccured = 0
         if settings.DEBUG:
             print >>sys.stdout, "Checking '%s.%s' out to '%s'..." % (module_name, self.name, modulepath)
-        for command in commandList:
-            if settings.DEBUG:
-                print >>sys.stdout, command
-            (error, output) = commands.getstatusoutput(command)
-            if settings.DEBUG:
-                print >> sys.stderr, output
-            if error:
-                errorsOccured = 1
+        # Do not allow 2 checkouts to run in parallel on the same branch
+        self.checkout_lock.acquire()
+        try:
+            for command in commandList:
                 if settings.DEBUG:
-                    print >> sys.stderr, error
-        if errorsOccured:
-            print >> sys.stderr, "Problem checking out module %s.%s" % (module_name, self.name)
-            return 0
-        else:
-            return 1
+                    print >>sys.stdout, command
+                (error, output) = commands.getstatusoutput(command)
+                if settings.DEBUG:
+                    print >> sys.stderr, output
+                if error:
+                    raise OSError(error, output)
+        finally:
+            self.checkout_lock.release()
+        return 1
 
 
 DOMAIN_TYPE_CHOICES = (

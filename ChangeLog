@@ -1,5 +1,17 @@
 2008-12-20  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/management/commands/update-stats.py: Enclose update_stats in a try
+	statement so as failure doesn't stop further updates. 
+	* stats/models.py: Use exceptions for handling errors in checkout().
+	Use thread locking to prevent concurrent VCS checkout (in a same branch
+	instance).
+	Fix save() signature.
+	Subclass delete() function for branches to remove a VCS repo on the
+	filesystem when the branch is deleted.
+	* stats/tests/__init__.py: Add basic unit tests.
+
+2008-12-20  Claude Paroz  <claude@2xlibre.net>
+
 	* media/css/main.css: Various CSS improvements.
 	* people/forms.py: New form to edit profile.
 	* templates/people/person_detail.html:

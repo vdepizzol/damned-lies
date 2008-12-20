@@ -42,7 +42,10 @@ class Command(BaseCommand):
                 print "Updating stats for %s..." % (module_arg)
                 branches = Branch.objects.filter(module__name=module_arg)
                 for branch in branches.all():
-                    branch.update_stats(options['force'])
+                    try:
+                        branch.update_stats(options['force'])
+                    except: 
+                        print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
             else:
                 # Update all modules
                 modules = Module.objects.all()
@@ -50,7 +53,10 @@ class Command(BaseCommand):
                     print "Updating stats for %s..." % (mod.name)
                     branches = Branch.objects.filter(module__name=mod)
                     for branch in branches.all():
-                        branch.update_stats(options['force'])
+                        try:
+                            branch.update_stats(options['force'])
+                        except:
+                            print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
         else:
             return "Too much command line arguments."
 
