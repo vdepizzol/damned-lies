@@ -143,11 +143,12 @@ class Branch(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
 
-    def save(self, force_insert=False, force_update=False):
+    def save(self, force_insert=False, force_update=False, update_statistics=True):
         super(Branch, self).save(force_insert, force_update)
-        # The update command is launched asynchronously in a separate thread
-        upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
-        upd_thread.start()
+        if update_statistics:
+            # The update command is launched asynchronously in a separate thread
+            upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
+            upd_thread.start()
     
     def delete(self):
         # Remove the repo checkout

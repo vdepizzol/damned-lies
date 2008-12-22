@@ -1,3 +1,8 @@
+2008-12-22  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* stats/models.py: New boolean argument to disable the update of
+	statistics at Branch saving.
+
 2008-12-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* people/urls.py: Fix to allow email as slug in URL.
