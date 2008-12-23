@@ -7,7 +7,7 @@ WHEREAREWE = 'http://l10n.gnome.org/'
 WHOAREWE = 'danilo@gnome.org'
 
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
-NOTIFICATIONS_TO = 'gnome-i18n@gnome.org'
+NOTIFICATIONS_TO = ['gnome-i18n@gnome.org']
 
 # Local directories
 SCRATCHDIR = ""

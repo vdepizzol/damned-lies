@@ -156,7 +156,7 @@ class Branch(models.Model):
         if os.access(localdir, os.W_OK):
             import shutil # os.rmdir cannot delete non-empty dirs
             shutil.rmtree(localdir)
-        models.Model.delete(self)
+        super(Branch, self).delete()
 
     def __cmp__(self, other):
         if self.name in BRANCH_HEAD_NAMES:

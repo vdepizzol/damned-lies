@@ -20,6 +20,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.utils.translation import ugettext as _, ugettext_noop
+from django.core.mail import send_mail
 from stats.conf import settings
 import sys, os, re, time, commands
 
@@ -276,13 +277,7 @@ def copy_file(file1, file2):
         return 0
 
 def notify_list(out_domain, diff):
-    """Send notification about string changes described in diff.
-
-    Uses settings.NOTIFICATIONS_TO as "to" address,
-    settings.WHOAREWE as "from" address, and sends
-    using SMTP on localhost:25."""
-    import smtplib
-    from email.mime.text import MIMEText
+    """Send notification about string changes described in diff."""
     text = u"""This is an automatic notification from status generation scripts on:
 %(ourweb)s.
 
@@ -296,15 +291,10 @@ might be worth investigating.
     'ourweb' : settings.WHEREAREWE,
     'potdiff' : "\n    ".join(diff).decode('utf-8') }
 
-    msg = MIMEText(text.encode('utf-8'), 'plain', 'utf-8')
-    msg['Subject'] = "String additions to '%s'" % (out_domain)
-    msg['From'] = "GNOME Status Pages <%s>" % (settings.WHOAREWE)
-    msg['To'] = settings.NOTIFICATIONS_TO
-
-    s = smtplib.SMTP()
-    s.connect()
-    s.sendmail(settings.WHOAREWE, settings.NOTIFICATIONS_TO, msg.as_string())
-    s.close()
+    send_mail(subject="String additions to '%s'" % (out_domain),
+              message=text,
+              from_email="GNOME Status Pages <%s>" % (settings.WHOAREWE),
+              recipient_list=settings.NOTIFICATIONS_TO)
 
 class Profiler(object):
     def __init__(self):

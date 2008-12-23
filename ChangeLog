@@ -1,5 +1,14 @@
 2008-12-23  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/conf/settings_sample.py: NOTIFICATIONS_TO is now a list.
+	* stats/models.py: Syntax fix.
+	* stats/tests/__init__.py: Add more tests (notification email, invalid
+	branch)
+	* stats/utils.py: Use django mail module instead of directly calling
+	smtplib.
+
+2008-12-23  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Always compute stats for languages containing LINGUAS
 	errors, to check if the error has been resolved.
 	Fixes #565442.
