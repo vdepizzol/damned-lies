@@ -317,10 +317,13 @@ class Branch(models.Model):
             # 6. Update language po files and update DB
             # *****************************************
             command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
+            stats_with_linguas_errors = Statistics.objects.filter(branch=self, domain=dom, information__description__contains='LINGUAS')
+            langs_with_linguas_errors = [stat.language.locale for stat in stats_with_linguas_errors]
             for lang, pofile in self.get_lang_files(dom, domain_path):
                 outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
 
-                if not force and not pot_has_changed and os.access(outpo, os.R_OK) and os.stat(pofile)[8] < os.stat(outpo)[8]:
+                if not force and not pot_has_changed and os.access(outpo, os.R_OK) and os.stat(pofile)[8] < os.stat(outpo)[8] \
+                   and not lang in langs_with_linguas_errors :
                     continue
 
                 realcmd = command % {
