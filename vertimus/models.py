@@ -18,271 +18,545 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from datetime import datetime
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
+from django.core import mail, urlresolvers
+from django.contrib.sites.models import Site
+from django.conf import settings
+from django.core.files.storage import default_storage
+
 from stats.models import Branch, Domain
 from languages.models import Language
 from people.models import Person
 
-ACTION_CODES = (
-    'WC', 
+#
+# States
+#
+
+# Sadly, the Django ORM isn't as powerful than SQLAlchemy :-(
+# So we need to use composition with StateDB and State to obtain
+# the desired behaviour.
+class StateDb(models.Model):
+    """Database storage of a State"""
+    branch = models.ForeignKey(Branch)
+    domain = models.ForeignKey(Domain)
+    language = models.ForeignKey(Language)
+    person = models.ForeignKey(Person, default=None, null=True)
+    
+    name = models.SlugField(max_length=20, default='None')
+    updated = models.DateTimeField(default=datetime.now, editable=False)
+
+    class Meta:
+        db_table = 'state'
+        unique_together = ('branch', 'domain', 'language')
+
+    def get_state(self):
+        state = eval('State'+self.name)()
+        state._state_db = self
+        return state
+
+    def __unicode__(self):
+        return self.name
+
+class StateAbstract(object):
+    """Abstract class"""
+
+    @property
+    def branch(self):
+        return self._state_db.branch
+
+    @property
+    def domain(self):
+        return self._state_db.domain
+
+    @property
+    def language(self):
+        return self._state_db.language
+
+    def get_person(self):
+        return self._state_db.person
+
+    def set_person(self, person):
+        self._state_db.person = person
+    person = property(get_person, set_person)
+
+    @property
+    def updated(self):
+        return self._state_db.updated
+
+    def get_state_db(self):
+        return self._state_db
+
+    def __unicode__(self):
+        return self.description
+
+    def _get_available_actions(self, action_names):
+        action_names.append('WC')
+        return [eval('Action' + action_name)() for action_name in action_names]
+
+    def apply_action(self, action, person, comment=None, file=None):
+        if action.name in (a.name for a in self.get_available_actions(person)):
+            new_state = action.apply(self, person, comment, file)
+            if new_state != None:
+                # Reuse the current state_db
+                new_state._state_db = self._state_db
+                # Only the name and the person change
+                new_state._state_db.name = new_state.name
+                new_state._state_db.person = person
+                return new_state
+            else:
+                return self
+        else:
+            raise Exception('Not allowed')
+
+    def save(self):
+        self._state_db.save()
+
+
+class StateNone(StateAbstract):
+    name = 'None'
+    description = _('Inactive')
+
+    def get_available_actions(self, person):
+        action_names = []
+
+        if person.is_translator(self.language.team):
+            action_names = ['RT']
+
+        return self._get_available_actions(action_names)
+
+
+class StateTranslating(StateAbstract):
+    name = 'Translating'
+    description = _('Translating') 
+
+    def get_available_actions(self, person):
+        action_names = []
+
+        if (self.person == person):
+            action_names = ['UT', 'UNDO']
+                    
+        return self._get_available_actions(action_names)
+
+
+class StateTranslated(StateAbstract):
+    name = 'Translated'
+    description = _('Translated')
+
+    def get_available_actions(self, person):
+        action_names = []
+
+        if person.is_reviewer(self.language.team):
+            action_names.append('RP')
+
+        if person.is_translator(self.language.team):
+            action_names.append('RT')
+            action_names.append('TR')
+
+        return self._get_available_actions(action_names)
+
+
+class StateProofreading(StateAbstract):
+    name = 'Proofreading'
+    description = 'Proofreading'
+
+    def get_available_actions(self, person):
+        action_names = []
+        
+        if person.is_reviewer(self.language.team):
+            if (self.person == person):
+                action_names = ['UP', 'TR', 'TC', 'UNDO']
+                    
+        return self._get_available_actions(action_names)
+
+
+class StateProofread(StateAbstract):
+    name = 'Proofread'
+    description = _('Proofread')
+
+    def get_available_actions(self, person):
+        if person.is_reviewer(self.language.team):
+            action_names = ['TC', 'TR']
+        else:
+            action_names = []
+
+        return self._get_available_actions(action_names)
+
+
+class StateToReview(StateAbstract):
+    name = 'ToReview'
+    description = 'To Review'
+
+    def get_available_actions(self, person):
+        action_names = []
+        if person.is_translator(self.language.team):
+            action_names.append('RT')
+
+        return self._get_available_actions(action_names)
+
+
+class StateToCommit(StateAbstract):
+    name = 'ToCommit'
+    description = _('To Commit')
+
+    def get_available_actions(self, person):
+        if person.is_committer(self.language.team):
+            action_names = ['RC', 'TR']
+        else:
+            action_names = []
+            
+        return self._get_available_actions(action_names)
+
+
+class StateCommitting(StateAbstract):
+    name = 'Committing'
+    description = _('Committing')
+        
+    def get_available_actions(self, person):
+        action_names = []
+
+        if person.is_committer(self.language.team):
+            if (self.person == person):
+                action_names = ['IC', 'TR', 'UNDO']
+            
+        return self._get_available_actions(action_names)
+
+
+class StateCommitted(StateAbstract):
+    name = 'Committed'
+    description = _('Committed')
+
+    def get_available_actions(self, person):
+        if person.is_committer(self.language.team):
+            action_names = ['BA']
+        else:            action_names = []
+
+        return self._get_available_actions(action_names)
+
+#
+# Actions 
+#
+
+
+ACTION_NAMES = (
+    'WC',
     'RT', 'UT',
     'RP', 'UP',
     'TC', 'RC',
     'IC', 'TR',
     'BA', 'UNDO')
 
-class VtmAction(models.Model):
-    branch = models.ForeignKey(Branch)
-    domain = models.ForeignKey(Domain)
-    language = models.ForeignKey(Language)
+class ActionDb(models.Model):
+    state_db = models.ForeignKey(StateDb)
     person = models.ForeignKey(Person)
 
-    code = models.CharField(max_length=8)
-    created = models.DateField(auto_now_add=True, editable=False)
+    name = models.SlugField(max_length=8)
+    description = None
+    created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to='vertimus/%Y/%m/', blank=True, null=True)
+    file = models.FileField(upload_to=settings.UPLOAD_DIR, blank=True, null=True)
 
     class Meta:
-        db_table = 'vtm_action'
-        ordering = ('created',)
-        get_latest_by = 'created'
+        db_table = 'action'
+        ordering = ('-created',)
+
+    def get_action(self):
+        action = eval('Action' + self.name)()
+        action._action_db = self
+        return action
+
+    @classmethod
+    def get_action_history(cls, state_db):
+        if state_db:
+            return [va_db.get_action() for va_db in ActionDb.objects.filter(
+                    state_db__id=state_db.id).order_by('created')]
+        else:
+            return []
+
+    def __unicode__(self):
+        return self.name
+
+class ActionAbstract(object):
+    """Abstract class"""
+
+    @classmethod
+    def new_by_name(cls, action_name):
+         return eval('Action' + action_name)()
 
     @classmethod
     def get_all(cls):
-        actions = []
-        for code in ACTION_CODES:
-            actions.append(eval('VtmAction' + code + '()'))
-    
-    @classmethod
-    def get_last_action(cls, branch, domain, language):
-        return VtmAction.objects.filter(
-            branch=branch, domain=domain, language=language).order_by('-created')[0]
+        """Reserved to the admins to access all actions"""
+        return [eval('Action' + action_name)() for action_name in ACTION_NAMES]
 
-    def apply(self, branch, domain, language, person, comment=None, file=None):
-        self.branch = branch
-        self.domain = domain
-        self.language = language
-        self.person = person
-        self.comment = comment
-        self.file = file
-        self.save()
+    @property
+    def person(self):
+        return self._action_db.person
 
-        return self._apply_child()
+    @property
+    def comment(self):
+        return self._action_db.comment
 
-    def __unicode__(self):
-        return self.name
+    @property
+    def file(self):
+        return self._action_db.file
 
-#
-# States
-#
-
-class VtmState(object):
-    """Abstract class"""
-    def __init__(self, code, name):
-        self.code = code
-        self.name = name
-        self.color = ''
+    def save_action_db(self, state, person, comment=None, file=None):
+        """Used by apply"""
+        self._action_db = ActionDb(state_db=state._state_db,
+            person=person, name=self.name, comment=comment, file=file)
+        self._action_db.save()
 
     def __unicode__(self):
-        return self.name
+        return self.description
 
-    def get_code(self):
-        return self.code
+    def send_mail_new_state(self, old_state, new_state, recipient_list):
+        # Remove None items from the list
+        recipient_list = filter(lambda x: x is not None, recipient_list)
 
-    @classmethod
-    def get_actions(cls, action_codes=[]):
-        action_codes.append('WC')
-        return [ eval('VtmAction' + action_code)() for action_code in action_codes ]
+        if recipient_list:
+            current_site = Site.objects.get_current()
+            url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
+                'vertimus-names-view',
+                 args = (
+                    old_state.branch.module.name,
+                    old_state.branch.name,
+                    old_state.domain.name,
+                    old_state.language.locale)))
+            subject = old_state.branch.module.name + u' - ' + old_state.branch.name
+            message = _(u"""Hello,
 
-    def apply_action(self, action, branch, domain, language, person, comment=None, file=None):
-        new_state = action.apply(branch, domain, language, person, comment, file)
-        if new_state == None:
-            return self
-        else:
-            return new_state
+The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.
+%(url)s
 
-    def apply_action_code(self, action_code, branch, domain, language, person, comment=None, file=None):
-        action = eval('VtmAction' + action_code)()
-        self.apply_action(action, branch, domain, language, person, comment, file)
+""") % { 
+                'module': old_state.branch.module.name,
+                'branch': old_state.branch.name,
+                'domain': old_state.domain.name,
+                'language': old_state.language.name, 
+                'new_state': new_state, 
+                'url': url
+            }
+            message += self.comment or _("Without comment")
+            message += "\n" + self.person.name
+            mail.send_mail(subject, message, self.person.email, recipient_list)
 
-
-class VtmStateNone(VtmState):
-    def __init__(self):
-        super(VtmStateNone, self).__init__('None', 'Inactive')
-
-    def get_actions(self, branch, domain, language, person):
-        return super(VtmStateNone, self).get_actions(['RT'])
-
-
-class VtmStateTranslating(VtmState):
-    def __init__(self):
-        super(VtmStateTranslating, self).__init__('Translating', 'Translating')
-
-    def get_actions(self, branch, domain, language, person):
-        action_codes = []
-
-        last_action = VtmAction.get_last_action(branch, domain, language)
-        if (last_action.person == person):
-            action_codes = ['UT', 'UNDO']
-                    
-        return super(VtmStateTranslating, self).get_actions(action_codes)
-
-
-class VtmStateTranslated(VtmState):
-    def __init__(self):
-        super(VtmStateTranslated, self).__init__('Translated', 'Translated')
-
-    def get_actions(self, branch, domain, language, person):
-        # FIXME
-        if person.is_reviewer:
-            action_codes = ['RP']
-        else:
-            action_codes = []
-
-        action_codes.append('RT')
-        return super(VtmStateTranslated, self).get_actions(action_codes)
-
-
-class VtmStateToReview(VtmState):
-    def __init__(self):
-        super(VtmStateToReview, self).__init__('ToReview', 'To Review')
-        self.color = 'needswork';
-
-    def get_actions(self, branch, domain, language, person):
-        return super(VtmStateToReview, self).get_actions(['RT'])
-
-
-class VtmStateProofreading(VtmState):
-    def __init__(self):
-        super(VtmStateProofreading, self).__init__('Proofreading', 'Proofreading')
-
-    def get_actions(self, branch, domain, language, person):
-        action_codes = []
-        
-        # FIXME
-        if person.is_commiter:
-            last_action = VtmAction.get_last_action(branch, domain, language)
-            if last_action.person == person:
-                action_codes = ['UP', 'TR', 'TC', 'UNDO']
-                    
-        return super(VtmStateProofreading, self).get_actions(action_codes)
-
-
-class VtmStateProofread(VtmState):
-    def __init__(self):
-        super(VtmStateProofread, self).__init__('Proofread', 'Proofread')
-
-    def get_actions(self, branch, domain, language, person):
-        if person.is_reviewer:
-            action_codes = ['TC', 'TR']
-        else:
-            action_codes = []
-
-        return super(VtmStateProofread, self).get_actions(action_codes)
-
-
-class VtmStateToCommit(VtmState):
-    def __init__(self):
-        super(VtmStateToCommit, self).__init__('ToCommit', 'To Commit')
-
-    def get_actions(self, branch, domain, language, person):
-        if person.is_commiter:
-            action_codes = ['RC', 'TR']
-        else:
-            action_codes = []
-            
-        return super(VtmStateToCommit, self).get_actions(action_codes)
-
-
-class VtmStateCommitting(VtmState):
-    def __init__(self):
-        super(VtmStateCommitting, self).__init__('Committing', 'Committing')
-        
-    def get_actions(self, branch, domain, language, person):
-        action_codes = []
-
-        # FIXME
-        if person.is_commiter:
-            last_action = VtmAction.get_last_action(branch, domain, language)
-            if (last_action.person == person):
-                action_codes = ['IC', 'TR', 'TC', 'UNDO']
-            
-        return super(VtmStateCommitting, self).get_actions(action_codes)
-
-
-class VtmStateCommitted(VtmState):
-    def __init__(self):
-        super(VtmStateCommitted, self).__init__('Committed', 'Committed')
-
-    def get_actions(self, branch, domain, language, person):
-        return super(VtmStateCommitted, self).get_actions()
-
-#
-# Actions 
-#
-
-class VtmActionWC(VtmAction):
-    class Meta:
-        db_table = 'vtm_action_wc'
-
-    def __init__(self, *args, **kwargs):
-        models.Model.__init__(self, *args, **kwargs)
-        self.code = 'WC'
-        self.name = 'Write a comment'
+class ActionWC(ActionAbstract):
+    name = 'WC'
+    description = _('Write a comment')
         
     def _new_state(self):
         return None
 
-    def _apply_child(self):
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        # Send an email to all translators of the page
+        translator_emails = set()
+        for d in Person.objects.filter(actiondb__state_db=state.get_state_db()).values('email'):
+            translator_emails.add(d['email'])
+
+        # Remove None items from the list
+        translator_emails = filter(lambda x: x is not None, translator_emails)
+
+        if translator_emails:
+            current_site = Site.objects.get_current()
+            url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
+                'vertimus-names-view',
+                args = (
+                    state.branch.module.name,
+                    state.branch.name,
+                    state.domain.name,
+                    state.language.locale)))
+            subject = state.branch.module.name + u' - ' + state.branch.name
+            message = _(u"""Hello,
+
+A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).
+%(url)s
+
+""") % { 
+                'module': state.branch.module.name,
+                'branch': state.branch.name,
+                'domain': state.domain.name,
+                'language': state.language.name, 
+                'url': url
+            }
+            message += comment or _("Without comment")
+            message += "\n" + person.name
+            mail.send_mail(subject, message, person.email, translator_emails)
+
         return self._new_state()
 
-
-class VtmActionRT(VtmAction):
-    class Meta:
-        db_table = 'vtm_action_rt'
-
-    def __init__(self, *args, **kwargs):
-        models.Model.__init__(self, *args, **kwargs)
-        self.code = 'RT'
-        self.name = 'Reserve for translation'
+class ActionRT(ActionAbstract):
+    name = 'RT'
+    description = _('Reserve for translation')
         
     def _new_state(self):
-        return VtmStateTranslating()
+        return StateTranslating()
 
-    def _apply_child(self):
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
         return self._new_state()
 
-
-class VtmActionUT(VtmAction):
-    class Meta:
-        db_table = 'vtm_action_ut'
-
-    def __init__(self, *args, **kwargs):
-        models.Model.__init__(self, *args, **kwargs)
-        self.code = 'UT'
-        self.name = 'Upload the new translation'
+class ActionUT(ActionAbstract):
+    name = 'UT'
+    description = _('Upload the new translation')
         
     def _new_state(self):
-        return VtmStateTranslated()
+        return StateTranslated()
 
-    def _apply_child(self):
-        return self._new_state()
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
 
+        new_state = self._new_state()
+        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+        return new_state
 
-class VtmActionRP(VtmAction):
-    class Meta:
-        db_table = 'vtm_action_rp'
-        
-    def __init__(self, *args, **kwargs):
-        models.Model.__init__(self, *args, **kwargs)
-        self.code = 'RP'
-        self.name = 'Reserve for proofreading'
+class ActionRP(ActionAbstract):
+    name = 'RP'
+    description = _('Reserve for proofreading')
 
     def _new_state(self):
-        return VtmStateProofreading()
+        return StateProofreading()
 
-    def _apply_child(self, branch, domain, language, person):
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
         return self._new_state()
 
-    
+class ActionUP(ActionAbstract):
+    name = 'UP'
+    description = _('Upload for proofreading')
+
+    def _new_state(self):
+        return StateProofread()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        new_state = self._new_state()
+        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+        return new_state
+
+class ActionTC(ActionAbstract):
+    name = 'TC'
+    description = _('Ready for submission')
+
+    def _new_state(self):
+        return StateToCommit()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        new_state = self._new_state()
+        # Send an email to all committers of the team
+        committers = [c.email for c in state.language.team.get_committers()]
+        self.send_mail_new_state(state, new_state, committers)
+        return new_state
+
+class ActionRC(ActionAbstract):
+    name = 'RC'
+    description = _('Reserve to submit')
+
+    def _new_state(self):
+        return StateCommitting()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+        return self._new_state()
+
+class ActionIC(ActionAbstract):
+    name = 'IC'
+    description = _('Inform of submission')
+
+    def _new_state(self):
+        return StateCommitted()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        new_state = self._new_state()
+        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+        return new_state
+
+class ActionTR(ActionAbstract):
+    name = 'TR'
+    description = _('Requiring review')
+
+    def _new_state(self):
+        return StateToReview()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        new_state = self._new_state()
+        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+        return new_state
+
+class ActionDbBackup(models.Model):
+    state_db = models.ForeignKey(StateDb)
+    person = models.ForeignKey(Person)
+
+    name = models.SlugField(max_length=8)
+    created = models.DateField(auto_now_add=True, editable=False)
+    comment = models.TextField(blank=True, null=True)
+    file = models.FileField(upload_to=settings.UPLOAD_BACKUP_DIR, blank=True, null=True)
+    sequence = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'action_backup'
+
+class ActionBA(ActionAbstract):
+    name = 'BA'
+    description = _('Backup the actions')
+
+    def _new_state(self):
+        return StateNone()
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        actions_db = ActionDb.objects.filter(state_db=state._state_db).all()
+
+        sequence = None
+        for action_db in actions_db:
+            action_db_backup = ActionDbBackup(
+                state_db=action_db.state_db,
+                person=action_db.person,
+                name=action_db.name,
+                created=action_db.created,
+                comment=action_db.comment,
+                file=action_db.file)
+            action_db_backup.save()
+
+            if sequence == None:
+                sequence = action_db_backup.id
+                action_db_backup.sequence = sequence
+                action_db_backup.save()
+
+            if action_db.file:
+                # Move the file to UPLOAD_BACKUP_DIR
+                # FIXME Hack
+                default_storage.save(
+                    settings.UPLOAD_BACKUP_DIR + '/' + action_db.file.name[len(settings.UPLOAD_DIR):],
+                    action_db.file)
+                default_storage.delete(action_db.file.path)
+
+            action_db.delete()            
+
+        return self._new_state()
+
+class ActionUNDO(ActionAbstract):
+    name = 'UNDO'
+    description = _('Undo the last state change')
+
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+
+        try:
+            # Exclude himself
+            action_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(
+                name__in=['WC', 'UNDO']).order_by('-created')[1]
+            action = action_db.get_action()
+            return action._new_state()
+        except:
+            return StateNone()

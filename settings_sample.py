@@ -38,6 +38,12 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 # 
 # Please refer to the README file to create an UTF-8 database with MySQL.
 
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_SUBJECT_PREFIX = '[DL]'
+SERVER_EMAIL = 'server@l10n.gnome.org'
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -64,6 +70,11 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = 'media'
 
+# By default, Django stores files locally, using the MEDIA_ROOT and MEDIA_URL settings
+UPLOAD_DIR = 'upload'
+UPLOAD_BACKUP_DIR = 'upload-backup'
+FILE_UPLOAD_PERMISSIONS = 0600
+
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
@@ -86,6 +97,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.transaction.TransactionMiddleware',
 )
 
 ROOT_URLCONF = 'djamnedlies.urls'

@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     # users is the hardcoded url in the contrib.auth User class, making it identical to /people
     (r'^users/', include('people.urls')),
     (r'^languages/', include('languages.urls')),
-    #(r'^stats/', include('stats.urls')),
+    (r'^vertimus/', include('vertimus.urls')),
     (r'^admin/(.*)', admin.site.root),
 )
 

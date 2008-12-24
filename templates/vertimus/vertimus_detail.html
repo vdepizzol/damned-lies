@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% blocktrans with module.get_description as name %}Module Translation: {{ name }}{% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {% trans language %}</h1>
+
+{% if module.comment %}
+  <p>{{ module.comment|safe }}</p>
+{% else %}
+  {% ifnotequal module.vcs_root "http://svn.gnome.org/svn" %}
+  <p><i><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</i></p>
+  {% endifnotequal %}
+{% endif %}
+
+<h3>State: {{ state }}
+{% ifnotequal state.name 'none' %}
+({{ state.updated|date:"D d M Y P" }})
+{% endifnotequal %}
+</h3>
+
+<a href="{{ stats.po_url }}"><img src="/media/img/download.png" alt="Download POT file" /></a>
+{{ stats.pot_text }}
+ 
+{% if stats.information_set.all %}
+<h4>{% trans "Notices" %}</h4>
+<table>
+  {% for info in stats.information_set.all %}
+  <tr>
+    <td valign="top"><img src="{{ info.get_icon }}" alt="{{ info.type }}" /></td>
+    <td>{{ info.get_description|safe }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+<table>
+  <tr>
+    <td>{% trans "Translated:" %}</td>
+    <td>{{ stats.get_translationstat|safe }}</td>
+  </tr>
+  <tr>
+    <td>{% trans "Graph:" %}</td>
+    <td><div class="graph">
+        <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
+        <div class="fuzzy" style="left:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
+        <div class="untranslated" style="left:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+{% if stats.fig_count %}
+<p><a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
+    <img src="/media/img/figure.png" alt="{% trans "Display document figures" %}"></a>
+</p>
+{% endif %}
+
+{% if action_history %}
+<h3>{% trans "Action History" %}</h3>
+<table>
+  {% for action in action_history %}
+  <tr>
+    <td>{{ action }}, 
+      <img src="/media/img/person.png" alt="Person"/>
+      <!-- Spam protection -->
+      <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
+      {{ action.created }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      {% if action.file %}
+      {% trans "Uploaded file:" %} <a href="{{ action.file.url }}">{{ action.file.name }}</a>
+        {% if action.comment %}<br/>{% endif %}
+      {% endif %}
+      {{ action.comment|linebreaksbr|default:"No comment" }}<br/>
+    </td>
+  </tr>
+  <tr class="noborder"><td>&nbsp;</td></tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+<h3>{% trans "New Action" %}</h3>
+
+{% if action_form %}
+  <form enctype="multipart/form-data" action="/vertimus/{{ stats.id }}" method="POST">
+    <table>
+      {{ action_form.as_table }}
+      <tr><td></td>
+        <td><input type="submit" value="Submit"></td><tr>
+    </table>
+  </form>
+{% else %}
+  {% blocktrans with language.team.description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
+{% endif %}
+
+{% endblock %}
