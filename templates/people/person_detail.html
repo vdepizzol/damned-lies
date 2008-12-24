@@ -12,7 +12,7 @@
       <div class="right_actions">
         {% include "logout_form.html" %}<br />
         {% if not profile_form %}
-        <a href="{% url people.views.person_detail_from_username slug=person.username %}edit">
+        <a href="{% url people.views.person_detail_from_username slug=person.username %}">
           <img src="/media/img/edit.png" alt="{% trans "Edit" %}" title="{% trans "Edit" %}" /></a>
         {% endif %}
       </div>
