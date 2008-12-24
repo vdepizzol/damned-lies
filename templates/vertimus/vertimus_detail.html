@@ -24,7 +24,7 @@
 {% endifnotequal %}
 </h3>
 
-<a href="{{ stats.po_url }}"><img src="/media/img/download.png" alt="Download POT file" /></a>
+<a href="{{ stats.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="Download POT file" /></a>
 {{ stats.pot_text }}
  
 {% if stats.information_set.all %}

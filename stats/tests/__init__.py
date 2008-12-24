@@ -82,7 +82,7 @@ class ModuleTestCase(unittest.TestCase):
         f.write("dummy_file.h")
         f.close()
         # Regenerate stats (mail should be sent)
-        branch.update_stats()
+        branch.update_stats(force=False)
         # Assertions
         self.assertEquals(len(mail.outbox), 1);
         self.assertEquals(mail.outbox[0].subject, "String additions to '%s'")

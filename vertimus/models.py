@@ -18,6 +18,8 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import os
+
 from datetime import datetime
 from django.db import models
 from django.utils.translation import ugettext as _
@@ -247,6 +249,14 @@ ACTION_NAMES = (
     'IC', 'TR',
     'BA', 'UNDO')
 
+def generate_upload_file_name(instance, original_filename):
+    filename = "%s-%s-%s-%s-%s.po" % (instance.state_db.branch.module.name, 
+                                   instance.state_db.branch.name, 
+                                   instance.state_db.domain.name,
+                                   instance.state_db.language.locale,
+                                   instance.state_db.id)
+    return "%s/%s" % (settings.UPLOAD_DIR, filename)
+
 class ActionDb(models.Model):
     state_db = models.ForeignKey(StateDb)
     person = models.ForeignKey(Person)
@@ -255,7 +265,7 @@ class ActionDb(models.Model):
     description = None
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=settings.UPLOAD_DIR, blank=True, null=True)
+    file = models.FileField(upload_to=generate_upload_file_name, blank=True, null=True)
 
     class Meta:
         db_table = 'action'
@@ -276,7 +286,7 @@ class ActionDb(models.Model):
 
     def __unicode__(self):
         return self.name
-
+    
 class ActionAbstract(object):
     """Abstract class"""
 
@@ -305,6 +315,8 @@ class ActionAbstract(object):
         """Used by apply"""
         self._action_db = ActionDb(state_db=state._state_db,
             person=person, name=self.name, comment=comment, file=file)
+        if file:
+            self._action_db.file.save(file.name, file, save=False)
         self._action_db.save()
 
     def __unicode__(self):
@@ -492,6 +504,9 @@ class ActionTR(ActionAbstract):
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state
 
+def generate_backup_file_name(instance, original_filename):
+    return "%s/%s" % (settings.UPLOAD_BACKUP_DIR, original_filename)
+
 class ActionDbBackup(models.Model):
     state_db = models.ForeignKey(StateDb)
     person = models.ForeignKey(Person)
@@ -499,7 +514,7 @@ class ActionDbBackup(models.Model):
     name = models.SlugField(max_length=8)
     created = models.DateField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=settings.UPLOAD_BACKUP_DIR, blank=True, null=True)
+    file = models.FileField(upload_to=generate_backup_file_name, blank=True, null=True)
     sequence = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -519,13 +534,18 @@ class ActionBA(ActionAbstract):
 
         sequence = None
         for action_db in actions_db:
+            file_to_backup = None
+            if action_db.file:
+                file_to_backup = action_db.file.file # get a file object, not a filefield
             action_db_backup = ActionDbBackup(
                 state_db=action_db.state_db,
                 person=action_db.person,
                 name=action_db.name,
                 created=action_db.created,
                 comment=action_db.comment,
-                file=action_db.file)
+                file=file_to_backup)
+            if file_to_backup:
+                action_db_backup.file.save(os.path.basename(action_db.file.name), file_to_backup, save=False)
             action_db_backup.save()
 
             if sequence == None:
@@ -533,15 +553,7 @@ class ActionBA(ActionAbstract):
                 action_db_backup.sequence = sequence
                 action_db_backup.save()
 
-            if action_db.file:
-                # Move the file to UPLOAD_BACKUP_DIR
-                # FIXME Hack
-                default_storage.save(
-                    settings.UPLOAD_BACKUP_DIR + '/' + action_db.file.name[len(settings.UPLOAD_DIR):],
-                    action_db.file)
-                default_storage.delete(action_db.file.path)
-
-            action_db.delete()            
+            action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere           
 
         return self._new_state()
 

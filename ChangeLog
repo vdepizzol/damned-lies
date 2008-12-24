@@ -1,3 +1,17 @@
+2008-12-24  Claude Paroz  <claude@2xlibre.net>
+
+	* settings_sample.py: MEDIA_URL should contain ending slash.
+	* stats/models.py: Prepare subclassed save function in order to act on
+	vcs_root change (TODO). Allow creation of a branch without checkout(),
+	useful for test suites.
+	* stats/tests/__init__.py: Missing parameter to update_stats.
+	* templates/base.html: Log in link is important now.
+	* templates/vertimus/vertimus_detail.html: Use MEDIA_URL to compose link.
+	* vertimus/models.py:
+	* vertimus/views.py: File saving is handled through FileField and not
+	manually.
+	* vertimus/tests/__init__.py: apply_action needs a real file object.
+
 2008-12-24  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* templates/people/person_detail.html: Fix URL to edit.

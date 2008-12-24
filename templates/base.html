@@ -83,7 +83,7 @@
   {% if user.is_authenticated %}
     {% blocktrans with user|linked_with:user.username|safe as username %}Logged in as: {{ username }}{% endblocktrans %}
   {% else %}
-  <!-- Not useful right now <a href="{% url login %}">{% trans "Log in" %}</a> -->
+    <a href="{% url login %}">{% trans "Log in" %}</a>
   {% endif %}
   </div>
 

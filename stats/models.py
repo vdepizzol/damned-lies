@@ -73,6 +73,10 @@ class Module(models.Model):
     def get_absolute_url(self):
         return ('stats.views.module', [self.name])
 
+    def save(self, force_insert=False, force_update=False):
+        super(Module, self).save(force_insert, force_update)
+        #FIXME: delete and recreate branch if vcs_root changed?
+
     def get_description(self):
         if self.description:
             return _(self.description)
@@ -116,10 +120,11 @@ class Module(models.Model):
 class BranchCharField(models.CharField):
     def pre_save(self, model_instance, add):
         """ Check if branch is valid before saving the instance """
-        try:
-            model_instance.checkout()
-        except:
-            raise ValueError("Branch not valid: error while checking out the branch.")
+        if model_instance.checkout_on_creation:
+            try:
+                model_instance.checkout()
+            except:
+                raise ValueError("Branch not valid: error while checking out the branch.")
         return getattr(model_instance, self.attname)
 
 class Branch(models.Model):
@@ -129,6 +134,9 @@ class Branch(models.Model):
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module = models.ForeignKey(Module)
     # 'releases' is the backward relation name from Release model
+    
+    # May be set to False by test suite
+    checkout_on_creation = True
 
     class Meta:
         db_table = 'branch'

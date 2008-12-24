@@ -26,7 +26,6 @@ from django.utils.translation import ugettext_lazy as _
 from django import forms
 from django.core import urlresolvers
 from django.conf import settings
-from django.core.files.storage import default_storage
 
 from people.models import Person
 from stats.models import Statistics, Module, Branch, Domain, Language
@@ -68,13 +67,6 @@ def vertimus_by_names(request, module_name, branch_name, domain_name, locale_nam
 
     return vertimus(request, branch, domain, language)
 
-def handle_uploaded_file(f, branch, domain, language):
-    filename = "%s-%s-%s-%s.po" % (branch.module.name, branch.name, domain.name, language.locale)
-    path = default_storage.save(settings.UPLOAD_DIR + '/' + filename, f)
-    
-    # Keep only the new filename (duplicate files)
-    return path
-
 def vertimus(request, branch, domain, language, stats=None):
     """The Vertimus view and form management"""
     if not stats:
@@ -102,13 +94,8 @@ def vertimus(request, branch, domain, language, stats=None):
                 action = action_form.cleaned_data['action']
                 comment = action_form.cleaned_data['comment']
                 
-                if 'file' in request.FILES:
-                    file = handle_uploaded_file(request.FILES['file'], branch, domain, language)
-                else:
-                    file = None
-
                 action = ActionAbstract.new_by_name(action)
-                new_state = state.apply_action(action, person, comment, file)
+                new_state = state.apply_action(action, person, comment, request.FILES.get('file',None))
                 new_state.save()
 
                 return HttpResponseRedirect(

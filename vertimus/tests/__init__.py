@@ -18,8 +18,9 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import os
+
 from django.test import TestCase
-from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from django.conf import settings
 
@@ -77,6 +78,7 @@ class VertimusTests(TestCase):
             vcs_web="http://svn.gnome.org/viewvc/gedit")
         self.m.save()
 
+        Branch.checkout_on_creation = False
         self.b = Branch(name='gnome-2-24', module=self.m) 
         # Block the update of Statistics by the thread
         self.b.save(update_statistics=False)
@@ -255,8 +257,11 @@ class VertimusTests(TestCase):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translating', person=self.pt).get_state()
         state.save()
 
+        test_file = ContentFile('test content')
+        test_file._name = 'mytestfile.po'
+
         action = ActionAbstract.new_by_name('UT')
-        new_state = state.apply_action(action, self.pt, "Done by translator.", 'myfile.po')
+        new_state = state.apply_action(action, self.pt, "Done by translator.", test_file)
         new_state.save()
 
     def test_action_rp(self):
@@ -271,8 +276,11 @@ class VertimusTests(TestCase):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Proofreading', person=self.pr).get_state()
         state.save()
 
+        test_file = ContentFile('test content')
+        test_file._name = 'mytestfile.po'
+
         action = ActionAbstract.new_by_name('UP')
-        new_state = state.apply_action(action, self.pr, "Done.", 'myfile.po')
+        new_state = state.apply_action(action, self.pr, "Done.", test_file)
         new_state.save()
 
     def test_action_tc(self):
@@ -312,12 +320,15 @@ class VertimusTests(TestCase):
         state.save()
 
         # Create a new file
-        filename = 'mytestfile.po'
-        path = default_storage.save(settings.UPLOAD_DIR + filename, ContentFile('test content'))
+        test_file = ContentFile('test content')
+        test_file._name = 'mytestfile.po'
 
         action = ActionAbstract.new_by_name('UP')
-        state = state.apply_action(action, self.pr, "Done.", path)
+        state = state.apply_action(action, self.pr, "Done.", test_file)
         state.save()
+
+        file_path = os.path.join(settings.MEDIA_ROOT, action.file.name)
+        self.assert_(os.access(file_path, os.W_OK))
 
         action = ActionAbstract.new_by_name('TC')
         state = state.apply_action(action, self.pc, "To commit.")
@@ -335,11 +346,13 @@ class VertimusTests(TestCase):
         state = state.apply_action(action, self.pc, comment="I don't want to disappear")
         state.save()
 
-        self.assert_(not default_storage.exists(path))
-        self.assert_(default_storage.exists(settings.UPLOAD_BACKUP_DIR + '/' + filename))
-
+        self.assert_(not os.access(file_path, os.F_OK))
+        
         # Remove test file
-        default_storage.delete(settings.UPLOAD_BACKUP_DIR + '/' + filename)
+        backup_action = ActionDbBackup.objects.get(comment="Done.")
+        backup_file_path = os.path.join(settings.MEDIA_ROOT, backup_action.file.name)
+        backup_action.delete()
+        self.assert_(not os.access(backup_file_path, os.F_OK))
 
     def test_action_undo(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()
