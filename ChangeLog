@@ -1,3 +1,7 @@
+2008-12-24  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* people/models.py: Fallback to username if no first_name or last_name
+
 2008-12-23  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/conf/settings_sample.py: NOTIFICATIONS_TO is now a list.

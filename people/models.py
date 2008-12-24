@@ -74,7 +74,10 @@ class Person(User):
 
     @property
     def name(self):
-        return self.first_name + " " + self.last_name
+        if self.first_name or self.last_name:
+            return self.first_name + " " + self.last_name
+        else:
+            return self.username
 
     @models.permalink
     def get_absolute_url(self):
