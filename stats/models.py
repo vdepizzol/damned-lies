@@ -212,15 +212,12 @@ class Branch(models.Model):
     def get_stats(self, typ):
         """ Get statistics list of type typ ('ui' or 'doc'), in a dict of lists, key is domain.name (POT in 1st position)"""
         stats = {}
-        for stat in self.statistics_set.all():
-            if stat.domain.dtype == typ:
-                if stats.has_key(stat.domain.name):
-                    if stat.language:
-                        stats[stat.domain.name].append(stat)
-                    else:
-                        stats[stat.domain.name].insert(0, stat) # This is the POT file
-                else:
-                    stats[stat.domain.name] = [stat,]
+        pot_stats = Statistics.objects.select_related(depth=1).filter(branch=self, language__isnull=True, domain__dtype=typ)
+        for stat in pot_stats.all():
+            stats[stat.domain.name] = [stat,]
+        tr_stats = Statistics.objects.select_related(depth=1).filter(branch=self, language__isnull=False, domain__dtype=typ)
+        for stat in tr_stats.all():
+            stats[stat.domain.name].append(stat)
         # Sort
         for key, doms in stats.items():
             doms.sort(self.compare_stats)
@@ -730,13 +727,13 @@ class Release(models.Model):
         
         stats = {'dtype':dtype, 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}
         # Sorted by module to allow grouping ('fake' stats)
-        pot_stats = Statistics.objects.filter(language=None, branch__releases=self, domain__dtype=dtype).order_by('domain__module__id')
-        tr_stats = Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype).order_by('domain__module__id')
+        pot_stats = Statistics.objects.select_related(depth=1).filter(language=None, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
+        tr_stats = Statistics.objects.select_related(depth=1).filter(language=lang, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
         vt_states = StateDb.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)
         for stat in pot_stats:
             categdescr = stat.branch.category_set.get(release=self).name
             domname = _(stat.domain.description)
-            modname = stat.domain.module.name
+            modname = stat.branch.module.name
             if not stats['categs'].has_key(categdescr):
                 stats['categs'][categdescr] = {'cattrans':0, 'catfuzzy':0, 
                                                'catuntrans':0, 'modules':{}}
@@ -867,6 +864,7 @@ class Statistics(models.Model):
         models.Model.__init__(self, *args, **kwargs)
         self.figures = None
         self.modname = None
+        self.moddescription = None
         self.partial_po = False # True if part of a multiple po module
     
     def __unicode__(self):
@@ -910,7 +908,9 @@ class Statistics(models.Model):
         return self.modname
     
     def module_description(self):
-        return self.branch.module.description or self.branch.module.name
+        if not self.moddescription:
+            self.moddescription = self.branch.module.description or self.branch.module.name
+        return self.moddescription
         
     def get_translationstat(self):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
