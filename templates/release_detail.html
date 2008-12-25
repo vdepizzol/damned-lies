@@ -19,11 +19,13 @@
 {% for lstats in release.get_global_stats %}
 <tr>
   <td class="leftcell" style="font-size:120%;">
-    <a href="{% url language_release locale=lstats.lang_locale release_name=release.name %}">{% trans lstats.lang_name %}</a>
+    {% trans lstats.lang_name %}</a>
   </td>
   
   {% ifnotequal lstats.doc_trans|add:lstats.doc_fuzzy "0" %}
-  <td>{{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</td>
+  <td><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
+      {{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</a>
+  </td>
   {% else %}
   <td>-</td>
   {% endifnotequal %}
@@ -37,7 +39,9 @@
      </div>
    </td>
   
-  <td>{{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</td>
+  <td><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
+      {{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</a>
+  </td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ lstats.ui_percent }}px;"></div>
       <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ lstats.ui_percent }}px; width:{{ lstats.ui_percentfuzzy }}px;"></div>

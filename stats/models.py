@@ -720,79 +720,82 @@ class Release(models.Model):
         """ Get statistics for a specific language, producing the stats data structure
             Used for displaying the language-release template """
         
-        # Sorted by module to allow grouping ('fake' stats)
-        pot_stats = Statistics.objects.filter(language=None, branch__releases=self).order_by('domain__module__id', 'domain__dtype')
-        stats = {'doc':{'dtype':'doc', 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}, 
-                 'ui':{'dtype':'ui', 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]} 
+        stats = {'doc': self.get_lang_stats_by_type(lang, 'doc'),
+                 'ui':  self.get_lang_stats_by_type(lang, 'ui'), 
                 }
+        return stats
+    
+    def get_lang_stats_by_type(self, lang, dtype):
+        from vertimus.models import StateDb # import here to prevent a circular dependency
+        
+        stats = {'dtype':dtype, 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0, 'categs':{}, 'all_errors':[]}
+        # Sorted by module to allow grouping ('fake' stats)
+        pot_stats = Statistics.objects.filter(language=None, branch__releases=self, domain__dtype=dtype).order_by('domain__module__id')
+        tr_stats = Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype).order_by('domain__module__id')
+        vt_states = StateDb.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)
         for stat in pot_stats:
-            dtype = stat.domain.dtype
             categdescr = stat.branch.category_set.get(release=self).name
             domname = _(stat.domain.description)
             modname = stat.domain.module.name
-            if not stats[dtype]['categs'].has_key(categdescr):
-                stats[dtype]['categs'][categdescr] = {'cattrans':0, 'catfuzzy':0, 
-                                                      'catuntrans':0, 'modules':{}}
-            stats[dtype]['totaluntrans'] += stat.untranslated
-            stats[dtype]['categs'][categdescr]['catuntrans'] += stat.untranslated
-            if not stats[dtype]['categs'][categdescr]['modules'].has_key(modname):
+            if not stats['categs'].has_key(categdescr):
+                stats['categs'][categdescr] = {'cattrans':0, 'catfuzzy':0, 
+                                               'catuntrans':0, 'modules':{}}
+            # Try to get translated stat, else stick with POT stat
+            try:
+                stat = tr_stats.get(branch=stat.branch, domain=stat.domain)
+                stats['all_errors'].extend(stat.information_set.all())
+            except Statistics.DoesNotExist:
+                pass
+
+            # Search if a state exists for this statistic
+            try:
+                stat.state = vt_states.get(branch=stat.branch, domain=stat.domain)
+            except StateDb.DoesNotExist:
+                stat.state = None
+
+            stats['totaltrans'] += stat.translated
+            stats['totalfuzzy'] += stat.fuzzy
+            stats['totaluntrans'] += stat.untranslated
+            stats['categs'][categdescr]['cattrans'] += stat.translated
+            stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy
+            stats['categs'][categdescr]['catuntrans'] += stat.untranslated
+            if not stats['categs'][categdescr]['modules'].has_key(modname):
                 # first element is a placeholder for a fake stat
-                stats[dtype]['categs'][categdescr]['modules'][modname] = {' fake':None, domname:stat}
+                stats['categs'][categdescr]['modules'][modname] = {' fake':None, domname:stat}
                 previous_domname = domname
             else:
-                if len(stats[dtype]['categs'][categdescr]['modules'][modname]) < 3:
+                if len(stats['categs'][categdescr]['modules'][modname]) < 3:
                     # Create a fake statistics object for module summary
-                    stats[dtype]['categs'][categdescr]['modules'][modname][' fake'] = FakeStatistics(stat.domain.module, dtype)
-                    stats[dtype]['categs'][categdescr]['modules'][modname][' fake'].untrans(stats[dtype]['categs'][categdescr]['modules'][modname][previous_domname])
-                stats[dtype]['categs'][categdescr]['modules'][modname][domname] = stat
-                stats[dtype]['categs'][categdescr]['modules'][modname][' fake'].untrans(stat)
-            #stats[dtype]['categs'][categdescr]['modules']["%s-%s" % (stat.branch.id, stat.domain.id)] = stat
-        
-        # Second pass for translated stats
-        tr_stats = Statistics.objects.filter(language=lang, branch__releases=self).order_by('domain__module__id')
-        for stat in tr_stats:
-            dtype = stat.domain.dtype
-            categdescr = stat.branch.category_set.get(release=self).name
-            domname = _(stat.domain.description)
-            modname = stat.domain.module.name
-            stats[dtype]['totaltrans'] += stat.translated
-            stats[dtype]['totalfuzzy'] += stat.fuzzy
-            stats[dtype]['totaluntrans'] -= (stat.translated + stat.fuzzy)
-            stats[dtype]['categs'][categdescr]['cattrans'] += stat.translated
-            stats[dtype]['categs'][categdescr]['catfuzzy'] += stat.fuzzy
-            stats[dtype]['categs'][categdescr]['catuntrans'] -= (stat.translated + stat.fuzzy)
-            if stats[dtype]['categs'][categdescr]['modules'][modname][' fake']:
-                stats[dtype]['categs'][categdescr]['modules'][modname][' fake'].trans(stat)
-            # Replace POT stat by translated stat
-            stats[dtype]['categs'][categdescr]['modules'][modname][domname] = stat
-            stats[dtype]['all_errors'].extend(stat.information_set.all())
-        
+                    stats['categs'][categdescr]['modules'][modname][' fake'] = FakeStatistics(stat.domain.module, dtype)
+                    stats['categs'][categdescr]['modules'][modname][' fake'].trans(stats['categs'][categdescr]['modules'][modname][previous_domname])
+                stats['categs'][categdescr]['modules'][modname][domname] = stat
+                stats['categs'][categdescr]['modules'][modname][' fake'].trans(stat)
+              
         # Compute percentages and sorting
-        for dtype in ['ui', 'doc']:
-            stats[dtype]['total'] = stats[dtype]['totaltrans'] + stats[dtype]['totalfuzzy'] + stats[dtype]['totaluntrans']
-            if stats[dtype]['total'] > 0:
-                stats[dtype]['totaltransperc'] = int(100*stats[dtype]['totaltrans']/stats[dtype]['total'])
-                stats[dtype]['totalfuzzyperc'] = int(100*stats[dtype]['totalfuzzy']/stats[dtype]['total'])
-                stats[dtype]['totaluntransperc'] = int(100*stats[dtype]['totaluntrans']/stats[dtype]['total'])
-            else:
-                stats[dtype]['totaltransperc'] = 0
-                stats[dtype]['totalfuzzyperc'] = 0
-                stats[dtype]['totaluntransperc'] = 0
-            for key, categ in stats[dtype]['categs'].items():
-                categ['catname'] = Category.get_cat_name(key)
-                categ['cattotal'] = categ['cattrans'] + categ['catfuzzy'] + categ['catuntrans']
-                categ['cattransperc'] = int(100*categ['cattrans']/categ['cattotal'])
-                # Sort modules
-                mods = [[name,mod] for name, mod in categ['modules'].items()]
-                mods.sort()
-                categ['modules'] = mods
-                # Sort domains
-                for mod in categ['modules']:
-                    doms = [(name,dom) for name, dom in mod[1].items()]
-                    doms.sort()
-                    mod[1] = doms
-            # Sort errors
-            stats[dtype]['all_errors'].sort()
+        stats['total'] = stats['totaltrans'] + stats['totalfuzzy'] + stats['totaluntrans']
+        if stats['total'] > 0:
+            stats['totaltransperc'] = int(100*stats['totaltrans']/stats['total'])
+            stats['totalfuzzyperc'] = int(100*stats['totalfuzzy']/stats['total'])
+            stats['totaluntransperc'] = int(100*stats['totaluntrans']/stats['total'])
+        else:
+            stats['totaltransperc'] = 0
+            stats['totalfuzzyperc'] = 0
+            stats['totaluntransperc'] = 0
+        for key, categ in stats['categs'].items():
+            categ['catname'] = Category.get_cat_name(key)
+            categ['cattotal'] = categ['cattrans'] + categ['catfuzzy'] + categ['catuntrans']
+            categ['cattransperc'] = int(100*categ['cattrans']/categ['cattotal'])
+            # Sort modules
+            mods = [[name,mod] for name, mod in categ['modules'].items()]
+            mods.sort()
+            categ['modules'] = mods
+            # Sort domains
+            for mod in categ['modules']:
+                doms = [(name,dom) for name, dom in mod[1].items()]
+                doms.sort()
+                mod[1] = doms
+        # Sort errors
+        stats['all_errors'].sort()
         return stats
 
     def get_lang_files(self, lang, dtype):
@@ -1023,15 +1026,10 @@ class FakeStatistics(object):
         self.untranslated = 0
         self.partial_po = False
     
-    def untrans(self, stat):
-        """ Called for POT file, so only untranslated is concerned """
-        self.untranslated += stat.untranslated
-        stat.partial_po = True
-    
     def trans(self, stat):
         self.translated += stat.translated
         self.fuzzy += stat.fuzzy
-        self.untranslated -= (stat.translated + stat.fuzzy)
+        self.untranslated += stat.untranslated
         stat.partial_po = True
     
     def is_fake(self):

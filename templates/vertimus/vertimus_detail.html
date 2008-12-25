@@ -7,6 +7,9 @@
 
 {% block content %}
 <div class="mainpage">
+{% with branch.releases.all.0 as release %} 
+<p align="right"><small><a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a></small></p>
+{% endwith %}
 
 <h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {% trans language %}</h1>
 
@@ -14,11 +17,11 @@
   <p>{{ module.comment|safe }}</p>
 {% else %}
   {% ifnotequal module.vcs_root "http://svn.gnome.org/svn" %}
-  <p><i><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</i></p>
+  <p><i><img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</i></p>
   {% endifnotequal %}
 {% endif %}
 
-<h3>State: {{ state }}
+<h3>{% trans "State:" %} {{ state }}
 {% ifnotequal state.name 'none' %}
 ({{ state.updated|date:"D d M Y P" }})
 {% endifnotequal %}
@@ -43,13 +46,10 @@
   <tr>
     <td>{% trans "Translated:" %}</td>
     <td>{{ stats.get_translationstat|safe }}</td>
-  </tr>
-  <tr>
-    <td>{% trans "Graph:" %}</td>
     <td><div class="graph">
         <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
-        <div class="fuzzy" style="left:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
-        <div class="untranslated" style="left:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
+        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
       </div>
     </td>
   </tr>
@@ -57,27 +57,25 @@
 
 {% if stats.fig_count %}
 <p><a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
-    <img src="/media/img/figure.png" alt="{% trans "Display document figures" %}"></a>
+    <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
 </p>
 {% endif %}
 
 {% if action_history %}
-<h3>{% trans "Action History" %}</h3>
+<h2>{% trans "Action History" %}</h2>
 <table>
   {% for action in action_history %}
   <tr>
-    <td>{{ action }}, 
-      <img src="/media/img/person.png" alt="Person"/>
+    <td class="action_head">
+      {{ action.created|date:"Y-m-d H:i" }}, <strong>{{ action }}</strong>,
       <!-- Spam protection -->
-      <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
-      {{ action.created }}
+      <img src="{{ MEDIA_URL }}img/person.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
     </td>
   </tr>
   <tr>
-    <td>
+    <td class="action_content">
       {% if action.file %}
-      {% trans "Uploaded file:" %} <a href="{{ action.file.url }}">{{ action.file.name }}</a>
-        {% if action.comment %}<br/>{% endif %}
+      <div class="uploaded_file">{% trans "File:" %} <a href="{{ action.file.url }}">{{ action.get_filename }}</a></div>
       {% endif %}
       {{ action.comment|linebreaksbr|default:"No comment" }}<br/>
     </td>
@@ -87,11 +85,11 @@
 </table>
 {% endif %}
 
-<h3>{% trans "New Action" %}</h3>
+<h2>{% trans "New Action" %}</h2>
 
 {% if action_form %}
-  <form enctype="multipart/form-data" action="/vertimus/{{ stats.id }}" method="POST">
-    <table>
+  <form enctype="multipart/form-data" action="{% url vertimus-stats-id-view stats.id %}" method="POST">
+    <table class="djform">
       {{ action_form.as_table }}
       <tr><td></td>
         <td><input type="submit" value="Submit"></td><tr>

@@ -39,23 +39,19 @@
           {% if dom.1.partial_po %}
             {# This is a partial po, indented, with the domain description #}
             <td class="leftcell" style="padding-left:2em; padding-right:2em;">
-            <a href="{{ dom.1.po_url }}"><img src="/media/img/download.png" alt="{% trans "Download po file" %}"></a>
-            {{ dom.1.domain.description }}
-            </td>
+            <a href="{% url vertimus-stats-id-view dom.1.id %}">{{ dom.1.domain.description }}</a>
           {% else %}
             <td class="leftcell">
             {% if not dom.1.is_fake %}
-              <a href="{{ dom.1.po_url }}"><img src="/media/img/download.png" alt="{% trans "Download po file" %}"></a>
-              <a href="{% url stats.views.module modname %}">
+              <a href="{% url vertimus-stats-id-view dom.1.id %}">{{ dom.1.module_description }}</a>
             {% else %}
-              <a href="{% url stats.views.module modname %}" style="font-style: italic;">
+              <em>{{ dom.1.module_description }}</em>
             {% endif %}
-            {{ dom.1.module_description }}</a>
-            {% for err in dom.1.information_set.all %}
-              <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.type }}" />
-            {% endfor %}
-            </td>
           {% endif %}
+          {% for err in dom.1.information_set.all %}
+            <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.type }}" />
+          {% endfor %}
+          </td>
           <td>{{ dom.1.tr_percentage }}%&nbsp;({{ dom.1.translated }}/{{ dom.1.fuzzy }}/{{ dom.1.untranslated }})</td>
           <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
               <div class="translated" style="width: {{ dom.1.tr_percentage }}px;"></div>
@@ -64,6 +60,13 @@
               <div class="untranslated" style="left:{{ upos }}px; width:{{ dom.1.un_percentage }}px;"></div>
               {% endwith %}
              </div>
+           </td>
+           <td>
+           {% if dom.1.state.name %}
+             {% ifnotequal dom.1.state.name "None" %}
+             <em><small>{{ dom.1.state.name }} - {{ dom.1.state.updated|date:"Y-m-d" }}</small></em>
+             {% endifnotequal %}
+           {% endif %}
            </td>
         </tr>
       {% endif %}

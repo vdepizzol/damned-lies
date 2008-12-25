@@ -164,6 +164,21 @@ p#show, p#hide {
   vertical-align: top;
 }
 
+/* used in vertimus_detail */
+td.action_head {
+  background: #C9DDF3;
+  border-bottom: dashed 2px;
+}
+td.action_content {
+  border-bottom: solid #CCCCCC 1px;
+}
+div.uploaded_file {
+  float:right;
+  background:#DDDDDD;
+  padding: 2px;
+  margin-left: 8px;
+}
+
 .error {
   font-style: italic;
   color: #666666;

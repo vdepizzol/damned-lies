@@ -24,11 +24,13 @@
   {% for stat in lang.get_release_stats %}
     <tr>
       <td class="leftcell" style="font-size:120%;">
-        <a href="{% url language_release lang.locale,stat.name %}">{{ stat.description }}</a>
+        {{ stat.description }}</a>
       </td>
   
     {% if stat.doctotal %}
-      <td>{{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</td>
+      <td><a href="{% url language_release lang.locale,stat.name,"doc" %}">
+          {{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</a>
+      </td>
       <td style="width: 108px; text-align: center;"><div class="graph">
         <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
         <div class="fuzzy" style="left:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
@@ -41,7 +43,9 @@
       <td>-</td><td></td>
     {% endif %}
 
-    <td>{{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</td>
+    <td><a href="{% url language_release lang.locale,stat.name,"ui" %}">
+        {{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</a>
+    </td>
     <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
       <div class="fuzzy" style="left:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
@@ -55,7 +59,7 @@
 </table>
 {% endfor %}
 
-<!-- Temporarily deactivated
+{% if not team.fake %}
 <h2>{% trans "Team membership" %}</h2>
 {% for group in mem_groups %}
     <h3>{{ group.title }}</h3>
@@ -81,6 +85,7 @@
       {% endif %}
     {% endif %}
 {% endfor %}
--->
+{% endif %}
+
 </div>
 {% endblock %}

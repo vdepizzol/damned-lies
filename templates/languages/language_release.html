@@ -6,21 +6,7 @@
 {% block content %}
 <div class="mainpage">
 
-{% with language.locale as locale %}
-{% with language.team as team %}
-{% if team %}
-  <h1>{% blocktrans with team.get_description as lang %}{{ lang }} Translation Team — {{ locale }}{% endblocktrans %}</h1>
-
-  {% include "teams/team_base.html" %}
-
-{% else %}
-  <h1>{% blocktrans %}Language code: {{ locale }}{% endblocktrans %}</h1>
-  <p>{% blocktrans %}There is no translation team in charge of '{{ locale }}' translation.{% endblocktrans %}</p>
-{% endif %}
-{% endwith %}
-{% endwith %}
-
-<h2>{% trans release.description %}</h2>
+<h2>{% trans release.description %} - <a href="{{ language.get_team_url }}">{{ language.get_name }}</a></h2>
 
 <p id="hide">
    <a href="#" onclick="return showHideCompleted();">{% trans "Hide completed modules" %}</a>
@@ -34,22 +20,10 @@
 <p><i>{% trans "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations." %}</i></p>
 {% endifequal %}
 
-<table><tr>
-{% if stats.doc.total %}
-  <td valign="top" width="50%"><!-- two columns set-up -->
-  <h3>{% trans "Documentation" %}</h3>
-  {% with stats.doc as modstats %}
-    {% include "languages/language_release_stats.html" %}
-  {% endwith %}
-  </td>
-{% endif %}  
-  <td valign="top"><!-- second column -->
-
-  <h3>{% trans "UI translations" %}</h3>
-  {% with stats.ui as modstats %}
-    {% include "languages/language_release_stats.html" %}
-  {% endwith %}
-</td></tr></table><!-- end two column layout -->
+<h3>{{ stats_title }}</h3>
+{% with stats as modstats %}
+  {% include "languages/language_release_stats.html" %}
+{% endwith %}
 
 </div>
 {% endblock %}

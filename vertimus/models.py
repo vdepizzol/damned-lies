@@ -308,6 +308,10 @@ class ActionAbstract(object):
         return self._action_db.comment
 
     @property
+    def created(self):
+        return self._action_db.created
+
+    @property
     def file(self):
         return self._action_db.file
 
@@ -321,6 +325,12 @@ class ActionAbstract(object):
 
     def __unicode__(self):
         return self.description
+    
+    def get_filename(self):
+        if self._action_db.file:
+            return os.path.basename(self._action_db.file.name)
+        else:
+            return None
 
     def send_mail_new_state(self, old_state, new_state, recipient_list):
         # Remove None items from the list
@@ -545,7 +555,7 @@ class ActionBA(ActionAbstract):
                 comment=action_db.comment,
                 file=file_to_backup)
             if file_to_backup:
-                action_db_backup.file.save(os.path.basename(action_db.file.name), file_to_backup, save=False)
+                action_db_backup.file.save(self.get_filename(), file_to_backup, save=False)
             action_db_backup.save()
 
             if sequence == None:
