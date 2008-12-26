@@ -85,13 +85,13 @@ class Module(models.Model):
     
     def get_bugs_i18n_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
-            return "%sbuglist.cgi?product=%s&amp;component=%s&amp;keywords_type=anywords&amp;keywords=I18N+L10N&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO" % (self.bugs_base, self.bugs_product, self.bugs_component)
+            return "%sbuglist.cgi?product=%s&component=%s&keywords_type=anywords&keywords=I18N+L10N&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=NEEDINFO" % (self.bugs_base, self.bugs_product, self.bugs_component)
         else:
             return None
 
     def get_bugs_enter_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
-            return "%senter_bug.cgi?product=%s&amp;component=%s" % (self.bugs_base, self.bugs_product, self.bugs_component)
+            return "%senter_bug.cgi?product=%s&component=%s" % (self.bugs_base, self.bugs_product, self.bugs_component)
         else:
             return self.bugs_base 
     

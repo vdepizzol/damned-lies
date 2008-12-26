@@ -1,5 +1,11 @@
 2008-12-26  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: Don't encode ampersands in the source, but later in
+	HTML rendering. Patch by Friedel Wolff.
+	Fixes #565719.
+
+2008-12-26  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Optimizations to reduce DB queries.
 
 2008-12-25  Claude Paroz  <claude@2xlibre.net>
