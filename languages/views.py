@@ -32,7 +32,7 @@ from languages.models import Language
 from stats.models import Release
 
 def languages(request):
-    languages = Language.objects.all()
+    languages = Language.objects.select_related("team").all()
     context = {
         'pageSection': "languages",
         'languages': utils.trans_sort_object_list(languages, 'name')

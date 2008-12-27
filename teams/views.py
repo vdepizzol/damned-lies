@@ -28,7 +28,7 @@ from teams.forms import EditMemberRoleForm
 from languages.models import Language
 
 def teams(request):
-    teams = Team.objects.all()
+    teams = Team.objects.all_with_roles()
 
     context = {
         'pageSection': 'teams',              
@@ -92,4 +92,4 @@ def team(request, team_slug):
         'mem_groups': mem_groups
     }
     return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
-       
+

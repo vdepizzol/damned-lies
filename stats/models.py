@@ -212,10 +212,10 @@ class Branch(models.Model):
     def get_stats(self, typ):
         """ Get statistics list of type typ ('ui' or 'doc'), in a dict of lists, key is domain.name (POT in 1st position)"""
         stats = {}
-        pot_stats = Statistics.objects.select_related(depth=1).filter(branch=self, language__isnull=True, domain__dtype=typ)
+        pot_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=True, domain__dtype=typ)
         for stat in pot_stats.all():
             stats[stat.domain.name] = [stat,]
-        tr_stats = Statistics.objects.select_related(depth=1).filter(branch=self, language__isnull=False, domain__dtype=typ)
+        tr_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=False, domain__dtype=typ)
         for stat in tr_stats.all():
             stats[stat.domain.name].append(stat)
         # Sort

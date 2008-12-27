@@ -1,3 +1,12 @@
+2008-12-27  Claude Paroz  <claude@2xlibre.net>
+
+	* languages/views.py: Add select_related to reduce db access.
+	* stats/models.py: Name related table unless 'language' is not fetched as
+	it is a null=True relation.
+	* teams/models.py: Add custom manager and add a method to fetch teams with
+	roles prefilled. This dramatically reduces db access.
+	* teams/views.py: Use new TeamManager function to fetch teams.
+
 2008-12-26  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: Don't encode ampersands in the source, but later in

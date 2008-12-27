@@ -23,6 +23,24 @@ from django.contrib.auth.models import Group
 from django.utils.translation import ugettext as _
 from people.models import Person
 
+class TeamManager(models.Manager):
+    def all_with_roles(self):
+        """ This method prefills team.coordinator/committers/reviewers/translators to reduce subsequent database access"""
+        teams = self.all()
+        roles = Role.objects.select_related("person").all()
+        role_dict = {}
+        for role in roles:
+            if not role_dict.has_key(role.team_id):
+                role_dict[role.team_id] = [role]
+            else:
+                role_dict[role.team_id].append(role)
+        for team in teams:
+            if role_dict.has_key(team.id):
+                for role in role_dict[team.id]:
+                    team.fill_role(role.role, role.person)
+        return teams
+
+
 class Team(Group):
     """The name of the team is stored in Group.name.
        The lang_code is generally used."""
@@ -32,10 +50,15 @@ class Team(Group):
     webpage_url = models.URLField(null=True, blank=True)
     mailing_list = models.EmailField(null=True, blank=True)
     mailing_list_subscribe = models.URLField(null=True, blank=True)
+    objects = TeamManager()
 
     class Meta:
         db_table = 'team'
         ordering = ('description',)
+
+    def __init__(self, *args, **kwargs):
+        models.Model.__init__(self, *args, **kwargs)
+        self.roles = None
 
     def __unicode__(self):
         return self.description
@@ -44,6 +67,12 @@ class Team(Group):
     def get_absolute_url(self):
         return ('team_slug', [self.name])
     
+    def fill_role(self, role, person):
+        """ Used by TeamManager to prefill roles in team """
+        if not self.roles:
+            self.roles = {'coordinator':[], 'committer':[], 'reviewer':[], 'translator':[]}
+        self.roles[role].append(person)
+        
     def get_description(self):
         return _(self.description)
     
@@ -51,13 +80,19 @@ class Team(Group):
         return self.language_set.all()
 
     def get_coordinator(self):
-        # The join by role__team__id generates only one query and
-        # the same one by role__team=self two queries!
-        return Person.objects.get(role__team__id=self.id, role__role='coordinator')
+        try:
+            return self.roles['coordinator'][0]
+        except:
+            # The join by role__team__id generates only one query and
+            # the same one by role__team=self two queries!
+            return Person.objects.get(role__team__id=self.id, role__role='coordinator')
 
     def get_members_by_role(self, role):
-        members = Person.objects.filter(role__team__id=self.id, role__role=role)
-        return members
+        try:
+            return self.roles[role]
+        except:
+            members = Person.objects.filter(role__team__id=self.id, role__role=role)
+            return members
         
     def get_committers(self):
         return self.get_members_by_role('committer')
