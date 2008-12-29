@@ -1,3 +1,9 @@
+2008-12-29  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/models.py:
+	* stats/utils.py: Replace commands.* by more modern subprocess.* Run each
+	shell command through new function utils.run_shell_command.
+
 2008-12-27  Claude Paroz  <claude@2xlibre.net>
 
 	* languages/views.py: Add select_related to reduce db access.

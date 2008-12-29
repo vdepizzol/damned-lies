@@ -19,7 +19,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os, sys, re, commands
+import os, sys, re
 import threading
 from datetime import datetime
 from time import tzname
@@ -302,7 +302,7 @@ class Branch(models.Model):
             
             # 5. Generate pot stats and update DB
             # ***********************************
-            pot_stats = utils.po_file_stats(potfile, 0)
+            pot_stats = utils.po_file_stats(potfile, False)
             errors.extend(pot_stats['errors'])
             if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
                 errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
@@ -336,11 +336,9 @@ class Branch(models.Model):
                     'pofile' : pofile,
                     'potfile' : potfile,
                     }
-                if settings.DEBUG: print >>sys.stderr, realcmd
-                (error, output) = commands.getstatusoutput(realcmd)
-                if settings.DEBUG: print >> sys.stderr, output
+                utils.run_shell_command(realcmd)
 
-                langstats = utils.po_file_stats(outpo, 1)
+                langstats = utils.po_file_stats(outpo, True)
                 if dom.dtype == "ui":
                     langstats['errors'].extend(utils.check_lang_support(self.co_path(), domain_path, lang))
                 elif dom.dtype == "doc":
@@ -473,13 +471,9 @@ class Branch(models.Model):
         self.checkout_lock.acquire()
         try:
             for command in commandList:
-                if settings.DEBUG:
-                    print >>sys.stdout, command
-                (error, output) = commands.getstatusoutput(command)
-                if settings.DEBUG:
-                    print >> sys.stderr, output
-                if error:
-                    raise OSError(error, output)
+                (status, output) = utils.run_shell_command(command)
+                if status != utils.STATUS_OK:
+                    raise OSError(status, output)
         finally:
             self.checkout_lock.release()
         return 1
@@ -537,13 +531,11 @@ class Domain(models.Model):
             "dir" : podir,
             "pot_command" : pot_command,
             }
-        if settings.DEBUG: print >>sys.stderr, command
-        (error, output) = commands.getstatusoutput(command)
-        if settings.DEBUG: print >> sys.stderr, output
+        (status, output) = utils.run_shell_command(command)
 
         potfile = os.path.join(vcs_path, self.potbase() + ".pot")
 
-        if error or not os.access(potfile, os.R_OK):
+        if status != utils.STATUS_OK or not os.access(potfile, os.R_OK):
             return "", (("error", ugettext_noop("Error regenerating POT file for %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                                  % {'file': self.potbase(),
                                     'cmd': pot_command,
@@ -941,8 +933,8 @@ class Statistics(models.Model):
         if self.figures is None and self.domain.dtype == 'doc':
             # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
             command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % { 'pofile': self.po_path() }
-            (error, output) = commands.getstatusoutput(command)
-            if error:
+            (status, output) = utils.run_shell_command(command)
+            if status != utils.STATUS_OK:
                 # FIXME: something should be logged here
                 return []
             lines = output.split('\n')

@@ -19,10 +19,14 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import sys, os, re, time
+from subprocess import Popen, PIPE, STDOUT
+
 from django.utils.translation import ugettext as _, ugettext_noop
 from django.core.mail import send_mail
 from stats.conf import settings
-import sys, os, re, time, commands
+
+STATUS_OK = 0
 
 def sort_object_list(lst, sort_meth):
     """ Sort an object list with sort_meth (which should return a translated string) """
@@ -38,17 +42,26 @@ def stripHTML(string):
     replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
+def run_shell_command(cmd, env=None):
+    if settings.DEBUG: print >>sys.stderr, cmd
+    
+    pipe = Popen(cmd, shell=True, env=env, stdout=PIPE, stderr=STDOUT)
+    (output, errout) = pipe.communicate()
+    status = pipe.returncode
+    
+    if settings.DEBUG: print >>sys.stderr, output
+    return (status, output)
+
+
 def check_potfiles(po_path):
     """Check if there were any problems regenerating a POT file (intltool-update -m).
        Return a list of errors """
     errors = []
 
     command = "cd \"%(dir)s\" && rm -f missing notexist && intltool-update -m" % { "dir" : po_path, }
-    if settings.DEBUG: print >>sys.stderr, command
-    (error, output) = commands.getstatusoutput(command)
-    if settings.DEBUG: print >> sys.stderr, output
+    (status, output) = run_shell_command(command)
 
-    if error:
+    if status != STATUS_OK:
         if settings.DEBUG: print >> sys.stderr, "Error running 'intltool-update -m' check."
         errors.append( ("error", ugettext_noop("Errors while running 'intltool-update -m' check.")) )
 
@@ -94,18 +107,18 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
     command = "cd \"%s\" && xml2po -o %s -e %s" % (vcs_path, potfile, files)
-    if verbose: print >>sys.stderr, command
-    (error, output) = commands.getstatusoutput(command)
-    if error:
+    (status, output) = run_shell_command(command)
+    
+    if status != STATUS_OK:
         errors.append(("error",
                        ugettext_noop("Error regenerating POT file for document %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                              % {'file': potbase,
                                 'cmd': command,
                                 'output': output})
                      )
-    if verbose: print >> sys.stderr, output
-    
-    if error or not os.access(potfile, os.R_OK):
+        potfile = ""
+
+    if not os.access(potfile, os.R_OK):
         return "", errors
     else:
         return potfile, errors
@@ -143,61 +156,57 @@ def read_makefile_variable(vcs_path, variable):
     return ""
 
 
-def po_file_stats(pofile, msgfmt_checks = 1):
+def po_file_stats(pofile, msgfmt_checks = True):
+    """ Compute pofile translation statistics, and proceed to some validity checks if msgfmt_checks is True """
+    res = {
+        'translated' : 0,
+        'fuzzy' : 0,
+        'untranslated' : 0,
+        'errors' : [],
+        }
 
-    errors = []
-
-    try: os.stat(pofile)
-    except OSError: errors.append(("error", ugettext_noop("PO file '%s' doesn't exist.") % pofile))
-
+    if not os.access(pofile, os.R_OK):
+        res['errors'].append(("error", ugettext_noop("PO file '%s' does not exist or cannot be read.") % pofile))
+        return res
+    
+    c_env = {"LC_ALL": "C", "LANG": "C", "LANGUAGE": "C"}
     if msgfmt_checks:
-        command = "LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % pofile
+        command = "msgfmt -cv -o /dev/null %s" % pofile
     else:
-        command = "LC_ALL=C LANG=C LANGUAGE=C msgfmt --statistics -o /dev/null %s" % pofile
+        command = "msgfmt --statistics -o /dev/null %s" % pofile
 
-    if settings.DEBUG: print >>sys.stderr, command
-    (error, output) = commands.getstatusoutput(command)
-    if settings.DEBUG: print >>sys.stderr, output
+    (status, output) = run_shell_command(command, env=c_env)
 
-    if error:
+    if status != STATUS_OK:
         if msgfmt_checks:
-            errors.append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (os.path.basename(pofile))))
+            res['errors'].append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (os.path.basename(pofile))))
         else:
-            errors.append(("error", ugettext_noop("Can't get statistics for POT file '%s'.") % (pofile)))
+            res['errors'].append(("error", ugettext_noop("Can't get statistics for POT file '%s'.") % (pofile)))
 
     if msgfmt_checks and os.access(pofile, os.X_OK):
-        errors.append(("warn", ugettext_noop("This PO file has an executable bit set.")))
+        res['errors'].append(("warn", ugettext_noop("This PO file has an executable bit set.")))
 
     r_tr = re.search(r"([0-9]+) translated", output)
     r_un = re.search(r"([0-9]+) untranslated", output)
     r_fz = re.search(r"([0-9]+) fuzzy", output)
 
-    if r_tr: translated = r_tr.group(1)
-    else: translated = 0
-    if r_un: untranslated = r_un.group(1)
-    else: untranslated = 0
-    if r_fz: fuzzy = r_fz.group(1)
-    else: fuzzy = 0
+    if r_tr:
+        res['translated'] = r_tr.group(1)
+    if r_un: 
+        res['untranslated'] = r_un.group(1)
+    if r_fz: 
+        res['fuzzy'] = r_fz.group(1)
 
     if msgfmt_checks:
-        # Lets check if PO files are in UTF-8
-        command = ("LC_ALL=C LANG=C LANGUAGE=C " +
-                   "msgconv -t UTF-8 %s |" +
-                   "diff -i -u %s - >/dev/null") % (pofile,
-                                                    pofile)
-        if settings.DEBUG: print >>sys.stderr, command
-        (error, output) = commands.getstatusoutput(command)
-        if settings.DEBUG: print >>sys.stderr, output
-        if error:
+        # Check if PO file is in UTF-8
+        command = ("msgconv -t UTF-8 %s | diff -i -u %s - >/dev/null") % (pofile,
+                                                                          pofile)
+        (status, output) = run_shell_command(command, env=c_env)
+        if status != STATUS_OK:
             myfile = os.path.basename(pofile)
-            errors.append(("warn",
-                           ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (myfile)))
-    return {
-        'translated' : translated,
-        'fuzzy' : fuzzy,
-        'untranslated' : untranslated,
-        'errors' : errors,
-        }
+            res['errors'].append(("warn",
+                                  ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (myfile)))
+    return res
 
 
 def check_lang_support(module_path, po_path, lang):
