@@ -11,6 +11,7 @@ from people.models import Person
 class JoinTeamForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(JoinTeamForm, self).__init__(*args, **kwargs)
+        # FIXME: exclude team to which user is already member
         self.fields['teams'] = forms.ModelChoiceField(queryset=Team.objects.all())
 
 class RegistrationForm(forms.Form):

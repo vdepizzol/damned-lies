@@ -1,3 +1,16 @@
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
+	* people/forms.py:
+	* people/views.py: Catch error if user is added multiple times in the same
+	team.
+	* templates/languages/language_release_stats.html:
+	* templates/stats_show.html:
+	* templates/vertimus/vertimus_detail.html:
+	* vertimus/urls.py:
+	* vertimus/views.py: Pass language.id to vertimus_by_stats_id, because
+	when stats is the POT file, there is no other mean to retrieve the
+	language.
+
 2008-12-29  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* media/css/layout.css:

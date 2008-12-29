@@ -39,11 +39,11 @@
           {% if dom.1.partial_po %}
             {# This is a partial po, indented, with the domain description #}
             <td class="leftcell" style="padding-left:2em; padding-right:2em;">
-            <a href="{% url vertimus-stats-id-view dom.1.id %}">{{ dom.1.domain.description }}</a>
+            <a href="{% url vertimus-stats-id-view dom.1.id language.id %}">{{ dom.1.domain.description }}</a>
           {% else %}
             <td class="leftcell">
             {% if not dom.1.is_fake %}
-              <a href="{% url vertimus-stats-id-view dom.1.id %}">{{ dom.1.module_description }}</a>
+              <a href="{% url vertimus-stats-id-view dom.1.id language.id %}">{{ dom.1.module_description }}</a>
             {% else %}
               <em>{{ dom.1.module_description }}</em>
             {% endif %}

@@ -19,7 +19,9 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.shortcuts import render_to_response, get_object_or_404
+from django.utils.translation import ugettext as _
 from django.template import RequestContext
+from django.db import IntegrityError
 from people.models import Person
 from teams.models import Role
 from people.forms import JoinTeamForm, EditProfileForm
@@ -41,7 +43,10 @@ def person_detail(request, person, edit_profile):
             if request.user.username == person.username:
                 team = join_form.cleaned_data['teams']
                 new_role = Role(team=team, person=person) # role default to translator
-                new_role.save()
+                try:
+                    new_role.save()
+                except IntegrityError:
+                    messages.append(_("You are already member of this team."))
             else:
                 messages.append(_("Sorry, you're not allowed to modify this user."))
     else:

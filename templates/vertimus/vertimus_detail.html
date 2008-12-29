@@ -85,7 +85,7 @@
 <h2>{% trans "New Action" %}</h2>
 
 {% if action_form %}
-  <form enctype="multipart/form-data" action="{% url vertimus-stats-id-view stats.id %}" method="POST">
+  <form enctype="multipart/form-data" action="{% url vertimus-stats-id-view stats.id language.id %}" method="POST">
     <table class="djform">
       {{ action_form.as_table }}
       <tr><td></td>

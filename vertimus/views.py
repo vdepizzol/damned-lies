@@ -30,10 +30,11 @@ from stats.models import Statistics, Module, Branch, Domain, Language
 from vertimus.models import StateDb, ActionDb, ActionAbstract
 from vertimus.forms import ActionForm
 
-def vertimus_by_stats_id(request, stats_id):
+def vertimus_by_stats_id(request, stats_id, lang_id):
     """Access to Vertimus view by a Statistics ID"""
     stats = get_object_or_404(Statistics, pk=stats_id)
-    return vertimus(request, stats.branch, stats.domain, stats.language, stats)
+    lang = get_object_or_404(Language, pk=lang_id)
+    return vertimus(request, stats.branch, stats.domain, lang, stats)
 
 def vertimus_by_ids(request, branch_id, domain_id, language_id):
     """Access to Vertimus view by Branch, Domain and language IDs"""
