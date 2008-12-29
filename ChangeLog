@@ -1,3 +1,11 @@
+2008-12-29  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* common/views.py:
+	* languages/views.py:
+	* stats/forms.py:
+	* stats/models.py:
+	* teams/models.py: has_key is deprecated since Python 2.5. 
+
 2008-12-29  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py:

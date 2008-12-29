@@ -5,7 +5,7 @@ from stats.models import Module, Branch, Category, CATEGORY_CHOICES, Release
 class ReleaseField(forms.ModelChoiceField):
     def __init__(self, *args, **kwargs):
         super(ReleaseField, self).__init__(*args, **kwargs)
-        if kwargs.has_key('initial'):
+        if 'initial' in kwargs:
             self.is_branch = True
 
 class ModuleBranchForm(forms.Form):

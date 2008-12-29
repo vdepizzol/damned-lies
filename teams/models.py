@@ -30,12 +30,12 @@ class TeamManager(models.Manager):
         roles = Role.objects.select_related("person").all()
         role_dict = {}
         for role in roles:
-            if not role_dict.has_key(role.team_id):
+            if role.team_id not in role_dict:
                 role_dict[role.team_id] = [role]
             else:
                 role_dict[role.team_id].append(role)
         for team in teams:
-            if role_dict.has_key(team.id):
+            if team.id in role_dict:
                 for role in role_dict[team.id]:
                     team.fill_role(role.role, role.person)
         return teams

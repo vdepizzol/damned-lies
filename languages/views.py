@@ -86,7 +86,7 @@ def language_release_xml(request, locale, release_name):
         if catname != 'default':
             content += "<category id=\"%s\">" % catname
         # totals for category
-        if stats['doc']['categs'].has_key(catname):
+        if catname in stats['doc']['categs']:
             content += "<doctranslated>%s</doctranslated>" % stats['doc']['categs'][catname]['cattrans']
             content += "<docfuzzy>%s</docfuzzy>" % stats['doc']['categs'][catname]['catfuzzy']
             content += "<docuntranslated>%s</docuntranslated>" % stats['doc']['categs'][catname]['catuntrans']
@@ -97,7 +97,7 @@ def language_release_xml(request, locale, release_name):
         for modname, mod in categ['modules']:
             content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod[1][1].branch.name)
             # find and iterate doc domains
-            if stats['doc']['categs'].has_key(catname) and stats['doc']['categs'][catname]['modules']:
+            if catname in stats['doc']['categs'] and stats['doc']['categs'][catname]['modules']:
                 for docmod in stats['doc']['categs'][catname]['modules']:
                     if docmod[0] == modname:
                         for doc_dom in docmod[1]:

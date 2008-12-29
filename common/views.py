@@ -48,10 +48,10 @@ def site_login(request, messages=[]):
     referer = None
     openid_path = ''
     if request.method == 'POST':
-        if request.POST.has_key('logout') and request.POST['logout']:
+        if 'logout' in request.POST and request.POST['logout']:
             logout(request)
             messages.append(_("You have been logged out."))
-        elif request.POST.has_key('username'):
+        elif 'username' in request.POST:
             username = request.POST['username']
             password = request.POST['password']
             user = authenticate(username=username, password=password)

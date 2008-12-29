@@ -667,7 +667,7 @@ class Release(models.Model):
         stats = {}
         total_docstrings, total_uistrings = self.total_strings()
         for row in cursor.fetchall():
-            if not stats.has_key(row[1]):
+            if row[1] not in stats:
                 # Initialize stats dict
                 stats[row[1]] = {
                     'lang_name': row[0], 'lang_locale': Language.slug_locale(row[1]),
@@ -726,7 +726,7 @@ class Release(models.Model):
             categdescr = stat.branch.category_set.get(release=self).name
             domname = _(stat.domain.description)
             modname = stat.branch.module.name
-            if not stats['categs'].has_key(categdescr):
+            if categdescr not in stats['categs']:
                 stats['categs'][categdescr] = {'cattrans':0, 'catfuzzy':0, 
                                                'catuntrans':0, 'modules':{}}
             # Try to get translated stat, else stick with POT stat
@@ -748,7 +748,7 @@ class Release(models.Model):
             stats['categs'][categdescr]['cattrans'] += stat.translated
             stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy
             stats['categs'][categdescr]['catuntrans'] += stat.untranslated
-            if not stats['categs'][categdescr]['modules'].has_key(modname):
+            if modname not in stats['categs'][categdescr]['modules']:
                 # first element is a placeholder for a fake stat
                 stats['categs'][categdescr]['modules'][modname] = {' fake':None, domname:stat}
                 previous_domname = domname
