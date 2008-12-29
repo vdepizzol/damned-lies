@@ -143,3 +143,7 @@ class Role(models.Model):
     class Meta:
         db_table = 'role'
         unique_together = ('team', 'person')
+    
+    def __unicode__(self):
+        return "%s is %s in %s team" % (self.person.name, self.role, self.team.description)
+

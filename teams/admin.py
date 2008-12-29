@@ -1,5 +1,5 @@
 from django.contrib import admin
-from teams.models import Team
+from teams.models import Team, Role
 
 class TeamAdmin(admin.ModelAdmin):
     search_fields = ('name',)
@@ -12,4 +12,8 @@ class TeamAdmin(admin.ModelAdmin):
 
         return field
 
+class RoleAdmin(admin.ModelAdmin):
+    search_fields = ('person__first_name', 'person__last_name', 'team__description', 'role')
+
 admin.site.register(Team, TeamAdmin)
+admin.site.register(Role, RoleAdmin)
