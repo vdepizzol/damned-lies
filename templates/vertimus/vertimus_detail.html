@@ -63,26 +63,23 @@
 
 {% if action_history %}
 <h2>{% trans "Action History" %}</h2>
-<table>
+<div>
   {% for action in action_history %}
-  <tr>
-    <td class="action_head">
-      {{ action.created|date:"Y-m-d H:i" }}, <strong>{{ action }}</strong>,
-      <!-- Spam protection -->
+  <div class="vertimus_action">
+    <div class="vertimus_action_head">
       <img src="{{ MEDIA_URL }}img/person.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="action_content">
+      , <strong>{{ action }}</strong>, {{ action.created|date:"Y-m-d H:i" }}
+    </div>
+    <div class="vertimus_action_content">
       {% if action.file %}
-      <div class="uploaded_file">{% trans "File:" %} <a href="{{ action.file.url }}">{{ action.get_filename }}</a></div>
+      <div class="uploaded_file">
+        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>{{ action.get_filename }}</a></div>
       {% endif %}
-      {{ action.comment|linebreaksbr|default:"No comment" }}<br/>
-    </td>
-  </tr>
-  <tr class="noborder"><td>&nbsp;</td></tr>
+      <p>{{ action.comment|linebreaksbr|default:"No comment" }}</p><br/>
+    </div>
+  </div>
   {% endfor %}
-</table>
+</div>
 {% endif %}
 
 <h2>{% trans "New Action" %}</h2>

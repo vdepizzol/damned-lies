@@ -164,17 +164,23 @@ p#show, p#hide {
   vertical-align: top;
 }
 
-/* used in vertimus_detail */
-td.action_head {
-  background: #C9DDF3;
-  border-bottom: dashed 2px;
+/* Used in vertimus_detail */
+.vertimus_action {
+  margin: 1em 0 1.5em;
+  border: solid #ddd 1px;
 }
-td.action_content {
-  border-bottom: solid #CCCCCC 1px;
+
+.vertimus_action_head {
+  background: #eee;
+  padding: 0.5em 12px 0;
 }
+
+.vertimus_action_content {
+  padding: 0.5em 12px 0;
+}
+
 div.uploaded_file {
-  float:right;
-  background:#DDDDDD;
+  float: right;
   padding: 2px;
   margin-left: 8px;
 }
