@@ -3,9 +3,9 @@
 {% load i18n %}
 
 <table name="stats-table">
-<tr style="background: inherit;">
-  <td class="leftcell" style="font-size: 120%; background: inherit;" colspan="2">{{ modstats.totaltransperc }}% ({{ modstats.totaltrans }}/{{ modstats.totalfuzzy }}/{{ modstats.totaluntrans }})</td>
-  <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
+<tr>
+  <td class="leftcell" colspan="2">{{ modstats.totaltransperc }}% ({{ modstats.totaltrans }}/{{ modstats.totalfuzzy }}/{{ modstats.totaluntrans }})</td>
+  <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ modstats.totaltransperc }}px;"></div>
       <div class="fuzzy" style="left:{{ modstats.totaltransperc }}px; width:{{ modstats.totalfuzzyperc }}px;"></div>
       {% with modstats.totaltransperc|add:modstats.totalfuzzyperc as upos %}
@@ -17,7 +17,7 @@
 
 {% for catname,categ in modstats.categs.items %}
   {% ifnotequal catname "default" %}
-    <tr><td colspan="3" class="leftcell" style="background: inherit; font-size: 120%; font-weight: bold; padding-top:1em;">
+    <tr><td colspan="3" class="leftcell" style="font-weight: bold; padding-top:1em;">
      {% with categ.cattransperc as percentage %}
      {% with categ.catname as categname %}
      {% blocktrans %}{{ categname }} ({{ percentage }}% translated){% endblocktrans %}
@@ -53,7 +53,7 @@
           {% endfor %}
           </td>
           <td>{{ dom.1.tr_percentage }}%&nbsp;({{ dom.1.translated }}/{{ dom.1.fuzzy }}/{{ dom.1.untranslated }})</td>
-          <td style="width: 108px; text-align: center; background:inherit;"><div class="graph">
+          <td style="width: 108px; text-align: center;"><div class="graph">
               <div class="translated" style="width: {{ dom.1.tr_percentage }}px;"></div>
               <div class="fuzzy" style="left:{{ dom.1.tr_percentage }}px; width:{{ dom.1.fu_percentage }}px;"></div>
               {% with dom.1.tr_percentage|add:dom.1.fu_percentage as upos %}
