@@ -1,5 +1,10 @@
 2008-12-29  Claude Paroz  <claude@2xlibre.net>
 
+	* common/views.py: Copy msgs function parameter before using it, 
+	unless the content appended to it persist between calls.
+
+2008-12-29  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/utils.py: Allow raw data as input for run_shell_command, piped
 	through stdin. Useful for data in memory and not saved in the file system.
 	* vertimus/tests/__init__.py: Add test with valid and not valid po file

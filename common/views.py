@@ -43,10 +43,11 @@ def index(request):
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
 
-def site_login(request, messages=[]):
+def site_login(request, msgs=[]):
     """ Site-specific login page. Not named 'login' to not confuse with auth.login """
     referer = None
     openid_path = ''
+    messages = list(msgs)
     if request.method == 'POST':
         if 'logout' in request.POST and request.POST['logout']:
             logout(request)
@@ -107,5 +108,5 @@ def activate_account(request, key):
         return render_to_response('error.html', {'error':"Sorry, the key you provided is not valid."})
     person.activate()
     Person.clean_unactivated_accounts()
-    return site_login(request, messages=[_("Your account has been activated.")])
+    return site_login(request, msgs=[_("Your account has been activated.")])
 
