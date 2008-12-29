@@ -43,10 +43,12 @@ class ActionForm(forms.Form):
 
     def clean_file(self):
         data = self.cleaned_data['file']
-        ext = os.path.splitext(data.name)[1]
-        # If this is a .po file, check validity (msgfmt)
-        if ext == ".po":
-            res = po_file_stats(data)
-            if res['errors']:
-                raise forms.ValidationError(".po file does not pass 'msgfmt -vc'. Please correct the file and try again.")
+        if data:
+            ext = os.path.splitext(data.name)[1]
+            # If this is a .po file, check validity (msgfmt)
+            if ext == ".po":
+                res = po_file_stats(data)
+                if res['errors']:
+                    raise forms.ValidationError(".po file does not pass 'msgfmt -vc'. Please correct the file and try again.")
+        return data
 

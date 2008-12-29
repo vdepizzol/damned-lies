@@ -404,4 +404,8 @@ class VertimusTests(TestCase):
         form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
 
         self.assert_(form.is_valid())
+        
+        # Test form without file
+        form = ActionForm([('WC', u'Write a comment')], post_content)
+        self.assert_(form.is_valid())
 
