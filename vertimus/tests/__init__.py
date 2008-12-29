@@ -21,7 +21,10 @@
 import os
 
 from django.test import TestCase
-from django.core.files.base import ContentFile
+from django.core.files.base import File, ContentFile
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.http import QueryDict
+from django.utils.datastructures import MultiValueDict
 from django.conf import settings
 
 from people.models import Person
@@ -29,6 +32,7 @@ from teams.models import Team, Role
 from languages.models import Language
 from stats.models import Module, Branch, Release, Category, Domain
 from vertimus.models import *
+from vertimus.forms import ActionForm
 
 class VertimusTests(TestCase):
 
@@ -386,5 +390,18 @@ class VertimusTests(TestCase):
 
         self.assertEqual(state.name, 'Translated')
         
-
+    def test_uploaded_file_validation(self):
+        # Test a non valid po file
+        post_content = QueryDict('action=WC&comment=Test1')
+        post_file = MultiValueDict({'file': [SimpleUploadedFile('filename.po', 'Not valid po file content')]})
+        form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
         
+        self.assert_('file' in form.errors)
+
+        # Test a valid po file
+        f = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "valid_po.po"), 'r')
+        post_file = MultiValueDict({'file': [File(f)]})
+        form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
+
+        self.assert_(form.is_valid())
+

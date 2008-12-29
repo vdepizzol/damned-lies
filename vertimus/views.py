@@ -22,29 +22,13 @@ from datetime import datetime
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponseRedirect, Http404
 from django.template import RequestContext
-from django.utils.translation import ugettext_lazy as _
-from django import forms
 from django.core import urlresolvers
 from django.conf import settings
 
 from people.models import Person
 from stats.models import Statistics, Module, Branch, Domain, Language
 from vertimus.models import StateDb, ActionDb, ActionAbstract
-
-class ActionForm(forms.Form):
-    action = forms.ChoiceField(label=_("Action"),
-#        help_text="Choose an action you want to apply",
-        choices=())
-    comment = forms.CharField(label=_("Comment"),
-#        help_text="Leave a comment to explain your action",
-        max_length=1000,
-        required=False,
-        widget=forms.Textarea)
-    file = forms.FileField(label=_("File"), required=False)
-
-    def __init__(self, available_actions, *args, **kwargs):
-        super(ActionForm, self).__init__(*args, **kwargs)
-        self.fields['action'].choices = available_actions
+from vertimus.forms import ActionForm
 
 def vertimus_by_stats_id(request, stats_id):
     """Access to Vertimus view by a Statistics ID"""

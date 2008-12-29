@@ -24,6 +24,7 @@ from subprocess import Popen, PIPE, STDOUT
 
 from django.utils.translation import ugettext as _, ugettext_noop
 from django.core.mail import send_mail
+from django.core.files.base import File
 from stats.conf import settings
 
 STATUS_OK = 0
@@ -42,10 +43,15 @@ def stripHTML(string):
     replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
-def run_shell_command(cmd, env=None):
+def run_shell_command(cmd, env=None, input_data=None):
     if settings.DEBUG: print >>sys.stderr, cmd
     
-    pipe = Popen(cmd, shell=True, env=env, stdout=PIPE, stderr=STDOUT)
+    stdin = None
+    if input_data:
+        stdin = PIPE
+    pipe = Popen(cmd, shell=True, env=env, stdin=stdin, stdout=PIPE, stderr=STDOUT)
+    if input_data:
+        pipe.stdin.write(input_data)
     (output, errout) = pipe.communicate()
     status = pipe.returncode
     
@@ -164,26 +170,37 @@ def po_file_stats(pofile, msgfmt_checks = True):
         'untranslated' : 0,
         'errors' : [],
         }
-
-    if not os.access(pofile, os.R_OK):
-        res['errors'].append(("error", ugettext_noop("PO file '%s' does not exist or cannot be read.") % pofile))
-        return res
-    
     c_env = {"LC_ALL": "C", "LANG": "C", "LANGUAGE": "C"}
-    if msgfmt_checks:
-        command = "msgfmt -cv -o /dev/null %s" % pofile
-    else:
-        command = "msgfmt --statistics -o /dev/null %s" % pofile
 
-    (status, output) = run_shell_command(command, env=c_env)
+    if isinstance(pofile, basestring):
+        # pofile is a filesystem path
+        filename = os.path.basename(pofile)
+        if not os.access(pofile, os.R_OK):
+            res['errors'].append(("error", ugettext_noop("PO file '%s' does not exist or cannot be read.") % pofile))
+            return res
+        input_data = None
+        input_file = pofile
+    elif isinstance(pofile, File):
+        filename = pofile.name
+        input_data = pofile.read()
+        input_file = "-"
+    else:
+        raise ValueError("pofile type not recognized")
+    
+    if msgfmt_checks:
+        command = "msgfmt -cv -o /dev/null %s" % input_file
+    else:
+        command = "msgfmt --statistics -o /dev/null %s" % input_file
+
+    (status, output) = run_shell_command(command, env=c_env, input_data=input_data)
 
     if status != STATUS_OK:
         if msgfmt_checks:
-            res['errors'].append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (os.path.basename(pofile))))
+            res['errors'].append(("error", ugettext_noop("PO file '%s' doesn't pass msgfmt check: not updating.") % (filename)))
         else:
             res['errors'].append(("error", ugettext_noop("Can't get statistics for POT file '%s'.") % (pofile)))
 
-    if msgfmt_checks and os.access(pofile, os.X_OK):
+    if msgfmt_checks and input_file != "-" and os.access(pofile, os.X_OK):
         res['errors'].append(("warn", ugettext_noop("This PO file has an executable bit set.")))
 
     r_tr = re.search(r"([0-9]+) translated", output)
@@ -199,13 +216,20 @@ def po_file_stats(pofile, msgfmt_checks = True):
 
     if msgfmt_checks:
         # Check if PO file is in UTF-8
-        command = ("msgconv -t UTF-8 %s | diff -i -u %s - >/dev/null") % (pofile,
-                                                                          pofile)
-        (status, output) = run_shell_command(command, env=c_env)
+        if input_file == "-":
+            try:
+                input_data.decode('UTF-8')
+                status = STATUS_OK
+            except:
+                status = STATUS_OK+1
+        else:
+            command = ("msgconv -t UTF-8 %s | diff -i -u %s - >/dev/null") % (pofile,
+                                                                              pofile)
+            (status, output) = run_shell_command(command, env=c_env)
         if status != STATUS_OK:
-            myfile = os.path.basename(pofile)
             res['errors'].append(("warn",
-                                  ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (myfile)))
+                              ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
+
     return res
 
 

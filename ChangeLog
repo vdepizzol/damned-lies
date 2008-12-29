@@ -1,3 +1,14 @@
+2008-12-29  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/utils.py: Allow raw data as input for run_shell_command, piped
+	through stdin. Useful for data in memory and not saved in the file system.
+	* vertimus/tests/__init__.py: Add test with valid and not valid po file
+	submission.
+	* vertimus/tests/valid_po.po: Valid po file for tests.
+	* vertimus/views.py:
+	* vertimus/forms.py: ActionForm moved from view to forms. Add clean_file
+	to check validity of po file submitted through the form. 
+
 2008-12-29  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* common/views.py:
