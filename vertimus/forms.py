@@ -46,7 +46,7 @@ class ActionForm(forms.Form):
         if data:
             ext = os.path.splitext(data.name)[1]
             # If this is a .po file, check validity (msgfmt)
-            if ext == ".po":
+            if ext in ('.po', '.gz', '.bz2', '.png'):
                 res = po_file_stats(data)
                 if res['errors']:
                     raise forms.ValidationError(".po file does not pass 'msgfmt -vc'. Please correct the file and try again.")

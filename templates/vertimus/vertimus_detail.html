@@ -83,7 +83,12 @@
       <div class="uploaded_file">
         <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a></div>
       {% endif %}
-      <p>{{ action.comment|linebreaksbr|default:_("No comment") }}</p><br/>
+      <p>{% if action.comment %}
+        {{ action.comment|linebreaksbr }}
+        {% else %}
+        <em>{% trans "No comment" %}</em>
+        {% endif %}
+      </p><br/>
     </div>
   </div>
   {% endfor %}
