@@ -22,7 +22,7 @@ import os
 
 from datetime import datetime
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
@@ -91,7 +91,7 @@ class StateAbstract(object):
         return self._state_db
 
     def __unicode__(self):
-        return self.description
+        return unicode(self.description)
 
     def _get_available_actions(self, action_names):
         action_names.append('WC')
@@ -161,7 +161,7 @@ class StateTranslated(StateAbstract):
 
 class StateProofreading(StateAbstract):
     name = 'Proofreading'
-    description = 'Proofreading'
+    description = _('Proofreading')
 
     def get_available_actions(self, person):
         action_names = []
@@ -188,7 +188,7 @@ class StateProofread(StateAbstract):
 
 class StateToReview(StateAbstract):
     name = 'ToReview'
-    description = 'To Review'
+    description = _('To Review')
 
     def get_available_actions(self, person):
         action_names = []
@@ -324,7 +324,7 @@ class ActionAbstract(object):
         self._action_db.save()
 
     def __unicode__(self):
-        return self.description
+        return unicode(self.description) # needs unicode() because description is lazy
     
     def get_filename(self):
         if self._action_db.file:

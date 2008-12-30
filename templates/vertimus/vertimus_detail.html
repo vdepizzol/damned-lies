@@ -7,18 +7,20 @@
 
 {% block content %}
 <div class="mainpage">
-{% with branch.releases.all.0 as release %}
-<p align="right"><small>
-{% if release %}
-  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a>
+{% with branch.releases.all as releases %}
+<div class="release_link">
+{% if releases %}
+  <p><em>{% trans "Used in release(s):" %}</em><br />
+  {% for release in releases %}
+  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a><br />
+  {% endfor %}
 {% else %}
   <a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>
 {% endif %}
-</small></p>
-
+</div>
 {% endwith %}
 
-<h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {% trans language %}</h1>
+<h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {{ language.get_name }}</h1>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
@@ -28,7 +30,7 @@
   {% endifnotequal %}
 {% endif %}
 
-<h3>{% trans "State:" %} {{ state }}
+<h3>{% trans "State:" %} {{ state.description }}
 {% ifnotequal state.name 'none' %}
 ({{ state.updated|date:"D d M Y P" }})
 {% endifnotequal %}
@@ -79,9 +81,9 @@
     <div class="vertimus_action_content">
       {% if action.file %}
       <div class="uploaded_file">
-        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>{{ action.get_filename }}</a></div>
+        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a></div>
       {% endif %}
-      <p>{{ action.comment|linebreaksbr|default:"No comment" }}</p><br/>
+      <p>{{ action.comment|linebreaksbr|default:_("No comment") }}</p><br/>
     </div>
   </div>
   {% endfor %}
@@ -95,7 +97,7 @@
     <table class="djform">
       {{ action_form.as_table }}
       <tr><td></td>
-        <td><input type="submit" value="Submit"></td><tr>
+        <td><input type="submit" value="{% trans "Submit" %}"></td><tr>
     </table>
   </form>
 {% else %}

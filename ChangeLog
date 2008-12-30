@@ -1,5 +1,17 @@
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
 
+	* media/css/main.css: Add new class used in vertimus_detail.
+	* templates/teams/team_base.html: Fix table width.
+	* templates/teams/team_detail.html: Swap doc and ui stats display.
+	* templates/vertimus/vertimus_detail.html: Display all releases containing
+	the branch. Fix translation details.
+	* vertimus/models.py: Use gettext_lazy so as Action and State descriptions
+	are translated at the last time.
+	* vertimus/views.py: Get pot Stats object when there is still no
+	translation for a language.
+
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/vertimus/vertimus_detail.html: Move the download icon just
 	before translation stats (it is not always a pot file). Move the notices
 	after this block.

@@ -55,7 +55,11 @@ def vertimus_by_names(request, module_name, branch_name, domain_name, locale_nam
 def vertimus(request, branch, domain, language, stats=None):
     """The Vertimus view and form management"""
     if not stats:
-        stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=language)
+        try:
+            stats = Statistics.objects.get(branch=branch, domain=domain, language=language)
+        except Statistics.DoesNotExist:
+            # Get the POT file stats
+            stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=None)
 
     # Get the state of the translation
     (state_db, created) = StateDb.objects.get_or_create(
