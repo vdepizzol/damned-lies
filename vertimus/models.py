@@ -287,9 +287,14 @@ class ActionDb(models.Model):
     def __unicode__(self):
         return self.name
     
+
 class ActionAbstract(object):
     """Abstract class"""
 
+    # A comment or a file is required
+    arg_is_required = False
+    file_is_required = False
+    
     @classmethod
     def new_by_name(cls, action_name):
          return eval('Action' + action_name)()
@@ -366,7 +371,8 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
 class ActionWC(ActionAbstract):
     name = 'WC'
     description = _('Write a comment')
-        
+    arg_is_required = True
+
     def _new_state(self):
         return None
 
@@ -412,7 +418,7 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
 class ActionRT(ActionAbstract):
     name = 'RT'
     description = _('Reserve for translation')
-        
+
     def _new_state(self):
         return StateTranslating()
 
@@ -423,7 +429,8 @@ class ActionRT(ActionAbstract):
 class ActionUT(ActionAbstract):
     name = 'UT'
     description = _('Upload the new translation')
-        
+    file_is_required = True
+
     def _new_state(self):
         return StateTranslated()
 
@@ -448,6 +455,7 @@ class ActionRP(ActionAbstract):
 class ActionUP(ActionAbstract):
     name = 'UP'
     description = _('Upload for proofreading')
+    file_is_required = True
 
     def _new_state(self):
         return StateProofread()
@@ -503,6 +511,7 @@ class ActionIC(ActionAbstract):
 class ActionTR(ActionAbstract):
     name = 'TR'
     description = _('Requiring review')
+    arg_is_required = True
 
     def _new_state(self):
         return StateToReview()
@@ -570,7 +579,7 @@ class ActionBA(ActionAbstract):
 class ActionUNDO(ActionAbstract):
     name = 'UNDO'
     description = _('Undo the last state change')
-
+    
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 

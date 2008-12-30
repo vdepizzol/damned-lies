@@ -23,7 +23,7 @@ import os
 
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-
+from vertimus.models import ActionAbstract
 from stats.utils import po_file_stats
 
 class ActionForm(forms.Form):
@@ -52,3 +52,17 @@ class ActionForm(forms.Form):
                     raise forms.ValidationError(".po file does not pass 'msgfmt -vc'. Please correct the file and try again.")
         return data
 
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        action = ActionAbstract.new_by_name(cleaned_data.get('action'))
+        comment = cleaned_data.get('comment')
+        file = cleaned_data.get('file')
+        
+        if action.arg_is_required and not comment and not file:
+            raise forms.ValidationError(_("A comment or a file is needed for this action."))
+
+        if action.file_is_required and not file:
+            raise forms.ValidationError(_("A file is needed for this action."))
+
+        return cleaned_data
+        

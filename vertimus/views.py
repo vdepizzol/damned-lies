@@ -84,7 +84,7 @@ def vertimus(request, branch, domain, language, stats=None):
                 comment = action_form.cleaned_data['comment']
                 
                 action = ActionAbstract.new_by_name(action)
-                new_state = state.apply_action(action, person, comment, request.FILES.get('file',None))
+                new_state = state.apply_action(action, person, comment, request.FILES.get('file', None))
                 new_state.save()
 
                 return HttpResponseRedirect(
