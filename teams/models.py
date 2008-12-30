@@ -20,7 +20,7 @@
 
 from django.db import models
 from django.contrib.auth.models import Group
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy, ugettext as _
 from people.models import Person
 
 class TeamManager(models.Manager):
@@ -127,9 +127,9 @@ class FakeTeam(object):
 
 
 ROLE_CHOICES = (
-    ('translator', 'Translator'),
-    ('reviewer', 'Reviewer'),
-    ('committer', 'Committer'),
+    ('translator', ugettext_lazy('Translator')),
+    ('reviewer', ugettext_lazy('Reviewer')),
+    ('committer', ugettext_lazy('Committer')),
 )
 
 class Role(models.Model):

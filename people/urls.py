@@ -14,5 +14,5 @@ urlpatterns = patterns('',
     url(r'^(?P<object_id>\d+)/$', 'people.views.person_detail_from_id', name='person_from_id'),
     # equivalent to the previous, but using username instead of user pk
     url(r'^(?P<slug>[\w@\.\-]+)/$', 'people.views.person_detail_from_username', name='person'),
-    url(r'^(?P<slug>[\w@\.\-]+)/edit$', 'people.views.person_detail_from_username', {'edit_profile': True}, name='person_edit'),
+    url(r'^(?P<slug>[\w@\.\-]+)/edit/$', 'people.views.person_detail_from_username', {'edit_profile': True}, name='person_edit'),
 )

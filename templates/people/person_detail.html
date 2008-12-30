@@ -12,7 +12,7 @@
       <div class="right_actions">
         {% include "logout_form.html" %}<br />
         {% if not profile_form %}
-        <a href="{% url people.views.person_detail_from_username slug=person.username %}edit">
+        <a href="{% url person_edit slug=person.username %}">
           <img src="/media/img/edit.png" alt="{% trans "Edit" %}" title="{% trans "Edit" %}" /></a>
         {% endif %}
       </div>
@@ -46,7 +46,7 @@
     <ul>
     {% for role in person.role_set.all %}
       {% with role.role as role_name %}
-      <li>{% blocktrans with role.team|linked_with:role.team.description|safe as team_name %}Member of {{ team_name }} team ({{ role_name }}){% endblocktrans %}
+      <li>{% blocktrans with role.team|linked_with:role.team.get_description|safe as team_name %}Member of {{ team_name }} team ({{ role_name }}){% endblocktrans %}
       </li>
       {% endwith %}
     {% endfor %}

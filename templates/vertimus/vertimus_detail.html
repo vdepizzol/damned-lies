@@ -12,7 +12,7 @@
 {% if releases %}
   <p><em>{% trans "Used in release(s):" %}</em><br />
   {% for release in releases %}
-  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a><br />
+  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %}</a><br />
   {% endfor %}
 {% else %}
   <a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>

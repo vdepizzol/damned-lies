@@ -22,7 +22,7 @@ import os
 
 from datetime import datetime
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext, ugettext_lazy as _
 from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
@@ -364,8 +364,8 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
                 'new_state': new_state, 
                 'url': url
             }
-            message += self.comment or _("Without comment")
-            message += "\n" + self.person.name
+            message += self.comment or ugettext("Without comment")
+            message += "\n\n" + self.person.name
             mail.send_mail(subject, message, self.person.email, recipient_list)
 
 class ActionWC(ActionAbstract):
@@ -409,7 +409,7 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
                 'language': state.language.name, 
                 'url': url
             }
-            message += comment or _("Without comment")
+            message += comment or ugettext("Without comment")
             message += "\n" + person.name
             mail.send_mail(subject, message, person.email, translator_emails)
 

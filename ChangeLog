@@ -1,3 +1,16 @@
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
+	* people/urls.py: 
+	* templates/people/person_detail.html: Fix edit link, translate team
+	description.
+	* templates/languages/language_release_stats.html: Get translated state
+	name.
+	* templates/vertimus/vertimus_detail.html: No need of language for
+	release link.
+	* teams/models.py: Translate ROLE_CHOICES.
+	* vertimus/forms.py: Separate test for extension validation.
+	* vertimus/models.py: ugettext should be used in functions.
+
 2008-12-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* templates/vertimus/vertimus_detail.html: <em> on No comment.

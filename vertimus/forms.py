@@ -45,11 +45,13 @@ class ActionForm(forms.Form):
         data = self.cleaned_data['file']
         if data:
             ext = os.path.splitext(data.name)[1]
+            if ext not in ('.po', '.gz', '.bz2', '.png'):
+                raise forms.ValidationError(_("Only files with extension .po, .gz, .bz2 or .png are admitted."))
             # If this is a .po file, check validity (msgfmt)
-            if ext in ('.po', '.gz', '.bz2', '.png'):
+            if ext == '.po':
                 res = po_file_stats(data)
                 if res['errors']:
-                    raise forms.ValidationError(".po file does not pass 'msgfmt -vc'. Please correct the file and try again.")
+                    raise forms.ValidationError(_(".po file does not pass 'msgfmt -vc'. Please correct the file and try again."))
         return data
 
     def clean(self):
