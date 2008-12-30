@@ -1,5 +1,11 @@
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/vertimus/vertimus_detail.html: Move the download icon just
+	before translation stats (it is not always a pot file). Move the notices
+	after this block.
+
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/vertimus/vertimus_detail.html: When a branch is not in any
 	release, display a link to the module instead to the release.
 
