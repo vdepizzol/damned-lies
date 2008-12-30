@@ -2,7 +2,7 @@ import sha, random
 
 from django import forms
 from django.conf import settings
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy, ugettext as _
 from django.core.urlresolvers import reverse
 from django.contrib.sites.models import Site
 from teams.models import Team
@@ -17,16 +17,16 @@ class JoinTeamForm(forms.Form):
 class RegistrationForm(forms.Form):
     """ Form for user registration """
     username = forms.CharField(max_length=30,
-                               label=_(u'Choose a username:'),
-                               help_text=_(u'May contain only letters, numbers, underscores or hyphens'))
-    email = forms.EmailField(label=_(u'Email:'))
-    openid_url = forms.URLField(label=_(u'OpenID:'),
+                               label=ugettext_lazy(u'Choose a username:'),
+                               help_text=ugettext_lazy(u'May contain only letters, numbers, underscores or hyphens'))
+    email = forms.EmailField(label=ugettext_lazy(u'Email:'))
+    openid_url = forms.URLField(label=ugettext_lazy(u'OpenID:'),
                                 required=False)
     password1 = forms.CharField(widget=forms.PasswordInput(render_value=False),
-                                label=_(u'Password:'), required=False, min_length=7,
-                                help_text=_(u'At least 7 characters'))
+                                label=ugettext_lazy(u'Password:'), required=False, min_length=7,
+                                help_text=ugettext_lazy(u'At least 7 characters'))
     password2 = forms.CharField(widget=forms.PasswordInput(render_value=False),
-                                label=_(u'Confirm password:'), required=False)
+                                label=ugettext_lazy(u'Confirm password:'), required=False)
     
     def clean_username(self):
         """  Validate the username (correctness and uniqueness)"""
