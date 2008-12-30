@@ -338,8 +338,8 @@ class ActionAbstract(object):
             return None
 
     def send_mail_new_state(self, old_state, new_state, recipient_list):
-        # Remove None items from the list
-        recipient_list = filter(lambda x: x is not None, recipient_list)
+        # Remove None and empty string items from the list
+        recipient_list = filter(lambda x: x and x is not None, recipient_list)
 
         if recipient_list:
             current_site = Site.objects.get_current()

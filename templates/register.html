@@ -26,7 +26,7 @@
   <table style="clear:both"><tr><td colspan="2">
     <div style="clear:both">{{ form.non_field_errors }}</div>
 {% if openid_path %}
-    <p>Authenticate via OpenID <strong>or</strong> password:</p></td></tr><tr><td valign="bottom">
+    <p>{% trans "Authenticate via OpenID <strong>or</strong> password:" %}</p></td></tr><tr><td valign="bottom">
   <div>
     {{ form.openid_url.errors }}
     <label for="id_openid"><img src="{{ openid_path }}logo/" alt=""> {{ form.openid_url.label }}</label> {{ form.openid_url }}

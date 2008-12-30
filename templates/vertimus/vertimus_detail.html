@@ -106,7 +106,7 @@
     </table>
   </form>
 {% else %}
-  {% blocktrans with language.team.description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
+  {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
 {% endif %}
 
 {% endblock %}

@@ -1,5 +1,11 @@
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/register.html:
+	* templates/vertimus/vertimus_detail.html: Translation fixes.
+	* vertimus/models.py: Filter out empty string from recipient_list.
+
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
 	* people/forms.py: Use ugettext_lazy for class definitions.
 
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
