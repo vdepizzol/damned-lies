@@ -7,8 +7,15 @@
 
 {% block content %}
 <div class="mainpage">
-{% with branch.releases.all.0 as release %} 
-<p align="right"><small><a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a></small></p>
+{% with branch.releases.all.0 as release %}
+<p align="right"><small>
+{% if release %}
+  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %} - {{ language.get_name }}</a>
+{% else %}
+  <a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>
+{% endif %}
+</small></p>
+
 {% endwith %}
 
 <h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {% trans language %}</h1>
@@ -55,7 +62,7 @@
   </tr>
 </table>
 
-{% if stats.fig_count %}
+{% if stats.fig_count and stats.language %}
 <p><a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
     <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
 </p>

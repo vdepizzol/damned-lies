@@ -1,5 +1,10 @@
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/vertimus/vertimus_detail.html: When a branch is not in any
+	release, display a link to the module instead to the release.
+
+2008-12-30  Claude Paroz  <claude@2xlibre.net>
+
 	* people/forms.py:
 	* people/views.py: Catch error if user is added multiple times in the same
 	team.
