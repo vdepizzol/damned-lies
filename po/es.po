@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 08:39+0000\n"
-"PO-Revision-Date: 2008-12-30 11:52+0100\n"
+"POT-Creation-Date: 2008-12-30 10:54+0000\n"
+"PO-Revision-Date: 2008-12-30 12:03+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -728,7 +728,7 @@ msgstr "Manual de la Miniaplicación de cifrado"
 
 #: database-content.py:178
 msgid "Release Notes"
-msgstr "Notas de lanzamiento"
+msgstr "Notas de la publicación"
 
 #: database-content.py:179
 msgid "GNOME Keyring Manager Manual"
@@ -857,7 +857,7 @@ msgstr "Documentación del desarrollador de GNOME 2"
 
 #: database-content.py:210
 msgid "GNOME Release Notes"
-msgstr "Notas de lanzamiento de GNOME"
+msgstr "Notas de publicación de GNOME"
 
 #: database-content.py:211
 msgid "Rhythmbox Music Player"
@@ -1021,7 +1021,7 @@ msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
 #: languages/views.py:52 templates/module_detail.html:91
-#: templates/release_detail.html:22 templates/teams/team_detail.html:22
+#: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -1230,9 +1230,9 @@ msgstr ""
 "%(output)s</pre>"
 
 #: stats/utils.py:179
-#, fuzzy, python-format
+#, python-format
 msgid "PO file '%s' does not exist or cannot be read."
-msgstr "El archivo PO «%s» no existe."
+msgstr "El archivo PO «%s» no existe o no se puede leer."
 
 #: stats/utils.py:199
 #, python-format
@@ -1363,7 +1363,7 @@ msgstr "Idiomas"
 
 #: templates/base.html:71
 msgid "Release sets"
-msgstr "Lanzamientos"
+msgstr "Publicaciones"
 
 #: templates/base.html:76 templates/index.html:36
 msgid "Modules"
@@ -1436,12 +1436,12 @@ msgstr ""
 
 #: templates/index.html:27
 msgid "Release Sets"
-msgstr "Lanzamientos"
+msgstr "Publicaciones"
 
 #: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
-"Lista de todos los lanzamientos de GNOME y lanzamientos para los que "
+"Lista de todos las publicaciones de GNOME y publicaciones para los que "
 "coleccionamos estadísticas."
 
 #: templates/index.html:30
@@ -1449,7 +1449,7 @@ msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
 msgstr ""
-"Algunos ejemplos de lanzamientos son «GNOME Office», «Quinto dedo» o «GNOME "
+"Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
 "2.14»."
 
 #: templates/index.html:31
@@ -1457,17 +1457,16 @@ msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
-"Los lanzamientos oficiales de GNOME están divididos en varias categorías "
-"tales como &quot;Aplicaciones del escritorio&quot; y &quot;Plataforma de "
-"desarrollo&quot;."
+"Las publicaciones oficiales de GNOME están divididos en varias categorías "
+"tales como «Aplicaciones del escritorio» y «Plataforma de desarrollo»."
 
 #: templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr ""
-"Mire aquí si quiere comprar el soporte para idioma en cualquiera de esos "
-"lanzamientos."
+"Mire aquí si quiere comprar el soporte para idioma en cualquiera de esas "
+"publicaciones."
 
 #: templates/index.html:37
 msgid "List of all modules with statistics in here."
@@ -1516,7 +1515,7 @@ msgstr "Salir de la sesión"
 msgid "Module Statistics: %(name)s"
 msgstr "Estadísticas del módulo: %(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:20
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1657,7 +1656,7 @@ msgstr ""
 #: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
-msgstr "Lanzamiento %(name)s"
+msgstr "Publicación %(name)s"
 
 #: templates/release_detail.html:13
 #: templates/languages/language_release.html:20
@@ -1665,15 +1664,15 @@ msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"Los módulos de este lanzamiento no forman parte del repositorio del SVN de "
+"Los módulos de esta publicación no forman parte del repositorio del SVN de "
 "GNOME. Comprueba la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
 #: templates/release_detail.html:19 templates/teams/team_detail.html:22
 msgid "Release"
-msgstr "Lanzamiento"
+msgstr "Publicación"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:23
+#: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
@@ -1685,13 +1684,13 @@ msgstr "Gráfico"
 
 #: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
-msgstr "Lanzamientos de GNOME"
+msgstr "Publicaciones de GNOME"
 
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
-msgstr "Seleccione un lanzamiento para ver más detalles acerca de él:"
+msgstr "Seleccione una publicación para ver más detalles acerca de ella:"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:34
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
 msgid "Notices"
 msgstr "Notas"
 
@@ -1703,7 +1702,7 @@ msgstr "Idioma"
 msgid "Translated"
 msgstr "Traducido"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:60
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
 msgid "Display document figures"
 msgstr "Mostrar las figuras del documento"
 
@@ -1846,25 +1845,37 @@ msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 #: templates/vertimus/vertimus_detail.html:5
 #, python-format
 msgid "Module Translation: %(name)s"
-msgstr ""
+msgstr "Traducción del módulo: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:24
+#: templates/vertimus/vertimus_detail.html:13
+msgid "Used in release(s):"
+msgstr "Usado en la(s) publicacion(es):"
+
+#: templates/vertimus/vertimus_detail.html:33
 msgid "State:"
 msgstr "Estado:"
 
-#: templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:43
 msgid "Translated:"
-msgstr ""
+msgstr "Traducido:"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:73
 msgid "Action History"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:85
+#: templates/vertimus/vertimus_detail.html:86
+msgid "No comment"
+msgstr "Sin comentarios"
+
+#: templates/vertimus/vertimus_detail.html:93
 msgid "New Action"
 msgstr "Acción nueva"
 
-#: templates/vertimus/vertimus_detail.html:96
+#: templates/vertimus/vertimus_detail.html:100
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/vertimus/vertimus_detail.html:104
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -1884,27 +1895,35 @@ msgstr "Archivo"
 
 #: vertimus/models.py:121
 msgid "Inactive"
-msgstr ""
+msgstr "Inactivo"
 
 #: vertimus/models.py:134
 msgid "Translating"
+msgstr "Traduciéndose"
+
+#: vertimus/models.py:164
+msgid "Proofreading"
 msgstr ""
 
 #: vertimus/models.py:178
 msgid "Proofread"
 msgstr ""
 
+#: vertimus/models.py:191
+msgid "To Review"
+msgstr "Para revisar"
+
 #: vertimus/models.py:203
 msgid "To Commit"
-msgstr ""
+msgstr "Para subir"
 
 #: vertimus/models.py:216
 msgid "Committing"
-msgstr ""
+msgstr "Subiéndose"
 
 #: vertimus/models.py:230
 msgid "Committed"
-msgstr ""
+msgstr "Subido"
 
 #: vertimus/models.py:349
 #, python-format
@@ -1941,6 +1960,12 @@ msgid ""
 "%(url)s\n"
 "\n"
 msgstr ""
+"Hola,\n"
+"\n"
+"se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
 
 #: vertimus/models.py:414
 msgid "Reserve for translation"
