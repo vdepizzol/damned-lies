@@ -8,7 +8,6 @@
 
 {% if user.is_authenticated %}
   <p>{% blocktrans with user.username as username %}You are already logged in as {{ username }}.{% endblocktrans %}</p>
-  {% include "logout_form.html" %}
 {% else %}
 {% url register as link %}
 <p>{% blocktrans %}If you do not own an account on this site, you can <a href='{{ link }}'>register</a> for a new account.{% endblocktrans %}</p>

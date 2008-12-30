@@ -9,7 +9,6 @@
 <h2>{% trans "Account Registration" %}</h2>
 {% if user.is_authenticated %}
   <p>{% blocktrans with user.username as username %}You are already logged in as {{ username }}.{% endblocktrans %}</p>
-  {% include "logout_form.html" %}
 {% else %}
 <p>{% trans "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations." %}</p>
 <p>{% trans "After registration and connection, you will be able to join an existing team from your profile page." %}</p>

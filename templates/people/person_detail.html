@@ -8,24 +8,24 @@
 <div class="mainpage">
   <h2>{{ person.name }}</h2>
   {% if user.is_authenticated %}
-    {% ifequal user.username person.username %}
-      <div class="right_actions">
-        {% include "logout_form.html" %}<br />
-        {% if not profile_form %}
-        <a href="{% url person_edit slug=person.username %}">
-          <img src="/media/img/edit.png" alt="{% trans "Edit" %}" title="{% trans "Edit" %}" /></a>
-        {% endif %}
-      </div>
-    {% endifequal %}
+  {% ifequal user.username person.username %}
+  <div class="right_actions">
+    <ul>
+      <li><a href="{% url person_edit slug=person.username %}">{% trans "Change your details" %}</a></li>
+      <li><a href="{% url password-change-view %}">{% trans "Change your password" %}</a></li>
+    </ul>
+  </div>
+  {% endifequal %}
   {% endif %}
 
   {% if profile_form %}
     <div class="maintainer">
-    <form action="." method="POST" class="djform"><table>
-    {{ profile_form.as_table }}
-    <tr><td colspan="2" align="center"><input type="submit" value="{% trans "Save" %}"></td></tr>
-    <input type="hidden" name="edit_profile_form" value="1" />
-    </form></table>
+    <form action="." method="POST" class="djform">
+      <table>{{ profile_form.as_table }}
+        <tr><td colspan="2" align="center"><input type="submit" value="{% trans "Save" %}"></td></tr>
+      </table>
+        <input type="hidden" name="edit_profile_form" value="1" />
+    </form>
     </div>
   {% else %}
     {% include "person_base.html" %}

@@ -129,11 +129,16 @@ div#authenticated {
   color: #aaaaaa;
 }
 
-div.right_actions {
- float: right;
- text-align: right;
- padding: 5px;
- background: #DCEAF7;
+.right_actions {
+  float: right;
+  text-align: right;
+  padding: 6px;
+  background: #DCEAF7;
+  font-size: small;
+}
+
+.right_actions ul {
+  list-style: none;
 }
 
 div.col1 { float: left }

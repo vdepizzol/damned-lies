@@ -16,3 +16,9 @@ urlpatterns = patterns('',
     url(r'^(?P<slug>[\w@\.\-]+)/$', 'people.views.person_detail_from_username', name='person'),
     url(r'^(?P<slug>[\w@\.\-]+)/edit/$', 'people.views.person_detail_from_username', {'edit_profile': True}, name='person_edit'),
 )
+
+# FIXME Not possible to give the pageSection
+urlpatterns += patterns('django.contrib.auth.views',
+    url(r'^password_change$', 'password_change', {'template_name': 'people/password_change_form.html'}, name='password-change-view'),
+    (r'^password_change_done$', 'password_change_done', {'template_name': 'people/password_change_done.html'}),
+)

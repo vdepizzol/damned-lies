@@ -79,6 +79,9 @@ class Person(User):
         else:
             return self.username
 
+    def __unicode__(self):
+        return self.name
+
     @models.permalink
     def get_absolute_url(self):
         return ('person', [self.username])

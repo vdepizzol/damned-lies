@@ -22,27 +22,13 @@
 <body>
   <div id="page">
     <ul id="general">
-      <li id="siteaction-gnome_home" class="home">
-        <a href="http://www.gnome.org/">{% trans "Home" %}</a>
-      </li>
-      <li id="siteaction-gnome_news">
-        <a href="http://news.gnome.org">{% trans "News" %}</a>
-      </li>
-      <li id="siteaction-gnome_projects">
-        <a href="http://www.gnome.org/projects/">{% trans "Projects" %}</a>
-      </li>
-      <li id="siteaction-gnome_art">
-        <a href="http://art.gnome.org">{% trans "Art" %}</a>
-      </li>
-      <li id="siteaction-gnome_support">
-        <a href="http://www.gnome.org/support/">{% trans "Support" %}</a>
-      </li>
-      <li id="siteaction-gnome_development">
-        <a href="http://developer.gnome.org">{% trans "Development" %}</a>
-      </li>
-      <li id="siteaction-gnome_community">
-        <a href="http://www.gnome.org/community/">{% trans "Community" %}</a>
-      </li>
+      <li id="siteaction-gnome_home" class="home"><a href="http://www.gnome.org/">{% trans "Home" %}</a></li>
+      <li id="siteaction-gnome_news"><a href="http://news.gnome.org">{% trans "News" %}</a></li>
+      <li id="siteaction-gnome_projects"><a href="http://www.gnome.org/projects/">{% trans "Projects" %}</a></li>
+      <li id="siteaction-gnome_art"><a href="http://art.gnome.org">{% trans "Art" %}</a></li>
+      <li id="siteaction-gnome_support"><a href="http://www.gnome.org/support/">{% trans "Support" %}</a></li>
+      <li id="siteaction-gnome_development"><a href="http://developer.gnome.org">{% trans "Development" %}</a></li>
+      <li id="siteaction-gnome_community"><a href="http://www.gnome.org/community/">{% trans "Community" %}</a></li>
     </ul>
     <div id="header">
       <h1>{% trans "Damned Lies" %}</h1>
@@ -78,13 +64,17 @@
       </div> <!-- end of #tabs -->
     </div> <!-- end of #header -->
   </div>
-<!-- end site header -->
+  <!-- end site header -->
   <div id="authenticated">
-  {% if user.is_authenticated %}
-    {% blocktrans with user|linked_with:user.username|safe as username %}Logged in as: {{ username }}{% endblocktrans %}
-  {% else %}
+    {% if user.is_authenticated %}
+    <form action="{% url login %}" method="post">
+      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/person.png" alt="Person"/>&nbsp;{{ user.person }}</a> &bull;
+      <input type="hidden" name="logout" value="1" />
+      <input type="submit" value="{% trans 'Log Out' %}" />
+    </form>
+    {% else %}
     <a href="{% url login %}">{% trans "Log in" %}</a>
-  {% endif %}
+    {% endif %}
   </div>
 
   <div class="body">

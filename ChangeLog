@@ -1,3 +1,22 @@
+2008-12-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	Add the password change form.
+	
+	* media/css/login.css: .submit-row is not used.
+	* media/css/main.css: Adjust .right_actions
+	* media/css/style.css: Remove input and option CSS attributes.
+	* people/models.py: Add __unicode__ method to return the name
+	property.
+	* people/urls.py: Add URLs to change the password using the
+	Django contrib view.	
+	* templates/base.html: Nicer user name and 'Log Out' button. 
+	* templates/login.html: Removed obsolete logout_form.html.
+	* templates/logout_form.html: Deleted.
+	* templates/people/password_change_done.html: Added.
+	* templates/people/password_change_form.html: Added.
+	* templates/people/person_detail.html: New right menu.
+	* templates/register.html: Removed obsolete logout_form.html.
+
 2008-12-30  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/register.html:

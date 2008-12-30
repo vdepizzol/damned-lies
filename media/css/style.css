@@ -91,29 +91,6 @@ h1 {
   color: #3f3f3f;
 }
 
-/* styling form widgets like bugzilla.gnome.org */
-input,textarea {
-  border: 1px solid #6f6f6f;
-/* background: #dddddd; */
-}
-
-input.login_small {
-  border-style: none;
-}
-
-input:focus,textarea:focus {
-  background-color: #f7f2d0;
-  color: #000000;
-}
-
-option {
-  border: 0px none #ffffff;
-}
-
-input[type=radio] {
-  margin-left: 1em;
-}
-
 /* footer */
 
 #footer {
