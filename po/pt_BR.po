@@ -2,1589 +2,2068 @@
 # This package is distributed under the same license as the damned-lies package.
 # Copyright (C) the Damned Lies maintainer(s).
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com> 2008.
+# Jonh Wendell <wendell@bani.com.br> 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-19 18:28-0300\n"
-"PO-Revision-Date: 2008-02-19 18:32-0300\n"
-"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"POT-Creation-Date: 2008-12-30 12:41+0000\n"
+"PO-Revision-Date: 2008-12-30 17:30-0300\n"
+"Last-Translator: Jonh Wendell <wendell@bani.com.br>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
-#: ../gnome-modules.xml.in.h:2
-#, no-c-format
-msgid "%(module/id)"
+#: database-content.py:1
+msgid "Gujarati"
+msgstr "Guzerate"
+
+#: database-content.py:2
+msgid "Irish"
+msgstr "Irlandês"
+
+#: database-content.py:3
+msgid "Guarani"
+msgstr "Guarani"
+
+#: database-content.py:4
+msgid "Galician"
+msgstr "Galego"
+
+#: database-content.py:5
+msgid "Latin"
+msgstr "Latim"
+
+#: database-content.py:6
+msgid "Tatar"
+msgstr "Tártaro"
+
+#: database-content.py:7
+msgid "Turkish"
+msgstr "Turco"
+
+#: database-content.py:8
+msgid "Limburgian"
+msgstr "Limburguês"
+
+#: database-content.py:9
+msgid "Latvian"
+msgstr "Letão"
+
+#: database-content.py:10
+msgid "Tagalog"
+msgstr "Tagalo"
+
+#: database-content.py:11
+msgid "Turkmen"
+msgstr "Turcomeno"
+
+#: database-content.py:12
+msgid "Thai"
+msgstr "Tailandês"
+
+#: database-content.py:13
+msgid "Tajik"
+msgstr "Tadjique"
+
+#: database-content.py:14
+msgid "Telugu"
+msgstr "Télugo"
+
+#: database-content.py:15
+msgid "Tamil"
+msgstr "Tâmil"
+
+#: database-content.py:16
+msgid "Yiddish"
+msgstr "Iídiche"
+
+#: database-content.py:17
+#, fuzzy
+msgid "Brazilian Portuguese"
+msgstr "Português"
+
+#: database-content.py:18
+msgid "German"
+msgstr "Alemão"
+
+#: database-content.py:19
+msgid "Danish"
+msgstr "Dinamarquês"
+
+#: database-content.py:20
+msgid "Dzongkha"
+msgstr "Butanês"
+
+#: database-content.py:21
+#, fuzzy
+msgid "Chinese (China)"
+msgstr "Chinês"
+
+# Sem tradução
+#: database-content.py:22
+#, fuzzy
+msgid "Balochi"
+msgstr "Kachin"
+
+#: database-content.py:23
+msgid "Crimean Tatar"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:3
+#: database-content.py:24
+msgid "Greek"
+msgstr "Grego"
+
+#: database-content.py:25
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: database-content.py:26
+msgid "Belarusian"
+msgstr "Bielo-russo"
+
+#: database-content.py:27
+msgid "Basque"
+msgstr "Basco"
+
+#: database-content.py:28
+msgid "Estonian"
+msgstr "Estoniano"
+
+#: database-content.py:29
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: database-content.py:30
+msgid "Russian"
+msgstr "Russo"
+
+#: database-content.py:31
+msgid "Kinyarwanda"
+msgstr "Ruanda"
+
+#: database-content.py:32
+msgid "Romanian"
+msgstr "Romeno"
+
+#: database-content.py:33
+#, fuzzy
+msgid "Canadian English"
+msgstr "Inglês"
+
+#: database-content.py:34
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+#: database-content.py:35
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+#: database-content.py:36
+msgid "Walloon"
+msgstr "Valão"
+
+#: database-content.py:37
+msgid "Asturian"
+msgstr "Asturiano"
+
+#: database-content.py:38
+msgid "Bengali"
+msgstr "Bengali"
+
+#: database-content.py:39
+msgid "Breton"
+msgstr "Bretão"
+
+#: database-content.py:40
+msgid "Bosnian"
+msgstr "Bósnio"
+
+#: database-content.py:41
+msgid "Japanese"
+msgstr "Japonês"
+
+#: database-content.py:42
+msgid "Occitan"
+msgstr "Provençal"
+
+#: database-content.py:43
+#, fuzzy
+msgid "Low German and Saxon"
+msgstr "Baixo Saxão"
+
+#: database-content.py:44
+msgid "Oriya"
+msgstr "Oriá"
+
+# Sem tradução
+#: database-content.py:45
+msgid "Xhosa"
+msgstr "Xhosa"
+
+#: database-content.py:46
+msgid "Northern Sotho"
+msgstr "Soto do Sul"
+
+#: database-content.py:47
+#, fuzzy
+msgid "Iranian Azerbaijani"
+msgstr "Azerbaidjano"
+
+#: database-content.py:48
+msgid "Catalan"
+msgstr "Catalão"
+
+#: database-content.py:49
+msgid "Welsh"
+msgstr "Galês"
+
+#: database-content.py:50
+msgid "Czech"
+msgstr "Tcheco"
+
+#: database-content.py:51
+#, fuzzy
+msgid "Pashto"
+msgstr "Pachto"
+
+#: database-content.py:52
+msgid "Portuguese"
+msgstr "Português"
+
+#: database-content.py:53
+msgid "Lithuanian"
+msgstr "Lituano"
+
+#: database-content.py:54
+msgid "Punjabi"
+msgstr "Panjabi"
+
+#: database-content.py:55
+#, fuzzy
+msgid "British English"
+msgstr "Inglês"
+
+#: database-content.py:56
+msgid "Armenian"
+msgstr "Armênio"
+
+#: database-content.py:57
+msgid "Croatian"
+msgstr "Croata"
+
+#: database-content.py:58
+msgid "Hungarian"
+msgstr "Húngaro"
+
+#: database-content.py:59
+msgid "Hindi"
+msgstr "Hindi"
+
+#: database-content.py:60
+msgid "Hebrew"
+msgstr "Hebraico"
+
+#: database-content.py:61
+msgid "Malagasy"
+msgstr "Malgaxe"
+
+#: database-content.py:62
+msgid "Friulian"
+msgstr "Friulano"
+
+#: database-content.py:63
+msgid "Uzbek"
+msgstr "Uzbeque"
+
+#: database-content.py:64
+msgid "Malayalam"
+msgstr "Malaiala"
+
+#: database-content.py:65
+msgid "Mongolian"
+msgstr "Mongol"
+
+#: database-content.py:66
+msgid "Maori"
+msgstr "Maori"
+
+#: database-content.py:67
+msgid "Macedonian"
+msgstr "Macedônio"
+
+#: database-content.py:68
+msgid "Urdu"
+msgstr "Urdu"
+
+#: database-content.py:69
+msgid "Polish"
+msgstr "Polonês"
+
+#: database-content.py:70
+msgid "Malay"
+msgstr "Malaio"
+
+#: database-content.py:71
+msgid "Marathi"
+msgstr "Marati"
+
+#: database-content.py:72
+msgid "Uighur"
+msgstr "Uigur"
+
+#: database-content.py:73
+#, fuzzy
+msgid "Old English"
+msgstr "Inglês"
+
+#: database-content.py:74
+msgid "Afrikaans"
+msgstr "Africânder"
+
+#: database-content.py:75
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: database-content.py:76
+msgid "Icelandic"
+msgstr "Islandês"
+
+#: database-content.py:77
+msgid "Amharic"
+msgstr "Amárico"
+
+#: database-content.py:78
+msgid "Italian"
+msgstr "Italiano"
+
+# Sem tradução
+#: database-content.py:79
+msgid "Kannada"
+msgstr "Kannada"
+
+#: database-content.py:80
+msgid "Assamese"
+msgstr "Assamês"
+
+#: database-content.py:81
+msgid "Arabic"
+msgstr "Árabe"
+
+#: database-content.py:82
+msgid "Ido"
+msgstr "Ido"
+
+#: database-content.py:83
+msgid "Zulu"
+msgstr "Zulu"
+
+#: database-content.py:84
+msgid "Azerbaijani"
+msgstr "Azerbaidjano"
+
+#: database-content.py:85
+msgid "Indonesian"
+msgstr "Indonésio"
+
+#: database-content.py:86
+#, fuzzy
+msgid "Bengali (India)"
+msgstr "Inglês (Canadense)"
+
+#: database-content.py:87
+msgid "Kashmiri"
+msgstr "Caxemira"
+
+#: database-content.py:88
+msgid "Chinese Traditional"
+msgstr "Chinês Tradicional"
+
+#: database-content.py:89
+msgid "Dutch"
+msgstr "Holandês"
+
+#: database-content.py:90
+msgid "Yoruba"
+msgstr "Ioruba"
+
+#: database-content.py:91
+#, fuzzy
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Norueguês (Nyorsk)"
+
+#: database-content.py:92
+msgid "Nepali"
+msgstr "Nepali"
+
+#: database-content.py:93
+#, fuzzy
+msgid "Australian English"
+msgstr "Idiomas Australianos"
+
+#: database-content.py:94
+msgid "French"
+msgstr "Francês"
+
+#: database-content.py:95
+msgid "Persian"
+msgstr "Persa"
+
+#: database-content.py:96
+#, fuzzy
+msgid "Fula"
+msgstr "Fula"
+
+#: database-content.py:97
+#, fuzzy
+msgid "Maithili"
+msgstr "Marati"
+
+#: database-content.py:98
+msgid "Finnish"
+msgstr "Finlandês"
+
+#: database-content.py:99
+msgid "Georgian"
+msgstr "Georgiano"
+
+#: database-content.py:100
+msgid "Kazakh"
+msgstr "Cazaque"
+
+#: database-content.py:101
+msgid "Serbian"
+msgstr "Sérvio"
+
+#: database-content.py:102
+msgid "Albanian"
+msgstr "Albanês"
+
+#: database-content.py:103
+msgid "Korean"
+msgstr "Coreano"
+
+#: database-content.py:104
+msgid "Swedish"
+msgstr "Sueco"
+
+#: database-content.py:105
+msgid "Khmer"
+msgstr "Khmer"
+
+#: database-content.py:106
+msgid "Slovak"
+msgstr "Eslovaco"
+
+#: database-content.py:107
+#, fuzzy
+msgid "Sinhala"
+msgstr "Cingalês"
+
+#: database-content.py:108
+msgid "Kurdish"
+msgstr "Curdo"
+
+#: database-content.py:109
+msgid "Slovenian"
+msgstr "Esloveno"
+
+#: database-content.py:110
+msgid "Kirghiz"
+msgstr "Quirguiz"
+
+#: database-content.py:111
+#, fuzzy
+msgid "Belarusian Latin"
+msgstr "Bielo-russo"
+
+#: database-content.py:112
+#, fuzzy
+msgid "Low German"
+msgstr "Alemão"
+
+#: database-content.py:113
+#, fuzzy
+msgid "Low Saxon, Germany"
+msgstr "Baixo Saxão"
+
+#: database-content.py:114
+msgid "Valencian (Southern Catalan)"
+msgstr ""
+
+#: database-content.py:115
+msgid "Uzbek (Cyrillic)"
+msgstr ""
+
+#: database-content.py:116
+msgid "Uzbek (Latin)"
+msgstr ""
+
+#: database-content.py:117
+msgid "Chinese (Hong Kong)"
+msgstr ""
+
+#: database-content.py:118
+#, fuzzy
+msgid "Chinese (Taiwan)"
+msgstr "Chinês"
+
+#: database-content.py:119
+#, fuzzy
+msgid "Norwegian Bokmål"
+msgstr "Norueguês (Bokmål)"
+
+#: database-content.py:120
+#, fuzzy
+msgid "Norwegian Nynorsk"
+msgstr "Norueguês (Nyorsk)"
+
+#: database-content.py:121
+#, fuzzy
+msgid "Serbian Latin"
+msgstr "Sérvio"
+
+#: database-content.py:122
+#, fuzzy
+msgid "Serbian Jekavian"
+msgstr "Sérvio"
+
+#: database-content.py:123
+msgid "UI translations"
+msgstr "Traduções de interface"
+
+#: database-content.py:124
+msgid "User Guide"
+msgstr "Guia do Usuário"
+
+#: database-content.py:125
 msgid "Accessibility Guide"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:4
-msgid "AisleRiot Manual"
+#: database-content.py:126
+msgid "System Administration Guide"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:5
+#: database-content.py:127
+msgid "GDM Manual"
+msgstr "Manual do GDM"
+
+#: database-content.py:128
 msgid "Anjuta Manual"
+msgstr "Manual do Anjuta"
+
+#: database-content.py:129
+msgid "GConf Editor Manual"
+msgstr "Manual do Editor de Configurações"
+
+#: database-content.py:130
+msgid "F-Spot Manual"
+msgstr "Manual do F-Spot"
+
+#: database-content.py:131
+msgid "FDL License"
+msgstr "Licença FDL"
+
+#: database-content.py:132
+msgid "LGPL License"
+msgstr "Licença LGPL"
+
+#: database-content.py:133
+msgid "GPL License"
+msgstr "Licença GPL"
+
+#: database-content.py:134
+msgid "Fish Applet Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:6
-msgid "Banshee Music Player"
+#: database-content.py:135
+msgid "Workspace Switcher Applet Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:7
-msgid "Battery Charge Monitor Manual"
+#: database-content.py:136
+msgid "Window List Applet Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:8
-msgid "Beagle Desktop Search"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:9
-msgid "Blackjack Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:10
-msgid "Bug Buddy Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:11
-msgid "CD Player Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:12
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:13
-msgid "Character Palette Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:14
+#: database-content.py:137
 msgid "Clock Applet Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:15
+#: database-content.py:138
+msgid "Iagno Manual"
+msgstr ""
+
+#: database-content.py:139
+msgid "Five or More Manual"
+msgstr ""
+
+#: database-content.py:140
+msgid "Nibbles Manual"
+msgstr ""
+
+#: database-content.py:141
+msgid "GNOME Robots Manual"
+msgstr ""
+
+#: database-content.py:142
+msgid "Four-in-a-row Manual"
+msgstr ""
+
+#: database-content.py:143
+msgid "GNOME Sudoku Manual"
+msgstr ""
+
+#: database-content.py:144
+msgid "glChess Manual"
+msgstr ""
+
+#: database-content.py:145
+msgid "GNOME Tali Manual"
+msgstr ""
+
+#: database-content.py:146
+msgid "Gnometris Manual"
+msgstr ""
+
+#: database-content.py:147
+msgid "GNOME Klotski Manual"
+msgstr ""
+
+#: database-content.py:148
+msgid "GNOME Tetravex Manual"
+msgstr ""
+
+#: database-content.py:149
+msgid "GNOME Mahjongg Manual"
+msgstr ""
+
+#: database-content.py:150
+msgid "AisleRiot Manual"
+msgstr ""
+
+#: database-content.py:151
+msgid "Mines Manual"
+msgstr ""
+
+#: database-content.py:152
+msgid "Same GNOME Manual"
+msgstr ""
+
+#: database-content.py:153
+msgid "Blackjack Manual"
+msgstr ""
+
+#: database-content.py:154
+msgid "CD Player Manual"
+msgstr ""
+
+#: database-content.py:155
+msgid "Sound Recorder Manual"
+msgstr ""
+
+#: database-content.py:156
+msgid "GStreamer Properties Manual"
+msgstr ""
+
+#: database-content.py:157
+msgid "GNOME Volume Control Manual"
+msgstr ""
+
+#: database-content.py:158
+msgid "Layout Descriptions"
+msgstr ""
+
+#: database-content.py:159
+msgid "Keyboard Indicator Manual"
+msgstr ""
+
+#: database-content.py:160
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr ""
+
+#: database-content.py:161
 msgid "Command Line Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:16
+#: database-content.py:162
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr ""
+
+#: database-content.py:163
+msgid "Invest Applet Manual"
+msgstr ""
+
+#: database-content.py:164
+msgid "System Monitor Manual"
+msgstr ""
+
+#: database-content.py:165
+msgid "Stock Ticker Manual"
+msgstr ""
+
+#: database-content.py:166
+msgid "Geyes Manual"
+msgstr ""
+
+#: database-content.py:167
+msgid "Panel Trash Manual"
+msgstr ""
+
+#: database-content.py:168
+msgid "Character Palette Manual"
+msgstr ""
+
+#: database-content.py:169
+msgid "Volume Control Manual"
+msgstr ""
+
+#: database-content.py:170
+msgid "Weather Report Manual"
+msgstr ""
+
+#: database-content.py:171
+msgid "Sticky Notes Manual"
+msgstr ""
+
+#: database-content.py:172
+msgid "Disk Mounter Manual"
+msgstr ""
+
+#: database-content.py:173
+msgid "Battery Charge Monitor Manual"
+msgstr ""
+
+#: database-content.py:174
+#, fuzzy
+msgid "User Directories"
+msgstr "D_icionários"
+
+#: database-content.py:175
+msgid "Integration Guide"
+msgstr ""
+
+#: database-content.py:176
+msgid "Platform Overview"
+msgstr ""
+
+#: database-content.py:177
+msgid "Encryption Applet Manual"
+msgstr ""
+
+#: database-content.py:178
+#, fuzzy
+msgid "Release Notes"
+msgstr "Substituir"
+
+#: database-content.py:179
+msgid "GNOME Keyring Manager Manual"
+msgstr ""
+
+#: database-content.py:180
 msgid "Criawips Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:17 ../templates/header.tmpl:56
-msgid "Damned Lies"
+#: database-content.py:181
+msgid "Sound Juicer Manual"
+msgstr "Manual do Sound Juicer"
+
+#: database-content.py:182
+msgid "Property Nicks"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:18
+#: database-content.py:183
+msgid "tips"
+msgstr ""
+
+#: database-content.py:184
+msgid "script-fu"
+msgstr ""
+
+#: database-content.py:185
+msgid "libgimp"
+msgstr ""
+
+#: database-content.py:186
+msgid "python"
+msgstr ""
+
+#: database-content.py:187
+msgid "plug-ins"
+msgstr ""
+
+#: database-content.py:188
 msgid "Dasher Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:19
-msgid "Deskbar Applet"
+#: database-content.py:189
+msgid "Weather Applet Locations"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:20
+#: database-content.py:190
 #, fuzzy
 msgid "Dictionary Manual"
 msgstr "D_icionários"
 
-#: ../gnome-modules.xml.in.h:21
-msgid "Disk Mounter Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:22
+#: database-content.py:191
 msgid "Disk Usage Analyzer Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:23
-msgid "Encryption Applet Manual"
+#: database-content.py:192
+msgid "Log Viewer Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:24
-msgid "Epiphany Web Browser"
+#: database-content.py:193
+msgid "Search Tool Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:25
-msgid "Eye of GNOME"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:26
-msgid "Eye of GNOME Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:27
-msgid "F-Spot Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:28
-msgid "FDL License"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:29
-msgid "Fish Applet Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:30
-msgid "Five or More Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:31
-msgid "Four-in-a-row Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:32
-msgid "GConf Editor Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:33
-msgid "GDM Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:34
+#: database-content.py:194
 msgid "GFloppy Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:35
-msgid "GLib"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:36
-msgid "GNOME 2 Development Documentation"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:37
-msgid "GNOME 2 User Documentation"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:38
-msgid "GNOME 2.18 Release Notes"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:39
-msgid "GNOME 2.20 Release Notes"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:40
-msgid "GNOME Applets"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:41
-msgid "GNOME Keyring Manager Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:42
-msgid "GNOME Klotski Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:43
-msgid "GNOME Library Web site"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:44
+#: database-content.py:195
 msgid "GNOME Library help"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:45
-msgid "GNOME Mahjongg Manual"
+#: database-content.py:196
+msgid "Eye of GNOME Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:46
-msgid "GNOME Robots Manual"
+#: database-content.py:197
+msgid "GST User Management Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:47
-msgid "GNOME Sudoku Manual"
+#: database-content.py:198
+msgid "GST Service Management Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:48
-msgid "GNOME Tali Manual"
+#: database-content.py:199
+msgid "GST Network Setup Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:49
-msgid "GNOME Tetravex Manual"
+#: database-content.py:200
+msgid "GST Shared Folders Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:50
-msgid "GNOME Volume Control Manual"
+#: database-content.py:201
+msgid "GST Time Setup Manual"
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:51
+#: database-content.py:202
+msgid "GNOME 2 User Documentation"
+msgstr ""
+
+#: database-content.py:203
+msgid "Beagle Desktop Search"
+msgstr ""
+
+#: database-content.py:204 templates/base.html:48
+#: templates/admin/base_site.html:7
+msgid "Damned Lies"
+msgstr ""
+
+#: database-content.py:205
+msgid "Banshee Music Player"
+msgstr ""
+
+#: database-content.py:206
+msgid "Shared MIME Info"
+msgstr ""
+
+#: database-content.py:207
+msgid "GNOME Applets"
+msgstr "Applets do GNOME"
+
+#: database-content.py:208
+msgid "JHBuild Documentation"
+msgstr "Documentação do JHBuild"
+
+#: database-content.py:209
+msgid "GNOME 2 Development Documentation"
+msgstr ""
+
+#: database-content.py:210
+msgid "GNOME Release Notes"
+msgstr "Notas de Lançamento do GNOME"
+
+#: database-content.py:211
+msgid "Rhythmbox Music Player"
+msgstr "Reprodutor de músicas Rhythmbox"
+
+#: database-content.py:212
+msgid "Epiphany Web Browser"
+msgstr "Navegador da web Epiphany"
+
+#: database-content.py:213
+msgid "GNOME Library Web site"
+msgstr ""
+
+#: database-content.py:214
+msgid "Eye of GNOME"
+msgstr ""
+
+#: database-content.py:215
+msgid "Gnome Specimen"
+msgstr ""
+
+#: database-content.py:216
+msgid "Deskbar Applet"
+msgstr ""
+
+#: database-content.py:217
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:52
-msgid "GPL License"
+#: database-content.py:218
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
 
-#: ../gnome-modules.xml.in.h:53
-msgid "GST Network Setup Manual"
+#: database-content.py:219
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
 msgstr ""
+"A partir do GNOME 2.23, GAIL faz parte do GTK+. Não envie arquivos para o trunk."
 
-#: ../gnome-modules.xml.in.h:54
-msgid "GST Service Management Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:55
-msgid "GST Shared Folders Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:56
-msgid "GST Time Setup Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:57
-msgid "GST User Management Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:58
-msgid "GStreamer Properties Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:59
-msgid "Geyes Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:60
-msgid "Gnometris Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:61
-msgid "Gtk+"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:62
-msgid "Iagno Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:63
-msgid "JHBuild Documentation"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:64
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:65
-msgid "Keyboard Indicator Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:66
-msgid "LGPL License"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:67
-msgid "Layout Descriptions"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:68
-msgid "Log Viewer Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:69
-msgid "Mines Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:70
-msgid "Nibbles Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:71
-msgid "Panel Trash Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:72
-msgid "Platform Overview"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:73
-msgid "Property Nicks"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:74
-msgid "Rhythmbox Music Player"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:75
-#, fuzzy
-msgid "Sabayon"
-msgstr "Samoano"
-
-#: ../gnome-modules.xml.in.h:76
-msgid "Same GNOME Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:77
-msgid "Seahorse Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:78
-msgid "Search Tool Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:79
-msgid "Shared MIME Info"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:80
-msgid "Sound Juicer Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:81
-msgid "Sound Recorder Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:82
-msgid "Sticky Notes Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:83
-msgid "Stock Ticker Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:84
-msgid "System Administration Guide"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:85
-msgid "System Monitor Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:86 ../templates/language-release.tmpl:72
-msgid "UI translations"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:87
-#, fuzzy
-msgid "User Directories"
-msgstr "D_icionários"
-
-#: ../gnome-modules.xml.in.h:88
-msgid "User Guide"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:89
-msgid "Volume Control Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:90
-msgid "Weather Applet Locations"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:91
-msgid "Weather Report Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:92
-msgid "Window List Applet Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:93
-msgid "Workspace Switcher Applet Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:94
-msgid "XKeyboard-Config"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:95
-msgid "glChess Manual"
-msgstr ""
-
-#: ../releases.xml.in.h:1
-msgid "Administration Tools"
-msgstr ""
-
-#: ../releases.xml.in.h:2
-msgid "Desktop Applications"
-msgstr ""
-
-#: ../releases.xml.in.h:3
-msgid "Development Platform"
-msgstr ""
-
-#: ../releases.xml.in.h:4
-msgid "Development Tools"
-msgstr ""
-
-#: ../releases.xml.in.h:5
-msgid "External Dependencies"
-msgstr ""
-
-#: ../releases.xml.in.h:6
-msgid "Extra GNOME Applications"
-msgstr ""
-
-#: ../releases.xml.in.h:7
-msgid "GNOME 2.14 (old stable)"
-msgstr ""
-
-#: ../releases.xml.in.h:8
-msgid "GNOME 2.16 (old stable)"
-msgstr ""
-
-#: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (old stable)"
-msgstr ""
-
-#: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (stable)"
-msgstr ""
-
-#: ../releases.xml.in.h:11
-msgid "GNOME 2.22 (development)"
-msgstr ""
-
-#: ../releases.xml.in.h:12
+#: database-content.py:220
 msgid "GNOME Fifth Toe (Extra software)"
-msgstr ""
+msgstr "GNOME Fifth Toe (Aplicativos Extra)"
 
-#: ../releases.xml.in.h:13
+#: database-content.py:221
+msgid "Extra GNOME Applications"
+msgstr "Aplicativos Extra do GNOME"
+
+#: database-content.py:222
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (antiga)"
+
+#: database-content.py:223
 msgid "GNOME Infrastructure"
-msgstr ""
+msgstr "Infraestrutura do GNOME"
 
-#: ../releases.xml.in.h:14
-msgid "GNOME desktop"
-msgstr ""
+#: database-content.py:224
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (antiga)"
 
-#: ../releases.xml.in.h:15
-msgid "GNOME developer platform"
-msgstr ""
+#: database-content.py:225
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (antiga)"
 
-#: ../releases.xml.in.h:16
+#: database-content.py:226
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (não é GNOME)"
+
+#: database-content.py:227
+msgid "GNOME 2.24 (stable)"
+msgstr "GNOME 2.24 (atual)"
+
+#: database-content.py:228
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (antiga)"
+
+#: database-content.py:229
 msgid "GNOME-Office Productivity Applications"
 msgstr ""
 
-#: ../releases.xml.in.h:17
-msgid "System Administration"
-msgstr ""
+#: database-content.py:230
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (antiga)"
 
-#: ../releases.xml.in.h:18
-msgid "freedesktop.org (non-GNOME)"
-msgstr ""
+#: database-content.py:231
+msgid "GNOME 2.26 (Development)"
+msgstr "GNOME 2.26 (Em desenvolvimento)"
 
-#: ../teams.py:211 ../templates/language-release.tmpl:7
-#: ../templates/team.tmpl:7
+#: common/views.py:33
+msgid "translator-credits"
+msgstr "Leonardo Ferreira Fontenelle <leonardof@gnome.org>\n"
+"Jonh Wendell <jwendell@gnome.org>"
+
+#: common/views.py:54
+msgid "You have been logged out."
+msgstr "Você foi desconectado."
+
+#: common/views.py:62
+msgid "You have been successfully logged in."
+msgstr "Conectado com sucesso."
+
+#: common/views.py:69
+msgid "We're sorry, but your account has been disabled."
+msgstr "Desculpe, sua conta foi desativada."
+
+#: common/views.py:71
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "Erro ao conectar. Verifique seu nome de usuário e senha."
+
+#: common/views.py:111
+msgid "Your account has been activated."
+msgstr "Sua conta foi ativada."
+
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:16
+msgid "Log in with your username and password:"
+msgstr "Conectar com seu nome de usuário e senha:"
+
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:19
+msgid "Username:"
+msgstr "Nome de usuário:"
+
+#: django_openid/templates/django_openid/admin_login.html:23
+#: people/forms.py:26 templates/login.html:22
+msgid "Password:"
+msgstr "Senha:"
+
+# Sem tradução
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:86 templates/login.html:28
+msgid "Log in"
+msgstr "Conectar"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:33
+msgid "Or use your OpenID:"
+msgstr "Ou use seu OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:23 templates/login.html:36
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:39
+msgid "Log in with OpenID"
+msgstr "Entrar com OpenID"
+
+#: languages/views.py:51
+msgid "UI Translations"
+msgstr "Traduções de Interface"
+
+#: languages/views.py:52 templates/module_detail.html:91
+#: templates/release_detail.html:22 templates/teams/team_detail.html:23
+msgid "Documentation"
+msgstr "Documentação"
+
+#: people/forms.py:20
+msgid "Choose a username:"
+msgstr "Escolha um nome de usuário:"
+
+#: people/forms.py:21
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "Deve conter somente letras, números, sublinhados ou hífens"
+
+#: people/forms.py:22
+msgid "Email:"
+msgstr "Email:"
+
+#: people/forms.py:27
+msgid "At least 7 characters"
+msgstr "No mínimo 7 caracteres"
+
+#: people/forms.py:29
+msgid "Confirm password:"
+msgstr "Confirme a senha:"
+
+#: people/forms.py:37
+msgid "This username is already taken. Please choose another."
+msgstr "Este nome de usuário já pertence a alguém. Escolha outro por favor."
+
+#: people/forms.py:45
+msgid "You must either provide an OpenId or a password"
+msgstr "Você deve informar ou uma senha ou um OpenId"
+
+#: people/forms.py:48
+msgid "The passwords do not match"
+msgstr "As senhas não conferem"
+
+#: people/forms.py:71
+msgid "Account activation"
+msgstr "Ativação de conta"
+
+#: people/forms.py:72
 #, python-format
-msgid "%(lang)s Translation Team"
+msgid ""
+"This is a confirmation that your registration on %s succeeded. To activate "
+"your account, please click on the link below or copy and paste it in a "
+"browser."
 msgstr ""
 
-#: ../translation-teams.xml.in.h:1
-msgid "Afrikaans"
-msgstr "Africânder"
-
-#: ../translation-teams.xml.in.h:2
-msgid "Albanian"
-msgstr "Albanês"
-
-#: ../translation-teams.xml.in.h:3
-msgid "Amharic"
-msgstr "Amárico"
-
-#: ../translation-teams.xml.in.h:4
-msgid "Arabic"
-msgstr "Árabe"
-
-#: ../translation-teams.xml.in.h:5
-msgid "Armenian"
-msgstr "Armênio"
-
-#: ../translation-teams.xml.in.h:6
-msgid "Assamese"
-msgstr "Assamês"
-
-#: ../translation-teams.xml.in.h:7
-msgid "Asturian"
-msgstr "Asturiano"
-
-#: ../translation-teams.xml.in.h:8
-#, fuzzy
-msgid "Australian English"
-msgstr "Idiomas Australianos"
-
-#: ../translation-teams.xml.in.h:9
-msgid "Azerbaijani"
-msgstr "Azerbaidjano"
-
-#: ../translation-teams.xml.in.h:10
-msgid "Basque"
-msgstr "Basco"
-
-#: ../translation-teams.xml.in.h:11
-msgid "Belarusian"
-msgstr "Bielo-russo"
-
-#: ../translation-teams.xml.in.h:12
-#, fuzzy
-msgid "Belarusian Latin"
-msgstr "Bielo-russo"
-
-#: ../translation-teams.xml.in.h:13
-msgid "Bengali"
-msgstr "Bengali"
-
-#: ../translation-teams.xml.in.h:14
-#, fuzzy
-msgid "Bengali (India)"
-msgstr "Inglês (Canadense)"
-
-#: ../translation-teams.xml.in.h:15
-msgid "Bosnian"
-msgstr "Bósnio"
-
-#: ../translation-teams.xml.in.h:16
-#, fuzzy
-msgid "Brazilian Portuguese"
-msgstr "Português"
-
-#: ../translation-teams.xml.in.h:17
-msgid "Breton"
-msgstr "Bretão"
-
-#: ../translation-teams.xml.in.h:18
-#, fuzzy
-msgid "British English"
-msgstr "Inglês"
-
-#: ../translation-teams.xml.in.h:19
-msgid "Bulgarian"
-msgstr "Búlgaro"
-
-#: ../translation-teams.xml.in.h:20
-msgid "Burmese"
-msgstr "Birmanês"
-
-#: ../translation-teams.xml.in.h:21
-#, fuzzy
-msgid "Canadian English"
-msgstr "Inglês"
-
-#: ../translation-teams.xml.in.h:22
-msgid "Catalan"
-msgstr "Catalão"
-
-#: ../translation-teams.xml.in.h:23
-#, fuzzy
-msgid "Chinese (China)"
-msgstr "Chinês"
-
-#: ../translation-teams.xml.in.h:24
-msgid "Chinese (Hong Kong)"
+#: people/forms.py:74
+#, python-format
+msgid "Administrators of %s"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:25
-#, fuzzy
-msgid "Chinese (Taiwan)"
-msgstr "Chinês"
+#: people/models.py:36
+msgid "Image"
+msgstr "Imagem"
 
-#: ../translation-teams.xml.in.h:26
-msgid "Chinese Traditional"
+#: people/models.py:37
+msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr ""
 
-#: ../translation-teams.xml.in.h:27
-msgid "Croatian"
-msgstr "Croata"
-
-#: ../translation-teams.xml.in.h:28
-msgid "Czech"
-msgstr "Tcheco"
-
-#: ../translation-teams.xml.in.h:29
-msgid "Danish"
-msgstr "Dinamarquês"
-
-#: ../translation-teams.xml.in.h:30
-msgid "Divehi"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:31
-msgid "Dutch"
-msgstr "Holandês"
-
-#: ../translation-teams.xml.in.h:32
-msgid "Dzongkha"
-msgstr "Butanês"
-
-#: ../translation-teams.xml.in.h:33
-msgid "Esperanto"
-msgstr "Esperanto"
-
-#: ../translation-teams.xml.in.h:34
-msgid "Estonian"
-msgstr "Estoniano"
-
-#: ../translation-teams.xml.in.h:35
-msgid "Fijian"
-msgstr "Fidjiano"
-
-#: ../translation-teams.xml.in.h:36
-msgid "Finnish"
-msgstr "Finlandês"
-
-#: ../translation-teams.xml.in.h:37
-msgid "French"
-msgstr "Francês"
-
-#: ../translation-teams.xml.in.h:38
-msgid "Friulian"
-msgstr "Friulano"
-
-#: ../translation-teams.xml.in.h:39
-msgid "Galician"
-msgstr "Galego"
-
-#: ../translation-teams.xml.in.h:40
-msgid "Georgian"
-msgstr "Georgiano"
-
-#: ../translation-teams.xml.in.h:41
-msgid "German"
-msgstr "Alemão"
-
-#: ../translation-teams.xml.in.h:42
-msgid "Greek"
-msgstr "Grego"
-
-#: ../translation-teams.xml.in.h:43
-msgid "Guarani"
-msgstr "Guarani"
-
-#: ../translation-teams.xml.in.h:44
-msgid "Gujarati"
-msgstr "Guzerate"
-
-#: ../translation-teams.xml.in.h:45
-msgid "Haitian Creole"
-msgstr "Crioulo Haitiano"
-
-#: ../translation-teams.xml.in.h:46
-msgid "Hausa"
-msgstr "Hauçá"
-
-#: ../translation-teams.xml.in.h:47
-msgid "Hebrew"
-msgstr "Hebraico"
-
-#: ../translation-teams.xml.in.h:48
-msgid "Hindi"
-msgstr "Hindi"
-
-#: ../translation-teams.xml.in.h:49
-msgid "Hungarian"
-msgstr "Húngaro"
-
-#: ../translation-teams.xml.in.h:50
-msgid "Hyam"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:51
-msgid "Icelandic"
-msgstr "Islandês"
-
-#: ../translation-teams.xml.in.h:52
-msgid "Ido"
-msgstr "Ido"
-
-#: ../translation-teams.xml.in.h:53
-msgid "Igbo"
-msgstr "Ibo"
-
-#: ../translation-teams.xml.in.h:54
-msgid "Indonesian"
-msgstr "Indonésio"
-
-#: ../translation-teams.xml.in.h:55
-#, fuzzy
-msgid "Iranian Azerbaijani"
-msgstr "Azerbaidjano"
-
-#: ../translation-teams.xml.in.h:56
-msgid "Irish"
-msgstr "Irlandês"
-
-#: ../translation-teams.xml.in.h:57
-msgid "Italian"
-msgstr "Italiano"
-
-#: ../translation-teams.xml.in.h:58
-msgid "Japanese"
-msgstr "Japonês"
-
-#: ../translation-teams.xml.in.h:59
-msgid "Jju"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:60
-#, fuzzy
-msgid "Kagoma"
-msgstr "Komi"
-
-# Sem tradução
-#: ../translation-teams.xml.in.h:61
-msgid "Kannada"
-msgstr "Kannada"
-
-#: ../translation-teams.xml.in.h:62
-msgid "Kashmiri"
-msgstr "Caxemira"
-
-#: ../translation-teams.xml.in.h:63
-msgid "Kazakh"
-msgstr "Cazaque"
-
-#: ../translation-teams.xml.in.h:64
-msgid "Khmer"
-msgstr "Khmer"
-
-#: ../translation-teams.xml.in.h:65
-msgid "Kinyarwanda"
-msgstr "Ruanda"
-
-#: ../translation-teams.xml.in.h:66
-msgid "Kirghiz"
-msgstr "Quirguiz"
-
-#: ../translation-teams.xml.in.h:67
-msgid "Korean"
-msgstr "Coreano"
-
-#: ../translation-teams.xml.in.h:68
-msgid "Kurdish"
-msgstr "Curdo"
-
-#: ../translation-teams.xml.in.h:69
-msgid "Lao"
-msgstr "Laosiano"
-
-#: ../translation-teams.xml.in.h:70
-msgid "Latin"
-msgstr "Latim"
-
-#: ../translation-teams.xml.in.h:71
-msgid "Latvian"
-msgstr "Letão"
-
-#: ../translation-teams.xml.in.h:72
-msgid "Limburgian"
-msgstr "Limburguês"
-
-#: ../translation-teams.xml.in.h:73
-msgid "Lithuanian"
-msgstr "Lituano"
-
-#: ../translation-teams.xml.in.h:74
-#, fuzzy
-msgid "Low German"
-msgstr "Alemão"
-
-#: ../translation-teams.xml.in.h:75
-#, fuzzy
-msgid "Low German and Saxon"
-msgstr "Baixo Saxão"
-
-#: ../translation-teams.xml.in.h:76
-#, fuzzy
-msgid "Low Saxon, Germany"
-msgstr "Baixo Saxão"
-
-#: ../translation-teams.xml.in.h:77
-msgid "Macedonian"
-msgstr "Macedônio"
-
-#: ../translation-teams.xml.in.h:78
-#, fuzzy
-msgid "Maithili"
-msgstr "Marati"
-
-#: ../translation-teams.xml.in.h:79
-msgid "Malagasy"
-msgstr "Malgaxe"
-
-#: ../translation-teams.xml.in.h:80
-msgid "Malay"
-msgstr "Malaio"
-
-#: ../translation-teams.xml.in.h:81
-msgid "Malayalam"
-msgstr "Malaiala"
-
-#: ../translation-teams.xml.in.h:82
-msgid "Maltese"
-msgstr "Maltês"
-
-#: ../translation-teams.xml.in.h:83
-msgid "Maori"
-msgstr "Maori"
-
-#: ../translation-teams.xml.in.h:84
-msgid "Marathi"
-msgstr "Marati"
-
-#: ../translation-teams.xml.in.h:85
-#, fuzzy
-msgid "Mayan"
-msgstr "Manês"
-
-#: ../translation-teams.xml.in.h:86
-msgid "Mongolian"
-msgstr "Mongol"
-
-#: ../translation-teams.xml.in.h:87
-msgid "Nahuatl"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:88
-msgid "Nepali"
-msgstr "Nepali"
-
-#: ../translation-teams.xml.in.h:89
-msgid "Northern Sotho"
-msgstr "Soto do Sul"
-
-#: ../translation-teams.xml.in.h:90
-#, fuzzy
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Norueguês (Nyorsk)"
-
-#: ../translation-teams.xml.in.h:91
-#, fuzzy
-msgid "Norwegian Bokmål"
-msgstr "Norueguês (Bokmål)"
-
-#: ../translation-teams.xml.in.h:92
-#, fuzzy
-msgid "Norwegian Nynorsk"
-msgstr "Norueguês (Nyorsk)"
-
-#: ../translation-teams.xml.in.h:93
-msgid "Occitan"
-msgstr "Provençal"
-
-#: ../translation-teams.xml.in.h:94
-#, fuzzy
-msgid "Old English"
-msgstr "Inglês"
-
-#: ../translation-teams.xml.in.h:95
-msgid "Oriya"
-msgstr "Oriá"
-
-#: ../translation-teams.xml.in.h:96
-#, fuzzy
-msgid "Pashto"
-msgstr "Pachto"
-
-#: ../translation-teams.xml.in.h:97
-msgid "Persian"
-msgstr "Persa"
-
-#: ../translation-teams.xml.in.h:98
-msgid "Polish"
-msgstr "Polonês"
-
-#: ../translation-teams.xml.in.h:99
-msgid "Portuguese"
-msgstr "Português"
-
-#: ../translation-teams.xml.in.h:100
-msgid "Punjabi"
-msgstr "Panjabi"
-
-#: ../translation-teams.xml.in.h:101
-msgid "Páez"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:102
-msgid "Quechua"
-msgstr "Quíchua"
-
-#: ../translation-teams.xml.in.h:103
-msgid "Romanian"
-msgstr "Romeno"
-
-#: ../translation-teams.xml.in.h:104
-msgid "Russian"
-msgstr "Russo"
-
-#: ../translation-teams.xml.in.h:105
-msgid "Sanskrit"
-msgstr "Sânscrito"
-
-#: ../translation-teams.xml.in.h:106
-msgid "Sardinian"
-msgstr "Sardo"
-
-#: ../translation-teams.xml.in.h:107
-msgid "Serbian"
-msgstr "Sérvio"
-
-#: ../translation-teams.xml.in.h:108
-#, fuzzy
-msgid "Serbian Jekavian"
-msgstr "Sérvio"
-
-#: ../translation-teams.xml.in.h:109
-#, fuzzy
-msgid "Serbian Latin"
-msgstr "Sérvio"
-
-#: ../translation-teams.xml.in.h:110
-#, fuzzy
-msgid "Sinhala"
-msgstr "Cingalês"
-
-#: ../translation-teams.xml.in.h:111
-msgid "Slovak"
-msgstr "Eslovaco"
-
-#: ../translation-teams.xml.in.h:112
-msgid "Slovenian"
-msgstr "Esloveno"
-
-#: ../translation-teams.xml.in.h:113
-msgid "Spanish"
-msgstr "Espanhol"
-
-#: ../translation-teams.xml.in.h:114
-msgid "Swahili"
-msgstr "Suaíli"
-
-#: ../translation-teams.xml.in.h:115
-msgid "Swedish"
-msgstr "Sueco"
-
-#: ../translation-teams.xml.in.h:116
-msgid "Tagalog"
-msgstr "Tagalo"
-
-#: ../translation-teams.xml.in.h:117
-msgid "Tajik"
-msgstr "Tadjique"
-
-#: ../translation-teams.xml.in.h:118
-msgid "Tamil"
-msgstr "Tâmil"
-
-#: ../translation-teams.xml.in.h:119
-msgid "Tatar"
-msgstr "Tártaro"
-
-#: ../translation-teams.xml.in.h:120
-msgid "Telugu"
-msgstr "Télugo"
-
-#: ../translation-teams.xml.in.h:121
-msgid "Tetum"
-msgstr "Tétum"
-
-#: ../translation-teams.xml.in.h:122
-msgid "Thai"
-msgstr "Tailandês"
-
-#: ../translation-teams.xml.in.h:123
-msgid "Tibetan"
-msgstr "Tibetano"
-
-#: ../translation-teams.xml.in.h:124
-msgid "Tigrinya"
-msgstr "Tigrínia"
-
-#: ../translation-teams.xml.in.h:125
-msgid "Turkish"
-msgstr "Turco"
-
-#: ../translation-teams.xml.in.h:126
-msgid "Turkmen"
-msgstr "Turcomeno"
-
-#: ../translation-teams.xml.in.h:127
-msgid "Tyap"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:128
-msgid "Uighur"
-msgstr "Uigur"
-
-#: ../translation-teams.xml.in.h:129
-msgid "Ukrainian"
-msgstr "Ucraniano"
-
-#: ../translation-teams.xml.in.h:130
-msgid "Urdu"
-msgstr "Urdu"
-
-#: ../translation-teams.xml.in.h:131
-msgid "Uzbek"
-msgstr "Uzbeque"
-
-#: ../translation-teams.xml.in.h:132
-msgid "Uzbek (Cyrillic)"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:133
-msgid "Uzbek (Latin)"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:134
-msgid "Vietnamese"
-msgstr "Vietnamita"
-
-#: ../translation-teams.xml.in.h:135
-msgid "Walloon"
-msgstr "Valão"
-
-#: ../translation-teams.xml.in.h:136
-msgid "Welsh"
-msgstr "Galês"
-
-#: ../translation-teams.xml.in.h:137
-msgid "Wolof"
-msgstr "Uólofe"
-
-# Sem tradução
-#: ../translation-teams.xml.in.h:138
-msgid "Xhosa"
-msgstr "Xhosa"
-
-#: ../translation-teams.xml.in.h:139
-msgid "Yiddish"
-msgstr "Iídiche"
-
-#: ../translation-teams.xml.in.h:140
-msgid "Yoruba"
-msgstr "Ioruba"
-
-#: ../translation-teams.xml.in.h:141
-msgid "Zapotec"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:142
-msgid "Zulu"
-msgstr "Zulu"
-
-#: ../update-stats.py:206
+#: people/models.py:38
+msgid "Web page"
+msgstr "Página Web"
+
+#: people/models.py:39
+msgid "IRC nickname"
+msgstr "Apelido no IRC"
+
+#: people/models.py:40
+msgid "Bugzilla account"
+msgstr "Conta do Bugzilla"
+
+#: people/models.py:41
+msgid "This shoud be an email, useful if not equal to 'email' field"
+msgstr "Isto deve ser um email, útil se diferente do campo 'email'"
+
+#: people/views.py:49
+msgid "You are already member of this team."
+msgstr "Você já é um membro desta equipe."
+
+#: people/views.py:51 people/views.py:62
+msgid "Sorry, you're not allowed to modify this user."
+msgstr "Desculpe, você não pode modificar este usuário."
+
+#: stats/models.py:284
 msgid "Can't generate POT file, using old one."
 msgstr ""
 
-#: ../update-stats.py:209
-msgid "Can't generate POT file, using old one if it exists."
-msgstr ""
-
-#: ../update-stats.py:238
+#: stats/models.py:308
 msgid "Can't copy new POT file to public location."
 msgstr ""
 
-#: ../update-stats.py:250
+#: stats/models.py:346
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "Este idioma não consta na lista DOC_LINGUAS."
+
+#: stats/models.py:539
 #, python-format
-msgid "There is no translation team in charge of '%s' translation."
-msgstr ""
-
-#: ../update-stats.py:326
-msgid "Entry for this language is not present in LINGUAS file."
-msgstr ""
-
-#: ../update-stats.py:353
 msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
+"Error regenerating POT file for %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
 
-#: ../update-stats.py:356
-msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
+#: stats/models.py:813
+msgid "Administration Tools"
+msgstr "Ferramentas administrativas"
+
+#: stats/models.py:814
+msgid "Development Tools"
+msgstr "Ferramentas de desenvolvimento"
+
+#: stats/models.py:815
+msgid "GNOME Desktop"
+msgstr "Desktop GNOME"
+
+#: stats/models.py:816
+msgid "GNOME Developer Platform"
+msgstr "Plataforma de desenvolvimento GNOME"
+
+#: stats/models.py:817
+msgid "New Module Proposals"
+msgstr "Novos módulos propostos"
+
+#: stats/models.py:890
+#, python-format
+msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr ""
 
-#: ../update-stats.py:370
+#: stats/models.py:921
+#, python-format
+msgid "%(count)s message"
+msgstr ""
+
+#: stats/models.py:922
+#, python-format
+msgid "updated on %(date)s"
+msgstr ""
+
+#: stats/models.py:924
+#, python-format
+msgid "%(count)s figure"
+msgstr ""
+
+#: stats/models.py:925
+#, python-format
+msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgstr ""
+
+#: stats/models.py:928
+#, python-format
+msgid "POT file (%(messages)s) — %(updated)s"
+msgstr ""
+
+#: stats/utils.py:72
 msgid "Errors while running 'intltool-update -m' check."
 msgstr ""
 
-#: ../update-stats.py:376
+#: stats/utils.py:78
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
-msgstr ""
+msgstr "Existem alguns arquivos faltando segundo POTFILES.in: %s"
 
-#: ../update-stats.py:385
+#: stats/utils.py:87
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
 "they don't exist: %s"
 msgstr ""
 
-#: ../update-stats.py:399
-#, python-format
-msgid "PO file '%s' doesn't exist."
-msgstr ""
-
-#: ../update-stats.py:412
-#, python-format
-msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr ""
-
-#: ../update-stats.py:414
-#, python-format
-msgid "Can't get statistics for POT file '%s'."
-msgstr ""
-
-#: ../update-stats.py:417
-msgid "This PO file has an executable bit set."
-msgstr ""
-
-#: ../update-stats.py:442
-#, python-format
-msgid "PO file '%s' is not UTF-8 encoded."
-msgstr ""
-
-#: ../update-stats.py:515
-msgid "Can't find checkout directory."
-msgstr ""
-
-#: ../update-stats.py:547
+#: stats/utils.py:99
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr ""
 
-#: ../update-stats.py:552
+#: stats/utils.py:102
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 
-#: ../update-stats.py:555
+#: stats/utils.py:105
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr ""
 
-#: ../update-stats.py:581
+#: stats/utils.py:120
 #, python-format
 msgid ""
-"Error regenerating POT file for document %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"Error regenerating POT file for document %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
 
-#: ../update-stats.py:610
+#: stats/utils.py:179
 #, python-format
-msgid "There is no translation team in charge of %s."
+msgid "PO file '%s' does not exist or cannot be read."
 msgstr ""
 
-#: ../update-stats.py:654
-msgid "DOC_LINGUAS list doesn't include this language."
+#: stats/utils.py:199
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 
-#: ../templates/footer.tmpl:4
-msgid "The GNOME Project"
+#: stats/utils.py:201
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
 msgstr ""
 
-#: ../templates/footer.tmpl:6
+#: stats/utils.py:204
+msgid "This PO file has an executable bit set."
+msgstr ""
+
+#: stats/utils.py:231
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr ""
+
+#: stats/utils.py:260
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr ""
+
+#: stats/utils.py:287
 msgid ""
-"Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-"\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
-"org</a>"
+"Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 
-#: ../templates/footer.tmpl:8
-msgid "Hosted by"
+#: stats/utils.py:290
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
 msgstr ""
 
-#: ../templates/header.tmpl:34 ../templates/header.tmpl:63
+#: teams/models.py:113
+#, python-format
+msgid "No team for locale %s"
+msgstr "Nenhuma equipe para a localidade %s"
+
+#: teams/models.py:130
+msgid "Translator"
+msgstr "Tradutor"
+
+#: teams/models.py:131
+msgid "Reviewer"
+msgstr "Revisor"
+
+#: teams/models.py:132
+msgid "Committer"
+msgstr "Committer"
+
+#: teams/views.py:43
+msgid "Committers"
+msgstr "Committers"
+
+#: teams/views.py:46
+msgid "No committers"
+msgstr "Nenhum commiter"
+
+#: teams/views.py:48
+msgid "Reviewers"
+msgstr "Revisores"
+
+#: teams/views.py:51
+msgid "No reviewers"
+msgstr "Nenhum revisor"
+
+#: teams/views.py:53
+msgid "Translators"
+msgstr "Tradutores"
+
+#: teams/views.py:56
+msgid "No translators"
+msgstr "Nenhum tradutor"
+
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Erro: página não encontrada"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "A página que você solicitou não foi encontrada neste servidor."
+
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Erro no servidor (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Erro no servidor"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Desculpe, mas aconteceu um erro no servidor."
+
+#: templates/base.html:26 templates/base.html.py:55
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
-#: ../templates/header.tmpl:37
+#: templates/base.html:29
 msgid "News"
-msgstr ""
+msgstr "Notícias"
 
-#: ../templates/header.tmpl:40
+#: templates/base.html:32
 msgid "Projects"
-msgstr ""
+msgstr "Projetos"
 
-#: ../templates/header.tmpl:43
+#: templates/base.html:35
 msgid "Art"
-msgstr ""
+msgstr "Arte"
 
-#: ../templates/header.tmpl:46
+#: templates/base.html:38
 msgid "Support"
-msgstr ""
+msgstr "Suporte"
 
-#: ../templates/header.tmpl:49
+#: templates/base.html:41
 msgid "Development"
-msgstr ""
+msgstr "Desenvolvimento"
 
-#: ../templates/header.tmpl:52
+#: templates/base.html:44
 msgid "Community"
-msgstr ""
+msgstr "Comunidade"
 
-#: ../templates/header.tmpl:69 ../templates/index.tmpl:13
+#: templates/base.html:55
+msgid "Back to Damned Lies home page"
+msgstr "Voltar a página Damned Lies"
+
+#: templates/base.html:61 templates/index.html:13
 #, fuzzy
 msgid "Teams"
 msgstr "Tâmil"
 
-#: ../templates/header.tmpl:74 ../templates/index.tmpl:20
+#: templates/base.html:66 templates/index.html:20
 #, fuzzy
 msgid "Languages"
 msgstr "Idiomas de Sinais"
 
-#: ../templates/header.tmpl:79
+#: templates/base.html:71
 msgid "Release sets"
-msgstr ""
+msgstr "Versões"
 
-#: ../templates/header.tmpl:84 ../templates/index.tmpl:35
+#: templates/base.html:76 templates/index.html:36
 msgid "Modules"
+msgstr "Módulos"
+
+#: templates/base.html:84
+#, python-format
+msgid "Logged in as: %(username)s"
+msgstr "Conectado como: %(username)s"
+
+#: templates/base.html:103
+msgid "The GNOME Project"
+msgstr "O Projeto GNOME"
+
+#: templates/base.html:105
+msgid ""
+"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr ""
 
-#: ../templates/index.tmpl:9
+#: templates/base.html:107
+msgid "Hosted by"
+msgstr "Hospedado pela"
+
+#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
+#: templates/login.html:4 templates/register.html:4
+#: templates/register_success.html:4
 msgid "Damned Lies about GNOME"
-msgstr ""
+msgstr "Mentiras cabeludas sobre o GNOME"
 
-#: ../templates/index.tmpl:14
+#: templates/error.html:9
+msgid "Error:"
+msgstr "Erro:"
+
+#: templates/index.html:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
+"Lista de todas as equipes de tradução, com muitas informações tais como o principal contato (coordenador), sites web e lista de discussão."
 
-#: ../templates/index.tmpl:15
+#: templates/index.html:15
 msgid ""
-"If there is no team for your language, you can easily <a href=\"http://live."
-"gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
+"Se não existe nenhuma equipe para o seu idioma, você pode facilmente <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>criar a sua</a>."
 
-#: ../templates/index.tmpl:21
+#: templates/index.html:22
+#, python-format
 msgid ""
-"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
 msgstr ""
+"Lista de todos os idiomas os quais existem <a href='%(teams_url)s'>Equipes de Tradução</"
+"a>."
 
-#: ../templates/index.tmpl:22
+#: templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
+"Algumas equipes gerenciam mais de um idioma (geralmente simples variantes), e aqui você pode ver todos os idiomas que o GNOME está sendo traduzido."
 
-#: ../templates/index.tmpl:26
+#: templates/index.html:27
 msgid "Release Sets"
-msgstr ""
+msgstr "Versões"
 
-#: ../templates/index.tmpl:27
+#: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr ""
+msgstr "Lista de todas as versões do GNOME e de outros pacotes."
 
-#: ../templates/index.tmpl:29
+#: templates/index.html:30
 msgid ""
-"Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
-"\"."
+"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"or &quot;GNOME 2.14&quot;."
 msgstr ""
+"Exemplos de versões são &quot;GNOME Office&quot; &quot;Fifth Toe&quot; ou &quot;GNOME 2.26&quot;."
 
-#: ../templates/index.tmpl:30
+#: templates/index.html:31
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
-"\"Desktop Applications\" and \"Developer Platform\"."
-msgstr ""
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+msgstr "Os pacotes oficiais do GNOME são divididos em categorias, tais como &quot;Desktop&quot; e &quot;Platform&quot;."
 
-#: ../templates/index.tmpl:32
+#: templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr ""
+"Entre aqui se você quer comparar o suporte aos idiomas em qualquer uma destas versões ou pacotes."
 
-#: ../templates/index.tmpl:36
+#: templates/index.html:37
 msgid "List of all modules with statistics in here."
-msgstr ""
+msgstr "Lista de todos os módulos com suas estatísticas."
 
-#: ../templates/index.tmpl:38
+#: templates/index.html:39
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
-msgstr ""
+msgstr "Módulos são bibliotecas ou aplicativos, com um ou mais ramos de desenvolvimento inclusos."
 
-#: ../templates/index.tmpl:39
+#: templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
+"Eles são geralmente obtidos do SVN, e nós mantemos todas as informações relevantes sobre eles (Bugzilla, página web, mantenedores, etc)."
 
-#: ../templates/index.tmpl:45
+#: templates/index.html:46
 msgid "Translated by:"
+msgstr "Traduzido por:"
+
+#: templates/login.html:10 templates/register.html:11
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Você já está conectado como %(username)s."
+
+#: templates/login.html:14
+#, python-format
+msgid ""
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
+msgstr ""
+"Se você não tem uma conta neste site, <a href='%(link)"
+"s'>crie</a> uma agora."
+
+#: templates/logout_form.html:5
+msgid "Log out"
+msgstr "Desconectar"
+
+#: templates/module_detail.html:5
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "Estatísticas do módulo: %(name)s"
+
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Este módulo não faz parte do repositório SVN do GNOME. Por favor dê uma olhada na página do módulo para saber para onde enviar a tradução."
+
+#: templates/module_detail.html:29
+msgid "Maintainers"
+msgstr "Mantenedores"
+
+#: templates/module_detail.html:37
+msgid "Bug reporting"
+msgstr "Relatório de Erros"
+
+#: templates/module_detail.html:40
+msgid "Show existing i18n and l10n bugs"
+msgstr "Ver os erros relacionados a i18n"
+
+#: templates/module_detail.html:42
+msgid "Report bugs to Bugzilla"
+msgstr "Relatar algum erro no Bugzilla"
+
+#: templates/module_detail.html:51
+msgid "Branches:"
+msgstr "Ramos:"
+
+#: templates/module_detail.html:65
+msgid "Browse CVS"
+msgstr "Navegar no CVS"
+
+#: templates/module_detail.html:68
+msgid "Browse SVN"
+msgstr "Navegar no SVN"
+
+#: templates/module_detail.html:72
+msgid "This branch is currently string-frozen."
+msgstr "Este ramo está atualmente congelado para strings."
+
+#: templates/module_detail.html:81
+msgid "Translation"
+msgstr "Tradução"
+
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
 msgstr ""
 
-#: ../templates/index.tmpl:45
-msgid "translator-credits"
+#: templates/module_images.html:12
+msgid "Figures translation status"
 msgstr ""
 
-#: ../templates/language-release-doc-stats.tmpl:26
-#: ../templates/language-release-ui-stats.tmpl:27
-msgid "%(cat)s (%(percent)s%% translated)"
+#: templates/module_images.html:17
+msgid "Original"
+msgstr "Original"
+
+#: templates/module_images.html:32
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr ""
+"Traduzida, mas usa a original (talvez a imagem não tenha nenhuma palavra a ser traduzida)"
+
+#: templates/module_images.html:36
+msgid "Fuzzy"
+msgstr "Aproximadas"
+
+#: templates/module_images.html:41
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr ""
 
-#: ../templates/language-release.tmpl:10 ../templates/team.tmpl:10
-#, fuzzy
-msgid "Details"
-msgstr "Dinamarquês"
+#: templates/module_images.html:44
+msgid "Not translated"
+msgstr "Não traduzidas"
 
-#: ../templates/language-release.tmpl:13 ../templates/team.tmpl:13
-msgid "%(lang)s Translation Team Page:"
+#: templates/module_list.html:4 templates/module_list.html.py:9
+msgid "GNOME Modules"
+msgstr "Módulos GNOME"
+
+#: templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr "Escolha um módulo abaixo para ver algumas mentiras cabeludas sobre ele:"
+
+#: templates/person_base.html:24
+msgid "Instant messaging:"
+msgstr "Mensageiro instantâneo:"
+
+#: templates/person_base.html:31
+msgid "Bugzilla account:"
+msgstr "Conta Bugzilla:"
+
+#: templates/person_base.html:35
+msgid "SVN account:"
+msgstr "Conta SVN:"
+
+#: templates/register.html:9
+msgid "Account Registration"
+msgstr "Criação de conta"
+
+#: templates/register.html:14
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+"Aqui você pode se registrar para obter uma conta neste site. Isso só é útil se você planeja contribuir traduzindo o GNOME."
+
+#: templates/register.html:15
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+"Depois que se registrar e se conectar no site, você está apto a entrar em qualquer equipe de tradução, na página do seu perfil."
+
+#: templates/register.html:35
+msgid "Register with OpenId"
+msgstr "Registrar com OpenID"
+
+#: templates/register.html:47
+msgid "Register with password"
+msgstr "Registrar com senha"
+
+#: templates/register_success.html:8
+msgid "Registration Success"
 msgstr ""
 
-#: ../templates/language-release.tmpl:17 ../templates/team.tmpl:17
-msgid "Users Web Page:"
+#: templates/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
 msgstr ""
 
-#: ../templates/language-release.tmpl:21 ../templates/team.tmpl:21
-msgid "Bugzilla:"
-msgstr ""
+#: templates/release_detail.html:10
+#, python-format
+msgid "%(name)s Release"
+msgstr "%(name)s"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
-msgid "Report Bug in Translation"
-msgstr ""
-
-#: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
-msgid "Show Existing Bugs"
-msgstr ""
-
-#: ../templates/language-release.tmpl:29 ../templates/team.tmpl:30
-msgid "Mailing List:"
-msgstr ""
-
-#: ../templates/language-release.tmpl:31 ../templates/team.tmpl:32
-msgid "Send e-mail to the list"
-msgstr ""
-
-#: ../templates/language-release.tmpl:33 ../templates/team.tmpl:34
-#, fuzzy
-msgid "Subscribe"
-msgstr "_Descrever"
-
-#: ../templates/language-release.tmpl:42 ../templates/team.tmpl:43
-msgid "Coordinator"
-msgstr ""
-
-#: ../templates/language-release.tmpl:52
-msgid "Hide completed modules"
-msgstr ""
-
-#: ../templates/language-release.tmpl:56
-msgid "Show completed modules"
-msgstr ""
-
-#: ../templates/language-release.tmpl:60 ../templates/release.tmpl:9
+#: templates/release_detail.html:13
+#: templates/languages/language_release.html:20
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
 
-#: ../templates/language-release.tmpl:66 ../templates/module.tmpl:73
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
-msgid "Documentation"
-msgstr ""
+#: templates/release_detail.html:19 templates/teams/team_detail.html:22
+msgid "Release"
+msgstr "Versão"
 
-#: ../templates/list-languages.tmpl:7
-#, fuzzy
-msgid "GNOME Languages"
-msgstr "Idiomas de Sinais"
+#: templates/release_detail.html:20 templates/teams/team_detail.html:22
+msgid "User Interface"
+msgstr "Interface"
 
-#: ../templates/list-languages.tmpl:11
-msgid "GNOME is being translated to following %(count)s language:"
-msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] ""
-msgstr[1] ""
+#: templates/release_detail.html:21 templates/release_detail.html.py:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:22
+#: templates/teams/team_detail.html:23
+msgid "Graph"
+msgstr "Gráfico"
 
-#: ../templates/list-languages.tmpl:35
-msgid "GNOME is currently not being translated to any language. :("
-msgstr ""
-
-#: ../templates/list-modules.tmpl:7
-msgid "GNOME modules"
-msgstr ""
-
-#: ../templates/list-modules.tmpl:10
-msgid "Select a module below to see some of the damned lies about it:"
-msgstr ""
-
-#: ../templates/list-modules.tmpl:30
-msgid ""
-"There are currently no modules for which I am gathering damned lies for. "
-"Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
-msgstr ""
-
-#: ../templates/list-releases.tmpl:7
+#: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
-msgstr ""
+msgstr "Versões do GNOME"
 
-#: ../templates/list-releases.tmpl:10
+#: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 
-#: ../templates/list-releases.tmpl:27
-msgid "There are currently no releases defined in GNOME. :("
-msgstr ""
-
-#: ../templates/list-teams.tmpl:7
-msgid "GNOME Translation Teams"
-msgstr ""
-
-#: ../templates/list-teams.tmpl:10
-msgid "Select a team below to see more information about it:"
-msgstr ""
-
-#: ../templates/list-teams.tmpl:20
-msgid "Coordinated by %(coordinator)s"
-msgstr ""
-
-#: ../templates/list-teams.tmpl:26
-msgid "There are currently no translation teams in GNOME. :("
-msgstr ""
-
-#: ../templates/module-images.tmpl:9
-msgid "Figures translation status"
-msgstr ""
-
-#: ../templates/module-images.tmpl:12
-#, fuzzy
-msgid "Original"
-msgstr "Tigrínia"
-
-#: ../templates/module-images.tmpl:28
-msgid ""
-"Translated, but uses original one (maybe the figure doesn't contain any "
-"string to translate)"
-msgstr ""
-
-#: ../templates/module-images.tmpl:36
-msgid "No existing file (\"Technical\" fuzzy)"
-msgstr ""
-
-#: ../templates/module-images.tmpl:39
-msgid "Not translated"
-msgstr ""
-
-#: ../templates/module.tmpl:12
-msgid ""
-"This module is not part of the GNOME SVN repository. Please check the "
-"module's  web page to see where to send translations."
-msgstr ""
-
-#: ../templates/module.tmpl:20
-msgid "Maintainers"
-msgstr ""
-
-#: ../templates/module.tmpl:36
-msgid "Bug reporting"
-msgstr ""
-
-#: ../templates/module.tmpl:37
-msgid "Report bugs to Bugzilla"
-msgstr ""
-
-#: ../templates/module.tmpl:43
-msgid "Branches:"
-msgstr ""
-
-#: ../templates/module.tmpl:58
-msgid "Browse CVS"
-msgstr ""
-
-#: ../templates/module.tmpl:60 ../templates/module.tmpl:62
-msgid "Browse SVN"
-msgstr ""
-
-#: ../templates/module.tmpl:66
-msgid "This branch is currently string-frozen."
-msgstr ""
-
-#: ../templates/module.tmpl:93
-msgid "Translation"
-msgstr ""
-
-#: ../templates/people.tmpl:7
-msgid "GNOME Contributors"
-msgstr ""
-
-#: ../templates/people.tmpl:10
-msgid "GNOME is being developed by following people:"
-msgstr ""
-
-#: ../templates/people.tmpl:40
-msgid "There are no contributors, GNOME turned itself up from nothing."
-msgstr ""
-
-#: ../templates/person-base.tmpl:26
-msgid "Instant messaging:"
-msgstr ""
-
-#: ../templates/person-base.tmpl:40
-msgid "Bugzilla account:"
-msgstr ""
-
-#: ../templates/person-base.tmpl:43
-msgid "SVN account:"
-msgstr ""
-
-#: ../templates/person-base.tmpl:47
-msgid "Maintains:"
-msgstr ""
-
-#: ../templates/person-base.tmpl:57
-msgid "Translates:"
-msgstr ""
-
-#: ../templates/person-base.tmpl:67
-msgid "Coordinates %(team)s"
-msgstr ""
-
-#: ../templates/release.tmpl:7
-msgid "%(release)s Release"
-msgstr ""
-
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
-#, fuzzy
-msgid "Release"
-msgstr "Substituir"
-
-#: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:41
-#: ../templates/team.tmpl:57
-msgid "Graph"
-msgstr ""
-
-#: ../templates/release.tmpl:15 ../templates/team.tmpl:57
-msgid "User Interface"
-msgstr ""
-
-#: ../templates/release.tmpl:29 ../templates/team.tmpl:69
-msgid "-"
-msgstr ""
-
-#: ../templates/show-stats.tmpl:15
-msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
-msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../templates/show-stats.tmpl:17
-msgid "POT file (%(potsize)s message)"
-msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../templates/show-stats.tmpl:22
-msgid "updated on %(date)s"
-msgstr ""
-
-#: ../templates/show-stats.tmpl:26
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
 #, fuzzy
 msgid "Notices"
 msgstr "Copta"
 
-#: ../templates/show-stats.tmpl:37
+#: templates/stats_show.html:30
 #, fuzzy
 msgid "Language"
 msgstr "Idiomas de Sinais"
 
-#: ../templates/show-stats.tmpl:37
+#: templates/stats_show.html:30 vertimus/models.py:147
 msgid "Translated"
+msgstr "Traduzidas"
+
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
+msgid "Display document figures"
 msgstr ""
+
+#: templates/admin/base_site.html:4
+msgid "Damned Lies site admin"
+msgstr ""
+
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
+msgid "GNOME Languages"
+msgstr "Idiomas"
+
+#: templates/languages/language_list.html:11
+#, python-format
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgstr "O GNOME está sendo traduzido para os seguintes %(numb)s idiomas:\n"
+
+#: templates/languages/language_release.html:12
+msgid "Hide completed modules"
+msgstr ""
+
+#: templates/languages/language_release.html:16
+msgid "Show completed modules"
+msgstr ""
+
+#: templates/languages/language_release_stats.html:23
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr ""
+
+#: templates/languages/language_release_stats.html:81
+msgid "Error summary"
+msgstr ""
+
+#: templates/languages/language_release_stats.html:90
+msgid "Download all po files"
+msgstr "Baixar todos os arquivos po"
+
+#: templates/people/person_detail.html:5
+msgid "GNOME Contributor"
+msgstr "Colaborador GNOME"
+
+#: templates/people/person_detail.html:16
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/people/person_detail.html:26
+msgid "Save"
+msgstr "Salvar"
+
+#: templates/people/person_detail.html:36
+msgid "Maintains:"
+msgstr "Mantém:"
+
+#: templates/people/person_detail.html:45 templates/teams/team_detail.html:63
+msgid "Team membership"
+msgstr "Participação nas equipes"
+
+#: templates/people/person_detail.html:49
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "Membro da equipe %(team_name)s (%(role_name)s)"
+
+#: templates/people/person_detail.html:59
+msgid "I would like to join the following team as 'translator':"
+msgstr "Eu gostaria de entrar na seguinte equipe como \"tradutor\":"
+
+#: templates/people/person_detail.html:60
+msgid "Join"
+msgstr "Entrar"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:9
+msgid "GNOME Contributors"
+msgstr "Colaboradores GNOME"
+
+#: templates/people/person_list.html:11
+msgid "GNOME is being developed by following people:"
+msgstr "O GNOME está sendo desenvolvido pelas seguintes pessoas:"
+
+#: templates/teams/team_base.html:6
+msgid "Details"
+msgstr "Detalhes"
+
+#: templates/teams/team_base.html:9
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Página Web da equipe de tradução para o %(lang)s:"
+
+#: templates/teams/team_base.html:13
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: templates/teams/team_base.html:15
+msgid "Report Bug in Translation"
+msgstr "Relatar um erro de tradução"
+
+#: templates/teams/team_base.html:16
+msgid "Show Existing Bugs"
+msgstr "Mostrar erros existentes"
+
+#: templates/teams/team_base.html:20
+msgid "Mailing List:"
+msgstr "Lista de Discussão:"
+
+#: templates/teams/team_base.html:22
+msgid "Send e-mail to the list"
+msgstr "Enviar email para a lista"
+
+#: templates/teams/team_base.html:24
+msgid "Subscribe"
+msgstr "Inscrever-se"
+
+#: templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Coordenador"
+
+#: templates/teams/team_detail.html:10
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "Equipe de tradução para o %(lang)s"
+
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "Equipes de tradução do GNOME"
+
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "Escolha uma equipe abaixo para ver mais informações sobre ela:"
+
+#: templates/teams/team_list.html:25
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Coordenada por <a href=\"%(url)s\">%(name)s</a>"
+
+#: templates/teams/team_list.html:34
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "Atualmente não há nenhuma equipe de tradução no GNOME. :("
+
+#: templates/vertimus/vertimus_detail.html:5
+#, python-format
+msgid "Module Translation: %(name)s"
+msgstr "Tradução do módulo %(name)s"
+
+#: templates/vertimus/vertimus_detail.html:13
+msgid "Used in release(s):"
+msgstr "Usado nas versões:"
+
+#: templates/vertimus/vertimus_detail.html:33
+msgid "State:"
+msgstr "Estado:"
+
+#: templates/vertimus/vertimus_detail.html:43
+msgid "Translated:"
+msgstr "Traduzido:"
+
+#: templates/vertimus/vertimus_detail.html:73
+msgid "Action History"
+msgstr "Histórico de ações"
+
+#: templates/vertimus/vertimus_detail.html:89
+msgid "No comment"
+msgstr "Nenhum comentário"
+
+#: templates/vertimus/vertimus_detail.html:98
+msgid "New Action"
+msgstr "Nova ação"
+
+#: templates/vertimus/vertimus_detail.html:105
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/vertimus/vertimus_detail.html:109
+#, python-format
+msgid ""
+"You need to be authenticated and to be member of the %(team_name)s team."
+msgstr ""
+"Você precisa estar conectado e ser um membro da equipe %(team_name)s."
+
+#: vertimus/forms.py:30
+msgid "Action"
+msgstr "Ação"
+
+#: vertimus/forms.py:33
+msgid "Comment"
+msgstr "Comentário"
+
+#: vertimus/forms.py:38
+msgid "File"
+msgstr "Arquivo"
+
+#: vertimus/forms.py:49
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Somente arquivos com extensão .po, .bz2 ou .png são admitidos."
+
+#: vertimus/forms.py:54
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ""
+"O arquivo .po não passou no teste 'msgfmt -vc'. Por favor corrija-o e tente novamente."
+
+#: vertimus/forms.py:64
+msgid "A comment or a file is needed for this action."
+msgstr "É necessário um comentário ou um arquivo para esta ação."
+
+#: vertimus/forms.py:67
+msgid "A file is needed for this action."
+msgstr "É necessário um arquivo para esta ação."
+
+#: vertimus/models.py:121
+msgid "Inactive"
+msgstr "Inativo"
+
+#: vertimus/models.py:134
+msgid "Translating"
+msgstr "Traduzindo"
+
+#: vertimus/models.py:164
+msgid "Proofreading"
+msgstr "Revisando"
+
+#: vertimus/models.py:178
+msgid "Proofread"
+msgstr ""
+
+#: vertimus/models.py:191
+msgid "To Review"
+msgstr "Pronto para revisão"
+
+#: vertimus/models.py:203
+msgid "To Commit"
+msgstr "Pronto para envio"
+
+#: vertimus/models.py:216
+msgid "Committing"
+msgstr "Submetendo"
+
+#: vertimus/models.py:230
+msgid "Committed"
+msgstr "Submetido"
+
+#: vertimus/models.py:354
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
+"'%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+
+#: vertimus/models.py:367 vertimus/models.py:412
+msgid "Without comment"
+msgstr "Sem comentários"
+
+#: vertimus/models.py:373
+msgid "Write a comment"
+msgstr "Escrever um comentário"
+
+#: vertimus/models.py:400
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+
+#: vertimus/models.py:420
+msgid "Reserve for translation"
+msgstr "Reservar para tradução"
+
+#: vertimus/models.py:431
+msgid "Upload the new translation"
+msgstr "Enviar a nova tradução"
+
+#: vertimus/models.py:446
+msgid "Reserve for proofreading"
+msgstr "Reservar para revisão"
+
+#: vertimus/models.py:457
+msgid "Upload for proofreading"
+msgstr ""
+
+#: vertimus/models.py:472
+msgid "Ready for submission"
+msgstr "Pronto para submissão"
+
+#: vertimus/models.py:488
+msgid "Reserve to submit"
+msgstr "Reservar para submissão"
+
+#: vertimus/models.py:499
+msgid "Inform of submission"
+msgstr "Informar da submissão"
+
+#: vertimus/models.py:513
+msgid "Requiring review"
+msgstr "Precisa de revisão"
+
+#: vertimus/models.py:544
+msgid "Backup the actions"
+msgstr "Backup das ações"
+
+#: vertimus/models.py:581
+msgid "Undo the last state change"
+msgstr "Desfazer a última ação"
+
+#, fuzzy
+#~ msgid "Sabayon"
+#~ msgstr "Samoano"
+
+#~ msgid "Burmese"
+#~ msgstr "Birmanês"
+
+#~ msgid "Fijian"
+#~ msgstr "Fidjiano"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "Crioulo Haitiano"
+
+#~ msgid "Hausa"
+#~ msgstr "Hauçá"
+
+#~ msgid "Igbo"
+#~ msgstr "Ibo"
+
+#, fuzzy
+#~ msgid "Kagoma"
+#~ msgstr "Komi"
+
+#~ msgid "Lao"
+#~ msgstr "Laosiano"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltês"
+
+#, fuzzy
+#~ msgid "Mayan"
+#~ msgstr "Manês"
+
+#~ msgid "Quechua"
+#~ msgstr "Quíchua"
+
+#~ msgid "Sanskrit"
+#~ msgstr "Sânscrito"
+
+#~ msgid "Sardinian"
+#~ msgstr "Sardo"
+
+#~ msgid "Swahili"
+#~ msgstr "Suaíli"
+
+#~ msgid "Tetum"
+#~ msgstr "Tétum"
+
+#~ msgid "Tibetan"
+#~ msgstr "Tibetano"
+
+#~ msgid "Tigrinya"
+#~ msgstr "Tigrínia"
+
+#~ msgid "Wolof"
+#~ msgstr "Uólofe"
 
 #~ msgid "_Suggestions for '%s'"
 #~ msgstr "_Sugestões para '%s'"
@@ -1672,9 +2151,6 @@ msgstr ""
 #~ msgid "Farsi"
 #~ msgstr "Persa"
 
-#~ msgid "Fulah"
-#~ msgstr "Fula"
-
 #~ msgid "Faroese"
 #~ msgstr "Feróico"
 
@@ -1727,10 +2203,6 @@ msgstr ""
 #~ msgid "Javanese"
 #~ msgstr "Javanês"
 
-# Sem tradução
-#~ msgid "Kachin"
-#~ msgstr "Kachin"
-
 #~ msgid "Kongo"
 #~ msgstr "Congo"
 
@@ -1764,10 +2236,6 @@ msgstr ""
 
 #~ msgid "Lingala"
 #~ msgstr "Lingala"
-
-# Sem tradução
-#~ msgid "Lozi"
-#~ msgstr "Lozi"
 
 #~ msgid "Luba-Katanga"
 #~ msgstr "Baluba"
@@ -1905,9 +2373,6 @@ msgstr ""
 #~ msgid "R_eplace All"
 #~ msgstr "_Substituir Todas"
 
-#~ msgid "Remember"
-#~ msgstr "Lembrar"
-
 #~ msgid "_Add word"
 #~ msgstr "_Adicionar palavra"
 
@@ -1931,9 +2396,6 @@ msgstr ""
 
 #~ msgid "Abkhazian"
 #~ msgstr "Abcázio"
-
-#~ msgid "Ainu"
-#~ msgstr "Aino"
 
 #~ msgid "English, Old (ca. 450-1100)"
 #~ msgstr "Inglês, Arcaico (apr.450-1100)"
