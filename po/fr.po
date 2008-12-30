@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 08:39+0000\n"
-"PO-Revision-Date: 2008-12-30 10:04+0100\n"
+"POT-Creation-Date: 2008-12-30 12:41+0000\n"
+"PO-Revision-Date: 2008-12-30 15:05+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -1022,7 +1022,7 @@ msgid "UI Translations"
 msgstr "Traductions de l'interface utilisateur"
 
 #: languages/views.py:52 templates/module_detail.html:91
-#: templates/release_detail.html:22 templates/teams/team_detail.html:22
+#: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -1291,6 +1291,18 @@ msgstr ""
 msgid "No team for locale %s"
 msgstr "Aucune équipe pour la langue %s"
 
+#: teams/models.py:130
+msgid "Translator"
+msgstr "Traducteur"
+
+#: teams/models.py:131
+msgid "Reviewer"
+msgstr "Relecteur"
+
+#: teams/models.py:132
+msgid "Committer"
+msgstr "Commiteur"
+
 #: teams/views.py:43
 msgid "Committers"
 msgstr "Commiteurs"
@@ -1522,7 +1534,7 @@ msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
 "s'>register</a> for a new account."
 msgstr ""
-"Si vous ne possédez pas de compte sur ce site, vous pouvez <a href=''%(link)"
+"Si vous ne possédez pas de compte sur ce site, vous pouvez <a href='%(link)"
 "s'>créer</a> un nouveau compte."
 
 #: templates/logout_form.html:5
@@ -1534,7 +1546,7 @@ msgstr "Se déconnecter"
 msgid "Module Statistics: %(name)s"
 msgstr "Statistiques de module : %(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:20
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1692,7 +1704,7 @@ msgstr ""
 msgid "Release"
 msgstr "Version"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:23
+#: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
 msgstr "Interface utilisateur"
 
@@ -1712,7 +1724,7 @@ msgstr ""
 "Sélectionnez une version ou un groupe de versions ci-dessous pour afficher "
 "de plus amples informations à son sujet :"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:34
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
 msgid "Notices"
 msgstr "Remarques"
 
@@ -1724,7 +1736,7 @@ msgstr "Langue"
 msgid "Translated"
 msgstr "Traduit"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:60
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
 msgid "Display document figures"
 msgstr "Affiche les figures du document"
 
@@ -1872,28 +1884,39 @@ msgstr "Il n'y a actuellement aucune équipe de traduction dans GNOME. :("
 msgid "Module Translation: %(name)s"
 msgstr "Traduction de module : %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:24
+#: templates/vertimus/vertimus_detail.html:13
+msgid "Used in release(s):"
+msgstr "Utilisé dans la(les) version(s) :"
+
+#: templates/vertimus/vertimus_detail.html:33
 msgid "State:"
 msgstr "État :"
 
-#: templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:43
 msgid "Translated:"
 msgstr "Traduction :"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:73
 msgid "Action History"
 msgstr "Historique des actions"
 
-#: templates/vertimus/vertimus_detail.html:85
+#: templates/vertimus/vertimus_detail.html:89
+msgid "No comment"
+msgstr "Sans commentaire"
+
+#: templates/vertimus/vertimus_detail.html:98
 msgid "New Action"
 msgstr "Nouvelle action"
 
-#: templates/vertimus/vertimus_detail.html:96
+#: templates/vertimus/vertimus_detail.html:105
+msgid "Submit"
+msgstr "Envoyer"
+
+#: templates/vertimus/vertimus_detail.html:109
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
-msgstr ""
-"Vous devez être authentifié et membre de l'équipe %(team_name)s."
+msgstr "Vous devez être authentifié et membre de l'équipe %(team_name)s."
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -1907,6 +1930,25 @@ msgstr "Commentaire"
 msgid "File"
 msgstr "Fichier"
 
+#: vertimus/forms.py:49
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Seuls les fichiers ayant l'extension .po, .gz, .bz2 ou .png sont acceptés."
+
+#: vertimus/forms.py:54
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ""
+"Le fichier .po n'est pas valide (msgfmt -vc). Veuillez le corriger et essayer "
+"à nouveau."
+
+#: vertimus/forms.py:64
+msgid "A comment or a file is needed for this action."
+msgstr "Un commentaire ou un fichier est nécessaire pour cette action."
+
+#: vertimus/forms.py:67
+msgid "A file is needed for this action."
+msgstr "Un fichier est nécessaire pour cette action."
+
 #: vertimus/models.py:121
 msgid "Inactive"
 msgstr "Inactif"
@@ -1915,9 +1957,17 @@ msgstr "Inactif"
 msgid "Translating"
 msgstr "Traduction en cours"
 
+#: vertimus/models.py:164
+msgid "Proofreading"
+msgstr "Relecture en cours"
+
 #: vertimus/models.py:178
 msgid "Proofread"
 msgstr "Relu"
+
+#: vertimus/models.py:191
+msgid "To Review"
+msgstr "À revoir"
 
 #: vertimus/models.py:203
 msgid "To Commit"
@@ -1931,7 +1981,7 @@ msgstr "Commit en cours"
 msgid "Committed"
 msgstr "Commité"
 
-#: vertimus/models.py:349
+#: vertimus/models.py:354
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1948,15 +1998,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:362 vertimus/models.py:406
+#: vertimus/models.py:367 vertimus/models.py:412
 msgid "Without comment"
 msgstr "Sans commentaire"
 
-#: vertimus/models.py:368
+#: vertimus/models.py:373
 msgid "Write a comment"
 msgstr "Écrire un commentaire"
 
-#: vertimus/models.py:394
+#: vertimus/models.py:400
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1968,48 +2018,48 @@ msgid ""
 msgstr ""
 "Bonjour,\n"
 "\n"
-"Un nouveau commentaire a été ajouté pour le module %(module)s - %(branch)s "
-"- %(domain)s (%(language)s).\n"
+"Un nouveau commentaire a été ajouté pour le module %(module)s - %(branch)s - "
+"%(domain)s (%(language)s).\n"
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:414
+#: vertimus/models.py:420
 msgid "Reserve for translation"
 msgstr "Réserver la traduction"
 
-#: vertimus/models.py:425
+#: vertimus/models.py:431
 msgid "Upload the new translation"
 msgstr "Déposer la nouvelle traduction"
 
-#: vertimus/models.py:439
+#: vertimus/models.py:446
 msgid "Reserve for proofreading"
 msgstr "Réserver la relecture"
 
-#: vertimus/models.py:450
+#: vertimus/models.py:457
 msgid "Upload for proofreading"
 msgstr "Déposer la relecture"
 
-#: vertimus/models.py:464
+#: vertimus/models.py:472
 msgid "Ready for submission"
 msgstr "Prêt pour le commit"
 
-#: vertimus/models.py:480
+#: vertimus/models.py:488
 msgid "Reserve to submit"
 msgstr "Réserver le commit"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:499
 msgid "Inform of submission"
 msgstr "Informer du commit"
 
-#: vertimus/models.py:505
+#: vertimus/models.py:513
 msgid "Requiring review"
 msgstr "À revoir"
 
-#: vertimus/models.py:535
+#: vertimus/models.py:544
 msgid "Backup the actions"
 msgstr "Archiver les actions"
 
-#: vertimus/models.py:572
+#: vertimus/models.py:581
 msgid "Undo the last state change"
 msgstr "Annuler le dernier changement d'état"
 
