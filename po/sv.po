@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 10:54+0000\n"
-"PO-Revision-Date: 2008-12-30 12:14+0100\n"
+"POT-Creation-Date: 2008-12-30 12:41+0000\n"
+"PO-Revision-Date: 2008-12-30 15:56+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1251,6 +1251,18 @@ msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används,
 msgid "No team for locale %s"
 msgstr "Ingen grupp för lokalen %s"
 
+#: teams/models.py:130
+msgid "Translator"
+msgstr "Översättare"
+
+#: teams/models.py:131
+msgid "Reviewer"
+msgstr "Granskare"
+
+#: teams/models.py:132
+msgid "Committer"
+msgstr "Insändare"
+
 #: teams/views.py:43
 msgid "Committers"
 msgstr "Insändare"
@@ -1786,19 +1798,19 @@ msgstr "Översatt:"
 msgid "Action History"
 msgstr "Åtgärdshistorik"
 
-#: templates/vertimus/vertimus_detail.html:86
+#: templates/vertimus/vertimus_detail.html:89
 msgid "No comment"
 msgstr "Ingen kommentar"
 
-#: templates/vertimus/vertimus_detail.html:93
+#: templates/vertimus/vertimus_detail.html:98
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:100
+#: templates/vertimus/vertimus_detail.html:105
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:109
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -1814,6 +1826,22 @@ msgstr "Kommentera"
 #: vertimus/forms.py:38
 msgid "File"
 msgstr "Fil"
+
+#: vertimus/forms.py:49
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Endast filer med filändelsen .po, .gz, .bz2 eller .png tillåts."
+
+#: vertimus/forms.py:54
+msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ".po-filen klarade inte \"msgfmt -vc\". Korrigera filen och försök igen."
+
+#: vertimus/forms.py:64
+msgid "A comment or a file is needed for this action."
+msgstr "En kommentar eller en fil behövs för denna åtgärd."
+
+#: vertimus/forms.py:67
+msgid "A file is needed for this action."
+msgstr "En fil behövs för denna åtgärd."
 
 #: vertimus/models.py:121
 msgid "Inactive"
@@ -1847,7 +1875,7 @@ msgstr "Insändning"
 msgid "Committed"
 msgstr "Insänd"
 
-#: vertimus/models.py:349
+#: vertimus/models.py:354
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1862,16 +1890,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:362
-#: vertimus/models.py:406
+#: vertimus/models.py:367
+#: vertimus/models.py:412
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:368
+#: vertimus/models.py:373
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: vertimus/models.py:394
+#: vertimus/models.py:400
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1886,43 +1914,43 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:414
+#: vertimus/models.py:420
 msgid "Reserve for translation"
 msgstr "Reservera för översättning"
 
-#: vertimus/models.py:425
+#: vertimus/models.py:431
 msgid "Upload the new translation"
 msgstr "Skicka upp ny översättning"
 
-#: vertimus/models.py:439
+#: vertimus/models.py:446
 msgid "Reserve for proofreading"
 msgstr "Reservera för korrekturläsning"
 
-#: vertimus/models.py:450
+#: vertimus/models.py:457
 msgid "Upload for proofreading"
 msgstr "Skicka upp för korrekturläsning"
 
-#: vertimus/models.py:464
+#: vertimus/models.py:472
 msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
-#: vertimus/models.py:480
+#: vertimus/models.py:488
 msgid "Reserve to submit"
 msgstr "Reservera för insändning"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:499
 msgid "Inform of submission"
 msgstr "Informera om insändning"
 
-#: vertimus/models.py:505
+#: vertimus/models.py:513
 msgid "Requiring review"
 msgstr "Kräver granskning"
 
-#: vertimus/models.py:535
+#: vertimus/models.py:544
 msgid "Backup the actions"
 msgstr "Säkerhetskopiera åtgärderna"
 
-#: vertimus/models.py:572
+#: vertimus/models.py:581
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
