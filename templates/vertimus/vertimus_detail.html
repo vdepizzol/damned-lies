@@ -14,13 +14,11 @@
   {% for release in releases %}
   <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %}</a><br />
   {% endfor %}
-{% else %}
-  <a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>
 {% endif %}
 </div>
 {% endwith %}
 
-<h1>{{ module.get_description }} - {{ branch.name }} - {% trans domain.description %} - {{ language.get_name }}</h1>
+<h1><a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a> - {{ branch.name }} - {% trans domain.description %} - {{ language.get_name }}</h1>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
