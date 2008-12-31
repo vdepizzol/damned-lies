@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 12:41+0000\n"
-"PO-Revision-Date: 2008-12-30 15:05+0100\n"
+"POT-Creation-Date: 2008-12-31 11:38+0000\n"
+"PO-Revision-Date: 2008-12-31 15:51+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -829,7 +829,7 @@ msgstr "Documentation d'utilisation de GNOME 2"
 msgid "Beagle Desktop Search"
 msgstr "Recherche dans le bureau Beagle"
 
-#: database-content.py:204 templates/base.html:48
+#: database-content.py:204 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
@@ -983,37 +983,37 @@ msgid "Your account has been activated."
 msgstr "Votre compte a été activé."
 
 #: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:16
+#: templates/login.html:15
 msgid "Log in with your username and password:"
 msgstr "Connectez-vous avec votre nom d'utilisateur et votre mot de passe :"
 
 #: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:19
+#: templates/login.html:18
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:26 templates/login.html:22
+#: people/forms.py:26 templates/login.html:21
 msgid "Password:"
 msgstr "Mot de passe :"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:86 templates/login.html:28
+#: templates/base.html:76 templates/login.html:27
 msgid "Log in"
 msgstr "Se connecter"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:33
+#: templates/login.html:32
 msgid "Or use your OpenID:"
 msgstr "Ou utilisez votre OpenID :"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:23 templates/login.html:36
+#: people/forms.py:23 templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID :"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:39
+#: templates/login.html:38
 msgid "Log in with OpenID"
 msgstr "Se connecter par OpenID"
 
@@ -1044,7 +1044,7 @@ msgstr "Courriel :"
 msgid "At least 7 characters"
 msgstr "Au minimum 7 caractères"
 
-#: people/forms.py:29
+#: people/forms.py:29 templates/people/password_change_form.html:30
 msgid "Confirm password:"
 msgstr "Confirmez le mot de passe :"
 
@@ -1347,64 +1347,63 @@ msgstr "Erreur de serveur"
 msgid "We're sorry but a server error has occurred."
 msgstr "Désolé, une erreur de serveur est survenue."
 
-#: templates/base.html:26 templates/base.html.py:55
+#: templates/base.html:25 templates/base.html.py:41
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:29
+#: templates/base.html:26
 msgid "News"
 msgstr "Actualités"
 
-#: templates/base.html:32
+#: templates/base.html:27
 msgid "Projects"
 msgstr "Projets"
 
-#: templates/base.html:35
+#: templates/base.html:28
 msgid "Art"
 msgstr "Art"
 
-#: templates/base.html:38
+#: templates/base.html:29
 msgid "Support"
 msgstr "Assistance"
 
-#: templates/base.html:41
+#: templates/base.html:30
 msgid "Development"
 msgstr "Développement"
 
-#: templates/base.html:44
+#: templates/base.html:31
 msgid "Community"
 msgstr "Communauté"
 
-#: templates/base.html:55
+#: templates/base.html:41
 msgid "Back to Damned Lies home page"
 msgstr "Retour à la page d'accueil de Damned Lies"
 
-#: templates/base.html:61 templates/index.html:13
+#: templates/base.html:47 templates/index.html:13
 msgid "Teams"
 msgstr "Équipes"
 
-#: templates/base.html:66 templates/index.html:20
+#: templates/base.html:52 templates/index.html:20
 msgid "Languages"
 msgstr "Langues"
 
-#: templates/base.html:71
+#: templates/base.html:57
 msgid "Release sets"
 msgstr "Groupes de versions"
 
-#: templates/base.html:76 templates/index.html:36
+#: templates/base.html:62 templates/index.html:36
 msgid "Modules"
 msgstr "Modules"
 
-#: templates/base.html:84
-#, python-format
-msgid "Logged in as: %(username)s"
-msgstr "Connecté en tant que %(username)s"
+#: templates/base.html:73
+msgid "Log Out"
+msgstr "Se déconnecter"
 
-#: templates/base.html:103
+#: templates/base.html:93
 msgid "The GNOME Project"
 msgstr "Le projet GNOME"
 
-#: templates/base.html:105
+#: templates/base.html:95
 msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
@@ -1413,7 +1412,7 @@ msgstr ""
 "viewvc/damned-lies/'>damned-lies</a> de <a href='http://svn.gnome.org'>svn."
 "gnome.org</a>"
 
-#: templates/base.html:107
+#: templates/base.html:97
 msgid "Hosted by"
 msgstr "Hébergé par"
 
@@ -1528,7 +1527,7 @@ msgstr "Traduit par :"
 msgid "You are already logged in as %(username)s."
 msgstr "Vous être déjà connecté en tant que %(username)s."
 
-#: templates/login.html:14
+#: templates/login.html:13
 #, python-format
 msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
@@ -1536,10 +1535,6 @@ msgid ""
 msgstr ""
 "Si vous ne possédez pas de compte sur ce site, vous pouvez <a href='%(link)"
 "s'>créer</a> un nouveau compte."
-
-#: templates/logout_form.html:5
-msgid "Log out"
-msgstr "Se déconnecter"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1649,7 +1644,7 @@ msgstr "Compte SVN :"
 msgid "Account Registration"
 msgstr "Enregistrement de compte"
 
-#: templates/register.html:14
+#: templates/register.html:13
 msgid ""
 "You can register here for an account on this site. This is only useful if "
 "you plan to contribute to GNOME translations."
@@ -1657,7 +1652,7 @@ msgstr ""
 "Vous pouvez créer ici un nouveau compte pour ce site. Ce n'est utile que si "
 "vous envisagez de contribuer aux traductions GNOME."
 
-#: templates/register.html:15
+#: templates/register.html:14
 msgid ""
 "After registration and connection, you will be able to join an existing team "
 "from your profile page."
@@ -1665,11 +1660,15 @@ msgstr ""
 "Après l'enregistrement et la connexion, vous pourrez rejoindre une équipe "
 "existante à partir de la page de votre profil."
 
-#: templates/register.html:35
+#: templates/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Authentifiez-vous par OpenID <strong>ou</strong> par un mot de passe :"
+
+#: templates/register.html:34
 msgid "Register with OpenId"
 msgstr "S'enregistrer par OpenID"
 
-#: templates/register.html:47
+#: templates/register.html:46
 msgid "Register with password"
 msgstr "S'enregistrer par mot de passe"
 
@@ -1777,15 +1776,54 @@ msgstr "Liste des erreurs"
 msgid "Download all po files"
 msgstr "Télécharger tous les fichiers po"
 
+#: templates/people/password_change_done.html:4
+#: templates/people/password_change_done.html:8
+msgid "Password change successful"
+msgstr "La modification du mot de passe a réussi"
+
+#: templates/people/password_change_done.html:9
+msgid "Your password was changed."
+msgstr "Votre mot de passe a été modifié."
+
+#: templates/people/password_change_form.html:4
+#: templates/people/password_change_form.html:9
+msgid "Password change"
+msgstr "Modification du mot de passe"
+
+#: templates/people/password_change_form.html:11
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"Pour des raisons de sécurité, veuillez saisir votre ancien mot de passe puis "
+"saisissez deux fois votre nouveau mot de passe afin de pouvoir vérifier que "
+"vous l'avez tapé correctement."
+
+#: templates/people/password_change_form.html:18
+msgid "Old password:"
+msgstr "Ancien mot de passe :"
+
+#: templates/people/password_change_form.html:24
+msgid "New password:"
+msgstr "Nouveau mot de passe :"
+
+#: templates/people/password_change_form.html:33
+msgid "Change my password"
+msgstr "Modifier mon mot de passe"
+
 #: templates/people/person_detail.html:5
 msgid "GNOME Contributor"
 msgstr "Contributeur GNOME"
 
-#: templates/people/person_detail.html:16
-msgid "Edit"
-msgstr "Modifier"
+#: templates/people/person_detail.html:14
+msgid "Change your details"
+msgstr "Modifier les informations"
 
-#: templates/people/person_detail.html:26
+#: templates/people/person_detail.html:15
+msgid "Change your password"
+msgstr "Modifier le mot de passe"
+
+#: templates/people/person_detail.html:25
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -1932,14 +1970,15 @@ msgstr "Fichier"
 
 #: vertimus/forms.py:49
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
-msgstr "Seuls les fichiers ayant l'extension .po, .gz, .bz2 ou .png sont acceptés."
+msgstr ""
+"Seuls les fichiers ayant l'extension .po, .gz, .bz2 ou .png sont acceptés."
 
 #: vertimus/forms.py:54
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
-"Le fichier .po n'est pas valide (msgfmt -vc). Veuillez le corriger et essayer "
-"à nouveau."
+"Le fichier .po n'est pas valide (msgfmt -vc). Veuillez le corriger et "
+"essayer à nouveau."
 
 #: vertimus/forms.py:64
 msgid "A comment or a file is needed for this action."
@@ -2062,6 +2101,9 @@ msgstr "Archiver les actions"
 #: vertimus/models.py:581
 msgid "Undo the last state change"
 msgstr "Annuler le dernier changement d'état"
+
+#~ msgid "Edit"
+#~ msgstr "Modifier"
 
 #~ msgid "%(lang)s Translation Team — %(locale)s"
 #~ msgstr "Équipe de traduction en %(lang)s (%(locale)s)"
