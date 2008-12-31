@@ -1,3 +1,10 @@
+2008-12-31  Claude Paroz  <claude@2xlibre.net>
+
+	* teams/forms.py: Exclude 'coordinator' from role popup.
+	* teams/models.py: Add 'coordinator' in role choices.
+	* teams/views.py: Compare username instead of objects, because User !=
+	Person.
+
 2008-12-30  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	Add the password change form.

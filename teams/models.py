@@ -130,6 +130,7 @@ ROLE_CHOICES = (
     ('translator', ugettext_lazy('Translator')),
     ('reviewer', ugettext_lazy('Reviewer')),
     ('committer', ugettext_lazy('Committer')),
+    ('coordinator', ugettext_lazy('Coordinator')),
 )
 
 class Role(models.Model):
