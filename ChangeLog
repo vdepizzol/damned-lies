@@ -1,3 +1,14 @@
+2009-01-01  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* media/css/main.css: New styles for person_list view. Fix hackergotchi
+	height and reduce text size. Reduce space between image and details.
+	* templates/people/person_list.html: Replace the CSS 3 attribute
+	'column-count' (and relatives) by a more ordinary CSS layout (fix
+	strange behaviour with FF3 and works with IE). Remove inline style.
+	Use MEDIA_URL setting.
+
+	First commit of 2009, happy new year ;)
+
 2008-12-31  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/vertimus/vertimus_detail.html: Add link to module on module

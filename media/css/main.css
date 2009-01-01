@@ -114,6 +114,24 @@ div.maintainer {
   clear: left;
 }
 
+/* Used in people/person_list */
+.person_list {
+  padding-left: 85px;
+  margin-bottom: 12px;
+  clear: left;
+}
+
+.person_list .name {
+  font-size: 110%;
+}
+
+.person_list img {
+  border: 0;
+  height: 48px;
+  float: left;
+  margin-left: -65px;
+}
+
 div.mainpage {
   width:80%;
   text-align: left;

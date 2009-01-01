@@ -5,26 +5,30 @@
 
 {% block content %}
 <div class="mainpage">
+  <h2>{% trans "GNOME Contributors" %}</h2>
 
-<h2>{% trans "GNOME Contributors" %}</h2>
+  <p>{% trans "GNOME is being developed by following people:" %}</p>
 
-<p>{% trans "GNOME is being developed by following people:" %}</p>
-
-<div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">
-{% for person in person_list %}
-  <div class="maintainer">
-  {% if person.image %}
-    <img class="people" src="{{ person.image }}" alt="{{ person.name }}" />
-  {% else %}
-    <img class="people" src="/media/img/nobody.png" alt="" />
-  {% endif %}
-  <a style="font-size: 120%;" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
-  {% if person.webpage_url %}
-  <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
-  {% endif %}
-  </div>
-{% endfor %}
-</div>
-
+  {% load list_to_columns %}
+  <div style="col3_container">
+    {% list_to_columns person_list as columns 3 %}
+    {% for l in columns %}
+    <div class="col3_column">
+      {% for person in l %}
+      <div class="person_list">
+        {% if person.image %}
+        <img src="{{ person.image }}" alt="{{ person.name }}" />
+        {% else %}
+        <img src="{{ MEDIA_URL }}img/nobody.png" alt="" />
+        {% endif %}
+        <a class="name" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
+        
+        {% if person.webpage_url %}
+        <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
