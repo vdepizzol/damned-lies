@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 12:41+0000\n"
-"PO-Revision-Date: 2008-12-30 15:56+0100\n"
+"POT-Creation-Date: 2008-12-31 11:38+0000\n"
+"PO-Revision-Date: 2009-01-01 17:00+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -829,7 +829,7 @@ msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
 #: database-content.py:204
-#: templates/base.html:48
+#: templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
@@ -967,40 +967,40 @@ msgid "Your account has been activated."
 msgstr "Ditt konto har aktiverats."
 
 #: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:16
+#: templates/login.html:15
 msgid "Log in with your username and password:"
 msgstr "Logga in med ditt användarnamn och lösenord:"
 
 #: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:19
+#: templates/login.html:18
 msgid "Username:"
 msgstr "Användarnamn:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:26
-#: templates/login.html:22
+#: templates/login.html:21
 msgid "Password:"
 msgstr "Lösenord:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:86
-#: templates/login.html:28
+#: templates/base.html:76
+#: templates/login.html:27
 msgid "Log in"
 msgstr "Logga in"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:33
+#: templates/login.html:32
 msgid "Or use your OpenID:"
 msgstr "eller använd ditt OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
 #: people/forms.py:23
-#: templates/login.html:36
+#: templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:39
+#: templates/login.html:38
 msgid "Log in with OpenID"
 msgstr "Logga in med OpenID"
 
@@ -1032,6 +1032,7 @@ msgid "At least 7 characters"
 msgstr "Minst 7 tecken"
 
 #: people/forms.py:29
+#: templates/people/password_change_form.html:30
 msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
@@ -1308,72 +1309,71 @@ msgstr "Serverfel"
 msgid "We're sorry but a server error has occurred."
 msgstr "Vi är ledsna men ett serverfel har inträffat."
 
-#: templates/base.html:26
-#: templates/base.html.py:55
+#: templates/base.html:25
+#: templates/base.html.py:41
 msgid "Home"
 msgstr "Hem"
 
-#: templates/base.html:29
+#: templates/base.html:26
 msgid "News"
 msgstr "Nyheter"
 
-#: templates/base.html:32
+#: templates/base.html:27
 msgid "Projects"
 msgstr "Projekt"
 
-#: templates/base.html:35
+#: templates/base.html:28
 msgid "Art"
 msgstr "Grafik"
 
-#: templates/base.html:38
+#: templates/base.html:29
 msgid "Support"
 msgstr "Support"
 
-#: templates/base.html:41
+#: templates/base.html:30
 msgid "Development"
 msgstr "Utveckling"
 
-#: templates/base.html:44
+#: templates/base.html:31
 msgid "Community"
 msgstr "Gemenskap"
 
-#: templates/base.html:55
+#: templates/base.html:41
 msgid "Back to Damned Lies home page"
 msgstr "Tillbaka till Förbannade lögner"
 
-#: templates/base.html:61
+#: templates/base.html:47
 #: templates/index.html:13
 msgid "Teams"
 msgstr "Grupper"
 
-#: templates/base.html:66
+#: templates/base.html:52
 #: templates/index.html:20
 msgid "Languages"
 msgstr "Språk"
 
-#: templates/base.html:71
+#: templates/base.html:57
 msgid "Release sets"
 msgstr "Utgåvesamlingar"
 
-#: templates/base.html:76
+#: templates/base.html:62
 #: templates/index.html:36
 msgid "Modules"
 msgstr "Moduler"
 
-#: templates/base.html:84
-#, python-format
-msgid "Logged in as: %(username)s"
-msgstr "Inloggad som: %(username)s"
+#: templates/base.html:73
+msgid "Log Out"
+msgstr "Logga ut"
 
-#: templates/base.html:103
+#: templates/base.html:93
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: templates/base.html:105
+#: templates/base.html:95
 msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
-#: templates/base.html:107
+#: templates/base.html:97
 msgid "Hosted by"
 msgstr "Driftas av"
 
@@ -1449,14 +1449,10 @@ msgstr "Översatt av:"
 msgid "You are already logged in as %(username)s."
 msgstr "Du är redan inloggad som %(username)s."
 
-#: templates/login.html:14
+#: templates/login.html:13
 #, python-format
 msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
 msgstr "Om du inte har ett konto för denna plats så kan du <a href='%(link)s'>registrera</a> ett nytt konto."
-
-#: templates/logout_form.html:5
-msgid "Log out"
-msgstr "Logga ut"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1558,19 +1554,23 @@ msgstr "SVN-konto:"
 msgid "Account Registration"
 msgstr "Kontoregistrering"
 
-#: templates/register.html:14
+#: templates/register.html:13
 msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
 msgstr "Du kan registrera ett konto för denna plats. Detta är endast användbart om du tänker bidra med översättningar till GNOME."
 
-#: templates/register.html:15
+#: templates/register.html:14
 msgid "After registration and connection, you will be able to join an existing team from your profile page."
 msgstr "Du kommer efter registrering och anslutning att kunna gå med i en befintlig grupp från din profilsida."
 
-#: templates/register.html:35
+#: templates/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Autentisera via OpenID <strong>eller</strong> lösenord:"
+
+#: templates/register.html:34
 msgid "Register with OpenId"
 msgstr "Registrera med OpenID"
 
-#: templates/register.html:47
+#: templates/register.html:46
 msgid "Register with password"
 msgstr "Registrera med lösenord"
 
@@ -1674,15 +1674,49 @@ msgstr "Felsammandrag"
 msgid "Download all po files"
 msgstr "Hämta alla po-filer"
 
+#: templates/people/password_change_done.html:4
+#: templates/people/password_change_done.html:8
+msgid "Password change successful"
+msgstr "Lösenordet har ändrats"
+
+#: templates/people/password_change_done.html:9
+msgid "Your password was changed."
+msgstr "Ditt lösenord ändrades."
+
+#: templates/people/password_change_form.html:4
+#: templates/people/password_change_form.html:9
+msgid "Password change"
+msgstr "Lösenordsbyte"
+
+#: templates/people/password_change_form.html:11
+msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt nya lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
+
+#: templates/people/password_change_form.html:18
+msgid "Old password:"
+msgstr "Gammalt lösenord:"
+
+#: templates/people/password_change_form.html:24
+msgid "New password:"
+msgstr "Nytt lösenord:"
+
+#: templates/people/password_change_form.html:33
+msgid "Change my password"
+msgstr "Ändra mitt lösenord"
+
 #: templates/people/person_detail.html:5
 msgid "GNOME Contributor"
 msgstr "GNOME-bidragsgivare"
 
-#: templates/people/person_detail.html:16
-msgid "Edit"
-msgstr "Redigera"
+#: templates/people/person_detail.html:14
+msgid "Change your details"
+msgstr "Ändra dina uppgifter"
 
-#: templates/people/person_detail.html:26
+#: templates/people/person_detail.html:15
+msgid "Change your password"
+msgstr "Ändra ditt lösenord"
+
+#: templates/people/person_detail.html:25
 msgid "Save"
 msgstr "Spara"
 
@@ -1954,6 +1988,10 @@ msgstr "Säkerhetskopiera åtgärderna"
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
+#~ msgid "Logged in as: %(username)s"
+#~ msgstr "Inloggad som: %(username)s"
+#~ msgid "Edit"
+#~ msgstr "Redigera"
 #~ msgid "openVPN"
 #~ msgstr "openVPN"
 #~ msgid "vpnc"
