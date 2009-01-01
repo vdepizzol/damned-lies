@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-31 11:38+0000\n"
+"POT-Creation-Date: 2009-01-01 20:30+0000\n"
 "PO-Revision-Date: 2008-12-09 20:14+0000\n"
 "Last-Translator: Yair Hershkovitz\n"
 "Language-Team: he\n"
@@ -829,7 +829,7 @@ msgstr "חיפוש בשולחן העבודה - Beagle"
 #: database-content.py:204 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
-msgstr "Damned Lies"
+msgstr "Damned Lies‏"
 
 #: database-content.py:205
 msgid "Banshee Music Player"
@@ -924,8 +924,7 @@ msgstr "‏GNOME ‏2.14 (גירסה ישנה)"
 
 #: database-content.py:226
 msgid "freedesktop.org (non-GNOME)"
-msgstr ""
-"‏freedesktop.org (לא שייך ל-GNOME)"
+msgstr "‏freedesktop.org (לא שייך ל-GNOME)"
 
 #: database-content.py:227
 msgid "GNOME 2.24 (stable)"
@@ -1266,6 +1265,10 @@ msgstr ""
 msgid "Committer"
 msgstr "קהילה"
 
+#: teams/models.py:133 templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "מתאם"
+
 #: teams/views.py:43
 #, fuzzy
 msgid "Committers"
@@ -1475,7 +1478,7 @@ msgstr ""
 msgid "Module Statistics: %(name)s"
 msgstr ""
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1538,7 +1541,7 @@ msgstr ""
 
 #: templates/module_images.html:36
 msgid "Fuzzy"
-msgstr ""
+msgstr "מטושטש"
 
 #: templates/module_images.html:41
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
@@ -1566,7 +1569,8 @@ msgstr "חשבון Bugzilla:"
 
 #: templates/person_base.html:35
 msgid "SVN account:"
-msgstr "חשבון SVN:"
+msgstr ""
+"חשבון SVN:‏"
 
 #: templates/register.html:9
 msgid "Account Registration"
@@ -1640,7 +1644,7 @@ msgstr "שחרורי GNOME"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr ""
 
@@ -1652,7 +1656,7 @@ msgstr "שפה"
 msgid "Translated"
 msgstr "מתורגם"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
 msgid "Display document figures"
 msgstr ""
 
@@ -1747,7 +1751,7 @@ msgstr ""
 
 #: templates/people/person_detail.html:45 templates/teams/team_detail.html:63
 msgid "Team membership"
-msgstr ""
+msgstr "חברות בצוותים"
 
 #: templates/people/person_detail.html:49
 #, python-format
@@ -1762,11 +1766,11 @@ msgstr ""
 msgid "Join"
 msgstr "הצטרף"
 
-#: templates/people/person_list.html:4 templates/people/person_list.html:9
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "תורמים ל-GNOME"
 
-#: templates/people/person_list.html:11
+#: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
 msgstr "‏GNOME מפותח על ידי האנשים הבאים:"
 
@@ -1797,20 +1801,18 @@ msgstr "רשימת תפוצה:"
 
 #: templates/teams/team_base.html:22
 msgid "Send e-mail to the list"
-msgstr ""
+msgstr "שלח דוא\"ל לרשימה"
 
 #: templates/teams/team_base.html:24
 msgid "Subscribe"
 msgstr "הרשם"
 
-#: templates/teams/team_base.html:31
-msgid "Coordinator"
-msgstr "מתאם"
-
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr ""
+"צוות התרגום ל"
+"%(lang)s"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
@@ -1838,31 +1840,31 @@ msgstr "צוותי תרגום GNOME"
 msgid "Used in release(s):"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:43
+#: templates/vertimus/vertimus_detail.html:41
 msgid "Translated:"
 msgstr "מתורגם:"
 
-#: templates/vertimus/vertimus_detail.html:73
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Action History"
-msgstr ""
+msgstr "היסטורית פעולות"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:87
 msgid "No comment"
 msgstr "אין הערה"
 
-#: templates/vertimus/vertimus_detail.html:98
+#: templates/vertimus/vertimus_detail.html:96
 msgid "New Action"
 msgstr "פעולה חדשה"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/vertimus/vertimus_detail.html:103
 msgid "Submit"
-msgstr ""
+msgstr "שלח"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:107
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
