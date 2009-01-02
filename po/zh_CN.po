@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-31 11:38+0000\n"
+"POT-Creation-Date: 2009-01-01 17:07+0000\n"
 "PO-Revision-Date: 2008-11-28 14:29+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -1109,11 +1109,11 @@ msgstr "抱歉，您没有权限修改此用户。"
 
 #: stats/models.py:284
 msgid "Can't generate POT file, using old one."
-msgstr "无法生成 POT 文档，改用旧的。"
+msgstr "无法生成 POT 文件，改用旧的。"
 
 #: stats/models.py:308
 msgid "Can't copy new POT file to public location."
-msgstr "无法复制新的 POT 文档到公开位置"
+msgstr "无法复制新的 POT 文件到公开位置"
 
 #: stats/models.py:346
 msgid "DOC_LINGUAS list doesn't include this language."
@@ -1175,21 +1175,21 @@ msgstr[0] "%(count)s 个图片"
 #: stats/models.py:925
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "POT 文档 (%(messages)s,·%(figures)s)·—·%(updated)s"
+msgstr "POT 文件 (%(messages)s %(figures)s) — %(updated)s"
 
 #: stats/models.py:928
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "POT 文档 (%(messages)s) — %(updated)s"
+msgstr "POT 文件 (%(messages)s) — %(updated)s"
 
 #: stats/utils.py:72
 msgid "Errors while running 'intltool-update -m' check."
-msgstr "运行 'intltool-update -m' 检查时出错。"
+msgstr "运行“intltool-update -m”检查时出错。"
 
 #: stats/utils.py:78
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
-msgstr "在 POTFILES.in 中缺少部分文件: %s"
+msgstr "在 POTFILES.in 中缺少部分文件：%s"
 
 #: stats/utils.py:87
 #, python-format
@@ -1197,7 +1197,7 @@ msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
 "they don't exist: %s"
 msgstr ""
-"下列文件在·POTFILES.in 或者 OTFILES.skip 中涉及到，然而他们并不存在：·%s"
+"下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而他们并不存在：%s"
 
 #: stats/utils.py:99
 #, python-format
@@ -1225,19 +1225,19 @@ msgstr ""
 "%(output)s</pre>"
 
 #: stats/utils.py:179
-#, fuzzy, python-format
+#, python-format
 msgid "PO file '%s' does not exist or cannot be read."
-msgstr "PO 文档 '%s' 不存在。"
+msgstr "PO 文件“%s”不存在或者无法读取。"
 
 #: stats/utils.py:199
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr "PO·文件·'%s'·没有通过·msgfmt·检查：不能更新。"
+msgstr "PO 文件“%s”没有通过 msgfmt 检查：不能更新。"
 
 #: stats/utils.py:201
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
-msgstr "无法得到 POT 文档 '%s' 的统计数据。"
+msgstr "无法得到 POT 文件“%s”的统计数据。"
 
 #: stats/utils.py:204
 msgid "This PO file has an executable bit set."
@@ -1246,7 +1246,7 @@ msgstr "该 PO 文件设置为可执行属性。"
 #: stats/utils.py:231
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "PO 文档 '%s' 并不是 UTF-8 编码。"
+msgstr "PO 文件“%s”并不是 UTF-8 编码。"
 
 #: stats/utils.py:260
 msgid "Entry for this language is not present in LINGUAS file."
@@ -1279,6 +1279,10 @@ msgstr "审阅者"
 #: teams/models.py:132
 msgid "Committer"
 msgstr "提交者"
+
+#: teams/models.py:133 templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "协调人"
 
 #: teams/views.py:43
 msgid "Committers"
@@ -1358,7 +1362,7 @@ msgstr "返回胡言乱语首页"
 
 #: templates/base.html:47 templates/index.html:13
 msgid "Teams"
-msgstr "队伍"
+msgstr "团队"
 
 #: templates/base.html:52 templates/index.html:20
 msgid "Languages"
@@ -1415,7 +1419,7 @@ msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
-"如果您的语言没有翻译小组，您可以轻易地<a·href=\"http://live.gnome.org/"
+"如果您的语言没有翻译小组，您可以轻易地<a href=\"http://live.gnome.org/"
 "TranslationProject/StartingATeam/\">开始您自己的小组</a>。"
 
 #: templates/index.html:22
@@ -1446,8 +1450,8 @@ msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
 msgstr ""
-"发行系列的例子有·&quot;GNOME·办公&quot;,·&quot;第五脚趾&quot;·和·&quot;"
-"GNOME·2.14&quot;."
+"发行系列的例子有“GNOME 办公”、“第五脚趾”和“"
+"GNOME 2.14”."
 
 #: templates/index.html:31
 msgid ""
@@ -1501,7 +1505,7 @@ msgstr ""
 msgid "Module Statistics: %(name)s"
 msgstr "模块统计：%(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1522,7 +1526,7 @@ msgstr "显示已存在的 i18n 和 l10n 的 bug"
 
 #: templates/module_detail.html:42
 msgid "Report bugs to Bugzilla"
-msgstr "报告 Bug 到 Bugzilla"
+msgstr "向 Bugzilla 报告 Bug"
 
 #: templates/module_detail.html:51
 msgid "Branches:"
@@ -1555,7 +1559,7 @@ msgstr "图形翻译状态"
 
 #: templates/module_images.html:17
 msgid "Original"
-msgstr "起初的"
+msgstr "原文"
 
 #: templates/module_images.html:32
 msgid ""
@@ -1603,15 +1607,13 @@ msgstr "账户注册"
 msgid ""
 "You can register here for an account on this site. This is only useful if "
 "you plan to contribute to GNOME translations."
-msgstr ""
-"您可以在这里注册本网站。请仅当您想要为 GNOME 翻译做出贡献时才注册。"
+msgstr "您可以在这里注册本网站。请仅当您想要为 GNOME 翻译做出贡献时才注册。"
 
 #: templates/register.html:14
 msgid ""
 "After registration and connection, you will be able to join an existing team "
 "from your profile page."
-msgstr ""
-"注册成功之后，您可以从您的个人页面加入现有的团队。"
+msgstr "注册成功之后，您可以从您的个人页面加入现有的团队。"
 
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
@@ -1647,7 +1649,7 @@ msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"该模块的本次发行不是·GNOME·SVN·库的一部分。请检查各模块的网页以查看应发送翻译"
+"该模块的本次发行不是 GNOME SVN 库的一部分。请检查各模块的网页以查看应发送翻译"
 "到何处。"
 
 #: templates/release_detail.html:19 templates/teams/team_detail.html:22
@@ -1670,9 +1672,9 @@ msgstr "GNOME 发行版本"
 
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
-msgstr "选择以下的某次发行或发行套件以查看有关于此的更多信息："
+msgstr "选择以下的某次发行或发行套件以查看有关的更多信息："
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "注意"
 
@@ -1684,7 +1686,7 @@ msgstr "语言"
 msgid "Translated"
 msgstr "已翻译"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
 msgid "Display document figures"
 msgstr "显示文档图片"
 
@@ -1833,10 +1835,6 @@ msgstr "发送 E-mail 到邮件列表"
 msgid "Subscribe"
 msgstr "订阅"
 
-#: templates/teams/team_base.html:31
-msgid "Coordinator"
-msgstr "协调人"
-
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
@@ -1853,7 +1851,7 @@ msgstr "选择下列的某个小组以查看关于它的更多信息："
 #: templates/teams/team_list.html:25
 #, python-format
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
-msgstr "由 <a·href=\"%(url)s\">%(name)s</a> 协调"
+msgstr "由 <a href=\"%(url)s\">%(name)s</a> 协调"
 
 #: templates/teams/team_list.html:34
 msgid "There are currently no translation teams in GNOME. :("
@@ -1868,31 +1866,31 @@ msgstr "模块翻译：%(name)s"
 msgid "Used in release(s):"
 msgstr "在下列发布中使用："
 
-#: templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
 msgstr "状态："
 
-#: templates/vertimus/vertimus_detail.html:43
+#: templates/vertimus/vertimus_detail.html:41
 msgid "Translated:"
 msgstr "已翻译："
 
-#: templates/vertimus/vertimus_detail.html:73
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Action History"
 msgstr "操作历史"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:87
 msgid "No comment"
 msgstr "无评论"
 
-#: templates/vertimus/vertimus_detail.html:98
+#: templates/vertimus/vertimus_detail.html:96
 msgid "New Action"
 msgstr "新操作"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/vertimus/vertimus_detail.html:103
 msgid "Submit"
 msgstr "提交"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:107
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -1917,8 +1915,7 @@ msgstr "只支持扩展名为 .po、.gz、.bz2 或 .png 的文件。"
 #: vertimus/forms.py:54
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr ""
-".po 文件无法通过“msgfmt -vc”。请您修复此文件，然后再试一次。"
+msgstr ".po 文件无法通过“msgfmt -vc”。请您修复此文件，然后再试一次。"
 
 #: vertimus/forms.py:64
 msgid "A comment or a file is needed for this action."
@@ -1972,8 +1969,8 @@ msgid ""
 msgstr ""
 "您好，\n"
 "\n"
-"%(module)s - %(branch)s - %(domain)s (%(language)s) 的新状态是 "
-"“%(new_state)s”。\n"
+"%(module)s - %(branch)s - %(domain)s (%(language)s) 的新状态是“%(new_state)"
+"s”。\n"
 "%(url)s\n"
 "\n"
 
