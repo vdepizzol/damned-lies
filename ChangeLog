@@ -1,3 +1,10 @@
+2009-01-02  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/models.py: Add identical doc figures detection in update_stats.
+	* stats/utils.py: Moved get_fig_stats from models to utils.
+	* stats/tests/__init__.py: Add test for identical doc figures detection.
+	Fixes bug #566227.
+
 2009-01-01  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* media/css/main.css: New styles for person_list view. Fix hackergotchi

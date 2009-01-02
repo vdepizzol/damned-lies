@@ -20,6 +20,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import sys, os, re, time
+from itertools import islice
 from subprocess import Popen, PIPE, STDOUT
 
 from django.utils.translation import ugettext as _, ugettext_noop
@@ -289,6 +290,34 @@ def check_lang_support(module_path, po_path, lang):
 
     errors.append(("warn", ugettext_noop("Don't know where to look if this language is actually used, ask the module maintainer.")))
     return errors
+
+def get_fig_stats(pofile):
+    """ Extract image strings from pofile and return a list of figures dict {'path':, 'fuzzy':, 'translated':} """
+    # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
+    command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
+    (status, output) = run_shell_command(command)
+    if status != STATUS_OK:
+        # FIXME: something should be logged here
+        return []
+    lines = output.split('\n')
+    while lines[0][0] != "#":
+        lines = lines[1:] # skip warning messages at the top of the output
+    re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
+    re_hash = re.compile('.*md5=(.*)\"')
+    figures = []
+    
+    for i, line in islice(enumerate(lines), 0, None, 4):
+        fig = {'path': '', 'hash': ''}
+        fig['fuzzy'] = line=='#, fuzzy'
+        path_match = re_path.match(lines[i+1])
+        if path_match and len(path_match.groups()):
+            fig['path'] = path_match.group(1)
+        hash_match = re_hash.match(lines[i+1])
+        if hash_match and len(hash_match.groups()):
+            fig['hash'] = hash_match.group(1)
+        fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
+        figures.append(fig)
+    return figures
 
 def copy_file(file1, file2):
     try:

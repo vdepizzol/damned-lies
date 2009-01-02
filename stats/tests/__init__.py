@@ -18,10 +18,10 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os, unittest
+import os, shutil, unittest
 import threading
 from django.core import mail
-from stats.models import Module, Domain, Branch, Category, Release, Statistics
+from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
 
 class ModuleTestCase(unittest.TestCase):
     def setUp(self):
@@ -87,6 +87,14 @@ class ModuleTestCase(unittest.TestCase):
         self.assertEquals(len(mail.outbox), 1);
         self.assertEquals(mail.outbox[0].subject, "String additions to '%s'")
         self.assertTrue(new_string in mail.outbox[0].message)
+        
+        # Detect warning if translated figure is identical to original figure
+        orig_figure = os.path.join(branch.co_path(), "help", "C", "figures", "gnome-hello.png")
+        shutil.copy(orig_figure, os.path.join(branch.co_path(), "help", "fr", "figures", "gnome-hello.png"))
+        branch.update_stats(force=True)
+        stat = Statistics.objects.get(branch=branch, domain__name='help', language__locale='fr')
+        warn_infos = Information.objects.filter(statistics=stat, type='warn')
+        self.assertEquals(len(warn_infos), 1);
 
         # Delete the branch (removing the repo checkout in the file system)
         checkout_path = branch.co_path()

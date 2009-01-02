@@ -19,11 +19,10 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os, sys, re
+import os, sys, re, hashlib
 import threading
 from datetime import datetime
 from time import tzname
-from itertools import islice
 from django.db import models, connection
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from stats.conf import settings
@@ -344,6 +343,14 @@ class Branch(models.Model):
                 elif dom.dtype == "doc":
                     if lang not in doclinguas:
                         langstats['errors'].append(("warn", ugettext_noop("DOC_LINGUAS list doesn't include this language.")))
+                    fig_stats = utils.get_fig_stats(outpo)
+                    for fig in fig_stats:
+                        trans_path = os.path.join(domain_path, lang, fig['path'])
+                        if os.access(trans_path, os.R_OK):
+                            fig_file = open(trans_path, 'rb').read()
+                            trans_hash = hashlib.md5(fig_file).hexdigest()
+                            if fig['hash'] == trans_hash:
+                                langstats['errors'].append(("warn", "Figures should not be copied when identical to original (%s)." % trans_path))
 
                 if settings.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
                 # Save in DB
@@ -931,33 +938,13 @@ class Statistics(models.Model):
     
     def get_figures(self):
         if self.figures is None and self.domain.dtype == 'doc':
-            # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
-            command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % { 'pofile': self.po_path() }
-            (status, output) = utils.run_shell_command(command)
-            if status != utils.STATUS_OK:
-                # FIXME: something should be logged here
-                return []
-            lines = output.split('\n')
-            while lines[0][0] != "#":
-                lines = lines[1:] # skip warning messages at the top of the output
-            re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
-            self.figures = []
-            
-            for i, line in islice(enumerate(lines), 0, None, 4):
-                fig = {}
-                fig['fuzzy'] = line=='#, fuzzy'
-                path_match = re_path.match(lines[i+1])
-                if path_match and len(path_match.groups()):
-                    fig['path'] = path_match.group(1)
-                else:
-                    fig['path'] = '' # This should not happen
-                fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
+            self.figures = utils.get_fig_stats(self.po_path())
+            for fig in self.figures:
                 fig['translated_file'] = False
                 if self.language:
                     # Check if a translated figure really exists or if the English one is used
                     if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
                         fig['translated_file'] = True
-                self.figures.append(fig)
         return self.figures
     
     def fig_count(self):
