@@ -1,5 +1,10 @@
 2009-01-03  Claude Paroz  <claude@2xlibre.net>
 
+	* people/forms.py: Replace sha module by hashlib. Mimic more strict
+	username choice like admin interface.
+
+2009-01-03  Claude Paroz  <claude@2xlibre.net>
+
 	* docs/DataModel.odg: team.coordinator_id has been suppressed.
 
 2009-01-03  Claude Paroz  <claude@2xlibre.net>

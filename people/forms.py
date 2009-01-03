@@ -1,4 +1,4 @@
-import sha, random
+import hashlib, random
 
 from django import forms
 from django.conf import settings
@@ -16,7 +16,7 @@ class JoinTeamForm(forms.Form):
 
 class RegistrationForm(forms.Form):
     """ Form for user registration """
-    username = forms.CharField(max_length=30,
+    username = forms.RegexField(max_length=30, regex=r'^\w+$',
                                label=ugettext_lazy(u'Choose a username:'),
                                help_text=ugettext_lazy(u'May contain only letters, numbers, underscores or hyphens'))
     email = forms.EmailField(label=ugettext_lazy(u'Email:'))
@@ -60,8 +60,8 @@ class RegistrationForm(forms.Form):
         openid = self.cleaned_data['openid_url']
         if openid:
             new_user.openids.create(openid = openid)
-        salt = sha.new(str(random.random())).hexdigest()[:5]
-        activation_key = sha.new(salt+username).hexdigest()
+        salt = hashlib.sha1(str(random.random())).hexdigest()[:5]
+        activation_key = hashlib.sha1(salt+username).hexdigest()
         new_user.activation_key = activation_key
         new_user.is_active = False
         new_user.save()
