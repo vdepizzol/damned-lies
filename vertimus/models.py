@@ -524,7 +524,7 @@ class ActionTR(ActionAbstract):
         return new_state
 
 def generate_backup_file_name(instance, original_filename):
-    return "%s/%s" % (settings.UPLOAD_BACKUP_DIR, original_filename)
+    return "%s/%s" % (settings.UPLOAD_BACKUP_DIR, os.path.basename(original_filename))
 
 class ActionDbBackup(models.Model):
     state_db = models.ForeignKey(StateDb)
@@ -564,7 +564,7 @@ class ActionBA(ActionAbstract):
                 comment=action_db.comment,
                 file=file_to_backup)
             if file_to_backup:
-                action_db_backup.file.save(self.get_filename(), file_to_backup, save=False)
+                action_db_backup.file.save(action_db.file.name, file_to_backup, save=False)
             action_db_backup.save()
 
             if sequence == None:
