@@ -1,3 +1,8 @@
+2009-01-04  Claude Paroz  <claude@2xlibre.net>
+
+	* languages/views.py: Add 'doc-only' modules in release xml stats.
+	Fixes bug #565288.
+
 2009-01-03  Claude Paroz  <claude@2xlibre.net>
 
 	* people/forms.py: Replace sha module by hashlib. Mimic more strict

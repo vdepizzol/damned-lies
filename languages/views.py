@@ -96,37 +96,48 @@ def language_release_xml(request, locale, release_name):
         # Modules
         for modname, mod in categ['modules']:
             content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod[1][1].branch.name)
-            # find and iterate doc domains
+            # DOC domains
             if catname in stats['doc']['categs'] and stats['doc']['categs'][catname]['modules']:
                 for docmod in stats['doc']['categs'][catname]['modules']:
                     if docmod[0] == modname:
-                        for doc_dom in docmod[1]:
-                            if doc_dom[0] == ' fake':
-                                continue
-                            stat = doc_dom[1]
-                            content += "<document id=\"%s\">" % stat.domain.name
-                            content += "<translated>%s</translated>" % stat.translated
-                            content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
-                            content += "<untranslated>%s</untranslated>" % stat.untranslated
-                            content += "<pofile>%s</pofile>" % stat.po_url()
-                            content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
-                            content += "</document>"
-            # iterate ui domains
-            for ui_dom in mod:
-                if ui_dom[0] == ' fake':
-                    continue
-                stat = ui_dom[1]
-                content += "<domain id=\"%s\">" % stat.domain.name
-                content += "<translated>%s</translated>" % stat.translated
-                content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
-                content += "<untranslated>%s</untranslated>" % stat.untranslated
-                content += "<pofile>%s</pofile>" % stat.po_url()
-                content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
-                content += "</domain>"
+                        content += get_domain_stats(docmod[1], "document")
+            # UI stats
+            content += get_domain_stats(mod, "domain")
             content += "</module>"
+        # Add modules who have no ui counterparts
+        if catname == 'dev-tools':
+            try:
+                mod = [m for m in stats['doc']['categs']['dev-tools']['modules'] if m[0] == 'gnome-devel-docs'][0][1]
+                content += "<module id=\"gnome-devel-docs\" branch=\"%s\">" % mod[1][1].branch.name
+                content += get_domain_stats(mod, "document")
+                content += "</module>"
+            except:
+                pass
+        if catname == 'desktop':
+            try:
+                mod = [m for m in stats['doc']['categs']['desktop']['modules'] if m[0] == 'gnome-user-docs'][0][1]
+                content += "<module id=\"gnome-user-docs\" branch=\"%s\">" % mod[1][1].branch.name
+                content += get_domain_stats(mod, "document")
+                content += "</module>"
+            except:
+                pass
         
         if catname != 'default':
             content += "</category>"
     content += "</stats>"
     return HttpResponse(content, content_type='text/xml')
 
+def get_domain_stats(mods, node_name):
+    """ Iterate module domains to get stats """
+    content = ""
+    for dom_key, stat in mods:
+        if dom_key == ' fake':
+            continue
+        content += "<%s id=\"%s\">" % (node_name, stat.domain.name)
+        content += "<translated>%s</translated>" % stat.translated
+        content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
+        content += "<untranslated>%s</untranslated>" % stat.untranslated
+        content += "<pofile>%s</pofile>" % stat.po_url()
+        content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
+        content += "</%s>" % node_name
+    return content
