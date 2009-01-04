@@ -1,3 +1,35 @@
+2009-01-04  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	Many changes to the user account management interface.
+	
+	* media/css/main.css: Adjustments for person detail and list.
+	* people/forms.py: Renaming to match Django conventions.
+	* people/models.py: Use the new name of the view.
+	* people/urls.py: Renamed views and new one.
+	* people/views.py: Better transaction management. Protect access
+	by the login_required decorator. Separated forms. Add context
+	information for the 'Working on' section.
+	* settings_sample.py: Added humanize tags.
+	* templates/base.html: Use nobody-16.png instead of
+	person.png (same icon for now).
+	* templates/module_detail.html: Updated to use person_overview.
+	* templates/people/password_change_done.html: Deleted.
+	* templates/people/password_change_form.html: Renamed.
+	* templates/people/person_base.html: Master template for person.
+	* templates/people/person_detail.html: New 'Working on' section to show the current 
+	list of modules on which the user is working.
+	* templates/people/person_detail_change_form.html: Separated form person_detail.
+	* templates/people/person_overview.html: Use MEDIA_URL. HTML
+	indentation. New CSS class.
+	* templates/people/person_password_change_form.html: Use the master template.
+	* templates/people/person_team_join_form.html: New.
+	* templates/people/person_team_membership.html: Reusable template.
+	* templates/person_base.html: Moved.
+	* templates/teams/team_base.html: Updated to use person_overview.
+	* templates/vertimus/vertimus_detail.html: Use nobody-16.png instead of
+	person.png (same icon for now).
+	* vertimus/models.py: New StateDb.get_absolute_url()
+
 2009-01-04  Claude Paroz  <claude@2xlibre.net>
 
 	* languages/views.py: Add 'doc-only' modules in release xml stats.

@@ -61,6 +61,10 @@ class StateDb(models.Model):
     def __unicode__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('vertimus-ids-view', [self.branch.id, self.domain.id, self.language.id])
+
 class StateAbstract(object):
     """Abstract class"""
 

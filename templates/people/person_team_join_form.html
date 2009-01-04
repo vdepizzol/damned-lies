@@ -1,0 +1,17 @@
+{% extends "people/person_base.html" %}
+{% load i18n %}
+
+{% block subcontent %}
+
+{% include "people/person_team_membership.html" %}
+
+<h2>{% trans "Join a new team" %}</h2>
+
+<form action="" method="POST">
+  <p><em>{% trans "I would like to join the following team as 'translator':" %}</em><br />
+    {{ form.teams }}
+    <input type="submit" value="{% trans "Join" %}">
+    <input type="hidden" name="join_team_form" value="1" />
+</form>
+
+{% endblock %}

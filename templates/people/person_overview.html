@@ -3,36 +3,36 @@
 
 {% load i18n %}
 
-  <div class="maintainer">
+<div class="person_detail">
   {% if person.image %}
-    <img class="people" src="{{ person.image }}" alt="{{ person.name }}" />
+  <img src="{{ person.image }}" alt="{{ person.name }}" />
   {% else %}
-    <img class="people" src="/media/img/nobody.png" alt="" />
+  <img src="{{ MEDIA_URL }}img/nobody.png" alt="" />
   {% endif %}
 
-  <a style="font-size: 140%;" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
+  <a class="name" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
 
   {% if person.no_spam_email %}
-    <a href="mailto:{{ person.no_spam_email }}">{{ person.no_spam_email }}</a><br />
+  <a href="mailto:{{ person.no_spam_email }}">{{ person.no_spam_email }}</a><br />
   {% endif %}
+
   {% if person.webpage_url %}
-    <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
+  <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
   {% endif %}
 
   <br />
   {% if person.irc_nick %}
-    <strong>{% trans "Instant messaging:" %}</strong>
-    <ul>
+  <strong>{% trans "Instant messaging:" %}</strong>
+  <ul>
     <li><em>{{ person.irc_nick }}</em> (IRC)</li>
-    </ul>
+  </ul>
   {% endif %}
-
+  
   {% if person.no_spam_bugzilla_account %}
-    <strong>{% trans "Bugzilla account:" %}</strong> {{ person.no_spam_bugzilla_account }}<br />
+  <strong>{% trans "Bugzilla account:" %}</strong> {{ person.no_spam_bugzilla_account }}<br />
   {% endif %}
 
   {% if person.svn_account %}
   <strong>{% trans "SVN account:" %}</strong> <a href="http://cia.vc/stats/author/{{ person.svn_account }}">{{ person.svn_account}}</a><br />
   {% endif %}
-
 </div>

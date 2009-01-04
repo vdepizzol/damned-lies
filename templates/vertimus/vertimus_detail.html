@@ -73,7 +73,7 @@
   {% for action in action_history %}
   <div class="vertimus_action">
     <div class="vertimus_action_head">
-      <img src="{{ MEDIA_URL }}img/person.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
+      <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
       , <strong>{{ action }}</strong>, {{ action.created|date:"Y-m-d H:i" }}
     </div>
     <div class="vertimus_action_content">

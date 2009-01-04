@@ -98,25 +98,14 @@ img {
   border: 0px;
 }
 
-img.people {
-  float: left;
-  margin-left: -85px;
-}
-
 img.screenshot {
   max-width: 550px;
   border: 0;
 }
 
-div.maintainer {
-  padding-left: 85px;
-  margin-bottom: 12px;
-  clear: left;
-}
-
 /* Used in people/person_list */
 .person_list {
-  padding-left: 85px;
+  padding-left: 65px;
   margin-bottom: 12px;
   clear: left;
 }
@@ -126,10 +115,23 @@ div.maintainer {
 }
 
 .person_list img {
-  border: 0;
   height: 48px;
   float: left;
   margin-left: -65px;
+}
+
+/* Used in people/person_list */
+.person_detail {
+  clear: left;
+}
+
+.person_detail .name {
+  font-size: 140%;
+}
+
+.person_detail img {
+  margin-right: 1em;
+  float: left;
 }
 
 div.mainpage {

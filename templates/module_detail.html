@@ -28,7 +28,7 @@
       {% if module.maintainers.all %}
       <h2>{% trans "Maintainers" %}</h2>
       {% for person in module.maintainers.all %}
-        {% include "person_base.html" %}
+        {% include "people/person_overview.html" %}
       {% endfor %}
       {% endif %}
     </td>

@@ -8,12 +8,6 @@ from django.contrib.sites.models import Site
 from teams.models import Team
 from people.models import Person
 
-class JoinTeamForm(forms.Form):
-    def __init__(self, *args, **kwargs):
-        super(JoinTeamForm, self).__init__(*args, **kwargs)
-        # FIXME: exclude team to which user is already member
-        self.fields['teams'] = forms.ModelChoiceField(queryset=Team.objects.all())
-
 class RegistrationForm(forms.Form):
     """ Form for user registration """
     username = forms.RegexField(max_length=30, regex=r'^\w+$',
@@ -78,8 +72,13 @@ class RegistrationForm(forms.Form):
 
         return new_user
 
-class EditProfileForm(forms.ModelForm):
+class DetailForm(forms.ModelForm):
     class Meta:
         model = Person
         fields = ('first_name', 'last_name', 'email', 'image', 'webpage_url', 'irc_nick', 'bugzilla_account')
 
+class TeamJoinForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(TeamJoinForm, self).__init__(*args, **kwargs)
+        # FIXME: exclude team to which user is already member
+        self.fields['teams'] = forms.ModelChoiceField(queryset=Team.objects.all())

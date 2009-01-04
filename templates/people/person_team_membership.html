@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load stats_extras %}
+
+{% if person.role_set.all %}
+<h2>{% trans "Team membership" %}</h2>
+<ul>
+  {% for role in person.role_set.all %}
+  {% with role.role as role_name %}
+  <li>{% blocktrans with role.team|linked_with:role.team.get_description|safe as team_name %}Member of {{ team_name }} team ({{ role_name }}){% endblocktrans %}
+  </li>
+  {% endwith %}
+  {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load stats_extras %}
+
+{% block title %}{% trans "GNOME Contributor" %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+  {% if user.is_authenticated %}
+  {% ifequal user.username person.username %}
+  <div class="right_actions">
+    <ul>
+      <li><a href="{% url person-detail-change-view %}">{% trans "Change your details" %}</a></li>
+      <li><a href="{% url person-password-change-view %}">{% trans "Change your password" %}</a></li>
+      <li><a href="{% url person-team-join-view %}">{% trans "Join a team" %}</a></li>
+    </ul>
+  </div>
+  {% endifequal %}
+  {% endif %}
+
+  {% include "people/person_overview.html" %}
+
+  {% block subcontent %}
+  {% endblock %}
+</div>
+{% endblock %}

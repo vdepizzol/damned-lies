@@ -68,7 +68,7 @@
   <div id="authenticated">
     {% if user.is_authenticated %}
     <form action="{% url login %}" method="post">
-      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/person.png" alt="Person"/>&nbsp;{{ user.person }}</a> &bull;
+      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>&nbsp;{{ user.person }}</a> &bull;
       <input type="hidden" name="logout" value="1" />
       <input type="submit" value="{% trans 'Log Out' %}" />
     </form>

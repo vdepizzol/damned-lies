@@ -30,7 +30,7 @@
   {% if team.get_coordinator %}
     <h2>{% trans "Coordinator" %}</h2>
     {% with team.get_coordinator as person %}
-    {% include "person_base.html" %}
+    {% include "person_overview.html" %}
     {% endwith %}
   {% endif %}
 </td></tr></table>
