@@ -347,7 +347,7 @@ class ActionAbstract(object):
 
         if recipient_list:
             current_lang = get_language()
-            activate(state.language.locale)
+            activate(old_state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
                 'vertimus-names-view',
@@ -366,13 +366,13 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
                 'module': old_state.branch.module.name,
                 'branch': old_state.branch.name,
                 'domain': old_state.domain.name,
-                'language': old_state.language.name, 
+                'language': old_state.language.get_name, 
                 'new_state': new_state, 
                 'url': url
             }
             message += self.comment or ugettext("Without comment")
             message += "\n\n" + self.person.name
-            message += _(u"--\nThis is an automated message sent from %s.") % current_site.domain
+            message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
             mail.send_mail(subject, message, settings.SERVER_EMAIL, recipient_list)
             activate(current_lang)
 
@@ -416,12 +416,12 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
                 'module': state.branch.module.name,
                 'branch': state.branch.name,
                 'domain': state.domain.name,
-                'language': state.language.name, 
+                'language': state.language.get_name, 
                 'url': url
             }
             message += comment or ugettext("Without comment")
             message += "\n\n" + person.name
-            message += _(u"--\nThis is an automated message sent from %s.") % current_site.domain
+            message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
             mail.send_mail(subject, message, settings.SERVER_EMAIL, translator_emails)
             activate(current_lang)
 

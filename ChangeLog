@@ -1,5 +1,10 @@
 2009-01-05  Claude Paroz  <claude@2xlibre.net>
 
+	* vertimus/models.py: Fix error state -> old_state. Improve translation
+	and mail layout.
+
+2009-01-05  Claude Paroz  <claude@2xlibre.net>
+
 	* vertimus/models.py: Send mail from Vertimus with SERVER_EMAIL in From:
 	field. Translate the mail message with the language of the object locale
 	instead of the current user pref.
