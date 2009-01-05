@@ -21,13 +21,13 @@
 
 <table>
 <tr>
-  <th>Date</th><th>Module</th><th>State</th>
+  <th>{% trans "Date" %}</th><th>{% trans "Module" %}</th><th>{% trans "State" %}</th>
 </tr>
 {% for state in states %}
 <tr>
   <td>{{ state.updated|naturalday }}</td>
   <td><a href="{{ state.get_absolute_url }}">{{ state.branch.module.get_description }} - {{ state.branch.name }} - {% trans state.domain.description %} - {{ state.language.get_name }}</a></td>
-  <td>{{ state }}</td>
+  <td>{{ state.get_state }}</td>
 </tr>
 {% endfor %}
 </table>

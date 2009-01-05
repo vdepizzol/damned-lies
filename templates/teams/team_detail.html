@@ -71,7 +71,7 @@
         {% endfor %}
         </ul>
         {{ group.form.form_type }}
-        <input type="submit" value="Apply modifications">
+        <input type="submit" value="{% trans "Apply modifications" %}">
         </form>
     {% else %}
       {% if not group.members %}
