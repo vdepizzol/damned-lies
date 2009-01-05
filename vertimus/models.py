@@ -22,7 +22,7 @@ import os
 
 from datetime import datetime
 from django.db import models
-from django.utils.translation import ugettext, ugettext_lazy as _
+from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
@@ -346,6 +346,8 @@ class ActionAbstract(object):
         recipient_list = filter(lambda x: x and x is not None, recipient_list)
 
         if recipient_list:
+            current_lang = get_language()
+            activate(state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
                 'vertimus-names-view',
@@ -370,7 +372,9 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
             }
             message += self.comment or ugettext("Without comment")
             message += "\n\n" + self.person.name
-            mail.send_mail(subject, message, self.person.email, recipient_list)
+            message += _(u"--\nThis is an automated message sent from %s.") % current_site.domain
+            mail.send_mail(subject, message, settings.SERVER_EMAIL, recipient_list)
+            activate(current_lang)
 
 class ActionWC(ActionAbstract):
     name = 'WC'
@@ -392,6 +396,8 @@ class ActionWC(ActionAbstract):
         translator_emails = filter(lambda x: x is not None, translator_emails)
 
         if translator_emails:
+            current_lang = get_language()
+            activate(state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
                 'vertimus-names-view',
@@ -414,8 +420,10 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
                 'url': url
             }
             message += comment or ugettext("Without comment")
-            message += "\n" + person.name
-            mail.send_mail(subject, message, person.email, translator_emails)
+            message += "\n\n" + person.name
+            message += _(u"--\nThis is an automated message sent from %s.") % current_site.domain
+            mail.send_mail(subject, message, settings.SERVER_EMAIL, translator_emails)
+            activate(current_lang)
 
         return self._new_state()
 
