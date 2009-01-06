@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-05 10:37+0000\n"
+"POT-Creation-Date: 2009-01-06 14:36+0000\n"
 "PO-Revision-Date: 2009-01-05 12:06-0300\n"
 "Last-Translator: Jonh Wendell <wendell@bani.com.br>\n"
 "Language-Team: Portuguese/Brazil <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: database-content.py:1
 msgid "Gujarati"
@@ -223,9 +223,8 @@ msgid "Czech"
 msgstr "Tcheco"
 
 #: database-content.py:51
-#, fuzzy
 msgid "Pashto"
-msgstr "Pachto"
+msgstr "Afegão"
 
 #: database-content.py:52
 msgid "Portuguese"
@@ -365,9 +364,8 @@ msgid "Indonesian"
 msgstr "Indonésio"
 
 #: database-content.py:86
-#, fuzzy
 msgid "Bengali (India)"
-msgstr "Inglês (Canadense)"
+msgstr "Bengalês (Índia)"
 
 #: database-content.py:87
 msgid "Kashmiri"
@@ -386,9 +384,8 @@ msgid "Yoruba"
 msgstr "Ioruba"
 
 #: database-content.py:91
-#, fuzzy
 msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Norueguês (Nyorsk)"
+msgstr "Norueguês (Bokmål e Nynorsk)"
 
 #: database-content.py:92
 msgid "Nepali"
@@ -411,9 +408,8 @@ msgid "Fula"
 msgstr "Fula"
 
 #: database-content.py:97
-#, fuzzy
 msgid "Maithili"
-msgstr "Marati"
+msgstr "Maithili"
 
 #: database-content.py:98
 msgid "Finnish"
@@ -452,7 +448,6 @@ msgid "Slovak"
 msgstr "Eslovaco"
 
 #: database-content.py:107
-#, fuzzy
 msgid "Sinhala"
 msgstr "Cingalês"
 
@@ -503,12 +498,10 @@ msgid "Chinese (Taiwan)"
 msgstr "Chinês (Taiwan)"
 
 #: database-content.py:119
-#, fuzzy
 msgid "Norwegian Bokmål"
 msgstr "Norueguês (Bokmål)"
 
 #: database-content.py:120
-#, fuzzy
 msgid "Norwegian Nynorsk"
 msgstr "Norueguês (Nyorsk)"
 
@@ -852,11 +845,11 @@ msgstr "Mentiras Cabeludas"
 
 #: database-content.py:205
 msgid "Banshee Music Player"
-msgstr ""
+msgstr "Reprodutor de músicas Banshee"
 
 #: database-content.py:206
 msgid "Shared MIME Info"
-msgstr ""
+msgstr "Tipos MIME"
 
 #: database-content.py:207
 msgid "GNOME Applets"
@@ -868,7 +861,7 @@ msgstr "Documentação do JHBuild"
 
 #: database-content.py:209
 msgid "GNOME 2 Development Documentation"
-msgstr ""
+msgstr "Documentação do desenvolvimento para o GNOME 2"
 
 #: database-content.py:210
 msgid "GNOME Release Notes"
@@ -892,7 +885,7 @@ msgstr "Visualisador de Imagens do GNOME"
 
 #: database-content.py:215
 msgid "Gnome Specimen"
-msgstr ""
+msgstr "Gnome Specimen"
 
 #: database-content.py:216
 msgid "Deskbar Applet"
@@ -930,7 +923,7 @@ msgstr "GNOME Fifth Toe (Aplicativos Extra)"
 
 #: database-content.py:221
 msgid "Extra GNOME Applications"
-msgstr "Aplicativos Extra do GNOME"
+msgstr "Aplicativos Extra"
 
 #: database-content.py:222
 msgid "GNOME 2.18 (old stable)"
@@ -938,7 +931,7 @@ msgstr "GNOME 2.18 (antiga)"
 
 #: database-content.py:223
 msgid "GNOME Infrastructure"
-msgstr "Infraestrutura do GNOME"
+msgstr "Infraestrutura"
 
 #: database-content.py:224
 msgid "GNOME 2.16 (old stable)"
@@ -1115,7 +1108,7 @@ msgid "Bugzilla account"
 msgstr "Conta do Bugzilla"
 
 #: people/models.py:41
-msgid "This shoud be an email, useful if not equal to 'email' field"
+msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "Isto deve ser um email, útil se diferente do campo 'email'"
 
 #: people/views.py:86
@@ -1177,7 +1170,9 @@ msgstr "%(lang_name)s (%(lang_locale)s)"
 #: stats/models.py:928
 #, python-format
 msgid "%(count)s message"
-msgstr "%(count)s mensagem"
+msgid_plural "%(count)s messages"
+msgstr[0] "%(count)s mensagem"
+msgstr[1] "%(count)s mensagens"
 
 #: stats/models.py:929
 #, python-format
@@ -1187,7 +1182,9 @@ msgstr "atualizado em %(date)s"
 #: stats/models.py:931
 #, python-format
 msgid "%(count)s figure"
-msgstr "%(count)s imagem"
+msgid_plural "%(count)s figures"
+msgstr[0] "%(count)s imagem"
+msgstr[1] "%(count)s imagens"
 
 #: stats/models.py:932
 #, python-format
@@ -1311,7 +1308,7 @@ msgstr "Committers"
 
 #: teams/views.py:46
 msgid "No committers"
-msgstr "Nenhum commiter"
+msgstr "Nenhum committer"
 
 #: teams/views.py:48
 msgid "Reviewers"
@@ -1403,7 +1400,7 @@ msgstr "Desconectar"
 
 #: templates/base.html:93
 msgid "The GNOME Project"
-msgstr "O Projeto GNOME"
+msgstr "Projeto GNOME"
 
 #: templates/base.html:95
 msgid ""
@@ -1586,7 +1583,7 @@ msgstr ""
 
 #: templates/module_images.html:12
 msgid "Figures translation status"
-msgstr ""
+msgstr "Tradução das imagens"
 
 #: templates/module_images.html:17
 msgid "Original"
@@ -1602,7 +1599,7 @@ msgstr ""
 
 #: templates/module_images.html:36
 msgid "Fuzzy"
-msgstr "Aproximadas"
+msgstr "Aproximada"
 
 #: templates/module_images.html:41
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
@@ -1646,7 +1643,7 @@ msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Autenticar via OpenID <strong>ou</strong> senha:"
 
 #: templates/register.html:34
-msgid "Register with OpenId"
+msgid "Register with OpenID"
 msgstr "Registrar com OpenID"
 
 #: templates/register.html:46
@@ -1712,7 +1709,7 @@ msgstr "Idioma"
 
 #: templates/stats_show.html:30 vertimus/models.py:151
 msgid "Translated"
-msgstr "Traduzidas"
+msgstr "Traduzido"
 
 #: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
 msgid "Display document figures"
@@ -1730,7 +1727,9 @@ msgstr "Idiomas"
 #: templates/languages/language_list.html:11
 #, python-format
 msgid "GNOME is being translated to following %(numb)s language.\n"
-msgstr "O GNOME está sendo traduzido para os seguintes %(numb)s idiomas:\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "O GNOME está sendo traduzido para o seguinte %(numb)s idioma:\n"
+msgstr[1] "O GNOME está sendo traduzido para os seguintes %(numb)s idiomas:\n"
 
 #: templates/languages/language_release.html:12
 msgid "Hide completed modules"
@@ -1822,7 +1821,8 @@ msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
-"Por favor, informe sua senha antiga, por segurança, e então informe sua nova senha duas vezes para que possamos verificar se você digitou corretamente."
+"Por favor, informe sua senha antiga, por segurança, e então informe sua nova "
+"senha duas vezes para que possamos verificar se você digitou corretamente."
 
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
@@ -1924,7 +1924,7 @@ msgstr "Tradução do módulo %(name)s"
 
 #: templates/vertimus/vertimus_detail.html:13
 msgid "Used in release(s):"
-msgstr "Usado nas versões:"
+msgstr "Usado nas versões/pacotes:"
 
 #: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
@@ -2001,7 +2001,7 @@ msgstr "Revisando"
 
 #: vertimus/models.py:182
 msgid "Proofread"
-msgstr "Revisar"
+msgstr "Precisa de revisão"
 
 #: vertimus/models.py:195
 msgid "To Review"
@@ -2009,7 +2009,7 @@ msgstr "Pronto para revisão"
 
 #: vertimus/models.py:207
 msgid "To Commit"
-msgstr "Pronto para envio"
+msgstr "Pronto para submissão"
 
 #: vertimus/models.py:220
 msgid "Committing"
@@ -2106,781 +2106,3 @@ msgstr "Backup das ações"
 msgid "Undo the last state change"
 msgstr "Desfazer a última ação"
 
-#~ msgid "Sorry, you're not allowed to modify this user."
-#~ msgstr "Desculpe, você não pode modificar este usuário."
-
-#~ msgid "Logged in as: %(username)s"
-#~ msgstr "Conectado como: %(username)s"
-
-#~ msgid "Edit"
-#~ msgstr "Editar"
-
-#, fuzzy
-#~ msgid "Sabayon"
-#~ msgstr "Samoano"
-
-#~ msgid "Burmese"
-#~ msgstr "Birmanês"
-
-#~ msgid "Fijian"
-#~ msgstr "Fidjiano"
-
-#~ msgid "Haitian Creole"
-#~ msgstr "Crioulo Haitiano"
-
-#~ msgid "Hausa"
-#~ msgstr "Hauçá"
-
-#~ msgid "Igbo"
-#~ msgstr "Ibo"
-
-#, fuzzy
-#~ msgid "Kagoma"
-#~ msgstr "Komi"
-
-#~ msgid "Lao"
-#~ msgstr "Laosiano"
-
-#~ msgid "Maltese"
-#~ msgstr "Maltês"
-
-#, fuzzy
-#~ msgid "Mayan"
-#~ msgstr "Manês"
-
-#~ msgid "Quechua"
-#~ msgstr "Quíchua"
-
-#~ msgid "Sanskrit"
-#~ msgstr "Sânscrito"
-
-#~ msgid "Sardinian"
-#~ msgstr "Sardo"
-
-#~ msgid "Swahili"
-#~ msgstr "Suaíli"
-
-#~ msgid "Tetum"
-#~ msgstr "Tétum"
-
-#~ msgid "Tibetan"
-#~ msgstr "Tibetano"
-
-#~ msgid "Tigrinya"
-#~ msgstr "Tigrínia"
-
-#~ msgid "Wolof"
-#~ msgstr "Uólofe"
-
-#~ msgid "_Suggestions for '%s'"
-#~ msgstr "_Sugestões para '%s'"
-
-#~ msgid "Suggestions"
-#~ msgstr "Sugestões"
-
-#~ msgid "Could not load glade file."
-#~ msgstr "Não foi possível carregar arquivo glade."
-
-#~ msgid "Afar"
-#~ msgstr "Afar"
-
-#~ msgid "Akan"
-#~ msgstr "Akan"
-
-# Fonte: wikipédia
-#~ msgid "Avar"
-#~ msgstr "Avárico"
-
-#~ msgid "Aymara"
-#~ msgstr "Aimará"
-
-# Sem tradução
-#~ msgid "Bashkir"
-#~ msgstr "Bashkir"
-
-#~ msgid "Balinese"
-#~ msgstr "Balinês"
-
-#~ msgid "Bemba"
-#~ msgstr "Bemba"
-
-#~ msgid "Bihari"
-#~ msgstr "Biari"
-
-#~ msgid "Bislama"
-#~ msgstr "Bichlamar"
-
-#~ msgid "Bambara"
-#~ msgstr "Bambara"
-
-#~ msgid "Chechen"
-#~ msgstr "Tchetcheno"
-
-#~ msgid "Cebuano"
-#~ msgstr "Cebuano"
-
-#~ msgid "Chamorro"
-#~ msgstr "Chamorro"
-
-# Não tem tradução
-#~ msgid "Chuukese"
-#~ msgstr "Chuukese"
-
-#~ msgid "Corsican"
-#~ msgstr "Corso"
-
-# Fonte: Wikipédia
-#~ msgid "Kashubian"
-#~ msgstr "Cassúbio"
-
-# Fonte: Wikipédia
-#~ msgid "Chuvash"
-#~ msgstr "Tchuvache"
-
-#~ msgid "German (Austria)"
-#~ msgstr "Alemão (Áustria)"
-
-#~ msgid "German (Germany)"
-#~ msgstr "Alemão (Alemanha)"
-
-#~ msgid "German (Swiss)"
-#~ msgstr "Alemão (Suíça)"
-
-#~ msgid "Ewe"
-#~ msgstr "Jeje"
-
-#~ msgid "English (American)"
-#~ msgstr "Inglês (Estados Unidos)"
-
-#~ msgid "English (British)"
-#~ msgstr "Inglês (Britânico)"
-
-#~ msgid "Farsi"
-#~ msgstr "Persa"
-
-#~ msgid "Faroese"
-#~ msgstr "Feróico"
-
-#~ msgid "French (France)"
-#~ msgstr "Francês (França)"
-
-#~ msgid "French (Swiss)"
-#~ msgstr "Francês (Suíça)"
-
-#~ msgid "Frisian"
-#~ msgstr "Frísio"
-
-#~ msgid "Scottish Gaelic"
-#~ msgstr "Escocês"
-
-#~ msgid "Manx Gaelic"
-#~ msgstr "Manês"
-
-#~ msgid "Hawaiian"
-#~ msgstr "Havaiano"
-
-# Sem tradução
-#~ msgid "Hiligaynon"
-#~ msgstr "Hiligaynon"
-
-# Sem tradução
-#~ msgid "Hiri Motu"
-#~ msgstr "Hiri Motu"
-
-#~ msgid "Upper Sorbian"
-#~ msgstr "Lusácio Alto"
-
-#~ msgid "Herero"
-#~ msgstr "Hereró"
-
-#~ msgid "Interlingua"
-#~ msgstr "Interlíngua"
-
-# Sem tradução
-#~ msgid "Iban"
-#~ msgstr "Iban"
-
-# Sem tradução
-#~ msgid "Sichuan Yi"
-#~ msgstr "Yi (Sichuan)"
-
-#~ msgid "Iloko"
-#~ msgstr "Ilocano"
-
-#~ msgid "Javanese"
-#~ msgstr "Javanês"
-
-#~ msgid "Kongo"
-#~ msgstr "Congo"
-
-# Sem tradução
-#~ msgid "Khasi"
-#~ msgstr "Khasi"
-
-#~ msgid "Kikuyu"
-#~ msgstr "Quicuio"
-
-#~ msgid "Kwanyama"
-#~ msgstr "Cuanhama"
-
-#~ msgid "Kalaallisut / Greenlandic"
-#~ msgstr "Groenlandês"
-
-#~ msgid "Konkani"
-#~ msgstr "Concani"
-
-#~ msgid "Kanuri"
-#~ msgstr "Canúri"
-
-#~ msgid "Cornish"
-#~ msgstr "Córnico"
-
-#~ msgid "Luxembourgish"
-#~ msgstr "Luxemburguês"
-
-#~ msgid "Ganda"
-#~ msgstr "Nganda"
-
-#~ msgid "Lingala"
-#~ msgstr "Lingala"
-
-#~ msgid "Luba-Katanga"
-#~ msgstr "Baluba"
-
-#~ msgid "Luo"
-#~ msgstr "Luo"
-
-#~ msgid "Marshallese"
-#~ msgstr "Marshallino"
-
-# Sem tradução
-#~ msgid "Minangkabau"
-#~ msgstr "Minangkabau"
-
-#~ msgid "Moldavian"
-#~ msgstr "Moldávio"
-
-#~ msgid "North Ndebele"
-#~ msgstr "Ndebele do Norte"
-
-#~ msgid "Ndonga"
-#~ msgstr "Ovampo"
-
-# Sem tradução
-#~ msgid "Niuean"
-#~ msgstr "Niueano"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norueguês"
-
-#~ msgid "South Ndebele"
-#~ msgstr "Ndebele do Sul"
-
-#~ msgid "Navajo"
-#~ msgstr "Navarro"
-
-#~ msgid "Nyanja/Chichewa"
-#~ msgstr "Cinianja"
-
-#~ msgid "Oromo"
-#~ msgstr "Oromo"
-
-#~ msgid "Ossetic"
-#~ msgstr "Osseta"
-
-#~ msgid "Pampanga"
-#~ msgstr "Pampangano"
-
-#~ msgid "Papiamento"
-#~ msgstr "Papiamento"
-
-#~ msgid "Portuguese (Portugal)"
-#~ msgstr "Português (Portugal)"
-
-#~ msgid "Portuguese (Brazilian)"
-#~ msgstr "Português (Brasil)"
-
-# Não acredita? Vê o artigo da Wikipédia em inglês.
-#~ msgid "Rarotongan"
-#~ msgstr "Maori das Ilhas Cook"
-
-#~ msgid "Rundi"
-#~ msgstr "Kirundi"
-
-#~ msgid "Sindhi"
-#~ msgstr "Síndi"
-
-# Os "sami" não gostam de ser chamados de "lapões",
-# mas "sami" não está no Houaiss.
-#~ msgid "Northern Sami"
-#~ msgstr "Lapão do Norte"
-
-#~ msgid "Sango"
-#~ msgstr "Sango"
-
-#~ msgid "Shona"
-#~ msgstr "Xona"
-
-#~ msgid "Somali"
-#~ msgstr "Somali"
-
-#~ msgid "Swati"
-#~ msgstr "Suázi"
-
-#~ msgid "Southern Sotho"
-#~ msgstr "Soto do Sul"
-
-#~ msgid "Sundanese"
-#~ msgstr "Sundanês"
-
-# Fonte: Wikipédia
-#~ msgid "Tokelau"
-#~ msgstr "Toquelauano"
-
-#~ msgid "Tswana"
-#~ msgstr "Tsonga"
-
-#~ msgid "Tonga"
-#~ msgstr "Tonga"
-
-#~ msgid "Tok Pisin"
-#~ msgstr "Crioulo Inglês (Papua-Nova Guiné)"
-
-#~ msgid "Tsonga"
-#~ msgstr "Tsonga"
-
-#~ msgid "Twi"
-#~ msgstr "Twi"
-
-#~ msgid "Tahitian"
-#~ msgstr "Taitiano"
-
-#~ msgid "Venda"
-#~ msgstr "Venda"
-
-# Sem tradução
-#~ msgid "Zhuang"
-#~ msgstr "Zhuang"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Add to dictionary"
-#~ msgstr "Adicionar ao dicionário"
-
-#~ msgid "Checked word"
-#~ msgstr "Palavra verificada"
-
-#~ msgid "Describe _all"
-#~ msgstr "Descrever _todos"
-
-#~ msgid "Ignore"
-#~ msgstr "Ignorar"
-
-#~ msgid "R_eplace All"
-#~ msgstr "_Substituir Todas"
-
-#~ msgid "_Add word"
-#~ msgstr "_Adicionar palavra"
-
-#~ msgid "_Back"
-#~ msgstr "_Voltar"
-
-#~ msgid "_Help"
-#~ msgstr "_Ajuda"
-
-#~ msgid "_Ignore"
-#~ msgstr "_Ignorar"
-
-#~ msgid "_Replace"
-#~ msgstr "_Substituir"
-
-#~ msgid "_Skip"
-#~ msgstr "_Pular"
-
-#~ msgid "I could not initialize Bonobo"
-#~ msgstr "Não foi possível iniciar o Bonobo"
-
-#~ msgid "Abkhazian"
-#~ msgstr "Abcázio"
-
-#~ msgid "English, Old (ca. 450-1100)"
-#~ msgstr "Inglês, Arcaico (apr.450-1100)"
-
-#~ msgid "Apache languages"
-#~ msgstr "Idiomas Apache"
-
-#~ msgid "Aragonese"
-#~ msgstr "Aragonês"
-
-#~ msgid "Artificial (Other)"
-#~ msgstr "Artificial (Outros)"
-
-#, fuzzy
-#~ msgid "Athapascan languages"
-#~ msgstr "Idiomas Apache"
-
-#~ msgid "Avaric"
-#~ msgstr "Avárico"
-
-#~ msgid "Avestan"
-#~ msgstr "Avéstico"
-
-#, fuzzy
-#~ msgid "Banda languages"
-#~ msgstr "Idiomas Maias"
-
-#~ msgid "Baltic (Other)"
-#~ msgstr "Báltico (Outros)"
-
-#~ msgid "Berber (Other)"
-#~ msgstr "Berbere (Outros)"
-
-#~ msgid "Bantu (Other)"
-#~ msgstr "Bantu (Outros)"
-
-#, fuzzy
-#~ msgid "Batak languages"
-#~ msgstr "Idiomas Maias"
-
-#~ msgid "Central American Indian (Other)"
-#~ msgstr "Nativo Centro-Americano (Outros)"
-
-#, fuzzy
-#~ msgid "Galibi Carib"
-#~ msgstr "Galego"
-
-#~ msgid "Catalan; Valencian"
-#~ msgstr "Catalão; Valenciano"
-
-#~ msgid "Caucasian (Other)"
-#~ msgstr "Caucasiano (Outris)"
-
-#~ msgid "Celtic (Other)"
-#~ msgstr "Celta (Outros)"
-
-#~ msgid "Chinook jargon"
-#~ msgstr "Jargão Chinook"
-
-#~ msgid "Cherokee"
-#~ msgstr "Cherokee"
-
-#~ msgid ""
-#~ "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church "
-#~ "Slavonic"
-#~ msgstr ""
-#~ "Eslavo Eclesiástico; Eslavo Antigo; Eslavo Eclesiástico; Búlgaro Antigo; "
-#~ "Eslavônico Antigo Eclesiástico"
-
-#~ msgid "Cheyenne"
-#~ msgstr "Cheyenne"
-
-#, fuzzy
-#~ msgid "Creoles and pidgins, English based (Other)"
-#~ msgstr "Baseados no Inglês (Outros)"
-
-#, fuzzy
-#~ msgid "Creoles and pidgins, French-based (Other)"
-#~ msgstr "Baseados no Francês (Outros)"
-
-#, fuzzy
-#~ msgid "Creoles and pidgins, Portuguese-based (Other)"
-#~ msgstr "Baseados no Português (Outros)"
-
-#, fuzzy
-#~ msgid "Land Dayak languages"
-#~ msgstr "Idiomas Maias"
-
-#~ msgid "Divehi; Dhivehi; Maldivian"
-#~ msgstr "Divehi; Maldívio"
-
-#~ msgid "Dutch, Middle (ca. 1050-1350)"
-#~ msgstr "Holandês, Medieval (apr. 1050-1350)"
-
-#~ msgid "Dutch; Flemish"
-#~ msgstr "Holandês; Flamengo"
-
-#~ msgid "Egyptian (Ancient)"
-#~ msgstr "Egípcio (Antigo)"
-
-#~ msgid "Elamite"
-#~ msgstr "Elamita"
-
-#~ msgid "English, Middle (1100-1500)"
-#~ msgstr "Inglês, Medieval (1100-1500)"
-
-#~ msgid "Fanti"
-#~ msgstr "Fânti"
-
-#, fuzzy
-#~ msgid "French, Middle (ca. 1400-1600)"
-#~ msgstr "Francês, Medieval (apr. 1400-1600)"
-
-#, fuzzy
-#~ msgid "French, Old (842-ca. 1400)"
-#~ msgstr "Francês, Arcaico (842-apr.1400)"
-
-#, fuzzy
-#~ msgid "Eastern Frisian"
-#~ msgstr "Estoniano"
-
-#~ msgid "Germanic (Other)"
-#~ msgstr "Germânicos (Outros)"
-
-#~ msgid "Gaelic; Scottish Gaelic"
-#~ msgstr "Escocês"
-
-#, fuzzy
-#~ msgid "German, Middle High (ca. 1050-1500)"
-#~ msgstr "Alemão, Medieval Recente (apr.1050-1500)"
-
-#, fuzzy
-#~ msgid "German, Old High (ca. 750-1050)"
-#~ msgstr "Alemão, Medieval Arcaico (apr.750-1050"
-
-#~ msgid "Gothic"
-#~ msgstr "Gótico"
-
-#~ msgid "Greek, Ancient (to 1453)"
-#~ msgstr "Grego, Arcaico (até 1453)"
-
-#~ msgid "Greek, Modern (1453-)"
-#~ msgstr "Grego Moderno (1453-)"
-
-#~ msgid "Haitian; Haitian Creole"
-#~ msgstr "Haitiano; Crioulo Haitiano"
-
-#, fuzzy
-#~ msgid "Ijo languages"
-#~ msgstr "Idiomas Tupi"
-
-#~ msgid "Inuktitut"
-#~ msgstr "Inuktitut"
-
-#~ msgid "Interlingue; Occidental"
-#~ msgstr "Ocidental"
-
-#~ msgid "Interlingua (International Auxiliary Language Association)"
-#~ msgstr "Interlíngua"
-
-#~ msgid "Indo-European (Other)"
-#~ msgstr "Indo-Europeu (Outros)"
-
-# Não consta no dicionário Houaiss, mas usado na internet
-#~ msgid "Inupiaq"
-#~ msgstr "Inupiaque"
-
-#~ msgid "Iranian (Other)"
-#~ msgstr "Iraniano (Outros)"
-
-#~ msgid "Judeo-Persian"
-#~ msgstr "Judaico-Persa"
-
-#~ msgid "Judeo-Arabic"
-#~ msgstr "Judaico-Árabe"
-
-#~ msgid "Kalaallisut; Greenlandic"
-#~ msgstr "Groenlandês"
-
-#, fuzzy
-#~ msgid "Karen languages"
-#~ msgstr "Idiomas Maias"
-
-# Existe "khmer" no Houaiss :o
-#~ msgid "Central Khmer"
-#~ msgstr "Khmer Central"
-
-#~ msgid "Kikuyu; Gikuyu"
-#~ msgstr "Quicuio"
-
-#~ msgid "Kirghiz; Kyrgyz"
-#~ msgstr "Quiguiz"
-
-#, fuzzy
-#~ msgid "Karelian"
-#~ msgstr "Coreano"
-
-#, fuzzy
-#~ msgid "Kru languages"
-#~ msgstr "Idiomas Tupi"
-
-#~ msgid "Kuanyama; Kwanyama"
-#~ msgstr "Cuanhama"
-
-# "Limburgês" não está no Houaiss como idioma
-#~ msgid "Limburgan; Limburger; Limburgish"
-#~ msgstr "Limburgês"
-
-# Gentílico, não idioma, no Houaiss
-#~ msgid "Luxembourgish; Letzeburgesch"
-#~ msgstr "Luxemburguês"
-
-#~ msgid "Austronesian (Other)"
-#~ msgstr "Austronésio (Outros)"
-
-#~ msgid "Irish, Middle (900-1200)"
-#~ msgstr "Irlandês, Medieval (900-1200)"
-
-#, fuzzy
-#~ msgid "Uncoded languages"
-#~ msgstr "Idiomas Maias"
-
-#, fuzzy
-#~ msgid "Manipuri"
-#~ msgstr "Maori"
-
-#~ msgid "Multiple languages"
-#~ msgstr "Idiomas múltiplos"
-
-#~ msgid "Mayan languages"
-#~ msgstr "Idiomas Maias"
-
-#, fuzzy
-#~ msgid "Nahuatl languages"
-#~ msgstr "Idiomas Núbios"
-
-#, fuzzy
-#~ msgid "North American Indian"
-#~ msgstr "Nativo Norte-Americano (Outros)"
-
-# No Houaiss, "nauruano" é gentílico, não idioma.
-#~ msgid "Nauru"
-#~ msgstr "Naurano"
-
-#~ msgid "Navajo; Navaho"
-#~ msgstr "Navarro"
-
-# Não consta no Houaiss
-#~ msgid "Ndebele, South; South Ndebele"
-#~ msgstr "Ndebele do Sul"
-
-# Não consta no Houaiss
-#~ msgid "Ndebele, North; North Ndebele"
-#~ msgstr "Ndebele do Norte"
-
-#, fuzzy
-#~ msgid "Norwegian Nynorsk; Nynorsk, Norwegian"
-#~ msgstr "Norueguês Nynorsk"
-
-#, fuzzy
-#~ msgid "Norwegian Bokmål; Bokmål, Norwegian"
-#~ msgstr "Norueguês Bokmål"
-
-#~ msgid "Norse, Old"
-#~ msgstr "Nórdico, Arcaico"
-
-#~ msgid "Nubian languages"
-#~ msgstr "Idiomas Núbios"
-
-#~ msgid "Chichewa; Chewa; Nyanja"
-#~ msgstr "Cinianja"
-
-#~ msgid "Occitan (post 1500); Provençal"
-#~ msgstr "Provençal"
-
-# Não consta no dicionário
-#~ msgid "Ojibwa"
-#~ msgstr "Obíjua"
-
-#~ msgid "Ossetian; Ossetic"
-#~ msgstr "Osseta"
-
-#~ msgid "Turkish, Ottoman (1500-1928)"
-#~ msgstr "Turco, Otomano (1500-1928)"
-
-#~ msgid "Panjabi; Punjabi"
-#~ msgstr "Panjabi"
-
-#, fuzzy
-#~ msgid "Persian, Old (ca. 600-400 B.C.)"
-#~ msgstr "Persa, Antigo (apr.600-400 AC)"
-
-#~ msgid "Philippine (Other)"
-#~ msgstr "Filipino (Outros)"
-
-#~ msgid "Phoenician"
-#~ msgstr "Fenício"
-
-#~ msgid "Pali"
-#~ msgstr "Páli"
-
-#~ msgid "Provençal, Old (to 1500)"
-#~ msgstr "Provençal, Arcaico (até 1500)"
-
-#~ msgid "Pushto; Pashto"
-#~ msgstr "Pachto"
-
-#~ msgid "Rapanui"
-#~ msgstr "Rapanui"
-
-#~ msgid "Romansh"
-#~ msgstr "Romanche"
-
-#~ msgid "South American Indian (Other)"
-#~ msgstr "Nativo Sul-Americano (Outros)"
-
-#~ msgid "Samaritan Aramaic"
-#~ msgstr "Aramaico Samaritano"
-
-#~ msgid "Sicilian"
-#~ msgstr "Siciliano"
-
-#~ msgid "Semitic (Other)"
-#~ msgstr "Semita (Outros)"
-
-#~ msgid "Irish, Old (to 900)"
-#~ msgstr "Irlandês, Arcaico (até 900)"
-
-#~ msgid "Sinhala; Sinhalese"
-#~ msgstr "Cingalês"
-
-#~ msgid "Sino-Tibetan (Other)"
-#~ msgstr "Sino-Tibetano (Outros)"
-
-#~ msgid "Slavic (Other)"
-#~ msgstr "Eslavo (Outros)"
-
-#, fuzzy
-#~ msgid "Songhai languages"
-#~ msgstr "Idiomas de Sinais"
-
-#~ msgid "Sotho, Southern"
-#~ msgstr "Sesoto do Sul"
-
-#~ msgid "Spanish; Castilian"
-#~ msgstr "Espanhol; Castelhano"
-
-#, fuzzy
-#~ msgid "Sranan Tongo"
-#~ msgstr "Ucraniano"
-
-#~ msgid "Nilo-Saharan (Other)"
-#~ msgstr "Nilo-Saariano (Outros)"
-
-#~ msgid "Sumerian"
-#~ msgstr "Sumeriano"
-
-#~ msgid "Klingon; tlhIngan-Hol"
-#~ msgstr "Klingon; tlhIngan-Hol"
-
-#~ msgid "Tonga (Tonga Islands)"
-#~ msgstr "Tonga"
-
-#~ msgid "Tupi languages"
-#~ msgstr "Idiomas Tupi"
-
-#~ msgid "Uighur; Uyghur"
-#~ msgstr "Uigur"
-
-#~ msgid "Undetermined"
-#~ msgstr "Indeterminado"
-
-#~ msgid "Volapük"
-#~ msgstr "Volapuque"
-
-#, fuzzy
-#~ msgid "Zande languages"
-#~ msgstr "Idiomas Maias"
-
-#~ msgid "Zuni"
-#~ msgstr "Zuni"
