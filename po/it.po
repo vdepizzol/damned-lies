@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-05 10:37+0000\n"
-"PO-Revision-Date: 2009-01-05 21:23+0100\n"
+"POT-Creation-Date: 2009-01-06 14:36+0000\n"
+"PO-Revision-Date: 2009-01-06 17:05+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -978,7 +978,7 @@ msgstr "Accesso eseguito correttamente."
 
 #: common/views.py:69
 msgid "We're sorry, but your account has been disabled."
-msgstr "L'account usato è stato disabilitato."
+msgstr "L'account è stato disabilitato."
 
 #: common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
@@ -1025,7 +1025,7 @@ msgstr "Accedi con OpenID"
 
 #: languages/views.py:51
 msgid "UI Translations"
-msgstr "Traduzioni interfaccia grafica"
+msgstr "Traduzioni interfaccia utente"
 
 #: languages/views.py:52 templates/module_detail.html:91
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
@@ -1105,8 +1105,8 @@ msgid "Bugzilla account"
 msgstr "Account Bugzilla"
 
 #: people/models.py:41
-msgid "This shoud be an email, useful if not equal to 'email' field"
-msgstr "Questo dovrebbe essere una email, utile se diverso dal campo \"email\""
+msgid "This should be an email address, useful if not equal to 'email' field"
+msgstr "Questo dovrebbe essere un indirizzo email, utile se diverso dal campo \"email\""
 
 #: people/views.py:86
 msgid "You are already member of this team."
@@ -1284,18 +1284,22 @@ msgstr ""
 msgid "No team for locale %s"
 msgstr "Nessun gruppo per la lingua %s"
 
+# TIPO DI ACCOUNT
 #: teams/models.py:130
 msgid "Translator"
 msgstr "Traduttore"
 
+# TIPO DI ACCOUNT
 #: teams/models.py:131
 msgid "Reviewer"
 msgstr "Revisione"
 
+# TIPO DI ACCOUNT
 #: teams/models.py:132
 msgid "Committer"
 msgstr "Committer"
 
+# TIPO DI ACCOUNT
 #: teams/models.py:133 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Coordinatore"
@@ -1386,7 +1390,7 @@ msgstr "Comunità"
 
 #: templates/base.html:41
 msgid "Back to Damned Lies home page"
-msgstr "Torna alla hompage di Maledette bugie"
+msgstr "Torna alla homepage di Maledette bugie"
 
 #: templates/base.html:47 templates/index.html:13
 msgid "Teams"
@@ -1661,7 +1665,7 @@ msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Autentica attraverso OpenID <strong>oppure</strong> password:"
 
 #: templates/register.html:34
-msgid "Register with OpenId"
+msgid "Register with OpenID"
 msgstr "Registra con OpenID"
 
 #: templates/register.html:46
@@ -1840,7 +1844,10 @@ msgstr "Cambio della password"
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
-msgstr "Inserire la propria vecchia password, per motivi di sicurezza, quindi inserire la propria nuova password due volte in modo da verificare che sia stata digitata in modo corretto."
+msgstr ""
+"Inserire la propria vecchia password, per motivi di sicurezza, quindi "
+"inserire la propria nuova password due volte in modo da verificare che sia "
+"stata digitata in modo corretto."
 
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
@@ -1860,7 +1867,7 @@ msgstr "Partecipa a un nuovo gruppo"
 
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
-msgstr "Partecipare al seguente gruppo come \"traduttore\":"
+msgstr "Partecipare al seguente gruppo come «traduttore»:"
 
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
@@ -1869,7 +1876,7 @@ msgstr "Partecipa"
 #: templates/people/person_team_membership.html:5
 #: templates/teams/team_detail.html:63
 msgid "Team membership"
-msgstr "Partecipazione ai gruppi"
+msgstr "Adesione ai gruppi"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
@@ -1935,13 +1942,15 @@ msgstr "Coordinato da <a href=\"%(url)s\">%(name)s</a>"
 
 #: templates/teams/team_list.html:34
 msgid "There are currently no translation teams in GNOME. :("
-msgstr "Al momento non vi è alcun gruppo di traduzione in GNOME :-("
+msgstr "Al momento non vi è alcun gruppo di traduzione in GNOME :("
 
 #: templates/vertimus/vertimus_detail.html:5
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Traduzione del modulo: %(name)s"
 
+# messo al solo plurale perché in italiano è 
+# molto meglio così
 #: templates/vertimus/vertimus_detail.html:13
 msgid "Used in release(s):"
 msgstr "Usato nei rilasci:"
@@ -2007,38 +2016,59 @@ msgstr "Per questa azione è necessario un commento o un file."
 msgid "A file is needed for this action."
 msgstr "Per questa azione è necessario un file."
 
+# STATO DELLA TRADUZIONE
 #: vertimus/models.py:125
 msgid "Inactive"
-msgstr "Inattivo"
+msgstr "Inattiva"
 
+# STATO DELLA TRADUZIONE
 #: vertimus/models.py:138
 msgid "Translating"
 msgstr "Traduzione in corso"
 
+# STATO DELLA TRADUZIONE
 #: vertimus/models.py:168
 msgid "Proofreading"
-msgstr "Bozza in correzione"
+msgstr "Correzione della bozza in corso"
 
+# STATO DELLA TRADUZIONE
 #: vertimus/models.py:182
 msgid "Proofread"
 msgstr "Bozza corretta"
 
+# STATO DELLA TRADUZIONE
+#
+# nota: usato riesaminare perché non sembra essere
+# la revisione come noi intendiamo.
+#
+# Per quanto si è capito, ma dobbiamo chiedere
+#
+#   revisione --> proofread
+#   ???       --> review
+#
+# review si applica all'intero workflow, non alla traduzione
+# e "azzera" lo stato, o meglio lo porta in "da riesaminare" e
+# consente come sole azioni aggiungi_commento e prenota_traduzione
 #: vertimus/models.py:195
 msgid "To Review"
-msgstr "Da revisionare"
+msgstr "Da riesaminare"
 
+# STATO DI TRADUZIONE
 #: vertimus/models.py:207
 msgid "To Commit"
-msgstr "Commit da eseguire"
+msgstr "Da eseguire il commit"
 
+# STATO DI TRADUZIONE
 #: vertimus/models.py:220
 msgid "Committing"
 msgstr "Commit in corso"
 
+# STATO DI TRADUZIONE
 #: vertimus/models.py:234
 msgid "Committed"
 msgstr "Commit eseguito"
 
+# testo per l'email inviata
 #: vertimus/models.py:360
 #, python-format
 msgid ""
@@ -2056,19 +2086,23 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
+# fa parte dell'email
 #: vertimus/models.py:373 vertimus/models.py:422
 msgid "Without comment"
-msgstr "Senza commento"
+msgstr "Nessun commento"
 
+# fa parte dell'email
 #: vertimus/models.py:375 vertimus/models.py:424
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Questo è un messaggio automatico inviato da %s."
 
+# AZIONE
 #: vertimus/models.py:381
 msgid "Write a comment"
-msgstr "Scrivere un commento"
+msgstr "Scrivi un commento"
 
+# testo per l'email inviata
 #: vertimus/models.py:410
 #, python-format
 msgid ""
@@ -2081,47 +2115,59 @@ msgid ""
 msgstr ""
 "Salve,\n"
 "\n"
-"È stato lasciato un nuovo commento su %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"È stato lasciato un nuovo commento su %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
 "%(url)s\n"
 "\n"
 
+# AZIONE
 #: vertimus/models.py:432
 msgid "Reserve for translation"
-msgstr "Prenota per la traduzione"
+msgstr "Prenota la traduzione"
 
+# AZIONE
 #: vertimus/models.py:443
 msgid "Upload the new translation"
 msgstr "Carica la nuova traduzione"
 
+# AZIONE
 #: vertimus/models.py:458
 msgid "Reserve for proofreading"
-msgstr "Prenota per correzione bozza"
+msgstr "Prenota la correzione bozza"
 
+# AZIONE
 #: vertimus/models.py:469
 msgid "Upload for proofreading"
 msgstr "Carica per correzione bozza"
 
+# AZIONE
 #: vertimus/models.py:484
 msgid "Ready for submission"
-msgstr "Pronto per l'invio"
+msgstr "Pronto per il commit"
 
+# AZIONE
+# cambiato submit/commit
 #: vertimus/models.py:500
 msgid "Reserve to submit"
-msgstr "Prenota per l'invio"
+msgstr "Prenota il commit"
 
+# AZIONE
+# cambiato sumission/commit
 #: vertimus/models.py:511
 msgid "Inform of submission"
-msgstr "Informa dell'invio"
+msgstr "Informa del commit"
 
+# AZIONE
 #: vertimus/models.py:525
 msgid "Requiring review"
-msgstr "Richiesta di revisione"
+msgstr "Richiesta di riesame"
 
+# AZIONE
+# traduzione prolissa, ma valida
 #: vertimus/models.py:556
 msgid "Backup the actions"
-msgstr "Backup di questa azione"
+msgstr "Conferma e azzera le azioni"
 
+# AZIONE
 #: vertimus/models.py:593
 msgid "Undo the last state change"
-msgstr "Ripristina l'ultimo cambio di stato"
+msgstr "Annulla l'ultimo cambio di stato"
