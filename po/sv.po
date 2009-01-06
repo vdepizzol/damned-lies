@@ -1,14 +1,14 @@
 # Swedish translation of damned-lies.
-# Copyright (C) 2007-2008  Free Software Foundation, Inc.
+# Copyright (C) 2007-2009  Free Software Foundation, Inc.
 # This file is distributed under the same license as the damned-lies package.
-# Daniel Nylander <po@danielnylander.se>, 2007, 2008.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-31 11:38+0000\n"
-"PO-Revision-Date: 2009-01-01 17:00+0100\n"
+"POT-Creation-Date: 2009-01-05 10:37+0000\n"
+"PO-Revision-Date: 2009-01-06 15:35+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -977,7 +977,7 @@ msgid "Username:"
 msgstr "Användarnamn:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:26
+#: people/forms.py:20
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Lösenord:"
@@ -994,7 +994,7 @@ msgid "Or use your OpenID:"
 msgstr "eller använd ditt OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:23
+#: people/forms.py:17
 #: templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID:"
@@ -1015,49 +1015,49 @@ msgstr "Gränssnittsöversättningar"
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: people/forms.py:20
+#: people/forms.py:14
 msgid "Choose a username:"
 msgstr "Välj ett användarnamn:"
 
-#: people/forms.py:21
+#: people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Får endast innehålla bokstäver, siffror, understreck eller bindestreck"
 
-#: people/forms.py:22
+#: people/forms.py:16
 msgid "Email:"
 msgstr "E-post:"
 
-#: people/forms.py:27
+#: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "Minst 7 tecken"
 
-#: people/forms.py:29
-#: templates/people/password_change_form.html:30
+#: people/forms.py:23
+#: templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
-#: people/forms.py:37
+#: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "Detta användarnamn används redan. Välj ett annat."
 
-#: people/forms.py:45
+#: people/forms.py:39
 msgid "You must either provide an OpenId or a password"
 msgstr "Du måste antingen tillhandahålla ett OpenID eller lösenord"
 
-#: people/forms.py:48
+#: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "Lösenorden stämmer inte överens"
 
-#: people/forms.py:71
+#: people/forms.py:65
 msgid "Account activation"
 msgstr "Kontoaktivering"
 
-#: people/forms.py:72
+#: people/forms.py:66
 #, python-format
 msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
 msgstr "Detta är en bekräftelse på att din registrering på %s har lyckats. Klicka på länken nedan eller kopiera in den i en webbläsare för att aktivera ditt konto."
 
-#: people/forms.py:74
+#: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "Administratörer för %s"
@@ -1086,28 +1086,27 @@ msgstr "Bugzilla-konto"
 msgid "This shoud be an email, useful if not equal to 'email' field"
 msgstr "Detta bör vara en e-postadress, användbar om den inte är samma som \"email\"-fältet"
 
-#: people/views.py:49
+#: people/views.py:86
 msgid "You are already member of this team."
 msgstr "Du är redan medlem i denna grupp."
 
-#: people/views.py:51
-#: people/views.py:62
-msgid "Sorry, you're not allowed to modify this user."
-msgstr "Tyvärr, du tillåts inte ändra denna användare."
+#: people/views.py:109
+msgid "Your password has been changed."
+msgstr "Ditt lösenord har ändrats."
 
-#: stats/models.py:284
+#: stats/models.py:283
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
-#: stats/models.py:308
+#: stats/models.py:307
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: stats/models.py:346
+#: stats/models.py:345
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:539
+#: stats/models.py:546
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1118,89 +1117,89 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:813
+#: stats/models.py:820
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:814
+#: stats/models.py:821
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:815
+#: stats/models.py:822
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:816
+#: stats/models.py:823
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:817
+#: stats/models.py:824
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:890
+#: stats/models.py:897
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:921
+#: stats/models.py:928
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:922
+#: stats/models.py:929
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:924
+#: stats/models.py:931
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:925
+#: stats/models.py:932
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:928
+#: stats/models.py:935
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:72
+#: stats/utils.py:73
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fel vid körning av \"intltool-update -m\"."
 
-#: stats/utils.py:78
+#: stats/utils.py:79
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Det saknas filer i POTFILES.in: %s"
 
-#: stats/utils.py:87
+#: stats/utils.py:88
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, men de finns ännu inte: %s"
 
-#: stats/utils.py:99
+#: stats/utils.py:100
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
-#: stats/utils.py:102
+#: stats/utils.py:103
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
 
-#: stats/utils.py:105
+#: stats/utils.py:106
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE pekar inte till en verklig fil, antagligen ett makro."
 
-#: stats/utils.py:120
+#: stats/utils.py:121
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1211,39 +1210,39 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:179
+#: stats/utils.py:180
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-filen \"%s\" finns inte eller kan inte läsas."
 
-#: stats/utils.py:199
+#: stats/utils.py:200
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
-#: stats/utils.py:201
+#: stats/utils.py:202
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
-#: stats/utils.py:204
+#: stats/utils.py:205
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
-#: stats/utils.py:231
+#: stats/utils.py:232
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
-#: stats/utils.py:260
+#: stats/utils.py:261
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
-#: stats/utils.py:287
+#: stats/utils.py:288
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
-#: stats/utils.py:290
+#: stats/utils.py:291
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
@@ -1263,6 +1262,11 @@ msgstr "Granskare"
 #: teams/models.py:132
 msgid "Committer"
 msgstr "Insändare"
+
+#: teams/models.py:133
+#: templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Koordinator"
 
 #: teams/views.py:43
 msgid "Committers"
@@ -1460,7 +1464,7 @@ msgid "Module Statistics: %(name)s"
 msgstr "Modulstatistik: %(name)s"
 
 #: templates/module_detail.html:17
-#: templates/vertimus/vertimus_detail.html:29
+#: templates/vertimus/vertimus_detail.html:27
 msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s SVN-förråd. Se modulens webbsida om var översättningarna ska skickas."
 
@@ -1538,18 +1542,6 @@ msgstr "GNOME-moduler"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Välj en modul nedan för att se några förbannade lögner om den:"
 
-#: templates/person_base.html:24
-msgid "Instant messaging:"
-msgstr "Snabbmeddelande:"
-
-#: templates/person_base.html:31
-msgid "Bugzilla account:"
-msgstr "Bugzilla-konto:"
-
-#: templates/person_base.html:35
-msgid "SVN account:"
-msgstr "SVN-konto:"
-
 #: templates/register.html:9
 msgid "Account Registration"
 msgstr "Kontoregistrering"
@@ -1620,7 +1612,7 @@ msgid "Select a release or a release set below to see more details about it:"
 msgstr "Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer om den:"
 
 #: templates/stats_show.html:17
-#: templates/vertimus/vertimus_detail.html:55
+#: templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "Anteckningar"
 
@@ -1629,12 +1621,12 @@ msgid "Language"
 msgstr "Språk"
 
 #: templates/stats_show.html:30
-#: vertimus/models.py:147
+#: vertimus/models.py:151
 msgid "Translated"
 msgstr "Översatt"
 
 #: templates/stats_show.html:50
-#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:66
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
 
@@ -1674,82 +1666,109 @@ msgstr "Felsammandrag"
 msgid "Download all po files"
 msgstr "Hämta alla po-filer"
 
-#: templates/people/password_change_done.html:4
-#: templates/people/password_change_done.html:8
-msgid "Password change successful"
-msgstr "Lösenordet har ändrats"
-
-#: templates/people/password_change_done.html:9
-msgid "Your password was changed."
-msgstr "Ditt lösenord ändrades."
-
-#: templates/people/password_change_form.html:4
-#: templates/people/password_change_form.html:9
-msgid "Password change"
-msgstr "Lösenordsbyte"
-
-#: templates/people/password_change_form.html:11
-msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
-msgstr "Ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt nya lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
-
-#: templates/people/password_change_form.html:18
-msgid "Old password:"
-msgstr "Gammalt lösenord:"
-
-#: templates/people/password_change_form.html:24
-msgid "New password:"
-msgstr "Nytt lösenord:"
-
-#: templates/people/password_change_form.html:33
-msgid "Change my password"
-msgstr "Ändra mitt lösenord"
-
-#: templates/people/person_detail.html:5
+#: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "GNOME-bidragsgivare"
 
-#: templates/people/person_detail.html:14
+#: templates/people/person_base.html:13
+#: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Ändra dina uppgifter"
 
-#: templates/people/person_detail.html:15
+#: templates/people/person_base.html:14
 msgid "Change your password"
 msgstr "Ändra ditt lösenord"
 
-#: templates/people/person_detail.html:25
-msgid "Save"
-msgstr "Spara"
+#: templates/people/person_base.html:15
+msgid "Join a team"
+msgstr "Gå med i en grupp"
 
-#: templates/people/person_detail.html:36
+#: templates/people/person_detail.html:9
 msgid "Maintains:"
 msgstr "Underhåller:"
 
-#: templates/people/person_detail.html:45
+#: templates/people/person_detail.html:20
+msgid "Working on"
+msgstr "Arbetar på"
+
+#: templates/people/person_detail.html:24
+msgid "Date"
+msgstr "Datum"
+
+#: templates/people/person_detail.html:24
+msgid "Module"
+msgstr "Modul"
+
+#: templates/people/person_detail.html:24
+msgid "State"
+msgstr "Tillstånd"
+
+#: templates/people/person_detail_change_form.html:13
+msgid "Save"
+msgstr "Spara"
+
+#: templates/people/person_list.html:4
+#: templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "GNOME-bidragsgivare"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "GNOME utvecklas av följande personer:"
+
+#: templates/people/person_overview.html:25
+msgid "Instant messaging:"
+msgstr "Snabbmeddelande:"
+
+#: templates/people/person_overview.html:32
+msgid "Bugzilla account:"
+msgstr "Bugzilla-konto:"
+
+#: templates/people/person_overview.html:36
+msgid "SVN account:"
+msgstr "SVN-konto:"
+
+#: templates/people/person_password_change_form.html:6
+msgid "Password change"
+msgstr "Lösenordsbyte"
+
+#: templates/people/person_password_change_form.html:8
+msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt nya lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
+
+#: templates/people/person_password_change_form.html:15
+msgid "Old password:"
+msgstr "Gammalt lösenord:"
+
+#: templates/people/person_password_change_form.html:21
+msgid "New password:"
+msgstr "Nytt lösenord:"
+
+#: templates/people/person_password_change_form.html:30
+msgid "Change my password"
+msgstr "Ändra mitt lösenord"
+
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "Gå med i en ny grupp"
+
+#: templates/people/person_team_join_form.html:11
+msgid "I would like to join the following team as 'translator':"
+msgstr "Jag vill gå med i följande grupp som \"översättare\":"
+
+#: templates/people/person_team_join_form.html:13
+msgid "Join"
+msgstr "Gå med"
+
+#: templates/people/person_team_membership.html:5
 #: templates/teams/team_detail.html:63
 msgid "Team membership"
 msgstr "Gruppmedlemskap"
 
-#: templates/people/person_detail.html:49
+#: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Medlem av gruppen %(team_name)s (%(role_name)s)"
-
-#: templates/people/person_detail.html:59
-msgid "I would like to join the following team as 'translator':"
-msgstr "Jag vill gå med i följande grupp som \"översättare\":"
-
-#: templates/people/person_detail.html:60
-msgid "Join"
-msgstr "Gå med"
-
-#: templates/people/person_list.html:4
-#: templates/people/person_list.html:9
-msgid "GNOME Contributors"
-msgstr "GNOME-bidragsgivare"
-
-#: templates/people/person_list.html:11
-msgid "GNOME is being developed by following people:"
-msgstr "GNOME utvecklas av följande personer:"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1784,14 +1803,14 @@ msgstr "Skicka e-post till listan"
 msgid "Subscribe"
 msgstr "Prenumerera"
 
-#: templates/teams/team_base.html:31
-msgid "Coordinator"
-msgstr "Koordinator"
-
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s översättningsgruppen"
+
+#: templates/teams/team_detail.html:74
+msgid "Apply modifications"
+msgstr "Verkställ ändringar"
 
 #: templates/teams/team_list.html:4
 #: templates/teams/team_list.html.py:9
@@ -1820,31 +1839,31 @@ msgstr "Modulöversättning: %(name)s"
 msgid "Used in release(s):"
 msgstr "Används i utgåvor:"
 
-#: templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
 msgstr "Tillstånd:"
 
-#: templates/vertimus/vertimus_detail.html:43
+#: templates/vertimus/vertimus_detail.html:41
 msgid "Translated:"
 msgstr "Översatt:"
 
-#: templates/vertimus/vertimus_detail.html:73
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Action History"
 msgstr "Åtgärdshistorik"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:87
 msgid "No comment"
 msgstr "Ingen kommentar"
 
-#: templates/vertimus/vertimus_detail.html:98
+#: templates/vertimus/vertimus_detail.html:96
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/vertimus/vertimus_detail.html:103
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:107
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -1877,39 +1896,39 @@ msgstr "En kommentar eller en fil behövs för denna åtgärd."
 msgid "A file is needed for this action."
 msgstr "En fil behövs för denna åtgärd."
 
-#: vertimus/models.py:121
+#: vertimus/models.py:125
 msgid "Inactive"
 msgstr "Inaktiv"
 
-#: vertimus/models.py:134
+#: vertimus/models.py:138
 msgid "Translating"
 msgstr "Översätter"
 
-#: vertimus/models.py:164
+#: vertimus/models.py:168
 msgid "Proofreading"
 msgstr "Korrekturläsning"
 
-#: vertimus/models.py:178
+#: vertimus/models.py:182
 msgid "Proofread"
 msgstr "Korrekturläs"
 
-#: vertimus/models.py:191
+#: vertimus/models.py:195
 msgid "To Review"
 msgstr "För granskning"
 
-#: vertimus/models.py:203
+#: vertimus/models.py:207
 msgid "To Commit"
 msgstr "För insändning"
 
-#: vertimus/models.py:216
+#: vertimus/models.py:220
 msgid "Committing"
 msgstr "Insändning"
 
-#: vertimus/models.py:230
+#: vertimus/models.py:234
 msgid "Committed"
 msgstr "Insänd"
 
-#: vertimus/models.py:354
+#: vertimus/models.py:360
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1924,16 +1943,22 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:367
-#: vertimus/models.py:412
+#: vertimus/models.py:373
+#: vertimus/models.py:422
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:373
+#: vertimus/models.py:375
+#: vertimus/models.py:424
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Detta är ett automatiskt skickat meddelande från %s."
+
+#: vertimus/models.py:381
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: vertimus/models.py:400
+#: vertimus/models.py:410
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1948,46 +1973,50 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:420
+#: vertimus/models.py:432
 msgid "Reserve for translation"
 msgstr "Reservera för översättning"
 
-#: vertimus/models.py:431
+#: vertimus/models.py:443
 msgid "Upload the new translation"
 msgstr "Skicka upp ny översättning"
 
-#: vertimus/models.py:446
+#: vertimus/models.py:458
 msgid "Reserve for proofreading"
 msgstr "Reservera för korrekturläsning"
 
-#: vertimus/models.py:457
+#: vertimus/models.py:469
 msgid "Upload for proofreading"
 msgstr "Skicka upp för korrekturläsning"
 
-#: vertimus/models.py:472
+#: vertimus/models.py:484
 msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
-#: vertimus/models.py:488
+#: vertimus/models.py:500
 msgid "Reserve to submit"
 msgstr "Reservera för insändning"
 
-#: vertimus/models.py:499
+#: vertimus/models.py:511
 msgid "Inform of submission"
 msgstr "Informera om insändning"
 
-#: vertimus/models.py:513
+#: vertimus/models.py:525
 msgid "Requiring review"
 msgstr "Kräver granskning"
 
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Backup the actions"
 msgstr "Säkerhetskopiera åtgärderna"
 
-#: vertimus/models.py:581
+#: vertimus/models.py:593
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
+#~ msgid "Sorry, you're not allowed to modify this user."
+#~ msgstr "Tyvärr, du tillåts inte ändra denna användare."
+#~ msgid "Password change successful"
+#~ msgstr "Lösenordet har ändrats"
 #~ msgid "Logged in as: %(username)s"
 #~ msgstr "Inloggad som: %(username)s"
 #~ msgid "Edit"
@@ -2022,8 +2051,6 @@ msgstr "Ångra senaste tillståndsändring"
 #~ msgstr "Sabayon"
 #~ msgid "XKeyboard-Config"
 #~ msgstr "XKeyboard-Config"
-#~ msgid "Desktop Applications"
-#~ msgstr "Skrivbordsprogram"
 #~ msgid "Development Platform"
 #~ msgstr "Utvecklingsplattform"
 #~ msgid "External Dependencies"
