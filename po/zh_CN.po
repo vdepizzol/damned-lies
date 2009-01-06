@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-01 17:07+0000\n"
+"POT-Creation-Date: 2009-01-05 10:37+0000\n"
 "PO-Revision-Date: 2008-11-28 14:29+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -102,7 +102,7 @@ msgstr "Dzongkha 语"
 
 #: database-content.py:21
 msgid "Chinese (China)"
-msgstr "中文 (中国)"
+msgstr "中文(中国)"
 
 #: database-content.py:22
 msgid "Balochi"
@@ -362,7 +362,7 @@ msgstr "印尼语"
 
 #: database-content.py:86
 msgid "Bengali (India)"
-msgstr "孟加拉语 (印地)"
+msgstr "孟加拉语(印地)"
 
 #: database-content.py:87
 msgid "Kashmiri"
@@ -382,7 +382,7 @@ msgstr "约鲁巴语"
 
 #: database-content.py:91
 msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "挪威语 (书面及尼诺斯克)"
+msgstr "挪威语(书面及尼诺斯克)"
 
 #: database-content.py:92
 msgid "Nepali"
@@ -474,23 +474,23 @@ msgstr "低地撒克逊语，德语"
 
 #: database-content.py:114
 msgid "Valencian (Southern Catalan)"
-msgstr "巴伦西亚语 (南加泰罗尼亚)"
+msgstr "巴伦西亚语(南加泰罗尼亚)"
 
 #: database-content.py:115
 msgid "Uzbek (Cyrillic)"
-msgstr "乌兹别克（西里尔）语"
+msgstr "乌兹别克(西里尔)语"
 
 #: database-content.py:116
 msgid "Uzbek (Latin)"
-msgstr "乌兹别克（拉丁）语"
+msgstr "乌兹别克(拉丁)语"
 
 #: database-content.py:117
 msgid "Chinese (Hong Kong)"
-msgstr "中文 (香港)"
+msgstr "中文(香港)"
 
 #: database-content.py:118
 msgid "Chinese (Taiwan)"
-msgstr "中文 (台湾)"
+msgstr "中文(台湾)"
 
 #: database-content.py:119
 msgid "Norwegian Bokmål"
@@ -798,7 +798,7 @@ msgstr "GFloppy 手册"
 
 #: database-content.py:195
 msgid "GNOME Library help"
-msgstr "GNOME 函数库帮助"
+msgstr "GNOME 数库帮助"
 
 #: database-content.py:196
 msgid "Eye of GNOME Manual"
@@ -975,12 +975,11 @@ msgstr "抱歉，您的帐户已被禁用。"
 
 #: common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
-msgstr "登录成功，请校验您的用户名和密码。"
+msgstr "登录不成功。请检查您的用户名和密码。"
 
 #: common/views.py:111
-#, fuzzy
 msgid "Your account has been activated."
-msgstr "抱歉，您的帐户已被禁用。"
+msgstr "您的帐户已激活。"
 
 #: django_openid/templates/django_openid/admin_login.html:17
 #: templates/login.html:15
@@ -990,12 +989,12 @@ msgstr "使用用户名和密码登录："
 #: django_openid/templates/django_openid/admin_login.html:20
 #: templates/login.html:18
 msgid "Username:"
-msgstr "用户名"
+msgstr "用户名："
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:26 templates/login.html:21
+#: people/forms.py:20 templates/login.html:21
 msgid "Password:"
-msgstr "密码"
+msgstr "密码："
 
 #: django_openid/templates/django_openid/admin_login.html:28
 #: templates/base.html:76 templates/login.html:27
@@ -1008,7 +1007,7 @@ msgid "Or use your OpenID:"
 msgstr "或者使用您的 OpenID："
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:23 templates/login.html:35
+#: people/forms.py:17 templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID："
 
@@ -1026,43 +1025,43 @@ msgstr "用户界面翻译"
 msgid "Documentation"
 msgstr "文档"
 
-#: people/forms.py:20
+#: people/forms.py:14
 msgid "Choose a username:"
 msgstr "选择用户名："
 
-#: people/forms.py:21
+#: people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "只能包含字母、数字、下划线或连字符"
 
-#: people/forms.py:22
+#: people/forms.py:16
 msgid "Email:"
 msgstr "电子邮件："
 
-#: people/forms.py:27
+#: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "至少七个字符"
 
-#: people/forms.py:29 templates/people/password_change_form.html:30
+#: people/forms.py:23 templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
 msgstr "确认密码："
 
-#: people/forms.py:37
+#: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "此用户名已经被占用。请另选一个。"
 
-#: people/forms.py:45
+#: people/forms.py:39
 msgid "You must either provide an OpenId or a password"
 msgstr "您必须提供 OpenID，或者您的密码"
 
-#: people/forms.py:48
+#: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "密码不匹配"
 
-#: people/forms.py:71
+#: people/forms.py:65
 msgid "Account activation"
 msgstr "账户激活"
 
-#: people/forms.py:72
+#: people/forms.py:66
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1070,7 +1069,7 @@ msgid ""
 "browser."
 msgstr ""
 
-#: people/forms.py:74
+#: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "%s 管理"
@@ -1099,27 +1098,27 @@ msgstr "Bugzilla 账户"
 msgid "This shoud be an email, useful if not equal to 'email' field"
 msgstr "这应该是一个电子邮件地址，特别适用于与“电子邮件”字段不同的情况"
 
-#: people/views.py:49
+#: people/views.py:86
 msgid "You are already member of this team."
 msgstr "您已经是此团队的一员。"
 
-#: people/views.py:51 people/views.py:62
-msgid "Sorry, you're not allowed to modify this user."
-msgstr "抱歉，您没有权限修改此用户。"
+#: people/views.py:109
+msgid "Your password has been changed."
+msgstr "您的密码已更改。"
 
-#: stats/models.py:284
+#: stats/models.py:283
 msgid "Can't generate POT file, using old one."
 msgstr "无法生成 POT 文件，改用旧的。"
 
-#: stats/models.py:308
+#: stats/models.py:307
 msgid "Can't copy new POT file to public location."
 msgstr "无法复制新的 POT 文件到公开位置"
 
-#: stats/models.py:346
+#: stats/models.py:345
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 清单没有包括该语言。"
 
-#: stats/models.py:539
+#: stats/models.py:546
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1130,68 +1129,68 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:813
+#: stats/models.py:820
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:814
+#: stats/models.py:821
 msgid "Development Tools"
 msgstr "开发工具"
 
-#: stats/models.py:815
+#: stats/models.py:822
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:816
+#: stats/models.py:823
 msgid "GNOME Developer Platform"
 msgstr "GNOME 开发者平台"
 
-#: stats/models.py:817
+#: stats/models.py:824
 msgid "New Module Proposals"
 msgstr "新模块提案"
 
-#: stats/models.py:890
+#: stats/models.py:897
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:921
+#: stats/models.py:928
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 条消息"
 
-#: stats/models.py:922
+#: stats/models.py:929
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新于 %(date)s"
 
-#: stats/models.py:924
+#: stats/models.py:931
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 个图片"
 
-#: stats/models.py:925
+#: stats/models.py:932
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s %(figures)s) — %(updated)s"
 
-#: stats/models.py:928
+#: stats/models.py:935
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:72
+#: stats/utils.py:73
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "运行“intltool-update -m”检查时出错。"
 
-#: stats/utils.py:78
+#: stats/utils.py:79
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "在 POTFILES.in 中缺少部分文件：%s"
 
-#: stats/utils.py:87
+#: stats/utils.py:88
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1199,21 +1198,21 @@ msgid ""
 msgstr ""
 "下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而他们并不存在：%s"
 
-#: stats/utils.py:99
+#: stats/utils.py:100
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "模块 %s 不像是 gnome-doc-utils 模块。"
 
-#: stats/utils.py:102
+#: stats/utils.py:103
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE 没有解析到某个真实文件，请使用 '%s.xml'。"
 
-#: stats/utils.py:105
+#: stats/utils.py:106
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE 没有指向某个真实文件，也许是某个宏。"
 
-#: stats/utils.py:120
+#: stats/utils.py:121
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1224,40 +1223,40 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:179
+#: stats/utils.py:180
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO 文件“%s”不存在或者无法读取。"
 
-#: stats/utils.py:199
+#: stats/utils.py:200
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO 文件“%s”没有通过 msgfmt 检查：不能更新。"
 
-#: stats/utils.py:201
+#: stats/utils.py:202
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "无法得到 POT 文件“%s”的统计数据。"
 
-#: stats/utils.py:204
+#: stats/utils.py:205
 msgid "This PO file has an executable bit set."
 msgstr "该 PO 文件设置为可执行属性。"
 
-#: stats/utils.py:231
+#: stats/utils.py:232
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO 文件“%s”并不是 UTF-8 编码。"
 
-#: stats/utils.py:260
+#: stats/utils.py:261
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "在 LINGUAS 文件内没有该语言的条目。"
 
-#: stats/utils.py:287
+#: stats/utils.py:288
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "在配置文件的 ALL_LINGUAS 内没有该语言的条目。"
 
-#: stats/utils.py:290
+#: stats/utils.py:291
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1266,7 +1265,7 @@ msgstr "如果不知道在哪里查找该语言是否在实际使用，询问该
 #: teams/models.py:113
 #, python-format
 msgid "No team for locale %s"
-msgstr "没有 %s 小组"
+msgstr "没有 %s 的团队"
 
 #: teams/models.py:130
 msgid "Translator"
@@ -1411,7 +1410,7 @@ msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
-"所有 GNOME 翻译小组清单，包含如首要联系人(协调人)的完全信息，网页和邮件列表信"
+"所有 GNOME 翻译团队清单，包含如首要联系人(协调人)的完全信息，网页和邮件列表信"
 "息。"
 
 #: templates/index.html:15
@@ -1419,23 +1418,23 @@ msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
-"如果您的语言没有翻译小组，您可以轻易地<a href=\"http://live.gnome.org/"
-"TranslationProject/StartingATeam/\">开始您自己的小组</a>。"
+"如果您的语言没有翻译团队，您可以轻易地<a href=\"http://live.gnome.org/"
+"TranslationProject/StartingATeam/\">开始您自己的团队</a>。"
 
 #: templates/index.html:22
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
-msgstr "这里是所有<a href='%(teams_url)s'>翻译小组</a>的语言清单"
+msgstr "这里列出了所有的<a href='%(teams_url)s'>翻译团队</a>。"
 
 #: templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
-"一些小组管理不止一个语言（通常仅仅是简单的变形），在这里你可以看到所有 GNOME "
-"正在被翻译为的语言。"
+"某些团队管理多种语言(通常仅仅是简单的变形)，在这里你可以看到 GNOME "
+"目前支持的各种语言。"
 
 #: templates/index.html:27
 msgid "Release Sets"
@@ -1449,9 +1448,7 @@ msgstr "所有 GNOME 发行套件的清单，以及我们为其收集统计的�
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
-msgstr ""
-"发行系列的例子有“GNOME 办公”、“第五脚趾”和“"
-"GNOME 2.14”."
+msgstr "发行系列的例子有“GNOME 办公”、“第五脚趾”和“GNOME 2.14”。"
 
 #: templates/index.html:31
 msgid ""
@@ -1480,8 +1477,8 @@ msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
-"它们通常从 CVS 中取出，我们保持所有关于它们的相关信息 (Bugzilla 细节，网页，"
-"维护者信息，...)。"
+"它们通常从 CVS 中取出，我们保持所有关于它们的相关信息 (Bugzilla 细节、网页、"
+"维护者信息……)。"
 
 #: templates/index.html:46
 msgid "Translated by:"
@@ -1522,7 +1519,7 @@ msgstr "Bug 报告"
 
 #: templates/module_detail.html:40
 msgid "Show existing i18n and l10n bugs"
-msgstr "显示已存在的 i18n 和 l10n 的 bug"
+msgstr "显示已存在的 i18n 和 l10n bug"
 
 #: templates/module_detail.html:42
 msgid "Report bugs to Bugzilla"
@@ -1555,7 +1552,7 @@ msgstr "模块文档图片状态：%(name)s"
 
 #: templates/module_images.html:12
 msgid "Figures translation status"
-msgstr "图形翻译状态"
+msgstr "图片翻译状态"
 
 #: templates/module_images.html:17
 msgid "Original"
@@ -1586,18 +1583,6 @@ msgstr "GNOME 模块"
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "选择下列的某个模块以查看关于它的“胡言乱语”："
-
-#: templates/person_base.html:24
-msgid "Instant messaging:"
-msgstr "即时通信："
-
-#: templates/person_base.html:31
-msgid "Bugzilla account:"
-msgstr "Bugzilla 帐号："
-
-#: templates/person_base.html:35
-msgid "SVN account:"
-msgstr "SVN 帐号："
 
 #: templates/register.html:9
 msgid "Account Registration"
@@ -1682,7 +1667,7 @@ msgstr "注意"
 msgid "Language"
 msgstr "语言"
 
-#: templates/stats_show.html:30 vertimus/models.py:147
+#: templates/stats_show.html:30 vertimus/models.py:151
 msgid "Translated"
 msgstr "已翻译"
 
@@ -1725,82 +1710,113 @@ msgstr "错误摘要"
 msgid "Download all po files"
 msgstr "下载全部 po 文件"
 
-#: templates/people/password_change_done.html:4
-#: templates/people/password_change_done.html:8
-msgid "Password change successful"
-msgstr "密码更改成功"
+#: templates/people/person_base.html:5
+msgid "GNOME Contributor"
+msgstr "GNOME 贡献者"
 
-#: templates/people/password_change_done.html:9
-msgid "Your password was changed."
-msgstr "您的密码已更改。"
+#: templates/people/person_base.html:13
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "更改您的详细资料"
 
-#: templates/people/password_change_form.html:4
-#: templates/people/password_change_form.html:9
+#: templates/people/person_base.html:14
+msgid "Change your password"
+msgstr "更改您的密码"
+
+#: templates/people/person_base.html:15
+msgid "Join a team"
+msgstr ""
+
+#: templates/people/person_detail.html:9
+msgid "Maintains:"
+msgstr "维护："
+
+#: templates/people/person_detail.html:20
+msgid "Working on"
+msgstr ""
+
+#: templates/people/person_detail.html:24
+#, fuzzy
+msgid "Date"
+msgstr "状态："
+
+#: templates/people/person_detail.html:24
+#, fuzzy
+msgid "Module"
+msgstr "模块"
+
+#: templates/people/person_detail.html:24
+#, fuzzy
+msgid "State"
+msgstr "状态："
+
+#: templates/people/person_detail_change_form.html:13
+msgid "Save"
+msgstr "保存"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "GNOME 贡献者"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "GNOME 正由下列人员开发："
+
+#: templates/people/person_overview.html:25
+msgid "Instant messaging:"
+msgstr "即时通信："
+
+#: templates/people/person_overview.html:32
+msgid "Bugzilla account:"
+msgstr "Bugzilla 帐号："
+
+#: templates/people/person_overview.html:36
+msgid "SVN account:"
+msgstr "SVN 帐号："
+
+#: templates/people/person_password_change_form.html:6
 msgid "Password change"
 msgstr "密码更改"
 
-#: templates/people/password_change_form.html:11
+#: templates/people/person_password_change_form.html:8
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
 
-#: templates/people/password_change_form.html:18
+#: templates/people/person_password_change_form.html:15
 msgid "Old password:"
 msgstr "旧密码："
 
-#: templates/people/password_change_form.html:24
+#: templates/people/person_password_change_form.html:21
 msgid "New password:"
 msgstr "新密码："
 
-#: templates/people/password_change_form.html:33
+#: templates/people/person_password_change_form.html:30
 msgid "Change my password"
 msgstr "更改我的密码"
 
-#: templates/people/person_detail.html:5
-msgid "GNOME Contributor"
-msgstr "GNOME 贡献者"
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr ""
 
-#: templates/people/person_detail.html:14
-msgid "Change your details"
-msgstr "更改您的详细资料"
-
-#: templates/people/person_detail.html:15
-msgid "Change your password"
-msgstr "更改您的密码"
-
-#: templates/people/person_detail.html:25
-msgid "Save"
-msgstr "保存"
-
-#: templates/people/person_detail.html:36
-msgid "Maintains:"
-msgstr "维护："
-
-#: templates/people/person_detail.html:45 templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "团队成员"
-
-#: templates/people/person_detail.html:49
-#, python-format
-msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr "%(team_name)s团队的一员，身份是%(role_name)s"
-
-#: templates/people/person_detail.html:59
+#: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
 msgstr "我想要以翻译者的身份加入下面的团队："
 
-#: templates/people/person_detail.html:60
+#: templates/people/person_team_join_form.html:13
 msgid "Join"
 msgstr "加入"
 
-#: templates/people/person_list.html:4 templates/people/person_list.html:9
-msgid "GNOME Contributors"
-msgstr "GNOME 贡献者"
+#: templates/people/person_team_membership.html:5
+#: templates/teams/team_detail.html:63
+msgid "Team membership"
+msgstr "团队成员"
 
-#: templates/people/person_list.html:11
-msgid "GNOME is being developed by following people:"
-msgstr "GNOME 正由下列人员开发："
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "%(team_name)s团队的一员，身份是%(role_name)s"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1809,7 +1825,7 @@ msgstr "细节"
 #: templates/teams/team_base.html:9
 #, python-format
 msgid "%(lang)s Translation Team Page:"
-msgstr "%(lang)s 翻译小组页面："
+msgstr "%(lang)s 翻译团队页面："
 
 #: templates/teams/team_base.html:13
 msgid "Bugzilla:"
@@ -1838,15 +1854,19 @@ msgstr "订阅"
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
-msgstr "%(lang)s 翻译小组"
+msgstr "%(lang)s 翻译团队"
+
+#: templates/teams/team_detail.html:74
+msgid "Apply modifications"
+msgstr "应用修改"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
-msgstr "GNOME 翻译小组"
+msgstr "GNOME 翻译团队"
 
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
-msgstr "选择下列的某个小组以查看关于它的更多信息："
+msgstr "选择下列的某个团队以查看关于它的更多信息："
 
 #: templates/teams/team_list.html:25
 #, python-format
@@ -1855,7 +1875,7 @@ msgstr "由 <a href=\"%(url)s\">%(name)s</a> 协调"
 
 #: templates/teams/team_list.html:34
 msgid "There are currently no translation teams in GNOME. :("
-msgstr "当前在 GNOME 中没有翻译小组，:("
+msgstr "当前在 GNOME 中没有翻译团队，:("
 
 #: templates/vertimus/vertimus_detail.html:5
 #, python-format
@@ -1925,39 +1945,39 @@ msgstr "此操作需要提供评论或者文件。"
 msgid "A file is needed for this action."
 msgstr "此操作需要提供文件。"
 
-#: vertimus/models.py:121
+#: vertimus/models.py:125
 msgid "Inactive"
 msgstr "普通"
 
-#: vertimus/models.py:134
+#: vertimus/models.py:138
 msgid "Translating"
 msgstr "正在翻译"
 
-#: vertimus/models.py:164
+#: vertimus/models.py:168
 msgid "Proofreading"
 msgstr "正在审阅"
 
-#: vertimus/models.py:178
+#: vertimus/models.py:182
 msgid "Proofread"
 msgstr "已审"
 
-#: vertimus/models.py:191
+#: vertimus/models.py:195
 msgid "To Review"
 msgstr "待复查"
 
-#: vertimus/models.py:203
+#: vertimus/models.py:207
 msgid "To Commit"
 msgstr "待提交"
 
-#: vertimus/models.py:216
+#: vertimus/models.py:220
 msgid "Committing"
 msgstr "正提交"
 
-#: vertimus/models.py:230
+#: vertimus/models.py:234
 msgid "Committed"
 msgstr "已提交"
 
-#: vertimus/models.py:354
+#: vertimus/models.py:360
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1974,15 +1994,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:367 vertimus/models.py:412
+#: vertimus/models.py:373 vertimus/models.py:422
 msgid "Without comment"
 msgstr "没有评论"
 
-#: vertimus/models.py:373
+#: vertimus/models.py:375 vertimus/models.py:424
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "这是一封 %s 自动发出的信件。"
+
+#: vertimus/models.py:381
 msgid "Write a comment"
 msgstr "留下评论"
 
-#: vertimus/models.py:400
+#: vertimus/models.py:410
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1998,42 +2023,43 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:420
+#: vertimus/models.py:432
 msgid "Reserve for translation"
 msgstr "占用此文件并进行翻译"
 
-#: vertimus/models.py:431
+#: vertimus/models.py:443
 msgid "Upload the new translation"
 msgstr "上传新翻译"
 
-#: vertimus/models.py:446
+#: vertimus/models.py:458
 msgid "Reserve for proofreading"
 msgstr "占用此文件进行审阅"
 
-#: vertimus/models.py:457
+#: vertimus/models.py:469
 msgid "Upload for proofreading"
 msgstr "上传审阅后的文件"
 
-#: vertimus/models.py:472
+#: vertimus/models.py:484
 msgid "Ready for submission"
 msgstr "可以提交"
 
-#: vertimus/models.py:488
+#: vertimus/models.py:500
 msgid "Reserve to submit"
 msgstr "即将提交"
 
-#: vertimus/models.py:499
+#: vertimus/models.py:511
 msgid "Inform of submission"
 msgstr "提交通知"
 
-#: vertimus/models.py:513
+#: vertimus/models.py:525
 msgid "Requiring review"
 msgstr "需要复查"
 
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Backup the actions"
 msgstr "备份操作"
 
-#: vertimus/models.py:581
+#: vertimus/models.py:593
 msgid "Undo the last state change"
 msgstr "撤消上次的状态"
+
