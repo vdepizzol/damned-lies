@@ -366,7 +366,7 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
                 'module': old_state.branch.module.name,
                 'branch': old_state.branch.name,
                 'domain': old_state.domain.name,
-                'language': old_state.language.get_name, 
+                'language': old_state.language.get_name(), 
                 'new_state': new_state, 
                 'url': url
             }
@@ -416,7 +416,7 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
                 'module': state.branch.module.name,
                 'branch': state.branch.name,
                 'domain': state.domain.name,
-                'language': state.language.get_name, 
+                'language': state.language.get_name(), 
                 'url': url
             }
             message += comment or ugettext("Without comment")

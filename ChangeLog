@@ -1,3 +1,11 @@
+2009-01-06  Claude Paroz  <claude@2xlibre.net>
+
+	* media/css/main.css:
+	* templates/people/person_overview.html: Make all text align to the right
+	of the image.
+	* vertimus/models.py: Fixed get_name which is a function call, not a
+	property.
+
 2009-01-05  Andre Klapper  <a9016009@gmx.de>
 
 	* people/models.py:
