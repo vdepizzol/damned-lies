@@ -202,10 +202,11 @@ def po_file_stats(pofile, msgfmt_checks = True):
 
     if msgfmt_checks and input_file != "-" and os.access(pofile, os.X_OK):
         res['errors'].append(("warn", ugettext_noop("This PO file has an executable bit set.")))
-
-    r_tr = re.search(r"([0-9]+) translated", output)
-    r_un = re.search(r"([0-9]+) untranslated", output)
-    r_fz = re.search(r"([0-9]+) fuzzy", output)
+    
+    # msgfmt output stats on stderr
+    r_tr = re.search(r"([0-9]+) translated", errs)
+    r_un = re.search(r"([0-9]+) untranslated", errs)
+    r_fz = re.search(r"([0-9]+) fuzzy", errs)
 
     if r_tr:
         res['translated'] = r_tr.group(1)

@@ -1,5 +1,10 @@
 2009-01-07  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/utils.py: msgfmt outputs stats on stderr.
+	Fixes bug #566934.
+
+2009-01-07  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Prevent a division by 0 in stats percentage computing.
 
 2009-01-07  Claude Paroz  <claude@2xlibre.net>
