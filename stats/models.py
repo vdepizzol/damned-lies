@@ -780,7 +780,10 @@ class Release(models.Model):
         for key, categ in stats['categs'].items():
             categ['catname'] = Category.get_cat_name(key)
             categ['cattotal'] = categ['cattrans'] + categ['catfuzzy'] + categ['catuntrans']
-            categ['cattransperc'] = int(100*categ['cattrans']/categ['cattotal'])
+            if categ['cattotal'] > 0:
+                categ['cattransperc'] = int(100*categ['cattrans']/categ['cattotal'])
+            else:
+                categ['cattransperc'] = 0
             # Sort modules
             mods = [[name,mod] for name, mod in categ['modules'].items()]
             mods.sort()
