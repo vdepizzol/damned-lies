@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies Head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-31 11:38+0000\n"
-"PO-Revision-Date: 2009-01-01 14:47+0100\n"
+"POT-Creation-Date: 2009-01-06 14:36+0000\n"
+"PO-Revision-Date: 2009-01-07 11:54+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -989,7 +989,7 @@ msgid "Username:"
 msgstr "Felhasználónév:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:26 templates/login.html:21
+#: people/forms.py:20 templates/login.html:21
 msgid "Password:"
 msgstr "Jelszó:"
 
@@ -1004,7 +1004,7 @@ msgid "Or use your OpenID:"
 msgstr "Vagy használjon OpenID-t:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:23 templates/login.html:35
+#: people/forms.py:17 templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID:"
 
@@ -1022,51 +1022,53 @@ msgstr "Felhasználói felület fordításai"
 msgid "Documentation"
 msgstr "Dokumentáció"
 
-#: people/forms.py:20
+#: people/forms.py:14
 msgid "Choose a username:"
 msgstr "Válasszon felhasználónevet:"
 
-#: people/forms.py:21
+#: people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Csak betűket, számokat, aláhúzásokat vagy kötőjeleket tartalmazhat"
 
-#: people/forms.py:22
+#: people/forms.py:16
 msgid "Email:"
 msgstr "E-mail:"
 
-#: people/forms.py:27
+#: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "Legalább 7 karakter"
 
-#: people/forms.py:29 templates/people/password_change_form.html:30
+#: people/forms.py:23 templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
 msgstr "Jelszó megerősítése:"
 
-#: people/forms.py:37
+#: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "Ez a felhasználónév már foglalt. Válasszon másikat."
 
-#: people/forms.py:45
+#: people/forms.py:39
 msgid "You must either provide an OpenId or a password"
 msgstr "Adjon meg egy OpenID-t vagy jelszót"
 
-#: people/forms.py:48
+#: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "A jelszavak nem egyeznek"
 
-#: people/forms.py:71
+#: people/forms.py:65
 msgid "Account activation"
 msgstr "Fiókaktiválás"
 
-#: people/forms.py:72
+#: people/forms.py:66
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
 "your account, please click on the link below or copy and paste it in a "
 "browser."
-msgstr "A regisztrációja a %s oldalon sikeres. A fiók aktiválásához kattintson az alábbi hivatkozásra vagy másolja be egy böngészőbe."
+msgstr ""
+"A regisztrációja a %s oldalon sikeres. A fiók aktiválásához kattintson az "
+"alábbi hivatkozásra vagy másolja be egy böngészőbe."
 
-#: people/forms.py:74
+#: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "%s adminisztrátorai"
@@ -1092,30 +1094,30 @@ msgid "Bugzilla account"
 msgstr "Bugzilla fiók"
 
 #: people/models.py:41
-msgid "This shoud be an email, useful if not equal to 'email' field"
-msgstr "Ez egy e-mail cím, hasznos ha nem azonos a fenti e-maillel"
+msgid "This should be an email address, useful if not equal to 'email' field"
+msgstr "Ez egy e-mail cím, hasznos ha nem azonos a fenti e-mail címmel"
 
-#: people/views.py:49
+#: people/views.py:86
 msgid "You are already member of this team."
 msgstr "Már tagja ennek a csapatnak."
 
-#: people/views.py:51 people/views.py:62
-msgid "Sorry, you're not allowed to modify this user."
-msgstr "Elnézést, nincs joga módosítani ezt a felhasználót."
+#: people/views.py:109
+msgid "Your password has been changed."
+msgstr "A jelszava módosítva."
 
-#: stats/models.py:284
+#: stats/models.py:283
 msgid "Can't generate POT file, using old one."
 msgstr "Nem készíthető POT fájl, a régi használata."
 
-#: stats/models.py:308
+#: stats/models.py:307
 msgid "Can't copy new POT file to public location."
 msgstr "Az új POT fájl nem másolható nyilvános helyre."
 
-#: stats/models.py:346
+#: stats/models.py:345
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "A DOC_LINGUAS lista jelenleg nem tartalmazza ezt a nyelvet."
 
-#: stats/models.py:539
+#: stats/models.py:546
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1126,70 +1128,70 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:813
+#: stats/models.py:820
 msgid "Administration Tools"
 msgstr "Adminisztrációs eszközök"
 
-#: stats/models.py:814
+#: stats/models.py:821
 msgid "Development Tools"
 msgstr "Fejlesztőeszközök"
 
-#: stats/models.py:815
+#: stats/models.py:822
 msgid "GNOME Desktop"
 msgstr "GNOME asztali környezet"
 
-#: stats/models.py:816
+#: stats/models.py:823
 msgid "GNOME Developer Platform"
 msgstr "GNOME fejlesztői környezet"
 
-#: stats/models.py:817
+#: stats/models.py:824
 msgid "New Module Proposals"
 msgstr "Új moduljavaslatok"
 
-#: stats/models.py:890
+#: stats/models.py:897
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:921
+#: stats/models.py:928
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s üzenet"
 msgstr[1] "%(count)s üzenet"
 
-#: stats/models.py:922
+#: stats/models.py:929
 #, python-format
 msgid "updated on %(date)s"
 msgstr "frissítve: %(date)s"
 
-#: stats/models.py:924
+#: stats/models.py:931
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s ábra"
 msgstr[1] "%(count)s ábra"
 
-#: stats/models.py:925
+#: stats/models.py:932
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:928
+#: stats/models.py:935
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:72
+#: stats/utils.py:73
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hibák az 'intltool-update -m' ellenőrzés futtatásakor."
 
-#: stats/utils.py:78
+#: stats/utils.py:79
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Néhány fájl hiányzik a POTFILES.in fájlból: %s"
 
-#: stats/utils.py:87
+#: stats/utils.py:88
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1198,23 +1200,23 @@ msgstr ""
 "A POTFILES.in vagy POTFILES.skip a következő fájlokra hivatkozik, noha ezek "
 "nem léteznek: %s"
 
-#: stats/utils.py:99
+#: stats/utils.py:100
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "A(z) %s modul nem tűnik gnome-doc-utils modulnak."
 
-#: stats/utils.py:102
+#: stats/utils.py:103
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "A DOC_MODULE nem oldható fel valódi fájlra, a(z) „%s.xml” kerül "
 "felhasználásra."
 
-#: stats/utils.py:105
+#: stats/utils.py:106
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "A DOC_MODULE nem egy valódi fájlra mutat, valószínűleg egy makró."
 
-#: stats/utils.py:120
+#: stats/utils.py:121
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1225,39 +1227,39 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:179
+#: stats/utils.py:180
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "A(z) „%s PO fájl nem létezik vagy nem olvasható."
 
-#: stats/utils.py:199
+#: stats/utils.py:200
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "A(z) „%s” PO fájl nem megy át az msgfmt ellenőrzésen: nem frissül."
 
-#: stats/utils.py:201
+#: stats/utils.py:202
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "A(z) „%s” POT fájl statisztikái nem érhetők el."
 
-#: stats/utils.py:204
+#: stats/utils.py:205
 msgid "This PO file has an executable bit set."
 msgstr "Ezen a PO fájlon be van állítva egy végrehajtható bit."
 
-#: stats/utils.py:231
+#: stats/utils.py:232
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "A(z) „%s” PO fájl nem UTF-8 kódolású."
 
-#: stats/utils.py:260
+#: stats/utils.py:261
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a LINGUAS fájlban."
 
-#: stats/utils.py:287
+#: stats/utils.py:288
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a configure fájl ALL_LINGUAS értékében."
 
-#: stats/utils.py:290
+#: stats/utils.py:291
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1281,6 +1283,10 @@ msgstr "Átolvasó"
 #: teams/models.py:132
 msgid "Committer"
 msgstr "Jóváhagyó"
+
+#: teams/models.py:133 templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Koordinátor"
 
 #: teams/views.py:43
 msgid "Committers"
@@ -1511,7 +1517,7 @@ msgstr "Ha nincs fiókja ezen az oldalon, <a href='%(link)s'>regisztrálhat</a> 
 msgid "Module Statistics: %(name)s"
 msgstr "Modulstatisztika: %(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:29
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
@@ -1596,18 +1602,6 @@ msgstr "GNOME modulok"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Válassza ki a modult, amelyről szemenszedett hazugságokat kíván látni:"
 
-#: templates/person_base.html:24
-msgid "Instant messaging:"
-msgstr "Azonnali üzenet:"
-
-#: templates/person_base.html:31
-msgid "Bugzilla account:"
-msgstr "Bugzilla fiók:"
-
-#: templates/person_base.html:35
-msgid "SVN account:"
-msgstr "SVN fiók:"
-
 #: templates/register.html:9
 msgid "Account Registration"
 msgstr "Regisztráció"
@@ -1616,20 +1610,24 @@ msgstr "Regisztráció"
 msgid ""
 "You can register here for an account on this site. This is only useful if "
 "you plan to contribute to GNOME translations."
-msgstr "Itt regisztrálhat egy fiókot az oldalra. Ez akkor hasznos, ha közre kíván működni a GNOME fordításában."
+msgstr ""
+"Itt regisztrálhat egy fiókot az oldalra. Ez akkor hasznos, ha közre kíván "
+"működni a GNOME fordításában."
 
 #: templates/register.html:14
 msgid ""
 "After registration and connection, you will be able to join an existing team "
 "from your profile page."
-msgstr "A regisztráció és bejelentkezés után a profiloldaláról csatlakozhat egy meglévő csapathoz."
+msgstr ""
+"A regisztráció és bejelentkezés után a profiloldaláról csatlakozhat egy "
+"meglévő csapathoz."
 
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Hitelesítés OpenID <strong>vagy</strong> jelszó használatával:"
 
 #: templates/register.html:34
-msgid "Register with OpenId"
+msgid "Register with OpenID"
 msgstr "Regisztráció OpenID-val"
 
 #: templates/register.html:46
@@ -1644,7 +1642,9 @@ msgstr "A regisztráció sikeres"
 msgid ""
 "The registration succeeded. You will now receive an email containing a link "
 "to activate your account."
-msgstr "A regisztráció sikeres. Kapni fog egy e-mailt a fiók aktiválásához szükséges hivatkozással."
+msgstr ""
+"A regisztráció sikeres. Kapni fog egy e-mailt a fiók aktiválásához szükséges "
+"hivatkozással."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1682,7 +1682,7 @@ msgstr "GNOME kiadások"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "Válasszon egy kiadáscsoportot a részletek megjelenítéséhez:"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:55
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "Megjegyzések"
 
@@ -1690,11 +1690,11 @@ msgstr "Megjegyzések"
 msgid "Language"
 msgstr "Nyelv"
 
-#: templates/stats_show.html:30 vertimus/models.py:147
+#: templates/stats_show.html:30 vertimus/models.py:151
 msgid "Translated"
 msgstr "Lefordított"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:68
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
 msgid "Display document figures"
 msgstr "Dokumentációs ábrák megjelenítése"
 
@@ -1734,82 +1734,110 @@ msgstr "Hibák összegzése"
 msgid "Download all po files"
 msgstr "Minden po fájl letöltése"
 
-#: templates/people/password_change_done.html:4
-#: templates/people/password_change_done.html:8
-msgid "Password change successful"
-msgstr "A jelszómódosítás sikeres"
+#: templates/people/person_base.html:5
+msgid "GNOME Contributor"
+msgstr "GNOME közreműködő"
 
-#: templates/people/password_change_done.html:9
-msgid "Your password was changed."
-msgstr "A jelszava megváltozott."
+#: templates/people/person_base.html:13
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "Adataim módosítása"
 
-#: templates/people/password_change_form.html:4
-#: templates/people/password_change_form.html:9
+#: templates/people/person_base.html:14
+msgid "Change your password"
+msgstr "Jelszómódosítás"
+
+#: templates/people/person_base.html:15
+msgid "Join a team"
+msgstr "Csatlakozás csapathoz"
+
+#: templates/people/person_detail.html:9
+msgid "Maintains:"
+msgstr "Karbantartó:"
+
+#: templates/people/person_detail.html:20
+msgid "Working on"
+msgstr "Ezeken dolgozik"
+
+#: templates/people/person_detail.html:24
+msgid "Date"
+msgstr "Dátum"
+
+#: templates/people/person_detail.html:24
+msgid "Module"
+msgstr "Modul"
+
+#: templates/people/person_detail.html:24
+msgid "State"
+msgstr "Állapot"
+
+#: templates/people/person_detail_change_form.html:13
+msgid "Save"
+msgstr "Mentés"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "GNOME közreműködők"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "A GNOME-ot a következő személyek fejlesztik:"
+
+#: templates/people/person_overview.html:25
+msgid "Instant messaging:"
+msgstr "Azonnali üzenet:"
+
+#: templates/people/person_overview.html:32
+msgid "Bugzilla account:"
+msgstr "Bugzilla fiók:"
+
+#: templates/people/person_overview.html:36
+msgid "SVN account:"
+msgstr "SVN fiók:"
+
+#: templates/people/person_password_change_form.html:6
 msgid "Password change"
 msgstr "Jelszómódosítás"
 
-#: templates/people/password_change_form.html:11
+#: templates/people/person_password_change_form.html:8
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr "Adja meg régi jelszavát, majd adja meg kétszer az új jelszót."
 
-#: templates/people/password_change_form.html:18
+#: templates/people/person_password_change_form.html:15
 msgid "Old password:"
 msgstr "Régi jelszó:"
 
-#: templates/people/password_change_form.html:24
+#: templates/people/person_password_change_form.html:21
 msgid "New password:"
 msgstr "Új jelszó:"
 
-#: templates/people/password_change_form.html:33
+#: templates/people/person_password_change_form.html:30
 msgid "Change my password"
 msgstr "Jelszómódosítás"
 
-#: templates/people/person_detail.html:5
-msgid "GNOME Contributor"
-msgstr "GNOME közreműködő"
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "Csatlakozás új csapathoz"
 
-#: templates/people/person_detail.html:14
-msgid "Change your details"
-msgstr "Adataim módosítása"
-
-#: templates/people/person_detail.html:15
-msgid "Change your password"
-msgstr "Jelszómódosítás"
-
-#: templates/people/person_detail.html:25
-msgid "Save"
-msgstr "Mentés"
-
-#: templates/people/person_detail.html:36
-msgid "Maintains:"
-msgstr "Karbantartó:"
-
-#: templates/people/person_detail.html:45 templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "Csapattagság"
-
-#: templates/people/person_detail.html:49
-#, python-format
-msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr "A(z) %(team_name)s csapat tagja (%(role_name)s)"
-
-#: templates/people/person_detail.html:59
+#: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
 msgstr "A következő csapathoz szeretnék fordítóként csatlakozni:"
 
-#: templates/people/person_detail.html:60
+#: templates/people/person_team_join_form.html:13
 msgid "Join"
 msgstr "Csatlakozás"
 
-#: templates/people/person_list.html:4 templates/people/person_list.html:9
-msgid "GNOME Contributors"
-msgstr "GNOME közreműködők"
+#: templates/people/person_team_membership.html:5
+#: templates/teams/team_detail.html:63
+msgid "Team membership"
+msgstr "Csapattagság"
 
-#: templates/people/person_list.html:11
-msgid "GNOME is being developed by following people:"
-msgstr "A GNOME-ot a következő személyek fejlesztik:"
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "A(z) %(team_name)s csapat tagja (%(role_name)s)"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1844,14 +1872,14 @@ msgstr "E-mail küldése a listának"
 msgid "Subscribe"
 msgstr "Feliratkozás"
 
-#: templates/teams/team_base.html:31
-msgid "Coordinator"
-msgstr "Koordinátor"
-
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s fordítócsapat"
+
+#: templates/teams/team_detail.html:74
+msgid "Apply modifications"
+msgstr "Módosítások alkalmazása"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
@@ -1879,31 +1907,31 @@ msgstr "Modul fordítása: %(name)s"
 msgid "Used in release(s):"
 msgstr "A következő kiadások használják:"
 
-#: templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
 msgstr "Állapot:"
 
-#: templates/vertimus/vertimus_detail.html:43
+#: templates/vertimus/vertimus_detail.html:41
 msgid "Translated:"
 msgstr "Lefordított:"
 
-#: templates/vertimus/vertimus_detail.html:73
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Action History"
 msgstr "Műveletelőzmények"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:87
 msgid "No comment"
 msgstr "Nincs hozzászólás"
 
-#: templates/vertimus/vertimus_detail.html:98
+#: templates/vertimus/vertimus_detail.html:96
 msgid "New Action"
 msgstr "Új művelet"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/vertimus/vertimus_detail.html:103
 msgid "Submit"
 msgstr "Elküldés"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:107
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Be kell jelentkeznie és a(z) %(team_name)s csapat tagjának kell lennie."
@@ -1926,7 +1954,9 @@ msgstr "Csak a .po, .gz, .bz2 vagy .png kiterjesztésű fájlok engedélyezettek
 
 #: vertimus/forms.py:54
 msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr "A .po fájl nem megy át az „msgfmt -vc” ellenőrzésen. Javítsa a fájlt és próbálja újra."
+msgstr ""
+"A .po fájl nem megy át az „msgfmt -vc” ellenőrzésen. Javítsa a fájlt és "
+"próbálja újra."
 
 #: vertimus/forms.py:64
 msgid "A comment or a file is needed for this action."
@@ -1936,39 +1966,39 @@ msgstr "Ehhez a művelethez hozzászólás vagy fájl szükséges."
 msgid "A file is needed for this action."
 msgstr "Ehhez a művelethez egy fájl szükséges."
 
-#: vertimus/models.py:121
+#: vertimus/models.py:125
 msgid "Inactive"
 msgstr "Inaktív"
 
-#: vertimus/models.py:134
+#: vertimus/models.py:138
 msgid "Translating"
 msgstr "Fordítás alatt"
 
-#: vertimus/models.py:164
+#: vertimus/models.py:168
 msgid "Proofreading"
 msgstr "Átolvasás alatt"
 
-#: vertimus/models.py:178
+#: vertimus/models.py:182
 msgid "Proofread"
 msgstr "Átolvasás"
 
-#: vertimus/models.py:191
+#: vertimus/models.py:195
 msgid "To Review"
 msgstr "Átolvasandó"
 
-#: vertimus/models.py:203
+#: vertimus/models.py:207
 msgid "To Commit"
 msgstr "Jóváhagyandó"
 
-#: vertimus/models.py:216
+#: vertimus/models.py:220
 msgid "Committing"
 msgstr "Jóváhagyás"
 
-#: vertimus/models.py:230
+#: vertimus/models.py:234
 msgid "Committed"
 msgstr "Jóváhagyva"
 
-#: vertimus/models.py:354
+#: vertimus/models.py:360
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1980,20 +2010,25 @@ msgid ""
 msgstr ""
 "Üdvözlet,\n"
 "\n"
-"%(module)s – %(branch)s – %(domain)s (%(language)s) állapota mostantól: "
-"„%(new_state)s”.\n"
+"%(module)s – %(branch)s – %(domain)s (%(language)s) állapota mostantól: „%"
+"(new_state)s”.\n"
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:367 vertimus/models.py:412
+#: vertimus/models.py:373 vertimus/models.py:422
 msgid "Without comment"
 msgstr "Nincs hozzászólás"
 
-#: vertimus/models.py:373
+#: vertimus/models.py:375 vertimus/models.py:424
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Ez egy automatikus üzenet a következőtől: %s."
+
+#: vertimus/models.py:381
 msgid "Write a comment"
 msgstr "Hozzászólás írása"
 
-#: vertimus/models.py:400
+#: vertimus/models.py:410
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2010,43 +2045,43 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:420
+#: vertimus/models.py:432
 msgid "Reserve for translation"
 msgstr "Lefoglalás fordításhoz"
 
-#: vertimus/models.py:431
+#: vertimus/models.py:443
 msgid "Upload the new translation"
 msgstr "Az új fordítás feltöltése"
 
-#: vertimus/models.py:446
+#: vertimus/models.py:458
 msgid "Reserve for proofreading"
 msgstr "Lefoglalás átolvasáshoz"
 
-#: vertimus/models.py:457
+#: vertimus/models.py:469
 msgid "Upload for proofreading"
 msgstr "Feltöltés átolvasáshoz"
 
-#: vertimus/models.py:472
+#: vertimus/models.py:484
 msgid "Ready for submission"
 msgstr "Feltöltésre kész"
 
-#: vertimus/models.py:488
+#: vertimus/models.py:500
 msgid "Reserve to submit"
 msgstr "Lefoglalás beküldéshez"
 
-#: vertimus/models.py:499
+#: vertimus/models.py:511
 msgid "Inform of submission"
 msgstr "Információ beküldésről"
 
-#: vertimus/models.py:513
+#: vertimus/models.py:525
 msgid "Requiring review"
 msgstr "Átolvasás szükséges"
 
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Backup the actions"
 msgstr "Műveletek törlése"
 
-#: vertimus/models.py:581
+#: vertimus/models.py:593
 msgid "Undo the last state change"
 msgstr "Az utolsó állapotváltozás visszavonása"
 
