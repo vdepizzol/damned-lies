@@ -478,9 +478,9 @@ class Branch(models.Model):
         self.checkout_lock.acquire()
         try:
             for command in commandList:
-                (status, output) = utils.run_shell_command(command)
+                (status, output, errs) = utils.run_shell_command(command)
                 if status != utils.STATUS_OK:
-                    raise OSError(status, output)
+                    raise OSError(status, errs)
         finally:
             self.checkout_lock.release()
         return 1
@@ -538,7 +538,7 @@ class Domain(models.Model):
             "dir" : podir,
             "pot_command" : pot_command,
             }
-        (status, output) = utils.run_shell_command(command)
+        (status, output, errs) = utils.run_shell_command(command)
 
         potfile = os.path.join(vcs_path, self.potbase() + ".pot")
 
@@ -546,7 +546,7 @@ class Domain(models.Model):
             return "", (("error", ugettext_noop("Error regenerating POT file for %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                                  % {'file': self.potbase(),
                                     'cmd': pot_command,
-                                    'output': output.decode('utf-8')}),
+                                    'output': errs.decode('utf-8')}),
                        )
         else:
             return potfile, ()

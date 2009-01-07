@@ -50,14 +50,14 @@ def run_shell_command(cmd, env=None, input_data=None):
     stdin = None
     if input_data:
         stdin = PIPE
-    pipe = Popen(cmd, shell=True, env=env, stdin=stdin, stdout=PIPE, stderr=STDOUT)
+    pipe = Popen(cmd, shell=True, env=env, stdin=stdin, stdout=PIPE, stderr=PIPE)
     if input_data:
         pipe.stdin.write(input_data)
     (output, errout) = pipe.communicate()
     status = pipe.returncode
     
-    if settings.DEBUG: print >>sys.stderr, output
-    return (status, output)
+    if settings.DEBUG: print >>sys.stderr, output + errout
+    return (status, output, errout)
 
 
 def check_potfiles(po_path):
@@ -66,10 +66,9 @@ def check_potfiles(po_path):
     errors = []
 
     command = "cd \"%(dir)s\" && rm -f missing notexist && intltool-update -m" % { "dir" : po_path, }
-    (status, output) = run_shell_command(command)
+    (status, output, errs) = run_shell_command(command)
 
     if status != STATUS_OK:
-        if settings.DEBUG: print >> sys.stderr, "Error running 'intltool-update -m' check."
         errors.append( ("error", ugettext_noop("Errors while running 'intltool-update -m' check.")) )
 
     missing = os.path.join(po_path, "missing")
@@ -114,14 +113,14 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
     command = "cd \"%s\" && xml2po -o %s -e %s" % (vcs_path, potfile, files)
-    (status, output) = run_shell_command(command)
+    (status, output, errs) = run_shell_command(command)
     
     if status != STATUS_OK:
         errors.append(("error",
                        ugettext_noop("Error regenerating POT file for document %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                              % {'file': potbase,
                                 'cmd': command,
-                                'output': output})
+                                'output': errs})
                      )
         potfile = ""
 
@@ -193,7 +192,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
     else:
         command = "msgfmt --statistics -o /dev/null %s" % input_file
 
-    (status, output) = run_shell_command(command, env=c_env, input_data=input_data)
+    (status, output, errs) = run_shell_command(command, env=c_env, input_data=input_data)
 
     if status != STATUS_OK:
         if msgfmt_checks:
@@ -226,7 +225,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
         else:
             command = ("msgconv -t UTF-8 %s | diff -i -u %s - >/dev/null") % (pofile,
                                                                               pofile)
-            (status, output) = run_shell_command(command, env=c_env)
+            (status, output, errs) = run_shell_command(command, env=c_env)
         if status != STATUS_OK:
             res['errors'].append(("warn",
                               ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
@@ -295,7 +294,7 @@ def get_fig_stats(pofile):
     """ Extract image strings from pofile and return a list of figures dict {'path':, 'fuzzy':, 'translated':} """
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
     command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
-    (status, output) = run_shell_command(command)
+    (status, output, errs) = run_shell_command(command)
     if status != STATUS_OK:
         # FIXME: something should be logged here
         return []
