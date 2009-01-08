@@ -1,5 +1,10 @@
 2009-01-08  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* stats/management/commands/update-trans.py: Use ANSI_QUOTES with
+	MySQL to not break the SQL compatibility.
+
+2009-01-08  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* templates/base.html: Revert to 'Log out' as Django.
 
 2009-01-08  Claude Paroz  <claude@2xlibre.net>

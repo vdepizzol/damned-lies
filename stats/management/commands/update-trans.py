@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from django.core.management.commands import makemessages
 from django.db import connection
 from optparse import make_option
+from stats.conf import settings
 import os
 import shutil
 
@@ -37,12 +38,14 @@ class Command(BaseCommand):
         dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
         f=open(dbfile, 'w')
         query = """SELECT description FROM team UNION DISTINCT
-                   SELECT name from `language` WHERE name <> locale UNION DISTINCT
+                   SELECT name from language WHERE name <> locale UNION DISTINCT
                    SELECT description FROM domain UNION DISTINCT
                    SELECT description FROM module WHERE description <> name UNION DISTINCT
-                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment<>'' UNION DISTINCT
-                   SELECT description FROM `release`;"""
+                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION DISTINCT
+                   SELECT description FROM "release" """
         cursor = connection.cursor()
+        if settings.DATABASE_ENGINE == 'mysql':
+            cursor.execute("SET sql_mode='ANSI_QUOTES'")
         cursor.execute(query)
         for row in cursor.fetchall():
             if row[0] is not None and row[0] != '':
