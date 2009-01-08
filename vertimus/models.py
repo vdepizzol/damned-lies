@@ -47,7 +47,7 @@ class StateDb(models.Model):
     person = models.ForeignKey(Person, default=None, null=True)
     
     name = models.SlugField(max_length=20, default='None')
-    updated = models.DateTimeField(default=datetime.now, editable=False)
+    updated = models.DateTimeField(default=datetime.now, editable=False, auto_now=True)
 
     class Meta:
         db_table = 'state'
