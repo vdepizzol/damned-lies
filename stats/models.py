@@ -53,7 +53,7 @@ class Module(models.Model):
     comment = models.TextField(null=True, blank=True)
     bugs_base = models.CharField(max_length=50)
     bugs_product = models.CharField(max_length=50)
-    bugs_component = models.CharField(max_length=50)
+    bugs_component = models.CharField(max_length=50, null=True, blank=True)
     vcs_type = models.CharField(max_length=5, choices=VCS_TYPE_CHOICES)
     vcs_root = models.URLField(verify_exists=False)
     vcs_web = models.URLField()
@@ -84,13 +84,17 @@ class Module(models.Model):
     
     def get_bugs_i18n_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
-            return "%sbuglist.cgi?product=%s&component=%s&keywords_type=anywords&keywords=I18N+L10N&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=NEEDINFO" % (self.bugs_base, self.bugs_product, self.bugs_component)
+            return utils.url_join(self.bugs_base,
+                                    "buglist.cgi?product=%s&keywords_type=anywords&keywords=I18N+L10N&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=NEEDINFO" % (self.bugs_product,))
         else:
             return None
 
     def get_bugs_enter_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
-            return "%senter_bug.cgi?product=%s&component=%s" % (self.bugs_base, self.bugs_product, self.bugs_component)
+            if self.bugs_component:
+                return utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s&component=%s" % (self.bugs_product, self.bugs_component))
+            else:
+                return utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s" % (self.bugs_product,))
         else:
             return self.bugs_base 
     
@@ -182,19 +186,19 @@ class Branch(models.Model):
            
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
-            return "%s/%s" % (self.module.vcs_root, self.module_name)
+            return utils.url_join(self.module.vcs_root, self.module_name)
         elif self.vcs_subpath:
-            return "%s/%s/%s" % (self.module.vcs_root, self.module.name, self.vcs_subpath)
+            return utils.url_join(self.module.vcs_root, self.module.name, self.vcs_subpath)
         elif self.is_head():
-            return "%s/%s/trunk" % (self.module.vcs_root, self.module.name)
+            return utils.url_join(self.module.vcs_root, self.module.name, "trunk")
         else:
-            return "%s/%s/branches/%s" % (self.module.vcs_root, self.module.name, self.name)
+            return utils.url_join(self.module.vcs_root, self.module.name, "branches", self.name)
 
     def get_vcs_web_url(self):
         if self.is_head():
-            return "%s/trunk" % (self.module.vcs_web)
+            return utils.url_join(self.module.vcs_web, "trunk")
         else:
-            return "%s/branches/%s" % (self.module.vcs_web, self.name)
+            return utils.url_join(self.module.vcs_web, "branches", self.name)
 
     def co_path(self):
         """ Returns the path of the local checkout for the branch """
@@ -968,11 +972,11 @@ class Statistics(models.Model):
             
     def vcs_path(self):
         """ Return the VCS path of file on remote vcs """
-        return os.path.join(self.branch.get_vcs_url(), self.domain.directory)
+        return utils.url_join(self.branch.get_vcs_url(), self.domain.directory)
         
     def vcs_web_path(self):
         """ Return the Web interface path of file on remote vcs """
-        return os.path.join(self.branch.get_vcs_web_url(), self.domain.directory)
+        return utils.url_join(self.branch.get_vcs_web_url(), self.domain.directory)
         
     def po_path(self):
         """ Return path of po file on local filesystem """
@@ -987,7 +991,7 @@ class Statistics(models.Model):
             subdir = "docs/"
         else:
             subdir = ""
-        return "/POT/%s.%s/%s%s" % (self.module_name(), self.branch.name, subdir, self.filename())
+        return utils.url_join("/POT/", self.module_name(), self.branch.name, subdir, self.filename())
         
     def most_important_message(self):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """

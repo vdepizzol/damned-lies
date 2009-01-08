@@ -46,6 +46,12 @@
         <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
       </div>
     </td>
+    <td>
+    {% if stats.fig_count and stats.language %}
+    <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
+        <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
+    {% endif %}
+    </td>
   </tr>
 </table>
 
@@ -59,12 +65,6 @@
   </tr>
   {% endfor %}
 </table>
-{% endif %}
-
-{% if stats.fig_count and stats.language %}
-<p><a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
-    <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
-</p>
 {% endif %}
 
 {% if action_history %}

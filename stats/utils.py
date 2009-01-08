@@ -358,6 +358,15 @@ might be worth investigating.
               from_email="GNOME Status Pages <%s>" % (settings.WHOAREWE),
               recipient_list=settings.NOTIFICATIONS_TO)
 
+def url_join(base, *args):
+    """ Create an url in joining base with arguments. A lot nicer than urlparse.urljoin! """
+    url = base
+    for arg in args:
+        if url[-1] != "/":
+            url += "/"
+        url += arg
+    return url
+
 class Profiler(object):
     def __init__(self):
         self.start = time.clock()

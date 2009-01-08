@@ -1,3 +1,12 @@
+2009-01-08  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/models.py: Use utils.url_join to create URLs. Make bugs_component
+	optional.
+	Fixes bugs #566960, #566961.
+	* stats/utils.py: Add new url_join utility function.
+	* templates/vertimus/vertimus_detail.html: Show doc images icon next to
+	the string stats.
+
 2009-01-07  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/utils.py: msgfmt outputs stats on stderr.
