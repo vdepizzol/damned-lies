@@ -1,10 +1,11 @@
+import os
+import shutil
+from optparse import make_option
+
 from django.core.management.base import BaseCommand
 from django.core.management.commands import makemessages
 from django.db import connection
-from optparse import make_option
-from stats.conf import settings
-import os
-import shutil
+from django.conf import settings
 
 class Command(BaseCommand):
     help = "Update translations of djamnedlies ('en' is a special case, and generate damned-lies.pot)"
