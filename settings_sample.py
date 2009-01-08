@@ -103,7 +103,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.transaction.TransactionMiddleware',
 )
 
-ROOT_URLCONF = 'djamnedlies.urls'
+# Make sure to change 'damned-lies' to match your site's name
+ROOT_URLCONF = 'damned-lies.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
