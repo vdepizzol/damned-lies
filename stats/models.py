@@ -991,7 +991,7 @@ class Statistics(models.Model):
             subdir = "docs/"
         else:
             subdir = ""
-        return utils.url_join("/POT/", self.module_name(), self.branch.name, subdir, self.filename())
+        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename())
         
     def most_important_message(self):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """
