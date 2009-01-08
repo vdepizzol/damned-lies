@@ -70,7 +70,7 @@
     <form action="{% url login %}" method="post">
       <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>&nbsp;{{ user.person }}</a> &bull;
       <input type="hidden" name="logout" value="1" />
-      <input type="submit" value="{% trans 'Log Out' %}" />
+      <input type="submit" value="{% trans 'Log out' %}" />
     </form>
     {% else %}
     <a href="{% url login %}">{% trans "Log in" %}</a>
