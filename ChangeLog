@@ -1,3 +1,15 @@
+2009-01-08  Claude Paroz  <claude@2xlibre.net>
+
+	* settings_sample.py:
+	* stats/conf/*: Removed stats custom settings (merged in
+	settings_sample.py).
+	* stats/models.py:
+	* stats/utils.py:
+	* stats/views.py:
+	* languages/views.py:
+	* urls.py:
+	* README: Removed references to stats/conf/settings.py.
+
 2009-01-08  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* stats/management/commands/update-trans.py: Use ANSI_QUOTES with

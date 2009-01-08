@@ -24,9 +24,10 @@ from itertools import islice
 from subprocess import Popen, PIPE, STDOUT
 
 from django.utils.translation import ugettext as _, ugettext_noop
+from django.contrib.sites.models import Site
 from django.core.mail import send_mail
 from django.core.files.base import File
-from stats.conf import settings
+from django.conf import settings
 
 STATUS_OK = 0
 
@@ -340,8 +341,9 @@ def copy_file(file1, file2):
 
 def notify_list(out_domain, diff):
     """Send notification about string changes described in diff."""
+    current_site = Site.objects.get_current()
     text = u"""This is an automatic notification from status generation scripts on:
-%(ourweb)s.
+http://%(ourweb)s.
 
 There have been following string additions to module '%(module)s':
 
@@ -350,12 +352,12 @@ There have been following string additions to module '%(module)s':
 Note that this doesn't directly indicate a string freeze break, but it
 might be worth investigating.
 """ % { 'module' : out_domain,
-    'ourweb' : settings.WHEREAREWE,
+    'ourweb' : current_site.domain,
     'potdiff' : "\n    ".join(diff).decode('utf-8') }
 
     send_mail(subject="String additions to '%s'" % (out_domain),
               message=text,
-              from_email="GNOME Status Pages <%s>" % (settings.WHOAREWE),
+              from_email="GNOME Status Pages <%s>" % (settings.SERVER_EMAIL),
               recipient_list=settings.NOTIFICATIONS_TO)
 
 def url_join(base, *args):

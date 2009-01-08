@@ -25,7 +25,7 @@ from datetime import datetime
 from time import tzname
 from django.db import models, connection
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
-from stats.conf import settings
+from django.conf import settings
 from stats import utils
 import potdiff
 

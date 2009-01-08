@@ -17,9 +17,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-SERVER_EMAIL = 'gnomeweb@gnome.org'
-EMAIL_SUBJECT_PREFIX = '[Damned Lies] '
-
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = os.path.join(PROJECT_PATH,'database.db')            # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
@@ -41,8 +38,10 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 EMAIL_HOST = 'localhost'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-EMAIL_SUBJECT_PREFIX = '[DL]'
-SERVER_EMAIL = 'server@l10n.gnome.org'
+EMAIL_SUBJECT_PREFIX = '[Damned Lies]'
+SERVER_EMAIL = 'gnomeweb@gnome.org'
+# When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
+NOTIFICATIONS_TO = ['gnome-i18n@gnome.org']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -70,10 +69,14 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
+# Local directory path for VCS checkout
+SCRATCHDIR = ""
+POTDIR = os.path.join(SCRATCHDIR, "POT")
 # By default, Django stores files locally, using the MEDIA_ROOT and MEDIA_URL settings
 UPLOAD_DIR = 'upload'
 UPLOAD_BACKUP_DIR = 'upload-backup'
 FILE_UPLOAD_PERMISSIONS = 0600
+
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.

@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from stats.conf import settings as stats_settings
 from django.contrib import admin
 
 admin.autodiscover()
@@ -42,5 +41,5 @@ if settings.STATIC_SERVE:
         (r'^media/(?P<path>.*)$', 'django.views.static.serve',
          {'document_root': settings.MEDIA_ROOT}),
         (r'^POT/(?P<path>.*)$', 'django.views.static.serve',
-         {'document_root': stats_settings.POTDIR}),
+         {'document_root': settings.POTDIR}),
     )

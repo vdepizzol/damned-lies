@@ -26,7 +26,6 @@ from django.template import RequestContext
 
 from stats.models import Statistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
-from stats.conf import settings
 from stats import utils
 
 MIME_TYPES = {'json': 'application/json',

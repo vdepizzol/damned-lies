@@ -1,7 +1,8 @@
 This is a re-implementation of the Damned-Lies application
 in a Django app. Damned-Lies has been originally written by
 Danilo Segan (danilo@gnome.org). This implementation has been
-written by Claude Paroz (claude@2xlibre.net).
+written by Claude Paroz (claude@2xlibre.net) and Stéphane
+Raimbault (.
 
 The former XML files (modules, releases, people, translation
 teams) have been replaced by a database.
@@ -16,7 +17,7 @@ Requirements
 
 1 - Django 1.0.X
 
-2 - Python 2.4 (for set built-in).
+2 - Python 2.5 (for hashlib module).
 
 3 - [Optional] Django Evolution is an extension to Django that allows
     you to track changes in your models over time, and to update the
@@ -36,15 +37,12 @@ Requirements
 Installation
 ============
 
-1 - Rename settings_sample.py in settings.py
+1 - Rename settings_sample.py in settings.py and review settings
+    (please refer to Database configuration below for more informations).
 
-2 - Review and fill in settings in stats/conf/settings_sample.py and
-    rename it to settings.py (please refer to Database configuration
-    below for more informations).
+2 - Run 'python manage.py syncdb'
 
-3 - Run 'python manage.py syncdb'
-
-4 - Configure Sites in admin interface to define the 'View on site'
+3 - Configure Sites in admin interface to define the 'View on site'
     link.
 
 OpenID support

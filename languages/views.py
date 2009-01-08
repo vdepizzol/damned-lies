@@ -26,7 +26,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
-from stats.conf import settings
+from django.conf import settings
 from common import utils
 from languages.models import Language
 from stats.models import Release
