@@ -325,7 +325,7 @@ class Branch(models.Model):
             
             # 6. Update language po files and update DB
             # *****************************************
-            command = "msgmerge -o %(outpo)s %(pofile)s %(potfile)s"
+            command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
             stats_with_linguas_errors = Statistics.objects.filter(branch=self, domain=dom, information__description__contains='LINGUAS')
             langs_with_linguas_errors = [stat.language.locale for stat in stats_with_linguas_errors]
             for lang, pofile in self.get_lang_files(dom, domain_path):
@@ -530,11 +530,10 @@ class Domain(models.Model):
         
         pot_command = self.pot_method
         podir = vcs_path
+        env = None
         if not self.pot_method: # default is intltool
-            pot_command = r"""XGETTEXT_ARGS="\"--msgid-bugs-address=%(bugs_enterurl)s\"" intltool-update -g '%(domain)s' -p""" % {
-                               'bugs_enterurl': self.module.get_bugs_enter_url(),
-                               'domain': self.potbase()
-                               }
+            env = {"XGETTEXT_ARGS": "\"--msgid-bugs-address=%s\"" % self.module.get_bugs_enter_url()}
+            pot_command = "intltool-update -g '%(domain)s' -p" % {'domain': self.potbase()}
         elif self.module.name == 'damned-lies':
             # special case for d-l, pot file should be generated from running instance dir
             podir = "."
@@ -543,7 +542,7 @@ class Domain(models.Model):
             "dir" : podir,
             "pot_command" : pot_command,
             }
-        (status, output, errs) = utils.run_shell_command(command)
+        (status, output, errs) = utils.run_shell_command(command, env=env)
 
         potfile = os.path.join(vcs_path, self.potbase() + ".pot")
 

@@ -48,7 +48,7 @@ class ModuleTestCase(unittest.TestCase):
         
     def testCreateAndDeleteBranch(self):
         # Create branch (include checkout)
-        branch = Branch(name="trunk",
+        branch = Branch(name="HEAD",
                         module = self.mod)
         branch.save()
         self.assertTrue(branch.is_head())
@@ -70,36 +70,37 @@ class ModuleTestCase(unittest.TestCase):
         # Link gnome-hello trunk to a string_frozen release
         cat = Category(release=self.rel, branch=branch, name='desktop')
         cat.save()
-                
+        
         # Create a new file with translation
-        new_file_path = os.path.join(branch.co_path(), "dummy_file.h")
+        new_file_path = os.path.join(branch.co_path(), "dummy_file.py")
         new_string = "Dummy string for D-L tests"
         f = open(new_file_path,'w')
-        f.write("a = _('%s')" % new_string)
+        f.write("a = _('%s')\n" % new_string)
         f.close()
         # Add the new file to POTFILES.in
         f = open(os.path.join(branch.co_path(), "po", "POTFILES.in"), 'a')
-        f.write("dummy_file.h")
+        f.write("dummy_file.py\n")
         f.close()
         # Regenerate stats (mail should be sent)
         branch.update_stats(force=False)
         # Assertions
         self.assertEquals(len(mail.outbox), 1);
-        self.assertEquals(mail.outbox[0].subject, "String additions to '%s'")
-        self.assertTrue(new_string in mail.outbox[0].message)
+        self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.HEAD'")
+        self.assertTrue(mail.outbox[0].message().as_string().find(new_string)>-1)
         
         # Detect warning if translated figure is identical to original figure
         orig_figure = os.path.join(branch.co_path(), "help", "C", "figures", "gnome-hello.png")
         shutil.copy(orig_figure, os.path.join(branch.co_path(), "help", "fr", "figures", "gnome-hello.png"))
         branch.update_stats(force=True)
-        stat = Statistics.objects.get(branch=branch, domain__name='help', language__locale='fr')
-        warn_infos = Information.objects.filter(statistics=stat, type='warn')
+        doc_stat = Statistics.objects.get(branch=branch, domain__name='help', language__locale='fr')
+        warn_infos = Information.objects.filter(statistics=doc_stat, type='warn')
         self.assertEquals(len(warn_infos), 1);
-        self.assertEquals(stat.po_url(), "/POT/gnome-hello.HEAD/gnome-hello.HEAD.fr.po");
+        ui_stat = Statistics.objects.get(branch=branch, domain__name='po', language__locale='fr')
+        self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.HEAD/gnome-hello.HEAD.fr.po");
 
         # Delete the branch (removing the repo checkout in the file system)
         checkout_path = branch.co_path()
-        branch = Branch.objects.get(name="trunk", module = self.mod)
+        branch = Branch.objects.get(name="HEAD", module = self.mod)
         branch.delete()
         self.assertFalse(os.access(checkout_path, os.F_OK))
      

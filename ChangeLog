@@ -1,5 +1,12 @@
 2009-01-10  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: Put XGETTEXT_ARG in env dict.
+	Add --previous to msgmerge call.
+	Fixes bug #550208.
+	* stats/tests/__init__.py: Make test really pass!
+
+2009-01-10  Claude Paroz  <claude@2xlibre.net>
+
 	* languages/urls.py: 'team_slug' is already used in teams/urls.py
 	* languages/views.py:
 	* people/views.py: Add dateformat to context.
