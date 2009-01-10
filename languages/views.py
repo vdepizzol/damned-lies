@@ -23,7 +23,7 @@ import os
 import tarfile
 from datetime import date, datetime
 from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, get_date_formats
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
@@ -51,6 +51,7 @@ def language_release(request, locale, release_name, dtype):
         'stats_title': {'ui':  _("UI Translations"),
                         'doc': _("Documentation")}.get(dtype),
         'stats': stats,
+        'dateformat': get_date_formats()[0],
     }
     return render_to_response('languages/language_release.html', context,
                               context_instance=RequestContext(request))

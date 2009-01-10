@@ -1,3 +1,15 @@
+2009-01-10  Claude Paroz  <claude@2xlibre.net>
+
+	* languages/urls.py: 'team_slug' is already used in teams/urls.py
+	* languages/views.py:
+	* people/views.py: Add dateformat to context.
+	* stats/tests/__init__.py: Added test for po_url
+	* stats/models.py:
+	* templates/languages/language_release_stats.html:
+	* templates/people/person_detail.html:
+	* templates/vertimus/vertimus_detail.html: Harmonize date formats.
+	Fixes bug #567080.
+
 2009-01-08 Og Maciel <ogmaciel@gnome.org>
 
 	* README: Fixed minor typo explaining how to rename settings_sample.py file.

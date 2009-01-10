@@ -25,6 +25,7 @@ from datetime import datetime
 from time import tzname
 from django.db import models, connection
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
+from django.utils import dateformat
 from django.conf import settings
 from stats import utils
 import potdiff
@@ -933,7 +934,8 @@ class Statistics(models.Model):
     def pot_text(self):
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", self.pot_size()) % {'count': self.pot_size()}
-        upd_text = _(u"updated on %(date)s") % {'date': self.date.strftime("%Y-%m-%d %H:%M:%S ")+tzname[0]}
+        # Date format syntax is similar to PHP http://www.php.net/date
+        upd_text = _(u"updated on %(date)s") % {'date': dateformat.format(self.date, _("Y-m-d g:i a O"))}
         if self.fig_count():
             fig_text = ungettext(u"%(count)s figure", "%(count)s figures", self.fig_count()) % {'count': self.fig_count()}
             text = _(u"POT file (%(messages)s, %(figures)s) — %(updated)s") % \

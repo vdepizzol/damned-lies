@@ -25,7 +25,7 @@
 </tr>
 {% for state in states %}
 <tr>
-  <td>{{ state.updated|naturalday }}</td>
+  <td>{{ state.updated|naturalday:dateformat }}</td>
   <td><a href="{{ state.get_absolute_url }}">{{ state.branch.module.get_description }} - {{ state.branch.name }} - {% trans state.domain.description %} - {{ state.language.get_name }}</a></td>
   <td>{{ state.get_state }}</td>
 </tr>

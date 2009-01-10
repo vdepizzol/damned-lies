@@ -95,6 +95,7 @@ class ModuleTestCase(unittest.TestCase):
         stat = Statistics.objects.get(branch=branch, domain__name='help', language__locale='fr')
         warn_infos = Information.objects.filter(statistics=stat, type='warn')
         self.assertEquals(len(warn_infos), 1);
+        self.assertEquals(stat.po_url(), "/POT/gnome-hello.HEAD/gnome-hello.HEAD.fr.po");
 
         # Delete the branch (removing the repo checkout in the file system)
         checkout_path = branch.co_path()

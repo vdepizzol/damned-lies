@@ -19,7 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, get_date_formats
 from django.template import RequestContext
 from django.db import transaction, IntegrityError
 from django.contrib.auth.decorators import login_required
@@ -40,6 +40,7 @@ def person_detail(request, person_id=None, person_username=None):
         'pageSection': "teams",
         'person': person,
         'states': states,
+        'dateformat': get_date_formats()[0],
     }
     return render_to_response('people/person_detail.html', context,
             context_instance=RequestContext(request))

@@ -30,7 +30,7 @@
 
 <h3>{% trans "State:" %} {{ state.description }}
 {% ifnotequal state.name 'none' %}
-({{ state.updated|date:"D d M Y P" }})
+({{ state.updated|date:_("Y-m-d g:i a O") }})
 {% endifnotequal %}
 </h3>
 
@@ -74,7 +74,7 @@
   <div class="vertimus_action">
     <div class="vertimus_action_head">
       <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
-      , <strong>{{ action }}</strong>, {{ action.created|date:"Y-m-d H:i" }}
+      , <strong>{{ action }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
     </div>
     <div class="vertimus_action_content">
       {% if action.file %}

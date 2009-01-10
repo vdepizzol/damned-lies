@@ -64,7 +64,7 @@
            <td>
            {% if dom.1.state.name %}
              {% ifnotequal dom.1.state.name "None" %}
-             <em><small>{{ dom.1.state.get_state }} - {{ dom.1.state.updated|date:"Y-m-d" }}</small></em>
+             <em><small>{{ dom.1.state.get_state }} - {{ dom.1.state.updated|date:dateformat }}</small></em>
              {% endifnotequal %}
            {% endif %}
            </td>
