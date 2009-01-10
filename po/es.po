@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-06 14:36+0000\n"
-"PO-Revision-Date: 2009-01-06 17:07+0100\n"
+"POT-Creation-Date: 2009-01-08 11:30+0000\n"
+"PO-Revision-Date: 2009-01-10 01:50+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -910,50 +910,54 @@ msgstr ""
 "el «trunk»."
 
 #: database-content.py:220
+msgid "A VNC client for GNOME"
+msgstr "Un cliente VNC para GNOME"
+
+#: database-content.py:221
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:221
+#: database-content.py:222
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (estable)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (desarrollo)"
 
@@ -1109,19 +1113,19 @@ msgstr "Ya es miembro de este equipo."
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
-#: stats/models.py:283
+#: stats/models.py:287
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: stats/models.py:307
+#: stats/models.py:311
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:345
+#: stats/models.py:349
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: stats/models.py:546
+#: stats/models.py:550
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1132,56 +1136,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:820
+#: stats/models.py:827
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:821
+#: stats/models.py:828
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:822
+#: stats/models.py:829
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:823
+#: stats/models.py:830
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:824
+#: stats/models.py:831
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:897
+#: stats/models.py:904
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:928
+#: stats/models.py:935
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:929
+#: stats/models.py:936
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:931
+#: stats/models.py:938
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:932
+#: stats/models.py:939
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:935
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1248,23 +1252,23 @@ msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: stats/utils.py:232
+#: stats/utils.py:233
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: stats/utils.py:261
+#: stats/utils.py:262
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: stats/utils.py:288
+#: stats/utils.py:289
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:291
+#: stats/utils.py:292
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1386,7 +1390,7 @@ msgid "Modules"
 msgstr "Módulos"
 
 #: templates/base.html:73
-msgid "Log Out"
+msgid "Log out"
 msgstr "Salir de la sesión"
 
 #: templates/base.html:93
@@ -1693,7 +1697,7 @@ msgstr "Publicaciones de GNOME"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "Seleccione una publicación para ver más detalles acerca de ella:"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:59
 msgid "Notices"
 msgstr "Notas"
 
@@ -1705,7 +1709,7 @@ msgstr "Idioma"
 msgid "Translated"
 msgstr "Traducido"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:52
 msgid "Display document figures"
 msgstr "Mostrar las figuras del documento"
 
@@ -1794,15 +1798,15 @@ msgstr "Contribuidores de GNOME"
 msgid "GNOME is being developed by following people:"
 msgstr "Las siguientes personas están desarrollando GNOME:"
 
-#: templates/people/person_overview.html:25
+#: templates/people/person_overview.html:27
 msgid "Instant messaging:"
 msgstr "Mensajería instantánea:"
 
-#: templates/people/person_overview.html:32
+#: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
 msgstr "Cuenta de Bugzilla:"
 
-#: templates/people/person_overview.html:36
+#: templates/people/person_overview.html:38
 msgid "SVN account:"
 msgstr "Cuenta de SVN:"
 
