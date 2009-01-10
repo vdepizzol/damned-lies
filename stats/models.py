@@ -56,7 +56,8 @@ class Module(models.Model):
     bugs_product = models.CharField(max_length=50)
     bugs_component = models.CharField(max_length=50, null=True, blank=True)
     vcs_type = models.CharField(max_length=5, choices=VCS_TYPE_CHOICES)
-    vcs_root = models.URLField(verify_exists=False)
+    # URLField is too restrictive for vcs_root
+    vcs_root = models.CharField(max_length=200)
     vcs_web = models.URLField()
     
     maintainers = models.ManyToManyField(Person, db_table='module_maintainer',
@@ -187,7 +188,7 @@ class Branch(models.Model):
            
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
-            return utils.url_join(self.module.vcs_root, self.module_name)
+            return utils.url_join(self.module.vcs_root)
         elif self.vcs_subpath:
             return utils.url_join(self.module.vcs_root, self.module.name, self.vcs_subpath)
         elif self.is_head():

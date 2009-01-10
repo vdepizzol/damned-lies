@@ -1,5 +1,11 @@
 2009-01-10  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: For git (and hg?) modules, all branches share the same
+	vcs_root.
+	Don't make vcs_root an URLField, too picky about validation.
+
+2009-01-10  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Put XGETTEXT_ARG in env dict.
 	Add --previous to msgmerge call.
 	Fixes bug #550208.
