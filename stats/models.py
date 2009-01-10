@@ -188,7 +188,7 @@ class Branch(models.Model):
            
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
-            return utils.url_join(self.module.vcs_root)
+            return self.module.vcs_root
         elif self.vcs_subpath:
             return utils.url_join(self.module.vcs_root, self.module.name, self.vcs_subpath)
         elif self.is_head():

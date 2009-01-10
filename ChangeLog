@@ -1,5 +1,23 @@
 2009-01-10  Claude Paroz  <claude@2xlibre.net>
 
+	* settings_sample.py: Middleware ordering matters. Session should be first.
+	* stats/models.py: One less function call...
+	* urls.py: Import view for language setting.
+	* templates/people/person_detail.html: Add form to change language for a
+	registered user.
+	Fixes bug #475527.
+
+2009-01-10  Claude Paroz  <claude@2xlibre.net>
+
+	reviewed by: <delete if not using a buddy>
+
+	* settings_sample.py:
+	* stats/models.py:
+	* templates/people/person_detail.html:
+	* urls.py:
+
+2009-01-10  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: For git (and hg?) modules, all branches share the same
 	vcs_root.
 	Don't make vcs_root an URLField, too picky about validation.
