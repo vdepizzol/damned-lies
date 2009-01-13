@@ -254,11 +254,15 @@ ACTION_NAMES = (
     'BA', 'UNDO')
 
 def generate_upload_file_name(instance, original_filename):
-    filename = "%s-%s-%s-%s-%s.po" % (instance.state_db.branch.module.name, 
+    base, ext = os.path.splitext(original_filename)
+    if os.path.splitext(base)[1] == ".tar":
+        ext = ".tar" + ext
+    filename = "%s-%s-%s-%s-%s%s" % (instance.state_db.branch.module.name, 
                                    instance.state_db.branch.name, 
                                    instance.state_db.domain.name,
                                    instance.state_db.language.locale,
-                                   instance.state_db.id)
+                                   instance.state_db.id,
+                                   ext)
     return "%s/%s" % (settings.UPLOAD_DIR, filename)
 
 class ActionDb(models.Model):

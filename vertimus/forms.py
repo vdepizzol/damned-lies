@@ -35,7 +35,8 @@ class ActionForm(forms.Form):
         max_length=1000,
         required=False,
         widget=forms.Textarea)
-    file = forms.FileField(label=_("File"), required=False)
+    file = forms.FileField(label=_("File"), required=False,
+                           help_text=_("Upload a .po, .gz, .bz2 or .png file"))
 
     def __init__(self, available_actions, *args, **kwargs):
         super(ActionForm, self).__init__(*args, **kwargs)

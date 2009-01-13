@@ -1,3 +1,12 @@
+2009-01-13  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/people/person_detail.html: Only show site language popup on
+	his own page.
+	* vertimus/forms.py: Add a help text to the File widget.
+	* vertimus/models.py: Set extension of uploaded files identical to
+	original file.
+	Fixes #567512.
+
 2009-01-10  Claude Paroz  <claude@2xlibre.net>
 
 	* settings_sample.py: Middleware ordering matters. Session should be first.
