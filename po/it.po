@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-08 11:30+0000\n"
-"PO-Revision-Date: 2009-01-10 15:17+0100\n"
+"POT-Creation-Date: 2009-01-12 14:11+0000\n"
+"PO-Revision-Date: 2009-01-13 17:53+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -922,51 +922,60 @@ msgstr ""
 msgid "A VNC client for GNOME"
 msgstr "Un client VNC per GNOME"
 
+# cambiata un po'....
 #: database-content.py:221
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in SVN even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr "Notare che GTK+ preseta i domini di traduzione \"po\" e \"po-properties\". Se si aggiunge una lingua per una dominio, è necessario fare il commit di entrambi i file su SVN, anche se uno dei due domini non presenta alcuna traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-properties."
+
+#: database-content.py:222
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "Extra GNOME Applications"
 msgstr "Applicazioni aggiuntive per GNOME"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "GNOME Infrastructure"
 msgstr "Infrastruttura di GNOME"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (vecchia stabile)"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (vecchia stabile)"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non-GNOME)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabile)"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (vecchia stabile)"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applicazioni di produttività GNOME-Office"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (vecchia stabile)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (in sviluppo)"
 
@@ -1116,27 +1125,27 @@ msgstr ""
 "Questo dovrebbe essere un indirizzo email, utile se diverso dal campo \"email"
 "\""
 
-#: people/views.py:86
+#: people/views.py:87
 msgid "You are already member of this team."
 msgstr "Si è già membri di questo gruppo."
 
-#: people/views.py:109
+#: people/views.py:110
 msgid "Your password has been changed."
 msgstr "La propria password è stata cambiata."
 
-#: stats/models.py:287
+#: stats/models.py:289
 msgid "Can't generate POT file, using old one."
 msgstr "Impossibile generare il file POT, in uso quello vecchio."
 
-#: stats/models.py:311
+#: stats/models.py:313
 msgid "Can't copy new POT file to public location."
 msgstr "Impossibile copiare il nuovo file POT su posizione pubblica."
 
-#: stats/models.py:349
+#: stats/models.py:351
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "L'elenco DOC_LINGUAS non incude questa lingua."
 
-#: stats/models.py:550
+#: stats/models.py:551
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1147,56 +1156,62 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:827
+#: stats/models.py:828
 msgid "Administration Tools"
 msgstr "Strumenti di amministrazione"
 
-#: stats/models.py:828
+#: stats/models.py:829
 msgid "Development Tools"
 msgstr "Strumenti di sviluppo"
 
-#: stats/models.py:829
+#: stats/models.py:830
 msgid "GNOME Desktop"
 msgstr "Ambiente grafico GNOME"
 
-#: stats/models.py:830
+#: stats/models.py:831
 msgid "GNOME Developer Platform"
 msgstr "Piattaforma di sviluppo GNOME"
 
-#: stats/models.py:831
+#: stats/models.py:832
 msgid "New Module Proposals"
 msgstr "Nuovi moduli proposti"
 
-#: stats/models.py:904
+#: stats/models.py:905
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:935
+#: stats/models.py:936
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s messaggio"
 msgstr[1] "%(count)s messaggi"
 
-#: stats/models.py:936
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:938
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aggiornato il %(date)s"
 
-#: stats/models.py:938
+#: stats/models.py:938 templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:77
+msgid "Y-m-d g:i a O"
+msgstr "Y-m-d H.i O"
+
+#: stats/models.py:940
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figure"
 
-#: stats/models.py:939
+#: stats/models.py:941
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "File POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:942
+#: stats/models.py:944
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "File POT (%(messages)s) — %(updated)s"
@@ -1800,23 +1815,32 @@ msgstr "Cambia la propria password"
 msgid "Join a team"
 msgstr "Partecipa a un gruppo"
 
-#: templates/people/person_detail.html:9
+#: templates/people/person_detail.html:12
+#| msgid "Language"
+msgid "Site Language:"
+msgstr "Lingua del sito:"
+
+#: templates/people/person_detail.html:21
+msgid "Choose"
+msgstr "Scegli"
+
+#: templates/people/person_detail.html:27
 msgid "Maintains:"
 msgstr "Mantiene:"
 
-#: templates/people/person_detail.html:20
+#: templates/people/person_detail.html:38
 msgid "Working on"
 msgstr "Al lavoro su"
 
-#: templates/people/person_detail.html:24
+#: templates/people/person_detail.html:42
 msgid "Date"
 msgstr "Data"
 
-#: templates/people/person_detail.html:24
+#: templates/people/person_detail.html:42
 msgid "Module"
 msgstr "Modulo"
 
-#: templates/people/person_detail.html:24
+#: templates/people/person_detail.html:42
 msgid "State"
 msgstr "Stato"
 
