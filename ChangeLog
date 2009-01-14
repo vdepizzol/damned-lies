@@ -1,5 +1,11 @@
 2009-01-14  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: Translate description in domain.get_description.
+	* templates/people/person_detail.html:
+	* templates/vertimus/vertimus_detail.html: Use domain.get_description.
+
+2009-01-14  Claude Paroz  <claude@2xlibre.net>
+
 	* media/css/main.css: Added style for having the translation graph outside
 	of a table.
 	* stats/models.py: Added ability to a Statistics object to render the

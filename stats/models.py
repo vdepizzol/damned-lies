@@ -524,7 +524,10 @@ class Domain(models.Model):
             return self.name
     
     def get_description(self):
-        return self.description or self.potbase()
+        if self.description:
+            return _(self.description)
+        else:
+            return self.potbase()
     
     def generate_pot_file(self, vcs_path):
         """ Return the pot file generated, and the error if any """

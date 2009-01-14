@@ -18,7 +18,7 @@
 </div>
 {% endwith %}
 
-<h1><a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a> - {{ branch.name }} - {% trans domain.description %} - {{ language.get_name }}</h1>
+<h1><a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a> - {{ branch.name }} - {{ domain.get_description }} - {{ language.get_name }}</h1>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
