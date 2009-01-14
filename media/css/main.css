@@ -31,8 +31,13 @@ h2 {
 div.graph {
   height: 14px;
   width: 100px;
-  border: 0px solid black; 
+  border: 0px solid black;
   position: relative;
+}
+
+div.graphinline {
+  display: inline;
+  top: -10px;
 }
 
 div.translated {

@@ -10,7 +10,7 @@
     {% endifnotequal %}
   {% endifnotequal %}
   </h3>
-  <a href="{{ stat1.po_url }}"><img src="/media/img/download.png" alt="Download POT file" /></a>
+  <a href="{{ stat1.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
   {{ stat1.pot_text }}
   <!-- This is the title of the section that lists notices about a module -->
   {% if stat1.information_set.all %}
@@ -47,7 +47,7 @@
       <td>{{ line.get_translationstat|safe }}</td>
       {% if stat1.fig_count %}
       <td><a href="{% url stats.views.docimages module_name=module.name,potbase=stat1.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
-          <img src="/media/img/figure.png" alt="{% trans "Display document figures" %}"></a>
+          <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
       </td>
       {% endif %}
       <td style="width: 108px; text-align: center;">

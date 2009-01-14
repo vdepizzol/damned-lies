@@ -97,6 +97,8 @@ class ModuleTestCase(unittest.TestCase):
         self.assertEquals(len(warn_infos), 1);
         ui_stat = Statistics.objects.get(branch=branch, domain__name='po', language__locale='fr')
         self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.HEAD/gnome-hello.HEAD.fr.po");
+        self.assertEquals(ui_stat.pot_url(), u"/POT/gnome-hello.HEAD/gnome-hello.HEAD.pot");
+        self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.HEAD/docs/gnome-hello-help.HEAD.fr.po");
 
         # Delete the branch (removing the repo checkout in the file system)
         checkout_path = branch.co_path()

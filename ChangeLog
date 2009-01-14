@@ -1,3 +1,14 @@
+2009-01-14  Claude Paroz  <claude@2xlibre.net>
+
+	* media/css/main.css: Added style for having the translation graph outside
+	of a table.
+	* stats/models.py: Added ability to a Statistics object to render the
+	corresponding pot file URL.
+	* stats/tests/__init__.py: Added tests for po_url and pot_url.
+	* templates/stats_show.html: Translation fix, and use of MEDIA_URL.
+	* templates/vertimus/vertimus_detail.html: Remove a 'formatting' table.
+	Add link to POT file. Fixes bug #567705.
+
 2009-01-13  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/people/person_detail.html: Only show site language popup on

@@ -922,8 +922,8 @@ class Statistics(models.Model):
     def get_translationstat(self):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
     
-    def filename(self):
-        if self.language:
+    def filename(self, potfile=False):
+        if self.language and not potfile:
             return "%s.%s.%s.po" % (self.domain.potbase(), self.branch.name, self.language.locale)
         else:
             return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
@@ -987,13 +987,15 @@ class Statistics(models.Model):
             subdir = "docs"
         return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename())
         
-    def po_url(self):
+    def po_url(self, potfile=False):
         """ Return URL of po file, e.g. for downloading the file """
+        subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs/"
-        else:
-            subdir = ""
-        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename())
+        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename(potfile))
+
+    def pot_url(self):
+        return self.po_url(potfile=True)
         
     def most_important_message(self):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """
