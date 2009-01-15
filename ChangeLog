@@ -1,3 +1,10 @@
+2009-01-15  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* vertimus/models.py: A backup is done after each commit, fixes
+	#567251. Fixes the sequence number in the action_backup table.
+	* vertimus/tests/__init__.py: Test adjustments to reflect the
+	change.	
+
 2009-01-15 Og Maciel <ogmaciel@gnome.org>
 
 	* stats/management/commands/update-trans.py: Removed the option argument

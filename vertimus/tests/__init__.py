@@ -304,22 +304,6 @@ class VertimusTests(TestCase):
         new_state.save()
 
     def test_action_ic(self):
-        state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Committing', person=self.pc).get_state()
-        state.save()
-
-        action = ActionAbstract.new_by_name('IC')
-        new_state = state.apply_action(action, self.pc, "Committed.")
-        new_state.save()
-
-    def test_action_tr(self):
-        state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translated').get_state()
-        state.save()
-
-        action = ActionAbstract.new_by_name('TR')
-        new_state = state.apply_action(action, self.pc, "Bad work :-/")
-        new_state.save()
-
-    def test_action_ba(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Proofreading', person=self.pr).get_state()
         state.save()
 
@@ -346,10 +330,6 @@ class VertimusTests(TestCase):
         state = state.apply_action(action, self.pc, "Committed.")
         state.save()
 
-        action = ActionAbstract.new_by_name('BA')
-        state = state.apply_action(action, self.pc, comment="I don't want to disappear")
-        state.save()
-
         self.assert_(not os.access(file_path, os.F_OK))
         
         # Remove test file
@@ -357,6 +337,22 @@ class VertimusTests(TestCase):
         backup_file_path = os.path.join(settings.MEDIA_ROOT, backup_action.file.name)
         backup_action.delete()
         self.assert_(not os.access(backup_file_path, os.F_OK))
+
+    def test_action_tr(self):
+        state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translated').get_state()
+        state.save()
+
+        action = ActionAbstract.new_by_name('TR')
+        new_state = state.apply_action(action, self.pc, "Bad work :-/")
+        new_state.save()
+
+    def test_action_ba(self):
+        state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Committed', person=self.pr).get_state()
+        state.save()
+
+        action = ActionAbstract.new_by_name('BA')
+        state = state.apply_action(action, self.pc, comment="I don't want to disappear")
+        state.save()
 
     def test_action_undo(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()

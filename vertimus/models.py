@@ -110,6 +110,14 @@ class StateAbstract(object):
                 # Only the name and the person change
                 new_state._state_db.name = new_state.name
                 new_state._state_db.person = person
+
+                if isinstance(new_state, StateCommitted):
+                    # Committed is the last state of the workflow 
+                    new_state.save()
+
+                    # Backup actions
+                    return new_state.apply_action(ActionBA(), person)
+
                 return new_state
             else:
                 return self
@@ -236,7 +244,8 @@ class StateCommitted(StateAbstract):
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
             action_names = ['BA']
-        else:            action_names = []
+        else:            
+            action_names = []
 
         return self._get_available_actions(action_names)
 
@@ -379,6 +388,7 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
             message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
             mail.send_mail(subject, message, settings.SERVER_EMAIL, recipient_list)
             activate(current_lang)
+
 
 class ActionWC(ActionAbstract):
     name = 'WC'
@@ -581,12 +591,14 @@ class ActionBA(ActionAbstract):
                 file=file_to_backup)
             if file_to_backup:
                 action_db_backup.file.save(action_db.file.name, file_to_backup, save=False)
-            action_db_backup.save()
 
             if sequence == None:
-                sequence = action_db_backup.id
-                action_db_backup.sequence = sequence
+                # The ID is available after the save()
                 action_db_backup.save()
+                sequence = action_db_backup.id
+
+            action_db_backup.sequence = sequence
+            action_db_backup.save()
 
             action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere           
 
