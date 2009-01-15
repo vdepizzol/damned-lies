@@ -38,11 +38,11 @@ class Command(BaseCommand):
         # Extract DB translatable strings into database-content.py
         dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
         f=open(dbfile, 'w')
-        query = """SELECT description FROM team UNION DISTINCT
-                   SELECT name from language WHERE name <> locale UNION DISTINCT
-                   SELECT description FROM domain UNION DISTINCT
-                   SELECT description FROM module WHERE description <> name UNION DISTINCT
-                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION DISTINCT
+        query = """SELECT description FROM team UNION 
+                   SELECT name from language WHERE name <> locale UNION 
+                   SELECT description FROM domain UNION 
+                   SELECT description FROM module WHERE description <> name UNION 
+                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION 
                    SELECT description FROM "release" """
         cursor = connection.cursor()
         if settings.DATABASE_ENGINE == 'mysql':

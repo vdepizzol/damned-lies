@@ -1,3 +1,8 @@
+2009-01-15 Og Maciel <ogmaciel@gnome.org>
+
+	* stats/management/commands/update-trans.py: Removed the option argument
+	DISTINCT to make it work with sqlite.
+
 2009-01-14  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: Translate description in domain.get_description.
