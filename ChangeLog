@@ -1,5 +1,15 @@
 2009-01-16  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: Add documentation for get_lang_stats_by_type output
+	structure.
+	* languages/view.py: Adapted XML output to revised get_lang_stats
+	structure.
+	* templates/languages/language_release_stats.html:
+	* templates/stats_show.html: Use preferably vertimus-by-names URLs.
+	Fixes bug #567398.
+
+2009-01-16  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: First version of commit_po, currently not used (WIP).
 	* stats/utils.py: Add an optional raise_on_error argument to
 	run_shell_command. 

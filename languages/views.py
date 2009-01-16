@@ -96,29 +96,29 @@ def language_release_xml(request, locale, release_name):
         content += "<untranslated>%s</untranslated>" % categ['catuntrans']
         # Modules
         for modname, mod in categ['modules']:
-            content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod[1][1].branch.name)
+            content += "<module id=\"%s\" branch=\"%s\">" % (modname, mod['branch'])
             # DOC domains
             if catname in stats['doc']['categs'] and stats['doc']['categs'][catname]['modules']:
                 for docmod in stats['doc']['categs'][catname]['modules']:
                     if docmod[0] == modname:
-                        content += get_domain_stats(docmod[1], "document")
+                        content += get_domain_stats(docmod[1]['domains'], "document")
             # UI stats
-            content += get_domain_stats(mod, "domain")
+            content += get_domain_stats(mod['domains'], "domain")
             content += "</module>"
         # Add modules who have no ui counterparts
         if catname == 'dev-tools':
             try:
                 mod = [m for m in stats['doc']['categs']['dev-tools']['modules'] if m[0] == 'gnome-devel-docs'][0][1]
-                content += "<module id=\"gnome-devel-docs\" branch=\"%s\">" % mod[1][1].branch.name
-                content += get_domain_stats(mod, "document")
+                content += "<module id=\"gnome-devel-docs\" branch=\"%s\">" % mod['branch']
+                content += get_domain_stats(mod['domains'], "document")
                 content += "</module>"
             except:
                 pass
         if catname == 'desktop':
             try:
                 mod = [m for m in stats['doc']['categs']['desktop']['modules'] if m[0] == 'gnome-user-docs'][0][1]
-                content += "<module id=\"gnome-user-docs\" branch=\"%s\">" % mod[1][1].branch.name
-                content += get_domain_stats(mod, "document")
+                content += "<module id=\"gnome-user-docs\" branch=\"%s\">" % mod['branch']
+                content += get_domain_stats(mod['domains'], "document")
                 content += "</module>"
             except:
                 pass

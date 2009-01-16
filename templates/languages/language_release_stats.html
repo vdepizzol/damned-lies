@@ -28,48 +28,50 @@
   
   {% for module in categ.modules %}
     {% with module.0 as modname %}
-    {% for dom in module.1 %}
+    {% for dom in module.1.domains %}
       {% with dom.0 as domname %}
-      {% if dom.1 %}
-        {% ifequal dom.1.tr_percentage 100 %}
-          <tr id="{{ modname }}-{{ domname }}-complete">
+      {% with dom.1 as stat %}
+      {% if stat %}
+        {% ifequal stat.tr_percentage 100 %}
+          <tr id="{{ modname }}-{{ stat.domain.id }}-complete">
         {% else %}
           <tr>
         {% endifequal %}
-          {% if dom.1.partial_po %}
+          {% if stat.partial_po %}
             {# This is a partial po, indented, with the domain description #}
             <td class="leftcell" style="padding-left:2em; padding-right:2em;">
-            <a href="{% url vertimus-stats-id-view dom.1.id language.id %}">{{ dom.1.domain.description }}</a>
+            <a href="{% url vertimus-names-view modname module.1.branch stat.domain.name language.locale %}">{{ domname }}</a>
           {% else %}
             <td class="leftcell">
-            {% if not dom.1.is_fake %}
-              <a href="{% url vertimus-stats-id-view dom.1.id language.id %}">{{ dom.1.module_description }}</a>
+            {% if not stat.is_fake %}
+              <a href="{% url vertimus-names-view modname module.1.branch stat.domain.name language.locale %}">{{ stat.module_description }}</a>
             {% else %}
-              <em>{{ dom.1.module_description }}</em>
+              <em>{{ stat.module_description }}</em>
             {% endif %}
           {% endif %}
-          {% for err in dom.1.information_set.all %}
+          {% for err in stat.information_set.all %}
             <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.type }}" />
           {% endfor %}
           </td>
-          <td>{{ dom.1.tr_percentage }}%&nbsp;({{ dom.1.translated }}/{{ dom.1.fuzzy }}/{{ dom.1.untranslated }})</td>
+          <td>{{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
           <td style="width: 108px; text-align: center;"><div class="graph">
-              <div class="translated" style="width: {{ dom.1.tr_percentage }}px;"></div>
-              <div class="fuzzy" style="left:{{ dom.1.tr_percentage }}px; width:{{ dom.1.fu_percentage }}px;"></div>
-              {% with dom.1.tr_percentage|add:dom.1.fu_percentage as upos %}
-              <div class="untranslated" style="left:{{ upos }}px; width:{{ dom.1.un_percentage }}px;"></div>
+              <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
+              <div class="fuzzy" style="left:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
+              {% with stat.tr_percentage|add:stat.fu_percentage as upos %}
+              <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.un_percentage }}px;"></div>
               {% endwith %}
              </div>
            </td>
            <td>
-           {% if dom.1.state.name %}
-             {% ifnotequal dom.1.state.name "None" %}
-             <em><small>{{ dom.1.state.get_state }} - {{ dom.1.state.updated|date:dateformat }}</small></em>
+           {% if stat.state.name %}
+             {% ifnotequal stat.state.name "None" %}
+             <em><small>{{ stat.state.get_state }} - {{ stat.state.updated|date:dateformat }}</small></em>
              {% endifnotequal %}
            {% endif %}
            </td>
         </tr>
       {% endif %}
+      {% endwith %}
       {% endwith %}
     {% endfor %}
     {% endwith %}
