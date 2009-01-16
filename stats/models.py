@@ -196,6 +196,9 @@ class Branch(models.Model):
         else:
             return utils.url_join(self.module.vcs_root, self.module.name, "branches", self.name)
 
+    def is_vcs_readonly(self):
+        return self.module.vcs_root.find('ssh://') == -1
+
     def get_vcs_web_url(self):
         if self.is_head():
             return utils.url_join(self.module.vcs_web, "trunk")
@@ -484,12 +487,69 @@ class Branch(models.Model):
         self.checkout_lock.acquire()
         try:
             for command in commandList:
-                (status, output, errs) = utils.run_shell_command(command)
-                if status != utils.STATUS_OK:
-                    raise OSError(status, errs)
+                utils.run_shell_command(command, raise_on_error=True)
         finally:
             self.checkout_lock.release()
         return 1
+
+    def commit_po(self, po_file, domain, language):
+        """ Commit the file 'po_file' in the branch VCS repository """
+        if self.is_vcs_readonly():
+            raise Exception, "This branch is in read-only mode. Unable to commit"
+        vcs_type = self.module.vcs_type
+        locale = language.locale
+        if vcs_type == "git":
+            commit_dir = os.path.join(settings.SCRATCHDIR, vcs_type, self.module.name + "." + self.name, domain.directory)
+            dest_filename = "%s.po" % locale
+            dest_path = os.path.join(commit_dir, dest_filename)
+            already_exist = os.access(dest_path, os.F_OK)
+            # Copy file in repo
+            utils.copy_file(po_file, dest_path)
+            # git add file.po
+            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git add %(po_file)s" % {
+                       'dest':    commit_dir,
+                       'branch':  self.name,
+                       'po_file': dest_filename,
+                       }, raise_on_error=True)
+            if not already_exist:
+                # Add locale to LINGUAS
+                linguas_file = os.path.join(commit_dir, "LINGUAS")
+                if os.access(linguas_file, os.F_OK):
+                    fin = open(linguas_file, 'r')
+                    fout = open(linguas_file+"~", 'w')
+                    lang_written = False
+                    for line in fin:
+                        if not lang_written and line[0] != "#" and line[:5] > locale[:5]:
+                            fout.write(locale + "\n")
+                            lang_written = True
+                        fout.write(line)
+                    fout.close()
+                    fin.close()
+                    os.rename(linguas_file+"~", linguas_file)
+                    utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git add %(lg_file)s" % {
+                               'dest':    commit_dir,
+                               'branch':  self.name,
+                               'lg_file': "LINGUAS",
+                               })
+                commit_message = "Added %s translation." % language.name
+            else:
+                commit_message = "Updated %s translation." % language.name
+            # FIXME: edit changelog?
+            # git commit -m "Updated %s translation."
+            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git commit -m \"%(msg)s\"" % {
+                       'dest':    commit_dir,
+                       'branch':  self.name,
+                       'msg': commit_message,
+                       }, raise_on_error=True)
+            # git push
+            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git push" % {
+                       'dest':    commit_dir,
+                       'branch':  self.name,
+                       'msg': commit_message,
+                       }, raise_on_error=True)
+        else:
+            raise NotImplementedError
+
 
 
 DOMAIN_TYPE_CHOICES = (

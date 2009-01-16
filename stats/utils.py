@@ -45,7 +45,7 @@ def stripHTML(string):
     replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
-def run_shell_command(cmd, env=None, input_data=None):
+def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
     if settings.DEBUG: print >>sys.stderr, cmd
     
     stdin = None
@@ -56,8 +56,10 @@ def run_shell_command(cmd, env=None, input_data=None):
         pipe.stdin.write(input_data)
     (output, errout) = pipe.communicate()
     status = pipe.returncode
-    
     if settings.DEBUG: print >>sys.stderr, output + errout
+    if raise_on_error and status != STATUS_OK:
+        raise OSError(status, errout)
+    
     return (status, output, errout)
 
 
