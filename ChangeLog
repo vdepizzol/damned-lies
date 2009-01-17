@@ -1,5 +1,17 @@
 2009-01-17  Claude Paroz  <claude@2xlibre.net>
 
+	* media/css/difflib.css: Specific CSS for diff template.
+	* templates/vertimus/vertimus_detail.html: Add link to diff template just
+	under po files.
+	* templates/vertimus/vertimus_diff.html: Show side-by-side diff between
+	two po files.
+	* vertimus/models.py: 3 utility methods added for diff functionality.
+	* vertimus/urls.py: Add URL for diff view.
+	* vertimus/views.py: Add vertimus_diff view.
+	Preliminary work for #566060.
+
+2009-01-17  Claude Paroz  <claude@2xlibre.net>
+
 	* vertimus/urls.py: Accept '.' in branch name.
 
 2009-01-16  Claude Paroz  <claude@2xlibre.net>

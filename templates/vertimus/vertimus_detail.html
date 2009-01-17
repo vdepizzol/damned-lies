@@ -73,7 +73,11 @@
     <div class="vertimus_action_content">
       {% if action.file %}
       <div class="uploaded_file">
-        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a></div>
+        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a><br />
+        {% if action.has_po_file %}
+          <div class="right_actions"><a href="{% url vertimus-diff-view action.id %}">diff with previous</a></div>
+        {% endif %}
+      </div>
       {% endif %}
       <p>{% if action.comment %}
         {{ action.comment|linebreaksbr }}

@@ -293,6 +293,15 @@ class ActionDb(models.Model):
         action._action_db = self
         return action
 
+    def get_previous_action_with_po(self):
+        """ Returns the previous action with an uploaded file related to the same state """
+        try:
+            act = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
+                                          created__lt=self.created).latest('created')
+            return act.get_action()
+        except ActionDb.DoesNotExist:
+            return None
+
     @classmethod
     def get_action_history(cls, state_db):
         if state_db:
@@ -320,6 +329,10 @@ class ActionAbstract(object):
     def get_all(cls):
         """Reserved to the admins to access all actions"""
         return [eval('Action' + action_name)() for action_name in ACTION_NAMES]
+
+    @property
+    def id(self):
+        return self._action_db.id
 
     @property
     def person(self):
@@ -353,6 +366,12 @@ class ActionAbstract(object):
             return os.path.basename(self._action_db.file.name)
         else:
             return None
+
+    def has_po_file(self):
+        try:
+            return self._action_db.file.name[-3:] == ".po"
+        except:
+            return False
 
     def send_mail_new_state(self, old_state, new_state, recipient_list):
         # Remove None and empty string items from the list

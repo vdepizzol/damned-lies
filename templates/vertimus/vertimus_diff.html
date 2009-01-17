@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Diff between po files" %}
+{% endblock %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ MEDIA_URL }}css/difflib.css" />
+{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{{ state.branch.module.get_description }} - {{ state.branch.name }} - {{ state.domain.get_description }} - {{ state.language.get_name }}</h1>
+<p><a href="{% url vertimus-names-view state.branch.module.name state.branch.name state.domain.name state.language.locale %}">{% trans "&lt;- Back to actions" %}</a></p>
+
+{{ diff_content|safe }}
+
+{% endblock %}

@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from datetime import datetime
+from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponseRedirect, Http404
 from django.template import RequestContext
@@ -107,4 +108,38 @@ def vertimus(request, branch, domain, language, stats=None):
         'action_form': action_form
     }
     return render_to_response('vertimus/vertimus_detail.html', context,
-                              context_instance=RequestContext(request)) 
+                              context_instance=RequestContext(request))
+
+def vertimus_diff(request, action_id):
+    """ Show a diff between current action po file and previous file """
+    import difflib
+    action_db1 = get_object_or_404(ActionDb, pk=action_id)
+    state = action_db1.state_db
+    content1 = [l.decode('utf-8') for l in open(action_db1.file.path, 'U').readlines()]
+    descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
+                                                            'date': action_db1.created }
+    action_db2 = action_db1.get_previous_action_with_po()
+    if action_db2:
+        file_path2 = action_db2.file.path
+        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db2.person.name,
+                                                                'date': action_db2.created }
+    else:
+        # The file should be the more recently committed file (merged)
+        try:
+            stats = Statistics.objects.get(branch=state.branch, domain=state.domain, language=state.language)
+            descr2 = _("Latest committed file for %(lang)s" % {'lang': state.language.get_name()})
+        except Statistics.DoesNotExist:
+            stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
+            descr2 = _("Latest POT file")
+        file_path2 = stats.po_path()
+    content2 = [l.decode('utf-8') for l in open(file_path2, 'U').readlines()]
+    d = difflib.HtmlDiff()
+    diff_content = d.make_table(content2, content1,
+                                descr2, descr1, context=True)
+
+    context = {
+        'diff_content': diff_content,
+        'state': state,
+    }
+    return render_to_response('vertimus/vertimus_diff.html', context,
+                              context_instance=RequestContext(request))
