@@ -191,7 +191,7 @@ class StateProofread(StateAbstract):
 
     def get_available_actions(self, person):
         if person.is_reviewer(self.language.team):
-            action_names = ['TC', 'TR']
+            action_names = ['TC', 'RP', 'TR']
         else:
             action_names = []
 

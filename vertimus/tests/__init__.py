@@ -185,7 +185,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pr, self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['TC', 'TR', 'WC'])
+            self.assertEqual(action_names, ['TC', 'RP', 'TR', 'WC'])
 
     def test_state_to_review(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pt)
