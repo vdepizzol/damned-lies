@@ -267,11 +267,11 @@ def generate_upload_file_name(instance, original_filename):
     if os.path.splitext(base)[1] == ".tar":
         ext = ".tar" + ext
     filename = "%s-%s-%s-%s-%s%s" % (instance.state_db.branch.module.name, 
-                                   instance.state_db.branch.name, 
-                                   instance.state_db.domain.name,
-                                   instance.state_db.language.locale,
-                                   instance.state_db.id,
-                                   ext)
+                                     instance.state_db.branch.name, 
+                                     instance.state_db.domain.name,
+                                     instance.state_db.language.locale,
+                                     instance.state_db.id,
+                                     ext)
     return "%s/%s" % (settings.UPLOAD_DIR, filename)
 
 class ActionDb(models.Model):
@@ -286,7 +286,7 @@ class ActionDb(models.Model):
 
     class Meta:
         db_table = 'action'
-        ordering = ('-created',)
+        ordering = ('-id',)
 
     def get_action(self):
         action = eval('Action' + self.name)()
@@ -296,9 +296,9 @@ class ActionDb(models.Model):
     def get_previous_action_with_po(self):
         """ Returns the previous action with an uploaded file related to the same state """
         try:
-            act = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
-                                          created__lt=self.created).latest('created')
-            return act.get_action()
+            action_db = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
+                id__lt=self.id).latest('id')
+            return action_db.get_action()
         except ActionDb.DoesNotExist:
             return None
 
@@ -306,7 +306,7 @@ class ActionDb(models.Model):
     def get_action_history(cls, state_db):
         if state_db:
             return [va_db.get_action() for va_db in ActionDb.objects.filter(
-                    state_db__id=state_db.id).order_by('created')]
+                    state_db__id=state_db.id).order_by('id')]
         else:
             return []
 
@@ -633,7 +633,7 @@ class ActionUNDO(ActionAbstract):
         try:
             # Exclude himself
             action_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(
-                name__in=['WC', 'UNDO']).order_by('-created')[1]
+                name__in=['WC', 'UNDO']).order_by('-id')[1]
             action = action_db.get_action()
             return action._new_state()
         except:
