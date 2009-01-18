@@ -1,14 +1,14 @@
 # Italian translation for damned-lies (http://l10n.gnome.org).
 # Copyright (C) 2007 Free Software Foundation, Inc
 # This file is distributed under the same license as the damned-lies package.
-# Luca Ferretti <elle.uca@libero.it>, 2008.
 #
+# Luca Ferretti <elle.uca@libero.it>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-15 13:14+0000\n"
-"PO-Revision-Date: 2009-01-15 17:07+0100\n"
+"POT-Creation-Date: 2009-01-15 16:16+0000\n"
+"PO-Revision-Date: 2009-01-18 10:37+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -191,7 +191,7 @@ msgstr "Occitano"
 
 #: database-content.py:43
 msgid "Low German and Saxon"
-msgstr ""
+msgstr "Basso tedesco e sassone"
 
 #: database-content.py:44
 msgid "Oriya"
@@ -467,11 +467,11 @@ msgstr "Latino bielorusso"
 
 #: database-content.py:112
 msgid "Low German"
-msgstr ""
+msgstr "Basso tedesco"
 
 #: database-content.py:113
 msgid "Low Saxon, Germany"
-msgstr ""
+msgstr "Basso sassone, Germania"
 
 #: database-content.py:114
 msgid "Valencian (Southern Catalan)"
@@ -838,8 +838,7 @@ msgstr "Documentazione utente per GNOME 2"
 msgid "Beagle Desktop Search"
 msgstr "Ricerca desktop Beagle"
 
-#: database-content.py:204
-#: templates/base.html:34
+#: database-content.py:204 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Maledette bugie"
@@ -893,16 +892,31 @@ msgid "Deskbar Applet"
 msgstr "Applet Deskbar"
 
 #: database-content.py:217
-msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "GNUCash non fa parte del repository SVN di GNOME. Consultare il  <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">Wiki di GNUCash</a> per sapere dove inviare le traduzioni."
+msgid ""
+"GNUCash is not part of the GNOME SVN repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
+msgstr ""
+"GNUCash non fa parte del repository SVN di GNOME. Consultare il  <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">Wiki di GNUCash</a> "
+"per sapere dove inviare le traduzioni."
 
 #: database-content.py:218
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr "Questo modulo non è specifico di GNOME. Inviare le proprie traduzioni attraverso il <a href=\\\"http://translationproject.org\\\">Translation Project</a>."
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr ""
+"Questo modulo non è specifico di GNOME. Inviare le proprie traduzioni "
+"attraverso il <a href=\\\"http://translationproject.org\\\">Translation "
+"Project</a>."
 
 #: database-content.py:219
-msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
-msgstr "A partire da GNOME 2.23, GAIL è integrato nelle GTK+. Non eseguire più commit sul branch \"trunk\"."
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr ""
+"A partire da GNOME 2.23, GAIL è integrato nelle GTK+. Non eseguire più "
+"commit sul branch \"trunk\"."
 
 #: database-content.py:220
 msgid "A VNC client for GNOME"
@@ -910,8 +924,17 @@ msgstr "Un client VNC per GNOME"
 
 # cambiata un po'....
 #: database-content.py:221
-msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in SVN even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
-msgstr "Notare che GTK+ preseta i domini di traduzione \"po\" e \"po-properties\". Se si aggiunge una lingua per una dominio, è necessario fare il commit di entrambi i file su SVN, anche se uno dei due domini non presenta alcuna traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-properties."
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in SVN even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr ""
+"Notare che GTK+ preseta i domini di traduzione \"po\" e \"po-properties\". "
+"Se si aggiunge una lingua per una dominio, è necessario fare il commit di "
+"entrambi i file su SVN, anche se uno dei due domini non presenta alcuna "
+"traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-"
+"properties."
 
 #: database-content.py:222
 msgid "GNOME Fifth Toe (Extra software)"
@@ -996,14 +1019,12 @@ msgid "Username:"
 msgstr "Nome utente:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20
-#: templates/login.html:21
+#: people/forms.py:20 templates/login.html:21
 msgid "Password:"
 msgstr "Password:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76
-#: templates/login.html:27
+#: templates/base.html:76 templates/login.html:27
 msgid "Log in"
 msgstr "Accedi"
 
@@ -1013,8 +1034,7 @@ msgid "Or use your OpenID:"
 msgstr "Oppure usare il proprio OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17
-#: templates/login.html:35
+#: people/forms.py:17 templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID:"
 
@@ -1027,10 +1047,8 @@ msgstr "Accedi con OpenID"
 msgid "UI Translations"
 msgstr "Traduzioni interfaccia utente"
 
-#: languages/views.py:52
-#: templates/module_detail.html:91
-#: templates/release_detail.html:22
-#: templates/teams/team_detail.html:23
+#: languages/views.py:52 templates/module_detail.html:91
+#: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentazione"
 
@@ -1050,8 +1068,7 @@ msgstr "Email:"
 msgid "At least 7 characters"
 msgstr "Almeno 7 caratteri"
 
-#: people/forms.py:23
-#: templates/people/person_password_change_form.html:27
+#: people/forms.py:23 templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
 msgstr "Conferma password:"
 
@@ -1073,8 +1090,14 @@ msgstr "Attivazione dell'account"
 
 #: people/forms.py:66
 #, python-format
-msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
-msgstr "Questa è una conferma che la propria registrazione su %s ha avuto successo. Per attivare il proprio account, fare clic sul collegamento qui sotto oppure copiarlo e incollarlo in un browser."
+msgid ""
+"This is a confirmation that your registration on %s succeeded. To activate "
+"your account, please click on the link below or copy and paste it in a "
+"browser."
+msgstr ""
+"Questa è una conferma che la propria registrazione su %s ha avuto successo. "
+"Per attivare il proprio account, fare clic sul collegamento qui sotto oppure "
+"copiarlo e incollarlo in un browser."
 
 #: people/forms.py:68
 #, python-format
@@ -1103,7 +1126,9 @@ msgstr "Account Bugzilla"
 
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr "Questo dovrebbe essere un indirizzo email, utile se diverso dal campo \"email\""
+msgstr ""
+"Questo dovrebbe essere un indirizzo email, utile se diverso dal campo \"email"
+"\""
 
 #: people/views.py:87
 msgid "You are already member of this team."
@@ -1174,8 +1199,7 @@ msgstr[1] "%(count)s messaggi"
 msgid "updated on %(date)s"
 msgstr "aggiornato il %(date)s"
 
-#: stats/models.py:941
-#: templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:941 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d H.i O"
@@ -1208,8 +1232,12 @@ msgstr "Nel file POTFILES.in mancano alcuni file: %s"
 
 #: stats/utils.py:88
 #, python-format
-msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
-msgstr "I seguenti file sono referenziati in POTFILES.in o in POTFILES.skip, ma non esistono: %s"
+msgid ""
+"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
+"they don't exist: %s"
+msgstr ""
+"I seguenti file sono referenziati in POTFILES.in o in POTFILES.skip, ma non "
+"esistono: %s"
 
 #: stats/utils.py:100
 #, python-format
@@ -1265,12 +1293,19 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La voce relativa a questa lingua non è presente nel file LINGUAS."
 
 #: stats/utils.py:289
-msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
-msgstr "La voce relativa a questa lingua non è presente nel file di configurazione ALL_LINGUAS."
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr ""
+"La voce relativa a questa lingua non è presente nel file di configurazione "
+"ALL_LINGUAS."
 
 #: stats/utils.py:292
-msgid "Don't know where to look if this language is actually used, ask the module maintainer."
-msgstr "Non sono disponibili indicazioni per verificare se questa lingua è realmente usata, chiedere al maintainer del modulo."
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+"Non sono disponibili indicazioni per verificare se questa lingua è realmente "
+"usata, chiedere al maintainer del modulo."
 
 #: teams/models.py:113
 #, python-format
@@ -1293,8 +1328,7 @@ msgid "Committer"
 msgstr "Committer"
 
 # TIPO DI ACCOUNT
-#: teams/models.py:133
-#: templates/teams/team_base.html:31
+#: teams/models.py:133 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Coordinatore"
 
@@ -1322,8 +1356,7 @@ msgstr "Traduttori"
 msgid "No translators"
 msgstr "Nessun traduttore"
 
-#: templates/404.html:4
-#: templates/404.html.py:9
+#: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "Errore: pagina non trovata"
 
@@ -1343,8 +1376,7 @@ msgstr "Errore del server"
 msgid "We're sorry but a server error has occurred."
 msgstr "Si è verificato un errore del server."
 
-#: templates/base.html:25
-#: templates/base.html.py:41
+#: templates/base.html:25 templates/base.html.py:41
 msgid "Home"
 msgstr "Home"
 
@@ -1388,13 +1420,11 @@ msgstr "Comunità"
 msgid "Back to Damned Lies home page"
 msgstr "Torna alla homepage di Maledette bugie"
 
-#: templates/base.html:47
-#: templates/index.html:13
+#: templates/base.html:47 templates/index.html:13
 msgid "Teams"
 msgstr "Gruppi"
 
-#: templates/base.html:52
-#: templates/index.html:20
+#: templates/base.html:52 templates/index.html:20
 msgid "Languages"
 msgstr "Lingue"
 
@@ -1402,8 +1432,7 @@ msgstr "Lingue"
 msgid "Release sets"
 msgstr "Set di rilasci"
 
-#: templates/base.html:62
-#: templates/index.html:36
+#: templates/base.html:62 templates/index.html:36
 msgid "Modules"
 msgstr "Moduli"
 
@@ -1417,18 +1446,19 @@ msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
 
 #: templates/base.html:95
-msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-msgstr "Mantenuto nel modulo <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> su <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgid ""
+"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgstr ""
+"Mantenuto nel modulo <a href='http://svn.gnome.org/viewvc/damned-"
+"lies/'>damned-lies</a> su <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
 #: templates/base.html:97
 msgid "Hosted by"
 msgstr "In hosting presso"
 
-#: templates/error.html:4
-#: templates/index.html:4
-#: templates/index.html.py:9
-#: templates/login.html:4
-#: templates/register.html:4
+#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
+#: templates/login.html:4 templates/register.html:4
 #: templates/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Maledette bugie su GNOME"
@@ -1438,21 +1468,38 @@ msgid "Error:"
 msgstr "Errore:"
 
 #: templates/index.html:14
-msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
-msgstr "Elenca tutti i gruppi di traduzione di GNOME, con informazioni complete come contatto principale (coordinatore), pagine web e mailing list."
+msgid ""
+"List of all GNOME Translation Teams, with full information such as primary "
+"contact (coordinator), web pages and mailing list information."
+msgstr ""
+"Elenca tutti i gruppi di traduzione di GNOME, con informazioni complete come "
+"contatto principale (coordinatore), pagine web e mailing list."
 
 #: templates/index.html:15
-msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgstr "Se non è presente alcun gruppo per la propria lingua, è possibile <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>dare vita a un proprio gruppo</a> con semplicità."
+msgid ""
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
+msgstr ""
+"Se non è presente alcun gruppo per la propria lingua, è possibile <a "
+"href='http://live.gnome.org/TranslationProject/StartingATeam/'>dare vita a "
+"un proprio gruppo</a> con semplicità."
 
 #: templates/index.html:22
 #, python-format
-msgid "List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> for."
-msgstr "Elenca tutte le lingue per cui esiste un <a href='%(teams_url)s'>Gruppo di traduzione</a>."
+msgid ""
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
+msgstr ""
+"Elenca tutte le lingue per cui esiste un <a href='%(teams_url)s'>Gruppo di "
+"traduzione</a>."
 
 #: templates/index.html:23
-msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
-msgstr "Alcuni gruppi gestiscono più di una lingua (di solito semplici varianti): qui è possibile vedere tutte le lingue in cui GNOME è tradotto."
+msgid ""
+"Some teams manage more than one language (usually just simple variants), and "
+"here you can see all the languages GNOME is being translated to."
+msgstr ""
+"Alcuni gruppi gestiscono più di una lingua (di solito semplici varianti): "
+"qui è possibile vedere tutte le lingue in cui GNOME è tradotto."
 
 #: templates/index.html:27
 msgid "Release Sets"
@@ -1460,56 +1507,85 @@ msgstr "Set di rilasci"
 
 #: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr "Elenca tutti i set di rilasci e i rilasci di GNOME e ne fornisce le statistiche."
+msgstr ""
+"Elenca tutti i set di rilasci e i rilasci di GNOME e ne fornisce le "
+"statistiche."
 
 #: templates/index.html:30
-msgid "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; or &quot;GNOME 2.14&quot;."
-msgstr "Esempi di set di rilasci sono &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; o &quot;GNOME 2.14&quot;."
+msgid ""
+"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"or &quot;GNOME 2.14&quot;."
+msgstr ""
+"Esempi di set di rilasci sono &quot;GNOME Office&quot;, &quot;Fifth "
+"Toe&quot; o &quot;GNOME 2.14&quot;."
 
 #: templates/index.html:31
-msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr "I set di rilasci ufficiali di GNOME sono ulteriormente suddivisi in categorie come &quot;Applicazioni desktop&quot; e &quot;Piattaforma di sviluppo&quot;."
+msgid ""
+"Official GNOME release sets are further divided into categories such as "
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+msgstr ""
+"I set di rilasci ufficiali di GNOME sono ulteriormente suddivisi in "
+"categorie come &quot;Applicazioni desktop&quot; e &quot;Piattaforma di "
+"sviluppo&quot;."
 
 #: templates/index.html:33
-msgid "Look here if you want to compare language support in any of these release sets."
-msgstr "Consultare qui per comparare il supporto alle lingue in ciascuno di questi set di rilasci."
+msgid ""
+"Look here if you want to compare language support in any of these release "
+"sets."
+msgstr ""
+"Consultare qui per comparare il supporto alle lingue in ciascuno di questi "
+"set di rilasci."
 
 #: templates/index.html:37
 msgid "List of all modules with statistics in here."
 msgstr "Elenco di tutti i moduli, incluse le statistiche."
 
 #: templates/index.html:39
-msgid "Modules are separate libraries or applications, with one or more branches of development included."
-msgstr "I moduli sono distinte librerie o applicazioni, con incluso uno o più branch di sviluppo."
+msgid ""
+"Modules are separate libraries or applications, with one or more branches of "
+"development included."
+msgstr ""
+"I moduli sono distinte librerie o applicazioni, con incluso uno o più branch "
+"di sviluppo."
 
 #: templates/index.html:40
-msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "Sono tipicamente ottenuti da CVS e contengono tutte le relative informazioni importanti (dettagli su Bugzilla, pagina web, informazioni su maintainer...)."
+msgid ""
+"They are usually taken from CVS, and we keep all relevant information on "
+"them (Bugzilla details, web page, maintainer information,...)."
+msgstr ""
+"Sono tipicamente ottenuti da CVS e contengono tutte le relative informazioni "
+"importanti (dettagli su Bugzilla, pagina web, informazioni su maintainer...)."
 
 #: templates/index.html:46
 msgid "Translated by:"
 msgstr "Tradotto da:"
 
-#: templates/login.html:10
-#: templates/register.html:11
+#: templates/login.html:10 templates/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "È già stato eseguito l'accesso come %(username)s."
 
 #: templates/login.html:13
 #, python-format
-msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
-msgstr "Se non si possiede alcun account su questo sito, è possibile <a href='%(link)s'>registrarsi</a> per crearne uno nuovo."
+msgid ""
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
+msgstr ""
+"Se non si possiede alcun account su questo sito, è possibile <a href='%(link)"
+"s'>registrarsi</a> per crearne uno nuovo."
 
 #: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Statistiche del modulo: %(name)s"
 
-#: templates/module_detail.html:17
-#: templates/vertimus/vertimus_detail.html:27
-msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
-msgstr "Questo modulo non fa parte del repository SVN di GNOME. Consultare la pagina web del modulo per sapere dove inviare le traduzioni."
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Questo modulo non fa parte del repository SVN di GNOME. Consultare la pagina "
+"web del modulo per sapere dove inviare le traduzioni."
 
 #: templates/module_detail.html:29
 msgid "Maintainers"
@@ -1562,8 +1638,12 @@ msgstr "Originale"
 
 # figura
 #: templates/module_images.html:32
-msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
-msgstr "Tradotta, ma usa quella originale (forse la figura non contiene alcuna stringa da tradurre)"
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr ""
+"Tradotta, ma usa quella originale (forse la figura non contiene alcuna "
+"stringa da tradurre)"
 
 #: templates/module_images.html:36
 msgid "Fuzzy"
@@ -1578,26 +1658,35 @@ msgstr "File non esistente (fuzzy &quot;tecnico&quot;)"
 msgid "Not translated"
 msgstr "Non tradotta"
 
-#: templates/module_list.html:4
-#: templates/module_list.html.py:9
+#: templates/module_list.html:4 templates/module_list.html.py:9
 msgid "GNOME Modules"
 msgstr "Moduli di GNOME"
 
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Selezionare uno dei moduli qui elencati per vedere alcune maledette bugie su di esso:"
+msgstr ""
+"Selezionare uno dei moduli qui elencati per vedere alcune maledette bugie su "
+"di esso:"
 
 #: templates/register.html:9
 msgid "Account Registration"
 msgstr "Registrazione account"
 
 #: templates/register.html:13
-msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
-msgstr "È possibile effettuare qui la registrazione di un account su questo sito. Ciò è utile solo se è in progetto di contribuire alle traduzioni di GNOME."
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+"È possibile effettuare qui la registrazione di un account su questo sito. "
+"Ciò è utile solo se è in progetto di contribuire alle traduzioni di GNOME."
 
 #: templates/register.html:14
-msgid "After registration and connection, you will be able to join an existing team from your profile page."
-msgstr "Dopo la registrazione e la connessione, sarà possibile partecipare a un gruppo esistente dalla pagina del proprio profilo."
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+"Dopo la registrazione e la connessione, sarà possibile partecipare a un "
+"gruppo esistente dalla pagina del proprio profilo."
 
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
@@ -1616,8 +1705,12 @@ msgid "Registration Success"
 msgstr "Registrazione riuscita"
 
 #: templates/register_success.html:10
-msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
-msgstr "La registrazione è riuscita. Verrà inviata una email contenente un collegamento per attivare il proprio account."
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
+"La registrazione è riuscita. Verrà inviata una email contenente un "
+"collegamento per attivare il proprio account."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1626,44 +1719,43 @@ msgstr "Rilascio %(name)s"
 
 #: templates/release_detail.html:13
 #: templates/languages/language_release.html:20
-msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr "I moduli di questo rilascio non sopo parte del repository SVN di GNOME. Verificare presso la pagina web di ciascun modulo le modalità di invio delle traduzioni."
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"I moduli di questo rilascio non sopo parte del repository SVN di GNOME. "
+"Verificare presso la pagina web di ciascun modulo le modalità di invio delle "
+"traduzioni."
 
-#: templates/release_detail.html:19
-#: templates/teams/team_detail.html:22
+#: templates/release_detail.html:19 templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Rilasci"
 
-#: templates/release_detail.html:20
-#: templates/teams/team_detail.html:22
+#: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
 msgstr "Interfaccia utente"
 
-#: templates/release_detail.html:21
-#: templates/release_detail.html.py:23
-#: templates/stats_show.html:34
-#: templates/teams/team_detail.html:22
+#: templates/release_detail.html:21 templates/release_detail.html.py:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:22
 #: templates/teams/team_detail.html:23
 msgid "Graph"
 msgstr "Grafico"
 
-#: templates/release_list.html:4
-#: templates/release_list.html.py:9
+#: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "Rilasci di GNOME"
 
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
-msgstr "Selezionare un rilascio o un set di rilasci qui elencati per vedere maggiori dettagli su di esso:"
+msgstr ""
+"Selezionare un rilascio o un set di rilasci qui elencati per vedere maggiori "
+"dettagli su di esso:"
 
-#: templates/stats_show.html:13
-#: templates/vertimus/vertimus_detail.html:38
-#| msgid "Download all po files"
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
 msgid "Download POT file"
 msgstr "Scarica file POT"
 
-#: templates/stats_show.html:17
-#: templates/vertimus/vertimus_detail.html:53
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "Avvisi"
 
@@ -1671,13 +1763,11 @@ msgstr "Avvisi"
 msgid "Language"
 msgstr "Lingua"
 
-#: templates/stats_show.html:30
-#: vertimus/models.py:151
+#: templates/stats_show.html:30 vertimus/models.py:151
 msgid "Translated"
 msgstr "Tradotto"
 
-#: templates/stats_show.html:50
-#: templates/vertimus/vertimus_detail.html:48
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
 msgid "Display document figures"
 msgstr "Mostra le figure del documento"
 
@@ -1766,8 +1856,7 @@ msgstr "Stato"
 msgid "Save"
 msgstr "Salva"
 
-#: templates/people/person_list.html:4
-#: templates/people/person_list.html:8
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "Collaboratori di GNOME"
 
@@ -1792,8 +1881,13 @@ msgid "Password change"
 msgstr "Cambio della password"
 
 #: templates/people/person_password_change_form.html:8
-msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
-msgstr "Inserire la propria vecchia password, per motivi di sicurezza, quindi inserire la propria nuova password due volte in modo da verificare che sia stata digitata in modo corretto."
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"Inserire la propria vecchia password, per motivi di sicurezza, quindi "
+"inserire la propria nuova password due volte in modo da verificare che sia "
+"stata digitata in modo corretto."
 
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
@@ -1871,14 +1965,15 @@ msgstr "Gruppo di traduzione %(lang)s"
 msgid "Apply modifications"
 msgstr "Applica le modifiche"
 
-#: templates/teams/team_list.html:4
-#: templates/teams/team_list.html.py:9
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
 msgstr "Gruppi di traduzione di GNOME"
 
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
-msgstr "Selezionare un gruppo qui elencato per vedere maggiori informazioni su di esso:"
+msgstr ""
+"Selezionare un gruppo qui elencato per vedere maggiori informazioni su di "
+"esso:"
 
 #: templates/teams/team_list.html:25
 #, python-format
@@ -1905,7 +2000,6 @@ msgid "State:"
 msgstr "Stato:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Download all po files"
 msgid "Download PO file"
 msgstr "Scarica file PO"
 
@@ -1931,7 +2025,8 @@ msgstr "Invia"
 
 #: templates/vertimus/vertimus_detail.html:101
 #, python-format
-msgid "You need to be authenticated and to be member of the %(team_name)s team."
+msgid ""
+"You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "È necessario autenticarsi ed essere membro del gruppo %(team_name)s."
 
 #: vertimus/forms.py:30
@@ -1955,8 +2050,11 @@ msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Sono ammessi solo file con estensione .po, .gz, .bz2 o .png"
 
 #: vertimus/forms.py:55
-msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr "Il file .po non passa il controllo \"msgfmt -vc\". Correggere il file e provare di nuovo."
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ""
+"Il file .po non passa il controllo \"msgfmt -vc\". Correggere il file e "
+"provare di nuovo."
 
 #: vertimus/forms.py:65
 msgid "A comment or a file is needed for this action."
@@ -2024,25 +2122,25 @@ msgstr "Commit eseguito"
 msgid ""
 "Hello,\n"
 "\n"
-"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
+"'%(new_state)s'.\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Salve,\n"
 "\n"
-"il nuovo stato di  %(module)s - %(branch)s - %(domain)s (%(language)s) è \"%(new_state)s\".\n"
+"il nuovo stato di  %(module)s - %(branch)s - %(domain)s (%(language)s) è \"%"
+"(new_state)s\".\n"
 "%(url)s\n"
 "\n"
 
 # fa parte dell'email
-#: vertimus/models.py:377
-#: vertimus/models.py:426
+#: vertimus/models.py:377 vertimus/models.py:426
 msgid "Without comment"
 msgstr "Nessun commento"
 
 # fa parte dell'email
-#: vertimus/models.py:379
-#: vertimus/models.py:428
+#: vertimus/models.py:379 vertimus/models.py:428
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Questo è un messaggio automatico inviato da %s."
@@ -2058,13 +2156,15 @@ msgstr "Scrivi un commento"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Salve,\n"
 "\n"
-"È stato lasciato un nuovo commento su %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
+"È stato lasciato un nuovo commento su %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -2120,4 +2220,3 @@ msgstr "Conferma e azzera le azioni"
 #: vertimus/models.py:597
 msgid "Undo the last state change"
 msgstr "Annulla l'ultimo cambio di stato"
-
