@@ -1,5 +1,9 @@
 2009-01-18  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* README: Add reference to OpenID note.
+
+2009-01-18  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* vertimus/models.py: Order by ID instead of created, it avoids a
 	possible problem with the dumb MySQL database (where datetime
 	precision is limited to second) when two actions are done in the
