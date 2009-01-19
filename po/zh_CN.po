@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-05 10:37+0000\n"
+"POT-Creation-Date: 2009-01-15 13:14+0000\n"
 "PO-Revision-Date: 2008-11-28 14:29+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -498,11 +498,11 @@ msgstr "挪威 Bokmål 书面语"
 
 #: database-content.py:120
 msgid "Norwegian Nynorsk"
-msgstr "挪威 尼诺斯克书面语"
+msgstr "挪威尼诺斯克书面语"
 
 #: database-content.py:121
 msgid "Serbian Latin"
-msgstr "塞尔维亚 拉丁语"
+msgstr "塞尔维亚拉丁语"
 
 #: database-content.py:122
 msgid "Serbian Jekavian"
@@ -774,7 +774,7 @@ msgstr "Dasher 手册"
 
 #: database-content.py:189
 msgid "Weather Applet Locations"
-msgstr "天气小程序手册"
+msgstr "天气小程序位置"
 
 #: database-content.py:190
 msgid "Dictionary Manual"
@@ -910,50 +910,62 @@ msgid ""
 msgstr "从 GNOME 2.23 开始，GAIL 被整合到 GTK+。请不要继续向 trunk 提交。"
 
 #: database-content.py:220
+msgid "A VNC client for GNOME"
+msgstr ""
+
+#: database-content.py:221
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in SVN even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr ""
+
+#: database-content.py:222
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME 第五脚趾 (额外的软件)"
 
-#: database-content.py:221
+#: database-content.py:223
 msgid "Extra GNOME Applications"
 msgstr "额外的 GNOME 程序"
 
-#: database-content.py:222
+#: database-content.py:224
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (老的稳定版本)"
 
-#: database-content.py:223
+#: database-content.py:225
 msgid "GNOME Infrastructure"
 msgstr "GNOME 基础架构"
 
-#: database-content.py:224
+#: database-content.py:226
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (老的稳定版本)"
 
-#: database-content.py:225
+#: database-content.py:227
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (老的稳定版本)"
 
-#: database-content.py:226
+#: database-content.py:228
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非 GNOME)"
 
-#: database-content.py:227
+#: database-content.py:229
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (稳定版本)"
 
-#: database-content.py:228
+#: database-content.py:230
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (老的稳定版本)"
 
-#: database-content.py:229
+#: database-content.py:231
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-办公室生产力程序"
 
-#: database-content.py:230
+#: database-content.py:232
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (老的稳定版本)"
 
-#: database-content.py:231
+#: database-content.py:233
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (开发版本)"
 
@@ -1095,30 +1107,30 @@ msgid "Bugzilla account"
 msgstr "Bugzilla 账户"
 
 #: people/models.py:41
-msgid "This shoud be an email, useful if not equal to 'email' field"
+msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "这应该是一个电子邮件地址，特别适用于与“电子邮件”字段不同的情况"
 
-#: people/views.py:86
+#: people/views.py:87
 msgid "You are already member of this team."
 msgstr "您已经是此团队的一员。"
 
-#: people/views.py:109
+#: people/views.py:110
 msgid "Your password has been changed."
 msgstr "您的密码已更改。"
 
-#: stats/models.py:283
+#: stats/models.py:289
 msgid "Can't generate POT file, using old one."
 msgstr "无法生成 POT 文件，改用旧的。"
 
-#: stats/models.py:307
+#: stats/models.py:313
 msgid "Can't copy new POT file to public location."
 msgstr "无法复制新的 POT 文件到公开位置"
 
-#: stats/models.py:345
+#: stats/models.py:351
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 清单没有包括该语言。"
 
-#: stats/models.py:546
+#: stats/models.py:554
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1129,54 +1141,60 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:820
+#: stats/models.py:831
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:821
+#: stats/models.py:832
 msgid "Development Tools"
 msgstr "开发工具"
 
-#: stats/models.py:822
+#: stats/models.py:833
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:823
+#: stats/models.py:834
 msgid "GNOME Developer Platform"
 msgstr "GNOME 开发者平台"
 
-#: stats/models.py:824
+#: stats/models.py:835
 msgid "New Module Proposals"
 msgstr "新模块提案"
 
-#: stats/models.py:897
+#: stats/models.py:908
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:928
+#: stats/models.py:939
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 条消息"
 
-#: stats/models.py:929
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:941
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新于 %(date)s"
 
-#: stats/models.py:931
+#: stats/models.py:941 templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:71
+msgid "Y-m-d g:i a O"
+msgstr "Y年m月d日 H:i"
+
+#: stats/models.py:943
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 个图片"
 
-#: stats/models.py:932
+#: stats/models.py:944
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s %(figures)s) — %(updated)s"
 
-#: stats/models.py:935
+#: stats/models.py:947
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s) — %(updated)s"
@@ -1242,21 +1260,21 @@ msgstr "无法得到 POT 文件“%s”的统计数据。"
 msgid "This PO file has an executable bit set."
 msgstr "该 PO 文件设置为可执行属性。"
 
-#: stats/utils.py:232
+#: stats/utils.py:233
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO 文件“%s”并不是 UTF-8 编码。"
 
-#: stats/utils.py:261
+#: stats/utils.py:262
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "在 LINGUAS 文件内没有该语言的条目。"
 
-#: stats/utils.py:288
+#: stats/utils.py:289
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "在配置文件的 ALL_LINGUAS 内没有该语言的条目。"
 
-#: stats/utils.py:291
+#: stats/utils.py:292
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1376,7 +1394,7 @@ msgid "Modules"
 msgstr "模块"
 
 #: templates/base.html:73
-msgid "Log Out"
+msgid "Log out"
 msgstr "注销"
 
 #: templates/base.html:93
@@ -1433,8 +1451,8 @@ msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
-"某些团队管理多种语言(通常仅仅是简单的变形)，在这里你可以看到 GNOME "
-"目前支持的各种语言。"
+"某些团队管理多种语言(通常仅仅是简单的变形)，在这里你可以看到 GNOME 目前支持的"
+"各种语言。"
 
 #: templates/index.html:27
 msgid "Release Sets"
@@ -1605,7 +1623,7 @@ msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "通过 OpenID <strong>或</strong> 密码进行身份验证："
 
 #: templates/register.html:34
-msgid "Register with OpenId"
+msgid "Register with OpenID"
 msgstr "使用 OpenID 注册"
 
 #: templates/register.html:46
@@ -1659,6 +1677,10 @@ msgstr "GNOME 发行版本"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "选择以下的某次发行或发行套件以查看有关的更多信息："
 
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
+msgid "Download POT file"
+msgstr "下载 POT 文件"
+
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "注意"
@@ -1671,7 +1693,7 @@ msgstr "语言"
 msgid "Translated"
 msgstr "已翻译"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:66
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
 msgid "Display document figures"
 msgstr "显示文档图片"
 
@@ -1725,30 +1747,35 @@ msgstr "更改您的密码"
 
 #: templates/people/person_base.html:15
 msgid "Join a team"
-msgstr ""
+msgstr "加入团队"
 
-#: templates/people/person_detail.html:9
+#: templates/people/person_detail.html:12
+msgid "Site Language:"
+msgstr "网站语言："
+
+#: templates/people/person_detail.html:21
+msgid "Choose"
+msgstr "选择"
+
+#: templates/people/person_detail.html:27
 msgid "Maintains:"
 msgstr "维护："
 
-#: templates/people/person_detail.html:20
+#: templates/people/person_detail.html:38
 msgid "Working on"
 msgstr ""
 
-#: templates/people/person_detail.html:24
-#, fuzzy
+#: templates/people/person_detail.html:42
 msgid "Date"
-msgstr "状态："
+msgstr "日期"
 
-#: templates/people/person_detail.html:24
-#, fuzzy
+#: templates/people/person_detail.html:42
 msgid "Module"
 msgstr "模块"
 
-#: templates/people/person_detail.html:24
-#, fuzzy
+#: templates/people/person_detail.html:42
 msgid "State"
-msgstr "状态："
+msgstr "状态"
 
 #: templates/people/person_detail_change_form.html:13
 msgid "Save"
@@ -1762,15 +1789,15 @@ msgstr "GNOME 贡献者"
 msgid "GNOME is being developed by following people:"
 msgstr "GNOME 正由下列人员开发："
 
-#: templates/people/person_overview.html:25
+#: templates/people/person_overview.html:27
 msgid "Instant messaging:"
 msgstr "即时通信："
 
-#: templates/people/person_overview.html:32
+#: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
-msgstr "Bugzilla 帐号："
+msgstr "Bugzilla 账户："
 
-#: templates/people/person_overview.html:36
+#: templates/people/person_overview.html:38
 msgid "SVN account:"
 msgstr "SVN 帐号："
 
@@ -1798,7 +1825,7 @@ msgstr "更改我的密码"
 
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
-msgstr ""
+msgstr "加入新团队"
 
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
@@ -1890,27 +1917,31 @@ msgstr "在下列发布中使用："
 msgid "State:"
 msgstr "状态："
 
-#: templates/vertimus/vertimus_detail.html:41
+#: templates/vertimus/vertimus_detail.html:39
+msgid "Download PO file"
+msgstr "下载 PO 文件"
+
+#: templates/vertimus/vertimus_detail.html:39
 msgid "Translated:"
 msgstr "已翻译："
 
-#: templates/vertimus/vertimus_detail.html:71
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Action History"
 msgstr "操作历史"
 
-#: templates/vertimus/vertimus_detail.html:87
+#: templates/vertimus/vertimus_detail.html:81
 msgid "No comment"
 msgstr "无评论"
 
-#: templates/vertimus/vertimus_detail.html:96
+#: templates/vertimus/vertimus_detail.html:90
 msgid "New Action"
 msgstr "新操作"
 
-#: templates/vertimus/vertimus_detail.html:103
+#: templates/vertimus/vertimus_detail.html:97
 msgid "Submit"
 msgstr "提交"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:101
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -1928,20 +1959,24 @@ msgstr "评论"
 msgid "File"
 msgstr "文件"
 
-#: vertimus/forms.py:49
+#: vertimus/forms.py:39
+msgid "Upload a .po, .gz, .bz2 or .png file"
+msgstr "上传 .po、.gz、.bz2 或 .png 文件"
+
+#: vertimus/forms.py:50
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "只支持扩展名为 .po、.gz、.bz2 或 .png 的文件。"
 
-#: vertimus/forms.py:54
+#: vertimus/forms.py:55
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ".po 文件无法通过“msgfmt -vc”。请您修复此文件，然后再试一次。"
 
-#: vertimus/forms.py:64
+#: vertimus/forms.py:65
 msgid "A comment or a file is needed for this action."
 msgstr "此操作需要提供评论或者文件。"
 
-#: vertimus/forms.py:67
+#: vertimus/forms.py:68
 msgid "A file is needed for this action."
 msgstr "此操作需要提供文件。"
 
@@ -1977,7 +2012,7 @@ msgstr "正提交"
 msgid "Committed"
 msgstr "已提交"
 
-#: vertimus/models.py:360
+#: vertimus/models.py:364
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1994,20 +2029,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:373 vertimus/models.py:422
+#: vertimus/models.py:377 vertimus/models.py:426
 msgid "Without comment"
 msgstr "没有评论"
 
-#: vertimus/models.py:375 vertimus/models.py:424
+#: vertimus/models.py:379 vertimus/models.py:428
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "这是一封 %s 自动发出的信件。"
 
-#: vertimus/models.py:381
+#: vertimus/models.py:385
 msgid "Write a comment"
 msgstr "留下评论"
 
-#: vertimus/models.py:410
+#: vertimus/models.py:414
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2023,43 +2058,42 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:432
+#: vertimus/models.py:436
 msgid "Reserve for translation"
 msgstr "占用此文件并进行翻译"
 
-#: vertimus/models.py:443
+#: vertimus/models.py:447
 msgid "Upload the new translation"
 msgstr "上传新翻译"
 
-#: vertimus/models.py:458
+#: vertimus/models.py:462
 msgid "Reserve for proofreading"
 msgstr "占用此文件进行审阅"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:473
 msgid "Upload for proofreading"
 msgstr "上传审阅后的文件"
 
-#: vertimus/models.py:484
+#: vertimus/models.py:488
 msgid "Ready for submission"
 msgstr "可以提交"
 
-#: vertimus/models.py:500
+#: vertimus/models.py:504
 msgid "Reserve to submit"
 msgstr "即将提交"
 
-#: vertimus/models.py:511
+#: vertimus/models.py:515
 msgid "Inform of submission"
 msgstr "提交通知"
 
-#: vertimus/models.py:525
+#: vertimus/models.py:529
 msgid "Requiring review"
 msgstr "需要复查"
 
-#: vertimus/models.py:556
+#: vertimus/models.py:560
 msgid "Backup the actions"
 msgstr "备份操作"
 
-#: vertimus/models.py:593
+#: vertimus/models.py:597
 msgid "Undo the last state change"
 msgstr "撤消上次的状态"
-
