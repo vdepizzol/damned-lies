@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-13 16:56+0000\n"
-"PO-Revision-Date: 2009-01-15 14:05+0100\n"
+"POT-Creation-Date: 2009-01-15 13:14+0000\n"
+"PO-Revision-Date: 2009-01-19 06:12+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -828,7 +828,8 @@ msgstr "Användardokumentation för GNOME 2"
 msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
-#: database-content.py:204 templates/base.html:34
+#: database-content.py:204
+#: templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
@@ -882,41 +883,23 @@ msgid "Deskbar Applet"
 msgstr "Panelprogrammet Skrivbordsrad"
 
 #: database-content.py:217
-msgid ""
-"GNUCash is not part of the GNOME SVN repository. Please check <a href="
-"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
-"to see where to send translations."
-msgstr ""
-"GNUCash är inte en del av GNOME:s SVN-förråd. Se på <a href=\"http://wiki."
-"gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information "
-"om var översättningen ska skickas."
+msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
+msgstr "GNUCash är inte en del av GNOME:s SVN-förråd. Se på <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information om var översättningen ska skickas."
 
 #: database-content.py:218
-msgid ""
-"This is not a GNOME-specific module. Please submit your translation through "
-"the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr ""
-"Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a "
-"href=\"http://translationproject.org\">Translation Project</a>."
+msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>."
 
 #: database-content.py:219
-msgid ""
-"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
-"more."
-msgstr ""
-"Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar "
-"i trunk längre."
+msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
+msgstr "Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar i trunk längre."
 
 #: database-content.py:220
 msgid "A VNC client for GNOME"
 msgstr "En VNC-klient för GNOME"
 
 #: database-content.py:221
-msgid ""
-"Please note that gtk+ has both po and po-properties UI domains.  If you add "
-"a new language in either domain, you have to commit both files in SVN even "
-"if one of them contains 0 translations, unless GTK+ build will break in /po-"
-"properties."
+msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in SVN even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Observera att gtk+ innehåller både domänen po och po-properties.  Om du lägger till ett nytt språk i någon av domänerna så måste du skicka in båda filerna i SVN även om en av dem bara innehåller 0 översättningar, annars kommer GTK+-byggnationen inte att fungera i /po-properties."
 
 #: database-content.py:222
@@ -1002,12 +985,14 @@ msgid "Username:"
 msgstr "Användarnamn:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20 templates/login.html:21
+#: people/forms.py:20
+#: templates/login.html:21
 msgid "Password:"
 msgstr "Lösenord:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:27
+#: templates/base.html:76
+#: templates/login.html:27
 msgid "Log in"
 msgstr "Logga in"
 
@@ -1017,7 +1002,8 @@ msgid "Or use your OpenID:"
 msgstr "eller använd ditt OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:35
+#: people/forms.py:17
+#: templates/login.html:35
 msgid "OpenID:"
 msgstr "OpenID:"
 
@@ -1030,8 +1016,10 @@ msgstr "Logga in med OpenID"
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
 
-#: languages/views.py:52 templates/module_detail.html:91
-#: templates/release_detail.html:22 templates/teams/team_detail.html:23
+#: languages/views.py:52
+#: templates/module_detail.html:91
+#: templates/release_detail.html:22
+#: templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -1051,7 +1039,8 @@ msgstr "E-post:"
 msgid "At least 7 characters"
 msgstr "Minst 7 tecken"
 
-#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: people/forms.py:23
+#: templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
@@ -1073,14 +1062,8 @@ msgstr "Kontoaktivering"
 
 #: people/forms.py:66
 #, python-format
-msgid ""
-"This is a confirmation that your registration on %s succeeded. To activate "
-"your account, please click on the link below or copy and paste it in a "
-"browser."
-msgstr ""
-"Detta är en bekräftelse på att din registrering på %s har lyckats. Klicka på "
-"länken nedan eller kopiera in den i en webbläsare för att aktivera ditt "
-"konto."
+msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
+msgstr "Detta är en bekräftelse på att din registrering på %s har lyckats. Klicka på länken nedan eller kopiera in den i en webbläsare för att aktivera ditt konto."
 
 #: people/forms.py:68
 #, python-format
@@ -1109,9 +1092,7 @@ msgstr "Bugzilla-konto"
 
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr ""
-"Detta bör vara en e-postadress, användbar om den inte är samma som \"email\"-"
-"fältet"
+msgstr "Detta bör vara en e-postadress, användbar om den inte är samma som \"email\"-fältet"
 
 #: people/views.py:87
 msgid "You are already member of this team."
@@ -1133,7 +1114,7 @@ msgstr "Kan inte kopiera ny POT-fil till publik plats."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:551
+#: stats/models.py:554
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1144,32 +1125,32 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:828
+#: stats/models.py:831
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:829
+#: stats/models.py:832
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:830
+#: stats/models.py:833
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:831
+#: stats/models.py:834
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:832
+#: stats/models.py:835
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:905
+#: stats/models.py:908
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:936
+#: stats/models.py:939
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1177,29 +1158,30 @@ msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:938
+#: stats/models.py:941
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:938 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:77
+#: stats/models.py:941
+#: templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
-#: stats/models.py:940
+#: stats/models.py:943
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:941
+#: stats/models.py:944
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:944
+#: stats/models.py:947
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -1215,12 +1197,8 @@ msgstr "Det saknas filer i POTFILES.in: %s"
 
 #: stats/utils.py:88
 #, python-format
-msgid ""
-"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
-"they don't exist: %s"
-msgstr ""
-"Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, "
-"men de finns ännu inte: %s"
+msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
+msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.skip, men de finns ännu inte: %s"
 
 #: stats/utils.py:100
 #, python-format
@@ -1276,18 +1254,12 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
 #: stats/utils.py:289
-msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
-msgstr ""
-"Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
+msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
 #: stats/utils.py:292
-msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr ""
-"Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga "
-"modulansvarig. "
+msgid "Don't know where to look if this language is actually used, ask the module maintainer."
+msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
 #: teams/models.py:113
 #, python-format
@@ -1306,7 +1278,8 @@ msgstr "Granskare"
 msgid "Committer"
 msgstr "Insändare"
 
-#: teams/models.py:133 templates/teams/team_base.html:31
+#: teams/models.py:133
+#: templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Koordinator"
 
@@ -1334,7 +1307,8 @@ msgstr "Översättare"
 msgid "No translators"
 msgstr "Inga översättare"
 
-#: templates/404.html:4 templates/404.html.py:9
+#: templates/404.html:4
+#: templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "Fel: sidan hittades inte"
 
@@ -1354,7 +1328,8 @@ msgstr "Serverfel"
 msgid "We're sorry but a server error has occurred."
 msgstr "Vi är ledsna men ett serverfel har inträffat."
 
-#: templates/base.html:25 templates/base.html.py:41
+#: templates/base.html:25
+#: templates/base.html.py:41
 msgid "Home"
 msgstr "Hem"
 
@@ -1386,11 +1361,13 @@ msgstr "Gemenskap"
 msgid "Back to Damned Lies home page"
 msgstr "Tillbaka till Förbannade lögner"
 
-#: templates/base.html:47 templates/index.html:13
+#: templates/base.html:47
+#: templates/index.html:13
 msgid "Teams"
 msgstr "Grupper"
 
-#: templates/base.html:52 templates/index.html:20
+#: templates/base.html:52
+#: templates/index.html:20
 msgid "Languages"
 msgstr "Språk"
 
@@ -1398,7 +1375,8 @@ msgstr "Språk"
 msgid "Release sets"
 msgstr "Utgåvesamlingar"
 
-#: templates/base.html:62 templates/index.html:36
+#: templates/base.html:62
+#: templates/index.html:36
 msgid "Modules"
 msgstr "Moduler"
 
@@ -1411,19 +1389,18 @@ msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
 #: templates/base.html:95
-msgid ""
-"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
-"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-msgstr ""
-"Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-"\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgstr "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
 #: templates/base.html:97
 msgid "Hosted by"
 msgstr "Driftas av"
 
-#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/register.html:4
+#: templates/error.html:4
+#: templates/index.html:4
+#: templates/index.html.py:9
+#: templates/login.html:4
+#: templates/register.html:4
 #: templates/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Förbannade lögner om GNOME"
@@ -1433,37 +1410,21 @@ msgid "Error:"
 msgstr "Fel:"
 
 #: templates/index.html:14
-msgid ""
-"List of all GNOME Translation Teams, with full information such as primary "
-"contact (coordinator), web pages and mailing list information."
-msgstr ""
-"Lista över alla GNOME-översättningsgrupper inklusive fullständig information "
-"som primär kontakt (koordinator), information om webbsidor och sändlistor."
+msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
+msgstr "Lista över alla GNOME-översättningsgrupper inklusive fullständig information som primär kontakt (koordinator), information om webbsidor och sändlistor."
 
 #: templates/index.html:15
-msgid ""
-"If there is no team for your language, you can easily <a href='http://live."
-"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgstr ""
-"Om det inte finns någon grupp för ditt språk kan du enkelt <a href='http://"
-"live.gnome.org/TranslationProject/StartingATeam/'>starta din egna grupp</a>."
+msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
+msgstr "Om det inte finns någon grupp för ditt språk kan du enkelt <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>starta din egna grupp</a>."
 
 #: templates/index.html:22
 #, python-format
-msgid ""
-"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
-"a> for."
-msgstr ""
-"Lista över alla språk som det finns <a href='%(teams_url)"
-"s'>översättningsgrupper</a> för."
+msgid "List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> for."
+msgstr "Lista över alla språk som det finns <a href='%(teams_url)s'>översättningsgrupper</a> för."
 
 #: templates/index.html:23
-msgid ""
-"Some teams manage more than one language (usually just simple variants), and "
-"here you can see all the languages GNOME is being translated to."
-msgstr ""
-"Några grupper hanterar fler än ett språk (vanligtvis bara enklare varianter) "
-"och här kan du se alla de språk som GNOME blir översatt till."
+msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
+msgstr "Några grupper hanterar fler än ett språk (vanligtvis bara enklare varianter) och här kan du se alla de språk som GNOME blir översatt till."
 
 #: templates/index.html:27
 msgid "Release Sets"
@@ -1471,82 +1432,56 @@ msgstr "Utgåvesamlingar"
 
 #: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr ""
-"Lista över alla GNOME-utgåvesamlingar och utgåvor som vi samlar statistik om."
+msgstr "Lista över alla GNOME-utgåvesamlingar och utgåvor som vi samlar statistik om."
 
 #: templates/index.html:30
-msgid ""
-"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
-"or &quot;GNOME 2.14&quot;."
-msgstr ""
-"Exempel på utgåvesamlingar är &quot;GNOME Office&quot;, &quot;Fifth "
-"Toe&quot; eller &quot;Gnome 2.14&quot;."
+msgid "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; or &quot;GNOME 2.14&quot;."
+msgstr "Exempel på utgåvesamlingar är &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; eller &quot;Gnome 2.14&quot;."
 
 #: templates/index.html:31
-msgid ""
-"Official GNOME release sets are further divided into categories such as "
-"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr ""
-"Officiella GNOME-utgåvesamlingar delas sedan upp i kategorier som &quot;"
-"Skrivbordsprogram&quot; och &quot;Utvecklingsplattform&quot;."
+msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+msgstr "Officiella GNOME-utgåvesamlingar delas sedan upp i kategorier som &quot;Skrivbordsprogram&quot; och &quot;Utvecklingsplattform&quot;."
 
 #: templates/index.html:33
-msgid ""
-"Look here if you want to compare language support in any of these release "
-"sets."
-msgstr ""
-"Se här om du vill jämföra språkstödet i någon av dessa utgåvesamlingar."
+msgid "Look here if you want to compare language support in any of these release sets."
+msgstr "Se här om du vill jämföra språkstödet i någon av dessa utgåvesamlingar."
 
 #: templates/index.html:37
 msgid "List of all modules with statistics in here."
 msgstr "Lista över alla moduler som har statistik här."
 
 #: templates/index.html:39
-msgid ""
-"Modules are separate libraries or applications, with one or more branches of "
-"development included."
-msgstr ""
-"Moduler är separata bibliotek eller program, med en eller flera "
-"utvecklingsgrenar inkluderade."
+msgid "Modules are separate libraries or applications, with one or more branches of development included."
+msgstr "Moduler är separata bibliotek eller program, med en eller flera utvecklingsgrenar inkluderade."
 
 #: templates/index.html:40
-msgid ""
-"They are usually taken from CVS, and we keep all relevant information on "
-"them (Bugzilla details, web page, maintainer information,...)."
-msgstr ""
-"De hämtas oftast från CVS, och vi håller alla relevant information om dem "
-"(Bugzilla-detaljer, webbsida, underhållare,...)."
+msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
+msgstr "De hämtas oftast från CVS, och vi håller alla relevant information om dem (Bugzilla-detaljer, webbsida, underhållare,...)."
 
 #: templates/index.html:46
 msgid "Translated by:"
 msgstr "Översatt av:"
 
-#: templates/login.html:10 templates/register.html:11
+#: templates/login.html:10
+#: templates/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Du är redan inloggad som %(username)s."
 
 #: templates/login.html:13
 #, python-format
-msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
-msgstr ""
-"Om du inte har ett konto för denna plats så kan du <a href='%(link)"
-"s'>registrera</a> ett nytt konto."
+msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
+msgstr "Om du inte har ett konto för denna plats så kan du <a href='%(link)s'>registrera</a> ett nytt konto."
 
 #: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Modulstatistik: %(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
-msgid ""
-"This module is not part of the GNOME SVN repository. Please check the "
-"module's web page to see where to send translations."
-msgstr ""
-"Den här modulen är inte en del av GNOME:s SVN-förråd. Se modulens webbsida "
-"om var översättningarna ska skickas."
+#: templates/module_detail.html:17
+#: templates/vertimus/vertimus_detail.html:27
+msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
+msgstr "Den här modulen är inte en del av GNOME:s SVN-förråd. Se modulens webbsida om var översättningarna ska skickas."
 
 #: templates/module_detail.html:29
 msgid "Maintainers"
@@ -1598,12 +1533,8 @@ msgid "Original"
 msgstr "Original"
 
 #: templates/module_images.html:32
-msgid ""
-"Translated, but uses original one (maybe the figure doesn't contain any "
-"string to translate)"
-msgstr ""
-"Översatt, men använder originalet (kanske figuren inte innehåller någon "
-"sträng att översätta)"
+msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
+msgstr "Översatt, men använder originalet (kanske figuren inte innehåller någon sträng att översätta)"
 
 #: templates/module_images.html:36
 msgid "Fuzzy"
@@ -1617,7 +1548,8 @@ msgstr "Ingen befintlig fil (&quot;Technical&quot; luddig)"
 msgid "Not translated"
 msgstr "Inte översatt"
 
-#: templates/module_list.html:4 templates/module_list.html.py:9
+#: templates/module_list.html:4
+#: templates/module_list.html.py:9
 msgid "GNOME Modules"
 msgstr "GNOME-moduler"
 
@@ -1630,20 +1562,12 @@ msgid "Account Registration"
 msgstr "Kontoregistrering"
 
 #: templates/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr ""
-"Du kan registrera ett konto för denna plats. Detta är endast användbart om "
-"du tänker bidra med översättningar till GNOME."
+msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
+msgstr "Du kan registrera ett konto för denna plats. Detta är endast användbart om du tänker bidra med översättningar till GNOME."
 
 #: templates/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr ""
-"Du kommer efter registrering och anslutning att kunna gå med i en befintlig "
-"grupp från din profilsida."
+msgid "After registration and connection, you will be able to join an existing team from your profile page."
+msgstr "Du kommer efter registrering och anslutning att kunna gå med i en befintlig grupp från din profilsida."
 
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
@@ -1662,12 +1586,8 @@ msgid "Registration Success"
 msgstr "Registrering lyckades"
 
 #: templates/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
-msgstr ""
-"Registreringen lyckades. Du kommer nu att få ett e-postmeddelande som "
-"innehåller en länk för att aktivera ditt konto."
+msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
+msgstr "Registreringen lyckades. Du kommer nu att få ett e-postmeddelande som innehåller en länk för att aktivera ditt konto."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1676,38 +1596,44 @@ msgstr "Utgåvan %(name)s"
 
 #: templates/release_detail.html:13
 #: templates/languages/language_release.html:20
-msgid ""
-"The modules of this release are not part of the GNOME SVN repository. Please "
-"check each module's web page to see where to send translations."
-msgstr ""
-"Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. "
-"Kontrollera webbsidan för varje modul för att se var översättningarna ska "
-"skickas."
+msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
+msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
-#: templates/release_detail.html:19 templates/teams/team_detail.html:22
+#: templates/release_detail.html:19
+#: templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Utgåva"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:22
+#: templates/release_detail.html:20
+#: templates/teams/team_detail.html:22
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
-#: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:22
+#: templates/release_detail.html:21
+#: templates/release_detail.html.py:23
+#: templates/stats_show.html:34
+#: templates/teams/team_detail.html:22
 #: templates/teams/team_detail.html:23
 msgid "Graph"
 msgstr "Diagram"
 
-#: templates/release_list.html:4 templates/release_list.html.py:9
+#: templates/release_list.html:4
+#: templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "GNOME-utgåvor"
 
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
-msgstr ""
-"Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer om den:"
+msgstr "Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer om den:"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:59
+#: templates/stats_show.html:13
+#: templates/vertimus/vertimus_detail.html:38
+#| msgid "Download po file"
+msgid "Download POT file"
+msgstr "Hämta POT-fil"
+
+#: templates/stats_show.html:17
+#: templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "Anteckningar"
 
@@ -1715,11 +1641,13 @@ msgstr "Anteckningar"
 msgid "Language"
 msgstr "Språk"
 
-#: templates/stats_show.html:30 vertimus/models.py:151
+#: templates/stats_show.html:30
+#: vertimus/models.py:151
 msgid "Translated"
 msgstr "Översatt"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:52
+#: templates/stats_show.html:50
+#: templates/vertimus/vertimus_detail.html:48
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
 
@@ -1808,7 +1736,8 @@ msgstr "Tillstånd"
 msgid "Save"
 msgstr "Spara"
 
-#: templates/people/person_list.html:4 templates/people/person_list.html:8
+#: templates/people/person_list.html:4
+#: templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "GNOME-bidragsgivare"
 
@@ -1833,12 +1762,8 @@ msgid "Password change"
 msgstr "Lösenordsbyte"
 
 #: templates/people/person_password_change_form.html:8
-msgid ""
-"Please enter your old password, for security's sake, and then enter your new "
-"password twice so we can verify you typed it in correctly."
-msgstr ""
-"Ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt nya "
-"lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
+msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Ange ditt gamla lösenord, för säkerhets skull, och ange sedan ditt nya lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
 
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
@@ -1916,7 +1841,8 @@ msgstr "%(lang)s översättningsgruppen"
 msgid "Apply modifications"
 msgstr "Verkställ ändringar"
 
-#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+#: templates/teams/team_list.html:4
+#: templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
 msgstr "GNOME-översättningsgrupper"
 
@@ -1946,30 +1872,34 @@ msgstr "Används i utgåvor:"
 msgid "State:"
 msgstr "Tillstånd:"
 
-#: templates/vertimus/vertimus_detail.html:41
+#: templates/vertimus/vertimus_detail.html:39
+#| msgid "Download po file"
+msgid "Download PO file"
+msgstr "Hämta PO-fil"
+
+#: templates/vertimus/vertimus_detail.html:39
 msgid "Translated:"
 msgstr "Översatt:"
 
-#: templates/vertimus/vertimus_detail.html:71
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Action History"
 msgstr "Åtgärdshistorik"
 
-#: templates/vertimus/vertimus_detail.html:87
+#: templates/vertimus/vertimus_detail.html:81
 msgid "No comment"
 msgstr "Ingen kommentar"
 
-#: templates/vertimus/vertimus_detail.html:96
+#: templates/vertimus/vertimus_detail.html:90
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:103
+#: templates/vertimus/vertimus_detail.html:97
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:101
 #, python-format
-msgid ""
-"You need to be authenticated and to be member of the %(team_name)s team."
+msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
 
 #: vertimus/forms.py:30
@@ -1993,10 +1923,8 @@ msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Endast filer med filändelsen .po, .gz, .bz2 eller .png tillåts."
 
 #: vertimus/forms.py:55
-msgid ""
-".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr ""
-".po-filen klarade inte \"msgfmt -vc\". Korrigera filen och försök igen."
+msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ".po-filen klarade inte \"msgfmt -vc\". Korrigera filen och försök igen."
 
 #: vertimus/forms.py:65
 msgid "A comment or a file is needed for this action."
@@ -2043,23 +1971,23 @@ msgstr "Insänd"
 msgid ""
 "Hello,\n"
 "\n"
-"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
-"'%(new_state)s'.\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hej,\n"
 "\n"
-"Det nya tillståndet för %(module)s - %(branch)s - %(domain)s (%(language)s) "
-"är nu '%(new_state)s'.\n"
+"Det nya tillståndet för %(module)s - %(branch)s - %(domain)s (%(language)s) är nu '%(new_state)s'.\n"
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:377 vertimus/models.py:426
+#: vertimus/models.py:377
+#: vertimus/models.py:426
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:379 vertimus/models.py:428
+#: vertimus/models.py:379
+#: vertimus/models.py:428
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Detta är ett automatiskt skickat meddelande från %s."
@@ -2073,15 +2001,13 @@ msgstr "Skriv en kommentar"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hej,\n"
 "\n"
-"En ny kommentar har lämnats för %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"En ny kommentar har lämnats för %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -2127,245 +2053,166 @@ msgstr "Ångra senaste tillståndsändring"
 
 #~ msgid "Sorry, you're not allowed to modify this user."
 #~ msgstr "Tyvärr, du tillåts inte ändra denna användare."
-
 #~ msgid "Password change successful"
 #~ msgstr "Lösenordet har ändrats"
-
 #~ msgid "Logged in as: %(username)s"
 #~ msgstr "Inloggad som: %(username)s"
-
 #~ msgid "Edit"
 #~ msgstr "Redigera"
-
 #~ msgid "openVPN"
 #~ msgstr "openVPN"
-
 #~ msgid "vpnc"
 #~ msgstr "vpnc"
-
 #~ msgid "pptp"
 #~ msgstr "pptp"
-
 #~ msgid "Coordinates:"
 #~ msgstr "Koordinerar:"
-
 #~ msgid "Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>"
 #~ msgstr "Koordinerar <a href=\"%(team_url)s\">%(team_desc)s</a>"
-
 #~ msgid "%(lang)s Translation Team — %(locale)s"
 #~ msgstr "%(lang)s översättningsgruppen — %(locale)s"
-
 #~ msgid "Language code: %(locale)s"
 #~ msgstr "Språkkod: %(locale)s"
-
 #~ msgid "There is no translation team in charge of '%(locale)s' translation."
 #~ msgstr ""
 #~ "Det finns ingen översättningsgrupp som ansvarar för översättningen till "
 #~ "\"%(locale)s\"."
-
-#~ msgid "Download po file"
-#~ msgstr "Hämta po-fil"
-
 #~ msgid "GNOME modules"
 #~ msgstr "GNOME-moduler"
-
 #~ msgid "GLib"
 #~ msgstr "GLib"
-
 #~ msgid "Gtk+"
 #~ msgstr "Gtk+"
-
 #~ msgid "Sabayon"
 #~ msgstr "Sabayon"
-
 #~ msgid "XKeyboard-Config"
 #~ msgstr "XKeyboard-Config"
-
 #~ msgid "Development Platform"
 #~ msgstr "Utvecklingsplattform"
-
 #~ msgid "External Dependencies"
 #~ msgstr "Externa beroenden"
-
 #~ msgid "System Administration"
 #~ msgstr "Systemadministration"
-
 #~ msgid "Can't generate POT file, using old one if it exists."
 #~ msgstr "Kan inte generera POT-fil, använder den gamla om möjligt."
-
 #~ msgid "Can't find checkout directory."
 #~ msgstr "Kan inte hitta utcheckningskatalogen."
-
 #~ msgid "There is no translation team in charge of %s."
 #~ msgstr "Det finns ingen översättningsgrupp som ansvarar för %s."
-
 #~ msgid "GNOME is currently not being translated to any language. :("
 #~ msgstr "GNOME blir för närvarande inte översatt till något språk. :("
-
 #~ msgid ""
 #~ "There are currently no modules for which I am gathering damned lies for. "
 #~ "Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
 #~ msgstr ""
 #~ "Det finns för närvarande inga moduler för vilka jag samlar in förbannade "
 #~ "lögner för. Peta på <a href=\"danilo@gnome.org\">Danilo</a> om det!"
-
 #~ msgid "There are currently no releases defined in GNOME. :("
 #~ msgstr "Det finns för närvarande inga utgåvor definierade i GNOME. :("
-
 #~ msgid "Coordinated by %(coordinator)s"
 #~ msgstr "Koordineras av %(coordinator)s"
-
 #~ msgid "There are no contributors, GNOME turned itself up from nothing."
 #~ msgstr "Det finns inga bidragsgivare, GNOME kom fram helt på egen hand."
-
 #~ msgid "Translates:"
 #~ msgstr "Översätter:"
-
 #~ msgid "Coordinates %(team)s"
 #~ msgstr "Koordinerar %(team)s"
-
 #~ msgid "-"
 #~ msgstr "-"
-
 #~ msgid "POT file (%(potsize)s message)"
 #~ msgid_plural "POT file (%(potsize)s messages)"
 #~ msgstr[0] "POT-fil (%(potsize)s meddelande)"
 #~ msgstr[1] "POT-fil (%(potsize)s meddelanden)"
-
 #~ msgid "Bug Buddy Manual"
 #~ msgstr "Handbok för Bug Buddy"
-
 #~ msgid "Seahorse Manual"
 #~ msgstr "Handbok för Seahorse"
-
 #~ msgid "Burmese"
 #~ msgstr "Burmesiska"
-
 #~ msgid "Divehi"
 #~ msgstr "Divehi"
-
 #~ msgid "Fijian"
 #~ msgstr "Fijian"
-
 #~ msgid "Haitian Creole"
 #~ msgstr "Haitisk kreol"
-
 #~ msgid "Hausa"
 #~ msgstr "Hausa"
-
 #~ msgid "Hyam"
 #~ msgstr "Hyam"
-
 #~ msgid "Igbo"
 #~ msgstr "Igbo"
-
 #~ msgid "Jju"
 #~ msgstr "Jju"
-
 #~ msgid "Kagoma"
 #~ msgstr "Kagoma"
-
 #~ msgid "Lao"
 #~ msgstr "Lao"
-
 #~ msgid "Maltese"
 #~ msgstr "Maltese"
-
 #~ msgid "Mayan"
 #~ msgstr "Mayan"
-
 #~ msgid "Nahuatl"
 #~ msgstr "Nahuatl"
-
 #~ msgid "Páez"
 #~ msgstr "Páez"
-
 #~ msgid "Quechua"
 #~ msgstr "Quechua"
-
 #~ msgid "Sanskrit"
 #~ msgstr "Sanskrit"
-
 #~ msgid "Sardinian"
 #~ msgstr "Sardinska"
-
 #~ msgid "Swahili"
 #~ msgstr "Swahili"
-
 #~ msgid "Tetum"
 #~ msgstr "Tetum"
-
 #~ msgid "Tibetan"
 #~ msgstr "Tibetanska"
-
 #~ msgid "Tigrinya"
 #~ msgstr "Tigrinya"
-
 #~ msgid "Tyap"
 #~ msgstr "Tyap"
-
 #~ msgid "Upper Sorbian"
 #~ msgstr "Högsorbiska"
-
 #~ msgid "Wolof"
 #~ msgstr "Wolof"
-
 #~ msgid "Zapotec"
 #~ msgstr "Zapotec"
-
 #~ msgid "%(module/id)"
 #~ msgstr "%(module/id)"
-
 #~ msgid "GNOME 2.18 Release Notes"
 #~ msgstr "Kommentarer till utgåvan GNOME 2.18"
-
 #~ msgid "GNOME 2.20 Release Notes"
 #~ msgstr "Kommentarer till utgåvan GNOME 2.20"
-
 #~ msgid "Maintains %(module)s"
 #~ msgstr "Underhåller %(module)s"
-
 #~ msgid "%(team)s Page:"
 #~ msgstr "Webbsida för %(team)s:"
-
 #~ msgid "GNOME desktop. Essential software."
 #~ msgstr "GNOME-skrivbordet. Nödvändig programvara."
-
 #~ msgid "GNOME developer platform. Essential software."
 #~ msgstr "GNOME-utvecklingsplattform. Nödvändig programvara."
-
 #~ msgid "Serbian (Latin and Jekavian)"
 #~ msgstr "Serbiska (Latin och jekavisk)"
-
 #~ msgid "Arabic Translation Team"
 #~ msgstr "Arabiska översättningsteamet"
-
 #~ msgid "Belarusian Translation Team"
 #~ msgstr "Vitryska översättningsteamet"
-
 #~ msgid "Serbian Translation Team"
 #~ msgstr "Serbiska översättningsteamet"
-
 #~ msgid "Slovenian GNOME Translation Team"
 #~ msgstr "Slovenska GNOME-översättningsteamet"
-
 #~ msgid "Swedish Translation Team"
 #~ msgstr "Svenska översättningsteamet"
-
 #~ msgid "Damned Lies about Gnome"
 #~ msgstr "Förbannade lögner om GNOME"
-
 #~ msgid "%(person)s — GNOME Contributor"
 #~ msgstr "%(person)s — GNOME-bidragsgivare"
-
 #~ msgid "Gnome Languages"
 #~ msgstr "Gnome-språk"
-
 #~ msgid "%(language)s Translations for %(release)s"
 #~ msgstr "%(language)s översättningar för %(release)s"
-
 #~ msgid "GST Boot Setup Manual"
 #~ msgstr "Handbok för Startadministrationsverktyg"
-
 #~ msgid "Norwegian"
 #~ msgstr "Norska"
+
