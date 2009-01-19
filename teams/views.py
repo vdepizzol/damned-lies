@@ -39,6 +39,7 @@ def teams(request):
 def team(request, team_slug):
     try:
         team = Team.objects.get(name=team_slug)
+        coordinator = team.get_coordinator()
         mem_groups = ( 
                {'title': _("Committers"),
                 'members': team.get_committers(),
@@ -59,10 +60,11 @@ def team(request, team_slug):
     except Team.DoesNotExist:
         lang = get_object_or_404(Language, locale=team_slug)
         team = FakeTeam(lang)
+        coordinator = None
         mem_groups = ()
 
     # Compare username because request.user is User and get_coordinator is Person
-    if request.user.is_authenticated() and request.user.username == team.get_coordinator().username:
+    if request.user.is_authenticated() and coordinator and request.user.username == coordinator.username:
         if request.method == 'POST':
             form_type = request.POST['form_type']
             roles = Role.objects.filter(team=team, role=form_type)
