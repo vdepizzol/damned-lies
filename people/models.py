@@ -50,10 +50,10 @@ class Person(User):
 
     @classmethod
     def clean_unactivated_accounts(cls):
-        accounts = cls.objects.filter(activation_key__isnull=False)
+        accounts = cls.objects.filter(activation_key__isnull=False, 
+                                      date_joined__lt=(datetime.datetime.now()-datetime.timedelta(days=10))).exclude(activation_key='')
         for account in accounts:
-            if account.date_joined + datetime.timedelta(days=5) <= datetime.datetime.now():
-                account.delete()
+            account.delete()
 
     def save(self):
         if not self.password or self.password == "!":

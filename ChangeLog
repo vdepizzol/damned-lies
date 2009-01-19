@@ -1,5 +1,11 @@
 2009-01-19  Claude Paroz  <claude@2xlibre.net>
 
+	* languages/models.py: Allow for empty team in Language class.
+	* people/models.py: Also exclude empty values while cleaning unactivated
+	accounts (forms like to enter empty values in models :-( ).
+
+2009-01-19  Claude Paroz  <claude@2xlibre.net>
+
 	* teams/views.py: Provide for the case when there is no coordinator for a
 	team.
 

@@ -5,7 +5,7 @@ from teams.models import Team, FakeTeam
 class Language(models.Model):
     name = models.CharField(max_length=50, unique=True)
     locale = models.CharField(max_length=15, unique=True)
-    team = models.ForeignKey(Team, null=True, default=None)
+    team = models.ForeignKey(Team, null=True, blank=True, default=None)
 
     class Meta:
         db_table = 'language'
