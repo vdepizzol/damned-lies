@@ -920,6 +920,9 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
+"请注意，gtk+ 有 po 和 po-properties 界面域。不管您想在哪一个域下添加语言，您都得"
+"在另外一个域下提交一个同名的文件，即使那个文件一条翻译都不包括，否则 GTK+ 将在"
+"构建的时候出错。"
 
 #: database-content.py:222
 msgid "GNOME Fifth Toe (Extra software)"
@@ -959,7 +962,7 @@ msgstr "GNOME 2.22 (老的稳定版本)"
 
 #: database-content.py:231
 msgid "GNOME-Office Productivity Applications"
-msgstr "GNOME-办公室生产力程序"
+msgstr "GNOME 办公室生产力程序"
 
 #: database-content.py:232
 msgid "GNOME 2.20 (old stable)"
@@ -975,7 +978,7 @@ msgstr "Aron Xu <aronmalache@163.com>"
 
 #: common/views.py:54
 msgid "You have been logged out."
-msgstr "您的登录已注销。"
+msgstr "您已注销。"
 
 #: common/views.py:62
 msgid "You have been successfully logged in."
@@ -983,7 +986,7 @@ msgstr "您已成功登录。"
 
 #: common/views.py:69
 msgid "We're sorry, but your account has been disabled."
-msgstr "抱歉，您的帐户已被禁用。"
+msgstr "抱歉，您的账户已被禁用。"
 
 #: common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
@@ -991,7 +994,7 @@ msgstr "登录不成功。请检查您的用户名和密码。"
 
 #: common/views.py:111
 msgid "Your account has been activated."
-msgstr "您的帐户已激活。"
+msgstr "您的账户已激活。"
 
 #: django_openid/templates/django_openid/admin_login.html:17
 #: templates/login.html:15
@@ -1799,7 +1802,7 @@ msgstr "Bugzilla 账户："
 
 #: templates/people/person_overview.html:38
 msgid "SVN account:"
-msgstr "SVN 帐号："
+msgstr "SVN 账户："
 
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
@@ -1810,6 +1813,7 @@ msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
+"为安全起见，请输入您的旧密码。然后输入两次您的新密码，以防您输错了密码。"
 
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
