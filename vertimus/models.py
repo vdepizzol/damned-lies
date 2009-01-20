@@ -100,8 +100,10 @@ class StateAbstract(object):
     def __unicode__(self):
         return unicode(self.description)
 
-    def _get_available_actions(self, action_names):
+    def _get_available_actions(self, person, action_names):
         action_names.append('WC')
+        if person.is_committer(self.language.team) and 'IC' not in action_names:
+            action_names.append('IC')
         return [eval('Action' + action_name)() for action_name in action_names]
 
     def apply_action(self, action, person, comment=None, file=None):
@@ -141,7 +143,7 @@ class StateNone(StateAbstract):
         if person.is_translator(self.language.team):
             action_names = ['RT']
 
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateTranslating(StateAbstract):
@@ -154,7 +156,7 @@ class StateTranslating(StateAbstract):
         if (self.person == person):
             action_names = ['UT', 'UNDO']
                     
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateTranslated(StateAbstract):
@@ -171,7 +173,7 @@ class StateTranslated(StateAbstract):
             action_names.append('RT')
             action_names.append('TR')
 
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateProofreading(StateAbstract):
@@ -185,7 +187,7 @@ class StateProofreading(StateAbstract):
             if (self.person == person):
                 action_names = ['UP', 'TR', 'TC', 'UNDO']
                     
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateProofread(StateAbstract):
@@ -198,7 +200,7 @@ class StateProofread(StateAbstract):
         else:
             action_names = []
 
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateToReview(StateAbstract):
@@ -210,7 +212,7 @@ class StateToReview(StateAbstract):
         if person.is_translator(self.language.team):
             action_names.append('RT')
 
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateToCommit(StateAbstract):
@@ -223,7 +225,7 @@ class StateToCommit(StateAbstract):
         else:
             action_names = []
             
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateCommitting(StateAbstract):
@@ -237,7 +239,7 @@ class StateCommitting(StateAbstract):
             if (self.person == person):
                 action_names = ['IC', 'TR', 'UNDO']
             
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 
 class StateCommitted(StateAbstract):
@@ -250,7 +252,7 @@ class StateCommitted(StateAbstract):
         else:            
             action_names = []
 
-        return self._get_available_actions(action_names)
+        return self._get_available_actions(person, action_names)
 
 #
 # Actions 

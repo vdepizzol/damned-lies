@@ -1,5 +1,12 @@
 2009-01-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* vertimus/models.py:
+	* vertimus/tests/__init__.py: Add 'Inform of submission' for all
+	committers (and coordinators). Fixes bug #567394 but some cases
+	aren't perfect so we intend to provide a better version later.
+
+2009-01-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* vertimus/models.py: Replace ActionBackup.created by a DateTime.
 	Under the awful MySQL:
 	ALTER TABLE `action_backup` CHANGE `created` `created` datetime NOT NULL
