@@ -1,5 +1,11 @@
 2009-01-20  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/languages/language_release_stats.html: Strip HTML tags from
+	error description.
+	Fixes bug #568159.
+
+2009-01-20  Claude Paroz  <claude@2xlibre.net>
+
 	* vertimus/views.py: Action_db2 was in fact an ActionAbstract object.
 
 2009-01-20  Claude Paroz  <claude@2xlibre.net>

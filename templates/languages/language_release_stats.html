@@ -50,7 +50,7 @@
             {% endif %}
           {% endif %}
           {% for err in stat.information_set.all %}
-            <img src="{{ err.get_icon }}" title="{{ err.get_description }}" alt="{{ err.type }}" />
+            <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}
           </td>
           <td>{{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
