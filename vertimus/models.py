@@ -525,7 +525,7 @@ class ActionRP(ActionAbstract):
 
 class ActionUP(ActionAbstract):
     name = 'UP'
-    description = _('Upload for proofreading')
+    description = _('Upload the proofread translation')
     file_is_required = True
 
     def _new_state(self):
@@ -540,6 +540,7 @@ class ActionUP(ActionAbstract):
 
 class ActionTC(ActionAbstract):
     name = 'TC'
+    # Translators: this means the file is ready to be committed in repository
     description = _('Ready for submission')
 
     def _new_state(self):
@@ -556,6 +557,7 @@ class ActionTC(ActionAbstract):
 
 class ActionRC(ActionAbstract):
     name = 'RC'
+    # Translators: this indicates a committer is going to commit the file in the repository
     description = _('Reserve to submit')
 
     def _new_state(self):
@@ -567,6 +569,7 @@ class ActionRC(ActionAbstract):
 
 class ActionIC(ActionAbstract):
     name = 'IC'
+    # Translators: this is used to indicate the file has been committed in the repository
     description = _('Inform of submission')
 
     def _new_state(self):
@@ -581,7 +584,8 @@ class ActionIC(ActionAbstract):
 
 class ActionTR(ActionAbstract):
     name = 'TR'
-    description = _('Requiring review')
+    # Translators: regardless of the translation completion, this file need to be reviewed
+    description = _('Review required')
     arg_is_required = True
 
     def _new_state(self):
