@@ -1,3 +1,9 @@
+2009-01-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* vertimus/models.py: Replace ActionBackup.created by a DateTime.
+	Under the awful MySQL:
+	ALTER TABLE `action_backup` CHANGE `created` `created` datetime NOT NULL
+
 2009-01-20  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/languages/language_release_stats.html: Strip HTML tags from

@@ -600,7 +600,7 @@ class ActionDbBackup(models.Model):
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
-    created = models.DateField(auto_now_add=True, editable=False)
+    created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_backup_file_name, blank=True, null=True)
     sequence = models.IntegerField(blank=True, null=True)
