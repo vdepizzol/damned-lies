@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-15 13:14+0000\n"
+"POT-Creation-Date: 2009-01-20 15:15+0000\n"
 "PO-Revision-Date: 2008-11-28 14:29+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -911,7 +911,7 @@ msgstr "从 GNOME 2.23 开始，GAIL 被整合到 GTK+。请不要继续向 trun
 
 #: database-content.py:220
 msgid "A VNC client for GNOME"
-msgstr ""
+msgstr "一个 GNOME 下的 VNC 客户端"
 
 #: database-content.py:221
 msgid ""
@@ -1118,19 +1118,19 @@ msgstr "您已经是此团队的一员。"
 msgid "Your password has been changed."
 msgstr "您的密码已更改。"
 
-#: stats/models.py:289
+#: stats/models.py:293
 msgid "Can't generate POT file, using old one."
 msgstr "无法生成 POT 文件，改用旧的。"
 
-#: stats/models.py:313
+#: stats/models.py:319
 msgid "Can't copy new POT file to public location."
 msgstr "无法复制新的 POT 文件到公开位置"
 
-#: stats/models.py:351
+#: stats/models.py:357
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 清单没有包括该语言。"
 
-#: stats/models.py:554
+#: stats/models.py:617
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1141,74 +1141,74 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:831
+#: stats/models.py:921
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:832
+#: stats/models.py:922
 msgid "Development Tools"
 msgstr "开发工具"
 
-#: stats/models.py:833
+#: stats/models.py:923
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:834
+#: stats/models.py:924
 msgid "GNOME Developer Platform"
 msgstr "GNOME 开发者平台"
 
-#: stats/models.py:835
+#: stats/models.py:925
 msgid "New Module Proposals"
 msgstr "新模块提案"
 
-#: stats/models.py:908
+#: stats/models.py:998
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:939
+#: stats/models.py:1029
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 条消息"
 
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:941
+#: stats/models.py:1031
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新于 %(date)s"
 
-#: stats/models.py:941 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:1031 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y年m月d日 H:i"
 
-#: stats/models.py:943
+#: stats/models.py:1033
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 个图片"
 
-#: stats/models.py:944
+#: stats/models.py:1034
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s %(figures)s) — %(updated)s"
 
-#: stats/models.py:947
+#: stats/models.py:1037
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:73
+#: stats/utils.py:75
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "运行“intltool-update -m”检查时出错。"
 
-#: stats/utils.py:79
+#: stats/utils.py:81
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "在 POTFILES.in 中缺少部分文件：%s"
 
-#: stats/utils.py:88
+#: stats/utils.py:90
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1216,21 +1216,21 @@ msgid ""
 msgstr ""
 "下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而他们并不存在：%s"
 
-#: stats/utils.py:100
+#: stats/utils.py:102
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "模块 %s 不像是 gnome-doc-utils 模块。"
 
-#: stats/utils.py:103
+#: stats/utils.py:105
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE 没有解析到某个真实文件，请使用 '%s.xml'。"
 
-#: stats/utils.py:106
+#: stats/utils.py:108
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE 没有指向某个真实文件，也许是某个宏。"
 
-#: stats/utils.py:121
+#: stats/utils.py:123
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1241,40 +1241,40 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:180
+#: stats/utils.py:182
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO 文件“%s”不存在或者无法读取。"
 
-#: stats/utils.py:200
+#: stats/utils.py:202
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO 文件“%s”没有通过 msgfmt 检查：不能更新。"
 
-#: stats/utils.py:202
+#: stats/utils.py:204
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "无法得到 POT 文件“%s”的统计数据。"
 
-#: stats/utils.py:205
+#: stats/utils.py:207
 msgid "This PO file has an executable bit set."
 msgstr "该 PO 文件设置为可执行属性。"
 
-#: stats/utils.py:233
+#: stats/utils.py:235
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO 文件“%s”并不是 UTF-8 编码。"
 
-#: stats/utils.py:262
+#: stats/utils.py:264
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "在 LINGUAS 文件内没有该语言的条目。"
 
-#: stats/utils.py:289
+#: stats/utils.py:291
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "在配置文件的 ALL_LINGUAS 内没有该语言的条目。"
 
-#: stats/utils.py:292
+#: stats/utils.py:294
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1301,27 +1301,27 @@ msgstr "提交者"
 msgid "Coordinator"
 msgstr "协调人"
 
-#: teams/views.py:43
+#: teams/views.py:44
 msgid "Committers"
 msgstr "提交者"
 
-#: teams/views.py:46
+#: teams/views.py:47
 msgid "No committers"
 msgstr "没有提交者"
 
-#: teams/views.py:48
+#: teams/views.py:49
 msgid "Reviewers"
 msgstr "审阅者"
 
-#: teams/views.py:51
+#: teams/views.py:52
 msgid "No reviewers"
 msgstr "没有审阅者"
 
-#: teams/views.py:53
+#: teams/views.py:54
 msgid "Translators"
 msgstr "翻译者"
 
-#: teams/views.py:56
+#: teams/views.py:57
 msgid "No translators"
 msgstr "没有翻译者"
 
@@ -1689,7 +1689,7 @@ msgstr "注意"
 msgid "Language"
 msgstr "语言"
 
-#: templates/stats_show.html:30 vertimus/models.py:151
+#: templates/stats_show.html:30 vertimus/models.py:162
 msgid "Translated"
 msgstr "已翻译"
 
@@ -1724,11 +1724,11 @@ msgstr "显示已完成的模块"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% 已翻译)"
 
-#: templates/languages/language_release_stats.html:81
+#: templates/languages/language_release_stats.html:83
 msgid "Error summary"
 msgstr "错误摘要"
 
-#: templates/languages/language_release_stats.html:90
+#: templates/languages/language_release_stats.html:92
 msgid "Download all po files"
 msgstr "下载全部 po 文件"
 
@@ -1763,7 +1763,7 @@ msgstr "维护："
 
 #: templates/people/person_detail.html:38
 msgid "Working on"
-msgstr ""
+msgstr "当前任务"
 
 #: templates/people/person_detail.html:42
 msgid "Date"
@@ -1929,23 +1929,35 @@ msgstr "已翻译："
 msgid "Action History"
 msgstr "操作历史"
 
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:88
 msgid "No comment"
 msgstr "无评论"
 
-#: templates/vertimus/vertimus_detail.html:90
+#: templates/vertimus/vertimus_detail.html:97
 msgid "New Action"
 msgstr "新操作"
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:104
 msgid "Submit"
 msgstr "提交"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:108
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "您需要先登录，并且必须是%(team_name)s团队的成员。"
+
+#: templates/vertimus/vertimus_diff.html:5
+msgid "Diff between po files"
+msgstr "PO 文件之间的差异"
+
+#: templates/vertimus/vertimus_diff.html:16
+msgid "&lt;- Back to actions"
+msgstr "&lt;- 返回操作"
+
+#: templates/vertimus/vertimus_diff.html:20
+msgid "Note: both files are merged with latest POT file."
+msgstr "注意：所有的文件都已经与最新的 POT 文件进行了合并。"
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -1980,39 +1992,39 @@ msgstr "此操作需要提供评论或者文件。"
 msgid "A file is needed for this action."
 msgstr "此操作需要提供文件。"
 
-#: vertimus/models.py:125
+#: vertimus/models.py:136
 msgid "Inactive"
 msgstr "普通"
 
-#: vertimus/models.py:138
+#: vertimus/models.py:149
 msgid "Translating"
 msgstr "正在翻译"
 
-#: vertimus/models.py:168
+#: vertimus/models.py:179
 msgid "Proofreading"
 msgstr "正在审阅"
 
-#: vertimus/models.py:182
+#: vertimus/models.py:193
 msgid "Proofread"
 msgstr "已审"
 
-#: vertimus/models.py:195
+#: vertimus/models.py:206
 msgid "To Review"
 msgstr "待复查"
 
-#: vertimus/models.py:207
+#: vertimus/models.py:218
 msgid "To Commit"
 msgstr "待提交"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:231
 msgid "Committing"
 msgstr "正提交"
 
-#: vertimus/models.py:234
+#: vertimus/models.py:245
 msgid "Committed"
 msgstr "已提交"
 
-#: vertimus/models.py:364
+#: vertimus/models.py:416
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2029,20 +2041,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:377 vertimus/models.py:426
+#: vertimus/models.py:429 vertimus/models.py:479
 msgid "Without comment"
 msgstr "没有评论"
 
-#: vertimus/models.py:379 vertimus/models.py:428
+#: vertimus/models.py:431 vertimus/models.py:481
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "这是一封 %s 自动发出的信件。"
 
-#: vertimus/models.py:385
+#: vertimus/models.py:438
 msgid "Write a comment"
 msgstr "留下评论"
 
-#: vertimus/models.py:414
+#: vertimus/models.py:467
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2058,42 +2070,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:436
+#: vertimus/models.py:489
 msgid "Reserve for translation"
 msgstr "占用此文件并进行翻译"
 
-#: vertimus/models.py:447
+#: vertimus/models.py:500
 msgid "Upload the new translation"
 msgstr "上传新翻译"
 
-#: vertimus/models.py:462
+#: vertimus/models.py:515
 msgid "Reserve for proofreading"
 msgstr "占用此文件进行审阅"
 
-#: vertimus/models.py:473
+#: vertimus/models.py:526
 msgid "Upload for proofreading"
 msgstr "上传审阅后的文件"
 
-#: vertimus/models.py:488
+#: vertimus/models.py:541
 msgid "Ready for submission"
 msgstr "可以提交"
 
-#: vertimus/models.py:504
+#: vertimus/models.py:557
 msgid "Reserve to submit"
 msgstr "即将提交"
 
-#: vertimus/models.py:515
+#: vertimus/models.py:568
 msgid "Inform of submission"
 msgstr "提交通知"
 
-#: vertimus/models.py:529
+#: vertimus/models.py:582
 msgid "Requiring review"
 msgstr "需要复查"
 
-#: vertimus/models.py:560
+#: vertimus/models.py:613
 msgid "Backup the actions"
 msgstr "备份操作"
 
-#: vertimus/models.py:597
+#: vertimus/models.py:652
 msgid "Undo the last state change"
 msgstr "撤消上次的状态"
+
+#: vertimus/views.py:120 vertimus/views.py:125
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "由 %(name)s 在 %(date)s 上传的文件"
+
+#: vertimus/views.py:131
+#, python-format
+msgid "Latest committed file for %(lang)s"
+msgstr "%(lang)s 上次提交的文件"
+
+#: vertimus/views.py:134
+msgid "Latest POT file"
+msgstr "最新的 POT 文件"
