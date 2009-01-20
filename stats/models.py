@@ -28,6 +28,7 @@ from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
 from django.conf import settings
 from stats import utils
+from stats import signals
 import potdiff
 
 from people.models import Person
@@ -307,6 +308,8 @@ class Branch(models.Model):
                 diff = potdiff.diff(previous_pot, potfile)
                 if not len(diff):
                     pot_has_changed = False
+                else:
+                    signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
             
             # 5. Generate pot stats and update DB
             # ***********************************

@@ -115,12 +115,13 @@ def vertimus_diff(request, action_id):
     import difflib
     action_db1 = get_object_or_404(ActionDb, pk=action_id)
     state = action_db1.state_db
-    content1 = [l.decode('utf-8') for l in open(action_db1.file.path, 'U').readlines()]
+    file_path1 = action_db1.get_action().merged_file()['path']
+    content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
     descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
                                                             'date': action_db1.created }
     action_db2 = action_db1.get_previous_action_with_po()
     if action_db2:
-        file_path2 = action_db2.file.path
+        file_path2 = action_db2.get_action().merged_file()['path']
         descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db2.person.name,
                                                                 'date': action_db2.created }
     else:

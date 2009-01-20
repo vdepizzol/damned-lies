@@ -75,6 +75,9 @@
       <div class="uploaded_file">
         <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a><br />
         {% if action.has_po_file %}
+          {% if action.merged_file.url %}
+            <a href="{{ action.merged_file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}</a><br />
+          {% endif %}
           <div class="right_actions"><a href="{% url vertimus-diff-view action.id %}">diff with previous</a></div>
         {% endif %}
       </div>

@@ -27,8 +27,11 @@ from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
 from django.core.files.storage import default_storage
+from django.db.models.signals import post_save, pre_delete
 
-from stats.models import Branch, Domain
+from stats.models import Branch, Domain, Statistics
+from stats.signals import pot_has_changed
+from stats.utils import run_shell_command
 from languages.models import Language
 from people.models import Person
 
@@ -302,6 +305,16 @@ class ActionDb(models.Model):
         except ActionDb.DoesNotExist:
             return None
 
+    def merge_file_with_pot(self, potfile):
+        """ Merge the uploaded translated file with current pot """
+        if self.file:
+            command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s" % {
+                      'outpo':   self.file.path[:-3] + ".merged.po",
+                      'pofile':  self.file.path,
+                      'potfile': potfile
+                      }
+            run_shell_command(command)
+
     @classmethod
     def get_action_history(cls, state_db):
         if state_db:
@@ -366,6 +379,17 @@ class ActionAbstract(object):
             return os.path.basename(self._action_db.file.name)
         else:
             return None
+
+    def merged_file(self):
+        """ If available, returns the merged file as a dict: {'url':'path':'filename':} """
+        mfile_url = mfile_path = mfile_name = None
+        if self._action_db.file:
+            mfile_url = self._action_db.file.url[:-3] + ".merged.po"
+            mfile_path = self._action_db.file.path[:-3] + ".merged.po"
+            mfile_name = os.path.basename(mfile_path)
+            if not os.access(mfile_path, os.R_OK):
+                mfile_url = mfile_path =  mfile_name = None
+        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
 
     def has_po_file(self):
         try:
@@ -638,3 +662,29 @@ class ActionUNDO(ActionAbstract):
             return action._new_state()
         except:
             return StateNone()
+
+def update_uploaded_files(sender, **kwargs):
+    """ Callback to handle pot_file_changed signal """
+    actions = ActionDb.objects.filter(state_db__branch=kwargs['branch'],
+                                      state_db__domain=kwargs['domain'],
+                                      file__endswith=".po")
+    for action in actions:
+        action.merge_file_with_pot(potfile=kwargs['potfile'])
+pot_has_changed.connect(update_uploaded_files)
+
+def merge_uploaded_file(sender, instance, **kwargs):
+    """ post_save callback for ActionDb that automatically merge uploaded file with latest pot file """
+    if instance.file and instance.file.path.endswith('.po'):
+        stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
+        potfile = stat.po_path()
+        instance.merge_file_with_pot(potfile)
+post_save.connect(merge_uploaded_file, sender=ActionDb)
+
+def delete_merged_file(sender, instance, **kwargs):
+    """ pre_delete callback for ActionDb that deletes the merged file from upload dir """
+    if instance.file and instance.file.path.endswith('.po'):
+        merged_file = instance.file.path[:-3] + ".merged.po"
+        if os.access(merged_file, os.W_OK):
+             os.remove(merged_file)
+pre_delete.connect(delete_merged_file, sender=ActionDb)
+

@@ -1,3 +1,15 @@
+2009-01-20  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/models.py: Emit pot_has_changed signal.
+	* stats/signals.py: Signal emitted by stats app (pot_has_changed).
+	* templates/vertimus/vertimus_detail.html: Add link to merged file below
+	original file.
+	* templates/vertimus/vertimus_diff.html: Add ending note about both files
+	being merged with latest pot file.
+	* vertimus/models.py: New functions related to merged files. Implement and
+	connect signals for merging/updating/deleting merged po files.
+	* vertimus/views.py: Do the diff with merged files.
+
 2009-01-19  Claude Paroz  <claude@2xlibre.net>
 
 	* languages/models.py: Allow for empty team in Language class.
