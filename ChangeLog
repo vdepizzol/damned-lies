@@ -1,5 +1,9 @@
 2009-01-20  Claude Paroz  <claude@2xlibre.net>
 
+	* vertimus/views.py: Action_db2 was in fact an ActionAbstract object.
+
+2009-01-20  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Emit pot_has_changed signal.
 	* stats/signals.py: Signal emitted by stats app (pot_has_changed).
 	* templates/vertimus/vertimus_detail.html: Add link to merged file below

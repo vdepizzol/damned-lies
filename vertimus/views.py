@@ -119,11 +119,11 @@ def vertimus_diff(request, action_id):
     content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
     descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
                                                             'date': action_db1.created }
-    action_db2 = action_db1.get_previous_action_with_po()
-    if action_db2:
-        file_path2 = action_db2.get_action().merged_file()['path']
-        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db2.person.name,
-                                                                'date': action_db2.created }
+    action2 = action_db1.get_previous_action_with_po()
+    if action2:
+        file_path2 = action2.merged_file()['path']
+        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
+                                                                'date': action2.created }
     else:
         # The file should be the more recently committed file (merged)
         try:
