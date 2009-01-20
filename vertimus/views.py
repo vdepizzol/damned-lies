@@ -116,6 +116,8 @@ def vertimus_diff(request, action_id):
     action_db1 = get_object_or_404(ActionDb, pk=action_id)
     state = action_db1.state_db
     file_path1 = action_db1.get_action().merged_file()['path']
+    if not file_path1:
+        file_path1 = action_db1.file.path
     content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
     descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
                                                             'date': action_db1.created }

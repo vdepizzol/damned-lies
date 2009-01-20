@@ -1,3 +1,10 @@
+2009-01-20  Claude Paroz  <claude@2xlibre.net>
+
+	* vertimus/models.py: If pot file does not exist, do not merge. Make
+	vertimus tests pass again.
+	* vertimus/views.py: Provide for the case where there isn't a merged
+	file.
+
 2009-01-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* vertimus/models.py:

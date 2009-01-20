@@ -677,7 +677,10 @@ pot_has_changed.connect(update_uploaded_files)
 def merge_uploaded_file(sender, instance, **kwargs):
     """ post_save callback for ActionDb that automatically merge uploaded file with latest pot file """
     if instance.file and instance.file.path.endswith('.po'):
-        stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
+        try:
+            stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
+        except Statistics.DoesNotExist:
+            return
         potfile = stat.po_path()
         instance.merge_file_with_pot(potfile)
 post_save.connect(merge_uploaded_file, sender=ActionDb)
