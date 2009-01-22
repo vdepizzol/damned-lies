@@ -1,3 +1,9 @@
+2009-01-22  Claude Paroz  <claude@2xlibre.net>
+
+	* teams/forms.py: Person name (form label) linked to person page.
+	* templates/teams/team_detail.html: Form label contains HTML (URL).
+	Fixes bug #567367.
+
 2009-01-20  Claude Paroz  <claude@2xlibre.net>
 
 	* vertimus/models.py: Rephrase some action names and add translator

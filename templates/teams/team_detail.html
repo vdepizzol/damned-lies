@@ -67,7 +67,7 @@
         <form action="#" method="POST">
         <ul>
         {% for field in group.form.get_fields %}
-          <li>{{ field.label }} {{ field }}</li>
+          <li>{{ field.label|safe }} {{ field }}</li>
         {% endfor %}
         </ul>
         {{ group.form.form_type }}

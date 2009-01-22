@@ -9,7 +9,7 @@ class EditMemberRoleForm(forms.Form):
         choices.append(('remove','Remove From Team'))
         for role in roles:
             self.fields[str(role.pk)] = forms.ChoiceField(choices=choices,
-                                                 label = role.person.name,
+                                                 label = "<a href='%s'>%s</a>" % (role.person.get_absolute_url(), role.person.name),
                                                  initial=role.role)
         self.fields['form_type'] = forms.CharField(widget=forms.HiddenInput,
                                                    initial=roles[0].role)
