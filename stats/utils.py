@@ -51,6 +51,9 @@ def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
     stdin = None
     if input_data:
         stdin = PIPE
+    if env:
+        os.environ.update(env)
+        env = os.environ
     pipe = Popen(cmd, shell=True, env=env, stdin=stdin, stdout=PIPE, stderr=PIPE)
     if input_data:
         pipe.stdin.write(input_data)

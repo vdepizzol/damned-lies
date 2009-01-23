@@ -1,3 +1,8 @@
+2009-01-23  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/utils.py: When environment variable(s) are passed for Popen,
+	merge them with	current environment instead of replacing it.
+
 2009-01-22  Claude Paroz  <claude@2xlibre.net>
 
 	* teams/forms.py: Person name (form label) linked to person page.
