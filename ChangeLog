@@ -1,5 +1,10 @@
 2009-01-23  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: Make get_vcs_web_url work for git/hg repo types.
+	* templates/module_detail.html: Make 'Browse' link more generic.
+
+2009-01-23  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/utils.py: When environment variable(s) are passed for Popen,
 	merge them with	current environment instead of replacing it.
 

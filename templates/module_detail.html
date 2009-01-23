@@ -61,12 +61,9 @@
   <!-- Main loop through branches -->
   {% for branch in module.get_branches %}
     <h2><a name="{{ branch.name }}"></a>{{ branch.name }}
-    {% ifequal module.vcs_type "cvs" %}
-      (<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse CVS" %}</a>)
-    {% endifequal %}
-    {% ifequal module.vcs_type "svn" %}
-      (<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse SVN" %}</a>)
-    {% endifequal %}
+    {% if branch.get_vcs_web_url %}
+      <small>(<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse Repository" %}</a>)</small>
+    {% endif %}
     </h2>
     {% if branch.release_cat.release.string_frozen %}
       <p>{% trans "This branch is currently string-frozen." %}</p>

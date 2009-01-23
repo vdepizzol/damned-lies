@@ -201,7 +201,9 @@ class Branch(models.Model):
         return self.module.vcs_root.find('ssh://') == -1
 
     def get_vcs_web_url(self):
-        if self.is_head():
+        if self.module.vcs_type in ('hg', 'git'):
+            return self.module.vcs_web
+        elif self.is_head():
             return utils.url_join(self.module.vcs_web, "trunk")
         else:
             return utils.url_join(self.module.vcs_web, "branches", self.name)
@@ -500,14 +502,19 @@ class Branch(models.Model):
         if self.is_vcs_readonly():
             raise Exception, "This branch is in read-only mode. Unable to commit"
         vcs_type = self.module.vcs_type
+        if vcs_type not in ("git",):
+            raise Exception, "Commit is not implemented for '%s'" % vcs_type
+
         locale = language.locale
+        commit_dir = os.path.join(settings.SCRATCHDIR, vcs_type, self.module.name + "." + self.name, domain.directory)
+        dest_filename = "%s.po" % locale
+        dest_path = os.path.join(commit_dir, dest_filename)
+        already_exist = os.access(dest_path, os.F_OK)
+
+        # Copy file in repo
+        utils.copy_file(po_file, dest_path)
+
         if vcs_type == "git":
-            commit_dir = os.path.join(settings.SCRATCHDIR, vcs_type, self.module.name + "." + self.name, domain.directory)
-            dest_filename = "%s.po" % locale
-            dest_path = os.path.join(commit_dir, dest_filename)
-            already_exist = os.access(dest_path, os.F_OK)
-            # Copy file in repo
-            utils.copy_file(po_file, dest_path)
             # git add file.po
             utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git add %(po_file)s" % {
                        'dest':    commit_dir,
@@ -550,9 +557,6 @@ class Branch(models.Model):
                        'branch':  self.name,
                        'msg': commit_message,
                        }, raise_on_error=True)
-        else:
-            raise NotImplementedError
-
 
 
 DOMAIN_TYPE_CHOICES = (
