@@ -22,6 +22,21 @@ table.stats {
     text-align: left;
 }
 
+/* styles related to jQuery tablesorter component */
+table.tablesorter thead tr .header {
+    background-image: url(../img/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../img/desc.gif);
+}
+
 h2 {
     width: 100%;
     margin-top: 2em;

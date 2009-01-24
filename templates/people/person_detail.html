@@ -3,6 +3,18 @@
 {% load humanize %}
 {% load stats_extras %}
 
+{% block extrahead %}
+<script type="text/javascript" src="{{ MEDIA_URL}}js/jquery-latest.min.js"></script> 
+<script type="text/javascript" src="{{ MEDIA_URL}}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+        $("#working_on").tablesorter(); 
+    } 
+);
+</script>
+{% endblock %}
+
 {% block subcontent %}
 {% if user.is_authenticated %}
 {% ifequal user.username person.username %}
@@ -37,17 +49,19 @@
 {% if states %}
 <h2>{% trans "Working on" %}</h2>
 
-<table>
-<tr>
-  <th>{% trans "Date" %}</th><th>{% trans "Module" %}</th><th>{% trans "State" %}</th>
-</tr>
+<table class="tablesorter" id="working_on">
+<thead><tr>
+  <th class="header">{% trans "Date" %}</th><th>{% trans "Module" %}</th><th>{% trans "State" %}</th>
+</tr></thead>
+<tbody>
 {% for state in states %}
 <tr>
-  <td>{{ state.updated|naturalday:dateformat }}</td>
+  <td><span style="display: none;">{{ state.updated }}</span>{{ state.updated|naturalday:dateformat }}</td>
   <td><a href="{{ state.get_absolute_url }}">{{ state.branch.module.get_description }} - {{ state.branch.name }} - {{ state.domain.get_description }} - {{ state.language.get_name }}</a></td>
   <td>{{ state.get_state }}</td>
 </tr>
 {% endfor %}
+</tbody>
 </table>
 
 {% endif %}

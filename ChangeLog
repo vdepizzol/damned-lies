@@ -1,3 +1,12 @@
+2009-01-24  Claude Paroz  <claude@2xlibre.net>
+
+	* README: Add instructions for jQuery installation.
+	* media/css/main.css: Add styles for sortable tables.
+	* media/img/(bg|asc|desc).gif: Icons (arrows) for sortable headers.
+	* templates/people/person_detail.html: Make the 'Working on' table
+	sortable.
+	Fixes bug #567676.
+
 2009-01-23  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: Make get_vcs_web_url work for git/hg repo types.
