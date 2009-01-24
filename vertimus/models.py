@@ -661,11 +661,19 @@ class ActionUNDO(ActionAbstract):
         self.save_action_db(state, person, comment, file)
 
         try:
-            # Exclude himself
-            action_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(
-                name__in=['WC', 'UNDO']).order_by('-id')[1]
-            action = action_db.get_action()
-            return action._new_state()
+            # Exclude WC because this action is a noop on State
+            actions_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(
+                name='WC').order_by('-id')
+            i = 0
+            while (i < len(actions_db)):
+                if actions_db[i].name == 'UNDO':
+                    # Skip Undo and the associated action
+                    i = i + 2
+                else:
+                    # Found
+                    action = actions_db[i].get_action()
+                    return action._new_state()
+            return StateNone()
         except:
             return StateNone()
 

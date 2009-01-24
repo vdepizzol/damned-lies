@@ -392,7 +392,7 @@ class VertimusTests(TestCase):
         state.save()
 
         self.assertEqual(state.name, 'None')
-
+        
         action = ActionAbstract.new_by_name('RT')
         state = state.apply_action(action, self.pt, "Translating")
         state.save()
@@ -409,6 +409,24 @@ class VertimusTests(TestCase):
         state = state.apply_action(action, self.pt, "Ooops! I don't want to do that. Sorry.")
         state.save()
 
+        self.assertEqual(state.name, 'Translated')
+            
+        action = ActionAbstract.new_by_name('RT')
+        state = state.apply_action(action, self.pt, "Translating 1")
+        state.save()
+        
+        action = ActionAbstract.new_by_name('UNDO')
+        state = state.apply_action(action, self.pt, "Undo 1")
+        state.save()
+        
+        action = ActionAbstract.new_by_name('RT')
+        state = state.apply_action(action, self.pt, "Translating 2")
+        state.save()
+        
+        action = ActionAbstract.new_by_name('UNDO')
+        state = state.apply_action(action, self.pt, "Undo 2")
+        state.save()
+        
         self.assertEqual(state.name, 'Translated')
         
     def test_uploaded_file_validation(self):
