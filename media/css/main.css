@@ -3,44 +3,46 @@ table.stats {
 }
 
 .stats th { 
-    text-align: left; 
-    background: gray; 
-    color: white;
-    padding-left: 2px;
-    padding-right: 2px; 
+  text-align: left; 
+  background: gray; 
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px; 
 }
 
 .stats td { 
-    background: #f0f0f0; 
-    text-align: center;
-    padding-left: 2px;
-    padding-right: 2px;
-    color: black;
+  background: #f0f0f0; 
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: black;
 }
 
 .stats td.leftcell { 
-    text-align: left;
+  text-align: left;
 }
 
 /* styles related to jQuery tablesorter component */
 table.tablesorter thead tr .header {
-    background-image: url(../img/bg.gif);
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-color: #EEEEEE;
-    cursor: pointer;
+  background-image: url(/media/img/bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: #EEEEEE;
+  cursor: pointer;
 }
+
 table.tablesorter thead tr .headerSortUp {
-    background-image: url(../img/asc.gif);
+  background-image: url(/media/img/asc.gif);
 }
+
 table.tablesorter thead tr .headerSortDown {
-    background-image: url(../img/desc.gif);
+  background-image: url(/media/img/desc.gif);
 }
 
 h2 {
-    width: 100%;
-    margin-top: 2em;
-    border-bottom: 1px solid gray;
+  width: 100%;
+  margin-top: 2em;
+  border-bottom: 1px solid gray;
 }
 
 div.graph {
@@ -109,7 +111,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
 td.fuzzy {
   background: #c98e7f;
 }
@@ -159,7 +160,7 @@ img.screenshot {
 }
 
 div.mainpage {
-  width:80%;
+  width: 80%;
   text-align: left;
   margin-right: auto;
   margin-left: auto;
@@ -201,13 +202,13 @@ p#show, p#hide {
 }
 
 .help {
-  font-size:10px;
-  color:#999;
+  font-size: 10px;
+  color: #999;
 }
 
 .djform td  {
-  font-size:10px;
-  color:#999;
+  font-size: 10px;
+  color: #999;
 }
 .djform th {
   vertical-align: top;
@@ -253,17 +254,18 @@ div.uploaded_file {
 
 ul.errorlist {
   list-style: none;
-  margin-left:0;
-  padding:0; 
+  margin-left: 0;
+  padding: 0; 
 }
+
 .errorlist li { 
-  font-size:12px !important; 
-  display:block; 
-  padding:4px 5px 4px 25px; 
-  margin:0 0 3px 0; 
-  border:1px solid red; 
-  color:white; 
-  background:red url(../img/admin/icon_alert.gif) 5px .3em no-repeat; 
+  font-size: 12px !important; 
+  display: block; 
+  padding: 4px 5px 4px 25px; 
+  margin: 0 0 3px 0; 
+  border: 1px solid red; 
+  color: white; 
+  background: red url(/media/img/admin/icon_alert.gif) 5px .3em no-repeat; 
 }
 
 .footnote {
@@ -273,4 +275,3 @@ ul.errorlist {
   margin-top: 20px;
   color: #aaaaaa;
 }
-

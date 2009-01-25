@@ -1,5 +1,13 @@
 2009-01-25  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* README: By default, Apache doesn't follow symlinks so it's more
+	convenient to copy the Javascript file.
+	* media/css/main.css: Fix images paths and coding standard details.	
+	* templates/people/person_detail.html: Use jquery.min.js instead
+	of jquery-latest.min.js (as for jquery.tablesorter).
+
+2009-01-25  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* docs/vertimus-workflow.svg: Added diagram to explain the
 	Vertimus Workflow.
 
