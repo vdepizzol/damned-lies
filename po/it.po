@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-20 22:15+0000\n"
-"PO-Revision-Date: 2009-01-21 22:43+0100\n"
+"POT-Creation-Date: 2009-01-24 14:54+0000\n"
+"PO-Revision-Date: 2009-01-25 21:53+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -565,19 +565,19 @@ msgstr "Licenza GPL"
 
 #: database-content.py:136
 msgid "Fish Applet Manual"
-msgstr "Manuale applet Pesce"
+msgstr "Manuale dell'applet Pesce"
 
 #: database-content.py:137
 msgid "Workspace Switcher Applet Manual"
-msgstr "Manuale applet Selettore area di lavoro"
+msgstr "Manuale dell'applet Selettore area di lavoro"
 
 #: database-content.py:138
 msgid "Window List Applet Manual"
-msgstr "Manuale applet Elenco finestre"
+msgstr "Manuale dell'applet Elenco finestre"
 
 #: database-content.py:139
 msgid "Clock Applet Manual"
-msgstr "Manuale applet Orologio"
+msgstr "Manuale dell'applet Orologio"
 
 #: database-content.py:140
 msgid "Iagno Manual"
@@ -707,7 +707,7 @@ msgstr "Manuale di Tavolozza caratteri"
 # aggiunto (applet) per differenziare da Regolazione volume
 #: database-content.py:171
 msgid "Volume Control Manual"
-msgstr "Manuale di Volume (applet)"
+msgstr "Manuale dell'applet Volume"
 
 #: database-content.py:172
 msgid "Weather Report Manual"
@@ -789,7 +789,7 @@ msgstr "Manuale di Dasher"
 
 #: database-content.py:191
 msgid "Weather Applet Locations"
-msgstr "Località applet Meteo"
+msgstr "Località dell'applet Meteo"
 
 #: database-content.py:192
 msgid "Dictionary Manual"
@@ -855,7 +855,7 @@ msgstr "Maledette bugie"
 
 #: database-content.py:207
 msgid "Banshee Music Player"
-msgstr "Lettore musicale Banshee"
+msgstr "Riproduttore musicale Banshee"
 
 #: database-content.py:208
 msgid "Shared MIME Info"
@@ -879,7 +879,7 @@ msgstr "Note di rilascio di GNOME"
 
 #: database-content.py:213
 msgid "Rhythmbox Music Player"
-msgstr "Lettore musicale Rhythmbox"
+msgstr "Riproduttore musicale Rhythmbox"
 
 #: database-content.py:214
 msgid "Epiphany Web Browser"
@@ -917,8 +917,8 @@ msgid ""
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
 "Questo modulo non è specifico di GNOME. Inviare le proprie traduzioni "
-"attraverso il <a href=\\\"http://translationproject.org\\\">Translation "
-"Project</a>."
+"attraverso il <a href=\"http://translationproject.org\">Translation Project</"
+"a>."
 
 #: database-content.py:221
 msgid ""
@@ -940,57 +940,61 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
-"Notare che GTK+ preseta i domini di traduzione \"po\" e \"po-properties\". "
+"Notare che GTK+ presenta i domini di traduzione \"po\" e \"po-properties\". "
 "Se si aggiunge una lingua per una dominio, è necessario fare il commit di "
 "entrambi i file su SVN, anche se uno dei due domini non presenta alcuna "
 "traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-"
 "properties."
 
 #: database-content.py:224
+msgid "Graphical frontend for the git directory tracker"
+msgstr "Frontend grafico per il sistema di tracciamento directory git"
+
+#: database-content.py:225
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "Extra GNOME Applications"
 msgstr "Applicazioni aggiuntive per GNOME"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "GNOME Infrastructure"
 msgstr "Infrastruttura di GNOME"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (vecchia stabile)"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (vecchia stabile)"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non-GNOME)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabile)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (vecchia stabile)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applicazioni di produttività GNOME-Office"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (vecchia stabile)"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (in sviluppo)"
 
@@ -1057,7 +1061,7 @@ msgstr "Accedi con OpenID"
 msgid "UI Translations"
 msgstr "Traduzioni interfaccia utente"
 
-#: languages/views.py:52 templates/module_detail.html:91
+#: languages/views.py:52 templates/module_detail.html:88
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentazione"
@@ -1088,7 +1092,7 @@ msgstr "Questo nome utente è già in uso. Sceglierne un altro."
 
 #: people/forms.py:39
 msgid "You must either provide an OpenId or a password"
-msgstr "È necessario fornire un OpedId o una password"
+msgstr "È necessario fornire un OpenId o una password"
 
 #: people/forms.py:42
 msgid "The passwords do not match"
@@ -1148,19 +1152,19 @@ msgstr "Si è già membri di questo gruppo."
 msgid "Your password has been changed."
 msgstr "La propria password è stata cambiata."
 
-#: stats/models.py:293
+#: stats/models.py:295
 msgid "Can't generate POT file, using old one."
 msgstr "Impossibile generare il file POT, in uso quello vecchio."
 
-#: stats/models.py:319
+#: stats/models.py:321
 msgid "Can't copy new POT file to public location."
 msgstr "Impossibile copiare il nuovo file POT su posizione pubblica."
 
-#: stats/models.py:357
+#: stats/models.py:359
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "L'elenco DOC_LINGUAS non incude questa lingua."
 
-#: stats/models.py:617
+#: stats/models.py:621
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1171,32 +1175,32 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:921
+#: stats/models.py:925
 msgid "Administration Tools"
 msgstr "Strumenti di amministrazione"
 
-#: stats/models.py:922
+#: stats/models.py:926
 msgid "Development Tools"
 msgstr "Strumenti di sviluppo"
 
-#: stats/models.py:923
+#: stats/models.py:927
 msgid "GNOME Desktop"
 msgstr "Ambiente grafico GNOME"
 
-#: stats/models.py:924
+#: stats/models.py:928
 msgid "GNOME Developer Platform"
 msgstr "Piattaforma di sviluppo GNOME"
 
-#: stats/models.py:925
+#: stats/models.py:929
 msgid "New Module Proposals"
 msgstr "Nuovi moduli proposti"
 
-#: stats/models.py:998
+#: stats/models.py:1002
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1029
+#: stats/models.py:1033
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1204,43 +1208,43 @@ msgstr[0] "%(count)s messaggio"
 msgstr[1] "%(count)s messaggi"
 
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1031
+#: stats/models.py:1035
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aggiornato il %(date)s"
 
-#: stats/models.py:1031 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:1035 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d H.i O"
 
-#: stats/models.py:1033
+#: stats/models.py:1037
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figure"
 
-#: stats/models.py:1034
+#: stats/models.py:1038
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "File POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1037
+#: stats/models.py:1041
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "File POT (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:75
+#: stats/utils.py:78
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Errori durante l'esecuzione del controllo 'intltool-update -m'."
 
-#: stats/utils.py:81
+#: stats/utils.py:84
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Nel file POTFILES.in mancano alcuni file: %s"
 
-#: stats/utils.py:90
+#: stats/utils.py:93
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1249,21 +1253,21 @@ msgstr ""
 "I seguenti file sono referenziati in POTFILES.in o in POTFILES.skip, ma non "
 "esistono: %s"
 
-#: stats/utils.py:102
+#: stats/utils.py:105
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Il modulo %s non sembra essere un modulo gnome-doc-utils."
 
-#: stats/utils.py:105
+#: stats/utils.py:108
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE non ha risoluzione su un file reale, usato «%s.xml»."
 
-#: stats/utils.py:108
+#: stats/utils.py:111
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr "DOC_MODULE non punta a un file reale, probabilemnte è una macro."
+msgstr "DOC_MODULE non punta a un file reale, probabilmente è una macro."
 
-#: stats/utils.py:123
+#: stats/utils.py:126
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1274,42 +1278,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:182
+#: stats/utils.py:185
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Il file po «%s» non esiste o non può essere letto."
 
-#: stats/utils.py:202
+#: stats/utils.py:205
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Il file PO «%s» non passa il controllo di msgfmt: non aggiornato."
 
-#: stats/utils.py:204
+#: stats/utils.py:207
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Impossibile ottenere le statistiche per il file POT «%s»."
 
-#: stats/utils.py:207
+#: stats/utils.py:210
 msgid "This PO file has an executable bit set."
 msgstr "Questo file PO ha un bit eseguibile impostato."
 
-#: stats/utils.py:235
+#: stats/utils.py:238
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Il file PO «%s» non è codificato in UTF-8."
 
-#: stats/utils.py:264
+#: stats/utils.py:267
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La voce relativa a questa lingua non è presente nel file LINGUAS."
 
-#: stats/utils.py:291
+#: stats/utils.py:294
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La voce relativa a questa lingua non è presente nel file di configurazione "
 "ALL_LINGUAS."
 
-#: stats/utils.py:294
+#: stats/utils.py:297
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1618,18 +1622,14 @@ msgid "Branches:"
 msgstr "Branch:"
 
 #: templates/module_detail.html:65
-msgid "Browse CVS"
-msgstr "Esplora CVS"
+msgid "Browse Repository"
+msgstr "Esplora repository"
 
-#: templates/module_detail.html:68
-msgid "Browse SVN"
-msgstr "Esplora SVN"
-
-#: templates/module_detail.html:72
+#: templates/module_detail.html:69
 msgid "This branch is currently string-frozen."
 msgstr "Per questo branch vale al momento lo string-freeze."
 
-#: templates/module_detail.html:81
+#: templates/module_detail.html:78
 msgid "Translation"
 msgstr "Traduzione"
 
@@ -1739,7 +1739,7 @@ msgstr ""
 
 #: templates/release_detail.html:19 templates/teams/team_detail.html:22
 msgid "Release"
-msgstr "Rilasci"
+msgstr "Rilascio"
 
 #: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
@@ -1876,7 +1876,7 @@ msgstr "GNOME è sviluppato dalle seguenti persone:"
 
 #: templates/people/person_overview.html:27
 msgid "Instant messaging:"
-msgstr "Messagistica istantanea:"
+msgstr "Messaggistica istantanea:"
 
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
@@ -2044,7 +2044,6 @@ msgid "Diff between po files"
 msgstr "Differenze tra i file PO"
 
 #: templates/vertimus/vertimus_diff.html:16
-#| msgid "Backup the actions"
 msgid "&lt;- Back to actions"
 msgstr "&lt;- Torna alle azioni"
 
@@ -2066,7 +2065,7 @@ msgstr "File"
 
 #: vertimus/forms.py:39
 msgid "Upload a .po, .gz, .bz2 or .png file"
-msgstr "Carica un file .po, .gz, .bz2 oppure .png"
+msgstr "Carica un file PO, GZ, BZ2 oppure PNG"
 
 #: vertimus/forms.py:50
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
@@ -2208,7 +2207,6 @@ msgstr "Prenota la correzione bozza"
 
 # AZIONE
 #: vertimus/models.py:528
-#| msgid "Upload the new translation"
 msgid "Upload the proofread translation"
 msgstr "Carica la nuova traduzione corretta"
 
@@ -2235,7 +2233,6 @@ msgstr "Informa del commit"
 # AZIONE
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:588
-#| msgid "Reviewer"
 msgid "Review required"
 msgstr "Riesame necessario"
 
@@ -2261,6 +2258,11 @@ msgid "Latest committed file for %(lang)s"
 msgstr "Ultimo file \"committato\" per %(lang)s"
 
 #: vertimus/views.py:136
-#| msgid "Download POT file"
 msgid "Latest POT file"
 msgstr "File POT più recente"
+
+#~ msgid "Browse CVS"
+#~ msgstr "Esplora CVS"
+
+#~ msgid "Browse SVN"
+#~ msgstr "Esplora SVN"
