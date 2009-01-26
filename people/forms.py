@@ -36,7 +36,7 @@ class RegistrationForm(forms.Form):
         password2 = cleaned_data.get('password2')
         openid_url = cleaned_data.get('openid_url')
         if not password1 and not openid_url:
-            raise forms.ValidationError(_(u'You must either provide an OpenId or a password'))
+            raise forms.ValidationError(_(u'You must either provide an OpenID or a password'))
         
         if password1 and password1 != password2:
             raise forms.ValidationError(_(u'The passwords do not match'))
