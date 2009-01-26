@@ -326,7 +326,7 @@ class ActionDb(models.Model):
             return []
 
     def __unicode__(self):
-        return self.name
+        return "%s (%s)" % (self.name, self.id)
     
 
 class ActionAbstract(object):
@@ -335,6 +335,7 @@ class ActionAbstract(object):
     # A comment or a file is required
     arg_is_required = False
     file_is_required = False
+    file_is_prohibited = False
     
     @classmethod
     def new_by_name(cls, action_name):
@@ -489,6 +490,7 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
 class ActionRT(ActionAbstract):
     name = 'RT'
     description = _('Reserve for translation')
+    file_is_prohibited = True
 
     def _new_state(self):
         return StateTranslating()
@@ -515,6 +517,7 @@ class ActionUT(ActionAbstract):
 class ActionRP(ActionAbstract):
     name = 'RP'
     description = _('Reserve for proofreading')
+    file_is_prohibited = True
 
     def _new_state(self):
         return StateProofreading()
@@ -559,6 +562,7 @@ class ActionRC(ActionAbstract):
     name = 'RC'
     # Translators: this indicates a committer is going to commit the file in the repository
     description = _('Reserve to submit')
+    file_is_prohibited = True
 
     def _new_state(self):
         return StateCommitting()

@@ -66,6 +66,9 @@ class ActionForm(forms.Form):
 
         if action.file_is_required and not file:
             raise forms.ValidationError(_("A file is needed for this action."))
+        
+        if action.file_is_prohibited and file:
+            raise forms.ValidationError(_("Please, don't send a file with a 'Reserve' action."))
 
         return cleaned_data
         

@@ -1,5 +1,10 @@
 2009-01-26  Claude Paroz  <claude@2xlibre.net>
 
+	* vertimus/forms.py: Verify that no file is sent for 'Reserve' actions.
+	* vertimus/models.py: Add file_is_prohibited = True for 'Reserve' actions.
+
+2009-01-26  Claude Paroz  <claude@2xlibre.net>
+
 	* people/forms.py: OpenId -> OpenID.
 	Fixes #569170.
 
