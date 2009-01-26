@@ -1177,7 +1177,7 @@ class Information(models.Model):
         return cmp(self.statistics.module_name(), other.statistics.module_name())
 
     def get_icon(self):
-        return "/media/img/%s.png" % self.type
+        return "../img/%s.png" % self.type
     
     def get_description(self):
         text = self.description

@@ -24,7 +24,7 @@ table.stats {
 
 /* styles related to jQuery tablesorter component */
 table.tablesorter thead tr .header {
-  background-image: url(/media/img/bg.gif);
+  background-image: url(../img/bg.gif);
   background-repeat: no-repeat;
   background-position: center right;
   background-color: #EEEEEE;
@@ -32,11 +32,11 @@ table.tablesorter thead tr .header {
 }
 
 table.tablesorter thead tr .headerSortUp {
-  background-image: url(/media/img/asc.gif);
+  background-image: url(../img/asc.gif);
 }
 
 table.tablesorter thead tr .headerSortDown {
-  background-image: url(/media/img/desc.gif);
+  background-image: url(../img/desc.gif);
 }
 
 h2 {
@@ -63,7 +63,7 @@ div.translated {
   height:100%; 
   left: 0%; 
   background: #448844;
-  background: url(/media/img/green-bar.png);
+  background: url(../img/green-bar.png);
   background-repeat: repeat-x;
   color: black;
 }
@@ -73,7 +73,7 @@ div.goodchange {
   top: 0px;
   height:100%; 
   background: #55DD55;
-  background: url(/media/img/cyan-bar.png);
+  background: url(../img/cyan-bar.png);
   background-repeat: repeat-x;
   color: black;
 }
@@ -83,7 +83,7 @@ div.fuzzy {
   top: 0px;
   height:100%; 
   background: #4444AA;
-  background: url(/media/img/purple-bar.png);
+  background: url(../img/purple-bar.png);
   background-repeat: repeat-x;
   color: black;
 }
@@ -93,7 +93,7 @@ div.untranslated {
   height:100%; 
   top: 0px;
   background: #FF4444;
-  background: url(/media/img/red-bar.png);
+  background: url(../img/red-bar.png);
   background-repeat: repeat-x;
   color: black;
 }
@@ -265,7 +265,7 @@ ul.errorlist {
   margin: 0 0 3px 0; 
   border: 1px solid red; 
   color: white; 
-  background: red url(/media/img/admin/icon_alert.gif) 5px .3em no-repeat; 
+  background: red url(../img/admin/icon_alert.gif) 5px .3em no-repeat; 
 }
 
 .footnote {

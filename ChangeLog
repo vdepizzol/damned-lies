@@ -1,3 +1,13 @@
+2009-01-26  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	Replace absolute paths to images by relative ones. Claude is right!
+	
+	* media/css/layout.css: 
+	* media/css/main.css:
+	* media/css/style.css: Use relative path to img directory.  Merge
+	3 body tags and use spaces instead of tabs.
+	* stats/models.py: Use relative path to img directory.
+
 2009-01-25  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* README: By default, Apache doesn't follow symlinks so it's more
