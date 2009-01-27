@@ -19,7 +19,6 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.db import models
-from django.contrib.auth.models import Group
 from django.utils.translation import ugettext_lazy, ugettext as _
 from people.models import Person
 
@@ -41,10 +40,10 @@ class TeamManager(models.Manager):
         return teams
 
 
-class Team(Group):
-    """The name of the team is stored in Group.name.
-       The lang_code is generally used."""
+class Team(models.Model):
+    """The lang_code is generally used for the name of the team."""
 
+    name = models.CharField(max_length=80)
     description = models.TextField()
     members = models.ManyToManyField(Person, through='Role', related_name='teams')
     webpage_url = models.URLField(null=True, blank=True)

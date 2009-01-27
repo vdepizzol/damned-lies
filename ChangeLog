@@ -1,5 +1,12 @@
 2009-01-27  Claude Paroz  <claude@2xlibre.net>
 
+	* docs/notes-upgrade.txt: Migration notes about decoupling 'team' from
+	'auth_group'.
+	* teams/models.py: 'team' table is now independant of auth_group. One
+	outcome is that languages without teams are shown again on /languages.
+
+2009-01-27  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/vertimus/vertimus_detail.html: Show the various diff links for
 	each po file.
 	* vertimus/models.py: get_action_history also build a file history

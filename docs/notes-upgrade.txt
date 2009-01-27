@@ -19,3 +19,18 @@ ALTER TABLE team DROP coordinator_id;
 
 # r1229
 ALTER TABLE statistics ADD UNIQUE ("branch_id", "domain_id", "language_id");
+
+# r1402
+# decouple team from auth_group:
+ALTER TABLE team ADD `id` int(11) NOT NULL FIRST;
+ALTER TABLE team ADD UNIQUE(`id`);
+ALTER TABLE team ADD `name` varchar(50) NOT NULL AFTER id;
+UPDATE team INNER JOIN auth_group ON team.group_ptr_id=auth_group.id SET team.id=auth_group.id;
+UPDATE team INNER JOIN auth_group ON team.group_ptr_id=auth_group.id SET team.name=auth_group.name;
+# replace foreign key names with those of your db
+ALTER TABLE team DROP FOREIGN KEY `group_ptr_id_refs_id_5511b014501b060`;
+ALTER TABLE language DROP FOREIGN KEY `team_id_refs_group_ptr_id_66eefe8fd7bd994`;
+ALTER TABLE language ADD FOREIGN KEY (`team_id`) REFERENCES `team` (`id`);
+ALTER TABLE team DROP group_ptr_id;
+ALTER TABLE team MODIFY `id` int(11) NOT NULL auto_increment;
+ALTER TABLE team ADD primary key(`id`);
