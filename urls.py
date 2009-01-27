@@ -43,4 +43,6 @@ if settings.STATIC_SERVE:
          {'document_root': settings.MEDIA_ROOT}),
         (r'^POT/(?P<path>.*)$', 'django.views.static.serve',
          {'document_root': settings.POTDIR}),
+        (r'^(robots.txt)$', 'django.views.static.serve',
+         {'document_root': settings.MEDIA_ROOT}),
     )
