@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-24 14:54+0000\n"
-"PO-Revision-Date: 2009-01-25 11:12+0100\n"
+"POT-Creation-Date: 2009-01-26 18:36+0000\n"
+"PO-Revision-Date: 2009-01-27 08:20+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1078,7 +1078,8 @@ msgid "This username is already taken. Please choose another."
 msgstr "Este nombre de usuario ya existe. Elija otro."
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
+#| msgid "You must either provide an OpenId or a password"
+msgid "You must either provide an OpenID or a password"
 msgstr "Debe proporcionar un OpenId o una contraseña"
 
 #: people/forms.py:42
@@ -1796,31 +1797,31 @@ msgstr "Cambiar su contraseña"
 msgid "Join a team"
 msgstr "Unirse a un equipo"
 
-#: templates/people/person_detail.html:12
+#: templates/people/person_detail.html:24
 msgid "Site Language:"
 msgstr "Idioma del sitio:"
 
-#: templates/people/person_detail.html:21
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Elija"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:39
 msgid "Maintains:"
 msgstr "Mantenedores:"
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:50
 msgid "Working on"
 msgstr "Trabajando en"
 
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Fecha"
 
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Módulo"
 
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Estado"
 
@@ -2042,6 +2043,10 @@ msgstr "Se necesita un comentario para esta acción."
 msgid "A file is needed for this action."
 msgstr "Se necesita un archivo para esta acción."
 
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "No envíe un archivo con la acción «Reservar»."
+
 #: vertimus/models.py:138
 msgid "Inactive"
 msgstr "Inactivo"
@@ -2074,7 +2079,7 @@ msgstr "Subiéndose"
 msgid "Committed"
 msgstr "Subido"
 
-#: vertimus/models.py:418
+#: vertimus/models.py:419
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2091,20 +2096,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:431 vertimus/models.py:481
+#: vertimus/models.py:432 vertimus/models.py:482
 msgid "Without comment"
 msgstr "Sin comentarios"
 
-#: vertimus/models.py:433 vertimus/models.py:483
+#: vertimus/models.py:434 vertimus/models.py:484
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
 
-#: vertimus/models.py:440
+#: vertimus/models.py:441
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:470
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2121,47 +2126,47 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:492
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:502
+#: vertimus/models.py:504
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: vertimus/models.py:517
+#: vertimus/models.py:519
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:531
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:547
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:564
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:577
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
+#: vertimus/models.py:592
 msgid "Review required"
 msgstr "Necesita revisión"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:623
 msgid "Backup the actions"
 msgstr "Respaldar las acciones"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:662
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
