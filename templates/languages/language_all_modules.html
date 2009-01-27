@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% trans "All modules" %} - {{ language.get_name }}{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script> 
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+        $("#stats-table").tablesorter({sortList: [[0,0]]}); 
+    }
+);
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h2>{% trans "All modules" %} - <a href="{{ language.get_team_url }}">{{ language.get_name }}</a></h2>
+
+<p id="hide">
+   <a href="#" onclick="return showHideCompleted();">{% trans "Hide completed modules" %}</a>
+</p>
+
+<p id="show" style="display:none">
+   <a href="#" onclick="return showHideCompleted();">{% trans "Show completed modules" %}</a>
+</p>
+
+<h3>{{ stats_title }}</h3>
+<table class="tablesorter" name="stats-table" id="stats-table">
+<thead>
+  <tr><th>{% trans "Module" %}</th><th>{% trans "Branch" %}</th><th>{% trans "Statistics" %}</th></tr>
+</thead>
+<tbody>
+{% for stat in stats %}
+  {% with stat.branch.module.name as modname %}
+  {% ifequal stat.tr_percentage 100 %}
+    <tr id="{{ modname }}-{{ stat.domain.id }}-complete">
+  {% else %}
+    <tr>
+  {% endifequal %}
+      <td><a href="{% url vertimus-names-view modname stat.branch.name stat.domain.name language.locale %}">{{ stat.branch.module.name }}</a></td>
+      <td>{{ stat.branch.name }}
+          {% ifnotequal stat.domain.name "po" %}
+            ({{ stat.domain.name }})
+          {% endifnotequal %}
+      </td>
+      <td><span style="display:none;">{{ stat.tr_percentage }}</span>
+          {{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
+      <td style="width: 108px; text-align: center;">
+        <div class="graph">
+          <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
+          <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
+          <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.tr_percentage|add:stat.fu_percentage }}px; width: {{ stat.un_percentage }}px;"></div>
+        </div>
+      </td>
+  </tr>
+  {% endwith %}
+{% endfor %}
+</tbody>
+</table>
+
+</div>
+{% endblock %}

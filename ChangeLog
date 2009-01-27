@@ -1,5 +1,13 @@
 2009-01-27  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/languages/language_all_modules.html:
+	* languages/urls.py:
+	* languages/views.py: Add a new URL/view/template to show stats for all
+	modules. Still need a link, probably from team page.
+	WIP for bug #415315.
+
+2009-01-27  Claude Paroz  <claude@2xlibre.net>
+
 	* media/robots.txt: Add file and prevent indexing of /vertimus (no
 	interest for search engines).
 	* urls.py: Serve robots.txt (in static serve config).

@@ -29,7 +29,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
 from common import utils
 from languages.models import Language
-from stats.models import Release
+from stats.models import Release, Statistics
 
 def languages(request):
     languages = Language.objects.select_related("team").all()
@@ -38,6 +38,19 @@ def languages(request):
         'languages': utils.trans_sort_object_list(languages, 'name')
     }
     return render_to_response('languages/language_list.html', context,
+                              context_instance=RequestContext(request))
+
+def language_all(request, locale, dtype):
+    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    stats = Statistics.objects.filter(language=language, domain__dtype=dtype).select_related('branch__module', 'domain') 
+    context = {
+        'pageSection': "languages",
+        'language': language,
+        'stats_title': {'ui':  _("UI Translations"),
+                        'doc': _("Documentation")}.get(dtype),
+        'stats': stats,
+    }
+    return render_to_response('languages/language_all_modules.html', context,
                               context_instance=RequestContext(request))
 
 def language_release(request, locale, release_name, dtype):
