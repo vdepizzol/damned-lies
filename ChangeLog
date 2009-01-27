@@ -1,3 +1,14 @@
+2009-01-27  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/vertimus/vertimus_detail.html: Show the various diff links for
+	each po file.
+	* vertimus/models.py: get_action_history also build a file history
+	attached with each action with a po file. Return now a list of tuples.
+	* vertimus/urls.py: Optionally accept the action id of the second diff
+	parameter.
+	* vertimus/views.py: Handle the optionally action_id2 parameter.
+	Fixes bug #568772.
+
 2009-01-26  Claude Paroz  <claude@2xlibre.net>
 
 	* vertimus/forms.py: Verify that no file is sent for 'Reserve' actions.

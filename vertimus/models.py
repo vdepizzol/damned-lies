@@ -319,11 +319,20 @@ class ActionDb(models.Model):
 
     @classmethod
     def get_action_history(cls, state_db):
+        """ Return action history as a list of tuples (action, file_history)
+            File_history is a list of previous po files, used in vertimus view to generate diff links """
+        history = []
         if state_db:
-            return [va_db.get_action() for va_db in ActionDb.objects.filter(
-                    state_db__id=state_db.id).order_by('id')]
-        else:
-            return []
+            file_history = [{'action':0, 'title': ugettext("File in repository")}]
+            for va_db in ActionDb.objects.filter(state_db__id=state_db.id).order_by('id'):
+                history.append((va_db.get_action(), list(file_history)))
+                if va_db.file and va_db.file.path.endswith('.po'):
+                    file_history.insert(0, {'action':va_db.id,
+                                            'title': ugettext("Uploaded file by %(name)s on %(date)s") % { 
+                                                                'name': va_db.person.name,
+                                                                'date': va_db.created },
+                                           })
+        return history
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)

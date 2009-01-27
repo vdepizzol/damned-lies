@@ -64,7 +64,7 @@
 {% if action_history %}
 <h2>{% trans "Action History" %}</h2>
 <div>
-  {% for action in action_history %}
+  {% for action,files in action_history %}
   <div class="vertimus_action">
     <div class="vertimus_action_head">
       <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
@@ -78,7 +78,11 @@
           {% if action.merged_file.url %}
             <a href="{{ action.merged_file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}</a><br />
           {% endif %}
-          <div class="right_actions"><a href="{% url vertimus-diff-view action.id %}">diff with previous</a></div>
+          <div class="right_actions">{% trans "diff with:" %}
+            {% for f in files %}
+                <a href="{% url vertimus-diff-view action.id,f.action %}" title="{{ f.title }}">[{{ forloop.revcounter }}]</a>
+            {% endfor %}
+          </div>
         {% endif %}
       </div>
       {% endif %}
