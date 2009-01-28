@@ -49,7 +49,7 @@
               <em>{{ stat.module_description }}</em>
             {% endif %}
           {% endif %}
-          {% for err in stat.information_set.all %}
+          {% for err in stat.info_list %}
             <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}
           </td>

@@ -836,28 +836,35 @@ class Release(models.Model):
                  'totaltransperc': 0, 'totalfuzzyperc': 0, 'totaluntransperc': 0,
                  'categs':{}, 'all_errors':[]}
         # Sorted by module to allow grouping ('fake' stats)
-        pot_stats = Statistics.objects.select_related(depth=1).filter(language=None, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
-        tr_stats = Statistics.objects.select_related(depth=1).filter(language=lang, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
-        vt_states = StateDb.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)
+        pot_stats = Statistics.objects.extra(select={'categ_name': "category.name"}).select_related('domain', 'branch__module').filter(language=None, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
+
+        tr_stats = Statistics.objects.select_related('domain', 'language', 'branch__module').filter(language=lang, branch__releases=self, domain__dtype=dtype).order_by('branch__module__id')
+        tr_stats_dict = dict([("%d-%d" % (st.branch.id, st.domain.id),st) for st in tr_stats])
+
+        infos_dict = Information.get_info_dict(lang)
+        
+        vt_states = StateDb.objects.select_related('branch','domain').filter(language=lang, branch__releases=self, domain__dtype=dtype)
+        vt_states_dict = dict([("%d-%d" % (vt.branch.id, vt.domain.id),vt) for vt in vt_states])
+
         for stat in pot_stats:
-            categdescr = stat.branch.category_set.get(release=self).name
+            categdescr = stat.categ_name
             domname = _(stat.domain.description)
             modname = stat.branch.module.name
             if categdescr not in stats['categs']:
                 stats['categs'][categdescr] = {'cattrans':0, 'catfuzzy':0, 'catuntrans':0,
                                                'cattransperc':0, 'modules':{}}
             # Try to get translated stat, else stick with POT stat
-            try:
-                stat = tr_stats.get(branch=stat.branch, domain=stat.domain)
-                stats['all_errors'].extend(stat.information_set.all())
-            except Statistics.DoesNotExist:
-                pass
+            br_dom_key = "%d-%d" % (stat.branch.id, stat.domain.id)
+            if br_dom_key in tr_stats_dict:
+                stat = tr_stats_dict[br_dom_key]
+            # Match stat with error list
+            if stat.id in infos_dict:
+                stat.info_list = infos_dict[stat.id]
+                stats['all_errors'].extend(stat.info_list)
 
             # Search if a state exists for this statistic
-            try:
-                stat.state = vt_states.get(branch=stat.branch, domain=stat.domain)
-            except StateDb.DoesNotExist:
-                stat.state = None
+            if br_dom_key in vt_states_dict:
+                stat.state = vt_states_dict[br_dom_key]
 
             stats['totaltrans'] += stat.translated
             stats['totalfuzzy'] += stat.fuzzy
@@ -963,13 +970,14 @@ class Statistics(models.Model):
         verbose_name = "statistics"
         verbose_name_plural = verbose_name
         unique_together = ('branch', 'domain', 'language')
-
+    
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
         self.figures = None
         self.modname = None
         self.moddescription = None
         self.partial_po = False # True if part of a multiple po module
+        self.info_list = []
     
     def __unicode__(self):
         """ String representation of the object """
@@ -1173,11 +1181,23 @@ class Information(models.Model):
     class Meta:
         db_table = 'information'
 
+    @classmethod
+    def get_info_dict(cls, lang):
+        """ Return a dict (of lists) with all Information objects for a lang, with statistics_id as the key 
+            Used for caching and preventing db access when requesting these objects for a long list of stats """
+        info_dict = {}
+        for info in Information.objects.filter(statistics__language=lang):
+            if info.statistics_id in info_dict:
+                info_dict[info.statistics_id].append(info)
+            else:
+                info_dict[info.statistics_id] = [info]
+        return info_dict
+
     def __cmp__(self, other):
         return cmp(self.statistics.module_name(), other.statistics.module_name())
 
     def get_icon(self):
-        return "../img/%s.png" % self.type
+        return "%simg/%s.png" % (settings.MEDIA_URL, self.type)
     
     def get_description(self):
         text = self.description
@@ -1189,7 +1209,7 @@ class Information(models.Model):
         
         #FIXME: if multiple substitutions, works only if order of %s is unchanged in translated string
         for match in matches:
-        	  text = text.replace('%s',match,1)
+            text = text.replace('%s',match,1)
         return text
 
 class ArchivedInformation(models.Model):
