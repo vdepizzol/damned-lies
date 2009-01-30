@@ -2,21 +2,23 @@
 # This package is distributed under the same license as the damned-lies package.
 # Copyright (C) the Damned Lies maintainer(s).
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com> 2008.
-# Jonh Wendell <wendell@bani.com.br> 2008.
-#
-#
+# Jonh Wendell <wendell@bani.com.br> 2008, 2009.
+# Enrico Nicoletto <liverig@gmail.com> 2009, 2009.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-24 14:54+0000\n"
-"PO-Revision-Date: 2009-01-26 11:59-0300\n"
-"Last-Translator: Jonh Wendell <wendell@bani.com.br>\n"
-"Language-Team: Portuguese/Brazil <gnome-pt_br-list@gnome.org>\n"
+"POT-Creation-Date: 2009-01-27 21:38+0000\n"
+"PO-Revision-Date: 2009-01-30 15:06-0300\n"
+"Last-Translator: Jonh Wendell <jwendell@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
 
 #: database-content.py:1
 msgid "Gujarati"
@@ -28,7 +30,7 @@ msgstr "Irlandês"
 
 #: database-content.py:3
 msgid "Guarani"
-msgstr "Guarani"
+msgstr "Guaraní"
 
 #: database-content.py:4
 msgid "Galician"
@@ -102,15 +104,14 @@ msgstr "Butanês"
 msgid "Chinese (China)"
 msgstr "Chinês (China)"
 
-# Sem tradução
+# Must be kept the term, balochi may refer to a people in Turkmenistan, a language or others meanings...
 #: database-content.py:22
-#, fuzzy
 msgid "Balochi"
-msgstr "Kachin"
+msgstr "Balochi"
 
 #: database-content.py:23
 msgid "Crimean Tatar"
-msgstr ""
+msgstr "Tártaros da Crimeia"
 
 #: database-content.py:24
 msgid "Greek"
@@ -122,7 +123,7 @@ msgstr "Esperanto"
 
 #: database-content.py:26
 msgid "Belarusian"
-msgstr "Bielo-russo"
+msgstr "Bielorusso"
 
 #: database-content.py:27
 msgid "Basque"
@@ -189,9 +190,8 @@ msgid "Occitan"
 msgstr "Provençal"
 
 #: database-content.py:43
-#, fuzzy
 msgid "Low German and Saxon"
-msgstr "Baixo Saxão"
+msgstr "Baixo alemão e Saxão"
 
 #: database-content.py:44
 msgid "Oriya"
@@ -207,9 +207,8 @@ msgid "Northern Sotho"
 msgstr "Soto do Sul"
 
 #: database-content.py:47
-#, fuzzy
 msgid "Iranian Azerbaijani"
-msgstr "Azerbaidjano"
+msgstr "Azerbaidjano iraniano"
 
 #: database-content.py:48
 msgid "Catalan"
@@ -465,30 +464,28 @@ msgid "Kirghiz"
 msgstr "Quirguiz"
 
 #: database-content.py:111
-#, fuzzy
 msgid "Belarusian Latin"
-msgstr "Bielo-russo"
+msgstr "Bielorusso latino"
 
 #: database-content.py:112
 msgid "Low German"
 msgstr "Baixo-alemão"
 
 #: database-content.py:113
-#, fuzzy
 msgid "Low Saxon, Germany"
-msgstr "Baixo Saxão"
+msgstr "Baixo saxão, Alemanha"
 
 #: database-content.py:114
 msgid "Valencian (Southern Catalan)"
-msgstr ""
+msgstr "Valenciano (Catalão meridional)"
 
 #: database-content.py:115
 msgid "Uzbek (Cyrillic)"
-msgstr ""
+msgstr "Uzbeque (Cirílico)"
 
 #: database-content.py:116
 msgid "Uzbek (Latin)"
-msgstr ""
+msgstr "Uzbeque (Latin)"
 
 #: database-content.py:117
 msgid "Chinese (Hong Kong)"
@@ -511,17 +508,16 @@ msgid "Serbian Latin"
 msgstr "Latim Sérvio"
 
 #: database-content.py:122
-#, fuzzy
 msgid "Serbian Jekavian"
-msgstr "Sérvio"
+msgstr "Sérvio Jekavian"
 
 #: database-content.py:123
 msgid "Hausa"
-msgstr ""
+msgstr "Hauçá"
 
 #: database-content.py:124
 msgid "Igbo"
-msgstr ""
+msgstr "Igbo"
 
 #: database-content.py:125
 msgid "UI translations"
@@ -693,7 +689,7 @@ msgstr "Manual do monitor de sistema"
 
 #: database-content.py:167
 msgid "Stock Ticker Manual"
-msgstr ""
+msgstr "Manual do Stock Ticker"
 
 #: database-content.py:168
 msgid "Geyes Manual"
@@ -701,11 +697,11 @@ msgstr "Manual do GEyes"
 
 #: database-content.py:169
 msgid "Panel Trash Manual"
-msgstr "Manual da lixeira do painél"
+msgstr "Manual do miniaplicativo Lixeira"
 
 #: database-content.py:170
 msgid "Character Palette Manual"
-msgstr ""
+msgstr "Manual do seletor de caracteres"
 
 #: database-content.py:171
 msgid "Volume Control Manual"
@@ -717,7 +713,7 @@ msgstr "Manual do relatório meteorológico"
 
 #: database-content.py:173
 msgid "Sticky Notes Manual"
-msgstr ""
+msgstr "Manual do Notas"
 
 #: database-content.py:174
 msgid "Disk Mounter Manual"
@@ -761,7 +757,7 @@ msgstr "Manual do Sound Juicer"
 
 #: database-content.py:184
 msgid "Property Nicks"
-msgstr "Property Nicks"
+msgstr "Nomes das propriedades"
 
 #: database-content.py:185
 msgid "tips"
@@ -789,7 +785,7 @@ msgstr "Manual do Dasher"
 
 #: database-content.py:191
 msgid "Weather Applet Locations"
-msgstr ""
+msgstr "Localizações do miniaplicativo do tempo"
 
 #: database-content.py:192
 msgid "Dictionary Manual"
@@ -813,7 +809,7 @@ msgstr "Manual do GFloppy"
 
 #: database-content.py:197
 msgid "GNOME Library help"
-msgstr ""
+msgstr "Ajuda da biblioteca GNOME"
 
 #: database-content.py:198
 msgid "Eye of GNOME Manual"
@@ -821,31 +817,31 @@ msgstr "Manual do visualisador de imagens"
 
 #: database-content.py:199
 msgid "GST User Management Manual"
-msgstr ""
+msgstr "Manual do gerenciamento de usuário GST"
 
 #: database-content.py:200
 msgid "GST Service Management Manual"
-msgstr ""
+msgstr "Manual do gerenciamento de serviço GST"
 
 #: database-content.py:201
 msgid "GST Network Setup Manual"
-msgstr ""
+msgstr "Manual de configuração de rede GST"
 
 #: database-content.py:202
 msgid "GST Shared Folders Manual"
-msgstr ""
+msgstr "Manual de pastas compartilhadas GST"
 
 #: database-content.py:203
 msgid "GST Time Setup Manual"
-msgstr ""
+msgstr "Manual de configuração de hora GST"
 
 #: database-content.py:204
 msgid "GNOME 2 User Documentation"
-msgstr ""
+msgstr "Documentação do usuário GNOME 2"
 
 #: database-content.py:205
 msgid "Beagle Desktop Search"
-msgstr ""
+msgstr "Pesquisas da área de trabalho Beagle"
 
 #: database-content.py:206 templates/base.html:34
 #: templates/admin/base_site.html:7
@@ -937,10 +933,14 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
+"Note que o gtk+ possui tanto po (UI) quanto po-properties. Se você adicionar "
+"um novo idioma em cada domínio, você terá que dar commit em ambos os "
+"arquivos no SVN, mesmo se um deles não possuir tradução alguma, caso "
+"contrário a compilação do GTK+ falhará em /po-properties."
 
 #: database-content.py:224
 msgid "Graphical frontend for the git directory tracker"
-msgstr ""
+msgstr "Interface gráfica para o rastreador de diretório git"
 
 #: database-content.py:225
 msgid "GNOME Fifth Toe (Extra software)"
@@ -994,7 +994,8 @@ msgstr "GNOME 2.26 (Em desenvolvimento)"
 msgid "translator-credits"
 msgstr ""
 "Leonardo Ferreira Fontenelle <leonardof@gnome.org>\n"
-"Jonh Wendell <jwendell@gnome.org>"
+"Jonh Wendell <jwendell@gnome.org>\n"
+"Enrico Nicoletto <liverig@gmail.com>"
 
 #: common/views.py:54
 msgid "You have been logged out."
@@ -1052,11 +1053,11 @@ msgstr "OpenID:"
 msgid "Log in with OpenID"
 msgstr "Entrar com OpenID"
 
-#: languages/views.py:51
+#: languages/views.py:49 languages/views.py:64
 msgid "UI Translations"
 msgstr "Traduções de Interface"
 
-#: languages/views.py:52 templates/module_detail.html:88
+#: languages/views.py:50 languages/views.py:65 templates/module_detail.html:88
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentação"
@@ -1071,7 +1072,7 @@ msgstr "Deve conter somente letras, números, sublinhados ou hífens"
 
 #: people/forms.py:16
 msgid "Email:"
-msgstr "Email:"
+msgstr "E-mail:"
 
 #: people/forms.py:21
 msgid "At least 7 characters"
@@ -1086,8 +1087,8 @@ msgid "This username is already taken. Please choose another."
 msgstr "Este nome de usuário já pertence a alguém. Escolha outro por favor."
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
-msgstr "Você deve informar ou uma senha ou um OpenID"
+msgid "You must either provide an OpenID or a password"
+msgstr "Você deve fornecer um OpenID ou uma senha"
 
 #: people/forms.py:42
 msgid "The passwords do not match"
@@ -1312,24 +1313,24 @@ msgstr ""
 "Não sei dizer se este idioma é realmente usado, pergunte ao mantenedor do "
 "módulo."
 
-#: teams/models.py:113
+#: teams/models.py:112
 #, python-format
 msgid "No team for locale %s"
 msgstr "Nenhuma equipe para a localidade %s"
 
-#: teams/models.py:130
+#: teams/models.py:129
 msgid "Translator"
 msgstr "Tradutor"
 
-#: teams/models.py:131
+#: teams/models.py:130
 msgid "Reviewer"
 msgstr "Revisor"
 
-#: teams/models.py:132
+#: teams/models.py:131
 msgid "Committer"
 msgstr "Committer"
 
-#: teams/models.py:133 templates/teams/team_base.html:31
+#: teams/models.py:132 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Coordenador"
 
@@ -1426,7 +1427,6 @@ msgid "Modules"
 msgstr "Módulos"
 
 #: templates/base.html:73
-#| msgid "Log Out"
 msgid "Log out"
 msgstr "Desconectar"
 
@@ -1607,7 +1607,7 @@ msgstr "Tradução"
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
-msgstr ""
+msgstr "Status da figura de doc. do módulo: %(name)s"
 
 #: templates/module_images.html:12
 msgid "Figures translation status"
@@ -1728,7 +1728,6 @@ msgstr ""
 "Escolha uma versão ou um pacote abaixo para ver mais detalhes sobre ele:"
 
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
-#| msgid "Download all po files"
 msgid "Download POT file"
 msgstr "Baixar o arquivo POT"
 
@@ -1752,6 +1751,36 @@ msgstr "Mostrar imagens dos documentos"
 msgid "Damned Lies site admin"
 msgstr "Administração do Damned Lies"
 
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#| msgid "Modules"
+msgid "All modules"
+msgstr "Todos os módulos"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:12
+msgid "Hide completed modules"
+msgstr "Esconder os módulos 100% traduzidos"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:16
+msgid "Show completed modules"
+msgstr "Mostrar todos os módulos"
+
+#: templates/languages/language_all_modules.html:34
+#: templates/people/person_detail.html:54
+msgid "Module"
+msgstr "Módulo"
+
+#: templates/languages/language_all_modules.html:34
+#| msgid "Branches:"
+msgid "Branch"
+msgstr "Ramo"
+
+#: templates/languages/language_all_modules.html:34
+msgid "Statistics"
+msgstr "Estatísticas"
+
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
@@ -1763,14 +1792,6 @@ msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "O GNOME está sendo traduzido para o seguinte %(numb)s idioma:\n"
 msgstr[1] "O GNOME está sendo traduzido para os seguintes %(numb)s idiomas:\n"
-
-#: templates/languages/language_release.html:12
-msgid "Hide completed modules"
-msgstr "Esconder os módulos 100% traduzidos"
-
-#: templates/languages/language_release.html:16
-msgid "Show completed modules"
-msgstr "Mostrar todos os módulos"
 
 #: templates/languages/language_release_stats.html:23
 msgid "%(categname)s (%(percentage)s% translated)"
@@ -1801,32 +1822,27 @@ msgstr "Mudar sua senha"
 msgid "Join a team"
 msgstr "Entrar em uma equipe"
 
-#: templates/people/person_detail.html:12
-#| msgid "Language"
+#: templates/people/person_detail.html:24
 msgid "Site Language:"
 msgstr "Idioma do site:"
 
-#: templates/people/person_detail.html:21
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Escolha"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:39
 msgid "Maintains:"
 msgstr "Mantém:"
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:50
 msgid "Working on"
 msgstr "Trabalhando em"
 
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Data"
 
-#: templates/people/person_detail.html:42
-msgid "Module"
-msgstr "Módulo"
-
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Estado"
 
@@ -1973,7 +1989,6 @@ msgid "State:"
 msgstr "Estado:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Download all po files"
 msgid "Download PO file"
 msgstr "Baixar o arquivo PO"
 
@@ -1985,19 +2000,23 @@ msgstr "Traduzido:"
 msgid "Action History"
 msgstr "Histórico de ações"
 
-#: templates/vertimus/vertimus_detail.html:88
+#: templates/vertimus/vertimus_detail.html:81
+msgid "diff with:"
+msgstr "diff com:"
+
+#: templates/vertimus/vertimus_detail.html:92
 msgid "No comment"
 msgstr "Nenhum comentário"
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Nova ação"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:108
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:112
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2008,7 +2027,6 @@ msgid "Diff between po files"
 msgstr "DIFF entre os arquivos po"
 
 #: templates/vertimus/vertimus_diff.html:16
-#| msgid "Backup the actions"
 msgid "&lt;- Back to actions"
 msgstr "&lt;- Voltar para página anterior"
 
@@ -2051,6 +2069,10 @@ msgstr "É necessário um comentário ou um arquivo para esta ação."
 msgid "A file is needed for this action."
 msgstr "É necessário um arquivo para esta ação."
 
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Por favor, não envie um arquivo junto com a ação \"Reservar\"."
+
 #: vertimus/models.py:138
 msgid "Inactive"
 msgstr "Inativo"
@@ -2069,7 +2091,7 @@ msgstr "Revisado"
 
 #: vertimus/models.py:208
 msgid "To Review"
-msgstr "Pronto para revisão"
+msgstr "Precisa melhorar"
 
 #: vertimus/models.py:220
 msgid "To Commit"
@@ -2083,7 +2105,18 @@ msgstr "Submetendo"
 msgid "Committed"
 msgstr "Submetido"
 
-#: vertimus/models.py:418
+#: vertimus/models.py:326
+#| msgid "Browse Repository"
+msgid "File in repository"
+msgstr "Arquivo no repositório"
+
+#: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:129
+#: vertimus/views.py:147
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Arquivo enviado por %(name)s·em·%(date)s"
+
+#: vertimus/models.py:428
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2100,20 +2133,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:431 vertimus/models.py:481
+#: vertimus/models.py:441 vertimus/models.py:491
 msgid "Without comment"
 msgstr "Sem comentários"
 
-#: vertimus/models.py:433 vertimus/models.py:483
+#: vertimus/models.py:443 vertimus/models.py:493
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Esta é uma mensagem automática enviada de %s."
 
-#: vertimus/models.py:440
+#: vertimus/models.py:450
 msgid "Write a comment"
 msgstr "Escrever um comentário"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:479
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2130,63 +2163,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:501
 msgid "Reserve for translation"
 msgstr "Reservar para tradução"
 
-#: vertimus/models.py:502
+#: vertimus/models.py:513
 msgid "Upload the new translation"
 msgstr "Enviar a nova tradução"
 
-#: vertimus/models.py:517
+#: vertimus/models.py:528
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisão"
 
-#: vertimus/models.py:528
-#| msgid "Upload the new translation"
+#: vertimus/models.py:540
 msgid "Upload the proofread translation"
 msgstr "Enviar a tradução revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Ready for submission"
 msgstr "Pronto para submissão"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:573
 msgid "Reserve to submit"
 msgstr "Reservar para submissão"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:586
 msgid "Inform of submission"
 msgstr "Informar da submissão"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
-#| msgid "Reviewer"
+#: vertimus/models.py:601
 msgid "Review required"
-msgstr "Revisão necessária"
+msgstr "Precisa melhorar"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:632
 msgid "Backup the actions"
 msgstr "Backup das ações"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:671
 msgid "Undo the last state change"
 msgstr "Desfazer a última ação"
 
-#: vertimus/views.py:122 vertimus/views.py:127
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "Arquivo enviado por %(name)s·em·%(date)s"
-
-#: vertimus/views.py:133
+#: vertimus/views.py:135
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último arquivo no repositório para %(lang)s"
 
-#: vertimus/views.py:136
+#: vertimus/views.py:138
 msgid "Latest POT file"
 msgstr "Último arquivo POT"
 
