@@ -394,6 +394,16 @@ class VertimusTests(TestCase):
         self.assertEqual(state.name, 'None')
         
         action = ActionAbstract.new_by_name('RT')
+        state = state.apply_action(action, self.pt, "Reserved!")
+        state.save()
+
+        action = ActionAbstract.new_by_name('UNDO')
+        state = state.apply_action(action, self.pt, "Ooops! I don't want to do that. Sorry.")
+        state.save()
+
+        self.assertEqual(state.name, 'None')
+
+        action = ActionAbstract.new_by_name('RT')
         state = state.apply_action(action, self.pt, "Translating")
         state.save()
         

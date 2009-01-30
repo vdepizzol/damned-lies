@@ -174,6 +174,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
         'translated' : 0,
         'fuzzy' : 0,
         'untranslated' : 0,
+        'num_figures' : 0,
         'errors' : [],
         }
     c_env = {"LC_ALL": "C", "LANG": "C", "LANGUAGE": "C"}
@@ -236,6 +237,10 @@ def po_file_stats(pofile, msgfmt_checks = True):
         if status != STATUS_OK:
             res['errors'].append(("warn",
                               ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
+    # Count number of figures in PO(T) file
+    command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
+    (status, output, errs) = run_shell_command(command)
+    res['num_figures'] = int(output)
 
     return res
 

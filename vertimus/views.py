@@ -28,7 +28,7 @@ from django.conf import settings
 
 from people.models import Person
 from stats.models import Statistics, Module, Branch, Domain, Language
-from vertimus.models import StateDb, ActionDb, ActionAbstract
+from vertimus.models import StateDb, ActionDb, ActionAbstract, ActionBA, StateToCommit, StateCommitted
 from vertimus.forms import ActionForm
 
 def vertimus_by_stats_id(request, stats_id, lang_id):
@@ -87,6 +87,15 @@ def vertimus(request, branch, domain, language, stats=None):
                 action = ActionAbstract.new_by_name(action)
                 new_state = state.apply_action(action, person, comment, request.FILES.get('file', None))
                 new_state.save()
+                if isinstance(new_state, StateToCommit):
+                    try:
+                        action_with_po = action._action_db.get_previous_action_with_po()
+                        branch.commit_po(action_with_po.file.path, domain, language)
+                        action = ActionIC()
+                        new_state = new_state.apply_action(action, person)
+                        new_state.save()
+                    except:
+                        pass # The file cannot be autocommitted
 
                 return HttpResponseRedirect(
                     urlresolvers.reverse('vertimus-names-view', 
@@ -146,7 +155,7 @@ def vertimus_diff(request, action_id, action_id2=None):
     content2 = [l.decode('utf-8') for l in open(file_path2, 'U').readlines()]
     d = difflib.HtmlDiff()
     diff_content = d.make_table(content2, content1,
-                                descr2, descr1, context=True)
+                                descr2, descr1, context=False)
 
     context = {
         'diff_content': diff_content,

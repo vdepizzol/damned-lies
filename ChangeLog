@@ -1,5 +1,14 @@
 2009-01-30  Claude Paroz  <claude@2xlibre.net>
 
+	* docs/notes-upgrade.txt: Add new field and migration script.
+	* stats/utils.py: Compute number of figures in po(t) files.
+	* stats/models.py: Store number of figures in database. This prevents
+	constant filesystem accesses (msgcat|grep) while displaying module stats.
+	Now filesystem access is only required when displaying doc images in
+	module_images template.
+
+2009-01-30  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/models.py: Place translator comment for date format just before 
 	the appropriate	string.
 	Fixes bug #569897.

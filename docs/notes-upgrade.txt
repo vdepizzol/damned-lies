@@ -34,3 +34,21 @@ ALTER TABLE language ADD FOREIGN KEY (`team_id`) REFERENCES `team` (`id`);
 ALTER TABLE team DROP group_ptr_id;
 ALTER TABLE team MODIFY `id` int(11) NOT NULL auto_increment;
 ALTER TABLE team ADD primary key(`id`);
+
+# r1412
+ALTER TABLE statistics ADD num_figures int(11) NOT NULL DEFAULT 0;
+# migration script to populate num_figures for POT files
+import os
+from stats.utils import run_shell_command
+from stats.models import Statistics
+
+stats = Statistics.objects.filter(language=None, domain__dtype='doc')
+for stat in stats:
+    pofile = stat.po_path(potfile=True)
+    if os.access(pofile, os.R_OK):
+        command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
+        (status, output, errs) = run_shell_command(command)
+        num = int(output)
+        if num > 0:
+            stat.num_figures = num
+            stat.save()

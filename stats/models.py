@@ -323,6 +323,7 @@ class Branch(models.Model):
             try:
                 stat = Statistics.objects.get(language=None, branch=self, domain=dom)
                 stat.untranslated = int(pot_stats['untranslated'])
+                stat.num_figures = int(pot_stats['num_figures'])
                 stat.date = datetime.now()
                 Information.objects.filter(statistics=stat).delete()
             except Statistics.DoesNotExist:
@@ -373,6 +374,7 @@ class Branch(models.Model):
                     stat.translated = int(langstats['translated'])
                     stat.fuzzy = int(langstats['fuzzy'])
                     stat.untranslated = int(langstats['untranslated'])
+                    stat.num_figures = int(langstats['num_figures'])
                     stat.date = datetime.now()
                     Information.objects.filter(statistics=stat).delete()
                 except Statistics.DoesNotExist:
@@ -964,6 +966,8 @@ class Statistics(models.Model):
     translated = models.IntegerField(default=0)
     fuzzy = models.IntegerField(default=0)
     untranslated = models.IntegerField(default=0)
+    # Number of figures in doc templates
+    num_figures = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'statistics'
@@ -1065,7 +1069,7 @@ class Statistics(models.Model):
     
     def fig_count(self):
         """ If stat of a document type, get the number of figures in the document """
-        return len(self.get_figures() or [])
+        return self.num_figures
     
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'total':0, 'prc':0}
@@ -1087,12 +1091,12 @@ class Statistics(models.Model):
         """ Return the Web interface path of file on remote vcs """
         return utils.url_join(self.branch.get_vcs_web_url(), self.domain.directory)
         
-    def po_path(self):
+    def po_path(self, potfile=False):
         """ Return path of po file on local filesystem """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs"
-        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename())
+        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile))
         
     def po_url(self, potfile=False):
         """ Return URL of po file, e.g. for downloading the file """
