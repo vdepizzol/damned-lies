@@ -1,5 +1,5 @@
 # translation of lt to Lithuanian
-# Copyright (C) 2008 Gintautas Miliauskas
+# Copyright (C) 2009 Gintautas Miliauskas
 # This file is distributed under the same license as the damned-lies package.
 #
 # Gintautas Miliauskas <gintas@akl.lt>, 2008, 2009.
@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-12 08:15+0000\n"
-"PO-Revision-Date: 2009-01-12 16:14+0200\n"
+"PO-Revision-Date: 2009-01-30 23:08+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: database-content.py:1
 msgid "Gujarati"
@@ -311,7 +312,7 @@ msgstr "Senoji anglų"
 
 #: database-content.py:74
 msgid "Afrikaans"
-msgstr "Afrikiečių"
+msgstr "Afrikaans"
 
 #: database-content.py:75
 msgid "Vietnamese"
@@ -935,23 +936,23 @@ msgstr "freedesktop.org (ne GNOME)"
 
 #: database-content.py:228
 msgid "GNOME 2.24 (stable)"
-msgstr ""
+msgstr "GNOME 2.24 (stabilus)"
 
 #: database-content.py:229
 msgid "GNOME 2.22 (old stable)"
-msgstr ""
+msgstr "GNOME 2.22 (senas stabilus)"
 
 #: database-content.py:230
 msgid "GNOME-Office Productivity Applications"
-msgstr "GNOME-Office Productivity Applications"
+msgstr "GNOME-Office produktyvumo programos"
 
 #: database-content.py:231
 msgid "GNOME 2.20 (old stable)"
-msgstr ""
+msgstr "GNOME 2.20 (senas stabilus)"
 
 #: database-content.py:232
 msgid "GNOME 2.26 (Development)"
-msgstr ""
+msgstr "GNOME 2.26 (kuriamas)"
 
 #: common/views.py:33
 msgid "translator-credits"
@@ -1250,7 +1251,8 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr ""
 
 #: stats/utils.py:289
-msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 
 #: stats/utils.py:292
@@ -1385,10 +1387,12 @@ msgid ""
 "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
 "lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 msgstr ""
+"Prižiūrima <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</"
+"a> modulyje serveryje <a href='http://svn.gnome.org/'>svn.gnome.org</a>."
 
 #: templates/base.html:97
 msgid "Hosted by"
-msgstr ""
+msgstr "Serverį teikia"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
 #: templates/login.html:4 templates/register.html:4
@@ -1405,12 +1409,17 @@ msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
+"Visų GNOME vertimo komandų sąrašas su informacija apie koordinatorius, "
+"tinklalapius ir el. pašto konferencijas."
 
 #: templates/index.html:15
 msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
+"Jei nėra vertėjų grupės, verčiančios į Jūsų kalbą, galite lengvai <a "
+"href='http://live.gnome.org/TranslationProject/StartingATeam/'>sukurti "
+"vertimo komandą</a>."
 
 #: templates/index.html:22
 #, python-format
@@ -1418,12 +1427,17 @@ msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
 msgstr ""
+"Kalbų, kurioms sukurtos <a href='%(teams_url)s'>vertimo komandos</a>, "
+"sąrašas."
 
 #: templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
+"Kai kurios komandos prižiūri daugiau negu vienos kalbos vertimą "
+"(dažniausiai tos pačios kalbos variantus).  Čia galite rasti visas kalbas, į "
+"kurias GNOME verčiamas."
 
 #: templates/index.html:27
 msgid "Release Sets"
@@ -1432,12 +1446,14 @@ msgstr "Leidimai"
 #: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
+"Visų GNOME leidimų ir paketų, kurių vertimo statistika sekama, sąrašas."
 
 #: templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
 msgstr ""
+"Leidimų ir paketų pavyzdžiai: „GNOME Office“, „Fifth Toe“ ar „GNOME 2.14“."
 
 #: templates/index.html:31
 msgid ""
@@ -1449,23 +1465,27 @@ msgstr ""
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
-msgstr ""
+msgstr "Čia galite palyginti kalbų palaikymą įvairiuose leidimuose."
 
 #: templates/index.html:37
 msgid "List of all modules with statistics in here."
-msgstr ""
+msgstr "Visų modulių su vertimų statistika sąrašas"
 
 #: templates/index.html:39
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
 msgstr ""
+"Moduliai yra atskiros bibliotekos ar programos su viena ar daugiau kūrimo "
+"šakų."
 
 #: templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
+"Jie paprastai paimami iš CVS, taip pat saugoma visa svarbi informacija apie "
+"juos (Bugzilla informacija, tinklalapis, prižiūrėtojai, …)."
 
 #: templates/index.html:46
 msgid "Translated by:"
@@ -1494,7 +1514,9 @@ msgstr "Modulio statistika: %(name)s"
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
-msgstr "Šis modulis nėra GNOME SVN repozitorijos dalis. Paskaitykite modulio tinklalapį, kuriame turėtų būti parašyta, kur siųsti vertimus."
+msgstr ""
+"Šis modulis nėra GNOME SVN repozitorijos dalis. Paskaitykite modulio "
+"tinklalapį, kuriame turėtų būti parašyta, kur siųsti vertimus."
 
 #: templates/module_detail.html:29
 msgid "Maintainers"
@@ -1569,7 +1591,7 @@ msgstr "GNOME moduliai"
 
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
-msgstr ""
+msgstr "Pasirinkite modulį, jei norite pamatyti daugiau informacijos apie jį:"
 
 #: templates/register.html:9
 msgid "Account Registration"
@@ -1642,6 +1664,8 @@ msgstr "GNOME leidimai"
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
+"Pasirinkite leidimą ar paketą, jei norite pamatyti daugiau informacijos apie "
+"jį:"
 
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:59
 msgid "Notices"
@@ -1653,7 +1677,7 @@ msgstr "Kalba"
 
 #: templates/stats_show.html:30 vertimus/models.py:151
 msgid "Translated"
-msgstr ""
+msgstr "Išversta"
 
 #: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:52
 msgid "Display document figures"
@@ -1672,8 +1696,9 @@ msgstr "GNOME kalbos"
 #, python-format
 msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "GNOME verčiamas į %(numb)s kalbą.\n"
+msgstr[1] "GNOME verčiamas į %(numb)s kalbas.\n"
+msgstr[2] "GNOME verčiamas į %(numb)s kalbų.\n"
 
 #: templates/languages/language_release.html:12
 msgid "Hide completed modules"
@@ -1685,7 +1710,7 @@ msgstr "Rodyti užbaigtus modulius"
 
 #: templates/languages/language_release_stats.html:23
 msgid "%(categname)s (%(percentage)s% translated)"
-msgstr ""
+msgstr "%(categname)s (išversta %(percentage)s%)"
 
 #: templates/languages/language_release_stats.html:81
 msgid "Error summary"
@@ -1702,11 +1727,11 @@ msgstr ""
 #: templates/people/person_base.html:13
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
-msgstr ""
+msgstr "Keisti asmeninę informaciją"
 
 #: templates/people/person_base.html:14
 msgid "Change your password"
-msgstr "Pasikeisti slaptažodį"
+msgstr "Keisti slaptažodį"
 
 #: templates/people/person_base.html:15
 msgid "Join a team"
@@ -1714,19 +1739,19 @@ msgstr "Prisijungti prie komandos"
 
 #: templates/people/person_detail.html:12
 msgid "Site Language:"
-msgstr ""
+msgstr "Svetainės kalba:"
 
 #: templates/people/person_detail.html:21
 msgid "Choose"
-msgstr ""
+msgstr "Pasirinkti"
 
 #: templates/people/person_detail.html:27
 msgid "Maintains:"
-msgstr ""
+msgstr "Prižiūri:"
 
 #: templates/people/person_detail.html:38
 msgid "Working on"
-msgstr ""
+msgstr "Dirba su"
 
 #: templates/people/person_detail.html:42
 msgid "Date"
@@ -1754,7 +1779,7 @@ msgstr "GNOME kuria šie žmonės:"
 
 #: templates/people/person_overview.html:27
 msgid "Instant messaging:"
-msgstr ""
+msgstr "Greitųjų žinučių tarnybos:"
 
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
@@ -1801,12 +1826,12 @@ msgstr "Prisijungti"
 #: templates/people/person_team_membership.html:5
 #: templates/teams/team_detail.html:63
 msgid "Team membership"
-msgstr "Komandos narystė"
+msgstr "Komandos nariai"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr ""
+msgstr "%(team_name)s komandos narys (%(role_name)s)"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1815,7 +1840,7 @@ msgstr "Išsami informacija"
 #: templates/teams/team_base.html:9
 #, python-format
 msgid "%(lang)s Translation Team Page:"
-msgstr ""
+msgstr "%(lang)s vertimo komandos puslapis:"
 
 #: templates/teams/team_base.html:13
 msgid "Bugzilla:"
@@ -1856,7 +1881,7 @@ msgstr "GNOME vertimo komandos"
 
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
-msgstr ""
+msgstr "Pasirinkite komandą, jei norite pamatyti daugiau informacijos apie ją:"
 
 #: templates/teams/team_list.html:25
 #, python-format
@@ -1890,7 +1915,7 @@ msgstr "Veiksmų istorija"
 
 #: templates/vertimus/vertimus_detail.html:87
 msgid "No comment"
-msgstr "Be komentaroKomentaro nėra"
+msgstr "Komentaro nėra"
 
 #: templates/vertimus/vertimus_detail.html:96
 msgid "New Action"
@@ -1902,8 +1927,9 @@ msgstr "Siųsti"
 
 #: templates/vertimus/vertimus_detail.html:107
 #, python-format
-msgid "You need to be authenticated and to be member of the %(team_name)s team."
-msgstr ""
+msgid ""
+"You need to be authenticated and to be member of the %(team_name)s team."
+msgstr "Turite būti autentikuotas ir %(team_name)s komandos narys."
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -1922,32 +1948,35 @@ msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Leidžiami tik failai su priesagomis .po, .gz, .bz2 arba .png."
 
 #: vertimus/forms.py:54
-msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
+".po failas netinkamas („msgfmt -vc“ grąžina klaidą). Pataisykite failą ir "
+"bandykite dar kartą."
 
 #: vertimus/forms.py:64
 msgid "A comment or a file is needed for this action."
-msgstr ""
+msgstr "Šiam veiksmui reikia komentaro arba failo."
 
 #: vertimus/forms.py:67
 msgid "A file is needed for this action."
-msgstr ""
+msgstr "Šiam veiksmui reikia failo."
 
 #: vertimus/models.py:125
 msgid "Inactive"
-msgstr ""
+msgstr "Neaktyvus"
 
 #: vertimus/models.py:138
 msgid "Translating"
-msgstr ""
+msgstr "Verčiama"
 
 #: vertimus/models.py:168
 msgid "Proofreading"
-msgstr ""
+msgstr "Tikrinama"
 
 #: vertimus/models.py:182
 msgid "Proofread"
-msgstr ""
+msgstr "Patikrinta"
 
 #: vertimus/models.py:195
 msgid "To Review"
@@ -2002,19 +2031,19 @@ msgstr ""
 
 #: vertimus/models.py:432
 msgid "Reserve for translation"
-msgstr ""
+msgstr "Rezervuoti vertimui"
 
 #: vertimus/models.py:443
 msgid "Upload the new translation"
-msgstr ""
+msgstr "Nusiųsti naują vertimą"
 
 #: vertimus/models.py:458
 msgid "Reserve for proofreading"
-msgstr ""
+msgstr "Rezervuoti tikrinimui"
 
 #: vertimus/models.py:469
 msgid "Upload for proofreading"
-msgstr ""
+msgstr "Nusiųsti tikrinimui"
 
 #: vertimus/models.py:484
 msgid "Ready for submission"
@@ -2030,7 +2059,7 @@ msgstr ""
 
 #: vertimus/models.py:525
 msgid "Requiring review"
-msgstr ""
+msgstr "Reikia peržiūros"
 
 #: vertimus/models.py:556
 msgid "Backup the actions"
@@ -2038,5 +2067,4 @@ msgstr ""
 
 #: vertimus/models.py:593
 msgid "Undo the last state change"
-msgstr ""
-
+msgstr "Atšaukti paskutinį būsenos pakeitimą"
