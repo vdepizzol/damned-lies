@@ -1,5 +1,10 @@
 2009-01-30  Claude Paroz  <claude@2xlibre.net>
 
+	* vertimus/tests/__init__.py:
+	* vertimus/views.py: Revert unwanted changes in previous commit.
+
+2009-01-30  Claude Paroz  <claude@2xlibre.net>
+
 	* docs/notes-upgrade.txt: Add new field and migration script.
 	* stats/utils.py: Compute number of figures in po(t) files.
 	* stats/models.py: Store number of figures in database. This prevents
