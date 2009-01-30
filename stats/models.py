@@ -1039,8 +1039,10 @@ class Statistics(models.Model):
     def pot_text(self):
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", self.pot_size()) % {'count': self.pot_size()}
-        # Date format syntax is similar to PHP http://www.php.net/date
-        upd_text = _(u"updated on %(date)s") % {'date': dateformat.format(self.date, _("Y-m-d g:i a O"))}
+        upd_text = _(u"updated on %(date)s") % {
+                        # Date format syntax is similar to PHP http://www.php.net/date
+                        'date': dateformat.format(self.date, _("Y-m-d g:i a O"))
+                        }
         if self.fig_count():
             fig_text = ungettext(u"%(count)s figure", "%(count)s figures", self.fig_count()) % {'count': self.fig_count()}
             text = _(u"POT file (%(messages)s, %(figures)s) — %(updated)s") % \
