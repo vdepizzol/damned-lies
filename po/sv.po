@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-24 14:54+0000\n"
-"PO-Revision-Date: 2009-01-25 23:16+0100\n"
+"POT-Creation-Date: 2009-01-27 21:38+0000\n"
+"PO-Revision-Date: 2009-02-01 00:59+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -414,7 +414,7 @@ msgstr "Georgiska"
 
 #: database-content.py:100
 msgid "Kazakh"
-msgstr "Kazak"
+msgstr "Kazakiska"
 
 #: database-content.py:101
 msgid "Serbian"
@@ -1024,11 +1024,13 @@ msgstr "OpenID:"
 msgid "Log in with OpenID"
 msgstr "Logga in med OpenID"
 
-#: languages/views.py:51
+#: languages/views.py:49
+#: languages/views.py:64
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
 
-#: languages/views.py:52
+#: languages/views.py:50
+#: languages/views.py:65
 #: templates/module_detail.html:88
 #: templates/release_detail.html:22
 #: templates/teams/team_detail.html:23
@@ -1061,8 +1063,9 @@ msgid "This username is already taken. Please choose another."
 msgstr "Detta användarnamn används redan. Välj ett annat."
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
-msgstr "Du måste antingen tillhandahålla ett OpenID eller lösenord"
+#| msgid "You must either provide an OpenId or a password"
+msgid "You must either provide an OpenID or a password"
+msgstr "Du måste antingen tillhandahålla ett OpenID eller ett lösenord"
 
 #: people/forms.py:42
 msgid "The passwords do not match"
@@ -1273,24 +1276,24 @@ msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfil
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
-#: teams/models.py:113
+#: teams/models.py:112
 #, python-format
 msgid "No team for locale %s"
 msgstr "Ingen grupp för lokalen %s"
 
-#: teams/models.py:130
+#: teams/models.py:129
 msgid "Translator"
 msgstr "Översättare"
 
-#: teams/models.py:131
+#: teams/models.py:130
 msgid "Reviewer"
 msgstr "Granskare"
 
-#: teams/models.py:132
+#: teams/models.py:131
 msgid "Committer"
 msgstr "Insändare"
 
-#: teams/models.py:133
+#: teams/models.py:132
 #: templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Koordinator"
@@ -1662,6 +1665,36 @@ msgstr "Visa dokumentationsbilder"
 msgid "Damned Lies site admin"
 msgstr "Admin för Förbannade lögner"
 
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#| msgid "Modules"
+msgid "All modules"
+msgstr "Alla moduler"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:12
+msgid "Hide completed modules"
+msgstr "Dölj färdiga moduler"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:16
+msgid "Show completed modules"
+msgstr "Visa färdiga moduler"
+
+#: templates/languages/language_all_modules.html:34
+#: templates/people/person_detail.html:54
+msgid "Module"
+msgstr "Modul"
+
+#: templates/languages/language_all_modules.html:34
+#| msgid "Branches:"
+msgid "Branch"
+msgstr "Gren"
+
+#: templates/languages/language_all_modules.html:34
+msgid "Statistics"
+msgstr "Statistik"
+
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
@@ -1673,14 +1706,6 @@ msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME översätts till följande %(numb)s språk.\n"
 msgstr[1] "GNOME översätts till följande %(numb)s språk.\n"
-
-#: templates/languages/language_release.html:12
-msgid "Hide completed modules"
-msgstr "Dölj färdiga moduler"
-
-#: templates/languages/language_release.html:16
-msgid "Show completed modules"
-msgstr "Visa färdiga moduler"
 
 #: templates/languages/language_release_stats.html:23
 msgid "%(categname)s (%(percentage)s% translated)"
@@ -1711,31 +1736,27 @@ msgstr "Ändra ditt lösenord"
 msgid "Join a team"
 msgstr "Gå med i en grupp"
 
-#: templates/people/person_detail.html:12
+#: templates/people/person_detail.html:24
 msgid "Site Language:"
 msgstr "Språk för webbplats:"
 
-#: templates/people/person_detail.html:21
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Välj"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:39
 msgid "Maintains:"
 msgstr "Underhåller:"
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:50
 msgid "Working on"
 msgstr "Arbetar på"
 
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Datum"
 
-#: templates/people/person_detail.html:42
-msgid "Module"
-msgstr "Modul"
-
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Tillstånd"
 
@@ -1891,19 +1912,23 @@ msgstr "Översatt:"
 msgid "Action History"
 msgstr "Åtgärdshistorik"
 
-#: templates/vertimus/vertimus_detail.html:88
+#: templates/vertimus/vertimus_detail.html:81
+msgid "diff with:"
+msgstr "diff med:"
+
+#: templates/vertimus/vertimus_detail.html:92
 msgid "No comment"
 msgstr "Ingen kommentar"
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:108
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:112
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -1952,6 +1977,10 @@ msgstr "En kommentar eller en fil behövs för denna åtgärd."
 msgid "A file is needed for this action."
 msgstr "En fil behövs för denna åtgärd."
 
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Skicka inte en fil med en \"Reservera\"-åtgärd."
+
 #: vertimus/models.py:138
 msgid "Inactive"
 msgstr "Inaktiv"
@@ -1984,7 +2013,20 @@ msgstr "Insändning"
 msgid "Committed"
 msgstr "Insänd"
 
-#: vertimus/models.py:418
+#: vertimus/models.py:326
+#| msgid "Browse Repository"
+msgid "File in repository"
+msgstr "Arkivera i förråd"
+
+#: vertimus/models.py:331
+#: vertimus/views.py:122
+#: vertimus/views.py:129
+#: vertimus/views.py:147
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Uppskickad fil av %(name)s den %(date)s"
+
+#: vertimus/models.py:428
 #, python-format
 msgid ""
 "Hello,\n"
@@ -1999,22 +2041,22 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:431
-#: vertimus/models.py:481
+#: vertimus/models.py:441
+#: vertimus/models.py:491
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:433
-#: vertimus/models.py:483
+#: vertimus/models.py:443
+#: vertimus/models.py:493
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Detta är ett automatiskt skickat meddelande från %s."
 
-#: vertimus/models.py:440
+#: vertimus/models.py:450
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:479
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2029,62 +2071,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:501
 msgid "Reserve for translation"
 msgstr "Reservera för översättning"
 
-#: vertimus/models.py:502
+#: vertimus/models.py:513
 msgid "Upload the new translation"
 msgstr "Skicka upp ny översättning"
 
-#: vertimus/models.py:517
+#: vertimus/models.py:528
 msgid "Reserve for proofreading"
 msgstr "Reservera för korrekturläsning"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:540
 msgid "Upload the proofread translation"
 msgstr "Skicka upp granskad översättning"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:573
 msgid "Reserve to submit"
 msgstr "Reservera för insändning"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:586
 msgid "Inform of submission"
 msgstr "Informera om insändning"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
+#: vertimus/models.py:601
 msgid "Review required"
 msgstr "Granskning krävs"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:632
 msgid "Backup the actions"
 msgstr "Säkerhetskopiera åtgärderna"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:671
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
-#: vertimus/views.py:122
-#: vertimus/views.py:127
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "Uppskickad fil av %(name)s den %(date)s"
-
-#: vertimus/views.py:133
+#: vertimus/views.py:135
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Senaste insända fil för %(lang)s"
 
-#: vertimus/views.py:136
+#: vertimus/views.py:138
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
