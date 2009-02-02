@@ -16,7 +16,7 @@
 <table class="stats">
   <thead>
     <tr>
-      <th>{% trans "Release" %}</th>
+      <th>{% trans "Language" %}</th>
       <th>{% trans "User Interface" %}</th>
       <th>{% trans "Graph" %}</th>
       <th>{% trans "Documentation" %}</th>
@@ -27,7 +27,7 @@
 {% for lstats in release.get_global_stats %}
 <tr>
   <td class="leftcell">
-    {% trans lstats.lang_name %}</a>
+    <a href="{% url team_slug lstats.lang_locale %}">{% trans lstats.lang_name %}</a>
   </td>
   
   <td><a href="{% url language_release lstats.lang_locale release.name "ui" %}">

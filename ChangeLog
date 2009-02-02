@@ -1,5 +1,11 @@
 2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* templates/release_detail.html: Fix language link (only the end
+	of anchor was present) and add the URL. Replace incorrect
+	'Release' header by 'Language'.
+
+2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* docs/notes-upgrade.txt: Added notes for PostgreSQL.
 
 2009-01-30  Claude Paroz  <claude@2xlibre.net>
