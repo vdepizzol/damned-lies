@@ -1,4 +1,4 @@
-# r1226
+## r1226
 Add this attribute to Team to be able to run the snippet:
 coordinator = models.ForeignKey(Person)
 
@@ -17,10 +17,12 @@ SQL command
 ALTER TABLE team DROP coordinator_id;
 
 
-# r1229
+## r1229
 ALTER TABLE statistics ADD UNIQUE ("branch_id", "domain_id", "language_id");
 
-# r1402
+## r1402
+
+# For MySQL
 # decouple team from auth_group:
 ALTER TABLE team ADD `id` int(11) NOT NULL FIRST;
 ALTER TABLE team ADD UNIQUE(`id`);
@@ -35,8 +37,22 @@ ALTER TABLE team DROP group_ptr_id;
 ALTER TABLE team MODIFY `id` int(11) NOT NULL auto_increment;
 ALTER TABLE team ADD primary key(`id`);
 
-# r1412
+## For PostgreSQL (simpler :)
+ALTER TABLE team ADD id SERIAL NOT NULL;
+ALTER TABLE team ADD name CHAR(50);
+UPDATE team t SET id = ag.id FROM auth_group ag WHERE t.group_ptr_id = ag.id;
+UPDATE team t SET name = ag.name FROM auth_group ag WHERE t.group_ptr_id = ag.id;
+ALTER TABLE team ADD UNIQUE(id);
+ALTER TABLE team ALTER name SET NOT NULL;
+ALTER TABLE team DROP group_ptr_id CASCADE;
+ALTER TABLE language ADD FOREIGN KEY (team_id) REFERENCES team(id);
+
+## r1412 
+# For MySQL
 ALTER TABLE statistics ADD num_figures int(11) NOT NULL DEFAULT 0;
+# For PostgreSQL
+ALTER TABLE statistics ADD num_figures int NOT NULL DEFAULT 0;
+
 # migration script to populate num_figures for POT files
 import os
 from stats.utils import run_shell_command
