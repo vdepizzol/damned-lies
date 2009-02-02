@@ -1,5 +1,13 @@
 2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	Add a new XML export for each release detail.
+	
+	* stats/views.py: New render_to_response.
+	* templates/release_detail.xml: Added template.
+	* urls.py: Optionally accept 'xml' as argument.
+
+2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* templates/release_detail.html: Fix language link (only the end
 	of anchor was present) and add the URL. Replace incorrect
 	'Release' header by 'Language'.

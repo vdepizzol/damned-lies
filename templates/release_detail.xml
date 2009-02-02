@@ -1,0 +1,13 @@
+<release id="{{ release.name }}">
+  {% for stat in release.get_global_stats %}
+  <language id="{{ stat.lang_locale }}">
+    <name>{{ stat.lang_name }}</name>
+    <ui_translated>{{ stat.ui_trans }}</ui_translated>
+    <ui_fuzzy>{{ stat.ui_fuzzy }}</ui_fuzzy>
+    <ui_untranslated>{{ stat.ui_untrans }}</ui_untranslated>
+    <doc_translated>{{ stat.doc_trans }}</doc_translated>
+    <doc_fuzzy>{{ stat.doc_fuzzy }}</doc_fuzzy>
+    <doc_untranslated>{{ stat.doc_untrans }}</doc_untranslated>
+  </language>
+  {% endfor %}
+</release>

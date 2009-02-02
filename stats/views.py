@@ -139,11 +139,14 @@ def releases(request, format='html'):
         }
         return render_to_response('release_list.html', context, context_instance=RequestContext(request))
 
-def release(request, release_name):
-    rel = get_object_or_404(Release, name=release_name)
-    context = {
-        'pageSection': "releases",
-        'release': rel
-    }
-    return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
+def release(request, release_name, format='html'):
+    release = get_object_or_404(Release, name=release_name)
+    if format == 'xml':
+        return render_to_response('release_detail.xml', { 'release' : release }, mimetype=MIME_TYPES[format])
+    else:
+        context = {
+            'pageSection': "releases",
+            'release': release
+        }
+        return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
 

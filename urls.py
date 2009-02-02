@@ -26,7 +26,7 @@ urlpatterns += patterns('stats.views',
     (r'^module/(?P<module_name>[\w\-\+]+)/edit/branches/$', 'module_edit_branches'),
     (r'^module/(?P<module_name>[\w\-\+]+)/(?P<potbase>[\w-]+)/(?P<branch_name>[\w-]+)/(?P<langcode>[\w@]+)/images/$', 'docimages'),
     url(r'^releases/(?P<format>(html|json|xml))?/?$', 'releases', name='releases'),
-    (r'^releases/(?P<release_name>[\w-]+)$', 'release'),
+    (r'^releases/(?P<release_name>[\w-]+)/(?P<format>(html|xml))?/?$', 'release'),
 )
 
 if 'django_openid' in settings.INSTALLED_APPS:
