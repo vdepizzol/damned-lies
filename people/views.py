@@ -18,6 +18,8 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from django.core import urlresolvers
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.utils.translation import ugettext as _, get_date_formats
 from django.template import RequestContext
@@ -25,7 +27,7 @@ from django.db import transaction, IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from people.models import Person
-from teams.models import Role
+from teams.models import Team, Role
 from people.forms import TeamJoinForm, DetailForm
 from vertimus.models import StateDb
 
@@ -39,6 +41,7 @@ def person_detail(request, person_id=None, person_username=None):
     context = {
         'pageSection': "teams",
         'person': person,
+        'on_own_page': request.user.is_authenticated() and person.username == request.user.username,
         'states': states,
         'dateformat': get_date_formats()[0],
     }
@@ -49,21 +52,20 @@ def person_detail(request, person_id=None, person_username=None):
 def person_detail_change(request):
     """Handle the form to change the details"""
     person = get_object_or_404(Person, username=request.user.username)
-    messages = []
     if request.method == 'POST':
         form = DetailForm(request.POST, instance=person)
         if form.is_valid():
             form.save()
         else:
-            messages.append("Sorry, the form is not valid.")
+            request.user.message_set.create(message="Sorry, the form is not valid.")
     else:
         form = DetailForm(instance=person)
 
     context = {
         'pageSection': "teams",
         'person': person,
+        'on_own_page': person.username == request.user.username,
         'form': form,
-        'messages': messages
     }
     return render_to_response('people/person_detail_change_form.html', context,
             context_instance=RequestContext(request))
@@ -73,41 +75,57 @@ def person_detail_change(request):
 def person_team_join(request):
     """Handle the form to join a team"""
     person = get_object_or_404(Person, username=request.user.username)
-    messages = []
     if request.method == 'POST':
         form = TeamJoinForm(request.POST)
         if form.is_valid():
             team = form.cleaned_data['teams']
-            new_role = Role(team=team, person=person) # role default to translator
+            # Role default to 'translator'
+            new_role = Role(team=team, person=person)
             try:
                 new_role.save()
-                transaction.commit()
+                request.user.message_set.create(message=_("You have successfully joined the team '%s'.") % team.get_description())
             except IntegrityError:
                 transaction.rollback()
-                messages.append(_("You are already member of this team."))
+                request.user.message_set.create(message=_("You are already member of this team."))
     else:
         form = TeamJoinForm()
 
     context = {
         'pageSection': "teams",
         'person': person,
+        'on_own_page': person.username == request.user.username,
         'form': form,
-        'messages': messages
     }
-    return render_to_response('people/person_team_join_form.html', context, 
-            context_instance=RequestContext(request))
 
+    context_instance = RequestContext(request)
+    transaction.commit()
+    return render_to_response('people/person_team_join_form.html', context, 
+            context_instance=context_instance)
+
+@login_required
+def person_team_leave(request, team_slug):
+    person = get_object_or_404(Person, username=request.user.username)
+    team = get_object_or_404(Team, name=team_slug)
+    try:
+        role = Role.objects.get(team=team, person=person)
+        role.delete()
+        person.message_set.create(message=_("You have been removed from the team '%s'.") % team.get_description())
+    except Role.DoesNotExist:
+        # Message no i18n'ed, should never happen under normal conditions
+        person.message_set.create(message="You are not a member of this team.")
+    # redirect to normal person detail
+    return HttpResponseRedirect(urlresolvers.reverse('person-username-view', 
+                                                     args=(person.username,)))
 
 @login_required
 def person_password_change(request):
     """Handle the generic form to change the password"""
     person = get_object_or_404(Person, username=request.user.username)
-    messages = []
 
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
-            messages.append(_("Your password has been changed."))
+            request.user.message_set.create(message=_("Your password has been changed."))
             form.save()
     else:
         form = PasswordChangeForm(request.user)
@@ -115,8 +133,8 @@ def person_password_change(request):
     context = {
         'pageSection': "teams",
         'person': person,
+        'on_own_page': person.username == request.user.username,
         'form': form,
-        'messages': messages
     }
     return render_to_response('people/person_password_change_form.html', context,
             context_instance=RequestContext(request))

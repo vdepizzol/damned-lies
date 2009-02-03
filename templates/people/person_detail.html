@@ -16,30 +16,31 @@ $(document).ready(function()
 {% endblock %}
 
 {% block subcontent %}
-{% if user.is_authenticated %}
-{% ifequal user.username person.username %}
+{% if on_own_page %}
   <br clear="right" />
   <div style="float:right; text-align:right;">
-  <form action="/i18n/setlang/" method="post">
-  {% trans "Site Language:" %} <select name="language">
-  {% for lang in LANGUAGES %}
-    {% ifequal lang.0 LANGUAGE_CODE %}
-    <option value="{{ lang.0 }}" selected="selected">{% trans  lang.1 %}</option>
-    {% else %}
-    <option value="{{ lang.0 }}" >{% trans lang.1 %}</option>
-    {% endifequal %}
-  {% endfor %}
-  </select><br />
-  <input type="submit" value="{% trans "Choose" %}" />
-  </form></div>
-{% endifequal %}
+    <form action="/i18n/setlang/" method="post">
+      {% trans "Site Language:" %}
+      <select name="language">
+      {% for lang in LANGUAGES %}
+        {% ifequal lang.0 LANGUAGE_CODE %}
+        <option value="{{ lang.0 }}" selected="selected">{% trans lang.1 %}</option>
+        {% else %}
+        <option value="{{ lang.0 }}" >{% trans lang.1 %}</option>
+        {% endifequal %}
+      {% endfor %}
+      </select>
+      <br/>
+      <input type="submit" value="{% trans "Choose" %}" />
+    </form>
+  </div>
 {% endif %}
 
 {% if person.maintains_modules.all %}
 <h2>{% trans "Maintains:" %}</h2>
 <ul>
   {% for module in person.maintains_modules.all %}
-  <li><a href="{{ module.get_absolute_url }} ">{{ module.description }}</a></li>
+  <li><a href="{{ module.get_absolute_url }}">{{ module.description }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
@@ -63,7 +64,6 @@ $(document).ready(function()
 {% endfor %}
 </tbody>
 </table>
-
 {% endif %}
 
 {% endblock %}

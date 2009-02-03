@@ -6,8 +6,7 @@
 
 {% block content %}
 <div class="mainpage">
-  {% if user.is_authenticated %}
-  {% ifequal user.username person.username %}
+  {% if on_own_page %}
   <div class="right_actions">
     <ul>
       <li><a href="{% url person-detail-change-view %}">{% trans "Change your details" %}</a></li>
@@ -15,7 +14,6 @@
       <li><a href="{% url person-team-join-view %}">{% trans "Join a team" %}</a></li>
     </ul>
   </div>
-  {% endifequal %}
   {% endif %}
 
   {% include "people/person_overview.html" %}

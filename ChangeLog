@@ -1,5 +1,28 @@
 2009-02-03  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	Patch made with Claude to fix #570247.
+	
+	* media/css/layout.css: New 'inline' class to avoid style tag in
+ 	HTML code.
+	* people/urls.py: New team_leave view (GET).
+	* people/views.py: Messages are passed by the message_set
+	relation (the old message still present in templates/base.html for
+	stats). New person_team_leave() function. Extract RequestContext()
+	call from render_to_response to avoid the get and delete of
+	messages in manual commit context.
+	* templates/people/person_base.html: Use new on_own_page
+	boolean.
+	* templates/people/person_detail.html: Use new on_own_page
+	boolean. Indent.
+	* templates/people/person_team_join_form.html: Removed useless
+	hidden.
+	* templates/people/person_team_membership.html: Change the string
+	"Team membership" incorrect in this context. Add a javascript
+	action to confirm the leaving (FIXME the message doesn't seem to
+	be translated).	
+
+2009-02-03  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* README: Line width reduced to 80 columns. The objective to merge
 	with Transifex is no longer true. Added note about Cherokee Web
 	server.	
@@ -26,7 +49,7 @@
 	* templates/languages/language_release_stats.html: Module table is now
 	sortable. Move "Download all po files" to language_release.
 	* templates/teams/team_detail.html: Add links to "all modules" view.
-    Fixes bugs #415315, #567084.
+	Fixes bugs #415315, #567084.
 
 2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
