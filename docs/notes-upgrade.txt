@@ -39,7 +39,7 @@ ALTER TABLE team ADD primary key(`id`);
 
 ## For PostgreSQL (simpler :)
 ALTER TABLE team ADD id SERIAL NOT NULL;
-ALTER TABLE team ADD name CHAR(50);
+ALTER TABLE team ADD name VARCHAR(50);
 UPDATE team t SET id = ag.id FROM auth_group ag WHERE t.group_ptr_id = ag.id;
 UPDATE team t SET name = ag.name FROM auth_group ag WHERE t.group_ptr_id = ag.id;
 ALTER TABLE team ADD UNIQUE(id);

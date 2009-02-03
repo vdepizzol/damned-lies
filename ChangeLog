@@ -1,11 +1,18 @@
+2009-02-03  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* README: Line width reduced to 80 columns. The objective to merge
+	with Transifex is no longer true. Added note about Cherokee Web
+	server.	
+	* docs/notes-upgrade.txt: Fixes varchar on team.name for PostgreSQL.
+
 2009-02-03  Claude Paroz  <claude@2xlibre.net>
 
 	* languages/views.py: Adapt XML generation to new stats structure.
 
 2009-02-03  Claude Paroz  <claude@2xlibre.net>
 
-	* templates/languages/language_release_stats.html: Don't include spaces in
-	translatable strings.
+	* templates/languages/language_release_stats.html: Don't include
+	spaces in translatable strings.
 
 2009-02-03  Claude Paroz  <claude@2xlibre.net>
 

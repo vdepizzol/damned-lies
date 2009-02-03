@@ -1,16 +1,14 @@
-This is a re-implementation of the Damned-Lies application
-in a Django app. Damned-Lies has been originally written by
-Danilo Segan (danilo@gnome.org). This implementation has been
-written by Claude Paroz (claude@2xlibre.net) and Stéphane
-Raimbault (stephane.raimbault@gmail.com).
+This is a re-implementation of the Damned-Lies application in Django.
+Damned-Lies has been originally written by Danilo Segan
+(danilo@gnome.org). This implementation has been written by Claude
+Paroz (claude@2xlibre.net) and Stéphane Raimbault
+(stephane.raimbault@gmail.com).
 
-The former XML files (modules, releases, people, translation
-teams) have been replaced by a database.
+The former XML files (modules, releases, people, translation teams)
+have been replaced by a database.
 
 The Data model is in the /docs directory.
 
-The middle-term objective is to merge this code with the Transifex 
-application (http://transifex.org).
 
 Requirements
 ============
@@ -37,13 +35,16 @@ Requirements
     git clone git://github.com/dcramer/django-debug-toolbar.git
     Define USE_DEBUG_TOOLBAR to True in settings.py to use it.
 
-6 - [Optional] python-openid and django-openid (see OpenID support below).
+6 - [Optional] python-openid and django-openid (see OpenID support
+    below).
+
 
 Installation
 ============
 
 1 - Rename settings_sample.py to settings.py and review settings
-    (please refer to Database configuration below for more informations).
+    (please refer to Database configuration below for more
+    informations).
 
 2 - Run 'python manage.py syncdb'
 
@@ -53,16 +54,21 @@ Installation
 4 - Download jQuery and tablesorter .min.js files and copy them in
     /media/js directory. Rename jquery-x.y.z.min.js into jquery.min.js
 
+
 OpenID support
 ==============
+
 If you want OpenID support, checkout Simon Willison's django_openid
-package (WIP, part of django-openid, not confuse!): 
+package (WIP, part of django-openid, not confuse!):
+
 svn co http://django-openid.googlecode.com/svn/trunk/django_openid
-Put it somewhere in your Python path and uncomment 'django_openid' in your
-settings.py INSTALLED_APPS.
-This package is dependant on the python-openid package to be installed on
-your system.
-Run 'python manage.py syncdb' and here we go!
+
+Put it somewhere in your Python path and uncomment 'django_openid' in
+your settings.py INSTALLED_APPS.
+
+This package is dependant on the python-openid package to be installed
+on your system. Run 'python manage.py syncdb' and here we go!
+
 
 Databases
 =========
@@ -73,7 +79,8 @@ performances.
 PostgreSQL
 ----------
 
-You just need to define DATABASE_ENGINE = 'postgresql_psycopg2' and DATABASE_NAME. Leave DATABASE_HOST setting empty to use UDS.
+You just need to define DATABASE_ENGINE = 'postgresql_psycopg2' and
+DATABASE_NAME. Leave DATABASE_HOST setting empty to use UDS.
 
 MySQL
 -----
@@ -98,25 +105,33 @@ mode: http://dev.mysql.com/doc/refman/5.0/en/server-sql-mode.html
 (sql-mode="ANSI_QUOTES" in my.cnf) but it can be dangerous for other
 applications.
 
+
 Running as CGI
 ==============
 
-If you don't want to setup Django with mod_python, there is a tutorial
+If you don't want to setup Django with Apache/mod_python, there is a tutorial
 on the Django Wiki:
-http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/
 
+http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/
 You'll also find a sample init script in the /docs directory.
+
+You can also use Cherokee/SCGI:
+http://www.cherokee-project.com/doc/cookbook_django.html
+
 
 Translations
 ============
 
-To be able to also extract strings from various database fields, a wrapper
-script has been created around standard Django make_messages. The script also
-copy po files in /po directory.
-Run 'python manage.py update-trans' to update translations when there are
-string changes.
+To be able to also extract strings from various database fields, a
+wrapper script has been created around standard Django
+make_messages. The script also copy po files in /po directory.
 
-After translation files in po directory have been updated, there is another script
-to put back po files in locale/<ll>/LC_MESSAGES/django.po and call Django's
-compile_messages command.
-Run 'python manage.py compile-trans'
+Run 'python manage.py update-trans' to update translations when there
+are string changes.
+
+After translation files in po directory have been updated, there is
+another script to put back po files in
+locale/<ll>/LC_MESSAGES/django.po and call Django's compile_messages
+command.
+
+Run 'python manage.py compile-trans'.
