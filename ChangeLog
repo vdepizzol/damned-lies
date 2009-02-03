@@ -1,5 +1,10 @@
 2009-02-03  Claude Paroz  <claude@2xlibre.net>
 
+	* templates/languages/language_release_stats.html: Don't include spaces in
+	translatable strings.
+
+2009-02-03  Claude Paroz  <claude@2xlibre.net>
+
 	* languages/views.py:
 	* media/css/main.css: Add branch class.
 	* stats/models.py: Make get_lang_stats_by_type a method of Statistics
