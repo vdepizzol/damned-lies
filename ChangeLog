@@ -1,3 +1,17 @@
+2009-02-03  Claude Paroz  <claude@2xlibre.net>
+
+	* languages/views.py:
+	* media/css/main.css: Add branch class.
+	* stats/models.py: Make get_lang_stats_by_type a method of Statistics
+	instead of Release.
+	* templates/languages/language_all_modules.html: Include
+	language_release_stats.html
+	* templates/languages/language_release.html:
+	* templates/languages/language_release_stats.html: Module table is now
+	sortable. Move "Download all po files" to language_release.
+	* templates/teams/team_detail.html: Add links to "all modules" view.
+    Fixes bugs #415315, #567084.
+
 2009-02-02  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	Add a new XML export for each release detail.

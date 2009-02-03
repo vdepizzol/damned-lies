@@ -42,13 +42,14 @@ def languages(request):
 
 def language_all(request, locale, dtype):
     language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
-    stats = Statistics.objects.filter(language=language, domain__dtype=dtype).select_related('branch__module', 'domain') 
+    stats = Statistics.get_lang_stats_by_type(language, dtype, release=None)
     context = {
         'pageSection': "languages",
         'language': language,
         'stats_title': {'ui':  _("UI Translations"),
                         'doc': _("Documentation")}.get(dtype),
         'stats': stats,
+        'dateformat': get_date_formats()[0],
     }
     return render_to_response('languages/language_all_modules.html', context,
                               context_instance=RequestContext(request))
@@ -56,7 +57,7 @@ def language_all(request, locale, dtype):
 def language_release(request, locale, release_name, dtype):
     language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
     release = get_object_or_404(Release, name=release_name)
-    stats = release.get_lang_stats_by_type(language, dtype)
+    stats = Statistics.get_lang_stats_by_type(language, dtype, release)
     context = {
         'pageSection': "languages",
         'language': language,

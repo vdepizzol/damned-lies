@@ -2,9 +2,9 @@
 
 {% load i18n %}
 
-<table name="stats-table">
+<table>
 <tr>
-  <td class="leftcell" colspan="2">{{ modstats.totaltransperc }}% ({{ modstats.totaltrans }}/{{ modstats.totalfuzzy }}/{{ modstats.totaluntrans }})</td>
+  <td class="leftcell" colspan="3">{{ modstats.totaltransperc }}% ({{ modstats.totaltrans }}/{{ modstats.totalfuzzy }}/{{ modstats.totaluntrans }})</td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ modstats.totaltransperc }}px;"></div>
       <div class="fuzzy" style="left:{{ modstats.totaltransperc }}px; width:{{ modstats.totalfuzzyperc }}px;"></div>
@@ -14,46 +14,53 @@
      </div>
    </td>
 </tr>
+</table>
 
+<table class="tablesorter" name="stats-table" id="stats-table">
+<thead>
+  <tr><th>{% trans "Module" %}</th><th>{% trans "Branch&nbsp;&nbsp;&nbsp;" %}</th><th >{% trans "Statistics" %}</th>
+      <th></th><th>{% trans "Status&nbsp;&nbsp;&nbsp;" %}</th><th>{% trans "Date&nbsp;&nbsp;&nbsp;" %}</th></tr>
+</thead>
+<tbody>
+ {# empty line to not disturb tablesorter if 1st line is a colspan #}
+ <tr style="display:none;"><td>mod</td><td>br</td><td>100</td><td></td><td>state</td><td></td></tr>
 {% for catname,categ in modstats.categs.items %}
   {% ifnotequal catname "default" %}
-    <tr><td colspan="3" class="leftcell" style="font-weight: bold; padding-top:1em;">
+    <tr class="subheader"><td colspan="4" class="leftcell" style="font-weight: bold; padding-top:1em;">
      {% with categ.cattransperc as percentage %}
      {% with categ.catname as categname %}
      {% blocktrans %}{{ categname }} ({{ percentage }}% translated){% endblocktrans %}
      {% endwith %}
      {% endwith %}
-    </td></tr>
+    </td><td></td></tr>
   {% endifnotequal %}
   
   {% for module in categ.modules %}
     {% with module.0 as modname %}
-    {% for dom in module.1.domains %}
+    {% for branch, doms in module.1.items %}
+     {% for dom in doms %}
       {% with dom.0 as domname %}
       {% with dom.1 as stat %}
-      {% if stat %}
+      {% if stat and not stat.is_fake %}
         {% ifequal stat.tr_percentage 100 %}
           <tr id="{{ modname }}-{{ stat.domain.id }}-complete">
         {% else %}
           <tr>
         {% endifequal %}
+        <td class="leftcell">
+          <a href="{% url vertimus-names-view modname branch stat.domain.name language.locale %}">{{ stat.module_description }}
           {% if stat.partial_po %}
-            {# This is a partial po, indented, with the domain description #}
-            <td class="leftcell" style="padding-left:2em; padding-right:2em;">
-            <a href="{% url vertimus-names-view modname module.1.branch stat.domain.name language.locale %}">{{ domname }}</a>
-          {% else %}
-            <td class="leftcell">
-            {% if not stat.is_fake %}
-              <a href="{% url vertimus-names-view modname module.1.branch stat.domain.name language.locale %}">{{ stat.module_description }}</a>
-            {% else %}
-              <em>{{ stat.module_description }}</em>
-            {% endif %}
+            {# For a partial po, domain description is appended #}
+            &bull; {{ domname }}
           {% endif %}
+          </a>          
           {% for err in stat.info_list %}
             <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}
-          </td>
-          <td>{{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
+        </td>
+          <td><span class="branch">{{ branch }}</span></td>
+          <td><span style="display:none;">{{ stat.tr_percentage }}</span>
+              {{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
           <td style="width: 108px; text-align: center;"><div class="graph">
               <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
               <div class="fuzzy" style="left:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
@@ -65,18 +72,23 @@
            <td>
            {% if stat.state.name %}
              {% ifnotequal stat.state.name "None" %}
-             <em><small>{{ stat.state.get_state }} - {{ stat.state.updated|date:dateformat }}</small></em>
+             <em><small>{{ stat.state.get_state }}</small></em></td>
+             <td><span style="display: none;">{{ stat.state.updated }}</span><em><small>{{ stat.state.updated|date:dateformat }}
+             {% else %} </td><td>
              {% endifnotequal %}
+           {% else %} </td><td>
            {% endif %}
            </td>
         </tr>
       {% endif %}
       {% endwith %}
       {% endwith %}
+     {% endfor %}
     {% endfor %}
     {% endwith %}
   {% endfor %}
 {% endfor %}
+</tbody>
 </table>
 
 {% if modstats.all_errors %}
@@ -88,6 +100,4 @@
   {% endfor %}
   </ul>
 {% endif %}
-<hr />
-<p><a href="{% url languages.views.language_release_tar locale=language.locale release_name=release.name dtype=modstats.dtype %}"><img src="/media/img/download.png" /> {% trans "Download all po files" %}</a></p>
 

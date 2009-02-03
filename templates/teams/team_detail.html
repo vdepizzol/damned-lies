@@ -56,6 +56,8 @@
     {% endif %}
   </tr>
   {% endfor %}
+  <tr><td></td><td><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
+      <td></td><td><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
 </table>
 {% endfor %}
 
