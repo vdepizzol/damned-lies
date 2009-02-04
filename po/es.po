@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-03 14:05+0000\n"
-"PO-Revision-Date: 2009-02-03 20:39+0100\n"
+"POT-Creation-Date: 2009-02-04 15:19+0000\n"
+"PO-Revision-Date: 2009-02-04 20:27+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -835,59 +835,63 @@ msgid "GNOME 2 User Documentation"
 msgstr "Documentación del usuario de GNOME 2"
 
 #: database-content.py:205
+msgid "Evince Document Viewer"
+msgstr "Visor de documentos Evince"
+
+#: database-content.py:206
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:206 templates/base.html:34
+#: database-content.py:207 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Banshee Music Player"
 msgstr "Reproductor de música Banshee"
 
-#: database-content.py:208
+#: database-content.py:209
 msgid "Shared MIME Info"
 msgstr "Información MIME compartida"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "GNOME Applets"
 msgstr "Miniaplicaciones de GNOME"
 
-#: database-content.py:210
+#: database-content.py:211
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentación del desarrollador de GNOME 2"
 
-#: database-content.py:211
+#: database-content.py:212
 msgid "GNOME Release Notes"
 msgstr "Notas de publicación de GNOME"
 
-#: database-content.py:212
+#: database-content.py:213
 msgid "Rhythmbox Music Player"
 msgstr "Reproductor de música Rhythmbox"
 
-#: database-content.py:213
+#: database-content.py:214
 msgid "Epiphany Web Browser"
 msgstr "Navegador web Epiphany"
 
-#: database-content.py:214
+#: database-content.py:215
 msgid "GNOME Library Web site"
 msgstr "Página web de la biblioteca de GNOME"
 
-#: database-content.py:215
+#: database-content.py:216
 msgid "Eye of GNOME"
 msgstr "Visor de imágenes (EOG)"
 
-#: database-content.py:216
+#: database-content.py:217
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:217
+#: database-content.py:218
 msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
-#: database-content.py:218
+#: database-content.py:219
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -897,7 +901,11 @@ msgstr ""
 "href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
 "GNUCash</a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:219
+#: database-content.py:220
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Evince es un visor de documentos para varios formatos de documento."
+
+#: database-content.py:221
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -905,7 +913,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:220
+#: database-content.py:222
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -913,11 +921,11 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:221
+#: database-content.py:223
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:222
+#: database-content.py:224
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -929,55 +937,55 @@ msgstr ""
 "archivos en el SVN incluso si uno de los dos no contiene traducciones, de "
 "otra forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:223
+#: database-content.py:225
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:224
+#: database-content.py:226
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:225
+#: database-content.py:227
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:226
+#: database-content.py:228
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:227
+#: database-content.py:229
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:228
+#: database-content.py:230
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:229
+#: database-content.py:231
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:230
+#: database-content.py:232
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:231
+#: database-content.py:233
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (estable)"
 
-#: database-content.py:232
+#: database-content.py:234
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:233
+#: database-content.py:235
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:234
+#: database-content.py:236
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:235
+#: database-content.py:237
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (desarrollo)"
 
@@ -1125,11 +1133,23 @@ msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
 "Esto debe ser un correo electrónico, útil si no igual que el campo «correo-e»."
 
-#: people/views.py:87
+#: people/views.py:86
+#, python-format
+#| msgid "You have been successfully logged in."
+msgid "You have successfully joined the team '%s'."
+msgstr "Se ha unido satisfactoriamente al equipo «%s»."
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "Ya es miembro de este equipo."
 
-#: people/views.py:110
+#: people/views.py:112
+#, python-format
+#| msgid "You have been logged out."
+msgid "You have been removed from the team '%s'."
+msgstr "Ha sido eliminado del equipo «%s»."
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
@@ -1773,7 +1793,7 @@ msgid "Download all po files"
 msgstr "Descargar todos los archivos po"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "Module"
 msgstr "Módulo"
 
@@ -1786,12 +1806,11 @@ msgid "Statistics"
 msgstr "Estadísticas"
 
 #: templates/languages/language_release_stats.html:22
-#| msgid "State"
 msgid "Status"
 msgstr "Estado"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "Date"
 msgstr "Fecha"
 
@@ -1807,36 +1826,36 @@ msgstr "Resumen del error"
 msgid "GNOME Contributor"
 msgstr "Contribuidor de GNOME"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Cambiar sus detalles"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Cambiar su contraseña"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Unirse a un equipo"
 
-#: templates/people/person_detail.html:24
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "Idioma del sitio:"
 
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "Elija"
 
-#: templates/people/person_detail.html:39
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "Mantenedores:"
 
-#: templates/people/person_detail.html:50
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "Trabajando en"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "Estado"
 
@@ -1901,14 +1920,22 @@ msgid "Join"
 msgstr "Unirse"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:65
-msgid "Team membership"
-msgstr "Membresía"
+msgid "Member of teams"
+msgstr "Miembro de los equipos"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Miembro del equipo %(team_name)s (como %(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+#| msgid "Save"
+msgid "Leave"
+msgstr "Abandonar"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "¿Está seguro de que quiere abandonar el equipo?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1951,6 +1978,10 @@ msgstr "Equipo de traducción al %(lang)s"
 #: templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Publicación"
+
+#: templates/teams/team_detail.html:65
+msgid "Team membership"
+msgstr "Membresía"
 
 #: templates/teams/team_detail.html:76
 msgid "Apply modifications"
