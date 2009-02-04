@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-12 08:15+0000\n"
-"PO-Revision-Date: 2009-01-30 23:08+0200\n"
+"PO-Revision-Date: 2009-02-04 17:54+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -916,7 +916,7 @@ msgstr "Papildomos GNOME programos"
 
 #: database-content.py:223
 msgid "GNOME 2.18 (old stable)"
-msgstr ""
+msgstr "GNOME 2.18 (senas stabilus)"
 
 #: database-content.py:224
 msgid "GNOME Infrastructure"
@@ -924,11 +924,11 @@ msgstr "GNOME infrastruktūra"
 
 #: database-content.py:225
 msgid "GNOME 2.16 (old stable)"
-msgstr ""
+msgstr "GNOME 2.16 (senas stabilus)"
 
 #: database-content.py:226
 msgid "GNOME 2.14 (old stable)"
-msgstr ""
+msgstr "GNOME 2.14 (senas stabilus)"
 
 #: database-content.py:227
 msgid "freedesktop.org (non-GNOME)"
@@ -952,7 +952,7 @@ msgstr "GNOME 2.20 (senas stabilus)"
 
 #: database-content.py:232
 msgid "GNOME 2.26 (Development)"
-msgstr "GNOME 2.26 (kuriamas)"
+msgstr "GNOME 2.26 (dabar kuriamas)"
 
 #: common/views.py:33
 msgid "translator-credits"
@@ -1097,7 +1097,7 @@ msgstr ""
 
 #: people/views.py:87
 msgid "You are already member of this team."
-msgstr "Jau esate šios komandos narys."
+msgstr "Jau esate šios vertėjų grupės narys."
 
 #: people/views.py:110
 msgid "Your password has been changed."
@@ -1356,11 +1356,11 @@ msgstr "Bendruomenė"
 
 #: templates/base.html:41
 msgid "Back to Damned Lies home page"
-msgstr ""
+msgstr "Atgal į Damned Lies pagrindinį puslapį"
 
 #: templates/base.html:47 templates/index.html:13
 msgid "Teams"
-msgstr "Komandos"
+msgstr "Vertėjų grupės"
 
 #: templates/base.html:52 templates/index.html:20
 msgid "Languages"
@@ -1409,7 +1409,7 @@ msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
-"Visų GNOME vertimo komandų sąrašas su informacija apie koordinatorius, "
+"Visų GNOME vertėjų grupių sąrašas su informacija apie koordinatorius, "
 "tinklalapius ir el. pašto konferencijas."
 
 #: templates/index.html:15
@@ -1419,7 +1419,7 @@ msgid ""
 msgstr ""
 "Jei nėra vertėjų grupės, verčiančios į Jūsų kalbą, galite lengvai <a "
 "href='http://live.gnome.org/TranslationProject/StartingATeam/'>sukurti "
-"vertimo komandą</a>."
+"vertėjų grupę</a>."
 
 #: templates/index.html:22
 #, python-format
@@ -1427,7 +1427,7 @@ msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
 msgstr ""
-"Kalbų, kurioms sukurtos <a href='%(teams_url)s'>vertimo komandos</a>, "
+"Kalbų, kurioms sukurtos <a href='%(teams_url)s'>vertėjų grupės</a>, "
 "sąrašas."
 
 #: templates/index.html:23
@@ -1435,7 +1435,7 @@ msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
-"Kai kurios komandos prižiūri daugiau negu vienos kalbos vertimą "
+"Kai kurios vertėjų grupės prižiūri daugiau negu vienos kalbos vertimą "
 "(dažniausiai tos pačios kalbos variantus).  Čia galite rasti visas kalbas, į "
 "kurias GNOME verčiamas."
 
@@ -1460,6 +1460,8 @@ msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
+"Oficialūs GNOME leidimai toliau grupuojami į kategorijas, pavyzdžiui "
+"„Darbastalio programos“ ir „Kūrimo platforma“."
 
 #: templates/index.html:33
 msgid ""
@@ -1591,7 +1593,7 @@ msgstr "GNOME moduliai"
 
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Pasirinkite modulį, jei norite pamatyti daugiau informacijos apie jį:"
+msgstr "Pasirinkite modulį, apie kurį norite pamatyti daugiau informacijos:"
 
 #: templates/register.html:9
 msgid "Account Registration"
@@ -1735,7 +1737,7 @@ msgstr "Keisti slaptažodį"
 
 #: templates/people/person_base.html:15
 msgid "Join a team"
-msgstr "Prisijungti prie komandos"
+msgstr "Prisijungti prie vertėjų grupės"
 
 #: templates/people/person_detail.html:12
 msgid "Site Language:"
@@ -1813,11 +1815,11 @@ msgstr "Pakeisti slaptažodį"
 
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
-msgstr "Prisijungti prie naujos komandos"
+msgstr "Prisijungti prie naujos vertėjų grupės"
 
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
-msgstr "Norėčiau prisijungti prie šios komandos kaip vertėjas:"
+msgstr "Norėčiau prisijungti prie šios vertėjų grupės kaip vertėjas:"
 
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
@@ -1826,12 +1828,12 @@ msgstr "Prisijungti"
 #: templates/people/person_team_membership.html:5
 #: templates/teams/team_detail.html:63
 msgid "Team membership"
-msgstr "Komandos nariai"
+msgstr "Vertėjų grupės nariai"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr "%(team_name)s komandos narys (%(role_name)s)"
+msgstr "%(team_name)s vertėjų grupės narys (%(role_name)s)"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1840,7 +1842,7 @@ msgstr "Išsami informacija"
 #: templates/teams/team_base.html:9
 #, python-format
 msgid "%(lang)s Translation Team Page:"
-msgstr "%(lang)s vertimo komandos puslapis:"
+msgstr "%(lang)s vertėjų grupės puslapis:"
 
 #: templates/teams/team_base.html:13
 msgid "Bugzilla:"
@@ -1869,19 +1871,19 @@ msgstr ""
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
-msgstr "%(lang)s vertimo komanda"
+msgstr "%(lang)s vertėjų grupė"
 
 #: templates/teams/team_detail.html:74
 msgid "Apply modifications"
-msgstr ""
+msgstr "Pritaikyti pakeitimus"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
-msgstr "GNOME vertimo komandos"
+msgstr "GNOME vertėjų grupės"
 
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
-msgstr "Pasirinkite komandą, jei norite pamatyti daugiau informacijos apie ją:"
+msgstr "Pasirinkite vertėjų grupę, jei norite pamatyti daugiau informacijos apie ją:"
 
 #: templates/teams/team_list.html:25
 #, python-format
@@ -1929,7 +1931,7 @@ msgstr "Siųsti"
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
-msgstr "Turite būti autentikuotas ir %(team_name)s komandos narys."
+msgstr "Turite būti autentikuotas ir %(team_name)s vertėjų grupės narys."
 
 #: vertimus/forms.py:30
 msgid "Action"
