@@ -23,7 +23,7 @@
 
 USE_DIFFLIB = 0
 
-def diff(pota, potb, only_additions = 0):
+def diff(pota, potb):
     """Returns a list of differing lines between two files."""
     f1 = open(pota, "r")
     data1 = f1.read()
@@ -39,19 +39,19 @@ def diff(pota, potb, only_additions = 0):
         # since we are working with sorted data, we can speed up the process by doing compares ourselves
         # instead of using difflib stuff
         i, j = 0, 0
-        result = []
+        result_add_only = []
+        result_all = []
         while i < len(res1) and j < len(res2):
             if res1[i] == res2[j]:
                 i+=1; j+=1
             elif res1[i] < res2[j]:
-                if not only_additions:
-                    result.append("- " + res1[i])
+                result_all.append("- " + res1[i])
                 i+=1
             elif res1[i] > res2[j]:
-                result.append("+ " + res2[j])
+                result_all.append("+ " + res2[j])
+                result_add_only.append("+ " + res2[j])
                 j+=1
-        #print "\n".join(result)
-        return result
+        return result_all, result_add_only
     else:
         import difflib
         d = difflib.Differ()

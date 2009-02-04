@@ -29,7 +29,14 @@ from django.core.mail import send_mail
 from django.core.files.base import File
 from django.conf import settings
 
+import potdiff
+
 STATUS_OK = 0
+
+NOT_CHANGED = 0
+CHANGED_ONLY_FORMATTING = 1
+CHANGED_WITH_ADDITIONS  = 2
+CHANGED_NO_ADDITIONS    = 3
 
 def sort_object_list(lst, sort_meth):
     """ Sort an object list with sort_meth (which should return a translated string) """
@@ -167,6 +174,19 @@ def read_makefile_variable(vcs_path, variable):
             fullline = ""
     return ""
 
+def pot_diff_status(pota, potb):
+    (status, output, errs) = run_shell_command("diff %s %s|wc -l" % (pota, potb))
+    # POT generation date always change and produce a 4 line diff
+    if int(output) <= 4:
+        return NOT_CHANGED, ""
+    
+    result_all, result_add_only = potdiff.diff(pota, potb)
+    if not len(result_all) and not len(result_add_only):
+        return CHANGED_ONLY_FORMATTING, ""
+    elif len(result_add_only):
+        return CHANGED_WITH_ADDITIONS, result_add_only
+    else:
+        return CHANGED_NO_ADDITIONS, result_all
 
 def po_file_stats(pofile, msgfmt_checks = True):
     """ Compute pofile translation statistics, and proceed to some validity checks if msgfmt_checks is True """

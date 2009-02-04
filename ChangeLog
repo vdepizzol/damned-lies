@@ -1,3 +1,13 @@
+2009-02-04  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/potdiff.py: potdiff returns two result sets in all cases, so as it
+	has not to be called twice.
+	* stats/utils.py: Added a pot diff function.
+	* stats/models.py: Uses utils.pot_diff_status and act upon the result
+	code.
+	The pot_has_changed signal is now sent even for formatting changes, so as
+	the diff view get rid of code line numbers stuff.
+
 2009-02-03  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	Patch made with Claude to fix #570247.

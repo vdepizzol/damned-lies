@@ -297,20 +297,15 @@ class Branch(models.Model):
                     # Not sure if we should do something here
                     continue
 
-            pot_has_changed = True
+            changed_status = utils.CHANGED_WITH_ADDITIONS
 
-            # If old pot already exists and we are in string freeze
             if os.access(previous_pot, os.R_OK):
-                if string_frozen and dom.dtype == 'ui':
-                    diff = potdiff.diff(previous_pot, potfile, 1)
-                    if len(diff):
-                        utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
-
-                # If old pot already exists, lets see if it has changed at all
-                diff = potdiff.diff(previous_pot, potfile)
-                if not len(diff):
-                    pot_has_changed = False
-                else:
+                # Compare old and new POT
+                changed_status, diff = utils.pot_diff_status(previous_pot, potfile)
+                if string_frozen and dom.dtype == 'ui' and changed_status == utils.CHANGED_WITH_ADDITIONS:
+                    utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
+                
+                if changed_status != utils.NOT_CHANGED:
                     signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
             
             # 5. Generate pot stats and update DB
@@ -341,8 +336,8 @@ class Branch(models.Model):
             for lang, pofile in self.get_lang_files(dom, domain_path):
                 outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
 
-                if not force and not pot_has_changed and os.access(outpo, os.R_OK) and os.stat(pofile)[8] < os.stat(outpo)[8] \
-                   and not lang in langs_with_linguas_errors :
+                if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
+                   and os.stat(pofile)[8] < os.stat(outpo)[8] and not lang in langs_with_linguas_errors :
                     continue
 
                 realcmd = command % {
