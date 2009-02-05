@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-04 14:02+0000\n"
-"PO-Revision-Date: 2009-02-04 12:17-0300\n"
+"POT-Creation-Date: 2009-02-04 15:19+0000\n"
+"PO-Revision-Date: 2009-02-05 09:11-0300\n"
 "Last-Translator: Jonh Wendell <jwendell@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1142,11 +1142,23 @@ msgstr "Conta do Bugzilla"
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "Isto deve ser um email, útil se diferente do campo 'email'"
 
-#: people/views.py:87
+#: people/views.py:86
+#, python-format
+#| msgid "You have been successfully logged in."
+msgid "You have successfully joined the team '%s'."
+msgstr "Você entrou na equipe '%s'."
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "Você já é um membro desta equipe."
 
-#: people/views.py:110
+#: people/views.py:112
+#, python-format
+#| msgid "You have been logged out."
+msgid "You have been removed from the team '%s'."
+msgstr "Você foi removido da equipe '%s'."
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "Sua senha foi alterada."
 
@@ -1786,7 +1798,7 @@ msgid "Download all po files"
 msgstr "Baixar todos os arquivos po"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "Module"
 msgstr "Módulo"
 
@@ -1799,12 +1811,11 @@ msgid "Statistics"
 msgstr "Estatísticas"
 
 #: templates/languages/language_release_stats.html:22
-#| msgid "State"
 msgid "Status"
 msgstr "Estado"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "Date"
 msgstr "Data"
 
@@ -1820,36 +1831,36 @@ msgstr "Resumo dos erros"
 msgid "GNOME Contributor"
 msgstr "Colaborador GNOME"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Mudar seus detalhes"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Mudar sua senha"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Entrar em uma equipe"
 
-#: templates/people/person_detail.html:24
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "Idioma do site:"
 
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "Escolha"
 
-#: templates/people/person_detail.html:39
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "Mantém:"
 
-#: templates/people/person_detail.html:50
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "Trabalhando em"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "Estado"
 
@@ -1914,14 +1925,22 @@ msgid "Join"
 msgstr "Entrar"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:65
-msgid "Team membership"
-msgstr "Participação nas equipes"
+msgid "Member of teams"
+msgstr "Membro da(s) equipe(s)"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Membro da equipe %(team_name)s (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+#| msgid "Save"
+msgid "Leave"
+msgstr "Sair"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Tem certeza que deseja deixar esta equipe?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1964,6 +1983,10 @@ msgstr "Equipe de tradução para o %(lang)s"
 #: templates/teams/team_detail.html:22
 msgid "Release"
 msgstr "Versão"
+
+#: templates/teams/team_detail.html:65
+msgid "Team membership"
+msgstr "Participação nas equipes"
 
 #: templates/teams/team_detail.html:76
 msgid "Apply modifications"
