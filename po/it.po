@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-24 14:54+0000\n"
-"PO-Revision-Date: 2009-01-25 21:53+0100\n"
+"POT-Creation-Date: 2009-02-04 19:56+0000\n"
+"PO-Revision-Date: 2009-02-05 13:44+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -761,7 +761,7 @@ msgstr "Manuale di Sound Juicer"
 # sarebbe gtk+/po-properties ....
 #: database-content.py:184
 msgid "Property Nicks"
-msgstr "Accenni di proprietà"
+msgstr "Nick delle proprietà"
 
 #: database-content.py:185
 msgid "tips"
@@ -845,29 +845,29 @@ msgid "GNOME 2 User Documentation"
 msgstr "Documentazione utente per GNOME 2"
 
 #: database-content.py:205
+msgid "Evince Document Viewer"
+msgstr "Visualizzatore di documenti Evince"
+
+#: database-content.py:206
 msgid "Beagle Desktop Search"
 msgstr "Ricerca desktop Beagle"
 
-#: database-content.py:206 templates/base.html:34
+#: database-content.py:207 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Maledette bugie"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Banshee Music Player"
 msgstr "Riproduttore musicale Banshee"
 
-#: database-content.py:208
+#: database-content.py:209
 msgid "Shared MIME Info"
 msgstr "Informazioni MIME condivise"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "GNOME Applets"
 msgstr "Applet di GNOME"
-
-#: database-content.py:210
-msgid "JHBuild Documentation"
-msgstr "Documentazione di JHBuild"
 
 #: database-content.py:211
 msgid "GNOME 2 Development Documentation"
@@ -912,6 +912,10 @@ msgstr ""
 "per sapere dove inviare le traduzioni."
 
 #: database-content.py:220
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Evince è un visualizzatore di documenti in diversi formati."
+
+#: database-content.py:221
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -920,7 +924,7 @@ msgstr ""
 "attraverso il <a href=\"http://translationproject.org\">Translation Project</"
 "a>."
 
-#: database-content.py:221
+#: database-content.py:222
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -928,12 +932,12 @@ msgstr ""
 "A partire da GNOME 2.23, GAIL è integrato nelle GTK+. Non eseguire più "
 "commit sul branch \"trunk\"."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "A VNC client for GNOME"
 msgstr "Un client VNC per GNOME"
 
 # cambiata un po'....
-#: database-content.py:223
+#: database-content.py:224
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -946,55 +950,55 @@ msgstr ""
 "traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-"
 "properties."
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Frontend grafico per il sistema di tracciamento directory git"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Extra GNOME Applications"
 msgstr "Applicazioni aggiuntive per GNOME"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME Infrastructure"
 msgstr "Infrastruttura di GNOME"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (vecchia stabile)"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (vecchia stabile)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non-GNOME)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabile)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (vecchia stabile)"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applicazioni di produttività GNOME-Office"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (vecchia stabile)"
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (in sviluppo)"
 
@@ -1057,11 +1061,11 @@ msgstr "OpenID:"
 msgid "Log in with OpenID"
 msgstr "Accedi con OpenID"
 
-#: languages/views.py:51
+#: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "Traduzioni interfaccia utente"
 
-#: languages/views.py:52 templates/module_detail.html:88
+#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Documentazione"
@@ -1091,8 +1095,8 @@ msgid "This username is already taken. Please choose another."
 msgstr "Questo nome utente è già in uso. Sceglierne un altro."
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
-msgstr "È necessario fornire un OpenId o una password"
+msgid "You must either provide an OpenID or a password"
+msgstr "È necessario fornire un OpenID o una password"
 
 #: people/forms.py:42
 msgid "The passwords do not match"
@@ -1124,7 +1128,7 @@ msgstr "Immagine"
 
 #: people/models.py:37
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
-msgstr "URL a un file immagine (JPG, PNG, ...) di un hackergotchi"
+msgstr "URL a un file di immagine (JPG, PNG, ...) di un hackergotchi"
 
 #: people/models.py:38
 msgid "Web page"
@@ -1144,11 +1148,23 @@ msgstr ""
 "Questo dovrebbe essere un indirizzo email, utile se diverso dal campo \"email"
 "\""
 
-#: people/views.py:87
+#: people/views.py:86
+#, python-format
+#| msgid "You have been successfully logged in."
+msgid "You have successfully joined the team '%s'."
+msgstr "Adesione al gruppo «%s» completata con successo."
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "Si è già membri di questo gruppo."
 
-#: people/views.py:110
+#: people/views.py:112
+#, python-format
+#| msgid "You have been logged out."
+msgid "You have been removed from the team '%s'."
+msgstr "Rimosso dal gruppo «%s»."
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "La propria password è stata cambiata."
 
@@ -1156,15 +1172,15 @@ msgstr "La propria password è stata cambiata."
 msgid "Can't generate POT file, using old one."
 msgstr "Impossibile generare il file POT, in uso quello vecchio."
 
-#: stats/models.py:321
+#: stats/models.py:316
 msgid "Can't copy new POT file to public location."
 msgstr "Impossibile copiare il nuovo file POT su posizione pubblica."
 
-#: stats/models.py:359
+#: stats/models.py:355
 msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "L'elenco DOC_LINGUAS non incude questa lingua."
+msgstr "L'elenco DOC_LINGUAS non include questa lingua."
 
-#: stats/models.py:621
+#: stats/models.py:618
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1175,76 +1191,77 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:925
+#: stats/models.py:819
 msgid "Administration Tools"
 msgstr "Strumenti di amministrazione"
 
-#: stats/models.py:926
+#: stats/models.py:820
 msgid "Development Tools"
 msgstr "Strumenti di sviluppo"
 
-#: stats/models.py:927
+#: stats/models.py:821
 msgid "GNOME Desktop"
 msgstr "Ambiente grafico GNOME"
 
-#: stats/models.py:928
+#: stats/models.py:822
 msgid "GNOME Developer Platform"
 msgstr "Piattaforma di sviluppo GNOME"
 
-#: stats/models.py:929
+#: stats/models.py:823
 msgid "New Module Proposals"
 msgstr "Nuovi moduli proposti"
 
-#: stats/models.py:1002
+#: stats/models.py:899
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1033
+#: stats/models.py:930
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s messaggio"
 msgstr[1] "%(count)s messaggi"
 
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1035
+#: stats/models.py:931
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aggiornato il %(date)s"
 
-#: stats/models.py:1035 templates/vertimus/vertimus_detail.html:33
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:933 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d H.i O"
 
-#: stats/models.py:1037
+#: stats/models.py:936
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figure"
 
-#: stats/models.py:1038
+#: stats/models.py:937
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "File POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1041
+#: stats/models.py:940
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "File POT (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:78
+#: stats/utils.py:85
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Errori durante l'esecuzione del controllo 'intltool-update -m'."
 
-#: stats/utils.py:84
+#: stats/utils.py:91
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Nel file POTFILES.in mancano alcuni file: %s"
 
-#: stats/utils.py:93
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1253,21 +1270,21 @@ msgstr ""
 "I seguenti file sono referenziati in POTFILES.in o in POTFILES.skip, ma non "
 "esistono: %s"
 
-#: stats/utils.py:105
+#: stats/utils.py:112
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Il modulo %s non sembra essere un modulo gnome-doc-utils."
 
-#: stats/utils.py:108
+#: stats/utils.py:115
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE non ha risoluzione su un file reale, usato «%s.xml»."
 
-#: stats/utils.py:111
+#: stats/utils.py:118
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE non punta a un file reale, probabilmente è una macro."
 
-#: stats/utils.py:126
+#: stats/utils.py:133
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1278,42 +1295,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:185
+#: stats/utils.py:206
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Il file po «%s» non esiste o non può essere letto."
 
-#: stats/utils.py:205
+#: stats/utils.py:226
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Il file PO «%s» non passa il controllo di msgfmt: non aggiornato."
 
-#: stats/utils.py:207
+#: stats/utils.py:228
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Impossibile ottenere le statistiche per il file POT «%s»."
 
-#: stats/utils.py:210
+#: stats/utils.py:231
 msgid "This PO file has an executable bit set."
 msgstr "Questo file PO ha un bit eseguibile impostato."
 
-#: stats/utils.py:238
+#: stats/utils.py:259
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Il file PO «%s» non è codificato in UTF-8."
 
-#: stats/utils.py:267
+#: stats/utils.py:292
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La voce relativa a questa lingua non è presente nel file LINGUAS."
 
-#: stats/utils.py:294
+#: stats/utils.py:319
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La voce relativa a questa lingua non è presente nel file di configurazione "
 "ALL_LINGUAS."
 
-#: stats/utils.py:297
+#: stats/utils.py:322
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1321,28 +1338,28 @@ msgstr ""
 "Non sono disponibili indicazioni per verificare se questa lingua è realmente "
 "usata, chiedere al maintainer del modulo."
 
-#: teams/models.py:113
+#: teams/models.py:112
 #, python-format
 msgid "No team for locale %s"
 msgstr "Nessun gruppo per la lingua %s"
 
 # TIPO DI ACCOUNT
-#: teams/models.py:130
+#: teams/models.py:129
 msgid "Translator"
 msgstr "Traduttore"
 
 # TIPO DI ACCOUNT
-#: teams/models.py:131
+#: teams/models.py:130
 msgid "Reviewer"
 msgstr "Revisione"
 
 # TIPO DI ACCOUNT
-#: teams/models.py:132
+#: teams/models.py:131
 msgid "Committer"
 msgstr "Committer"
 
 # TIPO DI ACCOUNT
-#: teams/models.py:133 templates/teams/team_base.html:31
+#: teams/models.py:132 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Coordinatore"
 
@@ -1607,7 +1624,7 @@ msgstr "Manutentori"
 
 #: templates/module_detail.html:37
 msgid "Bug reporting"
-msgstr "Senalazione bug"
+msgstr "Segnalazione bug"
 
 #: templates/module_detail.html:40
 msgid "Show existing i18n and l10n bugs"
@@ -1687,7 +1704,7 @@ msgid ""
 "You can register here for an account on this site. This is only useful if "
 "you plan to contribute to GNOME translations."
 msgstr ""
-"È possibile effettuare qui la registrazione di un account su questo sito. "
+"Qui è possibile effettuare la registrazione di un account su questo sito. "
 "Ciò è utile solo se è in progetto di contribuire alle traduzioni di GNOME."
 
 #: templates/register.html:14
@@ -1698,9 +1715,10 @@ msgstr ""
 "Dopo la registrazione e la connessione, sarà possibile partecipare a un "
 "gruppo esistente dalla pagina del proprio profilo."
 
+# nella pagine appare meglio come autenticazione piuttosto che come autentica
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Autentica attraverso OpenID <strong>oppure</strong> password:"
+msgstr "Autenticazione attraverso OpenID <strong>oppure</strong> password:"
 
 #: templates/register.html:34
 msgid "Register with OpenID"
@@ -1719,7 +1737,7 @@ msgid ""
 "The registration succeeded. You will now receive an email containing a link "
 "to activate your account."
 msgstr ""
-"La registrazione è riuscita. Verrà inviata una email contenente un "
+"La registrazione è riuscita. A breve si riceverà una email contenente un "
 "collegamento per attivare il proprio account."
 
 #: templates/release_detail.html:10
@@ -1728,7 +1746,7 @@ msgid "%(name)s Release"
 msgstr "Rilascio %(name)s"
 
 #: templates/release_detail.html:13
-#: templates/languages/language_release.html:20
+#: templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1737,9 +1755,9 @@ msgstr ""
 "Verificare presso la pagina web di ciascun modulo le modalità di invio delle "
 "traduzioni."
 
-#: templates/release_detail.html:19 templates/teams/team_detail.html:22
-msgid "Release"
-msgstr "Rilascio"
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "Lingua"
 
 #: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
@@ -1769,10 +1787,6 @@ msgstr "Scarica file POT"
 msgid "Notices"
 msgstr "Avvisi"
 
-#: templates/stats_show.html:30
-msgid "Language"
-msgstr "Lingua"
-
 #: templates/stats_show.html:30 vertimus/models.py:164
 msgid "Translated"
 msgstr "Tradotto"
@@ -1784,6 +1798,22 @@ msgstr "Mostra le figure del documento"
 #: templates/admin/base_site.html:4
 msgid "Damned Lies site admin"
 msgstr "Amministrazione sito Maledette bugie"
+
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#: templates/teams/team_detail.html:59 templates/teams/team_detail.html:60
+msgid "All modules"
+msgstr "Tutti i moduli"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:26
+msgid "Hide completed modules"
+msgstr "Nascondi moduli completati"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:30
+msgid "Show completed modules"
+msgstr "Mostra moduli completati"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -1797,68 +1827,75 @@ msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME è attualmente tradotto nella seguente lingua (%(numb)s):\n"
 msgstr[1] "GNOME è attualmente tradotto nelle seguenti lingue (%(numb)s):\n"
 
-#: templates/languages/language_release.html:12
-msgid "Hide completed modules"
-msgstr "Nascondi moduli completati"
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Scarica tutti file PO"
 
-#: templates/languages/language_release.html:16
-msgid "Show completed modules"
-msgstr "Mostra moduli completati"
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:55
+msgid "Module"
+msgstr "Modulo"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Branch"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Statistiche"
+
+#: templates/languages/language_release_stats.html:22
+#| msgid "State"
+msgid "Status"
+msgstr "Stato"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:55
+msgid "Date"
+msgstr "Data"
+
+#: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% tradotto)"
 
-#: templates/languages/language_release_stats.html:83
+#: templates/languages/language_release_stats.html:95
 msgid "Error summary"
 msgstr "Errore indice"
-
-#: templates/languages/language_release_stats.html:92
-msgid "Download all po files"
-msgstr "Scarica tutti file PO"
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "Collaboratori di GNOME"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Cambia i propri dettagli"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Cambia la propria password"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Partecipa a un gruppo"
 
-#: templates/people/person_detail.html:12
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "Lingua del sito:"
 
-#: templates/people/person_detail.html:21
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "Scegli"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "Mantiene:"
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "Al lavoro su"
 
-#: templates/people/person_detail.html:42
-msgid "Date"
-msgstr "Data"
-
-#: templates/people/person_detail.html:42
-msgid "Module"
-msgstr "Modulo"
-
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "Stato"
 
@@ -1924,14 +1961,22 @@ msgid "Join"
 msgstr "Partecipa"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "Adesione ai gruppi"
+msgid "Member of teams"
+msgstr "Membri del gruppo"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Membro del gruppo %(team_name)s (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+#| msgid "Save"
+msgid "Leave"
+msgstr "Abbandona"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Uscire veramente dal gruppo?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1962,16 +2007,27 @@ msgstr "Mailing list:"
 msgid "Send e-mail to the list"
 msgstr "Invia email alla lista"
 
+# dovrebbe essere riferito all'iscrizione
+# a una mailing list
 #: templates/teams/team_base.html:24
 msgid "Subscribe"
-msgstr "Esegui sottoscrizione"
+msgstr "Iscrizione"
 
 #: templates/teams/team_detail.html:10
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Gruppo di traduzione %(lang)s"
 
-#: templates/teams/team_detail.html:74
+#: templates/teams/team_detail.html:22
+msgid "Release"
+msgstr "Rilascio"
+
+# Questo appare come titolo sia nel profilo utente elencando i team a cui si partecipa, sia profilo del team elencando le persone... Per rendelo "buono" in entrembi i casi si va sulla traduzione libera
+#: templates/teams/team_detail.html:65
+msgid "Team membership"
+msgstr "Partecipazioni"
+
+#: templates/teams/team_detail.html:76
 msgid "Apply modifications"
 msgstr "Applica le modifiche"
 
@@ -2021,19 +2077,23 @@ msgstr "Tradotto:"
 msgid "Action History"
 msgstr "Cronologia azioni"
 
-#: templates/vertimus/vertimus_detail.html:88
+#: templates/vertimus/vertimus_detail.html:81
+msgid "diff with:"
+msgstr "differenze con:"
+
+#: templates/vertimus/vertimus_detail.html:92
 msgid "No comment"
 msgstr "Nessun commento"
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Nuova azione"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:108
 msgid "Submit"
 msgstr "Invia"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:112
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2075,16 +2135,23 @@ msgstr "Sono ammessi solo file con estensione .po, .gz, .bz2 o .png"
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
-"Il file .po non passa il controllo \"msgfmt -vc\". Correggere il file e "
-"provare di nuovo."
+"Il file .po non passa il controllo `msgfmt -v`. Correggere il file e provare "
+"di nuovo."
 
+# sarà un or esclusivo? 
 #: vertimus/forms.py:65
 msgid "A comment or a file is needed for this action."
-msgstr "Per questa azione è necessario un commento o un file."
+msgstr "Per questa azione è necessario un commento oppure un file."
 
 #: vertimus/forms.py:68
 msgid "A file is needed for this action."
 msgstr "Per questa azione è necessario un file."
+
+# negli altri è usato "load", per cui
+# traduco send come carica
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Non caricare un file con un'azione \"Prenota\""
 
 # STATO DELLA TRADUZIONE
 #: vertimus/models.py:138
@@ -2092,14 +2159,15 @@ msgid "Inactive"
 msgstr "Inattiva"
 
 # STATO DELLA TRADUZIONE
+# più breve di "Traduzione in corso"...
 #: vertimus/models.py:151
 msgid "Translating"
-msgstr "Traduzione in corso"
+msgstr "In traduzione"
 
 # STATO DELLA TRADUZIONE
 #: vertimus/models.py:181
 msgid "Proofreading"
-msgstr "Correzione della bozza in corso"
+msgstr "In correzione bozza"
 
 # STATO DELLA TRADUZIONE
 #: vertimus/models.py:195
@@ -2131,15 +2199,26 @@ msgstr "Da eseguire il commit"
 # STATO DI TRADUZIONE
 #: vertimus/models.py:233
 msgid "Committing"
-msgstr "Commit in corso"
+msgstr "In commit"
 
 # STATO DI TRADUZIONE
 #: vertimus/models.py:247
 msgid "Committed"
 msgstr "Commit eseguito"
 
+# Appare nei diff
+#: vertimus/models.py:326
+msgid "File in repository"
+msgstr "File nel repository"
+
+#: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:129
+#: vertimus/views.py:147
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "File caricato da %(name)s, %(date)s"
+
 # testo per l'email inviata
-#: vertimus/models.py:418
+#: vertimus/models.py:428
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2157,23 +2236,23 @@ msgstr ""
 "\n"
 
 # fa parte dell'email
-#: vertimus/models.py:431 vertimus/models.py:481
+#: vertimus/models.py:441 vertimus/models.py:491
 msgid "Without comment"
 msgstr "Nessun commento"
 
 # fa parte dell'email
-#: vertimus/models.py:433 vertimus/models.py:483
+#: vertimus/models.py:443 vertimus/models.py:493
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Questo è un messaggio automatico inviato da %s."
 
 # AZIONE
-#: vertimus/models.py:440
+#: vertimus/models.py:450
 msgid "Write a comment"
 msgstr "Scrivi un commento"
 
 # testo per l'email inviata
-#: vertimus/models.py:469
+#: vertimus/models.py:479
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2185,81 +2264,79 @@ msgid ""
 msgstr ""
 "Salve,\n"
 "\n"
-"È stato lasciato un nuovo commento su %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"È stato lasciato un nuovo commento per %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
 # AZIONE
-#: vertimus/models.py:491
+#: vertimus/models.py:501
 msgid "Reserve for translation"
 msgstr "Prenota la traduzione"
 
 # AZIONE
-#: vertimus/models.py:502
+#: vertimus/models.py:513
 msgid "Upload the new translation"
 msgstr "Carica la nuova traduzione"
 
 # AZIONE
-#: vertimus/models.py:517
+#: vertimus/models.py:528
 msgid "Reserve for proofreading"
 msgstr "Prenota la correzione bozza"
 
 # AZIONE
-#: vertimus/models.py:528
+#: vertimus/models.py:540
 msgid "Upload the proofread translation"
 msgstr "Carica la nuova traduzione corretta"
 
 # AZIONE
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Ready for submission"
 msgstr "Pronto per il commit"
 
 # AZIONE
 # cambiato submit/commit
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:573
 msgid "Reserve to submit"
 msgstr "Prenota il commit"
 
 # AZIONE
 # cambiato sumission/commit
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:586
 msgid "Inform of submission"
 msgstr "Informa del commit"
 
 # AZIONE
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
+#: vertimus/models.py:601
 msgid "Review required"
 msgstr "Riesame necessario"
 
 # AZIONE
 # traduzione prolissa, ma valida
-#: vertimus/models.py:619
+#: vertimus/models.py:632
 msgid "Backup the actions"
 msgstr "Conferma e azzera le azioni"
 
 # AZIONE
-#: vertimus/models.py:658
+#: vertimus/models.py:671
 msgid "Undo the last state change"
 msgstr "Annulla l'ultimo cambio di stato"
 
-#: vertimus/views.py:122 vertimus/views.py:127
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "File caricato da %(name)s, %(date)s"
-
-#: vertimus/views.py:133
+#: vertimus/views.py:135
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Ultimo file \"committato\" per %(lang)s"
 
-#: vertimus/views.py:136
+#: vertimus/views.py:138
 msgid "Latest POT file"
 msgstr "File POT più recente"
+
+#~ msgid "JHBuild Documentation"
+#~ msgstr "Documentazione di JHBuild"
 
 #~ msgid "Browse CVS"
 #~ msgstr "Esplora CVS"
