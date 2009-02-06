@@ -121,7 +121,6 @@ def vertimus_diff(request, action_id, action_id2=None):
     content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
     descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
                                                             'date': action_db1.created }
-    import pdb; pdb.set_trace()
     if action_id2 not in (None, "0"):
         # 1) id2 specified in url
         action2 = ActionDb.objects.get(id=action_id2)
