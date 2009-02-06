@@ -121,28 +121,32 @@ def vertimus_diff(request, action_id, action_id2=None):
     content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
     descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
                                                             'date': action_db1.created }
-    if action_id2 is None:
-        # Search previous in action history
-        action2 = action_db1.get_previous_action_with_po()
+    import pdb; pdb.set_trace()
+    if action_id2 not in (None, "0"):
+        # 1) id2 specified in url
+        action2 = ActionDb.objects.get(id=action_id2)
+        file_path2 = action2.get_action().merged_file()['path']
+        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
+                                                                'date': action2.created }
+    else:        
+        action2 = None
+        if action_id2 is None:
+            # 2) Search previous in action history
+            action2 = action_db1.get_previous_action_with_po()
         if action2:
             file_path2 = action2.merged_file()['path']
             descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
                                                                     'date': action2.created }
-    if action_id2 == "0" or (not action_id2 and not action2):
-         # The file should be the more recently committed file (merged)
-        try:
-            stats = Statistics.objects.get(branch=state.branch, domain=state.domain, language=state.language)
-            descr2 = _("Latest committed file for %(lang)s" % {'lang': state.language.get_name()})
-        except Statistics.DoesNotExist:
-            stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
-            descr2 = _("Latest POT file")
-        file_path2 = stats.po_path()
-    else:
-        # id2 specified in url
-        action2 = ActionDb.objects.get(id=action_id2)
-        file_path2 = action2.file.path
-        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
-                                                                'date': action2.created }
+        else:
+             # 3) Lastly, the file should be the more recently committed file (merged)
+            try:
+                stats = Statistics.objects.get(branch=state.branch, domain=state.domain, language=state.language)
+                descr2 = _("Latest committed file for %(lang)s" % {'lang': state.language.get_name()})
+            except Statistics.DoesNotExist:
+                stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
+                descr2 = _("Latest POT file")
+            file_path2 = stats.po_path()
+
     content2 = [l.decode('utf-8') for l in open(file_path2, 'U').readlines()]
     d = difflib.HtmlDiff()
     diff_content = d.make_table(content2, content1,
