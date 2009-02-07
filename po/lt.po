@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-12 08:15+0000\n"
-"PO-Revision-Date: 2009-02-04 17:54+0200\n"
+"PO-Revision-Date: 2009-02-07 19:06+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -1368,7 +1368,7 @@ msgstr "Kalbos"
 
 #: templates/base.html:57
 msgid "Release sets"
-msgstr "Leidimai"
+msgstr "Laidos"
 
 #: templates/base.html:62 templates/index.html:36
 msgid "Modules"
@@ -1441,33 +1441,33 @@ msgstr ""
 
 #: templates/index.html:27
 msgid "Release Sets"
-msgstr "Leidimai"
+msgstr "Laidos"
 
 #: templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
-"Visų GNOME leidimų ir paketų, kurių vertimo statistika sekama, sąrašas."
+"Visų GNOME laidų ir paketų, kurių vertimo statistika sekama, sąrašas."
 
 #: templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
 msgstr ""
-"Leidimų ir paketų pavyzdžiai: „GNOME Office“, „Fifth Toe“ ar „GNOME 2.14“."
+"Laidų ir paketų pavyzdžiai: „GNOME Office“, „Fifth Toe“ ar „GNOME 2.14“."
 
 #: templates/index.html:31
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
-"Oficialūs GNOME leidimai toliau grupuojami į kategorijas, pavyzdžiui "
+"Oficialios GNOME laidos grupuojamos į kategorijas, pavyzdžiui "
 "„Darbastalio programos“ ir „Kūrimo platforma“."
 
 #: templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
-msgstr "Čia galite palyginti kalbų palaikymą įvairiuose leidimuose."
+msgstr "Čia galite palyginti kalbų palaikymą įvairiose laidose."
 
 #: templates/index.html:37
 msgid "List of all modules with statistics in here."
@@ -1636,7 +1636,7 @@ msgstr ""
 #: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
-msgstr "%(name)s leidimas"
+msgstr "%(name)s laida"
 
 #: templates/release_detail.html:13
 #: templates/languages/language_release.html:20
@@ -1647,7 +1647,7 @@ msgstr ""
 
 #: templates/release_detail.html:19 templates/teams/team_detail.html:22
 msgid "Release"
-msgstr "Leidimas"
+msgstr "Laida"
 
 #: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
@@ -1661,12 +1661,12 @@ msgstr "Grafikas"
 
 #: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
-msgstr "GNOME leidimai"
+msgstr "GNOME laidos"
 
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
-"Pasirinkite leidimą ar paketą, jei norite pamatyti daugiau informacijos apie "
+"Pasirinkite laidą ar paketą, jei norite pamatyti daugiau informacijos apie "
 "jį:"
 
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:59
@@ -1901,7 +1901,7 @@ msgstr "Modulio vertimas: %(name)s"
 
 #: templates/vertimus/vertimus_detail.html:13
 msgid "Used in release(s):"
-msgstr "Naudojamas leidime:"
+msgstr "Naudojamas laidose:"
 
 #: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
