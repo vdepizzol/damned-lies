@@ -11,6 +11,8 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + (
         make_option('--force', action='store_true', dest='force', default=False,
             help="force statistics generation, even if files didn't change"),
+        make_option('--non-gnome', action='store_true', dest='non-gnome', default=False,
+            help="generate statistics for non-gnome modules (externally hosted)"),
     )        
 
     output_transaction = False
@@ -48,7 +50,10 @@ class Command(BaseCommand):
                         print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
             else:
                 # Update all modules
-                modules = Module.objects.all()
+                if options['non-gnome']:
+                    modules = Module.objects.exclude(vcs_root='http://svn.gnome.org/svn')
+                else:
+                    modules = Module.objects.all()
                 for mod in modules:
                     print "Updating stats for %s..." % (mod.name)
                     branches = Branch.objects.filter(module__name=mod)
