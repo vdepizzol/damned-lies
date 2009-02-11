@@ -1,3 +1,9 @@
+2009-02-11  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/management/commands/update-stats.py: Implement a basic lock
+	mecanism to prevent multiple stats running on same module/branch.
+	Fixes bug #562947.
+
 2009-02-10  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/management/commands/update-stats.py: Added an option to update all
