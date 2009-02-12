@@ -7,9 +7,9 @@
   <td class="leftcell" colspan="3">{{ modstats.totaltransperc }}% ({{ modstats.totaltrans }}/{{ modstats.totalfuzzy }}/{{ modstats.totaluntrans }})</td>
   <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width: {{ modstats.totaltransperc }}px;"></div>
-      <div class="fuzzy" style="left:{{ modstats.totaltransperc }}px; width:{{ modstats.totalfuzzyperc }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ modstats.totaltransperc }}px; width:{{ modstats.totalfuzzyperc }}px;"></div>
       {% with modstats.totaltransperc|add:modstats.totalfuzzyperc as upos %}
-      <div class="untranslated" style="left:{{ upos }}px; width: {{ modstats.totaluntransperc }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width: {{ modstats.totaluntransperc }}px;"></div>
       {% endwith %}
      </div>
    </td>
@@ -63,9 +63,9 @@
               {{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
           <td style="width: 108px; text-align: center;"><div class="graph">
               <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
-              <div class="fuzzy" style="left:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
+              <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
               {% with stat.tr_percentage|add:stat.fu_percentage as upos %}
-              <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.un_percentage }}px;"></div>
+              <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.un_percentage }}px;"></div>
               {% endwith %}
              </div>
            </td>
