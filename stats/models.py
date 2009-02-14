@@ -331,13 +331,13 @@ class Branch(models.Model):
             # 6. Update language po files and update DB
             # *****************************************
             command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
-            stats_with_linguas_errors = Statistics.objects.filter(branch=self, domain=dom, information__description__contains='LINGUAS')
-            langs_with_linguas_errors = [stat.language.locale for stat in stats_with_linguas_errors]
+            stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
+            langs_with_ext_errors = [stat.language.locale for stat in stats_with_ext_errors]
             for lang, pofile in self.get_lang_files(dom, domain_path):
                 outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
 
                 if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
-                   and os.stat(pofile)[8] < os.stat(outpo)[8] and not lang in langs_with_linguas_errors :
+                   and os.stat(pofile)[8] < os.stat(outpo)[8] and not lang in langs_with_ext_errors :
                     continue
 
                 realcmd = command % {
@@ -352,7 +352,7 @@ class Branch(models.Model):
                     langstats['errors'].extend(utils.check_lang_support(self.co_path(), domain_path, lang))
                 elif dom.dtype == "doc":
                     if lang not in doclinguas:
-                        langstats['errors'].append(("warn", ugettext_noop("DOC_LINGUAS list doesn't include this language.")))
+                        langstats['errors'].append(("warn-ext", ugettext_noop("DOC_LINGUAS list doesn't include this language.")))
                     fig_stats = utils.get_fig_stats(outpo)
                     for fig in fig_stats:
                         trans_path = os.path.join(domain_path, lang, fig['path'])
@@ -360,7 +360,7 @@ class Branch(models.Model):
                             fig_file = open(trans_path, 'rb').read()
                             trans_hash = hashlib.md5(fig_file).hexdigest()
                             if fig['hash'] == trans_hash:
-                                langstats['errors'].append(("warn", "Figures should not be copied when identical to original (%s)." % trans_path))
+                                langstats['errors'].append(("warn-ext", "Figures should not be copied when identical to original (%s)." % trans_path))
 
                 if settings.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
                 # Save in DB
@@ -997,7 +997,7 @@ class Statistics(models.Model):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """
         error = None
         for e in self.information_set.all():
-            if not error or e.type == 'error' or (e.type == 'warn' and error.type == 'info'):
+            if not error or e.type in ('error', 'error-ext') or (e.type in ('warn','warn-ext') and error.type == 'info'):
                 error = e
         return error
 
@@ -1191,12 +1191,16 @@ class ArchivedStatistics(models.Model):
 INFORMATION_TYPE_CHOICES = (
     ('info', 'Information'),
     ('warn','Warning'),
-    ('error','Error')
+    ('error','Error'),
+    # Type of warning/error external to po file itself (LINGUAS, images, etc.)
+    # po files containing these are always rechecked
+    ('warn-ext','Warning (external)'),
+    ('error-ext','Error (external)')
 )
 class Information(models.Model):
     statistics = models.ForeignKey('Statistics')
     # Priority of a stats message
-    type = models.CharField(max_length=5, choices=INFORMATION_TYPE_CHOICES)
+    type = models.CharField(max_length=10, choices=INFORMATION_TYPE_CHOICES)
     description = models.TextField()
 
     class Meta:
@@ -1218,7 +1222,7 @@ class Information(models.Model):
         return cmp(self.statistics.module_name(), other.statistics.module_name())
 
     def get_icon(self):
-        return "%simg/%s.png" % (settings.MEDIA_URL, self.type)
+        return "%simg/%s.png" % (settings.MEDIA_URL, self.type.split("-")[0])
     
     def get_description(self):
         text = self.description
@@ -1236,7 +1240,7 @@ class Information(models.Model):
 class ArchivedInformation(models.Model):
     statistics = models.ForeignKey('ArchivedStatistics')
     # Priority of a stats message
-    type = models.CharField(max_length=5, choices=INFORMATION_TYPE_CHOICES)
+    type = models.CharField(max_length=10, choices=INFORMATION_TYPE_CHOICES)
     description = models.TextField()
 
     class Meta:

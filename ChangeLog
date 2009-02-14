@@ -1,5 +1,14 @@
 2009-02-14  Claude Paroz  <claude@2xlibre.net>
 
+	* docs/notes-upgrade.txt: enlarge information.type varchar to 10 chars.
+	* stats/models.py: Add 2 more information type (warn-ext, error-ext) to be
+	able to select informations with external warnings/errors. These are
+	always checked when recomputing stats.
+	* stats/utils.py: LINGUAS warnings are of type 'warn-ext'.
+	Fixes bug #567680.
+
+2009-02-14  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/teams/team_detail.html: Also fix RTL display.
 	Really fixes #571349.
 

@@ -68,3 +68,7 @@ for stat in stats:
         if num > 0:
             stat.num_figures = num
             stat.save()
+
+## r1447
+ALTER TABLE information MODIFY `type` VARCHAR(10) NOT NULL;
+ALTER TABLE archived_information MODIFY `type` VARCHAR(10) NOT NULL;

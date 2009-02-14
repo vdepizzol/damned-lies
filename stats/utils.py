@@ -289,7 +289,7 @@ def check_lang_support(module_path, po_path, lang):
                     break
             lfile.close()
             if not in_config:
-                errors.append(("warn", ugettext_noop("Entry for this language is not present in LINGUAS file.")))
+                errors.append(("warn-ext", ugettext_noop("Entry for this language is not present in LINGUAS file.")))
             return errors
 
     for configure in [configureac, configurein]:
@@ -316,7 +316,7 @@ def check_lang_support(module_path, po_path, lang):
                     break
             cfile.close()
             if not in_config:
-                errors.append(("warn", ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.")))
+                errors.append(("warn-ext", ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.")))
             return errors
 
     errors.append(("warn", ugettext_noop("Don't know where to look if this language is actually used, ask the module maintainer.")))
