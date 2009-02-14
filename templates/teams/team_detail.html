@@ -32,9 +32,9 @@
     </td>
     <td style="width: 108px; text-align: center;"><div class="graph">
       <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
-      <div class="fuzzy" style="left:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
       {% with stat.uitransperc|add:stat.uifuzzyperc as upos %}
-      <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
       {% endwith %}
       </div>
     </td>
@@ -45,9 +45,9 @@
       </td>
       <td style="width: 108px; text-align: center;"><div class="graph">
         <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
-        <div class="fuzzy" style="left:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
+        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
         {% with stat.doctransperc|add:stat.docfuzzyperc as upos %}
-        <div class="untranslated" style="left:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
+        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
         {% endwith %}
         </div>
       </td>
