@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-28 20:25+0000\n"
-"PO-Revision-Date: 2009-01-29 13:53+0100\n"
+"POT-Creation-Date: 2009-01-30 22:31+0000\n"
+"PO-Revision-Date: 2009-01-31 12:41+0100\n"
 "Last-Translator: Sílvia Miranda <silviamira@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -930,10 +930,14 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
+"Tingueu en compte que el GTK+ té els dominis po i po-properties. Si afegiu "
+"una llengua nova en algun dels dos dominis, haureu de pujar una traducció "
+"tots dos a l'SVN encara que no estiguin traduïts. Si no ho feu així, la "
+"construcció del GTK+ fallarà a /po-properties."
 
 #: database-content.py:224
 msgid "Graphical frontend for the git directory tracker"
-msgstr ""
+msgstr "Frontal gràfic per al servei que fa un seguiment de directoris del git"
 
 #: database-content.py:225
 msgid "GNOME Fifth Toe (Extra software)"
@@ -1077,7 +1081,6 @@ msgid "This username is already taken. Please choose another."
 msgstr "Ja existeix aquest nom d'usuari. Escolliu-ne un altre."
 
 #: people/forms.py:39
-#, fuzzy
 msgid "You must either provide an OpenID or a password"
 msgstr "Heu de proporcionar un OpenID o bé una contrasenya"
 
@@ -1162,65 +1165,66 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:925
+#: stats/models.py:932
 msgid "Administration Tools"
 msgstr "Eines d'administració"
 
-#: stats/models.py:926
+#: stats/models.py:933
 msgid "Development Tools"
 msgstr "Eines de desenvolupament"
 
-#: stats/models.py:927
+#: stats/models.py:934
 msgid "GNOME Desktop"
 msgstr "Escriptori del GNOME"
 
-#: stats/models.py:928
+#: stats/models.py:935
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desenvolupament del GNOME"
 
-#: stats/models.py:929
+#: stats/models.py:936
 msgid "New Module Proposals"
 msgstr "Mòduls nous proposats"
 
-#: stats/models.py:1002
+#: stats/models.py:1010
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1033
+#: stats/models.py:1041
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s missatge"
 msgstr[1] "%(count)s missatges"
 
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1035
+#: stats/models.py:1042
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualitzat el %(date)s"
 
-#: stats/models.py:1035 templates/vertimus/vertimus_detail.html:33
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:1044 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1037
+#: stats/models.py:1047
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s captura"
 msgstr[1] "%(count)s captures"
 
-#: stats/models.py:1038
+#: stats/models.py:1048
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fitxer POT (%(messages)s, %(figures)s — %(updated)s)"
 
-#: stats/models.py:1041
+#: stats/models.py:1051
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "Fitxer POT (%(messages)s missatge — %(updated)s)"
+msgstr "Fitxer POT (%(messages)s — %(updated)s)"
 
 #: stats/utils.py:78
 msgid "Errors while running 'intltool-update -m' check."
@@ -1580,7 +1584,6 @@ msgstr ""
 msgid "Maintainers"
 msgstr "Mantenidors"
 
-# FIXME
 #: templates/module_detail.html:37
 msgid "Bug reporting"
 msgstr "Enviament d'informes d'error"
@@ -1599,7 +1602,7 @@ msgstr "Branques:"
 
 #: templates/module_detail.html:65
 msgid "Browse Repository"
-msgstr ""
+msgstr "Navega pel dipòsit"
 
 # FIXME: "cadenes congelades"? (josep)
 #: templates/module_detail.html:69
@@ -1760,9 +1763,8 @@ msgstr "Lloc administratiu del Damned Lies"
 
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:21
-#, fuzzy
 msgid "All modules"
-msgstr "Mòduls"
+msgstr "Tots els mòduls"
 
 #: templates/languages/language_all_modules.html:24
 #: templates/languages/language_release.html:12
@@ -1780,13 +1782,12 @@ msgid "Module"
 msgstr "Mòdul"
 
 #: templates/languages/language_all_modules.html:34
-#, fuzzy
 msgid "Branch"
-msgstr "Branques:"
+msgstr "Branca"
 
 #: templates/languages/language_all_modules.html:34
 msgid "Statistics"
-msgstr ""
+msgstr "Estadístiques"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -1830,14 +1831,12 @@ msgid "Join a team"
 msgstr "Afegiu-vos a un equip"
 
 #: templates/people/person_detail.html:24
-#, fuzzy
 msgid "Site Language:"
-msgstr "Llengua"
+msgstr "Llengua del lloc:"
 
 #: templates/people/person_detail.html:33
-#, fuzzy
 msgid "Choose"
-msgstr "Nucli"
+msgstr "Escolliu"
 
 #: templates/people/person_detail.html:39
 msgid "Maintains:"
@@ -1995,7 +1994,7 @@ msgstr "Traducció del mòdul: %(name)s"
 
 #: templates/vertimus/vertimus_detail.html:13
 msgid "Used in release(s):"
-msgstr "Utilitzat a la versió(ns):"
+msgstr "Utilitzat a les versions:"
 
 #: templates/vertimus/vertimus_detail.html:31
 msgid "State:"
@@ -2015,7 +2014,7 @@ msgstr "Historial d'accions"
 
 #: templates/vertimus/vertimus_detail.html:81
 msgid "diff with:"
-msgstr ""
+msgstr "diferències amb:"
 
 #: templates/vertimus/vertimus_detail.html:92
 msgid "No comment"
@@ -2037,15 +2036,15 @@ msgstr "Heu d'estar autenticat i ser membre de l'equip %(team_name)s."
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
-msgstr ""
+msgstr "Diferències entre els fitxers po"
 
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
-msgstr "&lt;- Neteja de les accions"
+msgstr "&lt;- Torna a les accions"
 
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
-msgstr ""
+msgstr "Nota: ambdós fitxers s'han actualitzat amb l'últim fitxer POT."
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -2061,7 +2060,7 @@ msgstr "Fitxer"
 
 #: vertimus/forms.py:39
 msgid "Upload a .po, .gz, .bz2 or .png file"
-msgstr ""
+msgstr "Pugeu un fitxer .po, .gz, .bz2 o .png"
 
 #: vertimus/forms.py:50
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
@@ -2084,7 +2083,7 @@ msgstr "Per a realitzar aquesta acció fa falta un fitxer."
 
 #: vertimus/forms.py:71
 msgid "Please, don't send a file with a 'Reserve' action."
-msgstr ""
+msgstr "No pugeu un fitxer amb l'acció «Reserva»."
 
 #: vertimus/models.py:138
 msgid "Inactive"
@@ -2120,13 +2119,13 @@ msgstr "Pujat"
 
 #: vertimus/models.py:326
 msgid "File in repository"
-msgstr ""
+msgstr "Fitxer del dipòsit"
 
 #: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:129
 #: vertimus/views.py:147
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
-msgstr ""
+msgstr "Fitxer pujat per %(name)s el %(date)s"
 
 #: vertimus/models.py:428
 #, python-format
@@ -2189,9 +2188,8 @@ msgid "Reserve for proofreading"
 msgstr "Reserva per a revisar"
 
 #: vertimus/models.py:540
-#, fuzzy
 msgid "Upload the proofread translation"
-msgstr "Pujada de la traducció nova"
+msgstr "Pujada de la traducció revisada"
 
 #. Translators: this means the file is ready to be committed in repository
 #: vertimus/models.py:556
@@ -2210,9 +2208,8 @@ msgstr "Informació de la pujada"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:601
-#, fuzzy
 msgid "Review required"
-msgstr "Revisor"
+msgstr "Li cal una revisió"
 
 #: vertimus/models.py:632
 msgid "Backup the actions"
@@ -2225,11 +2222,11 @@ msgstr "Desfeta de l'últim canvi d'estat"
 #: vertimus/views.py:135
 #, python-format
 msgid "Latest committed file for %(lang)s"
-msgstr ""
+msgstr "Últim fitxer pujat per al %(lang)s"
 
 #: vertimus/views.py:138
 msgid "Latest POT file"
-msgstr ""
+msgstr "Últim fitxer POT"
 
 #~ msgid "Browse CVS"
 #~ msgstr "Navegueu el CVS"
