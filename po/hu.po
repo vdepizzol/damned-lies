@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies Head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-27 21:38+0000\n"
-"PO-Revision-Date: 2009-01-30 23:29+0100\n"
+"POT-Creation-Date: 2009-02-04 15:19+0000\n"
+"PO-Revision-Date: 2009-02-19 14:30+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
@@ -834,29 +834,29 @@ msgid "GNOME 2 User Documentation"
 msgstr "GNOME 2 felhasználói dokumentáció"
 
 #: database-content.py:205
+msgid "Evince Document Viewer"
+msgstr "Evince dokumentummegjelenítő"
+
+#: database-content.py:206
 msgid "Beagle Desktop Search"
 msgstr "Beagle asztali kereső"
 
-#: database-content.py:206 templates/base.html:34
+#: database-content.py:207 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Szemenszedett hazugságok"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Banshee Music Player"
 msgstr "Banshee zenelejátszó"
 
-#: database-content.py:208
+#: database-content.py:209
 msgid "Shared MIME Info"
 msgstr "Osztott MIME információk"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "GNOME Applets"
 msgstr "GNOME kisalkalmazások"
-
-#: database-content.py:210
-msgid "JHBuild Documentation"
-msgstr "JHBuild dokumentáció"
 
 #: database-content.py:211
 msgid "GNOME 2 Development Documentation"
@@ -901,6 +901,10 @@ msgstr ""
 "Translation#Submitting\">GNUCash wikit</a>."
 
 #: database-content.py:220
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Az Evince egy dokumentummegjelenítő számos dokumentumformátumhoz."
+
+#: database-content.py:221
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -908,73 +912,77 @@ msgstr ""
 "Ez nem GNOME-specifikus modul. A fordításokat a <a href=\"http://"
 "translationproject.org\">Translation Project</a> használatával küldje el."
 
-#: database-content.py:221
+#: database-content.py:222
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
 msgstr "A GNOME 2.23 óta a GAIL a GTK+ része. Ne írjon a trunk ágba."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "A VNC client for GNOME"
 msgstr "VNC kliens GNOME-hoz"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
-msgstr "Ne feledje, hogy a gtk+ a po és po-properties UI tartományokat is tartalmazza. Ha új nyelvet ad hozzá, mindkét fájlt véglegesíteni kell az SVN-ben, még ha 0 fordítást tartalmaz is, különben a kód fordítása megszakad a /po-properties könyvtárban."
+msgstr ""
+"Ne feledje, hogy a gtk+ a po és po-properties UI tartományokat is "
+"tartalmazza. Ha új nyelvet ad hozzá, mindkét fájlt véglegesíteni kell az SVN-"
+"ben, még ha 0 fordítást tartalmaz is, különben a kód fordítása megszakad a /"
+"po-properties könyvtárban."
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafikus felület a git verziókövetőhöz"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (Extra szoftver)"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME alkalmazások"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (régi stabil)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME Infrastructure"
 msgstr "GNOME infrastruktúra"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (régi stabil)"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (régi stabil)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nem-GNOME)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabil)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (régi stabil)"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office irodai alkalmazások"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (régi stabil)"
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (fejlesztői)"
 
@@ -1037,11 +1045,11 @@ msgstr "OpenID:"
 msgid "Log in with OpenID"
 msgstr "Bejelentkezés OpenID-val"
 
-#: languages/views.py:49 languages/views.py:64
+#: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "Felhasználói felület fordításai"
 
-#: languages/views.py:50 languages/views.py:65 templates/module_detail.html:88
+#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Dokumentáció"
@@ -1071,7 +1079,6 @@ msgid "This username is already taken. Please choose another."
 msgstr "Ez a felhasználónév már foglalt. Válasszon másikat."
 
 #: people/forms.py:39
-#| msgid "You must either provide an OpenId or a password"
 msgid "You must either provide an OpenID or a password"
 msgstr "Adjon meg egy OpenID-t vagy jelszót"
 
@@ -1122,11 +1129,23 @@ msgstr "Bugzilla fiók"
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "Ez egy e-mail cím, hasznos ha nem azonos a fenti e-mail címmel"
 
-#: people/views.py:87
+#: people/views.py:86
+#, python-format
+#| msgid "You have been successfully logged in."
+msgid "You have successfully joined the team '%s'."
+msgstr "Sikeresen csatlakozott a következő csapathoz: „%s”."
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "Már tagja ennek a csapatnak."
 
-#: people/views.py:110
+#: people/views.py:112
+#, python-format
+#| msgid "You have been logged out."
+msgid "You have been removed from the team '%s'."
+msgstr "Eltávolították a következő csapatból: „%s”."
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "A jelszava módosítva."
 
@@ -1138,11 +1157,11 @@ msgstr "Nem készíthető POT fájl, a régi használata."
 msgid "Can't copy new POT file to public location."
 msgstr "Az új POT fájl nem másolható nyilvános helyre."
 
-#: stats/models.py:359
+#: stats/models.py:360
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "A DOC_LINGUAS lista jelenleg nem tartalmazza ezt a nyelvet."
 
-#: stats/models.py:621
+#: stats/models.py:623
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1153,62 +1172,63 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:925
+#: stats/models.py:824
 msgid "Administration Tools"
 msgstr "Adminisztrációs eszközök"
 
-#: stats/models.py:926
+#: stats/models.py:825
 msgid "Development Tools"
 msgstr "Fejlesztőeszközök"
 
-#: stats/models.py:927
+#: stats/models.py:826
 msgid "GNOME Desktop"
 msgstr "GNOME asztali környezet"
 
-#: stats/models.py:928
+#: stats/models.py:827
 msgid "GNOME Developer Platform"
 msgstr "GNOME fejlesztői környezet"
 
-#: stats/models.py:929
+#: stats/models.py:828
 msgid "New Module Proposals"
 msgstr "Új moduljavaslatok"
 
-#: stats/models.py:1002
+#: stats/models.py:904
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1033
+#: stats/models.py:935
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s üzenet"
 msgstr[1] "%(count)s üzenet"
 
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1035
+#: stats/models.py:936
 #, python-format
 msgid "updated on %(date)s"
 msgstr "frissítve: %(date)s"
 
-#: stats/models.py:1035 templates/vertimus/vertimus_detail.html:33
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:938 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y. m. d. G.i O"
 
-#: stats/models.py:1037
+#: stats/models.py:941
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s ábra"
 msgstr[1] "%(count)s ábra"
 
-#: stats/models.py:1038
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1041
+#: stats/models.py:945
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT fájl (%(messages)s) — %(updated)s"
@@ -1258,39 +1278,39 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:185
+#: stats/utils.py:186
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "A(z) „%s PO fájl nem létezik vagy nem olvasható."
 
-#: stats/utils.py:205
+#: stats/utils.py:206
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "A(z) „%s” PO fájl nem megy át az msgfmt ellenőrzésen: nem frissül."
 
-#: stats/utils.py:207
+#: stats/utils.py:208
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "A(z) „%s” POT fájl statisztikái nem érhetők el."
 
-#: stats/utils.py:210
+#: stats/utils.py:211
 msgid "This PO file has an executable bit set."
 msgstr "Ezen a PO fájlon be van állítva egy végrehajtható bit."
 
-#: stats/utils.py:238
+#: stats/utils.py:239
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "A(z) „%s” PO fájl nem UTF-8 kódolású."
 
-#: stats/utils.py:267
+#: stats/utils.py:272
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a LINGUAS fájlban."
 
-#: stats/utils.py:294
+#: stats/utils.py:299
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Ezen nyelv bejegyzése nincs jelen a configure fájl ALL_LINGUAS értékében."
 
-#: stats/utils.py:297
+#: stats/utils.py:302
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1412,7 +1432,6 @@ msgid "Modules"
 msgstr "Modulok"
 
 #: templates/base.html:73
-#| msgid "Log Out"
 msgid "Log out"
 msgstr "Kijelentkezés"
 
@@ -1680,7 +1699,7 @@ msgid "%(name)s Release"
 msgstr "%(name)s kiadás"
 
 #: templates/release_detail.html:13
-#: templates/languages/language_release.html:20
+#: templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1688,9 +1707,9 @@ msgstr ""
 "Ezen kiadás moduljai nem részei a GNOME SVN tárolónak. A fordítások "
 "beküldésével kapcsolatban nézze meg az egyes modulok weboldalát."
 
-#: templates/release_detail.html:19 templates/teams/team_detail.html:22
-msgid "Release"
-msgstr "Kiadás"
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "Nyelv"
 
 #: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
@@ -1711,7 +1730,6 @@ msgid "Select a release or a release set below to see more details about it:"
 msgstr "Válasszon egy kiadáscsoportot a részletek megjelenítéséhez:"
 
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
-#| msgid "Download all po files"
 msgid "Download POT file"
 msgstr "POT fájl letöltése"
 
@@ -1719,13 +1737,9 @@ msgstr "POT fájl letöltése"
 msgid "Notices"
 msgstr "Megjegyzések"
 
-#: templates/stats_show.html:30
-msgid "Language"
-msgstr "Nyelv"
-
 #: templates/stats_show.html:30 vertimus/models.py:164
 msgid "Translated"
-msgstr "Lefordított"
+msgstr "Lefordítva"
 
 #: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
 msgid "Display document figures"
@@ -1737,33 +1751,19 @@ msgstr "Szemenszedett hazugságok admin"
 
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:21
-#| msgid "Modules"
+#: templates/teams/team_detail.html:59 templates/teams/team_detail.html:60
 msgid "All modules"
 msgstr "Minden modul"
 
 #: templates/languages/language_all_modules.html:24
-#: templates/languages/language_release.html:12
+#: templates/languages/language_release.html:26
 msgid "Hide completed modules"
 msgstr "Befejezett modulok elrejtése"
 
 #: templates/languages/language_all_modules.html:28
-#: templates/languages/language_release.html:16
+#: templates/languages/language_release.html:30
 msgid "Show completed modules"
 msgstr "Befejezett modulok megjelenítése"
-
-#: templates/languages/language_all_modules.html:34
-#: templates/people/person_detail.html:54
-msgid "Module"
-msgstr "Modul"
-
-#: templates/languages/language_all_modules.html:34
-#| msgid "Branches:"
-msgid "Branch"
-msgstr "Ág"
-
-#: templates/languages/language_all_modules.html:34
-msgid "Statistics"
-msgstr "Statisztika"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -1777,57 +1777,75 @@ msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "A GNOME-ot a következő %(numb)s nyelvre fordítják:\n"
 msgstr[1] "A GNOME-ot a következő %(numb)s nyelvre fordítják:\n"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Minden po fájl letöltése"
+
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:55
+msgid "Module"
+msgstr "Modul"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Ág"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Statisztika"
+
+#: templates/languages/language_release_stats.html:22
+#| msgid "State"
+msgid "Status"
+msgstr "Állapot"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:55
+msgid "Date"
+msgstr "Dátum"
+
+#: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% lefordítva)"
 
-#: templates/languages/language_release_stats.html:83
+#: templates/languages/language_release_stats.html:95
 msgid "Error summary"
 msgstr "Hibák összegzése"
-
-#: templates/languages/language_release_stats.html:92
-msgid "Download all po files"
-msgstr "Minden po fájl letöltése"
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "GNOME közreműködő"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Adataim módosítása"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Jelszómódosítás"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Csatlakozás csapathoz"
 
-#: templates/people/person_detail.html:24
-#| msgid "Language"
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "Oldal nyelve:"
 
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "Válasszon"
 
-#: templates/people/person_detail.html:39
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "Karbantartó:"
 
-#: templates/people/person_detail.html:50
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "Ezeken dolgozik"
 
-#: templates/people/person_detail.html:54
-msgid "Date"
-msgstr "Dátum"
-
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "Állapot"
 
@@ -1890,14 +1908,22 @@ msgid "Join"
 msgstr "Csatlakozás"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "Csapattagság"
+msgid "Member of teams"
+msgstr "Ezen csapatok tagja:"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "A(z) %(team_name)s csapat tagja (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+#| msgid "Save"
+msgid "Leave"
+msgstr "Elhagyás"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Biztosan elhagyja a csapatot?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1937,7 +1963,15 @@ msgstr "Feliratkozás"
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s fordítócsapat"
 
-#: templates/teams/team_detail.html:74
+#: templates/teams/team_detail.html:22
+msgid "Release"
+msgstr "Kiadás"
+
+#: templates/teams/team_detail.html:65
+msgid "Team membership"
+msgstr "Csapattagság"
+
+#: templates/teams/team_detail.html:76
 msgid "Apply modifications"
 msgstr "Módosítások alkalmazása"
 
@@ -1972,7 +2006,6 @@ msgid "State:"
 msgstr "Állapot:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Download all po files"
 msgid "Download PO file"
 msgstr "PO fájl letöltése"
 
@@ -2010,7 +2043,6 @@ msgid "Diff between po files"
 msgstr "PO fájlok közti diff"
 
 #: templates/vertimus/vertimus_diff.html:16
-#| msgid "Backup the actions"
 msgid "&lt;- Back to actions"
 msgstr "&lt; – Vissza a műveletekhez"
 
@@ -2158,7 +2190,6 @@ msgid "Reserve for proofreading"
 msgstr "Lefoglalás átolvasáshoz"
 
 #: vertimus/models.py:540
-#| msgid "Upload the new translation"
 msgid "Upload the proofread translation"
 msgstr "Az átolvasott fordítás feltöltése"
 
@@ -2179,7 +2210,6 @@ msgstr "Információ beküldésről"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:601
-#| msgid "Reviewer"
 msgid "Review required"
 msgstr "Átolvasás szükséges"
 
