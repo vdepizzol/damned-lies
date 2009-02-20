@@ -1015,7 +1015,7 @@ msgstr "額外的 GNOME 應用程式"
 
 #: database-content.py:228
 msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (老舊穩定的版本)"
+msgstr "GNOME 2.18 (舊的穩定版)"
 
 #: database-content.py:229
 msgid "GNOME Infrastructure"
@@ -1023,11 +1023,11 @@ msgstr "GNOME 基礎建設"
 
 #: database-content.py:230
 msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (老舊穩定的版本)"
+msgstr "GNOME 2.16 (舊的穩定版)"
 
 #: database-content.py:231
 msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (老舊穩定的版本)"
+msgstr "GNOME 2.14 (舊的穩定版)"
 
 #: database-content.py:232
 msgid "freedesktop.org (non-GNOME)"
@@ -1039,7 +1039,7 @@ msgstr "GNOME 2.24 (穩定版)"
 
 #: database-content.py:234
 msgid "GNOME 2.22 (old stable)"
-msgstr "GNOME 2.22 (老舊穩定的版本)"
+msgstr "GNOME 2.22 (舊的穩定版)"
 
 #: database-content.py:235
 msgid "GNOME-Office Productivity Applications"
@@ -1047,7 +1047,7 @@ msgstr "GNOME-辦公室生產力應用程式"
 
 #: database-content.py:236
 msgid "GNOME 2.20 (old stable)"
-msgstr "GNOME 2.20 (老舊穩定的版本)"
+msgstr "GNOME 2.20 (舊的穩定版)"
 
 #: database-content.py:237
 msgid "GNOME 2.26 (Development)"
@@ -1055,7 +1055,7 @@ msgstr "GNOME 2.26 (開發版)"
 
 #: common/views.py:33
 msgid "translator-credits"
-msgstr "如對翻譯有任何意見，請送一封電子郵件給\n 以下地址，GNOME 翻譯團隊會盡快回覆您：\n zh-l10n@lists.linux.org.tw\n \n Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2009"
+msgstr "GNOME 翻譯團隊：zh-l10n@lists.linux.org.tw "
 
 #: common/views.py:54
 msgid "You have been logged out."
@@ -1085,12 +1085,12 @@ msgstr "請使用您的使用者名稱和密碼登入："
 #: django_openid/templates/django_openid/admin_login.html:20
 #: templates/login.html:18
 msgid "Username:"
-msgstr "使用者名稱:"
+msgstr "使用者名稱："
 
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20 templates/login.html:21
 msgid "Password:"
-msgstr "密碼:"
+msgstr "密碼："
 
 #: django_openid/templates/django_openid/admin_login.html:28
 #: templates/base.html:76 templates/login.html:27
@@ -1123,7 +1123,7 @@ msgstr "文件"
 
 #: people/forms.py:14
 msgid "Choose a username:"
-msgstr "選擇使用者名稱:"
+msgstr "選擇使用者名稱："
 
 #: people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
@@ -1139,7 +1139,7 @@ msgstr "至少 7 個字元"
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
 msgid "Confirm password:"
-msgstr "確認密碼:"
+msgstr "確認密碼："
 
 #: people/forms.py:31
 msgid "This username is already taken. Please choose another."
@@ -1535,7 +1535,7 @@ msgstr ""
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
-msgstr "列出<a href='%(teams_url)s'>翻譯團隊</ a>中所有的語言。"
+msgstr "列出<a href='%(teams_url)s'>翻譯團隊</a>中所有的語言。 "
 
 #: templates/index.html:23
 msgid ""
@@ -1591,7 +1591,7 @@ msgstr ""
 
 #: templates/index.html:46
 msgid "Translated by:"
-msgstr "翻譯者為:"
+msgstr "翻譯團隊： "
 
 #: templates/login.html:10 templates/register.html:11
 #, python-format
@@ -2040,7 +2040,7 @@ msgstr "下載 PO 檔案"
 
 #: templates/vertimus/vertimus_detail.html:39
 msgid "Translated:"
-msgstr "已翻譯："
+msgstr "翻譯率："
 
 #: templates/vertimus/vertimus_detail.html:65
 msgid "Action History"
