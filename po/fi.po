@@ -1,17 +1,17 @@
 # Finnish messages for damned lies.
-# Copyright (C) 2008 Timo Jyrinki.
+# Copyright (C) 2008-2009 Timo Jyrinki.
 # Copyright (C) 2007 Ilkka Tuohela.
 # Gnomen suomentajaryhmä: http://gnome.fi/
 #
-# Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
+# Timo Jyrinki <timo.jyrinki@iki.fi>, 2008-2009.
 # Ilkka Tuohela <hile@iki.fi>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-20 22:15+0000\n"
-"PO-Revision-Date: 2009-01-26 20:36+0200\n"
+"POT-Creation-Date: 2009-02-04 15:19+0000\n"
+"PO-Revision-Date: 2009-02-23 12:07+0200\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -836,29 +836,29 @@ msgid "GNOME 2 User Documentation"
 msgstr "Gnome 2 käyttäjän dokumentaatio"
 
 #: database-content.py:205
+msgid "Evince Document Viewer"
+msgstr "Evince-asiakirjakatselin"
+
+#: database-content.py:206
 msgid "Beagle Desktop Search"
 msgstr "Beagle-työpöytähaku"
 
-#: database-content.py:206 templates/base.html:34
+#: database-content.py:207 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Banshee Music Player"
 msgstr "Banshee-musiikkisoitin"
 
-#: database-content.py:208
+#: database-content.py:209
 msgid "Shared MIME Info"
 msgstr "Jaetut MIME-tiedot"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "GNOME Applets"
 msgstr "Gnomen sovelmat"
-
-#: database-content.py:210
-msgid "JHBuild Documentation"
-msgstr "JHBuild-ohjeet"
 
 #: database-content.py:211
 msgid "GNOME 2 Development Documentation"
@@ -903,6 +903,10 @@ msgstr ""
 "siihen liittyvät käännökset tulee lähettää."
 
 #: database-content.py:220
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Evince on asiakirjakatselin usealle asiakirjamuodolle."
+
+#: database-content.py:221
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -910,7 +914,7 @@ msgstr ""
 "Tämä ei ole Gnome-moduuli. Lähetä käännöksesi <a href=\"http://"
 "translationproject.org\">Translation Projectin</a> kautta."
 
-#: database-content.py:221
+#: database-content.py:222
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -918,11 +922,11 @@ msgstr ""
 "Gnome 2.23 -julkaisusta eteenpäin GAIL on integroitu GTK+:aan. Älä lähetä "
 "muutoksia versionhallinnan juureen enää."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "A VNC client for GNOME"
 msgstr "VNC-asiakas Gnomelle"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -932,61 +936,64 @@ msgstr ""
 "Huomaa, että gtk+:lla on sekä po- että po-properties-käyttöliittymäalueet. "
 "Jos lisäät kielen kumpaan vain alueeseen, sinun tulee toimittaa molemmat "
 "tiedostot SVN-versionhallintaan, vaikka toinen niistä sisältäisi nolla "
-"käännöstä. Muutoin GTK+:n rakentaminen keskeytyy "
-"/po-properties-hakemistossa."
+"käännöstä. Muutoin GTK+:n rakentaminen keskeytyy /po-properties-hakemistossa."
 
-#: database-content.py:224
+#: database-content.py:225
+msgid "Graphical frontend for the git directory tracker"
+msgstr "Graafinen käyttöliittymä git-hakemistoseurannalle"
+
+#: database-content.py:226
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Gnome Fifth Toe (lisäohjelmat)"
 
-#: database-content.py:225
+#: database-content.py:227
 msgid "Extra GNOME Applications"
 msgstr "Gnomen lisäsovellukset"
 
-#: database-content.py:226
+#: database-content.py:228
 msgid "GNOME 2.18 (old stable)"
 msgstr "Gnome 2.18 (vanha vakaa)"
 
-#: database-content.py:227
+#: database-content.py:229
 msgid "GNOME Infrastructure"
 msgstr "Gnomen infrastruktuuri"
 
-#: database-content.py:228
+#: database-content.py:230
 msgid "GNOME 2.16 (old stable)"
 msgstr "Gnome 2.16 (vanha vakaa)"
 
-#: database-content.py:229
+#: database-content.py:231
 msgid "GNOME 2.14 (old stable)"
 msgstr "Gnome 2.14 (vanha vakaa)"
 
-#: database-content.py:230
+#: database-content.py:232
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (Gnomen ulkopuoliset)"
 
-#: database-content.py:231
+#: database-content.py:233
 msgid "GNOME 2.24 (stable)"
 msgstr "Gnome 2.24 (vakaa)"
 
-#: database-content.py:232
+#: database-content.py:234
 msgid "GNOME 2.22 (old stable)"
 msgstr "Gnome 2.22 (vanha vakaa)"
 
-#: database-content.py:233
+#: database-content.py:235
 msgid "GNOME-Office Productivity Applications"
 msgstr "Gnome-Office tuottavuussovellukset"
 
-#: database-content.py:234
+#: database-content.py:236
 msgid "GNOME 2.20 (old stable)"
 msgstr "Gnome 2.20 (vanha vakaa)"
 
-#: database-content.py:235
+#: database-content.py:237
 msgid "GNOME 2.26 (Development)"
 msgstr "Gnome 2.26 (kehitysversio)"
 
 #: common/views.py:33
 msgid "translator-credits"
 msgstr ""
-"Timo Jyrinki, 2008.\n"
+"Timo Jyrinki, 2008-2009.\n"
 "Ilkka Tuohela, 2007.\n"
 "\n"
 "http://gnome.fi/"
@@ -1008,7 +1015,6 @@ msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Kirjautuminen ei onnistunut. Tarkista käyttäjänimesi ja salasanasi."
 
 #: common/views.py:111
-#| msgid "We're sorry, but your account has been disabled."
 msgid "Your account has been activated."
 msgstr "Käyttäjätilisi on aktivoitu."
 
@@ -1047,12 +1053,11 @@ msgstr "OpenID:"
 msgid "Log in with OpenID"
 msgstr "Kirjaudu sisään käyttäen OpenID:tä"
 
-#: languages/views.py:51
-#| msgid "UI translations"
+#: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "Käyttöliittymien käännökset"
 
-#: languages/views.py:52 templates/module_detail.html:91
+#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
 #: templates/release_detail.html:22 templates/teams/team_detail.html:23
 msgid "Documentation"
 msgstr "Ohjeet"
@@ -1074,7 +1079,6 @@ msgid "At least 7 characters"
 msgstr "Vähintään seitsemän merkkiä"
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
-#| msgid "Password:"
 msgid "Confirm password:"
 msgstr "Vahvista salasana:"
 
@@ -1083,8 +1087,8 @@ msgid "This username is already taken. Please choose another."
 msgstr "Tämä käyttäjänimi on jo käytössä. Valitse jokin toinen."
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
-msgstr "Anna joko OpenID tai salasana"
+msgid "You must either provide an OpenID or a password"
+msgstr "Anna joko OpenID-tunnus tai salasana"
 
 #: people/forms.py:42
 msgid "The passwords do not match"
@@ -1102,12 +1106,11 @@ msgid ""
 "browser."
 msgstr ""
 "Tämä on vahvistus onnistuneesta rekisteröinnistä: %s. Aktivoidaksesi "
-"käyttäjätilin, napsauta alla olevaa linkkiä tai kopioi ja liitä se "
-"selaimen osoiteriville."
+"käyttäjätilin, napsauta alla olevaa linkkiä tai kopioi ja liitä se selaimen "
+"osoiteriville."
 
 #: people/forms.py:68
 #, python-format
-#| msgid "Administration Tools"
 msgid "Administrators of %s"
 msgstr "%s – ylläpitäjät"
 
@@ -1119,9 +1122,8 @@ msgstr "Kuva"
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "URL haluamaasi sinua kuvastavaan kuvatiedostoon (.jpg, .png, ...)"
 
+#
 #: people/models.py:38
-# 
-#| msgid "Users Web Page:"
 msgid "Web page"
 msgstr "WWW-sivu"
 
@@ -1130,38 +1132,44 @@ msgid "IRC nickname"
 msgstr "IRC-kutsumanimi"
 
 #: people/models.py:40
-#| msgid "Bugzilla account:"
 msgid "Bugzilla account"
 msgstr "Bugzilla-käyttäjätili"
 
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
-"Tämän tulisi olla sähköpostiosoite. Hyödyllinen, jos eri kuin "
-"”Sähköposti:”-kentässä."
+"Tämän tulisi olla sähköpostiosoite. Hyödyllinen, jos eri kuin ”Sähköposti:”-"
+"kentässä."
 
-#: people/views.py:87
-#| msgid "You are already logged in as %(username)s."
+#: people/views.py:86
+msgid "You have successfully joined the team '%s'."
+msgstr "Olet nyt ryhmän ”%s” jäsen."
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "Olet jo tämän ryhmän jäsen."
 
-#: people/views.py:110
+#: people/views.py:112
+msgid "You have been removed from the team '%s'."
+msgstr "Sinut on nyt poistettu ryhmästä ”%s”."
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "Salasanasi on muutettu."
 
-#: stats/models.py:293
+#: stats/models.py:295
 msgid "Can't generate POT file, using old one."
 msgstr "POT-tiedosto ei voi luoda, käytetään vanhaa."
 
-#: stats/models.py:319
+#: stats/models.py:321
 msgid "Can't copy new POT file to public location."
 msgstr "Uutta POT-tiedostoa ei voi kopioida julkiselle alueelle."
 
-#: stats/models.py:357
+#: stats/models.py:360
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS-luettelo ei sisällä tätä kieltä."
 
-#: stats/models.py:617
+#: stats/models.py:623
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1172,76 +1180,77 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:921
+#: stats/models.py:824
 msgid "Administration Tools"
 msgstr "Ylläpitotyökalut"
 
-#: stats/models.py:922
+#: stats/models.py:825
 msgid "Development Tools"
 msgstr "Kehitystyökalut"
 
-#: stats/models.py:923
+#: stats/models.py:826
 msgid "GNOME Desktop"
 msgstr "Gnome-työpöytä"
 
-#: stats/models.py:924
+#: stats/models.py:827
 msgid "GNOME Developer Platform"
 msgstr "Gnomen kehitysalusta"
 
-#: stats/models.py:925
+#: stats/models.py:828
 msgid "New Module Proposals"
 msgstr "Ehdotetut uudet moduulit"
 
-#: stats/models.py:998
+#: stats/models.py:904
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1029
+#: stats/models.py:935
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s viesti"
 msgstr[1] "%(count)s viestiä"
 
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1031
+#: stats/models.py:936
 #, python-format
 msgid "updated on %(date)s"
 msgstr "päivitetty %(date)s"
 
-#: stats/models.py:1031 templates/vertimus/vertimus_detail.html:33
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:938 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "j.n.Y G.i O"
 
-#: stats/models.py:1033
+#: stats/models.py:941
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s kuva"
 msgstr[1] "%(count)s kuvaa"
 
-#: stats/models.py:1034
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-tiedosto (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1037
+#: stats/models.py:945
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-tiedosto (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:75
+#: stats/utils.py:78
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Virhe suoritettaessa tarkistusta \"intltool-update -m\""
 
-#: stats/utils.py:81
+#: stats/utils.py:84
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "POTFILES.in-tiedostosta puuttuu tiedostoja: %s"
 
-#: stats/utils.py:90
+#: stats/utils.py:93
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1250,21 +1259,21 @@ msgstr ""
 "Seuraaviin tiedostoihin viitataan joko POTFILES.in- tai POTFILES.skip-"
 "tiedostoista, mutta kyseisiä tiedostoja ei ole olemassa: %s"
 
-#: stats/utils.py:102
+#: stats/utils.py:105
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Moduuli %s ei näytä gnome-doc-utils-moduulilta."
 
-#: stats/utils.py:105
+#: stats/utils.py:108
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE ei viittaa oikeaan tiedostoon, käytetään '%s.xml'."
 
-#: stats/utils.py:108
+#: stats/utils.py:111
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE ei osoita oikeaan tiedostoon, luultavasti kyseessä makro."
 
-#: stats/utils.py:123
+#: stats/utils.py:126
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1275,73 +1284,69 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:182
+#: stats/utils.py:186
 #, python-format
-#| msgid "PO file '%s' doesn't exist."
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-tiedostoa ”%s” ei ole olemassa tai sitä ei voi lukea."
 
-#: stats/utils.py:202
+#: stats/utils.py:206
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-tiedosto '%s' ei läpäise msgfmt-tarkastusta: ei päivitetä."
 
-#: stats/utils.py:204
+#: stats/utils.py:208
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "POT-tiedostolle '%s' ei saatu tilastotietoja."
 
-#: stats/utils.py:207
+#: stats/utils.py:211
 msgid "This PO file has an executable bit set."
 msgstr "PO-tiedostolla on suoritusbitti asetettuna."
 
-#: stats/utils.py:235
+#: stats/utils.py:239
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-tiedosto '%s' ei ole UTF-8 merkistössä."
 
-#: stats/utils.py:264
+#: stats/utils.py:272
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Tälle kielelle ei ole mainintaa LINGUAS-tiedostossa."
 
-#: stats/utils.py:291
+#: stats/utils.py:299
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Tälle kielelle ei ole mainintaa configure-tiedoston ALL_LINGUAS kohdassa."
 
-#: stats/utils.py:294
+#: stats/utils.py:302
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
 msgstr ""
 "Ei tietoa mistä katsoa, onko kieli käytössä. Kysy moduulin ylläpitäjältä."
 
-#: teams/models.py:113
+#: teams/models.py:112
 #, python-format
 msgid "No team for locale %s"
 msgstr "Maa-asetustolle %s ei ole ryhmää"
 
-#: teams/models.py:130
-#| msgid "Translation"
+#: teams/models.py:129
 msgid "Translator"
 msgstr "Kääntäjä"
 
-#: teams/models.py:131
+#: teams/models.py:130
 msgid "Reviewer"
 msgstr "Tarkistaja"
 
-#: teams/models.py:132
-#| msgid "Community"
+#: teams/models.py:131
 msgid "Committer"
 msgstr "Toimittaja"
 
-#: teams/models.py:133 templates/teams/team_base.html:31
+#: teams/models.py:132 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Koordinaattori"
 
 #: teams/views.py:44
-#| msgid "Community"
 msgid "Committers"
 msgstr "Toimittajat"
 
@@ -1358,12 +1363,10 @@ msgid "No reviewers"
 msgstr "Ei tarkistajia"
 
 #: teams/views.py:54
-#| msgid "Translation"
 msgid "Translators"
 msgstr "Kääntäjät"
 
 #: teams/views.py:57
-#| msgid "Not translated"
 msgid "No translators"
 msgstr "Ei kääntäjiä"
 
@@ -1606,18 +1609,14 @@ msgid "Branches:"
 msgstr "Haarat:"
 
 #: templates/module_detail.html:65
-msgid "Browse CVS"
-msgstr "Selaa CVS-puuta"
+msgid "Browse Repository"
+msgstr "Selaa versionhallinnan varastoa"
 
-#: templates/module_detail.html:68
-msgid "Browse SVN"
-msgstr "Selaa SVN-puuta"
-
-#: templates/module_detail.html:72
+#: templates/module_detail.html:69
 msgid "This branch is currently string-frozen."
 msgstr "Tämän haaran merkkijonot on jäädytetty."
 
-#: templates/module_detail.html:81
+#: templates/module_detail.html:78
 msgid "Translation"
 msgstr "Käännös"
 
@@ -1687,7 +1686,6 @@ msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Tunnistaudu OpenID:llä <strong>tai</strong> salasanalla:"
 
 #: templates/register.html:34
-#| msgid "Log in with OpenID"
 msgid "Register with OpenID"
 msgstr "Rekisteröidy käyttäen OpenID:tä"
 
@@ -1713,7 +1711,7 @@ msgid "%(name)s Release"
 msgstr "%(name)s-julkaisu"
 
 #: templates/release_detail.html:13
-#: templates/languages/language_release.html:20
+#: templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1721,9 +1719,9 @@ msgstr ""
 "Tämän julkaisun moduulit eivät ole osa Gnomen SVN-versiohallintaa. Tarkista "
 "kunkin moduulin sivustolta, minne siihen liittyvät käännökset lähetetään."
 
-#: templates/release_detail.html:19 templates/teams/team_detail.html:22
-msgid "Release"
-msgstr "Julkaisu"
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "Kieli"
 
 #: templates/release_detail.html:20 templates/teams/team_detail.html:22
 msgid "User Interface"
@@ -1745,17 +1743,12 @@ msgstr ""
 "Valitse alta julkaisu tai julkaisujoukko, jos haluat nähdä siitä lisätietoja:"
 
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
-#| msgid "Download po file"
 msgid "Download POT file"
 msgstr "Lataa POT-tiedosto"
 
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
 msgstr "Huomautukset"
-
-#: templates/stats_show.html:30
-msgid "Language"
-msgstr "Kieli"
 
 #: templates/stats_show.html:30 vertimus/models.py:164
 msgid "Translated"
@@ -1769,6 +1762,22 @@ msgstr "Näytä ohjeiden kuvat"
 msgid "Damned Lies site admin"
 msgstr "Damned Lies -sivuston ylläpitäjä"
 
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#: templates/teams/team_detail.html:59 templates/teams/team_detail.html:60
+msgid "All modules"
+msgstr "Kaikki moduulit"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:26
+msgid "Hide completed modules"
+msgstr "Piilota valmiit moduulit"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:30
+msgid "Show completed modules"
+msgstr "Näytä valmiit moduulit"
+
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
@@ -1781,71 +1790,74 @@ msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "Gnomea käännetään seuraavalle %(numb)s kielelle.\n"
 msgstr[1] "Gnomea käännetään seuraaville %(numb)s kielille.\n"
 
-#: templates/languages/language_release.html:12
-msgid "Hide completed modules"
-msgstr "Piilota valmiit moduulit"
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Lataa kaikki po-tiedostot"
 
-#: templates/languages/language_release.html:16
-msgid "Show completed modules"
-msgstr "Näytä valmiit moduulit"
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:55
+msgid "Module"
+msgstr "Moduuli"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Haara"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Tilastot"
+
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "Tila"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:55
+msgid "Date"
+msgstr "Päiväys"
+
+#: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% käännetty)"
 
-#: templates/languages/language_release_stats.html:83
+#: templates/languages/language_release_stats.html:95
 msgid "Error summary"
 msgstr "Virheyhteenveto"
-
-#: templates/languages/language_release_stats.html:92
-msgid "Download all po files"
-msgstr "Lataa kaikki po-tiedostot"
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "Gnomen kehittäjä"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Muuta tietojasi"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Muuta salasanaa"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Liity ryhmään"
 
-#: templates/people/person_detail.html:12
-#| msgid "Language"
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "Sivuston kieli:"
 
-#: templates/people/person_detail.html:21
-#| msgid "Core"
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "Valitse"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "Ylläpitää:"
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "Työn alla"
 
-#: templates/people/person_detail.html:42
-msgid "Date"
-msgstr "Päiväys"
-
-#: templates/people/person_detail.html:42
-#| msgid "Modules"
-msgid "Module"
-msgstr "Moduuli"
-
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "Tila"
 
@@ -1874,7 +1886,6 @@ msgid "SVN account:"
 msgstr "SVN-tunnus:"
 
 #: templates/people/person_password_change_form.html:6
-#| msgid "Password:"
 msgid "Password change"
 msgstr "Salasanan muuttaminen"
 
@@ -1887,12 +1898,10 @@ msgstr ""
 "kaksi kertaa, jotta sen oikeasta kirjoitusasusta voidaan varmistua."
 
 #: templates/people/person_password_change_form.html:15
-#| msgid "Password:"
 msgid "Old password:"
 msgstr "Vanha alasana:"
 
 #: templates/people/person_password_change_form.html:21
-#| msgid "Password:"
 msgid "New password:"
 msgstr "Uusi salasana:"
 
@@ -1909,19 +1918,25 @@ msgid "I would like to join the following team as 'translator':"
 msgstr "Haluan liittyä seuraavaan ryhmään ”kääntäjänä”:"
 
 #: templates/people/person_team_join_form.html:13
-#| msgid "Log in"
 msgid "Join"
 msgstr "Liity"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "Ryhmäjäsenyydet"
+msgid "Member of teams"
+msgstr "Ryhmien jäsenyydet"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Kääntäjäryhmän %(team_name)s jäsen (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr "Poistu ryhmästä"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Haluatko varmasti poistua ryhmästä?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1961,7 +1976,15 @@ msgstr "Tilaa"
 msgid "%(lang)s Translation Team"
 msgstr "Kielen %(lang)s kääntäjäryhmä"
 
-#: templates/teams/team_detail.html:74
+#: templates/teams/team_detail.html:22
+msgid "Release"
+msgstr "Julkaisu"
+
+#: templates/teams/team_detail.html:65
+msgid "Team membership"
+msgstr "Ryhmäjäsenyydet"
+
+#: templates/teams/team_detail.html:76
 msgid "Apply modifications"
 msgstr "Toteuta muutokset"
 
@@ -1984,7 +2007,6 @@ msgstr "Gnomelle ei löydy juuri nyt yhtään kääntäjäryhmää. :("
 
 #: templates/vertimus/vertimus_detail.html:5
 #, python-format
-#| msgid "Module Statistics: %(name)s"
 msgid "Module Translation: %(name)s"
 msgstr "Moduulin käännös: %(name)s"
 
@@ -1997,12 +2019,10 @@ msgid "State:"
 msgstr "Tila:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Download po file"
 msgid "Download PO file"
 msgstr "Lataa PO-tiedosto"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Translated"
 msgid "Translated:"
 msgstr "Käännetty:"
 
@@ -2010,24 +2030,27 @@ msgstr "Käännetty:"
 msgid "Action History"
 msgstr "Toimintohistoria"
 
-#: templates/vertimus/vertimus_detail.html:88
+#: templates/vertimus/vertimus_detail.html:81
+msgid "diff with:"
+msgstr "eroavuudet:"
+
+#: templates/vertimus/vertimus_detail.html:92
 msgid "No comment"
 msgstr "Ei kommenttia"
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Uusi toiminto"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:108
 msgid "Submit"
 msgstr "Lähetä"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:112
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
-msgstr ""
-"Sinun tulee olla tunnistautunut ja ryhmän %(team_name)s jäsen."
+msgstr "Sinun tulee olla tunnistautunut ja ryhmän %(team_name)s jäsen."
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
@@ -2046,7 +2069,6 @@ msgid "Action"
 msgstr "Toiminto"
 
 #: vertimus/forms.py:33
-#| msgid "Community"
 msgid "Comment"
 msgstr "Kommentti"
 
@@ -2078,12 +2100,15 @@ msgstr "Kommentti tai tiedosto tarvitaan tähän toimintoon."
 msgid "A file is needed for this action."
 msgstr "Tiedosto tarvitaan tähän toimintoon."
 
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Ethän lähetä tiedostoa ”Varaa”-toimintoa käyttäessäsi."
+
 #: vertimus/models.py:138
 msgid "Inactive"
 msgstr "Inaktiivinen"
 
 #: vertimus/models.py:151
-#| msgid "Translation"
 msgid "Translating"
 msgstr "Käännetään"
 
@@ -2100,21 +2125,28 @@ msgid "To Review"
 msgstr "Tarkastettavaksi"
 
 #: vertimus/models.py:220
-#| msgid "Community"
 msgid "To Commit"
 msgstr "Toimitettavaksi"
 
 #: vertimus/models.py:233
-#| msgid "Community"
 msgid "Committing"
 msgstr "Toimitetaan"
 
 #: vertimus/models.py:247
-#| msgid "Community"
 msgid "Committed"
 msgstr "Toimitettu"
 
-#: vertimus/models.py:418
+#: vertimus/models.py:326
+msgid "File in repository"
+msgstr "Tiedosto versionhallinnassa"
+
+#: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:129
+#: vertimus/views.py:147
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Henkilö %(name)s lähetti tiedoston %(date)s"
+
+#: vertimus/models.py:428
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2131,20 +2163,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:431 vertimus/models.py:481
+#: vertimus/models.py:441 vertimus/models.py:491
 msgid "Without comment"
 msgstr "Ilman kommenttia"
 
-#: vertimus/models.py:433 vertimus/models.py:483
+#: vertimus/models.py:443 vertimus/models.py:493
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Tämä on ”%s”-järjestelmästä lähetetty automaattinen viesti."
 
-#: vertimus/models.py:440
+#: vertimus/models.py:450
 msgid "Write a comment"
 msgstr "Kirjoita kommentti"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:479
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2161,65 +2193,67 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:491
-#| msgid "UI translations"
+#: vertimus/models.py:501
 msgid "Reserve for translation"
 msgstr "Varaa käännettäväksi"
 
-#: vertimus/models.py:502
-#| msgid "UI translations"
+#: vertimus/models.py:513
 msgid "Upload the new translation"
 msgstr "Lähetä uusi käännös"
 
-#: vertimus/models.py:517
+#: vertimus/models.py:528
 msgid "Reserve for proofreading"
 msgstr "Varaa oikoluettavaksi"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:540
 msgid "Upload the proofread translation"
 msgstr "Lähetä oikoluettu käännös"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:556
 msgid "Ready for submission"
 msgstr "Valmis toimitettavaksi"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:573
 msgid "Reserve to submit"
 msgstr "Varaa toimitettavaksi"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:586
 msgid "Inform of submission"
 msgstr "Tiedota toimituksesta"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
+#: vertimus/models.py:601
 msgid "Review required"
 msgstr "Tarkistus vaaditaan"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:632
 msgid "Backup the actions"
 msgstr "Varmuuskopioi toiminnot"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:671
 msgid "Undo the last state change"
 msgstr "Kumoa viimeisin tilamuutos"
 
-#: vertimus/views.py:122 vertimus/views.py:127
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "Henkilö %(name)s lähetti tiedoston %(date)s"
-
-#: vertimus/views.py:133
+#: vertimus/views.py:135
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Viimeisin kielen %(lang)s toimitettu tiedosto"
 
-#: vertimus/views.py:136
+#: vertimus/views.py:138
 msgid "Latest POT file"
 msgstr "Viimeisin POT-tiedosto"
+
+#~ msgid "JHBuild Documentation"
+#~ msgstr "JHBuild-ohjeet"
+
+#~ msgid "Browse CVS"
+#~ msgstr "Selaa CVS-puuta"
+
+#~ msgid "Browse SVN"
+#~ msgstr "Selaa SVN-puuta"
 
 #~ msgid "openVPN"
 #~ msgstr "openVPN"
