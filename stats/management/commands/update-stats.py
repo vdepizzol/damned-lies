@@ -7,7 +7,7 @@ from stats.models import Module, Branch
 
 class Command(BaseCommand):
     help = "Update statistics about po file"
-    args = "[MODULE_ID [BRANCH]]"
+    args = "[MODULE [BRANCH]]"
     
     option_list = BaseCommand.option_list + (
         make_option('--force', action='store_true', dest='force', default=False,

@@ -1,8 +1,12 @@
+2009-02-27  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* stats/management/commands/update-stats.py: Fix help message.
+
 2009-02-14  Claude Paroz  <claude@2xlibre.net>
 
 	* docs/notes-upgrade.txt: enlarge information.type varchar to 10 chars.
-	* stats/models.py: Add 2 more information type (warn-ext, error-ext) to be
-	able to select informations with external warnings/errors. These are
+	* stats/models.py: Add 2 more information type (warn-ext, error-ext) to
+	be able to select informations with external warnings/errors. These are
 	always checked when recomputing stats.
 	* stats/utils.py: LINGUAS warnings are of type 'warn-ext'.
 	Fixes bug #567680.
@@ -14,8 +18,8 @@
 
 2009-02-12  Claude Paroz  <claude@2xlibre.net>
 
-	* templates/languages/language_release_stats.html: Fix graph direction for
-	RTL languages.
+	* templates/languages/language_release_stats.html: Fix graph direction
+	for RTL languages.
 	Fixes bug #571349.
 
 2009-02-11  Claude Paroz  <claude@2xlibre.net>
@@ -26,8 +30,8 @@
 
 2009-02-10  Claude Paroz  <claude@2xlibre.net>
 
-	* stats/management/commands/update-stats.py: Added an option to update all
-	non-GNOME modules.
+	* stats/management/commands/update-stats.py: Added an option to update
+	all non-GNOME modules.
 
 2009-02-06  Claude Paroz  <claude@2xlibre.net>
 
