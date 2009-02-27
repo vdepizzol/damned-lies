@@ -26,7 +26,6 @@ from django.utils.translation import get_language, activate, ugettext, ugettext_
 from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
-from django.core.files.storage import default_storage
 from django.db.models.signals import post_save, pre_delete
 
 from stats.models import Branch, Domain, Statistics
@@ -267,16 +266,19 @@ ACTION_NAMES = (
     'IC', 'TR',
     'BA', 'UNDO')
 
-def generate_upload_file_name(instance, original_filename):
-    base, ext = os.path.splitext(original_filename)
-    if os.path.splitext(base)[1] == ".tar":
+def generate_upload_file_name(instance, pathname):
+    # Extract the first extension (with the point)
+    root, ext = os.path.splitext(pathname)
+    # Check if a second extension is present
+    if os.path.splitext(root)[1] == ".tar":
         ext = ".tar" + ext
-    filename = "%s-%s-%s-%s-%s%s" % (instance.state_db.branch.module.name, 
-                                     instance.state_db.branch.name, 
-                                     instance.state_db.domain.name,
-                                     instance.state_db.language.locale,
-                                     instance.state_db.id,
-                                     ext)
+    filename = "%s-%s-%s-%s-%s%s" % (
+        instance.state_db.branch.module.name, 
+        instance.state_db.branch.name, 
+        instance.state_db.domain.name,
+        instance.state_db.language.locale,
+        instance.state_db.id,
+        ext)
     return "%s/%s" % (settings.UPLOAD_DIR, filename)
 
 class ActionDb(models.Model):
@@ -298,45 +300,53 @@ class ActionDb(models.Model):
         action._action_db = self
         return action
 
-    def get_previous_action_with_po(self):
-        """ Returns the previous action with an uploaded file related to the same state """
+    def get_previous_action_db_with_po(self):
+        """
+        Return the previous ActionDb with an uploaded file related to the
+        same state.
+        """
         try:
             action_db = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
                 id__lt=self.id).latest('id')
-            return action_db.get_action()
+            return action_db
         except ActionDb.DoesNotExist:
             return None
 
-    def merge_file_with_pot(self, potfile):
-        """ Merge the uploaded translated file with current pot """
+    def merge_file_with_pot(self, pot_file):
+        """Merge the uploaded translated file with current pot."""
         if self.file:
-            command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s" % {
-                      'outpo':   self.file.path[:-3] + ".merged.po",
-                      'pofile':  self.file.path,
-                      'potfile': potfile
-                      }
+            command = "msgmerge --previous -o %(out_po)s %(po_file)s %(pot_file)s" % {
+                'out_po': self.file.path[:-3] + ".merged.po",
+                'po_file': self.file.path,
+                'pot_file': pot_file
+            }
             run_shell_command(command)
 
     @classmethod
     def get_action_history(cls, state_db):
-        """ Return action history as a list of tuples (action, file_history)
-            File_history is a list of previous po files, used in vertimus view to generate diff links """
+        """
+        Return action history as a list of tuples (action, file_history),
+        file_history is a list of previous po files, used in vertimus view to
+        generate diff links
+        """
         history = []
         if state_db:
-            file_history = [{'action':0, 'title': ugettext("File in repository")}]
-            for va_db in ActionDb.objects.filter(state_db__id=state_db.id).order_by('id'):
-                history.append((va_db.get_action(), list(file_history)))
-                if va_db.file and va_db.file.path.endswith('.po'):
-                    file_history.insert(0, {'action':va_db.id,
-                                            'title': ugettext("Uploaded file by %(name)s on %(date)s") % { 
-                                                                'name': va_db.person.name,
-                                                                'date': va_db.created },
-                                           })
+            file_history = [{'action_id':0, 'title': ugettext("File in repository")}]
+            for action_db in ActionDb.objects.filter(state_db__id=state_db.id).order_by('id'):
+                history.append((action_db.get_action(), list(file_history)))
+                if action_db.file and action_db.file.path.endswith('.po'):
+                    # Action.id and ActionDb.id are identical (inheritance)
+                    file_history.insert(0, {
+                        'action_id': action_db.id,
+                        'title': ugettext("Uploaded file by %(name)s on %(date)s") % { 
+                            'name': action_db.person.name,
+                            'date': action_db.created },
+                        })
         return history
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)
-    
+
 
 class ActionAbstract(object):
     """Abstract class"""
@@ -375,6 +385,21 @@ class ActionAbstract(object):
     def file(self):
         return self._action_db.file
 
+    @property
+    def state(self):
+        return self._action_db.state_db.get_state()
+
+    def get_previous_action_with_po(self):
+        """
+        Return the previous Action with an uploaded file related to the same
+        state.
+        """
+        action_db = self._action_db.get_previous_action_db_with_po()
+        if action_db:
+            return action_db.get_action()
+        else:
+            return None
+
     def save_action_db(self, state, person, comment=None, file=None):
         """Used by apply"""
         self._action_db = ActionDb(state_db=state._state_db,
@@ -393,7 +418,7 @@ class ActionAbstract(object):
             return None
 
     def merged_file(self):
-        """ If available, returns the merged file as a dict: {'url':'path':'filename':} """
+        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
         mfile_url = mfile_path = mfile_name = None
         if self._action_db.file:
             mfile_url = self._action_db.file.url[:-3] + ".merged.po"
@@ -674,8 +699,7 @@ class ActionUNDO(ActionAbstract):
         self.save_action_db(state, person, comment, file)
 
         # Exclude WC because this action is a noop on State
-        actions_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(
-            name='WC').order_by('-id')
+        actions_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(name='WC').order_by('-id')
         i = 0
         while (i < len(actions_db)):
             if actions_db[i].name == 'UNDO':
@@ -688,7 +712,7 @@ class ActionUNDO(ActionAbstract):
         return StateNone()
 
 def update_uploaded_files(sender, **kwargs):
-    """ Callback to handle pot_file_changed signal """
+    """Callback to handle pot_file_changed signal"""
     actions = ActionDb.objects.filter(state_db__branch=kwargs['branch'],
                                       state_db__domain=kwargs['domain'],
                                       file__endswith=".po")
@@ -697,7 +721,10 @@ def update_uploaded_files(sender, **kwargs):
 pot_has_changed.connect(update_uploaded_files)
 
 def merge_uploaded_file(sender, instance, **kwargs):
-    """ post_save callback for ActionDb that automatically merge uploaded file with latest pot file """
+    """
+    post_save callback for ActionDb that automatically merge uploaded file
+    with latest pot file.
+    """
     if instance.file and instance.file.path.endswith('.po'):
         try:
             stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
@@ -708,10 +735,12 @@ def merge_uploaded_file(sender, instance, **kwargs):
 post_save.connect(merge_uploaded_file, sender=ActionDb)
 
 def delete_merged_file(sender, instance, **kwargs):
-    """ pre_delete callback for ActionDb that deletes the merged file from upload dir """
+    """
+    pre_delete callback for ActionDb that deletes the merged file from upload
+    directory.
+    """
     if instance.file and instance.file.path.endswith('.po'):
         merged_file = instance.file.path[:-3] + ".merged.po"
         if os.access(merged_file, os.W_OK):
              os.remove(merged_file)
 pre_delete.connect(delete_merged_file, sender=ActionDb)
-

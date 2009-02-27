@@ -18,15 +18,12 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from datetime import datetime
 from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.core import urlresolvers
-from django.conf import settings
 
-from people.models import Person
 from stats.models import Statistics, Module, Branch, Domain, Language
 from vertimus.models import StateDb, ActionDb, ActionAbstract
 from vertimus.forms import ActionForm
@@ -110,46 +107,50 @@ def vertimus(request, branch, domain, language, stats=None):
     return render_to_response('vertimus/vertimus_detail.html', context,
                               context_instance=RequestContext(request))
 
-def vertimus_diff(request, action_id, action_id2=None):
-    """ Show a diff between current action po file and previous file """
+def vertimus_diff(request, action_id_1, action_id_2=None):
+    """Show a diff between current action po file and previous file"""
     import difflib
-    action_db1 = get_object_or_404(ActionDb, pk=action_id)
-    state = action_db1.state_db
-    file_path1 = action_db1.get_action().merged_file()['path']
-    if not file_path1:
-        file_path1 = action_db1.file.path
-    content1 = [l.decode('utf-8') for l in open(file_path1, 'U').readlines()]
-    descr1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_db1.person.name,
-                                                            'date': action_db1.created }
-    if action_id2 not in (None, "0"):
-        # 1) id2 specified in url
-        action2 = ActionDb.objects.get(id=action_id2)
-        file_path2 = action2.get_action().merged_file()['path']
-        descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
-                                                                'date': action2.created }
+    action_1 = get_object_or_404(ActionDb, pk=action_id_1).get_action()
+    state = action_1.state
+
+    file_path_1 = action_1.merged_file()['path']
+    if not file_path_1:
+        # The merged file isn't availabe yet
+        file_path_1 = action_1.file.path
+
+    content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
+    descr_1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_1.person.name,
+                                                             'date': action_1.created }
+    if action_id_2 not in (None, "0"):
+        # 1) id_2 specified in URL
+        action_2 = get_object_or_404(ActionDb, pk=action_id_2).get_action()
+        file_path_2 = action_2.merged_file()['path']
+        descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
+                                                                 'date': action_2.created }
     else:        
-        action2 = None
-        if action_id2 is None:
+        action_2 = None
+        if action_id_2 is None:
             # 2) Search previous in action history
-            action2 = action_db1.get_previous_action_with_po()
-        if action2:
-            file_path2 = action2.merged_file()['path']
-            descr2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action2.person.name,
-                                                                    'date': action2.created }
+            action_2 = action_1.get_previous_action_with_po()
+
+        if action_2:
+            file_path_2 = action_2.merged_file()['path']
+            descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
+                                                                     'date': action_2.created }
         else:
              # 3) Lastly, the file should be the more recently committed file (merged)
             try:
                 stats = Statistics.objects.get(branch=state.branch, domain=state.domain, language=state.language)
-                descr2 = _("Latest committed file for %(lang)s" % {'lang': state.language.get_name()})
+                descr_2 = _("Latest committed file for %(lang)s" % {'lang': state.language.get_name()})
             except Statistics.DoesNotExist:
                 stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
-                descr2 = _("Latest POT file")
-            file_path2 = stats.po_path()
+                descr_2 = _("Latest POT file")
+            file_path_2 = stats.po_path()
 
-    content2 = [l.decode('utf-8') for l in open(file_path2, 'U').readlines()]
+    content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
     d = difflib.HtmlDiff()
-    diff_content = d.make_table(content2, content1,
-                                descr2, descr1, context=True)
+    diff_content = d.make_table(content_2, content_1,
+                                descr_2, descr_1, context=True)
 
     context = {
         'diff_content': diff_content,

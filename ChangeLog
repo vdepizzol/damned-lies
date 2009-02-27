@@ -1,5 +1,16 @@
 2009-02-27  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
+	* templates/vertimus/vertimus_detail.html: Rename action to action_id.
+	* vertimus/models.py: Useless default_storage import. Add
+	get_previous_action_with_po() and state in ActionAbstract. Rename
+	action to action_db when it's an ActionDb instance.
+	* vertimus/urls.py: action_id_1 and action_id_2.
+	* vertimus/views.py: Remove useless imports. Use real action and
+	state objects. Use get_object_or_404 for the action_id_2 (URL arg).
+	Coding conventions details.
+
+2009-02-27  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
 	* stats/management/commands/update-stats.py: Fix help message.
 
 2009-02-14  Claude Paroz  <claude@2xlibre.net>
