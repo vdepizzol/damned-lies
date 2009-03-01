@@ -130,7 +130,7 @@ class BranchCharField(models.CharField):
             try:
                 model_instance.checkout()
             except:
-                raise ValueError("Branch not valid: error while checking out the branch.")
+                raise ValueError("Branch not valid: error while checking out the branch (%s)." % sys.exc_info()[1])
         return getattr(model_instance, self.attname)
 
 class Branch(models.Model):
@@ -430,7 +430,7 @@ class Branch(models.Model):
                     "localdir" : modulepath,
                     })
             elif vcs_type == "git":
-                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git reset --hard && git clean -df" % {
+                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git fetch && git reset --hard origin/%(branch)s" % {
                     "localdir" : modulepath,
                     "branch" : self.name,
                     })
