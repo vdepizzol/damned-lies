@@ -14,18 +14,6 @@ class Language(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.locale)
 
-    @classmethod
-    def slug_locale(cls, loc_string):
-        if loc_string:
-            return loc_string.replace('@', '_at_')
-        return None
-
-    @classmethod
-    def unslug_locale(cls, loc_string):
-        if loc_string:
-            return loc_string.replace('_at_', '@')
-        return None
-    
     def get_name(self):
         if self.name != self.locale:
             return _(self.name)

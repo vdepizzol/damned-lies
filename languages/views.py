@@ -41,7 +41,7 @@ def languages(request):
                               context_instance=RequestContext(request))
 
 def language_all(request, locale, dtype):
-    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    language = get_object_or_404(Language, locale=locale)
     stats = Statistics.get_lang_stats_by_type(language, dtype, release=None)
     context = {
         'pageSection': "languages",
@@ -55,7 +55,7 @@ def language_all(request, locale, dtype):
                               context_instance=RequestContext(request))
 
 def language_release(request, locale, release_name, dtype):
-    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    language = get_object_or_404(Language, locale=locale)
     release = get_object_or_404(Release, name=release_name)
     stats = Statistics.get_lang_stats_by_type(language, dtype, release)
     context = {
@@ -93,7 +93,7 @@ def language_release_xml(request, locale, release_name):
     """ This view create the same XML output than the previous Damned-Lies, so as
         apps which depend on it (like Vertimus) don't break.
         This view may be suppressed when Vertimus will be integrated in D-L. """
-    language = get_object_or_404(Language, locale=Language.unslug_locale(locale))
+    language = get_object_or_404(Language, locale=locale)
     release = get_object_or_404(Release, name=release_name)
     stats = release.get_lang_stats(language)
     content = "<stats language=\"%s\" release=\"%s\">\n" % (locale, release_name)

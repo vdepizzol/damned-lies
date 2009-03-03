@@ -747,7 +747,7 @@ class Release(models.Model):
             if row[1] not in stats:
                 # Initialize stats dict
                 stats[row[1]] = {
-                    'lang_name': row[0], 'lang_locale': Language.slug_locale(row[1]),
+                    'lang_name': row[0], 'lang_locale': row[1],
                     'doc_trans': 0, 'doc_fuzzy': 0, 'doc_untrans': total_docstrings,
                     'doc_percent': 0, 'doc_percentfuzzy': 0, 'doc_percentuntrans': 100,
                     'ui_trans': 0, 'ui_fuzzy': 0, 'ui_untrans': total_uistrings,

@@ -1,3 +1,10 @@
+2009-03-03  Claude Paroz  <claude@2xlibre.net>
+
+	* languages/models.py:
+	* languages/views.py:
+	* stats/models.py: Now that URLs admit '@', slug/unslug locale is of no
+	use.
+
 2009-03-03  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* stats/forms.py:
