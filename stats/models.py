@@ -22,14 +22,12 @@
 import os, sys, re, hashlib
 import threading
 from datetime import datetime
-from time import tzname
 from django.db import models, connection
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
 from django.conf import settings
 from stats import utils
 from stats import signals
-import potdiff
 
 from people.models import Person
 from languages.models import Language

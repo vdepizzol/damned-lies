@@ -1,6 +1,5 @@
 from django import forms
-from stats.models import Module, Branch, Category, CATEGORY_CHOICES, Release
-
+from stats.models import CATEGORY_CHOICES, Release
 
 class ReleaseField(forms.ModelChoiceField):
     def __init__(self, *args, **kwargs):

@@ -1,5 +1,5 @@
 from django import forms
-from teams.models import Team, ROLE_CHOICES
+from teams.models import ROLE_CHOICES
 
 class EditMemberRoleForm(forms.Form):
 
@@ -8,9 +8,10 @@ class EditMemberRoleForm(forms.Form):
         choices = list(ROLE_CHOICES[:-1]) # exclude last element: coordinator
         choices.append(('remove','Remove From Team'))
         for role in roles:
-            self.fields[str(role.pk)] = forms.ChoiceField(choices=choices,
-                                                 label = "<a href='%s'>%s</a>" % (role.person.get_absolute_url(), role.person.name),
-                                                 initial=role.role)
+            self.fields[str(role.pk)] = forms.ChoiceField(
+                choices=choices,
+                label = "<a href='%s'>%s</a>" % (role.person.get_absolute_url(), role.person.name),
+                initial=role.role)
         self.fields['form_type'] = forms.CharField(widget=forms.HiddenInput,
                                                    initial=roles[0].role)
     

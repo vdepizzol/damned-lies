@@ -21,9 +21,9 @@
 
 import sys, os, re, time
 from itertools import islice
-from subprocess import Popen, PIPE, STDOUT
+from subprocess import Popen, PIPE
 
-from django.utils.translation import ugettext as _, ugettext_noop
+from django.utils.translation import ugettext_noop
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
 from django.core.files.base import File
