@@ -656,6 +656,11 @@ class ActionDbBackup(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)
 
+    def get_action(self):
+        action = eval('Action' + self.name)()
+        action._action_db = self
+        return action
+
 class ActionBA(ActionAbstract):
     name = 'BA'
     description = _('Backup the actions')

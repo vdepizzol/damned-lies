@@ -1,5 +1,10 @@
 2009-03-04  Claude Paroz  <claude@2xlibre.net>
 
+	* vertimus/models.py: ActionDbBackup also needs the get_action method for
+	rss feeds.
+
+2009-03-04  Claude Paroz  <claude@2xlibre.net>
+
 	* templates/feeds/actions_description.html:
 	* vertimus/feeds.py: Strings improvement regarding the new feeds
 	fonctionality.
