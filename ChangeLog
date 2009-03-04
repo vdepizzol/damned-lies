@@ -1,5 +1,13 @@
 2009-03-04  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/models.py: bugs_base and bugs_product may be null.
+	commit_po takes a user argument so the commit can be attributed to the
+	right person.
+	* vertimus/models.py: New 'Submit to repository' action for modules which
+	have write access.
+
+2009-03-04  Claude Paroz  <claude@2xlibre.net>
+
 	* vertimus/models.py: ActionDbBackup also needs the get_action method for
 	rss feeds.
 

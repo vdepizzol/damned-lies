@@ -51,8 +51,8 @@ class Module(models.Model):
     homepage = models.URLField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
-    bugs_base = models.CharField(max_length=50)
-    bugs_product = models.CharField(max_length=50)
+    bugs_base = models.CharField(max_length=50, null=True, blank=True)
+    bugs_product = models.CharField(max_length=50, null=True, blank=True)
     bugs_component = models.CharField(max_length=50, null=True, blank=True)
     vcs_type = models.CharField(max_length=5, choices=VCS_TYPE_CHOICES)
     # URLField is too restrictive for vcs_root
@@ -492,7 +492,7 @@ class Branch(models.Model):
             self.checkout_lock.release()
         return 1
 
-    def commit_po(self, po_file, domain, language):
+    def commit_po(self, po_file, domain, language, user):
         """ Commit the file 'po_file' in the branch VCS repository """
         if self.is_vcs_readonly():
             raise Exception, "This branch is in read-only mode. Unable to commit"
@@ -541,10 +541,12 @@ class Branch(models.Model):
                 commit_message = "Updated %s translation." % language.name
             # FIXME: edit changelog?
             # git commit -m "Updated %s translation."
-            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git commit -m \"%(msg)s\"" % {
+            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git commit -m \"%(msg)s\" --author \"%(name)s <%(email)s>\"" % {
                        'dest':    commit_dir,
                        'branch':  self.name,
                        'msg': commit_message,
+                       'name': user.name,
+                       'email': user.email,
                        }, raise_on_error=True)
             # git push
             utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git push" % {
@@ -552,6 +554,8 @@ class Branch(models.Model):
                        'branch':  self.name,
                        'msg': commit_message,
                        }, raise_on_error=True)
+        # Finish by updating stats
+        self.update_stats(force=False)
 
 
 DOMAIN_TYPE_CHOICES = (

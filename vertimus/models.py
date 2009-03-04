@@ -18,7 +18,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os
+import os, sys
 
 from datetime import datetime
 from django.db import models
@@ -199,6 +199,8 @@ class StateProofread(StateAbstract):
             action_names = ['TC', 'RP', 'TR']
         else:
             action_names = []
+        if not self.branch.is_vcs_readonly() and person.is_committer(self.language.team):
+            action_names.insert(1, 'CI')
 
         return self._get_available_actions(person, action_names)
 
@@ -222,6 +224,8 @@ class StateToCommit(StateAbstract):
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
             action_names = ['RC', 'TR']
+            if not self.branch.is_vcs_readonly():
+                action_names.insert(1, 'CI')
         else:
             action_names = []
             
@@ -263,7 +267,7 @@ ACTION_NAMES = (
     'WC',
     'RT', 'UT',
     'RP', 'UP',
-    'TC', 'RC',
+    'TC', 'CI', 'RC',
     'IC', 'TR',
     'BA', 'UNDO')
 
@@ -593,6 +597,29 @@ class ActionTC(ActionAbstract):
         self.send_mail_new_state(state, new_state, committers)
         return new_state
 
+class ActionCI(ActionAbstract):
+    name = 'CI'
+    description = _('Submit to repository')
+    file_is_prohibited = True
+    
+    def _new_state(self):
+        return StateCommitted()
+    
+    def apply(self, state, person, comment=None, file=None):
+        self.save_action_db(state, person, comment, file)
+        action_with_po = self.get_previous_action_with_po()
+        try:
+            state.branch.commit_po(action_with_po.file.path, state.domain, state.language, person)            
+            new_state = self._new_state()
+        except:
+            # Commit failed, state unchanged
+            person.message_set.create(message=_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
+            self._action_db.delete()
+            new_state = state 
+        if state != new_state:
+            self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+        return new_state
+
 class ActionRC(ActionAbstract):
     name = 'RC'
     # Translators: this indicates a committer is going to commit the file in the repository
@@ -726,7 +753,7 @@ def update_uploaded_files(sender, **kwargs):
                                       state_db__domain=kwargs['domain'],
                                       file__endswith=".po")
     for action in actions:
-        action.merge_file_with_pot(potfile=kwargs['potfile'])
+        action.merge_file_with_pot(kwargs['potfile'])
 pot_has_changed.connect(update_uploaded_files)
 
 def merge_uploaded_file(sender, instance, **kwargs):
