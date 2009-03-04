@@ -39,7 +39,8 @@ class LatestActionsByLanguage(Feed):
 
     def title(self, obj):
         current_site = Site.objects.get_current()
-        return _("%s - Vertimus actions for the %s language") % (current_site, obj.name)
+        return _("%(site)s - Vertimus actions for the %(lang)s language") % {
+                  'site': current_site, 'lang': obj.name }
 
     def link(self, obj):
         if not obj:
@@ -47,7 +48,7 @@ class LatestActionsByLanguage(Feed):
         return obj.get_team_url()
 
     def description(self, obj):
-        return _("Last actions of the GNOME translation project for the %s language") % obj.name
+        return _("Latest actions of the GNOME Translation Project for the %s language") % obj.name
 
     def items(self, obj):
         # The Django ORM doesn't provide the UNION SQL feature :-(
@@ -82,7 +83,8 @@ class LatestActionsByTeam(Feed):
 
     def title(self, obj):
         current_site = Site.objects.get_current()
-        return _("%s - Vertimus actions of the %s team") % (current_site, obj)
+        return _("%(site)s - Vertimus actions of the %(lang)s team") % {
+                  'site': current_site, 'lang': obj}
 
     def link(self, obj):
         if not obj:
@@ -90,7 +92,7 @@ class LatestActionsByTeam(Feed):
         return obj.get_absolute_url()
 
     def description(self, obj):
-        return _("Last actions made by the %s team of the GNOME translation project") % obj
+        return _("Latest actions made by the %s team of the GNOME Translation Project") % obj
 
     def items(self, obj):
         # The Django ORM doesn't provide the UNION SQL feature :-(
