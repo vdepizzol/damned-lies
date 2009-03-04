@@ -191,6 +191,7 @@ class StateProofreading(StateAbstract):
 
 class StateProofread(StateAbstract):
     name = 'Proofread'
+    # Translators: This is a status, not a verb
     description = _('Proofread')
 
     def get_available_actions(self, person):
