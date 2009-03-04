@@ -1,3 +1,22 @@
+2009-03-04  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	New RSS feeds to follow the Vertimus actions by team or
+	language (#566504).
+
+	* common/utils.py: Add a function to merge and sort two list of
+	objects.
+	* feeds/urls.py: Feed urls.
+	* settings_sample.py: Add the feed application.
+	* templates/feeds/actions_description.html: Feed item content.
+	* templates/feeds/actions_title.html: Feed item title.
+	* templates/languages/language_list.html: Add an RSS icon to each
+	languages.	
+	* templates/teams/team_detail.html: Associate the feed to the page.
+	* media/img/feed-icon-10x10.png: Added feed icon.
+	* urls.py: Add the '/rss' path.
+	* vertimus/feeds.py: Generate the content of the Vertimus feeds.
+	* vertimus/models.py: Add __unicode__ function to the archived actions.
+
 2009-03-04  Wouter Bolsterlee  <wbolster@svn.gnome.org>
 
 	* vertimus/models.py: Added translator comment.

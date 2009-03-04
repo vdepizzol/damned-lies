@@ -653,6 +653,9 @@ class ActionDbBackup(models.Model):
     class Meta:
         db_table = 'action_backup'
 
+    def __unicode__(self):
+        return "%s (%s)" % (self.name, self.id)
+
 class ActionBA(ActionAbstract):
     name = 'BA'
     description = _('Backup the actions')

@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     (r'^vertimus/', include('vertimus.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^admin/(.*)', admin.site.root),
+    (r'^rss/', include('feeds.urls')),
 )
 
 urlpatterns += patterns('stats.views',

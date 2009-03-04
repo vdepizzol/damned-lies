@@ -1,0 +1,10 @@
+{% load i18n %}
+</p>
+{% if obj.comment %}
+{{ obj.comment }}
+{% else %}
+{% trans 'Without comment' %}
+{% endif %}
+</p>
+
+<p>{{ obj.person }}</p>

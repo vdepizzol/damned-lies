@@ -123,7 +123,8 @@ INSTALLED_APPS = (
     'people',
     'stats',
     'teams',
-    'vertimus'
+    'vertimus',
+    'feeds',
 )
 
 INTERNAL_IPS=('127.0.0.1',)
