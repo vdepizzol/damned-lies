@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 21:31+0000\n"
-"PO-Revision-Date: 2009-03-05 00:58+0100\n"
+"POT-Creation-Date: 2009-03-04 23:59+0000\n"
+"PO-Revision-Date: 2009-03-05 01:00+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1142,7 +1142,7 @@ msgstr "Kan inte kopiera ny POT-fil till publik plats."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:616
+#: stats/models.py:620
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1153,64 +1153,64 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:817
+#: stats/models.py:821
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:818
+#: stats/models.py:822
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:819
+#: stats/models.py:823
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:820
+#: stats/models.py:824
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:821
+#: stats/models.py:825
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:897
+#: stats/models.py:901
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:928
+#: stats/models.py:932
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:929
+#: stats/models.py:933
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:931
+#: stats/models.py:935
 #: templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
-#: stats/models.py:934
+#: stats/models.py:938
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:935
+#: stats/models.py:939
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:938
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -2054,27 +2054,27 @@ msgstr "Korrekturläsning"
 msgid "Proofread"
 msgstr "Korrekturläs"
 
-#: vertimus/models.py:208
+#: vertimus/models.py:210
 msgid "To Review"
 msgstr "För granskning"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:222
 msgid "To Commit"
 msgstr "För insändning"
 
-#: vertimus/models.py:233
+#: vertimus/models.py:237
 msgid "Committing"
 msgstr "Insändning"
 
-#: vertimus/models.py:247
+#: vertimus/models.py:251
 msgid "Committed"
 msgstr "Insänd"
 
-#: vertimus/models.py:335
+#: vertimus/models.py:339
 msgid "File in repository"
 msgstr "Arkivera i förråd"
 
-#: vertimus/models.py:342
+#: vertimus/models.py:346
 #: vertimus/views.py:122
 #: vertimus/views.py:128
 #: vertimus/views.py:138
@@ -2082,7 +2082,7 @@ msgstr "Arkivera i förråd"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Uppskickad fil av %(name)s den %(date)s"
 
-#: vertimus/models.py:454
+#: vertimus/models.py:458
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2097,22 +2097,22 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:467
-#: vertimus/models.py:517
+#: vertimus/models.py:471
+#: vertimus/models.py:521
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:469
-#: vertimus/models.py:519
+#: vertimus/models.py:473
+#: vertimus/models.py:523
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Detta är ett automatiskt skickat meddelande från %s."
 
-#: vertimus/models.py:476
+#: vertimus/models.py:480
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: vertimus/models.py:505
+#: vertimus/models.py:509
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2127,47 +2127,58 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:527
+#: vertimus/models.py:531
 msgid "Reserve for translation"
 msgstr "Reservera för översättning"
 
-#: vertimus/models.py:539
+#: vertimus/models.py:543
 msgid "Upload the new translation"
 msgstr "Skicka upp ny översättning"
 
-#: vertimus/models.py:554
+#: vertimus/models.py:558
 msgid "Reserve for proofreading"
 msgstr "Reservera för korrekturläsning"
 
-#: vertimus/models.py:566
+#: vertimus/models.py:570
 msgid "Upload the proofread translation"
 msgstr "Skicka upp granskad översättning"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:582
+#: vertimus/models.py:586
 msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
+#: vertimus/models.py:602
+#| msgid "File in repository"
+msgid "Submit to repository"
+msgstr "Skicka in till förrådet"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "Verkställningen misslyckades. Felet var: \"%s\""
+
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:599
+#: vertimus/models.py:626
 msgid "Reserve to submit"
 msgstr "Reservera för insändning"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:612
+#: vertimus/models.py:639
 msgid "Inform of submission"
 msgstr "Informera om insändning"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:627
+#: vertimus/models.py:654
 msgid "Review required"
 msgstr "Granskning krävs"
 
-#: vertimus/models.py:666
+#: vertimus/models.py:693
 msgid "Backup the actions"
 msgstr "Säkerhetskopiera åtgärderna"
 
-#: vertimus/models.py:705
+#: vertimus/models.py:732
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
