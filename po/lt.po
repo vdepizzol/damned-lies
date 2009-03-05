@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-07 17:07+0000\n"
-"PO-Revision-Date: 2009-02-20 14:17+0200\n"
+"POT-Creation-Date: 2009-03-04 23:59+0000\n"
+"PO-Revision-Date: 2009-03-05 23:55+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -1042,7 +1042,7 @@ msgid "UI Translations"
 msgstr "Sąsajos vertimai"
 
 #: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
-#: templates/release_detail.html:22 templates/teams/team_detail.html:23
+#: templates/release_detail.html:22 templates/teams/team_detail.html:27
 msgid "Documentation"
 msgstr "Dokumentacija"
 
@@ -1121,7 +1121,6 @@ msgstr ""
 
 #: people/views.py:86
 #, python-format
-#| msgid "You have been successfully logged in."
 msgid "You have successfully joined the team '%s'."
 msgstr "Sėkmingai prisijungėte prie %s vertėjų grupės."
 
@@ -1131,7 +1130,6 @@ msgstr "Jau esate šios vertėjų grupės narys."
 
 #: people/views.py:112
 #, python-format
-#| msgid "You have been logged out."
 msgid "You have been removed from the team '%s'."
 msgstr "Buvote pašalinti iš %s vertėjų grupės."
 
@@ -1139,19 +1137,19 @@ msgstr "Buvote pašalinti iš %s vertėjų grupės."
 msgid "Your password has been changed."
 msgstr "Slaptažodis pakeistas."
 
-#: stats/models.py:295
+#: stats/models.py:293
 msgid "Can't generate POT file, using old one."
 msgstr ""
 
-#: stats/models.py:316
+#: stats/models.py:314
 msgid "Can't copy new POT file to public location."
 msgstr ""
 
-#: stats/models.py:355
+#: stats/models.py:353
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr ""
 
-#: stats/models.py:618
+#: stats/models.py:620
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1159,32 +1157,32 @@ msgid ""
 "%(output)s</pre>"
 msgstr ""
 
-#: stats/models.py:819
+#: stats/models.py:821
 msgid "Administration Tools"
 msgstr "Administravimo įrankiai"
 
-#: stats/models.py:820
+#: stats/models.py:822
 msgid "Development Tools"
 msgstr "Kūrimo įrankiai"
 
-#: stats/models.py:821
+#: stats/models.py:823
 msgid "GNOME Desktop"
 msgstr "GNOME darbastalis"
 
-#: stats/models.py:822
+#: stats/models.py:824
 msgid "GNOME Developer Platform"
 msgstr ""
 
-#: stats/models.py:823
+#: stats/models.py:825
 msgid "New Module Proposals"
 msgstr "Nauji siūlomi moduliai"
 
-#: stats/models.py:899
+#: stats/models.py:901
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:930
+#: stats/models.py:932
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1192,31 +1190,31 @@ msgstr[0] "%(count)s įrašas"
 msgstr[1] "%(count)s įrašai"
 msgstr[2] "%(count)s įrašų"
 
-#: stats/models.py:931
+#: stats/models.py:933
 #, python-format
 msgid "updated on %(date)s"
 msgstr "atnaujinta %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:933 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i 0"
 
-#: stats/models.py:936
+#: stats/models.py:938
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] ""
 msgstr[1] ""
 
-#: stats/models.py:937
+#: stats/models.py:939
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT failas (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:940
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT failas (%(messages)s) — %(updated)s"
@@ -1680,13 +1678,13 @@ msgstr ""
 msgid "Language"
 msgstr "Kalba"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:22
+#: templates/release_detail.html:20 templates/teams/team_detail.html:26
 msgid "User Interface"
 msgstr "Sąsaja"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:22
-#: templates/teams/team_detail.html:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:27
 msgid "Graph"
 msgstr "Grafikas"
 
@@ -1710,7 +1708,7 @@ msgstr "Parsisiųsti visus po failus"
 msgid "Notices"
 msgstr "Pranešimai"
 
-#: templates/stats_show.html:30 vertimus/models.py:164
+#: templates/stats_show.html:30 vertimus/models.py:163
 msgid "Translated"
 msgstr "Išversta"
 
@@ -1722,10 +1720,14 @@ msgstr ""
 msgid "Damned Lies site admin"
 msgstr ""
 
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:92
+msgid "No comment"
+msgstr "Komentaro nėra"
+
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:21
-#: templates/teams/team_detail.html:59 templates/teams/team_detail.html:60
-#| msgid "Modules"
+#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
 msgid "All modules"
 msgstr "Visi moduliai"
 
@@ -1762,7 +1764,6 @@ msgid "Module"
 msgstr "Modulis"
 
 #: templates/languages/language_release_stats.html:21
-#| msgid "Branches:"
 msgid "Branch"
 msgstr "Šaka"
 
@@ -1771,7 +1772,6 @@ msgid "Statistics"
 msgstr "Statistika"
 
 #: templates/languages/language_release_stats.html:22
-#| msgid "State"
 msgid "Status"
 msgstr "Būsena"
 
@@ -1935,20 +1935,25 @@ msgstr "Siųsti el. paštą į konferenciją"
 msgid "Subscribe"
 msgstr ""
 
-#: templates/teams/team_detail.html:10
+#: templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgstr ""
+
+#: templates/teams/team_detail.html:14
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s vertėjų grupė"
 
-#: templates/teams/team_detail.html:22
+#: templates/teams/team_detail.html:26
 msgid "Release"
 msgstr "Laida"
 
-#: templates/teams/team_detail.html:65
+#: templates/teams/team_detail.html:69
 msgid "Team membership"
 msgstr "Vertėjų grupės nariai"
 
-#: templates/teams/team_detail.html:76
+#: templates/teams/team_detail.html:80
 msgid "Apply modifications"
 msgstr "Pritaikyti pakeitimus"
 
@@ -2001,10 +2006,6 @@ msgstr "Veiksmų istorija"
 msgid "diff with:"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:92
-msgid "No comment"
-msgstr "Komentaro nėra"
-
 #: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Naujas veiksmas"
@@ -2031,6 +2032,26 @@ msgstr ""
 msgid "Note: both files are merged with latest POT file."
 msgstr ""
 
+#: vertimus/feeds.py:42
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr ""
+
+#: vertimus/feeds.py:51
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr ""
+
+#: vertimus/feeds.py:86
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr ""
+
+#: vertimus/feeds.py:95
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr ""
+
 #: vertimus/forms.py:30
 msgid "Action"
 msgstr "Veiksmas"
@@ -2045,7 +2066,7 @@ msgstr "Failas"
 
 #: vertimus/forms.py:39
 msgid "Upload a .po, .gz, .bz2 or .png file"
-msgstr ""
+msgstr "Siųsti .po, .gz, .bz2 arba .png failą"
 
 #: vertimus/forms.py:50
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
@@ -2068,51 +2089,52 @@ msgstr "Šiam veiksmui reikia failo."
 
 #: vertimus/forms.py:71
 msgid "Please, don't send a file with a 'Reserve' action."
-msgstr ""
+msgstr "Nesiųskite failų su rezervavimo veiksmu."
 
-#: vertimus/models.py:138
+#: vertimus/models.py:137
 msgid "Inactive"
 msgstr "Neaktyvus"
 
-#: vertimus/models.py:151
+#: vertimus/models.py:150
 msgid "Translating"
 msgstr "Verčiama"
 
-#: vertimus/models.py:181
+#: vertimus/models.py:180
 msgid "Proofreading"
 msgstr "Tikrinama"
 
+#. Translators: This is a status, not a verb
 #: vertimus/models.py:195
 msgid "Proofread"
 msgstr "Patikrinta"
 
-#: vertimus/models.py:208
+#: vertimus/models.py:210
 msgid "To Review"
-msgstr ""
+msgstr "Bus peržiūrėta"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:222
 msgid "To Commit"
-msgstr ""
+msgstr "Bus nusiųsta"
 
-#: vertimus/models.py:233
+#: vertimus/models.py:237
 msgid "Committing"
-msgstr ""
+msgstr "Siunčiama"
 
-#: vertimus/models.py:247
+#: vertimus/models.py:251
 msgid "Committed"
-msgstr ""
+msgstr "Nusiųsta"
 
-#: vertimus/models.py:326
+#: vertimus/models.py:339
 msgid "File in repository"
-msgstr ""
+msgstr "Failas repozitorijoje"
 
-#: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:128
-#: vertimus/views.py:137
+#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
+#: vertimus/views.py:138
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr ""
 
-#: vertimus/models.py:428
+#: vertimus/models.py:458
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2122,21 +2144,27 @@ msgid ""
 "%(url)s\n"
 "\n"
 msgstr ""
+"Sveiki,\n"
+"\n"
+"%(module)s - %(branch)s - %(domain)s (%(language)s) būsena dabar yra "
+"„%(new_state)s“.\n"
+"%(url)s\n"
+"\n"
 
-#: vertimus/models.py:441 vertimus/models.py:491
+#: vertimus/models.py:471 vertimus/models.py:521
 msgid "Without comment"
-msgstr "Be komentaro"
+msgstr "Komentarų nėra"
 
-#: vertimus/models.py:443 vertimus/models.py:493
+#: vertimus/models.py:473 vertimus/models.py:523
 #, python-format
 msgid "This is an automated message sent from %s."
-msgstr ""
+msgstr "Ši žinutė automatiškai išsiųsta iš %s."
 
-#: vertimus/models.py:450
+#: vertimus/models.py:480
 msgid "Write a comment"
-msgstr ""
+msgstr "Parašyti komentarą"
 
-#: vertimus/models.py:479
+#: vertimus/models.py:509
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2147,60 +2175,70 @@ msgid ""
 "\n"
 msgstr ""
 
-#: vertimus/models.py:501
+#: vertimus/models.py:531
 msgid "Reserve for translation"
 msgstr "Rezervuoti vertimui"
 
-#: vertimus/models.py:513
+#: vertimus/models.py:543
 msgid "Upload the new translation"
 msgstr "Nusiųsti naują vertimą"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:558
 msgid "Reserve for proofreading"
 msgstr "Rezervuoti tikrinimui"
 
-#: vertimus/models.py:540
+#: vertimus/models.py:570
 #, fuzzy
 #| msgid "Upload the new translation"
 msgid "Upload the proofread translation"
 msgstr "Nusiųsti naują vertimą"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:556
+#: vertimus/models.py:586
 msgid "Ready for submission"
 msgstr ""
 
-#. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:573
-msgid "Reserve to submit"
+#: vertimus/models.py:602
+msgid "Submit to repository"
 msgstr ""
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr ""
+
+#. Translators: this indicates a committer is going to commit the file in the repository
+#: vertimus/models.py:626
+msgid "Reserve to submit"
+msgstr "Rezervuoti nusiuntimui"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:586
+#: vertimus/models.py:639
 msgid "Inform of submission"
-msgstr ""
+msgstr "Pranešti apie nusiuntimą"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:601
+#: vertimus/models.py:654
 #, fuzzy
 #| msgid "Reviewer"
 msgid "Review required"
 msgstr "Peržiūrėtojas (reviewer)"
 
-#: vertimus/models.py:632
+#: vertimus/models.py:693
 msgid "Backup the actions"
 msgstr ""
 
-#: vertimus/models.py:671
+#: vertimus/models.py:732
 msgid "Undo the last state change"
 msgstr "Atšaukti paskutinį būsenos pakeitimą"
 
-#: vertimus/views.py:143
+#: vertimus/views.py:144
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr ""
 
-#: vertimus/views.py:146
+#: vertimus/views.py:147
 msgid "Latest POT file"
 msgstr ""
 
