@@ -34,8 +34,6 @@ def merge_sorted_by_field(object_list1, object_list2, field):
     Each call returns the next item, sorted by field in ascending order or in
     descending order if the field name begins by a minus sign.
 
-    The lists of objects must be already sorted in the same order as field.
-
     >>> from datetime import datetime
     >>> import itertools
     >>> class Foo(object):
@@ -44,16 +42,16 @@ def merge_sorted_by_field(object_list1, object_list2, field):
     ...     def __repr__(self):
     ...         return str(self.num)
     ...
-    >>> l1 = (Foo(1), Foo(4), Foo(5))
+    >>> l1 = (Foo(1), Foo(8), Foo(5))
     >>> l2 = (Foo(1), Foo(2), Foo(4), Foo(4), Foo(6))
     >>> merge_sorted_by_field(l1, l2, 'num')
-    [1, 1, 2, 4, 4, 4, 5, 6]
+    [1, 1, 2, 4, 4, 5, 6, 8]
     >>> merge_sorted_by_field(l1, l2, 'num')[:3]
     [1, 1, 2]
-    >>> l1 = (Foo(5), Foo(4), Foo(1))
+    >>> l1 = (Foo(3), Foo(9), Foo(5))
     >>> l2 = (Foo(6), Foo(4), Foo(4), Foo(2), Foo(1))
     >>> [el.num for el in merge_sorted_by_field(l1, l2, '-num')]
-    [6, 5, 4, 4, 4, 2, 1, 1]
+    [9, 6, 5, 4, 4, 3, 2, 1]
     """
     import itertools
     if field is not None and field[0] == '-':
@@ -66,6 +64,88 @@ def merge_sorted_by_field(object_list1, object_list2, field):
     return sorted(itertools.chain(object_list1, object_list2),
                   key=lambda x: getattr(x, field),
                   reverse=reverse)
+
+def imerge_sorted_by_field(object_list1, object_list2, field):
+    """
+    Each call returns the next item, sorted by field in ascending order or in
+    descending order if the field name begins by a minus sign.
+
+    This function is faster (only one comparison by iteration) and uses less
+    memory than merge_sorted_by_field (iterator) but the lists of objects must
+    be already sorted in the same order as field.
+
+    >>> from datetime import datetime
+    >>> import itertools
+    >>> class Foo(object):
+    ...     def __init__(self, num):
+    ...         self.num = num
+    ...     def __repr__(self):
+    ...         return str(self.num)
+    ...
+    >>> l1 = (Foo(1), Foo(3), Foo(5))
+    >>> l2 = (Foo(1), Foo(2), Foo(4), Foo(6), Foo(8))
+    >>> [el.num for el in imerge_sorted_by_field(l1, l2, 'num')]
+    [1, 1, 2, 3, 4, 5, 6, 8]
+    >>> [el.num for el in itertools.islice(imerge_sorted_by_field(l1, l2, 'num'), 3)]
+    [1, 1, 2]
+    >>> l1 = []
+    >>> [el.num for el in imerge_sorted_by_field(l1, l2, 'num')]
+    [1, 2, 4, 6, 8]
+    >>> l1 = (Foo(5), Foo(4), Foo(1))
+    >>> l2 = (Foo(6), Foo(4), Foo(4), Foo(2), Foo(1))
+    >>> [el.num for el in imerge_sorted_by_field(l1, l2, '-num')]
+    [6, 5, 4, 4, 4, 2, 1, 1]
+    """
+    import operator
+        
+    if field is not None and field[0] == '-':
+        # Reverse the sort order
+        field = field[1:]
+        op = operator.gt
+    else:
+        op = operator.lt
+
+    iter1, iter2 = iter(object_list1), iter(object_list2)
+    
+    # Too many try/except couples to my taste but I don't know how to filter the
+    # StopIteration to find the source.
+
+    try:
+        el1 = iter1.next()
+    except StopIteration:
+        # Finish the other list
+        while True:
+            el2 = iter2.next()
+            yield el2
+
+    try:
+        el2 = iter2.next()
+    except StopIteration:
+        # Finish the other list
+        while True:
+            # el1 is already fetched
+            yield el1
+            el1 = iter1.next()
+
+    while True:
+        if op(getattr(el1, field), getattr(el2, field)):
+            yield el1
+            try:
+                el1 = iter1.next()
+            except StopIteration:
+                # Finish the other list
+                while True:
+                    yield el2
+                    el2 = iter2.next()
+        else:
+            yield el2
+            try:
+                el2 = iter2.next()
+            except StopIteration:
+                # Finish the other list
+                while True:
+                    yield el1
+                    el1 = iter1.next()
 
 if __name__ == "__main__":
     import doctest

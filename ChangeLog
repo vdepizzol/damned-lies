@@ -1,3 +1,9 @@
+2009-03-05  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* common/utils.py: New version of merge_sorted_by_field using only
+	iterators.	
+	* vertimus/feeds.py: Use the new function with islice.
+
 2009-03-04  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: bugs_base and bugs_product may be null.
