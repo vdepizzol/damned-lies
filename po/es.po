@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-04 15:19+0000\n"
-"PO-Revision-Date: 2009-02-04 20:27+0100\n"
+"POT-Creation-Date: 2009-03-04 23:59+0000\n"
+"PO-Revision-Date: 2009-03-05 23:31+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1053,7 +1053,7 @@ msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
 #: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
-#: templates/release_detail.html:22 templates/teams/team_detail.html:23
+#: templates/release_detail.html:22 templates/teams/team_detail.html:27
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -1135,7 +1135,6 @@ msgstr ""
 
 #: people/views.py:86
 #, python-format
-#| msgid "You have been successfully logged in."
 msgid "You have successfully joined the team '%s'."
 msgstr "Se ha unido satisfactoriamente al equipo «%s»."
 
@@ -1145,7 +1144,6 @@ msgstr "Ya es miembro de este equipo."
 
 #: people/views.py:112
 #, python-format
-#| msgid "You have been logged out."
 msgid "You have been removed from the team '%s'."
 msgstr "Ha sido eliminado del equipo «%s»."
 
@@ -1153,19 +1151,19 @@ msgstr "Ha sido eliminado del equipo «%s»."
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
-#: stats/models.py:295
+#: stats/models.py:293
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: stats/models.py:321
+#: stats/models.py:314
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:360
+#: stats/models.py:353
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: stats/models.py:623
+#: stats/models.py:620
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1176,77 +1174,77 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:824
+#: stats/models.py:821
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:825
+#: stats/models.py:822
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:826
+#: stats/models.py:823
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:827
+#: stats/models.py:824
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:828
+#: stats/models.py:825
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:904
+#: stats/models.py:901
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:935
+#: stats/models.py:932
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:936
+#: stats/models.py:933
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:938 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:941
+#: stats/models.py:938
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:942
+#: stats/models.py:939
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:945
+#: stats/models.py:942
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/utils.py:78
+#: stats/utils.py:85
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hubo errores al ejecutar la comprobación «intltool-update -m»."
 
-#: stats/utils.py:84
+#: stats/utils.py:91
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Faltan algunos archivos en el archivo POTFILES.in: %s"
 
-#: stats/utils.py:93
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1255,21 +1253,21 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: stats/utils.py:105
+#: stats/utils.py:112
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
-#: stats/utils.py:108
+#: stats/utils.py:115
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE no resuelve a un archivo real, usando «%s.xml»."
 
-#: stats/utils.py:111
+#: stats/utils.py:118
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE no apunta a un archivo real, probablemente es un macro."
 
-#: stats/utils.py:126
+#: stats/utils.py:133
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1280,42 +1278,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:186
+#: stats/utils.py:206
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: stats/utils.py:206
+#: stats/utils.py:226
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: stats/utils.py:208
+#: stats/utils.py:228
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: stats/utils.py:211
+#: stats/utils.py:231
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: stats/utils.py:239
+#: stats/utils.py:259
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: stats/utils.py:272
+#: stats/utils.py:292
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: stats/utils.py:299
+#: stats/utils.py:319
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:302
+#: stats/utils.py:322
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1722,13 +1720,13 @@ msgstr ""
 msgid "Language"
 msgstr "Idioma"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:22
+#: templates/release_detail.html:20 templates/teams/team_detail.html:26
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:22
-#: templates/teams/team_detail.html:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:27
 msgid "Graph"
 msgstr "Gráfico"
 
@@ -1748,7 +1746,7 @@ msgstr "Descargar el archivo POT"
 msgid "Notices"
 msgstr "Notas"
 
-#: templates/stats_show.html:30 vertimus/models.py:164
+#: templates/stats_show.html:30 vertimus/models.py:163
 msgid "Translated"
 msgstr "Traducido"
 
@@ -1760,9 +1758,14 @@ msgstr "Mostrar las figuras del documento"
 msgid "Damned Lies site admin"
 msgstr "Administrador de Malditas mentiras"
 
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:92
+msgid "No comment"
+msgstr "Sin comentarios"
+
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:21
-#: templates/teams/team_detail.html:59 templates/teams/team_detail.html:60
+#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
 msgid "All modules"
 msgstr "Todos los módulos"
 
@@ -1929,7 +1932,6 @@ msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Miembro del equipo %(team_name)s (como %(role_name)s)"
 
 #: templates/people/person_team_membership.html:12
-#| msgid "Save"
 msgid "Leave"
 msgstr "Abandonar"
 
@@ -1970,20 +1972,27 @@ msgstr "Enviar un correo electrónico a la lista"
 msgid "Subscribe"
 msgstr "Suscribirse"
 
-#: templates/teams/team_detail.html:10
+#: templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgstr ""
+"Últimas acciones realizadas por el equipo %(lang)s del proyecto de "
+"traducción de GNOME"
+
+#: templates/teams/team_detail.html:14
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equipo de traducción al %(lang)s"
 
-#: templates/teams/team_detail.html:22
+#: templates/teams/team_detail.html:26
 msgid "Release"
 msgstr "Publicación"
 
-#: templates/teams/team_detail.html:65
+#: templates/teams/team_detail.html:69
 msgid "Team membership"
 msgstr "Membresía"
 
-#: templates/teams/team_detail.html:76
+#: templates/teams/team_detail.html:80
 msgid "Apply modifications"
 msgstr "Aplicar modificaciones"
 
@@ -2033,10 +2042,6 @@ msgstr "Histórico de acciones"
 msgid "diff with:"
 msgstr "diff con:"
 
-#: templates/vertimus/vertimus_detail.html:92
-msgid "No comment"
-msgstr "Sin comentarios"
-
 #: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
 msgstr "Acción nueva"
@@ -2062,6 +2067,28 @@ msgstr "&lt;- Volver a las acciones"
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
 msgstr "Nota: ambos archivos están mezclados con el último archivo POT"
+
+#: vertimus/feeds.py:42
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr "%(site)s - Acciones en Vertimus para el idioma %(lang)s"
+
+#: vertimus/feeds.py:51
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr "Últimas acciones del Proyecto de traducción de GNOME para el idioma %s"
+
+#: vertimus/feeds.py:86
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr "%(site)s - Acciones en Vertimus para el equipo %(lang)s"
+
+#: vertimus/feeds.py:95
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr ""
+"Últimas acciones realizadas por el equipo de traducción %s del Proyecto de "
+"traducción de GNOME"
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -2101,49 +2128,50 @@ msgstr "Se necesita un archivo para esta acción."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
-#: vertimus/models.py:138
+#: vertimus/models.py:137
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: vertimus/models.py:151
+#: vertimus/models.py:150
 msgid "Translating"
 msgstr "Traduciéndose"
 
-#: vertimus/models.py:181
+#: vertimus/models.py:180
 msgid "Proofreading"
 msgstr "En revisión"
 
+#. Translators: This is a status, not a verb
 #: vertimus/models.py:195
 msgid "Proofread"
 msgstr "Revisado"
 
-#: vertimus/models.py:208
+#: vertimus/models.py:210
 msgid "To Review"
 msgstr "Para revisar"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:222
 msgid "To Commit"
 msgstr "Para subir"
 
-#: vertimus/models.py:233
+#: vertimus/models.py:237
 msgid "Committing"
 msgstr "Subiéndose"
 
-#: vertimus/models.py:247
+#: vertimus/models.py:251
 msgid "Committed"
 msgstr "Subido"
 
-#: vertimus/models.py:326
+#: vertimus/models.py:339
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:331 vertimus/views.py:122 vertimus/views.py:129
-#: vertimus/views.py:147
+#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
+#: vertimus/views.py:138
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
-#: vertimus/models.py:428
+#: vertimus/models.py:458
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2160,20 +2188,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:441 vertimus/models.py:491
+#: vertimus/models.py:471 vertimus/models.py:521
 msgid "Without comment"
 msgstr "Sin comentarios"
 
-#: vertimus/models.py:443 vertimus/models.py:493
+#: vertimus/models.py:473 vertimus/models.py:523
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
 
-#: vertimus/models.py:450
+#: vertimus/models.py:480
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:479
+#: vertimus/models.py:509
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2190,56 +2218,67 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:501
+#: vertimus/models.py:531
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:513
+#: vertimus/models.py:543
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:558
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: vertimus/models.py:540
+#: vertimus/models.py:570
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:556
+#: vertimus/models.py:586
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
+#: vertimus/models.py:602
+#| msgid "File in repository"
+msgid "Submit to repository"
+msgstr "Enviar al repositorio"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "Falló la carga. El error fue: «%s»"
+
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:626
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:586
+#: vertimus/models.py:639
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:601
+#: vertimus/models.py:654
 msgid "Review required"
 msgstr "Necesita revisión"
 
-#: vertimus/models.py:632
+#: vertimus/models.py:693
 msgid "Backup the actions"
 msgstr "Respaldar las acciones"
 
-#: vertimus/models.py:671
+#: vertimus/models.py:732
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
-#: vertimus/views.py:135
+#: vertimus/views.py:144
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
-#: vertimus/views.py:138
+#: vertimus/views.py:147
 msgid "Latest POT file"
 msgstr "Último archivo POT"
 
