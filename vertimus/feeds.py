@@ -102,8 +102,6 @@ class LatestActionsByTeam(Feed):
         actions_db = ActionDb.objects.filter(state_db__language__team=obj.id).select_related('state').order_by('-created')[:20]
         archived_actions_db = ActionDbBackup.objects.filter(state_db__language__team=obj.id).select_related('state').order_by('-created')[:20]
 
-        import pdb; pdb.set_trace()
-
         a = imerge_sorted_by_field(actions_db, archived_actions_db, '-created')
         b = islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20)
         # islice avoid to fetch too many objects
