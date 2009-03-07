@@ -1,5 +1,11 @@
 2009-03-07  Claude Paroz  <claude@2xlibre.net>
 
+	* stats/utils.py: Fix detection of previous msgid.
+	* templates/module_images.html: Fixed class name of fuzzy-containing
+	cells.
+
+2009-03-07  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/utils.py: With msgmerge --previous flag, previous msgid may now be
 	inserted between the "#, fuzzy" marker and the new msgid. Detect that.
 

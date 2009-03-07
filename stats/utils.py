@@ -339,7 +339,7 @@ def get_fig_stats(pofile):
     
     for i, line in islice(enumerate(lines), 0, None, 4):
         fig = {'path': '', 'hash': ''}
-        fig['fuzzy'] = (line=='#, fuzzy' or line[:4]=='#| "')
+        fig['fuzzy'] = (line=='#, fuzzy' or line[:8]=='#| msgid')
         path_match = re_path.match(lines[i+1])
         if path_match and len(path_match.groups()):
             fig['path'] = path_match.group(1)

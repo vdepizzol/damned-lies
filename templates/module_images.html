@@ -23,7 +23,7 @@
     <a href="{{ vcs_web_path }}/C/{{ fig.path }}"><span class="path">C/{{ fig.path }}</span><br/></a>
     <a href="{{ vcs_path }}/C/{{ fig.path }}"><img class="screenshot" src="{{ vcs_path }}/C/{{ fig.path }}"/></a>
     </td>
-    <td valign="top" class="$tdclass">
+    <td valign="top" class="{{ fig.fuzzy|yesno:"fuzzy," }}">
     {% if fig.translated %}
       {% if fig.translated_file %}
       <a href="{{ vcs_web_path }}/{{ locale }}/{{ fig.path }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
