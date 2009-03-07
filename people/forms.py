@@ -67,7 +67,7 @@ class RegistrationForm(forms.Form):
         message += "\n\nhttp://%s%s\n\n" % (current_site.domain, str(reverse("register_activation", kwargs={'key': activation_key}))) 
         message += _(u"Administrators of %s" % current_site.name)
 
-        send_mail(subject, message, settings.SERVER_EMAIL,
+        send_mail(subject, message, settings.DEFAULT_FROM_EMAIL,
                   (email,), fail_silently=False)
 
         return new_user

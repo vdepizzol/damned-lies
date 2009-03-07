@@ -1,5 +1,22 @@
 2009-03-07  Claude Paroz  <claude@2xlibre.net>
 
+	* common/views.py:
+	* templates/register.html:
+	* templates/register_success.html: Moved templates into registration
+	folder.
+	* templates/registration/password_reset*: Customize 'reset password'
+	templates from contrib/admin/templates/registration.
+	* media/css/layout.css: Unite link colors.
+	* settings_sample.py:
+	* stats/utils.py:
+	* vertimus/models.py:
+	* people/forms.py: Renamed SERVER_EMAIL to Django standard
+	DEFAULT_FROM_EMAIL.
+	* templates/login.html: Add link to forgotten password page.
+	* urls.py: Add new urls for forgotten password functionality.
+
+2009-03-07  Claude Paroz  <claude@2xlibre.net>
+
 	* stats/utils.py: Fix detection of previous msgid.
 	* templates/module_images.html: Fixed class name of fuzzy-containing
 	cells.

@@ -98,7 +98,7 @@ def site_register(request):
         'form': form,
         'openid_path': openid_path,
     }
-    return render_to_response('register.html', context, context_instance=RequestContext(request))
+    return render_to_response('registration/register.html', context, context_instance=RequestContext(request))
 
 def activate_account(request, key):
     """ Activate an account through the link a requestor has received by email """

@@ -387,7 +387,7 @@ might be worth investigating.
 
     send_mail(subject="String additions to '%s'" % (out_domain),
               message=text,
-              from_email="GNOME Status Pages <%s>" % (settings.SERVER_EMAIL),
+              from_email="GNOME Status Pages <%s>" % (settings.DEFAULT_FROM_EMAIL),
               recipient_list=settings.NOTIFICATIONS_TO)
 
 def url_join(base, *args):

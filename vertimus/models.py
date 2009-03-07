@@ -471,7 +471,7 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
             message += self.comment or ugettext("Without comment")
             message += "\n\n" + self.person.name
             message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
-            mail.send_mail(subject, message, settings.SERVER_EMAIL, recipient_list)
+            mail.send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
             activate(current_lang)
 
 
@@ -521,7 +521,7 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
             message += comment or ugettext("Without comment")
             message += "\n\n" + person.name
             message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
-            mail.send_mail(subject, message, settings.SERVER_EMAIL, translator_emails)
+            mail.send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, translator_emails)
             activate(current_lang)
 
         return self._new_state()

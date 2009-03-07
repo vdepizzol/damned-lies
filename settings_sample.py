@@ -39,7 +39,7 @@ EMAIL_HOST = 'localhost'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_SUBJECT_PREFIX = '[Damned Lies]'
-SERVER_EMAIL = 'gnomeweb@gnome.org'
+DEFAULT_FROM_EMAIL = 'gnomeweb@gnome.org'
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 NOTIFICATIONS_TO = ['gnome-i18n@gnome.org']
 
