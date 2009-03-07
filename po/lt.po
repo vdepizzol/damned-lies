@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-04 23:59+0000\n"
-"PO-Revision-Date: 2009-03-05 23:55+0200\n"
+"PO-Revision-Date: 2009-03-07 17:17+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -1575,7 +1575,7 @@ msgstr "Šakos:"
 
 #: templates/module_detail.html:65
 msgid "Browse Repository"
-msgstr ""
+msgstr "Naršyti repozitoriją"
 
 #: templates/module_detail.html:69
 msgid "This branch is currently string-frozen."
@@ -1642,7 +1642,7 @@ msgstr ""
 
 #: templates/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr ""
+msgstr "Autentikuotis OpenID <strong>arba</strong> slaptažodžiu:"
 
 #: templates/register.html:34
 msgid "Register with OpenID"
@@ -1790,7 +1790,7 @@ msgstr ""
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
-msgstr ""
+msgstr "GNOME pagalbininkas"
 
 #: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
@@ -1831,7 +1831,7 @@ msgstr "Įrašyti"
 
 #: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
-msgstr ""
+msgstr "GNOME pagalbininkai"
 
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
@@ -1851,7 +1851,7 @@ msgstr "SVN paskyra:"
 
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
-msgstr ""
+msgstr "Slaptažodžio keitimas"
 
 #: templates/people/person_password_change_form.html:8
 msgid ""
@@ -1885,7 +1885,7 @@ msgstr "Prisijungti"
 
 #: templates/people/person_team_membership.html:5
 msgid "Member of teams"
-msgstr ""
+msgstr "Grupių narys"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
@@ -1893,14 +1893,13 @@ msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "%(team_name)s vertėjų grupės narys (%(role_name)s)"
 
 #: templates/people/person_team_membership.html:12
-#, fuzzy
 #| msgid "Save"
 msgid "Leave"
-msgstr "Įrašyti"
+msgstr "Palikti grupę"
 
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
-msgstr ""
+msgstr "Ar tikrai norite palikti vertėjų grupę?"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1933,7 +1932,7 @@ msgstr "Siųsti el. paštą į konferenciją"
 
 #: templates/teams/team_base.html:24
 msgid "Subscribe"
-msgstr ""
+msgstr "Prisijungti prie konferencijos"
 
 #: templates/teams/team_detail.html:5
 #, python-format
@@ -1989,10 +1988,9 @@ msgid "State:"
 msgstr "Būsena:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#, fuzzy
 #| msgid "Download all po files"
 msgid "Download PO file"
-msgstr "Parsisiųsti visus po failus"
+msgstr "Parsisiųsti PO failą"
 
 #: templates/vertimus/vertimus_detail.html:39
 msgid "Translated:"
@@ -2004,7 +2002,7 @@ msgstr "Veiksmų istorija"
 
 #: templates/vertimus/vertimus_detail.html:81
 msgid "diff with:"
-msgstr ""
+msgstr "rodyti skirtumus su:"
 
 #: templates/vertimus/vertimus_detail.html:101
 msgid "New Action"
@@ -2022,11 +2020,11 @@ msgstr "Turite būti autentikuotas ir %(team_name)s vertėjų grupės narys."
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
-msgstr ""
+msgstr "Skirtumai tarp po failų"
 
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
-msgstr ""
+msgstr "&lt;- Atgal prie veiksmų"
 
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
@@ -2040,7 +2038,7 @@ msgstr ""
 #: vertimus/feeds.py:51
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
-msgstr ""
+msgstr "Vėliausi GNOME vertimų projekto %s kalbos veiksmai"
 
 #: vertimus/feeds.py:86
 #, python-format
@@ -2050,7 +2048,7 @@ msgstr ""
 #: vertimus/feeds.py:95
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
-msgstr ""
+msgstr "Vėliausi GNOME vertimo projekto %s vertėjų grupės veiksmai"
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -2132,7 +2130,7 @@ msgstr "Failas repozitorijoje"
 #: vertimus/views.py:138
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
-msgstr ""
+msgstr "%(date)s nusiųstas failas (%(name)s)."
 
 #: vertimus/models.py:458
 #, python-format
@@ -2153,7 +2151,7 @@ msgstr ""
 
 #: vertimus/models.py:471 vertimus/models.py:521
 msgid "Without comment"
-msgstr "Komentarų nėra"
+msgstr "(komentaro nėra)"
 
 #: vertimus/models.py:473 vertimus/models.py:523
 #, python-format
@@ -2174,6 +2172,11 @@ msgid ""
 "%(url)s\n"
 "\n"
 msgstr ""
+"Sveiki,\n"
+"\n"
+"%(module)s - %(branch)s - %(domain)s (%(language)s) paliktas naujas komentaras.\n"
+"%(url)s\n"
+"\n"
 
 #: vertimus/models.py:531
 msgid "Reserve for translation"
@@ -2188,19 +2191,18 @@ msgid "Reserve for proofreading"
 msgstr "Rezervuoti tikrinimui"
 
 #: vertimus/models.py:570
-#, fuzzy
 #| msgid "Upload the new translation"
 msgid "Upload the proofread translation"
-msgstr "Nusiųsti naują vertimą"
+msgstr "Nusiųsti peržiūrėtą vertimą"
 
 #. Translators: this means the file is ready to be committed in repository
 #: vertimus/models.py:586
 msgid "Ready for submission"
-msgstr ""
+msgstr "Paruošta nusiuntimui"
 
 #: vertimus/models.py:602
 msgid "Submit to repository"
-msgstr ""
+msgstr "Nusiųsti į repozitoriją"
 
 #. Commit failed, state unchanged
 #: vertimus/models.py:616
@@ -2220,10 +2222,9 @@ msgstr "Pranešti apie nusiuntimą"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:654
-#, fuzzy
 #| msgid "Reviewer"
 msgid "Review required"
-msgstr "Peržiūrėtojas (reviewer)"
+msgstr "Reikalinga peržiūra"
 
 #: vertimus/models.py:693
 msgid "Backup the actions"
@@ -2236,11 +2237,11 @@ msgstr "Atšaukti paskutinį būsenos pakeitimą"
 #: vertimus/views.py:144
 #, python-format
 msgid "Latest committed file for %(lang)s"
-msgstr ""
+msgstr "Vėliausias nusiųstas %(lang)s kalbos failas"
 
 #: vertimus/views.py:147
 msgid "Latest POT file"
-msgstr ""
+msgstr "Vėliausias POT failas"
 
 #~ msgid "Browse CVS"
 #~ msgstr "Naršyti CVS"
