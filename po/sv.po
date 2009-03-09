@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 23:59+0000\n"
-"PO-Revision-Date: 2009-03-05 01:00+0100\n"
+"POT-Creation-Date: 2009-03-07 15:18+0000\n"
+"PO-Revision-Date: 2009-03-09 22:04+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1008,23 +1008,24 @@ msgstr "Lösenord:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
 #: templates/base.html:76
-#: templates/login.html:27
+#: templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Logga in"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:32
+#: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "eller använd ditt OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
 #: people/forms.py:17
-#: templates/login.html:35
+#: templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:38
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Logga in med OpenID"
 
@@ -1059,6 +1060,7 @@ msgstr "Minst 7 tecken"
 
 #: people/forms.py:23
 #: templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
@@ -1429,8 +1431,8 @@ msgstr "Driftas av"
 #: templates/index.html:4
 #: templates/index.html.py:9
 #: templates/login.html:4
-#: templates/register.html:4
-#: templates/register_success.html:4
+#: templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Förbannade lögner om GNOME"
 
@@ -1492,7 +1494,7 @@ msgid "Translated by:"
 msgstr "Översatt av:"
 
 #: templates/login.html:10
-#: templates/register.html:11
+#: templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Du är redan inloggad som %(username)s."
@@ -1501,6 +1503,11 @@ msgstr "Du är redan inloggad som %(username)s."
 #, python-format
 msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
 msgstr "Om du inte har ett konto för denna plats så kan du <a href='%(link)s'>registrera</a> ett nytt konto."
+
+#: templates/login.html:22
+#| msgid "Change your password"
+msgid "Have you forgotten your password?"
+msgstr "Har du glömt ditt lösenord?"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1581,38 +1588,6 @@ msgstr "GNOME-moduler"
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Välj en modul nedan för att se några förbannade lögner om den:"
-
-#: templates/register.html:9
-msgid "Account Registration"
-msgstr "Kontoregistrering"
-
-#: templates/register.html:13
-msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
-msgstr "Du kan registrera ett konto för denna plats. Detta är endast användbart om du tänker bidra med översättningar till GNOME."
-
-#: templates/register.html:14
-msgid "After registration and connection, you will be able to join an existing team from your profile page."
-msgstr "Du kommer efter registrering och anslutning att kunna gå med i en befintlig grupp från din profilsida."
-
-#: templates/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Autentisera via OpenID <strong>eller</strong> lösenord:"
-
-#: templates/register.html:34
-msgid "Register with OpenID"
-msgstr "Registrera med OpenID"
-
-#: templates/register.html:46
-msgid "Register with password"
-msgstr "Registrera med lösenord"
-
-#: templates/register_success.html:8
-msgid "Registration Success"
-msgstr "Registrering lyckades"
-
-#: templates/register_success.html:10
-msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
-msgstr "Registreringen lyckades. Du kommer nu att få ett e-postmeddelande som innehåller en länk för att aktivera ditt konto."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1818,10 +1793,12 @@ msgid "Old password:"
 msgstr "Gammalt lösenord:"
 
 #: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "Nytt lösenord:"
 
 #: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Ändra mitt lösenord"
 
@@ -1853,6 +1830,99 @@ msgstr "Lämna"
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "Är du säker på att du vill lämna gruppen?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Nollställning av lösenord har genomförts"
+
+#: templates/registration/password_reset_complete.html:10
+#| msgid "Your password has been changed."
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Ditt lösenord har ställts in. Du kan nu gå vidare och logga in."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+#| msgid "Password:"
+msgid "Password reset"
+msgstr "Nollställ lösenord"
+
+#: templates/registration/password_reset_confirm.html:10
+#| msgid "New password:"
+msgid "Enter new password"
+msgstr "Ange nytt lösenord"
+
+#: templates/registration/password_reset_confirm.html:12
+#| msgid ""
+#| "Please enter your old password, for security's sake, and then enter your "
+#| "new password twice so we can verify you typed it in correctly."
+msgid "Please enter your new password twice so we can verify you typed it in correctly."
+msgstr "Ange ditt nya lösenord två gånger så att vi kan verifiera att du matade in det korrekt."
+
+#: templates/registration/password_reset_confirm.html:24
+#| msgid "Password change successful"
+msgid "Password reset unsuccessful"
+msgstr "Lösenordet har inte nollställts"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
+msgstr "Länken för nollställning av lösenord av ogiltig. Möjligen har den redan använts. Begär en ny nollställning av lösenordet."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+#| msgid "Password change successful"
+msgid "Password reset successful"
+msgstr "Lösenordet har nollställts"
+
+#: templates/registration/password_reset_done.html:11
+msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
+msgstr "Vi har nu skickat instruktioner till dig för hur man ställer in ett nytt lösenord. Du bör få detta meddelande inom kort."
+
+#: templates/registration/password_reset_form.html:11
+msgid "Forgotten your password? Enter your e-mail address below, and we'll e-mail instructions for setting a new one."
+msgstr "Glömt ditt lösenord? Ange din e-postadress nedan så kommer vi att skicka instruktioner för hur man anger ett nytt lösenord."
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "E-postadress:"
+
+#: templates/registration/password_reset_form.html:15
+#| msgid "Change my password"
+msgid "Reset my password"
+msgstr "Nollställ mitt lösenord"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Kontoregistrering"
+
+#: templates/registration/register.html:13
+msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
+msgstr "Du kan registrera ett konto för denna plats. Detta är endast användbart om du tänker bidra med översättningar till GNOME."
+
+#: templates/registration/register.html:14
+msgid "After registration and connection, you will be able to join an existing team from your profile page."
+msgstr "Du kommer efter registrering och anslutning att kunna gå med i en befintlig grupp från din profilsida."
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Autentisera via OpenID <strong>eller</strong> lösenord:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Registrera med OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Registrera med lösenord"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Registrering lyckades"
+
+#: templates/registration/register_success.html:10
+msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
+msgstr "Registreringen lyckades. Du kommer nu att få ett e-postmeddelande som innehåller en länk för att aktivera ditt konto."
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1981,22 +2051,22 @@ msgstr "&lt;- Tillbaka till åtgärder"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Observera: båda filerna är sammanfogade med senaste POT-fil."
 
-#: vertimus/feeds.py:42
+#: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Vertimus-åtgärder för språket %(lang)s"
 
-#: vertimus/feeds.py:51
+#: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Senaste åtgärder för GNOME-översättningsprojektet för språket %s"
 
-#: vertimus/feeds.py:86
+#: vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Vertimus-åtgärder för gruppen %(lang)s"
 
-#: vertimus/feeds.py:95
+#: vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Senaste åtgärder gjorda av gruppen %s för GNOME-översättningsprojektet"
@@ -2149,7 +2219,6 @@ msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
 #: vertimus/models.py:602
-#| msgid "File in repository"
 msgid "Submit to repository"
 msgstr "Skicka in till förrådet"
 
@@ -2203,8 +2272,6 @@ msgstr "Senaste POT-fil"
 #~ msgstr "Kräver granskning"
 #~ msgid "Sorry, you're not allowed to modify this user."
 #~ msgstr "Tyvärr, du tillåts inte ändra denna användare."
-#~ msgid "Password change successful"
-#~ msgstr "Lösenordet har ändrats"
 #~ msgid "Logged in as: %(username)s"
 #~ msgstr "Inloggad som: %(username)s"
 #~ msgid "Edit"
