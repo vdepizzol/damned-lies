@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-10 10:14+0000\n"
-"PO-Revision-Date: 2009-03-10 11:13+0100\n"
+"POT-Creation-Date: 2009-03-10 10:45+0000\n"
+"PO-Revision-Date: 2009-03-10 11:56+0100\n"
 "Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -843,7 +843,7 @@ msgstr "Gnome Gebruikershandleiding"
 
 #: database-content.py:205
 msgid "Evince Document Viewer"
-msgstr ""
+msgstr "Evince-documentviewer"
 
 #: database-content.py:206
 msgid "Beagle Desktop Search"
@@ -910,7 +910,7 @@ msgstr ""
 
 #: database-content.py:220
 msgid "Evince is a document viewer for multiple document formats."
-msgstr ""
+msgstr "Evince is een documentviewer voor meedere documentformaten."
 
 #: database-content.py:221
 msgid ""
@@ -932,6 +932,7 @@ msgstr ""
 msgid "A VNC client for GNOME"
 msgstr "Een VNC-client voor Gnome"
 
+# Vrij vertaald (Wouter Bolsterlee)
 #: database-content.py:224
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
@@ -939,10 +940,11 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
+"Let er op dat gtk+ zowel ‘po’ als ‘po-properties’ bevat. Als u enkel een vertaling voor een van deze toevoegt, dient u een leeg bestand voor de andere in SVN toe te voegen."
 
 #: database-content.py:225
 msgid "Graphical frontend for the git directory tracker"
-msgstr ""
+msgstr "Grafische interface voor git-versiebeheer"
 
 #: database-content.py:226
 msgid "GNOME Fifth Toe (Extra software)"
@@ -1575,8 +1577,7 @@ msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
 "s'>register</a> for a new account."
 msgstr ""
-"Als u nog geen account heeft, kunt u zich <a href='%(link)s'>registreren</"
-"a>."
+"Als u nog geen account heeft, kunt u zich <a href='%(link)s'>registreren</a>."
 
 #: templates/login.html:22
 msgid "Have you forgotten your password?"
@@ -1908,30 +1909,24 @@ msgstr "Lidmaatschap opzeggen"
 
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
-msgstr ""
+msgstr "Weet u zeker dat u dit team wilt verlaten?"
 
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_complete.html:8
 msgid "Password reset complete"
-msgstr ""
+msgstr "Resetten van wachtwoord voltooid"
 
 #: templates/registration/password_reset_complete.html:10
-#, fuzzy
-#| msgid "Your password has been changed."
 msgid "Your password has been set. You may go ahead and log in now."
-msgstr "Uw wachtwoord is gewijzigd."
+msgstr "Uw wachtwoord is gewijzigd. U kunt zich nu aanmelden."
 
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
-#, fuzzy
-#| msgid "Password:"
 msgid "Password reset"
-msgstr "Wachtwoord:"
+msgstr "Wachtwoord gereset"
 
 #: templates/registration/password_reset_confirm.html:10
-#, fuzzy
-#| msgid "New password:"
 msgid "Enter new password"
 msgstr "Nieuw wachtwoord:"
 
@@ -1940,39 +1935,40 @@ msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr ""
-"Tik uw nieuwe wachtwoord "
-"tweemaal in (om zeker te zijn dat deze correct ingetikt is)."
+"Tik uw nieuwe wachtwoord tweemaal in (om zeker te zijn dat deze correct "
+"ingetikt is)."
 
 #: templates/registration/password_reset_confirm.html:24
 msgid "Password reset unsuccessful"
-msgstr ""
+msgstr "Wachtwoord niet gereset"
 
 #: templates/registration/password_reset_confirm.html:26
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
 msgstr ""
+"De verwijzing voor het resetten van uw wachtwoord was ongeldig. Wellicht is dit specifieke verzoek al eerder gebruikt. Dien opnieuw een verzoek tot resetten in."
 
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
 msgid "Password reset successful"
-msgstr ""
+msgstr "Wachtwoord succesvol gereset"
 
 #: templates/registration/password_reset_done.html:11
 msgid ""
 "We've e-mailed you instructions for setting your password to the e-mail "
 "address you submitted. You should be receiving it shortly."
-msgstr ""
+msgstr "Er ontvangt binnenkort een e-mail met instructies voor het resetten van uw wachtwoord."
 
 #: templates/registration/password_reset_form.html:11
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll e-mail "
 "instructions for setting a new one."
-msgstr ""
+msgstr "Wachtwoord vergeten? Geef uw mail-adres om uw wachtwoord te resetten."
 
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
-msgstr ""
+msgstr "E-mail:"
 
 #: templates/registration/password_reset_form.html:15
 msgid "Reset my password"
@@ -2057,7 +2053,7 @@ msgstr "Lid worden"
 #: templates/teams/team_detail.html:5
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr ""
+msgstr "Laatste acties door het team voor %(lang)s van het Gnome-vertaalproject"
 
 #: templates/teams/team_detail.html:14
 #, python-format
@@ -2147,27 +2143,27 @@ msgstr "← Terug naar acties"
 
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
-msgstr ""
+msgstr "Let op: beide bestanden zijn samengevoegd met het meest recente POT-bestand."
 
 #: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
-msgstr ""
+msgstr "%(site)s — Vertimus-acties voor taal %(lang)s"
 
 #: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
-msgstr ""
+msgstr "Laatste acties van het Gnome-vertaalproject voor taal %s"
 
 #: vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
-msgstr ""
+msgstr "%(site)s — Vertimus-acties van het team voor %(lang)s"
 
 #: vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
-msgstr ""
+msgstr "Laatste acties door het team voor %s van het Gnome-vertaalproject"
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -2206,7 +2202,7 @@ msgstr "Er is een bestand nodig."
 
 #: vertimus/forms.py:71
 msgid "Please, don't send a file with a 'Reserve' action."
-msgstr ""
+msgstr "U kunt geen bestand insturen bij het reserveren voor vertaling."
 
 #: vertimus/models.py:137
 msgid "Inactive"
@@ -2243,13 +2239,13 @@ msgstr "Gecommit"
 
 #: vertimus/models.py:339
 msgid "File in repository"
-msgstr ""
+msgstr "Bestand in repository"
 
 #: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
 #: vertimus/views.py:138
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
-msgstr ""
+msgstr "Bestand door %(name)s geüpload op %(date)s"
 
 #: vertimus/models.py:458
 #, python-format
@@ -2321,13 +2317,13 @@ msgstr "Klaar voor inzending"
 
 #: vertimus/models.py:602
 msgid "Submit to repository"
-msgstr ""
+msgstr "Naar repository inzenden"
 
 #. Commit failed, state unchanged
 #: vertimus/models.py:616
 #, python-format
 msgid "The commit failed. The error was: '%s'"
-msgstr ""
+msgstr "Committen mislukt. Foutmelding: %s"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: vertimus/models.py:626
@@ -2355,8 +2351,8 @@ msgstr "Laatste actie annuleren"
 #: vertimus/views.py:144
 #, python-format
 msgid "Latest committed file for %(lang)s"
-msgstr ""
+msgstr "Meest recente commit voor %(lang)s"
 
 #: vertimus/views.py:147
 msgid "Latest POT file"
-msgstr ""
+msgstr "Meest recente POT-bestand"
