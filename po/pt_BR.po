@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 23:59+0000\n"
-"PO-Revision-Date: 2009-03-05 16:24-0300\n"
+"POT-Creation-Date: 2009-03-07 15:18+0000\n"
+"PO-Revision-Date: 2009-03-11 11:17-0300\n"
 "Last-Translator: Jonh Wendell <jwendell@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1039,22 +1039,23 @@ msgstr "Senha:"
 
 # Sem tradução
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:27
+#: templates/base.html:76 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Conectar"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:32
+#: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "Ou use seu OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:35
+#: people/forms.py:17 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:38
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Entrar com OpenID"
 
@@ -1084,6 +1085,7 @@ msgid "At least 7 characters"
 msgstr "No mínimo 7 caracteres"
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Confirme a senha:"
 
@@ -1463,8 +1465,8 @@ msgid "Hosted by"
 msgstr "Hospedado pela"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/register.html:4
-#: templates/register_success.html:4
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Mentiras cabeludas sobre o GNOME"
 
@@ -1562,7 +1564,7 @@ msgstr ""
 msgid "Translated by:"
 msgstr "Traduzido por:"
 
-#: templates/login.html:10 templates/register.html:11
+#: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Você já está conectado como %(username)s."
@@ -1574,6 +1576,11 @@ msgid ""
 "s'>register</a> for a new account."
 msgstr ""
 "Se você não tem uma conta neste site, <a href='%(link)s'>crie</a> uma agora."
+
+#: templates/login.html:22
+#| msgid "Change your password"
+msgid "Have you forgotten your password?"
+msgstr "Esqueceu sua senha?"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1661,50 +1668,6 @@ msgstr "Módulos GNOME"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Escolha um módulo abaixo para ver algumas mentiras cabeludas sobre ele:"
-
-#: templates/register.html:9
-msgid "Account Registration"
-msgstr "Criação de conta"
-
-#: templates/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr ""
-"Aqui você pode se registrar para obter uma conta neste site. Isso só é útil "
-"se você planeja contribuir traduzindo o GNOME."
-
-#: templates/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr ""
-"Depois que se registrar e se conectar no site, você está apto a entrar em "
-"qualquer equipe de tradução, na página do seu perfil."
-
-#: templates/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Autenticar via OpenID <strong>ou</strong> senha:"
-
-#: templates/register.html:34
-msgid "Register with OpenID"
-msgstr "Registrar com OpenID"
-
-#: templates/register.html:46
-msgid "Register with password"
-msgstr "Registrar com senha"
-
-#: templates/register_success.html:8
-msgid "Registration Success"
-msgstr "Registrado com sucesso"
-
-#: templates/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
-msgstr ""
-"O registro foi efetuado com sucesso. Você receberá um email contendo um link "
-"para ativar sua conta."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1908,10 +1871,12 @@ msgid "Old password:"
 msgstr "Senha atual:"
 
 #: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "Nova senha:"
 
 #: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Alterar minha senha"
 
@@ -1943,6 +1908,125 @@ msgstr "Sair"
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "Tem certeza que deseja deixar esta equipe?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Redefinição da senha terminada"
+
+#: templates/registration/password_reset_complete.html:10
+#| msgid "Your password has been changed."
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Sua senha foi definida. Pode continuar sua navegação e se conectar."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+#| msgid "Password:"
+msgid "Password reset"
+msgstr "Redefinir a senha"
+
+#: templates/registration/password_reset_confirm.html:10
+#| msgid "New password:"
+msgid "Enter new password"
+msgstr "Nova senha"
+
+#: templates/registration/password_reset_confirm.html:12
+#| msgid ""
+#| "Please enter your old password, for security's sake, and then enter your "
+#| "new password twice so we can verify you typed it in correctly."
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Por favor, informe sua nova senha duas vezes para que possamos verificar se "
+"você digitou corretamente."
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Falha ao redefinir a senha"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"O link para redefinição da senha é inválido, provavelmente porque ele já foi "
+"usado.  Por favor, solicite novamente a redefinição da senha."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "Senha redefinida"
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"Nós enviamos no e-mail informado instruções para definir uma senha nova. "
+"Você deve recebê-las em breve."
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"Esqueceu sua senha? Digite seu endereço de e-mail abaixo e nós enviaremos "
+"instruções para você definir uma senha nova."
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "E-mail:"
+
+#: templates/registration/password_reset_form.html:15
+#| msgid "Change my password"
+msgid "Reset my password"
+msgstr "Limpar minha senha"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Criação de conta"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+"Aqui você pode se registrar para obter uma conta neste site. Isso só é útil "
+"se você planeja contribuir traduzindo o GNOME."
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+"Depois que se registrar e se conectar no site, você está apto a entrar em "
+"qualquer equipe de tradução, na página do seu perfil."
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Autenticar via OpenID <strong>ou</strong> senha:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Registrar com OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Registrar com senha"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Registrado com sucesso"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
+"O registro foi efetuado com sucesso. Você receberá um email contendo um link "
+"para ativar sua conta."
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -2071,22 +2155,22 @@ msgstr "&lt;- Voltar para página anterior"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Nota: Ambos os arquivos estão mesclados com o último arquivo POT."
 
-#: vertimus/feeds.py:42
+#: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Atividades do Vertimus para o idioma %(lang)s"
 
-#: vertimus/feeds.py:51
+#: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Atividades recentes no Projeto de Tradução GNOME para o idioma %s"
 
-#: vertimus/feeds.py:86
+#: vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Atividades do Vertimus para a equipe %(lang)s"
 
-#: vertimus/feeds.py:95
+#: vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Atividades recentes da equipe %s do Projeto de Tradução GNOME"
@@ -2242,7 +2326,6 @@ msgid "Ready for submission"
 msgstr "Pronto para submissão"
 
 #: vertimus/models.py:602
-#| msgid "File in repository"
 msgid "Submit to repository"
 msgstr "Enviar ao repositório"
 
