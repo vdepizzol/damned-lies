@@ -1,5 +1,5 @@
 # Italian translation for damned-lies (http://l10n.gnome.org).
-# Copyright (C) 2007 Free Software Foundation, Inc
+# Copyright (C) 2007, 2008, 2009 Free Software Foundation, Inc
 # This file is distributed under the same license as the damned-lies package.
 #
 # Luca Ferretti <elle.uca@libero.it>, 2008, 2009.
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 23:59+0000\n"
-"PO-Revision-Date: 2009-03-06 21:00+0100\n"
+"POT-Creation-Date: 2009-03-11 14:19+0000\n"
+"PO-Revision-Date: 2009-03-12 19:03+0100\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -902,6 +902,10 @@ msgid "Deskbar Applet"
 msgstr "Applet Deskbar"
 
 #: database-content.py:219
+msgid "Niepce Digital"
+msgstr "Niepce Digital"
+
+#: database-content.py:220
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -911,11 +915,11 @@ msgstr ""
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">Wiki di GNUCash</a> "
 "per sapere dove inviare le traduzioni."
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince è un visualizzatore di documenti in diversi formati."
 
-#: database-content.py:221
+#: database-content.py:222
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -924,7 +928,7 @@ msgstr ""
 "attraverso il <a href=\"http://translationproject.org\">Translation Project</"
 "a>."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -932,12 +936,12 @@ msgstr ""
 "A partire da GNOME 2.23, GAIL è integrato nelle GTK+. Non eseguire più "
 "commit sul branch \"trunk\"."
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "A VNC client for GNOME"
 msgstr "Un client VNC per GNOME"
 
 # cambiata un po'....
-#: database-content.py:224
+#: database-content.py:225
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -950,55 +954,55 @@ msgstr ""
 "traduzione. In caso contrario la build delle GTK+ non riuscirà in /po-"
 "properties."
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Frontend grafico per il sistema di tracciamento directory git"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Extra GNOME Applications"
 msgstr "Applicazioni aggiuntive per GNOME"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME Infrastructure"
 msgstr "Infrastruttura di GNOME"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (vecchia stabile)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (vecchia stabile)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non-GNOME)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabile)"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (vecchia stabile)"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applicazioni di produttività GNOME-Office"
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (vecchia stabile)"
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (in sviluppo)"
 
@@ -1042,22 +1046,23 @@ msgid "Password:"
 msgstr "Password:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:27
+#: templates/base.html:76 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Accedi"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:32
+#: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "Oppure usare il proprio OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:35
+#: people/forms.py:17 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:38
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Accedi con OpenID"
 
@@ -1087,6 +1092,7 @@ msgid "At least 7 characters"
 msgstr "Almeno 7 caratteri"
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Conferma password:"
 
@@ -1487,8 +1493,8 @@ msgid "Hosted by"
 msgstr "In hosting presso"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/register.html:4
-#: templates/register_success.html:4
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Maledette bugie su GNOME"
 
@@ -1589,7 +1595,7 @@ msgstr ""
 msgid "Translated by:"
 msgstr "Tradotto da:"
 
-#: templates/login.html:10 templates/register.html:11
+#: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "È già stato eseguito l'accesso come %(username)s."
@@ -1602,6 +1608,10 @@ msgid ""
 msgstr ""
 "Se non si possiede alcun account su questo sito, è possibile <a href='%(link)"
 "s'>registrarsi</a> per crearne uno nuovo."
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "Password dimenticata?"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1692,51 +1702,6 @@ msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Selezionare uno dei moduli qui elencati per vedere alcune maledette bugie su "
 "di esso:"
-
-#: templates/register.html:9
-msgid "Account Registration"
-msgstr "Registrazione account"
-
-#: templates/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr ""
-"Qui è possibile effettuare la registrazione di un account su questo sito. "
-"Ciò è utile solo se è in progetto di contribuire alle traduzioni di GNOME."
-
-#: templates/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr ""
-"Dopo la registrazione e la connessione, sarà possibile partecipare a un "
-"gruppo esistente dalla pagina del proprio profilo."
-
-# nella pagine appare meglio come autenticazione piuttosto che come autentica
-#: templates/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Autenticazione attraverso OpenID <strong>oppure</strong> password:"
-
-#: templates/register.html:34
-msgid "Register with OpenID"
-msgstr "Registra con OpenID"
-
-#: templates/register.html:46
-msgid "Register with password"
-msgstr "Registra con password"
-
-#: templates/register_success.html:8
-msgid "Registration Success"
-msgstr "Registrazione riuscita"
-
-#: templates/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
-msgstr ""
-"La registrazione è riuscita. A breve si riceverà una email contenente un "
-"collegamento per attivare il proprio account."
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1943,10 +1908,12 @@ msgid "Old password:"
 msgstr "Vecchia password:"
 
 #: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "Nuova password:"
 
 #: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Cambia la password"
 
@@ -1978,6 +1945,123 @@ msgstr "Abbandona"
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "Uscire veramente dal gruppo?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Azzeramento password completato"
+
+# omesso go ahead
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr ""
+"La propria password è stata impostata. Ora è possibile eseguire l'accesso."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "Azzeramento password"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Inserire la nuova password"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Inserire la propria nuovaa password due volte in modo da verificare che sia "
+"stata digitata in modo corretto."
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Azzeramento password non riuscito"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Il collegamento di azzeramento password non era valido, probabilmente perché "
+"era già stato usateo. Richiedere nuovamente l'azzeramento della password."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "Azzeramento password riuscito"
+
+# cambiata un po' per renderla meno pedante
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"Sono state inviate per email le istruzioni per impostare la propria "
+"password. Dovrebbero essere ricevute a breve attraverso l'indirizzo email "
+"indicato."
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"Password dimenticata? Inserire il proprio indirizzo email qui sotto, "
+"verranno inviate per email le istruzioni per impostarne una nuova."
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "Indirizzo email:"
+
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "Azzera la password"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Registrazione account"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+"Qui è possibile effettuare la registrazione di un account su questo sito. "
+"Ciò è utile solo se è in progetto di contribuire alle traduzioni di GNOME."
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+"Dopo la registrazione e la connessione, sarà possibile partecipare a un "
+"gruppo esistente dalla pagina del proprio profilo."
+
+# nella pagine appare meglio come autenticazione piuttosto che come autentica
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Autenticazione attraverso OpenID <strong>oppure</strong> password:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Registra con OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Registra con password"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Registrazione riuscita"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
+"La registrazione è riuscita. A breve si riceverà una email contenente un "
+"collegamento per attivare il proprio account."
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -2017,7 +2101,9 @@ msgstr "Iscrizione"
 #: templates/teams/team_detail.html:5
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr "Ultima azione compiuta dal gruppo di traduzione %(lang)s del progetto di traduzione di GNOME"
+msgstr ""
+"Ultima azione compiuta dal gruppo di traduzione %(lang)s del progetto di "
+"traduzione di GNOME"
 
 #: templates/teams/team_detail.html:14
 #, python-format
@@ -2113,22 +2199,22 @@ msgstr "&lt;- Torna alle azioni"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Nota: entrambi i file sono \"uniti\" con il file PO più recente."
 
-#: vertimus/feeds.py:42
+#: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Azioni di Vertimus per il gruppo %(lang)s"
 
-#: vertimus/feeds.py:51
+#: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Ultima azione dello GNOME Translation Project per il gruppo %s"
 
-#: vertimus/feeds.py:86
+#: vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Azioni di Vertimus del gruppo %(lang)s"
 
-#: vertimus/feeds.py:95
+#: vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Ultima azione compiuta dal gruppo %s dello GNOME Translation Project"
@@ -2160,7 +2246,7 @@ msgstr ""
 "Il file .po non passa il controllo `msgfmt -v`. Correggere il file e provare "
 "di nuovo."
 
-# sarà un or esclusivo? 
+# sarà un or esclusivo?
 #: vertimus/forms.py:65
 msgid "A comment or a file is needed for this action."
 msgstr "Per questa azione è necessario un commento oppure un file."
@@ -2320,7 +2406,6 @@ msgstr "Pronto per il commit"
 
 # Appare nei diff
 #: vertimus/models.py:602
-#| msgid "File in repository"
 msgid "Submit to repository"
 msgstr "Invia al repository"
 
