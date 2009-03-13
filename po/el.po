@@ -1,1436 +1,1039 @@
+# translation of damned-lies.HEAD.po to Greek
 # Greek translation of damned-lies.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Simos Xenitellis <simos@gnome.org>, 2007.
+# Fotis Tsamis <ftsamis@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-26 22:10+0000\n"
-"PO-Revision-Date: 2007-12-04 19:59+0200\n"
-"Last-Translator: NikosCharonitakis <nikosx@gmail.com>\n"
-"Language-Team: Greek <team@gnome.gr>\n"
+"POT-Creation-Date: 2009-03-07 15:18+0000\n"
+"PO-Revision-Date: 2009-03-09 23:18+0200\n"
+"Last-Translator: Fotis Tsamis <ftsamis@gmail.com>\n"
+"Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../gnome-modules.xml.in.h:2
-#, no-c-format
-msgid "%(module/id)"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:3
-msgid "Accessibility Guide"
-msgstr "Οδηγός προσιτότητας"
-
-#: ../gnome-modules.xml.in.h:4
-msgid "AisleRiot Manual"
-msgstr "Εγχειρίδιο AisleRiot"
-
-#: ../gnome-modules.xml.in.h:5
-msgid "Anjuta Manual"
-msgstr "Εγχειρίδιο Anjuta"
-
-#: ../gnome-modules.xml.in.h:6
-msgid "Banshee Music Player"
-msgstr "Αναπαραγωγή μουσικής Banshee"
-
-#: ../gnome-modules.xml.in.h:7
-#, fuzzy
-msgid "Battery Charge Monitor Manual"
-msgstr "Παρακολούθηση φορτίου μπαταρίας"
-
-#: ../gnome-modules.xml.in.h:8
-#, fuzzy
-msgid "Beagle Desktop Search"
-msgstr "Επιλογή χρήστη"
-
-#: ../gnome-modules.xml.in.h:9
-#, fuzzy
-msgid "Blackjack Manual"
-msgstr "Blackjack"
-
-#
-#: ../gnome-modules.xml.in.h:10
-#, fuzzy
-msgid "Bug Buddy Manual"
-msgstr "Βοηθός Σφαλμάτων"
-
-#: ../gnome-modules.xml.in.h:11
-#, fuzzy
-msgid "CD Player Manual"
-msgstr "Εγ_χειρίδιο Dasher"
-
-#: ../gnome-modules.xml.in.h:12
-#, fuzzy
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "Παρακολούθηση κλιμάκωσης συχνότητας CPU"
-
-#: ../gnome-modules.xml.in.h:13
-#, fuzzy
-msgid "Character Palette Manual"
-msgstr "Επιλογέας Χαρακτήρων"
-
-#: ../gnome-modules.xml.in.h:14
-#, fuzzy
-msgid "Clock Applet Manual"
-msgstr "Εργοστάσιο μικροεφαρμογής ρολογιού"
-
-#: ../gnome-modules.xml.in.h:15
-#, fuzzy
-msgid "Command Line Manual"
-msgstr "Βοήθεια γραμμής εντολών"
-
-#: ../gnome-modules.xml.in.h:16
-#, fuzzy
-msgid "Criawips Manual"
-msgstr "Claws Mail"
-
-#: ../gnome-modules.xml.in.h:17
-#: ../templates/header.tmpl:54
-msgid "Damned Lies"
-msgstr "Damned Lies"
-
-#: ../gnome-modules.xml.in.h:18
-#, fuzzy
-msgid "Dasher Manual"
-msgstr "Εγ_χειρίδιο Dasher"
-
-#: ../gnome-modules.xml.in.h:19
-#, fuzzy
-msgid "Deskbar Applet"
-msgstr "Ιστοσελίδα Deskbar "
-
-#: ../gnome-modules.xml.in.h:20
-msgid "Dictionary Manual"
-msgstr "Εγχειρίδιο Λεξικού"
-
-#: ../gnome-modules.xml.in.h:21
-#, fuzzy
-msgid "Disk Mounter Manual"
-msgstr "Προσάρτηση δίσκων"
-
-#: ../gnome-modules.xml.in.h:22
-#, fuzzy
-msgid "Disk Usage Analyzer Manual"
-msgstr "Ανάλυση χρήσης δίσκου"
-
-#: ../gnome-modules.xml.in.h:23
-#, fuzzy
-msgid "Encryption Applet Manual"
-msgstr "Μικροεφαρμογή Απορριμμάτων"
-
-#: ../gnome-modules.xml.in.h:24
-msgid "Epiphany Web Browser"
-msgstr "Περιηγητής διαδικτύου Epiphany"
-
-#
-#: ../gnome-modules.xml.in.h:25
-msgid "Eye of GNOME"
-msgstr "Μάτι του GNOME"
-
-#
-#: ../gnome-modules.xml.in.h:26
-#, fuzzy
-msgid "Eye of GNOME Manual"
-msgstr "Μάτι του GNOME"
-
-#: ../gnome-modules.xml.in.h:27
-#, fuzzy
-msgid "F-Spot Manual"
-msgstr ""
-"#-#-#-#-#  help.HEAD.el.po (sound-juicer greek help)  #-#-#-#-#\n"
-"Οδηγός\n"
-"#-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#\n"
-"Χειρωνακτική"
-
-#: ../gnome-modules.xml.in.h:28
-msgid "FDL License"
-msgstr "Άδεια χρήσης FDL"
-
-#: ../gnome-modules.xml.in.h:29
-#, fuzzy
-msgid "Fish Applet Manual"
-msgstr "Μικροεφαρμογή Απορριμμάτων"
-
-#: ../gnome-modules.xml.in.h:30
-#, fuzzy
-msgid "Five or More Manual"
-msgstr "Five or More"
-
-#: ../gnome-modules.xml.in.h:31
-#, fuzzy
-msgid "Four-in-a-row Manual"
-msgstr "Τέσσερα στη σειρά"
-
-#: ../gnome-modules.xml.in.h:32
-#, fuzzy
-msgid "GConf Editor Manual"
-msgstr "Ένδειξη Γλώσσας Πληκτρολογίου"
-
-#: ../gnome-modules.xml.in.h:33
-#, fuzzy
-msgid "GDM Manual"
-msgstr ""
-"#-#-#-#-#  help.HEAD.el.po (sound-juicer greek help)  #-#-#-#-#\n"
-"Οδηγός\n"
-"#-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#\n"
-"Χειρωνακτική"
-
-#: ../gnome-modules.xml.in.h:34
-#, fuzzy
-msgid "GFloppy Manual"
-msgstr "Epiphany"
-
-#: ../gnome-modules.xml.in.h:35
-msgid "GLib"
-msgstr "GLib"
-
-#: ../gnome-modules.xml.in.h:36
-#, fuzzy
-msgid "GNOME 2 Development Documentation"
-msgstr "Τεκμηρίωση προγραμματισμού"
-
-#: ../gnome-modules.xml.in.h:37
-#, fuzzy
-msgid "GNOME 2 User Documentation"
-msgstr "Ομάδα Τεκμηρίωσης GNOME"
-
-#: ../gnome-modules.xml.in.h:38
-msgid "GNOME 2.18 release notes"
-msgstr "Σημειώσεις κυκλοφορίας 2.18"
-
-#: ../gnome-modules.xml.in.h:39
-msgid "GNOME 2.20 release notes"
-msgstr "Σημειώσεις κυκλοφορίας GNOME 2.20"
-
-#
-#: ../gnome-modules.xml.in.h:40
-#, fuzzy
-msgid "GNOME Applets"
-msgstr "Διαδρομή GNOME"
-
-#: ../gnome-modules.xml.in.h:41
-#, fuzzy
-msgid "GNOME Keyring Manager Manual"
-msgstr "Διαχείριση κωδικών του Gnome"
-
-#: ../gnome-modules.xml.in.h:42
-#, fuzzy
-msgid "GNOME Klotski Manual"
-msgstr "Διαχείριση κωδικών του Gnome"
-
-#: ../gnome-modules.xml.in.h:43
-#, fuzzy
-msgid "GNOME Library Web site"
-msgstr "Βιβλιοθήκη GNOME"
-
-#: ../gnome-modules.xml.in.h:44
-#, fuzzy
-msgid "GNOME Library help"
-msgstr "Βιβλιοθήκη GNOME"
-
-#: ../gnome-modules.xml.in.h:45
-#, fuzzy
-msgid "GNOME Mahjongg Manual"
-msgstr "Διαχείριση κωδικών του Gnome"
-
-#: ../gnome-modules.xml.in.h:46
-#, fuzzy
-msgid "GNOME Release Notes"
-msgstr "_Διαγραφή Σημειώσεων"
-
-#: ../gnome-modules.xml.in.h:47
-#, fuzzy
-msgid "GNOME Robots Manual"
-msgstr "Διαχείριση ενέργειας του GNOME"
-
-#: ../gnome-modules.xml.in.h:48
-#, fuzzy
-msgid "GNOME Sudoku Manual"
-msgstr "Διαχείριση ενέργειας του GNOME"
-
-#: ../gnome-modules.xml.in.h:49
-#, fuzzy
-msgid "GNOME Tali Manual"
-msgstr "GNOME Tali"
-
-#: ../gnome-modules.xml.in.h:50
-msgid "GNOME Tetravex Manual"
-msgstr "Τεκμηρίωση GNOME Tetravex"
-
-#: ../gnome-modules.xml.in.h:51
-#, fuzzy
-msgid "GNOME Volume Control Manual"
-msgstr "Έλεγχος Έντασης Ήχου"
-
-#: ../gnome-modules.xml.in.h:52
-msgid "GPL License"
-msgstr "Άδεια διάθεσης GPL"
-
-# #-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#
-#
-#: ../gnome-modules.xml.in.h:53
-#, fuzzy
-msgid "GST Network Setup Manual"
-msgstr "Ρυθμίσεις δικτύου"
-
-#: ../gnome-modules.xml.in.h:54
-msgid "GST Service Management Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:55
-#, fuzzy
-msgid "GST Shared Folders Manual"
-msgstr "Κοινόχρηστοι φάκελοι"
-
-#: ../gnome-modules.xml.in.h:56
-msgid "GST Time Setup Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:57
-#, fuzzy
-msgid "GST User Management Manual"
-msgstr "Διαχείριση ενέργειας"
-
-#: ../gnome-modules.xml.in.h:58
-#, fuzzy
-msgid "GStreamer Properties Manual"
-msgstr "Επιλογέας Χαρακτήρων"
-
-#: ../gnome-modules.xml.in.h:59
-#, fuzzy
-msgid "Geyes Manual"
-msgstr ""
-"#-#-#-#-#  help.HEAD.el.po (sound-juicer greek help)  #-#-#-#-#\n"
-"Οδηγός\n"
-"#-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#\n"
-"Χειρωνακτική"
-
-#: ../gnome-modules.xml.in.h:60
-msgid "Gnometris Manual"
-msgstr "Εγχειρίδιο Gnometris"
-
-#: ../gnome-modules.xml.in.h:61
-msgid "Gtk+"
-msgstr "Gtk+"
-
-#: ../gnome-modules.xml.in.h:62
-#, fuzzy
-msgid "Iagno Manual"
-msgstr "Epiphany"
-
-#: ../gnome-modules.xml.in.h:63
-#, fuzzy
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Κατάσταση προσιτότητας πληκτρολογίου"
-
-#: ../gnome-modules.xml.in.h:64
-msgid "Keyboard Indicator Manual"
-msgstr "Ένδειξη Γλώσσας Πληκτρολογίου"
-
-#: ../gnome-modules.xml.in.h:65
-msgid "LGPL License"
-msgstr "Άδεια χρήσης LGPL"
-
-#: ../gnome-modules.xml.in.h:66
-#, fuzzy
-msgid "Layout Descriptions"
-msgstr "Περιγραφή γραμματοσειράς"
-
-#: ../gnome-modules.xml.in.h:67
-#, fuzzy
-msgid "Log Viewer Manual"
-msgstr "Παρακολούθηση Καταγραφών"
-
-#: ../gnome-modules.xml.in.h:68
-#, fuzzy
-msgid "Mines Manual"
-msgstr "Epiphany"
-
-#: ../gnome-modules.xml.in.h:69
-#, fuzzy
-msgid "Nibbles Manual"
-msgstr "Nibbles"
-
-#: ../gnome-modules.xml.in.h:70
-#, fuzzy
-msgid "Panel Trash Manual"
-msgstr "Thrash Metal"
-
-#: ../gnome-modules.xml.in.h:71
-#, fuzzy
-msgid "Platform Overview"
-msgstr "Γενικές επισκοπήσεις"
-
-# #-#-#-#-#  gtkhtml.HEAD.el.po (el)  #-#-#-#-#
-#
-#: ../gnome-modules.xml.in.h:72
-#, fuzzy
-msgid "Property Nicks"
-msgstr "Ιδιότητες"
-
-#: ../gnome-modules.xml.in.h:73
-msgid "Rhythmbox Music Player"
-msgstr "Rhythmbox Music Player"
-
-#: ../gnome-modules.xml.in.h:74
-msgid "Sabayon"
-msgstr "Sabayon"
-
-#: ../gnome-modules.xml.in.h:75
-#, fuzzy
-msgid "Same GNOME Manual"
-msgstr "Same Gnome"
-
-#: ../gnome-modules.xml.in.h:76
-#, fuzzy
-msgid "Seahorse Manual"
-msgstr "Α_ναζήτηση για:"
-
-#: ../gnome-modules.xml.in.h:77
-#, fuzzy
-msgid "Search Tool Manual"
-msgstr "Α_ναζήτηση για:"
-
-# sysdeps/names/mem.c:46
-#: ../gnome-modules.xml.in.h:78
-msgid "Shared MIME Info"
-msgstr "Shared MIME Info"
-
-#: ../gnome-modules.xml.in.h:79
-#, fuzzy
-msgid "Sound Juicer Manual"
-msgstr "Sound Juicer"
-
-#: ../gnome-modules.xml.in.h:80
-#, fuzzy
-msgid "Sound Recorder Manual"
-msgstr "Sound Juicer"
-
-#: ../gnome-modules.xml.in.h:81
-#, fuzzy
-msgid "Sticky Notes Manual"
-msgstr "Sticky Notes"
-
-#: ../gnome-modules.xml.in.h:82
-msgid "Stock Ticker Manual"
-msgstr ""
-
-#: ../gnome-modules.xml.in.h:83
-#, fuzzy
-msgid "System Administration Guide"
-msgstr "Διαχείριση Συστήματος"
-
-#: ../gnome-modules.xml.in.h:84
-#, fuzzy
-msgid "System Monitor Manual"
-msgstr ""
-"#-#-#-#-#  gnome-applets.HEAD.el.po (el)  #-#-#-#-#\n"
-"Παρακολούθηση Συστήματος\n"
-"#-#-#-#-#  gnome-system-monitor.HEAD.el.po (el)  #-#-#-#-#\n"
-"Παρακολούθηση συστήματος"
-
-#: ../gnome-modules.xml.in.h:85
-#: ../templates/language-release.tmpl:63
-msgid "UI translations"
-msgstr "Μεταφράσεις γραφικού περιβάλλοντος"
-
-#
-#: ../gnome-modules.xml.in.h:86
-#, fuzzy
-msgid "User Directories"
-msgstr "Κατάλογος χρηστών"
-
-#: ../gnome-modules.xml.in.h:87
-msgid "User Guide"
-msgstr "Οδηγός χρήσης"
-
-#: ../gnome-modules.xml.in.h:88
-#, fuzzy
-msgid "Volume Control Manual"
-msgstr "Έλεγχος Έντασης Ήχου"
-
-#: ../gnome-modules.xml.in.h:89
-#, fuzzy
-msgid "Weather Applet Locations"
-msgstr "Άλλες εφαρμογές"
-
-#: ../gnome-modules.xml.in.h:90
-#, fuzzy
-msgid "Weather Report Manual"
-msgstr "Δελτίο καιρού"
-
-#: ../gnome-modules.xml.in.h:91
-#, fuzzy
-msgid "Window List Applet Manual"
-msgstr "Εργοστάσιο μικροεφαρμογής περιήγησης παραθύρου"
-
-#: ../gnome-modules.xml.in.h:92
-#, fuzzy
-msgid "Workspace Switcher Applet Manual"
-msgstr ""
-"#-#-#-#-#  gnome-panel.HEAD.el.po (el)  #-#-#-#-#\n"
-"Εφαρμογή εναλλαγής χώρων εργασίας\n"
-"#-#-#-#-#  libwnck.HEAD.el.po (el)  #-#-#-#-#\n"
-"Εναλλάκτης Χώρων Εργασίας"
-
-#: ../gnome-modules.xml.in.h:93
-msgid "XKeyboard-Config"
-msgstr "XKeyboard-Config"
-
-#: ../gnome-modules.xml.in.h:94
-#, fuzzy
-msgid "glChess Manual"
-msgstr ""
-"#-#-#-#-#  help.HEAD.el.po (sound-juicer greek help)  #-#-#-#-#\n"
-"Οδηγός\n"
-"#-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#\n"
-"Χειρωνακτική"
-
-#: ../releases.xml.in.h:1
-msgid "Administration Tools"
-msgstr "Εργαλεία διαχείρισης"
-
-#: ../releases.xml.in.h:2
-msgid "Desktop Applications"
-msgstr "Εφαρμογές επιφάνειας εργασίας"
-
-#: ../releases.xml.in.h:3
-msgid "Development Platform"
-msgstr "Περιβάλλον ανάπτυξης"
-
-#: ../releases.xml.in.h:4
-msgid "Development Tools"
-msgstr "Εργαλεία ανάπτυξης"
-
-#: ../releases.xml.in.h:5
-msgid "External Dependencies"
-msgstr "Εξωτερικές εξαρτήσεις"
-
-#: ../releases.xml.in.h:6
-msgid "Extra GNOME Applications"
-msgstr "Άλλες εφαρμογές GNOME"
-
-#: ../releases.xml.in.h:7
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (παλαιό σταθερό)"
-
-#: ../releases.xml.in.h:8
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (παλαιό σταθερό)"
-
-#: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (παλαιό σταθερό)"
-
-#: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (stable)"
-msgstr "GNOME 2.20 (σταθερό)"
-
-#: ../releases.xml.in.h:11
-msgid "GNOME 2.22 (development)"
-msgstr "GNOME 2.22 (σε ανάπτυξη)"
-
-#: ../releases.xml.in.h:12
-#, fuzzy
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "GNOME Five or More"
-
-#: ../releases.xml.in.h:13
-#, fuzzy
-msgid "GNOME Infrastructure"
-msgstr "Διασύνδεση Χρήστη GNOME"
-
-#: ../releases.xml.in.h:14
-msgid "GNOME desktop"
-msgstr "Επιφάνεια εργασίας GNOME"
-
-#: ../releases.xml.in.h:15
-msgid "GNOME developer platform"
-msgstr "Περιβάλλον ανάπτυξης GNOME"
-
-#: ../releases.xml.in.h:16
-msgid "GNOME-Office Productivity Applications"
-msgstr "Εφαρμογές γραφείου GNOME"
-
-#: ../releases.xml.in.h:17
-msgid "New module proposals"
-msgstr ""
-
-#: ../releases.xml.in.h:18
-msgid "System Administration"
-msgstr "Διαχείριση Συστήματος"
-
-#: ../releases.xml.in.h:19
-msgid "freedesktop.org (non-GNOME)"
-msgstr "freedesktop.org (μη-GNOME)"
-
-#: ../teams.py:207
-#: ../templates/language-release.tmpl:7
-#: ../templates/team.tmpl:7
-#, python-format
-msgid "%(lang)s Translation Team"
-msgstr "Μεταφραστική ομάδα για %(lang)s"
-
-#: ../translation-teams.xml.in.h:1
-#, fuzzy
-msgid "Afrikaans"
-msgstr "A-M|Afrikaans"
-
-#: ../translation-teams.xml.in.h:2
-msgid "Albanian"
-msgstr "Αλβανικά"
-
-#: ../translation-teams.xml.in.h:3
-#, fuzzy
-msgid "Amharic"
-msgstr "A-M|Amharic"
-
-#: ../translation-teams.xml.in.h:4
-msgid "Arabic"
-msgstr "Αραβικά"
-
-# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
-#
-#: ../translation-teams.xml.in.h:5
-msgid "Armenian"
-msgstr "Αρμένικα"
-
-#: ../translation-teams.xml.in.h:6
-#, fuzzy
-msgid "Assamese"
-msgstr "Frameset"
-
-#: ../translation-teams.xml.in.h:7
-#, fuzzy
-msgid "Asturian"
-msgstr "Adrian"
-
-#: ../translation-teams.xml.in.h:8
-msgid "Australian English"
-msgstr "Αγγλικά Αυστραλίας"
-
-#: ../translation-teams.xml.in.h:9
-#, fuzzy
-msgid "Azerbaijani"
-msgstr "Αζερμπαϊτζάν"
-
-#: ../translation-teams.xml.in.h:10
-msgid "Basque"
-msgstr "Βασκική"
-
-#: ../translation-teams.xml.in.h:11
-#, fuzzy
-msgid "Belarusian"
-msgstr "A-M|Belarusian"
-
-#: ../translation-teams.xml.in.h:12
-#, fuzzy
-msgid "Belarusian Latin"
-msgstr "Βασικά Λατινικά"
-
-#: ../translation-teams.xml.in.h:13
-msgid "Bengali"
-msgstr "Βεγγαλικά"
-
-#: ../translation-teams.xml.in.h:14
-#, fuzzy
-msgid "Bengali (India)"
-msgstr "A-M|Bengali (India)"
-
-#: ../translation-teams.xml.in.h:15
-msgid "Bosnian"
-msgstr "Βοσνιακά"
-
-#: ../translation-teams.xml.in.h:16
+#: database-content.py:1
+msgid "Gujarati"
+msgstr "Γκουτζαράτι"
+
+#: database-content.py:2
+msgid "Irish"
+msgstr "Ιρλανδική"
+
+#: database-content.py:3
+msgid "Guarani"
+msgstr "Γκουαρανί"
+
+#: database-content.py:4
+msgid "Galician"
+msgstr "Γαλικιανή"
+
+#: database-content.py:5
+msgid "Latin"
+msgstr "Λατινική"
+
+#: database-content.py:6
+msgid "Tatar"
+msgstr "Ταταρική"
+
+#: database-content.py:7
+msgid "Turkish"
+msgstr "Τουρκική"
+
+#: database-content.py:8
+msgid "Limburgian"
+msgstr "Λιμβουργιανά"
+
+#: database-content.py:9
+msgid "Latvian"
+msgstr "Λετονική"
+
+#: database-content.py:10
+msgid "Tagalog"
+msgstr "Ταγκαλόγκ"
+
+#: database-content.py:11
+msgid "Turkmen"
+msgstr "Τουρκμενική"
+
+#: database-content.py:12
+msgid "Thai"
+msgstr "Ταϊλανδική"
+
+#: database-content.py:13
+msgid "Tajik"
+msgstr "Tajik"
+
+#: database-content.py:14
+msgid "Telugu"
+msgstr "Τελουγκου"
+
+#: database-content.py:15
+msgid "Tamil"
+msgstr "Ταμίλ"
+
+#: database-content.py:16
+msgid "Yiddish"
+msgstr "Yiddish"
+
+#: database-content.py:17
 msgid "Brazilian Portuguese"
 msgstr "Πορτογαλικά Βραζιλίας"
 
-#: ../translation-teams.xml.in.h:17
-#, fuzzy
-msgid "Breton"
-msgstr "Loreto"
+#: database-content.py:18
+msgid "German"
+msgstr "Γερμανική"
 
-#: ../translation-teams.xml.in.h:18
-msgid "British English"
-msgstr "Αγγλικά"
-
-#: ../translation-teams.xml.in.h:19
-msgid "Bulgarian"
-msgstr "Βουλγαρικά"
-
-#: ../translation-teams.xml.in.h:20
-#, fuzzy
-msgid "Burmese"
-msgstr "Frameset"
-
-#: ../translation-teams.xml.in.h:21
-msgid "Canadian English"
-msgstr "Αγγλικά Καναδά"
-
-#: ../translation-teams.xml.in.h:22
-msgid "Catalan"
-msgstr "Καταλανικά"
-
-#: ../translation-teams.xml.in.h:23
-msgid "Chinese (China)"
-msgstr "Κινέζικα"
-
-#: ../translation-teams.xml.in.h:24
-msgid "Chinese (Hong Kong)"
-msgstr "Κινέζικα (Hong Kong)"
-
-#: ../translation-teams.xml.in.h:25
-msgid "Chinese (Taiwan)"
-msgstr "Κινέζικα (Taiwan)"
-
-#: ../translation-teams.xml.in.h:26
-msgid "Chinese Traditional"
-msgstr "Κινέζικα παραδοσιακά"
-
-# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
-#
-#: ../translation-teams.xml.in.h:27
-msgid "Croatian"
-msgstr "Κροατικά"
-
-#: ../translation-teams.xml.in.h:28
-msgid "Czech"
-msgstr "Τσέχικα"
-
-#: ../translation-teams.xml.in.h:29
-#, fuzzy
+#: database-content.py:19
 msgid "Danish"
-msgstr "Ισπανικά"
+msgstr "Δανική"
 
-#: ../translation-teams.xml.in.h:30
-msgid "Divehi"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:31
-msgid "Dutch"
-msgstr "Ολλανδικά"
-
-#: ../translation-teams.xml.in.h:32
-#, fuzzy
+#: database-content.py:20
 msgid "Dzongkha"
-msgstr "Songkhla"
+msgstr "Dzongkha"
 
-#: ../translation-teams.xml.in.h:33
+#: database-content.py:21
+msgid "Chinese (China)"
+msgstr "Κινέζικη"
+
+#: database-content.py:22
+msgid "Balochi"
+msgstr "Balochi"
+
+#: database-content.py:23
+msgid "Crimean Tatar"
+msgstr "Κριμαϊκή Ταταρική"
+
+#: database-content.py:24
+msgid "Greek"
+msgstr "Ελληνική"
+
+#: database-content.py:25
 msgid "Esperanto"
 msgstr "Εσπεράντο"
 
-#: ../translation-teams.xml.in.h:34
+#: database-content.py:26
+msgid "Belarusian"
+msgstr "Belarusian"
+
+#: database-content.py:27
+msgid "Basque"
+msgstr "Βασκική"
+
+#: database-content.py:28
 msgid "Estonian"
-msgstr "Εσθονικά"
+msgstr "Εσθονική"
 
-#: ../translation-teams.xml.in.h:35
-#, fuzzy
-msgid "Fijian"
-msgstr "Fujian"
+#: database-content.py:29
+msgid "Spanish"
+msgstr "Ισπανική"
 
-#: ../translation-teams.xml.in.h:36
-msgid "Finnish"
-msgstr "Φινλανδικά"
+#: database-content.py:30
+msgid "Russian"
+msgstr "Ρωσική"
 
-#: ../translation-teams.xml.in.h:37
-msgid "French"
-msgstr "Γαλλικά"
+#: database-content.py:31
+msgid "Kinyarwanda"
+msgstr "Kinyarwanda"
 
-#: ../translation-teams.xml.in.h:38
-#, fuzzy
-msgid "Galician"
-msgstr "A-M|Galician"
+# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
+#
+#: database-content.py:32
+msgid "Romanian"
+msgstr "Ρουμανική"
 
-#: ../translation-teams.xml.in.h:39
-msgid "Georgian"
-msgstr "Γεωργιανά"
+#: database-content.py:33
+msgid "Canadian English"
+msgstr "Αγγλική Καναδά"
 
-#: ../translation-teams.xml.in.h:40
-msgid "German"
-msgstr "Γερμανικά"
+#: database-content.py:34
+msgid "Bulgarian"
+msgstr "Βουλγαρική"
 
-#: ../translation-teams.xml.in.h:41
-msgid "Greek"
-msgstr "Ελληνικά"
+#: database-content.py:35
+msgid "Ukrainian"
+msgstr "Ουκρανική"
 
-#: ../translation-teams.xml.in.h:42
-#, fuzzy
-msgid "Guarani"
-msgstr "Guarany"
+#: database-content.py:36
+msgid "Walloon"
+msgstr "Walloon"
 
-#: ../translation-teams.xml.in.h:43
-#, fuzzy
-msgid "Gujarati"
-msgstr ""
-"#-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#\n"
-"Gujarati\n"
-"#-#-#-#-#  gucharmap.HEAD.el.po (el)  #-#-#-#-#\n"
-"Γκουτζαράτι\n"
-"#-#-#-#-#  totem.HEAD.el.po (totem.HEAD)  #-#-#-#-#\n"
-"Γκουαρατί"
+#: database-content.py:37
+msgid "Asturian"
+msgstr "Asturian"
 
-#: ../translation-teams.xml.in.h:44
-#, fuzzy
-msgid "Hausa"
-msgstr "Wausau"
+#: database-content.py:38
+msgid "Bengali"
+msgstr "Βεγγαλική"
 
-#: ../translation-teams.xml.in.h:45
-msgid "Hebrew"
-msgstr "Εβραΐκα"
+#: database-content.py:39
+msgid "Breton"
+msgstr "Βρετονική"
 
-#: ../translation-teams.xml.in.h:46
-#, fuzzy
-msgid "Hindi"
-msgstr ""
-"#-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ινδική\n"
-"#-#-#-#-#  totem.HEAD.el.po (totem.HEAD)  #-#-#-#-#\n"
-"Ινδικά"
+#: database-content.py:40
+msgid "Bosnian"
+msgstr "Βοσνιακή"
 
-#: ../translation-teams.xml.in.h:47
-msgid "Hungarian"
-msgstr "Ουγγρικά"
-
-#: ../translation-teams.xml.in.h:48
-msgid "Hyam"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:49
-msgid "Icelandic"
-msgstr "Ισλανδικά"
-
-#: ../translation-teams.xml.in.h:50
-msgid "Ido"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:51
-msgid "Igbo"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:52
-#, fuzzy
-msgid "Indonesian"
-msgstr ""
-"#-#-#-#-#  evolution.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ινδονησία\n"
-"#-#-#-#-#  gnome-applets-locations.HEAD.el.po (el)  #-#-#-#-#\n"
-"Indonesia"
-
-#: ../translation-teams.xml.in.h:53
-#, fuzzy
-msgid "Iranian Azerbaijani"
-msgstr "Αζερμπαϊτζάν"
-
-#: ../translation-teams.xml.in.h:54
-msgid "Irish"
-msgstr "Ιρλανδικά"
-
-#: ../translation-teams.xml.in.h:55
-msgid "Italian"
-msgstr "Ιταλικά"
-
-#: ../translation-teams.xml.in.h:56
+#: database-content.py:41
 msgid "Japanese"
-msgstr "Ιαπωνικά"
+msgstr "Ιαπωνική"
 
-#: ../translation-teams.xml.in.h:57
-#, fuzzy
-msgid "Jju"
-msgstr "Jujuy"
+#: database-content.py:42
+msgid "Occitan"
+msgstr "Occitan"
 
-#: ../translation-teams.xml.in.h:58
-#, fuzzy
-msgid "Kagoma"
-msgstr "Kigoma"
+#: database-content.py:43
+msgid "Low German and Saxon"
+msgstr "Low German and Saxon"
 
-#: ../translation-teams.xml.in.h:59
+#: database-content.py:44
+msgid "Oriya"
+msgstr "Ορίγια"
+
+#: database-content.py:45
+msgid "Xhosa"
+msgstr "Xhosa"
+
+#: database-content.py:46
+msgid "Northern Sotho"
+msgstr "Northern Sotho"
+
+#: database-content.py:47
+msgid "Iranian Azerbaijani"
+msgstr "Ιρανικά Αζερμπαϊτζάν"
+
+#: database-content.py:48
+msgid "Catalan"
+msgstr "Καταλανική"
+
+#: database-content.py:49
+msgid "Welsh"
+msgstr "Ουαλλική"
+
+#: database-content.py:50
+msgid "Czech"
+msgstr "Τσέχικη"
+
+#: database-content.py:51
+msgid "Pashto"
+msgstr "Pashto"
+
+#: database-content.py:52
+msgid "Portuguese"
+msgstr "Πορτογαλική"
+
+#: database-content.py:53
+msgid "Lithuanian"
+msgstr "Λιθουανική"
+
+#: database-content.py:54
+msgid "Punjabi"
+msgstr "Punjabi"
+
+#: database-content.py:55
+msgid "British English"
+msgstr "Αγγλική"
+
+# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
+#
+#: database-content.py:56
+msgid "Armenian"
+msgstr "Αρμένικη"
+
+# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
+#
+#: database-content.py:57
+msgid "Croatian"
+msgstr "Κροατική"
+
+#: database-content.py:58
+msgid "Hungarian"
+msgstr "Ουγγρική"
+
+#: database-content.py:59
+msgid "Hindi"
+msgstr "Ινδική"
+
+#: database-content.py:60
+msgid "Hebrew"
+msgstr "Εβραΐκη"
+
+#: database-content.py:61
+msgid "Malagasy"
+msgstr "Malagasy"
+
+#: database-content.py:62
+msgid "Friulian"
+msgstr "Friulian"
+
+#: database-content.py:63
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: database-content.py:64
+msgid "Malayalam"
+msgstr "Μαλαγιάλαμ"
+
+#: database-content.py:65
+msgid "Mongolian"
+msgstr "Μογγολική"
+
+#: database-content.py:66
+msgid "Maori"
+msgstr "Maori"
+
+#: database-content.py:67
+msgid "Macedonian"
+msgstr "Σλαβομακεδονική"
+
+#: database-content.py:68
+msgid "Urdu"
+msgstr "Urdu"
+
+#: database-content.py:69
+msgid "Polish"
+msgstr "Πολωνική"
+
+#: database-content.py:70
+msgid "Malay"
+msgstr "Malay"
+
+#: database-content.py:71
+msgid "Marathi"
+msgstr "Marathi"
+
+#: database-content.py:72
+msgid "Uighur"
+msgstr "Uighur"
+
+#: database-content.py:73
+msgid "Old English"
+msgstr "Old English"
+
+#: database-content.py:74
+msgid "Afrikaans"
+msgstr "Afrikaans"
+
+#: database-content.py:75
+msgid "Vietnamese"
+msgstr "Βιετναμέζικη"
+
+#: database-content.py:76
+msgid "Icelandic"
+msgstr "Ισλανδική"
+
+#: database-content.py:77
+msgid "Amharic"
+msgstr "Amharic"
+
+#: database-content.py:78
+msgid "Italian"
+msgstr "Ιταλική"
+
+#: database-content.py:79
 msgid "Kannada"
 msgstr "Κανάντα"
 
-#: ../translation-teams.xml.in.h:60
-#, fuzzy
-msgid "Kashmiri"
-msgstr "Χμερ"
+#: database-content.py:80
+msgid "Assamese"
+msgstr "Assamese"
 
-#: ../translation-teams.xml.in.h:61
+#: database-content.py:81
+msgid "Arabic"
+msgstr "Αραβική"
+
+#: database-content.py:82
+msgid "Ido"
+msgstr "Ido"
+
+#: database-content.py:83
+msgid "Zulu"
+msgstr "Ζουλού"
+
+#: database-content.py:84
+msgid "Azerbaijani"
+msgstr "Azerbaijani"
+
+#: database-content.py:85
+msgid "Indonesian"
+msgstr "Indonesian"
+
+#: database-content.py:86
+msgid "Bengali (India)"
+msgstr "Bengali (India)"
+
+#: database-content.py:87
+msgid "Kashmiri"
+msgstr "Kashmiri"
+
+#: database-content.py:88
+msgid "Chinese Traditional"
+msgstr "Κινέζικα παραδοσιακά"
+
+#: database-content.py:89
+msgid "Dutch"
+msgstr "Ολλανδική"
+
+#: database-content.py:90
+msgid "Yoruba"
+msgstr "Yoruba"
+
+#: database-content.py:91
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Νορβηγική (Bokmål and Nynorsk)"
+
+#: database-content.py:92
+msgid "Nepali"
+msgstr "Nepali"
+
+#: database-content.py:93
+msgid "Australian English"
+msgstr "Αγγλική Αυστραλίας"
+
+#: database-content.py:94
+msgid "French"
+msgstr "Γαλλική"
+
+#: database-content.py:95
+msgid "Persian"
+msgstr "Περσική"
+
+#: database-content.py:96
+msgid "Fula"
+msgstr "Fula"
+
+#: database-content.py:97
+msgid "Maithili"
+msgstr "Maithili"
+
+#: database-content.py:98
+msgid "Finnish"
+msgstr "Φινλανδική"
+
+#: database-content.py:99
+msgid "Georgian"
+msgstr "Γεωργιανά"
+
+#: database-content.py:100
 #, fuzzy
 msgid "Kazakh"
 msgstr "Καζακστάν"
 
-#: ../translation-teams.xml.in.h:62
+#: database-content.py:101
+msgid "Serbian"
+msgstr "Σέρβικη"
+
+#: database-content.py:102
+msgid "Albanian"
+msgstr "Αλβανική"
+
+#: database-content.py:103
+msgid "Korean"
+msgstr "Κορεάτικη"
+
+#: database-content.py:104
+msgid "Swedish"
+msgstr "Σουηδική"
+
+#: database-content.py:105
 msgid "Khmer"
 msgstr "Χμερ"
 
-#: ../translation-teams.xml.in.h:63
-#, fuzzy
-msgid "Kinyarwanda"
-msgstr "A-M|Kinyarwanda"
-
-#: ../translation-teams.xml.in.h:64
-msgid "Kirghiz"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:65
-msgid "Korean"
-msgstr "Κορεάτικα"
-
-#: ../translation-teams.xml.in.h:66
-msgid "Kurdish"
-msgstr "Κουρδικά"
-
-#: ../translation-teams.xml.in.h:67
-msgid "Lao"
-msgstr "Λαοτιανά"
-
-#: ../translation-teams.xml.in.h:68
-msgid "Latin"
-msgstr "Λατινικά"
-
-#: ../translation-teams.xml.in.h:69
-#, fuzzy
-msgid "Latvian"
-msgstr "Λετονία"
-
-#: ../translation-teams.xml.in.h:70
-#, fuzzy
-msgid "Limburgian"
-msgstr "Limburg"
-
-#: ../translation-teams.xml.in.h:71
-msgid "Lithuanian"
-msgstr "Λιθουανικά"
-
-#: ../translation-teams.xml.in.h:72
-#, fuzzy
-msgid "Low German"
-msgstr ""
-"#-#-#-#-#  gnome-applets.HEAD.el.po (el)  #-#-#-#-#\n"
-"Γερμανική\n"
-"#-#-#-#-#  gnopernicus.HEAD.el.po (el)  #-#-#-#-#\n"
-"Γερμανικά"
-
-#: ../translation-teams.xml.in.h:73
-#, fuzzy
-msgid "Low German and Saxon"
-msgstr "Lower Saxony"
-
-#: ../translation-teams.xml.in.h:74
-msgid "Low Saxon, Germany"
-msgstr "Γερμανικά κάτω Σαξονίας"
-
-#: ../translation-teams.xml.in.h:75
-msgid "Macedonian"
-msgstr "Σλαβομακεδονική"
-
-#: ../translation-teams.xml.in.h:76
-#, fuzzy
-msgid "Maithili"
-msgstr "Faith"
-
-#: ../translation-teams.xml.in.h:77
-#, fuzzy
-msgid "Malagasy"
-msgstr ""
-"#-#-#-#-#  evolution.HEAD.el.po (el)  #-#-#-#-#\n"
-"Μαδαγασκάρη\n"
-"#-#-#-#-#  gnome-applets-locations.HEAD.el.po (el)  #-#-#-#-#\n"
-"Madagascar"
-
-#: ../translation-teams.xml.in.h:78
-#, fuzzy
-msgid "Malay"
-msgstr "Μαλαισία"
-
-#: ../translation-teams.xml.in.h:79
-msgid "Malayalam"
-msgstr "Μαλαγιάλαμ"
-
-#: ../translation-teams.xml.in.h:80
-msgid "Maltese"
-msgstr "Μαλτέζικα"
-
-#: ../translation-teams.xml.in.h:81
-msgid "Maori"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:82
-#, fuzzy
-msgid "Marathi"
-msgstr "Μαραθώνας"
-
-#: ../translation-teams.xml.in.h:83
-#, fuzzy
-msgid "Mayan"
-msgstr "Mayaguez"
-
-#: ../translation-teams.xml.in.h:84
-msgid "Mongolian"
-msgstr "Μογγολικά"
-
-#: ../translation-teams.xml.in.h:85
-msgid "Nahuatl"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:86
-#, fuzzy
-msgid "Nepali"
-msgstr "Νεπάλ"
-
-#: ../translation-teams.xml.in.h:87
-#, fuzzy
-msgid "Northern Sotho"
-msgstr "N-Z|Northern Sotho"
-
-#: ../translation-teams.xml.in.h:88
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Νορβηγικά (Bokmål and Nynorsk)"
-
-#: ../translation-teams.xml.in.h:89
-msgid "Norwegian Bokmål"
-msgstr "Νορβηγικά Bokmål"
-
-#: ../translation-teams.xml.in.h:90
-msgid "Norwegian Nynorsk"
-msgstr "Νορβηγικά (nynorsk)"
-
-#: ../translation-teams.xml.in.h:91
-msgid "Occitan"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:92
-msgid "Old English"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:93
-msgid "Oriya"
-msgstr "Ορίγια"
-
-#: ../translation-teams.xml.in.h:94
-msgid "Persian"
-msgstr "Περσικά"
-
-#: ../translation-teams.xml.in.h:95
-msgid "Polish"
-msgstr "Πολωνική"
-
-#: ../translation-teams.xml.in.h:96
-msgid "Portuguese"
-msgstr "Πορτογαλικά"
-
-#: ../translation-teams.xml.in.h:97
-#, fuzzy
-msgid "Punjabi"
-msgstr "N-Z|Punjabi"
-
-#: ../translation-teams.xml.in.h:98
-#, fuzzy
-msgid "Pushto"
-msgstr "Push"
-
-#: ../translation-teams.xml.in.h:99
-msgid "Páez"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:100
-msgid "Quechua"
-msgstr ""
-
-# #-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#
-#
-#: ../translation-teams.xml.in.h:101
-msgid "Romanian"
-msgstr "Ρουμανικά"
-
-#: ../translation-teams.xml.in.h:102
-msgid "Russian"
-msgstr "Ρωσικά"
-
-#: ../translation-teams.xml.in.h:103
-msgid "Sanskrit"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:104
-#, fuzzy
-msgid "Sardinian"
-msgstr "Ουκρανική"
-
-#: ../translation-teams.xml.in.h:105
-msgid "Serbian"
-msgstr "Σέρβικα"
-
-#: ../translation-teams.xml.in.h:106
-#, fuzzy
-msgid "Serbian Jekavian"
-msgstr "N-Z|Serbian (Jekavian)"
-
-#: ../translation-teams.xml.in.h:107
-#, fuzzy
-msgid "Serbian Latin"
-msgstr "Γεωργιανή-Λατινική"
-
-#: ../translation-teams.xml.in.h:108
-msgid "Sinhala"
-msgstr "Σιναλέζικα"
-
-#: ../translation-teams.xml.in.h:109
+#: database-content.py:106
 msgid "Slovak"
-msgstr "Σλοβάκικα"
+msgstr "Σλοβάκικη"
 
-#: ../translation-teams.xml.in.h:110
+#: database-content.py:107
+msgid "Sinhala"
+msgstr "Σιναλέζικη"
+
+#: database-content.py:108
+msgid "Kurdish"
+msgstr "Κουρδική"
+
+#: database-content.py:109
 msgid "Slovenian"
 msgstr "Σλοβενική"
 
-#: ../translation-teams.xml.in.h:111
-msgid "Spanish"
-msgstr "Ισπανικά"
+#: database-content.py:110
+msgid "Kirghiz"
+msgstr "Kirghiz"
 
-#: ../translation-teams.xml.in.h:112
+#: database-content.py:111
 #, fuzzy
-msgid "Swahili"
-msgstr "Philip"
+msgid "Belarusian Latin"
+msgstr "Βασικά Λατινικά"
 
-#: ../translation-teams.xml.in.h:113
-msgid "Swedish"
-msgstr "Σουηδικά"
+#: database-content.py:112
+msgid "Low German"
+msgstr "Low German"
 
-#: ../translation-teams.xml.in.h:114
-msgid "Tagalog"
-msgstr "Ταγκαλόγκ"
+#: database-content.py:113
+msgid "Low Saxon, Germany"
+msgstr "Γερμανική κάτω Σαξονίας"
 
-#: ../translation-teams.xml.in.h:115
-#, fuzzy
-msgid "Tajik"
-msgstr "Tajima"
+#: database-content.py:114
+msgid "Valencian (Southern Catalan)"
+msgstr "Valencian (Southern Catalan)"
 
-#: ../translation-teams.xml.in.h:116
-msgid "Tamil"
-msgstr "Ταμίλ"
-
-#: ../translation-teams.xml.in.h:117
-#, fuzzy
-msgid "Tatar"
-msgstr "Κατάρ"
-
-#: ../translation-teams.xml.in.h:118
-msgid "Telugu"
-msgstr "Τελουγκου"
-
-#: ../translation-teams.xml.in.h:119
-#, fuzzy
-msgid "Tetum"
-msgstr "Chetumal"
-
-#: ../translation-teams.xml.in.h:120
-#, fuzzy
-msgid "Thai"
-msgstr ""
-"#-#-#-#-#  evolution.HEAD.el.po (el)  #-#-#-#-#\n"
-"Thai\n"
-"#-#-#-#-#  gnome-applets.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ταϊλανδέζικη\n"
-"#-#-#-#-#  gedit.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ταϊλανδέζικη\n"
-"#-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ταϊλανδέζικη\n"
-"#-#-#-#-#  gucharmap.HEAD.el.po (el)  #-#-#-#-#\n"
-"Ταϊλανδικά\n"
-"#-#-#-#-#  totem.HEAD.el.po (totem.HEAD)  #-#-#-#-#\n"
-"Ταυλανδικά"
-
-#: ../translation-teams.xml.in.h:121
-msgid "Tibetan"
-msgstr "Θιβετιανά"
-
-#: ../translation-teams.xml.in.h:122
-msgid "Tigrinya"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:123
-msgid "Turkish"
-msgstr "Τουρκικά"
-
-#: ../translation-teams.xml.in.h:124
-#, fuzzy
-msgid "Turkmen"
-msgstr "Τουρκία"
-
-#: ../translation-teams.xml.in.h:125
-msgid "Tyap"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:126
-msgid "Uighur"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:127
-msgid "Ukrainian"
-msgstr "Ουκρανική"
-
-#: ../translation-teams.xml.in.h:128
-msgid "Urdu"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:129
-#, fuzzy
-msgid "Uzbek"
-msgstr "Ουζμπεκιστάν"
-
-#: ../translation-teams.xml.in.h:130
-#, fuzzy
+#: database-content.py:115
 msgid "Uzbek (Cyrillic)"
-msgstr ""
-"#-#-#-#-#  evolution.HEAD.el.po (el)  #-#-#-#-#\n"
-"Κυριλλική\n"
-"#-#-#-#-#  gedit.HEAD.el.po (el)  #-#-#-#-#\n"
-"Κυριλλική\n"
-"#-#-#-#-#  gnome-terminal.HEAD.el.po (el)  #-#-#-#-#\n"
-"Κυριλλική\n"
-"#-#-#-#-#  gucharmap.HEAD.el.po (el)  #-#-#-#-#\n"
-"Κυριλλικά\n"
-"#-#-#-#-#  totem.HEAD.el.po (totem.HEAD)  #-#-#-#-#\n"
-"Κυριλλικά"
+msgstr "Uzbek (Cyrillic)"
 
-#: ../translation-teams.xml.in.h:131
-#, fuzzy
+#: database-content.py:116
 msgid "Uzbek (Latin)"
-msgstr "Ουζμπεκιστάν"
+msgstr "Uzbek (Latin)"
 
-#: ../translation-teams.xml.in.h:132
-msgid "Vietnamese"
-msgstr "Βιετναμέζικα"
+#: database-content.py:117
+msgid "Chinese (Hong Kong)"
+msgstr "Κινέζικη (Hong Kong)"
 
-#: ../translation-teams.xml.in.h:133
+#: database-content.py:118
+msgid "Chinese (Taiwan)"
+msgstr "Κινέζικη (Taiwan)"
+
+#: database-content.py:119
+msgid "Norwegian Bokmål"
+msgstr "Νορβηγική Bokmål"
+
+#: database-content.py:120
+msgid "Norwegian Nynorsk"
+msgstr "Νορβηγική (Nynorsk)"
+
+#: database-content.py:121
+msgid "Serbian Latin"
+msgstr "Serbian Latin"
+
+#: database-content.py:122
+msgid "Serbian Jekavian"
+msgstr "Serbian Jekavian"
+
+#: database-content.py:123
+msgid "Hausa"
+msgstr "Hausa"
+
+#: database-content.py:124
+msgid "Igbo"
+msgstr "Igbo"
+
+#: database-content.py:125
+msgid "UI translations"
+msgstr "Μεταφράσεις γραφικού περιβάλλοντος"
+
+#: database-content.py:126
+msgid "User Guide"
+msgstr "Οδηγός χρήσης"
+
+#: database-content.py:127
+msgid "Accessibility Guide"
+msgstr "Οδηγός προσιτότητας"
+
+#: database-content.py:128
+msgid "System Administration Guide"
+msgstr "Οδηγός διαχείρισης συστήματος"
+
+#: database-content.py:129
+msgid "GDM Manual"
+msgstr "Εγχειρίδιο GDM"
+
+#: database-content.py:130
+msgid "Anjuta Manual"
+msgstr "Εγχειρίδιο Anjuta"
+
+#: database-content.py:131
+msgid "GConf Editor Manual"
+msgstr "Εγχειρίδιο GConf Editor"
+
+#: database-content.py:132
+msgid "F-Spot Manual"
+msgstr "Εγχειρίδιο F-Spot"
+
+#: database-content.py:133
+msgid "FDL License"
+msgstr "Άδεια χρήσης FDL"
+
+#: database-content.py:134
+msgid "LGPL License"
+msgstr "Άδεια χρήσης LGPL"
+
+#: database-content.py:135
+msgid "GPL License"
+msgstr "Άδεια διάθεσης GPL"
+
+#: database-content.py:136
+msgid "Fish Applet Manual"
+msgstr "Εγχειρίδιο Fish Applet"
+
+#: database-content.py:137
+msgid "Workspace Switcher Applet Manual"
+msgstr "Εγχειρίδιο Εφαρμογής εναλλαγής χώρων εργασίας"
+
+#: database-content.py:138
+msgid "Window List Applet Manual"
+msgstr "Εγχειρίδιο Window List Applet"
+
+#: database-content.py:139
+msgid "Clock Applet Manual"
+msgstr "Εγχειρίδιο Clock Applet"
+
+#: database-content.py:140
+msgid "Iagno Manual"
+msgstr "Εγχειρίδιο Iagno"
+
+#: database-content.py:141
+msgid "Five or More Manual"
+msgstr "Εγχειρίδιο Five or More"
+
+#: database-content.py:142
+msgid "Nibbles Manual"
+msgstr "Εγχειρίδιο Nibbles"
+
+#: database-content.py:143
+msgid "GNOME Robots Manual"
+msgstr "Εγχειρίδιο GNOME Robots"
+
+#: database-content.py:144
+msgid "Four-in-a-row Manual"
+msgstr "Εγχειρίδιο Four-in-a-row"
+
+#: database-content.py:145
+msgid "GNOME Sudoku Manual"
+msgstr "Εγχειρίδιο GNOME Sudoku"
+
+#: database-content.py:146
+msgid "glChess Manual"
+msgstr "Εγχειρίδιο glChess"
+
+#: database-content.py:147
+msgid "GNOME Tali Manual"
+msgstr "Εγχειρίδιο GNOME Tali"
+
+#: database-content.py:148
+msgid "Gnometris Manual"
+msgstr "Εγχειρίδιο Gnometris"
+
+#: database-content.py:149
+msgid "GNOME Klotski Manual"
+msgstr "Εγχειρίδιο GNOME Klotski"
+
+#: database-content.py:150
+msgid "GNOME Tetravex Manual"
+msgstr "Εγχειρίδιο GNOME Tetravex"
+
+#: database-content.py:151
+msgid "GNOME Mahjongg Manual"
+msgstr "Εγχειρίδιο GNOME Mahjongg"
+
+#: database-content.py:152
+msgid "AisleRiot Manual"
+msgstr "Εγχειρίδιο AisleRiot"
+
+#: database-content.py:153
+msgid "Mines Manual"
+msgstr "Εγχειρίδιο Mines"
+
+#: database-content.py:154
+msgid "Same GNOME Manual"
+msgstr "Εγχειρίδιο Same Gnome"
+
+#: database-content.py:155
+msgid "Blackjack Manual"
+msgstr "Εγχειρίδιο Blackjack"
+
+#: database-content.py:156
+msgid "CD Player Manual"
+msgstr "Εγχειρίδιο CD Player"
+
+#: database-content.py:157
+msgid "Sound Recorder Manual"
+msgstr "Εγχειρίδιο Sound Recorder"
+
+#: database-content.py:158
+msgid "GStreamer Properties Manual"
+msgstr "Εγχειρίδιο GStreamer Properties"
+
+#: database-content.py:159
+msgid "GNOME Volume Control Manual"
+msgstr "Εγχειρίδιο GNOME Volume Control"
+
+#: database-content.py:160
 #, fuzzy
-msgid "Walloon"
-msgstr "N-Z|Walloon"
+msgid "Layout Descriptions"
+msgstr "Περιγραφή γραμματοσειράς"
 
-#: ../translation-teams.xml.in.h:134
+#: database-content.py:161
+msgid "Keyboard Indicator Manual"
+msgstr "Ένδειξη Γλώσσας Πληκτρολογίου"
+
+#: database-content.py:162
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "Εγχειρίδιο CPU Frequency Scaling Monitor"
+
+#: database-content.py:163
+msgid "Command Line Manual"
+msgstr "Εγχειρίδιο γραμμής εντολών"
+
+#: database-content.py:164
 #, fuzzy
-msgid "Welsh"
-msgstr "N-Z|Welsh"
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "Κατάσταση προσιτότητας πληκτρολογίου"
 
-#: ../translation-teams.xml.in.h:135
-msgid "Wolof"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:136
+#: database-content.py:165
 #, fuzzy
-msgid "Xhosa"
-msgstr "N-Z|Xhosa"
+msgid "Invest Applet Manual"
+msgstr "Μικροεφαρμογή Απορριμμάτων"
 
-#: ../translation-teams.xml.in.h:137
+#: database-content.py:166
 #, fuzzy
-msgid "Yiddish"
-msgstr "N-Z|Yiddish"
+msgid "System Monitor Manual"
+msgstr "Παρακολούθηση συστήματος"
 
-#: ../translation-teams.xml.in.h:138
+#: database-content.py:167
+msgid "Stock Ticker Manual"
+msgstr "Εγχειρίδιο Stock Ticker"
+
+#: database-content.py:168
+msgid "Geyes Manual"
+msgstr "Τεκμηρίωση Geyes"
+
+#: database-content.py:169
 #, fuzzy
-msgid "Yoruba"
-msgstr ""
-"#-#-#-#-#  evolution.HEAD.el.po (el)  #-#-#-#-#\n"
-"Αρούμπα\n"
-"#-#-#-#-#  gnome-applets-locations.HEAD.el.po (el)  #-#-#-#-#\n"
-"Aruba"
+msgid "Panel Trash Manual"
+msgstr "simos: Thrash Metal ...................fotis:  yeah bαby \\m// lol"
 
-#: ../translation-teams.xml.in.h:139
-msgid "Zapotec"
-msgstr ""
-
-#: ../translation-teams.xml.in.h:140
-msgid "Zulu"
-msgstr "Ζουλού"
-
-#: ../update-stats.py:206
-msgid "Can't generate POT file, using old one."
-msgstr "Αδυναμία δημιουργίας του αρχείου POT, θα γίνει χρήση του παλαιότερου."
-
-#: ../update-stats.py:209
+#: database-content.py:170
 #, fuzzy
-msgid "Can't generate POT file, using old one if it exists."
-msgstr "Δεν είναι δυνατή η λήψη του φακέλου`%s' . Ο φάκελος δεν υπάρχει."
+msgid "Character Palette Manual"
+msgstr "Επιλογέας Χαρακτήρων"
 
-#: ../update-stats.py:238
-msgid "Can't copy new POT file to public location."
-msgstr ""
-
-#: ../update-stats.py:250
-#, fuzzy, python-format
-msgid "There is no translation team in charge of '%s' translation."
-msgstr "Δεν υπάρχει διαθέσιμος χώρος στον προορισμό."
-
-#: ../update-stats.py:326
-msgid "Entry for this language is not present in LINGUAS file."
-msgstr "Δεν υπάρχει καταχώρηση για αυτή τη γλώσσα στο αρχείο LINGUAS."
-
-#: ../update-stats.py:354
-msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
-msgstr "Δεν υπάρχει καταχώρηση για αυτή τη γλώσσα στο ALL_LINGUAS στο αρχείο ρύθμισης."
-
-#: ../update-stats.py:357
-msgid "Don't know where to look if this language is actually used, ask the module maintainer."
-msgstr ""
-
-#: ../update-stats.py:371
-msgid "Errors while running 'intltool-update -m' check."
-msgstr "Σφάλματα κατά την εκτέλεση του ελέγχου 'intltool-update -m'."
-
-#: ../update-stats.py:377
-#, python-format
-msgid "There are some missing files from POTFILES.in: %s"
-msgstr "Υπάρχουν κάποια αρχεία που λείπουν από το POTFILES.in: %s"
-
-#: ../update-stats.py:386
-#, python-format
-msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
-msgstr ""
-
-#: ../update-stats.py:400
-#, python-format
-msgid "PO file '%s' doesn't exist."
-msgstr "Το αρχείο PO '%s' δεν υπάρχει."
-
-#: ../update-stats.py:413
-#, python-format
-msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr ""
-
-#: ../update-stats.py:415
-#, fuzzy, python-format
-msgid "Can't get statistics for POT file '%s'."
-msgstr ""
-"#-#-#-#-#  gtk+.HEAD.el.po (el)  #-#-#-#-#\n"
-"Αδυναμία λήψης πληροφοριών για το αρχείο '%s': %s\n"
-"#-#-#-#-#  libgnomeui.HEAD.el.po (el)  #-#-#-#-#\n"
-"Αδυναμία λήψης πληροφοριώνς για το αρχείο '%s': %s"
-
-#: ../update-stats.py:418
+#: database-content.py:171
 #, fuzzy
-msgid "This PO file has an executable bit set."
-msgstr "Το \"%s\" είναι ένα εκτελέσιμο αρχείο κειμένου."
+msgid "Volume Control Manual"
+msgstr "Έλεγχος Έντασης Ήχου"
 
-#: ../update-stats.py:444
-#, python-format
-msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "Το αρχείο PO '%s' δεν έχει κωδικοποίηση UTF-8."
-
-# backends/xml-backend.c:315
-#: ../update-stats.py:513
+#: database-content.py:172
 #, fuzzy
-msgid "Can't find checkout directory."
-msgstr "Αδυναμία εύρεσης καταλόγου %s\n"
+msgid "Weather Report Manual"
+msgstr "Δελτίο καιρού"
 
-#: ../update-stats.py:533
-#, python-format
-msgid "Module %s doesn't look like gnome-doc-utils module."
+#: database-content.py:173
+#, fuzzy
+msgid "Sticky Notes Manual"
+msgstr "Sticky Notes"
+
+#: database-content.py:174
+#, fuzzy
+msgid "Disk Mounter Manual"
+msgstr "Προσάρτηση δίσκων"
+
+#: database-content.py:175
+#, fuzzy
+msgid "Battery Charge Monitor Manual"
+msgstr "Παρακολούθηση φορτίου μπαταρίας"
+
+#
+#: database-content.py:176
+#, fuzzy
+msgid "User Directories"
+msgstr "Κατάλογος χρηστών"
+
+#: database-content.py:177
+#, fuzzy
+msgid "Integration Guide"
+msgstr "Διαχείριση Συστήματος"
+
+#: database-content.py:178
+#, fuzzy
+msgid "Platform Overview"
+msgstr "Γενικές επισκοπήσεις"
+
+#: database-content.py:179
+#, fuzzy
+msgid "Encryption Applet Manual"
+msgstr "Μικροεφαρμογή Απορριμμάτων"
+
+#: database-content.py:180
+msgid "Release Notes"
+msgstr "Σημειώσεις έκδοσης"
+
+#: database-content.py:181
+#, fuzzy
+msgid "GNOME Keyring Manager Manual"
+msgstr "Διαχείριση κωδικών του Gnome"
+
+#: database-content.py:182
+#, fuzzy
+msgid "Criawips Manual"
+msgstr "Claws Mail"
+
+#: database-content.py:183
+#, fuzzy
+msgid "Sound Juicer Manual"
+msgstr "Sound Juicer"
+
+# #-#-#-#-#  gtkhtml.HEAD.el.po (el)  #-#-#-#-#
+#
+#: database-content.py:184
+#, fuzzy
+msgid "Property Nicks"
+msgstr "Ιδιότητες"
+
+#: database-content.py:185
+msgid "tips"
+msgstr "συμβουλές"
+
+#: database-content.py:186
+msgid "script-fu"
+msgstr "script-fu"
+
+#: database-content.py:187
+msgid "libgimp"
+msgstr "libgimp"
+
+#: database-content.py:188
+msgid "python"
+msgstr "python"
+
+#: database-content.py:189
+msgid "plug-ins"
+msgstr "πρόσθετα"
+
+#: database-content.py:190
+msgid "Dasher Manual"
+msgstr "Εγχειρίδιο Dasher"
+
+#: database-content.py:191
+#, fuzzy
+msgid "Weather Applet Locations"
+msgstr "Άλλες εφαρμογές"
+
+#: database-content.py:192
+msgid "Dictionary Manual"
+msgstr "Εγχειρίδιο Λεξικού"
+
+#: database-content.py:193
+#, fuzzy
+msgid "Disk Usage Analyzer Manual"
+msgstr "Ανάλυση χρήσης δίσκου"
+
+#: database-content.py:194
+#, fuzzy
+msgid "Log Viewer Manual"
+msgstr "Παρακολούθηση Καταγραφών"
+
+#: database-content.py:195
+#, fuzzy
+msgid "Search Tool Manual"
+msgstr "Α_ναζήτηση για:"
+
+#: database-content.py:196
+#, fuzzy
+msgid "GFloppy Manual"
+msgstr "Epiphany"
+
+#: database-content.py:197
+#, fuzzy
+msgid "GNOME Library help"
+msgstr "Βιβλιοθήκη GNOME"
+
+#
+#: database-content.py:198
+#, fuzzy
+msgid "Eye of GNOME Manual"
+msgstr "Μάτι του GNOME"
+
+#: database-content.py:199
+#, fuzzy
+msgid "GST User Management Manual"
+msgstr "Διαχείριση ενέργειας"
+
+#: database-content.py:200
+msgid "GST Service Management Manual"
+msgstr "Εγχειρίδιο GST Service Management"
+
+# #-#-#-#-#  gnome-system-tools.HEAD.el.po (el)  #-#-#-#-#
+#
+#: database-content.py:201
+#, fuzzy
+msgid "GST Network Setup Manual"
+msgstr "Ρυθμίσεις δικτύου"
+
+#: database-content.py:202
+#, fuzzy
+msgid "GST Shared Folders Manual"
+msgstr "Κοινόχρηστοι φάκελοι"
+
+#: database-content.py:203
+msgid "GST Time Setup Manual"
+msgstr "Εγχειρίδιο GST Time Setup"
+
+#: database-content.py:204
+msgid "GNOME 2 User Documentation"
+msgstr "Τεκμηρίωση χρήστη GNOME 2"
+
+#: database-content.py:205
+msgid "Evince Document Viewer"
+msgstr "Εφαρμογή προβολής εγγράφων Evince"
+
+#: database-content.py:206
+#, fuzzy
+msgid "Beagle Desktop Search"
+msgstr "Επιλογή χρήστη"
+
+#: database-content.py:207 templates/base.html:34
+#: templates/admin/base_site.html:7
+msgid "Damned Lies"
+msgstr "Damned Lies"
+
+#: database-content.py:208
+msgid "Banshee Music Player"
+msgstr "Αναπαραγωγή μουσικής Banshee"
+
+# sysdeps/names/mem.c:46
+#: database-content.py:209
+msgid "Shared MIME Info"
+msgstr "Shared MIME Info"
+
+#
+#: database-content.py:210
+#, fuzzy
+msgid "GNOME Applets"
+msgstr "Διαδρομή GNOME"
+
+#: database-content.py:211
+#, fuzzy
+msgid "GNOME 2 Development Documentation"
+msgstr "Τεκμηρίωση προγραμματισμού"
+
+#: database-content.py:212
+#, fuzzy
+msgid "GNOME Release Notes"
+msgstr "_Διαγραφή Σημειώσεων"
+
+#: database-content.py:213
+msgid "Rhythmbox Music Player"
+msgstr "Rhythmbox Music Player"
+
+#: database-content.py:214
+msgid "Epiphany Web Browser"
+msgstr "Περιηγητής διαδικτύου Epiphany"
+
+#: database-content.py:215
+#, fuzzy
+msgid "GNOME Library Web site"
+msgstr "Βιβλιοθήκη GNOME"
+
+#
+#: database-content.py:216
+msgid "Eye of GNOME"
+msgstr "Μάτι του GNOME"
+
+#: database-content.py:217
+msgid "Gnome Specimen"
 msgstr ""
 
-#: ../update-stats.py:538
-#, python-format
-msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr ""
+#: database-content.py:218
+#, fuzzy
+msgid "Deskbar Applet"
+msgstr "Ιστοσελίδα Deskbar "
 
-#: ../update-stats.py:541
-msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr ""
-
-#: ../update-stats.py:567
-#, python-format
+#: database-content.py:219
 msgid ""
-"Error regenerating POT file for document %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"GNUCash is not part of the GNOME SVN repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
 msgstr ""
 
-#: ../update-stats.py:596
-#, fuzzy, python-format
-msgid "There is no translation team in charge of %s."
-msgstr "Δεν υπάρχει τίποτα στο πρόχειρο για να επικολληθεί."
+#: database-content.py:220
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Το Evince είναι μια εφαρμογή προβολής εγγράφων για διάφορες μορφές εγγράφων"
 
-#: ../update-stats.py:640
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "Η λιστα DOC_LINGUAS δεν περιέχει αυτή τη γλώσσα."
-
-#: ../templates/index.tmpl:9
-#, fuzzy
-msgid "Damned Lies about GNOME"
-msgstr "Μάθετε περισσότερα για το GNOME"
-
-#: ../templates/index.tmpl:13
-#: ../templates/header.tmpl:67
-msgid "Teams"
-msgstr "Ομάδες"
-
-#: ../templates/index.tmpl:14
-msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
+#: database-content.py:221
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
 
-#: ../templates/index.tmpl:15
-msgid "If there is no team for your language, you can easily <a href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
+#: database-content.py:222
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
 msgstr ""
 
-#: ../templates/index.tmpl:20
-#: ../templates/header.tmpl:72
-msgid "Languages"
-msgstr "Γλώσσες"
-
-#: ../templates/index.tmpl:21
-msgid "List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
+#: database-content.py:223
+msgid "A VNC client for GNOME"
 msgstr ""
 
-#: ../templates/index.tmpl:22
-msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
+#: database-content.py:224
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in SVN even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
 msgstr ""
 
-#: ../templates/index.tmpl:26
-#, fuzzy
-msgid "Release Sets"
-msgstr ""
-"#-#-#-#-#  glade3.HEAD.el.po (glade3.HEAD)  #-#-#-#-#\n"
-"Release\n"
-"#-#-#-#-#  gok.HEAD.el.po (el)  #-#-#-#-#\n"
-"Απελευθέρωση"
-
-#: ../templates/index.tmpl:27
-msgid "List of all GNOME release sets and releases we gather stats for."
+#: database-content.py:225
+msgid "Graphical frontend for the git directory tracker"
 msgstr ""
 
-#: ../templates/index.tmpl:29
-msgid "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14\"."
-msgstr ""
+#: database-content.py:226
+msgid "GNOME Fifth Toe (Extra software)"
+msgstr "GNOME Fifth Toe (Επιπλέον λογισμικό)"
 
-#: ../templates/index.tmpl:30
-msgid "Official GNOME release sets are further divided into categories such as \"Desktop Applications\" and \"Developer Platform\"."
-msgstr ""
+#: database-content.py:227
+msgid "Extra GNOME Applications"
+msgstr "Άλλες εφαρμογές GNOME"
 
-#: ../templates/index.tmpl:32
-msgid "Look here if you want to compare language support in any of these release sets."
-msgstr ""
+#: database-content.py:228
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (παλαιό σταθερό)"
 
-#: ../templates/index.tmpl:35
-#: ../templates/header.tmpl:82
-msgid "Modules"
-msgstr "Αρθρώματα"
+#: database-content.py:229
+msgid "GNOME Infrastructure"
+msgstr "Υποδομή GNOME"
 
-#: ../templates/index.tmpl:36
-msgid "List of all modules with statistics in here."
-msgstr ""
+#: database-content.py:230
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (παλαιό σταθερό)"
 
-#: ../templates/index.tmpl:38
-msgid "Modules are separate libraries or applications, with one or more branches of development included."
-msgstr ""
+#: database-content.py:231
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (παλαιό σταθερό)"
 
-#: ../templates/index.tmpl:39
-msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr ""
+#: database-content.py:232
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (μη-GNOME)"
 
-#: ../templates/index.tmpl:45
-msgid "Translated by:"
-msgstr "Μετάφραση από:"
+#: database-content.py:233
+#| msgid "GNOME 2.20 (stable)"
+msgid "GNOME 2.24 (stable)"
+msgstr "GNOME 2.24 (σταθερό)"
+
+#: database-content.py:234
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (παλαιό σταθερό)"
+
+#: database-content.py:235
+msgid "GNOME-Office Productivity Applications"
+msgstr "Εφαρμογές γραφείου GNOME"
+
+#: database-content.py:236
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (παλαιό σταθερό)"
+
+#: database-content.py:237
+#| msgid "GNOME 2.22 (development)"
+msgid "GNOME 2.26 (Development)"
+msgstr "GNOME 2.26 (σε ανάπτυξη)"
 
 # #-#-#-#-#  accerciser.HEAD.el.po (accerciser)  #-#-#-#-#
 # #-#-#-#-#  gnome-power-manager.HEAD.el.po (el)  #-#-#-#-#
@@ -1451,309 +1054,1345 @@ msgstr "Μετάφραση από:"
 #
 # #-#-#-#-#  nautilus.HEAD.el.po (el)  #-#-#-#-#
 #
-#: ../templates/index.tmpl:45
+#: common/views.py:33
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
-" Σίμος Ξενιτέλλης <simos at gnome.org>\n"
-"\n"
-"Για περισσότερα δείτε http://www.gnome.gr/"
+"Φώτης Τσάμης <ftsamis at gmail.com>\n"
+"Σίμος Ξενιτέλλης <simos at gnome.org>\n"
+"Για περισσότερα δείτε <a href='http://www.gnome.gr/'>gnome.gr</a>."
 
-#: ../templates/header.tmpl:32
-#: ../templates/header.tmpl:61
-msgid "Home"
-msgstr "Αρχή"
+#: common/views.py:54
+msgid "You have been logged out."
+msgstr "Έχετε αποσυνδεθεί."
 
-#: ../templates/header.tmpl:35
-msgid "News"
-msgstr "Νέα"
+#: common/views.py:62
+msgid "You have been successfully logged in."
+msgstr "Έγινε είσοδος."
 
-#: ../templates/header.tmpl:38
-msgid "Projects"
-msgstr "Έργα"
+#: common/views.py:69
+msgid "We're sorry, but your account has been disabled."
+msgstr "Λυπούμαστε, αλλά ο λογαριασμός σας έχει απενεργοποιηθεί."
 
-#: ../templates/header.tmpl:41
-msgid "Art"
-msgstr ""
+#: common/views.py:71
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "Μη επιτυχής είσοδος. Παρακαλούμε ελέγξτε το όνομα χρήστη και τον κωδικό πρόσβασης σας."
 
-#: ../templates/header.tmpl:44
-msgid "Support"
-msgstr "Υποστήριξη"
+#: common/views.py:111
+msgid "Your account has been activated."
+msgstr "Ο λογαριασμός σας έχει ενεργοποιηθεί."
 
-#: ../templates/header.tmpl:47
-msgid "Development"
-msgstr "Ανάπτυξη"
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "Είσοδος με το όνομα χρήστη και τον κωδικό πρόσβασης σας:"
 
-#: ../templates/header.tmpl:50
-msgid "Community"
-msgstr "Κοινότητα"
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+#| msgid "User Interface"
+msgid "Username:"
+msgstr "Όνομα χρήστη"
 
-#: ../templates/header.tmpl:77
-msgid "Release sets"
-msgstr "Σετ εκδόσεων"
+#: django_openid/templates/django_openid/admin_login.html:23
+#: people/forms.py:20 templates/login.html:21
+msgid "Password:"
+msgstr "Κωδικός πρόσβασης:"
 
-#: ../templates/show-stats.tmpl:12
-msgid "POT file (%(potsize)s message)"
-msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] "POT file (%(potsize)s μήνυμα)"
-msgstr[1] "POT file (%(potsize)s μηνύματα)"
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:76 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "Είσοδος"
 
-#: ../templates/show-stats.tmpl:16
-msgid "updated on %(date)s"
-msgstr "ενημερωμένο στις %(date)s"
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "Ή χρησιμοποιήστε το OpenID σας:"
 
-#: ../templates/show-stats.tmpl:20
-msgid "Notices"
-msgstr "Ειδοποιήσεις"
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17 templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
 
-#: ../templates/show-stats.tmpl:31
-msgid "Language"
-msgstr "Γλώσσα"
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Είσοδος με OpenID"
 
-#: ../templates/show-stats.tmpl:31
-msgid "Translated"
-msgstr "Μεταφρασμένο"
+#: languages/views.py:49 languages/views.py:65
+#| msgid "UI translations"
+msgid "UI Translations"
+msgstr "Μεταφράσεις γραφικού περιβάλλοντος"
 
-#: ../templates/show-stats.tmpl:31
-#: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
-msgid "Graph"
-msgstr "Γράφημα"
-
-#: ../templates/list-teams.tmpl:7
-msgid "GNOME Translation Teams"
-msgstr "Μεταφραστικές ομάδες GNOME"
-
-#: ../templates/list-teams.tmpl:10
-msgid "Select a team below to see more information about it:"
-msgstr "Επιλέξτε μια ομάδα για να δείτε περισσότερες πληροφορίες:"
-
-#: ../templates/list-teams.tmpl:20
-msgid "Coordinated by %(coordinator)s"
-msgstr "Συντονίζεται από %(coordinator)s"
-
-#: ../templates/list-teams.tmpl:26
-msgid "There are currently no translation teams in GNOME. :("
-msgstr ""
-
-#: ../templates/release.tmpl:7
-#, fuzzy
-msgid "%(release)s Release"
-msgstr "Key Release"
-
-#: ../templates/release.tmpl:9
-#: ../templates/language-release.tmpl:51
-msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr ""
-
-#: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
-msgid "Release"
-msgstr "Κυκλοφορία"
-
-#: ../templates/release.tmpl:15
-#: ../templates/language-release.tmpl:57
-#: ../templates/module.tmpl:69
-#: ../templates/team.tmpl:57
+#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
+#: templates/release_detail.html:22 templates/teams/team_detail.html:27
 msgid "Documentation"
 msgstr "Τεκμηρίωση"
 
-#: ../templates/release.tmpl:15
-#: ../templates/team.tmpl:57
-msgid "User Interface"
-msgstr "Διασύνδεση Χρήστη"
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "Επιλέξτε ένα όνομα χρήστη:"
 
-#: ../templates/release.tmpl:29
-#: ../templates/team.tmpl:69
-msgid "-"
-msgstr "-"
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "Μπορεί να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες ή παύλες"
 
-#: ../templates/language-release-ui-stats.tmpl:27
-#: ../templates/language-release-doc-stats.tmpl:26
-msgid "%(cat)s (%(percent)s%% translated)"
-msgstr "%(cat)s (%(percent)s%% μεταφρασμένο)"
+#: people/forms.py:16
+msgid "Email:"
+msgstr "Ηλεκτρονικό ταχυδρομείο:"
 
-#: ../templates/list-releases.tmpl:7
-#, fuzzy
-msgid "GNOME Releases"
+#: people/forms.py:21
+msgid "At least 7 characters"
+msgstr "Το λιγότερο 7 χαρακτήρες"
+
+#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
+msgid "Confirm password:"
+msgstr "Επιβεβαίωση κωδικού πρόσβασης:"
+
+#: people/forms.py:31
+msgid "This username is already taken. Please choose another."
+msgstr "Αυτό το όνομα χρήστη είναι ήδη δηλωμένο. Παρακαλούμε επιλέξτε ένα άλλο."
+
+#: people/forms.py:39
+msgid "You must either provide an OpenID or a password"
+msgstr "Πρέπει να ορίσετε ένα OpenID ή έναν κωδικό πρόσβασης"
+
+#: people/forms.py:42
+msgid "The passwords do not match"
+msgstr "Οι κωδικοί δεν ταιριάζουν"
+
+#: people/forms.py:65
+msgid "Account activation"
+msgstr "Ενεργοποίηση λογαριασμού"
+
+#: people/forms.py:66
+#, python-format
+msgid ""
+"This is a confirmation that your registration on %s succeeded. To activate "
+"your account, please click on the link below or copy and paste it in a "
+"browser."
+msgstr "Αυτή είναι μια επιβεβαίωση ότι η εγγραφή σας στο %s πέτυχε. Για να ενεργοποιήσετε τον λογαριασμό σας, παρακαλούμε κάντε κλικ στον ακόλουθο σύνδεσμο ή κάντε τον επικόλληση σε έναν περιηγητή."
+
+#: people/forms.py:68
+#, python-format
+#| msgid "Administration Tools"
+msgid "Administrators of %s"
+msgstr "Διαχειριστές του %s"
+
+#: people/models.py:36
+msgid "Image"
+msgstr "Εικόνα"
+
+#: people/models.py:37
+msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+msgstr "URL ενός αρχείου εικόνας (.jpg, .png, ...) ενός hackergotchi"
+
+#: people/models.py:38
+#| msgid "Users Web Page:"
+msgid "Web page"
+msgstr "Ιστοσελίδα"
+
+#: people/models.py:39
+msgid "IRC nickname"
+msgstr "Ψευδώνυμο στο IRC"
+
+#: people/models.py:40
+#| msgid "Bugzilla account:"
+msgid "Bugzilla account"
+msgstr "Λογαριασμός Bugzilla:"
+
+#: people/models.py:41
+msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
-"#-#-#-#-#  glade3.HEAD.el.po (glade3.HEAD)  #-#-#-#-#\n"
-"Release\n"
-"#-#-#-#-#  gok.HEAD.el.po (el)  #-#-#-#-#\n"
-"Απελευθέρωση"
 
-#: ../templates/list-releases.tmpl:10
-msgid "Select a release or a release set below to see more details about it:"
+#: people/views.py:86
+#, python-format
+msgid "You have successfully joined the team '%s'."
+msgstr "Γίνατε επιτυχώς μέλος της ομάδας '%s'"
+
+#: people/views.py:89
+msgid "You are already member of this team."
+msgstr "Είστε ήδη μέλος αυτής της ομάδας."
+
+#: people/views.py:112
+#, python-format
+msgid "You have been removed from the team '%s'."
+msgstr "Έχετε αφαιρεθεί από την ομάδα '%s'."
+
+#: people/views.py:128
+msgid "Your password has been changed."
+msgstr "Ο κωδικός πρόσβασης σας έχει αλλάξει."
+
+#: stats/models.py:293
+msgid "Can't generate POT file, using old one."
+msgstr "Αδυναμία δημιουργίας του αρχείου POT, θα γίνει χρήση του παλαιότερου."
+
+#: stats/models.py:314
+msgid "Can't copy new POT file to public location."
+msgstr "Αδυναμία αντιγραφής του νέου αρχείου POT σε δημόσια τοποθεσία."
+
+#: stats/models.py:353
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "Η λιστα DOC_LINGUAS δεν περιέχει αυτή τη γλώσσα."
+
+#: stats/models.py:620
+#, python-format
+msgid ""
+"Error regenerating POT file for %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
 
-#: ../templates/list-releases.tmpl:27
-msgid "There are currently no releases defined in GNOME. :("
-msgstr ""
+#: stats/models.py:821
+msgid "Administration Tools"
+msgstr "Εργαλεία διαχείρισης"
 
-#: ../templates/list-languages.tmpl:7
-msgid "GNOME Languages"
-msgstr "Γλώσσες του GNOME"
+#: stats/models.py:822
+msgid "Development Tools"
+msgstr "Εργαλεία ανάπτυξης"
 
-#: ../templates/list-languages.tmpl:11
-msgid "GNOME is being translated to following %(count)s language:"
-msgid_plural "GNOME is being translated to following %(count)s languages:"
+#: stats/models.py:823
+#| msgid "GNOME desktop"
+msgid "GNOME Desktop"
+msgstr "Επιφάνεια εργασίας GNOME"
+
+#: stats/models.py:824
+#| msgid "GNOME developer platform"
+msgid "GNOME Developer Platform"
+msgstr "Περιβάλλον ανάπτυξης GNOME"
+
+#: stats/models.py:825
+msgid "New Module Proposals"
+msgstr "Νέες προτάσεις μονάδων"
+
+#: stats/models.py:901
+#, python-format
+msgid "%(lang_name)s (%(lang_locale)s)"
+msgstr "%(lang_name)s (%(lang_locale)s)"
+
+#: stats/models.py:932
+#, python-format
+msgid "%(count)s message"
+msgid_plural "%(count)s messages"
+msgstr[0] "%(count)s μήνυμα"
+msgstr[1] "%(count)s μηνύματα"
+
+#: stats/models.py:933
+#, python-format
+msgid "updated on %(date)s"
+msgstr "ενημερώθηκε στις %(date)s"
+
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:71
+msgid "Y-m-d g:i a O"
+msgstr "Y-m-d g:i a O"
+
+#: stats/models.py:938
+#, python-format
+msgid "%(count)s figure"
+msgid_plural "%(count)s figures"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../templates/list-languages.tmpl:35
-msgid "GNOME is currently not being translated to any language. :("
+#: stats/models.py:939
+#, python-format
+msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgstr "Αρχείο POT (%(messages)s, %(figures)s) — %(updated)s"
+
+#: stats/models.py:942
+#, python-format
+msgid "POT file (%(messages)s) — %(updated)s"
+msgstr "Αρχείο POT (%(messages)s) — %(updated)s"
+
+#: stats/utils.py:85
+msgid "Errors while running 'intltool-update -m' check."
+msgstr "Σφάλματα κατά την εκτέλεση του ελέγχου 'intltool-update -m'."
+
+#: stats/utils.py:91
+#, python-format
+msgid "There are some missing files from POTFILES.in: %s"
+msgstr "Υπάρχουν κάποια αρχεία που λείπουν από το POTFILES.in: %s"
+
+#: stats/utils.py:100
+#, python-format
+msgid ""
+"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
+"they don't exist: %s"
 msgstr ""
 
-#: ../templates/language-release.tmpl:10
-#: ../templates/team.tmpl:10
-msgid "Details"
-msgstr "Λεπτομέρειες"
+#: stats/utils.py:112
+#, python-format
+msgid "Module %s doesn't look like gnome-doc-utils module."
+msgstr ""
 
-#: ../templates/language-release.tmpl:13
-#: ../templates/team.tmpl:13
-msgid "%(lang)s Translation Team Page:"
-msgstr "Σελίδα μεταφραστικής ομάδας για %(lang)s: "
+#: stats/utils.py:115
+#, python-format
+msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgstr ""
 
-#: ../templates/language-release.tmpl:17
-#: ../templates/team.tmpl:17
-msgid "Users Web Page:"
-msgstr "Ιστοσελίδα χρήστη:"
+#: stats/utils.py:118
+msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+msgstr ""
 
-#: ../templates/language-release.tmpl:21
-#: ../templates/team.tmpl:21
-msgid "Bugzilla:"
-msgstr "Bugzilla (παρακολούθηση σφαλμάτων):"
+#: stats/utils.py:133
+#, python-format
+msgid ""
+"Error regenerating POT file for document %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
+msgstr ""
 
-#: ../templates/language-release.tmpl:23
-#: ../templates/team.tmpl:23
-msgid "Report Bug in Translation"
-msgstr "Αναφορά σφάλματος σε μετάφραση"
+#: stats/utils.py:206
+#, python-format
+#| msgid "PO file '%s' doesn't exist."
+msgid "PO file '%s' does not exist or cannot be read."
+msgstr "Το αρχείο PO '%s' δεν υπάρχει ή δεν μπορεί να διαβαστεί."
 
-#: ../templates/language-release.tmpl:24
-#: ../templates/team.tmpl:24
-msgid "Show Existing Bugs"
-msgstr "Προβολή υπαρχόντων σφαλμάτων"
+#: stats/utils.py:226
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr "Το αρχείο PO '%s' δεν περνάει τον έλεγχο msgfmt: δεν γίνεται ανανέωση."
 
-#: ../templates/language-release.tmpl:29
-#: ../templates/team.tmpl:30
-msgid "Mailing List:"
-msgstr "Λίστα ταχυδρομείου:"
+#: stats/utils.py:228
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "Αδυναμία λήψης στατιστικών για το αρχείο POT '%s'."
 
-#: ../templates/language-release.tmpl:31
-#: ../templates/team.tmpl:32
-msgid "Send e-mail to the list"
-msgstr "Αποστολή γράμματος στη λίστα"
+#: stats/utils.py:231
+msgid "This PO file has an executable bit set."
+msgstr "Αυτό το αρχείο PO είναι εκτελέσιμο."
 
-#: ../templates/language-release.tmpl:33
-#: ../templates/team.tmpl:34
-msgid "Subscribe"
-msgstr "Συνδρομή στη λίστα και αρχείο γραμμάτων"
+#: stats/utils.py:259
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "Το αρχείο PO '%s' δεν έχει κωδικοποίηση UTF-8."
 
-#: ../templates/language-release.tmpl:42
-#: ../templates/team.tmpl:43
+#: stats/utils.py:292
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "Δεν υπάρχει καταχώρηση για αυτή τη γλώσσα στο αρχείο LINGUAS."
+
+#: stats/utils.py:319
+msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr ""
+"Δεν υπάρχει καταχώρηση για αυτή τη γλώσσα στο ALL_LINGUAS στο αρχείο "
+"ρύθμισης."
+
+#: stats/utils.py:322
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+
+#: teams/models.py:112
+#, python-format
+msgid "No team for locale %s"
+msgstr "Δεν υπάρχει ομάδα για την γλώσσα %s"
+
+#: teams/models.py:129
+#| msgid "Translation"
+msgid "Translator"
+msgstr "Μεταφραστής"
+
+#: teams/models.py:130
+msgid "Reviewer"
+msgstr "Αναθεωρητής"
+
+#: teams/models.py:131
+#| msgid "Community"
+msgid "Committer"
+msgstr "Υποβολέας"
+
+#: teams/models.py:132 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Συντονιστής"
 
-#: ../templates/list-modules.tmpl:7
+#: teams/views.py:44
+#| msgid "Community"
+msgid "Committers"
+msgstr "Υποβολείς"
+
+#: teams/views.py:47
+msgid "No committers"
+msgstr "Δεν υπάρχουν υποβολείς"
+
+#: teams/views.py:49
+msgid "Reviewers"
+msgstr "Αναθεωρητές"
+
+#: teams/views.py:52
+msgid "No reviewers"
+msgstr "Δεν υπάρχουν αναθεωρητές"
+
+#: teams/views.py:54
+#| msgid "Translation"
+msgid "Translators"
+msgstr "Μεταφραστές"
+
+#: teams/views.py:57
+#| msgid "UI translations"
+msgid "No translators"
+msgstr "Δεν υπάρχουν μεταφραστές"
+
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Σφάλμα: η σελίδα δεν βρέθηκε"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "Η σελίδα που ζητήσατε δεν υπάρχει σε αυτόν τον εξυπηρετητή."
+
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Σφάλμα: Σφάλμα εξυπηρετητή (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Σφάλμα εξυπηρετητή"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Λυπούμαστε αλλά προέκυψε ένα σφάλμα εξυπηρετητή."
+
+#: templates/base.html:25 templates/base.html.py:41
+msgid "Home"
+msgstr "Αρχή"
+
+#: templates/base.html:26
+msgid "News"
+msgstr "Νέα"
+
+#: templates/base.html:27
+msgid "Projects"
+msgstr "Έργα"
+
+#: templates/base.html:28
+msgid "Art"
+msgstr "Τέχνη"
+
+#: templates/base.html:29
+msgid "Support"
+msgstr "Υποστήριξη"
+
+#: templates/base.html:30
+msgid "Development"
+msgstr "Ανάπτυξη"
+
+#: templates/base.html:31
+msgid "Community"
+msgstr "Κοινότητα"
+
+#: templates/base.html:41
+msgid "Back to Damned Lies home page"
+msgstr "Πίσω στην κεντρική σελίδα Damned Lies"
+
+#: templates/base.html:47 templates/index.html:13
+msgid "Teams"
+msgstr "Ομάδες"
+
+#: templates/base.html:52 templates/index.html:20
+msgid "Languages"
+msgstr "Γλώσσες"
+
+#: templates/base.html:57
+msgid "Release sets"
+msgstr "Σετ εκδόσεων"
+
+#: templates/base.html:62 templates/index.html:36
+msgid "Modules"
+msgstr "Μονάδες"
+
+#: templates/base.html:73
+msgid "Log out"
+msgstr "Αποσύνδεση"
+
+#: templates/base.html:93
+msgid "The GNOME Project"
+msgstr "Το έργο GNOME"
+
+#: templates/base.html:95
+msgid ""
+"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgstr ""
+
+#: templates/base.html:97
+#| msgid "Translated by:"
+msgid "Hosted by"
+msgstr "Φιλοξενείται από την"
+
+#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 #, fuzzy
-msgid "GNOME modules"
-msgstr "GNOME Curves"
+msgid "Damned Lies about GNOME"
+msgstr "Μάθετε περισσότερα για το GNOME"
 
-#: ../templates/list-modules.tmpl:10
-msgid "Select a module below to see some of the damned lies about it:"
+#: templates/error.html:9
+msgid "Error:"
+msgstr "Σφάλμα:"
+
+#: templates/index.html:14
+msgid ""
+"List of all GNOME Translation Teams, with full information such as primary "
+"contact (coordinator), web pages and mailing list information."
+msgstr "Λίστα με όλες τις ομάδες μεταφράσεων GNOME, με όλες τις πληροφορίες όπως η πρωτεύουσα επαφή (συντονιστής), ιστοσελίδες και πληροφορίες ταχυδρομικών λιστών."
+
+#: templates/index.html:15
+msgid ""
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
 
-#: ../templates/list-modules.tmpl:18
-msgid "There are currently no modules for which I am gathering damned lies for. Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
+#: templates/index.html:22
+#, python-format
+msgid ""
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
+msgstr "Λίστα όλων των γλωσσών για τις οποίες υπάρχουν <a href='%(teams_url)s'>Μεταφραστικές ομάδες</a>."
+
+#: templates/index.html:23
+msgid ""
+"Some teams manage more than one language (usually just simple variants), and "
+"here you can see all the languages GNOME is being translated to."
 msgstr ""
 
-#: ../templates/people.tmpl:7
-msgid "GNOME Contributors"
-msgstr "Συντελεστές GNOME"
+#: templates/index.html:27
+msgid "Release Sets"
+msgstr "Σετ εκδόσεων"
 
-#: ../templates/people.tmpl:10
-msgid "GNOME is being developed by following people:"
+#: templates/index.html:28
+msgid "List of all GNOME release sets and releases we gather stats for."
+msgstr "Λίστα με όλα τα σετ εκδόσεων GNOME και εκδόσεις για τις οποίες μαζεύουμε στατιστικά."
+
+#: templates/index.html:30
+msgid ""
+"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"or &quot;GNOME 2.14&quot;."
+msgstr ""
+"Παραδείγματα σετ εκδόσεων είναι &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"ή &quot;GNOME 2.14&quot;."
+
+#: templates/index.html:31
+msgid ""
+"Official GNOME release sets are further divided into categories such as "
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
 
-#: ../templates/people.tmpl:31
-msgid "There are no contributors, GNOME turned itself up from nothing."
+#: templates/index.html:33
+msgid ""
+"Look here if you want to compare language support in any of these release "
+"sets."
 msgstr ""
 
-#: ../templates/module.tmpl:9
-msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
+#: templates/index.html:37
+msgid "List of all modules with statistics in here."
+msgstr "Λίστα με όλες τις μονάδες με στατιστικά εδώ μέσα."
+
+#: templates/index.html:39
+msgid ""
+"Modules are separate libraries or applications, with one or more branches of "
+"development included."
 msgstr ""
 
-#: ../templates/module.tmpl:16
-#, fuzzy
+#: templates/index.html:40
+msgid ""
+"They are usually taken from CVS, and we keep all relevant information on "
+"them (Bugzilla details, web page, maintainer information,...)."
+msgstr ""
+
+#: templates/index.html:46
+msgid "Translated by:"
+msgstr "Μετάφραση από:"
+
+#: templates/login.html:10 templates/registration/register.html:11
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Είστε ήδη συνδεδεμένος ως %(username)s."
+
+#: templates/login.html:13
+#, python-format
+msgid ""
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
+msgstr "Αν δεν έχετε δικό σας λογαριασμό σε αυτόν τον ιστότοπο, μπορείτε να κάνετε <a href='%(link)s'>Εγγραφή</a>."
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "Ξεχάσατε τον κωδικό πρόσβασης σας;"
+
+#: templates/module_detail.html:5
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "Στατιστικά μονάδας: %(name)s"
+
+#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
+msgid ""
+"This module is not part of the GNOME SVN repository. Please check the "
+"module's web page to see where to send translations."
+msgstr "Αυτή η μονάδα δεν είναι μέρος του αποθετηρίου GNOME SVN. Παρακαλούμε ελέγξτε την ιστοσελίδα της μονάδας για να δείτε που να στείλετε τις μεταφράσεις."
+
+#: templates/module_detail.html:29
 msgid "Maintainers"
-msgstr "Πλαίσια (Containers)"
+msgstr ""
 
-#: ../templates/module.tmpl:32
+#: templates/module_detail.html:37
 msgid "Bug reporting"
 msgstr "Αναφορά σφαλμάτων"
 
-#: ../templates/module.tmpl:33
+#: templates/module_detail.html:40
+#| msgid "Show Existing Bugs"
+msgid "Show existing i18n and l10n bugs"
+msgstr "Προβολή υπαρχόντων σφαλμάτων του i18n και του l18n"
+
+#: templates/module_detail.html:42
 msgid "Report bugs to Bugzilla"
 msgstr "Αναφέρετε σφάλματα στο Bugzilla"
 
-#: ../templates/module.tmpl:39
+#: templates/module_detail.html:51
 msgid "Branches:"
 msgstr "Κλάδοι:"
 
-# #-#-#-#-#  libgnomeui.HEAD.el.po (el)  #-#-#-#-#
-# #-#-#-#-#  memory.el.po (abiword 1.0)  #-#-#-#-#
-# #-#-#-#-#  gabber-el.po (gabber 1.0)  #-#-#-#-#
-#
-# #-#-#-#-#  gnome-db-el.po (gnome-db 0.0.91)  #-#-#-#-#
-#
-# #-#-#-#-#  gaim-el.po (gaim 0.48)  #-#-#-#-#
-#
-# #-#-#-#-#  gimp-print-el.po (gimp-print 1.0)  #-#-#-#-#
-#
-# #-#-#-#-#  screem-el.po (screem 1.0)  #-#-#-#-#
-#
-#: ../templates/module.tmpl:54
-msgid "Browse CVS"
-msgstr "Περιήγηση σε CVS"
+#: templates/module_detail.html:65
+msgid "Browse Repository"
+msgstr "Περιήγηση στο αποθετήριο"
 
-# #-#-#-#-#  libgnomeui.HEAD.el.po (el)  #-#-#-#-#
-# #-#-#-#-#  memory.el.po (abiword 1.0)  #-#-#-#-#
-# #-#-#-#-#  gabber-el.po (gabber 1.0)  #-#-#-#-#
-#
-# #-#-#-#-#  gnome-db-el.po (gnome-db 0.0.91)  #-#-#-#-#
-#
-# #-#-#-#-#  gaim-el.po (gaim 0.48)  #-#-#-#-#
-#
-# #-#-#-#-#  gimp-print-el.po (gimp-print 1.0)  #-#-#-#-#
-#
-# #-#-#-#-#  screem-el.po (screem 1.0)  #-#-#-#-#
-#
-#: ../templates/module.tmpl:56
-#: ../templates/module.tmpl:58
-msgid "Browse SVN"
-msgstr "Περιήγηση σε SVN"
-
-#: ../templates/module.tmpl:62
+#: templates/module_detail.html:69
 #, fuzzy
 msgid "This branch is currently string-frozen."
 msgstr "Το αντικείμενο που είναι αυτή τη στιγμή ενεργό"
 
-#: ../templates/module.tmpl:89
+#: templates/module_detail.html:78
 msgid "Translation"
 msgstr "Μετάφραση"
 
-#~ msgid "Instant messaging:"
-#~ msgstr "Άμεσα μηνύματα:"
-#~ msgid "Bugzilla account:"
-#~ msgstr "Λογαριασμός Bugzilla:"
-#~ msgid "SVN account:"
-#~ msgstr "Λογαριασμός SVN:"
-#~ msgid "Maintains:"
-#~ msgstr "Είναι υπεύθυνος για:"
-#~ msgid "Translates:"
-#~ msgstr "Μεταφράζει:"
-#~ msgid "Coordinates %(team)s"
-#~ msgstr "Συντονίζει την ομάδα για %(team)s"
-#~ msgid "%(team)s Page:"
-#~ msgstr "Ιστοσελίδα για %(team)s:"
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
+msgstr ""
+
+#: templates/module_images.html:12
+#, fuzzy
+#| msgid "UI translations"
+msgid "Figures translation status"
+msgstr "Μεταφράσεις γραφικού περιβάλλοντος"
+
+#: templates/module_images.html:17
+#| msgid "Oriya"
+msgid "Original"
+msgstr ""
+
+#: templates/module_images.html:32
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr ""
+
+#: templates/module_images.html:36
+msgid "Fuzzy"
+msgstr ""
+
+#: templates/module_images.html:41
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
+msgstr ""
+
+#: templates/module_images.html:44
+#| msgid "Translated"
+msgid "Not translated"
+msgstr "Αμετάφραστο"
+
+#: templates/module_list.html:4 templates/module_list.html.py:9
+msgid "GNOME Modules"
+msgstr "Μονάδες GNOME "
+
+#: templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr ""
+
+#: templates/release_detail.html:10
+#, fuzzy, python-format
+msgid "%(name)s Release"
+msgstr "Key Release"
+
+#: templates/release_detail.html:13
+#: templates/languages/language_release.html:34
+msgid ""
+"The modules of this release are not part of the GNOME SVN repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: templates/release_detail.html:20 templates/teams/team_detail.html:26
+msgid "User Interface"
+msgstr "Γραφικό περιβάλλον"
+
+#: templates/release_detail.html:21 templates/release_detail.html.py:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:27
+msgid "Graph"
+msgstr "Γράφημα"
+
+#: templates/release_list.html:4 templates/release_list.html.py:9
+msgid "GNOME Releases"
+msgstr "Εκδόσεις GNOME"
+
+#: templates/release_list.html:11
+msgid "Select a release or a release set below to see more details about it:"
+msgstr "Επιλέξτε μια έκδοση ή ένα σετ εκδόσεων από τα κατωτέρω για να δείτε περισσότερες πληροφορίες για αυτό:"
+
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
+msgid "Download POT file"
+msgstr "Κατέβασμα αρχείου POT"
+
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
+msgid "Notices"
+msgstr "Ειδοποιήσεις"
+
+#: templates/stats_show.html:30 vertimus/models.py:163
+msgid "Translated"
+msgstr "Μεταφρασμένο"
+
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
+msgid "Display document figures"
+msgstr ""
+
+#: templates/admin/base_site.html:4
+#| msgid "Damned Lies"
+msgid "Damned Lies site admin"
+msgstr "Διαχειριστής ιστότοπου Damned Lies"
+
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:92
+msgid "No comment"
+msgstr "Χωρίς σχόλιο"
+
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
+#| msgid "Modules"
+msgid "All modules"
+msgstr "Όλες οι μονάδες"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:26
+msgid "Hide completed modules"
+msgstr "Απόκρυψη των ολοκληρωμένων μονάδων"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:30
+msgid "Show completed modules"
+msgstr "Εμφάνιση των ολοκληρωμένων μονάδων"
+
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
+msgid "GNOME Languages"
+msgstr "Γλώσσες του GNOME"
+
+#: templates/languages/language_list.html:11
+#, python-format
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "Το GNOME μεταφράζεται στην ακόλουθη %(numb)s γλώσσα.\n"
+msgstr[1] "Το GNOME μεταφράζεται στις ακόλουθες %(numb)s γλώσσες.\n"
+
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Κατέβασμα όλων των αρχείων po"
+
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:55
+#| msgid "Modules"
+msgid "Module"
+msgstr "Μονάδα"
+
+#: templates/languages/language_release_stats.html:21
+#| msgid "Branches:"
+msgid "Branch"
+msgstr "Κλάδος:"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:55
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: templates/languages/language_release_stats.html:32
+#| msgid "%(cat)s (%(percent)s%% translated)"
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr "%(categname)s (%(percentage)s% μεταφρασμένο)"
+
+#: templates/languages/language_release_stats.html:95
+msgid "Error summary"
+msgstr ""
+
+#: templates/people/person_base.html:5
+#| msgid "GNOME Contributors"
+msgid "GNOME Contributor"
+msgstr "Συντελεστής GNOME"
+
+#: templates/people/person_base.html:12
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "Αλλαγή των πληροφοριών μου"
+
+#: templates/people/person_base.html:13
+msgid "Change your password"
+msgstr "Αλλαγή του κωδικού πρόσβασης μου"
+
+#: templates/people/person_base.html:14
+msgid "Join a team"
+msgstr "Γίνε μέλος μιας ομάδας"
+
+#: templates/people/person_detail.html:23
+#| msgid "Language"
+msgid "Site Language:"
+msgstr "Γλώσσα ιστότοπου:"
+
+#: templates/people/person_detail.html:34
+msgid "Choose"
+msgstr "Επιλογή"
+
+#: templates/people/person_detail.html:40
+msgid "Maintains:"
+msgstr "Είναι υπεύθυνος για:"
+
+#: templates/people/person_detail.html:51
+msgid "Working on"
+msgstr "Εργάζεται στα"
+
+#: templates/people/person_detail.html:55
+msgid "State"
+msgstr "Κατάσταση"
+
+#: templates/people/person_detail_change_form.html:13
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "Συντελεστές GNOME"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "Το GNOME αναπτύσσεται από τα ακόλουθα άτομα:"
+
+#: templates/people/person_overview.html:27
+msgid "Instant messaging:"
+msgstr "Άμεσα μηνύματα:"
+
+#: templates/people/person_overview.html:34
+msgid "Bugzilla account:"
+msgstr "Λογαριασμός Bugzilla:"
+
+#: templates/people/person_overview.html:38
+msgid "SVN account:"
+msgstr "Λογαριασμός SVN:"
+
+#: templates/people/person_password_change_form.html:6
+msgid "Password change"
+msgstr "Αλλαγή κωδικού πρόσβασης"
+
+#: templates/people/person_password_change_form.html:8
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr "Παρακαλούμε πληκτρολογήστε τον παλιό σας κωδικό πρόσβασης, για ασφάλεια, και μετά πληκτρολογήστε τον νέο σας κωδικό πρόσβασης δύο φορές ώστε να επιβεβαιώσουμε ότι τον γράψατε σωστά."
+
+#: templates/people/person_password_change_form.html:15
+msgid "Old password:"
+msgstr "Παλιός κωδικός πρόσβασης:"
+
+#: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
+msgid "New password:"
+msgstr "Νέος κωδικός πρόσβασης:"
+
+#: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
+msgid "Change my password"
+msgstr "Αλλαγή του κωδικού πρόσβασης μου"
+
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "Γίνετε μέλος σε μια νέα ομάδα"
+
+#: templates/people/person_team_join_form.html:11
+msgid "I would like to join the following team as 'translator':"
+msgstr "Θα ήθελα να γίνω μέλος στην ακόλουθη ομάδα σαν 'μεταφραστής':"
+
+#: templates/people/person_team_join_form.html:13
+msgid "Join"
+msgstr "Γίνε μέλος"
+
+#: templates/people/person_team_membership.html:5
+msgid "Member of teams"
+msgstr "Μέλος των ομάδων"
+
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "Μέλος της %(team_name)sς ομάδας (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr "Αποχώρηση"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Είστε σίγουρος πως θέλετε να αποχωρήσετε από την ομάδα;"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Η επαναφορά του κωδικού πρόσβασης ολοκληρώθηκε"
+
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Ο κωδικός πρόσβασης σας έχει ορισθεί. Μπορείτε να κάνετε είσοδο τώρα."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "Επαναφορά κωδικού πρόσβασης"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Εισάγετε τον νέο κωδικό πρόσβασης"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "Παρακαλούμε εισάγετε τον νέο κωδικό πρόσβασης σας δύο φορές ώστε να ελέγξουμε ότι τον πληκτρολογήσατε σωστά."
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Ανεπιτυχής επαναφορά κωδικού πρόσβασης"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr "Ο σύνδεσμος για την επαναφορά του κωδικού πρόσβασης ήταν μη έγκυρος, πιθανόν επειδή έχει ήδη χρησιμοποιηθεί. Παρακαλούμε κάντε μια καινούρια επαναφορά κωδικού πρόσβασης."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "Επιτυχής επαναφορά κωδικού πρόσβασης"
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr "Στείλαμε οδηγίες για το πώς θα ορίσετε τον κωδικό σας στην διεύθυνση ηλεκτρονικού ταχυδρομείου που δώσατε. Θα το λάβετε σύντομα."
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr "Ξεχάσατε τον κωδικό πρόσβασήςσας; Εισάγετε την διεύθυνση ηλεκτρονικού ταχυδρομείου παρακάτω, και θα σας στείλουμε οδηγίες για να ορίσετε νέο."
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "Διεύθυνση ηλεκτρονικού ταχυδρομείου:"
+
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "Επαναφορά του κωδικού πρόσβασης μου"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Εγγραφή λογαριασμού"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr "Μπορείτε να εγγραφείτε εδώ για έναν λογαριασμό σε αυτόν τον ιστότοπο. Αυτό είναι χρήσιμο μόνο αν θέλετε να συνεισφέρετε στις μεταφράσεις για το GNOME."
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr "Μετά την εγγραφή και την σύνδεση, θα μπορείτε να γίνετε μέλος μιας ομάδας από την σελίδα προφίλ σας."
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Επικύρωση μέσω OpenID <strong>ή</strong> κωδικό πρόσβασης:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Εγγραφή με OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Εγγραφή με κωδικό πρόσβασης"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Επιτυχία εγγραφής"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr "Η εγγραφή πραγματοποιήθηκε. Θα λάβετε τώρα ένα μήνυμα ηλεκτρονικού ταχυδρομείου που περιέχει ένα σύνδεσμο για να ενεργοποιήσετε τον λογαριασμό σας."
+
+#: templates/teams/team_base.html:6
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: templates/teams/team_base.html:9
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Σελίδα μεταφραστικής ομάδας για %(lang)s: "
+
+#: templates/teams/team_base.html:13
+msgid "Bugzilla:"
+msgstr "Bugzilla (παρακολούθηση σφαλμάτων):"
+
+#: templates/teams/team_base.html:15
+msgid "Report Bug in Translation"
+msgstr "Αναφορά σφάλματος σε μετάφραση"
+
+#: templates/teams/team_base.html:16
+msgid "Show Existing Bugs"
+msgstr "Προβολή υπαρχόντων σφαλμάτων"
+
+#: templates/teams/team_base.html:20
+msgid "Mailing List:"
+msgstr "Λίστα ταχυδρομείου:"
+
+#: templates/teams/team_base.html:22
+msgid "Send e-mail to the list"
+msgstr "Αποστολή γράμματος στη λίστα"
+
+#: templates/teams/team_base.html:24
+msgid "Subscribe"
+msgstr "Συνδρομή στη λίστα και αρχείο γραμμάτων"
+
+#: templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgstr "Τελευταίες ενέργειες που έγιναν από την %(lang)s ομάδα του έργου μετάφρασης GNOME"
+
+#: templates/teams/team_detail.html:14
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "%(lang)s μεταφραστική ομάδα "
+
+#: templates/teams/team_detail.html:26
+msgid "Release"
+msgstr "Κυκλοφορία"
+
+#: templates/teams/team_detail.html:69
+msgid "Team membership"
+msgstr "Μέλη ομάδας"
+
+#: templates/teams/team_detail.html:80
+#| msgid "Desktop Applications"
+msgid "Apply modifications"
+msgstr "Εφαρμογή τροποποιήσεων"
+
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "Μεταφραστικές ομάδες GNOME"
+
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "Επιλέξτε μια ομάδα για να δείτε περισσότερες πληροφορίες:"
+
+#: templates/teams/team_list.html:25
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Συντονίζεται από <a href=\"%(url)s\">%(name)s</a>"
+
+#: templates/teams/team_list.html:34
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "Προς το παρόν δεν υπάρχουν μεταφραστικές ομάδες στο GNOME. :("
+
+#: templates/vertimus/vertimus_detail.html:5
+#, python-format
+#| msgid "GNOME Translation Teams"
+msgid "Module Translation: %(name)s"
+msgstr "Μετάφραση μονάδας: %(name)s"
+
+#: templates/vertimus/vertimus_detail.html:13
+msgid "Used in release(s):"
+msgstr "Χρησιμοποιείται στις εκδόσεις:"
+
+#: templates/vertimus/vertimus_detail.html:31
+msgid "State:"
+msgstr "Κατάσταση:"
+
+#: templates/vertimus/vertimus_detail.html:39
+msgid "Download PO file"
+msgstr "Κατέβασμα αρχείου PO"
+
+#: templates/vertimus/vertimus_detail.html:39
+#| msgid "Translated"
+msgid "Translated:"
+msgstr "Μεταφρασμένο:"
+
+#: templates/vertimus/vertimus_detail.html:65
+msgid "Action History"
+msgstr "Ιστορικό ενεργειών"
+
+#: templates/vertimus/vertimus_detail.html:81
+msgid "diff with:"
+msgstr ""
+
+#: templates/vertimus/vertimus_detail.html:101
+msgid "New Action"
+msgstr "Νέα ενέργεια"
+
+#: templates/vertimus/vertimus_detail.html:108
+msgid "Submit"
+msgstr "Υποβολή"
+
+#: templates/vertimus/vertimus_detail.html:112
+#, python-format
+msgid "You need to be authenticated and to be member of the %(team_name)s team."
+msgstr "Χρειάζεται να είστε επικυρωμένος και μέλος της ομάδας %(team_name)s."
+
+#: templates/vertimus/vertimus_diff.html:5
+msgid "Diff between po files"
+msgstr ""
+
+#: templates/vertimus/vertimus_diff.html:16
+msgid "&lt;- Back to actions"
+msgstr "&lt;- Πίσω στις ενέργειες"
+
+#: templates/vertimus/vertimus_diff.html:20
+msgid "Note: both files are merged with latest POT file."
+msgstr ""
+
+#: vertimus/feeds.py:43
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr ""
+
+#: vertimus/feeds.py:52
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr "Τελευταίες ενέργειες του μεταφραστικού έργου GNOME για την γλώσσα %s"
+
+#: vertimus/feeds.py:88
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr ""
+
+#: vertimus/feeds.py:97
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr "Τελευταίες ενέργειες που έγιναν από την %s ομάδα του μεταφραστικού έργου GNOME"
+
+#: vertimus/forms.py:30
+msgid "Action"
+msgstr "Ενέργεια"
+
+#: vertimus/forms.py:33
+#| msgid "Community"
+msgid "Comment"
+msgstr "Σχόλιο"
+
+#: vertimus/forms.py:38
+msgid "File"
+msgstr "Αρχείο"
+
+#: vertimus/forms.py:39
+msgid "Upload a .po, .gz, .bz2 or .png file"
+msgstr "Ανεβάστε ένα αρχείο .po, .gz, .bz2 ή .png"
+
+#: vertimus/forms.py:50
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Μόνο αρχεία με κατάληξη .po, .gz, .bz2 ή .png αναγνωρίζονται."
+
+#: vertimus/forms.py:55
+msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr "Το αρχείο .po δεν περνάει το 'msgfmt -vc'. Παρακαλούμε διορθώστε το αρχείο και προσπαθήστε ξανά."
+
+#: vertimus/forms.py:65
+msgid "A comment or a file is needed for this action."
+msgstr "Χρειάζεται ένα σχόλιο ή αρχείο για αυτήν την ενέργεια."
+
+#: vertimus/forms.py:68
+msgid "A file is needed for this action."
+msgstr "Χρειάζεται ένα αρχείο για αυτή την ενέργεια."
+
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Παρακαλούμε, μην στέλνετε ένα αρχείο με ενέργεια 'Ανάληψη'"
+
+#: vertimus/models.py:137
+msgid "Inactive"
+msgstr "Ανενεργό"
+
+#: vertimus/models.py:150
+#| msgid "Translation"
+msgid "Translating"
+msgstr "Μεταφράζεται"
+
+#: vertimus/models.py:180
+msgid "Proofreading"
+msgstr "Ελέγχεται"
+
+#. Translators: This is a status, not a verb
+#: vertimus/models.py:195
+msgid "Proofread"
+msgstr "Έλεγχος"
+
+#: vertimus/models.py:210
+msgid "To Review"
+msgstr "Προς αναθεώρηση"
+
+#: vertimus/models.py:222
+#| msgid "Community"
+msgid "To Commit"
+msgstr "Προς υποβολή"
+
+#: vertimus/models.py:237
+#| msgid "Community"
+msgid "Committing"
+msgstr "Γίνεται υποβολή"
+
+#: vertimus/models.py:251
+#| msgid "Community"
+msgid "Committed"
+msgstr "Υποβλήθηκε"
+
+#: vertimus/models.py:339
+msgid "File in repository"
+msgstr ""
+
+#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
+#: vertimus/views.py:138
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Ανέβηκε το αρχείο από %(name)s στις %(date)s"
+
+#: vertimus/models.py:458
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
+"'%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Γεια σας,\n"
+"\n"
+"Η νέα κατάσταση του %(module)s - %(branch)s - %(domain)s (%(language)s) είναι "
+"'%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+
+#: vertimus/models.py:471 vertimus/models.py:521
+msgid "Without comment"
+msgstr "Χωρίς σχόλιο"
+
+#: vertimus/models.py:473 vertimus/models.py:523
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Αυτό είναι ένα αυτόματο μήνυμα που στάλθηκε από το %s"
+
+#: vertimus/models.py:480
+msgid "Write a comment"
+msgstr "Γράψτε ένα σχόλιο"
+
+#: vertimus/models.py:509
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Γεια σας,\n"
+"\n"
+"Έγινε ένα νέο σχόλιο στο %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
+
+#: vertimus/models.py:531
+#| msgid "UI translations"
+msgid "Reserve for translation"
+msgstr "Ανάληψη για μετάφραση"
+
+#: vertimus/models.py:543
+#| msgid "UI translations"
+msgid "Upload the new translation"
+msgstr "Ανέβασμα της μετάφρασης"
+
+#: vertimus/models.py:558
+msgid "Reserve for proofreading"
+msgstr "Ανάληψη για έλεγχο"
+
+#: vertimus/models.py:570
+msgid "Upload the proofread translation"
+msgstr "Ανέβασμα της ελεγμένης μετάφρασης"
+
+#. Translators: this means the file is ready to be committed in repository
+#: vertimus/models.py:586
+msgid "Ready for submission"
+msgstr "Έτοιμο για υποβολή"
+
+#: vertimus/models.py:602
+msgid "Submit to repository"
+msgstr "Υποβολή σε αποθετήριο"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "Η υποβολή απέτυχε. Το σφάλμα ήταν: '%s'"
+
+#. Translators: this indicates a committer is going to commit the file in the repository
+#: vertimus/models.py:626
+msgid "Reserve to submit"
+msgstr "Ανάληψη για υποβολή"
+
+#. Translators: this is used to indicate the file has been committed in the repository
+#: vertimus/models.py:639
+msgid "Inform of submission"
+msgstr ""
+
+#. Translators: regardless of the translation completion, this file need to be reviewed
+#: vertimus/models.py:654
+msgid "Review required"
+msgstr "Χρειάζεται αναθεώρηση"
+
+#: vertimus/models.py:693
+msgid "Backup the actions"
+msgstr ""
+
+#: vertimus/models.py:732
+msgid "Undo the last state change"
+msgstr "Αναίρεση της τελευταίας ενέργειας"
+
+#: vertimus/views.py:144
+#, python-format
+msgid "Latest committed file for %(lang)s"
+msgstr "Τελευταίο υποβληθέν αρχείο για %(lang)s"
+
+#: vertimus/views.py:147
+msgid "Latest POT file"
+msgstr "Τελευταίο αρχείο POT"
 
