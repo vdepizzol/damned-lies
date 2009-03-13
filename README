@@ -45,6 +45,8 @@ Installation
 1 - Rename settings_sample.py to settings.py and review settings
     (please refer to Database configuration below for more
     informations).
+    SCRATCHDIR should point to an existing directory, writable by
+    the web application user.
 
 2 - Run 'python manage.py syncdb'
 

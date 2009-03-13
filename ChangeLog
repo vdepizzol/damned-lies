@@ -1,3 +1,18 @@
+2009-03-13  Claude Paroz  <claude@2xlibre.net>
+
+	* README: Add note about SCRATCHDIR.
+	* media/css/main.css: Add translation coverage classes.
+	* stats/templatetags/stats_extras.py: New filter to produce css class for
+	translation coverage.
+	* stats/models.py: New total_by_releases method to compute multi-release
+	stats.
+	* stats/views.py:
+	* templates/release_compare.html:
+	* urls.py: Add view, template and url for release comparison.
+	* templates/registration/password_reset_complete.html: Fix login link.
+	* vertimus/views.py: Set max column width in diff view (translator
+	comments are not wrapped).
+
 2009-03-07  Claude Paroz  <claude@2xlibre.net>
 
 	* common/views.py:

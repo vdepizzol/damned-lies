@@ -643,7 +643,53 @@ class Release(models.Model):
 
     def __unicode__(self):
         return self.description
-    
+
+    @classmethod
+    def total_by_releases(cls, dtype, releases):
+        """ Get summary stats for all languages and 'releases', and return a 'stats' dict with
+            each language locale as the key:
+            stats{
+              'll': (<language name>, percentage for release 1, percentage for release 2, ...),
+              'll': ...
+            }
+        """
+        rel_ids = [str(rel.id) for rel in releases]
+        LOCALE, NAME, REL_ID, TRANS, FUZZY, UNTRANS = 0, 1, 2, 3, 4, 5
+        query = """
+            SELECT language.locale, language.name, category.release_id,
+                   SUM(stat.translated), 
+                   SUM(stat.fuzzy),
+                   SUM(stat.untranslated)
+            FROM statistics AS stat
+            LEFT JOIN language
+                   ON stat.language_id = language.id
+            INNER JOIN domain 
+                   ON stat.domain_id = domain.id
+            INNER JOIN branch 
+                   ON stat.branch_id = branch.id
+            INNER JOIN category 
+                   ON category.branch_id = branch.id 
+            WHERE domain.dtype = %%s
+              AND category.release_id IN (%s)
+            GROUP BY language_id, category.release_id
+            ORDER BY language.name""" % (",".join(rel_ids),)
+        cursor = connection.cursor()
+        cursor.execute(query, (dtype,))
+        stats = {}; totals = [0] * len(releases)
+        for row in cursor.fetchall():
+            if row[LOCALE] not in stats:
+                stats[row[LOCALE]] = [0] * len(releases)
+                stats[row[LOCALE]].insert(0, _(row[NAME])) # translated language name
+            if row[LOCALE] == None: # POT stats
+                totals[rel_ids.index(str(row[REL_ID]))] = row[UNTRANS]
+            else:
+                stats[row[LOCALE]][rel_ids.index(str(row[REL_ID]))+1] = row[TRANS]
+        # Compute percentages
+        def perc(x, y): return int(x/y * 100)
+        for k in stats.keys():
+            stats[k] = [stats[k][0]] + map(perc, stats[k][1:], totals)
+        return stats
+
     def total_strings(self):
         """ Returns the total number of strings in the release as a tuple (doc_total, ui_total) """
         # Uses the special statistics record where language_id is NULL to compute the sum.

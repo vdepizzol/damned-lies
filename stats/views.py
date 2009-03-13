@@ -150,3 +150,14 @@ def release(request, release_name, format='html'):
         }
         return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
 
+def compare_by_releases(request, dtype, rels_to_compare):
+    releases = []
+    for rel_id in rels_to_compare.split("-"):
+        # Important to keep the ordering of the url
+        releases.append(Release.objects.get(id=rel_id))
+    stats = Release.total_by_releases(dtype, releases)
+    context = {
+        'releases': releases,
+        'stats': stats
+    }
+    return render_to_response('release_compare.html', context, context_instance=RequestContext(request))

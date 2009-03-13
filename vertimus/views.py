@@ -148,7 +148,7 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
             file_path_2 = stats.po_path()
 
     content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
-    d = difflib.HtmlDiff()
+    d = difflib.HtmlDiff(wrapcolumn=80)
     diff_content = d.make_table(content_2, content_1,
                                 descr_2, descr_1, context=True)
 

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load stats_extras %}
+
+{% block title %} {% trans "Releases Comparison" %} {% endblock %}
+{% block extrahead %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script> 
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+        $("#stats").tablesorter(); 
+    }
+);
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+
+<h1>{% trans "Releases Comparison" %}</h1>
+
+<table class="tablesorter" id="stats">
+  <thead>
+    <tr>
+    <th class="header">{% trans "Languages" %}</th>
+    {% for rel in releases %}
+      <th class="header">{{ rel.name }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+
+{% for locale, stat in stats.items %}
+<tr class="stats">
+  {% for perc in stat %}
+    {% if forloop.first %}
+      <td class="stats leftcell">
+        {{ perc }} ({{ locale }})
+      </td>
+    {% else %}
+      <td class="stats {{ perc|support_class }}">{{ perc }}%</td>
+    {% endif %}
+  {% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+</div>
+{% endblock %}
