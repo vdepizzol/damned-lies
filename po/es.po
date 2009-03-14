@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-07 15:18+0000\n"
-"PO-Revision-Date: 2009-03-07 17:47+0100\n"
+"POT-Creation-Date: 2009-03-11 14:19+0000\n"
+"PO-Revision-Date: 2009-03-14 12:03+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -892,6 +892,10 @@ msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
 #: database-content.py:219
+msgid "Niepce Digital"
+msgstr "Niepce Digital"
+
+#: database-content.py:220
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -901,11 +905,11 @@ msgstr ""
 "href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
 "GNUCash</a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
-#: database-content.py:221
+#: database-content.py:222
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -913,7 +917,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -921,11 +925,11 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -937,55 +941,55 @@ msgstr ""
 "archivos en el SVN incluso si uno de los dos no contiene traducciones, de "
 "otra forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (estable)"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (desarrollo)"
 
@@ -1573,7 +1577,6 @@ msgstr ""
 "a> para obtener una."
 
 #: templates/login.html:22
-#| msgid "Change your password"
 msgid "Have you forgotten your password?"
 msgstr "¿Ha olvidado su contraseña?"
 
@@ -1910,26 +1913,20 @@ msgid "Password reset complete"
 msgstr "Restablecimiento de contraseña completado"
 
 #: templates/registration/password_reset_complete.html:10
-#| msgid "Your password has been changed."
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "Se envió su contraseña. Puede proceder e iniciar sesión ahora."
 
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
-#| msgid "Password:"
 msgid "Password reset"
 msgstr "Restablecimiento de contraseña"
 
 #: templates/registration/password_reset_confirm.html:10
-#| msgid "New password:"
 msgid "Enter new password"
 msgstr "Introduzca la contraseña nueva"
 
 #: templates/registration/password_reset_confirm.html:12
-#| msgid ""
-#| "Please enter your old password, for security's sake, and then enter your "
-#| "new password twice so we can verify you typed it in correctly."
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
@@ -1938,7 +1935,6 @@ msgstr ""
 "correctamente."
 
 #: templates/registration/password_reset_confirm.html:24
-#| msgid "Password change successful"
 msgid "Password reset unsuccessful"
 msgstr "La contraseña no se restableció correctamente"
 
@@ -1952,7 +1948,6 @@ msgstr ""
 
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
-#| msgid "Password change successful"
 msgid "Password reset successful"
 msgstr "La contraseña se restableció correctamente"
 
@@ -1974,10 +1969,9 @@ msgstr ""
 
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
-msgstr "Dirección de correo-_e:"
+msgstr "Dirección de correo-e:"
 
 #: templates/registration/password_reset_form.html:15
-#| msgid "Change my password"
 msgid "Reset my password"
 msgstr "Restablecer mi contraseña"
 
