@@ -74,7 +74,11 @@
              {% ifnotequal stat.state.name "None" %}
              <em><small>{{ stat.state.get_state }}</small></em></td>
              <td><span style="display: none;">{{ stat.state.updated }}</span><em><small>{{ stat.state.updated|date:dateformat }}
-             {% else %} </td><td>
+             {% else %}
+               {% if stat.state.last_comment %}
+                 <span class="comment">{{ stat.state.last_comment|truncatewords:12 }}</span>
+               {% endif %}
+               </td><td>
              {% endifnotequal %}
            {% else %} </td><td>
            {% endif %}

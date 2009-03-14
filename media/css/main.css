@@ -40,7 +40,7 @@ table.tablesorter thead tr .header {
   background-color: #EEEEEE;
   border-bottom: #AAAAAA solid 1px;
   cursor: pointer;
-  padding-right: 1em;
+  padding-right: 1.2em;
 }
 
 table.tablesorter thead tr .headerSortUp {
@@ -222,6 +222,12 @@ p#show, p#hide {
 .help {
   font-size: 10px;
   color: #999;
+}
+
+.comment {
+  font-size: small;
+  font-style: italic;
+  color: #666666;
 }
 
 .djform td  {

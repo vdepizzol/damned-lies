@@ -1,3 +1,12 @@
+2009-03-14  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/release_compare.html: Sort by language name by default.
+	* media/css/main.css: Add style for comment in language_release.
+	* stats/models.py: Fill stateDb objects with last comment, if any.
+	* templates/languages/language_release_stats.html: Show last comment on
+	module, if any and state is None (Inactive).
+	Fixes (partially?) bug #566429.
+
 2009-03-13  Claude Paroz  <claude@2xlibre.net>
 
 	* README: Add note about SCRATCHDIR.
