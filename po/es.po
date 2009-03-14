@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-11 14:19+0000\n"
-"PO-Revision-Date: 2009-03-14 16:47+0100\n"
+"POT-Creation-Date: 2009-03-14 15:48+0000\n"
+"PO-Revision-Date: 2009-03-14 16:49+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1180,63 +1180,63 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:821
+#: stats/models.py:867
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:822
+#: stats/models.py:868
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:823
+#: stats/models.py:869
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:824
+#: stats/models.py:870
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:825
+#: stats/models.py:871
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:901
+#: stats/models.py:947
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:932
+#: stats/models.py:978
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:933
+#: stats/models.py:979
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:981 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:938
+#: stats/models.py:984
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:939
+#: stats/models.py:985
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:942
+#: stats/models.py:988
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1429,6 +1429,7 @@ msgid "Teams"
 msgstr "Equipos"
 
 #: templates/base.html:52 templates/index.html:20
+#: templates/release_compare.html:26
 msgid "Languages"
 msgstr "Idiomas"
 
@@ -1666,6 +1667,11 @@ msgstr "Módulos de GNOME"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Seleccione un módulo para ver algunas de las malditas mentiras sobre él:"
+
+#: templates/release_compare.html:5 templates/release_compare.html.py:21
+#| msgid "Release Notes"
+msgid "Releases Comparison"
+msgstr "Comparación entre publicaciones"
 
 #: templates/release_detail.html:10
 #, python-format
