@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-14 17:43+0000\n"
-"PO-Revision-Date: 2009-03-14 20:46+0100\n"
+"POT-Creation-Date: 2009-03-16 21:34+0000\n"
+"PO-Revision-Date: 2009-03-16 22:58+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -773,7 +773,6 @@ msgid "plug-ins"
 msgstr "plug-ins"
 
 #: database-content.py:190
-#| msgid "Action"
 msgid "Functions"
 msgstr "Funktioner"
 
@@ -834,144 +833,157 @@ msgid "GST Time Setup Manual"
 msgstr "Handbok för Tidsadministrationsverktyg"
 
 #: database-content.py:205
+#: languages/views.py:50
+#: languages/views.py:66
+#: templates/module_detail.html:88
+#: templates/release_detail.html:22
+#: templates/teams/team_detail.html:27
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: database-content.py:206
 msgid "GNOME 2 User Documentation"
 msgstr "Användardokumentation för GNOME 2"
 
-#: database-content.py:206
+#: database-content.py:207
 msgid "Evince Document Viewer"
 msgstr "Dokumentvisaren Evince"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
-#: database-content.py:208
+#: database-content.py:209
 #: templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "Banshee Music Player"
 msgstr "Musikspelaren Banshee"
 
-#: database-content.py:210
+#: database-content.py:211
 msgid "Shared MIME Info"
 msgstr "Delad MIME-information"
 
-#: database-content.py:211
+#: database-content.py:212
 msgid "GNOME Applets"
 msgstr "GNOME-panelprogram"
 
-#: database-content.py:212
+#: database-content.py:213
 msgid "GNOME 2 Development Documentation"
 msgstr "Utvecklardokumentation för GNOME 2"
 
-#: database-content.py:213
+#: database-content.py:214
 msgid "GNOME Release Notes"
 msgstr "Kommentarer till GNOME-utgåva"
 
-#: database-content.py:214
+#: database-content.py:215
 msgid "Rhythmbox Music Player"
 msgstr "Musikspelaren Rhythmbox"
 
-#: database-content.py:215
+#: database-content.py:216
 msgid "Epiphany Web Browser"
 msgstr "Webbläsaren Epiphany"
 
-#: database-content.py:216
+#: database-content.py:217
 msgid "GNOME Library Web site"
 msgstr "Webbplatsen GNOME-biblioteket"
 
-#: database-content.py:217
+#: database-content.py:218
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:218
+#: database-content.py:219
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:219
+#: database-content.py:220
 msgid "Deskbar Applet"
 msgstr "Panelprogrammet Skrivbordsrad"
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "Niepce Digital"
 msgstr "Niepce Digital"
 
-#: database-content.py:221
+#: database-content.py:222
 msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
 msgstr "GNUCash är inte en del av GNOME:s SVN-förråd. Se på <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information om var översättningen ska skickas."
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince är en dokumentvisare för flera typer av dokumentformat."
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar i trunk längre."
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "A VNC client for GNOME"
 msgstr "En VNC-klient för GNOME"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in SVN even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Observera att gtk+ innehåller både domänen po och po-properties.  Om du lägger till ett nytt språk i någon av domänerna så måste du skicka in båda filerna i SVN även om en av dem bara innehåller 0 översättningar, annars kommer GTK+-byggnationen inte att fungera i /po-properties."
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafisk framände för git-katalogbevakaren"
 
-#: database-content.py:228
+#: database-content.py:229
+msgid "moserial is a clean, friendly gtk-based serial terminal for the gnome desktop. It is written in Vala for extra goodness."
+msgstr "moserial är en ren, vänlig gtk-baserad serieterminal för gnome-skrivbordet. Det har skrivits i Vala för extra brahet."
+
+#: database-content.py:230
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (Extra programvara)"
 
-#: database-content.py:229
+#: database-content.py:231
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:230
+#: database-content.py:232
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:231
+#: database-content.py:233
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:232
+#: database-content.py:234
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (gammal stabil)"
 
-#: database-content.py:233
+#: database-content.py:235
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (gammal stabil)"
 
-#: database-content.py:234
+#: database-content.py:236
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
-#: database-content.py:235
+#: database-content.py:237
 msgid "GNOME 2.24 (stable)"
 msgstr "GNOME 2.24 (stabil)"
 
-#: database-content.py:236
+#: database-content.py:238
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:237
+#: database-content.py:239
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:238
+#: database-content.py:240
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:239
+#: database-content.py:241
 msgid "GNOME 2.26 (Development)"
 msgstr "GNOME 2.26 (utveckling)"
 
@@ -1042,14 +1054,6 @@ msgstr "Logga in med OpenID"
 #: languages/views.py:65
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
-
-#: languages/views.py:50
-#: languages/views.py:66
-#: templates/module_detail.html:88
-#: templates/release_detail.html:22
-#: templates/teams/team_detail.html:27
-msgid "Documentation"
-msgstr "Dokumentation"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1600,7 +1604,6 @@ msgstr "Välj en modul nedan för att se några förbannade lögner om den:"
 
 #: templates/release_compare.html:5
 #: templates/release_compare.html.py:21
-#| msgid "Release Notes"
 msgid "Releases Comparison"
 msgstr "Jämförelse av utgåvor"
 
@@ -1729,7 +1732,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% översatt)"
 
-#: templates/languages/language_release_stats.html:95
+#: templates/languages/language_release_stats.html:99
 msgid "Error summary"
 msgstr "Sammandrag av fel"
 
