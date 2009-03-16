@@ -63,7 +63,7 @@ def module_edit_branches(request, module_name):
             for key, field in form.fields.items():
                 if not getattr(field, 'is_branch', False):
                     continue
-                if form.cleaned_data[key+'_del']:
+                if form.fields[key].initial and not form.cleaned_data[key]:
                     # Delete category
                     Category.objects.get(pk=key).delete()
                     updated = True

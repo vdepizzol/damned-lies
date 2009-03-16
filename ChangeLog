@@ -1,3 +1,13 @@
+2009-03-16  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/forms.py:
+	* stats/views.py:
+	* templates/module_edit_branches.html: Instead of using a 'delete'
+	checkbox to delete a category, use the empty value of the release popup to
+	signify 'delete'. Probably more intuitive, as old delete checkbox could be
+	interpreted as the branch deletion.
+	Fixes bug #575541.
+
 2009-03-14  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/release_compare.html: Sort by language name by default.
