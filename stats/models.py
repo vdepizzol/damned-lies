@@ -99,9 +99,9 @@ class Module(models.Model):
         else:
             return self.bugs_base 
     
-    def get_branches(self):
+    def get_branches(self, reverse=False):
         branches = list(self.branch_set.all())
-        branches.sort()
+        branches.sort(reverse=reverse)
         return branches
     
     def get_head_branch(self):
