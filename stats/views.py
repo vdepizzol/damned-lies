@@ -68,15 +68,20 @@ def module_edit_branches(request, module_name):
                     Category.objects.get(pk=key).delete()
                     updated = True
                     continue
-                release_has_changed = field.initial != form.cleaned_data[key].pk
+                release_has_changed = field.initial != getattr(form.cleaned_data[key], 'pk', None)
                 category_has_changed = form.fields[key+'_cat'].initial != form.cleaned_data[key+'_cat']
-                if release_has_changed or category_has_changed:
-                    old_release = Release.objects.get(pk=field.initial)
-                    cat = Category.objects.get(pk=key)
-                    if release_has_changed:
-                        new_release = form.cleaned_data[key]
-                        cat.release = new_release
-                    cat.name = form.cleaned_data[key+'_cat']
+                if form.cleaned_data[key] and (release_has_changed or category_has_changed):
+                    if field.initial:
+                        old_release = Release.objects.get(pk=field.initial)
+                        cat = Category.objects.get(pk=key)
+                        if release_has_changed:
+                            new_release = form.cleaned_data[key]
+                            cat.release = new_release
+                        cat.name = form.cleaned_data[key+'_cat']
+                    else:
+                        rel = Release.objects.get(pk=form.cleaned_data[key].pk)
+                        branch = Branch.objects.get(module=mod, name=key)
+                        cat = Category(release=rel, branch=branch, name=form.cleaned_data[key+'_cat'])
                     cat.save()
                     updated = True
             # New branch (or new category)

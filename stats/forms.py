@@ -5,7 +5,7 @@ class ReleaseField(forms.ModelChoiceField):
     def __init__(self, *args, **kwargs):
         super(ReleaseField, self).__init__(*args, **kwargs)
         self.required = False
-        if 'initial' in kwargs:
+        if 'label' in kwargs:
             self.is_branch = True
 
 class ModuleBranchForm(forms.Form):
@@ -30,7 +30,7 @@ class ModuleBranchForm(forms.Form):
                 self.branch_fields.append((branch.name, branch.name+'_cat'))
                 
         self.fields['new_branch'] = forms.CharField(required=False)
-        self.fields['new_branch_release'] = ReleaseField(queryset=Release.objects.all(), required=False)
+        self.fields['new_branch_release'] = ReleaseField(queryset=Release.objects.all())
         self.fields['new_branch_category'] = forms.ChoiceField(choices=CATEGORY_CHOICES)
 
     def get_branches(self):
