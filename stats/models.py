@@ -208,7 +208,11 @@ class Branch(models.Model):
 
     def co_path(self):
         """ Returns the path of the local checkout for the branch """
-        return os.path.join(settings.SCRATCHDIR, self.module.vcs_type, self.module.name + "." + self.name)
+        if self.module.vcs_type in ('hg', 'git'):
+            branch_dir = self.module.name
+        else:
+            branch_dir = self.module.name + "." + self.name
+        return os.path.join(settings.SCRATCHDIR, self.module.vcs_type, branch_dir)
     
     def output_dir(self, dom_type):
         """ Directory where generated pot and po files are written on local system """
@@ -405,15 +409,20 @@ class Branch(models.Model):
         module_name = self.module.name
         vcs_type = self.module.vcs_type
         localroot = os.path.join(settings.SCRATCHDIR, vcs_type)
-        moduledir = self.module.name + "." + self.name
-        modulepath = os.path.join(localroot, moduledir)
+        if vcs_type in ('hg', 'git'):
+            moduledir = self.module.name
+            branch_exists = self.id != None
+        else:
+            moduledir = self.module.name + "." + self.name
+            branch_exists = os.access(self.co_path(), os.X_OK | os.W_OK)
+        modulepath = self.co_path()
         scmroot = self.module.vcs_root
 
         try: os.makedirs(localroot)
         except: pass
         
         commandList = []
-        if os.access(modulepath, os.X_OK | os.W_OK):
+        if branch_exists:
             # Path exists, update repos
             if vcs_type == "cvs":
                 commandList.append("cd \"%(localdir)s\" && cvs -z4 up -Pd" % {
@@ -464,15 +473,22 @@ class Branch(models.Model):
                     "branch" : self.name,
                     })
             elif vcs_type == "git":
-                commandList.append("cd \"%(localroot)s\" && git clone %(gitpath)s \"%(dir)s\"" % {
-                    "localroot" : localroot,
-                    "gitpath" : vcs_path,
-                    "dir" : moduledir,
-                    })
-                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s" % {
-                    "localdir" : modulepath,
-                    "branch" : self.name,
-                    })
+                # We are assuming here that master is the first branch created
+                if self.name == "master":
+                    commandList.append("cd \"%(localroot)s\" && git clone %(gitpath)s \"%(dir)s\"" % {
+                        "localroot" : localroot,
+                        "gitpath" : vcs_path,
+                        "dir" : moduledir,
+                        })
+                    commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s" % {
+                        "localdir" : modulepath,
+                        "branch" : self.name,
+                        })
+                else:
+                    commandList.append("cd \"%(localdir)s\" && git checkout --track -b %(branch)s  origin/%(branch)s" % {
+                        "localdir" : modulepath,
+                        "branch" : self.name,
+                        })
             elif vcs_type == "bzr":
                 commandList.append("cd \"%(localroot)s\" && bzr co --lightweight %(bzrpath)s \"%(dir)s\"" % {
                     "localroot" : localroot,
