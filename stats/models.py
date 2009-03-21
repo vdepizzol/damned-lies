@@ -411,7 +411,7 @@ class Branch(models.Model):
         localroot = os.path.join(settings.SCRATCHDIR, vcs_type)
         if vcs_type in ('hg', 'git'):
             moduledir = self.module.name
-            branch_exists = self.id != None
+            branch_exists = self.id != None and os.access(self.co_path(), os.X_OK | os.W_OK)
         else:
             moduledir = self.module.name + "." + self.name
             branch_exists = os.access(self.co_path(), os.X_OK | os.W_OK)

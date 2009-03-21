@@ -1,3 +1,10 @@
+2009-03-21  Claude Paroz  <claude@2xlibre.net>
+
+	* stats/management/commands/migrate-to-git.py: New script in prevision to
+	git migration in April.
+	* stats/models.py: branch is considered new if checkout folder does not
+	exist.
+
 2009-03-20  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/models.py: Fix git branch handling. The checkout dir is common to
