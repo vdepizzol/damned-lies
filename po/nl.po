@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-10 10:45+0000\n"
-"PO-Revision-Date: 2009-03-10 11:56+0100\n"
+"POT-Creation-Date: 2009-03-16 21:34+0000\n"
+"PO-Revision-Date: 2009-03-23 18:05+0100\n"
 "Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -782,123 +782,138 @@ msgid "plug-ins"
 msgstr "plug-ins"
 
 #: database-content.py:190
+#| msgid "Action"
+msgid "Functions"
+msgstr "Functies"
+
+#: database-content.py:191
 msgid "Dasher Manual"
 msgstr "Dasher-handleiding"
 
-#: database-content.py:191
+#: database-content.py:192
 msgid "Weather Applet Locations"
 msgstr "Weerapplet-locaties"
 
-#: database-content.py:192
+#: database-content.py:193
 msgid "Dictionary Manual"
 msgstr "Woordenboek-handleiding"
 
-#: database-content.py:193
+#: database-content.py:194
 msgid "Disk Usage Analyzer Manual"
 msgstr "Schijfgebruik-handleiding"
 
-#: database-content.py:194
+#: database-content.py:195
 msgid "Log Viewer Manual"
 msgstr "Logweergave-handleiding"
 
-#: database-content.py:195
+#: database-content.py:196
 msgid "Search Tool Manual"
 msgstr "Zoekopdracht-handleiding"
 
-#: database-content.py:196
+#: database-content.py:197
 msgid "GFloppy Manual"
 msgstr "GFloppy-handleiding"
 
-#: database-content.py:197
+#: database-content.py:198
 msgid "GNOME Library help"
 msgstr "Hulp voor Gnome Bibliotheek"
 
-#: database-content.py:198
+#: database-content.py:199
 msgid "Eye of GNOME Manual"
 msgstr "EOG Afbeeldingweergave-handleiding"
 
-#: database-content.py:199
+#: database-content.py:200
 msgid "GST User Management Manual"
 msgstr "GST Gebruikersbeheer-handleiding"
 
-#: database-content.py:200
+#: database-content.py:201
 msgid "GST Service Management Manual"
 msgstr "GST Servicesbeheer-handleiding"
 
-#: database-content.py:201
+#: database-content.py:202
 msgid "GST Network Setup Manual"
 msgstr "GST Netwerk-handleiding"
 
-#: database-content.py:202
+#: database-content.py:203
 msgid "GST Shared Folders Manual"
 msgstr "GST Gedeelde mappen-handleiding"
 
-#: database-content.py:203
+#: database-content.py:204
 msgid "GST Time Setup Manual"
 msgstr "GST Datum & Tijd-handleiding"
 
-#: database-content.py:204
+#: database-content.py:205 languages/views.py:50 languages/views.py:66
+#: templates/module_detail.html:88 templates/release_detail.html:22
+#: templates/teams/team_detail.html:27
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: database-content.py:206
 msgid "GNOME 2 User Documentation"
 msgstr "Gnome Gebruikershandleiding"
 
-#: database-content.py:205
+#: database-content.py:207
 msgid "Evince Document Viewer"
 msgstr "Evince-documentviewer"
 
-#: database-content.py:206
+#: database-content.py:208
 msgid "Beagle Desktop Search"
 msgstr "Beagle zoekopdracht"
 
-#: database-content.py:207 templates/base.html:34
+#: database-content.py:209 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: database-content.py:208
+#: database-content.py:210
 msgid "Banshee Music Player"
 msgstr "Banshee Muziekspeler"
 
-#: database-content.py:209
+#: database-content.py:211
 msgid "Shared MIME Info"
 msgstr "Gezamenlijke MIME-info"
 
-#: database-content.py:210
+#: database-content.py:212
 msgid "GNOME Applets"
 msgstr "Gnome-applets"
 
-#: database-content.py:211
+#: database-content.py:213
 msgid "GNOME 2 Development Documentation"
 msgstr "Gnome ontwikkelaarsdocumentatie"
 
-#: database-content.py:212
+#: database-content.py:214
 msgid "GNOME Release Notes"
 msgstr "Gnome-aankondiging"
 
-#: database-content.py:213
+#: database-content.py:215
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox"
 
-#: database-content.py:214
+#: database-content.py:216
 msgid "Epiphany Web Browser"
 msgstr "Epiphany webbrowser"
 
-#: database-content.py:215
+#: database-content.py:217
 msgid "GNOME Library Web site"
 msgstr "Gnome-bibliotheekwebsite"
 
-#: database-content.py:216
+#: database-content.py:218
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:217
+#: database-content.py:219
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:218
+#: database-content.py:220
 msgid "Deskbar Applet"
 msgstr "Actiebalk"
 
-#: database-content.py:219
+#: database-content.py:221
+msgid "Niepce Digital"
+msgstr "Niepce Digital"
+
+#: database-content.py:222
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -908,11 +923,11 @@ msgstr ""
 "gnucash.org/wiki/Translation#Submitting\">de GNUCash-wiki</a> voor meer "
 "informatie over het vertaalproces."
 
-#: database-content.py:220
+#: database-content.py:223
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince is een documentviewer voor meedere documentformaten."
 
-#: database-content.py:221
+#: database-content.py:224
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -920,7 +935,7 @@ msgstr ""
 "Dit is geen Gnome-specifieke module. Stuur uw vertalingen op via het <a href="
 "\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:222
+#: database-content.py:225
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -928,69 +943,78 @@ msgstr ""
 "Sinds Gnome 2.23 is GAIL geïntegreerd in GTK+. Zet geen vertalingen meer in "
 "trunk."
 
-#: database-content.py:223
+#: database-content.py:226
 msgid "A VNC client for GNOME"
 msgstr "Een VNC-client voor Gnome"
 
 # Vrij vertaald (Wouter Bolsterlee)
-#: database-content.py:224
+#: database-content.py:227
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
-"Let er op dat gtk+ zowel ‘po’ als ‘po-properties’ bevat. Als u enkel een vertaling voor een van deze toevoegt, dient u een leeg bestand voor de andere in SVN toe te voegen."
+"Let er op dat gtk+ zowel ‘po’ als ‘po-properties’ bevat. Als u enkel een "
+"vertaling voor een van deze toevoegt, dient u een leeg bestand voor de "
+"andere in SVN toe te voegen."
 
-#: database-content.py:225
+#: database-content.py:228
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafische interface voor git-versiebeheer"
 
-#: database-content.py:226
+#: database-content.py:229
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the gnome "
+"desktop. It is written in Vala for extra goodness."
+msgstr ""
+"Moserial is een simpele GTK+-gebaseerde seriële terminal voor de Gnome-werkomgeving. Het is in Vala geschreven, voor extra hipheid."
+
+#: database-content.py:230
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Gnome Fifth Toe (Extra toepassingen)"
 
-#: database-content.py:227
+#: database-content.py:231
 msgid "Extra GNOME Applications"
 msgstr "Extra Gnome-toepassingen"
 
-#: database-content.py:228
+#: database-content.py:232
 msgid "GNOME 2.18 (old stable)"
 msgstr "Gnome 2.18 (oude versie)"
 
-#: database-content.py:229
+#: database-content.py:233
 msgid "GNOME Infrastructure"
 msgstr "Gnome-infrastructuur"
 
-#: database-content.py:230
+#: database-content.py:234
 msgid "GNOME 2.16 (old stable)"
 msgstr "Gnome 2.16 (oude versie)"
 
-#: database-content.py:231
+#: database-content.py:235
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (oude versie)"
 
-#: database-content.py:232
+#: database-content.py:236
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (niet-Gnome)"
 
-#: database-content.py:233
+#: database-content.py:237
 msgid "GNOME 2.24 (stable)"
 msgstr "Gnome 2.24 (huidige versie)"
 
-#: database-content.py:234
+#: database-content.py:238
 msgid "GNOME 2.22 (old stable)"
 msgstr "Gnome 2.22 (oude versie)"
 
-#: database-content.py:235
+#: database-content.py:239
 msgid "GNOME-Office Productivity Applications"
 msgstr "Gnome-Office productiviteitsapplicaties"
 
-#: database-content.py:236
+#: database-content.py:240
 msgid "GNOME 2.20 (old stable)"
 msgstr "Gnome 2.20 (oude versie)"
 
-#: database-content.py:237
+#: database-content.py:241
 msgid "GNOME 2.26 (Development)"
 msgstr "Gnome 2.26 (ontwikkelversie)"
 
@@ -1061,11 +1085,6 @@ msgstr "Aanmelden met OpenID"
 #: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "Interface-vertaling"
-
-#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
-#: templates/release_detail.html:22 templates/teams/team_detail.html:27
-msgid "Documentation"
-msgstr "Documentatie"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1187,63 +1206,63 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:821
+#: stats/models.py:867
 msgid "Administration Tools"
 msgstr "Beheertoepassingen"
 
-#: stats/models.py:822
+#: stats/models.py:868
 msgid "Development Tools"
 msgstr "Ontwikkeltoepassingen"
 
-#: stats/models.py:823
+#: stats/models.py:869
 msgid "GNOME Desktop"
 msgstr "Gnome-werkomgeving"
 
-#: stats/models.py:824
+#: stats/models.py:870
 msgid "GNOME Developer Platform"
 msgstr "Gnome-ontwikkelplatform"
 
-#: stats/models.py:825
+#: stats/models.py:871
 msgid "New Module Proposals"
 msgstr "Voorgestelde modules"
 
-#: stats/models.py:901
+#: stats/models.py:947
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:932
+#: stats/models.py:978
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s bericht"
 msgstr[1] "%(count)s berichten"
 
-#: stats/models.py:933
+#: stats/models.py:979
 #, python-format
 msgid "updated on %(date)s"
 msgstr "bijgewerkt op %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:981 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "d-m-Y H:i O"
 
-#: stats/models.py:938
+#: stats/models.py:984
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s afbeelding"
 msgstr[1] "%(count)s afbeeldingen"
 
-#: stats/models.py:939
+#: stats/models.py:985
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-bestand (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:942
+#: stats/models.py:988
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-bestand (%(messages)s) — %(updated)s"
@@ -1434,6 +1453,7 @@ msgid "Teams"
 msgstr "Teams"
 
 #: templates/base.html:52 templates/index.html:20
+#: templates/release_compare.html:26
 msgid "Languages"
 msgstr "Talen"
 
@@ -1671,6 +1691,11 @@ msgstr "Gnome-modules"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Kies een module voor meer gegevens:"
 
+#: templates/release_compare.html:5 templates/release_compare.html.py:21
+#| msgid "Release Notes"
+msgid "Releases Comparison"
+msgstr "Aankondigings-vergelijking"
+
 #: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
@@ -1791,7 +1816,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% vertaald)"
 
-#: templates/languages/language_release_stats.html:95
+#: templates/languages/language_release_stats.html:99
 msgid "Error summary"
 msgstr "Foutoverzicht"
 
@@ -1947,7 +1972,9 @@ msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a new password reset."
 msgstr ""
-"De verwijzing voor het resetten van uw wachtwoord was ongeldig. Wellicht is dit specifieke verzoek al eerder gebruikt. Dien opnieuw een verzoek tot resetten in."
+"De verwijzing voor het resetten van uw wachtwoord was ongeldig. Wellicht is "
+"dit specifieke verzoek al eerder gebruikt. Dien opnieuw een verzoek tot "
+"resetten in."
 
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
@@ -1958,7 +1985,9 @@ msgstr "Wachtwoord succesvol gereset"
 msgid ""
 "We've e-mailed you instructions for setting your password to the e-mail "
 "address you submitted. You should be receiving it shortly."
-msgstr "Er ontvangt binnenkort een e-mail met instructies voor het resetten van uw wachtwoord."
+msgstr ""
+"Er ontvangt binnenkort een e-mail met instructies voor het resetten van uw "
+"wachtwoord."
 
 #: templates/registration/password_reset_form.html:11
 msgid ""
@@ -2053,7 +2082,8 @@ msgstr "Lid worden"
 #: templates/teams/team_detail.html:5
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr "Laatste acties door het team voor %(lang)s van het Gnome-vertaalproject"
+msgstr ""
+"Laatste acties door het team voor %(lang)s van het Gnome-vertaalproject"
 
 #: templates/teams/team_detail.html:14
 #, python-format
@@ -2143,7 +2173,8 @@ msgstr "← Terug naar acties"
 
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
-msgstr "Let op: beide bestanden zijn samengevoegd met het meest recente POT-bestand."
+msgstr ""
+"Let op: beide bestanden zijn samengevoegd met het meest recente POT-bestand."
 
 #: vertimus/feeds.py:43
 #, python-format
