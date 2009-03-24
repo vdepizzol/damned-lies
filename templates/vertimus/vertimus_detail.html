@@ -61,6 +61,15 @@
 </table>
 {% endif %}
 
+{% if other_states %}
+<div style="margin-top:0.5em;">
+  <img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" /> {% trans "On-going activities in same module:" %}
+  {% for st in other_states %}
+  <a href="{% url vertimus-ids-view st.branch.pk st.domain.pk st.language.pk %}">{{ st.branch.name }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
 {% if action_history %}
 <h2>{% trans "Action History" %}</h2>
 <div>

@@ -64,6 +64,7 @@ def vertimus(request, branch, domain, language, stats=None):
         branch=branch,
         domain=domain,
         language=language)
+    other_branch_states = StateDb.objects.filter(domain=domain, language=language).exclude(branch=branch.pk).exclude(name='None')
 
     state = state_db.get_state()
     action_history = ActionDb.get_action_history(state_db)
@@ -97,6 +98,7 @@ def vertimus(request, branch, domain, language, stats=None):
         'pageSection': 'module',
         'stats': stats,
         'branch': branch,
+        'other_states': other_branch_states,
         'domain': domain,
         'language': language,
         'module': branch.module,

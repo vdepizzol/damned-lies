@@ -1,3 +1,11 @@
+2009-03-24  Claude Paroz  <claude@2xlibre.net>
+
+	* templates/vertimus/vertimus_detail.html:
+	* vertimus/views.py: Add a note in vertimus detail when there is activity
+	on another branch of the same module. So when a module branches in a
+	release, it's easier to see that there is some ongoing activity in another
+	branch (e.g. HEAD).
+
 2009-03-21  Claude Paroz  <claude@2xlibre.net>
 
 	* stats/management/commands/migrate-to-git.py: New script in prevision to
