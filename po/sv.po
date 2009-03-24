@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-16 21:34+0000\n"
-"PO-Revision-Date: 2009-03-16 22:58+0100\n"
+"POT-Creation-Date: 2009-03-23 17:05+0000\n"
+"PO-Revision-Date: 2009-03-24 09:42+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -968,8 +968,9 @@ msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
 #: database-content.py:237
-msgid "GNOME 2.24 (stable)"
-msgstr "GNOME 2.24 (stabil)"
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.24 (old stable)"
+msgstr "GNOME 2.24 (gammal stabil)"
 
 #: database-content.py:238
 msgid "GNOME 2.22 (old stable)"
@@ -984,8 +985,9 @@ msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
 #: database-content.py:241
-msgid "GNOME 2.26 (Development)"
-msgstr "GNOME 2.26 (utveckling)"
+#| msgid "GNOME 2.24 (stable)"
+msgid "GNOME 2.26 (stable)"
+msgstr "GNOME 2.26 (stabil)"
 
 #: common/views.py:33
 msgid "translator-credits"
@@ -1145,19 +1147,19 @@ msgstr "Du har tagits bort från gruppen \"%s\"."
 msgid "Your password has been changed."
 msgstr "Ditt lösenord har ändrats."
 
-#: stats/models.py:293
+#: stats/models.py:297
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
-#: stats/models.py:314
+#: stats/models.py:318
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: stats/models.py:353
+#: stats/models.py:357
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
-#: stats/models.py:620
+#: stats/models.py:636
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1168,64 +1170,64 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:867
+#: stats/models.py:883
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:868
+#: stats/models.py:884
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:869
+#: stats/models.py:885
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:870
+#: stats/models.py:886
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:871
+#: stats/models.py:887
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:947
+#: stats/models.py:963
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:978
+#: stats/models.py:994
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:979
+#: stats/models.py:995
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:981
+#: stats/models.py:997
 #: templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
-#: stats/models.py:984
+#: stats/models.py:1000
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:985
+#: stats/models.py:1001
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:988
+#: stats/models.py:1004
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -2269,6 +2271,8 @@ msgstr "Senaste insända fil för %(lang)s"
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
+#~ msgid "GNOME 2.26 (Development)"
+#~ msgstr "GNOME 2.26 (utveckling)"
 #~ msgid "JHBuild Documentation"
 #~ msgstr "Dokumentation för JHBuild"
 #~ msgid "Browse CVS"
