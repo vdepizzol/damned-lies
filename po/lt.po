@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 23:59+0000\n"
-"PO-Revision-Date: 2009-03-07 17:17+0200\n"
+"POT-Creation-Date: 2009-03-23 17:05+0000\n"
+"PO-Revision-Date: 2009-03-24 16:45+0200\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -760,165 +760,179 @@ msgstr ""
 
 #: database-content.py:186
 msgid "script-fu"
-msgstr ""
+msgstr "script-fu"
 
 #: database-content.py:187
 msgid "libgimp"
-msgstr ""
+msgstr "libgimp"
 
 #: database-content.py:188
 msgid "python"
-msgstr ""
+msgstr "python"
 
 #: database-content.py:189
 msgid "plug-ins"
-msgstr ""
+msgstr "įskiepiai"
 
 #: database-content.py:190
+msgid "Functions"
+msgstr "Funkcijos"
+
+#: database-content.py:191
 msgid "Dasher Manual"
 msgstr ""
 
-#: database-content.py:191
+#: database-content.py:192
 msgid "Weather Applet Locations"
 msgstr ""
 
-#: database-content.py:192
+#: database-content.py:193
 msgid "Dictionary Manual"
 msgstr ""
 
-#: database-content.py:193
+#: database-content.py:194
 msgid "Disk Usage Analyzer Manual"
 msgstr ""
 
-#: database-content.py:194
+#: database-content.py:195
 msgid "Log Viewer Manual"
 msgstr ""
 
-#: database-content.py:195
+#: database-content.py:196
 msgid "Search Tool Manual"
 msgstr ""
 
-#: database-content.py:196
+#: database-content.py:197
 msgid "GFloppy Manual"
 msgstr ""
 
-#: database-content.py:197
+#: database-content.py:198
 msgid "GNOME Library help"
 msgstr ""
 
-#: database-content.py:198
+#: database-content.py:199
 msgid "Eye of GNOME Manual"
 msgstr ""
 
-#: database-content.py:199
+#: database-content.py:200
 msgid "GST User Management Manual"
 msgstr ""
 
-#: database-content.py:200
+#: database-content.py:201
 msgid "GST Service Management Manual"
 msgstr ""
 
-#: database-content.py:201
+#: database-content.py:202
 msgid "GST Network Setup Manual"
 msgstr ""
 
-#: database-content.py:202
+#: database-content.py:203
 msgid "GST Shared Folders Manual"
 msgstr ""
 
-#: database-content.py:203
+#: database-content.py:204
 msgid "GST Time Setup Manual"
 msgstr ""
 
-#: database-content.py:204
+#: database-content.py:205 languages/views.py:50 languages/views.py:66
+#: templates/module_detail.html:88 templates/release_detail.html:22
+#: templates/teams/team_detail.html:27
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#: database-content.py:206
 msgid "GNOME 2 User Documentation"
 msgstr ""
 
-#: database-content.py:205
+#: database-content.py:207
 msgid "Evince Document Viewer"
 msgstr ""
 
-#: database-content.py:206
+#: database-content.py:208
 msgid "Beagle Desktop Search"
 msgstr ""
 
-#: database-content.py:207 templates/base.html:34
+#: database-content.py:209 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: database-content.py:208
+#: database-content.py:210
 msgid "Banshee Music Player"
 msgstr "Banshee muzikos grotuvas"
 
-#: database-content.py:209
+#: database-content.py:211
 msgid "Shared MIME Info"
 msgstr ""
 
-#: database-content.py:210
+#: database-content.py:212
 msgid "GNOME Applets"
 msgstr ""
 
-#: database-content.py:211
+#: database-content.py:213
 msgid "GNOME 2 Development Documentation"
 msgstr ""
 
-#: database-content.py:212
+#: database-content.py:214
 msgid "GNOME Release Notes"
 msgstr ""
 
-#: database-content.py:213
+#: database-content.py:215
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox muzikos grotuvas"
 
-#: database-content.py:214
+#: database-content.py:216
 msgid "Epiphany Web Browser"
 msgstr "Epiphany žiniatinkklio naršyklė"
 
-#: database-content.py:215
+#: database-content.py:217
 msgid "GNOME Library Web site"
 msgstr ""
 
-#: database-content.py:216
+#: database-content.py:218
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:217
+#: database-content.py:219
 msgid "Gnome Specimen"
 msgstr ""
 
-#: database-content.py:218
+#: database-content.py:220
 msgid "Deskbar Applet"
 msgstr "Deskbar įtaisas"
 
-#: database-content.py:219
+#: database-content.py:221
+msgid "Niepce Digital"
+msgstr ""
+
+#: database-content.py:222
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
 msgstr ""
 
-#: database-content.py:220
+#: database-content.py:223
 msgid "Evince is a document viewer for multiple document formats."
 msgstr ""
 
-#: database-content.py:221
+#: database-content.py:224
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
 
-#: database-content.py:222
+#: database-content.py:225
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
 msgstr ""
 
-#: database-content.py:223
+#: database-content.py:226
 msgid "A VNC client for GNOME"
 msgstr ""
 
-#: database-content.py:224
+#: database-content.py:227
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -926,57 +940,63 @@ msgid ""
 "properties."
 msgstr ""
 
-#: database-content.py:225
+#: database-content.py:228
 msgid "Graphical frontend for the git directory tracker"
 msgstr ""
 
-#: database-content.py:226
+#: database-content.py:229
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the gnome "
+"desktop. It is written in Vala for extra goodness."
+msgstr ""
+
+#: database-content.py:230
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME Fifth Toe (papildomos programos)"
 
-#: database-content.py:227
+#: database-content.py:231
 msgid "Extra GNOME Applications"
 msgstr "Papildomos GNOME programos"
 
-#: database-content.py:228
+#: database-content.py:232
 msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (senas stabilus)"
+msgstr "GNOME 2.18 (sena stabili)"
 
-#: database-content.py:229
+#: database-content.py:233
 msgid "GNOME Infrastructure"
 msgstr "GNOME infrastruktūra"
 
-#: database-content.py:230
+#: database-content.py:234
 msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (senas stabilus)"
+msgstr "GNOME 2.16 (sena stabili)"
 
-#: database-content.py:231
+#: database-content.py:235
 msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (senas stabilus)"
+msgstr "GNOME 2.14 (sena stabili)"
 
-#: database-content.py:232
+#: database-content.py:236
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (ne GNOME)"
 
-#: database-content.py:233
-msgid "GNOME 2.24 (stable)"
-msgstr "GNOME 2.24 (stabilus)"
+#: database-content.py:237
+msgid "GNOME 2.24 (old stable)"
+msgstr "GNOME 2.24 (sena stabili)"
 
-#: database-content.py:234
+#: database-content.py:238
 msgid "GNOME 2.22 (old stable)"
-msgstr "GNOME 2.22 (senas stabilus)"
+msgstr "GNOME 2.22 (sena stabili)"
 
-#: database-content.py:235
+#: database-content.py:239
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktyvumo programos"
 
-#: database-content.py:236
+#: database-content.py:240
 msgid "GNOME 2.20 (old stable)"
-msgstr "GNOME 2.20 (senas stabilus)"
+msgstr "GNOME 2.20 (sena stabili)"
 
-#: database-content.py:237
-msgid "GNOME 2.26 (Development)"
-msgstr "GNOME 2.26 (ateinanti versija)"
+#: database-content.py:241
+msgid "GNOME 2.26 (stable)"
+msgstr "GNOME 2.26 (stabili)"
 
 #: common/views.py:33
 msgid "translator-credits"
@@ -1018,33 +1038,29 @@ msgid "Password:"
 msgstr "Slaptažodis:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:27
+#: templates/base.html:76 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Prisijungti"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:32
+#: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "arba pasinaudokite OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:35
+#: people/forms.py:17 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:38
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Prisijungti su OpenID"
 
 #: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "Sąsajos vertimai"
-
-#: languages/views.py:50 languages/views.py:66 templates/module_detail.html:88
-#: templates/release_detail.html:22 templates/teams/team_detail.html:27
-msgid "Documentation"
-msgstr "Dokumentacija"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1063,6 +1079,7 @@ msgid "At least 7 characters"
 msgstr ""
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr ""
 
@@ -1137,19 +1154,19 @@ msgstr "Buvote pašalinti iš %s vertėjų grupės."
 msgid "Your password has been changed."
 msgstr "Slaptažodis pakeistas."
 
-#: stats/models.py:293
+#: stats/models.py:297
 msgid "Can't generate POT file, using old one."
 msgstr ""
 
-#: stats/models.py:314
+#: stats/models.py:318
 msgid "Can't copy new POT file to public location."
 msgstr ""
 
-#: stats/models.py:353
+#: stats/models.py:357
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr ""
 
-#: stats/models.py:620
+#: stats/models.py:636
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1157,32 +1174,32 @@ msgid ""
 "%(output)s</pre>"
 msgstr ""
 
-#: stats/models.py:821
+#: stats/models.py:883
 msgid "Administration Tools"
 msgstr "Administravimo įrankiai"
 
-#: stats/models.py:822
+#: stats/models.py:884
 msgid "Development Tools"
 msgstr "Kūrimo įrankiai"
 
-#: stats/models.py:823
+#: stats/models.py:885
 msgid "GNOME Desktop"
 msgstr "GNOME darbastalis"
 
-#: stats/models.py:824
+#: stats/models.py:886
 msgid "GNOME Developer Platform"
 msgstr ""
 
-#: stats/models.py:825
+#: stats/models.py:887
 msgid "New Module Proposals"
 msgstr "Nauji siūlomi moduliai"
 
-#: stats/models.py:901
+#: stats/models.py:963
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:932
+#: stats/models.py:994
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1190,31 +1207,31 @@ msgstr[0] "%(count)s įrašas"
 msgstr[1] "%(count)s įrašai"
 msgstr[2] "%(count)s įrašų"
 
-#: stats/models.py:933
+#: stats/models.py:995
 #, python-format
 msgid "updated on %(date)s"
 msgstr "atnaujinta %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:935 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:997 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:71
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i 0"
 
-#: stats/models.py:938
+#: stats/models.py:1000
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] ""
 msgstr[1] ""
 
-#: stats/models.py:939
+#: stats/models.py:1001
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT failas (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:942
+#: stats/models.py:1004
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT failas (%(messages)s) — %(updated)s"
@@ -1398,6 +1415,7 @@ msgid "Teams"
 msgstr "Vertėjų grupės"
 
 #: templates/base.html:52 templates/index.html:20
+#: templates/release_compare.html:26
 msgid "Languages"
 msgstr "Kalbos"
 
@@ -1430,8 +1448,8 @@ msgid "Hosted by"
 msgstr "Serverį teikia"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/register.html:4
-#: templates/register_success.html:4
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Damned Lies (GNOME)"
 
@@ -1526,7 +1544,7 @@ msgstr ""
 msgid "Translated by:"
 msgstr "Vertėjas:"
 
-#: templates/login.html:10 templates/register.html:11
+#: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Jau prisijungėte kaip %(username)s."
@@ -1539,6 +1557,10 @@ msgid ""
 msgstr ""
 "Jei neturite paskyros šioje svetainėje, galite <a href='%(link)"
 "s'>užsiregistruoti</a>."
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "Ar pamiršote slaptažodį?"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1624,42 +1646,8 @@ msgstr "GNOME moduliai"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Pasirinkite modulį, apie kurį norite pamatyti daugiau informacijos:"
 
-#: templates/register.html:9
-msgid "Account Registration"
-msgstr "Paskyros registracija"
-
-#: templates/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr ""
-
-#: templates/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr ""
-
-#: templates/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Autentikuotis OpenID <strong>arba</strong> slaptažodžiu:"
-
-#: templates/register.html:34
-msgid "Register with OpenID"
-msgstr "Registruotis su OpenID"
-
-#: templates/register.html:46
-msgid "Register with password"
-msgstr "Registruotis su slaptažodžiu"
-
-#: templates/register_success.html:8
-msgid "Registration Success"
-msgstr "Registracija sėkminga"
-
-#: templates/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
+#: templates/release_compare.html:5 templates/release_compare.html.py:21
+msgid "Releases Comparison"
 msgstr ""
 
 #: templates/release_detail.html:10
@@ -1699,10 +1687,8 @@ msgstr ""
 "jį:"
 
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
-#, fuzzy
-#| msgid "Download all po files"
 msgid "Download POT file"
-msgstr "Parsisiųsti visus po failus"
+msgstr "Parsisiųsti POT failą"
 
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
 msgid "Notices"
@@ -1784,7 +1770,7 @@ msgstr "Data"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (išversta %(percentage)s%)"
 
-#: templates/languages/language_release_stats.html:95
+#: templates/languages/language_release_stats.html:99
 msgid "Error summary"
 msgstr ""
 
@@ -1864,10 +1850,12 @@ msgid "Old password:"
 msgstr "Senas slaptažodis:"
 
 #: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "Naujas slaptažodis:"
 
 #: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Pakeisti slaptažodį"
 
@@ -1893,13 +1881,116 @@ msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "%(team_name)s vertėjų grupės narys (%(role_name)s)"
 
 #: templates/people/person_team_membership.html:12
-#| msgid "Save"
 msgid "Leave"
 msgstr "Palikti grupę"
 
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "Ar tikrai norite palikti vertėjų grupę?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:10
+#, fuzzy
+#| msgid "Your password has been changed."
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Slaptažodis pakeistas."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+#, fuzzy
+#| msgid "Password:"
+msgid "Password reset"
+msgstr "Slaptažodis:"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Įveskite naują slaptažodį"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:15
+#, fuzzy
+#| msgid "Change my password"
+msgid "Reset my password"
+msgstr "Pakeisti slaptažodį"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Paskyros registracija"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Autentikuotis OpenID <strong>arba</strong> slaptažodžiu:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Registruotis su OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Registruotis su slaptažodžiu"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Registracija sėkminga"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1988,7 +2079,6 @@ msgid "State:"
 msgstr "Būsena:"
 
 #: templates/vertimus/vertimus_detail.html:39
-#| msgid "Download all po files"
 msgid "Download PO file"
 msgstr "Parsisiųsti PO failą"
 
@@ -2030,22 +2120,22 @@ msgstr "&lt;- Atgal prie veiksmų"
 msgid "Note: both files are merged with latest POT file."
 msgstr ""
 
-#: vertimus/feeds.py:42
+#: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr ""
 
-#: vertimus/feeds.py:51
+#: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Vėliausi GNOME vertimų projekto %s kalbos veiksmai"
 
-#: vertimus/feeds.py:86
+#: vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr ""
 
-#: vertimus/feeds.py:95
+#: vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Vėliausi GNOME vertimo projekto %s vertėjų grupės veiksmai"
@@ -2144,8 +2234,8 @@ msgid ""
 msgstr ""
 "Sveiki,\n"
 "\n"
-"%(module)s - %(branch)s - %(domain)s (%(language)s) būsena dabar yra "
-"„%(new_state)s“.\n"
+"%(module)s - %(branch)s - %(domain)s (%(language)s) būsena dabar yra „%"
+"(new_state)s“.\n"
 "%(url)s\n"
 "\n"
 
@@ -2174,7 +2264,8 @@ msgid ""
 msgstr ""
 "Sveiki,\n"
 "\n"
-"%(module)s - %(branch)s - %(domain)s (%(language)s) paliktas naujas komentaras.\n"
+"%(module)s - %(branch)s - %(domain)s (%(language)s) paliktas naujas "
+"komentaras.\n"
 "%(url)s\n"
 "\n"
 
@@ -2191,7 +2282,6 @@ msgid "Reserve for proofreading"
 msgstr "Rezervuoti tikrinimui"
 
 #: vertimus/models.py:570
-#| msgid "Upload the new translation"
 msgid "Upload the proofread translation"
 msgstr "Nusiųsti peržiūrėtą vertimą"
 
@@ -2222,13 +2312,12 @@ msgstr "Pranešti apie nusiuntimą"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:654
-#| msgid "Reviewer"
 msgid "Review required"
 msgstr "Reikalinga peržiūra"
 
 #: vertimus/models.py:693
 msgid "Backup the actions"
-msgstr ""
+msgstr "Padaryti veiksmų atsarginę kopiją"
 
 #: vertimus/models.py:732
 msgid "Undo the last state change"
@@ -2242,6 +2331,9 @@ msgstr "Vėliausias nusiųstas %(lang)s kalbos failas"
 #: vertimus/views.py:147
 msgid "Latest POT file"
 msgstr "Vėliausias POT failas"
+
+#~ msgid "GNOME 2.26 (Development)"
+#~ msgstr "GNOME 2.26 (ateinanti versija)"
 
 #~ msgid "Browse CVS"
 #~ msgstr "Naršyti CVS"
