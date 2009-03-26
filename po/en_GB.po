@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-23 17:05+0000\n"
+"POT-Creation-Date: 2009-03-26 07:33+0000\n"
 "PO-Revision-Date: 2009-03-20 07:30+0000\n"
 "Last-Translator: Jen Ockwell <jenfraggleubuntu@gmail.com>\n"
 "Language-Team: British English <en@li.org>\n"
@@ -1236,7 +1236,7 @@ msgstr "updated on %(date)s"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:997 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:71
+#: templates/vertimus/vertimus_detail.html:80
 msgid "Y-m-d g:i a O"
 msgstr "d/m/y H:i O"
 
@@ -1741,7 +1741,7 @@ msgid "Damned Lies site admin"
 msgstr "Damned Lies site admin"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:92
+#: templates/vertimus/vertimus_detail.html:101
 msgid "No comment"
 msgstr "No comment"
 
@@ -2129,23 +2129,27 @@ msgstr "Download PO file"
 msgid "Translated:"
 msgstr "Translated:"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:66
+msgid "On-going activities in same module:"
+msgstr "On-going activities in same module:"
+
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "Action History"
 
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:90
 msgid "diff with:"
 msgstr "diff with:"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:110
 msgid "New Action"
 msgstr "New Action"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:117
 msgid "Submit"
 msgstr "Submit"
 
-#: templates/vertimus/vertimus_detail.html:112
+#: templates/vertimus/vertimus_detail.html:121
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2259,8 +2263,8 @@ msgstr "Committed"
 msgid "File in repository"
 msgstr "File in repository"
 
-#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
-#: vertimus/views.py:138
+#: vertimus/models.py:346 vertimus/views.py:124 vertimus/views.py:130
+#: vertimus/views.py:140
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Uploaded file by %(name)s on %(date)s"
@@ -2366,12 +2370,12 @@ msgstr "Backup the actions"
 msgid "Undo the last state change"
 msgstr "Undo the last state change"
 
-#: vertimus/views.py:144
+#: vertimus/views.py:146
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Latest committed file for %(lang)s"
 
-#: vertimus/views.py:147
+#: vertimus/views.py:149
 msgid "Latest POT file"
 msgstr "Latest POT file"
 
