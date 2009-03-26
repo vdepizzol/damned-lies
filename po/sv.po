@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-23 17:05+0000\n"
-"PO-Revision-Date: 2009-03-24 09:42+0100\n"
+"POT-Creation-Date: 2009-03-26 07:33+0000\n"
+"PO-Revision-Date: 2009-03-26 23:56+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -968,7 +968,6 @@ msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
 #: database-content.py:237
-#| msgid "GNOME 2.14 (old stable)"
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
@@ -985,7 +984,6 @@ msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
 #: database-content.py:241
-#| msgid "GNOME 2.24 (stable)"
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (stabil)"
 
@@ -1211,7 +1209,7 @@ msgstr "uppdaterad den %(date)s"
 #. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:997
 #: templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:71
+#: templates/vertimus/vertimus_detail.html:80
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
@@ -1671,7 +1669,7 @@ msgid "Damned Lies site admin"
 msgstr "Admin för Förbannade lögner"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:92
+#: templates/vertimus/vertimus_detail.html:101
 msgid "No comment"
 msgstr "Ingen kommentar"
 
@@ -2029,23 +2027,27 @@ msgstr "Hämta PO-fil"
 msgid "Translated:"
 msgstr "Översatt:"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:66
+msgid "On-going activities in same module:"
+msgstr "Pågående aktiviteter i samma modul:"
+
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "Åtgärdshistorik"
 
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:90
 msgid "diff with:"
 msgstr "diff med:"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:110
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:117
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:112
+#: templates/vertimus/vertimus_detail.html:121
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -2156,9 +2158,9 @@ msgid "File in repository"
 msgstr "Arkivera i förråd"
 
 #: vertimus/models.py:346
-#: vertimus/views.py:122
-#: vertimus/views.py:128
-#: vertimus/views.py:138
+#: vertimus/views.py:124
+#: vertimus/views.py:130
+#: vertimus/views.py:140
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Uppskickad fil av %(name)s den %(date)s"
@@ -2262,12 +2264,12 @@ msgstr "Säkerhetskopiera åtgärderna"
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
-#: vertimus/views.py:144
+#: vertimus/views.py:146
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Senaste insända fil för %(lang)s"
 
-#: vertimus/views.py:147
+#: vertimus/views.py:149
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
