@@ -4,21 +4,20 @@
 # 甘露(Lu Gan) <rhythm.gan@gmail.com>, 2008.
 # Aron Xu <aronmalache@163.com>, 2008.
 # Funda Wang <fundawang@gmail.com>, 2008.
-# Funda Wang <fundawang@gmail.com>, 2008.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-20 22:15+0000\n"
-"PO-Revision-Date: 2008-11-28 14:29+0800\n"
+"POT-Creation-Date: 2009-03-26 07:34+0000\n"
+"PO-Revision-Date: 2009-03-26 21:07+0800\n"
 "Last-Translator: Aron Xu <aronmalache@163.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0;"
 
 #: database-content.py:1
 msgid "Gujarati"
@@ -777,123 +776,137 @@ msgid "plug-ins"
 msgstr "plug-ins"
 
 #: database-content.py:190
+msgid "Functions"
+msgstr "功能"
+
+#: database-content.py:191
 msgid "Dasher Manual"
 msgstr "Dasher 手册"
 
-#: database-content.py:191
+#: database-content.py:192
 msgid "Weather Applet Locations"
 msgstr "天气小程序位置"
 
-#: database-content.py:192
+#: database-content.py:193
 msgid "Dictionary Manual"
 msgstr "字典手册"
 
-#: database-content.py:193
+#: database-content.py:194
 msgid "Disk Usage Analyzer Manual"
 msgstr "磁盘用量分析器手册"
 
-#: database-content.py:194
+#: database-content.py:195
 msgid "Log Viewer Manual"
 msgstr "日志查看器手册"
 
-#: database-content.py:195
+#: database-content.py:196
 msgid "Search Tool Manual"
 msgstr "搜索工具手册"
 
-#: database-content.py:196
+#: database-content.py:197
 msgid "GFloppy Manual"
 msgstr "GFloppy 手册"
 
-#: database-content.py:197
+#: database-content.py:198
 msgid "GNOME Library help"
 msgstr "GNOME 数库帮助"
 
-#: database-content.py:198
+#: database-content.py:199
 msgid "Eye of GNOME Manual"
 msgstr "GNOME 之眼手册"
 
-#: database-content.py:199
+#: database-content.py:200
 msgid "GST User Management Manual"
 msgstr "GST 用户管理手册"
 
-#: database-content.py:200
+#: database-content.py:201
 msgid "GST Service Management Manual"
 msgstr "GST 服务管理手册"
 
-#: database-content.py:201
+#: database-content.py:202
 msgid "GST Network Setup Manual"
 msgstr "GST 网络设置手册"
 
-#: database-content.py:202
+#: database-content.py:203
 msgid "GST Shared Folders Manual"
 msgstr "GST 共享文件夹手册"
 
-#: database-content.py:203
+#: database-content.py:204
 msgid "GST Time Setup Manual"
 msgstr "GST 时间设置手册"
 
-#: database-content.py:204
+#: database-content.py:205 languages/views.py:50 languages/views.py:66
+#: templates/module_detail.html:88 templates/release_detail.html:22
+#: templates/teams/team_detail.html:27
+msgid "Documentation"
+msgstr "文档"
+
+#: database-content.py:206
 msgid "GNOME 2 User Documentation"
 msgstr "GNOME 2 用户文档"
 
-#: database-content.py:205
+#: database-content.py:207
+msgid "Evince Document Viewer"
+msgstr "Evince 文档查看器"
+
+#: database-content.py:208
 msgid "Beagle Desktop Search"
 msgstr "Beagle 桌面搜索"
 
-#: database-content.py:206 templates/base.html:34
+#: database-content.py:209 templates/base.html:34
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "胡言乱语"
 
-#: database-content.py:207
+#: database-content.py:210
 msgid "Banshee Music Player"
 msgstr "Banshee 音乐播放器"
 
-#: database-content.py:208
+#: database-content.py:211
 msgid "Shared MIME Info"
 msgstr "共享 MIME 信息"
 
-#: database-content.py:209
+#: database-content.py:212
 msgid "GNOME Applets"
 msgstr "GNOME 小程序"
 
-#: database-content.py:210
-msgid "JHBuild Documentation"
-msgstr "JHBuild 文件"
-
-#: database-content.py:211
+#: database-content.py:213
 msgid "GNOME 2 Development Documentation"
 msgstr "GNOME 2 开发文档"
 
-#: database-content.py:212
+#: database-content.py:214
 msgid "GNOME Release Notes"
 msgstr "GNOME 发行注记"
 
-#: database-content.py:213
+#: database-content.py:215
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox 音乐播放器"
 
-#: database-content.py:214
+#: database-content.py:216
 msgid "Epiphany Web Browser"
 msgstr "Epiphany 网络浏览器"
 
-#: database-content.py:215
+#: database-content.py:217
 msgid "GNOME Library Web site"
 msgstr "GNOME 函数库网站"
 
-#: database-content.py:216
+#: database-content.py:218
 msgid "Eye of GNOME"
 msgstr "GNOME 之眼"
 
-#: database-content.py:217
+#: database-content.py:219
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:218
+#: database-content.py:220
 msgid "Deskbar Applet"
 msgstr "Deskbar 小程序"
 
-#: database-content.py:219
+#: database-content.py:221
+msgid "Niepce Digital"
+msgstr ""
+
+#: database-content.py:222
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -903,7 +916,11 @@ msgstr ""
 "org/wiki/Translation#Submitting\">the GNUCash Wiki</a> 以知晓将翻译发送到哪"
 "里。"
 
-#: database-content.py:220
+#: database-content.py:223
+msgid "Evince is a document viewer for multiple document formats."
+msgstr ""
+
+#: database-content.py:224
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -911,17 +928,17 @@ msgstr ""
 "这不是一个 GNOME 特有的模块。请通过 <a href=\"http://translationproject.org"
 "\">翻译项目</a>提交翻译。"
 
-#: database-content.py:221
+#: database-content.py:225
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
 msgstr "从 GNOME 2.23 开始，GAIL 被整合到 GTK+。请不要继续向 trunk 提交。"
 
-#: database-content.py:222
+#: database-content.py:226
 msgid "A VNC client for GNOME"
 msgstr "一个 GNOME 下的 VNC 客户端"
 
-#: database-content.py:223
+#: database-content.py:227
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -932,57 +949,67 @@ msgstr ""
 "都得在另外一个域下提交一个同名的文件，即使那个文件一条翻译都不包括，否则 GTK"
 "+ 将在构建的时候出错。"
 
-#: database-content.py:224
+#: database-content.py:228
+msgid "Graphical frontend for the git directory tracker"
+msgstr ""
+
+#: database-content.py:229
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the gnome "
+"desktop. It is written in Vala for extra goodness."
+msgstr ""
+
+#: database-content.py:230
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "GNOME 第五脚趾 (额外的软件)"
 
-#: database-content.py:225
+#: database-content.py:231
 msgid "Extra GNOME Applications"
 msgstr "额外的 GNOME 程序"
 
-#: database-content.py:226
+#: database-content.py:232
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (老的稳定版本)"
 
-#: database-content.py:227
+#: database-content.py:233
 msgid "GNOME Infrastructure"
 msgstr "GNOME 基础架构"
 
-#: database-content.py:228
+#: database-content.py:234
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (老的稳定版本)"
 
-#: database-content.py:229
+#: database-content.py:235
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (老的稳定版本)"
 
-#: database-content.py:230
+#: database-content.py:236
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非 GNOME)"
 
-#: database-content.py:231
-msgid "GNOME 2.24 (stable)"
-msgstr "GNOME 2.24 (稳定版本)"
+#: database-content.py:237
+msgid "GNOME 2.24 (old stable)"
+msgstr "GNOME 2.24 (老的稳定版本)"
 
-#: database-content.py:232
+#: database-content.py:238
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (老的稳定版本)"
 
-#: database-content.py:233
+#: database-content.py:239
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME 办公室生产力程序"
 
-#: database-content.py:234
+#: database-content.py:240
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (老的稳定版本)"
 
-#: database-content.py:235
-msgid "GNOME 2.26 (Development)"
-msgstr "GNOME 2.26 (开发版本)"
+#: database-content.py:241
+msgid "GNOME 2.26 (stable)"
+msgstr "GNOME 2.26 (稳定版本)"
 
 #: common/views.py:33
 msgid "translator-credits"
-msgstr "Aron Xu <aronmalache@163.com>"
+msgstr "开源软件国际化之 GNOME 简体中文小组"
 
 #: common/views.py:54
 msgid "You have been logged out."
@@ -1020,33 +1047,29 @@ msgid "Password:"
 msgstr "密码："
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:27
+#: templates/base.html:76 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "登录"
 
 #: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:32
+#: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "或者使用您的 OpenID："
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:35
+#: people/forms.py:17 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID："
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:38
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "使用 OpenID 登录"
 
-#: languages/views.py:51
+#: languages/views.py:49 languages/views.py:65
 msgid "UI Translations"
 msgstr "用户界面翻译"
-
-#: languages/views.py:52 templates/module_detail.html:91
-#: templates/release_detail.html:22 templates/teams/team_detail.html:23
-msgid "Documentation"
-msgstr "文档"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1065,6 +1088,7 @@ msgid "At least 7 characters"
 msgstr "至少七个字符"
 
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "确认密码："
 
@@ -1073,7 +1097,7 @@ msgid "This username is already taken. Please choose another."
 msgstr "此用户名已经被占用。请另选一个。"
 
 #: people/forms.py:39
-msgid "You must either provide an OpenId or a password"
+msgid "You must either provide an OpenID or a password"
 msgstr "您必须提供 OpenID，或者您的密码"
 
 #: people/forms.py:42
@@ -1091,7 +1115,8 @@ msgid ""
 "your account, please click on the link below or copy and paste it in a "
 "browser."
 msgstr ""
-"此信息代表您在 %s 上注册成功。要激活您的账户，请点击上方的链接，或者将其粘贴到浏览器中。"
+"此信息代表您在 %s 上注册成功。要激活您的账户，请点击上方的链接，或者将其粘贴"
+"到浏览器中。"
 
 #: people/forms.py:68
 #, python-format
@@ -1122,19 +1147,29 @@ msgstr "Bugzilla 账户"
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "这应该是一个电子邮件地址，特别适用于与“电子邮件”字段不同的情况"
 
-#: people/views.py:87
+#: people/views.py:86
+#, python-format
+msgid "You have successfully joined the team '%s'."
+msgstr "您已成功加入“%s”小组。"
+
+#: people/views.py:89
 msgid "You are already member of this team."
 msgstr "您已经是此团队的一员。"
 
-#: people/views.py:110
+#: people/views.py:112
+#, python-format
+msgid "You have been removed from the team '%s'."
+msgstr "您已退出“%s”小组。"
+
+#: people/views.py:128
 msgid "Your password has been changed."
 msgstr "您的密码已更改。"
 
-#: stats/models.py:293
+#: stats/models.py:297
 msgid "Can't generate POT file, using old one."
 msgstr "无法生成 POT 文件，改用旧的。"
 
-#: stats/models.py:319
+#: stats/models.py:318
 msgid "Can't copy new POT file to public location."
 msgstr "无法复制新的 POT 文件到公开位置"
 
@@ -1142,7 +1177,7 @@ msgstr "无法复制新的 POT 文件到公开位置"
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 清单没有包括该语言。"
 
-#: stats/models.py:617
+#: stats/models.py:636
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1153,74 +1188,75 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:921
+#: stats/models.py:883
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:922
+#: stats/models.py:884
 msgid "Development Tools"
 msgstr "开发工具"
 
-#: stats/models.py:923
+#: stats/models.py:885
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:924
+#: stats/models.py:886
 msgid "GNOME Developer Platform"
 msgstr "GNOME 开发者平台"
 
-#: stats/models.py:925
+#: stats/models.py:887
 msgid "New Module Proposals"
 msgstr "新模块提案"
 
-#: stats/models.py:998
+#: stats/models.py:963
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1029
+#: stats/models.py:994
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 条消息"
 
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1031
+#: stats/models.py:995
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新于 %(date)s"
 
-#: stats/models.py:1031 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:71
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: stats/models.py:997 templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:80
 msgid "Y-m-d g:i a O"
 msgstr "Y年m月d日 H:i"
 
-#: stats/models.py:1033
+#: stats/models.py:1000
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 个图片"
 
-#: stats/models.py:1034
+#: stats/models.py:1001
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s %(figures)s) — %(updated)s"
 
-#: stats/models.py:1037
+#: stats/models.py:1004
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 文件 (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:75
+#: stats/utils.py:85
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "运行“intltool-update -m”检查时出错。"
 
-#: stats/utils.py:81
+#: stats/utils.py:91
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "在 POTFILES.in 中缺少部分文件：%s"
 
-#: stats/utils.py:90
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1228,21 +1264,21 @@ msgid ""
 msgstr ""
 "下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而他们并不存在：%s"
 
-#: stats/utils.py:102
+#: stats/utils.py:112
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "模块 %s 不像是 gnome-doc-utils 模块。"
 
-#: stats/utils.py:105
+#: stats/utils.py:115
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE 没有解析到某个真实文件，请使用 '%s.xml'。"
 
-#: stats/utils.py:108
+#: stats/utils.py:118
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE 没有指向某个真实文件，也许是某个宏。"
 
-#: stats/utils.py:123
+#: stats/utils.py:133
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1253,63 +1289,63 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:182
+#: stats/utils.py:206
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO 文件“%s”不存在或者无法读取。"
 
-#: stats/utils.py:202
+#: stats/utils.py:226
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO 文件“%s”没有通过 msgfmt 检查：不能更新。"
 
-#: stats/utils.py:204
+#: stats/utils.py:228
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "无法得到 POT 文件“%s”的统计数据。"
 
-#: stats/utils.py:207
+#: stats/utils.py:231
 msgid "This PO file has an executable bit set."
 msgstr "该 PO 文件设置为可执行属性。"
 
-#: stats/utils.py:235
+#: stats/utils.py:259
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO 文件“%s”并不是 UTF-8 编码。"
 
-#: stats/utils.py:264
+#: stats/utils.py:292
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "在 LINGUAS 文件内没有该语言的条目。"
 
-#: stats/utils.py:291
+#: stats/utils.py:319
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "在配置文件的 ALL_LINGUAS 内没有该语言的条目。"
 
-#: stats/utils.py:294
+#: stats/utils.py:322
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
 msgstr "如果不知道在哪里查找该语言是否在实际使用，询问该模块的维护者。"
 
-#: teams/models.py:113
+#: teams/models.py:112
 #, python-format
 msgid "No team for locale %s"
 msgstr "没有 %s 的团队"
 
-#: teams/models.py:130
+#: teams/models.py:129
 msgid "Translator"
 msgstr "翻译者"
 
-#: teams/models.py:131
+#: teams/models.py:130
 msgid "Reviewer"
 msgstr "审阅者"
 
-#: teams/models.py:132
+#: teams/models.py:131
 msgid "Committer"
 msgstr "提交者"
 
-#: teams/models.py:133 templates/teams/team_base.html:31
+#: teams/models.py:132 templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "协调人"
 
@@ -1394,6 +1430,7 @@ msgid "Teams"
 msgstr "团队"
 
 #: templates/base.html:52 templates/index.html:20
+#: templates/release_compare.html:26
 msgid "Languages"
 msgstr "语言"
 
@@ -1426,8 +1463,8 @@ msgid "Hosted by"
 msgstr "主机提供"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/register.html:4
-#: templates/register_success.html:4
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "关于 GNOME 的胡言乱语"
 
@@ -1514,7 +1551,7 @@ msgstr ""
 msgid "Translated by:"
 msgstr "翻译由："
 
-#: templates/login.html:10 templates/register.html:11
+#: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "您已登录为 %(username)s。"
@@ -1526,6 +1563,10 @@ msgid ""
 "s'>register</a> for a new account."
 msgstr ""
 "如果您在本网站没有账户，可以在<a href='%(link)s'>这里注册</a>一个新账户。"
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "忘记密码？"
 
 #: templates/module_detail.html:5
 #, python-format
@@ -1560,18 +1601,14 @@ msgid "Branches:"
 msgstr "分支："
 
 #: templates/module_detail.html:65
-msgid "Browse CVS"
-msgstr "浏览 CVS"
+msgid "Browse Repository"
+msgstr "查看仓库"
 
-#: templates/module_detail.html:68
-msgid "Browse SVN"
-msgstr "浏览 SVN"
-
-#: templates/module_detail.html:72
+#: templates/module_detail.html:69
 msgid "This branch is currently string-frozen."
 msgstr "该分支当前处于字符串冻结期。"
 
-#: templates/module_detail.html:81
+#: templates/module_detail.html:78
 msgid "Translation"
 msgstr "翻译"
 
@@ -1614,44 +1651,9 @@ msgstr "GNOME 模块"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "选择下列的某个模块以查看关于它的“胡言乱语”："
 
-#: templates/register.html:9
-msgid "Account Registration"
-msgstr "账户注册"
-
-#: templates/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr "您可以在这里注册本网站。请仅当您想要为 GNOME 翻译做出贡献时才注册。"
-
-#: templates/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr "注册成功之后，您可以从您的个人页面加入现有的团队。"
-
-#: templates/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "通过 OpenID <strong>或</strong> 密码进行身份验证："
-
-#: templates/register.html:34
-msgid "Register with OpenID"
-msgstr "使用 OpenID 注册"
-
-#: templates/register.html:46
-msgid "Register with password"
-msgstr "使用密码注册"
-
-#: templates/register_success.html:8
-msgid "Registration Success"
-msgstr "注册成功"
-
-#: templates/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
-msgstr ""
-"注册已成功。您现在将收到一封电子邮件，其中描述了您应该如何激活您的账户。"
+#: templates/release_compare.html:5 templates/release_compare.html.py:21
+msgid "Releases Comparison"
+msgstr "发行比较"
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1659,7 +1661,7 @@ msgid "%(name)s Release"
 msgstr "%(name)s 发行"
 
 #: templates/release_detail.html:13
-#: templates/languages/language_release.html:20
+#: templates/languages/language_release.html:34
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -1667,17 +1669,17 @@ msgstr ""
 "该模块的本次发行不是 GNOME SVN 库的一部分。请检查各模块的网页以查看应发送翻译"
 "到何处。"
 
-#: templates/release_detail.html:19 templates/teams/team_detail.html:22
-msgid "Release"
-msgstr "发行"
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "语言"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:22
+#: templates/release_detail.html:20 templates/teams/team_detail.html:26
 msgid "User Interface"
 msgstr "用户界面"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:22
-#: templates/teams/team_detail.html:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:27
 msgid "Graph"
 msgstr "图表"
 
@@ -1697,11 +1699,7 @@ msgstr "下载 POT 文件"
 msgid "Notices"
 msgstr "注意"
 
-#: templates/stats_show.html:30
-msgid "Language"
-msgstr "语言"
-
-#: templates/stats_show.html:30 vertimus/models.py:164
+#: templates/stats_show.html:30 vertimus/models.py:163
 msgid "Translated"
 msgstr "已翻译"
 
@@ -1712,6 +1710,27 @@ msgstr "显示文档图片"
 #: templates/admin/base_site.html:4
 msgid "Damned Lies site admin"
 msgstr "胡言乱语网站管理"
+
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:101
+msgid "No comment"
+msgstr "无评论"
+
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:21
+#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
+msgid "All modules"
+msgstr "全部模块"
+
+#: templates/languages/language_all_modules.html:24
+#: templates/languages/language_release.html:26
+msgid "Hide completed modules"
+msgstr "隐藏已完成的模块"
+
+#: templates/languages/language_all_modules.html:28
+#: templates/languages/language_release.html:30
+msgid "Show completed modules"
+msgstr "显示已完成的模块"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -1724,68 +1743,74 @@ msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME 已被翻译为 %(numb)s 种语言：\n"
 
-#: templates/languages/language_release.html:12
-msgid "Hide completed modules"
-msgstr "隐藏已完成的模块"
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "下载全部 po 文件"
 
-#: templates/languages/language_release.html:16
-msgid "Show completed modules"
-msgstr "显示已完成的模块"
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:55
+msgid "Module"
+msgstr "模块"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "分支"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "统计信息"
+
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "状态"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:55
+msgid "Date"
+msgstr "日期"
+
+#: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% 已翻译)"
 
-#: templates/languages/language_release_stats.html:83
+#: templates/languages/language_release_stats.html:99
 msgid "Error summary"
 msgstr "错误摘要"
-
-#: templates/languages/language_release_stats.html:92
-msgid "Download all po files"
-msgstr "下载全部 po 文件"
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "GNOME 贡献者"
 
-#: templates/people/person_base.html:13
+#: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "更改您的详细资料"
 
-#: templates/people/person_base.html:14
+#: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "更改您的密码"
 
-#: templates/people/person_base.html:15
+#: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "加入团队"
 
-#: templates/people/person_detail.html:12
+#: templates/people/person_detail.html:23
 msgid "Site Language:"
 msgstr "网站语言："
 
-#: templates/people/person_detail.html:21
+#: templates/people/person_detail.html:34
 msgid "Choose"
 msgstr "选择"
 
-#: templates/people/person_detail.html:27
+#: templates/people/person_detail.html:40
 msgid "Maintains:"
 msgstr "维护："
 
-#: templates/people/person_detail.html:38
+#: templates/people/person_detail.html:51
 msgid "Working on"
 msgstr "当前任务"
 
-#: templates/people/person_detail.html:42
-msgid "Date"
-msgstr "日期"
-
-#: templates/people/person_detail.html:42
-msgid "Module"
-msgstr "模块"
-
-#: templates/people/person_detail.html:42
+#: templates/people/person_detail.html:55
 msgid "State"
 msgstr "状态"
 
@@ -1829,10 +1854,12 @@ msgid "Old password:"
 msgstr "旧密码："
 
 #: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "新密码："
 
 #: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "更改我的密码"
 
@@ -1849,14 +1876,122 @@ msgid "Join"
 msgstr "加入"
 
 #: templates/people/person_team_membership.html:5
-#: templates/teams/team_detail.html:63
-msgid "Team membership"
-msgstr "团队成员"
+msgid "Member of teams"
+msgstr "小组成员"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "%(team_name)s团队的一员，身份是%(role_name)s"
+
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr ""
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "您确定要离开此小组？"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "密码重设完成"
+
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "您的密码已设定，请直接登录。"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "密码重设"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "输入新密码："
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"请输入两次您的新密码，以防您输错了密码。"
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "密码重设失败"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "密码重设成功"
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"忘记密码？请在下面输入您的电子邮件地址，我们将会通过邮件指导您如何重设密码。"
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "电子邮件地址："
+
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "重设我的密码"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "账户注册"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr "您可以在这里注册本网站。请仅当您想要为 GNOME 翻译做出贡献时才注册。"
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr "注册成功之后，您可以从您的个人页面加入现有的团队。"
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "通过 OpenID <strong>或</strong> 密码进行身份验证："
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "使用 OpenID 注册"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "使用密码注册"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "注册成功"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
+"注册成功。您现在将收到一封电子邮件，其中描述了您应该如何激活您的账户。"
 
 #: templates/teams/team_base.html:6
 msgid "Details"
@@ -1891,12 +2026,25 @@ msgstr "发送 E-mail 到邮件列表"
 msgid "Subscribe"
 msgstr "订阅"
 
-#: templates/teams/team_detail.html:10
+#: templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgstr ""
+
+#: templates/teams/team_detail.html:14
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s 翻译团队"
 
-#: templates/teams/team_detail.html:74
+#: templates/teams/team_detail.html:26
+msgid "Release"
+msgstr "发行"
+
+#: templates/teams/team_detail.html:69
+msgid "Team membership"
+msgstr "团队成员"
+
+#: templates/teams/team_detail.html:80
 msgid "Apply modifications"
 msgstr "应用修改"
 
@@ -1938,23 +2086,27 @@ msgstr "下载 PO 文件"
 msgid "Translated:"
 msgstr "已翻译："
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:66
+msgid "On-going activities in same module:"
+msgstr ""
+
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "操作历史"
 
-#: templates/vertimus/vertimus_detail.html:88
-msgid "No comment"
-msgstr "无评论"
+#: templates/vertimus/vertimus_detail.html:90
+msgid "diff with:"
+msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:97
+#: templates/vertimus/vertimus_detail.html:110
 msgid "New Action"
 msgstr "新操作"
 
-#: templates/vertimus/vertimus_detail.html:104
+#: templates/vertimus/vertimus_detail.html:117
 msgid "Submit"
 msgstr "提交"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:121
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -1971,6 +2123,26 @@ msgstr "&lt;- 返回操作"
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
 msgstr "注意：所有的文件都已经与最新的 POT 文件进行了合并。"
+
+#: vertimus/feeds.py:43
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr ""
+
+#: vertimus/feeds.py:52
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr ""
+
+#: vertimus/feeds.py:88
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr ""
+
+#: vertimus/feeds.py:97
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr ""
 
 #: vertimus/forms.py:30
 msgid "Action"
@@ -2005,39 +2177,54 @@ msgstr "此操作需要提供评论或者文件。"
 msgid "A file is needed for this action."
 msgstr "此操作需要提供文件。"
 
-#: vertimus/models.py:138
+#: vertimus/forms.py:71
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr ""
+
+#: vertimus/models.py:137
 msgid "Inactive"
 msgstr "普通"
 
-#: vertimus/models.py:151
+#: vertimus/models.py:150
 msgid "Translating"
 msgstr "正在翻译"
 
-#: vertimus/models.py:181
+#: vertimus/models.py:180
 msgid "Proofreading"
 msgstr "正在审阅"
 
+#. Translators: This is a status, not a verb
 #: vertimus/models.py:195
 msgid "Proofread"
 msgstr "已审"
 
-#: vertimus/models.py:208
+#: vertimus/models.py:210
 msgid "To Review"
 msgstr "待复查"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:222
 msgid "To Commit"
 msgstr "待提交"
 
-#: vertimus/models.py:233
+#: vertimus/models.py:237
 msgid "Committing"
 msgstr "正提交"
 
-#: vertimus/models.py:247
+#: vertimus/models.py:251
 msgid "Committed"
 msgstr "已提交"
 
-#: vertimus/models.py:418
+#: vertimus/models.py:339
+msgid "File in repository"
+msgstr "仓库中的文件"
+
+#: vertimus/models.py:346 vertimus/views.py:124 vertimus/views.py:130
+#: vertimus/views.py:140
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "由 %(name)s 在 %(date)s 上传的文件"
+
+#: vertimus/models.py:458
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2054,20 +2241,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:431 vertimus/models.py:481
+#: vertimus/models.py:471 vertimus/models.py:521
 msgid "Without comment"
 msgstr "没有评论"
 
-#: vertimus/models.py:433 vertimus/models.py:483
+#: vertimus/models.py:473 vertimus/models.py:523
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "这是一封 %s 自动发出的信件。"
 
-#: vertimus/models.py:440
+#: vertimus/models.py:480
 msgid "Write a comment"
 msgstr "留下评论"
 
-#: vertimus/models.py:469
+#: vertimus/models.py:509
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2083,60 +2270,77 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:491
+#: vertimus/models.py:531
 msgid "Reserve for translation"
 msgstr "占用此文件并进行翻译"
 
-#: vertimus/models.py:502
+#: vertimus/models.py:543
 msgid "Upload the new translation"
 msgstr "上传新翻译"
 
-#: vertimus/models.py:517
+#: vertimus/models.py:558
 msgid "Reserve for proofreading"
 msgstr "占用此文件进行审阅"
 
-#: vertimus/models.py:528
+#: vertimus/models.py:570
 msgid "Upload the proofread translation"
 msgstr "上传审阅后的翻译"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:544
+#: vertimus/models.py:586
 msgid "Ready for submission"
 msgstr "可以提交"
 
+#: vertimus/models.py:602
+msgid "Submit to repository"
+msgstr "提交到仓库"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "提交失败，错误信息为：“%s”"
+
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:561
+#: vertimus/models.py:626
 msgid "Reserve to submit"
 msgstr "即将提交"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:573
+#: vertimus/models.py:639
 msgid "Inform of submission"
 msgstr "提交通知"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:588
+#: vertimus/models.py:654
 msgid "Review required"
 msgstr "需要复查"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:693
 msgid "Backup the actions"
 msgstr "备份操作"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:732
 msgid "Undo the last state change"
 msgstr "撤消上次的状态"
 
-#: vertimus/views.py:122 vertimus/views.py:127
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "由 %(name)s 在 %(date)s 上传的文件"
-
-#: vertimus/views.py:133
+#: vertimus/views.py:146
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "%(lang)s 上次提交的文件"
 
-#: vertimus/views.py:136
+#: vertimus/views.py:149
 msgid "Latest POT file"
 msgstr "最新的 POT 文件"
+
+#~ msgid "JHBuild Documentation"
+#~ msgstr "JHBuild 文件"
+
+#~ msgid "GNOME 2.26 (Development)"
+#~ msgstr "GNOME 2.26 (开发版本)"
+
+#~ msgid "Browse CVS"
+#~ msgstr "浏览 CVS"
+
+#~ msgid "Browse SVN"
+#~ msgstr "浏览 SVN"
