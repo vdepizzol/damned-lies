@@ -13,9 +13,9 @@
 {% if module.comment %}
   <p>{% trans module.comment %}</p>
 {% else %}
-  {% ifnotequal module.vcs_root "http://svn.gnome.org/svn" %}
-  <p><em><img src="/media/img/warn.png" alt="Warning logo" />{% trans "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations." %}</em></p>
-  {% endifnotequal %}
+  {% if not module.has_standard_vcs %}
+  <p><em><img src="/media/img/warn.png" alt="Warning logo" /> {{ non_standard_repo_msg }}</em></p>
+  {% endif %}
 {% endif %}
 
 {% if module.homepage %}

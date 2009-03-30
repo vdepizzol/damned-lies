@@ -18,6 +18,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -102,6 +103,7 @@ def vertimus(request, branch, domain, language, stats=None):
         'domain': domain,
         'language': language,
         'module': branch.module,
+        'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'state': state,
         'action_history': action_history, 
         'action_form': action_form

@@ -83,6 +83,10 @@ class Module(models.Model):
         else:
             return self.name
     
+    def has_standard_vcs(self):
+        """ This function checks if the module is hosted in the standard VCS of the project """
+        return re.search(settings.VCS_HOME_REGEX, self.vcs_root) is not None
+        
     def get_bugs_i18n_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
             return utils.url_join(self.bugs_base,

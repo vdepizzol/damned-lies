@@ -1,6 +1,7 @@
 # Django settings for djamnedlies project.
 
 import os
+gettext_noop = lambda s: s
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -73,6 +74,11 @@ MEDIA_URL = '/media/'
 # Local directory path for VCS checkout
 SCRATCHDIR = ""
 POTDIR = os.path.join(SCRATCHDIR, "POT")
+
+# The regex is used to determine if the module is in the standard VCS of the project
+VCS_HOME_REGEX = "svn\.gnome\.org"
+VCS_HOME_WARNING = gettext_noop(u"This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations.")
+
 # By default, Django stores files locally, using the MEDIA_ROOT and MEDIA_URL settings
 UPLOAD_DIR = 'upload'
 UPLOAD_BACKUP_DIR = 'upload-backup'

@@ -1,3 +1,14 @@
+2009-03-30  Claude Paroz  <claude@2xlibre.net>
+
+	* settings_sample.py: Add settings for defining the project VCS.
+	* stats/models.py: New method to determine if module is hosted in project
+	VCS.
+	* stats/views.py:
+	* vertimus/views.py: Pass non_standard_repo_msg to the templates.
+	* templates/module_detail.html:
+	* templates/vertimus/vertimus_detail.html: Use new method of specifying if
+	module is hosted on project VCS.
+
 2009-03-24  Claude Paroz  <claude@2xlibre.net>
 
 	* templates/vertimus/vertimus_detail.html:

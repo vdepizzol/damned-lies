@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2009 Claude Paroz <claude@2xlibre.net>.
 #
 # This file is part of Damned Lies.
 #
@@ -18,11 +18,13 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from django.conf import settings
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.http import HttpResponse
 from django.template import RequestContext
+from django.utils.translation import ugettext as _
 
 from stats.models import Statistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
@@ -44,6 +46,7 @@ def module(request, module_name):
     context = {
         'pageSection':  "module",
         'module': mod,
+        'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'can_edit_branches': mod.can_edit_branches(request.user),
     }
     return render_to_response('module_detail.html', context, context_instance=RequestContext(request))
