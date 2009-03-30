@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-23 17:05+0000\n"
-"PO-Revision-Date: 2009-03-23 18:47+0100\n"
+"POT-Creation-Date: 2009-03-26 07:33+0000\n"
+"PO-Revision-Date: 2009-03-26 16:47+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -992,7 +992,6 @@ msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
 #: database-content.py:237
-#| msgid "GNOME 2.14 (old stable)"
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
@@ -1009,7 +1008,6 @@ msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
 #: database-content.py:241
-#| msgid "GNOME 2.24 (stable)"
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
@@ -1235,7 +1233,7 @@ msgstr "actualizado el %(date)s"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:997 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:71
+#: templates/vertimus/vertimus_detail.html:80
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
@@ -1745,7 +1743,7 @@ msgid "Damned Lies site admin"
 msgstr "Administrador de Malditas mentiras"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:92
+#: templates/vertimus/vertimus_detail.html:101
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2134,23 +2132,27 @@ msgstr "Descargar el archivo PO"
 msgid "Translated:"
 msgstr "Traducido:"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:66
+msgid "On-going activities in same module:"
+msgstr "Actividades en desarrollo sobre el mismo módulo:"
+
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "Histórico de acciones"
 
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:90
 msgid "diff with:"
 msgstr "diff con:"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:110
 msgid "New Action"
 msgstr "Acción nueva"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:117
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/vertimus/vertimus_detail.html:112
+#: templates/vertimus/vertimus_detail.html:121
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2265,8 +2267,8 @@ msgstr "Subido"
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
-#: vertimus/views.py:138
+#: vertimus/models.py:346 vertimus/views.py:124 vertimus/views.py:130
+#: vertimus/views.py:140
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
@@ -2372,12 +2374,12 @@ msgstr "Respaldar las acciones"
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
-#: vertimus/views.py:144
+#: vertimus/views.py:146
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
-#: vertimus/views.py:147
+#: vertimus/views.py:149
 msgid "Latest POT file"
 msgstr "Último archivo POT"
 
