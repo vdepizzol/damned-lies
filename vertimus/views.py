@@ -122,7 +122,11 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
         # The merged file isn't availabe yet
         file_path_1 = action_1.file.path
 
-    content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
+    try:
+        content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
+    except UnicodeDecodeError:
+        return render_to_response('error.html', 
+                                  {'error': _("Error: The file %s contains invalid characters.") % file_path_1.split('/')[-1]})
     descr_1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_1.person.name,
                                                              'date': action_1.created }
     if action_id_2 not in (None, "0"):
@@ -150,8 +154,11 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
                 stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
                 descr_2 = _("Latest POT file")
             file_path_2 = stats.po_path()
-
-    content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
+    try:
+        content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
+    except UnicodeDecodeError:
+        return render_to_response('error.html', 
+                                  {'error': _("Error: The file %s contains invalid characters.") % file_path_2.split('/')[-1]})
     d = difflib.HtmlDiff(wrapcolumn=80)
     diff_content = d.make_table(content_2, content_1,
                                 descr_2, descr_1, context=True)
