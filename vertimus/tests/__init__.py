@@ -131,7 +131,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RT', 'WC', 'IC'])
+            self.assertEqual(action_names, ['RT', 'WC', None, 'IC'])
         
     def test_state_translating(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pt)
@@ -145,7 +145,7 @@ class VertimusTests(TestCase):
         
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['WC', 'IC'])
+            self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
 
         # Same person
         action_names = [a.name for a in state.get_available_actions(self.pt)]
@@ -168,7 +168,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC', 'IC'])
+            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC', None, 'IC', 'BA'])
 
     def test_state_proofreading(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
@@ -182,7 +182,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['WC', 'IC'])
+            self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
 
         # Same person and reviewer
         action_names = [a.name for a in state.get_available_actions(self.pr)]
@@ -203,7 +203,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['TC', 'RP', 'TR', 'WC', 'IC'])
+            self.assertEqual(action_names, ['TC', 'RP', 'TR', 'WC', None, 'IC', 'BA'])
 
     def test_state_to_review(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pt)
@@ -220,7 +220,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RT', 'WC', 'IC'])
+            self.assertEqual(action_names, ['RT', 'WC', None, 'IC', 'BA'])
 
     def test_state_to_commit(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
@@ -234,7 +234,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RC', 'TR', 'WC', 'IC'])
+            self.assertEqual(action_names, ['RC', 'TR', 'WC', None, 'IC', 'BA'])
 
     def test_state_committing(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pc)
@@ -247,7 +247,7 @@ class VertimusTests(TestCase):
             self.assertEqual(action_names, ['WC'])
 
         action_names = [a.name for a in state.get_available_actions(self.pcoo)]
-        self.assertEqual(action_names, ['WC', 'IC'])
+        self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
 
         action_names = [a.name for a in state.get_available_actions(self.pc)]
         self.assertEqual(action_names, ['IC', 'TR', 'UNDO', 'WC'])
@@ -264,7 +264,7 @@ class VertimusTests(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['BA', 'WC', 'IC'])
+            self.assertEqual(action_names, ['BA', 'WC', None, 'IC'])
 
     def test_action_wc(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()

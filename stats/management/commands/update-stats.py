@@ -69,7 +69,7 @@ class Command(BaseCommand):
                             self.get_lock_for_module(mod.name, branch.name)
                             branch.update_stats(options['force'])
                         except:
-                            print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
+                            print "Error while updating stats for %s (branch '%s')" % (mod.name, branch.name)
                         finally:
                             self.release_lock_for_module(mod.name, branch.name)
         else:

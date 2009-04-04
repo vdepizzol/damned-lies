@@ -26,10 +26,19 @@ from django.utils.translation import ugettext_lazy as _
 from vertimus.models import ActionAbstract
 from stats.utils import po_file_stats
 
+class ActionWidget(forms.Select):
+    """ Custom widget to disable the separator option (containing "--------") """ 
+    def render_options(self, choices, selected_choices):
+        options = super(ActionWidget, self).render_options(choices, selected_choices)
+        options = options.replace("<option value=\"None\">--------</option>",
+                                  "<option disabled='disabled'>--------</option>")
+        return options
+
 class ActionForm(forms.Form):
     action = forms.ChoiceField(label=_("Action"),
 #        help_text="Choose an action you want to apply",
-        choices=())
+        choices=(),
+        widget=ActionWidget)
     comment = forms.CharField(label=_("Comment"),
 #        help_text="Leave a comment to explain your action",
         max_length=1000,

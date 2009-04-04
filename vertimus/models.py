@@ -102,7 +102,9 @@ class StateAbstract(object):
     def _get_available_actions(self, person, action_names):
         action_names.append('WC')
         if person.is_committer(self.language.team) and 'IC' not in action_names:
-            action_names.append('IC')
+            action_names.extend(('Separator', 'IC'))
+            if self.name not in ('None', 'Committed'):
+                action_names.append('BA')
         return [eval('Action' + action_name)() for action_name in action_names]
 
     def apply_action(self, action, person, comment=None, file=None):
@@ -747,6 +749,11 @@ class ActionUNDO(ActionAbstract):
                 return action._new_state()
         return StateNone()
 
+class ActionSeparator(object):
+    """ Fake action to add a separator in action menu """
+    name = None
+    description = "--------"
+    
 def update_uploaded_files(sender, **kwargs):
     """Callback to handle pot_file_changed signal"""
     actions = ActionDb.objects.filter(state_db__branch=kwargs['branch'],
