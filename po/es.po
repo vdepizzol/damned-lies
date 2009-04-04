@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-01 07:08+0000\n"
-"PO-Revision-Date: 2009-04-03 20:29+0200\n"
+"POT-Creation-Date: 2009-04-03 18:34+0000\n"
+"PO-Revision-Date: 2009-04-04 13:19+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -964,50 +964,54 @@ msgstr ""
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
 #: database-content.py:230
+msgid "This is a clone of the official version from the freedektop repository"
+msgstr "Este es un clon de la versión oficial del repositorio de freedesktop"
+
+#: database-content.py:231
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
@@ -2267,8 +2271,8 @@ msgstr "Subido"
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:346 vertimus/views.py:126 vertimus/views.py:132
-#: vertimus/views.py:142
+#: vertimus/models.py:346 vertimus/views.py:130 vertimus/views.py:136
+#: vertimus/views.py:146
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
@@ -2374,19 +2378,19 @@ msgstr "Respaldar las acciones"
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
-#: vertimus/views.py:148
+#: vertimus/views.py:129 vertimus/views.py:161
+#, python-format
+msgid "Error: The file %s contains invalid characters."
+msgstr "Error: El archivo %s contiene caracteres no válidos."
+
+#: vertimus/views.py:152
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
-#: vertimus/views.py:151
+#: vertimus/views.py:155
 msgid "Latest POT file"
 msgstr "Último archivo POT"
-
-#: vertimus/views.py:158
-#, python-format
-msgid "Error: The file %s contains invalid characters."
-msgstr "Error: El archivo %s contiene caracteres no válidos."
 
 #~ msgid "GNOME 2.26 (Development)"
 #~ msgstr "GNOME 2.26 (desarrollo)"
