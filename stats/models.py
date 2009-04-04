@@ -155,6 +155,8 @@ class Branch(models.Model):
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
         self.checkout_lock = threading.Lock()
+        self._ui_stats = None
+        self._doc_stats = None
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
@@ -226,15 +228,28 @@ class Branch(models.Model):
             os.makedirs(dirname)
         return dirname
     
-    def get_stats(self, typ):
-        """ Get statistics list of type typ ('ui' or 'doc'), in a dict of lists, key is domain.name (POT in 1st position)"""
-        stats = {}
+    def get_stats(self, typ, mandatory_langs=[]):
+        """ Get statistics list of type typ ('ui' or 'doc'), in a dict of lists, key is domain.name (POT in 1st position)
+            stats = {'po':      [potstat, polang1, polang2, ...],
+                     'po-tips': [potstat, polang1, polang2, ...]}
+            mandatory_langs is a list of language objects whose stats should be added even if no translation exists.
+        """
+        stats = {}; stats_langs = {}
         pot_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=True, domain__dtype=typ)
         for stat in pot_stats.all():
             stats[stat.domain.name] = [stat,]
+            stats_langs[stat.domain.name] = []
         tr_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=False, domain__dtype=typ)
         for stat in tr_stats.all():
             stats[stat.domain.name].append(stat)
+            stats_langs[stat.domain.name].append(stat.language)
+        # Check if all mandatory languages are present
+        for lang in mandatory_langs:
+            for domain in stats.keys():
+                if lang not in stats_langs[domain]:
+                    fake_stat = FakeStatistics(self.module, typ, lang)
+                    fake_stat.untranslated = stats[domain][0].untranslated
+                    stats[domain].append(fake_stat)
         # Sort
         for key, doms in stats.items():
             doms.sort(self.compare_stats)
@@ -252,11 +267,15 @@ class Branch(models.Model):
                 res = cmp(a.get_lang(), b.get_lang())
         return res  
     
-    def get_doc_stats(self):
-        return self.get_stats('doc')
+    def get_doc_stats(self, mandatory_langs=[]):
+        if not self._doc_stats:
+            self._doc_stats = self.get_stats('doc', mandatory_langs)
+        return self._doc_stats
 
-    def get_ui_stats(self):
-        return self.get_stats('ui')
+    def get_ui_stats(self, mandatory_langs=[]):
+        if not self._ui_stats:
+            self._ui_stats = self.get_stats('ui', mandatory_langs)
+        return self._ui_stats
     
     def update_stats(self, force):
         """ Update statistics for all po files from the branch """
@@ -1210,9 +1229,10 @@ class Statistics(models.Model):
 class FakeStatistics(object):
     """ This is a fake statistics class where a summary value is needed for a multi-domain module
         This is used in get_lang_stats for the language-release-stats template """
-    def __init__(self, module, dtype):
+    def __init__(self, module, dtype, lang=None):
         self.module = module
         self.dtype = dtype
+        self.language = lang
         self.translated = 0
         self.fuzzy = 0
         self.untranslated = 0
@@ -1226,7 +1246,19 @@ class FakeStatistics(object):
     
     def is_fake(self):
         return True
-        
+
+    def get_lang(self):
+        if self.language:
+            return _("%(lang_name)s (%(lang_locale)s)") % { 
+                'lang_name': _(self.language.name),
+                'lang_locale': self.language.locale
+            }
+        else:
+            return "pot file"
+
+    def get_translationstat(self):
+        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
+
     def pot_size(self):
         return int(self.translated) + int(self.fuzzy) + int(self.untranslated)
     def tr_percentage(self):
@@ -1248,7 +1280,8 @@ class FakeStatistics(object):
         return self.module.name
     def module_description(self):
         return self.module.description
-       
+    def most_important_message(self):
+        return None
 
 class ArchivedStatistics(models.Model):
     module = models.TextField()

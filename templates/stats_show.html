@@ -1,22 +1,22 @@
 {% load i18n %}
 
 {% for dname, stat in stats.items %}
-  {% with stat|first as stat1 %} 
-  <h3>{% trans stat1.domain.get_description %}
-  {% ifnotequal stat1.domain.directory 'help' %}
-    {% ifnotequal stat1.domain.directory 'po' %}
+  {% with stat|first as pot_stat %} 
+  <h3>{% trans pot_stat.domain.get_description %}
+  {% ifnotequal pot_stat.domain.directory 'help' %}
+    {% ifnotequal pot_stat.domain.directory 'po' %}
     <br />
-    <span class="path">{{ stat1.domain.directory }}</span>
+    <span class="path">{{ pot_stat.domain.directory }}</span>
     {% endifnotequal %}
   {% endifnotequal %}
   </h3>
-  <a href="{{ stat1.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
-  {{ stat1.pot_text }}
+  <a href="{{ pot_stat.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
+  {{ pot_stat.pot_text }}
   <!-- This is the title of the section that lists notices about a module -->
-  {% if stat1.information_set.all %}
+  {% if pot_stat.information_set.all %}
   <h4>{% trans "Notices" %}</h4>
   <table>
-    {% for msg in stat1.information_set.all %}
+    {% for msg in pot_stat.information_set.all %}
     <tr>
       <td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.type }}" /></td>
       <td>{{ msg.get_description|safe }}</td>
@@ -28,7 +28,7 @@
   <table class="stats">
     <thead><tr>
         <th>{% trans "Language" %}</th><th>{% trans "Translated" %}</th>
-        {% if stat1.fig_count %}
+        {% if pot_stat.fig_count %}
         <th></th>
         {% endif %}
         <th>{% trans "Graph" %}</th>
@@ -37,7 +37,7 @@
     {% for line in stat %}
     {% if not forloop.first %}
     <tr>
-      <td class="leftcell"><a href="{% url vertimus-names-view module.name branch.name stat1.domain.name line.language.locale %}">{{ line.get_lang }}</a>
+      <td class="leftcell"><a href="{% url vertimus-names-view module.name branch.name pot_stat.domain.name line.language.locale %}">{{ line.get_lang }}</a>
         {% with line.most_important_message as msg %} 
         {% if msg %}
         <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.type }}" />
@@ -45,8 +45,8 @@
         {% endwith %}
       </td>
       <td>{{ line.get_translationstat|safe }}</td>
-      {% if stat1.fig_count %}
-      <td><a href="{% url stats.views.docimages module_name=module.name,potbase=stat1.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
+      {% if pot_stat.fig_count %}
+      <td><a href="{% url stats.views.docimages module_name=module.name,potbase=pot_stat.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
           <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
       </td>
       {% endif %}

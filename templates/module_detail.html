@@ -46,10 +46,10 @@
   </tr>
 </table>
 
-{% if module.branch_set.all %}
+{% if branches %}
   <!-- Links to branches of module -->
   <p><strong>{% trans "Branches:" %}</strong>
-  {% for branch in module.get_branches %}
+  {% for branch in branches %}
     {% ifnotequal forloop.counter 1 %} - {% endifnotequal %}
     <a href="#{{ branch.name }}">{{ branch.name }}</a>
   {% endfor %}
@@ -59,7 +59,7 @@
   </p>
 
   <!-- Main loop through branches -->
-  {% for branch in module.get_branches %}
+  {% for branch in branches %}
     <h2><a name="{{ branch.name }}"></a>{{ branch.name }}
     {% if branch.get_vcs_web_url %}
       <small>(<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse Repository" %}</a>)</small>

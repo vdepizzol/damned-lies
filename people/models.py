@@ -118,5 +118,12 @@ class Person(User):
         except:
             return False
 
+    def get_languages(self):
+        all_teams = [role.team for role in self.role_set.select_related('team')]
+        all_languages = []
+        for team in all_teams:
+            all_languages.extend(team.get_languages())
+        return all_languages
+
     # Related names
     # - module: maintains_modules

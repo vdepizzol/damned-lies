@@ -1,5 +1,18 @@
 2009-04-04  Claude Paroz  <claude@2xlibre.net>
 
+	* people/models.py: get_languages allows to get all languages from all
+	teams the user is subscribed to.
+	* stats/models.py: Pass a list of languages to stat generation so as they
+	are always present.
+	* stats/views.py: Generate and cache branch stats in the view.
+	* templates/module_detail.html: branches is now a context variable.
+	* templates/stats_show.html: stat1 renamed to clearer pot_stat.
+	The authenticated user's language(s) are now always shown on the module
+	detail page, even when no po file have been committed.
+	Fixes bug #577700.
+
+2009-04-04  Claude Paroz  <claude@2xlibre.net>
+
 	* media/css/main.css: Slightly reduce spacing on titles.
 	* templates/feeds/actions_title.html: Description is more useful than
 	state.

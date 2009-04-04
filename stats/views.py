@@ -43,9 +43,18 @@ def modules(request):
 
 def module(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
+    branches = mod.get_branches()
+    if request.user.is_authenticated():
+        person = request.user.person
+        langs = person.get_languages()
+        for branch in branches:
+            branch.get_ui_stats(mandatory_langs=langs)
+            branch.get_doc_stats(mandatory_langs=langs)
+    
     context = {
         'pageSection':  "module",
         'module': mod,
+        'branches': branches,
         'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'can_edit_branches': mod.can_edit_branches(request.user),
     }
