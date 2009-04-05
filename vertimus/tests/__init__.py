@@ -34,13 +34,13 @@ from stats.models import Module, Branch, Release, Category, Domain
 from vertimus.models import *
 from vertimus.forms import ActionForm
 
-class VertimusTests(TestCase):
+class VertimusTest(TestCase):
 
     def setUp(self):
         self.pn = Person(first_name='John', last_name='Nothing',
             email='jn@devnull.com', username= 'jn')
         self.pn.save()
-        
+
         self.pt = Person(first_name='John', last_name='Translator',
             email='jt@tf1.com', username= 'jt')
         self.pt.save()
@@ -83,7 +83,7 @@ class VertimusTests(TestCase):
         self.m.save()
 
         Branch.checkout_on_creation = False
-        self.b = Branch(name='gnome-2-24', module=self.m) 
+        self.b = Branch(name='gnome-2-24', module=self.m)
         # Block the update of Statistics by the thread
         self.b.save(update_statistics=False)
 
@@ -99,7 +99,7 @@ class VertimusTests(TestCase):
             description='UI translations',
             dtype='ui', directory='po')
         self.d.save()
-        
+
     def tearDown(self):
         self.d.delete()
         self.c.delete()
@@ -132,7 +132,7 @@ class VertimusTests(TestCase):
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
             self.assertEqual(action_names, ['RT', 'WC', None, 'IC'])
-        
+
     def test_state_translating(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pt)
         sdb.name = 'Translating'
@@ -142,7 +142,7 @@ class VertimusTests(TestCase):
         for p in (self.pn, self.pr):
             action_names = [a.name for a in state.get_available_actions(p)]
             self.assertEqual(action_names, ['WC'])
-        
+
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
             self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
@@ -156,7 +156,7 @@ class VertimusTests(TestCase):
         sdb.name = 'Translated'
         state = sdb.get_state()
         self.assert_(isinstance(state, StateTranslated))
-        
+
         action_names = [a.name for a in state.get_available_actions(self.pn)]
         self.assertEqual(action_names, ['WC'])
 
@@ -175,7 +175,7 @@ class VertimusTests(TestCase):
         sdb.name = 'Proofreading'
         state = sdb.get_state()
         self.assert_(isinstance(state, StateProofreading))
-        
+
         for p in (self.pn, self.pt):
             action_names = [a.name for a in state.get_available_actions(p)]
             self.assertEqual(action_names, ['WC'])
@@ -187,7 +187,7 @@ class VertimusTests(TestCase):
         # Same person and reviewer
         action_names = [a.name for a in state.get_available_actions(self.pr)]
         self.assertEqual(action_names, ['UP', 'TR', 'TC', 'UNDO', 'WC'])
-        
+
     def test_state_proofread(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
         sdb.name = 'Proofread'
@@ -356,7 +356,7 @@ class VertimusTests(TestCase):
         state.save()
 
         self.assert_(not os.access(file_path, os.F_OK))
-        
+
         # Remove test file
         backup_action = ActionDbBackup.objects.get(comment="Done.")
         backup_file_path = os.path.join(settings.MEDIA_ROOT, backup_action.file.name)
@@ -368,16 +368,20 @@ class VertimusTests(TestCase):
         state.save()
 
         action = ActionAbstract.new_by_name('TR')
-        new_state = state.apply_action(action, self.pc, "Bad work :-/")
-        new_state.save()
+        state = state.apply_action(action, self.pc, "Bad work :-/")
+        state.save()
 
     def test_action_ba(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Committed', person=self.pr).get_state()
         state.save()
 
         action = ActionAbstract.new_by_name('BA')
-        state = state.apply_action(action, self.pc, comment="I don't want to disappear")
+        state = state.apply_action(action, self.pc, comment="I don't want to disappear :)")
         state.save()
+
+        sdb = StateDb.objects.get(branch=self.b, domain=self.d, language=self.l)
+        state = sdb.get_state()
+        self.assert_(isinstance(state, StateNone))
 
     def test_action_undo(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()
@@ -392,11 +396,11 @@ class VertimusTests(TestCase):
         state.save()
 
         self.assertEqual(state.name, 'None')
-        
+
         action = ActionAbstract.new_by_name('RT')
         state = state.apply_action(action, self.pt, "Translating")
         state.save()
-        
+
         action = ActionAbstract.new_by_name('UT')
         state = state.apply_action(action, self.pt, "Translated")
         state.save()
@@ -410,31 +414,31 @@ class VertimusTests(TestCase):
         state.save()
 
         self.assertEqual(state.name, 'Translated')
-            
+
         action = ActionAbstract.new_by_name('RT')
         state = state.apply_action(action, self.pt, "Translating 1")
         state.save()
-        
+
         action = ActionAbstract.new_by_name('UNDO')
         state = state.apply_action(action, self.pt, "Undo 1")
         state.save()
-        
+
         action = ActionAbstract.new_by_name('RT')
         state = state.apply_action(action, self.pt, "Translating 2")
         state.save()
-        
+
         action = ActionAbstract.new_by_name('UNDO')
         state = state.apply_action(action, self.pt, "Undo 2")
         state.save()
-        
+
         self.assertEqual(state.name, 'Translated')
-        
+
     def test_uploaded_file_validation(self):
         # Test a non valid po file
         post_content = QueryDict('action=WC&comment=Test1')
         post_file = MultiValueDict({'file': [SimpleUploadedFile('filename.po', 'Not valid po file content')]})
         form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
-        
+
         self.assert_('file' in form.errors)
 
         # Test a valid po file
@@ -443,8 +447,45 @@ class VertimusTests(TestCase):
         form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
 
         self.assert_(form.is_valid())
-        
+
         # Test form without file
         form = ActionForm([('WC', u'Write a comment')], post_content)
         self.assert_(form.is_valid())
 
+    def test_mysql(self):
+        # Copied from test_action_undo() with minor changes
+        state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()
+        state.save()
+
+        action = ActionAbstract.new_by_name('RT')
+        state = state.apply_action(action, self.pr, "Reserved!")
+        state.save()
+
+        action = ActionAbstract.new_by_name('UNDO')
+        state = state.apply_action(action, self.pr, "Ooops! I don't want to do that. Sorry.")
+        state.save()
+
+        action = ActionAbstract.new_by_name('RT')
+        state = state.apply_action(action, self.pr, "Translating")
+        state.save()
+
+        action = ActionAbstract.new_by_name('UT')
+        state = state.apply_action(action, self.pr, "Translated")
+        state.save()
+
+        action = ActionAbstract.new_by_name('RP')
+        state = state.apply_action(action, self.pr, "Proofreading")
+        state.save()
+
+        action = ActionAbstract.new_by_name('UNDO')
+        state = state.apply_action(action, self.pr, "Ooops! I don't want to do that. Sorry.")
+        state.save()
+
+        actions_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(name='WC').order_by('-id')
+
+        # So the last action is UNDO
+        self.assert_(isinstance(actions_db[0].get_action(), ActionUNDO))
+
+        # Here be dragons! A call to len() workaround the Django/MySQL bug!
+        len(actions_db)
+        self.assert_(isinstance(actions_db[0].get_action(), ActionUNDO))
