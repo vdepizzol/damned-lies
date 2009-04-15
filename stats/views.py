@@ -60,6 +60,16 @@ def module(request, module_name):
     }
     return render_to_response('module_detail.html', context, context_instance=RequestContext(request))
 
+def module_branch(request, module_name, branch_name):
+    """ This view is used to dynamically load a specific branch stats (jquery.load) """
+    mod = get_object_or_404(Module, name=module_name)
+    branch = mod.branch_set.get(name=branch_name)
+    context = {
+        'module': mod,
+        'branch': branch,
+    }
+    return render_to_response('branch_detail.html', context, context_instance=RequestContext(request))
+    
 @login_required
 def module_edit_branches(request, module_name):
     mod = get_object_or_404(Module, name=module_name)

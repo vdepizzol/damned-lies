@@ -1,8 +1,34 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load stats_extras %}
 
 {% block title %}
 {% blocktrans with module.get_description as name %}Module Statistics: {{ name }}{% endblocktrans %}
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript">
+$(document).ready(function() { 
+        $(".branch").click(function(event) {
+            event.preventDefault();
+            branch_div = $("#div-"+this.id);
+            is_visible = branch_div.is(':visible');
+            if (is_visible) {
+                branch_div.hide();
+                $(this).children('img').attr("src", "{{ MEDIA_URL }}img/closed.png");
+            } else {
+                if (branch_div.attr("class") == "empty") {
+                    // Load the branch stats dynamically
+                    branch_div.load("/module/{{ module.name }}/branch/"+this.id+"/");
+                    branch_div.attr("class", "loaded");
+                }
+                branch_div.show();
+                $(this).children('img').attr("src", "{{ MEDIA_URL }}img/open.png");
+            }
+        });
+    }
+);
+</script>
 {% endblock %}
 
 {% block content %}
@@ -60,39 +86,24 @@
 
   <!-- Main loop through branches -->
   {% for branch in branches %}
-    <h2><a name="{{ branch.name }}"></a>{{ branch.name }}
+    <h2>
+    {% ifless forloop.counter 3 %}
+      <a href="." class="branch" id="{{ branch.name }}"><img src="{{ MEDIA_URL }}img/open.png" /></a>
+    {% else %}
+      <a href="." class="branch" id="{{ branch.name }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>
+    {% endifless %}
+     <a name="{{ branch.name }}"></a>{{ branch.name }}
     {% if branch.get_vcs_web_url %}
       <small>(<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse Repository" %}</a>)</small>
     {% endif %}
     </h2>
-    {% if branch.release_cat.release.string_frozen %}
-      <p>{% trans "This branch is currently string-frozen." %}</p>
-    {% endif %}
-
-    <table width="100%">
-      <tr>
-        <td valign="top"><!-- split to two columns -->
-          {% with branch.get_ui_stats as stats %}
-          {% if stats|length %}
-          {% if not stats|length_is:"1" %}
-          <h3>{% trans "Translation" %}</h3>
-          {% endif %}
-          {% include "stats_show.html" %}
-          {% endif %}
-          {% endwith %}
-        </td>
-        <td valign="top"><!-- split to two columns -->
-          {% with branch.get_doc_stats as stats %}
-          {% if stats|length %}
-          {% if not stats|length_is:"1" %}
-          <h3>{% trans "Documentation" %}</h3>
-          {% endif %}
-          {% include "stats_show.html" %}
-          {% endif %}
-          {% endwith %}
-        </td>
-      </tr>
-    </table>
+    {% ifless forloop.counter 3 %}
+      <div id="div-{{ branch.name }}" class="loaded">
+      {% include "branch_detail.html" %}
+      </div>
+    {% else %}
+      <div id="div-{{ branch.name }}" class="empty" style="display:none;"></div>
+    {% endifless %}
 
   {% endfor %}
 {% endif %}

@@ -1,3 +1,22 @@
+2009-04-15  Claude Paroz  <claude@2xlibre.net>
+
+	* media/img/open.png:
+	* media/img/closed.png: triangle icons to indicate the hidden/displayed
+	states.
+	* stats/templatetags/stats_extras.py: Add a custom tag to be able to do an
+	'if less than' in templates.
+	* stats/views.py:
+	* templates/branch_detail.html: Separate the branch stats to be able to
+	load them dynamically from the module_detail template.
+	* templates/module_detail.html: Only two first branch stats are displayed
+	initially. Other branch stats can be loaded dynamically (jquery).
+	* urls.py: Add the url for the single branch view.
+	* templates/languages/language_all_modules.html:
+	* templates/languages/language_release.html:
+	* templates/people/person_detail.html:
+	* templates/release_compare.html:
+	* templates/base.html: Add the jquery include in the base.
+
 2009-04-05  Stéphane Raimbault  <stephane.raimbault@gmail.com>
 
 	* vertimus/tests/__init__.py: Added a failing test for MySQL.

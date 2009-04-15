@@ -1,0 +1,31 @@
+{% load i18n %}
+
+{% if branch.has_string_frozen %}
+  <p>{% trans "This branch is currently string-frozen." %}</p>
+{% endif %}
+
+<table width="100%">
+  <tr>
+    <td valign="top"><!-- split to two columns -->
+      {% with branch.get_ui_stats as stats %}
+      {% if stats|length %}
+      {% if not stats|length_is:"1" %}
+      <h3>{% trans "Translation" %}</h3>
+      {% endif %}
+      {% include "stats_show.html" %}
+      {% endif %}
+      {% endwith %}
+    </td>
+    <td valign="top"><!-- split to two columns -->
+      {% with branch.get_doc_stats as stats %}
+      {% if stats|length %}
+      {% if not stats|length_is:"1" %}
+      <h3>{% trans "Documentation" %}</h3>
+      {% endif %}
+      {% include "stats_show.html" %}
+      {% endif %}
+      {% endwith %}
+    </td>
+  </tr>
+</table>
+
