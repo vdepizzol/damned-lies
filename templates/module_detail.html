@@ -86,11 +86,11 @@ $(document).ready(function() {
 
   <!-- Main loop through branches -->
   {% for branch in branches %}
-    <h2>
+    <h2><a href="." class="branch" id="{{ branch.name }}">
     {% ifless forloop.counter 3 %}
-      <a href="." class="branch" id="{{ branch.name }}"><img src="{{ MEDIA_URL }}img/open.png" /></a>
+      <img src="{{ MEDIA_URL }}img/open.png" /></a>
     {% else %}
-      <a href="." class="branch" id="{{ branch.name }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>
+      <img src="{{ MEDIA_URL }}img/closed.png" /></a>
     {% endifless %}
      <a name="{{ branch.name }}"></a>{{ branch.name }}
     {% if branch.get_vcs_web_url %}

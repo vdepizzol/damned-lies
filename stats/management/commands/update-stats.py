@@ -19,11 +19,11 @@ class Command(BaseCommand):
     output_transaction = False
 
     def handle(self, *args, **options):
-        if len(args) <= 2:
-            if len(args) == 2:
-                # Update the specific branch of a module
-                module_arg = args[0]
-                branch_arg = args[1]
+        if len(args) >= 2:
+            # Update the specific branch(es) of a module
+            module_arg = args[0]
+            branch_list = args[1:]
+            for branch_arg in branch_list:
                 if branch_arg == "trunk":
                     branch_arg = "HEAD"
                 try:
@@ -41,39 +41,37 @@ class Command(BaseCommand):
                     print >> sys.stderr, "Error during updating, mail sent to admins"
                 finally:
                     self.release_lock_for_module(module_arg, branch_arg)
-                    
-            elif len(args) == 1:
-                # Update all branches of a module
-                module_arg = args[0]
-                print "Updating stats for %s..." % (module_arg)
-                branches = Branch.objects.filter(module__name=module_arg)
+                
+        elif len(args) == 1:
+            # Update all branches of a module
+            module_arg = args[0]
+            print "Updating stats for %s..." % (module_arg)
+            branches = Branch.objects.filter(module__name=module_arg)
+            for branch in branches.all():
+                try:
+                    self.get_lock_for_module(module_arg, branch.name)
+                    branch.update_stats(options['force'])
+                except: 
+                    print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
+                finally:
+                    self.release_lock_for_module(module_arg, branch.name)
+        else:
+            # Update all modules
+            if options['non-gnome']:
+                modules = Module.objects.exclude(vcs_root='http://svn.gnome.org/svn')
+            else:
+                modules = Module.objects.all()
+            for mod in modules:
+                print "Updating stats for %s..." % (mod.name)
+                branches = Branch.objects.filter(module__name=mod)
                 for branch in branches.all():
                     try:
-                        self.get_lock_for_module(module_arg, branch.name)
+                        self.get_lock_for_module(mod.name, branch.name)
                         branch.update_stats(options['force'])
-                    except: 
-                        print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
+                    except:
+                        print "Error while updating stats for %s (branch '%s')" % (mod.name, branch.name)
                     finally:
-                        self.release_lock_for_module(module_arg, branch.name)
-            else:
-                # Update all modules
-                if options['non-gnome']:
-                    modules = Module.objects.exclude(vcs_root='http://svn.gnome.org/svn')
-                else:
-                    modules = Module.objects.all()
-                for mod in modules:
-                    print "Updating stats for %s..." % (mod.name)
-                    branches = Branch.objects.filter(module__name=mod)
-                    for branch in branches.all():
-                        try:
-                            self.get_lock_for_module(mod.name, branch.name)
-                            branch.update_stats(options['force'])
-                        except:
-                            print "Error while updating stats for %s (branch '%s')" % (mod.name, branch.name)
-                        finally:
-                            self.release_lock_for_module(mod.name, branch.name)
-        else:
-            return "Too much command line arguments."
+                        self.release_lock_for_module(mod.name, branch.name)
 
         return "Update completed."
     
