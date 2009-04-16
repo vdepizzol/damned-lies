@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 11:21+0000\n"
-"PO-Revision-Date: 2009-04-04 21:49+0200\n"
+"POT-Creation-Date: 2009-04-14 00:26+0000\n"
+"PO-Revision-Date: 2009-04-16 18:37+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -972,50 +972,62 @@ msgid "This is a clone of the official version from the freedektop repository"
 msgstr "Este es un clon de la versión oficial del repositorio de freedesktop"
 
 #: database-content.py:232
+msgid "Passepartout is a DTP application for X."
+msgstr "Passepartout es una aplicación DTP para las X."
+
+#: database-content.py:233
+msgid ""
+"gnome-disk-utility provides libraries and applications for dealing with "
+"storage devices."
+msgstr ""
+"gnome-disk-utility proporciona bibliotecas y aplicaciones para comunicarse "
+"con dispositivos de almacenamiento."
+
+#: database-content.py:234
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:233
+#: database-content.py:235
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:234
+#: database-content.py:236
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:235
+#: database-content.py:237
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:236
+#: database-content.py:238
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:237
+#: database-content.py:239
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:238
+#: database-content.py:240
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:239
+#: database-content.py:241
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:240
+#: database-content.py:242
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:241
+#: database-content.py:243
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:242
+#: database-content.py:244
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:243
+#: database-content.py:245
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
@@ -1738,7 +1750,7 @@ msgstr "Descargar el archivo POT"
 msgid "Notices"
 msgstr "Notas"
 
-#: templates/stats_show.html:30 vertimus/models.py:163
+#: templates/stats_show.html:30 vertimus/models.py:165
 msgid "Translated"
 msgstr "Traducido"
 
@@ -2200,88 +2212,88 @@ msgstr ""
 "Últimas acciones realizadas por el equipo de traducción %s del Proyecto de "
 "traducción de GNOME"
 
-#: vertimus/forms.py:30
+#: vertimus/forms.py:38
 msgid "Action"
 msgstr "Acción"
 
-#: vertimus/forms.py:33
+#: vertimus/forms.py:42
 msgid "Comment"
 msgstr "Comentario"
 
-#: vertimus/forms.py:38
+#: vertimus/forms.py:47
 msgid "File"
 msgstr "Archivo"
 
-#: vertimus/forms.py:39
+#: vertimus/forms.py:48
 msgid "Upload a .po, .gz, .bz2 or .png file"
 msgstr "Subir un archivo .po, .gz, .bz2 o .png"
 
-#: vertimus/forms.py:50
+#: vertimus/forms.py:59
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Sólo se admiten archivos con extensión .po, .gz, .bz2 o .png."
 
-#: vertimus/forms.py:55
+#: vertimus/forms.py:64
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
 "El archivo .po no pasa «msgfmt -vc». Corrija el archivo e inténtelo de nuevo."
 
-#: vertimus/forms.py:65
+#: vertimus/forms.py:74
 msgid "A comment or a file is needed for this action."
 msgstr "Se necesita un comentario para esta acción."
 
-#: vertimus/forms.py:68
+#: vertimus/forms.py:77
 msgid "A file is needed for this action."
 msgstr "Se necesita un archivo para esta acción."
 
-#: vertimus/forms.py:71
+#: vertimus/forms.py:80
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
-#: vertimus/models.py:137
+#: vertimus/models.py:139
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: vertimus/models.py:150
+#: vertimus/models.py:152
 msgid "Translating"
 msgstr "Traduciéndose"
 
-#: vertimus/models.py:180
+#: vertimus/models.py:182
 msgid "Proofreading"
 msgstr "En revisión"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:195
+#: vertimus/models.py:197
 msgid "Proofread"
 msgstr "Revisado"
 
-#: vertimus/models.py:210
+#: vertimus/models.py:212
 msgid "To Review"
 msgstr "Para revisar"
 
-#: vertimus/models.py:222
+#: vertimus/models.py:224
 msgid "To Commit"
 msgstr "Para subir"
 
-#: vertimus/models.py:237
+#: vertimus/models.py:239
 msgid "Committing"
 msgstr "Subiéndose"
 
-#: vertimus/models.py:251
+#: vertimus/models.py:253
 msgid "Committed"
 msgstr "Subido"
 
-#: vertimus/models.py:339
+#: vertimus/models.py:341
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:346 vertimus/views.py:130 vertimus/views.py:136
+#: vertimus/models.py:348 vertimus/views.py:130 vertimus/views.py:136
 #: vertimus/views.py:146
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
-#: vertimus/models.py:458
+#: vertimus/models.py:460
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2298,20 +2310,20 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:471 vertimus/models.py:521
+#: vertimus/models.py:473 vertimus/models.py:523
 msgid "Without comment"
 msgstr "Sin comentarios"
 
-#: vertimus/models.py:473 vertimus/models.py:523
+#: vertimus/models.py:475 vertimus/models.py:525
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
 
-#: vertimus/models.py:480
+#: vertimus/models.py:482
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:509
+#: vertimus/models.py:511
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2328,57 +2340,57 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:531
+#: vertimus/models.py:533
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:545
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: vertimus/models.py:558
+#: vertimus/models.py:560
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: vertimus/models.py:570
+#: vertimus/models.py:572
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:586
+#: vertimus/models.py:588
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
-#: vertimus/models.py:602
+#: vertimus/models.py:604
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:616
+#: vertimus/models.py:618
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Falló la carga. El error fue: «%s»"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:626
+#: vertimus/models.py:628
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:639
+#: vertimus/models.py:641
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:654
+#: vertimus/models.py:656
 msgid "Review required"
 msgstr "Necesita revisión"
 
-#: vertimus/models.py:693
+#: vertimus/models.py:695
 msgid "Backup the actions"
 msgstr "Restablecer las acciones"
 
-#: vertimus/models.py:732
+#: vertimus/models.py:734
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
