@@ -58,7 +58,7 @@ class Command(BaseCommand):
         else:
             # Update all modules
             if options['non-gnome']:
-                modules = Module.objects.exclude(vcs_root='http://svn.gnome.org/svn')
+                modules = Module.objects.exclude(vcs_root__startswith='git://git.gnome.org/')
             else:
                 modules = Module.objects.all()
             for mod in modules:
