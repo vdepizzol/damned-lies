@@ -55,12 +55,16 @@ def language_all(request, locale, dtype):
                               context_instance=RequestContext(request))
 
 def language_release(request, locale, release_name, dtype):
-    language = get_object_or_404(Language, locale=locale)
+    if locale == 'C':
+        language = None
+    else:
+        language = get_object_or_404(Language, locale=locale)
     release = get_object_or_404(Release, name=release_name)
     stats = Statistics.get_lang_stats_by_type(language, dtype, release)
     context = {
         'pageSection': "languages",
         'language': language,
+        'language_name': language and language.get_name() or _("Original strings"),
         'release': release,
         'stats_title': {'ui':  _("UI Translations"),
                         'doc': _("Documentation")}.get(dtype),

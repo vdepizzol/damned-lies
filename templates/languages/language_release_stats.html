@@ -48,7 +48,11 @@
           <tr>
         {% endifequal %}
         <td class="leftcell">
+          {% if language %}
           <a href="{% url vertimus-names-view modname branch stat.domain.name language.locale %}">{{ stat.module_description }}
+          {% else %}
+          <a href="{% url stats.views.module modname %}">{{ stat.module_description }}
+          {% endif %}
           {% if stat.partial_po %}
             {# For a partial po, domain description is appended #}
             &bull; {{ domname }}

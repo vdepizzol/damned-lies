@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %} {% trans release.description %} - {% trans language.name %}{% endblock %}
+{% block title %} {% trans release.description %} - {{ language_name }}{% endblock %}
 {% block extrahead %}
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript">
@@ -19,7 +19,7 @@ $(document).ready(function()
 {% block content %}
 <div class="mainpage">
 
-<h2>{% trans release.description %} - <a href="{{ language.get_team_url }}">{{ language.get_name }}</a></h2>
+<h2>{% trans release.description %} - <a href="{{ language.get_team_url }}">{{ language_name }}</a></h2>
 
 <p id="hide">
    <a href="#" onclick="return showHideCompleted();">{% trans "Hide completed modules" %}</a>
@@ -30,7 +30,7 @@ $(document).ready(function()
 </p>
 
 {% ifequal release.status "xternal" %}
-<p><i>{% trans "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations." %}</i></p>
+<p><i>{% trans "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations." %}</i></p>
 {% endifequal %}
 
 <h3>{{ stats_title }}</h3>
@@ -38,8 +38,10 @@ $(document).ready(function()
   {% include "languages/language_release_stats.html" %}
 {% endwith %}
 
+{% if language %}
 <hr />
 <p><a href="{% url languages.views.language_release_tar locale=language.locale release_name=release.name dtype=stats.dtype %}"><img src="{{ MEDIA_URL }}img/download.png" /> {% trans "Download all po files" %}</a></p>
+{% endif %}
 
 </div>
 {% endblock %}
