@@ -62,6 +62,11 @@
   
 </tr>
 {% endfor %}
+<tr><td colspan="5"><hr></td></tr>
+<tr><td class="leftcell"><i><small>{% trans "Original strings" %}</small></i></td>
+    <td><i><small><a href="{% url language_release "C" release.name "ui" %}">{% trans "User Interface" %}</a></small></i></td><td></td>
+    <td><i><small><a href="{% url language_release "C" release.name "doc" %}">{% trans "Documentation" %}</a></small></i></td><td></td>
+</tr>
 </table>
 
 </div>
