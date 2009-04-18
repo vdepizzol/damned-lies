@@ -78,7 +78,7 @@ class Command(BaseCommand):
     # Weird things happen when multiple updates run in parallel for the same module
     # We use filesystem directories creation/deletion to act as global lock mecanism
     def get_lock_for_module(self, module_name, branch_name):
-        dirpath = os.path.join("/tmp", "updating-%s-%s" % (module_name, branch_name))
+        dirpath = os.path.join("/tmp", "updating-%s" % (module_name,))
         while True:
             try:
                 os.mkdir(dirpath)
@@ -88,6 +88,6 @@ class Command(BaseCommand):
         return # Lock acquired
 
     def release_lock_for_module(self, module_name, branch_name):
-        dirpath = os.path.join("/tmp", "updating-%s-%s" % (module_name, branch_name))
+        dirpath = os.path.join("/tmp", "updating-%s" % (module_name,))
         os.rmdir(dirpath)
 
