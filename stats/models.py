@@ -289,6 +289,12 @@ class Branch(models.Model):
             if not os.access(domain_path, os.X_OK):
                 # TODO: should check if existing stats, and delete (archive) them in this case
                 continue
+            try:
+                stat = Statistics.objects.get(language=None, branch=self, domain=dom)
+                Information.objects.filter(statistics=stat).delete() # Reset errors
+            except Statistics.DoesNotExist:
+                stat = Statistics(language=None, branch=self, domain=dom)
+                stat.save()
             errors = []
             
             # 2. Pre-check, if available (intltool-update -m)
@@ -319,7 +325,8 @@ class Branch(models.Model):
                     potfile = previous_pot
                     errors.append(("error", ugettext_noop("Can't generate POT file, using old one.")))
                 else:
-                    # Not sure if we should do something here
+                    errors.append(("error", ugettext_noop("Can't generate POT file, statistics aborted.")))
+                    stat.set_errors(errors)
                     continue
 
             changed_status = utils.CHANGED_WITH_ADDITIONS
@@ -340,18 +347,11 @@ class Branch(models.Model):
             if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
                 errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
 
-            try:
-                stat = Statistics.objects.get(language=None, branch=self, domain=dom)
-                stat.untranslated = int(pot_stats['untranslated'])
-                stat.num_figures = int(pot_stats['num_figures'])
-                stat.date = datetime.now()
-                Information.objects.filter(statistics=stat).delete()
-            except Statistics.DoesNotExist:
-                stat = Statistics(language = None, branch = self, domain = dom, translated = 0,
-                                  fuzzy = 0, untranslated = int(pot_stats['untranslated']))
+            stat.untranslated = int(pot_stats['untranslated'])
+            stat.num_figures = int(pot_stats['num_figures'])
+            stat.date = datetime.now()
             stat.save()
-            for err in errors:
-                stat.information_set.add(Information(type=err[0], description=err[1]))
+            stat.set_errors(errors)
             
             # 6. Update language po files and update DB
             # *****************************************
@@ -1079,7 +1079,11 @@ class Statistics(models.Model):
 
     def pot_url(self):
         return self.po_url(potfile=True)
-        
+
+    def set_errors(self, errors):
+        for err in errors:
+            self.information_set.add(Information(type=err[0], description=err[1]))
+
     def most_important_message(self):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """
         error = None
