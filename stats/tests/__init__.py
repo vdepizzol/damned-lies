@@ -87,9 +87,9 @@ class ModuleTestCase(unittest.TestCase):
         # FIXME: deleting a git branch doesn't delete the repo
         #self.assertFalse(os.access(checkout_path, os.F_OK))
 
-    # FIXME: Desactivated, because git checkout reset the tree (and POTFILES.in...)
-    def tstStringFrozenMail(self):
-        
+    def testStringFrozenMail(self):
+        """ String change for a module of a string_frozen release should generate a message """
+        mail.outbox = []
         self.rel.string_frozen = True
         self.rel.save()
         
@@ -104,21 +104,20 @@ class ModuleTestCase(unittest.TestCase):
         f.write("dummy_file.py\n")
         f.close()
         # Regenerate stats (mail should be sent)
-        self.b.update_stats(force=False)
+        self.b.update_stats(force=False, checkout=False)
         # Assertions
         self.assertEquals(len(mail.outbox), 1);
-        self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.HEAD'")
+        self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.master'")
         self.assertTrue(mail.outbox[0].message().as_string().find(new_string)>-1)
    
-    # FIXME: Desactivated, because git checkout reset the tree (and fr/figures/gnome-hello.png...)
-    def tstIdenticalFigureWarning(self):
+    def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """
         self.b.checkout()
         orig_figure = os.path.join(self.b.co_path(), "help", "C", "figures", "gnome-hello.png")
         shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "fr", "figures", "gnome-hello.png"))
-        self.b.update_stats(force=True)
+        self.b.update_stats(force=True, checkout=False)
         doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
-        warn_infos = Information.objects.filter(statistics=doc_stat, type='warn')
+        warn_infos = Information.objects.filter(statistics=doc_stat, type='warn-ext')
         self.assertEquals(len(warn_infos), 1);
         ui_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
         self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.fr.po");

@@ -277,9 +277,10 @@ class Branch(models.Model):
             self._ui_stats = self.get_stats('ui', mandatory_langs)
         return self._ui_stats
     
-    def update_stats(self, force):
+    def update_stats(self, force, checkout=True):
         """ Update statistics for all po files from the branch """
-        self.checkout()
+        if checkout:
+            self.checkout()
         domains = Domain.objects.filter(module=self.module).all()
         string_frozen = self.has_string_frozen()
         for dom in domains:
