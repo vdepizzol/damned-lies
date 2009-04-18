@@ -96,7 +96,7 @@
       </div>
       {% endif %}
       <p>{% if action.comment %}
-        {{ action.comment|linebreaksbr }}
+        {{ action.comment|linebreaksbr|urlize }}
         {% else %}
         <em>{% trans "No comment" %}</em>
         {% endif %}
