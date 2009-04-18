@@ -509,7 +509,7 @@ class Branch(models.Model):
                         "branch" : self.name,
                         })
                 else:
-                    commandList.append("cd \"%(localdir)s\" && git checkout --track -b %(branch)s  origin/%(branch)s" % {
+                    commandList.append("cd \"%(localdir)s\" && git pull && git checkout --track -b %(branch)s  origin/%(branch)s" % {
                         "localdir" : modulepath,
                         "branch" : self.name,
                         })
