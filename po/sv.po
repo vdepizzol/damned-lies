@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-19 03:10+0000\n"
-"PO-Revision-Date: 2009-04-19 18:59+0100\n"
+"POT-Creation-Date: 2009-04-20 12:01+0000\n"
+"PO-Revision-Date: 2009-04-20 18:14+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -465,7 +465,6 @@ msgid "Bemba"
 msgstr "Bemba"
 
 #: database-content.py:113
-#| msgid "Nepali"
 msgid "Neapolitan"
 msgstr "Neapolitanska"
 
@@ -960,7 +959,9 @@ msgid "moserial is a clean, friendly gtk-based serial terminal for the gnome des
 msgstr "moserial är en ren, vänlig gtk-baserad serieterminal för gnome-skrivbordet. Det har skrivits i Vala för extra brahet."
 
 #: database-content.py:231
-msgid "This is a clone of the official version from the freedektop repository"
+#| msgid ""
+#| "This is a clone of the official version from the freedektop repository"
+msgid "This is a clone of the official version from the freedesktop repository"
 msgstr "Detta är en klon av den officiella versionen från freedesktop-förrådet"
 
 #: database-content.py:232
@@ -3038,6 +3039,10 @@ msgstr "Ursprungliga strängar"
 #: stats/models.py:331
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Kan inte generera POT-fil, statistiken avbruten."
+
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "Copyright &copy; 2006-2009"
 
 #: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
