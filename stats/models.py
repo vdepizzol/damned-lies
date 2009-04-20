@@ -463,7 +463,7 @@ class Branch(models.Model):
                     "localdir" : modulepath,
                     })
             elif vcs_type == "git":
-                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git fetch && git reset --hard origin/%(branch)s" % {
+                commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git fetch && git reset --hard origin/%(branch)s && git clean -dfq" % {
                     "localdir" : modulepath,
                     "branch" : self.name,
                     })
