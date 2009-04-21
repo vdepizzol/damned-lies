@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-19 03:26+0000\n"
-"PO-Revision-Date: 2009-04-19 05:39+0200\n"
+"POT-Creation-Date: 2009-04-20 12:01+0000\n"
+"PO-Revision-Date: 2009-04-21 09:47+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Virtaal 0.3.1\n"
@@ -474,7 +474,6 @@ msgstr "البِمْبا"
 
 # نيبال
 #: database-content.py:113
-#| msgid "Nepali"
 msgid "Neapolitan"
 msgstr "النابولية"
 
@@ -560,7 +559,7 @@ msgstr "كتيّب محرر GConf"
 
 #: database-content.py:134
 msgid "F-Spot Manual"
-msgstr "كتيّب آف-سبوت"
+msgstr "كتيّب إف-سبوت"
 
 #: database-content.py:135
 msgid "FDL License"
@@ -986,7 +985,9 @@ msgstr ""
 "الروعة"
 
 #: database-content.py:231
-msgid "This is a clone of the official version from the freedektop repository"
+#| msgid ""
+#| "This is a clone of the official version from the freedektop repository"
+msgid "This is a clone of the official version from the freedesktop repository"
 msgstr "هذه نسيخة من النسخة الرسمية من مستودع سطح المكتب الحر"
 
 #: database-content.py:232
@@ -1246,7 +1247,7 @@ msgstr "لقد تم تغيير كلمة السر."
 #: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
 #: stats/models.py:329
 msgid "Can't generate POT file, using old one."
-msgstr "لم أستطع توليد ملف POT، أستخدم القديم."
+msgstr "لم أستطع توليد ملف POT، سأستخدم القديم."
 
 #: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
 #: stats/models.py:351
@@ -1353,13 +1354,13 @@ msgstr[5] "%(count)s شكل"
 #: stats/models.py:1027
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "ملف POT (%(messages)s، %(figures)s) — %(updated)s"
+msgstr "ملف POT‏ (%(messages)s، %(figures)s) — %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
 #: stats/models.py:1030
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "ملف POT (%(messages)s) — %(updated)s"
+msgstr "ملف POT‏ (%(messages)s) — %(updated)s"
 
 #: djamnedlies-git/stats/utils.py:85 djamnedlies-svn/stats/utils.py:85
 #: stats/utils.py:85
@@ -2987,6 +2988,10 @@ msgstr "المقاطع الأصلية"
 #: stats/models.py:331
 msgid "Can't generate POT file, statistics aborted."
 msgstr "لم أستطع توليد ملف POT، أُجهضت الإحصائيات."
+
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "حقوق النشر &copy; ٢٠٠٦-٢٠٠٩ "
 
 #: templates/languages/language_release.html:33
 msgid ""
