@@ -2,7 +2,7 @@
 {% load i18n %}
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml"
-      title="{% blocktrans with team.get_description as lang %}Last actions made by the {{ lang }} team of the GNOME translation project{% endblocktrans %}"
+      title="{% blocktrans with team.get_description as lang %}Last actions made by the {{ lang }} team of the GNOME Translation Project{% endblocktrans %}"
       href="/rss/teams/{{ team.name }}" />
 {% endblock %}
 {% block title %}{{ team.get_description }}{% endblock %}
