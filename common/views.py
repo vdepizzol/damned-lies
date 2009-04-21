@@ -26,6 +26,7 @@ from django.utils.translation import ugettext as _
 from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
 from people.models import Person
+from teams.models import Role
 from people.forms import RegistrationForm 
 
 
@@ -61,6 +62,11 @@ def site_login(request, msgs=[]):
                     login(request, user)
                     message = _("You have been successfully logged in.")
                     user.message_set.create(message=message)
+                    if Role.objects.filter(person__username=user.username).count() < 1:
+                        message = _("You have not joined any translation team yet. You can do it from <a href=\"%(url)s\">your profile</a>.") % {
+                            'url': reverse('person-team-join-view'),
+                        }
+                        user.message_set.create(message=message)
                     if request.POST['referer']:
                         return HttpResponseRedirect(request.POST['referer'])
                     else:

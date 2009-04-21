@@ -82,7 +82,7 @@
     <div id="content">
     {% if messages %}
         {% for message in messages %}
-        <p class="errornote">{{ message }}</p>
+        <p class="errornote">{{ message|safe }}</p>
         {% endfor %}
     {% endif %}
 
