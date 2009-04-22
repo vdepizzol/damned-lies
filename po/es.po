@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-19 03:10+0000\n"
-"PO-Revision-Date: 2009-04-19 14:03+0200\n"
+"POT-Creation-Date: 2009-04-21 16:05+0000\n"
+"PO-Revision-Date: 2009-04-23 00:54+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -467,7 +467,6 @@ msgid "Bemba"
 msgstr "Bemba"
 
 #: database-content.py:113
-#| msgid "Nepali"
 msgid "Neapolitan"
 msgstr "Napolitano"
 
@@ -973,16 +972,25 @@ msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
 #: database-content.py:230
+#| msgid ""
+#| "moserial is a clean, friendly gtk-based serial terminal for the gnome "
+#| "desktop. It is written in Vala for extra goodness."
 msgid ""
-"moserial is a clean, friendly gtk-based serial terminal for the gnome "
+"moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
 msgstr ""
 "moserial es un terminal serie limpio y amigable basado en GTK para el "
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
 #: database-content.py:231
-msgid "This is a clone of the official version from the freedektop repository"
-msgstr "Este es un clon de la versión oficial del repositorio de freedesktop"
+msgid ""
+"This is a clone of the official version from the freedesktop.org repository."
+"<br/>Note that the repository name in git.gnome.org is <pre>system-tools-"
+"backends-clone</pre>"
+msgstr ""
+"Es un clon de la versión oficial del repositorio de freedesktop.org.<br/"
+">Note que el nombre del repositorio en git.gnome.org es <pre>system-tools-"
+"backends-clone</pre>"
 
 #: database-content.py:232
 msgid "Passepartout is a DTP application for X."
@@ -1055,14 +1063,10 @@ msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
 #: database-content.py:248
-#| msgid "GNOME 2.26 (Development)"
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (desarrollo)"
 
 #: settings.py:73 settings_sample.py:80 djamnedlies-git/settings_sample.py:80
-#| msgid ""
-#| "This module is not part of the GNOME SVN repository. Please check the "
-#| "module's web page to see where to send translations."
 msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1070,32 +1074,41 @@ msgstr ""
 "Este módulo no forma parte del repositorio git de GNOME. Compruebe la página "
 "web del módulo para ver dónde enviar las traducciones."
 
-#: common/views.py:33 djamnedlies-git/common/views.py:33
+#: common/views.py:34 djamnedlies-git/common/views.py:33
 #: djamnedlies-svn/common/views.py:33
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2009"
 
-#: common/views.py:54 djamnedlies-git/common/views.py:54
+#: common/views.py:55 djamnedlies-git/common/views.py:54
 #: djamnedlies-svn/common/views.py:54
 msgid "You have been logged out."
 msgstr "Ha salido de la sesión."
 
-#: common/views.py:62 djamnedlies-git/common/views.py:62
+#: common/views.py:63 djamnedlies-git/common/views.py:62
 #: djamnedlies-svn/common/views.py:62
 msgid "You have been successfully logged in."
 msgstr "Ha iniciado la sesión correctamente."
 
-#: common/views.py:69 djamnedlies-git/common/views.py:69
+#: common/views.py:66
+#, python-format
+msgid ""
+"You have not joined any translation team yet. You can do it from <a href=\"%"
+"(url)s\">your profile</a>."
+msgstr ""
+"Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
+"href=\"%(url)s\">su perfil</a>."
+
+#: common/views.py:75 djamnedlies-git/common/views.py:69
 #: djamnedlies-svn/common/views.py:69
 msgid "We're sorry, but your account has been disabled."
 msgstr "Su cuenta ha sido desactivada."
 
-#: common/views.py:71 djamnedlies-git/common/views.py:71
+#: common/views.py:77 djamnedlies-git/common/views.py:71
 #: djamnedlies-svn/common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Ha fallado el inicio de sesión. Compruebe su usuario y su contraseña."
 
-#: common/views.py:111 djamnedlies-git/common/views.py:111
+#: common/views.py:117 djamnedlies-git/common/views.py:111
 #: djamnedlies-svn/common/views.py:111
 msgid "Your account has been activated."
 msgstr "Su cuenta ha sido activada."
@@ -1637,10 +1650,6 @@ msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
 #: djamnedlies-git/templates/base.html:96 templates/base.html:96
-#| msgid ""
-#| "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-"
-#| "lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn."
-#| "gnome.org</a>"
 msgid ""
 "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -2568,7 +2577,6 @@ msgstr "Suscribirse"
 
 #: djamnedlies-git/templates/teams/team_detail.html:5
 #: djamnedlies-svn/templates/teams/team_detail.html:5
-#: templates/teams/team_detail.html:5
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME translation project"
 msgstr ""
@@ -3003,19 +3011,18 @@ msgstr ""
 "lies/'>damned-lies</a> en <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
 #: languages/views.py:67 templates/release_detail.html:66
-#| msgid "Original"
 msgid "Original strings"
 msgstr "Cadenas originales"
 
 #: stats/models.py:331
-#| msgid "Can't generate POT file, using old one."
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "Copyright &copy; 2006-2009"
+
 #: templates/languages/language_release.html:33
-#| msgid ""
-#| "The modules of this release are not part of the GNOME SVN repository. "
-#| "Please check each module's web page to see where to send translations."
 msgid ""
 "The modules of this release are not part of the GNOME git repository. Please "
 "check each module's web page to see where to send translations."
@@ -3023,6 +3030,20 @@ msgstr ""
 "Los módulos de este lanzamiento no forman parte del repositorio git de "
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
+
+#: templates/teams/team_detail.html:5
+#, python-format
+#| msgid ""
+#| "Last actions made by the %(lang)s team of the GNOME translation project"
+msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
+msgstr ""
+"Últimas acciones realizadas por el equipo %(lang)s del Proyecto de "
+"traducción de GNOME"
+
+#~ msgid ""
+#~ "This is a clone of the official version from the freedektop repository"
+#~ msgstr ""
+#~ "Este es un clon de la versión oficial del repositorio de freedesktop"
 
 #~ msgid "Stock Ticker Manual"
 #~ msgstr "Manual de Stock ticker"
