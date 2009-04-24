@@ -153,8 +153,8 @@ def read_makefile_variable(vcs_path, variable):
     fullline = ""
     for line in fin:
         fullline += " " + line.strip()
-        if len(line)>2 and line[-2] == "\\":
-            fullline = fullline[:-2]
+        if len(line)>2 and fullline[-1] == "\\":
+            fullline = fullline[:-1]
         else:
             match = re.match(variable + r"\s*=\s*([^=]*)", fullline.strip())
             if match:
