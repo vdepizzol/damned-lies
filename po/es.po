@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-21 16:05+0000\n"
-"PO-Revision-Date: 2009-04-23 00:54+0200\n"
+"POT-Creation-Date: 2009-04-23 17:41+0000\n"
+"PO-Revision-Date: 2009-04-25 20:18+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -972,9 +972,6 @@ msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
 #: database-content.py:230
-#| msgid ""
-#| "moserial is a clean, friendly gtk-based serial terminal for the gnome "
-#| "desktop. It is written in Vala for extra goodness."
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1015,56 +1012,69 @@ msgstr ""
 "inferior)."
 
 #: database-content.py:236
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr ""
+"GNOME Vídeo Arcade es un frontal de MAME (Multiple Arcade Machine Emulator) "
+"para GNOME."
+
+#: database-content.py:237
 msgid "GNOME Fifth Toe (Extra software)"
 msgstr "Quinto dedo de GNOME: software adicional"
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (desarrollo)"
+
+#: database-content.py:250
+#| msgid "Extra GNOME Applications"
+msgid "Obsolete GNOME Applications"
+msgstr "Aplicaciones obsoletas de GNOME"
 
 #: settings.py:73 settings_sample.py:80 djamnedlies-git/settings_sample.py:80
 msgid ""
@@ -3033,8 +3043,6 @@ msgstr ""
 
 #: templates/teams/team_detail.html:5
 #, python-format
-#| msgid ""
-#| "Last actions made by the %(lang)s team of the GNOME translation project"
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Últimas acciones realizadas por el equipo %(lang)s del Proyecto de "
