@@ -251,7 +251,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
             except:
                 status = STATUS_OK+1
         else:
-            command = ("msgconv -t UTF-8 %s | diff -i -u %s - >/dev/null") % (pofile,
+            command = ("msgconv -t UTF-8 %s | diff -i -I '^#~' -u %s - >/dev/null") % (pofile,
                                                                               pofile)
             (status, output, errs) = run_shell_command(command, env=c_env)
         if status != STATUS_OK:
