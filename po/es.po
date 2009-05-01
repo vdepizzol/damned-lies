@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-23 17:41+0000\n"
-"PO-Revision-Date: 2009-04-25 20:18+0200\n"
+"POT-Creation-Date: 2009-04-27 07:40+0000\n"
+"PO-Revision-Date: 2009-05-01 20:58+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1020,59 +1020,54 @@ msgstr ""
 "para GNOME."
 
 #: database-content.py:237
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "Quinto dedo de GNOME: software adicional"
-
-#: database-content.py:238
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:239
+#: database-content.py:238
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:240
+#: database-content.py:239
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:241
+#: database-content.py:240
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:242
+#: database-content.py:241
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:243
+#: database-content.py:242
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:244
+#: database-content.py:243
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:245
+#: database-content.py:244
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:246
+#: database-content.py:245
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:247
+#: database-content.py:246
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:248
+#: database-content.py:247
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
-#: database-content.py:249
+#: database-content.py:248
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (desarrollo)"
 
-#: database-content.py:250
-#| msgid "Extra GNOME Applications"
+#: database-content.py:249
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
 
@@ -1758,7 +1753,7 @@ msgstr ""
 "coleccionamos estadísticas."
 
 #: djamnedlies-git/templates/index.html:30
-#: djamnedlies-svn/templates/index.html:30 templates/index.html:30
+#: djamnedlies-svn/templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
@@ -3032,6 +3027,17 @@ msgstr "No se puede general el archivo POT, estadísticas abortadas."
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
 
+#: templates/index.html:30
+#| msgid ""
+#| "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
+#| "Toe&quot; or &quot;GNOME 2.14&quot;."
+msgid ""
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
+msgstr ""
+"Algunos ejemplos de publicaciones son «Infraestructura de GNOME» o «GNOME "
+"2.26»."
+
 #: templates/languages/language_release.html:33
 msgid ""
 "The modules of this release are not part of the GNOME git repository. Please "
@@ -3047,6 +3053,9 @@ msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Últimas acciones realizadas por el equipo %(lang)s del Proyecto de "
 "traducción de GNOME"
+
+#~ msgid "GNOME Fifth Toe (Extra software)"
+#~ msgstr "Quinto dedo de GNOME: software adicional"
 
 #~ msgid ""
 #~ "This is a clone of the official version from the freedektop repository"
