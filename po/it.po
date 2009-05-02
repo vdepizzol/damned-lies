@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-22 20:35+0000\n"
-"PO-Revision-Date: 2009-04-22 22:39+0200\n"
+"POT-Creation-Date: 2009-05-01 18:58+0000\n"
+"PO-Revision-Date: 2009-05-02 12:57+0200\n"
 "Last-Translator: Luca Ferretti <elle.uca@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -1027,59 +1027,65 @@ msgstr ""
 "collegamento sotto)."
 
 #: database-content.py:236
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "GNOME Fifth Toe (software aggiuntivo)"
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr "GNOME Video Arcade è un frontend di MAME (Multiple Arcade Machine Emulator) per GNOME."
 
 #: database-content.py:237
+#| msgid "GNOME Release Notes"
+msgid "GNOME Teletext viewer"
+msgstr "Visualizzatore televideo di GNOME"
+
+#: database-content.py:238
 msgid "Extra GNOME Applications"
 msgstr "Applicazioni aggiuntive per GNOME"
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (vecchia stabile)"
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "GNOME Infrastructure"
 msgstr "Infrastruttura di GNOME"
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (vecchia stabile)"
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (vecchia stabile)"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non-GNOME)"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (vecchia stabile)"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (vecchia stabile)"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applicazioni di produttività GNOME-Office"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (vecchia stabile)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (stabile)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (in sviluppo)"
 
-#: database-content.py:249
-#| msgid "Extra GNOME Applications"
+#: database-content.py:250
 msgid "Obsolete GNOME Applications"
 msgstr "Applicazioni per GNOME obsolete"
 
@@ -1785,7 +1791,7 @@ msgstr ""
 "statistiche."
 
 #: djamnedlies-git/templates/index.html:30
-#: djamnedlies-svn/templates/index.html:30 templates/index.html:30
+#: djamnedlies-svn/templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
@@ -2870,14 +2876,14 @@ msgstr "In traduzione"
 #: djamnedlies-git/vertimus/models.py:182
 #: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:182
 msgid "Proofreading"
-msgstr "In correzione bozza"
+msgstr "In revisione"
 
 # STATO DELLA TRADUZIONE
 #. Translators: This is a status, not a verb
 #: djamnedlies-git/vertimus/models.py:197
 #: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:197
 msgid "Proofread"
-msgstr "Bozza corretta"
+msgstr "Revisionata"
 
 # STATO DELLA TRADUZIONE
 #
@@ -3011,20 +3017,20 @@ msgstr "Carica la nuova traduzione"
 #: djamnedlies-git/vertimus/models.py:560
 #: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:560
 msgid "Reserve for proofreading"
-msgstr "Prenota la correzione bozza"
+msgstr "Prenota la revisione"
 
 # AZIONE
 #: djamnedlies-git/vertimus/models.py:572
 #: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:572
 msgid "Upload the proofread translation"
-msgstr "Carica la nuova traduzione corretta"
+msgstr "Carica la traduzione revisionata"
 
 # AZIONE
 #. Translators: this means the file is ready to be committed in repository
 #: djamnedlies-git/vertimus/models.py:588
 #: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:588
 msgid "Ready for submission"
-msgstr "Pronto per il commit"
+msgstr "Pronto per l'invio"
 
 # Appare nei diff
 #: djamnedlies-git/vertimus/models.py:604
@@ -3040,20 +3046,18 @@ msgid "The commit failed. The error was: '%s'"
 msgstr "Il commit non è riuscito. L'errore è stato: «%s»"
 
 # AZIONE
-# cambiato submit/commit
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: djamnedlies-git/vertimus/models.py:628
 #: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:628
 msgid "Reserve to submit"
-msgstr "Prenota il commit"
+msgstr "Prenota l'invio"
 
 # AZIONE
-# cambiato sumission/commit
 #. Translators: this is used to indicate the file has been committed in the repository
 #: djamnedlies-git/vertimus/models.py:641
 #: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:641
 msgid "Inform of submission"
-msgstr "Informa del commit"
+msgstr "Informa dell'invio"
 
 # AZIONE
 #. Translators: regardless of the translation completion, this file need to be reviewed
@@ -3123,6 +3127,15 @@ msgstr "Impossibile generare il file POT, statistiche interrotte."
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
 
+#: templates/index.html:30
+#| msgid ""
+#| "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
+#| "Toe&quot; or &quot;GNOME 2.14&quot;."
+msgid ""
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
+msgstr "Esempi di set di rilasci sono &quot;Infrastruttura di GNOME&quot; o &quot;GNOME 2.26&quot;."
+
 #: templates/languages/language_release.html:33
 msgid ""
 "The modules of this release are not part of the GNOME git repository. Please "
@@ -3138,6 +3151,9 @@ msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Ultime azioni compiute dal gruppo %(lang)s del progetto di traduzione di "
 "GNOME"
+
+#~ msgid "GNOME Fifth Toe (Extra software)"
+#~ msgstr "GNOME Fifth Toe (software aggiuntivo)"
 
 #~ msgid ""
 #~ "This is a clone of the official version from the freedektop repository"
