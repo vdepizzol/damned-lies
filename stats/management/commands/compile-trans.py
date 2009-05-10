@@ -1,6 +1,5 @@
 from django.core.management.base import NoArgsCommand
 from django.core.management.commands import compilemessages
-from optparse import make_option
 import os
 import shutil
 

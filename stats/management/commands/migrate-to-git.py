@@ -1,4 +1,3 @@
-import os
 import shutil
 from django.core.management.base import BaseCommand
 from stats.models import Module, Branch

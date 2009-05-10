@@ -35,7 +35,7 @@ class IfLessNode(template.Node):
 def ifless(parser, token):
     bits = list(token.split_contents())
     if len(bits) != 3:
-        raise TemplateSyntaxError, "%r takes two arguments" % bits[0]
+        raise template.TemplateSyntaxError, "%r takes two arguments" % bits[0]
     nodelist_true = parser.parse(('else', 'endifless'))
     token = parser.next_token()
     if token.contents == 'else':

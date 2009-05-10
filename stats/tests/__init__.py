@@ -19,7 +19,6 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os, shutil, unittest
-import threading
 from django.core import mail
 from django.conf import settings
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information

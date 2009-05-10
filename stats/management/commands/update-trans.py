@@ -1,6 +1,5 @@
 import os
 import shutil
-from optparse import make_option
 
 from django.core.management.base import BaseCommand
 from django.core.management.commands import makemessages
