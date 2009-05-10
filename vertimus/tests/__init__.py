@@ -244,7 +244,7 @@ class VertimusTest(TeamTest):
         state.save()
 
         test_file = ContentFile('test content')
-        test_file._name = 'mytestfile.po'
+        test_file.name = 'mytestfile.po'
 
         action = ActionAbstract.new_by_name('UT')
         new_state = state.apply_action(action, self.pt, "Done by translator.", test_file)
@@ -263,7 +263,7 @@ class VertimusTest(TeamTest):
         state.save()
 
         test_file = ContentFile('test content')
-        test_file._name = 'mytestfile.po'
+        test_file.name = 'mytestfile.po'
 
         action = ActionAbstract.new_by_name('UP')
         new_state = state.apply_action(action, self.pr, "Done.", test_file)
@@ -291,7 +291,7 @@ class VertimusTest(TeamTest):
 
         # Create a new file
         test_file = ContentFile('test content')
-        test_file._name = 'mytestfile.po'
+        test_file.name = 'mytestfile.po'
 
         action = ActionAbstract.new_by_name('UP')
         state = state.apply_action(action, self.pr, "Done.", test_file)
