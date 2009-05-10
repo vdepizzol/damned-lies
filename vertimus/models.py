@@ -47,7 +47,7 @@ class StateDb(models.Model):
     domain = models.ForeignKey(Domain)
     language = models.ForeignKey(Language)
     person = models.ForeignKey(Person, default=None, null=True)
-    
+
     name = models.SlugField(max_length=20, default='None')
     updated = models.DateTimeField(default=datetime.now, editable=False, auto_now=True)
 
@@ -108,6 +108,7 @@ class StateAbstract(object):
         return [eval('Action' + action_name)() for action_name in action_names]
 
     def apply_action(self, action, person, comment=None, file=None):
+        # Check the permission to use this action
         if action.name in (a.name for a in self.get_available_actions(person)):
             new_state = action.apply(self, person, comment, file)
             if new_state != None:
@@ -118,7 +119,7 @@ class StateAbstract(object):
                 new_state._state_db.person = person
 
                 if isinstance(new_state, StateCommitted):
-                    # Committed is the last state of the workflow 
+                    # Committed is the last state of the workflow
                     new_state.save()
 
                     # Backup actions
@@ -149,14 +150,14 @@ class StateNone(StateAbstract):
 
 class StateTranslating(StateAbstract):
     name = 'Translating'
-    description = _('Translating') 
+    description = _('Translating')
 
     def get_available_actions(self, person):
         action_names = []
 
         if (self.person == person):
             action_names = ['UT', 'UNDO']
-                    
+
         return self._get_available_actions(person, action_names)
 
 
@@ -183,11 +184,11 @@ class StateProofreading(StateAbstract):
 
     def get_available_actions(self, person):
         action_names = []
-        
+
         if person.is_reviewer(self.language.team):
             if (self.person == person):
                 action_names = ['UP', 'TR', 'TC', 'UNDO']
-                    
+
         return self._get_available_actions(person, action_names)
 
 
@@ -230,21 +231,21 @@ class StateToCommit(StateAbstract):
                 action_names.insert(1, 'CI')
         else:
             action_names = []
-            
+
         return self._get_available_actions(person, action_names)
 
 
 class StateCommitting(StateAbstract):
     name = 'Committing'
     description = _('Committing')
-        
+
     def get_available_actions(self, person):
         action_names = []
 
         if person.is_committer(self.language.team):
             if (self.person == person):
                 action_names = ['IC', 'TR', 'UNDO']
-            
+
         return self._get_available_actions(person, action_names)
 
 
@@ -255,15 +256,14 @@ class StateCommitted(StateAbstract):
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
             action_names = ['BA']
-        else:            
+        else:
             action_names = []
 
         return self._get_available_actions(person, action_names)
 
 #
-# Actions 
+# Actions
 #
-
 
 ACTION_NAMES = (
     'WC',
@@ -273,20 +273,20 @@ ACTION_NAMES = (
     'IC', 'TR',
     'BA', 'UNDO')
 
-def generate_upload_file_name(instance, pathname):
+def generate_upload_filename(instance, filename):
     # Extract the first extension (with the point)
-    root, ext = os.path.splitext(pathname)
+    root, ext = os.path.splitext(filename)
     # Check if a second extension is present
     if os.path.splitext(root)[1] == ".tar":
         ext = ".tar" + ext
-    filename = "%s-%s-%s-%s-%s%s" % (
-        instance.state_db.branch.module.name, 
-        instance.state_db.branch.name, 
+    new_filename = "%s-%s-%s-%s-%s%s" % (
+        instance.state_db.branch.module.name,
+        instance.state_db.branch.name,
         instance.state_db.domain.name,
         instance.state_db.language.locale,
         instance.state_db.id,
         ext)
-    return "%s/%s" % (settings.UPLOAD_DIR, filename)
+    return "%s/%s" % (settings.UPLOAD_DIR, new_filename)
 
 class ActionDb(models.Model):
     state_db = models.ForeignKey(StateDb)
@@ -296,7 +296,7 @@ class ActionDb(models.Model):
     description = None
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=generate_upload_file_name, blank=True, null=True)
+    file = models.FileField(upload_to=generate_upload_filename, blank=True, null=True)
 
     class Meta:
         db_table = 'action'
@@ -345,7 +345,7 @@ class ActionDb(models.Model):
                     # Action.id and ActionDb.id are identical (inheritance)
                     file_history.insert(0, {
                         'action_id': action_db.id,
-                        'title': ugettext("Uploaded file by %(name)s on %(date)s") % { 
+                        'title': ugettext("Uploaded file by %(name)s on %(date)s") % {
                             'name': action_db.person.name,
                             'date': action_db.created },
                         })
@@ -362,7 +362,7 @@ class ActionAbstract(object):
     arg_is_required = False
     file_is_required = False
     file_is_prohibited = False
-    
+
     @classmethod
     def new_by_name(cls, action_name):
          return eval('Action' + action_name)()
@@ -417,7 +417,7 @@ class ActionAbstract(object):
 
     def __unicode__(self):
         return unicode(self.description) # needs unicode() because description is lazy
-    
+
     def get_filename(self):
         if self._action_db.file:
             return os.path.basename(self._action_db.file.name)
@@ -462,12 +462,12 @@ class ActionAbstract(object):
 The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.
 %(url)s
 
-""") % { 
+""") % {
                 'module': old_state.branch.module.name,
                 'branch': old_state.branch.name,
                 'domain': old_state.domain.name,
-                'language': old_state.language.get_name(), 
-                'new_state': new_state, 
+                'language': old_state.language.get_name(),
+                'new_state': new_state,
                 'url': url
             }
             message += self.comment or ugettext("Without comment")
@@ -513,11 +513,11 @@ class ActionWC(ActionAbstract):
 A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).
 %(url)s
 
-""") % { 
+""") % {
                 'module': state.branch.module.name,
                 'branch': state.branch.name,
                 'domain': state.domain.name,
-                'language': state.language.get_name(), 
+                'language': state.language.get_name(),
                 'url': url
             }
             message += comment or ugettext("Without comment")
@@ -603,21 +603,21 @@ class ActionCI(ActionAbstract):
     name = 'CI'
     description = _('Submit to repository')
     file_is_prohibited = True
-    
+
     def _new_state(self):
         return StateCommitted()
-    
+
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
         action_with_po = self.get_previous_action_with_po()
         try:
-            state.branch.commit_po(action_with_po.file.path, state.domain, state.language, person)            
+            state.branch.commit_po(action_with_po.file.path, state.domain, state.language, person)
             new_state = self._new_state()
         except:
             # Commit failed, state unchanged
             person.message_set.create(message=_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
             self._action_db.delete()
-            new_state = state 
+            new_state = state
         if state != new_state:
             self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state
@@ -666,7 +666,7 @@ class ActionTR(ActionAbstract):
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state
 
-def generate_backup_file_name(instance, original_filename):
+def generate_backup_filename(instance, original_filename):
     return "%s/%s" % (settings.UPLOAD_BACKUP_DIR, os.path.basename(original_filename))
 
 class ActionDbBackup(models.Model):
@@ -676,7 +676,7 @@ class ActionDbBackup(models.Model):
     name = models.SlugField(max_length=8)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=generate_backup_file_name, blank=True, null=True)
+    file = models.FileField(upload_to=generate_backup_filename, blank=True, null=True)
     sequence = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -725,14 +725,14 @@ class ActionBA(ActionAbstract):
             action_db_backup.sequence = sequence
             action_db_backup.save()
 
-            action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere           
+            action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere
 
         return self._new_state()
 
 class ActionUNDO(ActionAbstract):
     name = 'UNDO'
     description = _('Undo the last state change')
-    
+
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
@@ -753,7 +753,7 @@ class ActionSeparator(object):
     """ Fake action to add a separator in action menu """
     name = None
     description = "--------"
-    
+
 def update_uploaded_files(sender, **kwargs):
     """Callback to handle pot_file_changed signal"""
     actions = ActionDb.objects.filter(state_db__branch=kwargs['branch'],
