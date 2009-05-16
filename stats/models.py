@@ -292,12 +292,6 @@ class Branch(models.Model):
             if not os.access(domain_path, os.X_OK):
                 # TODO: should check if existing stats, and delete (archive) them in this case
                 continue
-            try:
-                stat = Statistics.objects.get(language=None, branch=self, domain=dom)
-                Information.objects.filter(statistics=stat).delete() # Reset errors
-            except Statistics.DoesNotExist:
-                stat = Statistics(language=None, branch=self, domain=dom)
-                stat.save()
             errors = []
             
             # 2. Pre-check, if available (intltool-update -m)
@@ -312,12 +306,23 @@ class Branch(models.Model):
                 potfile, errs = dom.generate_pot_file(domain_path)
             elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
                 potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
+                if not potfile:
+                    print >> sys.stderr, "\n".join([e[1] for e in errs])
+                    continue
                 doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
             else:
                 print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                 continue 
             errors.extend(errs)
             
+            # Prepare statistics object
+            try:
+                stat = Statistics.objects.get(language=None, branch=self, domain=dom)
+                Information.objects.filter(statistics=stat).delete() # Reset errors
+            except Statistics.DoesNotExist:
+                stat = Statistics(language=None, branch=self, domain=dom)
+                stat.save()
+
             # 4. Compare with old pot files, various checks
             # *****************************
             previous_pot = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + ".pot")
