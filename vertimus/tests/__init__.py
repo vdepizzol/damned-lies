@@ -145,7 +145,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['WC', None, 'IC', 'AA'])
 
         # Same person
         action_names = [a.name for a in state.get_available_actions(self.pt)]
@@ -168,7 +168,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC', None, 'IC', 'AA'])
 
     def test_state_proofreading(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
@@ -182,7 +182,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['WC', None, 'IC', 'AA'])
 
         # Same person and reviewer
         action_names = [a.name for a in state.get_available_actions(self.pr)]
@@ -203,7 +203,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['TC', 'RP', 'TR', 'WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['TC', 'RP', 'TR', 'WC', None, 'IC', 'AA'])
 
     def test_state_to_review(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pt)
@@ -220,7 +220,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RT', 'WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['RT', 'WC', None, 'IC', 'AA'])
 
     def test_state_to_commit(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
@@ -234,7 +234,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RC', 'TR', 'WC', None, 'IC', 'BA'])
+            self.assertEqual(action_names, ['RC', 'TR', 'WC', None, 'IC', 'AA'])
 
     def test_state_committing(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pc)
@@ -247,7 +247,7 @@ class VertimusTest(TestCase):
             self.assertEqual(action_names, ['WC'])
 
         action_names = [a.name for a in state.get_available_actions(self.pcoo)]
-        self.assertEqual(action_names, ['WC', None, 'IC', 'BA'])
+        self.assertEqual(action_names, ['WC', None, 'IC', 'AA'])
 
         action_names = [a.name for a in state.get_available_actions(self.pc)]
         self.assertEqual(action_names, ['IC', 'TR', 'UNDO', 'WC'])
@@ -264,7 +264,7 @@ class VertimusTest(TestCase):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['BA', 'WC', None, 'IC'])
+            self.assertEqual(action_names, ['AA', 'WC', None, 'IC'])
 
     def test_action_wc(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()
@@ -358,10 +358,10 @@ class VertimusTest(TestCase):
         self.assert_(not os.access(file_path, os.F_OK))
 
         # Remove test file
-        backup_action = ActionDbBackup.objects.get(comment="Done.")
-        backup_file_path = os.path.join(settings.MEDIA_ROOT, backup_action.file.name)
-        backup_action.delete()
-        self.assert_(not os.access(backup_file_path, os.F_OK))
+        action_db_archived = ActionDbArchived.objects.get(comment="Done.")
+        filename_archived = os.path.join(settings.MEDIA_ROOT, action_db_archived.file.name)
+        action_db_archived.delete()
+        self.assert_(not os.access(filename_archived, os.F_OK))
 
     def test_action_tr(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translated').get_state()
@@ -375,7 +375,7 @@ class VertimusTest(TestCase):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Committed', person=self.pr).get_state()
         state.save()
 
-        action = ActionAbstract.new_by_name('BA')
+        action = ActionAbstract.new_by_name('AA')
         state = state.apply_action(action, self.pc, comment="I don't want to disappear :)")
         state.save()
 

@@ -81,7 +81,7 @@ VCS_HOME_WARNING = gettext_noop(u"This module is not part of the GNOME git repos
 
 # By default, Django stores files locally, using the MEDIA_ROOT and MEDIA_URL settings
 UPLOAD_DIR = 'upload'
-UPLOAD_BACKUP_DIR = 'upload-backup'
+UPLOAD_ARCHIVED_DIR = 'upload-archived'
 FILE_UPLOAD_PERMISSIONS = 0600
 
 

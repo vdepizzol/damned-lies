@@ -47,7 +47,7 @@ ALTER TABLE team ALTER name SET NOT NULL;
 ALTER TABLE team DROP group_ptr_id CASCADE;
 ALTER TABLE language ADD FOREIGN KEY (team_id) REFERENCES team(id);
 
-## r1412 
+## r1412
 # For MySQL
 ALTER TABLE statistics ADD num_figures int(11) NOT NULL DEFAULT 0;
 # For PostgreSQL
@@ -72,3 +72,17 @@ for stat in stats:
 ## r1447
 ALTER TABLE information MODIFY `type` VARCHAR(10) NOT NULL;
 ALTER TABLE archived_information MODIFY `type` VARCHAR(10) NOT NULL;
+
+## Rename archives tables
+ALTER TABLE archived_statistics RENAME TO statistics_archived;
+ALTER TABLE archived_information RENAME TO information_archived;
+ALTER TABLE action_backup RENAME TO action_archived;
+UPDATE action_archived SET name = 'AA' where name = 'BA';
+
+# For PostgreSQL
+ALTER INDEX action_backup_pkey RENAME TO action_archived_pkey;
+ALTER INDEX archived_information_pkey RENAME TO information_archived_pkey;
+ALTER INDEX archived_statistics_pkey RENAME TO statistics_archived_pkey;
+ALTER SEQUENCE action_backup_id_seq RENAME TO action_archived_id_seq;
+ALTER SEQUENCE archived_information_id_seq RENAME TO information_archived_id_seq;
+ALTER SEQUENCE archived_statistics_id_seq RENAME TO statistics_archived_id_seq;

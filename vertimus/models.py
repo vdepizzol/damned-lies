@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>
+# Copyright (c) 2008-2009 Stéphane Raimbault <stephane.raimbault@gmail.com>
 #
 # This file is part of Damned Lies.
 #
@@ -104,7 +104,7 @@ class StateAbstract(object):
         if person.is_committer(self.language.team) and 'IC' not in action_names:
             action_names.extend(('Separator', 'IC'))
             if self.name not in ('None', 'Committed'):
-                action_names.append('BA')
+                action_names.append('AA')
         return [eval('Action' + action_name)() for action_name in action_names]
 
     def apply_action(self, action, person, comment=None, file=None):
@@ -122,8 +122,8 @@ class StateAbstract(object):
                     # Committed is the last state of the workflow
                     new_state.save()
 
-                    # Backup actions
-                    return new_state.apply_action(ActionBA(), person)
+                    # Archive actions
+                    return new_state.apply_action(ActionAA(), person)
 
                 return new_state
             else:
@@ -255,7 +255,7 @@ class StateCommitted(StateAbstract):
 
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
-            action_names = ['BA']
+            action_names = ['AA']
         else:
             action_names = []
 
@@ -271,7 +271,7 @@ ACTION_NAMES = (
     'RP', 'UP',
     'TC', 'CI', 'RC',
     'IC', 'TR',
-    'BA', 'UNDO')
+    'AA', 'UNDO')
 
 def generate_upload_filename(instance, filename):
     # Extract the first extension (with the point)
@@ -666,21 +666,21 @@ class ActionTR(ActionAbstract):
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state
 
-def generate_backup_filename(instance, original_filename):
-    return "%s/%s" % (settings.UPLOAD_BACKUP_DIR, os.path.basename(original_filename))
+def generate_archive_filename(instance, original_filename):
+    return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
 
-class ActionDbBackup(models.Model):
+class ActionDbArchived(models.Model):
     state_db = models.ForeignKey(StateDb)
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=generate_backup_filename, blank=True, null=True)
+    file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
     sequence = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        db_table = 'action_backup'
+        db_table = 'action_archived'
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)
@@ -690,9 +690,9 @@ class ActionDbBackup(models.Model):
         action._action_db = self
         return action
 
-class ActionBA(ActionAbstract):
-    name = 'BA'
-    description = _('Backup the actions')
+class ActionAA(ActionAbstract):
+    name = 'AA'
+    description = _('Archive the actions')
 
     def _new_state(self):
         return StateNone()
@@ -704,26 +704,26 @@ class ActionBA(ActionAbstract):
 
         sequence = None
         for action_db in actions_db:
-            file_to_backup = None
+            file_to_archive = None
             if action_db.file:
-                file_to_backup = action_db.file.file # get a file object, not a filefield
-            action_db_backup = ActionDbBackup(
+                file_to_archive = action_db.file.file # get a file object, not a filefield
+            action_db_archived = ActionDbArchived(
                 state_db=action_db.state_db,
                 person=action_db.person,
                 name=action_db.name,
                 created=action_db.created,
                 comment=action_db.comment,
-                file=file_to_backup)
-            if file_to_backup:
-                action_db_backup.file.save(action_db.file.name, file_to_backup, save=False)
+                file=file_to_archive)
+            if file_to_archive:
+                action_db_archived.file.save(action_db.file.name, file_to_archive, save=False)
 
             if sequence == None:
                 # The ID is available after the save()
-                action_db_backup.save()
-                sequence = action_db_backup.id
+                action_db_archived.save()
+                sequence = action_db_archived.id
 
-            action_db_backup.sequence = sequence
-            action_db_backup.save()
+            action_db_archived.sequence = sequence
+            action_db_archived.save()
 
             action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere
 

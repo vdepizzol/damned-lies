@@ -26,7 +26,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.sites.models import Site
 from languages.models import Language
 from teams.models import Team
-from vertimus.models import ActionDb, ActionDbBackup
+from vertimus.models import ActionDb, ActionDbArchived
 from common.utils import imerge_sorted_by_field
 
 class LatestActionsByLanguage(Feed):
@@ -55,7 +55,7 @@ class LatestActionsByLanguage(Feed):
         # The Django ORM doesn't provide the UNION SQL feature :-(
         # so we need to fetch twice more objects than required
         actions_db = ActionDb.objects.filter(state_db__language=obj.id).select_related('state').order_by('-created')[:20]
-        archived_actions_db = ActionDbBackup.objects.filter(state_db__language=obj.id).select_related('state').order_by('-created')[:20]
+        archived_actions_db = ActionDbArchived.objects.filter(state_db__language=obj.id).select_related('state').order_by('-created')[:20]
 
         # islice avoid to fetch too many objects
         return (action_db.get_action() for action_db in islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20))
@@ -100,7 +100,7 @@ class LatestActionsByTeam(Feed):
         # The Django ORM doesn't provide the UNION SQL feature :-(
         # so we need to fetch twice more objects than required
         actions_db = ActionDb.objects.filter(state_db__language__team=obj.id).select_related('state').order_by('-created')[:20]
-        archived_actions_db = ActionDbBackup.objects.filter(state_db__language__team=obj.id).select_related('state').order_by('-created')[:20]
+        archived_actions_db = ActionDbArchived.objects.filter(state_db__language__team=obj.id).select_related('state').order_by('-created')[:20]
 
         a = imerge_sorted_by_field(actions_db, archived_actions_db, '-created')
         b = islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20)

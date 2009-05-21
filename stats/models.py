@@ -1295,7 +1295,7 @@ class FakeStatistics(object):
     def most_important_message(self):
         return None
 
-class ArchivedStatistics(models.Model):
+class StatisticsArchived(models.Model):
     module = models.TextField()
     type = models.CharField(max_length=3, choices=DOMAIN_TYPE_CHOICES)
     domain = models.TextField()
@@ -1307,7 +1307,7 @@ class ArchivedStatistics(models.Model):
     untranslated = models.IntegerField(default=0)
 
     class Meta:
-        db_table = 'archived_statistics'
+        db_table = 'statistics_archived'
 
 INFORMATION_TYPE_CHOICES = (
     ('info', 'Information'),
@@ -1358,11 +1358,11 @@ class Information(models.Model):
             text = text.replace('%s',match,1)
         return text
 
-class ArchivedInformation(models.Model):
-    statistics = models.ForeignKey('ArchivedStatistics')
+class InformationArchived(models.Model):
+    statistics = models.ForeignKey('StatisticsArchived')
     # Priority of a stats message
     type = models.CharField(max_length=10, choices=INFORMATION_TYPE_CHOICES)
     description = models.TextField()
 
     class Meta:
-        db_table = 'archived_information'
+        db_table = 'information_archived'
