@@ -73,7 +73,7 @@ def vertimus(request, branch, domain, language, stats=None):
     if request.user.is_authenticated():
         # Only authenticated user can act on the translation
         person = request.user.person
-        
+
         available_actions = [(va.name, va.description) for va in state.get_available_actions(person)]
         if request.method == 'POST':
             action_form = ActionForm(available_actions, request.POST, request.FILES)
@@ -82,13 +82,13 @@ def vertimus(request, branch, domain, language, stats=None):
                 # Process the data in form.cleaned_data
                 action = action_form.cleaned_data['action']
                 comment = action_form.cleaned_data['comment']
-                
+
                 action = ActionAbstract.new_by_name(action)
                 new_state = state.apply_action(action, person, comment, request.FILES.get('file', None))
                 new_state.save()
 
                 return HttpResponseRedirect(
-                    urlresolvers.reverse('vertimus-names-view', 
+                    urlresolvers.reverse('vertimus-names-view',
                         args=(branch.module.name, branch.name, domain.name, language.locale)))
         else:
             action_form = ActionForm(available_actions)
@@ -105,7 +105,7 @@ def vertimus(request, branch, domain, language, stats=None):
         'module': branch.module,
         'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'state': state,
-        'action_history': action_history, 
+        'action_history': action_history,
         'action_form': action_form
     }
     return render_to_response('vertimus/vertimus_detail.html', context,
@@ -125,7 +125,7 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
     try:
         content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
     except UnicodeDecodeError:
-        return render_to_response('error.html', 
+        return render_to_response('error.html',
                                   {'error': _("Error: The file %s contains invalid characters.") % file_path_1.split('/')[-1]})
     descr_1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_1.person.name,
                                                              'date': action_1.created }
@@ -135,7 +135,7 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
         file_path_2 = action_2.merged_file()['path']
         descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                  'date': action_2.created }
-    else:        
+    else:
         action_2 = None
         if action_id_2 is None:
             # 2) Search previous in action history
@@ -157,7 +157,7 @@ def vertimus_diff(request, action_id_1, action_id_2=None):
     try:
         content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
     except UnicodeDecodeError:
-        return render_to_response('error.html', 
+        return render_to_response('error.html',
                                   {'error': _("Error: The file %s contains invalid characters.") % file_path_2.split('/')[-1]})
     d = difflib.HtmlDiff(wrapcolumn=80)
     diff_content = d.make_table(content_2, content_1,

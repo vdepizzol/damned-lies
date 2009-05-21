@@ -97,7 +97,7 @@ def imerge_sorted_by_field(object_list1, object_list2, field):
     [6, 5, 4, 4, 4, 2, 1, 1]
     """
     import operator
-        
+
     if field is not None and field[0] == '-':
         # Reverse the sort order
         field = field[1:]
@@ -106,7 +106,7 @@ def imerge_sorted_by_field(object_list1, object_list2, field):
         op = operator.lt
 
     iter1, iter2 = iter(object_list1), iter(object_list2)
-    
+
     # Too many try/except couples to my taste but I don't know how to filter the
     # StopIteration to find the source.
 

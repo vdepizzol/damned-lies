@@ -32,7 +32,7 @@ from common.utils import imerge_sorted_by_field
 class LatestActionsByLanguage(Feed):
     title_template = 'feeds/actions_title.html'
     description_template = 'feeds/actions_description.html'
-    
+
     def get_object(self, bits):
         if len(bits) != 1:
             raise ObjectDoesNotExist
@@ -61,8 +61,8 @@ class LatestActionsByLanguage(Feed):
         return (action_db.get_action() for action_db in islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20))
 
     def item_link(self, item):
-        return urlresolvers.reverse('vertimus-names-view', 
-                                    args=(item.state.branch.module.name, 
+        return urlresolvers.reverse('vertimus-names-view',
+                                    args=(item.state.branch.module.name,
                                           item.state.branch.name,
                                           item.state.domain.name,
                                           item.state.language.locale))
@@ -108,8 +108,8 @@ class LatestActionsByTeam(Feed):
         return (action_db.get_action() for action_db in islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20))
 
     def item_link(self, item):
-        return urlresolvers.reverse('vertimus-names-view', 
-                                    args=(item.state.branch.module.name, 
+        return urlresolvers.reverse('vertimus-names-view',
+                                    args=(item.state.branch.module.name,
                                           item.state.branch.name,
                                           item.state.domain.name,
                                           item.state.language.locale))

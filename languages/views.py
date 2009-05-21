@@ -90,7 +90,7 @@ def language_release_tar(request, locale, release_name, dtype):
         for f in file_list:
             tar_file.add(f, os.path.basename(f))
         tar_file.close()
-    
+
     return HttpResponseRedirect("/POT/tar/%s" % tar_filename)
 
 def language_release_xml(request, locale, release_name):
@@ -141,7 +141,7 @@ def language_release_xml(request, locale, release_name):
                 content += "</module>"
             except:
                 pass
-        
+
         if catname != 'default':
             content += "</category>"
     content += "</stats>"

@@ -14,7 +14,7 @@ class EditMemberRoleForm(forms.Form):
                 initial=role.role)
         self.fields['form_type'] = forms.CharField(widget=forms.HiddenInput,
                                                    initial=roles[0].role)
-    
+
     def get_fields(self):
         for key, field in self.fields.items():
             if key not in ('form_type',):

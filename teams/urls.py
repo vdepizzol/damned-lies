@@ -5,7 +5,7 @@ info_dict = {
     'queryset': Team.objects.all(),
     'template_object_name': 'team',
     'slug_field': 'name',
-    'extra_context': { 
+    'extra_context': {
         'pageSection': "teams"
     }
 }

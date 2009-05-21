@@ -36,7 +36,7 @@ class ModuleAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': (('name','description'),
-                        'homepage', 'comment', 
+                        'homepage', 'comment',
                        ('bugs_base', 'bugs_product', 'bugs_component'),
                        ('vcs_type', 'vcs_root', 'vcs_web'),
                        'maintainers')

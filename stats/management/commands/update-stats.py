@@ -8,13 +8,13 @@ from stats.models import Module, Branch
 class Command(BaseCommand):
     help = "Update statistics about po file"
     args = "[MODULE [BRANCH]]"
-    
+
     option_list = BaseCommand.option_list + (
         make_option('--force', action='store_true', dest='force', default=False,
             help="force statistics generation, even if files didn't change"),
         make_option('--non-gnome', action='store_true', dest='non-gnome', default=False,
             help="generate statistics for non-gnome modules (externally hosted)"),
-    )        
+    )
 
     output_transaction = False
 
@@ -41,7 +41,7 @@ class Command(BaseCommand):
                     print >> sys.stderr, "Error during updating, mail sent to admins"
                 finally:
                     self.release_lock_for_module(module_arg, branch_arg)
-                
+
         elif len(args) == 1:
             # Update all branches of a module
             module_arg = args[0]
@@ -51,7 +51,7 @@ class Command(BaseCommand):
                 try:
                     self.get_lock_for_module(module_arg, branch.name)
                     branch.update_stats(options['force'])
-                except: 
+                except:
                     print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
                 finally:
                     self.release_lock_for_module(module_arg, branch.name)
@@ -74,7 +74,7 @@ class Command(BaseCommand):
                         self.release_lock_for_module(mod.name, branch.name)
 
         return "Update completed."
-    
+
     # Weird things happen when multiple updates run in parallel for the same module
     # We use filesystem directories creation/deletion to act as global lock mecanism
     def get_lock_for_module(self, module_name, branch_name):
@@ -90,4 +90,3 @@ class Command(BaseCommand):
     def release_lock_for_module(self, module_name, branch_name):
         dirpath = os.path.join("/tmp", "updating-%s" % (module_name,))
         os.rmdir(dirpath)
-

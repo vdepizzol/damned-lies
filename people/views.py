@@ -99,7 +99,7 @@ def person_team_join(request):
 
     context_instance = RequestContext(request)
     transaction.commit()
-    return render_to_response('people/person_team_join_form.html', context, 
+    return render_to_response('people/person_team_join_form.html', context,
             context_instance=context_instance)
 
 @login_required
@@ -114,7 +114,7 @@ def person_team_leave(request, team_slug):
         # Message no i18n'ed, should never happen under normal conditions
         person.message_set.create(message="You are not a member of this team.")
     # redirect to normal person detail
-    return HttpResponseRedirect(urlresolvers.reverse('person-username-view', 
+    return HttpResponseRedirect(urlresolvers.reverse('person-username-view',
                                                      args=(person.username,)))
 
 @login_required
@@ -138,4 +138,3 @@ def person_password_change(request):
     }
     return render_to_response('people/person_password_change_form.html', context,
             context_instance=RequestContext(request))
-    

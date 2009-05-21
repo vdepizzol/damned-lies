@@ -65,16 +65,16 @@ class Team(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('team_slug', [self.name])
-    
+
     def fill_role(self, role, person):
         """ Used by TeamManager to prefill roles in team """
         if not self.roles:
             self.roles = {'coordinator':[], 'committer':[], 'reviewer':[], 'translator':[]}
         self.roles[role].append(person)
-        
+
     def get_description(self):
         return _(self.description)
-    
+
     def get_languages(self):
         return self.language_set.all()
 
@@ -92,7 +92,7 @@ class Team(models.Model):
         except:
             members = Person.objects.filter(role__team__id=self.id, role__role=role)
             return members
-        
+
     def get_committers(self):
         return self.get_members_by_role('committer')
 
@@ -106,21 +106,21 @@ class FakeTeam(object):
     """ This is a class replacing a Team object when a language
         has no team attached """
     fake = 1
-    
+
     def __init__(self, language):
         self.language = language
         self.description = _("No team for locale %s") % self.language.locale
-    
+
     def get_absolute_url(self):
-        # FIXME: try to avoid using a hard-coded link 
+        # FIXME: try to avoid using a hard-coded link
         return "/teams/%s" % self.language.locale
-    
+
     def get_description(self):
         return self.language.locale
 
     def get_languages(self):
         return (self.language,)
-    
+
     def get_coordinator(self):
         return None
 
@@ -135,7 +135,7 @@ ROLE_CHOICES = (
 class Role(models.Model):
     """ This is the intermediary class between Person and Team to attribute
         roles to Team members. """
-    
+
     team = models.ForeignKey(Team)
     person = models.ForeignKey(Person)
     role = models.CharField(max_length=15, choices=ROLE_CHOICES, default='translator')
@@ -143,7 +143,6 @@ class Role(models.Model):
     class Meta:
         db_table = 'role'
         unique_together = ('team', 'person')
-    
+
     def __unicode__(self):
         return "%s is %s in %s team" % (self.person.name, self.role, self.team.description)
-

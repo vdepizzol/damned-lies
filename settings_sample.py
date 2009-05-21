@@ -33,7 +33,7 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 #    'read_default_file': '/etc/mysql/my.cnf',
 #    'init_command': 'SET storage_engine=INNODB'
 # }
-# 
+#
 # Please refer to the README file to create an UTF-8 database with MySQL.
 
 EMAIL_HOST = 'localhost'
@@ -140,5 +140,5 @@ if USE_DJANGO_EVOLUTION:
     INSTALLED_APPS += ('django_evolution',)
 
 if USE_DEBUG_TOOLBAR:
-    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',) 
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     INSTALLED_APPS += ('debug_toolbar',)

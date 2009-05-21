@@ -28,7 +28,7 @@ class ModuleBranchForm(forms.Form):
                                                         label=branch.name)
                 self.fields[branch.name+'_cat'] = forms.ChoiceField(choices=CATEGORY_CHOICES)
                 self.branch_fields.append((branch.name, branch.name+'_cat'))
-                
+
         self.fields['new_branch'] = forms.CharField(required=False)
         self.fields['new_branch_release'] = ReleaseField(queryset=Release.objects.all())
         self.fields['new_branch_category'] = forms.ChoiceField(choices=CATEGORY_CHOICES)
@@ -36,4 +36,3 @@ class ModuleBranchForm(forms.Form):
     def get_branches(self):
         for rel_field, cat_field in self.branch_fields:
             yield (self[rel_field], self[cat_field])
-

@@ -27,7 +27,7 @@ from vertimus.models import ActionAbstract
 from stats.utils import po_file_stats
 
 class ActionWidget(forms.Select):
-    """ Custom widget to disable the separator option (containing "--------") """ 
+    """ Custom widget to disable the separator option (containing "--------") """
     def render_options(self, choices, selected_choices):
         options = super(ActionWidget, self).render_options(choices, selected_choices)
         options = options.replace("<option value=\"None\">--------</option>",
@@ -69,15 +69,14 @@ class ActionForm(forms.Form):
         action = ActionAbstract.new_by_name(cleaned_data.get('action'))
         comment = cleaned_data.get('comment')
         file = cleaned_data.get('file')
-        
+
         if action.arg_is_required and not comment and not file:
             raise forms.ValidationError(_("A comment or a file is needed for this action."))
 
         if action.file_is_required and not file:
             raise forms.ValidationError(_("A file is needed for this action."))
-        
+
         if action.file_is_prohibited and file:
             raise forms.ValidationError(_("Please, don't send a file with a 'Reserve' action."))
 
         return cleaned_data
-        

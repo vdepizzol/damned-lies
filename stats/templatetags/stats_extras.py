@@ -4,7 +4,7 @@ register = template.Library()
 
 @register.filter
 def linked_with(value, arg):
-    """ This filter returns an object (passed in value) enclosed with his absolute url 
+    """ This filter returns an object (passed in value) enclosed with his absolute url
         arg is the linked text """
     return "<a href='%s'>%s</a>" % (value.get_absolute_url(), arg)
 
@@ -24,13 +24,13 @@ class IfLessNode(template.Node):
         self.val2 = val2
         self.nodelist_true = nodelist_true
         self.nodelist_false = nodelist_false
-    
+
     def render(self, context):
         if self.val1.resolve(context) < self.val2.resolve(context):
             return self.nodelist_true.render(context)
         else:
             return self.nodelist_false.render(context)
-    
+
 @register.tag
 def ifless(parser, token):
     bits = list(token.split_contents())

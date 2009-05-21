@@ -19,9 +19,8 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-
 from django import template
-     
+
 register = template.Library()
 
 class SplitListNode(template.Node):
@@ -31,10 +30,10 @@ class SplitListNode(template.Node):
         self.new_list = new_list
 
     def split_seq(self, list, cols=2):
-        start = 0 
-        for i in xrange(cols): 
-            stop = start + len(list[i::cols]) 
-            yield list[start:stop] 
+        start = 0
+        for i in xrange(cols):
+            stop = start + len(list[i::cols])
+            yield list[start:stop]
             start = stop
 
     def render(self, context):

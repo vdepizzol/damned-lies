@@ -50,7 +50,7 @@ def module(request, module_name):
         for branch in branches:
             branch.get_ui_stats(mandatory_langs=langs)
             branch.get_doc_stats(mandatory_langs=langs)
-    
+
     context = {
         'pageSection':  "module",
         'module': mod,
@@ -69,7 +69,7 @@ def module_branch(request, module_name, branch_name):
         'branch': branch,
     }
     return render_to_response('branch_detail.html', context, context_instance=RequestContext(request))
-    
+
 @login_required
 def module_edit_branches(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
@@ -131,7 +131,7 @@ def module_edit_branches(request, module_name):
                 form = ModuleBranchForm(mod) # Redisplay a clean form
         else:
             messages.append("Sorry, form is not valid")
-    else:  
+    else:
         form = ModuleBranchForm(mod)
     context = {
         'module': mod,
@@ -143,7 +143,7 @@ def module_edit_branches(request, module_name):
 def docimages(request, module_name, potbase, branch_name, langcode):
     mod = get_object_or_404(Module, name=module_name)
     stat = get_object_or_404(Statistics,
-                             branch__module=mod.id, 
+                             branch__module=mod.id,
                              branch__name=branch_name,
                              domain__name=potbase,
                              language__locale=langcode)

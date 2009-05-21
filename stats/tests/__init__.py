@@ -30,9 +30,9 @@ class ModuleTestCase(unittest.TestCase):
         path = os.path.join(settings.SCRATCHDIR, 'git', 'gnome-hello')
         if os.access(path, os.X_OK):
             shutil.rmtree(path)
-    
+
     def setUp(self):
-        # TODO: load bulk data from fixtures 
+        # TODO: load bulk data from fixtures
         Branch.checkout_on_creation = False
         self.mod = Module(name="gnome-hello",
                   bugs_base="http://bugzilla.gnome.org",
@@ -49,23 +49,23 @@ class ModuleTestCase(unittest.TestCase):
 
         self.b = Branch(name='master', module=self.mod)
         self.b.save(update_statistics=False)
-    
+
         self.rel = Release(name='gnome-2-24', status='official',
                       description='GNOME 2.24 (stable)',
                       string_frozen=True)
         self.rel.save()
-        
+
         self.cat = Category(release=self.rel, branch=self.b, name='desktop')
         self.cat.save()
 
     def testModuleFunctions(self):
         self.assertEquals(self.mod.get_description(), 'gnome-hello')
-        
+
     def testBranchFunctions(self):
         self.assertTrue(self.b.is_head())
         self.assertEquals(self.b.get_vcs_url(), "git://git.gnome.org/gnome-hello")
         self.assertEquals(self.b.get_vcs_web_url(), "http://git.gnome.org/cgit/gnome-hello/")
-        
+
     def testBranchStats(self):
         # Check stats
         self.b.update_stats(force=True)
@@ -73,7 +73,7 @@ class ModuleTestCase(unittest.TestCase):
         self.assertEquals(fr_po_stat.translated, 40)
         fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
         self.assertEquals(fr_doc_stat.translated, 36)
-        
+
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True
         # Create branch (include checkout)
@@ -91,7 +91,7 @@ class ModuleTestCase(unittest.TestCase):
         mail.outbox = []
         self.rel.string_frozen = True
         self.rel.save()
-        
+
         # Create a new file with translation
         new_file_path = os.path.join(self.b.co_path(), "dummy_file.py")
         new_string = "Dummy string for D-L tests"
@@ -108,7 +108,7 @@ class ModuleTestCase(unittest.TestCase):
         self.assertEquals(len(mail.outbox), 1);
         self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.master'")
         self.assertTrue(mail.outbox[0].message().as_string().find(new_string)>-1)
-   
+
     def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """
         self.b.checkout()
@@ -122,7 +122,7 @@ class ModuleTestCase(unittest.TestCase):
         self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.fr.po");
         self.assertEquals(ui_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot");
         self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.fr.po");
-     
+
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """
         Branch.checkout_on_creation = True
@@ -130,4 +130,3 @@ class ModuleTestCase(unittest.TestCase):
                         module = self.mod)
         self.assertRaises(ValueError, branch.save)
         Branch.checkout_on_creation = False
-

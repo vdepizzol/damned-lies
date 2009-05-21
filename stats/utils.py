@@ -54,7 +54,7 @@ def stripHTML(string):
 
 def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
     if settings.DEBUG: print >>sys.stderr, cmd
-    
+
     stdin = None
     if input_data:
         stdin = PIPE
@@ -69,7 +69,7 @@ def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
     if settings.DEBUG: print >>sys.stderr, output + errout
     if raise_on_error and status != STATUS_OK:
         raise OSError(status, errout)
-    
+
     return (status, output, errout)
 
 
@@ -105,7 +105,7 @@ def check_potfiles(po_path):
 
 def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
-    
+
     errors = []
     modulename = read_makefile_variable(vcs_path, "DOC_MODULE")
     if not modulename:
@@ -117,17 +117,17 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
         else:
             errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
             return "", errors
-    
+
     files = os.path.join("C", modulename + ".xml")
     includes = read_makefile_variable(vcs_path, "DOC_INCLUDES")
     for f in includes.split(" "):
         if f.strip() != "":
             files += " %s" % (os.path.join("C", f.strip()))
-    
+
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
     command = "cd \"%s\" && xml2po -o %s -e %s" % (vcs_path, potfile, files)
     (status, output, errs) = run_shell_command(command)
-    
+
     if status != STATUS_OK:
         errors.append(("error",
                        ugettext_noop("Error regenerating POT file for document %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
@@ -179,7 +179,7 @@ def pot_diff_status(pota, potb):
     # POT generation date always change and produce a 4 line diff
     if int(output) <= 4:
         return NOT_CHANGED, ""
-    
+
     result_all, result_add_only = potdiff.diff(pota, potb)
     if not len(result_all) and not len(result_add_only):
         return CHANGED_ONLY_FORMATTING, ""
@@ -213,7 +213,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
         input_file = "-"
     else:
         raise ValueError("pofile type not recognized")
-    
+
     if msgfmt_checks:
         command = "msgfmt -cv -o /dev/null %s" % input_file
     else:
@@ -229,7 +229,7 @@ def po_file_stats(pofile, msgfmt_checks = True):
 
     if msgfmt_checks and input_file != "-" and os.access(pofile, os.X_OK):
         res['errors'].append(("warn", ugettext_noop("This PO file has an executable bit set.")))
-    
+
     # msgfmt output stats on stderr
     r_tr = re.search(r"([0-9]+) translated", errs)
     r_un = re.search(r"([0-9]+) untranslated", errs)
@@ -237,9 +237,9 @@ def po_file_stats(pofile, msgfmt_checks = True):
 
     if r_tr:
         res['translated'] = r_tr.group(1)
-    if r_un: 
+    if r_un:
         res['untranslated'] = r_un.group(1)
-    if r_fz: 
+    if r_fz:
         res['fuzzy'] = r_fz.group(1)
 
     if msgfmt_checks:
@@ -324,7 +324,7 @@ def check_lang_support(module_path, po_path, lang):
 
 def get_fig_stats(pofile):
     """ Extract image strings from pofile and return a list of figures dict {'path':, 'fuzzy':, 'translated':} """
-    # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line 
+    # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
     command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
     (status, output, errs) = run_shell_command(command)
     if status != STATUS_OK:
@@ -336,7 +336,7 @@ def get_fig_stats(pofile):
     re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
     re_hash = re.compile('.*md5=(.*)\"')
     figures = []
-    
+
     for i, line in islice(enumerate(lines), 0, None, 4):
         fig = {'path': '', 'hash': ''}
         fig['fuzzy'] = (line=='#, fuzzy' or line[:8]=='#| msgid')
@@ -402,6 +402,6 @@ def url_join(base, *args):
 class Profiler(object):
     def __init__(self):
         self.start = time.clock()
-    
+
     def time_spent(self):
-        return time.clock() - self.start 
+        return time.clock() - self.start

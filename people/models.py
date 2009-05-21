@@ -50,7 +50,7 @@ class Person(User):
 
     @classmethod
     def clean_unactivated_accounts(cls):
-        accounts = cls.objects.filter(activation_key__isnull=False, 
+        accounts = cls.objects.filter(activation_key__isnull=False,
                                       date_joined__lt=(datetime.datetime.now()-datetime.timedelta(days=10))).exclude(activation_key='')
         for account in accounts:
             account.delete()
@@ -60,12 +60,12 @@ class Person(User):
             self.password = None
             self.set_unusable_password()
         super(User, self).save()
-    
+
     def activate(self):
         self.activation_key = None
         self.is_active = True
         self.save()
-        
+
     def no_spam_email(self):
         return obfuscate_email(self.email)
 
@@ -96,7 +96,7 @@ class Person(User):
             return True
         except:
             return False
-        
+
     def is_committer(self, team):
         try:
             self.role_set.get(team__id=team.id, role__in=['committer', 'coordinator'])

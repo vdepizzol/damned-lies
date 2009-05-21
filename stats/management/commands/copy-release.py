@@ -24,7 +24,7 @@ from stats.models import Release, Category, Module
 class Command(BaseCommand):
     help = "Copy an existing release and use trunk branches"
     args = "RELEASE_TO_COPY, NEW_RELEASE"
-    
+
     output_transaction = False
 
     def handle(self, *args, **options):
@@ -35,10 +35,10 @@ class Command(BaseCommand):
             rel_to_copy = Release.objects.get(name=args[0])
         except:
             raise CommandError("No release named '%s'" % args[0])
-        
+
         new_rel = Release(name=args[1], description=args[1], string_frozen=False, status=rel_to_copy.status)
         new_rel.save()
-        
+
         for cat in rel_to_copy.category_set.all():
             if not cat.branch.is_head():
                 mod = Module.objects.get(pk=cat.branch.module.id)
@@ -46,6 +46,5 @@ class Command(BaseCommand):
             else:
                 branch = cat.branch
             new_rel.category_set.add(Category(release=new_rel, branch=branch, name=cat.name))
-        
-        print "New release '%s' created" % args[1]
 
+        print "New release '%s' created" % args[1]

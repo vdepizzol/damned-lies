@@ -24,4 +24,3 @@ urlpatterns = patterns('people.views',
 urlpatterns += patterns('django.views.generic.list_detail',
     url(r'^$', 'object_list', dict(info_dict_list), name='persons-view'),
 )
-

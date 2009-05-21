@@ -27,7 +27,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
 from people.models import Person
 from teams.models import Role
-from people.forms import RegistrationForm 
+from people.forms import RegistrationForm
 
 
 def index(request):
@@ -115,4 +115,3 @@ def activate_account(request, key):
     person.activate()
     Person.clean_unactivated_accounts()
     return site_login(request, msgs=[_("Your account has been activated.")])
-

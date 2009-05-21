@@ -6,7 +6,7 @@ import shutil
 class Command(NoArgsCommand):
     help = "Compile translations of djamnedlies"
     args = ""
-    
+
     output_transaction = False
 
     def handle(self, **options):
@@ -20,7 +20,6 @@ class Command(NoArgsCommand):
             if not os.path.isdir(localedir):
                 os.makedirs(localedir)
             shutil.copy(os.path.join(podir, pofile), os.path.join(localedir, 'django.po'))
-        
+
         # Run compilemessages -l ll
         compilemessages.compile_messages()
-

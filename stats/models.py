@@ -33,8 +33,8 @@ from people.models import Person
 from languages.models import Language
 
 VCS_TYPE_CHOICES = (
-    ('cvs', 'CVS'), 
-    ('svn', 'Subversion'), 
+    ('cvs', 'CVS'),
+    ('svn', 'Subversion'),
     ('git', 'Git'),
     ('hg', 'Mercurial'),
     ('bzr', 'Bazaar')
@@ -58,17 +58,17 @@ class Module(models.Model):
     # URLField is too restrictive for vcs_root
     vcs_root = models.CharField(max_length=200)
     vcs_web = models.URLField()
-    
+
     maintainers = models.ManyToManyField(Person, db_table='module_maintainer',
         related_name='maintains_modules', blank=True)
 
     class Meta:
         db_table = 'module'
         ordering = ('name',)
-    
+
     def __unicode__(self):
         return self.name
-    
+
     @models.permalink
     def get_absolute_url(self):
         return ('stats.views.module', [self.name])
@@ -82,11 +82,11 @@ class Module(models.Model):
             return _(self.description)
         else:
             return self.name
-    
+
     def has_standard_vcs(self):
         """ This function checks if the module is hosted in the standard VCS of the project """
         return re.search(settings.VCS_HOME_REGEX, self.vcs_root) is not None
-        
+
     def get_bugs_i18n_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
             return utils.url_join(self.bugs_base,
@@ -101,13 +101,13 @@ class Module(models.Model):
             else:
                 return utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s" % (self.bugs_product,))
         else:
-            return self.bugs_base 
-    
+            return self.bugs_base
+
     def get_branches(self, reverse=False):
         branches = list(self.branch_set.all())
         branches.sort(reverse=reverse)
         return branches
-    
+
     def get_head_branch(self):
         """ Returns the HEAD (trunk, master, ...) branch of the module """
         branch = self.branch_set.filter(name__in = BRANCH_HEAD_NAMES)
@@ -116,9 +116,9 @@ class Module(models.Model):
             return branch[0]
         else:
             return None
-    
+
     def can_edit_branches(self, user):
-        """ Returns True for superusers, users with adequate permissions or maintainers of the module """ 
+        """ Returns True for superusers, users with adequate permissions or maintainers of the module """
         if user.is_superuser or \
            user.has_perms(['stats.delete_branch', 'stats.add_branch', 'stats.change_branch']) or \
            user.username in [ p.username for p in self.maintainers.all() ]:
@@ -142,7 +142,7 @@ class Branch(models.Model):
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module = models.ForeignKey(Module)
     # 'releases' is the backward relation name from Release model
-    
+
     # May be set to False by test suite
     checkout_on_creation = True
 
@@ -167,7 +167,7 @@ class Branch(models.Model):
             # The update command is launched asynchronously in a separate thread
             upd_thread = threading.Thread(target=self.update_stats, kwargs={'force':True})
             upd_thread.start()
-    
+
     def delete(self):
         # Remove the repo checkout
         localdir = os.path.join(settings.SCRATCHDIR, self.module.vcs_type, self.module.name + "." + self.name)
@@ -190,7 +190,7 @@ class Branch(models.Model):
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
         return self.releases.filter(string_frozen=True).count() and True or False
-           
+
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
             return self.module.vcs_root
@@ -221,7 +221,7 @@ class Branch(models.Model):
         else:
             branch_dir = self.module.name + "." + self.name
         return os.path.join(settings.SCRATCHDIR, self.module.vcs_type, branch_dir)
-    
+
     def output_dir(self, dom_type):
         """ Directory where generated pot and po files are written on local system """
         subdir = {'ui': '', 'doc': 'docs'}[dom_type]
@@ -229,7 +229,7 @@ class Branch(models.Model):
         if not os.path.isdir(dirname):
             os.makedirs(dirname)
         return dirname
-    
+
     def get_stats(self, typ, mandatory_langs=[]):
         """ Get statistics list of type typ ('ui' or 'doc'), in a dict of lists, key is domain.name (POT in 1st position)
             stats = {'po':      [potstat, polang1, polang2, ...],
@@ -256,7 +256,7 @@ class Branch(models.Model):
         for key, doms in stats.items():
             doms.sort(self.compare_stats)
         return stats
-    
+
     def compare_stats(self, a, b):
         """ Sort stats, pot first, then translated (desc), then language name """
         if not a.language:
@@ -267,8 +267,8 @@ class Branch(models.Model):
             res = -cmp(a.translated, b.translated)
             if not res:
                 res = cmp(a.get_lang(), b.get_lang())
-        return res  
-    
+        return res
+
     def get_doc_stats(self, mandatory_langs=[]):
         if not self._doc_stats:
             self._doc_stats = self.get_stats('doc', mandatory_langs)
@@ -278,7 +278,7 @@ class Branch(models.Model):
         if not self._ui_stats:
             self._ui_stats = self.get_stats('ui', mandatory_langs)
         return self._ui_stats
-    
+
     def update_stats(self, force, checkout=True):
         """ Update statistics for all po files from the branch """
         if checkout:
@@ -293,13 +293,13 @@ class Branch(models.Model):
                 # TODO: should check if existing stats, and delete (archive) them in this case
                 continue
             errors = []
-            
+
             # 2. Pre-check, if available (intltool-update -m)
             # **************************
             if dom.dtype == 'ui' and not dom.pot_method:
                 # Run intltool-update -m to check for some errors
                 errors.extend(utils.check_potfiles(domain_path))
-            
+
             # 3. Generate a fresh pot file
             # ****************************
             if dom.dtype == 'ui':
@@ -312,9 +312,9 @@ class Branch(models.Model):
                 doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
             else:
                 print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
-                continue 
+                continue
             errors.extend(errs)
-            
+
             # Prepare statistics object
             try:
                 stat = Statistics.objects.get(language=None, branch=self, domain=dom)
@@ -344,10 +344,10 @@ class Branch(models.Model):
                 changed_status, diff = utils.pot_diff_status(previous_pot, potfile)
                 if string_frozen and dom.dtype == 'ui' and changed_status == utils.CHANGED_WITH_ADDITIONS:
                     utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
-                
+
                 if changed_status != utils.NOT_CHANGED:
                     signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
-            
+
             # 5. Generate pot stats and update DB
             # ***********************************
             pot_stats = utils.po_file_stats(potfile, False)
@@ -360,7 +360,7 @@ class Branch(models.Model):
             stat.date = datetime.now()
             stat.save()
             stat.set_errors(errors)
-            
+
             # 6. Update language po files and update DB
             # *****************************************
             command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
@@ -415,8 +415,8 @@ class Branch(models.Model):
                                       fuzzy = int(langstats['fuzzy']), untranslated = int(langstats['untranslated']))
                 stat.save()
                 for err in langstats['errors']:
-                    stat.information_set.add(Information(type=err[0], description=err[1])) 
-    
+                    stat.information_set.add(Information(type=err[0], description=err[1]))
+
     def get_lang_files(self, domain, dom_path):
         """ Returns a list of language files on filesystem, as tuple (lang, lang_file) -> lang_file with complete path """
         flist = []
@@ -434,7 +434,7 @@ class Branch(models.Model):
                 if os.path.isfile(pofile):
                     flist.append((d, pofile))
         return flist
-    
+
     def checkout(self):
         """ Do a checkout or an update of the VCS files """
         module_name = self.module.name
@@ -451,7 +451,7 @@ class Branch(models.Model):
 
         try: os.makedirs(localroot)
         except: pass
-        
+
         commandList = []
         if branch_exists:
             # Path exists, update repos
@@ -526,7 +526,7 @@ class Branch(models.Model):
                     "bzrpath" : vcs_path,
                     "dir" : moduledir,
                     })
-        
+
         # Run command(s)
         if settings.DEBUG:
             print >>sys.stdout, "Checking '%s.%s' out to '%s'..." % (module_name, self.name, modulepath)
@@ -617,7 +617,7 @@ class Domain(models.Model):
     dtype = models.CharField(max_length=5, choices=DOMAIN_TYPE_CHOICES, default='ui')
     directory = models.CharField(max_length=50)
     # The pot_method is a command who should produce a potfile in the po directory of
-    # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot). If blank, method is 
+    # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot). If blank, method is
     # intltool for UI and gnome-doc-utils for DOC
     pot_method = models.CharField(max_length=50, null=True, blank=True)
 
@@ -635,16 +635,16 @@ class Domain(models.Model):
             return "%s-help" % self.module.name
         else:
             return self.name
-    
+
     def get_description(self):
         if self.description:
             return _(self.description)
         else:
             return self.potbase()
-    
+
     def generate_pot_file(self, vcs_path):
         """ Return the pot file generated, and the error if any """
-        
+
         pot_command = self.pot_method
         podir = vcs_path
         env = None
@@ -671,7 +671,7 @@ class Domain(models.Model):
                        )
         else:
             return potfile, ()
-    
+
 RELEASE_STATUS_CHOICES = (
     ('official', 'Official'),
     ('unofficial', 'Unofficial'),
@@ -704,18 +704,18 @@ class Release(models.Model):
         LOCALE, NAME, REL_ID, TRANS, FUZZY, UNTRANS = 0, 1, 2, 3, 4, 5
         query = """
             SELECT language.locale, language.name, category.release_id,
-                   SUM(stat.translated), 
+                   SUM(stat.translated),
                    SUM(stat.fuzzy),
                    SUM(stat.untranslated)
             FROM statistics AS stat
             LEFT JOIN language
                    ON stat.language_id = language.id
-            INNER JOIN domain 
+            INNER JOIN domain
                    ON stat.domain_id = domain.id
-            INNER JOIN branch 
+            INNER JOIN branch
                    ON stat.branch_id = branch.id
-            INNER JOIN category 
-                   ON category.branch_id = branch.id 
+            INNER JOIN category
+                   ON category.branch_id = branch.id
             WHERE domain.dtype = %%s
               AND category.release_id IN (%s)
             GROUP BY language_id, category.release_id
@@ -741,17 +741,17 @@ class Release(models.Model):
         """ Returns the total number of strings in the release as a tuple (doc_total, ui_total) """
         # Uses the special statistics record where language_id is NULL to compute the sum.
         query = """
-            SELECT domain.dtype, 
+            SELECT domain.dtype,
                    SUM(stat.untranslated)
             FROM statistics AS stat
-            LEFT JOIN domain 
+            LEFT JOIN domain
                    ON domain.id = stat.domain_id
             LEFT JOIN branch AS br
                    ON br.id = stat.branch_id
             LEFT JOIN category AS cat
                    ON cat.branch_id = br.id
             LEFT JOIN "release" AS rel
-                   ON rel.id = cat.release_id 
+                   ON rel.id = cat.release_id
             WHERE rel.id = %s
               AND stat.language_id IS NULL
             GROUP BY domain.dtype"""
@@ -767,24 +767,24 @@ class Release(models.Model):
             elif row[0] == 'doc':
                 total_doc = row[1]
         return (total_doc, total_ui)
-    
+
     def total_for_lang(self, lang):
         """ Returns total translated/fuzzy/untranslated strings for a specific
             language """
-        
+
         total_doc, total_ui = self.total_strings()
         query = """
             SELECT domain.dtype,
-                   SUM(stat.translated), 
-                   SUM(stat.fuzzy) 
+                   SUM(stat.translated),
+                   SUM(stat.fuzzy)
             FROM statistics AS stat
-            LEFT JOIN domain 
+            LEFT JOIN domain
                    ON stat.domain_id = domain.id
-            LEFT JOIN branch 
+            LEFT JOIN branch
                    ON stat.branch_id = branch.id
-            LEFT JOIN category 
-                   ON category.branch_id = branch.id 
-            WHERE language_id = %s 
+            LEFT JOIN category
+                   ON category.branch_id = branch.id
+            WHERE language_id = %s
               AND category.release_id = %s
             GROUP BY domain.dtype"""
         cursor = connection.cursor()
@@ -812,22 +812,22 @@ class Release(models.Model):
             stats['docfuzzyperc'] = int(100*stats['docfuzzy']/total_doc)
             stats['docuntransperc'] = int(100*stats['docuntrans']/total_doc)
         return stats
-    
+
     def get_global_stats(self):
         """ Get statistics for all languages in a release, grouped by language
             Returns a sorted list: (language, doc_trans, doc_fuzzy,
             doc_untrans, ui_trans, ui_fuzzy, ui_untrans) """
 
         query = """
-            SELECT MIN(lang.name), 
-                   MIN(lang.locale), 
-                   domain.dtype, 
-                   SUM(stat.translated) AS trans, 
+            SELECT MIN(lang.name),
+                   MIN(lang.locale),
+                   domain.dtype,
+                   SUM(stat.translated) AS trans,
                    SUM(stat.fuzzy)
             FROM statistics AS stat
-            LEFT JOIN domain 
+            LEFT JOIN domain
                    ON domain.id = stat.domain_id
-            LEFT JOIN language AS lang 
+            LEFT JOIN language AS lang
                    ON stat.language_id = lang.id
             LEFT JOIN branch AS br
                    ON br.id = stat.branch_id
@@ -869,22 +869,22 @@ class Release(models.Model):
 
         results = stats.values()
         results.sort(self.compare_stats)
-        return results 
-    
+        return results
+
     def compare_stats(self, a, b):
         res = cmp(b['ui_trans'], a['ui_trans'])
         if not res:
             res = cmp(b['doc_trans'], a['doc_trans'])
             if not res:
                 res = cmp(b['lang_name'], a['lang_name'])
-        return res  
-    
+        return res
+
     def get_lang_stats(self, lang):
         """ Get statistics for a specific language, producing the stats data structure
             Used for displaying the language-release template """
-        
+
         stats = {'doc': Statistics.get_lang_stats_by_type(lang, 'doc', self),
-                 'ui':  Statistics.get_lang_stats_by_type(lang, 'ui', self), 
+                 'ui':  Statistics.get_lang_stats_by_type(lang, 'ui', self),
                 }
         return stats
 
@@ -929,7 +929,7 @@ class Category(models.Model):
 
     def __unicode__(self):
         return "%s (%s, %s)" % (self.get_name_display(), self.release, self.branch)
-    
+
     @classmethod
     def get_cat_name(cls, key):
         for entry in CATEGORY_CHOICES:
@@ -941,7 +941,7 @@ class Statistics(models.Model):
     branch = models.ForeignKey(Branch)
     domain = models.ForeignKey(Domain)
     language = models.ForeignKey(Language, null=True)
-    
+
     date = models.DateTimeField(auto_now_add=True)
     translated = models.IntegerField(default=0)
     fuzzy = models.IntegerField(default=0)
@@ -954,7 +954,7 @@ class Statistics(models.Model):
         verbose_name = "statistics"
         verbose_name_plural = verbose_name
         unique_together = ('branch', 'domain', 'language')
-    
+
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
         self.figures = None
@@ -962,7 +962,7 @@ class Statistics(models.Model):
         self.moddescription = None
         self.partial_po = False # True if part of a multiple po module
         self.info_list = []
-    
+
     def __unicode__(self):
         """ String representation of the object """
         return "%s (%s-%s) %s (%s)" % (self.branch.module.name, self.domain.dtype, self.domain.name,
@@ -970,19 +970,19 @@ class Statistics(models.Model):
 
     def is_fake(self):
         return False
-        
+
     def tr_percentage(self):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self.translated/self.pot_size())
-    
+
     def fu_percentage(self):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self.fuzzy/self.pot_size())
-    
+
     def un_percentage(self):
         if self.pot_size() == 0:
             return 0
@@ -991,35 +991,35 @@ class Statistics(models.Model):
 
     def get_lang(self):
         if self.language:
-            return _("%(lang_name)s (%(lang_locale)s)") % { 
+            return _("%(lang_name)s (%(lang_locale)s)") % {
                 'lang_name': _(self.language.name),
                 'lang_locale': self.language.locale
             }
         else:
             return "pot file"
-    
+
     def module_name(self):
         if not self.modname:
             self.modname = self.branch.module.name
         return self.modname
-    
+
     def module_description(self):
         if not self.moddescription:
             self.moddescription = self.branch.module.description or self.branch.module.name
         return self.moddescription
-        
+
     def get_translationstat(self):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
-    
+
     def filename(self, potfile=False):
         if self.language and not potfile:
             return "%s.%s.%s.po" % (self.domain.potbase(), self.branch.name, self.language.locale)
         else:
             return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
-            
+
     def pot_size(self):
         return int(self.translated) + int(self.fuzzy) + int(self.untranslated)
-    
+
     def pot_text(self):
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", self.pot_size()) % {'count': self.pot_size()}
@@ -1035,7 +1035,7 @@ class Statistics(models.Model):
             text = _(u"POT file (%(messages)s) — %(updated)s") % \
                               {'messages': msg_text, 'updated': upd_text}
         return text
-    
+
     def get_figures(self):
         if self.figures is None and self.domain.dtype == 'doc':
             self.figures = utils.get_fig_stats(self.po_path())
@@ -1046,11 +1046,11 @@ class Statistics(models.Model):
                     if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
                         fig['translated_file'] = True
         return self.figures
-    
+
     def fig_count(self):
         """ If stat of a document type, get the number of figures in the document """
         return self.num_figures
-    
+
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'total':0, 'prc':0}
         for fig in self.get_figures():
@@ -1062,22 +1062,22 @@ class Statistics(models.Model):
         if stats['total'] > 0:
             stats['prc'] = 100*stats['translated']/stats['total']
         return stats
-            
+
     def vcs_path(self):
         """ Return the VCS path of file on remote vcs """
         return utils.url_join(self.branch.get_vcs_url(), self.domain.directory)
-        
+
     def vcs_web_path(self):
         """ Return the Web interface path of file on remote vcs """
         return utils.url_join(self.branch.get_vcs_web_url(), self.domain.directory)
-        
+
     def po_path(self, potfile=False):
         """ Return path of po file on local filesystem """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs"
         return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile))
-        
+
     def po_url(self, potfile=False):
         """ Return URL of po file, e.g. for downloading the file """
         subdir = ""
@@ -1118,7 +1118,7 @@ class Statistics(models.Model):
                         'catname': <catname>, # translated category name (see CATEGORY_CHOICES)
                         'cattotal': 0,
                         'cattrans': 0,
-                        'catfuzzy': 0, 
+                        'catfuzzy': 0,
                         'catuntrans': 0,
                         'cattransperc': 0,
                         'modules': { # This dict is converted to a sorted list at the end of stats computation
@@ -1136,7 +1136,7 @@ class Statistics(models.Model):
             }
         """
         from vertimus.models import StateDb, ActionDb # import here to prevent a circular dependency
-        
+
         stats = {'dtype':dtype, 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0,
                  'totaltransperc': 0, 'totalfuzzyperc': 0, 'totaluntransperc': 0,
                  'categs':{}, 'all_errors':[]}
@@ -1155,7 +1155,7 @@ class Statistics(models.Model):
         tr_stats_dict = dict([("%d-%d" % (st.branch.id, st.domain.id),st) for st in tr_stats])
 
         infos_dict = Information.get_info_dict(lang)
-        
+
         # Prepare StateDb objects in a dict (with "branch_id-domain_id" as key), to save database queries later
         vt_states = StateDb.objects.select_related('branch','domain')
         if release:
@@ -1214,7 +1214,7 @@ class Statistics(models.Model):
                     stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stats['categs'][categdescr]['modules'][modname][branchname][1][1])
                 stats['categs'][categdescr]['modules'][modname][branchname].append((domname, stat))
                 stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stat)
-              
+
         # Compute percentages and sorting
         stats['total'] = stats['totaltrans'] + stats['totalfuzzy'] + stats['totaluntrans']
         if stats['total'] > 0:
@@ -1249,19 +1249,19 @@ class FakeStatistics(object):
         self.fuzzy = 0
         self.untranslated = 0
         self.partial_po = False
-    
+
     def trans(self, stat):
         self.translated += stat.translated
         self.fuzzy += stat.fuzzy
         self.untranslated += stat.untranslated
         stat.partial_po = True
-    
+
     def is_fake(self):
         return True
 
     def get_lang(self):
         if self.language:
-            return _("%(lang_name)s (%(lang_locale)s)") % { 
+            return _("%(lang_name)s (%(lang_locale)s)") % {
                 'lang_name': _(self.language.name),
                 'lang_locale': self.language.locale
             }
@@ -1329,7 +1329,7 @@ class Information(models.Model):
 
     @classmethod
     def get_info_dict(cls, lang):
-        """ Return a dict (of lists) with all Information objects for a lang, with statistics_id as the key 
+        """ Return a dict (of lists) with all Information objects for a lang, with statistics_id as the key
             Used for caching and preventing db access when requesting these objects for a long list of stats """
         info_dict = {}
         for info in Information.objects.filter(statistics__language=lang):
@@ -1344,15 +1344,15 @@ class Information(models.Model):
 
     def get_icon(self):
         return "%simg/%s.png" % (settings.MEDIA_URL, self.type.split("-")[0])
-    
+
     def get_description(self):
         text = self.description
-        matches = re.findall('###([^#]*)###',text) 
+        matches = re.findall('###([^#]*)###',text)
         if matches:
             text = re.sub('###([^#]*)###', '%s', text)
 
         text = _(text)
-        
+
         #FIXME: if multiple substitutions, works only if order of %s is unchanged in translated string
         for match in matches:
             text = text.replace('%s',match,1)
@@ -1366,4 +1366,3 @@ class ArchivedInformation(models.Model):
 
     class Meta:
         db_table = 'archived_information'
-

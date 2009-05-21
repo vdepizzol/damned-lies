@@ -76,7 +76,7 @@ def _parse_contents(contents):
     if len(contents) and contents[-1] != "\n": contents += "\n"
 
     # state machine for parsing PO files
-    msgid = ""; msgstr = ""; msgctxt = ""; comment = ""; plural = ""; 
+    msgid = ""; msgstr = ""; msgctxt = ""; comment = ""; plural = "";
     in_msgid = in_msgstr = in_msgctxt = in_msgid_plural = in_plural = 0
 
     result = []
@@ -90,7 +90,7 @@ def _parse_contents(contents):
         if line == "":
             if in_msgstr and msgid != "":
                 onemsg = ""
-                
+
                 if msgctxt: onemsg += ('"' + msgctxt + '"::')
                 onemsg += ('"' + msgid + '"')
                 if plural: onemsg += ('/"' + plural + '"')
@@ -148,4 +148,3 @@ def _parse_contents(contents):
 if __name__ == "__main__":
     import sys
     print "\n".join(diff(sys.argv[1], sys.argv[2]))
-    

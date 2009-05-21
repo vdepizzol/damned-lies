@@ -19,24 +19,24 @@ class Language(models.Model):
             return _(self.name)
         else:
             return self.locale
-    
+
     def bugs_url_enter(self):
         return "http://bugzilla.gnome.org/enter_bug.cgi?product=l10n&amp;component=%s%%20[%s]" %  (self.name, self.locale)
-        
+
     def bugs_url_show(self):
-        return "http://bugzilla.gnome.org/buglist.cgi?product=l10n&amp;component=%s%%20[%s]&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED" % (self.name, self.locale)          
+        return "http://bugzilla.gnome.org/buglist.cgi?product=l10n&amp;component=%s%%20[%s]&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED" % (self.name, self.locale)
 
     def get_release_stats(self):
         # FIXME Here be dragons
         """ Get summary stats for all releases """
         from stats.models import Release
-        
+
         releases = Release.objects.all().order_by('status', '-name')
         stats = []
         for rel in releases:
             stats.append(rel.total_for_lang(self))
         return stats
-    
+
     def get_team_url(self):
         if self.team:
             return self.team.get_absolute_url()

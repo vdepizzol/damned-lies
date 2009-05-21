@@ -31,8 +31,8 @@ def teams(request):
     teams = Team.objects.all_with_roles()
 
     context = {
-        'pageSection': 'teams',              
-        'teams': utils.trans_sort_object_list(teams, 'description') 
+        'pageSection': 'teams',
+        'teams': utils.trans_sort_object_list(teams, 'description')
     }
     return render_to_response('teams/team_list.html', context, context_instance=RequestContext(request))
 
@@ -40,7 +40,7 @@ def team(request, team_slug):
     try:
         team = Team.objects.get(name=team_slug)
         coordinator = team.get_coordinator()
-        mem_groups = ( 
+        mem_groups = (
                {'title': _("Committers"),
                 'members': team.get_committers(),
                 'form': None,
@@ -95,4 +95,3 @@ def team(request, team_slug):
         'mem_groups': mem_groups
     }
     return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
-

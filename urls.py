@@ -38,7 +38,7 @@ urlpatterns += patterns('stats.views',
 
 if 'django_openid' in settings.INSTALLED_APPS:
     from django_openid.auth import AuthConsumer
-    
+
     urlpatterns += patterns('',
         # ...
         (r'^openid/(.*)', AuthConsumer()),

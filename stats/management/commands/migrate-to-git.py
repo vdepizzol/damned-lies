@@ -15,12 +15,12 @@ class Command(BaseCommand):
             old_branch_dirs = []
             for branch in module.branch_set.all():
                 old_branch_dirs.append(branch.co_path())
-            
+
             module.vcs_type = "git"
             module.vcs_root = "git://git.gnome.org/%s" % module.name
             module.vcs_web = "http://git.gnome.org/cgit/%s/" % module.name
             module.save()
-            
+
             # Checkout new git repo with master branch
             head_branch = Branch.objects.get(module__name=module.name, name='HEAD')
             head_branch.name = "master"
@@ -29,7 +29,7 @@ class Command(BaseCommand):
             except Exception, e:
                 print "Unable to save master branch for module '%s': %s" % (module.name, e)
                 continue
-            
+
             for branch in module.branch_set.exclude(name='master'):
                 # Checkout branch (other than master)
                 cmd = "cd \"%(localdir)s\" && git checkout --track -b %(branch)s  origin/%(branch)s" % {
@@ -42,8 +42,7 @@ class Command(BaseCommand):
                     print "Unable to checkout branch '%s' of module '%s': %s" % (branch.name, module.name, e)
                     continue
                 branch.update_stats(force=False)
-                
+
             # delete old checkouts
             for branch_dir in old_branch_dirs:
                 shutil.rmtree(branch_dir)
-

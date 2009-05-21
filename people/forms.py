@@ -21,7 +21,7 @@ class RegistrationForm(forms.Form):
                                 help_text=ugettext_lazy(u'At least 7 characters'))
     password2 = forms.CharField(widget=forms.PasswordInput(render_value=False),
                                 label=ugettext_lazy(u'Confirm password:'), required=False)
-    
+
     def clean_username(self):
         """  Validate the username (correctness and uniqueness)"""
         try:
@@ -37,7 +37,7 @@ class RegistrationForm(forms.Form):
         openid_url = cleaned_data.get('openid_url')
         if not password1 and not openid_url:
             raise forms.ValidationError(_(u'You must either provide an OpenID or a password'))
-        
+
         if password1 and password1 != password2:
             raise forms.ValidationError(_(u'The passwords do not match'))
         return cleaned_data
@@ -64,7 +64,7 @@ class RegistrationForm(forms.Form):
         current_site = Site.objects.get_current()
         subject = settings.EMAIL_SUBJECT_PREFIX + _(u'Account activation')
         message = _(u"This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser.") % current_site.name
-        message += "\n\nhttp://%s%s\n\n" % (current_site.domain, str(reverse("register_activation", kwargs={'key': activation_key}))) 
+        message += "\n\nhttp://%s%s\n\n" % (current_site.domain, str(reverse("register_activation", kwargs={'key': activation_key})))
         message += _(u"Administrators of %s" % current_site.name)
 
         send_mail(subject, message, settings.DEFAULT_FROM_EMAIL,

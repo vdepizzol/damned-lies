@@ -9,11 +9,11 @@ from django.conf import settings
 class Command(BaseCommand):
     help = "Update translations of djamnedlies ('en' is a special case, and generate damned-lies.pot)"
     args = "LANG_CODE"
-    
+
     #option_list = BaseCommand.option_list + (
     #    make_option('--pot', action='store_true', dest='pot', default=False,
     #        help="create a pot file"),
-    #)        
+    #)
 
     output_transaction = False
 
@@ -33,15 +33,15 @@ class Command(BaseCommand):
                 shutil.copy(pofile, os.path.join(localedir, 'django.po'))
         else:
             pofile = os.path.join(podir, 'damned-lies.pot')
-        
+
         # Extract DB translatable strings into database-content.py
         dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
         f=open(dbfile, 'w')
-        query = """SELECT description FROM team UNION 
-                   SELECT name from language WHERE name <> locale UNION 
-                   SELECT description FROM domain UNION 
-                   SELECT description FROM module WHERE description <> name UNION 
-                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION 
+        query = """SELECT description FROM team UNION
+                   SELECT name from language WHERE name <> locale UNION
+                   SELECT description FROM domain UNION
+                   SELECT description FROM module WHERE description <> name UNION
+                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION
                    SELECT description FROM "release" """
         cursor = connection.cursor()
         if settings.DATABASE_ENGINE == 'mysql':
@@ -54,13 +54,11 @@ class Command(BaseCommand):
 
         # Run makemessages -l ll
         makemessages.make_messages(lang_code, verbosity=2, extensions=['.html'])
-        
+
         # Delete database-content.py
         os.unlink(dbfile)
-        
+
         # Copy locale/ll/LC_MESSAGES/django.po to po/ll.po
         shutil.copy(os.path.join(localedir, 'django.po'), pofile)
-        
+
         return "po file for language '%s' updated." % lang_code
-
-
