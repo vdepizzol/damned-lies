@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-21 16:05+0000\n"
-"PO-Revision-Date: 2009-04-21 18:21+0200\n"
+"POT-Creation-Date: 2009-05-21 04:33+0000\n"
+"PO-Revision-Date: 2009-05-21 11:57+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -806,38 +806,34 @@ msgid "Search Tool Manual"
 msgstr "Manuel de l'outil de recherche"
 
 #: database-content.py:198
-msgid "GFloppy Manual"
-msgstr "Manuel de GFloppy"
-
-#: database-content.py:199
 msgid "GNOME Library help"
 msgstr "Aide de la bibliothèque GNOME"
 
-#: database-content.py:200
+#: database-content.py:199
 msgid "Eye of GNOME Manual"
 msgstr "Manuel de Eye of GNOME"
 
-#: database-content.py:201
+#: database-content.py:200
 msgid "GST User Management Manual"
 msgstr "Manuel GST de la gestion des utilisateurs"
 
-#: database-content.py:202
+#: database-content.py:201
 msgid "GST Service Management Manual"
 msgstr "Manuel GST du gestionnaire des services"
 
-#: database-content.py:203
+#: database-content.py:202
 msgid "GST Network Setup Manual"
 msgstr "Manuel GST des paramètres réseau"
 
-#: database-content.py:204
+#: database-content.py:203
 msgid "GST Shared Folders Manual"
 msgstr "Manuel GST des dossiers partagés"
 
-#: database-content.py:205
+#: database-content.py:204
 msgid "GST Time Setup Manual"
 msgstr "Manuel GST de Date et heure"
 
-#: database-content.py:206 djamnedlies-git/languages/views.py:50
+#: database-content.py:205 djamnedlies-git/languages/views.py:50
 #: djamnedlies-git/languages/views.py:66
 #: djamnedlies-git/templates/branch_detail.html:23
 #: djamnedlies-git/templates/release_detail.html:22
@@ -851,6 +847,10 @@ msgstr "Manuel GST de Date et heure"
 #: templates/teams/team_detail.html:27
 msgid "Documentation"
 msgstr "Documentation"
+
+#: database-content.py:206
+msgid "UI translation"
+msgstr "Traductions de l'interface utilisateur"
 
 #: database-content.py:207
 msgid "GNOME 2 User Documentation"
@@ -918,7 +918,7 @@ msgstr "Applet Deskbar"
 
 #: database-content.py:222
 msgid "WebKitGTK+"
-msgstr ""
+msgstr "WebKitGTK+"
 
 #: database-content.py:223
 msgid ""
@@ -936,6 +936,14 @@ msgstr "Evince est un visionneur de documents en plusieurs formats."
 
 #: database-content.py:225
 msgid ""
+"Committed translations are updated manually on l10n.gnome.org frome time to "
+"time. Be patient :-) "
+msgstr ""
+"Les traductions soumises sont mises à jour sur l10n.gnome.org manuellement et "
+"de temps en temps. Merci de votre patience :-)"
+
+#: database-content.py:226
+msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
@@ -943,7 +951,7 @@ msgstr ""
 "par l'intermédiaire du <a href=\"http://translationproject.org\">Translation "
 "Project</a>."
 
-#: database-content.py:226
+#: database-content.py:227
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -951,11 +959,11 @@ msgstr ""
 "À partir de GNOME 2.23, Gail est intégré dans GTK+. Prière de ne plus "
 "commiter dans trunk."
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "A VNC client for GNOME"
 msgstr "Un client VNC pour GNOME"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -967,11 +975,11 @@ msgstr ""
 "soumettre un fichier dans l'autre domaine, même s'il n'est pas traduit, sous "
 "peine de faire échouer la compilation dans /po-properties."
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Interface graphique pour le gestionnaire de versions git"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -979,21 +987,19 @@ msgstr ""
 "moserial est un terminal série soigné et convivial basé sur GTK pour le "
 "bureau GNOME. Pour ne rien gâcher, il est écrit en Vala."
 
-#: database-content.py:231
-msgid ""
-"This is a clone of the official version from the freedesktop.org repository."
-"<br/>Note that the repository name in git.gnome.org is <pre>system-tools-"
-"backends-clone</pre>"
-msgstr ""
-"Ceci est un clone de la version officielle qui se trouve dans le dépôt "
-"freedesktop.org.<br/>Notez que le nom du dépôt sur git.gnome.org est <pre>"
-"system-tools-backends-clone</pre>"
-
 #: database-content.py:232
+msgid ""
+"This is a clone of the official system-tools-backends version from the "
+"freedesktop.org repository."
+msgstr ""
+"Ceci est un clone de la version officielle de system-tools-backends dans "
+"le dépôt freedesktop.org."
+
+#: database-content.py:233
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout est une application de mise en page pour X."
 
-#: database-content.py:233
+#: database-content.py:234
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1001,65 +1007,79 @@ msgstr ""
 "gnome-disk-utility fournit des bibliothèques et des applications en lien "
 "avec les périphériques de stockage."
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "A note taking application"
 msgstr "Une application de prise de notes"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
-
-#: database-content.py:236
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "GNOME Fifth Toe (logiciels supplémentaires)"
+"Les traductions doivent être transmises dans des rapports de bogues (voir lien "
+"ci-dessous)."
 
 #: database-content.py:237
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr ""
+"GNOME Video Arcade est une interface MAME (Multiple Arcade Machine Emulator)"
+"pour GNOME."
+
+#: database-content.py:238
+msgid "GNOME Teletext viewer"
+msgstr "Afficheur télétexte GNOME"
+
+#: database-content.py:239
 msgid "Extra GNOME Applications"
 msgstr "Applications GNOME supplémentaires (Extra)"
 
-#: database-content.py:238
+#: database-content.py:240
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (ancienne stable)"
 
-#: database-content.py:239
+#: database-content.py:241
 msgid "GNOME Infrastructure"
 msgstr "Infrastructure GNOME"
 
-#: database-content.py:240
+#: database-content.py:242
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (ancienne stable)"
 
-#: database-content.py:241
+#: database-content.py:243
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (ancienne stable)"
 
-#: database-content.py:242
+#: database-content.py:244
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non GNOME)"
 
-#: database-content.py:243
+#: database-content.py:245
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (ancienne stable)"
 
-#: database-content.py:244
+#: database-content.py:246
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (ancienne stable)"
 
-#: database-content.py:245
+#: database-content.py:247
 msgid "GNOME-Office Productivity Applications"
 msgstr "Applications de productivité GNOME-Office"
 
-#: database-content.py:246
+#: database-content.py:248
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (ancienne stable)"
 
-#: database-content.py:247
+#: database-content.py:249
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (stable)"
 
-#: database-content.py:248
+#: database-content.py:250
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (développement)"
+
+#: database-content.py:251
+msgid "Obsolete GNOME Applications"
+msgstr "Applications GNOME obsolètes"
 
 #: settings.py:73 settings_sample.py:80 djamnedlies-git/settings_sample.py:80
 msgid ""
@@ -1090,6 +1110,8 @@ msgid ""
 "You have not joined any translation team yet. You can do it from <a href=\"%"
 "(url)s\">your profile</a>."
 msgstr ""
+"Vous n'êtes affilié à aucune équipe de traduction. Vous pouvez le faire à "
+"partir de la page de <a href=\"%(url)s\">votre profil</a>."
 
 #: common/views.py:75 djamnedlies-git/common/views.py:69
 #: djamnedlies-svn/common/views.py:69
@@ -1255,23 +1277,23 @@ msgid "Your password has been changed."
 msgstr "Votre mot de passe a été modifié."
 
 #: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
-#: stats/models.py:329
+#: stats/models.py:334
 msgid "Can't generate POT file, using old one."
 msgstr "Impossible de générer le fichier POT, utilisation de l'ancien."
 
 #: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
-#: stats/models.py:351
+#: stats/models.py:356
 msgid "Can't copy new POT file to public location."
 msgstr ""
 "Impossible de copier le nouveau fichier POT vers un emplacement public."
 
 #: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
-#: stats/models.py:383
+#: stats/models.py:388
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La liste DOC_LINGUAS ne contient pas cette langue."
 
 #: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
-#: stats/models.py:662
+#: stats/models.py:667
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1283,39 +1305,39 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
-#: stats/models.py:909
+#: stats/models.py:914
 msgid "Administration Tools"
 msgstr "Outils d'administration"
 
 #: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
-#: stats/models.py:910
+#: stats/models.py:915
 msgid "Development Tools"
 msgstr "Outils de développement"
 
 #: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
-#: stats/models.py:911
+#: stats/models.py:916
 msgid "GNOME Desktop"
 msgstr "Bureau GNOME"
 
 #: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
-#: stats/models.py:912
+#: stats/models.py:917
 msgid "GNOME Developer Platform"
 msgstr "Plate-forme de développement GNOME"
 
 #: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
-#: stats/models.py:913
+#: stats/models.py:918
 msgid "New Module Proposals"
 msgstr "Propositions de nouveaux modules"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
 #: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:989 stats/models.py:1259
+#: stats/models.py:994 stats/models.py:1264
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1020
+#: stats/models.py:1025
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1323,7 +1345,7 @@ msgstr[0] "%(count)s message"
 msgstr[1] "%(count)s messages"
 
 #: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1021
+#: stats/models.py:1026
 #, python-format
 msgid "updated on %(date)s"
 msgstr "mis à jour le %(date)s"
@@ -1340,13 +1362,13 @@ msgstr "mis à jour le %(date)s"
 #: djamnedlies-svn/stats/models.py:1020
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1023 templates/vertimus/vertimus_detail.html:33
+#: stats/models.py:1028 templates/vertimus/vertimus_detail.html:33
 #: templates/vertimus/vertimus_detail.html:80
 msgid "Y-m-d g:i a O"
 msgstr "d/m/Y H:i O"
 
 #: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1026
+#: stats/models.py:1031
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1354,13 +1376,13 @@ msgstr[0] "%(count)s figure"
 msgstr[1] "%(count)s figures"
 
 #: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1027
+#: stats/models.py:1032
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s, %(figures)s) — %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1030
+#: stats/models.py:1035
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s) — %(updated)s"
@@ -1758,7 +1780,7 @@ msgstr ""
 "nous tenons à jour des statistiques."
 
 #: djamnedlies-git/templates/index.html:30
-#: djamnedlies-svn/templates/index.html:30 templates/index.html:30
+#: djamnedlies-svn/templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
@@ -2072,7 +2094,7 @@ msgstr "Remarques"
 #: djamnedlies-git/vertimus/models.py:165
 #: djamnedlies-svn/templates/stats_show.html:30
 #: djamnedlies-svn/vertimus/models.py:165 templates/stats_show.html:30
-#: vertimus/models.py:165
+#: vertimus/models.py:166
 msgid "Translated"
 msgstr "Traduit"
 
@@ -2819,43 +2841,43 @@ msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "N'envoyez pas de fichier avec une action du type « Réserver »."
 
 #: djamnedlies-git/vertimus/models.py:139
-#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:139
+#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:140
 msgid "Inactive"
 msgstr "Inactif"
 
 #: djamnedlies-git/vertimus/models.py:152
-#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:152
+#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:153
 msgid "Translating"
 msgstr "Traduction en cours"
 
 #: djamnedlies-git/vertimus/models.py:182
-#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:182
+#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:183
 msgid "Proofreading"
 msgstr "Relecture en cours"
 
 #. Translators: This is a status, not a verb
 #: djamnedlies-git/vertimus/models.py:197
-#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:197
+#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:198
 msgid "Proofread"
 msgstr "Relu"
 
 #: djamnedlies-git/vertimus/models.py:212
-#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:212
+#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:213
 msgid "To Review"
 msgstr "À revoir"
 
 #: djamnedlies-git/vertimus/models.py:224
-#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:224
+#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:225
 msgid "To Commit"
 msgstr "À commiter"
 
 #: djamnedlies-git/vertimus/models.py:239
-#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:239
+#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:240
 msgid "Committing"
 msgstr "Commit en cours"
 
 #: djamnedlies-git/vertimus/models.py:253
-#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:253
+#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:254
 msgid "Committed"
 msgstr "Commité"
 
@@ -3038,13 +3060,21 @@ msgstr ""
 msgid "Original strings"
 msgstr "Chaînes originales"
 
-#: stats/models.py:331
+#: stats/models.py:336
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Impossible de générer le fichier POT, statistiques interrompues."
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
+
+#: templates/index.html:30
+msgid ""
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
+msgstr ""
+"Voici des exemples de groupes de versions : « Infrastructure GNOME » ou "
+"« GNOME 2.26 »."
 
 #: templates/languages/language_release.html:33
 msgid ""
