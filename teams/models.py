@@ -82,9 +82,12 @@ class Team(models.Model):
         try:
             return self.roles['coordinator'][0]
         except:
-            # The join by role__team__id generates only one query and
-            # the same one by role__team=self two queries!
-            return Person.objects.get(role__team__id=self.id, role__role='coordinator')
+            try:
+                # The join by role__team__id generates only one query and
+                # the same one by role__team=self two queries!
+                return Person.objects.get(role__team__id=self.id, role__role='coordinator')
+            except Person.DoesNotExist:
+                return None
 
     def get_members_by_role(self, role):
         try:
