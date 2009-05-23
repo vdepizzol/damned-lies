@@ -36,7 +36,7 @@
 
 <div style="line-height: 1.7">
 <em><a href="{{ stats.pot_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a> {{ stats.pot_text }}</em><br />
-<a href="{{ stats.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
+<a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
 {{ stats.get_translationstat|safe }}&nbsp;
 <div class="graph graphinline">
   <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>

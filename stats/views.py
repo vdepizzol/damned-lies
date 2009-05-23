@@ -17,18 +17,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+from datetime import date
 
 from django.conf import settings
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 
 from stats.models import Statistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
 from stats import utils
+from languages.models import Language
 
 MIME_TYPES = {'json': 'application/json',
               'xml':  'text/xml'
@@ -153,6 +155,57 @@ def docimages(request, module_name, potbase, branch_name, langcode):
         'stat': stat
     }
     return render_to_response('module_images.html', context, context_instance=RequestContext(request))
+
+def dynamic_po(request, filename):
+    """ Generates a dynamic po file from the POT file of a branch """
+    try:
+        module, domain, branch, locale, ext = filename.split(".")
+        language = Language.objects.select_related('team').get(locale=locale)
+    except:
+        raise Http404
+    potfile = get_object_or_404(Statistics,
+                             branch__module__name=module,
+                             branch__name=branch,
+                             domain__name=domain,
+                             language=None)
+    file_path = potfile.po_path()
+    f = open(file_path)
+
+    dyn_content = """# %(lang)s translation of %(pack)s.
+# Copyright (C) %(year)s %(pack)s's COPYRIGHT HOLDER
+# This file is distributed under the same license as the %(pack)s package.\n""" % {
+        'lang': language.name,
+        'pack': module,
+        'year': date.today().year
+    }
+    if request.user.is_authenticated():
+        person = request.user.person
+        dyn_content += "# %(name)s <%(email)s>, %(year)s.\n#\n" % {
+            'name' : person.name,
+            'email': person.email,
+            'year' : date.today().year,
+        }
+    else:
+        dyn_content += "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n#\n"
+
+    line = "1"
+    while line:
+        line = f.readline()
+        if line and line[0] == '#':
+            # Skip first lines of the file
+            continue
+        # Transformations
+        line = {
+            '"Project-Id-': "\"Project-Id-Version: %s %s\\n\"\n" % (module, branch),
+            '"Language-Te': "\"Language-Team: %s <%s>\\n\"\n" % (
+                language.name, language.team and language.team.mailing_list or "%s@li.org" % locale),
+            '"Content-Typ': "\"Content-Type: text/plain; charset=UTF-8\\n\"\n",
+            '"Plural-Form': "\"Plural-Forms: %s;\\n\"\n" % (language.plurals or "nplurals=INTEGER; plural=EXPRESSION"),
+        }.get(line[:12], line)
+        dyn_content += line
+        if line == "\n":
+            break # Quit loop on first blank line after headers
+    return HttpResponse(dyn_content + f.read(), 'text/plain')
 
 def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')

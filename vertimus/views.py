@@ -56,9 +56,12 @@ def vertimus(request, branch, domain, language, stats=None):
     if not stats:
         try:
             stats = Statistics.objects.get(branch=branch, domain=domain, language=language)
+            po_url = stats.po_url()
         except Statistics.DoesNotExist:
             # Get the POT file stats
             stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=None)
+            po_url = urlresolvers.reverse('dynamic_po',
+                        args=("%s.%s.%s.%s.po" % (branch.module.name, domain.name, branch.name, language.locale),))
 
     # Get the state of the translation
     (state_db, created) = StateDb.objects.get_or_create(
@@ -98,6 +101,7 @@ def vertimus(request, branch, domain, language, stats=None):
     context = {
         'pageSection': 'module',
         'stats': stats,
+        'po_url': po_url,
         'branch': branch,
         'other_states': other_branch_states,
         'domain': domain,

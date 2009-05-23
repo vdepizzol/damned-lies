@@ -27,6 +27,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('stats.views',
     url(r'^module/$', 'modules', name='modules'),
+    url(r'^module/po/(?P<filename>.*)$', 'dynamic_po', name='dynamic_po'),
     (r'^module/(?P<module_name>[\w\-\+]+)/$', 'module'),
     (r'^module/(?P<module_name>[\w\-\+]+)/edit/branches/$', 'module_edit_branches'),
     (r'^module/(?P<module_name>[\w\-\+]+)/branch/(?P<branch_name>[\w-]+)/$', 'module_branch'),
