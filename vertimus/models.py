@@ -299,7 +299,6 @@ class ActionDb(models.Model):
 
     class Meta:
         db_table = 'action'
-        ordering = ('-id',)
 
     def get_action(self):
         action = eval('Action' + self.name)()
@@ -700,7 +699,7 @@ class ActionAA(ActionAbstract):
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        actions_db = ActionDb.objects.filter(state_db=state._state_db).all()
+        actions_db = ActionDb.objects.filter(state_db=state._state_db).order_by('id').all()
 
         sequence = None
         for action_db in actions_db:
