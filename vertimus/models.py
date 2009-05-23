@@ -20,7 +20,6 @@
 
 import os, sys
 
-from datetime import datetime
 from django.db import models
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 from django.core import mail, urlresolvers
@@ -49,7 +48,7 @@ class StateDb(models.Model):
     person = models.ForeignKey(Person, default=None, null=True)
 
     name = models.SlugField(max_length=20, default='None')
-    updated = models.DateTimeField(default=datetime.now, editable=False, auto_now=True)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=True, editable=False)
 
     class Meta:
         db_table = 'state'
@@ -674,7 +673,8 @@ class ActionDbArchived(models.Model):
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
-    created = models.DateTimeField(auto_now_add=True, editable=False)
+    # Datetime copied from ActionDb
+    created = models.DateTimeField(editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
     sequence = models.IntegerField(blank=True, null=True)
