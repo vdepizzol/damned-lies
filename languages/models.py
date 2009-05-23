@@ -6,6 +6,7 @@ class Language(models.Model):
     name = models.CharField(max_length=50, unique=True)
     locale = models.CharField(max_length=15, unique=True)
     team = models.ForeignKey(Team, null=True, blank=True, default=None)
+    plurals = models.CharField(max_length=200, blank=True)
 
     class Meta:
         db_table = 'language'
