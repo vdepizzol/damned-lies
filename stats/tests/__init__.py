@@ -18,14 +18,17 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-import os, shutil, unittest
+import os, shutil
+from django.test import TestCase
+from django.test.client import Client
 from django.core import mail
 from django.conf import settings
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
+from languages.models import Language
 
-class ModuleTestCase(unittest.TestCase):
+class ModuleTestCase(TestCase):
     def __init__(self, name):
-        unittest.TestCase.__init__(self, name)
+        TestCase.__init__(self, name)
         # Delete the checkout if it exists prior to running the test suite
         path = os.path.join(settings.SCRATCHDIR, 'git', 'gnome-hello')
         if os.access(path, os.X_OK):
@@ -130,3 +133,16 @@ class ModuleTestCase(unittest.TestCase):
                         module = self.mod)
         self.assertRaises(ValueError, branch.save)
         Branch.checkout_on_creation = False
+
+    def testDynamicPO(self):
+        """ Test the creation of a blank po file for a new language """
+        lang = Language(name="Tamil", locale="ta")
+        lang.save()
+        self.b.update_stats(force=True) # At least POT stats needed
+        c = Client()
+        response = c.get('/module/po/gnome-hello.po.master.ta.po')
+        self.assertContains(response, """# Tamil translation of gnome-hello.
+# Copyright (C) 2009 gnome-hello's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-hello package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""")
+        self.assertContains(response, "Language-Team: Tamil <ta@li.org>")
