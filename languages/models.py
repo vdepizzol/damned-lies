@@ -21,6 +21,10 @@ class Language(models.Model):
         else:
             return self.locale
 
+    def get_plurals(self):
+        # Translators: this concerns an unknown plural form
+        return self.plurals or _("Unknown")
+
     def bugs_url_enter(self):
         return "http://bugzilla.gnome.org/enter_bug.cgi?product=l10n&amp;component=%s%%20[%s]" %  (self.name, self.locale)
 
