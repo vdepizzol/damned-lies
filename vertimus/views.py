@@ -62,6 +62,8 @@ def vertimus(request, branch, domain, language, stats=None):
             stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=None)
             po_url = urlresolvers.reverse('dynamic_po',
                         args=("%s.%s.%s.%s.po" % (branch.module.name, domain.name, branch.name, language.locale),))
+    else:
+        po_url = stats.po_url()
 
     # Get the state of the translation
     (state_db, created) = StateDb.objects.get_or_create(
