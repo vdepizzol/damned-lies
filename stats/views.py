@@ -17,6 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+import codecs
 from datetime import date
 
 from django.conf import settings
@@ -169,9 +170,9 @@ def dynamic_po(request, filename):
                              domain__name=domain,
                              language=None)
     file_path = potfile.po_path()
-    f = open(file_path)
+    f = codecs.open(file_path, encoding='utf-8')
 
-    dyn_content = """# %(lang)s translation of %(pack)s.
+    dyn_content = u"""# %(lang)s translation of %(pack)s.
 # Copyright (C) %(year)s %(pack)s's COPYRIGHT HOLDER
 # This file is distributed under the same license as the %(pack)s package.\n""" % {
         'lang': language.name,
@@ -180,13 +181,13 @@ def dynamic_po(request, filename):
     }
     if request.user.is_authenticated():
         person = request.user.person
-        dyn_content += "# %(name)s <%(email)s>, %(year)s.\n#\n" % {
+        dyn_content += u"# %(name)s <%(email)s>, %(year)s.\n#\n" % {
             'name' : person.name,
             'email': person.email,
             'year' : date.today().year,
         }
     else:
-        dyn_content += "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n#\n"
+        dyn_content += u"# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n#\n"
 
     line = "1"
     while line:
@@ -196,16 +197,18 @@ def dynamic_po(request, filename):
             continue
         # Transformations
         line = {
-            '"Project-Id-': "\"Project-Id-Version: %s %s\\n\"\n" % (module, branch),
-            '"Language-Te': "\"Language-Team: %s <%s>\\n\"\n" % (
+            '"Project-Id-': u"\"Project-Id-Version: %s %s\\n\"\n" % (module, branch),
+            '"Language-Te': u"\"Language-Team: %s <%s>\\n\"\n" % (
                 language.name, language.team and language.team.mailing_list or "%s@li.org" % locale),
-            '"Content-Typ': "\"Content-Type: text/plain; charset=UTF-8\\n\"\n",
-            '"Plural-Form': "\"Plural-Forms: %s;\\n\"\n" % (language.plurals or "nplurals=INTEGER; plural=EXPRESSION"),
+            '"Content-Typ': u"\"Content-Type: text/plain; charset=UTF-8\\n\"\n",
+            '"Plural-Form': u"\"Plural-Forms: %s;\\n\"\n" % (language.plurals or "nplurals=INTEGER; plural=EXPRESSION"),
         }.get(line[:12], line)
         dyn_content += line
         if line == "\n":
             break # Quit loop on first blank line after headers
-    return HttpResponse(dyn_content + f.read(), 'text/plain')
+    # codecs 'read' call doesn't always return all remaining buffer in first call. Bug?
+    content = dyn_content + f.read() + f.read()
+    return HttpResponse(content, 'text/plain')
 
 def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')
