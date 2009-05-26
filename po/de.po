@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-23 11:51+0000\n"
-"PO-Revision-Date: 2009-05-23 18:52+0100\n"
+"POT-Creation-Date: 2009-05-26 08:46+0000\n"
+"PO-Revision-Date: 2009-05-26 17:58+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -855,7 +855,6 @@ msgid "Documentation"
 msgstr "Dokumentation"
 
 #: database-content.py:207
-#| msgid "UI translations"
 msgid "UI translation"
 msgstr "Übersetzung der Benutzeroberfläche"
 
@@ -942,12 +941,15 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince ist ein Dokumentenbetrachter für verschiedene Dokumentformate."
 
 #: database-content.py:226
+#| msgid ""
+#| "Committed translations are updated manually on l10n.gnome.org frome time "
+#| "to time. Be patient :-) "
 msgid ""
-"Committed translations are updated manually on l10n.gnome.org frome time to "
-"time. Be patient :-) "
+"Committed translations are updated manually on l10n.gnome.org from time to "
+"time. Be patient :-)"
 msgstr ""
 "Eingespielte Übersetzungen werden von Zeit zu Zeit manuell auf l10n.gnome.org "
-"aktualisiert. Wir bitten um Geduld!"
+"aktualisiert. Wir bitten um Geduld :-)"
 
 #: database-content.py:227
 msgid ""
@@ -958,17 +960,33 @@ msgstr ""
 "<a href=\"http://translationproject.org\">Translation Project</a>."
 
 #: database-content.py:228
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://translationproject.org\">Translation Project</"
+#| "a>."
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>. See "
+"also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the "
+"translation page for xdg-user-dirs at the Translation Project</a>."
+msgstr ""
+"Dies ist kein GNOME-spezifisches Modul. Bitte senden Sie Übersetzungen an das "
+"<a href=\"http://translationproject.org\">Translation Project</a>. Beachten "
+"Sie bitte auch <a href=\"http://translationproject.org/domain/xdg-user-dirs."
+"html\">die Übersetzungsseite für xdg-user-dirs beim Translation Project</a>."
+
+#: database-content.py:229
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr ""
 "Seit GNOME 2.23 ist GAIL in GTK+ integriert. Bitte nicht mehr in »trunk« "
 "einspielen."
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "A VNC client for GNOME"
 msgstr "Ein VNC-Client für GNOME"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add a "
 "new language in either domain, you have to commit both files in SVN even if "
@@ -982,11 +1000,11 @@ msgstr ""
 "Sie dies nicht, wird später die Erstellung von GTK+ in /po-properties "
 "scheitern."
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafische Oberfläche für die Navigation in GIT-Softwarebeständen"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -994,7 +1012,7 @@ msgstr ""
 "moserial ist ein sauberes, nettes gtk-basiertes serielles Terminal für den "
 "GNOME-Desktop. Für noch bessere Qualität wurde es in Vala geschrieben."
 
-#: database-content.py:233
+#: database-content.py:234
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1002,12 +1020,12 @@ msgstr ""
 "Dies ist ein Klon der offiziellen Version von system-tools-backends im "
 "Softwarebestand von freedesktop.org."
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "Passepartout is a DTP application for X."
 msgstr ""
 "Passepartout ist eine Desktop-Publishing-Anwendung mit grafischer Oberfläche."
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1015,17 +1033,17 @@ msgstr ""
 "gnome-disk-utility stellt Bibliotheken und Anwendungen für den Umgang mit "
 "Speichergeräten bereit."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "A note taking application"
 msgstr "Eine Notizzettel-Anwendung"
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Übersetzungen sollten als Fehlerberichte eingereicht werden (siehe Link "
 "unten)."
 
-#: database-content.py:238
+#: database-content.py:239
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for "
 "GNOME."
@@ -1033,59 +1051,59 @@ msgstr ""
 "GNOME Video Arcade ist ein MAME- (Multiple Arcade Machine Emulator) Front-end "
 "für GNOME."
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Videotext-Betrachter"
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "Extra GNOME Applications"
 msgstr "Zusätzliche GNOME-Anwendungen"
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (alte stabile Version)"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "GNOME Infrastructure"
 msgstr "GNOME-Infrastruktur"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (alte stabile Version)"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (alte stabile Version)"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nicht-GNOME)"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (alte stabile Version)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (alte stabile Version)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Büroanwendungen"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (alte stabile Version)"
 
-#: database-content.py:250
+#: database-content.py:251
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (aktuelle stabile Version)"
 
-#: database-content.py:251
+#: database-content.py:252
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (Entwicklerversion)"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "Obsolete GNOME Applications"
 msgstr "Veraltete GNOME-Anwendungen"
 
@@ -2100,7 +2118,7 @@ msgstr "Notizen"
 #: djamnedlies-git/vertimus/models.py:165
 #: djamnedlies-svn/templates/stats_show.html:30
 #: djamnedlies-svn/vertimus/models.py:165 templates/stats_show.html:30
-#: vertimus/models.py:166
+#: vertimus/models.py:165
 msgid "Translated"
 msgstr "Übersetzt"
 
@@ -2640,13 +2658,13 @@ msgstr "Veröffentlichung"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
 #: djamnedlies-svn/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:69
+#: templates/teams/team_detail.html:71
 msgid "Team membership"
 msgstr "Team-Mitgliedschaft"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
 #: djamnedlies-svn/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:80
+#: templates/teams/team_detail.html:82
 msgid "Apply modifications"
 msgstr "Änderungen anwenden"
 
@@ -2837,48 +2855,48 @@ msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Bitte senden Sie keine Datei mit der Aktion »Reservieren«."
 
 #: djamnedlies-git/vertimus/models.py:139
-#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:140
+#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:139
 msgid "Inactive"
 msgstr "Inaktiv"
 
 #: djamnedlies-git/vertimus/models.py:152
-#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:153
+#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:152
 msgid "Translating"
 msgstr "Übersetzung läuft"
 
 #: djamnedlies-git/vertimus/models.py:182
-#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:183
+#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:182
 msgid "Proofreading"
 msgstr "Korrekturlesen läuft"
 
 #. Translators: This is a status, not a verb
 #: djamnedlies-git/vertimus/models.py:197
-#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:198
+#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:197
 msgid "Proofread"
 msgstr "Korrekturgelesen"
 
 #: djamnedlies-git/vertimus/models.py:212
-#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:213
+#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:212
 msgid "To Review"
 msgstr "Überarbeitung erforderlich"
 
 #: djamnedlies-git/vertimus/models.py:224
-#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:225
+#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:224
 msgid "To Commit"
 msgstr "Einspielen"
 
 #: djamnedlies-git/vertimus/models.py:239
-#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:240
+#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:239
 msgid "Committing"
 msgstr "Einspielen läuft"
 
 #: djamnedlies-git/vertimus/models.py:253
-#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:254
+#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:253
 msgid "Committed"
 msgstr "Eingespielt"
 
 #: djamnedlies-git/vertimus/models.py:341
-#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:341
+#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:339
 msgid "File in repository"
 msgstr "Datei im Softwarebestand"
 
@@ -2886,14 +2904,14 @@ msgstr "Datei im Softwarebestand"
 #: djamnedlies-git/vertimus/views.py:136 djamnedlies-git/vertimus/views.py:146
 #: djamnedlies-svn/vertimus/models.py:348 djamnedlies-svn/vertimus/views.py:130
 #: djamnedlies-svn/vertimus/views.py:136 djamnedlies-svn/vertimus/views.py:146
-#: vertimus/models.py:348 vertimus/views.py:130 vertimus/views.py:136
-#: vertimus/views.py:146
+#: vertimus/models.py:346 vertimus/views.py:136 vertimus/views.py:142
+#: vertimus/views.py:152
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Datei von %(name)s am %(date)s hochgeladen"
 
 #: djamnedlies-git/vertimus/models.py:460
-#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:460
+#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:458
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2913,27 +2931,27 @@ msgstr ""
 #: djamnedlies-git/vertimus/models.py:473
 #: djamnedlies-git/vertimus/models.py:523
 #: djamnedlies-svn/vertimus/models.py:473
-#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:473
-#: vertimus/models.py:523
+#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:471
+#: vertimus/models.py:521
 msgid "Without comment"
 msgstr "Ohne Kommentar"
 
 #: djamnedlies-git/vertimus/models.py:475
 #: djamnedlies-git/vertimus/models.py:525
 #: djamnedlies-svn/vertimus/models.py:475
-#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:475
-#: vertimus/models.py:525
+#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:473
+#: vertimus/models.py:523
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Dies ist eine automatisch versendete Nachricht von %s."
 
 #: djamnedlies-git/vertimus/models.py:482
-#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:482
+#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:480
 msgid "Write a comment"
 msgstr "Einen Kommentar schreiben"
 
 #: djamnedlies-git/vertimus/models.py:511
-#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:511
+#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:509
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2951,86 +2969,86 @@ msgstr ""
 "\n"
 
 #: djamnedlies-git/vertimus/models.py:533
-#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:533
+#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:531
 msgid "Reserve for translation"
 msgstr "Zur Übersetzung reservieren"
 
 #: djamnedlies-git/vertimus/models.py:545
-#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:545
+#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:543
 msgid "Upload the new translation"
 msgstr "Die neue Übersetzung hochladen"
 
 #: djamnedlies-git/vertimus/models.py:560
-#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:560
+#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:558
 msgid "Reserve for proofreading"
 msgstr "Zum Korrekturlesen reservieren"
 
 #: djamnedlies-git/vertimus/models.py:572
-#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:572
+#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:570
 msgid "Upload the proofread translation"
 msgstr "Die korrigierte Übersetzung hochladen"
 
 #. Translators: this means the file is ready to be committed in repository
 #: djamnedlies-git/vertimus/models.py:588
-#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:588
+#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:586
 msgid "Ready for submission"
 msgstr "Bereit zur Einbringung"
 
 #: djamnedlies-git/vertimus/models.py:604
-#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:604
+#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:602
 msgid "Submit to repository"
 msgstr "In Softwarebestand einspielen"
 
 #. Commit failed, state unchanged
 #: djamnedlies-git/vertimus/models.py:618
-#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:618
+#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:616
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Einspielen ist gescheitert. Die Fehlermeldung war: »%s«"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: djamnedlies-git/vertimus/models.py:628
-#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:628
+#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:626
 msgid "Reserve to submit"
 msgstr "Zur Einbringung reservieren"
 
 #. Translators: this is used to indicate the file has been committed in the repository
 #: djamnedlies-git/vertimus/models.py:641
-#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:641
+#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:639
 msgid "Inform of submission"
 msgstr "Über Einbringung informieren"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: djamnedlies-git/vertimus/models.py:656
-#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:656
+#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:654
 msgid "Review required"
 msgstr "Überarbeitung ist erforderlich"
 
 #: djamnedlies-git/vertimus/models.py:695
-#: djamnedlies-svn/vertimus/models.py:695 vertimus/models.py:695
+#: djamnedlies-svn/vertimus/models.py:695
 msgid "Backup the actions"
 msgstr "Aktionen sichern"
 
 #: djamnedlies-git/vertimus/models.py:734
-#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:734
+#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:733
 msgid "Undo the last state change"
 msgstr "Die letzte Statusänderung rückgängig machen"
 
 #: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
 #: djamnedlies-svn/vertimus/views.py:129 djamnedlies-svn/vertimus/views.py:161
-#: vertimus/views.py:129 vertimus/views.py:161
+#: vertimus/views.py:135 vertimus/views.py:167
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Fehler: Die Datei %s enthält ungültige Zeichen."
 
 #: djamnedlies-git/vertimus/views.py:152 djamnedlies-svn/vertimus/views.py:152
-#: vertimus/views.py:152
+#: vertimus/views.py:158
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Zuletzt eingespielte Datei für %(lang)s"
 
 #: djamnedlies-git/vertimus/views.py:155 djamnedlies-svn/vertimus/views.py:155
-#: vertimus/views.py:155
+#: vertimus/views.py:161
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
 
@@ -3051,6 +3069,11 @@ msgstr ""
 "Verwaltet im Modul <a href='http://svn.gnome.org/viewvc/damned-"
 "lies/'>Verdammte Lügen</a> auf <a href='http://svn.gnome.org/'>svn.gnome.org</"
 "a>."
+
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:26
+msgid "Unknown"
+msgstr "Unbekannt"
 
 #: languages/views.py:67 templates/release_detail.html:66
 msgid "Original strings"
@@ -3086,6 +3109,15 @@ msgstr ""
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Letzte vom %(lang)s-Team des GNOME-Übersetzungsprojekts ausgeführte Aktionen"
+
+#: templates/teams/team_detail.html:66
+msgid "Plural forms:"
+msgstr "Pluralformen:"
+
+#: vertimus/models.py:694
+#| msgid "Backup the actions"
+msgid "Archive the actions"
+msgstr "Aktionen archivieren"
 
 #~ msgid "GFloppy Manual"
 #~ msgstr "Diskettenformatierer-Handbuch"
