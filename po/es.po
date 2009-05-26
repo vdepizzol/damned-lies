@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-05-26 08:46+0000\n"
-"PO-Revision-Date: 2009-05-26 19:35+0200\n"
+"PO-Revision-Date: 2009-05-26 19:38+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -3049,7 +3049,7 @@ msgstr ""
 #. Translators: this concerns an unknown plural form
 #: languages/models.py:26
 msgid "Unknown"
-msgstr "Desonocido"
+msgstr ""
 
 #: languages/views.py:67 templates/release_detail.html:66
 msgid "Original strings"
@@ -3089,12 +3089,13 @@ msgstr ""
 
 #: templates/teams/team_detail.html:66
 msgid "Plural forms:"
-msgstr "Formas plurales:"
+msgstr ""
 
 #: vertimus/models.py:694
+#, fuzzy
 #| msgid "Backup the actions"
 msgid "Archive the actions"
-msgstr "Archivar las acciones"
+msgstr "Restablecer las acciones"
 
 #~ msgid "GFloppy Manual"
 #~ msgstr "Manual del formateador de disquetes"
