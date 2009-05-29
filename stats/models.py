@@ -22,13 +22,13 @@
 import os, sys, re, hashlib
 import threading
 from datetime import datetime
-from django.db import models, connection
+
+from django.conf import settings
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
-from django.conf import settings
-from stats import utils
-from stats import signals
+from django.db import models, connection
 
+from stats import utils, signals
 from people.models import Person
 from languages.models import Language
 

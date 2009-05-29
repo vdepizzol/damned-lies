@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load humanize %}
 
 {% block title %}
 {% blocktrans with module.get_description as name %}Module Translation: {{ name }}{% endblocktrans %}
@@ -12,13 +13,18 @@
 {% if releases %}
   <p><em>{% trans "Used in release(s):" %}</em><br />
   {% for release in releases %}
-  <a href="{% url languages.views.language_release language.locale, release.name, domain.dtype %}">{% trans release.description %}</a><br />
+    <a href="{% url languages.views.language_release language.locale,release.name,domain.dtype %}">
+    {% trans release.description %}
+    </a><br/>
   {% endfor %}
 {% endif %}
 </div>
 {% endwith %}
 
-<h1><a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a> - {{ branch.name }} - {{ domain.get_description }} - {{ language.get_name }}</h1>
+<h1>
+<a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>
+- {{ branch.name }} - {{ domain.get_description }} - {{ language.get_name }}
+</h1>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
@@ -28,25 +34,30 @@
   {% endif %}
 {% endif %}
 
-<h3>{% trans "State:" %} {{ state.description }}
+<h3>
+{% trans "State:" %} {{ state.description }}
 {% ifnotequal state.name 'none' %}
 ({{ state.updated|date:_("Y-m-d g:i a O") }})
 {% endifnotequal %}
 </h3>
 
 <div style="line-height: 1.7">
-<em><a href="{{ stats.pot_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a> {{ stats.pot_text }}</em><br />
-<a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
-{{ stats.get_translationstat|safe }}&nbsp;
-<div class="graph graphinline">
-  <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
-  <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
-  <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
-</div>
-{% if stats.fig_count and stats.language %}
-    <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
-        <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
-{% endif %}
+  <em><a href="{{ stats.pot_url }}">
+      <img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
+    {{ stats.pot_text }}
+  </em>
+  <br/>
+  <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
+  {{ stats.get_translationstat|safe }}&nbsp;
+  <div class="graph graphinline">
+    <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
+    <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
+    <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+  </div>
+  {% if stats.fig_count and stats.language %}
+  <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
+    <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
+  {% endif %}
 </div>
 
 {% if stats.information_set.all %}
@@ -63,29 +74,56 @@
 
 {% if other_states %}
 <div style="margin-top:0.5em;">
-  <img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" /> {% trans "On-going activities in same module:" %}
+  <img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" />
+  {% trans "On-going activities in same module:" %}
   {% for st in other_states %}
-  <a href="{% url vertimus-ids-view st.branch.pk st.domain.pk st.language.pk %}">{{ st.branch.name }}</a>
+    <a href="{% url vertimus-ids-view st.branch.pk,st.domain.pk,st.language.pk %}">{{ st.branch.name }}</a>
   {% endfor %}
 </div>
 {% endif %}
 
+<div id="vertimus_actions_title">
+  <h2>
+    {% ifequal level 0 %}
+      {% trans "Actions" %}
+    {% else %}
+      {% blocktrans with level|ordinal|safe as human_level %}
+      Archived Actions ({{ human_level }} grandparent)
+      {% endblocktrans %}
+      <a href="{% url vertimus-names-view module.name,branch.name,domain.name,language.locale %}">
+        {% trans "(Return to current)" %}
+      </a>
+    {% endifequal %}
+    {% if grandparent_level %}
+      <a href="{% url vertimus_archives_by_names module.name,branch.name,domain.name,language.locale,grandparent_level %}">
+        {% trans "(Previous action history)" %}
+      </a>
+    {% endif %}
+  </h2>
+</div>
+
 {% if action_history %}
-<h2>{% trans "Action History" %}</h2>
 <div>
   {% for action,files in action_history %}
   <div class="vertimus_action">
     <div class="vertimus_action_head">
-      <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/> <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
+      <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>
+      <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
       , <strong>{{ action }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
     </div>
     <div class="vertimus_action_content">
       {% if action.file %}
       <div class="uploaded_file">
-        <a href="{{ action.file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}</a><br />
+        <a href="{{ action.file.url }}">
+          <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}
+        </a>
+        <br/>
         {% if action.has_po_file %}
           {% if action.merged_file.url %}
-            <a href="{{ action.merged_file.url }}"><img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}</a><br />
+            <a href="{{ action.merged_file.url }}">
+              <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}
+            </a>
+            <br/>
           {% endif %}
           <div class="right_actions">{% trans "diff with:" %}
             {% for f in files %}
@@ -105,20 +143,30 @@
   </div>
   {% endfor %}
 </div>
+{% else %}
+  <p><em>{% trans "No current actions." %}</em></p>
 {% endif %}
 
-<h2>{% trans "New Action" %}</h2>
+{% ifequal level 0 %}
+  <h2>{% trans "New Action" %}</h2>
 
-{% if action_form %}
-  <form enctype="multipart/form-data" action="{% url vertimus-stats-id-view stats.id language.id %}" method="POST">
+  {% if action_form %}
+  <form enctype="multipart/form-data"
+        action="{% url vertimus-stats-id-view stats.id language.id %}"
+        method="POST">
     <table class="djform">
       {{ action_form.as_table }}
-      <tr><td></td>
-        <td><input type="submit" value="{% trans "Submit" %}"></td><tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="{% trans "Submit" %}"></td>
+      <tr>
     </table>
   </form>
-{% else %}
-  {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
-{% endif %}
+  {% else %}
+  {% blocktrans with language.team.get_description as team_name %}
+  You need to be authenticated and to be member of the {{ team_name }} team.
+  {% endblocktrans %}
+  {% endif %}
+{% endifequal %}
 
 {% endblock %}

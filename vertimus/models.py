@@ -26,6 +26,7 @@ from django.core import mail, urlresolvers
 from django.contrib.sites.models import Site
 from django.conf import settings
 from django.db.models.signals import post_save, pre_delete
+from django.db import connection
 
 from stats.models import Branch, Domain, Statistics
 from stats.signals import pot_has_changed
@@ -129,6 +130,29 @@ class StateAbstract(object):
                 return self
         else:
             raise Exception('Not allowed')
+
+    def get_action_sequence_from_level(self, level):
+        """Get the sequence corresponding to the requested level.
+           The first level is 1."""
+        if level <= 0:
+            raise Exception("Level must be greater than 0")
+
+        # Raw SQL in waiting for Django 1.1.
+        query = """
+            SELECT sequence
+              FROM action_archived
+             WHERE state_db_id = %s
+             GROUP BY sequence
+             ORDER BY sequence DESC
+             LIMIT 1 OFFSET %s"""
+        cursor = connection.cursor()
+        cursor.execute(query, (self._state_db.id, level - 1))
+        try:
+            sequence = cursor.fetchone()[0]
+        except:
+            sequence = None
+
+        return sequence
 
     def save(self):
         self._state_db.save()
@@ -287,6 +311,32 @@ def generate_upload_filename(instance, filename):
         ext)
     return "%s/%s" % (settings.UPLOAD_DIR, new_filename)
 
+def action_db_get_action_history(cls, state_db=None, sequence=None):
+    """
+    Return action history as a list of tuples (action, file_history),
+    file_history is a list of previous po files, used in vertimus view to
+    generate diff links
+    """
+    history = []
+    if state_db or sequence:
+        file_history = [{'action_id':0, 'title': ugettext("File in repository")}]
+        if not sequence:
+            query = cls.objects.filter(state_db__id=state_db.id)
+        else:
+            # Not necessary to filter on state_db with a sequence (unique)
+            query = cls.objects.filter(sequence=sequence)
+        for action_db in query.order_by('id'):
+            history.append((action_db.get_action(), list(file_history)))
+            if action_db.file and action_db.file.path.endswith('.po'):
+                # Action.id and ActionDb.id are identical (inheritance)
+                file_history.insert(0, {
+                    'action_id': action_db.id,
+                    'title': ugettext("Uploaded file by %(name)s on %(date)s") % {
+                        'name': action_db.person.name,
+                        'date': action_db.created },
+                    })
+    return history
+
 class ActionDb(models.Model):
     state_db = models.ForeignKey(StateDb)
     person = models.ForeignKey(Person)
@@ -300,6 +350,9 @@ class ActionDb(models.Model):
     class Meta:
         db_table = 'action'
 
+    def __unicode__(self):
+        return "%s (%s)" % (self.name, self.id)
+
     def get_action(self):
         action = eval('Action' + self.name)()
         action._action_db = self
@@ -311,7 +364,7 @@ class ActionDb(models.Model):
         same state.
         """
         try:
-            action_db = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
+            action_db = self.objects.filter(file__endswith=".po", state_db=self.state_db,
                 id__lt=self.id).latest('id')
             return action_db
         except ActionDb.DoesNotExist:
@@ -329,29 +382,36 @@ class ActionDb(models.Model):
 
     @classmethod
     def get_action_history(cls, state_db):
-        """
-        Return action history as a list of tuples (action, file_history),
-        file_history is a list of previous po files, used in vertimus view to
-        generate diff links
-        """
-        history = []
-        if state_db:
-            file_history = [{'action_id':0, 'title': ugettext("File in repository")}]
-            for action_db in ActionDb.objects.filter(state_db__id=state_db.id).order_by('id'):
-                history.append((action_db.get_action(), list(file_history)))
-                if action_db.file and action_db.file.path.endswith('.po'):
-                    # Action.id and ActionDb.id are identical (inheritance)
-                    file_history.insert(0, {
-                        'action_id': action_db.id,
-                        'title': ugettext("Uploaded file by %(name)s on %(date)s") % {
-                            'name': action_db.person.name,
-                            'date': action_db.created },
-                        })
-        return history
+        return action_db_get_action_history(cls, state_db=state_db)
+
+def generate_archive_filename(instance, original_filename):
+    return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
+
+class ActionDbArchived(models.Model):
+    state_db = models.ForeignKey(StateDb)
+    person = models.ForeignKey(Person)
+
+    name = models.SlugField(max_length=8)
+    # Datetime copied from ActionDb
+    created = models.DateTimeField(editable=False)
+    comment = models.TextField(blank=True, null=True)
+    file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
+    sequence = models.IntegerField()
+
+    class Meta:
+        db_table = 'action_archived'
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)
 
+    def get_action(self):
+        action = eval('Action' + self.name)()
+        action._action_db = self
+        return action
+
+    @classmethod
+    def get_action_history(cls, sequence):
+        return action_db_get_action_history(cls, state_db=None, sequence=sequence)
 
 class ActionAbstract(object):
     """Abstract class"""
@@ -663,31 +723,6 @@ class ActionTR(ActionAbstract):
         new_state = self._new_state()
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state
-
-def generate_archive_filename(instance, original_filename):
-    return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
-
-class ActionDbArchived(models.Model):
-    state_db = models.ForeignKey(StateDb)
-    person = models.ForeignKey(Person)
-
-    name = models.SlugField(max_length=8)
-    # Datetime copied from ActionDb
-    created = models.DateTimeField(editable=False)
-    comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
-    sequence = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        db_table = 'action_archived'
-
-    def __unicode__(self):
-        return "%s (%s)" % (self.name, self.id)
-
-    def get_action(self):
-        action = eval('Action' + self.name)()
-        action._action_db = self
-        return action
 
 class ActionAA(ActionAbstract):
     name = 'AA'

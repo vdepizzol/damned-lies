@@ -2,33 +2,35 @@ table.stats {
   width: 100%;
 }
 
-.stats th { 
-  text-align: left; 
-  background: gray; 
+.stats th {
+  text-align: left;
+  background: gray;
   color: white;
   padding-left: 2px;
-  padding-right: 2px; 
+  padding-right: 2px;
 }
 
-.stats td { 
-  background: #f0f0f0; 
+.stats td {
+  background: #f0f0f0;
   text-align: center;
   padding-left: 2px;
   padding-right: 2px;
   color: black;
 }
 
-.stats td.leftcell { 
+.stats td.leftcell {
   text-align: left;
 }
 
 td.supported {
   color: #FFFFFF;
-  background-color: green; 
+  background-color: green;
 }
+
 td.partially {
   background-color: orange;
 }
+
 td.not_supported {
 }
 
@@ -70,10 +72,10 @@ div.graphinline {
 }
 
 div.translated {
-  position: absolute; 
+  position: absolute;
   top: 0px;
-  height:100%; 
-  left: 0%; 
+  height:100%;
+  left: 0%;
   background: #448844;
   background: url(../img/green-bar.png);
   background-repeat: repeat-x;
@@ -81,9 +83,9 @@ div.translated {
 }
 
 div.goodchange {
-  position: absolute; 
+  position: absolute;
   top: 0px;
-  height:100%; 
+  height:100%;
   background: #55DD55;
   background: url(../img/cyan-bar.png);
   background-repeat: repeat-x;
@@ -91,9 +93,9 @@ div.goodchange {
 }
 
 div.fuzzy {
-  position: absolute; 
+  position: absolute;
   top: 0px;
-  height:100%; 
+  height:100%;
   background: #4444AA;
   background: url(../img/purple-bar.png);
   background-repeat: repeat-x;
@@ -101,8 +103,8 @@ div.fuzzy {
 }
 
 div.untranslated {
-  position: absolute; 
-  height:100%; 
+  position: absolute;
+  height:100%;
   top: 0px;
   background: #FF4444;
   background: url(../img/red-bar.png);
@@ -239,6 +241,11 @@ p#show, p#hide {
 }
 
 /* Used in vertimus_detail */
+#vertimus_actions_title a {
+  font-size: small;
+  font-weight: normal;
+}
+
 .vertimus_action {
   margin: 1em 0 1.5em;
   border: solid #ddd 1px;
@@ -279,17 +286,17 @@ div.uploaded_file {
 ul.errorlist {
   list-style: none;
   margin-left: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-.errorlist li { 
-  font-size: 12px !important; 
-  display: block; 
-  padding: 4px 5px 4px 25px; 
-  margin: 0 0 3px 0; 
-  border: 1px solid red; 
-  color: white; 
-  background: red url(../img/admin/icon_alert.gif) 5px .3em no-repeat; 
+.errorlist li {
+  font-size: 12px !important;
+  display: block;
+  padding: 4px 5px 4px 25px;
+  margin: 0 0 3px 0;
+  border: 1px solid red;
+  color: white;
+  background: red url(../img/admin/icon_alert.gif) 5px .3em no-repeat;
 }
 
 .footnote {
@@ -299,3 +306,4 @@ ul.errorlist {
   margin-top: 20px;
   color: #aaaaaa;
 }
+

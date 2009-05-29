@@ -26,7 +26,7 @@ from django.template import RequestContext
 from django.core import urlresolvers
 
 from stats.models import Statistics, Module, Branch, Domain, Language
-from vertimus.models import StateDb, ActionDb, ActionAbstract
+from vertimus.models import StateDb, ActionDb, ActionDbArchived, ActionAbstract
 from vertimus.forms import ActionForm
 
 def vertimus_by_stats_id(request, stats_id, lang_id):
@@ -42,17 +42,21 @@ def vertimus_by_ids(request, branch_id, domain_id, language_id):
     language = get_object_or_404(Language, pk=language_id)
     return vertimus(request, branch, domain, language)
 
-def vertimus_by_names(request, module_name, branch_name, domain_name, locale_name):
-    """Access to Vertimus view by Branch, Domain and language names"""
+def vertimus_by_names(request, module_name, branch_name,
+                      domain_name, locale_name, level="0"):
+    """Access to Vertimus view by Branch, Domain and Language names"""
     module = get_object_or_404(Module, name=module_name)
     branch = get_object_or_404(Branch, name=branch_name, module__id=module.id)
     domain = get_object_or_404(Domain, name=domain_name, module__id=module.id)
     language = get_object_or_404(Language, locale=locale_name)
+    return vertimus(request, branch, domain, language, level=level)
 
-    return vertimus(request, branch, domain, language)
+def vertimus(request, branch, domain, language, stats=None, level="0"):
+    """The Vertimus view and form management. Level argument is used to
+       access to the previous action history, first level (1) is the
+       grandparent, second (2) is the parent of the grandparent, etc."""
+    level = int(level)
 
-def vertimus(request, branch, domain, language, stats=None):
-    """The Vertimus view and form management"""
     if not stats:
         try:
             stats = Statistics.objects.get(branch=branch, domain=domain, language=language)
@@ -70,16 +74,29 @@ def vertimus(request, branch, domain, language, stats=None):
         branch=branch,
         domain=domain,
         language=language)
-    other_branch_states = StateDb.objects.filter(domain=domain, language=language).exclude(branch=branch.pk).exclude(name='None')
+    other_branch_states = StateDb.objects.filter(
+        domain=domain, language=language).exclude(branch=branch.pk).exclude(name='None')
 
     state = state_db.get_state()
-    action_history = ActionDb.get_action_history(state_db)
+    if level == 0:
+        # Current actions
+        action_history = ActionDb.get_action_history(state_db)
+    else:
+        sequence = state.get_action_sequence_from_level(level)
+        action_history = ActionDbArchived.get_action_history(sequence)
 
-    if request.user.is_authenticated():
-        # Only authenticated user can act on the translation
+    # Get the sequence of the grandparent to know if exists a previous action
+    # history
+    sequence_grandparent = state.get_action_sequence_from_level(level + 1)
+    grandparent_level = level + 1 if sequence_grandparent else None
+
+    if request.user.is_authenticated() and level == 0:
+        # Only authenticated user can act on the translation and it's not
+        # possible to edit an archived workflow
         person = request.user.person
 
-        available_actions = [(va.name, va.description) for va in state.get_available_actions(person)]
+        available_actions = [(va.name, va.description)
+                             for va in state.get_available_actions(person)]
         if request.method == 'POST':
             action_form = ActionForm(available_actions, request.POST, request.FILES)
 
@@ -89,12 +106,14 @@ def vertimus(request, branch, domain, language, stats=None):
                 comment = action_form.cleaned_data['comment']
 
                 action = ActionAbstract.new_by_name(action)
-                new_state = state.apply_action(action, person, comment, request.FILES.get('file', None))
+                new_state = state.apply_action(action, person, comment,
+                                               request.FILES.get('file', None))
                 new_state.save()
 
                 return HttpResponseRedirect(
                     urlresolvers.reverse('vertimus-names-view',
-                        args=(branch.module.name, branch.name, domain.name, language.locale)))
+                        args=(branch.module.name, branch.name, domain.name,
+                              language.locale)))
         else:
             action_form = ActionForm(available_actions)
     else:
@@ -112,10 +131,13 @@ def vertimus(request, branch, domain, language, stats=None):
         'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'state': state,
         'action_history': action_history,
-        'action_form': action_form
+        'action_form': action_form,
+        'level': level,
+        'grandparent_level': grandparent_level,
     }
     return render_to_response('vertimus/vertimus_detail.html', context,
                               context_instance=RequestContext(request))
+
 
 def vertimus_diff(request, action_id_1, action_id_2=None):
     """Show a diff between current action po file and previous file"""
