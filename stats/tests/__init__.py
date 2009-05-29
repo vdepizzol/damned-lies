@@ -126,6 +126,14 @@ class ModuleTestCase(TestCase):
         self.assertEquals(ui_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot");
         self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.fr.po");
 
+    def testFigureURLs(self):
+        """ Test if figure urls are properly constructed """
+        self.b.update_stats(force=True)
+        stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='fr')
+        figs = stat.get_figures()
+        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/cgit/gnome-hello/plain/help/C/figures/gnome-hello.png?h=master')
+        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/cgit/gnome-hello/plain/help/fr/figures/gnome-hello.png?h=master')
+
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """
         Branch.checkout_on_creation = True

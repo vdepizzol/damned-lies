@@ -184,6 +184,14 @@ class Branch(models.Model):
         else:
             return -cmp(self.name, other.name)
 
+    @property
+    def img_url_prefix(self):
+        return self.module.vcs_type == 'git' and "plain" or ""
+
+    @property
+    def img_url_suffix(self):
+        return self.module.vcs_type == 'git' and "?h=%s" % self.name or ""
+
     def is_head(self):
         return self.name in BRANCH_HEAD_NAMES
 
@@ -727,7 +735,7 @@ class Release(models.Model):
             if row[LOCALE] not in stats:
                 stats[row[LOCALE]] = [0] * len(releases)
                 stats[row[LOCALE]].insert(0, _(row[NAME])) # translated language name
-            if row[LOCALE] == None: # POT stats
+            if row[LOCALE] is None: # POT stats
                 totals[rel_ids.index(str(row[REL_ID]))] = row[UNTRANS]
             else:
                 stats[row[LOCALE]][rel_ids.index(str(row[REL_ID]))+1] = row[TRANS]
@@ -1037,9 +1045,16 @@ class Statistics(models.Model):
         return text
 
     def get_figures(self):
+        """ self.figures is a list of dicts:
+            [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
         if self.figures is None and self.domain.dtype == 'doc':
             self.figures = utils.get_fig_stats(self.po_path())
+            # something like: "http://git.gnome.org/cgit/vinagre / plain / help / %s / %s ?h=master"
+            url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
+                                       self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
             for fig in self.figures:
+                fig['orig_remote_url'] = url_model % ('C', fig['path'])
+                fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
                 fig['translated_file'] = False
                 if self.language:
                     # Check if a translated figure really exists or if the English one is used

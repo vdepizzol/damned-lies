@@ -323,7 +323,8 @@ def check_lang_support(module_path, po_path, lang):
     return errors
 
 def get_fig_stats(pofile):
-    """ Extract image strings from pofile and return a list of figures dict {'path':, 'fuzzy':, 'translated':} """
+    """ Extract image strings from pofile and return a list of figures dict:
+        [{'path':, 'hash':, 'fuzzy':, 'translated':}, ...] """
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
     command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
     (status, output, errs) = run_shell_command(command)
