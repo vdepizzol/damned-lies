@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-27 11:26+0300\n"
-"PO-Revision-Date: 2007-01-13 21:25+0300\n"
+"POT-Creation-Date: 2009-05-26 17:37+0000\n"
+"PO-Revision-Date: 2009-05-29 21:25+0300\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,1482 +17,3118 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../gnome-modules.xml.in.h:2
-#, no-c-format
-msgid "%(module/id)"
-msgstr "%(module/id)"
-
-#: ../gnome-modules.xml.in.h:3
-msgid "Accessibility Guide"
-msgstr "Посібник з можливостей доступності"
-
-#: ../gnome-modules.xml.in.h:4
-msgid "AisleRiot Manual"
-msgstr "Довідка до аплету Рибка"
-
-#: ../gnome-modules.xml.in.h:5
-msgid "Anjuta Manual"
-msgstr "Довідка до Anjuta"
-
-#: ../gnome-modules.xml.in.h:6
-msgid "Banshee Music Player"
-msgstr "Музичний програвач Banshee"
-
-#: ../gnome-modules.xml.in.h:7
-msgid "Battery Charge Monitor Manual"
-msgstr "Довідка з Індикатора заряду батареї"
-
-#: ../gnome-modules.xml.in.h:8
-msgid "Beagle Desktop Search"
-msgstr "Пошук на робочому столі Beagle"
-
-#: ../gnome-modules.xml.in.h:9
-msgid "Blackjack Manual"
-msgstr "Довідка до Blackjack"
-
-#: ../gnome-modules.xml.in.h:10
-msgid "Bug Buddy Manual"
-msgstr "Довідка до засобу сповіщення про помилки"
-
-#: ../gnome-modules.xml.in.h:11
-msgid "CD Player Manual"
-msgstr "Довідка до програвача компакт-дисків"
-
-#: ../gnome-modules.xml.in.h:12
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "Довідка до індикатора частоти процесора"
-
-#: ../gnome-modules.xml.in.h:13
-msgid "Character Palette Manual"
-msgstr "Довідка до таблиці символів"
-
-#: ../gnome-modules.xml.in.h:14
-msgid "Clock Applet Manual"
-msgstr "Довідка до аплету Годинник"
-
-#: ../gnome-modules.xml.in.h:15
-msgid "Command Line Manual"
-msgstr "Довідка до аплету Командний рядок"
-
-#: ../gnome-modules.xml.in.h:16
-msgid "Core"
-msgstr "Основні модулі"
-
-#: ../gnome-modules.xml.in.h:17
-msgid "Criawips Manual"
-msgstr "Довідка до Criawips"
-
-#: ../gnome-modules.xml.in.h:18 ../templates/header.tmpl:30
-msgid "Damned Lies"
-msgstr "Damned Lies"
-
-#: ../gnome-modules.xml.in.h:19
-msgid "Dasher Manual"
-msgstr "Довідка до Dasher"
-
-#: ../gnome-modules.xml.in.h:20
-msgid "Deskbar Applet"
-msgstr "Аплет Deskbar"
-
-#: ../gnome-modules.xml.in.h:21
-msgid "Dictionary Manual"
-msgstr "Довідка до словника"
-
-#: ../gnome-modules.xml.in.h:22
-msgid "Disk Mounter Manual"
-msgstr "Довідка до аплету підключення дисків"
-
-#: ../gnome-modules.xml.in.h:23
-msgid "Disk Usage Analyzer Manual"
-msgstr "Довідка до програми аналізу дискового простору"
-
-#: ../gnome-modules.xml.in.h:24
-msgid "Encryption Applet Manual"
-msgstr "Довідка до аплету Шифрування"
-
-#: ../gnome-modules.xml.in.h:25
-msgid "Epiphany Web Browser"
-msgstr "Веб-переглядач Epiphany"
-
-#: ../gnome-modules.xml.in.h:26
-msgid "Eye of GNOME"
-msgstr "Око GNOME"
-
-#: ../gnome-modules.xml.in.h:27
-msgid "Eye of GNOME Manual"
-msgstr "Довідка до ока GNOME"
-
-#: ../gnome-modules.xml.in.h:28
-msgid "F-Spot Manual"
-msgstr "Довідка до програми F-Spot"
-
-#: ../gnome-modules.xml.in.h:29
-msgid "FDL License"
-msgstr "Ліцензія FDL"
-
-#: ../gnome-modules.xml.in.h:30
-msgid "Fish Applet Manual"
-msgstr "Довідка до аплету Рибка"
-
-#: ../gnome-modules.xml.in.h:31
-msgid "Five or More Manual"
-msgstr "Довідка до гри П'яит або більше"
-
-#: ../gnome-modules.xml.in.h:32
-msgid "Four-in-a-row Manual"
-msgstr "Довідка до гри чотири в ряд"
-
-#: ../gnome-modules.xml.in.h:33
-msgid "GConf Editor Manual"
-msgstr "Довідка до редактора системних параметрів"
-
-#: ../gnome-modules.xml.in.h:34
-msgid "GDM Manual"
-msgstr "Довідка до менеджера входу у систему"
-
-#: ../gnome-modules.xml.in.h:35
-msgid "GFloppy Manual"
-msgstr "Довідка до програми форматування дискет"
-
-#: ../gnome-modules.xml.in.h:36
-msgid "GLib"
-msgstr "GLib"
-
-#: ../gnome-modules.xml.in.h:37
-msgid "GNOME 2 Development Documentation"
-msgstr "Документація розробника GNOME 2"
-
-#: ../gnome-modules.xml.in.h:38
-msgid "GNOME 2 User Documentation"
-msgstr "Документація користувача GNOME 2"
-
-#: ../gnome-modules.xml.in.h:39
-msgid "GNOME 2.18 release notes"
-msgstr "Примітки до випуску GNOME 2.16"
-
-#: ../gnome-modules.xml.in.h:40
-msgid "GNOME Applets"
-msgstr "Аплети GNOME"
-
-#: ../gnome-modules.xml.in.h:41
-msgid "GNOME Keyring Manager Manual"
-msgstr "Довідка до менеджера ключів"
-
-#: ../gnome-modules.xml.in.h:42
-msgid "GNOME Klotski Manual"
-msgstr "Довідка до гри Кльоцки"
-
-#: ../gnome-modules.xml.in.h:43
-msgid "GNOME Library Web site"
-msgstr "Веб-сайт бібліотеки GNOME"
-
-#: ../gnome-modules.xml.in.h:44
-msgid "GNOME Library help"
-msgstr "Довідка до бібліотеки GNOME"
-
-#: ../gnome-modules.xml.in.h:45
-msgid "GNOME Mahjongg Manual"
-msgstr "Довідка до GNOME Mahjongg"
-
-#: ../gnome-modules.xml.in.h:46
-msgid "GNOME Release Notes"
-msgstr "Примітки до випуску GNOME"
-
-#: ../gnome-modules.xml.in.h:47
-msgid "GNOME Robots Manual"
-msgstr "Довідка до роботів GNOME"
-
-#: ../gnome-modules.xml.in.h:48
-msgid "GNOME Sudoku Manual"
-msgstr "Довідка до GNOME Sudoku"
-
-#: ../gnome-modules.xml.in.h:49
-msgid "GNOME Tali Manual"
-msgstr "Довідка до GNOME Tali"
-
-#: ../gnome-modules.xml.in.h:50
-msgid "GNOME Tetravex Manual"
-msgstr "Довідка до GNOME Tetravex"
-
-#: ../gnome-modules.xml.in.h:51
-msgid "GNOME Volume Control Manual"
-msgstr "Довідка до регулятору гучності"
-
-#: ../gnome-modules.xml.in.h:52
-msgid "GPL License"
-msgstr "Ліцензія GPL"
-
-#: ../gnome-modules.xml.in.h:53
-msgid "GST Network Setup Manual"
-msgstr "Довідка до налаштовування мережі GST"
-
-#: ../gnome-modules.xml.in.h:54
-msgid "GST Service Management Manual"
-msgstr "Довідка до налаштовування служб у GST"
-
-#: ../gnome-modules.xml.in.h:55
-msgid "GST Shared Folders Manual"
-msgstr "Довідка до налаштовування спільних тек у GST"
-
-#: ../gnome-modules.xml.in.h:56
-msgid "GST Time Setup Manual"
-msgstr "Довідка до налаштовування часу у GST"
-
-#: ../gnome-modules.xml.in.h:57
-msgid "GST User Management Manual"
-msgstr "Довідка до керування користувачами у GST"
-
-#: ../gnome-modules.xml.in.h:58
-msgid "GStreamer Properties Manual"
-msgstr "Довідка до властивостей GStreamer"
-
-#: ../gnome-modules.xml.in.h:59
-msgid "Geyes Manual"
-msgstr "Довідка до аплету Очі"
-
-#: ../gnome-modules.xml.in.h:60
-msgid "Gnometris Manual"
-msgstr "Довідка до Gnometris"
-
-#: ../gnome-modules.xml.in.h:61
-msgid "Gtk+"
-msgstr "Gtk+"
-
-#: ../gnome-modules.xml.in.h:62
-msgid "Iagno Manual"
-msgstr "Довідка до Iagno"
-
-#: ../gnome-modules.xml.in.h:63
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Довідка до індикатора спеціальних можливостей клавіатури"
-
-#: ../gnome-modules.xml.in.h:64
-msgid "Keyboard Indicator Manual"
-msgstr "Довідка до індикатора розкладки клавіатури"
-
-#: ../gnome-modules.xml.in.h:65
-msgid "LGPL License"
-msgstr "Ліцензія LGPL"
-
-#: ../gnome-modules.xml.in.h:66
-msgid "Layout Descriptions"
-msgstr "Опис розкладок"
-
-#: ../gnome-modules.xml.in.h:67
-msgid "Log Viewer Manual"
-msgstr "Довідка до перегляду журналів"
-
-#: ../gnome-modules.xml.in.h:68
-msgid "Mines Manual"
-msgstr "Довідка до гри Міни"
-
-#: ../gnome-modules.xml.in.h:69
-msgid "Nibbles Manual"
-msgstr "Довідка до гри Хробак"
-
-#: ../gnome-modules.xml.in.h:70
-msgid "Panel Trash Manual"
-msgstr "Довідка до аплету Смітник"
-
-#: ../gnome-modules.xml.in.h:71
-msgid "Platform Overview"
-msgstr "Огляд платформи"
-
-#: ../gnome-modules.xml.in.h:72
-msgid "Property Nicks"
-msgstr "Назва властивостей"
-
-#: ../gnome-modules.xml.in.h:73
-msgid "Rhythmbox Music Player"
-msgstr "Програвач музики Rhythmbox"
-
-#: ../gnome-modules.xml.in.h:74
-msgid "Sabayon"
-msgstr "Sabayon"
-
-#: ../gnome-modules.xml.in.h:75
-msgid "Same GNOME Manual"
-msgstr "Довідка до гри Той самий GNOME"
-
-#: ../gnome-modules.xml.in.h:76
-msgid "Seahorse Manual"
-msgstr "Довідка до Seahorse"
-
-#: ../gnome-modules.xml.in.h:77
-msgid "Search Tool Manual"
-msgstr "Довідка до пошуку файлів"
-
-#: ../gnome-modules.xml.in.h:78
-msgid "Shared MIME Info"
-msgstr "Загальна інформація MIME"
-
-#: ../gnome-modules.xml.in.h:79
-msgid "Sound Juicer Manual"
-msgstr "Довідка до копіювання звуку із звукових дисків"
-
-#: ../gnome-modules.xml.in.h:80
-msgid "Sound Recorder Manual"
-msgstr "Довідка до програми запису звуку"
-
-#: ../gnome-modules.xml.in.h:81
-msgid "Sticky Notes Manual"
-msgstr "Довідка до аплету Липкі нотатки"
-
-#: ../gnome-modules.xml.in.h:82
-msgid "Stock Ticker Manual"
-msgstr "Довідка до аплету Інвестиції"
-
-#: ../gnome-modules.xml.in.h:83
-msgid "System Administration Guide"
-msgstr "Посібник системного адміністратора"
-
-#: ../gnome-modules.xml.in.h:84
-msgid "System Monitor Manual"
-msgstr "Довідка до системному монітору"
-
-#: ../gnome-modules.xml.in.h:85 ../templates/language-release.tmpl:92
-msgid "UI translations"
-msgstr "Переклади інтерфейсу"
-
-#: ../gnome-modules.xml.in.h:86
-msgid "User Directories"
-msgstr "Каталоги користувача"
-
-#: ../gnome-modules.xml.in.h:87
-msgid "User Guide"
-msgstr "Посібник користувача"
-
-#: ../gnome-modules.xml.in.h:88
-msgid "Volume Control Manual"
-msgstr "Довідка до аплету регулювання гучності"
-
-#: ../gnome-modules.xml.in.h:89
-msgid "Weather Applet Locations"
-msgstr "Місцевості з аплету погоди"
-
-#: ../gnome-modules.xml.in.h:90
-msgid "Weather Report Manual"
-msgstr "Довідка до аплету погоди"
-
-#: ../gnome-modules.xml.in.h:91
-msgid "Window List Applet Manual"
-msgstr "Довідка до списку вікон"
-
-#: ../gnome-modules.xml.in.h:92
-msgid "Workspace Switcher Applet Manual"
-msgstr "Довідка до перемикача робочих столів"
-
-#: ../gnome-modules.xml.in.h:93
-msgid "XKeyboard-Config"
-msgstr "Налаштовування клавіатури"
-
-#: ../gnome-modules.xml.in.h:94
-msgid "glChess Manual"
-msgstr "Довідка до glChess"
-
-#: ../releases.xml.in.h:1
-msgid "Administration Tools"
-msgstr "Засоби адміністрування"
-
-#: ../releases.xml.in.h:2
-msgid "Desktop Applications"
-msgstr "Настільні програми"
-
-#: ../releases.xml.in.h:3
-msgid "Development Platform"
-msgstr "Платформа розробки"
-
-#: ../releases.xml.in.h:4
-msgid "Development Tools"
-msgstr "Засоби розробки"
-
-#: ../releases.xml.in.h:5
-msgid "External Dependencies"
-msgstr "Зовнішні залежності"
-
-#: ../releases.xml.in.h:6
-msgid "Extra GNOME Applications"
-msgstr "Додаткові програми GNOME"
-
-#: ../releases.xml.in.h:7
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (стара стабільна версія)"
-
-#: ../releases.xml.in.h:8
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (стара стабільна версія)"
-
-#: ../releases.xml.in.h:9
-msgid "GNOME 2.18 (stable)"
-msgstr "GNOME 2.18 (стабільна версія)"
-
-#: ../releases.xml.in.h:10
-msgid "GNOME 2.20 (development)"
-msgstr "GNOME 2.20 (версія у розробці)"
-
-#: ../releases.xml.in.h:11
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "П'ятий палець ноги GNOME (Додаткові програми)"
-
-#: ../releases.xml.in.h:12
-msgid "GNOME Infrastructure"
-msgstr "Інфраструктура GNOME"
-
-#: ../releases.xml.in.h:13
-msgid "GNOME desktop"
-msgstr "Середовище GNOME"
-
-#: ../releases.xml.in.h:14
-msgid "GNOME developer platform"
-msgstr "Платформа розробки GNOME"
-
-#: ../releases.xml.in.h:15
-msgid "GNOME-Office Productivity Applications"
-msgstr "Офісні програми GNOME"
-
-#: ../releases.xml.in.h:16
-msgid "New module proposals"
-msgstr "Нові запропоновані модулі"
-
-#: ../releases.xml.in.h:17
-msgid "System Administration"
-msgstr "Системне адміністрування"
-
-#: ../releases.xml.in.h:18
-msgid "freedesktop.org (non-GNOME)"
-msgstr "freedesktop.org (не GNOME)"
-
-#: ../teams.py:246 ../templates/language-release.tmpl:6
-#: ../templates/team.tmpl:6
-#, python-format
-msgid "%(lang)s Translation Team"
-msgstr "Команда перекладу %(lang)s"
-
-#. import pprint
-#. pprint.pprint(TranslationLanguages())
-#: ../translation-teams.xml.in.h:1
-msgid "Afrikaans"
-msgstr "Африканс"
-
-#: ../translation-teams.xml.in.h:2
-msgid "Albanian"
-msgstr "Албанською"
-
-#: ../translation-teams.xml.in.h:3
-msgid "Amharic"
-msgstr "Амхарською (Амарин'я)"
-
-#: ../translation-teams.xml.in.h:4
-msgid "Arabic"
-msgstr "Арабською"
-
-#: ../translation-teams.xml.in.h:5
-msgid "Armenian"
-msgstr "Вірменською"
-
-#: ../translation-teams.xml.in.h:6
-msgid "Assamese"
-msgstr "Ассамською"
-
-#: ../translation-teams.xml.in.h:7
-msgid "Asturian"
-msgstr "Астуріанською"
-
-#: ../translation-teams.xml.in.h:8
-msgid "Australian English"
-msgstr "Австралійською англійською"
-
-#: ../translation-teams.xml.in.h:9
-msgid "Azerbaijani"
-msgstr "Азербайджанською"
-
-#: ../translation-teams.xml.in.h:10
-msgid "Basque"
-msgstr "Баскською"
-
-#: ../translation-teams.xml.in.h:11
-msgid "Belarusian"
-msgstr "Білоруською"
-
-#: ../translation-teams.xml.in.h:12
-msgid "Belarusian Latin"
-msgstr "Білоруською (латиниця)"
-
-#: ../translation-teams.xml.in.h:13
-msgid "Bengali"
-msgstr "Бенгальською"
-
-#: ../translation-teams.xml.in.h:14
-msgid "Bengali (India)"
-msgstr "Бенгальською (Індія)"
-
-#: ../translation-teams.xml.in.h:15
-msgid "Bosnian"
-msgstr "Боснійською"
-
-#: ../translation-teams.xml.in.h:16
-msgid "Brazilian Portuguese"
-msgstr "Бразильською португальською"
-
-#: ../translation-teams.xml.in.h:17
-msgid "Breton"
-msgstr "Бретонською"
-
-#: ../translation-teams.xml.in.h:18
-msgid "British English"
-msgstr "Британською англійською"
-
-#: ../translation-teams.xml.in.h:19
-msgid "Bulgarian"
-msgstr "Болгарською"
-
-#: ../translation-teams.xml.in.h:20
-msgid "Burmese"
-msgstr "Бірманською"
-
-#: ../translation-teams.xml.in.h:21
-msgid "Canadian English"
-msgstr "Канадською англійською"
-
-#: ../translation-teams.xml.in.h:22
-msgid "Catalan"
-msgstr "Каталонською"
-
-#: ../translation-teams.xml.in.h:23
-msgid "Chinese (China)"
-msgstr "Китайською (Китай)"
-
-#: ../translation-teams.xml.in.h:24
-msgid "Chinese (Hong Kong)"
-msgstr "Китайською (Гонконг)"
-
-#: ../translation-teams.xml.in.h:25
-msgid "Chinese (Taiwan)"
-msgstr "Китайською (Тайвань)"
-
-#: ../translation-teams.xml.in.h:26
-msgid "Chinese Traditional"
-msgstr "Традиційною китайською"
-
-#: ../translation-teams.xml.in.h:27
-msgid "Croatian"
-msgstr "Хорватською"
-
-#: ../translation-teams.xml.in.h:28
-msgid "Czech"
-msgstr "Чеською"
-
-#: ../translation-teams.xml.in.h:29
-msgid "Danish"
-msgstr "Датською"
-
-#: ../translation-teams.xml.in.h:30
-msgid "Divehi"
-msgstr "Дівехі (Мальдивською)"
-
-#: ../translation-teams.xml.in.h:31
-msgid "Dutch"
-msgstr "Нідерландською"
-
-#: ../translation-teams.xml.in.h:32
-msgid "Dzongkha"
-msgstr "Дзонг-ке"
-
-#: ../translation-teams.xml.in.h:33
-msgid "Esperanto"
-msgstr "Есперанто"
-
-#: ../translation-teams.xml.in.h:34
-msgid "Estonian"
-msgstr "Естонською"
-
-#: ../translation-teams.xml.in.h:35
-msgid "Fijian"
-msgstr "Фіджі"
-
-#: ../translation-teams.xml.in.h:36
-msgid "Finnish"
-msgstr "Фінською"
-
-#: ../translation-teams.xml.in.h:37
-msgid "French"
-msgstr "Французькою"
-
-#: ../translation-teams.xml.in.h:38
-msgid "Galician"
-msgstr "Гаельською"
-
-#: ../translation-teams.xml.in.h:39
-msgid "Georgian"
-msgstr "Грузинською"
-
-#: ../translation-teams.xml.in.h:40
-msgid "German"
-msgstr "Німецькою"
-
-#: ../translation-teams.xml.in.h:41
-msgid "Greek"
-msgstr "Грецькою"
-
-#: ../translation-teams.xml.in.h:42
-msgid "Guarani"
-msgstr "Гуарані"
-
-#: ../translation-teams.xml.in.h:43
+#: database-content.py:1
 msgid "Gujarati"
 msgstr "Гуджараті"
 
-#: ../translation-teams.xml.in.h:44
-msgid "Hausa"
-msgstr "Хауса"
-
-#: ../translation-teams.xml.in.h:45
-msgid "Hebrew"
-msgstr "Іврит"
-
-#: ../translation-teams.xml.in.h:46
-msgid "Hindi"
-msgstr "Хінді"
-
-#: ../translation-teams.xml.in.h:47
-msgid "Hungarian"
-msgstr "Угорською"
-
-#: ../translation-teams.xml.in.h:48
-msgid "Hyam"
-msgstr "Гуам"
-
-#: ../translation-teams.xml.in.h:49
-msgid "Icelandic"
-msgstr "Ісландською"
-
-#: ../translation-teams.xml.in.h:50
-msgid "Igbo"
-msgstr "Ігбо"
-
-#: ../translation-teams.xml.in.h:51
-msgid "Indonesian"
-msgstr "Індонезійською"
-
-#: ../translation-teams.xml.in.h:52
-msgid "Iranian Azerbaijani"
-msgstr "Іранською азербайджанською"
-
-#: ../translation-teams.xml.in.h:53
+#: database-content.py:2
 msgid "Irish"
-msgstr "Ірландською"
+msgstr "Ірландська"
 
-#: ../translation-teams.xml.in.h:54
-msgid "Italian"
-msgstr "Італійською"
+#: database-content.py:3
+msgid "Guarani"
+msgstr "Гуарані"
 
-#: ../translation-teams.xml.in.h:55
-msgid "Japanese"
-msgstr "Японською"
+#: database-content.py:4
+msgid "Galician"
+msgstr "Гаельська"
 
-#: ../translation-teams.xml.in.h:56
-msgid "Jju"
-msgstr "Юджі"
-
-#: ../translation-teams.xml.in.h:57
-msgid "Kagoma"
-msgstr "Кагома"
-
-#: ../translation-teams.xml.in.h:58
-msgid "Kannada"
-msgstr "Каннада"
-
-#: ../translation-teams.xml.in.h:59
-msgid "Kazakh"
-msgstr "Казахською"
-
-#: ../translation-teams.xml.in.h:60
-msgid "Khmer"
-msgstr "Кхмерською"
-
-#: ../translation-teams.xml.in.h:61
-msgid "Kinyarwanda"
-msgstr "Кін'яруанда"
-
-#: ../translation-teams.xml.in.h:62
-msgid "Kirghiz"
-msgstr "Киргизькою"
-
-#: ../translation-teams.xml.in.h:63
-msgid "Korean"
-msgstr "Корейською"
-
-#: ../translation-teams.xml.in.h:64
-msgid "Kurdish"
-msgstr "Курдською"
-
-#: ../translation-teams.xml.in.h:65
-msgid "Lao"
-msgstr "Лаоською"
-
-#: ../translation-teams.xml.in.h:66
+#: database-content.py:5
 msgid "Latin"
-msgstr "Латинською"
+msgstr "Латинська"
 
-#: ../translation-teams.xml.in.h:67
-msgid "Latvian"
-msgstr "Латвійською"
+#: database-content.py:6
+msgid "Tatar"
+msgstr "Татарська"
 
-#: ../translation-teams.xml.in.h:68
+#: database-content.py:7
+msgid "Turkish"
+msgstr "Турецька"
+
+#: database-content.py:8
 msgid "Limburgian"
-msgstr "Лімбурзькою"
+msgstr "Лімбурзька"
 
-#: ../translation-teams.xml.in.h:69
-msgid "Lithuanian"
-msgstr "Литовською"
+#: database-content.py:9
+msgid "Latvian"
+msgstr "Латвійська"
 
-#: ../translation-teams.xml.in.h:70
-msgid "Low German"
-msgstr "Південною німецькою"
-
-#: ../translation-teams.xml.in.h:71
-msgid "Low German and Saxon"
-msgstr "Південною німецькою та саксонською"
-
-#: ../translation-teams.xml.in.h:72
-msgid "Low Saxon, Germany"
-msgstr "Південно-саксонською німецькою"
-
-#: ../translation-teams.xml.in.h:73
-msgid "Macedonian"
-msgstr "Македонською"
-
-#: ../translation-teams.xml.in.h:74
-msgid "Maithili"
-msgstr "Майтхілі"
-
-#: ../translation-teams.xml.in.h:75
-msgid "Malagasy"
-msgstr "Малагасі"
-
-#: ../translation-teams.xml.in.h:76
-msgid "Malay"
-msgstr "Малайською"
-
-#: ../translation-teams.xml.in.h:77
-msgid "Malayalam"
-msgstr "Малаялам"
-
-#: ../translation-teams.xml.in.h:78
-msgid "Maltese"
-msgstr "Мальтійською"
-
-#: ../translation-teams.xml.in.h:79
-msgid "Maori"
-msgstr "Маорі"
-
-#: ../translation-teams.xml.in.h:80
-msgid "Marathi"
-msgstr "Маратхі"
-
-#: ../translation-teams.xml.in.h:81
-msgid "Mayan"
-msgstr "Менкською"
-
-#: ../translation-teams.xml.in.h:82
-msgid "Mongolian"
-msgstr "Монгольською"
-
-#: ../translation-teams.xml.in.h:83
-msgid "Nahuatl"
-msgstr "Нахуатл"
-
-#: ../translation-teams.xml.in.h:84
-msgid "Nepali"
-msgstr "Непальською"
-
-#: ../translation-teams.xml.in.h:85
-msgid "Northern Sotho"
-msgstr "Північно-саамською"
-
-#: ../translation-teams.xml.in.h:86
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Норвезькою (бокмал та нюнорск)"
-
-#: ../translation-teams.xml.in.h:87
-msgid "Norwegian Bokmål"
-msgstr "Норвезькою бокмал"
-
-#: ../translation-teams.xml.in.h:88
-msgid "Norwegian Nynorsk"
-msgstr "Норвезькою нюнорск"
-
-#: ../translation-teams.xml.in.h:89
-msgid "Occitan"
-msgstr "Оцитан"
-
-#: ../translation-teams.xml.in.h:90
-msgid "Old English"
-msgstr "Старою англійською"
-
-#: ../translation-teams.xml.in.h:91
-msgid "Oriya"
-msgstr "Орія"
-
-#: ../translation-teams.xml.in.h:92
-msgid "Persian"
-msgstr "Персидською"
-
-#: ../translation-teams.xml.in.h:93
-msgid "Polish"
-msgstr "Польською"
-
-#: ../translation-teams.xml.in.h:94
-msgid "Portuguese"
-msgstr "Португальською"
-
-#: ../translation-teams.xml.in.h:95
-msgid "Punjabi"
-msgstr "Панджабі"
-
-#: ../translation-teams.xml.in.h:96
-msgid "Pushto"
-msgstr "Пушту"
-
-#: ../translation-teams.xml.in.h:97
-msgid "Páez"
-msgstr "Паез"
-
-#: ../translation-teams.xml.in.h:98
-msgid "Quechua"
-msgstr "Кечуа"
-
-#: ../translation-teams.xml.in.h:99
-msgid "Romanian"
-msgstr "Румунською"
-
-#: ../translation-teams.xml.in.h:100
-msgid "Russian"
-msgstr "Російською"
-
-#: ../translation-teams.xml.in.h:101
-msgid "Sanskrit"
-msgstr "Санскрит"
-
-#: ../translation-teams.xml.in.h:102
-msgid "Sardinian"
-msgstr "Сардинською"
-
-#: ../translation-teams.xml.in.h:103
-msgid "Serbian"
-msgstr "Сербською"
-
-#: ../translation-teams.xml.in.h:104
-msgid "Serbian Jekavian"
-msgstr "Сербською кирилиця"
-
-#: ../translation-teams.xml.in.h:105
-msgid "Serbian Latin"
-msgstr "Сербською латиниця"
-
-#: ../translation-teams.xml.in.h:106
-msgid "Sinhala"
-msgstr "Сінхала"
-
-#: ../translation-teams.xml.in.h:107
-msgid "Slovak"
-msgstr "Словацькою"
-
-#: ../translation-teams.xml.in.h:108
-msgid "Slovenian"
-msgstr "Словенською"
-
-#: ../translation-teams.xml.in.h:109
-msgid "Spanish"
-msgstr "Іспанською"
-
-#: ../translation-teams.xml.in.h:110
-msgid "Swahili"
-msgstr "Суахілі"
-
-#: ../translation-teams.xml.in.h:111
-msgid "Swedish"
-msgstr "Шведською"
-
-#: ../translation-teams.xml.in.h:112
+#: database-content.py:10
 msgid "Tagalog"
 msgstr "Тагалог"
 
-#: ../translation-teams.xml.in.h:113
-msgid "Tajik"
-msgstr "Таджицькою"
+#: database-content.py:11
+msgid "Turkmen"
+msgstr "Туркменська"
 
-#: ../translation-teams.xml.in.h:114
-msgid "Tamil"
-msgstr "Тамільською"
-
-#: ../translation-teams.xml.in.h:115
-msgid "Tatar"
-msgstr "Татарською"
-
-#: ../translation-teams.xml.in.h:116
-msgid "Telugu"
-msgstr "Телугу"
-
-#: ../translation-teams.xml.in.h:117
-msgid "Tetum"
-msgstr "Тетумською"
-
-#: ../translation-teams.xml.in.h:118
+#: database-content.py:12
 msgid "Thai"
 msgstr "Таї"
 
-#: ../translation-teams.xml.in.h:119
-msgid "Tibetan"
-msgstr "Тибетською"
+#: database-content.py:13
+msgid "Tajik"
+msgstr "Таджицька"
 
-#: ../translation-teams.xml.in.h:120
-msgid "Tigrinya"
-msgstr "Тигринья"
+#: database-content.py:14
+msgid "Telugu"
+msgstr "Телугу"
 
-#: ../translation-teams.xml.in.h:121
-msgid "Turkish"
-msgstr "Турецькою"
+#: database-content.py:15
+msgid "Tamil"
+msgstr "Тамільська"
 
-#: ../translation-teams.xml.in.h:122
-msgid "Turkmen"
-msgstr "Туркменською"
-
-#: ../translation-teams.xml.in.h:123
-msgid "Tyap"
-msgstr "Туап"
-
-#: ../translation-teams.xml.in.h:124
-msgid "Uighur"
-msgstr "Уйгурською"
-
-#: ../translation-teams.xml.in.h:125
-msgid "Ukrainian"
-msgstr "Українською"
-
-#: ../translation-teams.xml.in.h:126
-msgid "Urdu"
-msgstr "Урду"
-
-#: ../translation-teams.xml.in.h:127
-msgid "Uzbek"
-msgstr "Узбецькою"
-
-#: ../translation-teams.xml.in.h:128
-msgid "Uzbek (Cyrillic)"
-msgstr "Узбецькою (кирилиця)"
-
-#: ../translation-teams.xml.in.h:129
-msgid "Uzbek (Latin)"
-msgstr "Узбецькою (латиниця)"
-
-#: ../translation-teams.xml.in.h:130
-msgid "Vietnamese"
-msgstr "В'єтнамською"
-
-#: ../translation-teams.xml.in.h:131
-msgid "Walloon"
-msgstr "Валлун"
-
-#: ../translation-teams.xml.in.h:132
-msgid "Welsh"
-msgstr "Уельською (Валлійською)"
-
-#: ../translation-teams.xml.in.h:133
-msgid "Wolof"
-msgstr "Волоф"
-
-#: ../translation-teams.xml.in.h:134
-msgid "Xhosa"
-msgstr "Коса"
-
-#: ../translation-teams.xml.in.h:135
+#: database-content.py:16
 msgid "Yiddish"
 msgstr "Ідиш"
 
-#: ../translation-teams.xml.in.h:136
+#: database-content.py:17
+msgid "Brazilian Portuguese"
+msgstr "Бразильська португальська"
+
+#: database-content.py:18
+msgid "German"
+msgstr "Німецька"
+
+#: database-content.py:19
+msgid "Danish"
+msgstr "Данська"
+
+#: database-content.py:20
+msgid "Dzongkha"
+msgstr "Дзонг-ке"
+
+#: database-content.py:21
+msgid "Chinese (China)"
+msgstr "Китайська (Китай)"
+
+#: database-content.py:22
+msgid "Balochi"
+msgstr "Белуджська"
+
+#: database-content.py:23
+msgid "Crimean Tatar"
+msgstr "Кримсько-татарська"
+
+#: database-content.py:24
+msgid "Greek"
+msgstr "Грецька"
+
+#: database-content.py:25
+msgid "Esperanto"
+msgstr "Есперанто"
+
+#: database-content.py:26
+msgid "Belarusian"
+msgstr "Білоруська"
+
+#: database-content.py:27
+msgid "Basque"
+msgstr "Баскська"
+
+#: database-content.py:28
+msgid "Estonian"
+msgstr "Естонська"
+
+#: database-content.py:29
+msgid "Spanish"
+msgstr "Іспанська"
+
+#: database-content.py:30
+msgid "Russian"
+msgstr "Російська"
+
+#: database-content.py:31
+msgid "Kinyarwanda"
+msgstr "Кін'яруанда"
+
+#: database-content.py:32
+msgid "Romanian"
+msgstr "Румунська"
+
+#: database-content.py:33
+msgid "Canadian English"
+msgstr "Канадська англійська"
+
+#: database-content.py:34
+msgid "Bulgarian"
+msgstr "Болгарська"
+
+#: database-content.py:35
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: database-content.py:36
+msgid "Walloon"
+msgstr "Валлун"
+
+#: database-content.py:37
+msgid "Asturian"
+msgstr "Астуріанська"
+
+#: database-content.py:38
+msgid "Bengali"
+msgstr "Бенгальська"
+
+#: database-content.py:39
+msgid "Breton"
+msgstr "Бретонська"
+
+#: database-content.py:40
+msgid "Bosnian"
+msgstr "Боснійська"
+
+#: database-content.py:41
+msgid "Japanese"
+msgstr "Японська"
+
+#: database-content.py:42
+msgid "Occitan"
+msgstr "Окситанська"
+
+#: database-content.py:43
+msgid "Low German and Saxon"
+msgstr "Південнонімецька та саксонська"
+
+#: database-content.py:44
+msgid "Oriya"
+msgstr "Орія"
+
+#: database-content.py:45
+msgid "Xhosa"
+msgstr "Коса"
+
+#: database-content.py:46
+msgid "Northern Sotho"
+msgstr "Північно-саамська"
+
+#: database-content.py:47
+msgid "Iranian Azerbaijani"
+msgstr "Іранська азербайджанська"
+
+#: database-content.py:48
+msgid "Catalan"
+msgstr "Каталонська"
+
+#: database-content.py:49
+msgid "Welsh"
+msgstr "Уельська (Валлійська)"
+
+#: database-content.py:50
+msgid "Czech"
+msgstr "Чеська"
+
+#: database-content.py:51
+#| msgid "Pushto"
+msgid "Pashto"
+msgstr "Пушту"
+
+#: database-content.py:52
+msgid "Portuguese"
+msgstr "Португальська"
+
+#: database-content.py:53
+msgid "Lithuanian"
+msgstr "Литовська"
+
+#: database-content.py:54
+msgid "Punjabi"
+msgstr "Панджабі"
+
+#: database-content.py:55
+msgid "British English"
+msgstr "Британська англійська"
+
+#: database-content.py:56
+msgid "Armenian"
+msgstr "Вірменська"
+
+#: database-content.py:57
+msgid "Croatian"
+msgstr "Хорватська"
+
+#: database-content.py:58
+msgid "Hungarian"
+msgstr "Угорська"
+
+#: database-content.py:59
+msgid "Hindi"
+msgstr "Хінді"
+
+#: database-content.py:60
+msgid "Hebrew"
+msgstr "Іврит"
+
+#: database-content.py:61
+msgid "Malagasy"
+msgstr "Малагасі"
+
+#: database-content.py:62
+#| msgid "Fijian"
+msgid "Friulian"
+msgstr "Фруїльська"
+
+#: database-content.py:63
+msgid "Uzbek"
+msgstr "Узбецька"
+
+#: database-content.py:64
+msgid "Malayalam"
+msgstr "Малаялам"
+
+#: database-content.py:65
+msgid "Mongolian"
+msgstr "Монгольська"
+
+#: database-content.py:66
+msgid "Maori"
+msgstr "Маорі"
+
+#: database-content.py:67
+msgid "Macedonian"
+msgstr "Македонська"
+
+#: database-content.py:68
+msgid "Urdu"
+msgstr "Урду"
+
+#: database-content.py:69
+msgid "Polish"
+msgstr "Польська"
+
+#: database-content.py:70
+msgid "Malay"
+msgstr "Малайська"
+
+#: database-content.py:71
+msgid "Marathi"
+msgstr "Маратхі"
+
+#: database-content.py:72
+msgid "Uighur"
+msgstr "Уйгурська"
+
+#: database-content.py:73
+msgid "Old English"
+msgstr "Стара англійська"
+
+#: database-content.py:74
+msgid "Afrikaans"
+msgstr "Африканс"
+
+#: database-content.py:75
+msgid "Vietnamese"
+msgstr "В'єтнамська"
+
+#: database-content.py:76
+msgid "Icelandic"
+msgstr "Ісландська"
+
+#: database-content.py:77
+msgid "Amharic"
+msgstr "Амхарська (Амарин'я)"
+
+#: database-content.py:78
+msgid "Italian"
+msgstr "Італійська"
+
+#: database-content.py:79
+msgid "Kannada"
+msgstr "Каннада"
+
+#: database-content.py:80
+msgid "Assamese"
+msgstr "Ассамська"
+
+#: database-content.py:81
+msgid "Arabic"
+msgstr "Арабська"
+
+#: database-content.py:82
+msgid "Ido"
+msgstr "Ідо"
+
+#: database-content.py:83
+msgid "Zulu"
+msgstr "Зулуська"
+
+#: database-content.py:84
+msgid "Azerbaijani"
+msgstr "Азербайджанська"
+
+#: database-content.py:85
+msgid "Indonesian"
+msgstr "Індонезійська"
+
+#: database-content.py:86
+msgid "Bengali (India)"
+msgstr "Бенгальська (Індія)"
+
+#: database-content.py:87
+#| msgid "Khmer"
+msgid "Kashmiri"
+msgstr "Кашмірська"
+
+#: database-content.py:88
+msgid "Chinese Traditional"
+msgstr "Традиційна китайська"
+
+#: database-content.py:89
+msgid "Dutch"
+msgstr "Нідерландська"
+
+#: database-content.py:90
 msgid "Yoruba"
 msgstr "Йоруба"
 
-#: ../translation-teams.xml.in.h:137
-msgid "Zapotec"
-msgstr "Сапотекською"
+#: database-content.py:91
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Норвезька (букмол та нюношк)"
 
-#: ../translation-teams.xml.in.h:138
-msgid "Zulu"
-msgstr "Зулуською"
+#: database-content.py:92
+msgid "Nepali"
+msgstr "Непальська"
 
-#: ../update-stats.py:214
+#: database-content.py:93
+msgid "Australian English"
+msgstr "Австралійська англійська"
+
+#: database-content.py:94
+msgid "French"
+msgstr "Французька"
+
+#: database-content.py:95
+msgid "Persian"
+msgstr "Персидська"
+
+#: database-content.py:96
+msgid "Fula"
+msgstr "Фула"
+
+#: database-content.py:97
+msgid "Maithili"
+msgstr "Майтхілі"
+
+#: database-content.py:98
+msgid "Finnish"
+msgstr "Фінська"
+
+#: database-content.py:99
+msgid "Georgian"
+msgstr "Грузинська"
+
+#: database-content.py:100
+msgid "Kazakh"
+msgstr "Казахська"
+
+#: database-content.py:101
+msgid "Serbian"
+msgstr "Сербська"
+
+#: database-content.py:102
+msgid "Albanian"
+msgstr "Албанська"
+
+#: database-content.py:103
+msgid "Korean"
+msgstr "Корейська"
+
+#: database-content.py:104
+msgid "Swedish"
+msgstr "Шведська"
+
+#: database-content.py:105
+msgid "Khmer"
+msgstr "Кхмерська"
+
+#: database-content.py:106
+msgid "Slovak"
+msgstr "Словацька"
+
+#: database-content.py:107
+msgid "Sinhala"
+msgstr "Сінхала"
+
+#: database-content.py:108
+msgid "Kurdish"
+msgstr "Курдська"
+
+#: database-content.py:109
+msgid "Slovenian"
+msgstr "Словенська"
+
+#: database-content.py:110
+msgid "Kirghiz"
+msgstr "Киргизька"
+
+#: database-content.py:111
+msgid "Hausa"
+msgstr "Хауса"
+
+#: database-content.py:112
+msgid "Bemba"
+msgstr "Вемба"
+
+#: database-content.py:113
+#| msgid "Nepali"
+msgid "Neapolitan"
+msgstr "Неаполітанською"
+
+#: database-content.py:114
+msgid "Divehi"
+msgstr "Дівехі (Мальдивською)"
+
+#: database-content.py:115
+msgid "Belarusian Latin"
+msgstr "Білоруська (латиниця)"
+
+#: database-content.py:116
+msgid "Low German"
+msgstr "Південна німецька"
+
+#: database-content.py:117
+msgid "Low Saxon, Germany"
+msgstr "Південно-саксонська німецька"
+
+#: database-content.py:118
+msgid "Valencian (Southern Catalan)"
+msgstr "Валенсійстка (південно-каталанська)"
+
+#: database-content.py:119
+msgid "Uzbek (Cyrillic)"
+msgstr "Узбецька (кирилиця)"
+
+#: database-content.py:120
+msgid "Uzbek (Latin)"
+msgstr "Узбецька (латиниця)"
+
+#: database-content.py:121
+msgid "Chinese (Hong Kong)"
+msgstr "Китайська (Гонконг)"
+
+#: database-content.py:122
+msgid "Chinese (Taiwan)"
+msgstr "Китайська (Тайвань)"
+
+#: database-content.py:123
+msgid "Norwegian Bokmål"
+msgstr "Норвезька букмол"
+
+#: database-content.py:124
+msgid "Norwegian Nynorsk"
+msgstr "Норвезька нюношк"
+
+#: database-content.py:125
+msgid "Serbian Latin"
+msgstr "Сербська латиниця"
+
+#: database-content.py:126
+msgid "Serbian Jekavian"
+msgstr "Сербська кирилиця"
+
+#: database-content.py:127
+msgid "Igbo"
+msgstr "Ігбо"
+
+#: database-content.py:128
+msgid "Lao"
+msgstr "Лаоська"
+
+#: database-content.py:129
+msgid "UI translations"
+msgstr "Переклади інтерфейсу"
+
+#: database-content.py:130
+msgid "User Guide"
+msgstr "Посібник користувача"
+
+#: database-content.py:131
+msgid "Accessibility Guide"
+msgstr "Посібник з можливостей доступності"
+
+#: database-content.py:132
+msgid "System Administration Guide"
+msgstr "Посібник системного адміністратора"
+
+#: database-content.py:133
+msgid "GDM Manual"
+msgstr "Довідка до менеджера входу у систему"
+
+#: database-content.py:134
+msgid "Anjuta Manual"
+msgstr "Довідка до Anjuta"
+
+#: database-content.py:135
+msgid "GConf Editor Manual"
+msgstr "Довідка до редактора системних параметрів"
+
+#: database-content.py:136
+msgid "F-Spot Manual"
+msgstr "Довідка до програми F-Spot"
+
+#: database-content.py:137
+msgid "FDL License"
+msgstr "Ліцензія FDL"
+
+#: database-content.py:138
+msgid "LGPL License"
+msgstr "Ліцензія LGPL"
+
+#: database-content.py:139
+msgid "GPL License"
+msgstr "Ліцензія GPL"
+
+#: database-content.py:140
+msgid "Fish Applet Manual"
+msgstr "Довідка до аплету Рибка"
+
+#: database-content.py:141
+msgid "Workspace Switcher Applet Manual"
+msgstr "Довідка до перемикача робочих столів"
+
+#: database-content.py:142
+msgid "Window List Applet Manual"
+msgstr "Довідка до списку вікон"
+
+#: database-content.py:143
+msgid "Clock Applet Manual"
+msgstr "Довідка до аплету Годинник"
+
+#: database-content.py:144
+msgid "Iagno Manual"
+msgstr "Довідка до Ягно"
+
+#: database-content.py:145
+msgid "Five or More Manual"
+msgstr "Довідка до гри П'ять або більше"
+
+#: database-content.py:146
+msgid "Nibbles Manual"
+msgstr "Довідка до гри Хробак"
+
+#: database-content.py:147
+msgid "GNOME Robots Manual"
+msgstr "Довідка до роботів GNOME"
+
+#: database-content.py:148
+msgid "Four-in-a-row Manual"
+msgstr "Довідка до гри чотири в ряд"
+
+#: database-content.py:149
+msgid "GNOME Sudoku Manual"
+msgstr "Довідка до GNOME Sudoku"
+
+#: database-content.py:150
+msgid "glChess Manual"
+msgstr "Довідка до Шахів"
+
+#: database-content.py:151
+msgid "GNOME Tali Manual"
+msgstr "Довідка до Талі"
+
+#: database-content.py:152
+msgid "Gnometris Manual"
+msgstr "Довідка до Gnometris"
+
+#: database-content.py:153
+msgid "GNOME Klotski Manual"
+msgstr "Довідка до гри Кльоцки"
+
+#: database-content.py:154
+msgid "GNOME Tetravex Manual"
+msgstr "Довідка до GNOME Tetravex"
+
+#: database-content.py:155
+msgid "GNOME Mahjongg Manual"
+msgstr "Довідка до GNOME Mahjongg"
+
+#: database-content.py:156
+msgid "AisleRiot Manual"
+msgstr "Довідка до аплету Рибка"
+
+#: database-content.py:157
+msgid "Mines Manual"
+msgstr "Довідка до гри Міни"
+
+#: database-content.py:158
+msgid "Same GNOME Manual"
+msgstr "Довідка до гри Той самий GNOME"
+
+#: database-content.py:159
+msgid "Blackjack Manual"
+msgstr "Довідка до Блекджек"
+
+#: database-content.py:160
+msgid "CD Player Manual"
+msgstr "Довідка до програвача компакт-дисків"
+
+#: database-content.py:161
+msgid "Sound Recorder Manual"
+msgstr "Довідка до програми запису звуку"
+
+#: database-content.py:162
+msgid "GStreamer Properties Manual"
+msgstr "Довідка до властивостей GStreamer"
+
+#: database-content.py:163
+msgid "GNOME Volume Control Manual"
+msgstr "Довідка до регулятору гучності"
+
+#: database-content.py:164
+msgid "Layout Descriptions"
+msgstr "Опис розкладок"
+
+#: database-content.py:165
+msgid "Keyboard Indicator Manual"
+msgstr "Довідка до індикатора розкладки клавіатури"
+
+#: database-content.py:166
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "Довідка до індикатора частоти процесора"
+
+#: database-content.py:167
+msgid "Command Line Manual"
+msgstr "Довідка до аплету Командний рядок"
+
+#: database-content.py:168
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "Довідка до індикатора спеціальних можливостей клавіатури"
+
+#: database-content.py:169
+#| msgid "Fish Applet Manual"
+msgid "Invest Applet Manual"
+msgstr "Довідка до аплету Invest"
+
+#: database-content.py:170
+msgid "System Monitor Manual"
+msgstr "Довідка до системному монітору"
+
+#: database-content.py:171
+msgid "Geyes Manual"
+msgstr "Довідка до аплету Очі"
+
+#: database-content.py:172
+msgid "Panel Trash Manual"
+msgstr "Довідка до аплету Смітник"
+
+#: database-content.py:173
+msgid "Character Palette Manual"
+msgstr "Довідка до таблиці символів"
+
+#: database-content.py:174
+msgid "Volume Control Manual"
+msgstr "Довідка до аплету регулювання гучності"
+
+#: database-content.py:175
+msgid "Weather Report Manual"
+msgstr "Довідка до аплету погоди"
+
+#: database-content.py:176
+msgid "Sticky Notes Manual"
+msgstr "Довідка до аплету Липкі нотатки"
+
+#: database-content.py:177
+msgid "Disk Mounter Manual"
+msgstr "Довідка до аплету підключення дисків"
+
+#: database-content.py:178
+msgid "Battery Charge Monitor Manual"
+msgstr "Довідка з Індикатора заряду батареї"
+
+#: database-content.py:179
+msgid "User Directories"
+msgstr "Каталоги користувача"
+
+#: database-content.py:180
+#| msgid "System Administration Guide"
+msgid "Integration Guide"
+msgstr "Посібник з інтеграції"
+
+#: database-content.py:181
+msgid "Platform Overview"
+msgstr "Огляд платформи"
+
+#: database-content.py:182
+msgid "Encryption Applet Manual"
+msgstr "Довідка до аплету Шифрування"
+
+#: database-content.py:183
+#| msgid "GNOME Release Notes"
+msgid "Release Notes"
+msgstr "Примітки до випуску"
+
+#: database-content.py:184
+msgid "GNOME Keyring Manager Manual"
+msgstr "Довідка до менеджера ключів"
+
+#: database-content.py:185
+msgid "Criawips Manual"
+msgstr "Довідка до Criawips"
+
+#: database-content.py:186
+msgid "Sound Juicer Manual"
+msgstr "Довідка до копіювання звуку із звукових дисків"
+
+#: database-content.py:187
+msgid "Property Nicks"
+msgstr "Назва властивостей"
+
+#: database-content.py:188
+msgid "tips"
+msgstr "Підказки"
+
+#: database-content.py:189
+msgid "script-fu"
+msgstr "script-fu"
+
+#: database-content.py:190
+msgid "libgimp"
+msgstr "libgimp"
+
+#: database-content.py:191
+msgid "python"
+msgstr "python"
+
+#: database-content.py:192
+msgid "plug-ins"
+msgstr "Расширения"
+
+#: database-content.py:193
+msgid "Functions"
+msgstr "Функції"
+
+#: database-content.py:194
+msgid "Dasher Manual"
+msgstr "Довідка до Dasher"
+
+#: database-content.py:195
+msgid "Weather Applet Locations"
+msgstr "Місцевості з аплету погоди"
+
+#: database-content.py:196
+msgid "Dictionary Manual"
+msgstr "Довідка до словника"
+
+#: database-content.py:197
+msgid "Disk Usage Analyzer Manual"
+msgstr "Довідка до програми аналізу дискового простору"
+
+#: database-content.py:198
+msgid "Log Viewer Manual"
+msgstr "Довідка до перегляду журналів"
+
+#: database-content.py:199
+msgid "Search Tool Manual"
+msgstr "Довідка до пошуку файлів"
+
+#: database-content.py:200
+msgid "GNOME Library help"
+msgstr "Бібліотека документації GNOME"
+
+#: database-content.py:201
+msgid "Eye of GNOME Manual"
+msgstr "Довідка до ока GNOME"
+
+#: database-content.py:202
+msgid "GST User Management Manual"
+msgstr "Довідка до керування користувачами у GST"
+
+#: database-content.py:203
+msgid "GST Service Management Manual"
+msgstr "Довідка до налаштовування служб у GST"
+
+#: database-content.py:204
+msgid "GST Network Setup Manual"
+msgstr "Довідка до налаштовування мережі GST"
+
+#: database-content.py:205
+msgid "GST Shared Folders Manual"
+msgstr "Довідка до налаштовування спільних тек у GST"
+
+#: database-content.py:206
+msgid "GST Time Setup Manual"
+msgstr "Довідка до налаштовування часу у GST"
+
+#: database-content.py:207 djamnedlies-git/languages/views.py:50
+#: djamnedlies-git/languages/views.py:66
+#: djamnedlies-git/templates/branch_detail.html:23
+#: djamnedlies-git/templates/release_detail.html:22
+#: djamnedlies-git/templates/teams/team_detail.html:27
+#: djamnedlies-svn/languages/views.py:50 djamnedlies-svn/languages/views.py:66
+#: djamnedlies-svn/templates/branch_detail.html:23
+#: djamnedlies-svn/templates/release_detail.html:22
+#: djamnedlies-svn/templates/teams/team_detail.html:27 languages/views.py:50
+#: languages/views.py:70 templates/branch_detail.html:23
+#: templates/release_detail.html:22 templates/release_detail.html.py:68
+#: templates/teams/team_detail.html:27
+msgid "Documentation"
+msgstr "Документація"
+
+#: database-content.py:208
+#| msgid "UI translations"
+msgid "UI translation"
+msgstr "Переклади інтерфейсу"
+
+#: database-content.py:209
+msgid "GNOME 2 User Documentation"
+msgstr "Документація користувача GNOME 2"
+
+#: database-content.py:210
+msgid "Evince Document Viewer"
+msgstr "Оглядач документації Evince"
+
+#: database-content.py:211
+msgid "Beagle Desktop Search"
+msgstr "Пошук на робочому столі Beagle"
+
+#: database-content.py:212 djamnedlies-git/templates/base.html:35
+#: djamnedlies-git/templates/admin/base_site.html:7
+#: djamnedlies-svn/templates/base.html:35
+#: djamnedlies-svn/templates/admin/base_site.html:7 templates/base.html:35
+#: templates/admin/base_site.html:7
+msgid "Damned Lies"
+msgstr "Damned Lies"
+
+#: database-content.py:213
+msgid "Banshee Music Player"
+msgstr "Музичний програвач Banshee"
+
+#: database-content.py:214
+msgid "Shared MIME Info"
+msgstr "Загальна інформація про типи файлів MIME"
+
+#: database-content.py:215
+msgid "GNOME Applets"
+msgstr "Аплети GNOME"
+
+#: database-content.py:216
+msgid "GNOME 2 Development Documentation"
+msgstr "Документація розробника GNOME 2"
+
+#: database-content.py:217
+msgid "GNOME Release Notes"
+msgstr "Примітки до випуску GNOME"
+
+#: database-content.py:218
+msgid "Rhythmbox Music Player"
+msgstr "Програвач музики Rhythmbox"
+
+#: database-content.py:219
+msgid "Epiphany Web Browser"
+msgstr "Веб-переглядач Epiphany"
+
+#: database-content.py:220
+msgid "GNOME Library Web site"
+msgstr "Веб-сайт бібліотеки GNOME"
+
+#: database-content.py:221
+msgid "Eye of GNOME"
+msgstr "Око GNOME"
+
+#: database-content.py:222
+msgid "Gnome Specimen"
+msgstr "Зразки шрифтів"
+
+#: database-content.py:223
+msgid "Deskbar Applet"
+msgstr "Аплет Deskbar"
+
+#: database-content.py:224
+msgid "WebKitGTK+"
+msgstr "WebKitGTK+"
+
+#: database-content.py:225
+#| msgid ""
+#| "This module is not part of the GNOME SVN repository. Please check the "
+#| "module's web page to see where to send translations."
+msgid ""
+"GNUCash is not part of the GNOME SVN repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
+msgstr ""
+"GNUCash не є частиною репозиторію GNOME SVN. Перевірте веб-сторінку <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"щоб дізнатись, куди надсилати переклади."
+
+#: database-content.py:226
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Оглядач документації Evince, що підтримує багато форматів."
+
+#: database-content.py:227
+msgid ""
+"Committed translations are updated manually on l10n.gnome.org from time to "
+"time. Be patient :-)"
+msgstr ""
+"Надіслані до l10n.gnome.org переклади оновлюються вручну час від часу. Будьте терплячі :-)"
+
+#: database-content.py:228
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr "Цей пакет не орієнтований  на GNOME. Надішліть власний переклад, використовуючи <a href=\"http://translationproject.org\">проект перекладу</a>."
+
+#: database-content.py:229
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>. See "
+"also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the "
+"translation page for xdg-user-dirs at the Translation Project</a>."
+msgstr ""
+"Цей модуль не належить до GNOME. Надсилайте переклад до "
+"the <a href=\"http://translationproject.org\">Translation Project</a>. Також дивіться "
+"<a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">сторінку перекладу "
+"xdg-user-dirs на Translation Project</a>."
+
+#: database-content.py:230
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr "Починаючи з GNOME 2.23, GAIL входить до складу бібліотеки GTK+. Не додавайте нових перекладів."
+
+#: database-content.py:231
+msgid "A VNC client for GNOME"
+msgstr "Клієнт VNC для GNOME"
+
+#: database-content.py:232
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in SVN even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr "Переклад gtk+ складається з двох частин: po та po-properties.  Якщо ви додаєте нову мову до однієї з частин, треба додати обидва файли перекладу до репозиторію Subversion, навіть якщо один з них не містить перекладених повідомлень. У іншому випадку у po-properties виникає помилка при збиранні GTK+."
+
+#: database-content.py:233
+msgid "Graphical frontend for the git directory tracker"
+msgstr "Графічна оболонка до слідкування за каталогом git"
+
+#: database-content.py:234
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the GNOME "
+"desktop. It is written in Vala for extra goodness."
+msgstr ""
+"moserial - простий термінал для послідовних каналів зв'язку для GNOME. Він написаний на Vala."
+
+#: database-content.py:235
+msgid ""
+"This is a clone of the official system-tools-backends version from the "
+"freedesktop.org repository."
+msgstr ""
+"Це - клон офіційної версії system-tools-backends з репозиторію "
+"freedesktop.org."
+
+#: database-content.py:236
+msgid "Passepartout is a DTP application for X."
+msgstr "Passepartout - DTP програма для X."
+
+#: database-content.py:237
+msgid ""
+"gnome-disk-utility provides libraries and applications for dealing with "
+"storage devices."
+msgstr ""
+"gnome-disk-utility містить бібліотеки та програми для роботи з сховищами даних."
+
+#: database-content.py:238
+msgid "A note taking application"
+msgstr "Програма ведення нотаток"
+
+#: database-content.py:239
+msgid "Translations should be submitted as bug reports (see link below)."
+msgstr "Переклади слід надсилати до системи обробки помилок (дивіться посилання нижче)"
+
+#: database-content.py:240
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr ""
+"GNOME Video Arcade - MAME (Multiple Arcade Machine Emulator) оболонка для GNOME."
+
+#: database-content.py:241
+#| msgid "GNOME Release Notes"
+msgid "GNOME Teletext viewer"
+msgstr "Перегляд телетексту у GNOME"
+
+#: database-content.py:242
+msgid "Extra GNOME Applications"
+msgstr "Додаткові програми GNOME"
+
+#: database-content.py:243
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (стара стабільна версія)"
+
+#: database-content.py:244
+msgid "GNOME Infrastructure"
+msgstr "Інфраструктура GNOME"
+
+#: database-content.py:245
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (стара стабільна версія)"
+
+#: database-content.py:246
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (стара стабільна версія)"
+
+#: database-content.py:247
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (не GNOME)"
+
+#: database-content.py:248
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.24 (old stable)"
+msgstr "GNOME 2.24 (стара стабільна версія)"
+
+#: database-content.py:249
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (стара стабільна версія)"
+
+#: database-content.py:250
+msgid "GNOME-Office Productivity Applications"
+msgstr "Офісні програми GNOME"
+
+#: database-content.py:251
+#| msgid "GNOME 2.14 (old stable)"
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (стара стабільна версія)"
+
+#: database-content.py:252
+#| msgid "GNOME 2.18 (stable)"
+msgid "GNOME 2.26 (stable)"
+msgstr "GNOME 2.26 (стабільна версія)"
+
+#: database-content.py:253
+#| msgid "GNOME 2.20 (development)"
+msgid "GNOME 2.28 (development)"
+msgstr "GNOME 2.28 (версія у розробці)"
+
+#: database-content.py:254
+#| msgid "Extra GNOME Applications"
+msgid "Obsolete GNOME Applications"
+msgstr "Застарілі програми GNOME"
+
+#: settings.py:73 settings_sample.py:80 djamnedlies-git/settings_sample.py:80
+#| msgid ""
+#| "This module is not part of the GNOME SVN repository. Please check the "
+#| "module's web page to see where to send translations."
+msgid ""
+"This module is not part of the GNOME git repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Цей модуль не є частиною git-репозиторію GNOME. Перевірте веб-сторінку "
+"кожного модулів для перегляду інформації, куди надсилати переклади."
+
+#: common/views.py:34 djamnedlies-git/common/views.py:33
+#: djamnedlies-svn/common/views.py:33
+msgid "translator-credits"
+msgstr "Максим Дзюманенко <dziumanenko@gmail.com>"
+
+#: common/views.py:55 djamnedlies-git/common/views.py:54
+#: djamnedlies-svn/common/views.py:54
+msgid "You have been logged out."
+msgstr "Вихід успішно завершено."
+
+#: common/views.py:63 djamnedlies-git/common/views.py:62
+#: djamnedlies-svn/common/views.py:62
+msgid "You have been successfully logged in."
+msgstr "Вхід успішно завершено"
+
+#: common/views.py:66
+#, python-format
+msgid ""
+"You have not joined any translation team yet. You can do it from <a href=\"%"
+"(url)s\">your profile</a>."
+msgstr ""
+"Ви ще не приєдналися до команди перекладу. Ви можете зробити це у <a href=\"%"
+"(url)s\">вашому профілі</a>."
+
+#: common/views.py:75 djamnedlies-git/common/views.py:69
+#: djamnedlies-svn/common/views.py:69
+msgid "We're sorry, but your account has been disabled."
+msgstr "Нажаль, ваш обліковий запис вимкнено."
+
+#: common/views.py:77 djamnedlies-git/common/views.py:71
+#: djamnedlies-svn/common/views.py:71
+msgid "Login unsuccessful. Please verify your username and password."
+msgstr "Вхід завершено невдало. Перевірте ім'я користувача та пароль."
+
+#: common/views.py:117 djamnedlies-git/common/views.py:111
+#: djamnedlies-svn/common/views.py:111
+msgid "Your account has been activated."
+msgstr "Ваш обліковий запис активовано."
+
+#: djamnedlies-git/languages/views.py:49 djamnedlies-git/languages/views.py:65
+#: djamnedlies-svn/languages/views.py:49 djamnedlies-svn/languages/views.py:65
+#: languages/views.py:49 languages/views.py:69
+#| msgid "UI translations"
+msgid "UI Translations"
+msgstr "Переклади інтерфейсу"
+
+#: djamnedlies-git/people/forms.py:14 djamnedlies-svn/people/forms.py:14
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "Виберіть ім'я:"
+
+#: djamnedlies-git/people/forms.py:15 djamnedlies-svn/people/forms.py:15
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "Може містити лише літери, цифри, нижні підкреслення та дефізи"
+
+#: djamnedlies-git/people/forms.py:16 djamnedlies-svn/people/forms.py:16
+#: people/forms.py:16
+msgid "Email:"
+msgstr "Ел.пошта:"
+
+#: djamnedlies-git/people/forms.py:17 djamnedlies-git/templates/login.html:37
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:34
+#: djamnedlies-svn/people/forms.py:17 djamnedlies-svn/templates/login.html:37
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17 templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: djamnedlies-git/people/forms.py:20 djamnedlies-git/templates/login.html:21
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:23
+#: djamnedlies-svn/people/forms.py:20 djamnedlies-svn/templates/login.html:21
+#: django_openid/templates/django_openid/admin_login.html:23
+#: people/forms.py:20 templates/login.html:21
+msgid "Password:"
+msgstr "Пароль:"
+
+#: djamnedlies-git/people/forms.py:21 djamnedlies-svn/people/forms.py:21
+#: people/forms.py:21
+msgid "At least 7 characters"
+msgstr "Принаймні 7 символів"
+
+#: djamnedlies-git/people/forms.py:23
+#: djamnedlies-git/templates/people/person_password_change_form.html:27
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:18
+#: djamnedlies-svn/people/forms.py:23
+#: djamnedlies-svn/templates/people/person_password_change_form.html:27
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:18
+#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: templates/registration/password_reset_confirm.html:18
+msgid "Confirm password:"
+msgstr "Підтвердження паролю: "
+
+#: djamnedlies-git/people/forms.py:31 djamnedlies-svn/people/forms.py:31
+#: people/forms.py:31
+msgid "This username is already taken. Please choose another."
+msgstr "Це ім'я вже зайнято. Виберіть інше."
+
+#: djamnedlies-git/people/forms.py:39 djamnedlies-svn/people/forms.py:39
+#: people/forms.py:39
+msgid "You must either provide an OpenID or a password"
+msgstr "Слід вказати або OpenID або пароль"
+
+#: djamnedlies-git/people/forms.py:42 djamnedlies-svn/people/forms.py:42
+#: people/forms.py:42
+msgid "The passwords do not match"
+msgstr "Паролі не збігаються"
+
+#: djamnedlies-git/people/forms.py:65 djamnedlies-svn/people/forms.py:65
+#: people/forms.py:65
+msgid "Account activation"
+msgstr "Активація облікового запису"
+
+#: djamnedlies-git/people/forms.py:66 djamnedlies-svn/people/forms.py:66
+#: people/forms.py:66
+#, python-format
+msgid ""
+"This is a confirmation that your registration on %s succeeded. To activate "
+"your account, please click on the link below or copy and paste it in a "
+"browser."
+msgstr "Вашу реєстрацію на %s успішно завершено. Для активації облікового запису клацніть на посиланні нижче або скопіюйте та вставте її до веб-оглядача."
+
+#: djamnedlies-git/people/forms.py:68 djamnedlies-svn/people/forms.py:68
+#: people/forms.py:68
+#, python-format
+#| msgid "Administration Tools"
+msgid "Administrators of %s"
+msgstr "Адміністратори %s"
+
+#: djamnedlies-git/people/models.py:36 djamnedlies-svn/people/models.py:36
+#: people/models.py:36
+msgid "Image"
+msgstr "Зображення"
+
+#: djamnedlies-git/people/models.py:37 djamnedlies-svn/people/models.py:37
+#: people/models.py:37
+msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+msgstr "URL вашої фотографії (.jpg, .png, ...)"
+
+#: djamnedlies-git/people/models.py:38 djamnedlies-svn/people/models.py:38
+#: people/models.py:38
+#| msgid "Users Web Page:"
+msgid "Web page"
+msgstr "Веб-сторінка"
+
+#: djamnedlies-git/people/models.py:39 djamnedlies-svn/people/models.py:39
+#: people/models.py:39
+msgid "IRC nickname"
+msgstr "Ім'я у IRC"
+
+#: djamnedlies-git/people/models.py:40 djamnedlies-svn/people/models.py:40
+#: people/models.py:40
+#| msgid "Bugzilla account:"
+msgid "Bugzilla account"
+msgstr "Обліковий рахунок Bugzilla"
+
+#: djamnedlies-git/people/models.py:41 djamnedlies-svn/people/models.py:41
+#: people/models.py:41
+msgid "This should be an email address, useful if not equal to 'email' field"
+msgstr "Поле має бути адресою електронної пошти. Має сенс у випадку, якщо воно не збігається з полем 'електронна пошта'."
+
+#: djamnedlies-git/people/views.py:86 djamnedlies-svn/people/views.py:86
+#: people/views.py:86
+#, python-format
+msgid "You have successfully joined the team '%s'."
+msgstr "Ви успішно приєдналися до команди '%s'."
+
+#: djamnedlies-git/people/views.py:89 djamnedlies-svn/people/views.py:89
+#: people/views.py:89
+msgid "You are already member of this team."
+msgstr "Ви вже є учасником цієї команди."
+
+#: djamnedlies-git/people/views.py:112 djamnedlies-svn/people/views.py:112
+#: people/views.py:112
+#, python-format
+msgid "You have been removed from the team '%s'."
+msgstr "Вас видалено з команди '%s'."
+
+#: djamnedlies-git/people/views.py:128 djamnedlies-svn/people/views.py:128
+#: people/views.py:128
+msgid "Your password has been changed."
+msgstr "Пароль змінено."
+
+#: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
+#: stats/models.py:334
 msgid "Can't generate POT file, using old one."
 msgstr "Не вдається видалити POT-файл, використовується старий."
 
-#: ../update-stats.py:217
-msgid "Can't generate POT file, using old one if it exists."
-msgstr "Не вдається створити POT-файл, використовується старий, якщо ві існує."
-
-#: ../update-stats.py:246
+#: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
+#: stats/models.py:356
 msgid "Can't copy new POT file to public location."
 msgstr "Не вдається скопіювати новий POT-файл у місце загального доступу."
 
-#: ../update-stats.py:258
+#: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
+#: stats/models.py:388
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "Список DOC_LINGUAS не включає цю мову."
+
+#: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
+#: stats/models.py:667
 #, python-format
-msgid "There is no translation team in charge of '%s' translation."
-msgstr "Немає команди перекладу, що відповідає за мову '%s'."
-
-#: ../update-stats.py:334
-msgid "Entry for this language is not present in LINGUAS file."
-msgstr "Запис про цю мову відсутній у файлі LINGUAS."
-
-#: ../update-stats.py:362
+#| msgid ""
+#| "Error regenerating POT file for document %s:\n"
+#| "<pre>%s\n"
+#| "%s</pre>"
 msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
+"Error regenerating POT file for %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
-"Запис про цю мову відсутній у файлі ALL_LINGUAS."
+"Помилка при створенні POT-файлу для %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 
-#: ../update-stats.py:365
-msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr ""
-"Невідомо де отримати інформацію про те чи використовується активно ця мова, спитайте у керівника модуля."
+#: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
+#: stats/models.py:914
+msgid "Administration Tools"
+msgstr "Засоби адміністрування"
 
-#: ../update-stats.py:379
+#: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
+#: stats/models.py:915
+msgid "Development Tools"
+msgstr "Засоби розробки"
+
+#: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
+#: stats/models.py:916
+#| msgid "GNOME desktop"
+msgid "GNOME Desktop"
+msgstr "Середовище GNOME"
+
+#: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
+#: stats/models.py:917
+#| msgid "GNOME developer platform"
+msgid "GNOME Developer Platform"
+msgstr "Платформа розробки GNOME"
+
+#: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
+#: stats/models.py:918
+#| msgid "New module proposals"
+msgid "New Module Proposals"
+msgstr "Нові запропоновані модулі"
+
+#: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
+#: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
+#: stats/models.py:994 stats/models.py:1264
+#, python-format
+msgid "%(lang_name)s (%(lang_locale)s)"
+msgstr "%(lang_name)s (%(lang_locale)s)"
+
+#: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
+#: stats/models.py:1025
+#, python-format
+msgid "%(count)s message"
+msgid_plural "%(count)s messages"
+msgstr[0] "%(count)s повідомлення"
+msgstr[1] "%(count)s повідомлення"
+msgstr[2] "%(count)s повідомлень"
+
+#: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
+#: stats/models.py:1026
+#, python-format
+msgid "updated on %(date)s"
+msgstr "оновлено %(date)s"
+
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Date format syntax is similar to PHP http://www.php.net/date
+#: djamnedlies-git/stats/models.py:1020
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
+#: djamnedlies-svn/stats/models.py:1020
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
+#: stats/models.py:1028 templates/vertimus/vertimus_detail.html:33
+#: templates/vertimus/vertimus_detail.html:80
+msgid "Y-m-d g:i a O"
+msgstr "d-m-Y g:i a O"
+
+#: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
+#: stats/models.py:1031
+#, python-format
+msgid "%(count)s figure"
+msgid_plural "%(count)s figures"
+msgstr[0] "%(count)s ілюстрація"
+msgstr[1] "%(count)s ілюстрації"
+msgstr[2] "%(count)s ілюстрацій"
+
+#: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
+#: stats/models.py:1032
+#, python-format
+msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgstr "Файл POT (%(messages)s, %(figures)s) — %(updated)s"
+
+#: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
+#: stats/models.py:1035
+#, python-format
+msgid "POT file (%(messages)s) — %(updated)s"
+msgstr "Файл POT (%(messages)s) — %(updated)s"
+
+#: djamnedlies-git/stats/utils.py:85 djamnedlies-svn/stats/utils.py:85
+#: stats/utils.py:85
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Помилки при виконанні перевірки 'intltool-update -m'."
 
-#: ../update-stats.py:385
+#: djamnedlies-git/stats/utils.py:91 djamnedlies-svn/stats/utils.py:91
+#: stats/utils.py:91
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Відсутні деякі файли у POTFILES.in: %s"
 
-#: ../update-stats.py:394
+#: djamnedlies-git/stats/utils.py:100 djamnedlies-svn/stats/utils.py:100
+#: stats/utils.py:100
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
 "they don't exist: %s"
 msgstr ""
-"Наступні файли посилаються на POTFILES.in чи POTFILES.skip, але вони не існують: %s"
+"Наступні файли посилаються на POTFILES.in чи POTFILES.skip, але вони не "
+"існують: %s"
 
-#: ../update-stats.py:408
-#, python-format
-msgid "PO file '%s' doesn't exist."
-msgstr "PO-файл '%s' не існує."
-
-#: ../update-stats.py:421
-#, python-format
-msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr "PO-файл '%s' не проходить перевірку msgfmt: не буде оновлено."
-
-#: ../update-stats.py:423
-#, python-format
-msgid "Can't get statistics for POT file '%s'."
-msgstr "Не вдається отримати статистику POT-файлу '%s'."
-
-#: ../update-stats.py:426
-msgid "This PO file has an executable bit set."
-msgstr "Для цього PO-файлу встановлено біт \"виконуваний\"."
-
-#: ../update-stats.py:452
-#, python-format
-msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "PO-файл '%s' у кодуванні відмінному від UTF-8."
-
-#: ../update-stats.py:521
-msgid "Can't find checkout directory."
-msgstr "Не вдається знайти каталог контролю."
-
-#: ../update-stats.py:541
+#: djamnedlies-git/stats/utils.py:112 djamnedlies-svn/stats/utils.py:112
+#: stats/utils.py:112
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Модуль %s не схожий на модуль підготовлений для gnome-doc-utils."
 
-#: ../update-stats.py:546
+#: djamnedlies-git/stats/utils.py:115 djamnedlies-svn/stats/utils.py:115
+#: stats/utils.py:115
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE не вказує на справжній файл, використовується '%s.xml'."
 
-#: ../update-stats.py:549
+#: djamnedlies-git/stats/utils.py:118 djamnedlies-svn/stats/utils.py:118
+#: stats/utils.py:118
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE не вказує на справжній файл, можливо це макрос."
 
-#: ../update-stats.py:575
+#: djamnedlies-git/stats/utils.py:133 djamnedlies-svn/stats/utils.py:133
+#: stats/utils.py:133
 #, python-format
+#| msgid ""
+#| "Error regenerating POT file for document %s:\n"
+#| "<pre>%s\n"
+#| "%s</pre>"
 msgid ""
-"Error regenerating POT file for document %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"Error regenerating POT file for document %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 msgstr ""
-"Помилка оновлення POT-файлу для документу %s:\n"
-"<pre>%s\n"
-"%s</pre>"
+"Помилка оновлення POT-файлу для документу %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
 
-#: ../update-stats.py:604
+#: djamnedlies-git/stats/utils.py:206 djamnedlies-svn/stats/utils.py:206
+#: stats/utils.py:206
 #, python-format
-msgid "There is no translation team in charge of %s."
-msgstr "Немає команди перекладу, відповідальної за %s."
+#| msgid "PO file '%s' doesn't exist."
+msgid "PO file '%s' does not exist or cannot be read."
+msgstr "PO-файл '%s' не існує або його неможливо прочитати."
 
-#: ../update-stats.py:648
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "Список DOC_LINGUAS не включає цю мову."
+#: djamnedlies-git/stats/utils.py:226 djamnedlies-svn/stats/utils.py:226
+#: stats/utils.py:226
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr "PO-файл '%s' не проходить перевірку msgfmt: не буде оновлено."
 
-#: ../templates/index.tmpl:7
-msgid "Damned Lies about GNOME"
-msgstr "Огидна брехня про GNOME"
+#: djamnedlies-git/stats/utils.py:228 djamnedlies-svn/stats/utils.py:228
+#: stats/utils.py:228
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "Не вдається отримати статистику POT-файлу '%s'."
 
-#: ../templates/index.tmpl:11 ../templates/header.tmpl:32
+#: djamnedlies-git/stats/utils.py:231 djamnedlies-svn/stats/utils.py:231
+#: stats/utils.py:231
+msgid "This PO file has an executable bit set."
+msgstr "Для цього PO-файлу встановлено біт \"виконуваний\"."
+
+#: djamnedlies-git/stats/utils.py:259 djamnedlies-svn/stats/utils.py:259
+#: stats/utils.py:259
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "PO-файл '%s' у кодуванні відмінному від UTF-8."
+
+#: djamnedlies-git/stats/utils.py:292 djamnedlies-svn/stats/utils.py:292
+#: stats/utils.py:292
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "Запис про цю мову відсутній у файлі LINGUAS."
+
+#: djamnedlies-git/stats/utils.py:319 djamnedlies-svn/stats/utils.py:319
+#: stats/utils.py:319
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr "Запис про цю мову відсутній у файлі ALL_LINGUAS."
+
+#: djamnedlies-git/stats/utils.py:322 djamnedlies-svn/stats/utils.py:322
+#: stats/utils.py:322
+msgid ""
+"Don't know where to look if this language is actually used, ask the module "
+"maintainer."
+msgstr ""
+"Невідомо де отримати інформацію про те чи використовується активно ця мова, "
+"спитайте у керівника модуля."
+
+#: djamnedlies-git/teams/models.py:112 djamnedlies-svn/teams/models.py:112
+#: teams/models.py:115
+#, python-format
+msgid "No team for locale %s"
+msgstr "Для мови з кодом %s немає команди перекладу"
+
+#: djamnedlies-git/teams/models.py:129 djamnedlies-svn/teams/models.py:129
+#: teams/models.py:132
+#| msgid "Translation"
+msgid "Translator"
+msgstr "Перекладач"
+
+#: djamnedlies-git/teams/models.py:130 djamnedlies-svn/teams/models.py:130
+#: teams/models.py:133
+msgid "Reviewer"
+msgstr "Рецензент"
+
+#: djamnedlies-git/teams/models.py:131 djamnedlies-svn/teams/models.py:131
+#: teams/models.py:134
+msgid "Committer"
+msgstr "Відповідальний перекладач"
+
+#: djamnedlies-git/teams/models.py:132
+#: djamnedlies-git/templates/teams/team_base.html:31
+#: djamnedlies-svn/teams/models.py:132
+#: djamnedlies-svn/templates/teams/team_base.html:31 teams/models.py:135
+#: templates/teams/team_base.html:31
+msgid "Coordinator"
+msgstr "Координатор"
+
+#: djamnedlies-git/teams/views.py:44 djamnedlies-svn/teams/views.py:44
+#: teams/views.py:44
+msgid "Committers"
+msgstr "Відповідальні перекладачі"
+
+#: djamnedlies-git/teams/views.py:47 djamnedlies-svn/teams/views.py:47
+#: teams/views.py:47
+msgid "No committers"
+msgstr "Немає відповідальних перекладачів"
+
+#: djamnedlies-git/teams/views.py:49 djamnedlies-svn/teams/views.py:49
+#: teams/views.py:49
+msgid "Reviewers"
+msgstr "Рецензенти"
+
+#: djamnedlies-git/teams/views.py:52 djamnedlies-svn/teams/views.py:52
+#: teams/views.py:52
+msgid "No reviewers"
+msgstr "Немає рецензентів"
+
+#: djamnedlies-git/teams/views.py:54 djamnedlies-svn/teams/views.py:54
+#: teams/views.py:54
+#| msgid "Translates:"
+msgid "Translators"
+msgstr "Перекладачі"
+
+#: djamnedlies-git/teams/views.py:57 djamnedlies-svn/teams/views.py:57
+#: teams/views.py:57
+#| msgid "UI translations"
+msgid "No translators"
+msgstr "Немає перекладачів"
+
+#: djamnedlies-git/templates/404.html:4 djamnedlies-git/templates/404.html:9
+#: djamnedlies-svn/templates/404.html:4 djamnedlies-svn/templates/404.html:9
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Помилка: сторінку не знайдено"
+
+#: djamnedlies-git/templates/404.html:11 djamnedlies-svn/templates/404.html:11
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "Запитану сторінку не знайдено на сервері."
+
+#: djamnedlies-git/templates/500.html:4 djamnedlies-svn/templates/500.html:4
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Помилка: помилка сервера (500)"
+
+#: djamnedlies-git/templates/500.html:9 djamnedlies-svn/templates/500.html:9
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Помилка сервера"
+
+#: djamnedlies-git/templates/500.html:11 djamnedlies-svn/templates/500.html:11
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Виникла помилка сервера"
+
+#: djamnedlies-git/templates/base.html:26
+#: djamnedlies-git/templates/base.html:42
+#: djamnedlies-svn/templates/base.html:26
+#: djamnedlies-svn/templates/base.html:42 templates/base.html:26
+#: templates/base.html.py:42
+msgid "Home"
+msgstr "Домашня сторінка"
+
+#: djamnedlies-git/templates/base.html:27
+#: djamnedlies-svn/templates/base.html:27 templates/base.html:27
+msgid "News"
+msgstr "Новини"
+
+#: djamnedlies-git/templates/base.html:28
+#: djamnedlies-svn/templates/base.html:28 templates/base.html:28
+msgid "Projects"
+msgstr "Проекти"
+
+#: djamnedlies-git/templates/base.html:29
+#: djamnedlies-svn/templates/base.html:29 templates/base.html:29
+msgid "Art"
+msgstr "Мистецтво"
+
+#: djamnedlies-git/templates/base.html:30
+#: djamnedlies-svn/templates/base.html:30 templates/base.html:30
+msgid "Support"
+msgstr "Підтримка"
+
+#: djamnedlies-git/templates/base.html:31
+#: djamnedlies-svn/templates/base.html:31 templates/base.html:31
+#| msgid "Development Tools"
+msgid "Development"
+msgstr "Розробка"
+
+#: djamnedlies-git/templates/base.html:32
+#: djamnedlies-svn/templates/base.html:32 templates/base.html:32
+msgid "Community"
+msgstr "Спільнота"
+
+#: djamnedlies-git/templates/base.html:42
+#: djamnedlies-svn/templates/base.html:42 templates/base.html:42
+msgid "Back to Damned Lies home page"
+msgstr "Повернутися на стартову сторінку damned lies"
+
+#: djamnedlies-git/templates/base.html:48
+#: djamnedlies-git/templates/index.html:13
+#: djamnedlies-svn/templates/base.html:48
+#: djamnedlies-svn/templates/index.html:13 templates/base.html:48
+#: templates/index.html:13
 msgid "Teams"
 msgstr "Команди"
 
-#: ../templates/index.tmpl:12
+#: djamnedlies-git/templates/base.html:53
+#: djamnedlies-git/templates/index.html:20
+#: djamnedlies-git/templates/release_compare.html:25
+#: djamnedlies-svn/templates/base.html:53
+#: djamnedlies-svn/templates/index.html:20
+#: djamnedlies-svn/templates/release_compare.html:25 templates/base.html:53
+#: templates/index.html:20 templates/release_compare.html:25
+msgid "Languages"
+msgstr "Мови"
+
+#: djamnedlies-git/templates/base.html:58
+#: djamnedlies-svn/templates/base.html:58 templates/base.html:58
+msgid "Release sets"
+msgstr "Набори випусків"
+
+#: djamnedlies-git/templates/base.html:63
+#: djamnedlies-git/templates/index.html:36
+#: djamnedlies-svn/templates/base.html:63
+#: djamnedlies-svn/templates/index.html:36 templates/base.html:63
+#: templates/index.html:36
+msgid "Modules"
+msgstr "Модулі"
+
+#: djamnedlies-git/templates/base.html:74
+#: djamnedlies-svn/templates/base.html:74 templates/base.html:74
+msgid "Log out"
+msgstr "Вийти"
+
+#: djamnedlies-git/templates/base.html:77
+#: djamnedlies-git/templates/login.html:29
+#: djamnedlies-git/templates/registration/password_reset_complete.html:12
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:28
+#: djamnedlies-svn/templates/base.html:77
+#: djamnedlies-svn/templates/login.html:29
+#: djamnedlies-svn/templates/registration/password_reset_complete.html:12
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:77 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "Увійти"
+
+#: djamnedlies-git/templates/base.html:94
+#: djamnedlies-svn/templates/base.html:94 templates/base.html:94
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
+
+#: djamnedlies-git/templates/base.html:96 templates/base.html:96
+msgid ""
+"Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+"lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgstr ""
+"Підтримується у модулі <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+"lies</a> на <a href='http://git.gnome.org/'>git.gnome.org</a>"
+
+#: djamnedlies-git/templates/base.html:98
+#: djamnedlies-svn/templates/base.html:98 templates/base.html:98
+#| msgid "Translated by:"
+msgid "Hosted by"
+msgstr "Хостинг надано"
+
+#: djamnedlies-git/templates/branch_detail.html:4
+#: djamnedlies-svn/templates/branch_detail.html:4
+#: templates/branch_detail.html:4
+msgid "This branch is currently string-frozen."
+msgstr "Рядки повідомлень у цій гілці тимчасово не змінюються."
+
+#: djamnedlies-git/templates/branch_detail.html:13
+#: djamnedlies-svn/templates/branch_detail.html:13
+#: templates/branch_detail.html:13
+msgid "Translation"
+msgstr "Переклад"
+
+#: djamnedlies-git/templates/error.html:4
+#: djamnedlies-git/templates/index.html:4
+#: djamnedlies-git/templates/index.html:9
+#: djamnedlies-git/templates/login.html:4
+#: djamnedlies-git/templates/registration/register.html:4
+#: djamnedlies-git/templates/registration/register_success.html:4
+#: djamnedlies-svn/templates/error.html:4
+#: djamnedlies-svn/templates/index.html:4
+#: djamnedlies-svn/templates/index.html:9
+#: djamnedlies-svn/templates/login.html:4
+#: djamnedlies-svn/templates/registration/register.html:4
+#: djamnedlies-svn/templates/registration/register_success.html:4
+#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
+msgid "Damned Lies about GNOME"
+msgstr "Повна брехня про GNOME"
+
+#: djamnedlies-git/templates/error.html:9
+#: djamnedlies-svn/templates/error.html:9 templates/error.html:9
+msgid "Error:"
+msgstr "Помилка:"
+
+#: djamnedlies-git/templates/index.html:14
+#: djamnedlies-svn/templates/index.html:14 templates/index.html:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
-"Список усіх команд перекладу GNOME, з повною інформацією, такою як контактні дані про координатора, веб-сторінки та список розсилки."
+"Список усіх команд перекладу GNOME, з повною інформацією, такою як контактні "
+"дані про координатора, веб-сторінки та список розсилки."
 
-#: ../templates/index.tmpl:13
+#: djamnedlies-git/templates/index.html:15
+#: djamnedlies-svn/templates/index.html:15 templates/index.html:15
+#| msgid ""
+#| "If there is no team for your language, you can easily <a href=\"http://"
+#| "live.gnome.org/TranslationProject/StartingATeam/\">start your own team</"
+#| "a>."
 msgid ""
-"If there is no team for your language, you can easily <a href=\"http://live."
-"gnome.org/TranslationProject/StartingATeam/\">start your own team</a>."
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
-"Якщо для вашої мови не створено команди, ви можете <a href=\"http://live."
-"gnome.org/TranslationProject/StartingATeam/\">започаткувати власну команду</a>."
+"Якщо для вашої мови не створено команди, ви можете <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>започаткувати власну команду</"
+"a>."
 
-#: ../templates/index.tmpl:18 ../templates/header.tmpl:33
-msgid "Languages"
-msgstr "Мови"
-
-#: ../templates/index.tmpl:19
+#: djamnedlies-git/templates/index.html:22
+#: djamnedlies-svn/templates/index.html:22 templates/index.html:22
+#, python-format
+#| msgid ""
+#| "List of all languages there are <a href=\"teams/\">Translation Teams</a> "
+#| "for."
 msgid ""
-"List of all languages there are <a href=\"teams/\">Translation Teams</a> for."
-msgstr ""
-"Список усіх мов, для яких є <a href=\"teams/\">Команди перекладу</a>."
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
+msgstr "Список усіх мов, для яких є <a href='%(teams_url)s'>Команди перекладу</a>."
 
-#: ../templates/index.tmpl:20
+#: djamnedlies-git/templates/index.html:23
+#: djamnedlies-svn/templates/index.html:23 templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
 msgstr ""
-"Деякі команди контролюють переклад більш ніж однією мовою (зазвичай просто різними варіантами),  "
-"тут ви можете побачити усі мови, якими перекладається GNOME."
+"Деякі команди контролюють переклад більш ніж однією мовою (зазвичай просто "
+"різними варіантами),  тут ви можете побачити усі мови, якими перекладається "
+"GNOME."
 
-#: ../templates/index.tmpl:24
+#: djamnedlies-git/templates/index.html:27
+#: djamnedlies-svn/templates/index.html:27 templates/index.html:27
 msgid "Release Sets"
 msgstr "Випуски"
 
-#: ../templates/index.tmpl:25
+#: djamnedlies-git/templates/index.html:28
+#: djamnedlies-svn/templates/index.html:28 templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr "Список усіх наборів випусків GNOME та випусків про які збирається статистика."
-
-#: ../templates/index.tmpl:27
-msgid ""
-"Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME 2.14"
-"\"."
 msgstr ""
-"Приклади наборів випусків \"Офіс GNOME\", \"П'ятий палець ноги\" або \"GNOME 2.14"
-"\"."
+"Список усіх наборів випусків GNOME та випусків про які збирається статистика."
 
-#: ../templates/index.tmpl:28
+#: djamnedlies-git/templates/index.html:30
+#: djamnedlies-svn/templates/index.html:30
+#| msgid ""
+#| "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME "
+#| "2.14\"."
+msgid ""
+"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
+"or &quot;GNOME 2.14&quot;."
+msgstr ""
+"Приклади наборів випусків  &quot;Офісні програми GNOME&quot;, &quot;Додаткові програми GNOME&quot; "
+"або &quot;GNOME 2.14&quot;."
+
+#: djamnedlies-git/templates/index.html:31
+#: djamnedlies-svn/templates/index.html:31 templates/index.html:31
+#| msgid ""
+#| "Official GNOME release sets are further divided into categories such as "
+#| "\"Desktop Applications\" and \"Developer Platform\"."
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
-"\"Desktop Applications\" and \"Developer Platform\"."
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
-"Офіційні випуски GNOME далі діляться на такі категорії, як "
-"\"Настільні програми\" та \"Платформа розробки\"."
+"Офіційні випуски GNOME далі діляться на такі категорії, як &quot;Настільні "
+"програми&quot; та &quot;Платформа розробки&quot;."
 
-#: ../templates/index.tmpl:30
+#: djamnedlies-git/templates/index.html:33
+#: djamnedlies-svn/templates/index.html:33 templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr ""
-"Погляньте сюди, якщо ви хочете порівняти підтримку мов у будь-якому з наборів випусків."
+"Погляньте сюди, якщо ви хочете порівняти підтримку мов у будь-якому з "
+"наборів випусків."
 
-#: ../templates/index.tmpl:33 ../templates/header.tmpl:35
-msgid "Modules"
-msgstr "Модулі"
-
-#: ../templates/index.tmpl:34
+#: djamnedlies-git/templates/index.html:37
+#: djamnedlies-svn/templates/index.html:37 templates/index.html:37
 msgid "List of all modules with statistics in here."
 msgstr "Список усіх модулів зі статистикою."
 
-#: ../templates/index.tmpl:36
+#: djamnedlies-git/templates/index.html:39
+#: djamnedlies-svn/templates/index.html:39 templates/index.html:39
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
 msgstr ""
-"Модулями є окремі бібліотеки чи програми, з однією або кількома відгалуженнями розробки."
+"Модулями є окремі бібліотеки чи програми, з однією або кількома "
+"відгалуженнями розробки."
 
-#: ../templates/index.tmpl:37
+#: djamnedlies-git/templates/index.html:40
+#: djamnedlies-svn/templates/index.html:40 templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
-"Зазвичай вони беруться з CVS, та ми зберігаємо всю відповідну інформацію про них "
-"(подробиці з Bugzilla, веб-сторінка, інформацію про керівника,...)."
+"Зазвичай вони беруться з CVS, та ми зберігаємо всю відповідну інформацію про "
+"них (подробиці з Bugzilla, веб-сторінка, інформацію про керівника,...)."
 
-#: ../templates/index.tmpl:43
+#: djamnedlies-git/templates/index.html:46
+#: djamnedlies-svn/templates/index.html:46 templates/index.html:46
 msgid "Translated by:"
 msgstr "Перекладено:"
 
-#: ../templates/index.tmpl:43
-msgid "translator-credits"
-msgstr "Максим Дзюманенко <dziumanenko@gmail.com>"
+#: djamnedlies-git/templates/login.html:10
+#: djamnedlies-git/templates/registration/register.html:11
+#: djamnedlies-svn/templates/login.html:10
+#: djamnedlies-svn/templates/registration/register.html:11
+#: templates/login.html:10 templates/registration/register.html:11
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Ви вже зайшли як користувач %(username)s."
 
-#: ../templates/header.tmpl:27
-msgid "Home"
-msgstr "Домашня сторінка"
+#: djamnedlies-git/templates/login.html:13
+#: djamnedlies-svn/templates/login.html:13 templates/login.html:13
+#, python-format
+msgid ""
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
+msgstr "Якщо у вас немає облікового запису на цьому сайті, можете його <a href='%(link)s'>зареєструвати</a>."
 
-#: ../templates/header.tmpl:34
-msgid "Release sets"
-msgstr "Набори випусків"
+#: djamnedlies-git/templates/login.html:15
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:17
+#: djamnedlies-svn/templates/login.html:15
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "Увійдіть за допомогою імені та паролю:"
 
-#: ../templates/show-stats.tmpl:8
-msgid "POT file (%(potsize)s message)"
-msgid_plural "POT file (%(potsize)s messages)"
-msgstr[0] "Файл POT (%(potsize)s повідомлення)"
-msgstr[1] "Файл POT (%(potsize)s повідомлення)"
-msgstr[2] "Файл POT (%(potsize)s повідомлень)"
+#: djamnedlies-git/templates/login.html:18
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:20
+#: djamnedlies-svn/templates/login.html:18
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+#| msgid "User Interface"
+msgid "Username:"
+msgstr "Ім'я користувача"
 
-#: ../templates/show-stats.tmpl:12
-msgid "updated on %(date)s"
-msgstr "оновлено %(date)s"
+#: djamnedlies-git/templates/login.html:22
+#: djamnedlies-svn/templates/login.html:22 templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "Забули пароль?"
 
-#: ../templates/show-stats.tmpl:16
-msgid "Notices"
-msgstr "Примітки"
+#: djamnedlies-git/templates/login.html:34
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:31
+#: djamnedlies-svn/templates/login.html:34
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "Або використовуйте OpenID:"
 
-#: ../templates/show-stats.tmpl:27
-msgid "Language"
-msgstr "Мова"
+#: djamnedlies-git/templates/login.html:40
+#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:37
+#: djamnedlies-svn/templates/login.html:41
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Увійти з OpenID"
 
-#: ../templates/show-stats.tmpl:27
-msgid "Translated"
-msgstr "Перекладено"
+#: djamnedlies-git/templates/module_detail.html:6
+#: djamnedlies-svn/templates/module_detail.html:6
+#: templates/module_detail.html:6
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "Статистика пакету: %(name)s"
 
-#: ../templates/show-stats.tmpl:27 ../templates/release.tmpl:14
-#: ../templates/team.tmpl:86
-msgid "Graph"
-msgstr "Графік"
+#: djamnedlies-git/templates/module_detail.html:55
+#: djamnedlies-svn/templates/module_detail.html:55
+#: templates/module_detail.html:55
+msgid "Maintainers"
+msgstr "Керівники"
 
-#: ../templates/person.tmpl:22 ../templates/language-release.tmpl:54
-#: ../templates/team.tmpl:55
-msgid "Instant messaging:"
-msgstr "Швидке повідомлення:"
+#: djamnedlies-git/templates/module_detail.html:63
+#: djamnedlies-svn/templates/module_detail.html:63
+#: templates/module_detail.html:63
+msgid "Bug reporting"
+msgstr "Повідомити про помилку"
 
-#: ../templates/person.tmpl:36 ../templates/language-release.tmpl:68
-#: ../templates/team.tmpl:69
-msgid "Bugzilla account:"
-msgstr "Обліковий рахунок Bugzilla:"
+#: djamnedlies-git/templates/module_detail.html:66
+#: djamnedlies-svn/templates/module_detail.html:66
+#: templates/module_detail.html:66
+#| msgid "Show Existing Bugs"
+msgid "Show existing i18n and l10n bugs"
+msgstr "Показати проблеми інтернаціоналізації та локалізації"
 
-#: ../templates/person.tmpl:39 ../templates/language-release.tmpl:71
-#: ../templates/team.tmpl:72
-msgid "SVN account:"
-msgstr "Обліковий рахунок SVN:"
+#: djamnedlies-git/templates/module_detail.html:68
+#: djamnedlies-svn/templates/module_detail.html:68
+#: templates/module_detail.html:68
+msgid "Report bugs to Bugzilla"
+msgstr "Сповістити про проблему у Bugzilla"
 
-#: ../templates/person.tmpl:43
-msgid "Maintains:"
-msgstr "Керує:"
+#: djamnedlies-git/templates/module_detail.html:77
+#: djamnedlies-svn/templates/module_detail.html:77
+#: templates/module_detail.html:77
+msgid "Branches:"
+msgstr "Гілки:"
 
-#: ../templates/person.tmpl:45
-msgid "Maintains %(module)s"
-msgstr "Керує розробкою %(module)s"
+#: djamnedlies-git/templates/module_detail.html:97
+#: djamnedlies-svn/templates/module_detail.html:97
+#: templates/module_detail.html:97
+msgid "Browse Repository"
+msgstr "Оглянути репозиторій"
 
-#: ../templates/person.tmpl:51
-msgid "Translates:"
-msgstr "Перекладає:"
+#: djamnedlies-git/templates/module_images.html:4
+#: djamnedlies-svn/templates/module_images.html:4
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
+msgstr "Стан перекладу ілюстрацій пакету: %(name)s"
 
-#: ../templates/person.tmpl:61
-msgid "Coordinates %(team)s"
-msgstr "Координує %(team)s"
+#: djamnedlies-git/templates/module_images.html:12
+#: djamnedlies-svn/templates/module_images.html:12
+#: templates/module_images.html:12
+#| msgid "UI translations"
+msgid "Figures translation status"
+msgstr "Стан перекладу ілюстрацій"
 
-#: ../templates/list-teams.tmpl:6
-msgid "GNOME Translation Teams"
-msgstr "Команди перекладу GNOME"
+#: djamnedlies-git/templates/module_images.html:17
+#: djamnedlies-svn/templates/module_images.html:17
+#: templates/module_images.html:17
+#| msgid "Tigrinya"
+msgid "Original"
+msgstr "Оригінал"
 
-#: ../templates/list-teams.tmpl:9
-msgid "Select a team below to see more information about it:"
-msgstr "Виберіть команду зі списку для отримання додаткової інформації:"
+#: djamnedlies-git/templates/module_images.html:32
+#: djamnedlies-svn/templates/module_images.html:32
+#: templates/module_images.html:32
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr "Перекладено, але використовується оригінальний (можливо, ілюстрація не містить рядків для перекладу)"
 
-#: ../templates/list-teams.tmpl:19
-msgid "Coordinated by %(coordinator)s"
-msgstr "Координується %(coordinator)s"
+#: djamnedlies-git/templates/module_images.html:36
+#: djamnedlies-svn/templates/module_images.html:36
+#: templates/module_images.html:36
+msgid "Fuzzy"
+msgstr "Неточний"
 
-#: ../templates/list-teams.tmpl:25
-msgid "There are currently no translation teams in GNOME. :("
-msgstr "Не визначені команди перекладу у GNOME. :("
+#: djamnedlies-git/templates/module_images.html:41
+#: djamnedlies-svn/templates/module_images.html:41
+#: templates/module_images.html:41
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
+msgstr "Файл відсутній (&quot;технічно&quot; нечіткий)"
 
-#: ../templates/release.tmpl:6
-msgid "%(release)s Release"
-msgstr "Випуск %(release)s"
+#: djamnedlies-git/templates/module_images.html:44
+#: djamnedlies-svn/templates/module_images.html:44
+#: templates/module_images.html:44
+#| msgid "Translated"
+msgid "Not translated"
+msgstr "Не перекладено"
 
-#: ../templates/release.tmpl:8 ../templates/language-release.tmpl:80
+#: djamnedlies-git/templates/module_list.html:4
+#: djamnedlies-git/templates/module_list.html:9
+#: djamnedlies-svn/templates/module_list.html:4
+#: djamnedlies-svn/templates/module_list.html:9 templates/module_list.html:4
+#: templates/module_list.html.py:9
+#| msgid "GNOME modules"
+msgid "GNOME Modules"
+msgstr "Пакети GNOME"
+
+#: djamnedlies-git/templates/module_list.html:11
+#: djamnedlies-svn/templates/module_list.html:11 templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr "Виберіть модуль внизу для перегляду інформації про нього"
+
+#: djamnedlies-git/templates/release_compare.html:5
+#: djamnedlies-git/templates/release_compare.html:20
+#: djamnedlies-svn/templates/release_compare.html:5
+#: djamnedlies-svn/templates/release_compare.html:20
+#: templates/release_compare.html:5 templates/release_compare.html.py:20
+msgid "Releases Comparison"
+msgstr "Порівняння випусків"
+
+#: djamnedlies-git/templates/release_detail.html:10
+#: djamnedlies-svn/templates/release_detail.html:10
+#: templates/release_detail.html:10
+#, python-format
+#| msgid "%(release)s Release"
+msgid "%(name)s Release"
+msgstr "Випуск %(name)s"
+
+#: djamnedlies-git/templates/release_detail.html:13
+#: djamnedlies-git/templates/languages/language_release.html:33
+#: djamnedlies-svn/templates/release_detail.html:13
+#: djamnedlies-svn/templates/languages/language_release.html:33
+#: templates/release_detail.html:13
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"Модулі цього випуску не є частиною репозиторію GNOME SVN. Перевірте "
-"веб-сторінку кожного модуля для перегляду інформації, куди надсилати переклади."
+"Пакети цього випуску не є частиною репозиторію GNOME SVN. Перевірте веб-"
+"сторінку кожного пакету для перегляду інформації, куди надсилати переклади."
 
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
-msgid "Release"
-msgstr "Випуск"
+#: djamnedlies-git/templates/release_detail.html:19
+#: djamnedlies-git/templates/stats_show.html:30
+#: djamnedlies-svn/templates/release_detail.html:19
+#: djamnedlies-svn/templates/stats_show.html:30
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "Мова"
 
-#: ../templates/release.tmpl:14 ../templates/language-release.tmpl:86
-#: ../templates/module.tmpl:68 ../templates/team.tmpl:86
-msgid "Documentation"
-msgstr "Документація"
-
-#: ../templates/release.tmpl:14 ../templates/team.tmpl:86
+#: djamnedlies-git/templates/release_detail.html:20
+#: djamnedlies-git/templates/teams/team_detail.html:26
+#: djamnedlies-svn/templates/release_detail.html:20
+#: djamnedlies-svn/templates/teams/team_detail.html:26
+#: templates/release_detail.html:20 templates/release_detail.html.py:67
+#: templates/teams/team_detail.html:26
 msgid "User Interface"
 msgstr "Інтерфейс користувача"
 
-#: ../templates/release.tmpl:28 ../templates/team.tmpl:98
-msgid "-"
-msgstr "-"
+#: djamnedlies-git/templates/release_detail.html:21
+#: djamnedlies-git/templates/release_detail.html:23
+#: djamnedlies-git/templates/stats_show.html:34
+#: djamnedlies-git/templates/teams/team_detail.html:26
+#: djamnedlies-git/templates/teams/team_detail.html:27
+#: djamnedlies-svn/templates/release_detail.html:21
+#: djamnedlies-svn/templates/release_detail.html:23
+#: djamnedlies-svn/templates/stats_show.html:34
+#: djamnedlies-svn/templates/teams/team_detail.html:26
+#: djamnedlies-svn/templates/teams/team_detail.html:27
+#: templates/release_detail.html:21 templates/release_detail.html.py:23
+#: templates/stats_show.html:34 templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:27
+msgid "Graph"
+msgstr "Графік"
 
-#: ../templates/language-release-ui-stats.tmpl:27
-#: ../templates/language-release-doc-stats.tmpl:26
-msgid "%(cat)s (%(percent)s%% translated)"
-msgstr "%(cat)s (%(percent)s%% перекладено)"
-
-#: ../templates/list-releases.tmpl:6
+#: djamnedlies-git/templates/release_list.html:4
+#: djamnedlies-git/templates/release_list.html:9
+#: djamnedlies-svn/templates/release_list.html:4
+#: djamnedlies-svn/templates/release_list.html:9 templates/release_list.html:4
+#: templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "Випуски GNOME"
 
-#: ../templates/list-releases.tmpl:9
+#: djamnedlies-git/templates/release_list.html:11
+#: djamnedlies-svn/templates/release_list.html:11
+#: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 "Виберіть випуск чи модуль для перегляду додаткової інформації про нього:"
 
-#: ../templates/list-releases.tmpl:26
-msgid "There are currently no releases defined in GNOME. :("
-msgstr "Не вказані існуючі випуски GNOME. :("
+#: djamnedlies-git/templates/stats_show.html:13
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
+#: djamnedlies-svn/templates/stats_show.html:13
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:38
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
+msgid "Download POT file"
+msgstr "Завантажити pot-файл"
 
-#: ../templates/list-languages.tmpl:6
+#: djamnedlies-git/templates/stats_show.html:17
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
+#: djamnedlies-svn/templates/stats_show.html:17
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:53
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
+msgid "Notices"
+msgstr "Примітки"
+
+#: djamnedlies-git/templates/stats_show.html:30
+#: djamnedlies-git/vertimus/models.py:165
+#: djamnedlies-svn/templates/stats_show.html:30
+#: djamnedlies-svn/vertimus/models.py:165 templates/stats_show.html:30
+#: vertimus/models.py:165
+msgid "Translated"
+msgstr "Перекладено"
+
+#: djamnedlies-git/templates/stats_show.html:50
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
+#: djamnedlies-svn/templates/stats_show.html:50
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:48
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
+msgid "Display document figures"
+msgstr "Ілюстрації документу"
+
+#: djamnedlies-git/templates/admin/base_site.html:4
+#: djamnedlies-svn/templates/admin/base_site.html:4
+#: templates/admin/base_site.html:4
+#| msgid "Damned Lies"
+msgid "Damned Lies site admin"
+msgstr "Адміністратор сайту damned lies"
+
+#: djamnedlies-git/templates/feeds/actions_description.html:6
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
+#: djamnedlies-svn/templates/feeds/actions_description.html:6
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:101
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:101
+msgid "No comment"
+msgstr "Немає коментаря"
+
+#: djamnedlies-git/templates/languages/language_all_modules.html:4
+#: djamnedlies-git/templates/languages/language_all_modules.html:20
+#: djamnedlies-git/templates/teams/team_detail.html:63
+#: djamnedlies-git/templates/teams/team_detail.html:64
+#: djamnedlies-svn/templates/languages/language_all_modules.html:4
+#: djamnedlies-svn/templates/languages/language_all_modules.html:20
+#: djamnedlies-svn/templates/teams/team_detail.html:63
+#: djamnedlies-svn/templates/teams/team_detail.html:64
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:20
+#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
+#| msgid "Modules"
+msgid "All modules"
+msgstr "Усі пакети"
+
+#: djamnedlies-git/templates/languages/language_all_modules.html:23
+#: djamnedlies-git/templates/languages/language_release.html:25
+#: djamnedlies-svn/templates/languages/language_all_modules.html:23
+#: djamnedlies-svn/templates/languages/language_release.html:25
+#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_release.html:25
+msgid "Hide completed modules"
+msgstr "Сховати перекладені пакети"
+
+#: djamnedlies-git/templates/languages/language_all_modules.html:27
+#: djamnedlies-git/templates/languages/language_release.html:29
+#: djamnedlies-svn/templates/languages/language_all_modules.html:27
+#: djamnedlies-svn/templates/languages/language_release.html:29
+#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_release.html:29
+msgid "Show completed modules"
+msgstr "Показати перекладені пакети"
+
+#: djamnedlies-git/templates/languages/language_list.html:4
+#: djamnedlies-git/templates/languages/language_list.html:9
+#: djamnedlies-svn/templates/languages/language_list.html:4
+#: djamnedlies-svn/templates/languages/language_list.html:9
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
 msgid "GNOME Languages"
 msgstr "Мови GNOME"
 
-#: ../templates/list-languages.tmpl:10
-msgid "GNOME is being translated to following %(count)s language:"
-msgid_plural "GNOME is being translated to following %(count)s languages:"
-msgstr[0] "GNOME перекладається наступною %(count)s мовою:"
-msgstr[1] "GNOME перекладається наступними %(count)s мовами:"
-msgstr[2] "GNOME перекладається наступними %(count)s мовами:"
+#: djamnedlies-git/templates/languages/language_list.html:11
+#: djamnedlies-svn/templates/languages/language_list.html:11
+#: templates/languages/language_list.html:11
+#, python-format
+#| msgid "GNOME is being translated to following %(count)s language:"
+#| msgid_plural "GNOME is being translated to following %(count)s languages:"
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "GNOME перекладено наступною %(numb)s мовою.\n"
+msgstr[1] "GNOME перекладено наступними %(numb)s мовами.\n"
+msgstr[2] "GNOME перекладено наступними %(numb)s мовами.\n"
 
-#: ../templates/list-languages.tmpl:34
-msgid "GNOME is currently not being translated to any language. :("
-msgstr "GNOME наразі не перекладається жодною мовою. :("
+#: djamnedlies-git/templates/languages/language_release.html:42
+#: djamnedlies-svn/templates/languages/language_release.html:42
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Завантажити всі po-файли"
 
-#: ../templates/language-release.tmpl:9 ../templates/team.tmpl:9
-msgid "Details"
-msgstr "Подробиці"
+#: djamnedlies-git/templates/languages/language_release_stats.html:21
+#: djamnedlies-git/templates/people/person_detail.html:54
+#: djamnedlies-svn/templates/languages/language_release_stats.html:21
+#: djamnedlies-svn/templates/people/person_detail.html:54
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:54
+#| msgid "Modules"
+msgid "Module"
+msgstr "Пакет"
 
-#: ../templates/language-release.tmpl:12
-msgid "%(lang)s Translation Team Page:"
-msgstr "Сторінка команди перекладу %(lang)s:"
+#: djamnedlies-git/templates/languages/language_release_stats.html:21
+#: djamnedlies-svn/templates/languages/language_release_stats.html:21
+#: templates/languages/language_release_stats.html:21
+#| msgid "Branches:"
+msgid "Branch"
+msgstr "Гілка"
 
-#: ../templates/language-release.tmpl:16 ../templates/team.tmpl:16
-msgid "Users Web Page:"
-msgstr "Веб-сторінка для користувачів:"
+#: djamnedlies-git/templates/languages/language_release_stats.html:21
+#: djamnedlies-svn/templates/languages/language_release_stats.html:21
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Статистика"
 
-#: ../templates/language-release.tmpl:20 ../templates/team.tmpl:20
-msgid "Bugzilla:"
-msgstr "Bugzilla:"
+#: djamnedlies-git/templates/languages/language_release_stats.html:22
+#: djamnedlies-svn/templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "Стан"
 
-#: ../templates/language-release.tmpl:22 ../templates/team.tmpl:22
-msgid "Report Bug in Translation"
-msgstr "Повідомити про помилку у перекладі"
+#: djamnedlies-git/templates/languages/language_release_stats.html:22
+#: djamnedlies-git/templates/people/person_detail.html:54
+#: djamnedlies-svn/templates/languages/language_release_stats.html:22
+#: djamnedlies-svn/templates/people/person_detail.html:54
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:54
+msgid "Date"
+msgstr "Дата"
 
-#: ../templates/language-release.tmpl:23 ../templates/team.tmpl:23
-msgid "Show Existing Bugs"
-msgstr "Показати існуючі проблеми"
+#: djamnedlies-git/templates/languages/language_release_stats.html:32
+#: djamnedlies-svn/templates/languages/language_release_stats.html:32
+#: templates/languages/language_release_stats.html:32
+#| msgid "%(cat)s (%(percent)s%% translated)"
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr "%(categname)s (%(percentage)s% перекладено)"
 
-#: ../templates/language-release.tmpl:28 ../templates/team.tmpl:29
-msgid "Mailing List:"
-msgstr "Список розсилки:"
+#: djamnedlies-git/templates/languages/language_release_stats.html:99
+#: djamnedlies-svn/templates/languages/language_release_stats.html:99
+#: templates/languages/language_release_stats.html:103
+msgid "Error summary"
+msgstr "Зведення про помилку"
 
-#: ../templates/language-release.tmpl:30 ../templates/team.tmpl:31
-msgid "Send e-mail to the list"
-msgstr "Надіслати повідомлення до списку розсилки"
+#: djamnedlies-git/templates/people/person_base.html:5
+#: djamnedlies-svn/templates/people/person_base.html:5
+#: templates/people/person_base.html:5
+#| msgid "GNOME Contributors"
+msgid "GNOME Contributor"
+msgstr "Помічник GNOME"
 
-#: ../templates/language-release.tmpl:32 ../templates/team.tmpl:33
-msgid "Subscribe"
-msgstr "Підписатися"
+#: djamnedlies-git/templates/people/person_base.html:12
+#: djamnedlies-git/templates/people/person_detail_change_form.html:7
+#: djamnedlies-svn/templates/people/person_base.html:12
+#: djamnedlies-svn/templates/people/person_detail_change_form.html:7
+#: templates/people/person_base.html:12
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "Змінити подробиці"
 
-#: ../templates/language-release.tmpl:41 ../templates/team.tmpl:42
-msgid "Coordinator"
-msgstr "Координатор"
+#: djamnedlies-git/templates/people/person_base.html:13
+#: djamnedlies-svn/templates/people/person_base.html:13
+#: templates/people/person_base.html:13
+msgid "Change your password"
+msgstr "Змінити пароль"
 
-#: ../templates/list-modules.tmpl:6
-msgid "GNOME modules"
-msgstr "Модулі GNOME"
+#: djamnedlies-git/templates/people/person_base.html:14
+#: djamnedlies-svn/templates/people/person_base.html:14
+#: templates/people/person_base.html:14
+msgid "Join a team"
+msgstr "ПРиєднатися до команди"
 
-#: ../templates/list-modules.tmpl:9
-msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Виберіть модуль внизу для перегляду інформації про нього"
+#: djamnedlies-git/templates/people/person_detail.html:22
+#: djamnedlies-svn/templates/people/person_detail.html:22
+#: templates/people/person_detail.html:22
+#| msgid "Language"
+msgid "Site Language:"
+msgstr "Мова сайту:"
 
-#: ../templates/list-modules.tmpl:17
-msgid ""
-"There are currently no modules for which I am gathering damned lies for. "
-"Poke <a href=\"danilo@gnome.org\">Danilo</a> about it!"
-msgstr ""
-"Поки що немає модулів, про які збирається статистика. Запитайте <a href="
-"\"danilo@gnome.org\">Данило</a> про подробиці!"
+#: djamnedlies-git/templates/people/person_detail.html:33
+#: djamnedlies-svn/templates/people/person_detail.html:33
+#: templates/people/person_detail.html:33
+#| msgid "Core"
+msgid "Choose"
+msgstr "Зберегти"
 
-#: ../templates/people.tmpl:6
+#: djamnedlies-git/templates/people/person_detail.html:39
+#: djamnedlies-svn/templates/people/person_detail.html:39
+#: templates/people/person_detail.html:39
+msgid "Maintains:"
+msgstr "Керує:"
+
+#: djamnedlies-git/templates/people/person_detail.html:50
+#: djamnedlies-svn/templates/people/person_detail.html:50
+#: templates/people/person_detail.html:50
+msgid "Working on"
+msgstr "Працює над"
+
+#: djamnedlies-git/templates/people/person_detail.html:54
+#: djamnedlies-svn/templates/people/person_detail.html:54
+#: templates/people/person_detail.html:54
+msgid "State"
+msgstr "Стан"
+
+#: djamnedlies-git/templates/people/person_detail_change_form.html:13
+#: djamnedlies-svn/templates/people/person_detail_change_form.html:13
+#: templates/people/person_detail_change_form.html:13
+msgid "Save"
+msgstr "Зберегти"
+
+#: djamnedlies-git/templates/people/person_list.html:4
+#: djamnedlies-git/templates/people/person_list.html:8
+#: djamnedlies-svn/templates/people/person_list.html:4
+#: djamnedlies-svn/templates/people/person_list.html:8
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "Помічники GNOME"
 
-#: ../templates/people.tmpl:9
+#: djamnedlies-git/templates/people/person_list.html:10
+#: djamnedlies-svn/templates/people/person_list.html:10
+#: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
-msgstr "Наступні учасники допомагають розробляти GNOME:"
+msgstr "Наступні учасники допомагають створювати GNOME:"
 
-#: ../templates/people.tmpl:30
-msgid "There are no contributors, GNOME turned itself up from nothing."
-msgstr "Немає учасників, GNOME залишився ні з чим."
+#: djamnedlies-git/templates/people/person_overview.html:27
+#: djamnedlies-svn/templates/people/person_overview.html:27
+#: templates/people/person_overview.html:27
+msgid "Instant messaging:"
+msgstr "Швидке повідомлення:"
 
-#: ../templates/module.tmpl:8
+#: djamnedlies-git/templates/people/person_overview.html:34
+#: djamnedlies-svn/templates/people/person_overview.html:34
+#: templates/people/person_overview.html:34
+msgid "Bugzilla account:"
+msgstr "Обліковий рахунок Bugzilla:"
+
+#: djamnedlies-git/templates/people/person_overview.html:38
+#: djamnedlies-svn/templates/people/person_overview.html:38
+#: templates/people/person_overview.html:38
+msgid "SVN account:"
+msgstr "Обліковий рахунок SVN:"
+
+#: djamnedlies-git/templates/people/person_password_change_form.html:6
+#: djamnedlies-svn/templates/people/person_password_change_form.html:6
+#: templates/people/person_password_change_form.html:6
+msgid "Password change"
+msgstr "Зміна паролю"
+
+#: djamnedlies-git/templates/people/person_password_change_form.html:8
+#: djamnedlies-svn/templates/people/person_password_change_form.html:8
+#: templates/people/person_password_change_form.html:8
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr "Задля безпеки, введіть свій старий пароль, потім двічі введіть новий пароль, щоб перевірити правильність його написання."
+
+#: djamnedlies-git/templates/people/person_password_change_form.html:15
+#: djamnedlies-svn/templates/people/person_password_change_form.html:15
+#: templates/people/person_password_change_form.html:15
+msgid "Old password:"
+msgstr "Старий пароль:"
+
+#: djamnedlies-git/templates/people/person_password_change_form.html:21
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:16
+#: djamnedlies-svn/templates/people/person_password_change_form.html:21
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:16
+#: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
+msgid "New password:"
+msgstr "Новий пароль:"
+
+#: djamnedlies-git/templates/people/person_password_change_form.html:30
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:19
+#: djamnedlies-svn/templates/people/person_password_change_form.html:30
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:19
+#: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
+msgid "Change my password"
+msgstr "Змінити пароль"
+
+#: djamnedlies-git/templates/people/person_team_join_form.html:8
+#: djamnedlies-svn/templates/people/person_team_join_form.html:8
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "Приєднатися до команди"
+
+#: djamnedlies-git/templates/people/person_team_join_form.html:11
+#: djamnedlies-svn/templates/people/person_team_join_form.html:11
+#: templates/people/person_team_join_form.html:11
+msgid "I would like to join the following team as 'translator':"
+msgstr "Я хочу приєднатися до наступної команди у якості перекладача:"
+
+#: djamnedlies-git/templates/people/person_team_join_form.html:13
+#: djamnedlies-svn/templates/people/person_team_join_form.html:13
+#: templates/people/person_team_join_form.html:13
+msgid "Join"
+msgstr "Приєднатися"
+
+#: djamnedlies-git/templates/people/person_team_membership.html:5
+#: djamnedlies-svn/templates/people/person_team_membership.html:5
+#: templates/people/person_team_membership.html:5
+msgid "Member of teams"
+msgstr "Учасник команди"
+
+#: djamnedlies-git/templates/people/person_team_membership.html:9
+#: djamnedlies-svn/templates/people/person_team_membership.html:9
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "Учасник команди перекладу на %(team_name)s (%(role_name)s)"
+
+#: djamnedlies-git/templates/people/person_team_membership.html:12
+#: djamnedlies-svn/templates/people/person_team_membership.html:12
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr "Піти"
+
+#: djamnedlies-git/templates/people/person_team_membership.html:13
+#: djamnedlies-svn/templates/people/person_team_membership.html:13
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Ви справді хочете піти з команди?"
+
+#: djamnedlies-git/templates/registration/password_reset_complete.html:4
+#: djamnedlies-git/templates/registration/password_reset_complete.html:8
+#: djamnedlies-svn/templates/registration/password_reset_complete.html:4
+#: djamnedlies-svn/templates/registration/password_reset_complete.html:8
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Скидання паролю завершено"
+
+#: djamnedlies-git/templates/registration/password_reset_complete.html:10
+#: djamnedlies-svn/templates/registration/password_reset_complete.html:10
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Ваш пароль було встановлено. Тепер ви можете увійти на сайт."
+
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:4
+#: djamnedlies-git/templates/registration/password_reset_form.html:4
+#: djamnedlies-git/templates/registration/password_reset_form.html:9
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:4
+#: djamnedlies-svn/templates/registration/password_reset_form.html:4
+#: djamnedlies-svn/templates/registration/password_reset_form.html:9
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "Скинути пароль"
+
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:10
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:10
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Введіть новий пароль"
+
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:12
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Будь ласка введіть новий пароль двічі, щоб переконатись що виввели його правильно."
+
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:24
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:24
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Пароль успішно скинуто"
+
+#: djamnedlies-git/templates/registration/password_reset_confirm.html:26
+#: djamnedlies-svn/templates/registration/password_reset_confirm.html:26
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Посилання на скидання паролю некоректне, можливо, оскільки воно вже використовувалось. "
+"Зробіть новий запит на скидання паролю."
+
+#: djamnedlies-git/templates/registration/password_reset_done.html:4
+#: djamnedlies-git/templates/registration/password_reset_done.html:9
+#: djamnedlies-svn/templates/registration/password_reset_done.html:4
+#: djamnedlies-svn/templates/registration/password_reset_done.html:9
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "Пароль успішно створено"
+
+#: djamnedlies-git/templates/registration/password_reset_done.html:11
+#: djamnedlies-svn/templates/registration/password_reset_done.html:11
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"За вказаною адресою вам надіслано інструкції для встановлення вашого паролю. "
+"Ви маєте незабаром їх отримати."
+
+#: djamnedlies-git/templates/registration/password_reset_form.html:11
+#: djamnedlies-svn/templates/registration/password_reset_form.html:11
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"Забули пароль? Введіть адресу електронної пошти, та ми надішлемо інструкції  "
+"для його встановлення."
+
+#: djamnedlies-git/templates/registration/password_reset_form.html:15
+#: djamnedlies-svn/templates/registration/password_reset_form.html:15
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "Адреса ел.пошти:"
+
+#: djamnedlies-git/templates/registration/password_reset_form.html:15
+#: djamnedlies-svn/templates/registration/password_reset_form.html:15
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "Скинути пароль"
+
+#: djamnedlies-git/templates/registration/register.html:9
+#: djamnedlies-svn/templates/registration/register.html:9
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Реєстрація облікового рахунку"
+
+#: djamnedlies-git/templates/registration/register.html:13
+#: djamnedlies-svn/templates/registration/register.html:13
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr "Тут ви можете зареєструвати обліковий запис для авторизації на цьому сайті.  Це має сенс у випадку, якщо ви плануєте прийняти участь у перекладі GNOME."
+
+#: djamnedlies-git/templates/registration/register.html:14
+#: djamnedlies-svn/templates/registration/register.html:14
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr "Після реєстрації та входу можете приєднатися до існуючої команди з сторінки вашого профілю."
+
+#: djamnedlies-git/templates/registration/register.html:28
+#: djamnedlies-svn/templates/registration/register.html:28
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Увійти за допомогою OpenID <strong>або</strong> паролю:"
+
+#: djamnedlies-git/templates/registration/register.html:34
+#: djamnedlies-svn/templates/registration/register.html:34
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Зареєструватися, використовуючи OpenID"
+
+#: djamnedlies-git/templates/registration/register.html:46
+#: djamnedlies-svn/templates/registration/register.html:46
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Зареєструватися, використовуючи пароль"
+
+#: djamnedlies-git/templates/registration/register_success.html:8
+#: djamnedlies-svn/templates/registration/register_success.html:8
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Реєстрацію успішно завершено"
+
+#: djamnedlies-git/templates/registration/register_success.html:10
+#: djamnedlies-svn/templates/registration/register_success.html:10
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr "Реєстрацію успішно завершено. Зараз ви отримаєте лист з посиланням для активації вашого облікового запису."
+
+#: djamnedlies-git/templates/teams/team_base.html:6
+#: djamnedlies-svn/templates/teams/team_base.html:6
+#: templates/teams/team_base.html:6
+msgid "Details"
+msgstr "Подробиці"
+
+#: djamnedlies-git/templates/teams/team_base.html:9
+#: djamnedlies-svn/templates/teams/team_base.html:9
+#: templates/teams/team_base.html:9
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Сторінка команди перекладу %(lang)s:"
+
+#: djamnedlies-git/templates/teams/team_base.html:13
+#: djamnedlies-svn/templates/teams/team_base.html:13
+#: templates/teams/team_base.html:13
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: djamnedlies-git/templates/teams/team_base.html:15
+#: djamnedlies-svn/templates/teams/team_base.html:15
+#: templates/teams/team_base.html:15
+msgid "Report Bug in Translation"
+msgstr "Повідомити про помилку у перекладі"
+
+#: djamnedlies-git/templates/teams/team_base.html:16
+#: djamnedlies-svn/templates/teams/team_base.html:16
+#: templates/teams/team_base.html:16
+msgid "Show Existing Bugs"
+msgstr "Показати існуючі проблеми"
+
+#: djamnedlies-git/templates/teams/team_base.html:20
+#: djamnedlies-svn/templates/teams/team_base.html:20
+#: templates/teams/team_base.html:20
+msgid "Mailing List:"
+msgstr "Список розсилки:"
+
+#: djamnedlies-git/templates/teams/team_base.html:22
+#: djamnedlies-svn/templates/teams/team_base.html:22
+#: templates/teams/team_base.html:22
+msgid "Send e-mail to the list"
+msgstr "Надіслати повідомлення до списку розсилки"
+
+#: djamnedlies-git/templates/teams/team_base.html:24
+#: djamnedlies-svn/templates/teams/team_base.html:24
+#: templates/teams/team_base.html:24
+msgid "Subscribe"
+msgstr "Підписатися"
+
+#: djamnedlies-git/templates/teams/team_detail.html:5
+#: djamnedlies-svn/templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgstr "Останні дії команди %(lang)s у проекті перекладу GNOME"
+
+#: djamnedlies-git/templates/teams/team_detail.html:14
+#: djamnedlies-svn/templates/teams/team_detail.html:14
+#: templates/teams/team_detail.html:14
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "Команда перекладу %(lang)s"
+
+#: djamnedlies-git/templates/teams/team_detail.html:26
+#: djamnedlies-svn/templates/teams/team_detail.html:26
+#: templates/teams/team_detail.html:26
+msgid "Release"
+msgstr "Випуск"
+
+#: djamnedlies-git/templates/teams/team_detail.html:69
+#: djamnedlies-svn/templates/teams/team_detail.html:69
+#: templates/teams/team_detail.html:71
+msgid "Team membership"
+msgstr "Склад команди"
+
+#: djamnedlies-git/templates/teams/team_detail.html:80
+#: djamnedlies-svn/templates/teams/team_detail.html:80
+#: templates/teams/team_detail.html:82
+#| msgid "Desktop Applications"
+msgid "Apply modifications"
+msgstr "Застосувати зміни"
+
+#: djamnedlies-git/templates/teams/team_list.html:4
+#: djamnedlies-git/templates/teams/team_list.html:9
+#: djamnedlies-svn/templates/teams/team_list.html:4
+#: djamnedlies-svn/templates/teams/team_list.html:9
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "Команди перекладу GNOME"
+
+#: djamnedlies-git/templates/teams/team_list.html:12
+#: djamnedlies-svn/templates/teams/team_list.html:12
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "Виберіть команду зі списку для отримання додаткової інформації:"
+
+#: djamnedlies-git/templates/teams/team_list.html:25
+#: djamnedlies-svn/templates/teams/team_list.html:25
+#: templates/teams/team_list.html:25
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Координатор: <a href=\"%(url)s\">%(name)s</a>"
+
+#: djamnedlies-git/templates/teams/team_list.html:34
+#: djamnedlies-svn/templates/teams/team_list.html:34
+#: templates/teams/team_list.html:34
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "Не визначені команди перекладу у GNOME. :("
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:5
+#: templates/vertimus/vertimus_detail.html:5
+#, python-format
+#| msgid "GNOME Translation Teams"
+msgid "Module Translation: %(name)s"
+msgstr "Переклад пакету: %(name)s"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:13
+#: templates/vertimus/vertimus_detail.html:13
+msgid "Used in release(s):"
+msgstr "Використовується у випусках:"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:31
+#: templates/vertimus/vertimus_detail.html:31
+msgid "State:"
+msgstr "Стан:"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:39
+msgid "Download PO file"
+msgstr "Завантажити po-файл"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:39
+#| msgid "Translated"
+msgid "Translated:"
+msgstr "Перекладено:"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:66
+msgid "On-going activities in same module:"
+msgstr "Поточна активність у тому ж модулі:"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:74
+msgid "Action History"
+msgstr "Історія змін"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:90
+#: templates/vertimus/vertimus_detail.html:90
+msgid "diff with:"
+msgstr "відмінності з:"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:110
+#: templates/vertimus/vertimus_detail.html:110
+msgid "New Action"
+msgstr "Нова дія"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:117
+#: templates/vertimus/vertimus_detail.html:117
+msgid "Submit"
+msgstr "Прийняти"
+
+#: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
+#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:121
+#: templates/vertimus/vertimus_detail.html:121
+#, python-format
+msgid ""
+"You need to be authenticated and to be member of the %(team_name)s team."
+msgstr "Вам треба увійти та стати учасником команди перекладу на %(team_name)s."
+
+#: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
+#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:5
+#: templates/vertimus/vertimus_diff.html:5
+msgid "Diff between po files"
+msgstr "Відмінності між po файлами"
+
+#: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
+#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:16
+#: templates/vertimus/vertimus_diff.html:16
+msgid "&lt;- Back to actions"
+msgstr "&lt;- назад до дій"
+
+#: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
+#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:20
+#: templates/vertimus/vertimus_diff.html:20
+msgid "Note: both files are merged with latest POT file."
+msgstr "Примітка: обидва файли поєднано з останнім POT-файлом."
+
+#: djamnedlies-git/vertimus/feeds.py:43 djamnedlies-svn/vertimus/feeds.py:43
+#: vertimus/feeds.py:43
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr "%(site)s - дії Vertimus для мови %(lang)s"
+
+#: djamnedlies-git/vertimus/feeds.py:52 djamnedlies-svn/vertimus/feeds.py:52
+#: vertimus/feeds.py:52
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr "Останні дії у GNOME Translation Project для мови %s"
+
+#: djamnedlies-git/vertimus/feeds.py:88 djamnedlies-svn/vertimus/feeds.py:88
+#: vertimus/feeds.py:88
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr "%(site)s - дії Vertimus команди %(lang)s"
+
+#: djamnedlies-git/vertimus/feeds.py:97 djamnedlies-svn/vertimus/feeds.py:97
+#: vertimus/feeds.py:97
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr "Останні дії виконані командою %s у GNOME Translation Project"
+
+#: djamnedlies-git/vertimus/forms.py:38 djamnedlies-svn/vertimus/forms.py:38
+#: vertimus/forms.py:38
+msgid "Action"
+msgstr "Дія"
+
+#: djamnedlies-git/vertimus/forms.py:42 djamnedlies-svn/vertimus/forms.py:42
+#: vertimus/forms.py:42
+msgid "Comment"
+msgstr "Коментар"
+
+#: djamnedlies-git/vertimus/forms.py:47 djamnedlies-svn/vertimus/forms.py:47
+#: vertimus/forms.py:47
+msgid "File"
+msgstr "Файл"
+
+#: djamnedlies-git/vertimus/forms.py:48 djamnedlies-svn/vertimus/forms.py:48
+#: vertimus/forms.py:48
+msgid "Upload a .po, .gz, .bz2 or .png file"
+msgstr "Завантажте файл .po, .gz, .bz2 або .png"
+
+#: djamnedlies-git/vertimus/forms.py:59 djamnedlies-svn/vertimus/forms.py:59
+#: vertimus/forms.py:59
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Допускаються лише файли з розширеннями .po, .gz, .bz2 або .png."
+
+#: djamnedlies-git/vertimus/forms.py:64 djamnedlies-svn/vertimus/forms.py:64
+#: vertimus/forms.py:64
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr "Команда 'msgfmt -vc' завершилась з помилкою цього po-файлу. Виправте його та спробуйте знову."
+
+#: djamnedlies-git/vertimus/forms.py:74 djamnedlies-svn/vertimus/forms.py:74
+#: vertimus/forms.py:74
+msgid "A comment or a file is needed for this action."
+msgstr "Для цієї дії треба вказати коментар або файл."
+
+#: djamnedlies-git/vertimus/forms.py:77 djamnedlies-svn/vertimus/forms.py:77
+#: vertimus/forms.py:77
+msgid "A file is needed for this action."
+msgstr "Для цієї дії треба вказати файл."
+
+#: djamnedlies-git/vertimus/forms.py:80 djamnedlies-svn/vertimus/forms.py:80
+#: vertimus/forms.py:80
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Не надсилайте файл з дією 'Зарезервувати'"
+
+#: djamnedlies-git/vertimus/models.py:139
+#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:139
+msgid "Inactive"
+msgstr "Неактивний"
+
+#: djamnedlies-git/vertimus/models.py:152
+#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:152
+#| msgid "Translation"
+msgid "Translating"
+msgstr "Переклад"
+
+#: djamnedlies-git/vertimus/models.py:182
+#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:182
+msgid "Proofreading"
+msgstr "Вичитування"
+
+#. Translators: This is a status, not a verb
+#: djamnedlies-git/vertimus/models.py:197
+#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:197
+msgid "Proofread"
+msgstr "Рецензування"
+
+#: djamnedlies-git/vertimus/models.py:212
+#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:212
+msgid "To Review"
+msgstr "Готовий до рецензування"
+
+#: djamnedlies-git/vertimus/models.py:224
+#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:224
+msgid "To Commit"
+msgstr "Готовий для запису до репозиторію"
+
+#: djamnedlies-git/vertimus/models.py:239
+#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:239
+msgid "Committing"
+msgstr "Записується до репозиторію"
+
+#: djamnedlies-git/vertimus/models.py:253
+#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:253
+msgid "Committed"
+msgstr "Записано до репозиторію"
+
+#: djamnedlies-git/vertimus/models.py:341
+#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:339
+msgid "File in repository"
+msgstr "Файл у репозиторії"
+
+#: djamnedlies-git/vertimus/models.py:348
+#: djamnedlies-git/vertimus/views.py:130 djamnedlies-git/vertimus/views.py:136
+#: djamnedlies-git/vertimus/views.py:146
+#: djamnedlies-svn/vertimus/models.py:348
+#: djamnedlies-svn/vertimus/views.py:130 djamnedlies-svn/vertimus/views.py:136
+#: djamnedlies-svn/vertimus/views.py:146 vertimus/models.py:346
+#: vertimus/views.py:136 vertimus/views.py:142 vertimus/views.py:152
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Файл надано %(name)s  %(date)s"
+
+#: djamnedlies-git/vertimus/models.py:460
+#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:458
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
+"'%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Змінено стан %(module)s - %(branch)s - %(domain)s (%(language)s). Новий стан '%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+
+#: djamnedlies-git/vertimus/models.py:473
+#: djamnedlies-git/vertimus/models.py:523
+#: djamnedlies-svn/vertimus/models.py:473
+#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:471
+#: vertimus/models.py:521
+msgid "Without comment"
+msgstr "Без коментаря"
+
+#: djamnedlies-git/vertimus/models.py:475
+#: djamnedlies-git/vertimus/models.py:525
+#: djamnedlies-svn/vertimus/models.py:475
+#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:473
+#: vertimus/models.py:523
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Це автоматичне повідомлення, надіслане з %s."
+
+#: djamnedlies-git/vertimus/models.py:482
+#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:480
+msgid "Write a comment"
+msgstr "Коментар"
+
+#: djamnedlies-git/vertimus/models.py:511
+#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:509
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Залишений новий коментар для %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
+"%(url)s\n"
+"\n"
+
+#: djamnedlies-git/vertimus/models.py:533
+#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:531
+#| msgid "UI translations"
+msgid "Reserve for translation"
+msgstr "Зарезервовано для перекладу"
+
+#: djamnedlies-git/vertimus/models.py:545
+#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:543
+#| msgid "UI translations"
+msgid "Upload the new translation"
+msgstr "Завантажити новий переклад"
+
+#: djamnedlies-git/vertimus/models.py:560
+#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:558
+msgid "Reserve for proofreading"
+msgstr "Резервування для вичитування"
+
+#: djamnedlies-git/vertimus/models.py:572
+#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:570
+msgid "Upload the proofread translation"
+msgstr "Вивантажити переклад після рецензії"
+
+#. Translators: this means the file is ready to be committed in repository
+#: djamnedlies-git/vertimus/models.py:588
+#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:586
+msgid "Ready for submission"
+msgstr "Готовий до запису"
+
+#: djamnedlies-git/vertimus/models.py:604
+#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:602
+msgid "Submit to repository"
+msgstr "Записати у репозиторій"
+
+#. Commit failed, state unchanged
+#: djamnedlies-git/vertimus/models.py:618
+#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:616
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "Запис завершився помилкою. Помилка: '%s'"
+
+#. Translators: this indicates a committer is going to commit the file in the repository
+#: djamnedlies-git/vertimus/models.py:628
+#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:626
+msgid "Reserve to submit"
+msgstr "Резервування для прийняття"
+
+#. Translators: this is used to indicate the file has been committed in the repository
+#: djamnedlies-git/vertimus/models.py:641
+#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:639
+msgid "Inform of submission"
+msgstr "Повідомлення для прийняття"
+
+#. Translators: regardless of the translation completion, this file need to be reviewed
+#: djamnedlies-git/vertimus/models.py:656
+#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:654
+msgid "Review required"
+msgstr "Вимагається перегляд"
+
+#: djamnedlies-git/vertimus/models.py:695
+#: djamnedlies-svn/vertimus/models.py:695
+msgid "Backup the actions"
+msgstr "Зробити резервну копію дій"
+
+#: djamnedlies-git/vertimus/models.py:734
+#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:733
+msgid "Undo the last state change"
+msgstr "Скасувати останню зміну стану"
+
+#: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
+#: djamnedlies-svn/vertimus/views.py:129 djamnedlies-svn/vertimus/views.py:161
+#: vertimus/views.py:135 vertimus/views.py:167
+#, python-format
+msgid "Error: The file %s contains invalid characters."
+msgstr "помилка: Файл %s містить неправильні символи."
+
+#: djamnedlies-git/vertimus/views.py:152 djamnedlies-svn/vertimus/views.py:152
+#: vertimus/views.py:158
+#, python-format
+msgid "Latest committed file for %(lang)s"
+msgstr "Останній записаний файл для мови %(lang)s"
+
+#: djamnedlies-git/vertimus/views.py:155 djamnedlies-svn/vertimus/views.py:155
+#: vertimus/views.py:161
+msgid "Latest POT file"
+msgstr "Останній POT-файл"
+
+#: djamnedlies-svn/settings.py:73 djamnedlies-svn/settings_sample.py:80
 msgid ""
 "This module is not part of the GNOME SVN repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Ці модулі не є частиною репозиторію GNOME SVN. Перевірте "
-"веб-сторінку кожного модулів для перегляду інформації, куди надсилати переклади."
+"Ці модулі не є частиною репозиторію GNOME SVN. Перевірте веб-сторінку "
+"кожного модулів для перегляду інформації, куди надсилати переклади."
 
-#: ../templates/module.tmpl:15
-msgid "Maintainers"
-msgstr "Керівники"
+#: djamnedlies-svn/templates/base.html:96
+msgid ""
+"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+msgstr "Підтримується пакетом <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a>, який можна знайти на <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
-#: ../templates/module.tmpl:31
-msgid "Bug reporting"
-msgstr "Повідомити про помилку"
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:26
+msgid "Unknown"
+msgstr "Невідомо"
 
-#: ../templates/module.tmpl:32
-msgid "Report bugs to Bugzilla"
-msgstr "Сповістити про проблему у Bugzilla"
+#: languages/views.py:67 templates/release_detail.html:66
+msgid "Original strings"
+msgstr "Оригінальні рядки"
 
-#: ../templates/module.tmpl:38
-msgid "Branches:"
-msgstr "Відгалуження:"
+#: stats/models.py:336
+#| msgid "Can't generate POT file, using old one."
+msgid "Can't generate POT file, statistics aborted."
+msgstr "Не вдається створити POT-файл, статистику перервано."
 
-#: ../templates/module.tmpl:53
-msgid "Browse CVS"
-msgstr "Огляд CVS"
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "Copyright &copy; 2006-2009"
 
-#: ../templates/module.tmpl:55 ../templates/module.tmpl:57
-msgid "Browse SVN"
-msgstr "Огляд SVN"
+#: templates/index.html:30
+#| msgid ""
+#| "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME "
+#| "2.14\"."
+msgid ""
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
+msgstr ""
+"Приклади наборів випусків &quot;Інфраструктура GNOME&quot; or &quot;GNOME "
+"2.26&quot;."
 
-#: ../templates/module.tmpl:61
-msgid "This branch is currently string-frozen."
-msgstr "Рядки повідомлень у цій гілці тимчасово не змінюються."
+#: templates/languages/language_release.html:33
+#| msgid ""
+#| "The modules of this release are not part of the GNOME SVN repository. "
+#| "Please check each module's web page to see where to send translations."
+msgid ""
+"The modules of this release are not part of the GNOME git repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"Модулі цього випуску не є частиною репозиторію git GNOME. Перевірте веб-"
+"сторінку кожного модуля для перегляду інформації, куди надсилати переклади."
 
-#: ../templates/module.tmpl:88
-msgid "Translation"
-msgstr "Переклад"
+#: templates/teams/team_detail.html:5
+#, python-format
+msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
+msgstr "Останні дії зроблені командою %(lang)s у GNOME Translation Project"
 
-#: ../templates/team.tmpl:12
-msgid "%(team)s Page:"
-msgstr ")s, веб-сторінка:"
+#: templates/teams/team_detail.html:66
+msgid "Plural forms:"
+msgstr "Множинні форми:"
+
+#: vertimus/models.py:694
+msgid "Archive the actions"
+msgstr "Архів дій"
 
 
