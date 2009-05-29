@@ -36,7 +36,7 @@
 
 <h3>
 {% trans "State:" %} {{ state.description }}
-{% ifnotequal state.name 'none' %}
+{% ifnotequal state.name 'None' %}
 ({{ state.updated|date:_("Y-m-d g:i a O") }})
 {% endifnotequal %}
 </h3>
