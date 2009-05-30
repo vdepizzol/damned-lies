@@ -6,6 +6,15 @@
 {% blocktrans with module.get_description as name %}Module Translation: {{ name }}{% endblocktrans %}
 {% endblock %}
 
+{% block extrahead %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.growfield2.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#id_comment").growfield();
+});
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="mainpage">
 {% with branch.releases.all as releases %}

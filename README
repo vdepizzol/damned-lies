@@ -17,8 +17,11 @@ Requirements
 
 2 - Python 2.5 (for hashlib module).
 
-3 - jQuery (tested with 1.3.1) (http://jquery.com) and jQuery 
-    tablesorter (http://tablesorter.com).
+3 - jQuery (tested with 1.3.1) (http://jquery.com) and plugins:
+    * jQuery tablesorter (http://tablesorter.com)
+      in /media/js/jquery.tablesorter.min.js
+    * jQuery growfield (http://kuindji.com/jquery/growfield/growfield.xml)
+      in /media/js/jquery.growfield2.js
 
 4 - [Optional] Django Evolution is an extension to Django that allows
     you to track changes in your models over time, and to update the

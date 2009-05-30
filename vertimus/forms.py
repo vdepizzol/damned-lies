@@ -41,9 +41,9 @@ class ActionForm(forms.Form):
         widget=ActionWidget)
     comment = forms.CharField(label=_("Comment"),
 #        help_text="Leave a comment to explain your action",
-        max_length=1000,
+        max_length=5000,
         required=False,
-        widget=forms.Textarea)
+        widget=forms.Textarea(attrs={'rows':8, 'cols':70}))
     file = forms.FileField(label=_("File"), required=False,
                            help_text=_("Upload a .po, .gz, .bz2 or .png file"))
 
