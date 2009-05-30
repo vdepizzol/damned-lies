@@ -23,7 +23,16 @@
 
 <h1>
 <a href="{% url stats.views.module module.name %}">{{ module.get_description }}</a>
-- {{ branch.name }} - {{ domain.get_description }} - {{ language.get_name }}
+» {{ branch.name }} » {{ language.get_name }}
+</h1>
+
+<p>{{ domain.get_description }}</p>
+
+<h1>
+{% trans "State:" %} {{ state.description }}
+{% ifnotequal state.name 'None' %}
+({{ state.updated|date:_("Y-m-d g:i a O") }})
+{% endifnotequal %}
 </h1>
 
 {% if module.comment %}
@@ -33,13 +42,6 @@
   <p><em><img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" /> {{ non_standard_repo_msg }}</em></p>
   {% endif %}
 {% endif %}
-
-<h3>
-{% trans "State:" %} {{ state.description }}
-{% ifnotequal state.name 'None' %}
-({{ state.updated|date:_("Y-m-d g:i a O") }})
-{% endifnotequal %}
-</h3>
 
 <div style="line-height: 1.7">
   <em><a href="{{ stats.pot_url }}">
