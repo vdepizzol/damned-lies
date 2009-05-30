@@ -28,12 +28,12 @@
 
 <p>{{ domain.get_description }}</p>
 
-<h1>
+<h2 class="plain">
 {% trans "State:" %} {{ state.description }}
 {% ifnotequal state.name 'None' %}
 ({{ state.updated|date:_("Y-m-d g:i a O") }})
 {% endifnotequal %}
-</h1>
+</h2>
 
 {% if module.comment %}
   <p>{{ module.comment|safe }}</p>
@@ -89,9 +89,7 @@
     {% ifequal level 0 %}
       {% trans "Actions" %}
     {% else %}
-      {% blocktrans with level|ordinal|safe as human_level %}
-      Archived Actions ({{ human_level }} grandparent)
-      {% endblocktrans %}
+      {% blocktrans with level|ordinal|safe as human_level %}Archived Actions ({{ human_level }} archived series){% endblocktrans %}
       <a href="{% url vertimus-names-view module.name,branch.name,domain.name,language.locale %}">
         {% trans "(Return to current)" %}
       </a>
@@ -165,9 +163,7 @@
     </table>
   </form>
   {% else %}
-  {% blocktrans with language.team.get_description as team_name %}
-  You need to be authenticated and to be member of the {{ team_name }} team.
-  {% endblocktrans %}
+  {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
   {% endif %}
 {% endifequal %}
 
