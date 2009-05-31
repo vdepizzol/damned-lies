@@ -145,6 +145,34 @@ class Team(models.Model):
     def get_translators_exact(self):
         return self.get_members_by_role_exact('translator')
 
+    def get_members_by_roles(self, roles):
+        """Requires a list of roles in argument"""
+        try:
+            members = []
+            for role in roles:
+                members += self.roles[role]
+        except:
+            members = list(Person.objects.filter(role__team__id=self.id,
+                                                 role__role__in=roles))
+        return members
+
+    def get_committers(self):
+        return self.get_members_by_roles(['coordinator', 'committer'])
+
+    def get_reviewers(self):
+        return self.get_members_by_roles(['coordinator', 'committer', 'reviewer'])
+
+    def get_translators(self):
+        """Don't use get_members_by_roles to provide an optimization"""
+        try:
+            members = []
+            for role in ['coordinator', 'committer', 'reviewer', 'translator']:
+                members += self.roles[role]
+        except:
+            # Not necessary to filter as for other roles
+            members = list(self.members.all())
+        return members
+
 class FakeTeam(object):
     """
     This is a class replacing a Team object when a language

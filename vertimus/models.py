@@ -653,7 +653,7 @@ class ActionTC(ActionAbstract):
 
         new_state = self._new_state()
         # Send an email to all committers of the team
-        committers = [c.email for c in state.language.team.get_committers_exact()]
+        committers = [c.email for c in state.language.team.get_committers()]
         self.send_mail_new_state(state, new_state, committers)
         return new_state
 

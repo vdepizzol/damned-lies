@@ -50,16 +50,55 @@ class TeamTest(TestCase):
         self.pn.delete()
         self.t.delete()
 
-    def test_roles(self):
-        """
-        Tests the hierarchy of roles
-        """
-        people = self.t.get_coordinator()
-        self.assertEqual(people, self.pcoo)
-
-        team = Team.objects.all_with_coordinator()[0]
+    def run_roles_exact_test(self, team):
         pcoo = team.get_coordinator()
         self.assertEqual(pcoo, self.pcoo)
 
-        list_pc = team.get_committers_exact()
-        self.assertEqual(list_pc[0], self.pc)
+        members = team.get_committers_exact()
+        self.assert_(len(members), 1)
+        self.assertEqual(members[0], self.pc)
+
+        members = team.get_reviewers_exact()
+        self.assert_(len(members), 1)
+        self.assertEqual(members[0], self.pr)
+
+        members = team.get_translators_exact()
+        self.assert_(len(members), 1)
+        self.assertEqual(members[0], self.pt)
+
+    def test_roles_exact(self):
+        self.run_roles_exact_test(self.t)
+
+    def test_roles_exact_prefilled_coordinator(self):
+        self.run_roles_exact_test(Team.objects.all_with_coordinator()[0])
+
+    def test_roles_exact_prefilled_all(self):
+        self.run_roles_exact_test(Team.objects.all_with_roles()[0])
+
+    def run_roles_test(self, team):
+        """
+        Tests the hierarchy of roles
+        """
+        members = team.get_committers()
+        self.assertEqual(len(members), 2)
+        for pc in members:
+            self.assert_(pc in [self.pcoo, self.pc])
+
+        members = team.get_reviewers()
+        self.assertEqual(len(members), 3)
+        for pc in members:
+            self.assert_(pc in [self.pcoo, self.pc, self.pr])
+
+        members = team.get_translators()
+        self.assertEqual(len(members), 4)
+        for pc in members:
+            self.assert_(pc in [self.pcoo, self.pc, self.pr, self.pt])
+
+    def test_roles(self):
+        self.run_roles_test(self.t)
+
+    def test_roles_prefilled_coordinator(self):
+        self.run_roles_test(Team.objects.all_with_coordinator()[0])
+
+    def test_roles_prefilled_all(self):
+        self.run_roles_test(Team.objects.all_with_roles()[0])
