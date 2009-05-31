@@ -28,7 +28,7 @@ from teams.forms import EditMemberRoleForm
 from languages.models import Language
 
 def teams(request):
-    teams = Team.objects.all_with_roles()
+    teams = Team.objects.all_with_coordinator()
 
     context = {
         'pageSection': 'teams',

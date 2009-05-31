@@ -23,20 +23,55 @@ from django.utils.translation import ugettext_lazy, ugettext as _
 from people.models import Person
 
 class TeamManager(models.Manager):
+
+    def all_with_coordinator(self):
+        """
+        Returns all teams with the coordinator already prefilled. Use that
+        function to reduce the size of extracted data and the numbers of objects
+        built or use all_with_roles() if you need informations about the other
+        roles.
+        """
+        teams = self.all()
+        roles = Role.objects.select_related("person").filter(role='coordinator')
+        role_dict = {}
+
+        for role in roles:
+            # Only one coordinator by team
+            role_dict[role.team_id] = role
+
+        for team in teams:
+            try:
+                role = role_dict[team.id]
+                team.roles = {'coordinator': [role.person]}
+            except KeyError:
+                # Abnormal because a team must have a coordinator but of no
+                # consequence
+                pass
+        return teams
+
     def all_with_roles(self):
-        """ This method prefills team.coordinator/committers/reviewers/translators to reduce subsequent database access"""
+        """
+        This method prefills team.coordinator/committer/reviewer/translator to
+        reduce subsequent database access.
+        """
         teams = self.all()
         roles = Role.objects.select_related("person").all()
         role_dict = {}
+
         for role in roles:
             if role.team_id not in role_dict:
                 role_dict[role.team_id] = [role]
             else:
                 role_dict[role.team_id].append(role)
+
         for team in teams:
-            if team.id in role_dict:
+            try:
                 for role in role_dict[team.id]:
                     team.fill_role(role.role, role.person)
+            except KeyError:
+                # Abnormal because a team must have a coordinator but of no
+                # consequence
+                pass
         return teams
 
 
@@ -69,7 +104,10 @@ class Team(models.Model):
     def fill_role(self, role, person):
         """ Used by TeamManager to prefill roles in team """
         if not self.roles:
-            self.roles = {'coordinator':[], 'committer':[], 'reviewer':[], 'translator':[]}
+            self.roles = {'coordinator': [],
+                          'committer': [],
+                          'reviewer': [],
+                          'translator': []}
         self.roles[role].append(person)
 
     def get_description(self):
@@ -85,7 +123,8 @@ class Team(models.Model):
             try:
                 # The join by role__team__id generates only one query and
                 # the same one by role__team=self two queries!
-                return Person.objects.get(role__team__id=self.id, role__role='coordinator')
+                return Person.objects.get(role__team__id=self.id,
+                                          role__role='coordinator')
             except Person.DoesNotExist:
                 return None
 
@@ -93,7 +132,8 @@ class Team(models.Model):
         try:
             return self.roles[role]
         except:
-            members = Person.objects.filter(role__team__id=self.id, role__role=role)
+            members = Person.objects.filter(role__team__id=self.id,
+                                            role__role=role)
             return members
 
     def get_committers(self):
@@ -106,8 +146,10 @@ class Team(models.Model):
         return self.get_members_by_role('translator')
 
 class FakeTeam(object):
-    """ This is a class replacing a Team object when a language
-        has no team attached """
+    """
+    This is a class replacing a Team object when a language
+    has no team attached.
+    """
     fake = 1
 
     def __init__(self, language):
@@ -136,16 +178,19 @@ ROLE_CHOICES = (
 )
 
 class Role(models.Model):
-    """ This is the intermediary class between Person and Team to attribute
-        roles to Team members. """
-
+    """
+    This is the intermediary class between Person and Team to attribute roles to
+    Team members.
+    """
     team = models.ForeignKey(Team)
     person = models.ForeignKey(Person)
-    role = models.CharField(max_length=15, choices=ROLE_CHOICES, default='translator')
+    role = models.CharField(max_length=15, choices=ROLE_CHOICES,
+                            default='translator')
 
     class Meta:
         db_table = 'role'
         unique_together = ('team', 'person')
 
     def __unicode__(self):
-        return "%s is %s in %s team" % (self.person.name, self.role, self.team.description)
+        return "%s is %s in %s team" % (self.person.name, self.role,
+                                        self.team.description)

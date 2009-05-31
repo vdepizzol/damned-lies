@@ -27,50 +27,15 @@ from django.http import QueryDict
 from django.utils.datastructures import MultiValueDict
 from django.conf import settings
 
-from people.models import Person
-from teams.models import Team, Role
-from languages.models import Language
+from teams.tests import TeamTest
 from stats.models import Module, Branch, Release, Category, Domain
 from vertimus.models import *
 from vertimus.forms import ActionForm
 
-class VertimusTest(TestCase):
+class VertimusTest(TeamTest):
 
     def setUp(self):
-        self.pn = Person(first_name='John', last_name='Nothing',
-            email='jn@devnull.com', username= 'jn')
-        self.pn.save()
-
-        self.pt = Person(first_name='John', last_name='Translator',
-            email='jt@tf1.com', username= 'jt')
-        self.pt.save()
-
-        self.pr = Person(first_name='John', last_name='Reviewer',
-            email='jr@csa.com', username= 'jr')
-        self.pr.save()
-
-        self.pc = Person(first_name='John', last_name='Committer',
-            email='jc@alinsudesonpleingre.fr', username= 'jc')
-        self.pc.save()
-
-        self.pcoo = Person(first_name='John', last_name='Coordinator',
-            email='jcoo@imthebigboss.fr', username= 'jcoo')
-        self.pcoo.save()
-
-        self.t = Team(name='fr', description='French')
-        self.t.save()
-
-        self.role = Role(team=self.t, person=self.pt)
-        self.role.save()
-
-        self.role = Role(team=self.t, person=self.pr, role='reviewer')
-        self.role.save()
-
-        self.role = Role(team=self.t, person=self.pc, role='committer')
-        self.role.save()
-
-        self.role = Role(team=self.t, person=self.pcoo, role='coordinator')
-        self.role.save()
+        super(VertimusTest, self).setUp()
 
         self.l = Language(name='french', locale='fr', team=self.t)
         self.l.save()
@@ -107,14 +72,7 @@ class VertimusTest(TestCase):
         self.b.delete()
         self.m.delete()
         self.l.delete()
-        for role in Role.objects.all():
-            role.delete()
-        self.t.delete()
-        self.pn.delete()
-        self.pt.delete()
-        self.pr.delete()
-        self.pc.delete()
-        self.pcoo.delete()
+        super(VertimusTest, self).tearDown()
 
     def test_state_none(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l)
