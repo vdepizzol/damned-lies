@@ -128,22 +128,22 @@ class Team(models.Model):
             except Person.DoesNotExist:
                 return None
 
-    def get_members_by_role(self, role):
+    def get_members_by_role_exact(self, role):
         try:
             return self.roles[role]
         except:
-            members = Person.objects.filter(role__team__id=self.id,
-                                            role__role=role)
+            members = list(Person.objects.filter(role__team__id=self.id,
+                                                 role__role=role))
             return members
 
-    def get_committers(self):
-        return self.get_members_by_role('committer')
+    def get_committers_exact(self):
+        return self.get_members_by_role_exact('committer')
 
-    def get_reviewers(self):
-        return self.get_members_by_role('reviewer')
+    def get_reviewers_exact(self):
+        return self.get_members_by_role_exact('reviewer')
 
-    def get_translators(self):
-        return self.get_members_by_role('translator')
+    def get_translators_exact(self):
+        return self.get_members_by_role_exact('translator')
 
 class FakeTeam(object):
     """

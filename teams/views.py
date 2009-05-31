@@ -42,17 +42,17 @@ def team(request, team_slug):
         coordinator = team.get_coordinator()
         mem_groups = (
                {'title': _("Committers"),
-                'members': team.get_committers(),
+                'members': team.get_committers_exact(),
                 'form': None,
                 'no_member': _("No committers")
                },
                {'title': _("Reviewers"),
-                'members': team.get_reviewers(),
+                'members': team.get_reviewers_exact(),
                 'form': None,
                 'no_member': _("No reviewers")
                },
                {'title': _("Translators"),
-                'members': team.get_translators(),
+                'members': team.get_translators_exact(),
                 'form': None,
                 'no_member': _("No translators")
                },

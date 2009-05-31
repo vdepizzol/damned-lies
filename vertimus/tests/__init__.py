@@ -20,7 +20,6 @@
 
 import os
 
-from django.test import TestCase
 from django.core.files.base import File, ContentFile
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.http import QueryDict

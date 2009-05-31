@@ -61,5 +61,5 @@ class TeamTest(TestCase):
         pcoo = team.get_coordinator()
         self.assertEqual(pcoo, self.pcoo)
 
-        list_pc = team.get_committers()
+        list_pc = team.get_committers_exact()
         self.assertEqual(list_pc[0], self.pc)
