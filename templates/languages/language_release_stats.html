@@ -34,7 +34,7 @@
      {% endwith %}
     </td><td></td></tr>
   {% endifnotequal %}
-  
+
   {% for module in categ.modules %}
     {% with module.0 as modname %}
     {% for branch, doms in module.1.items %}
@@ -49,7 +49,7 @@
         {% endifequal %}
         <td class="leftcell">
           {% if language %}
-          <a href="{% url vertimus-names-view modname branch stat.domain.name language.locale %}">{{ stat.module_description }}
+          <a href="{% url vertimus_by_names modname,branch,stat.domain.name,language.locale %}">{{ stat.module_description }}
           {% else %}
           <a href="{% url stats.views.module modname %}">{{ stat.module_description }}
           {% endif %}
@@ -57,7 +57,7 @@
             {# For a partial po, domain description is appended #}
             &bull; {{ domname }}
           {% endif %}
-          </a>          
+          </a>
           {% for err in stat.info_list %}
             <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}

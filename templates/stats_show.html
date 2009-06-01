@@ -1,7 +1,7 @@
 {% load i18n %}
 
 {% for dname, stat in stats.items %}
-  {% with stat|first as pot_stat %} 
+  {% with stat|first as pot_stat %}
   <h3>{% trans pot_stat.domain.get_description %}
   {% ifnotequal pot_stat.domain.directory 'help' %}
     {% ifnotequal pot_stat.domain.directory 'po' %}
@@ -37,8 +37,8 @@
     {% for line in stat %}
     {% if not forloop.first %}
     <tr>
-      <td class="leftcell"><a href="{% url vertimus-names-view module.name branch.name pot_stat.domain.name line.language.locale %}">{{ line.get_lang }}</a>
-        {% with line.most_important_message as msg %} 
+      <td class="leftcell"><a href="{% url vertimus_by_names module.name,branch.name,pot_stat.domain.name,line.language.locale %}">{{ line.get_lang }}</a>
+        {% with line.most_important_message as msg %}
         {% if msg %}
         <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.type }}" />
         {% endif %}

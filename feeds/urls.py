@@ -7,6 +7,8 @@ feeds = {
 }
 
 urlpatterns = patterns('',
-    (r'^(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
-        {'feed_dict': feeds}),
+    url(
+        regex = r'^(?P<url>.*)/$',
+        view = 'django.contrib.syndication.views.feed',
+        kwargs = {'feed_dict': feeds})
 )

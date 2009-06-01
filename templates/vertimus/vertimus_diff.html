@@ -13,7 +13,7 @@
 <div class="mainpage">
 
 <h1>{{ state.branch.module.get_description }} - {{ state.branch.name }} - {{ state.domain.get_description }} - {{ state.language.get_name }}</h1>
-<p><a href="{% url vertimus-names-view state.branch.module.name state.branch.name state.domain.name state.language.locale %}">{% trans "&lt;- Back to actions" %}</a></p>
+<p><a href="{% url vertimus_by_names state.branch.module.name,state.branch.name,state.domain.name,state.language.locale %}">{% trans "&lt;- Back to actions" %}</a></p>
 
 {{ diff_content|safe }}
 

@@ -64,7 +64,7 @@ def site_login(request, msgs=[]):
                     user.message_set.create(message=message)
                     if Role.objects.filter(person__username=user.username).count() < 1:
                         message = _("You have not joined any translation team yet. You can do it from <a href=\"%(url)s\">your profile</a>.") % {
-                            'url': reverse('person-team-join-view'),
+                            'url': reverse('person_team_join'),
                         }
                         user.message_set.create(message=message)
                     if request.POST['referer']:

@@ -84,7 +84,7 @@ class Person(User):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('person-username-view', [self.username])
+        return ('person_detail_username', [self.username])
 
     def coordinates_teams(self):
         from teams.models import Team

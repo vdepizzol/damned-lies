@@ -61,7 +61,7 @@ class LatestActionsByLanguage(Feed):
         return (action_db.get_action() for action_db in islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20))
 
     def item_link(self, item):
-        return urlresolvers.reverse('vertimus-names-view',
+        return urlresolvers.reverse('vertimus_by_names',
                                     args=(item.state.branch.module.name,
                                           item.state.branch.name,
                                           item.state.domain.name,
@@ -108,7 +108,7 @@ class LatestActionsByTeam(Feed):
         return (action_db.get_action() for action_db in islice(imerge_sorted_by_field(actions_db, archived_actions_db, '-created'), 20))
 
     def item_link(self, item):
-        return urlresolvers.reverse('vertimus-names-view',
+        return urlresolvers.reverse('vertimus_by_names',
                                     args=(item.state.branch.module.name,
                                           item.state.branch.name,
                                           item.state.domain.name,

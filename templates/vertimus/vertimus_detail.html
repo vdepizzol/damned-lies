@@ -88,7 +88,7 @@ $(document).ready(function() {
   <img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" />
   {% trans "On-going activities in same module:" %}
   {% for st in other_states %}
-    <a href="{% url vertimus-ids-view st.branch.pk,st.domain.pk,st.language.pk %}">{{ st.branch.name }}</a>
+    <a href="{% url vertimus_by_ids st.branch.pk,st.domain.pk,st.language.pk %}">{{ st.branch.name }}</a>
   {% endfor %}
 </div>
 {% endif %}
@@ -99,7 +99,7 @@ $(document).ready(function() {
       {% trans "Actions" %}
     {% else %}
       {% blocktrans with level|ordinal|safe as human_level %}Archived Actions ({{ human_level }} archived series){% endblocktrans %}
-      <a href="{% url vertimus-names-view module.name,branch.name,domain.name,language.locale %}">
+      <a href="{% url vertimus_by_names module.name,branch.name,domain.name,language.locale %}">
         {% trans "(Return to current)" %}
       </a>
     {% endifequal %}
@@ -136,7 +136,7 @@ $(document).ready(function() {
           {% endif %}
           <div class="right_actions">{% trans "diff with:" %}
             {% for f in files %}
-                <a href="{% url vertimus-diff-view action.id,f.action_id %}" title="{{ f.title }}">[{{ forloop.revcounter }}]</a>
+                <a href="{% url vertimus_diff action.id,f.action_id %}" title="{{ f.title }}">[{{ forloop.revcounter }}]</a>
             {% endfor %}
           </div>
         {% endif %}
@@ -161,7 +161,7 @@ $(document).ready(function() {
 
   {% if action_form %}
   <form enctype="multipart/form-data"
-        action="{% url vertimus-stats-id-view stats.id language.id %}"
+        action="{% url vertimus_by_stats_id stats.id,language.id %}"
         method="POST">
     <table class="djform">
       {{ action_form.as_table }}

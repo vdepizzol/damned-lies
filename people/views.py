@@ -114,7 +114,7 @@ def person_team_leave(request, team_slug):
         # Message no i18n'ed, should never happen under normal conditions
         person.message_set.create(message="You are not a member of this team.")
     # redirect to normal person detail
-    return HttpResponseRedirect(urlresolvers.reverse('person-username-view',
+    return HttpResponseRedirect(urlresolvers.reverse('person_detail_username',
                                                      args=(person.username,)))
 
 @login_required

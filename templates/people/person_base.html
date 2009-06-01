@@ -9,9 +9,9 @@
   {% if on_own_page %}
   <div class="right_actions">
     <ul>
-      <li><a href="{% url person-detail-change-view %}">{% trans "Change your details" %}</a></li>
-      <li><a href="{% url person-password-change-view %}">{% trans "Change your password" %}</a></li>
-      <li><a href="{% url person-team-join-view %}">{% trans "Join a team" %}</a></li>
+      <li><a href="{% url person_detail_change %}">{% trans "Change your details" %}</a></li>
+      <li><a href="{% url person_password_change %}">{% trans "Change your password" %}</a></li>
+      <li><a href="{% url person_team_join %}">{% trans "Join a team" %}</a></li>
     </ul>
   </div>
   {% endif %}

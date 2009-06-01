@@ -65,7 +65,7 @@ class StateDb(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('vertimus-ids-view', [self.branch.id, self.domain.id, self.language.id])
+        return ('vertimus_by_ids', [self.branch.id, self.domain.id, self.language.id])
 
 class StateAbstract(object):
     """Abstract class"""
@@ -508,7 +508,7 @@ class ActionAbstract(object):
             activate(old_state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
-                'vertimus-names-view',
+                'vertimus_by_names',
                  args = (
                     old_state.branch.module.name,
                     old_state.branch.name,
@@ -559,7 +559,7 @@ class ActionWC(ActionAbstract):
             activate(state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
-                'vertimus-names-view',
+                'vertimus_by_names',
                 args = (
                     state.branch.module.name,
                     state.branch.name,

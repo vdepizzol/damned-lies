@@ -111,7 +111,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
                 new_state.save()
 
                 return HttpResponseRedirect(
-                    urlresolvers.reverse('vertimus-names-view',
+                    urlresolvers.reverse('vertimus_by_names',
                         args=(branch.module.name, branch.name, domain.name,
                               language.locale)))
         else:
