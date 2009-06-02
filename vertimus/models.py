@@ -396,7 +396,9 @@ class ActionDbArchived(models.Model):
     created = models.DateTimeField(editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
-    sequence = models.IntegerField()
+    # The first element of each cycle is null at creation time (and defined
+    # afterward).
+    sequence = models.IntegerField(null=True)
 
     class Meta:
         db_table = 'action_archived'
