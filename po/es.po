@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-26 17:38+0000\n"
-"PO-Revision-Date: 2009-05-26 19:40+0200\n"
+"POT-Creation-Date: 2009-05-30 10:09+0000\n"
+"PO-Revision-Date: 2009-06-01 09:46+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1293,22 +1293,22 @@ msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
 #: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
-#: stats/models.py:334
+#: stats/models.py:342
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
 #: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
-#: stats/models.py:356
+#: stats/models.py:364
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
 #: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
-#: stats/models.py:388
+#: stats/models.py:396
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
 #: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
-#: stats/models.py:667
+#: stats/models.py:675
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1320,39 +1320,39 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
-#: stats/models.py:914
+#: stats/models.py:922
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
 #: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
-#: stats/models.py:915
+#: stats/models.py:923
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
 #: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
-#: stats/models.py:916
+#: stats/models.py:924
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
 #: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
-#: stats/models.py:917
+#: stats/models.py:925
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
 #: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
-#: stats/models.py:918
+#: stats/models.py:926
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
 #: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:994 stats/models.py:1264
+#: stats/models.py:1002 stats/models.py:1279
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1025
+#: stats/models.py:1033
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1360,7 +1360,7 @@ msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
 #: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1026
+#: stats/models.py:1034
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
@@ -1377,13 +1377,13 @@ msgstr "actualizado el %(date)s"
 #: djamnedlies-svn/stats/models.py:1020
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1028 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:80
+#: stats/models.py:1036 templates/vertimus/vertimus_detail.html:34
+#: templates/vertimus/vertimus_detail.html:112
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
 #: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1031
+#: stats/models.py:1039
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1391,13 +1391,13 @@ msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
 #: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1032
+#: stats/models.py:1040
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1035
+#: stats/models.py:1043
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1958,7 +1958,7 @@ msgstr "Original"
 
 #: djamnedlies-git/templates/module_images.html:32
 #: djamnedlies-svn/templates/module_images.html:32
-#: templates/module_images.html:32
+#: templates/module_images.html:30
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
@@ -1968,19 +1968,19 @@ msgstr ""
 
 #: djamnedlies-git/templates/module_images.html:36
 #: djamnedlies-svn/templates/module_images.html:36
-#: templates/module_images.html:36
+#: templates/module_images.html:34
 msgid "Fuzzy"
 msgstr "Difuso"
 
 #: djamnedlies-git/templates/module_images.html:41
 #: djamnedlies-svn/templates/module_images.html:41
-#: templates/module_images.html:41
+#: templates/module_images.html:39
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "El archivo no existe (&quot;técnicamente&quot; difuso)"
 
 #: djamnedlies-git/templates/module_images.html:44
 #: djamnedlies-svn/templates/module_images.html:44
-#: templates/module_images.html:44
+#: templates/module_images.html:42
 msgid "Not translated"
 msgstr "No traducido"
 
@@ -2077,7 +2077,7 @@ msgstr "Seleccione una publicación para ver más detalles acerca de ella:"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
 #: djamnedlies-svn/templates/stats_show.html:13
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:38
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:48
 msgid "Download POT file"
 msgstr "Descargar el archivo POT"
 
@@ -2085,7 +2085,7 @@ msgstr "Descargar el archivo POT"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
 #: djamnedlies-svn/templates/stats_show.html:17
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:53
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:66
 msgid "Notices"
 msgstr "Notas"
 
@@ -2093,7 +2093,7 @@ msgstr "Notas"
 #: djamnedlies-git/vertimus/models.py:165
 #: djamnedlies-svn/templates/stats_show.html:30
 #: djamnedlies-svn/vertimus/models.py:165 templates/stats_show.html:30
-#: vertimus/models.py:165
+#: vertimus/models.py:189
 msgid "Translated"
 msgstr "Traducido"
 
@@ -2101,7 +2101,7 @@ msgstr "Traducido"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
 #: djamnedlies-svn/templates/stats_show.html:50
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:48
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:61
 msgid "Display document figures"
 msgstr "Mostrar las figuras del documento"
 
@@ -2116,7 +2116,7 @@ msgstr "Administrador de Malditas mentiras"
 #: djamnedlies-svn/templates/feeds/actions_description.html:6
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:139
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2673,68 +2673,67 @@ msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:5
-#: templates/vertimus/vertimus_detail.html:5
+#: templates/vertimus/vertimus_detail.html:6
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Traducción del módulo: %(name)s"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:13
-#: templates/vertimus/vertimus_detail.html:13
+#: templates/vertimus/vertimus_detail.html:14
 msgid "Used in release(s):"
 msgstr "Usado en la(s) publicacion(es):"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:31
-#: templates/vertimus/vertimus_detail.html:31
+#: templates/vertimus/vertimus_detail.html:32
 msgid "State:"
 msgstr "Estado:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:52
 msgid "Download PO file"
 msgstr "Descargar el archivo PO"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:52
 msgid "Translated:"
 msgstr "Traducido:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:80
 msgid "On-going activities in same module:"
 msgstr "Actividades en desarrollo sobre el mismo módulo:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:74
-#: templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "Histórico de acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:90
+#: templates/vertimus/vertimus_detail.html:128
 msgid "diff with:"
 msgstr "diff con:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:110
+#: templates/vertimus/vertimus_detail.html:151
 msgid "New Action"
 msgstr "Acción nueva"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:117
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:121
+#: templates/vertimus/vertimus_detail.html:166
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2832,48 +2831,48 @@ msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
 #: djamnedlies-git/vertimus/models.py:139
-#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:139
+#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:163
 msgid "Inactive"
 msgstr "Inactivo"
 
 #: djamnedlies-git/vertimus/models.py:152
-#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:152
+#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:176
 msgid "Translating"
 msgstr "Traduciéndose"
 
 #: djamnedlies-git/vertimus/models.py:182
-#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:182
+#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:206
 msgid "Proofreading"
 msgstr "En revisión"
 
 #. Translators: This is a status, not a verb
 #: djamnedlies-git/vertimus/models.py:197
-#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:197
+#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:221
 msgid "Proofread"
 msgstr "Revisado"
 
 #: djamnedlies-git/vertimus/models.py:212
-#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:212
+#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:236
 msgid "To Review"
 msgstr "Para revisar"
 
 #: djamnedlies-git/vertimus/models.py:224
-#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:224
+#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:248
 msgid "To Commit"
 msgstr "Para subir"
 
 #: djamnedlies-git/vertimus/models.py:239
-#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:239
+#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:263
 msgid "Committing"
 msgstr "Subiéndose"
 
 #: djamnedlies-git/vertimus/models.py:253
-#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:253
+#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:277
 msgid "Committed"
 msgstr "Subido"
 
 #: djamnedlies-git/vertimus/models.py:341
-#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:339
+#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:322
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
@@ -2882,14 +2881,14 @@ msgstr "Archivo en el repositorio"
 #: djamnedlies-git/vertimus/views.py:146
 #: djamnedlies-svn/vertimus/models.py:348
 #: djamnedlies-svn/vertimus/views.py:130 djamnedlies-svn/vertimus/views.py:136
-#: djamnedlies-svn/vertimus/views.py:146 vertimus/models.py:346
-#: vertimus/views.py:136 vertimus/views.py:142 vertimus/views.py:152
+#: djamnedlies-svn/vertimus/views.py:146 vertimus/models.py:334
+#: vertimus/views.py:158 vertimus/views.py:164 vertimus/views.py:174
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
 #: djamnedlies-git/vertimus/models.py:460
-#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:458
+#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:518
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2909,27 +2908,27 @@ msgstr ""
 #: djamnedlies-git/vertimus/models.py:473
 #: djamnedlies-git/vertimus/models.py:523
 #: djamnedlies-svn/vertimus/models.py:473
-#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:471
-#: vertimus/models.py:521
+#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:531
+#: vertimus/models.py:581
 msgid "Without comment"
 msgstr "Sin comentarios"
 
 #: djamnedlies-git/vertimus/models.py:475
 #: djamnedlies-git/vertimus/models.py:525
 #: djamnedlies-svn/vertimus/models.py:475
-#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:473
-#: vertimus/models.py:523
+#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:533
+#: vertimus/models.py:583
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
 
 #: djamnedlies-git/vertimus/models.py:482
-#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:480
+#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:540
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
 #: djamnedlies-git/vertimus/models.py:511
-#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:509
+#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:569
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2947,58 +2946,58 @@ msgstr ""
 "\n"
 
 #: djamnedlies-git/vertimus/models.py:533
-#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:531
+#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:591
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
 #: djamnedlies-git/vertimus/models.py:545
-#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:543
+#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:603
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
 #: djamnedlies-git/vertimus/models.py:560
-#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:558
+#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:618
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
 #: djamnedlies-git/vertimus/models.py:572
-#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:570
+#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:630
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
 #: djamnedlies-git/vertimus/models.py:588
-#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:586
+#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:646
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
 #: djamnedlies-git/vertimus/models.py:604
-#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:602
+#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:662
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
 #. Commit failed, state unchanged
 #: djamnedlies-git/vertimus/models.py:618
-#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:616
+#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:676
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Falló la carga. El error fue: «%s»"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: djamnedlies-git/vertimus/models.py:628
-#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:626
+#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:686
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
 #: djamnedlies-git/vertimus/models.py:641
-#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:639
+#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:699
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: djamnedlies-git/vertimus/models.py:656
-#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:654
+#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:714
 msgid "Review required"
 msgstr "Necesita revisión"
 
@@ -3008,25 +3007,25 @@ msgid "Backup the actions"
 msgstr "Restablecer las acciones"
 
 #: djamnedlies-git/vertimus/models.py:734
-#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:733
+#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:768
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
 #: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
 #: djamnedlies-svn/vertimus/views.py:129 djamnedlies-svn/vertimus/views.py:161
-#: vertimus/views.py:135 vertimus/views.py:167
+#: vertimus/views.py:157 vertimus/views.py:189
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Error: El archivo %s contiene caracteres no válidos."
 
 #: djamnedlies-git/vertimus/views.py:152 djamnedlies-svn/vertimus/views.py:152
-#: vertimus/views.py:158
+#: vertimus/views.py:180
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
 #: djamnedlies-git/vertimus/views.py:155 djamnedlies-svn/vertimus/views.py:155
-#: vertimus/views.py:161
+#: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Último archivo POT"
 
@@ -3055,7 +3054,7 @@ msgstr "Desconocido"
 msgid "Original strings"
 msgstr "Cadenas originales"
 
-#: stats/models.py:336
+#: stats/models.py:344
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
@@ -3091,8 +3090,31 @@ msgstr ""
 msgid "Plural forms:"
 msgstr "Formas plurales:"
 
-#: vertimus/models.py:694
-#| msgid "Backup the actions"
+#: templates/vertimus/vertimus_detail.html:90
+#| msgid "Action"
+msgid "Actions"
+msgstr "Acciones"
+
+#: templates/vertimus/vertimus_detail.html:92
+#, python-format
+msgid "Archived Actions (%(human_level)s archived series)"
+msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
+
+#: templates/vertimus/vertimus_detail.html:94
+msgid "(Return to current)"
+msgstr "(Volver a la actual)"
+
+#: templates/vertimus/vertimus_detail.html:99
+#| msgid "Action History"
+msgid "(Previous action history)"
+msgstr "(Histórico de acciones anteriores)"
+
+#: templates/vertimus/vertimus_detail.html:147
+#| msgid "Documentation"
+msgid "No current actions."
+msgstr "Sin acción actual."
+
+#: vertimus/models.py:729
 msgid "Archive the actions"
 msgstr "Archivar las acciones"
 
