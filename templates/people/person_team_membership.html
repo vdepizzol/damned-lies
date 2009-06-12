@@ -5,7 +5,7 @@
 <h2>{% trans "Member of teams" %}</h2>
 <ul>
   {% for role in person.role_set.all %}
-  {% with role.role as role_name %}
+  {% with role.get_role_display as role_name %}
   <li>{% blocktrans with role.team|linked_with:role.team.get_description|safe as team_name %}Member of {{ team_name }} team ({{ role_name }}){% endblocktrans %}
       {% if on_own_page %}
       <form class="inline" method="GET" action="{% url person_team_leave role.team.name %}">
