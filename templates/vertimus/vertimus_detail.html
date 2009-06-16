@@ -53,9 +53,9 @@ $(document).ready(function() {
 {% endif %}
 
 <div style="line-height: 1.7">
-  <em><a href="{{ stats.pot_url }}">
+  <em><a href="{{ pot_stats.pot_url }}">
       <img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
-    {{ stats.pot_text }}
+    {{ pot_stats.pot_text }}
   </em>
   <br/>
   <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
@@ -65,9 +65,11 @@ $(document).ready(function() {
     <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
     <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
   </div>
-  {% if stats.fig_count and stats.language %}
-  <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
+  {% if pot_stats.fig_count and stats.language %}
+  <div style="display: inline; margin-left:110px;">
+    <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
     <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
+  </div>
   {% endif %}
 </div>
 

@@ -57,13 +57,13 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
        grandparent, second (2) is the parent of the grandparent, etc."""
     level = int(level)
 
+    pot_stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=None)
     if not stats:
         try:
             stats = Statistics.objects.get(branch=branch, domain=domain, language=language)
             po_url = stats.po_url()
         except Statistics.DoesNotExist:
-            # Get the POT file stats
-            stats = get_object_or_404(Statistics, branch=branch, domain=domain, language=None)
+            stats = pot_stats
             po_url = urlresolvers.reverse('dynamic_po',
                         args=("%s.%s.%s.%s.po" % (branch.module.name, domain.name, branch.name, language.locale),))
     else:
@@ -122,6 +122,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
     context = {
         'pageSection': 'module',
         'stats': stats,
+        'pot_stats': pot_stats,
         'po_url': po_url,
         'branch': branch,
         'other_states': other_branch_states,
