@@ -311,10 +311,14 @@ class Branch(models.Model):
             # 3. Generate a fresh pot file
             # ****************************
             if dom.dtype == 'ui':
-                potfile, errs = dom.generate_pot_file(domain_path)
+                potfile, errs = dom.generate_pot_file(self)
                 linguas = utils.get_ui_linguas(self.co_path(), domain_path)
-            elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
-                potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
+            elif dom.dtype == 'doc':
+                if dom.pot_method:
+                    potfile, errs = dom.generate_pot_file(self)
+                else:
+                    # Standard gnome-doc-utils pot generation
+                    potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
                 if not potfile:
                     print >> sys.stderr, "\n".join([e[1] for e in errs])
                     continue
@@ -394,7 +398,7 @@ class Branch(models.Model):
 
                 langstats = utils.po_file_stats(outpo, True)
                 if linguas['langs'] is not None and lang not in linguas['langs']:
-                    langstats['errors'].append("warn-ext", linguas['error'])
+                    langstats['errors'].append(("warn-ext", linguas['error']))
                 if dom.dtype == "doc":
                     fig_stats = utils.get_fig_stats(outpo)
                     for fig in fig_stats:
@@ -439,10 +443,12 @@ class Branch(models.Model):
                 pofile = os.path.join(dom_path, f)
                 flist.append((lang, pofile))
         if domain.dtype == "doc":
-            for d in os.listdir(dom_path):
-                pofile = os.path.join(dom_path, d, d + ".po")
-                if os.path.isfile(pofile):
-                    flist.append((d, pofile))
+            for lang_dir in os.listdir(dom_path):
+                for base_name in [lang_dir, domain.name.replace("_","/")]:
+                    pofile = os.path.join(dom_path, lang_dir, base_name + ".po")
+                    if os.path.isfile(pofile):
+                        flist.append((lang_dir, pofile))
+                        break
         return flist
 
     def checkout(self):
@@ -652,9 +658,10 @@ class Domain(models.Model):
         else:
             return self.potbase()
 
-    def generate_pot_file(self, vcs_path):
+    def generate_pot_file(self, current_branch):
         """ Return the pot file generated, and the error if any """
 
+        vcs_path = os.path.join(current_branch.co_path(), self.directory)
         pot_command = self.pot_method
         podir = vcs_path
         env = None
@@ -672,6 +679,11 @@ class Domain(models.Model):
         (status, output, errs) = utils.run_shell_command(command, env=env)
 
         potfile = os.path.join(vcs_path, self.potbase() + ".pot")
+        if not os.access(potfile, os.R_OK):
+            # Try to get POT file from command output, with path relative to checkout root
+            m = re.search('([\w/]*\.pot)', output)
+            if m:
+                potfile = os.path.join(current_branch.co_path(), m.group(0))
 
         if status != utils.STATUS_OK or not os.access(potfile, os.R_OK):
             return "", (("error", ugettext_noop("Error regenerating POT file for %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
