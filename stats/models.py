@@ -312,16 +312,20 @@ class Branch(models.Model):
             # ****************************
             if dom.dtype == 'ui':
                 potfile, errs = dom.generate_pot_file(domain_path)
+                linguas = utils.get_ui_linguas(self.co_path(), domain_path)
             elif dom.dtype == 'doc': # only gnome-doc-utils toolchain supported so far for docs
                 potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
                 if not potfile:
                     print >> sys.stderr, "\n".join([e[1] for e in errs])
                     continue
-                doclinguas = utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split()
+                linguas = {'langs': utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split(),
+                           'error': ugettext_noop("DOC_LINGUAS list doesn't include this language.") }
             else:
                 print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                 continue
             errors.extend(errs)
+            if linguas['langs'] is None:
+                errors.append(("warn", linguas['error']))
 
             # Prepare statistics object
             try:
@@ -389,11 +393,9 @@ class Branch(models.Model):
                 utils.run_shell_command(realcmd)
 
                 langstats = utils.po_file_stats(outpo, True)
-                if dom.dtype == "ui":
-                    langstats['errors'].extend(utils.check_lang_support(self.co_path(), domain_path, lang))
-                elif dom.dtype == "doc":
-                    if lang not in doclinguas:
-                        langstats['errors'].append(("warn-ext", ugettext_noop("DOC_LINGUAS list doesn't include this language.")))
+                if linguas['langs'] is not None and lang not in linguas['langs']:
+                    langstats['errors'].append("warn-ext", linguas['error'])
+                if dom.dtype == "doc":
                     fig_stats = utils.get_fig_stats(outpo)
                     for fig in fig_stats:
                         trans_path = os.path.join(domain_path, lang, fig['path'])

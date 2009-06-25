@@ -265,35 +265,27 @@ def po_file_stats(pofile, msgfmt_checks = True):
     return res
 
 
-def check_lang_support(module_path, po_path, lang):
-    """Checks if language is listed in one of po/LINGUAS, configure.ac or configure.in"""
+def get_ui_linguas(module_path, po_path):
+    """Get language list in one of po/LINGUAS, configure.ac or configure.in"""
 
     LINGUAShere = os.path.join(po_path, "LINGUAS")
     LINGUASpo = os.path.join(module_path, "po", "LINGUAS") # if we're in eg. po-locations/
     configureac = os.path.join(module_path, "configure.ac")
     configurein = os.path.join(module_path, "configure.in")
 
-    errors = []
+    langs = []
 
     # is "lang" listed in either of po/LINGUAS, ./configure.ac(ALL_LINGUAS) or ./configure.in(ALL_LINGUAS)
-    in_config = 0
     for LINGUAS in [LINGUAShere, LINGUASpo]:
         if os.access(LINGUAS, os.R_OK):
             lfile = open(LINGUAS, "r")
-            for line in lfile:
-                line = line.strip()
-                if len(line) and line[0]=="#": continue
-                if lang in line.split(" "):
-                    if settings.DEBUG: print >>sys.stderr, "Language '%s' found in LINGUAS." % (lang)
-                    in_config = 1
-                    break
+            [langs.extend(line.split()) for line in lfile if line[:1]!='#']
             lfile.close()
-            if not in_config:
-                errors.append(("warn-ext", ugettext_noop("Entry for this language is not present in LINGUAS file.")))
-            return errors
+            return {'langs':langs,
+                    'error': ugettext_noop("Entry for this language is not present in LINGUAS file.") }
 
     for configure in [configureac, configurein]:
-        if not in_config and os.access(configure, os.R_OK):
+        if os.access(configure, os.R_OK):
             cfile = open(configure, "r")
             lines = []
             prev = ""
@@ -307,20 +299,14 @@ def check_lang_support(module_path, po_path, lang):
 
             for line in lines:
                 line = line.strip()
-                test = re.search('ALL_LINGUAS\s*[=,]\s*"([^"]*)"', line)
-                if test:
-                    value = test.groups(1)[0]
-                    if lang in value.split(" "):
-                        if settings.DEBUG: print >>sys.stderr, "Language '%s' found in %s." % (lang, configure)
-                        in_config = 1
-                    break
-            cfile.close()
-            if not in_config:
-                errors.append(("warn-ext", ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.")))
-            return errors
-
-    errors.append(("warn", ugettext_noop("Don't know where to look if this language is actually used, ask the module maintainer.")))
-    return errors
+                match = re.search('ALL_LINGUAS\s*[=,]\s*"([^"]*)"', line)
+                if match:
+                    langs = match.groups(1)[0].split()
+                    cfile.close()
+                    return {'langs':langs,
+                            'error': ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.") }
+    return {'langs':None,
+            'error': ugettext_noop("Don't know where to look if this language is actually used, ask the module maintainer.") }
 
 def get_fig_stats(pofile):
     """ Extract image strings from pofile and return a list of figures dict:
