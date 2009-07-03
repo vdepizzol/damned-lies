@@ -322,8 +322,7 @@ class Branch(models.Model):
                 if not potfile:
                     print >> sys.stderr, "\n".join([e[1] for e in errs])
                     continue
-                linguas = {'langs': utils.read_makefile_variable(domain_path, "DOC_LINGUAS").split(),
-                           'error': ugettext_noop("DOC_LINGUAS list doesn't include this language.") }
+                linguas = utils.get_doc_linguas(self.co_path(), domain_path)
             else:
                 print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                 continue

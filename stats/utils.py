@@ -107,7 +107,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
 
     errors = []
-    modulename = read_makefile_variable(vcs_path, "DOC_MODULE")
+    modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
     if not modulename:
         return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),)
     if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
@@ -119,7 +119,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
             return "", errors
 
     files = os.path.join("C", modulename + ".xml")
-    includes = read_makefile_variable(vcs_path, "DOC_INCLUDES")
+    includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
     for f in includes.split(" "):
         if f.strip() != "":
             files += " %s" % (os.path.join("C", f.strip()))
@@ -142,13 +142,18 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     else:
         return potfile, errors
 
-def read_makefile_variable(vcs_path, variable):
-    makefileam = os.path.join(vcs_path, "Makefile.am")
-    try:
-        fin = open(makefileam, "r")
-    except IOError:
-        # probably file not found or unreadable
-        return ""
+def read_makefile_variable(vcs_paths, variable):
+    """ vcs_paths is a list of potential path where Makefile.am could be found """
+    makefiles = [os.path.join(path, "Makefile.am") for path in vcs_paths]
+    for makefile in makefiles:
+        try:
+            fin = open(makefile, "r")
+            break
+        except IOError:
+            # probably file not found or unreadable
+            pass
+    if not fin:
+        return None # no file found
 
     fullline = ""
     for line in fin:
@@ -159,20 +164,8 @@ def read_makefile_variable(vcs_path, variable):
             match = re.match(variable + r"\s*=\s*([^=]*)", fullline.strip())
             if match:
                 return match.group(1)
-            else:
-                # FIXME: hackish, works for www.gnome.org/tour
-                match = re.match("include\s+(.+)", fullline.strip())
-                if match:
-                    incfile = os.path.join(os.path.dirname(makefileam), os.path.basename(match.group(1)))
-                    if incfile.find("gnome-doc-utils.make")==-1:
-                        if settings.DEBUG:
-                            print >>sys.stderr, "Reading file %s..." % (incfile)
-                        var = read_makefile_variable(incfile, variable)
-                        if var != "":
-                            return var
-
             fullline = ""
-    return ""
+    return None
 
 def pot_diff_status(pota, potb):
     (status, output, errs) = run_shell_command("diff %s %s|wc -l" % (pota, potb))
@@ -306,7 +299,16 @@ def get_ui_linguas(module_path, po_path):
                     return {'langs':langs,
                             'error': ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.") }
     return {'langs':None,
-            'error': ugettext_noop("Don't know where to look if this language is actually used, ask the module maintainer.") }
+            'error': ugettext_noop("Don't know where to look for the LINGUAS variable, ask the module maintainer.") }
+
+def get_doc_linguas(module_path, po_path):
+    """Get language list in one Makefile.am (either path) """
+    linguas = read_makefile_variable([po_path, module_path], "DOC_LINGUAS")
+    if linguas is None:
+        return {'langs':None,
+                'error': ugettext_noop("Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer.") }
+    return {'langs': linguas.split(),
+            'error': ugettext_noop("DOC_LINGUAS list doesn't include this language.") }
 
 def get_fig_stats(pofile):
     """ Extract image strings from pofile and return a list of figures dict:
