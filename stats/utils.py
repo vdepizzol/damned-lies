@@ -151,7 +151,7 @@ def read_makefile_variable(vcs_paths, variable):
             break
         except IOError:
             # probably file not found or unreadable
-            pass
+            fin = None
     if not fin:
         return None # no file found
 
