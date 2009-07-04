@@ -120,9 +120,10 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
 
     files = os.path.join("C", modulename + ".xml")
     includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
-    for f in includes.split(" "):
-        if f.strip() != "":
-            files += " %s" % (os.path.join("C", f.strip()))
+    if includes:
+        for f in includes.split(" "):
+            if f.strip() != "":
+                files += " %s" % (os.path.join("C", f.strip()))
 
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
     command = "cd \"%s\" && xml2po -o %s -e %s" % (vcs_path, potfile, files)
