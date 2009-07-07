@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-24 13:52+0000\n"
-"PO-Revision-Date: 2009-06-26 00:37+0900\n"
+"POT-Creation-Date: 2009-07-05 09:35+0000\n"
+"PO-Revision-Date: 2009-07-08 01:03+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -932,6 +932,10 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:225
+msgid "The Gimp Manual"
+msgstr "GIMP マニュアル"
+
+#: database-content.py:226
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -941,18 +945,18 @@ msgstr ""
 "<a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash の "
 "Wiki</a>を参照してください。"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince は複数の文書形式を表示できるドキュメント・ビューアです。"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
 msgstr ""
 "コミットした翻訳は時々 l10n.gnome.org に手動で反映されます。待っててね :-)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -960,7 +964,7 @@ msgstr ""
 "これはGNOME固有のモジュールではありません。<a href=\"http://"
 "translationproject.org\"Translation Project</a>から翻訳を送付してください。"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -972,7 +976,7 @@ msgstr ""
 "\"http://translationproject.org/domain/xdg-user-dirs.html\">Translation "
 "Project の xdg-user-dirs の翻訳ページ</a> もご覧ください。"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -980,11 +984,11 @@ msgstr ""
 "GNOME 2.23 から、GAIL は GTK+ に統合されました。もう trunk にはコミットしない"
 "でください。"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "A VNC client for GNOME"
 msgstr "GNOME用 VNCクライアント"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -996,99 +1000,99 @@ msgstr ""
 "もコミットしてください。そうしないと、 GTK+ は /po-properties でコンパイルに"
 "失敗してしまいます。"
 
-#: database-content.py:233
-msgid "Graphical frontend for the git directory tracker"
-msgstr ""
-
 #: database-content.py:234
+msgid "Graphical frontend for the git directory tracker"
+msgstr "Git ディレクトリ・トラッカーのグラフィカル・フロントエンド"
+
+#: database-content.py:235
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
 msgstr ""
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
 msgstr ""
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "Passepartout is a DTP application for X."
 msgstr ""
 
-#: database-content.py:237
+#: database-content.py:238
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
 msgstr ""
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "A note taking application"
 msgstr ""
 
-#: database-content.py:239
-msgid "Translations should be submitted as bug reports (see link below)."
-msgstr ""
-
 #: database-content.py:240
+msgid "Translations should be submitted as bug reports (see link below)."
+msgstr "翻訳はバグレポートとして送ってください (下記のリンク参照)"
+
+#: database-content.py:241
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
 msgstr ""
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME Teletext viewer"
 msgstr ""
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "Extra GNOME Applications"
 msgstr "追加の GNOME アプリケーション"
 
-#: database-content.py:243
-msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (旧安定板)"
-
 #: database-content.py:244
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (旧安定版)"
+
+#: database-content.py:245
 msgid "GNOME Infrastructure"
 msgstr "GNOME インフラストラクチャ"
 
-#: database-content.py:245
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (旧安定板)"
-
 #: database-content.py:246
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (旧安定板)"
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (旧安定版)"
 
 #: database-content.py:247
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (旧安定版)"
+
+#: database-content.py:248
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非 GNOME)"
 
-#: database-content.py:248
-msgid "GNOME 2.24 (old stable)"
-msgstr "GNOME 2.24 (旧安定板)"
-
 #: database-content.py:249
-msgid "GNOME 2.22 (old stable)"
-msgstr "GNOME 2.22 (旧安定板)"
+msgid "GNOME 2.24 (old stable)"
+msgstr "GNOME 2.24 (旧安定版)"
 
 #: database-content.py:250
+msgid "GNOME 2.22 (old stable)"
+msgstr "GNOME 2.22 (旧安定版)"
+
+#: database-content.py:251
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME オフィス・生産性アプリケーション"
 
-#: database-content.py:251
-msgid "GNOME 2.20 (old stable)"
-msgstr "GNOME 2.20 (旧安定板)"
-
 #: database-content.py:252
-msgid "GNOME 2.26 (stable)"
-msgstr "GNOME 2.26 (安定板)"
+msgid "GNOME 2.20 (old stable)"
+msgstr "GNOME 2.20 (旧安定版)"
 
 #: database-content.py:253
+msgid "GNOME 2.26 (stable)"
+msgstr "GNOME 2.26 (安定版)"
+
+#: database-content.py:254
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (開発版)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "Obsolete GNOME Applications"
 msgstr "廃止された GNOME アプリケーション"
 
@@ -1131,7 +1135,7 @@ msgstr "ログインに成功しました。"
 msgid ""
 "You have not joined any translation team yet. You can do it from <a href=\"%"
 "(url)s\">your profile</a>."
-msgstr ""
+msgstr "あなたはまだどの翻訳チームにも参加していません。<a href=\"%s(url)s\">あなたのプロフィール</a>から参加できます。"
 
 #: common/views.py:75 djamnedlies-git/common/views.py:69
 #: djamnedlies-svn/common/views.py:69
@@ -1162,7 +1166,7 @@ msgstr "ユーザー名を選んでください:"
 #: djamnedlies-git/people/forms.py:15 djamnedlies-svn/people/forms.py:15
 #: people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
-msgstr ""
+msgstr "英字、数字、アンダースコア、およびハイフンのみが使えます"
 
 #: djamnedlies-git/people/forms.py:16 djamnedlies-svn/people/forms.py:16
 #: people/forms.py:16
@@ -1289,22 +1293,22 @@ msgid "Your password has been changed."
 msgstr "パスワードを変更しました。"
 
 #: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
-#: stats/models.py:342
+#: stats/models.py:349
 msgid "Can't generate POT file, using old one."
 msgstr "POT ファイルを生成できません。古いものを使います。"
 
 #: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
-#: stats/models.py:364
+#: stats/models.py:371
 msgid "Can't copy new POT file to public location."
 msgstr "新しい POT ファイルをパブリックな場所にコピーできません。"
 
 #: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
-#: stats/models.py:396
+#: stats/utils.py:312
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS リストにこの言語が含まれていません。"
 
 #: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
-#: stats/models.py:675
+#: stats/models.py:688
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1316,46 +1320,46 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
-#: stats/models.py:922
+#: stats/models.py:935
 msgid "Administration Tools"
 msgstr "システム管理ツール"
 
 #: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
-#: stats/models.py:923
+#: stats/models.py:936
 msgid "Development Tools"
 msgstr "開発ツール"
 
 #: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
-#: stats/models.py:924
+#: stats/models.py:937
 msgid "GNOME Desktop"
 msgstr "GNOME デスクトップ"
 
 #: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
-#: stats/models.py:925
+#: stats/models.py:938
 msgid "GNOME Developer Platform"
 msgstr "GNOME 開発プラットフォーム"
 
 #: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
-#: stats/models.py:926
+#: stats/models.py:939
 msgid "New Module Proposals"
 msgstr "新しいモジュールの候補"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
 #: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:1002 stats/models.py:1279
+#: stats/models.py:1015 stats/models.py:1292
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1033
+#: stats/models.py:1046
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 個のメッセージ"
 
 #: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1034
+#: stats/models.py:1047
 #, python-format
 msgid "updated on %(date)s"
 msgstr "%(date)s に更新"
@@ -1372,26 +1376,26 @@ msgstr "%(date)s に更新"
 #: djamnedlies-svn/stats/models.py:1020
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1036 templates/vertimus/vertimus_detail.html:43
+#: stats/models.py:1049 templates/vertimus/vertimus_detail.html:43
 #: templates/vertimus/vertimus_detail.html:123
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
 #: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1039
+#: stats/models.py:1052
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 個の画像"
 
 #: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1040
+#: stats/models.py:1053
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT ファイル (%(messages)s, %(figures)s) - %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1043
+#: stats/models.py:1056
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT ファイル (%(messages)s) - %(updated)s"
@@ -1438,7 +1442,7 @@ msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE は実ファイルを参照していません。おそらくマクロです。"
 
 #: djamnedlies-git/stats/utils.py:133 djamnedlies-svn/stats/utils.py:133
-#: stats/utils.py:133
+#: stats/utils.py:134
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1450,48 +1454,47 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/utils.py:206 djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:206
+#: stats/utils.py:200
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO ファイル '%s' は存在ないか、読みこめません。"
 
 #: djamnedlies-git/stats/utils.py:226 djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:226
+#: stats/utils.py:220
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "PO ファイル '%s' は msgfmt チェックをパスしませんでした: 更新しません。"
 
 #: djamnedlies-git/stats/utils.py:228 djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:228
+#: stats/utils.py:222
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "POT ファイル '%s' の統計情報を取得できません。"
 
 #: djamnedlies-git/stats/utils.py:231 djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:231
+#: stats/utils.py:225
 msgid "This PO file has an executable bit set."
 msgstr "この PO ファイルには実行可能属性がセットされています。"
 
 #: djamnedlies-git/stats/utils.py:259 djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:259
+#: stats/utils.py:253
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO ファイル '%s' は UTF-8 エンコーディングになっていません。"
 
 #: djamnedlies-git/stats/utils.py:292 djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:292
+#: stats/utils.py:279
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "LINGUAS ファイル内にこの言語のエントリがありません。"
 
 #: djamnedlies-git/stats/utils.py:319 djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:319
+#: stats/utils.py:301
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "configure ファイル内の ALL_LINGUAS にこの言語のエントリがありません。"
 
 #: djamnedlies-git/stats/utils.py:322 djamnedlies-svn/stats/utils.py:322
-#: stats/utils.py:322
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1503,7 +1506,7 @@ msgstr ""
 #: teams/models.py:185
 #, python-format
 msgid "No team for locale %s"
-msgstr ""
+msgstr "ロケール %s にはチームが存在しません"
 
 #: djamnedlies-git/teams/models.py:129 djamnedlies-svn/teams/models.py:129
 #: teams/models.py:202
@@ -1536,7 +1539,7 @@ msgstr "コミッター"
 #: djamnedlies-git/teams/views.py:47 djamnedlies-svn/teams/views.py:47
 #: teams/views.py:47
 msgid "No committers"
-msgstr ""
+msgstr "コミッターはいません"
 
 #: djamnedlies-git/teams/views.py:49 djamnedlies-svn/teams/views.py:49
 #: teams/views.py:49
@@ -1686,6 +1689,8 @@ msgid ""
 "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr ""
+"<a href='http://git.gnome.org/'>git.gnome.org</a>の\n"
+"<a href='http://git.gnome.org/cgit/damned-lies'>damned-lies</a>モジュールでメンテナンスされています。"
 
 #: djamnedlies-git/templates/base.html:98
 #: djamnedlies-svn/templates/base.html:98 templates/base.html:98
@@ -1836,7 +1841,7 @@ msgstr "翻訳者:"
 #: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
-msgstr ""
+msgstr "あなたは既に%(username)sとしてログインしています。"
 
 #: djamnedlies-git/templates/login.html:13
 #: djamnedlies-svn/templates/login.html:13 templates/login.html:13
@@ -1844,7 +1849,7 @@ msgstr ""
 msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
 "s'>register</a> for a new account."
-msgstr ""
+msgstr "このサイトのアカウントをまだ持っていないのであれば、新しいアカウントを<a href='%(link)s'>登録</a>できます。"
 
 #: djamnedlies-git/templates/login.html:15
 #: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:17
@@ -1931,13 +1936,13 @@ msgstr "リポジトリの閲覧"
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
-msgstr ""
+msgstr "モジュールの文書の画像の状況: %(name)s"
 
 #: djamnedlies-git/templates/module_images.html:12
 #: djamnedlies-svn/templates/module_images.html:12
 #: templates/module_images.html:12
 msgid "Figures translation status"
-msgstr ""
+msgstr "画像の翻訳状況"
 
 #: djamnedlies-git/templates/module_images.html:17
 #: djamnedlies-svn/templates/module_images.html:17
@@ -1951,7 +1956,7 @@ msgstr "オリジナル"
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
-msgstr ""
+msgstr "翻訳されていますが、元のものをそのまま使っています (画像に翻訳すべき文字列が含まれていないのでしょう)"
 
 #: djamnedlies-git/templates/module_images.html:36
 #: djamnedlies-svn/templates/module_images.html:36
@@ -2063,7 +2068,7 @@ msgstr "さらなる詳細を見るにはリリースまたはリリースセッ
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:38
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:57
 msgid "Download POT file"
-msgstr ""
+msgstr "POT ファイルをダウンロード"
 
 #: djamnedlies-git/templates/stats_show.html:17
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
@@ -2269,7 +2274,7 @@ msgstr "状態"
 #: djamnedlies-svn/templates/people/person_detail_change_form.html:13
 #: templates/people/person_detail_change_form.html:13
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: djamnedlies-git/templates/people/person_list.html:4
 #: djamnedlies-git/templates/people/person_list.html:8
@@ -2307,7 +2312,7 @@ msgstr "SVN アカウント:"
 #: djamnedlies-svn/templates/people/person_password_change_form.html:6
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
-msgstr ""
+msgstr "パスワード変更"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:8
 #: djamnedlies-svn/templates/people/person_password_change_form.html:8
@@ -2321,7 +2326,7 @@ msgstr ""
 #: djamnedlies-svn/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
-msgstr ""
+msgstr "古いパスワード:"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:21
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:16
@@ -2330,7 +2335,7 @@ msgstr ""
 #: templates/people/person_password_change_form.html:21
 #: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
-msgstr ""
+msgstr "新しいパスワード:"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:30
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:19
@@ -2339,25 +2344,25 @@ msgstr ""
 #: templates/people/person_password_change_form.html:30
 #: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
-msgstr ""
+msgstr "パスワードを変更"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:8
 #: djamnedlies-svn/templates/people/person_team_join_form.html:8
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
-msgstr ""
+msgstr "新しくチームに参加"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:11
 #: djamnedlies-svn/templates/people/person_team_join_form.html:11
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
-msgstr ""
+msgstr "以下のチームに「翻訳者」として参加したい"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:13
 #: djamnedlies-svn/templates/people/person_team_join_form.html:13
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
-msgstr ""
+msgstr "参加"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:5
 #: djamnedlies-svn/templates/people/person_team_membership.html:5
@@ -2370,7 +2375,7 @@ msgstr "参加中のチーム"
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr ""
+msgstr "%(team_name)s チームのメンバー (%(role_name)s)"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:12
 #: djamnedlies-svn/templates/people/person_team_membership.html:12
@@ -2409,7 +2414,7 @@ msgstr "パスワードを設定しました。さらに進んでログインし
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
 msgid "Password reset"
-msgstr ""
+msgstr "パスワードのリセット"
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:10
 #: djamnedlies-svn/templates/registration/password_reset_confirm.html:10
@@ -2468,7 +2473,7 @@ msgstr ""
 #: djamnedlies-svn/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
-msgstr ""
+msgstr "メールアドレス:"
 
 #: djamnedlies-git/templates/registration/password_reset_form.html:15
 #: djamnedlies-svn/templates/registration/password_reset_form.html:15
@@ -2480,7 +2485,7 @@ msgstr ""
 #: djamnedlies-svn/templates/registration/register.html:9
 #: templates/registration/register.html:9
 msgid "Account Registration"
-msgstr ""
+msgstr "アカウント登録"
 
 #: djamnedlies-git/templates/registration/register.html:13
 #: djamnedlies-svn/templates/registration/register.html:13
@@ -3003,9 +3008,20 @@ msgstr ""
 msgid "Original strings"
 msgstr ""
 
-#: stats/models.py:344
+#: stats/models.py:351
 msgid "Can't generate POT file, statistics aborted."
 msgstr "POT ファイルを生成できません。統計処理を中断しました。"
+
+#: stats/utils.py:303
+msgid ""
+"Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr "LINGUAS 変数をどこから探し出せば良いのかわかりません。モジュールのメンテナに問い合わせてください。"
+
+#: stats/utils.py:310
+msgid ""
+"Don't know where to look for the DOC_LINGUAS variable, ask the module "
+"maintainer."
+msgstr "DOC_LINGUAS変数をどこから探し出せば良いのかわかりません。モジュールのメンテナに問い合わせてください。"
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
