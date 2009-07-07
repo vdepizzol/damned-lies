@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-10 22:54+0000\n"
-"PO-Revision-Date: 2009-06-13 09:32+0100\n"
+"POT-Creation-Date: 2009-07-04 08:57+0000\n"
+"PO-Revision-Date: 2009-07-07 18:35+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -861,7 +861,6 @@ msgid "Documentation"
 msgstr "Dokumentation"
 
 #: database-content.py:208
-#| msgid "UI translations"
 msgid "UI translation"
 msgstr "Gränssnittsöversättning"
 
@@ -936,127 +935,127 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:225
+#| msgid "GST Time Setup Manual"
+msgid "The Gimp Manual"
+msgstr "Handbok för Gimp"
+
+#: database-content.py:226
 msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
 msgstr "GNUCash är inte en del av GNOME:s SVN-förråd. Se på <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information om var översättningen ska skickas."
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince är en dokumentvisare för flera typer av dokumentformat."
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "Verkställda översättningar uppdateras manuellt på l10n.gnome.org med jämna mellanrum. Stressa inte :-)"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:229
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://translationproject.org\">Translation "
-#| "Project</a>."
+#: database-content.py:230
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>. Se även <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">översättningssidan för xdg-user-dirs hos Translation Project</a>."
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar i trunk längre."
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "A VNC client for GNOME"
 msgstr "En VNC-klient för GNOME"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in SVN even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Observera att gtk+ innehåller både domänen po och po-properties.  Om du lägger till ett nytt språk i någon av domänerna så måste du skicka in båda filerna i SVN även om en av dem bara innehåller 0 översättningar, annars kommer GTK+-byggnationen inte att fungera i /po-properties."
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafisk framände för git-katalogbevakaren"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "moserial är en ren, vänlig gtk-baserad serieterminal för GNOME-skrivbordet. Det har skrivits i Vala för extra brahet."
 
-#: database-content.py:235
+#: database-content.py:236
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Detta är en klon av den officiella versionen av system-tools-backends från förrådet hos freedesktop.org."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout är ett layoutprogram för X."
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "gnome-disk-utility tillhandahåller bibliotek och program för att hantera lagringsenheter."
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "A note taking application"
 msgstr "Ett anteckningsblock"
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "GNOME Video Arcade är en grafisk klient för MAME (Multiple Arcade Machine Emulator) för GNOME."
 
-#: database-content.py:241
-#| msgid "GNOME Release Notes"
+#: database-content.py:242
 msgid "GNOME Teletext viewer"
 msgstr "GNOME-texttv-visare"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (gammal stabil)"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (gammal stabil)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:250
+#: database-content.py:251
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:251
+#: database-content.py:252
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (stabil)"
 
-#: database-content.py:253
+#: database-content.py:254
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (utveckling)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
@@ -1066,9 +1065,6 @@ msgid "This module is not part of the GNOME git repository. Please check the mod
 msgstr "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens webbsida om var översättningarna ska skickas."
 
 #: settings_sample.py:80
-#| msgid ""
-#| "This module is not part of the GNOME git repository. Please check the "
-#| "module's web page to see where to send translations."
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s Git-förråd. Kontrollera modulens webbsida för information om var översättningarna ska skickas."
 
@@ -1282,25 +1278,25 @@ msgstr "Ditt lösenord har ändrats."
 
 #: djamnedlies-git/stats/models.py:320
 #: djamnedlies-svn/stats/models.py:320
-#: stats/models.py:342
+#: stats/models.py:349
 msgid "Can't generate POT file, using old one."
 msgstr "Kan inte generera POT-fil, använder en gammal."
 
 #: djamnedlies-git/stats/models.py:341
 #: djamnedlies-svn/stats/models.py:341
-#: stats/models.py:364
+#: stats/models.py:371
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
 #: djamnedlies-git/stats/models.py:380
 #: djamnedlies-svn/stats/models.py:380
-#: stats/models.py:396
+#: stats/utils.py:311
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
 #: djamnedlies-git/stats/models.py:659
 #: djamnedlies-svn/stats/models.py:659
-#: stats/models.py:675
+#: stats/models.py:688
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1313,31 +1309,31 @@ msgstr ""
 
 #: djamnedlies-git/stats/models.py:906
 #: djamnedlies-svn/stats/models.py:906
-#: stats/models.py:922
+#: stats/models.py:935
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
 #: djamnedlies-git/stats/models.py:907
 #: djamnedlies-svn/stats/models.py:907
-#: stats/models.py:923
+#: stats/models.py:936
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
 #: djamnedlies-git/stats/models.py:908
 #: djamnedlies-svn/stats/models.py:908
-#: stats/models.py:924
+#: stats/models.py:937
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
 #: djamnedlies-git/stats/models.py:909
 #: djamnedlies-svn/stats/models.py:909
-#: stats/models.py:925
+#: stats/models.py:938
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
 #: djamnedlies-git/stats/models.py:910
 #: djamnedlies-svn/stats/models.py:910
-#: stats/models.py:926
+#: stats/models.py:939
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
@@ -1345,15 +1341,15 @@ msgstr "Nya modulförslag"
 #: djamnedlies-git/stats/models.py:1252
 #: djamnedlies-svn/stats/models.py:986
 #: djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:1002
-#: stats/models.py:1279
+#: stats/models.py:1015
+#: stats/models.py:1292
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017
 #: djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1033
+#: stats/models.py:1046
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1362,7 +1358,7 @@ msgstr[1] "%(count)s meddelanden"
 
 #: djamnedlies-git/stats/models.py:1018
 #: djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1034
+#: stats/models.py:1047
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
@@ -1379,15 +1375,15 @@ msgstr "uppdaterad den %(date)s"
 #: djamnedlies-svn/stats/models.py:1020
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1036
+#: stats/models.py:1049
 #: templates/vertimus/vertimus_detail.html:43
-#: templates/vertimus/vertimus_detail.html:121
+#: templates/vertimus/vertimus_detail.html:123
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
 #: djamnedlies-git/stats/models.py:1023
 #: djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1039
+#: stats/models.py:1052
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1396,14 +1392,14 @@ msgstr[1] "%(count)s bilder"
 
 #: djamnedlies-git/stats/models.py:1024
 #: djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1040
+#: stats/models.py:1053
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027
 #: djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1043
+#: stats/models.py:1056
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -1463,53 +1459,52 @@ msgstr ""
 
 #: djamnedlies-git/stats/utils.py:206
 #: djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:206
+#: stats/utils.py:199
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-filen \"%s\" finns inte eller kan inte läsas."
 
 #: djamnedlies-git/stats/utils.py:226
 #: djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:226
+#: stats/utils.py:219
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
 #: djamnedlies-git/stats/utils.py:228
 #: djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:228
+#: stats/utils.py:221
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
 #: djamnedlies-git/stats/utils.py:231
 #: djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:231
+#: stats/utils.py:224
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
 #: djamnedlies-git/stats/utils.py:259
 #: djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:259
+#: stats/utils.py:252
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
 #: djamnedlies-git/stats/utils.py:292
 #: djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:292
+#: stats/utils.py:278
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
 #: djamnedlies-git/stats/utils.py:319
 #: djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:319
+#: stats/utils.py:300
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
 #: djamnedlies-git/stats/utils.py:322
 #: djamnedlies-svn/stats/utils.py:322
-#: stats/utils.py:322
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
@@ -2102,7 +2097,7 @@ msgstr "Hämta POT-fil"
 #: djamnedlies-svn/templates/stats_show.html:17
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:53
 #: templates/stats_show.html:17
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:77
 msgid "Notices"
 msgstr "Anteckningar"
 
@@ -2120,7 +2115,7 @@ msgstr "Översatt"
 #: djamnedlies-svn/templates/stats_show.html:50
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:48
 #: templates/stats_show.html:50
-#: templates/vertimus/vertimus_detail.html:70
+#: templates/vertimus/vertimus_detail.html:71
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
 
@@ -2135,7 +2130,7 @@ msgstr "Admin för Förbannade lögner"
 #: djamnedlies-svn/templates/feeds/actions_description.html:6
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:148
+#: templates/vertimus/vertimus_detail.html:150
 msgid "No comment"
 msgstr "Ingen kommentar"
 
@@ -2692,7 +2687,7 @@ msgstr "Översatt:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:91
 msgid "On-going activities in same module:"
 msgstr "Pågående aktiviteter i samma modul:"
 
@@ -2703,25 +2698,25 @@ msgstr "Åtgärdshistorik"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:137
+#: templates/vertimus/vertimus_detail.html:139
 msgid "diff with:"
 msgstr "diff med:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:160
+#: templates/vertimus/vertimus_detail.html:162
 msgid "New Action"
 msgstr "Ny åtgärd"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:170
+#: templates/vertimus/vertimus_detail.html:172
 msgid "Submit"
 msgstr "Skicka"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:175
+#: templates/vertimus/vertimus_detail.html:177
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -2890,9 +2885,9 @@ msgstr "Arkivera i förråd"
 #: djamnedlies-svn/vertimus/views.py:136
 #: djamnedlies-svn/vertimus/views.py:146
 #: vertimus/models.py:334
-#: vertimus/views.py:158
-#: vertimus/views.py:164
-#: vertimus/views.py:174
+#: vertimus/views.py:159
+#: vertimus/views.py:165
+#: vertimus/views.py:175
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Uppskickad fil av %(name)s den %(date)s"
@@ -3037,22 +3032,22 @@ msgstr "Ångra senaste tillståndsändring"
 #: djamnedlies-git/vertimus/views.py:161
 #: djamnedlies-svn/vertimus/views.py:129
 #: djamnedlies-svn/vertimus/views.py:161
-#: vertimus/views.py:157
-#: vertimus/views.py:189
+#: vertimus/views.py:158
+#: vertimus/views.py:190
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Fel: Filen %s innehåller ogiltiga tecken."
 
 #: djamnedlies-git/vertimus/views.py:152
 #: djamnedlies-svn/vertimus/views.py:152
-#: vertimus/views.py:180
+#: vertimus/views.py:181
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Senaste insända fil för %(lang)s"
 
 #: djamnedlies-git/vertimus/views.py:155
 #: djamnedlies-svn/vertimus/views.py:155
-#: vertimus/views.py:183
+#: vertimus/views.py:184
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
@@ -3075,9 +3070,23 @@ msgstr "Okänt"
 msgid "Original strings"
 msgstr "Ursprungliga strängar"
 
-#: stats/models.py:344
+#: stats/models.py:351
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Kan inte generera POT-fil, statistiken avbruten."
+
+#: stats/utils.py:302
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr "Vet inte var jag ska leta efter variabeln LINGUAS, fråga modulansvarig. "
+
+#: stats/utils.py:309
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
+msgstr "Vet inte var jag ska leta efter variabeln DOC_LINGUAS, fråga modulansvarig. "
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
@@ -3088,9 +3097,6 @@ msgid "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GN
 msgstr "Exempel på utgåvesamlingar är &quot;GNOME-infrastruktur&quot; eller &quot;GNOME 2.26&quot;."
 
 #: templates/release_detail.html:13
-#| msgid ""
-#| "The modules of this release are not part of the GNOME git repository. "
-#| "Please check each module's web page to see where to send translations."
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s Git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
@@ -3107,32 +3113,28 @@ msgstr "Senaste åtgärder gjorda av gruppen %(lang)s i GNOME-översättningspro
 msgid "Plural forms:"
 msgstr "Pluralformer:"
 
-#: templates/vertimus/vertimus_detail.html:99
-#| msgid "Action"
+#: templates/vertimus/vertimus_detail.html:101
 msgid "Actions"
 msgstr "Åtgärder"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:103
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arkiverade åtgärder (%(human_level)s arkiverade serier)"
 
-#: templates/vertimus/vertimus_detail.html:103
+#: templates/vertimus/vertimus_detail.html:105
 msgid "(Return to current)"
 msgstr "(Återgå till aktuell)"
 
-#: templates/vertimus/vertimus_detail.html:108
-#| msgid "Action History"
+#: templates/vertimus/vertimus_detail.html:110
 msgid "(Previous action history)"
 msgstr "(Åtgärdshistorik)"
 
-#: templates/vertimus/vertimus_detail.html:156
-#| msgid "Documentation"
+#: templates/vertimus/vertimus_detail.html:158
 msgid "No current actions."
 msgstr "Inga aktuella åtgärder."
 
 #: vertimus/models.py:731
-#| msgid "Backup the actions"
 msgid "Archive the actions"
 msgstr "Arkivera åtgärderna"
 
