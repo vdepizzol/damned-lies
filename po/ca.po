@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-25 21:39+0000\n"
-"PO-Revision-Date: 2009-06-26 21:45+0200\n"
+"POT-Creation-Date: 2009-07-04 08:57+0000\n"
+"PO-Revision-Date: 2009-07-07 18:05+0200\n"
 "Last-Translator: David Planella <david.planella@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -933,6 +933,11 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:225
+#| msgid "GST Time Setup Manual"
+msgid "The Gimp Manual"
+msgstr "Manual del GIMP"
+
+#: database-content.py:226
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -942,11 +947,11 @@ msgstr ""
 "gnucash.org/wiki/Translation#Submitting\">el wiki del GNUCash</a> per a "
 "comprovar a on podeu enviar les traduccions."
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "L'Evince és un visualitzador de documents per a múltiples formats."
 
-#: database-content.py:227
+#: database-content.py:228
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -954,7 +959,7 @@ msgstr ""
 "Les traduccions pujades s'actualitzen manualment al lloc web l10n.gnome.org "
 "de tant en tant. Tingueu paciència."
 
-#: database-content.py:228
+#: database-content.py:229
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -962,7 +967,7 @@ msgstr ""
 "Aquest mòdul no és específic del GNOME. Envieu la traducció mitjançant el <a "
 "href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:229
+#: database-content.py:230
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -974,7 +979,7 @@ msgstr ""
 "també <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">la "
 "pàgina de traducció de l'xdg-user-dirs al Translation Project</a>."
 
-#: database-content.py:230
+#: database-content.py:231
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -982,11 +987,11 @@ msgstr ""
 "A partir del GNOME 2.23, el GAIL està integrat en el GTK+. No envieu més "
 "traduccions a trunk."
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "A VNC client for GNOME"
 msgstr "Un client de VNC per al GNOME"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -998,11 +1003,11 @@ msgstr ""
 "tots dos a l'SVN encara que no estiguin traduïts. Si no ho feu així, la "
 "construcció del GTK+ fallarà a /po-properties."
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Frontal gràfic per al servei que fa un seguiment de directoris del git"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1010,7 +1015,7 @@ msgstr ""
 "El moserial és un terminal sèrie fàcil d'utilitzar basat en el GTK per a "
 "l'escriptori GNOME. S'ha desenvolupat en el llenguatge Vala."
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1018,13 +1023,13 @@ msgstr ""
 "Aquest és un clon de la versió oficial del system-tools-backends del dipòsit "
 "de freedesktop.org."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "Passepartout is a DTP application for X."
 msgstr ""
 "El Passepartout és una aplicació de publicació assistida per ordinador per a "
 "l'X."
 
-#: database-content.py:237
+#: database-content.py:238
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1032,17 +1037,17 @@ msgstr ""
 "La gnome-disk-utility proporciona biblioteques i aplicacions per a treballar "
 "amb dispositius d'emmagatzematge."
 
-#: database-content.py:238
+#: database-content.py:239
 msgid "A note taking application"
 msgstr "Una aplicació per a prendre notes"
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Les traduccions s'haurien d'enviar com a informes d'error (vegeu l'enllaç de "
 "més avall)."
 
-#: database-content.py:240
+#: database-content.py:241
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1050,59 +1055,59 @@ msgstr ""
 "El GNOME Video Arcade és un frontal MAME («Multiple Arcade Machine Emulator», "
 "emulador de múltiples jocs de saló de jocs electrònics) per al GNOME."
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "GNOME Teletext viewer"
 msgstr "Visualitzador de teletext del GNOME"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "Extra GNOME Applications"
 msgstr "Aplicacions extra del GNOME"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (antiga estable)"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura del GNOME"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (antiga estable)"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (antiga estable)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no del GNOME)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (antiga estable)"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (antiga estable)"
 
-#: database-content.py:250
+#: database-content.py:251
 msgid "GNOME-Office Productivity Applications"
 msgstr "Aplicacions de productivitat del GNOME-Office"
 
-#: database-content.py:251
+#: database-content.py:252
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (antiga estable)"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
-#: database-content.py:253
+#: database-content.py:254
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (desenvolupament)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicacions obsoletes del GNOME"
 
@@ -1308,22 +1313,22 @@ msgid "Your password has been changed."
 msgstr "S'ha canviat la contrasenya."
 
 #: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
-#: stats/models.py:346
+#: stats/models.py:349
 msgid "Can't generate POT file, using old one."
 msgstr "No es pot generar el fitxer POT; s'utilitza l'antic."
 
 #: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
-#: stats/models.py:368
+#: stats/models.py:371
 msgid "Can't copy new POT file to public location."
 msgstr "No es pot copiar el fitxer POT al lloc públic."
 
 #: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
-#: stats/models.py:322
+#: stats/utils.py:311
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "La llista DOC_LINGUAS no inclou aquesta llengua."
 
 #: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
-#: stats/models.py:677
+#: stats/models.py:688
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1335,39 +1340,39 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
-#: stats/models.py:924
+#: stats/models.py:935
 msgid "Administration Tools"
 msgstr "Eines d'administració"
 
 #: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
-#: stats/models.py:925
+#: stats/models.py:936
 msgid "Development Tools"
 msgstr "Eines de desenvolupament"
 
 #: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
-#: stats/models.py:926
+#: stats/models.py:937
 msgid "GNOME Desktop"
 msgstr "Escriptori del GNOME"
 
 #: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
-#: stats/models.py:927
+#: stats/models.py:938
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desenvolupament del GNOME"
 
 #: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
-#: stats/models.py:928
+#: stats/models.py:939
 msgid "New Module Proposals"
 msgstr "Mòduls nous proposats"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
 #: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:1004 stats/models.py:1281
+#: stats/models.py:1015 stats/models.py:1292
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1035
+#: stats/models.py:1046
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1375,7 +1380,7 @@ msgstr[0] "%(count)s missatge"
 msgstr[1] "%(count)s missatges"
 
 #: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1036
+#: stats/models.py:1047
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualitzat el %(date)s"
@@ -1392,13 +1397,13 @@ msgstr "actualitzat el %(date)s"
 #: djamnedlies-svn/stats/models.py:1020
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1038 templates/vertimus/vertimus_detail.html:43
+#: stats/models.py:1049 templates/vertimus/vertimus_detail.html:43
 #: templates/vertimus/vertimus_detail.html:123
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
 #: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1041
+#: stats/models.py:1052
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1406,13 +1411,13 @@ msgstr[0] "%(count)s captura"
 msgstr[1] "%(count)s captures"
 
 #: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1042
+#: stats/models.py:1053
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fitxer POT (%(messages)s, %(figures)s — %(updated)s)"
 
 #: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1045
+#: stats/models.py:1056
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Fitxer POT (%(messages)s — %(updated)s)"
@@ -1469,42 +1474,42 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/utils.py:206 djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:206
+#: stats/utils.py:199
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El fitxer PO «%s» no existeix o no es pot llegir."
 
 #: djamnedlies-git/stats/utils.py:226 djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:226
+#: stats/utils.py:219
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "El fitxer PO «%s» no ha superat la verificació del msgfmt: no s'actualitza."
 
 #: djamnedlies-git/stats/utils.py:228 djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:228
+#: stats/utils.py:221
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No es poden obtenir les estadístiques del fitxer POT «%s»."
 
 #: djamnedlies-git/stats/utils.py:231 djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:231
+#: stats/utils.py:224
 msgid "This PO file has an executable bit set."
 msgstr "El bit d'execució d'aquest fitxer PO està activat."
 
 #: djamnedlies-git/stats/utils.py:259 djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:259
+#: stats/utils.py:252
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El fitxer PO «%s» no està codificat en UTF-8."
 
 #: djamnedlies-git/stats/utils.py:292 djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:285
+#: stats/utils.py:278
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "No hi ha cap entrada per a aquesta llengua al fitxer LINGUAS"
 
 #: djamnedlies-git/stats/utils.py:319 djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:307
+#: stats/utils.py:300
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
@@ -1512,7 +1517,6 @@ msgstr ""
 "ALL_LINGUAS."
 
 #: djamnedlies-git/stats/utils.py:322 djamnedlies-svn/stats/utils.py:322
-#: stats/utils.py:309
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -3085,10 +3089,29 @@ msgstr "Desconegudes"
 msgid "Original strings"
 msgstr "Cadenes originals"
 
-#: stats/models.py:348
+#: stats/models.py:351
 msgid "Can't generate POT file, statistics aborted."
 msgstr ""
 "No es pot generar el fitxer POT; s'interromprà la generació d'estadístiques."
+
+#: stats/utils.py:302
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid ""
+"Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr ""
+"No se sap on cercar la variable LINGUAS, demaneu-ho al mantenidor del mòdul."
+
+#: stats/utils.py:309
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid ""
+"Don't know where to look for the DOC_LINGUAS variable, ask the module "
+"maintainer."
+msgstr ""
+"No se sap on cercar la variable DOC_LINGUAS; demaneu-ho al mantenidor del mòdul."
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
