@@ -107,18 +107,29 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
 
     errors = []
-    modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
-    if not modulename:
-        return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),)
-    if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
-        if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
-            errors.append(("warn", ugettext_noop("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
-            modulename = moduleid
-        else:
-            errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
-            return "", errors
+    if os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK):
+        # a Mallard document
+        files = os.path.join("C", "index.page")
 
-    files = os.path.join("C", modulename + ".xml")
+        pages = read_makefile_variable([vcs_path], "DOC_PAGES")
+        if pages:
+            for f in pages.split(" "):
+                if f.strip() != "":
+                    files += " %s" % (os.path.join("C", f.strip()))
+
+    else:
+        modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
+        if not modulename:
+            return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),)
+        if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
+            if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
+                errors.append(("warn", ugettext_noop("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
+                modulename = moduleid
+            else:
+                errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
+                return "", errors
+        files = os.path.join("C", modulename + ".xml")
+
     includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
     if includes:
         for f in includes.split(" "):
