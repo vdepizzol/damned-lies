@@ -1,6 +1,6 @@
 <teams>
   {% for team in teams %}
-  <team id="{{ team.name}}">
+  <team id="{{ team.name }}">
     {% with team.get_coordinator as coordinator %}
     <description>{{ team.description }}</description>
     {% if coordinator and coordinator.svn_account %}

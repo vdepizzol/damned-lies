@@ -28,14 +28,12 @@ from django.http import HttpResponse, Http404
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 
+from common.utils import MIME_TYPES
 from stats.models import Statistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
 from stats import utils
 from languages.models import Language
 
-MIME_TYPES = {'json': 'application/json',
-              'xml':  'text/xml'
-             }
 def modules(request):
     all_modules = Module.objects.all()
     context = {
@@ -225,7 +223,8 @@ def releases(request, format='html'):
 def release(request, release_name, format='html'):
     release = get_object_or_404(Release, name=release_name)
     if format == 'xml':
-        return render_to_response('release_detail.xml', { 'release' : release }, mimetype=MIME_TYPES[format])
+        return render_to_response('release_detail.xml', { 'release' : release },
+                                  mimetype=MIME_TYPES[format])
     else:
         context = {
             'pageSection': "releases",

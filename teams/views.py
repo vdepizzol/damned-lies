@@ -27,9 +27,6 @@ from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm
 from languages.models import Language
 
-MIME_TYPES = {'json': 'application/json',
-              'xml':  'text/xml'
-             }
 def teams(request):
     teams = Team.objects.all_with_coordinator()
     format = request.GET.get('format', 'html')
@@ -38,14 +35,15 @@ def teams(request):
             'teams/team_list.xml',
             { 'teams' : teams },
             context_instance=RequestContext(request),
-            mimetype=MIME_TYPES[format]
-        )
+            mimetype=utils.MIME_TYPES[format]
+            )
     else:
         context = {
             'pageSection': 'teams',
             'teams': utils.trans_sort_object_list(teams, 'description')
         }
-        return render_to_response('teams/team_list.html', context, context_instance=RequestContext(request))
+        return render_to_response('teams/team_list.html', context,
+                                  context_instance=RequestContext(request))
 
 def team(request, team_slug):
     try:

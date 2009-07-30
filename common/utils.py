@@ -21,6 +21,11 @@
 
 from django.utils.translation import ugettext as _
 
+MIME_TYPES = {
+    'json': 'application/json',
+    'xml':  'text/xml'
+}
+
 def trans_sort_object_list(lst, tr_field):
     """Sort an object list with translated_name"""
     for l in lst:
