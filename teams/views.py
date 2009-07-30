@@ -23,8 +23,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from common import utils
-from django.core import serializers
-from django.http import HttpResponse
 from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm
 from languages.models import Language
@@ -35,9 +33,13 @@ MIME_TYPES = {'json': 'application/json',
 def teams(request):
     teams = Team.objects.all_with_coordinator()
     format = request.GET.get('format', 'html')
-    if format in ('json', 'xml'):
-        data = serializers.serialize(format, teams)
-        return HttpResponse(data, mimetype=MIME_TYPES[format])
+    if format == 'xml':
+        return render_to_response(
+            'teams/team_list.xml',
+            { 'teams' : teams },
+            context_instance=RequestContext(request),
+            mimetype=MIME_TYPES[format]
+        )
     else:
         context = {
             'pageSection': 'teams',

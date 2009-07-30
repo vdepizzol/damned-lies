@@ -1,0 +1,11 @@
+<teams>
+  {% for team in teams %}
+  <team id="{{ teams.name}}">
+    {% with team.get_coordinator as coordinator %}
+    {% if coordinator %}
+    <coordinator>{{ coordinator.svn_account }}</coordinator>
+    {% endif %}
+    {% endwith %}
+  </team>
+  {% endfor %}
+</teams>
