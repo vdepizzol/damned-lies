@@ -24,6 +24,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from common import utils
 from django.core import serializers
+from django.http import HttpResponse
 from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm
 from languages.models import Language
