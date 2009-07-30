@@ -23,18 +23,26 @@ from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from common import utils
+from django.core import serializers
 from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm
 from languages.models import Language
 
+MIME_TYPES = {'json': 'application/json',
+              'xml':  'text/xml'
+             }
 def teams(request):
     teams = Team.objects.all_with_coordinator()
-
-    context = {
-        'pageSection': 'teams',
-        'teams': utils.trans_sort_object_list(teams, 'description')
-    }
-    return render_to_response('teams/team_list.html', context, context_instance=RequestContext(request))
+    format = request.GET.get('format', 'html')
+    if format in ('json', 'xml'):
+        data = serializers.serialize(format, teams)
+        return HttpResponse(data, mimetype=MIME_TYPES[format])
+    else:
+        context = {
+            'pageSection': 'teams',
+            'teams': utils.trans_sort_object_list(teams, 'description')
+        }
+        return render_to_response('teams/team_list.html', context, context_instance=RequestContext(request))
 
 def team(request, team_slug):
     try:
