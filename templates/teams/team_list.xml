@@ -1,9 +1,13 @@
 <teams>
   {% for team in teams %}
-  <team id="{{ teams.name}}">
+  <team id="{{ team.name}}">
     {% with team.get_coordinator as coordinator %}
-    {% if coordinator %}
-    <coordinator>{{ coordinator.svn_account }}</coordinator>
+    <description>{{ team.description }}</description>
+    {% if coordinator and coordinator.svn_account %}
+    <coordinator>
+      <name>{{ coordinator.name }}</name>
+      <vcs>{{ coordinator.svn_account }}</vcs>
+    </coordinator>
     {% endif %}
     {% endwith %}
   </team>
