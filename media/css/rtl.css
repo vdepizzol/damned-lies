@@ -37,7 +37,36 @@ div.mainpage {
   margin-right: auto;
 }
 
+div#authenticated {
+  text-align: left;
+  margin-left: 4px;
+}
+
+div#language_menu {
+  float: left;
+  text-align: left;
+}
+
+.right_actions {
+  float: left;
+  text-align: left;
+}
+
 img.people {
   float: right;
   margin-right: -85px;
 }
+
+.person_detail {
+  clear: right;
+}
+
+.person_detail .image {
+  margin-left: 1em;
+  float: right;
+}
+
+.person_detail .txt {
+  margin-right: 95px;
+}
+
