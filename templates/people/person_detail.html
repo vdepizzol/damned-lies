@@ -17,7 +17,7 @@ $(document).ready(function()
 {% block subcontent %}
 {% if on_own_page %}
   <br clear="right" />
-  <div style="float:right; text-align:right;">
+  <div id="language_menu">
     <form action="/i18n/setlang/" method="post">
       {% trans "Site Language:" %}
       <select name="language">
