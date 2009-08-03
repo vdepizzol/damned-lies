@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-28 12:36+0000\n"
-"PO-Revision-Date: 2009-07-28 18:40+0100\n"
+"POT-Creation-Date: 2009-08-02 15:26+0000\n"
+"PO-Revision-Date: 2009-08-03 07:46+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -485,8 +485,8 @@ msgid "Low Saxon, Germany"
 msgstr "Lågsaxiska (Tyskland)"
 
 #: database-content.py:118
-msgid "Valencian (Southern Catalan)"
-msgstr "Valensiska (Sydkatalanska)"
+msgid "Catalan (Valencian)"
+msgstr "Katalanska (Valensiska)"
 
 #: database-content.py:119
 msgid "Uzbek (Cyrillic)"
@@ -1062,6 +1062,10 @@ msgstr "GNOME 2.28 (utveckling)"
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
+#: database-content.py:257
+msgid "External Dependencies (GNOME)"
+msgstr "Externa beroenden (GNOME)"
+
 #: settings.py:73
 #: djamnedlies-git/settings_sample.py:80
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
@@ -1293,7 +1297,7 @@ msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
 #: djamnedlies-git/stats/models.py:380
 #: djamnedlies-svn/stats/models.py:380
-#: stats/utils.py:312
+#: stats/utils.py:323
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
@@ -1429,27 +1433,27 @@ msgstr "Följande filer refereras till i antingen POTFILES.in eller POTFILES.ski
 
 #: djamnedlies-git/stats/utils.py:112
 #: djamnedlies-svn/stats/utils.py:112
-#: stats/utils.py:112
+#: stats/utils.py:123
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
 #: djamnedlies-git/stats/utils.py:115
 #: djamnedlies-svn/stats/utils.py:115
-#: stats/utils.py:115
+#: stats/utils.py:126
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
 
 #: djamnedlies-git/stats/utils.py:118
 #: djamnedlies-svn/stats/utils.py:118
-#: stats/utils.py:118
+#: stats/utils.py:129
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE pekar inte till en verklig fil, antagligen ett makro."
 
 #: djamnedlies-git/stats/utils.py:133
 #: djamnedlies-svn/stats/utils.py:133
-#: stats/utils.py:134
+#: stats/utils.py:145
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1462,47 +1466,47 @@ msgstr ""
 
 #: djamnedlies-git/stats/utils.py:206
 #: djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:200
+#: stats/utils.py:211
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-filen \"%s\" finns inte eller kan inte läsas."
 
 #: djamnedlies-git/stats/utils.py:226
 #: djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:220
+#: stats/utils.py:231
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-filen \"%s\" klarade inte msgfmt-kontrollen: uppdaterar inte."
 
 #: djamnedlies-git/stats/utils.py:228
 #: djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:222
+#: stats/utils.py:233
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan inte få tag på statistik för POT-filen \"%s\"."
 
 #: djamnedlies-git/stats/utils.py:231
 #: djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:225
+#: stats/utils.py:236
 msgid "This PO file has an executable bit set."
 msgstr "Den här PO-filen har fått den körbara biten inställd."
 
 #: djamnedlies-git/stats/utils.py:259
 #: djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:253
+#: stats/utils.py:264
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" är inte UTF-8-kodad."
 
 #: djamnedlies-git/stats/utils.py:292
 #: djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:279
+#: stats/utils.py:290
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
 #: djamnedlies-git/stats/utils.py:319
 #: djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:301
+#: stats/utils.py:312
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
@@ -1547,37 +1551,37 @@ msgstr "Koordinator"
 
 #: djamnedlies-git/teams/views.py:44
 #: djamnedlies-svn/teams/views.py:44
-#: teams/views.py:44
+#: teams/views.py:53
 msgid "Committers"
 msgstr "Insändare"
 
 #: djamnedlies-git/teams/views.py:47
 #: djamnedlies-svn/teams/views.py:47
-#: teams/views.py:47
+#: teams/views.py:56
 msgid "No committers"
 msgstr "Inga insändare"
 
 #: djamnedlies-git/teams/views.py:49
 #: djamnedlies-svn/teams/views.py:49
-#: teams/views.py:49
+#: teams/views.py:58
 msgid "Reviewers"
 msgstr "Granskare"
 
 #: djamnedlies-git/teams/views.py:52
 #: djamnedlies-svn/teams/views.py:52
-#: teams/views.py:52
+#: teams/views.py:61
 msgid "No reviewers"
 msgstr "Inga granskare"
 
 #: djamnedlies-git/teams/views.py:54
 #: djamnedlies-svn/teams/views.py:54
-#: teams/views.py:54
+#: teams/views.py:63
 msgid "Translators"
 msgstr "Översättare"
 
 #: djamnedlies-git/teams/views.py:57
 #: djamnedlies-svn/teams/views.py:57
-#: teams/views.py:57
+#: teams/views.py:66
 msgid "No translators"
 msgstr "Inga översättare"
 
@@ -3077,11 +3081,11 @@ msgstr "Ursprungliga strängar"
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Kan inte generera POT-fil, statistiken avbruten."
 
-#: stats/utils.py:303
+#: stats/utils.py:314
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Vet inte var jag ska leta efter variabeln LINGUAS, fråga modulansvarig. "
 
-#: stats/utils.py:310
+#: stats/utils.py:321
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Vet inte var jag ska leta efter variabeln DOC_LINGUAS, fråga modulansvarig. "
 
@@ -3135,6 +3139,8 @@ msgstr "Inga aktuella åtgärder."
 msgid "Archive the actions"
 msgstr "Arkivera åtgärderna"
 
+#~ msgid "Valencian (Southern Catalan)"
+#~ msgstr "Valensiska (Sydkatalanska)"
 #~ msgid "GFloppy Manual"
 #~ msgstr "Handbok för GFloppy"
 #~ msgid ""
