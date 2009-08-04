@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-04 08:57+0000\n"
-"PO-Revision-Date: 2009-07-05 11:34+0200\n"
+"POT-Creation-Date: 2009-08-03 10:58+0000\n"
+"PO-Revision-Date: 2009-08-04 20:01+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -487,8 +487,8 @@ msgid "Low Saxon, Germany"
 msgstr "Bajo sajón, Alemania"
 
 #: database-content.py:118
-msgid "Valencian (Southern Catalan)"
-msgstr "Valenciano"
+msgid "Catalan (Valencian)"
+msgstr "Catalán (valenciano)"
 
 #: database-content.py:119
 msgid "Uzbek (Cyrillic)"
@@ -846,11 +846,7 @@ msgstr "Manual de la herramienta de administración de la hora"
 #: djamnedlies-git/languages/views.py:66
 #: djamnedlies-git/templates/branch_detail.html:23
 #: djamnedlies-git/templates/release_detail.html:22
-#: djamnedlies-git/templates/teams/team_detail.html:27
-#: djamnedlies-svn/languages/views.py:50 djamnedlies-svn/languages/views.py:66
-#: djamnedlies-svn/templates/branch_detail.html:23
-#: djamnedlies-svn/templates/release_detail.html:22
-#: djamnedlies-svn/templates/teams/team_detail.html:27 languages/views.py:50
+#: djamnedlies-git/templates/teams/team_detail.html:27 languages/views.py:50
 #: languages/views.py:70 templates/branch_detail.html:23
 #: templates/release_detail.html:22 templates/release_detail.html.py:68
 #: templates/teams/team_detail.html:27
@@ -862,79 +858,80 @@ msgid "UI translation"
 msgstr "Traducción del IU"
 
 #: database-content.py:209
+msgid "po-tags"
+msgstr "po-tags"
+
+#: database-content.py:210
 msgid "GNOME 2 User Documentation"
 msgstr "Documentación del usuario de GNOME 2"
 
-#: database-content.py:210
+#: database-content.py:211
 msgid "Evince Document Viewer"
 msgstr "Visor de documentos Evince"
 
-#: database-content.py:211
+#: database-content.py:212
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:212 djamnedlies-git/templates/base.html:35
-#: djamnedlies-git/templates/admin/base_site.html:7
-#: djamnedlies-svn/templates/base.html:35
-#: djamnedlies-svn/templates/admin/base_site.html:7 templates/base.html:35
+#: database-content.py:213 djamnedlies-git/templates/base.html:35
+#: djamnedlies-git/templates/admin/base_site.html:7 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
-#: database-content.py:213
+#: database-content.py:214
 msgid "Banshee Music Player"
 msgstr "Reproductor de música Banshee"
 
-#: database-content.py:214
+#: database-content.py:215
 msgid "Shared MIME Info"
 msgstr "Información MIME compartida"
 
-#: database-content.py:215
+#: database-content.py:216
 msgid "GNOME Applets"
 msgstr "Miniaplicaciones de GNOME"
 
-#: database-content.py:216
+#: database-content.py:217
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentación del desarrollador de GNOME 2"
 
-#: database-content.py:217
+#: database-content.py:218
 msgid "GNOME Release Notes"
 msgstr "Notas de publicación de GNOME"
 
-#: database-content.py:218
+#: database-content.py:219
 msgid "Rhythmbox Music Player"
 msgstr "Reproductor de música Rhythmbox"
 
-#: database-content.py:219
+#: database-content.py:220
 msgid "Epiphany Web Browser"
 msgstr "Navegador web Epiphany"
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "GNOME Library Web site"
 msgstr "Página web de la biblioteca de GNOME"
 
-#: database-content.py:221
+#: database-content.py:222
 msgid "Eye of GNOME"
 msgstr "Visor de imágenes (EOG)"
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:225
-#| msgid "GST Time Setup Manual"
+#: database-content.py:226
 msgid "The Gimp Manual"
 msgstr "El manual de El Gimp"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -944,11 +941,11 @@ msgstr ""
 "href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
 "GNUCash</a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
-#: database-content.py:228
+#: database-content.py:229
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -956,7 +953,7 @@ msgstr ""
 "Las traducciones subidas se actualizan manualmente en l10n.gnome.org de vez "
 "en cuando. Sé paciente :-)."
 
-#: database-content.py:229
+#: database-content.py:230
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -964,7 +961,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:230
+#: database-content.py:231
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -977,7 +974,7 @@ msgstr ""
 "dirs.html\">la página de traducción para xdg-user-dits en Translation "
 "Project</a>."
 
-#: database-content.py:231
+#: database-content.py:232
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -985,11 +982,11 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -1001,11 +998,11 @@ msgstr ""
 "archivos en el SVN incluso si uno de los dos no contiene traducciones, de "
 "otra forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1013,7 +1010,7 @@ msgstr ""
 "moserial es un terminal serie limpio y amigable basado en GTK para el "
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1021,11 +1018,11 @@ msgstr ""
 "Este es un clon de la versión oficial de system-tools-backends del "
 "repositorio de freedesktop.org."
 
-#: database-content.py:237
+#: database-content.py:238
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout es una aplicación DTP para las X."
 
-#: database-content.py:238
+#: database-content.py:239
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1033,17 +1030,17 @@ msgstr ""
 "gnome-disk-utility proporciona bibliotecas y aplicaciones para comunicarse "
 "con dispositivos de almacenamiento."
 
-#: database-content.py:239
+#: database-content.py:240
 msgid "A note taking application"
 msgstr "Una aplicación para tomar notas"
 
-#: database-content.py:240
+#: database-content.py:241
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Las traducciones se deben enviar como informes de error (consultar el enlace "
 "inferior)."
 
-#: database-content.py:241
+#: database-content.py:242
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1051,61 +1048,66 @@ msgstr ""
 "GNOME Vídeo Arcade es un frontal de MAME (Multiple Arcade Machine Emulator) "
 "para GNOME."
 
-#: database-content.py:242
+#: database-content.py:243
 msgid "GNOME Teletext viewer"
 msgstr "Visor de teletexto de GNOME"
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:245
+#: database-content.py:246
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:247
+#: database-content.py:248
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:250
+#: database-content.py:251
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:251
+#: database-content.py:252
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:253
+#: database-content.py:254
 msgid "GNOME 2.26 (stable)"
 msgstr "GNOME 2.26 (estable)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "GNOME 2.28 (development)"
 msgstr "GNOME 2.28 (desarrollo)"
 
-#: database-content.py:255
+#: database-content.py:256
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
+
+#: database-content.py:257
+#| msgid "External Dependencies"
+msgid "External Dependencies (GNOME)"
+msgstr "Dependencias externas (GNOME)"
 
 #: settings.py:73 djamnedlies-git/settings_sample.py:80
 msgid ""
@@ -1124,17 +1126,14 @@ msgstr ""
 "web del módulo para ver dónde enviar las traducciones."
 
 #: common/views.py:34 djamnedlies-git/common/views.py:33
-#: djamnedlies-svn/common/views.py:33
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2009"
 
 #: common/views.py:55 djamnedlies-git/common/views.py:54
-#: djamnedlies-svn/common/views.py:54
 msgid "You have been logged out."
 msgstr "Ha salido de la sesión."
 
 #: common/views.py:63 djamnedlies-git/common/views.py:62
-#: djamnedlies-svn/common/views.py:62
 msgid "You have been successfully logged in."
 msgstr "Ha iniciado la sesión correctamente."
 
@@ -1148,95 +1147,75 @@ msgstr ""
 "href=\"%(url)s\">su perfil</a>."
 
 #: common/views.py:75 djamnedlies-git/common/views.py:69
-#: djamnedlies-svn/common/views.py:69
 msgid "We're sorry, but your account has been disabled."
 msgstr "Su cuenta ha sido desactivada."
 
 #: common/views.py:77 djamnedlies-git/common/views.py:71
-#: djamnedlies-svn/common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Ha fallado el inicio de sesión. Compruebe su usuario y su contraseña."
 
 #: common/views.py:117 djamnedlies-git/common/views.py:111
-#: djamnedlies-svn/common/views.py:111
 msgid "Your account has been activated."
 msgstr "Su cuenta ha sido activada."
 
 #: djamnedlies-git/languages/views.py:49 djamnedlies-git/languages/views.py:65
-#: djamnedlies-svn/languages/views.py:49 djamnedlies-svn/languages/views.py:65
 #: languages/views.py:49 languages/views.py:69
 msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
-#: djamnedlies-git/people/forms.py:14 djamnedlies-svn/people/forms.py:14
-#: people/forms.py:14
+#: djamnedlies-git/people/forms.py:14 people/forms.py:14
 msgid "Choose a username:"
 msgstr "Elija un nombre de usuario:"
 
-#: djamnedlies-git/people/forms.py:15 djamnedlies-svn/people/forms.py:15
-#: people/forms.py:15
+#: djamnedlies-git/people/forms.py:15 people/forms.py:15
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Sólo puede contener letras, números, guiones bajos o guiones"
 
-#: djamnedlies-git/people/forms.py:16 djamnedlies-svn/people/forms.py:16
-#: people/forms.py:16
+#: djamnedlies-git/people/forms.py:16 people/forms.py:16
 msgid "Email:"
 msgstr "Correo-e:"
 
 #: djamnedlies-git/people/forms.py:17 djamnedlies-git/templates/login.html:37
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:34
-#: djamnedlies-svn/people/forms.py:17 djamnedlies-svn/templates/login.html:37
 #: django_openid/templates/django_openid/admin_login.html:34
 #: people/forms.py:17 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: djamnedlies-git/people/forms.py:20 djamnedlies-git/templates/login.html:21
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:23
-#: djamnedlies-svn/people/forms.py:20 djamnedlies-svn/templates/login.html:21
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20 templates/login.html:21
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: djamnedlies-git/people/forms.py:21 djamnedlies-svn/people/forms.py:21
-#: people/forms.py:21
+#: djamnedlies-git/people/forms.py:21 people/forms.py:21
 msgid "At least 7 characters"
 msgstr "Al menos 7 caracteres"
 
 #: djamnedlies-git/people/forms.py:23
 #: djamnedlies-git/templates/people/person_password_change_form.html:27
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:18
-#: djamnedlies-svn/people/forms.py:23
-#: djamnedlies-svn/templates/people/person_password_change_form.html:27
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:18
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Confirmar contraseña:"
 
-#: djamnedlies-git/people/forms.py:31 djamnedlies-svn/people/forms.py:31
-#: people/forms.py:31
+#: djamnedlies-git/people/forms.py:31 people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "Este nombre de usuario ya existe. Elija otro."
 
-#: djamnedlies-git/people/forms.py:39 djamnedlies-svn/people/forms.py:39
-#: people/forms.py:39
+#: djamnedlies-git/people/forms.py:39 people/forms.py:39
 msgid "You must either provide an OpenID or a password"
 msgstr "Debe proporcionar un OpenId o una contraseña"
 
-#: djamnedlies-git/people/forms.py:42 djamnedlies-svn/people/forms.py:42
-#: people/forms.py:42
+#: djamnedlies-git/people/forms.py:42 people/forms.py:42
 msgid "The passwords do not match"
 msgstr "Las contraseñas no coinciden"
 
-#: djamnedlies-git/people/forms.py:65 djamnedlies-svn/people/forms.py:65
-#: people/forms.py:65
+#: djamnedlies-git/people/forms.py:65 people/forms.py:65
 msgid "Account activation"
 msgstr "Activación de cuenta"
 
-#: djamnedlies-git/people/forms.py:66 djamnedlies-svn/people/forms.py:66
-#: people/forms.py:66
+#: djamnedlies-git/people/forms.py:66 people/forms.py:66
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1246,82 +1225,67 @@ msgstr ""
 "Esta es la confirmación de que su registro en %s es correcto. Para activar "
 "su cuenta pulse en el enlace inferior o cópielo y péguelo en un navegador."
 
-#: djamnedlies-git/people/forms.py:68 djamnedlies-svn/people/forms.py:68
-#: people/forms.py:68
+#: djamnedlies-git/people/forms.py:68 people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "Administradores de %s"
 
-#: djamnedlies-git/people/models.py:36 djamnedlies-svn/people/models.py:36
-#: people/models.py:36
+#: djamnedlies-git/people/models.py:36 people/models.py:36
 msgid "Image"
 msgstr "Imagen"
 
-#: djamnedlies-git/people/models.py:37 djamnedlies-svn/people/models.py:37
-#: people/models.py:37
+#: djamnedlies-git/people/models.py:37 people/models.py:37
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "URL a un archivo de imagen (.jpg, .png, ...) de un hackergotchi"
 
-#: djamnedlies-git/people/models.py:38 djamnedlies-svn/people/models.py:38
-#: people/models.py:38
+#: djamnedlies-git/people/models.py:38 people/models.py:38
 msgid "Web page"
 msgstr "Página web"
 
-#: djamnedlies-git/people/models.py:39 djamnedlies-svn/people/models.py:39
-#: people/models.py:39
+#: djamnedlies-git/people/models.py:39 people/models.py:39
 msgid "IRC nickname"
 msgstr "Apodo en el IRC"
 
-#: djamnedlies-git/people/models.py:40 djamnedlies-svn/people/models.py:40
-#: people/models.py:40
+#: djamnedlies-git/people/models.py:40 people/models.py:40
 msgid "Bugzilla account"
 msgstr "Cuenta de Bugzilla"
 
-#: djamnedlies-git/people/models.py:41 djamnedlies-svn/people/models.py:41
-#: people/models.py:41
+#: djamnedlies-git/people/models.py:41 people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
 "Esto debe ser un correo electrónico, útil si no igual que el campo «correo-e»."
 
-#: djamnedlies-git/people/views.py:86 djamnedlies-svn/people/views.py:86
-#: people/views.py:86
+#: djamnedlies-git/people/views.py:86 people/views.py:86
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Se ha unido satisfactoriamente al equipo «%s»."
 
-#: djamnedlies-git/people/views.py:89 djamnedlies-svn/people/views.py:89
-#: people/views.py:89
+#: djamnedlies-git/people/views.py:89 people/views.py:89
 msgid "You are already member of this team."
 msgstr "Ya es miembro de este equipo."
 
-#: djamnedlies-git/people/views.py:112 djamnedlies-svn/people/views.py:112
-#: people/views.py:112
+#: djamnedlies-git/people/views.py:112 people/views.py:112
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Ha sido eliminado del equipo «%s»."
 
-#: djamnedlies-git/people/views.py:128 djamnedlies-svn/people/views.py:128
-#: people/views.py:128
+#: djamnedlies-git/people/views.py:128 people/views.py:128
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
-#: djamnedlies-git/stats/models.py:320 djamnedlies-svn/stats/models.py:320
-#: stats/models.py:349
+#: djamnedlies-git/stats/models.py:320 stats/models.py:349
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: djamnedlies-git/stats/models.py:341 djamnedlies-svn/stats/models.py:341
-#: stats/models.py:371
+#: djamnedlies-git/stats/models.py:341 stats/models.py:371
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: djamnedlies-git/stats/models.py:380 djamnedlies-svn/stats/models.py:380
-#: stats/utils.py:311
+#: djamnedlies-git/stats/models.py:380 stats/utils.py:323
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: djamnedlies-git/stats/models.py:659 djamnedlies-svn/stats/models.py:659
-#: stats/models.py:688
+#: djamnedlies-git/stats/models.py:659 stats/models.py:688
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1332,48 +1296,40 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906 djamnedlies-svn/stats/models.py:906
-#: stats/models.py:935
+#: djamnedlies-git/stats/models.py:906 stats/models.py:935
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: djamnedlies-git/stats/models.py:907 djamnedlies-svn/stats/models.py:907
-#: stats/models.py:936
+#: djamnedlies-git/stats/models.py:907 stats/models.py:936
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: djamnedlies-git/stats/models.py:908 djamnedlies-svn/stats/models.py:908
-#: stats/models.py:937
+#: djamnedlies-git/stats/models.py:908 stats/models.py:937
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: djamnedlies-git/stats/models.py:909 djamnedlies-svn/stats/models.py:909
-#: stats/models.py:938
+#: djamnedlies-git/stats/models.py:909 stats/models.py:938
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: djamnedlies-git/stats/models.py:910 djamnedlies-svn/stats/models.py:910
-#: stats/models.py:939
+#: djamnedlies-git/stats/models.py:910 stats/models.py:939
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
-#: djamnedlies-svn/stats/models.py:986 djamnedlies-svn/stats/models.py:1252
 #: stats/models.py:1015 stats/models.py:1292
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017 djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1046
+#: djamnedlies-git/stats/models.py:1017 stats/models.py:1046
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: djamnedlies-git/stats/models.py:1018 djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1047
+#: djamnedlies-git/stats/models.py:1018 stats/models.py:1047
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
@@ -1382,52 +1338,41 @@ msgstr "actualizado el %(date)s"
 #. Date format syntax is similar to PHP http://www.php.net/date
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
 #: djamnedlies-git/stats/models.py:1020
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: djamnedlies-svn/stats/models.py:1020
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1049 templates/vertimus/vertimus_detail.html:43
 #: templates/vertimus/vertimus_detail.html:123
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: djamnedlies-git/stats/models.py:1023 djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1052
+#: djamnedlies-git/stats/models.py:1023 stats/models.py:1052
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: djamnedlies-git/stats/models.py:1024 djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1053
+#: djamnedlies-git/stats/models.py:1024 stats/models.py:1053
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027 djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1056
+#: djamnedlies-git/stats/models.py:1027 stats/models.py:1056
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: djamnedlies-git/stats/utils.py:85 djamnedlies-svn/stats/utils.py:85
-#: stats/utils.py:85
+#: djamnedlies-git/stats/utils.py:85 stats/utils.py:85
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hubo errores al ejecutar la comprobación «intltool-update -m»."
 
-#: djamnedlies-git/stats/utils.py:91 djamnedlies-svn/stats/utils.py:91
-#: stats/utils.py:91
+#: djamnedlies-git/stats/utils.py:91 stats/utils.py:91
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Faltan algunos archivos en el archivo POTFILES.in: %s"
 
-#: djamnedlies-git/stats/utils.py:100 djamnedlies-svn/stats/utils.py:100
-#: stats/utils.py:100
+#: djamnedlies-git/stats/utils.py:100 stats/utils.py:100
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1436,25 +1381,21 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: djamnedlies-git/stats/utils.py:112 djamnedlies-svn/stats/utils.py:112
-#: stats/utils.py:112
+#: djamnedlies-git/stats/utils.py:112 stats/utils.py:123
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
-#: djamnedlies-git/stats/utils.py:115 djamnedlies-svn/stats/utils.py:115
-#: stats/utils.py:115
+#: djamnedlies-git/stats/utils.py:115 stats/utils.py:126
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE no resuelve a un archivo real, usando «%s.xml»."
 
-#: djamnedlies-git/stats/utils.py:118 djamnedlies-svn/stats/utils.py:118
-#: stats/utils.py:118
+#: djamnedlies-git/stats/utils.py:118 stats/utils.py:129
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE no apunta a un archivo real, probablemente es un macro."
 
-#: djamnedlies-git/stats/utils.py:133 djamnedlies-svn/stats/utils.py:133
-#: stats/utils.py:133
+#: djamnedlies-git/stats/utils.py:133 stats/utils.py:145
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1465,49 +1406,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206 djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:199
+#: djamnedlies-git/stats/utils.py:206 stats/utils.py:211
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: djamnedlies-git/stats/utils.py:226 djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:219
+#: djamnedlies-git/stats/utils.py:226 stats/utils.py:231
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: djamnedlies-git/stats/utils.py:228 djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:221
+#: djamnedlies-git/stats/utils.py:228 stats/utils.py:233
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: djamnedlies-git/stats/utils.py:231 djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:224
+#: djamnedlies-git/stats/utils.py:231 stats/utils.py:236
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: djamnedlies-git/stats/utils.py:259 djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:252
+#: djamnedlies-git/stats/utils.py:259 stats/utils.py:264
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: djamnedlies-git/stats/utils.py:292 djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:278
+#: djamnedlies-git/stats/utils.py:292 stats/utils.py:290
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: djamnedlies-git/stats/utils.py:319 djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:300
+#: djamnedlies-git/stats/utils.py:319 stats/utils.py:312
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: djamnedlies-git/stats/utils.py:322 djamnedlies-svn/stats/utils.py:322
+#: djamnedlies-git/stats/utils.py:322
 msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
@@ -1515,185 +1449,145 @@ msgstr ""
 "No se sabe dónde mirar si este idioma se usa actualmente, pregunta al "
 "mantenedor del módulo."
 
-#: djamnedlies-git/teams/models.py:112 djamnedlies-svn/teams/models.py:112
-#: teams/models.py:185
+#: djamnedlies-git/teams/models.py:112 teams/models.py:185
 #, python-format
 msgid "No team for locale %s"
 msgstr "No existe un equipo para el idioma %s"
 
-#: djamnedlies-git/teams/models.py:129 djamnedlies-svn/teams/models.py:129
-#: teams/models.py:202
+#: djamnedlies-git/teams/models.py:129 teams/models.py:202
 msgid "Translator"
 msgstr "Traductor"
 
-#: djamnedlies-git/teams/models.py:130 djamnedlies-svn/teams/models.py:130
-#: teams/models.py:203
+#: djamnedlies-git/teams/models.py:130 teams/models.py:203
 msgid "Reviewer"
 msgstr "Revisor"
 
-#: djamnedlies-git/teams/models.py:131 djamnedlies-svn/teams/models.py:131
-#: teams/models.py:204
+#: djamnedlies-git/teams/models.py:131 teams/models.py:204
 msgid "Committer"
 msgstr "Efectúa cambios en el SVN"
 
 #: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31
-#: djamnedlies-svn/teams/models.py:132
-#: djamnedlies-svn/templates/teams/team_base.html:31 teams/models.py:205
+#: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:205
 #: templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Coordinador"
 
-#: djamnedlies-git/teams/views.py:44 djamnedlies-svn/teams/views.py:44
-#: teams/views.py:44
+#: djamnedlies-git/teams/views.py:44 teams/views.py:53
 msgid "Committers"
 msgstr "Personas que efectúan cambios en el SVN"
 
-#: djamnedlies-git/teams/views.py:47 djamnedlies-svn/teams/views.py:47
-#: teams/views.py:47
+#: djamnedlies-git/teams/views.py:47 teams/views.py:56
 msgid "No committers"
 msgstr "No hay ninguna persona que efectúe cambios en el SVN"
 
-#: djamnedlies-git/teams/views.py:49 djamnedlies-svn/teams/views.py:49
-#: teams/views.py:49
+#: djamnedlies-git/teams/views.py:49 teams/views.py:58
 msgid "Reviewers"
 msgstr "Revisores"
 
-#: djamnedlies-git/teams/views.py:52 djamnedlies-svn/teams/views.py:52
-#: teams/views.py:52
+#: djamnedlies-git/teams/views.py:52 teams/views.py:61
 msgid "No reviewers"
 msgstr "No hay ningún revisor"
 
-#: djamnedlies-git/teams/views.py:54 djamnedlies-svn/teams/views.py:54
-#: teams/views.py:54
+#: djamnedlies-git/teams/views.py:54 teams/views.py:63
 msgid "Translators"
 msgstr "Traductores"
 
-#: djamnedlies-git/teams/views.py:57 djamnedlies-svn/teams/views.py:57
-#: teams/views.py:57
+#: djamnedlies-git/teams/views.py:57 teams/views.py:66
 msgid "No translators"
 msgstr "No traductores"
 
 #: djamnedlies-git/templates/404.html:4 djamnedlies-git/templates/404.html:9
-#: djamnedlies-svn/templates/404.html:4 djamnedlies-svn/templates/404.html:9
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "Error: página no encontrada"
 
-#: djamnedlies-git/templates/404.html:11 djamnedlies-svn/templates/404.html:11
-#: templates/404.html:11
+#: djamnedlies-git/templates/404.html:11 templates/404.html:11
 msgid "The page you requested has not been found on this server."
 msgstr "No se encontró en el servidor la página que solicitó."
 
-#: djamnedlies-git/templates/500.html:4 djamnedlies-svn/templates/500.html:4
-#: templates/500.html:4
+#: djamnedlies-git/templates/500.html:4 templates/500.html:4
 msgid "Error: server error (500)"
 msgstr "Error: erro del servidor (500)"
 
-#: djamnedlies-git/templates/500.html:9 djamnedlies-svn/templates/500.html:9
-#: templates/500.html:9
+#: djamnedlies-git/templates/500.html:9 templates/500.html:9
 msgid "Server Error"
 msgstr "Error del servidor"
 
-#: djamnedlies-git/templates/500.html:11 djamnedlies-svn/templates/500.html:11
-#: templates/500.html:11
+#: djamnedlies-git/templates/500.html:11 templates/500.html:11
 msgid "We're sorry but a server error has occurred."
 msgstr "Ocurrió un error en el servidor."
 
 #: djamnedlies-git/templates/base.html:26
-#: djamnedlies-git/templates/base.html:42
-#: djamnedlies-svn/templates/base.html:26
-#: djamnedlies-svn/templates/base.html:42 templates/base.html:26
+#: djamnedlies-git/templates/base.html:42 templates/base.html:26
 #: templates/base.html.py:42
 msgid "Home"
 msgstr "Principal"
 
-#: djamnedlies-git/templates/base.html:27
-#: djamnedlies-svn/templates/base.html:27 templates/base.html:27
+#: djamnedlies-git/templates/base.html:27 templates/base.html:27
 msgid "News"
 msgstr "Noticias"
 
-#: djamnedlies-git/templates/base.html:28
-#: djamnedlies-svn/templates/base.html:28 templates/base.html:28
+#: djamnedlies-git/templates/base.html:28 templates/base.html:28
 msgid "Projects"
 msgstr "Proyectos"
 
-#: djamnedlies-git/templates/base.html:29
-#: djamnedlies-svn/templates/base.html:29 templates/base.html:29
+#: djamnedlies-git/templates/base.html:29 templates/base.html:29
 msgid "Art"
 msgstr "Arte"
 
-#: djamnedlies-git/templates/base.html:30
-#: djamnedlies-svn/templates/base.html:30 templates/base.html:30
+#: djamnedlies-git/templates/base.html:30 templates/base.html:30
 msgid "Support"
 msgstr "Soporte"
 
-#: djamnedlies-git/templates/base.html:31
-#: djamnedlies-svn/templates/base.html:31 templates/base.html:31
+#: djamnedlies-git/templates/base.html:31 templates/base.html:31
 msgid "Development"
 msgstr "Desarrollo"
 
-#: djamnedlies-git/templates/base.html:32
-#: djamnedlies-svn/templates/base.html:32 templates/base.html:32
+#: djamnedlies-git/templates/base.html:32 templates/base.html:32
 msgid "Community"
 msgstr "Comunidad"
 
-#: djamnedlies-git/templates/base.html:42
-#: djamnedlies-svn/templates/base.html:42 templates/base.html:42
+#: djamnedlies-git/templates/base.html:42 templates/base.html:42
 msgid "Back to Damned Lies home page"
 msgstr "Volver a la página principal de Malditas Mentiras"
 
 #: djamnedlies-git/templates/base.html:48
-#: djamnedlies-git/templates/index.html:13
-#: djamnedlies-svn/templates/base.html:48
-#: djamnedlies-svn/templates/index.html:13 templates/base.html:48
+#: djamnedlies-git/templates/index.html:13 templates/base.html:48
 #: templates/index.html:13
 msgid "Teams"
 msgstr "Equipos"
 
 #: djamnedlies-git/templates/base.html:53
 #: djamnedlies-git/templates/index.html:20
-#: djamnedlies-git/templates/release_compare.html:25
-#: djamnedlies-svn/templates/base.html:53
-#: djamnedlies-svn/templates/index.html:20
-#: djamnedlies-svn/templates/release_compare.html:25 templates/base.html:53
+#: djamnedlies-git/templates/release_compare.html:25 templates/base.html:53
 #: templates/index.html:20 templates/release_compare.html:25
 msgid "Languages"
 msgstr "Idiomas"
 
-#: djamnedlies-git/templates/base.html:58
-#: djamnedlies-svn/templates/base.html:58 templates/base.html:58
+#: djamnedlies-git/templates/base.html:58 templates/base.html:58
 msgid "Release sets"
 msgstr "Publicaciones"
 
 #: djamnedlies-git/templates/base.html:63
-#: djamnedlies-git/templates/index.html:36
-#: djamnedlies-svn/templates/base.html:63
-#: djamnedlies-svn/templates/index.html:36 templates/base.html:63
+#: djamnedlies-git/templates/index.html:36 templates/base.html:63
 #: templates/index.html:36
 msgid "Modules"
 msgstr "Módulos"
 
-#: djamnedlies-git/templates/base.html:74
-#: djamnedlies-svn/templates/base.html:74 templates/base.html:74
+#: djamnedlies-git/templates/base.html:74 templates/base.html:74
 msgid "Log out"
 msgstr "Salir de la sesión"
 
 #: djamnedlies-git/templates/base.html:77
 #: djamnedlies-git/templates/login.html:29
 #: djamnedlies-git/templates/registration/password_reset_complete.html:12
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:28
-#: djamnedlies-svn/templates/base.html:77
-#: djamnedlies-svn/templates/login.html:29
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:12
 #: django_openid/templates/django_openid/admin_login.html:28
 #: templates/base.html:77 templates/login.html:29
 #: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Iniciar sesión"
 
-#: djamnedlies-git/templates/base.html:94
-#: djamnedlies-svn/templates/base.html:94 templates/base.html:94
+#: djamnedlies-git/templates/base.html:94 templates/base.html:94
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
@@ -1705,19 +1599,16 @@ msgstr ""
 "Mantenido en el módulo <a href='http://git.gnome.org/cgit/damned-"
 "lies/'>damned-lies</a> en <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
-#: djamnedlies-git/templates/base.html:98
-#: djamnedlies-svn/templates/base.html:98 templates/base.html:98
+#: djamnedlies-git/templates/base.html:98 templates/base.html:98
 msgid "Hosted by"
 msgstr "Hospedado por"
 
 #: djamnedlies-git/templates/branch_detail.html:4
-#: djamnedlies-svn/templates/branch_detail.html:4
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
 msgstr "Actualmente las cadenas de esta rama están congeladas."
 
 #: djamnedlies-git/templates/branch_detail.html:13
-#: djamnedlies-svn/templates/branch_detail.html:13
 #: templates/branch_detail.html:13
 msgid "Translation"
 msgstr "Traducción"
@@ -1728,25 +1619,17 @@ msgstr "Traducción"
 #: djamnedlies-git/templates/login.html:4
 #: djamnedlies-git/templates/registration/register.html:4
 #: djamnedlies-git/templates/registration/register_success.html:4
-#: djamnedlies-svn/templates/error.html:4
-#: djamnedlies-svn/templates/index.html:4
-#: djamnedlies-svn/templates/index.html:9
-#: djamnedlies-svn/templates/login.html:4
-#: djamnedlies-svn/templates/registration/register.html:4
-#: djamnedlies-svn/templates/registration/register_success.html:4
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
 #: templates/login.html:4 templates/registration/register.html:4
 #: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "Malditas mentiras acerca de GNOME"
 
-#: djamnedlies-git/templates/error.html:9
-#: djamnedlies-svn/templates/error.html:9 templates/error.html:9
+#: djamnedlies-git/templates/error.html:9 templates/error.html:9
 msgid "Error:"
 msgstr "Error:"
 
-#: djamnedlies-git/templates/index.html:14
-#: djamnedlies-svn/templates/index.html:14 templates/index.html:14
+#: djamnedlies-git/templates/index.html:14 templates/index.html:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -1754,8 +1637,7 @@ msgstr ""
 "Lista de todos los equipos de traducción de GNOME, con información completa "
 "tal como el contacto primario (coordinador), páginas web y listas de correo."
 
-#: djamnedlies-git/templates/index.html:15
-#: djamnedlies-svn/templates/index.html:15 templates/index.html:15
+#: djamnedlies-git/templates/index.html:15 templates/index.html:15
 msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
@@ -1763,8 +1645,7 @@ msgstr ""
 "Si no hay un equipo para su idioma puede <a href='http://live.gnome.org/"
 "TranslationProject/StartingATeam/'>iniciar su propio equipo</a> fácilmente."
 
-#: djamnedlies-git/templates/index.html:22
-#: djamnedlies-svn/templates/index.html:22 templates/index.html:22
+#: djamnedlies-git/templates/index.html:22 templates/index.html:22
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
@@ -1773,8 +1654,7 @@ msgstr ""
 "Lista de todos los idiomas para los que hay <a href='%(teams_url)s'>equipos "
 "de traducción</a>."
 
-#: djamnedlies-git/templates/index.html:23
-#: djamnedlies-svn/templates/index.html:23 templates/index.html:23
+#: djamnedlies-git/templates/index.html:23 templates/index.html:23
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1783,20 +1663,17 @@ msgstr ""
 "sencillas), y aquí puede ver todos los idiomas a los que se está traduciendo "
 "GNOME."
 
-#: djamnedlies-git/templates/index.html:27
-#: djamnedlies-svn/templates/index.html:27 templates/index.html:27
+#: djamnedlies-git/templates/index.html:27 templates/index.html:27
 msgid "Release Sets"
 msgstr "Publicaciones"
 
-#: djamnedlies-git/templates/index.html:28
-#: djamnedlies-svn/templates/index.html:28 templates/index.html:28
+#: djamnedlies-git/templates/index.html:28 templates/index.html:28
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
 "Lista de todos las publicaciones de GNOME y publicaciones para los que "
 "coleccionamos estadísticas."
 
 #: djamnedlies-git/templates/index.html:30
-#: djamnedlies-svn/templates/index.html:30
 msgid ""
 "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
 "or &quot;GNOME 2.14&quot;."
@@ -1804,8 +1681,7 @@ msgstr ""
 "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
 "2.14»."
 
-#: djamnedlies-git/templates/index.html:31
-#: djamnedlies-svn/templates/index.html:31 templates/index.html:31
+#: djamnedlies-git/templates/index.html:31 templates/index.html:31
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
@@ -1813,8 +1689,7 @@ msgstr ""
 "Las publicaciones oficiales de GNOME están divididos en varias categorías "
 "tales como «Aplicaciones del escritorio» y «Plataforma de desarrollo»."
 
-#: djamnedlies-git/templates/index.html:33
-#: djamnedlies-svn/templates/index.html:33 templates/index.html:33
+#: djamnedlies-git/templates/index.html:33 templates/index.html:33
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -1822,13 +1697,11 @@ msgstr ""
 "Mire aquí si quiere comprar el soporte para idioma en cualquiera de esas "
 "publicaciones."
 
-#: djamnedlies-git/templates/index.html:37
-#: djamnedlies-svn/templates/index.html:37 templates/index.html:37
+#: djamnedlies-git/templates/index.html:37 templates/index.html:37
 msgid "List of all modules with statistics in here."
 msgstr "Lista de todos los módulos con estadísticas."
 
-#: djamnedlies-git/templates/index.html:39
-#: djamnedlies-svn/templates/index.html:39 templates/index.html:39
+#: djamnedlies-git/templates/index.html:39 templates/index.html:39
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1836,8 +1709,7 @@ msgstr ""
 "Los módulos están separados en bibliotecas o aplicaciones, con una o más "
 "ramas de desarrollo incluidas."
 
-#: djamnedlies-git/templates/index.html:40
-#: djamnedlies-svn/templates/index.html:40 templates/index.html:40
+#: djamnedlies-git/templates/index.html:40 templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
@@ -1845,22 +1717,18 @@ msgstr ""
 "Generalmente se cogen del SVN, y guardamos información relevante sobre ellos "
 "(detalles de Bugzilla, página web, información de mantenimiento...)."
 
-#: djamnedlies-git/templates/index.html:46
-#: djamnedlies-svn/templates/index.html:46 templates/index.html:46
+#: djamnedlies-git/templates/index.html:46 templates/index.html:46
 msgid "Translated by:"
 msgstr "Traducido por:"
 
 #: djamnedlies-git/templates/login.html:10
 #: djamnedlies-git/templates/registration/register.html:11
-#: djamnedlies-svn/templates/login.html:10
-#: djamnedlies-svn/templates/registration/register.html:11
 #: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Está registrado como %(username)s."
 
-#: djamnedlies-git/templates/login.html:13
-#: djamnedlies-svn/templates/login.html:13 templates/login.html:13
+#: djamnedlies-git/templates/login.html:13 templates/login.html:13
 #, python-format
 msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
@@ -1870,106 +1738,86 @@ msgstr ""
 "a> para obtener una."
 
 #: djamnedlies-git/templates/login.html:15
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:17
-#: djamnedlies-svn/templates/login.html:15
 #: django_openid/templates/django_openid/admin_login.html:17
 #: templates/login.html:15
 msgid "Log in with your username and password:"
 msgstr "Iniciar sesión con su usuario y contraseña:"
 
 #: djamnedlies-git/templates/login.html:18
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:20
-#: djamnedlies-svn/templates/login.html:18
 #: django_openid/templates/django_openid/admin_login.html:20
 #: templates/login.html:18
 msgid "Username:"
 msgstr "Nombre de usuario:"
 
-#: djamnedlies-git/templates/login.html:22
-#: djamnedlies-svn/templates/login.html:22 templates/login.html:22
+#: djamnedlies-git/templates/login.html:22 templates/login.html:22
 msgid "Have you forgotten your password?"
 msgstr "¿Ha olvidado su contraseña?"
 
 #: djamnedlies-git/templates/login.html:34
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:31
-#: djamnedlies-svn/templates/login.html:34
 #: django_openid/templates/django_openid/admin_login.html:31
 #: templates/login.html:34
 msgid "Or use your OpenID:"
 msgstr "O usar su OpenID:"
 
 #: djamnedlies-git/templates/login.html:40
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:37
-#: djamnedlies-svn/templates/login.html:41
 #: django_openid/templates/django_openid/admin_login.html:37
 #: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Iniciar sesión con OpenID"
 
 #: djamnedlies-git/templates/module_detail.html:6
-#: djamnedlies-svn/templates/module_detail.html:6
 #: templates/module_detail.html:6
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Estadísticas del módulo: %(name)s"
 
 #: djamnedlies-git/templates/module_detail.html:55
-#: djamnedlies-svn/templates/module_detail.html:55
 #: templates/module_detail.html:55
 msgid "Maintainers"
 msgstr "Mantenedores"
 
 #: djamnedlies-git/templates/module_detail.html:63
-#: djamnedlies-svn/templates/module_detail.html:63
 #: templates/module_detail.html:63
 msgid "Bug reporting"
 msgstr "Informar de errores"
 
 #: djamnedlies-git/templates/module_detail.html:66
-#: djamnedlies-svn/templates/module_detail.html:66
 #: templates/module_detail.html:66
 msgid "Show existing i18n and l10n bugs"
 msgstr "Mostrar los errores de i18n y l10n existentes"
 
 #: djamnedlies-git/templates/module_detail.html:68
-#: djamnedlies-svn/templates/module_detail.html:68
 #: templates/module_detail.html:68
 msgid "Report bugs to Bugzilla"
 msgstr "Informar de errores a Bugzilla"
 
 #: djamnedlies-git/templates/module_detail.html:77
-#: djamnedlies-svn/templates/module_detail.html:77
 #: templates/module_detail.html:77
 msgid "Branches:"
 msgstr "Ramas:"
 
 #: djamnedlies-git/templates/module_detail.html:97
-#: djamnedlies-svn/templates/module_detail.html:97
 #: templates/module_detail.html:97
 msgid "Browse Repository"
 msgstr "Examinar el repositorio"
 
 #: djamnedlies-git/templates/module_images.html:4
-#: djamnedlies-svn/templates/module_images.html:4
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
 msgstr "Estado de las figuras del documento del módulo: %(name)s"
 
 #: djamnedlies-git/templates/module_images.html:12
-#: djamnedlies-svn/templates/module_images.html:12
 #: templates/module_images.html:12
 msgid "Figures translation status"
 msgstr "Estado de la traducción de las imágenes"
 
 #: djamnedlies-git/templates/module_images.html:17
-#: djamnedlies-svn/templates/module_images.html:17
 #: templates/module_images.html:17
 msgid "Original"
 msgstr "Original"
 
 #: djamnedlies-git/templates/module_images.html:32
-#: djamnedlies-svn/templates/module_images.html:32
 #: templates/module_images.html:30
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
@@ -1979,47 +1827,38 @@ msgstr ""
 "que traducir)"
 
 #: djamnedlies-git/templates/module_images.html:36
-#: djamnedlies-svn/templates/module_images.html:36
 #: templates/module_images.html:34
 msgid "Fuzzy"
 msgstr "Difuso"
 
 #: djamnedlies-git/templates/module_images.html:41
-#: djamnedlies-svn/templates/module_images.html:41
 #: templates/module_images.html:39
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "El archivo no existe (&quot;técnicamente&quot; difuso)"
 
 #: djamnedlies-git/templates/module_images.html:44
-#: djamnedlies-svn/templates/module_images.html:44
 #: templates/module_images.html:42
 msgid "Not translated"
 msgstr "No traducido"
 
 #: djamnedlies-git/templates/module_list.html:4
-#: djamnedlies-git/templates/module_list.html:9
-#: djamnedlies-svn/templates/module_list.html:4
-#: djamnedlies-svn/templates/module_list.html:9 templates/module_list.html:4
+#: djamnedlies-git/templates/module_list.html:9 templates/module_list.html:4
 #: templates/module_list.html.py:9
 msgid "GNOME Modules"
 msgstr "Módulos de GNOME"
 
-#: djamnedlies-git/templates/module_list.html:11
-#: djamnedlies-svn/templates/module_list.html:11 templates/module_list.html:11
+#: djamnedlies-git/templates/module_list.html:11 templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Seleccione un módulo para ver algunas de las malditas mentiras sobre él:"
 
 #: djamnedlies-git/templates/release_compare.html:5
 #: djamnedlies-git/templates/release_compare.html:20
-#: djamnedlies-svn/templates/release_compare.html:5
-#: djamnedlies-svn/templates/release_compare.html:20
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
 msgstr "Comparación entre publicaciones"
 
 #: djamnedlies-git/templates/release_detail.html:10
-#: djamnedlies-svn/templates/release_detail.html:10
 #: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
@@ -2027,8 +1866,6 @@ msgstr "Publicación %(name)s"
 
 #: djamnedlies-git/templates/release_detail.html:13
 #: djamnedlies-git/templates/languages/language_release.html:33
-#: djamnedlies-svn/templates/release_detail.html:13
-#: djamnedlies-svn/templates/languages/language_release.html:33
 msgid ""
 "The modules of this release are not part of the GNOME SVN repository. Please "
 "check each module's web page to see where to send translations."
@@ -2039,16 +1876,12 @@ msgstr ""
 
 #: djamnedlies-git/templates/release_detail.html:19
 #: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-svn/templates/release_detail.html:19
-#: djamnedlies-svn/templates/stats_show.html:30
 #: templates/release_detail.html:19 templates/stats_show.html:30
 msgid "Language"
 msgstr "Idioma"
 
 #: djamnedlies-git/templates/release_detail.html:20
 #: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/release_detail.html:20
-#: djamnedlies-svn/templates/teams/team_detail.html:26
 #: templates/release_detail.html:20 templates/release_detail.html.py:67
 #: templates/teams/team_detail.html:26
 msgid "User Interface"
@@ -2059,11 +1892,6 @@ msgstr "Interfaz de usuario"
 #: djamnedlies-git/templates/stats_show.html:34
 #: djamnedlies-git/templates/teams/team_detail.html:26
 #: djamnedlies-git/templates/teams/team_detail.html:27
-#: djamnedlies-svn/templates/release_detail.html:21
-#: djamnedlies-svn/templates/release_detail.html:23
-#: djamnedlies-svn/templates/stats_show.html:34
-#: djamnedlies-svn/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/teams/team_detail.html:27
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
 #: templates/stats_show.html:34 templates/teams/team_detail.html:26
 #: templates/teams/team_detail.html:27
@@ -2071,61 +1899,47 @@ msgid "Graph"
 msgstr "Gráfico"
 
 #: djamnedlies-git/templates/release_list.html:4
-#: djamnedlies-git/templates/release_list.html:9
-#: djamnedlies-svn/templates/release_list.html:4
-#: djamnedlies-svn/templates/release_list.html:9 templates/release_list.html:4
+#: djamnedlies-git/templates/release_list.html:9 templates/release_list.html:4
 #: templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "Publicaciones de GNOME"
 
 #: djamnedlies-git/templates/release_list.html:11
-#: djamnedlies-svn/templates/release_list.html:11
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "Seleccione una publicación para ver más detalles acerca de ella:"
 
 #: djamnedlies-git/templates/stats_show.html:13
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
-#: djamnedlies-svn/templates/stats_show.html:13
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:38
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:57
 msgid "Download POT file"
 msgstr "Descargar el archivo POT"
 
 #: djamnedlies-git/templates/stats_show.html:17
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
-#: djamnedlies-svn/templates/stats_show.html:17
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:53
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:77
 msgid "Notices"
 msgstr "Notas"
 
 #: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-git/vertimus/models.py:165
-#: djamnedlies-svn/templates/stats_show.html:30
-#: djamnedlies-svn/vertimus/models.py:165 templates/stats_show.html:30
+#: djamnedlies-git/vertimus/models.py:165 templates/stats_show.html:30
 #: vertimus/models.py:189
 msgid "Translated"
 msgstr "Traducido"
 
 #: djamnedlies-git/templates/stats_show.html:50
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
-#: djamnedlies-svn/templates/stats_show.html:50
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:48
 #: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:71
 msgid "Display document figures"
 msgstr "Mostrar las figuras del documento"
 
 #: djamnedlies-git/templates/admin/base_site.html:4
-#: djamnedlies-svn/templates/admin/base_site.html:4
 #: templates/admin/base_site.html:4
 msgid "Damned Lies site admin"
 msgstr "Administrador de Malditas mentiras"
 
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
-#: djamnedlies-svn/templates/feeds/actions_description.html:6
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
 #: templates/vertimus/vertimus_detail.html:150
 msgid "No comment"
@@ -2135,10 +1949,6 @@ msgstr "Sin comentarios"
 #: djamnedlies-git/templates/languages/language_all_modules.html:20
 #: djamnedlies-git/templates/teams/team_detail.html:63
 #: djamnedlies-git/templates/teams/team_detail.html:64
-#: djamnedlies-svn/templates/languages/language_all_modules.html:4
-#: djamnedlies-svn/templates/languages/language_all_modules.html:20
-#: djamnedlies-svn/templates/teams/team_detail.html:63
-#: djamnedlies-svn/templates/teams/team_detail.html:64
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
 #: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
@@ -2147,8 +1957,6 @@ msgstr "Todos los módulos"
 
 #: djamnedlies-git/templates/languages/language_all_modules.html:23
 #: djamnedlies-git/templates/languages/language_release.html:25
-#: djamnedlies-svn/templates/languages/language_all_modules.html:23
-#: djamnedlies-svn/templates/languages/language_release.html:25
 #: templates/languages/language_all_modules.html:23
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
@@ -2156,8 +1964,6 @@ msgstr "Ocultar los módulos completados"
 
 #: djamnedlies-git/templates/languages/language_all_modules.html:27
 #: djamnedlies-git/templates/languages/language_release.html:29
-#: djamnedlies-svn/templates/languages/language_all_modules.html:27
-#: djamnedlies-svn/templates/languages/language_release.html:29
 #: templates/languages/language_all_modules.html:27
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
@@ -2165,15 +1971,12 @@ msgstr "Mostrar los módulos completados"
 
 #: djamnedlies-git/templates/languages/language_list.html:4
 #: djamnedlies-git/templates/languages/language_list.html:9
-#: djamnedlies-svn/templates/languages/language_list.html:4
-#: djamnedlies-svn/templates/languages/language_list.html:9
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
 msgstr "Idiomas de GNOME"
 
 #: djamnedlies-git/templates/languages/language_list.html:11
-#: djamnedlies-svn/templates/languages/language_list.html:11
 #: templates/languages/language_list.html:11
 #, python-format
 msgid "GNOME is being translated to following %(numb)s language.\n"
@@ -2182,162 +1985,133 @@ msgstr[0] "GNOME se está traduciendo a %(numb)s idioma:\n"
 msgstr[1] "GNOME se está traduciendo a los siguientes %(numb)s idiomas:\n"
 
 #: djamnedlies-git/templates/languages/language_release.html:42
-#: djamnedlies-svn/templates/languages/language_release.html:42
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
 msgstr "Descargar todos los archivos po"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:21
 #: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:21
 #: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Módulo"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
 #: templates/languages/language_release_stats.html:21
 msgid "Branch"
 msgstr "Rama"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
 #: templates/languages/language_release_stats.html:21
 msgid "Statistics"
 msgstr "Estadísticas"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-svn/templates/languages/language_release_stats.html:22
 #: templates/languages/language_release_stats.html:22
 msgid "Status"
 msgstr "Estado"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:22
 #: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/languages/language_release_stats.html:22
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:22
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Fecha"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:32
-#: djamnedlies-svn/templates/languages/language_release_stats.html:32
 #: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% traducido)"
 
 #: djamnedlies-git/templates/languages/language_release_stats.html:99
-#: djamnedlies-svn/templates/languages/language_release_stats.html:99
 #: templates/languages/language_release_stats.html:103
 msgid "Error summary"
 msgstr "Resumen del error"
 
 #: djamnedlies-git/templates/people/person_base.html:5
-#: djamnedlies-svn/templates/people/person_base.html:5
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "Contribuidor de GNOME"
 
 #: djamnedlies-git/templates/people/person_base.html:12
 #: djamnedlies-git/templates/people/person_detail_change_form.html:7
-#: djamnedlies-svn/templates/people/person_base.html:12
-#: djamnedlies-svn/templates/people/person_detail_change_form.html:7
 #: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Cambiar sus detalles"
 
 #: djamnedlies-git/templates/people/person_base.html:13
-#: djamnedlies-svn/templates/people/person_base.html:13
 #: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Cambiar su contraseña"
 
 #: djamnedlies-git/templates/people/person_base.html:14
-#: djamnedlies-svn/templates/people/person_base.html:14
 #: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Unirse a un equipo"
 
 #: djamnedlies-git/templates/people/person_detail.html:22
-#: djamnedlies-svn/templates/people/person_detail.html:22
 #: templates/people/person_detail.html:22
 msgid "Site Language:"
 msgstr "Idioma del sitio:"
 
 #: djamnedlies-git/templates/people/person_detail.html:33
-#: djamnedlies-svn/templates/people/person_detail.html:33
 #: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Elija"
 
 #: djamnedlies-git/templates/people/person_detail.html:39
-#: djamnedlies-svn/templates/people/person_detail.html:39
 #: templates/people/person_detail.html:39
 msgid "Maintains:"
 msgstr "Mantenedores:"
 
 #: djamnedlies-git/templates/people/person_detail.html:50
-#: djamnedlies-svn/templates/people/person_detail.html:50
 #: templates/people/person_detail.html:50
 msgid "Working on"
 msgstr "Trabajando en"
 
 #: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Estado"
 
 #: djamnedlies-git/templates/people/person_detail_change_form.html:13
-#: djamnedlies-svn/templates/people/person_detail_change_form.html:13
 #: templates/people/person_detail_change_form.html:13
 msgid "Save"
 msgstr "Guardar"
 
 #: djamnedlies-git/templates/people/person_list.html:4
 #: djamnedlies-git/templates/people/person_list.html:8
-#: djamnedlies-svn/templates/people/person_list.html:4
-#: djamnedlies-svn/templates/people/person_list.html:8
 #: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "Contribuidores de GNOME"
 
 #: djamnedlies-git/templates/people/person_list.html:10
-#: djamnedlies-svn/templates/people/person_list.html:10
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
 msgstr "Las siguientes personas están desarrollando GNOME:"
 
 #: djamnedlies-git/templates/people/person_overview.html:27
-#: djamnedlies-svn/templates/people/person_overview.html:27
 #: templates/people/person_overview.html:27
 msgid "Instant messaging:"
 msgstr "Mensajería instantánea:"
 
 #: djamnedlies-git/templates/people/person_overview.html:34
-#: djamnedlies-svn/templates/people/person_overview.html:34
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
 msgstr "Cuenta de Bugzilla:"
 
 #: djamnedlies-git/templates/people/person_overview.html:38
-#: djamnedlies-svn/templates/people/person_overview.html:38
 #: templates/people/person_overview.html:38
 msgid "SVN account:"
 msgstr "Cuenta de SVN:"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:6
-#: djamnedlies-svn/templates/people/person_password_change_form.html:6
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
 msgstr "Cambio de contraseña"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:8
-#: djamnedlies-svn/templates/people/person_password_change_form.html:8
 #: templates/people/person_password_change_form.html:8
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
@@ -2347,15 +2121,12 @@ msgstr ""
 "nueva contraseña dos veces para verificar que la escribió correctamente."
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:15
-#: djamnedlies-svn/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
 msgstr "Contraseña antigua:"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:21
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:16
-#: djamnedlies-svn/templates/people/person_password_change_form.html:21
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:16
 #: templates/people/person_password_change_form.html:21
 #: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
@@ -2363,67 +2134,55 @@ msgstr "Contraseña nueva:"
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:30
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:19
-#: djamnedlies-svn/templates/people/person_password_change_form.html:30
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:19
 #: templates/people/person_password_change_form.html:30
 #: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Cambiar mi contraseña"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:8
-#: djamnedlies-svn/templates/people/person_team_join_form.html:8
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
 msgstr "Unirse a un equipo nuevo"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:11
-#: djamnedlies-svn/templates/people/person_team_join_form.html:11
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
 msgstr "Me gustaría unirme al siguiente equipo como «traductor»:"
 
 #: djamnedlies-git/templates/people/person_team_join_form.html:13
-#: djamnedlies-svn/templates/people/person_team_join_form.html:13
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
 msgstr "Unirse"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:5
-#: djamnedlies-svn/templates/people/person_team_membership.html:5
 #: templates/people/person_team_membership.html:5
 msgid "Member of teams"
 msgstr "Miembro de los equipos"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:9
-#: djamnedlies-svn/templates/people/person_team_membership.html:9
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Miembro del equipo %(team_name)s (como %(role_name)s)"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:12
-#: djamnedlies-svn/templates/people/person_team_membership.html:12
 #: templates/people/person_team_membership.html:12
 msgid "Leave"
 msgstr "Abandonar"
 
 #: djamnedlies-git/templates/people/person_team_membership.html:13
-#: djamnedlies-svn/templates/people/person_team_membership.html:13
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "¿Está seguro de que quiere abandonar el equipo?"
 
 #: djamnedlies-git/templates/registration/password_reset_complete.html:4
 #: djamnedlies-git/templates/registration/password_reset_complete.html:8
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:4
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:8
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_complete.html:8
 msgid "Password reset complete"
 msgstr "Restablecimiento de contraseña completado"
 
 #: djamnedlies-git/templates/registration/password_reset_complete.html:10
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:10
 #: templates/registration/password_reset_complete.html:10
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "Se envió su contraseña. Puede proceder e iniciar sesión ahora."
@@ -2431,9 +2190,6 @@ msgstr "Se envió su contraseña. Puede proceder e iniciar sesión ahora."
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:4
 #: djamnedlies-git/templates/registration/password_reset_form.html:4
 #: djamnedlies-git/templates/registration/password_reset_form.html:9
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-svn/templates/registration/password_reset_form.html:4
-#: djamnedlies-svn/templates/registration/password_reset_form.html:9
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
@@ -2441,13 +2197,11 @@ msgid "Password reset"
 msgstr "Restablecimiento de contraseña"
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:10
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:10
 #: templates/registration/password_reset_confirm.html:10
 msgid "Enter new password"
 msgstr "Introduzca la contraseña nueva"
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:12
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:12
 #: templates/registration/password_reset_confirm.html:12
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
@@ -2457,13 +2211,11 @@ msgstr ""
 "correctamente."
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:24
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:24
 #: templates/registration/password_reset_confirm.html:24
 msgid "Password reset unsuccessful"
 msgstr "La contraseña no se restableció correctamente"
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:26
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:26
 #: templates/registration/password_reset_confirm.html:26
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
@@ -2474,15 +2226,12 @@ msgstr ""
 
 #: djamnedlies-git/templates/registration/password_reset_done.html:4
 #: djamnedlies-git/templates/registration/password_reset_done.html:9
-#: djamnedlies-svn/templates/registration/password_reset_done.html:4
-#: djamnedlies-svn/templates/registration/password_reset_done.html:9
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
 msgid "Password reset successful"
 msgstr "La contraseña se restableció correctamente"
 
 #: djamnedlies-git/templates/registration/password_reset_done.html:11
-#: djamnedlies-svn/templates/registration/password_reset_done.html:11
 #: templates/registration/password_reset_done.html:11
 msgid ""
 "We've e-mailed you instructions for setting your password to the e-mail "
@@ -2492,7 +2241,6 @@ msgstr ""
 "para establecer su contraseña. Debería recibirlo pronto."
 
 #: djamnedlies-git/templates/registration/password_reset_form.html:11
-#: djamnedlies-svn/templates/registration/password_reset_form.html:11
 #: templates/registration/password_reset_form.html:11
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll e-mail "
@@ -2502,25 +2250,21 @@ msgstr ""
 "enviarán instrucciones por correo-e para obtener una nueva."
 
 #: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: djamnedlies-svn/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
 msgstr "Dirección de correo-_e:"
 
 #: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: djamnedlies-svn/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "Reset my password"
 msgstr "Restablecer mi contraseña"
 
 #: djamnedlies-git/templates/registration/register.html:9
-#: djamnedlies-svn/templates/registration/register.html:9
 #: templates/registration/register.html:9
 msgid "Account Registration"
 msgstr "Registro de cuenta"
 
 #: djamnedlies-git/templates/registration/register.html:13
-#: djamnedlies-svn/templates/registration/register.html:13
 #: templates/registration/register.html:13
 msgid ""
 "You can register here for an account on this site. This is only useful if "
@@ -2530,7 +2274,6 @@ msgstr ""
 "útil si planea contribuir a traducid GNOME."
 
 #: djamnedlies-git/templates/registration/register.html:14
-#: djamnedlies-svn/templates/registration/register.html:14
 #: templates/registration/register.html:14
 msgid ""
 "After registration and connection, you will be able to join an existing team "
@@ -2540,31 +2283,26 @@ msgstr ""
 "su página de perfil."
 
 #: djamnedlies-git/templates/registration/register.html:28
-#: djamnedlies-svn/templates/registration/register.html:28
 #: templates/registration/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Autenticarse a través de OpenID <strong>o</strong> contraseña:"
 
 #: djamnedlies-git/templates/registration/register.html:34
-#: djamnedlies-svn/templates/registration/register.html:34
 #: templates/registration/register.html:34
 msgid "Register with OpenID"
 msgstr "Registrarse con OpenID"
 
 #: djamnedlies-git/templates/registration/register.html:46
-#: djamnedlies-svn/templates/registration/register.html:46
 #: templates/registration/register.html:46
 msgid "Register with password"
 msgstr "Registrarse con contraseña"
 
 #: djamnedlies-git/templates/registration/register_success.html:8
-#: djamnedlies-svn/templates/registration/register_success.html:8
 #: templates/registration/register_success.html:8
 msgid "Registration Success"
 msgstr "Registro correcto"
 
 #: djamnedlies-git/templates/registration/register_success.html:10
-#: djamnedlies-svn/templates/registration/register_success.html:10
 #: templates/registration/register_success.html:10
 msgid ""
 "The registration succeeded. You will now receive an email containing a link "
@@ -2574,56 +2312,47 @@ msgstr ""
 "enlace para activar su cuenta."
 
 #: djamnedlies-git/templates/teams/team_base.html:6
-#: djamnedlies-svn/templates/teams/team_base.html:6
 #: templates/teams/team_base.html:6
 msgid "Details"
 msgstr "Detalles"
 
 #: djamnedlies-git/templates/teams/team_base.html:9
-#: djamnedlies-svn/templates/teams/team_base.html:9
 #: templates/teams/team_base.html:9
 #, python-format
 msgid "%(lang)s Translation Team Page:"
 msgstr "Página del equipo de traducción al %(lang)s:"
 
 #: djamnedlies-git/templates/teams/team_base.html:13
-#: djamnedlies-svn/templates/teams/team_base.html:13
 #: templates/teams/team_base.html:13
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
 #: djamnedlies-git/templates/teams/team_base.html:15
-#: djamnedlies-svn/templates/teams/team_base.html:15
 #: templates/teams/team_base.html:15
 msgid "Report Bug in Translation"
 msgstr "Informar de un error en la traducción"
 
 #: djamnedlies-git/templates/teams/team_base.html:16
-#: djamnedlies-svn/templates/teams/team_base.html:16
 #: templates/teams/team_base.html:16
 msgid "Show Existing Bugs"
 msgstr "Mostrar errores existentes"
 
 #: djamnedlies-git/templates/teams/team_base.html:20
-#: djamnedlies-svn/templates/teams/team_base.html:20
 #: templates/teams/team_base.html:20
 msgid "Mailing List:"
 msgstr "Lista de correo:"
 
 #: djamnedlies-git/templates/teams/team_base.html:22
-#: djamnedlies-svn/templates/teams/team_base.html:22
 #: templates/teams/team_base.html:22
 msgid "Send e-mail to the list"
 msgstr "Enviar un correo electrónico a la lista"
 
 #: djamnedlies-git/templates/teams/team_base.html:24
-#: djamnedlies-svn/templates/teams/team_base.html:24
 #: templates/teams/team_base.html:24
 msgid "Subscribe"
 msgstr "Suscribirse"
 
 #: djamnedlies-git/templates/teams/team_detail.html:5
-#: djamnedlies-svn/templates/teams/team_detail.html:5
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME translation project"
 msgstr ""
@@ -2631,119 +2360,99 @@ msgstr ""
 "traducción de GNOME"
 
 #: djamnedlies-git/templates/teams/team_detail.html:14
-#: djamnedlies-svn/templates/teams/team_detail.html:14
 #: templates/teams/team_detail.html:14
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equipo de traducción al %(lang)s"
 
 #: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/teams/team_detail.html:26
 #: templates/teams/team_detail.html:26
 msgid "Release"
 msgstr "Publicación"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
-#: djamnedlies-svn/templates/teams/team_detail.html:69
 #: templates/teams/team_detail.html:71
 msgid "Team membership"
 msgstr "Membresía"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
-#: djamnedlies-svn/templates/teams/team_detail.html:80
 #: templates/teams/team_detail.html:82
 msgid "Apply modifications"
 msgstr "Aplicar modificaciones"
 
 #: djamnedlies-git/templates/teams/team_list.html:4
 #: djamnedlies-git/templates/teams/team_list.html:9
-#: djamnedlies-svn/templates/teams/team_list.html:4
-#: djamnedlies-svn/templates/teams/team_list.html:9
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
 msgstr "Equipos de traducción de GNOME"
 
 #: djamnedlies-git/templates/teams/team_list.html:12
-#: djamnedlies-svn/templates/teams/team_list.html:12
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
 msgstr "Seleccione un equipo para ver más información acerca de él:"
 
 #: djamnedlies-git/templates/teams/team_list.html:25
-#: djamnedlies-svn/templates/teams/team_list.html:25
 #: templates/teams/team_list.html:25
 #, python-format
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Coordinado por <a href=\"%(url)s\">%(name)s</a>"
 
 #: djamnedlies-git/templates/teams/team_list.html:34
-#: djamnedlies-svn/templates/teams/team_list.html:34
 #: templates/teams/team_list.html:34
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Actualmente no hay equipos de traducción para GNOME. :("
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:5
 #: templates/vertimus/vertimus_detail.html:6
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Traducción del módulo: %(name)s"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:13
 #: templates/vertimus/vertimus_detail.html:23
 msgid "Used in release(s):"
 msgstr "Usado en la(s) publicacion(es):"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:31
 #: templates/vertimus/vertimus_detail.html:41
 msgid "State:"
 msgstr "Estado:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
 #: templates/vertimus/vertimus_detail.html:61
 msgid "Download PO file"
 msgstr "Descargar el archivo PO"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
 #: templates/vertimus/vertimus_detail.html:61
 msgid "Translated:"
 msgstr "Traducido:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:66
 #: templates/vertimus/vertimus_detail.html:91
 msgid "On-going activities in same module:"
 msgstr "Actividades en desarrollo sobre el mismo módulo:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:74
 msgid "Action History"
 msgstr "Histórico de acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:90
 #: templates/vertimus/vertimus_detail.html:139
 msgid "diff with:"
 msgstr "diff con:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:110
 #: templates/vertimus/vertimus_detail.html:162
 msgid "New Action"
 msgstr "Acción nueva"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:117
 #: templates/vertimus/vertimus_detail.html:172
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:121
 #: templates/vertimus/vertimus_detail.html:177
 #, python-format
 msgid ""
@@ -2751,155 +2460,126 @@ msgid ""
 msgstr "Debe estar autenticado y ser miembro del equipo %(team_name)s."
 
 #: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:5
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
 msgstr "Diff entre los archivos po"
 
 #: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:16
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
 msgstr "&lt;- Volver a las acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:20
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
 msgstr "Nota: ambos archivos están mezclados con el último archivo POT"
 
-#: djamnedlies-git/vertimus/feeds.py:43 djamnedlies-svn/vertimus/feeds.py:43
-#: vertimus/feeds.py:43
+#: djamnedlies-git/vertimus/feeds.py:43 vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Acciones en Vertimus para el idioma %(lang)s"
 
-#: djamnedlies-git/vertimus/feeds.py:52 djamnedlies-svn/vertimus/feeds.py:52
-#: vertimus/feeds.py:52
+#: djamnedlies-git/vertimus/feeds.py:52 vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Últimas acciones del Proyecto de traducción de GNOME para el idioma %s"
 
-#: djamnedlies-git/vertimus/feeds.py:88 djamnedlies-svn/vertimus/feeds.py:88
-#: vertimus/feeds.py:88
+#: djamnedlies-git/vertimus/feeds.py:88 vertimus/feeds.py:88
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Acciones en Vertimus para el equipo %(lang)s"
 
-#: djamnedlies-git/vertimus/feeds.py:97 djamnedlies-svn/vertimus/feeds.py:97
-#: vertimus/feeds.py:97
+#: djamnedlies-git/vertimus/feeds.py:97 vertimus/feeds.py:97
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr ""
 "Últimas acciones realizadas por el equipo de traducción %s del Proyecto de "
 "traducción de GNOME"
 
-#: djamnedlies-git/vertimus/forms.py:38 djamnedlies-svn/vertimus/forms.py:38
-#: vertimus/forms.py:38
+#: djamnedlies-git/vertimus/forms.py:38 vertimus/forms.py:38
 msgid "Action"
 msgstr "Acción"
 
-#: djamnedlies-git/vertimus/forms.py:42 djamnedlies-svn/vertimus/forms.py:42
-#: vertimus/forms.py:42
+#: djamnedlies-git/vertimus/forms.py:42 vertimus/forms.py:42
 msgid "Comment"
 msgstr "Comentario"
 
-#: djamnedlies-git/vertimus/forms.py:47 djamnedlies-svn/vertimus/forms.py:47
-#: vertimus/forms.py:47
+#: djamnedlies-git/vertimus/forms.py:47 vertimus/forms.py:47
 msgid "File"
 msgstr "Archivo"
 
-#: djamnedlies-git/vertimus/forms.py:48 djamnedlies-svn/vertimus/forms.py:48
-#: vertimus/forms.py:48
+#: djamnedlies-git/vertimus/forms.py:48 vertimus/forms.py:48
 msgid "Upload a .po, .gz, .bz2 or .png file"
 msgstr "Subir un archivo .po, .gz, .bz2 o .png"
 
-#: djamnedlies-git/vertimus/forms.py:59 djamnedlies-svn/vertimus/forms.py:59
-#: vertimus/forms.py:59
+#: djamnedlies-git/vertimus/forms.py:59 vertimus/forms.py:59
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Sólo se admiten archivos con extensión .po, .gz, .bz2 o .png."
 
-#: djamnedlies-git/vertimus/forms.py:64 djamnedlies-svn/vertimus/forms.py:64
-#: vertimus/forms.py:64
+#: djamnedlies-git/vertimus/forms.py:64 vertimus/forms.py:64
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
 "El archivo .po no pasa «msgfmt -vc». Corrija el archivo e inténtelo de nuevo."
 
-#: djamnedlies-git/vertimus/forms.py:74 djamnedlies-svn/vertimus/forms.py:74
-#: vertimus/forms.py:74
+#: djamnedlies-git/vertimus/forms.py:74 vertimus/forms.py:74
 msgid "A comment or a file is needed for this action."
 msgstr "Se necesita un comentario para esta acción."
 
-#: djamnedlies-git/vertimus/forms.py:77 djamnedlies-svn/vertimus/forms.py:77
-#: vertimus/forms.py:77
+#: djamnedlies-git/vertimus/forms.py:77 vertimus/forms.py:77
 msgid "A file is needed for this action."
 msgstr "Se necesita un archivo para esta acción."
 
-#: djamnedlies-git/vertimus/forms.py:80 djamnedlies-svn/vertimus/forms.py:80
-#: vertimus/forms.py:80
+#: djamnedlies-git/vertimus/forms.py:80 vertimus/forms.py:80
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
-#: djamnedlies-git/vertimus/models.py:139
-#: djamnedlies-svn/vertimus/models.py:139 vertimus/models.py:163
+#: djamnedlies-git/vertimus/models.py:139 vertimus/models.py:163
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: djamnedlies-git/vertimus/models.py:152
-#: djamnedlies-svn/vertimus/models.py:152 vertimus/models.py:176
+#: djamnedlies-git/vertimus/models.py:152 vertimus/models.py:176
 msgid "Translating"
 msgstr "Traduciéndose"
 
-#: djamnedlies-git/vertimus/models.py:182
-#: djamnedlies-svn/vertimus/models.py:182 vertimus/models.py:206
+#: djamnedlies-git/vertimus/models.py:182 vertimus/models.py:206
 msgid "Proofreading"
 msgstr "En revisión"
 
 #. Translators: This is a status, not a verb
-#: djamnedlies-git/vertimus/models.py:197
-#: djamnedlies-svn/vertimus/models.py:197 vertimus/models.py:221
+#: djamnedlies-git/vertimus/models.py:197 vertimus/models.py:221
 msgid "Proofread"
 msgstr "Revisado"
 
-#: djamnedlies-git/vertimus/models.py:212
-#: djamnedlies-svn/vertimus/models.py:212 vertimus/models.py:236
+#: djamnedlies-git/vertimus/models.py:212 vertimus/models.py:236
 msgid "To Review"
 msgstr "Para revisar"
 
-#: djamnedlies-git/vertimus/models.py:224
-#: djamnedlies-svn/vertimus/models.py:224 vertimus/models.py:248
+#: djamnedlies-git/vertimus/models.py:224 vertimus/models.py:248
 msgid "To Commit"
 msgstr "Para subir"
 
-#: djamnedlies-git/vertimus/models.py:239
-#: djamnedlies-svn/vertimus/models.py:239 vertimus/models.py:263
+#: djamnedlies-git/vertimus/models.py:239 vertimus/models.py:263
 msgid "Committing"
 msgstr "Subiéndose"
 
-#: djamnedlies-git/vertimus/models.py:253
-#: djamnedlies-svn/vertimus/models.py:253 vertimus/models.py:277
+#: djamnedlies-git/vertimus/models.py:253 vertimus/models.py:277
 msgid "Committed"
 msgstr "Subido"
 
-#: djamnedlies-git/vertimus/models.py:341
-#: djamnedlies-svn/vertimus/models.py:341 vertimus/models.py:322
+#: djamnedlies-git/vertimus/models.py:341 vertimus/models.py:322
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
 #: djamnedlies-git/vertimus/models.py:348
 #: djamnedlies-git/vertimus/views.py:130 djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146
-#: djamnedlies-svn/vertimus/models.py:348
-#: djamnedlies-svn/vertimus/views.py:130 djamnedlies-svn/vertimus/views.py:136
-#: djamnedlies-svn/vertimus/views.py:146 vertimus/models.py:334
+#: djamnedlies-git/vertimus/views.py:146 vertimus/models.py:334
 #: vertimus/views.py:159 vertimus/views.py:165 vertimus/views.py:175
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
-#: djamnedlies-git/vertimus/models.py:460
-#: djamnedlies-svn/vertimus/models.py:460 vertimus/models.py:520
+#: djamnedlies-git/vertimus/models.py:460 vertimus/models.py:520
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2917,29 +2597,23 @@ msgstr ""
 "\n"
 
 #: djamnedlies-git/vertimus/models.py:473
-#: djamnedlies-git/vertimus/models.py:523
-#: djamnedlies-svn/vertimus/models.py:473
-#: djamnedlies-svn/vertimus/models.py:523 vertimus/models.py:533
+#: djamnedlies-git/vertimus/models.py:523 vertimus/models.py:533
 #: vertimus/models.py:583
 msgid "Without comment"
 msgstr "Sin comentarios"
 
 #: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525
-#: djamnedlies-svn/vertimus/models.py:475
-#: djamnedlies-svn/vertimus/models.py:525 vertimus/models.py:535
+#: djamnedlies-git/vertimus/models.py:525 vertimus/models.py:535
 #: vertimus/models.py:585
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
 
-#: djamnedlies-git/vertimus/models.py:482
-#: djamnedlies-svn/vertimus/models.py:482 vertimus/models.py:542
+#: djamnedlies-git/vertimus/models.py:482 vertimus/models.py:542
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: djamnedlies-git/vertimus/models.py:511
-#: djamnedlies-svn/vertimus/models.py:511 vertimus/models.py:571
+#: djamnedlies-git/vertimus/models.py:511 vertimus/models.py:571
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2956,105 +2630,74 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: djamnedlies-git/vertimus/models.py:533
-#: djamnedlies-svn/vertimus/models.py:533 vertimus/models.py:593
+#: djamnedlies-git/vertimus/models.py:533 vertimus/models.py:593
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: djamnedlies-git/vertimus/models.py:545
-#: djamnedlies-svn/vertimus/models.py:545 vertimus/models.py:605
+#: djamnedlies-git/vertimus/models.py:545 vertimus/models.py:605
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: djamnedlies-git/vertimus/models.py:560
-#: djamnedlies-svn/vertimus/models.py:560 vertimus/models.py:620
+#: djamnedlies-git/vertimus/models.py:560 vertimus/models.py:620
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: djamnedlies-git/vertimus/models.py:572
-#: djamnedlies-svn/vertimus/models.py:572 vertimus/models.py:632
+#: djamnedlies-git/vertimus/models.py:572 vertimus/models.py:632
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: djamnedlies-git/vertimus/models.py:588
-#: djamnedlies-svn/vertimus/models.py:588 vertimus/models.py:648
+#: djamnedlies-git/vertimus/models.py:588 vertimus/models.py:648
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
-#: djamnedlies-git/vertimus/models.py:604
-#: djamnedlies-svn/vertimus/models.py:604 vertimus/models.py:664
+#: djamnedlies-git/vertimus/models.py:604 vertimus/models.py:664
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
 #. Commit failed, state unchanged
-#: djamnedlies-git/vertimus/models.py:618
-#: djamnedlies-svn/vertimus/models.py:618 vertimus/models.py:678
+#: djamnedlies-git/vertimus/models.py:618 vertimus/models.py:678
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Falló la carga. El error fue: «%s»"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: djamnedlies-git/vertimus/models.py:628
-#: djamnedlies-svn/vertimus/models.py:628 vertimus/models.py:688
+#: djamnedlies-git/vertimus/models.py:628 vertimus/models.py:688
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: djamnedlies-git/vertimus/models.py:641
-#: djamnedlies-svn/vertimus/models.py:641 vertimus/models.py:701
+#: djamnedlies-git/vertimus/models.py:641 vertimus/models.py:701
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: djamnedlies-git/vertimus/models.py:656
-#: djamnedlies-svn/vertimus/models.py:656 vertimus/models.py:716
+#: djamnedlies-git/vertimus/models.py:656 vertimus/models.py:716
 msgid "Review required"
 msgstr "Necesita revisión"
 
 #: djamnedlies-git/vertimus/models.py:695
-#: djamnedlies-svn/vertimus/models.py:695
 msgid "Backup the actions"
 msgstr "Restablecer las acciones"
 
-#: djamnedlies-git/vertimus/models.py:734
-#: djamnedlies-svn/vertimus/models.py:734 vertimus/models.py:770
+#: djamnedlies-git/vertimus/models.py:734 vertimus/models.py:770
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
 #: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
-#: djamnedlies-svn/vertimus/views.py:129 djamnedlies-svn/vertimus/views.py:161
 #: vertimus/views.py:158 vertimus/views.py:190
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Error: El archivo %s contiene caracteres no válidos."
 
-#: djamnedlies-git/vertimus/views.py:152 djamnedlies-svn/vertimus/views.py:152
-#: vertimus/views.py:181
+#: djamnedlies-git/vertimus/views.py:152 vertimus/views.py:181
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
-#: djamnedlies-git/vertimus/views.py:155 djamnedlies-svn/vertimus/views.py:155
-#: vertimus/views.py:184
+#: djamnedlies-git/vertimus/views.py:155 vertimus/views.py:184
 msgid "Latest POT file"
 msgstr "Último archivo POT"
-
-#: djamnedlies-svn/settings.py:73 djamnedlies-svn/settings_sample.py:80
-msgid ""
-"This module is not part of the GNOME SVN repository. Please check the "
-"module's web page to see where to send translations."
-msgstr ""
-"Este módulo no forma parte del repositorio GNOME SVN. Por favor compruebe la "
-"página web del módulo para ver dónde enviar las traducciones."
-
-#: djamnedlies-svn/templates/base.html:96
-msgid ""
-"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
-"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-msgstr ""
-"Mantenido en el módulo <a href='http://svn.gnome.org/viewvc/damned-"
-"lies/'>damned-lies</a> en <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
 
 #. Translators: this concerns an unknown plural form
 #: languages/models.py:26
@@ -3069,20 +2712,14 @@ msgstr "Cadenas originales"
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
-#: stats/utils.py:302
-#| msgid ""
-#| "Don't know where to look if this language is actually used, ask the "
-#| "module maintainer."
+#: stats/utils.py:314
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:309
-#| msgid ""
-#| "Don't know where to look if this language is actually used, ask the "
-#| "module maintainer."
+#: stats/utils.py:321
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -3155,6 +2792,25 @@ msgstr "Sin acción actual."
 #: vertimus/models.py:731
 msgid "Archive the actions"
 msgstr "Archivar las acciones"
+
+#~ msgid "Valencian (Southern Catalan)"
+#~ msgstr "Valenciano"
+
+#~ msgid ""
+#~ "This module is not part of the GNOME SVN repository. Please check the "
+#~ "module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Este módulo no forma parte del repositorio GNOME SVN. Por favor compruebe "
+#~ "la página web del módulo para ver dónde enviar las traducciones."
+
+#~ msgid ""
+#~ "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-"
+#~ "lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn."
+#~ "gnome.org</a>"
+#~ msgstr ""
+#~ "Mantenido en el módulo <a href='http://svn.gnome.org/viewvc/damned-"
+#~ "lies/'>damned-lies</a> en <a href='http://svn.gnome.org/'>svn.gnome.org</"
+#~ "a>"
 
 #~ msgid "GFloppy Manual"
 #~ msgstr "Manual del formateador de disquetes"
@@ -3243,9 +2899,6 @@ msgstr "Archivar las acciones"
 
 #~ msgid "Development Platform"
 #~ msgstr "Plataforma de desarrollo"
-
-#~ msgid "External Dependencies"
-#~ msgstr "Dependencias externas"
 
 #~ msgid "System Administration"
 #~ msgstr "Administración del sistema"
