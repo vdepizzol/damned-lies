@@ -3,8 +3,7 @@ from stats.models import CATEGORY_CHOICES, Release
 
 class ReleaseField(forms.ModelChoiceField):
     def __init__(self, *args, **kwargs):
-        super(ReleaseField, self).__init__(*args, **kwargs)
-        self.required = False
+        super(ReleaseField, self).__init__(*args, required=False, **kwargs)
         if 'label' in kwargs:
             self.is_branch = True
 
