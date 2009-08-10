@@ -12,6 +12,7 @@ class ModuleBranchForm(forms.Form):
     def __init__(self, module, *args, **kwargs):
         super(ModuleBranchForm, self).__init__(*args, **kwargs)
         self.branch_fields = []
+        default_cat_name = None
         for branch in module.get_branches(reverse=True):
             categs = branch.category_set.order_by('name', 'release__name')
             if len(categs):
@@ -22,6 +23,7 @@ class ModuleBranchForm(forms.Form):
                     self.fields[str(cat.id)+'_cat'] = forms.ChoiceField(choices=CATEGORY_CHOICES,
                                                                         initial=cat.name)
                     self.branch_fields.append((str(cat.id), str(cat.id)+'_cat'))
+                default_cat_name = cat.name
             else:
                 # Branch is not linked to any release
                 self.fields[branch.name] = ReleaseField(queryset=Release.objects.all(),
@@ -31,7 +33,8 @@ class ModuleBranchForm(forms.Form):
 
         self.fields['new_branch'] = forms.CharField(required=False)
         self.fields['new_branch_release'] = ReleaseField(queryset=Release.objects.all())
-        self.fields['new_branch_category'] = forms.ChoiceField(choices=CATEGORY_CHOICES)
+        self.fields['new_branch_category'] = forms.ChoiceField(choices=CATEGORY_CHOICES,
+                                                               initial=default_cat_name)
 
     def get_branches(self):
         for rel_field, cat_field in self.branch_fields:
