@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-03 10:58+0000\n"
-"PO-Revision-Date: 2009-08-04 20:01+0200\n"
+"POT-Creation-Date: 2009-08-06 17:08+0000\n"
+"PO-Revision-Date: 2009-08-13 20:09+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1105,7 +1105,6 @@ msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
 
 #: database-content.py:257
-#| msgid "External Dependencies"
 msgid "External Dependencies (GNOME)"
 msgstr "Dependencias externas (GNOME)"
 
@@ -2102,7 +2101,6 @@ msgid "Bugzilla account:"
 msgstr "Cuenta de Bugzilla:"
 
 #: djamnedlies-git/templates/people/person_overview.html:38
-#: templates/people/person_overview.html:38
 msgid "SVN account:"
 msgstr "Cuenta de SVN:"
 
@@ -2756,6 +2754,11 @@ msgstr ""
 "Los módulos de este lanzamiento no forman parte del repositorio git de "
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
+
+#: templates/people/person_overview.html:38
+#| msgid "SVN account:"
+msgid "Git account:"
+msgstr "Cuenta de Git:"
 
 #: templates/teams/team_detail.html:5
 #, python-format
