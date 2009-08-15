@@ -17,7 +17,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-import codecs
 from datetime import date
 
 from django.conf import settings
@@ -167,10 +166,9 @@ def dynamic_po(request, filename):
                              branch__name=branch,
                              domain__name=domain,
                              language=None)
-    file_path = potfile.po_path()
-    f = codecs.open(file_path, encoding='utf-8')
+    file_path = potfile.po_path().encode('ascii')
 
-    dyn_content = u"""# %(lang)s translation of %(pack)s.
+    dyn_content = u"""# %(lang)s translation for %(pack)s.
 # Copyright (C) %(year)s %(pack)s's COPYRIGHT HOLDER
 # This file is distributed under the same license as the %(pack)s package.\n""" % {
         'lang': language.name,
@@ -187,26 +185,33 @@ def dynamic_po(request, filename):
     else:
         dyn_content += u"# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n#\n"
 
-    line = "1"
-    while line:
-        line = f.readline()
-        if line and line[0] == '#':
+    command = "msginit --locale=%s --no-translator --input=%s --output-file=-" % (locale, file_path)
+    status, output, err = utils.run_shell_command(command, raise_on_error=True)
+    lines = output.decode('utf-8').split("\n")
+    skip_next_line = False
+    for i, line in enumerate(lines):
+        if skip_next_line or (line and line[0] == '#'):
             # Skip first lines of the file
+            skip_next_line = False
             continue
         # Transformations
-        line = {
-            '"Project-Id-': u"\"Project-Id-Version: %s %s\\n\"\n" % (module, branch),
-            '"Language-Te': u"\"Language-Team: %s <%s>\\n\"\n" % (
+        new_line = {
+            '"Project-Id-': u"\"Project-Id-Version: %s %s\\n\"" % (module, branch),
+            '"Last-Transl': u"\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"",
+            '"Language-Te': u"\"Language-Team: %s <%s>\\n\"" % (
                 language.name, language.team and language.team.mailing_list or "%s@li.org" % locale),
-            '"Content-Typ': u"\"Content-Type: text/plain; charset=UTF-8\\n\"\n",
-            '"Plural-Form': u"\"Plural-Forms: %s;\\n\"\n" % (language.plurals or "nplurals=INTEGER; plural=EXPRESSION"),
+            '"Content-Typ': u"\"Content-Type: text/plain; charset=UTF-8\\n\"",
+            '"Plural-Form': u"\"Plural-Forms: %s;\\n\"" % (language.plurals or "nplurals=INTEGER; plural=EXPRESSION"),
         }.get(line[:12], line)
-        dyn_content += line
-        if line == "\n":
-            break # Quit loop on first blank line after headers
-    # codecs 'read' call doesn't always return all remaining buffer in first call. Bug?
-    content = dyn_content + f.read() + f.read()
-    return HttpResponse(content, 'text/plain')
+        if line != new_line and line[-3:] != u"\\n\"":
+            # Skip the wrapped part of the replaced line
+            skip_next_line = True
+        dyn_content += new_line + "\n"
+        if line == "":
+            # Output the remaining part of the file untouched
+            dyn_content += "\n".join(lines[i+1:])
+            break
+    return HttpResponse(dyn_content, 'text/plain')
 
 def releases(request, format='html'):
     all_releases = Release.objects.order_by('status', '-name')
