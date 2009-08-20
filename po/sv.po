@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-06 17:08+0000\n"
-"PO-Revision-Date: 2009-08-10 08:34+0100\n"
+"POT-Creation-Date: 2009-08-20 19:58+0000\n"
+"PO-Revision-Date: 2009-08-20 23:37+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1218,24 +1218,24 @@ msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "Detta bör vara en e-postadress, användbar om den inte är samma som \"email\"-fältet"
 
 #: djamnedlies-git/people/views.py:86
-#: people/views.py:86
+#: people/views.py:87
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Du har gått med i gruppen \"%s\"."
 
 #: djamnedlies-git/people/views.py:89
-#: people/views.py:89
+#: people/views.py:93
 msgid "You are already member of this team."
 msgstr "Du är redan medlem i denna grupp."
 
 #: djamnedlies-git/people/views.py:112
-#: people/views.py:112
+#: people/views.py:116
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Du har tagits bort från gruppen \"%s\"."
 
 #: djamnedlies-git/people/views.py:128
-#: people/views.py:128
+#: people/views.py:132
 msgid "Your password has been changed."
 msgstr "Ditt lösenord har ändrats."
 
@@ -1436,29 +1436,29 @@ msgid "Don't know where to look if this language is actually used, ask the modul
 msgstr "Vet inte var jag ska kontrollera om det här språket faktiskt används, fråga modulansvarig. "
 
 #: djamnedlies-git/teams/models.py:112
-#: teams/models.py:185
+#: teams/models.py:198
 #, python-format
 msgid "No team for locale %s"
 msgstr "Ingen grupp för lokalen %s"
 
 #: djamnedlies-git/teams/models.py:129
-#: teams/models.py:202
+#: teams/models.py:215
 msgid "Translator"
 msgstr "Översättare"
 
 #: djamnedlies-git/teams/models.py:130
-#: teams/models.py:203
+#: teams/models.py:216
 msgid "Reviewer"
 msgstr "Granskare"
 
 #: djamnedlies-git/teams/models.py:131
-#: teams/models.py:204
+#: teams/models.py:217
 msgid "Committer"
 msgstr "Insändare"
 
 #: djamnedlies-git/teams/models.py:132
 #: djamnedlies-git/templates/teams/team_base.html:31
-#: teams/models.py:205
+#: teams/models.py:218
 #: templates/teams/team_base.html:31
 msgid "Coordinator"
 msgstr "Koordinator"
@@ -2588,6 +2588,7 @@ msgstr "Utan kommentar"
 
 #: djamnedlies-git/vertimus/models.py:475
 #: djamnedlies-git/vertimus/models.py:525
+#: teams/models.py:181
 #: vertimus/models.py:535
 #: vertimus/models.py:585
 #, python-format
@@ -2709,6 +2710,15 @@ msgstr "Okänt"
 msgid "Original strings"
 msgstr "Ursprungliga strängar"
 
+#: people/views.py:88
+msgid "A new person joined your team"
+msgstr "En ny person har gått med i din grupp"
+
+#: people/views.py:89
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "%(name)s har precis gått med i din översättningsgrupp på %(site)s"
+
 #: stats/models.py:351
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Kan inte generera POT-fil, statistiken avbruten."
@@ -2738,7 +2748,6 @@ msgid "The modules of this release are not part of the GNOME git repository. Ple
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
 #: templates/people/person_overview.html:38
-#| msgid "SVN account:"
 msgid "Git account:"
 msgstr "Git-konto:"
 
