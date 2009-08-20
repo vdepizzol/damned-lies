@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>.
+# Copyright (c) 2009 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -19,7 +20,10 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.db import models
+from django.core import mail
 from django.utils.translation import ugettext_lazy, ugettext as _
+from django.conf import settings
+from django.contrib.sites.models import Site
 from people.models import Person
 
 class TeamManager(models.Manager):
@@ -172,6 +176,15 @@ class Team(models.Model):
             # Not necessary to filter as for other roles
             members = list(self.members.all())
         return members
+
+    def send_mail_to_coordinator(self, subject, message):
+        message += "\n--\n" + _(u"This is an automated message sent from %s.") % Site.objects.get_current()
+        mail.send_mail(
+            subject,
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            [self.get_coordinator().email]
+        )
 
 class FakeTeam(object):
     """

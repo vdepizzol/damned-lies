@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
 from django.test import TestCase
+from django.test.client import Client
+from django.core.urlresolvers import reverse
+from django.core import mail
+from django.contrib.auth import login
 from people.models import Person
 from teams.models import Team, Role
 
@@ -7,6 +12,7 @@ class TeamTest(TestCase):
     def setUp(self):
         self.pn = Person(first_name='John', last_name='Nothing',
             email='jn@devnull.com', username= 'jn')
+        self.pn.set_password('password')
         self.pn.save()
 
         self.pt = Person(first_name='John', last_name='Translator',
@@ -102,3 +108,19 @@ class TeamTest(TestCase):
 
     def test_roles_prefilled_all(self):
         self.run_roles_test(Team.objects.all_with_roles()[0])
+
+    def test_join_team(self):
+        c = Client()
+        response = c.post('/login/', {'username': self.pn.username, 'password': 'password'})
+        # Display team join page
+        team_join_url = reverse('person_team_join', current_app='people')
+        response = c.get(team_join_url)
+        self.assertContains(response, "select name=\"teams\"")
+        # Post for joining
+        response = c.post(team_join_url, {'teams':[str(self.t.pk)]})
+        # Test user is member of team
+        self.assertTrue(self.pn.is_translator(self.t))
+        # Test coordinator receives email
+        self.assertEquals(len(mail.outbox), 1)
+        self.assertEquals(mail.outbox[0].recipients()[0], self.pcoo.email)
+

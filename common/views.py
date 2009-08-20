@@ -67,7 +67,7 @@ def site_login(request, msgs=[]):
                             'url': reverse('person_team_join'),
                         }
                         user.message_set.create(message=message)
-                    if request.POST['referer']:
+                    if 'referer' in request.POST:
                         return HttpResponseRedirect(request.POST['referer'])
                     else:
                         return HttpResponseRedirect(reverse("home"))

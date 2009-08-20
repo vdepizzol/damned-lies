@@ -26,6 +26,7 @@ from django.template import RequestContext
 from django.db import transaction, IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.sites.models import Site
 from people.models import Person
 from teams.models import Team, Role
 from people.forms import TeamJoinForm, DetailForm
@@ -84,6 +85,9 @@ def person_team_join(request):
             try:
                 new_role.save()
                 request.user.message_set.create(message=_("You have successfully joined the team '%s'.") % team.get_description())
+                team.send_mail_to_coordinator(subject=_("A new person joined your team"),
+                                              message=_("%(name)s has just joined your translation team on %(site)s") %
+                                                        {'name': person.name, 'site': Site.objects.get_current()})
             except IntegrityError:
                 transaction.rollback()
                 request.user.message_set.create(message=_("You are already member of this team."))
