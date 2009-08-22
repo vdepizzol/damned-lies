@@ -148,10 +148,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     action_1 = get_object_or_404(ActionDb, pk=action_id_1).get_action()
     state = action_1.state
 
-    file_path_1 = action_1.merged_file()['path']
-    if not file_path_1:
-        # The merged file isn't availabe yet
-        file_path_1 = action_1.file.path
+    file_path_1 = action_1.merged_file()['path'] or action_1.file.path
 
     try:
         content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
@@ -163,7 +160,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     if action_id_2 not in (None, "0"):
         # 1) id_2 specified in URL
         action_2 = get_object_or_404(ActionDb, pk=action_id_2).get_action()
-        file_path_2 = action_2.merged_file()['path']
+        file_path_2 = action_2.merged_file()['path'] or action_2.file.path
         descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                  'date': action_2.created }
     else:
@@ -173,7 +170,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
             action_2 = action_1.get_previous_action_with_po()
 
         if action_2:
-            file_path_2 = action_2.merged_file()['path']
+            file_path_2 = action_2.merged_file()['path'] or action_2.file.path
             descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                      'date': action_2.created }
         else:
