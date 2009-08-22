@@ -140,9 +140,11 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
                               context_instance=RequestContext(request))
 
 
-def vertimus_diff(request, action_id_1, action_id_2=None):
+def vertimus_diff(request, action_id_1, action_id_2, level):
     """Show a diff between current action po file and previous file"""
     import difflib
+    if level != 0:
+        ActionDb = ActionDbArchived
     action_1 = get_object_or_404(ActionDb, pk=action_id_1).get_action()
     state = action_1.state
 

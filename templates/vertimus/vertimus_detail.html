@@ -138,7 +138,7 @@ $(document).ready(function() {
           {% endif %}
           <div class="right_actions">{% trans "diff with:" %}
             {% for f in files %}
-                <a href="{% url vertimus_diff action.id,f.action_id %}" title="{{ f.title }}">[{{ forloop.revcounter }}]</a>
+                <a href="{% url vertimus_diff action.id,f.action_id,level %}" title="{{ f.title }}">[{{ forloop.revcounter }}]</a>
             {% endfor %}
           </div>
         {% endif %}
