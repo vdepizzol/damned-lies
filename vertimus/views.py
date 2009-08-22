@@ -143,9 +143,11 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
 def vertimus_diff(request, action_id_1, action_id_2, level):
     """Show a diff between current action po file and previous file"""
     import difflib
-    if level != 0:
-        ActionDb = ActionDbArchived
-    action_1 = get_object_or_404(ActionDb, pk=action_id_1).get_action()
+    if int(level) != 0:
+        ActionDbReal = ActionDbArchived
+    else:
+        ActionDbReal = ActionDb
+    action_1 = get_object_or_404(ActionDbReal, pk=action_id_1).get_action()
     state = action_1.state
 
     file_path_1 = action_1.merged_file()['path'] or action_1.file.path
@@ -159,7 +161,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
                                                              'date': action_1.created }
     if action_id_2 not in (None, "0"):
         # 1) id_2 specified in URL
-        action_2 = get_object_or_404(ActionDb, pk=action_id_2).get_action()
+        action_2 = get_object_or_404(ActionDbReal, pk=action_id_2).get_action()
         file_path_2 = action_2.merged_file()['path'] or action_2.file.path
         descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                  'date': action_2.created }
