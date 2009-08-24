@@ -21,7 +21,7 @@
 {% endif %}
 
 {% for lang in team.get_languages %}
-  <h2>{{ lang.get_name }}</h2>
+  <h2>{{ lang.get_name }} ({{ lang.locale }})</h2>
   <table class="stats">
   <thead><tr><th>{% trans "Release" %}</th><th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th>
          <th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th></tr></thead>
