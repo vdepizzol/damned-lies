@@ -422,8 +422,12 @@ class Branch(models.Model):
                     try:
                         language = Language.objects.get(locale=lang)
                     except Language.DoesNotExist:
-                        language = Language(name=lang, locale=lang)
-                        language.save()
+                        if self.is_head():
+                            language = Language(name=lang, locale=lang)
+                            language.save()
+                        else:
+                            # Do not create language (and therefore ignore stats) for an 'old' branch
+                            continue
                     stat = Statistics(language = language, branch = self, domain = dom, translated = int(langstats['translated']),
                                       fuzzy = int(langstats['fuzzy']), untranslated = int(langstats['untranslated']))
                 stat.save()
