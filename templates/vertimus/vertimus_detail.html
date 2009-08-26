@@ -17,6 +17,10 @@ $(document).ready(function() {
 
 {% block content %}
 <div class="mainpage">
+{% if action_form.non_field_errors %}
+  {{ action_form.non_field_errors }}
+{% endif %}
+
 {% with branch.releases.all as releases %}
 <div class="release_link">
 {% if releases %}

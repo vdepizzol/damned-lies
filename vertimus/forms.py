@@ -66,7 +66,10 @@ class ActionForm(forms.Form):
 
     def clean(self):
         cleaned_data = self.cleaned_data
-        action = ActionAbstract.new_by_name(cleaned_data.get('action'))
+        action_code = cleaned_data.get('action')
+        if action_code is None:
+            raise forms.ValidationError(_("Unvalid action. Someone probably posted another action just before you."))
+        action = ActionAbstract.new_by_name(action_code)
         comment = cleaned_data.get('comment')
         file = cleaned_data.get('file')
 
