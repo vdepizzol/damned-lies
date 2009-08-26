@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-26 07:31+0000\n"
-"PO-Revision-Date: 2009-08-26 10:21-0300\n"
+"POT-Creation-Date: 2009-08-26 13:23+0000\n"
+"PO-Revision-Date: 2009-08-26 10:29-0300\n"
 "Last-Translator: Jonh Wendell <jwendell@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -528,7 +528,6 @@ msgid "Interlingua"
 msgstr "Interlingua"
 
 #: database-content.py:127
-#| msgid "Limburgian"
 msgid "Luxembourgish"
 msgstr "Luxemburguês"
 
@@ -537,7 +536,6 @@ msgid "Tsonga"
 msgstr "Tsonga"
 
 #: database-content.py:129
-#| msgid "Maithili"
 msgid "Swahili"
 msgstr "Suaíli"
 
@@ -546,7 +544,6 @@ msgid "South Ndebele"
 msgstr "Ndebele do Sul"
 
 #: database-content.py:131
-#| msgid "Northern Sotho"
 msgid "Southern Sotho"
 msgstr "Soto do Sul"
 
@@ -559,7 +556,6 @@ msgid "Igbo"
 msgstr "Igbo"
 
 #: database-content.py:134
-#| msgid "Friulian"
 msgid "Frisian"
 msgstr "Frísio"
 
@@ -897,7 +893,6 @@ msgid "UI translation"
 msgstr "Traduções de IU"
 
 #: database-content.py:216
-#| msgid "po-tags"
 msgid "tags"
 msgstr "etiquetas"
 
@@ -1384,8 +1379,8 @@ msgstr "atualizado em %(date)s"
 #: djamnedlies-git/stats/models.py:1020
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1053 templates/vertimus/vertimus_detail.html:43
-#: templates/vertimus/vertimus_detail.html:123
+#: stats/models.py:1053 templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:127
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
@@ -1951,13 +1946,13 @@ msgstr ""
 
 #: djamnedlies-git/templates/stats_show.html:13
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:57
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Baixar o arquivo POT"
 
 #: djamnedlies-git/templates/stats_show.html:17
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:77
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "Alertas"
 
@@ -1969,7 +1964,7 @@ msgstr "Traduzido"
 
 #: djamnedlies-git/templates/stats_show.html:50
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:71
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "Mostrar imagens dos documentos"
 
@@ -1981,7 +1976,7 @@ msgstr "Administração do Damned Lies"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:150
+#: templates/vertimus/vertimus_detail.html:154
 msgid "No comment"
 msgstr "Nenhum comentário"
 
@@ -2446,27 +2441,27 @@ msgid "Module Translation: %(name)s"
 msgstr "Tradução do módulo %(name)s"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
-#: templates/vertimus/vertimus_detail.html:23
+#: templates/vertimus/vertimus_detail.html:27
 msgid "Used in release(s):"
 msgstr "Usado nas versões/pacotes:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
-#: templates/vertimus/vertimus_detail.html:41
+#: templates/vertimus/vertimus_detail.html:45
 msgid "State:"
 msgstr "Estado:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:61
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Download PO file"
 msgstr "Baixar o arquivo PO"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:61
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Translated:"
 msgstr "Traduzido:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:91
+#: templates/vertimus/vertimus_detail.html:95
 msgid "On-going activities in same module:"
 msgstr "Atividades em andamento no mesmo módulo:"
 
@@ -2475,22 +2470,22 @@ msgid "Action History"
 msgstr "Histórico de ações"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:139
+#: templates/vertimus/vertimus_detail.html:143
 msgid "diff with:"
 msgstr "diff com:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:162
+#: templates/vertimus/vertimus_detail.html:166
 msgid "New Action"
 msgstr "Nova ação"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:176
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:177
+#: templates/vertimus/vertimus_detail.html:181
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2558,15 +2553,15 @@ msgstr ""
 "O arquivo .po não passou no teste 'msgfmt -vc'. Por favor corrija-o e tente "
 "novamente."
 
-#: djamnedlies-git/vertimus/forms.py:74 vertimus/forms.py:74
+#: djamnedlies-git/vertimus/forms.py:74 vertimus/forms.py:77
 msgid "A comment or a file is needed for this action."
 msgstr "É necessário um comentário ou um arquivo para esta ação."
 
-#: djamnedlies-git/vertimus/forms.py:77 vertimus/forms.py:77
+#: djamnedlies-git/vertimus/forms.py:77 vertimus/forms.py:80
 msgid "A file is needed for this action."
 msgstr "É necessário um arquivo para esta ação."
 
-#: djamnedlies-git/vertimus/forms.py:80 vertimus/forms.py:80
+#: djamnedlies-git/vertimus/forms.py:80 vertimus/forms.py:83
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Por favor, não envie um arquivo junto com a ação \"Reservar\"."
 
@@ -2813,26 +2808,32 @@ msgstr "Atividades recentes da equipe %(lang)s no projeto de tradução GNOME"
 msgid "Plural forms:"
 msgstr "Formas de plurais:"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:105
 msgid "Actions"
 msgstr "Ações"
 
-#: templates/vertimus/vertimus_detail.html:103
+#: templates/vertimus/vertimus_detail.html:107
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Ações arquivadas - (%(human_level)s séries arquivadas"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/vertimus/vertimus_detail.html:109
 msgid "(Return to current)"
 msgstr "(Retorna para o atual)"
 
-#: templates/vertimus/vertimus_detail.html:110
+#: templates/vertimus/vertimus_detail.html:114
 msgid "(Previous action history)"
 msgstr "(Histórico de ações anteriores)"
 
-#: templates/vertimus/vertimus_detail.html:158
+#: templates/vertimus/vertimus_detail.html:162
 msgid "No current actions."
 msgstr "Não há ações atuais."
+
+#: vertimus/forms.py:71
+msgid "Unvalid action. Someone probably posted another action just before you."
+msgstr ""
+"Ação inválida. Provavelmente alguém submeteu outra ação imediatamente antes "
+"de você."
 
 #: vertimus/models.py:731
 msgid "Archive the actions"
