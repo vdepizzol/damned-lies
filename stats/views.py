@@ -18,6 +18,7 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 from datetime import date
+import os
 
 from django.conf import settings
 from django.shortcuts import render_to_response, get_object_or_404
@@ -167,6 +168,8 @@ def dynamic_po(request, filename):
                              domain__name=domain,
                              language=None)
     file_path = potfile.po_path().encode('ascii')
+    if not os.access(file_path, os.X_OK):
+        raise Http404
 
     dyn_content = u"""# %(lang)s translation for %(pack)s.
 # Copyright (C) %(year)s %(pack)s's COPYRIGHT HOLDER
