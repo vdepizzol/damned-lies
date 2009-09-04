@@ -168,7 +168,7 @@ def dynamic_po(request, filename):
                              domain__name=domain,
                              language=None)
     file_path = potfile.po_path().encode('ascii')
-    if not os.access(file_path, os.X_OK):
+    if not os.access(file_path, os.R_OK):
         raise Http404
 
     dyn_content = u"""# %(lang)s translation for %(pack)s.
