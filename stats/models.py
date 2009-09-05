@@ -380,7 +380,7 @@ class Branch(models.Model):
             command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
             stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
             langs_with_ext_errors = [stat.language.locale for stat in stats_with_ext_errors]
-            for lang, pofile in self.get_lang_files(dom, domain_path):
+            for lang, pofile in dom.get_lang_files(self.co_path()):
                 outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
 
                 if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
@@ -432,26 +432,6 @@ class Branch(models.Model):
                 stat.save()
                 for err in langstats['errors']:
                     stat.information_set.add(Information(type=err[0], description=err[1]))
-
-    def get_lang_files(self, domain, dom_path):
-        """ Returns a list of language files on filesystem, as tuple (lang, lang_file) -> lang_file with complete path """
-        flist = []
-        if domain.dtype == "ui":
-            for f in os.listdir(dom_path):
-                # FIXME: temporary fix for ooo-build module (see #551328)
-                if f[-3:] != ".po" or f[:4] == "ooo-":
-                    continue
-                lang = f[:-3]
-                pofile = os.path.join(dom_path, f)
-                flist.append((lang, pofile))
-        if domain.dtype == "doc":
-            for lang_dir in os.listdir(dom_path):
-                for base_name in [lang_dir, domain.name.replace("_","/")]:
-                    pofile = os.path.join(dom_path, lang_dir, base_name + ".po")
-                    if os.path.isfile(pofile):
-                        flist.append((lang_dir, pofile))
-                        break
-        return flist
 
     def checkout(self):
         """ Do a checkout or an update of the VCS files """
@@ -663,6 +643,24 @@ class Domain(models.Model):
             return _(self.description)
         else:
             return self.potbase()
+
+    def get_lang_files(self, base_path):
+        """ Returns a list of language files on filesystem, as tuple (lang, lang_file) -> lang_file with complete path """
+        flist = []
+        dom_path = os.path.join(base_path, self.directory)
+        for item in os.listdir(dom_path):
+            # FIXME: temporary fix for ooo-build module (see #551328)
+            if item[-3:] == ".po" and item[:4] != "ooo-":
+                lang = item[:-3]
+                pofile = os.path.join(dom_path, item)
+                flist.append((lang, pofile))
+            elif os.path.isdir(os.path.join(dom_path, item)):
+                for base_name in [item, self.name.replace("_","/")]:
+                    pofile = os.path.join(dom_path, item, base_name + ".po")
+                    if os.access(pofile, os.F_OK):
+                        flist.append((item, pofile))
+                        break
+        return flist
 
     def generate_pot_file(self, current_branch):
         """ Return the pot file generated, and the error if any """
