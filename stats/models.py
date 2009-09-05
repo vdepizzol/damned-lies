@@ -26,6 +26,7 @@ from datetime import datetime
 from django.conf import settings
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
+from django.utils.datastructures import SortedDict
 from django.db import models, connection
 
 from stats import utils, signals
@@ -244,8 +245,10 @@ class Branch(models.Model):
                      'po-tips': [potstat, polang1, polang2, ...]}
             mandatory_langs is a list of language objects whose stats should be added even if no translation exists.
         """
-        stats = {}; stats_langs = {}
-        pot_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=True, domain__dtype=typ)
+        stats = SortedDict(); stats_langs = {}
+        pot_stats = Statistics.objects.select_related("language", "domain", "branch"
+                        ).filter(branch=self, language__isnull=True, domain__dtype=typ
+                        ).order_by('domain__name')
         for stat in pot_stats.all():
             stats[stat.domain.name] = [stat,]
             stats_langs[stat.domain.name] = []
