@@ -113,7 +113,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
 
         pages = read_makefile_variable([vcs_path], "DOC_PAGES")
         if pages:
-            for f in pages.split(" "):
+            for f in pages.split():
                 if f.strip() != "":
                     files += " %s" % (os.path.join("C", f.strip()))
 
@@ -157,27 +157,46 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
 def read_makefile_variable(vcs_paths, variable):
     """ vcs_paths is a list of potential path where Makefile.am could be found """
     makefiles = [os.path.join(path, "Makefile.am") for path in vcs_paths]
+    good_makefile = None
     for makefile in makefiles:
-        try:
-            fin = open(makefile, "r")
+        if os.access(makefile, os.R_OK):
+            good_makefile = makefile
             break
-        except IOError:
-            # probably file not found or unreadable
-            fin = None
-    if not fin:
+    if not good_makefile:
         return None # no file found
 
-    fullline = ""
-    for line in fin:
-        fullline += " " + line.strip()
-        if len(line)>2 and fullline[-1] == "\\":
-            fullline = fullline[:-1]
+    return search_variable_in_file(good_makefile, variable)
+
+def search_variable_in_file(file_path, variable):
+    """ Search for a variable value in a file, and return content if found
+        Return None if variable not found in file (or file does not exist)
+    """
+    try:
+        file = open(file_path, "r")
+    except IOError:
+        return None
+
+    non_terminated_content = ""
+    found = None
+    for line in file:
+        line = line.strip()
+        if non_terminated_content:
+            line = non_terminated_content + " " + line
+        # Test if line is non terminated (end with \ or even quote count)
+        if (len(line)>2 and line[-1] == "\\") or line.count('"') % 2 == 1:
+            if line[-1] == "\\":
+                # Remove trailing backslash
+                line = line[:-1]
+            non_terminated_content = line
         else:
-            match = re.match(variable + r"\s*=\s*([^=]*)", fullline.strip())
+            non_terminated_content = ""
+            # Search for variable
+            match = re.search('%s\s*[=,]\s*"?([^"=]*)"?' % variable, line)
             if match:
-                return match.group(1)
-            fullline = ""
-    return None
+                found = match.group(1)
+                break
+    file.close()
+    return found
 
 def pot_diff_status(pota, potb):
     (status, output, errs) = run_shell_command("diff %s %s|wc -l" % (pota, potb))
@@ -290,26 +309,10 @@ def get_ui_linguas(module_path, po_path):
                     'error': ugettext_noop("Entry for this language is not present in LINGUAS file.") }
 
     for configure in [configureac, configurein]:
-        if os.access(configure, os.R_OK):
-            cfile = open(configure, "r")
-            lines = []
-            prev = ""
-            for line in cfile:
-                line = prev + line.strip()
-                if line.count('"') % 2 == 1:
-                    prev = line
-                else:
-                    lines.append(line)
-                    prev = ""
-
-            for line in lines:
-                line = line.strip()
-                match = re.search('ALL_LINGUAS\s*[=,]\s*"([^"]*)"', line)
-                if match:
-                    langs = match.groups(1)[0].split()
-                    cfile.close()
-                    return {'langs':langs,
-                            'error': ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.") }
+        found = search_variable_in_file(configure, 'ALL_LINGUAS')
+        if found is not None:
+            return {'langs': found.split(),
+                    'error': ugettext_noop("Entry for this language is not present in ALL_LINGUAS in configure file.") }
     return {'langs':None,
             'error': ugettext_noop("Don't know where to look for the LINGUAS variable, ask the module maintainer.") }
 

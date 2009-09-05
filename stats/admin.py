@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.contrib import admin
+from django import forms
 from stats.models import Statistics, Information, Module, Branch, Domain, Category, Release
 
 class BranchInline(admin.TabularInline):
@@ -27,10 +28,11 @@ class BranchInline(admin.TabularInline):
 class DomainInline(admin.TabularInline):
     model = Domain
     def formfield_for_dbfield(self, db_field, **kwargs):
-        field = super(DomainInline, self).formfield_for_dbfield(db_field, **kwargs)
         if db_field.name == 'description':
-            field.widget.attrs['rows'] = '1'
-        return field
+            kwargs['widget'] = forms.Textarea(attrs={'rows':'1', 'cols':'20'})
+        if db_field.name in ('name', 'directory'):
+            kwargs['widget'] = forms.TextInput(attrs={'size':'20'})
+        return super(DomainInline, self).formfield_for_dbfield(db_field, **kwargs)
 
 class ModuleAdmin(admin.ModelAdmin):
     fieldsets = (

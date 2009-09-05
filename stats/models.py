@@ -312,7 +312,6 @@ class Branch(models.Model):
             # ****************************
             if dom.dtype == 'ui':
                 potfile, errs = dom.generate_pot_file(self)
-                linguas = utils.get_ui_linguas(self.co_path(), domain_path)
             elif dom.dtype == 'doc':
                 if dom.pot_method:
                     potfile, errs = dom.generate_pot_file(self)
@@ -322,12 +321,12 @@ class Branch(models.Model):
                 if not potfile:
                     print >> sys.stderr, "\n".join([e[1] for e in errs])
                     continue
-                linguas = utils.get_doc_linguas(self.co_path(), domain_path)
             else:
                 print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                 continue
             errors.extend(errs)
-            if linguas['langs'] is None:
+            linguas = dom.get_linguas(self.co_path())
+            if linguas['langs'] is None and linguas['error']:
                 errors.append(("warn", linguas['error']))
 
             # Prepare statistics object
@@ -636,9 +635,12 @@ class Domain(models.Model):
     dtype = models.CharField(max_length=5, choices=DOMAIN_TYPE_CHOICES, default='ui')
     directory = models.CharField(max_length=50)
     # The pot_method is a command who should produce a potfile in the po directory of
-    # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot). If blank, method is
-    # intltool for UI and gnome-doc-utils for DOC
-    pot_method = models.CharField(max_length=50, null=True, blank=True)
+    # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot).
+    pot_method = models.CharField(max_length=50, null=True, blank=True,
+        help_text="Leave blank for standard method (intltool for UI and gnome-doc-utils for DOC)")
+    linguas_location = models.CharField(max_length=50, null=True, blank=True,
+        help_text="""Use 'no' for no LINGUAS check, or path/to/file#variable for a non-standard location.
+            Leave blank for standard location (ALL_LINGUAS in LINGUAS/configure.ac/.in for UI and DOC_LINGUAS in Makefile.am for DOC)""")
 
     class Meta:
         db_table = 'domain'
@@ -696,6 +698,30 @@ class Domain(models.Model):
                        )
         else:
             return potfile, ()
+
+    def get_linguas(self, base_path):
+        """ Return a linguas dict like this: {'langs':['lang1', lang2], 'error':"Error"} """
+        if self.linguas_location:
+            # Custom (or no) linguas location
+            if self.linguas_location == 'no':
+                return {'langs':None, 'error':''}
+            else:
+                variable = "ALL_LINGUAS"
+                if "#" in self.linguas_location:
+                    file_path, variable = self.linguas_location.split("#")
+                else:
+                    file_path = self.linguas_location
+                langs = utils.search_variable_in_file(os.path.join(base_path, file_path), variable)
+                return {'langs': langs,
+                        'error': ugettext_noop("Entry for this language is not present in %(var)s variable in %(file)s file." % {
+                            'var': variable, 'file': file_path})}
+        # Standard linguas location
+        if self.dtype == 'ui':
+            return utils.get_ui_linguas(base_path, os.path.join(base_path, self.directory))
+        elif self.dtype == 'doc':
+            return utils.get_doc_linguas(base_path, os.path.join(base_path, self.directory))
+        else:
+            raise ValueError("Domain dtype should be one of 'ui', 'doc'")
 
 RELEASE_STATUS_CHOICES = (
     ('official', 'Official'),

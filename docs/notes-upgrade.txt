@@ -89,3 +89,6 @@ ALTER SEQUENCE archived_statistics_id_seq RENAME TO statistics_archived_id_seq;
 
 ## Add language plural forms
 ALTER TABLE language ADD plurals VARCHAR(200);
+
+# Add new linguas_location field
+ALTER TABLE domain ADD linguas_location VARCHAR(50);
