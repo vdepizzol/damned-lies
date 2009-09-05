@@ -636,7 +636,7 @@ class Domain(models.Model):
     directory = models.CharField(max_length=50)
     # The pot_method is a command who should produce a potfile in the po directory of
     # the domain, named <potbase()>.pot (e.g. /po/gnucash.pot).
-    pot_method = models.CharField(max_length=50, null=True, blank=True,
+    pot_method = models.CharField(max_length=100, null=True, blank=True,
         help_text="Leave blank for standard method (intltool for UI and gnome-doc-utils for DOC)")
     linguas_location = models.CharField(max_length=50, null=True, blank=True,
         help_text="""Use 'no' for no LINGUAS check, or path/to/file#variable for a non-standard location.
@@ -644,6 +644,7 @@ class Domain(models.Model):
 
     class Meta:
         db_table = 'domain'
+        ordering = ('-dtype', 'name')
 
     def __unicode__(self):
         return self.get_dtype_display()

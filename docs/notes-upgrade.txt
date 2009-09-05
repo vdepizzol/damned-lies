@@ -92,3 +92,4 @@ ALTER TABLE language ADD plurals VARCHAR(200);
 
 # Add new linguas_location field
 ALTER TABLE domain ADD linguas_location VARCHAR(50);
+ALTER TABLE domain MODIFY `pot_method` VARCHAR(100);
