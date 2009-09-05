@@ -630,7 +630,7 @@ class Domain(models.Model):
         ordering = ('-dtype', 'name')
 
     def __unicode__(self):
-        return self.get_dtype_display()
+        return "%s (%s)" % (self.name, self.get_dtype_display())
 
     def potbase(self):
         if self.name[:2] == 'po':
@@ -658,7 +658,7 @@ class Domain(models.Model):
                 pofile = os.path.join(dom_path, item)
                 flist.append((lang, pofile))
             elif os.path.isdir(os.path.join(dom_path, item)):
-                for base_name in [item, self.name.replace("_","/")]:
+                for base_name in [item, self.name.replace("~","/")]:
                     pofile = os.path.join(dom_path, item, base_name + ".po")
                     if os.access(pofile, os.F_OK):
                         flist.append((item, pofile))
@@ -688,7 +688,7 @@ class Domain(models.Model):
         potfile = os.path.join(vcs_path, self.potbase() + ".pot")
         if not os.access(potfile, os.R_OK):
             # Try to get POT file from command output, with path relative to checkout root
-            m = re.search('([\w/]*\.pot)', output)
+            m = re.search('([\w/-]*\.pot)', output)
             if m:
                 potfile = os.path.join(current_branch.co_path(), m.group(0))
 
