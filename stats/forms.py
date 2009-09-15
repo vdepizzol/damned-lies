@@ -28,7 +28,8 @@ class ModuleBranchForm(forms.Form):
                 # Branch is not linked to any release
                 self.fields[branch.name] = ReleaseField(queryset=Release.objects.all(),
                                                         label=branch.name)
-                self.fields[branch.name+'_cat'] = forms.ChoiceField(choices=CATEGORY_CHOICES)
+                self.fields[branch.name+'_cat'] = forms.ChoiceField(choices=CATEGORY_CHOICES,
+                                                                    initial=default_cat_name)
                 self.branch_fields.append((branch.name, branch.name+'_cat'))
 
         self.fields['new_branch'] = forms.CharField(required=False)
