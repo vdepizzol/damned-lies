@@ -70,7 +70,7 @@ $(document).ready(function() {
     <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
   </div>
   {% if pot_stats.fig_count and stats.language %}
-  <div style="display: inline; margin-left:110px;">
+  <div class="docimages">
     <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
     <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
   </div>
