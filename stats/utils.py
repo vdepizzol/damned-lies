@@ -107,6 +107,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
 
     errors = []
+    xml2po_options = ""
     if os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK):
         # a Mallard document
         files = os.path.join("C", "index.page")
@@ -116,6 +117,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
             for f in pages.split():
                 if f.strip() != "":
                     files += " %s" % (os.path.join("C", f.strip()))
+        xml2po_options = "-m mallard"
 
     else:
         modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
@@ -137,7 +139,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
                 files += " %s" % (os.path.join("C", f.strip()))
 
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
-    command = "cd \"%s\" && xml2po -o %s -e %s" % (vcs_path, potfile, files)
+    command = "cd \"%s\" && xml2po %s -o %s -e %s" % (vcs_path, xml2po_options, potfile, files)
     (status, output, errs) = run_shell_command(command)
 
     if status != STATUS_OK:
