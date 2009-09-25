@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-05 16:05+0000\n"
-"PO-Revision-Date: 2009-09-06 13:46+0200\n"
+"POT-Creation-Date: 2009-09-24 07:31+0000\n"
+"PO-Revision-Date: 2009-09-24 10:25+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1304,11 +1304,11 @@ msgstr "Ha sido eliminado del equipo «%s»."
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
-#: djamnedlies-git/stats/models.py:320 stats/models.py:348
+#: djamnedlies-git/stats/models.py:320 stats/models.py:351
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: djamnedlies-git/stats/models.py:341 stats/models.py:370
+#: djamnedlies-git/stats/models.py:341 stats/models.py:373
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
@@ -1316,7 +1316,7 @@ msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: djamnedlies-git/stats/models.py:659 stats/models.py:695
+#: djamnedlies-git/stats/models.py:659 stats/models.py:696
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1327,40 +1327,40 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906 stats/models.py:966
+#: djamnedlies-git/stats/models.py:906 stats/models.py:967
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: djamnedlies-git/stats/models.py:907 stats/models.py:967
+#: djamnedlies-git/stats/models.py:907 stats/models.py:968
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: djamnedlies-git/stats/models.py:908 stats/models.py:968
+#: djamnedlies-git/stats/models.py:908 stats/models.py:969
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: djamnedlies-git/stats/models.py:909 stats/models.py:969
+#: djamnedlies-git/stats/models.py:909 stats/models.py:970
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: djamnedlies-git/stats/models.py:910 stats/models.py:970
+#: djamnedlies-git/stats/models.py:910 stats/models.py:971
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1046 stats/models.py:1323
+#: stats/models.py:1047 stats/models.py:1324
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017 stats/models.py:1077
+#: djamnedlies-git/stats/models.py:1017 stats/models.py:1078
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: djamnedlies-git/stats/models.py:1018 stats/models.py:1078
+#: djamnedlies-git/stats/models.py:1018 stats/models.py:1079
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
@@ -1372,24 +1372,24 @@ msgstr "actualizado el %(date)s"
 #: djamnedlies-git/stats/models.py:1020
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1080 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:127
+#: stats/models.py:1081 templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:129
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: djamnedlies-git/stats/models.py:1023 stats/models.py:1083
+#: djamnedlies-git/stats/models.py:1023 stats/models.py:1084
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: djamnedlies-git/stats/models.py:1024 stats/models.py:1084
+#: djamnedlies-git/stats/models.py:1024 stats/models.py:1085
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027 stats/models.py:1087
+#: djamnedlies-git/stats/models.py:1027 stats/models.py:1088
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
@@ -1792,7 +1792,7 @@ msgstr "O usar su OpenID:"
 
 #: djamnedlies-git/templates/login.html:40
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:40
+#: templates/login.html:41
 msgid "Log in with OpenID"
 msgstr "Iniciar sesión con OpenID"
 
@@ -1972,7 +1972,7 @@ msgstr "Administrador de Malditas mentiras"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:154
+#: templates/vertimus/vertimus_detail.html:156
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2468,22 +2468,22 @@ msgid "Action History"
 msgstr "Histórico de acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:143
+#: templates/vertimus/vertimus_detail.html:145
 msgid "diff with:"
 msgstr "diff con:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:166
+#: templates/vertimus/vertimus_detail.html:168
 msgid "New Action"
 msgstr "Acción nueva"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:178
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:181
+#: templates/vertimus/vertimus_detail.html:183
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2747,14 +2747,12 @@ msgstr "Se unió una persona nueva a su equipo"
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s se acaba de unir a su equipo de traducción en %(site)s"
 
-#: stats/models.py:350
+#: stats/models.py:353
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
-#: stats/models.py:717
+#: stats/models.py:718
 #, python-format
-#| msgid ""
-#| "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr ""
@@ -2827,24 +2825,38 @@ msgstr "Acciones"
 
 #: templates/vertimus/vertimus_detail.html:107
 #, python-format
-msgid "Archived Actions (%(human_level)s archived series)"
-msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
+#| msgid "Archived Actions (%(human_level)s archived series)"
+msgid ""
+"Archived Actions (%(human_level)s archived series)\n"
+"      "
+msgid_plural ""
+"\n"
+"      Archived Actions (%(human_level)s archived series"
+msgstr[0] ""
+"Acciones archivadas (series archivadas de %(human_level)s)\n"
+"      "
+msgstr[1] ""
+"\n"
+"Acciones archivadas (series archivadas de %(human_level)s)\n"
+"      "
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:111
 msgid "(Return to current)"
 msgstr "(Volver a la actual)"
 
-#: templates/vertimus/vertimus_detail.html:114
+#: templates/vertimus/vertimus_detail.html:116
 msgid "(Previous action history)"
 msgstr "(Histórico de acciones anteriores)"
 
-#: templates/vertimus/vertimus_detail.html:162
+#: templates/vertimus/vertimus_detail.html:164
 msgid "No current actions."
 msgstr "Sin acción actual."
 
 #: vertimus/forms.py:71
-msgid "Unvalid action. Someone probably posted another action just before you."
-msgstr "Acción no válida. Probablemente alguien publicó otra acción antes."
+#| msgid ""
+#| "Unvalid action. Someone probably posted another action just before you."
+msgid "Invalid action. Someone probably posted another action just before you."
+msgstr "Acción no válida. Probablemente alguien publicó otra acción justo antes."
 
 #: vertimus/models.py:731
 msgid "Archive the actions"
