@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-24 07:31+0000\n"
-"PO-Revision-Date: 2009-09-24 10:25+0200\n"
+"POT-Creation-Date: 2009-09-24 10:43+0000\n"
+"PO-Revision-Date: 2009-09-28 22:03+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1373,7 +1373,7 @@ msgstr "actualizado el %(date)s"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1081 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:129
+#: templates/vertimus/vertimus_detail.html:127
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
@@ -1972,7 +1972,7 @@ msgstr "Administrador de Malditas mentiras"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:156
+#: templates/vertimus/vertimus_detail.html:154
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2468,22 +2468,22 @@ msgid "Action History"
 msgstr "Histórico de acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:145
+#: templates/vertimus/vertimus_detail.html:143
 msgid "diff with:"
 msgstr "diff con:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:168
+#: templates/vertimus/vertimus_detail.html:166
 msgid "New Action"
 msgstr "Acción nueva"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:178
+#: templates/vertimus/vertimus_detail.html:176
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:183
+#: templates/vertimus/vertimus_detail.html:181
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2825,30 +2825,18 @@ msgstr "Acciones"
 
 #: templates/vertimus/vertimus_detail.html:107
 #, python-format
-#| msgid "Archived Actions (%(human_level)s archived series)"
-msgid ""
-"Archived Actions (%(human_level)s archived series)\n"
-"      "
-msgid_plural ""
-"\n"
-"      Archived Actions (%(human_level)s archived series"
-msgstr[0] ""
-"Acciones archivadas (series archivadas de %(human_level)s)\n"
-"      "
-msgstr[1] ""
-"\n"
-"Acciones archivadas (series archivadas de %(human_level)s)\n"
-"      "
+msgid "Archived Actions (%(human_level)s archived series)"
+msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
 
-#: templates/vertimus/vertimus_detail.html:111
+#: templates/vertimus/vertimus_detail.html:109
 msgid "(Return to current)"
 msgstr "(Volver a la actual)"
 
-#: templates/vertimus/vertimus_detail.html:116
+#: templates/vertimus/vertimus_detail.html:114
 msgid "(Previous action history)"
 msgstr "(Histórico de acciones anteriores)"
 
-#: templates/vertimus/vertimus_detail.html:164
+#: templates/vertimus/vertimus_detail.html:162
 msgid "No current actions."
 msgstr "Sin acción actual."
 
@@ -2856,7 +2844,7 @@ msgstr "Sin acción actual."
 #| msgid ""
 #| "Unvalid action. Someone probably posted another action just before you."
 msgid "Invalid action. Someone probably posted another action just before you."
-msgstr "Acción no válida. Probablemente alguien publicó otra acción justo antes."
+msgstr "Acción no válida. Probablemente alguien publicó otra acción antes."
 
 #: vertimus/models.py:731
 msgid "Archive the actions"
