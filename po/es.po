@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-24 10:43+0000\n"
-"PO-Revision-Date: 2009-09-28 22:03+0200\n"
+"POT-Creation-Date: 2009-09-29 20:03+0000\n"
+"PO-Revision-Date: 2009-09-30 00:47+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
@@ -894,76 +894,81 @@ msgid "Quick Reference"
 msgstr "Referencia rápida"
 
 #: database-content.py:218
+#| msgid "Integration Guide"
+msgid "Optimization Guide"
+msgstr "Guía de optimización"
+
+#: database-content.py:219
 msgid "GNOME 2 User Documentation"
 msgstr "Documentación del usuario de GNOME 2"
 
-#: database-content.py:219
+#: database-content.py:220
 msgid "Evince Document Viewer"
 msgstr "Visor de documentos Evince"
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:221 djamnedlies-git/templates/base.html:35
+#: database-content.py:222 djamnedlies-git/templates/base.html:35
 #: djamnedlies-git/templates/admin/base_site.html:7 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "Banshee Music Player"
 msgstr "Reproductor de música Banshee"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "Shared MIME Info"
 msgstr "Información MIME compartida"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "GNOME Applets"
 msgstr "Miniaplicaciones de GNOME"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentación del desarrollador de GNOME 2"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME Release Notes"
 msgstr "Notas de publicación de GNOME"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Rhythmbox Music Player"
 msgstr "Reproductor de música Rhythmbox"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "Epiphany Web Browser"
 msgstr "Navegador web Epiphany"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME Library Web site"
 msgstr "Página web de la biblioteca de GNOME"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "Eye of GNOME"
 msgstr "Visor de imágenes (EOG)"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "The Gimp Manual"
 msgstr "El manual de El Gimp"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -973,11 +978,11 @@ msgstr ""
 "href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de "
 "GNUCash</a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
-#: database-content.py:237
+#: database-content.py:238
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -985,7 +990,7 @@ msgstr ""
 "Las traducciones subidas se actualizan manualmente en l10n.gnome.org de vez "
 "en cuando. Sé paciente :-)."
 
-#: database-content.py:238
+#: database-content.py:239
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -993,7 +998,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:239
+#: database-content.py:240
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1006,7 +1011,7 @@ msgstr ""
 "dirs.html\">la página de traducción para xdg-user-dits en Translation "
 "Project</a>."
 
-#: database-content.py:240
+#: database-content.py:241
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -1014,11 +1019,11 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in SVN even "
@@ -1030,11 +1035,11 @@ msgstr ""
 "archivos en el SVN incluso si uno de los dos no contiene traducciones, de "
 "otra forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1042,7 +1047,7 @@ msgstr ""
 "moserial es un terminal serie limpio y amigable basado en GTK para el "
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
-#: database-content.py:245
+#: database-content.py:246
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1050,11 +1055,11 @@ msgstr ""
 "Este es un clon de la versión oficial de system-tools-backends del "
 "repositorio de freedesktop.org."
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout es una aplicación DTP para las X."
 
-#: database-content.py:247
+#: database-content.py:248
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1062,17 +1067,17 @@ msgstr ""
 "gnome-disk-utility proporciona bibliotecas y aplicaciones para comunicarse "
 "con dispositivos de almacenamiento."
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "A note taking application"
 msgstr "Una aplicación para tomar notas"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Las traducciones se deben enviar como informes de error (consultar el enlace "
 "inferior)."
 
-#: database-content.py:250
+#: database-content.py:251
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1080,63 +1085,65 @@ msgstr ""
 "GNOME Vídeo Arcade es un frontal de MAME (Multiple Arcade Machine Emulator) "
 "para GNOME."
 
-#: database-content.py:251
+#: database-content.py:252
 msgid "GNOME Teletext viewer"
 msgstr "Visor de teletexto de GNOME"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:253
+#: database-content.py:254
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:255
+#: database-content.py:256
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:256
+#: database-content.py:257
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:257
+#: database-content.py:258
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:258
+#: database-content.py:259
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:259
+#: database-content.py:260
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:260
+#: database-content.py:261
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:261
+#: database-content.py:262
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:262
-msgid "GNOME 2.26 (stable)"
-msgstr "GNOME 2.26 (estable)"
-
 #: database-content.py:263
-msgid "GNOME 2.28 (development)"
-msgstr "GNOME 2.28 (desarrollo)"
+#| msgid "GNOME 2.16 (old stable)"
+msgid "GNOME 2.26 (old stable)"
+msgstr "GNOME 2.26 (estable, antigua)"
 
 #: database-content.py:264
+#| msgid "GNOME 2.26 (stable)"
+msgid "GNOME 2.28 (stable)"
+msgstr "GNOME 2.28 (estable)"
+
+#: database-content.py:265
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
 
-#: database-content.py:265
+#: database-content.py:266
 msgid "External Dependencies (GNOME)"
 msgstr "Dependencias externas (GNOME)"
 
@@ -1312,7 +1319,7 @@ msgstr "No se puede general el archivo POT, usando el antiguo."
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: djamnedlies-git/stats/models.py:380 stats/utils.py:326
+#: djamnedlies-git/stats/models.py:380 stats/utils.py:328
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
@@ -1412,21 +1419,21 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: djamnedlies-git/stats/utils.py:112 stats/utils.py:123
+#: djamnedlies-git/stats/utils.py:112 stats/utils.py:125
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
-#: djamnedlies-git/stats/utils.py:115 stats/utils.py:126
+#: djamnedlies-git/stats/utils.py:115 stats/utils.py:128
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE no resuelve a un archivo real, usando «%s.xml»."
 
-#: djamnedlies-git/stats/utils.py:118 stats/utils.py:129
+#: djamnedlies-git/stats/utils.py:118 stats/utils.py:131
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE no apunta a un archivo real, probablemente es un macro."
 
-#: djamnedlies-git/stats/utils.py:133 stats/utils.py:145
+#: djamnedlies-git/stats/utils.py:133 stats/utils.py:147
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1437,35 +1444,35 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206 stats/utils.py:230
+#: djamnedlies-git/stats/utils.py:206 stats/utils.py:232
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: djamnedlies-git/stats/utils.py:226 stats/utils.py:250
+#: djamnedlies-git/stats/utils.py:226 stats/utils.py:252
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: djamnedlies-git/stats/utils.py:228 stats/utils.py:252
+#: djamnedlies-git/stats/utils.py:228 stats/utils.py:254
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: djamnedlies-git/stats/utils.py:231 stats/utils.py:255
+#: djamnedlies-git/stats/utils.py:231 stats/utils.py:257
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: djamnedlies-git/stats/utils.py:259 stats/utils.py:283
+#: djamnedlies-git/stats/utils.py:259 stats/utils.py:285
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: djamnedlies-git/stats/utils.py:292 stats/utils.py:309
+#: djamnedlies-git/stats/utils.py:292 stats/utils.py:311
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: djamnedlies-git/stats/utils.py:319 stats/utils.py:315
+#: djamnedlies-git/stats/utils.py:319 stats/utils.py:317
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
@@ -2759,14 +2766,14 @@ msgstr ""
 "La entrada para este idioma no está presente en la variable %(var)s del "
 "archivo %(file)s."
 
-#: stats/utils.py:317
+#: stats/utils.py:319
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:324
+#: stats/utils.py:326
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -2841,14 +2848,15 @@ msgid "No current actions."
 msgstr "Sin acción actual."
 
 #: vertimus/forms.py:71
-#| msgid ""
-#| "Unvalid action. Someone probably posted another action just before you."
 msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Acción no válida. Probablemente alguien publicó otra acción antes."
 
 #: vertimus/models.py:731
 msgid "Archive the actions"
 msgstr "Archivar las acciones"
+
+#~ msgid "GNOME 2.28 (development)"
+#~ msgstr "GNOME 2.28 (desarrollo)"
 
 #~ msgid "Low German and Saxon"
 #~ msgstr "Bajo sajón y sajón"
