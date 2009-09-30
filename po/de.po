@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-24 10:43+0000\n"
-"PO-Revision-Date: 2009-09-29 22:01+0100\n"
+"POT-Creation-Date: 2009-09-29 20:03+0000\n"
+"PO-Revision-Date: 2009-09-30 20:44+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "Guaraní"
 
 #: database-content.py:4
 msgid "Galician"
-msgstr "Galicisch"
+msgstr "Galizisch"
 
 #: database-content.py:5
 msgid "Latin"
@@ -69,7 +69,7 @@ msgstr "Thai"
 
 #: database-content.py:13
 msgid "Tajik"
-msgstr "Tajik"
+msgstr "Tadschikisch"
 
 #: database-content.py:14
 msgid "Telugu"
@@ -895,76 +895,81 @@ msgid "Quick Reference"
 msgstr "Kurzreferenz"
 
 #: database-content.py:218
+#| msgid "Integration Guide"
+msgid "Optimization Guide"
+msgstr "Optimierungs-Handbuch"
+
+#: database-content.py:219
 msgid "GNOME 2 User Documentation"
 msgstr "GNOME 2 Benutzerdokumentation"
 
-#: database-content.py:219
+#: database-content.py:220
 msgid "Evince Document Viewer"
 msgstr "Evince Dokumentenbetrachter"
 
-#: database-content.py:220
+#: database-content.py:221
 msgid "Beagle Desktop Search"
 msgstr "Beagle Desktopsuche"
 
-#: database-content.py:221 djamnedlies-git/templates/base.html:35
+#: database-content.py:222 djamnedlies-git/templates/base.html:35
 #: djamnedlies-git/templates/admin/base_site.html:7 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Verdammte Lügen"
 
-#: database-content.py:222
+#: database-content.py:223
 msgid "Banshee Music Player"
 msgstr "Banshee Musik-Wiedergabeprogramm"
 
-#: database-content.py:223
+#: database-content.py:224
 msgid "Shared MIME Info"
 msgstr "MIME-Typen-Info"
 
-#: database-content.py:224
+#: database-content.py:225
 msgid "GNOME Applets"
 msgstr "GNOME Applets"
 
-#: database-content.py:225
+#: database-content.py:226
 msgid "GNOME 2 Development Documentation"
 msgstr "GNOME Entwicklerdokumentation"
 
-#: database-content.py:226
+#: database-content.py:227
 msgid "GNOME Release Notes"
 msgstr "Anmerkungen zur GNOME-Veröffentlichung"
 
-#: database-content.py:227
+#: database-content.py:228
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox Musik-Player"
 
-#: database-content.py:228
+#: database-content.py:229
 msgid "Epiphany Web Browser"
 msgstr "Epiphany Webbrowser"
 
-#: database-content.py:229
+#: database-content.py:230
 msgid "GNOME Library Web site"
 msgstr "Website der GNOME-Bibliothek"
 
-#: database-content.py:230
+#: database-content.py:231
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:231
+#: database-content.py:232
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:232
+#: database-content.py:233
 msgid "Deskbar Applet"
 msgstr "Deskbar-Applet"
 
-#: database-content.py:233
+#: database-content.py:234
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:234
+#: database-content.py:235
 msgid "The Gimp Manual"
 msgstr "Gimp-Handbuch"
 
-#: database-content.py:235
+#: database-content.py:236
 msgid ""
 "GNUCash is not part of the GNOME SVN repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -974,56 +979,54 @@ msgstr ""
 "das <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash-"
 "Wiki</a> um Informationen über das Einsenden von Übersetzungen zu erhalten."
 
-#: database-content.py:236
+#: database-content.py:237
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince ist ein Dokumentenbetrachter für verschiedene Dokumentformate."
 
-#: database-content.py:237
+#: database-content.py:238
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
 msgstr ""
-"Eingespielte Übersetzungen werden von Zeit zu Zeit manuell auf l10n.gnome."
-"org aktualisiert. Wir bitten um Geduld :-)"
+"Eingespielte Übersetzungen werden von Zeit zu Zeit manuell auf l10n.gnome.org "
+"aktualisiert. Wir bitten um Geduld :-)"
 
-#: database-content.py:238
+#: database-content.py:239
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
-"Dies ist kein GNOME-spezifisches Modul. Bitte senden Sie Übersetzungen an "
-"das <a href=\"http://translationproject.org\">Translation Project</a>."
+"Dies ist kein GNOME-spezifisches Modul. Bitte senden Sie Übersetzungen an das "
+"<a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:239
+#: database-content.py:240
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
 "also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the "
 "translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr ""
-"Dies ist kein GNOME-spezifisches Modul. Bitte senden Sie Übersetzungen an "
-"das <a href=\"http://translationproject.org\">Translation Project</a>. "
-"Beachten Sie bitte auch <a href=\"http://translationproject.org/domain/xdg-"
-"user-dirs.html\">die Übersetzungsseite für xdg-user-dirs beim Translation "
-"Project</a>."
+"Dies ist kein GNOME-spezifisches Modul. Bitte senden Sie Übersetzungen an das "
+"<a href=\"http://translationproject.org\">Translation Project</a>. Beachten "
+"Sie bitte auch <a href=\"http://translationproject.org/domain/xdg-user-dirs."
+"html\">die Übersetzungsseite für xdg-user-dirs beim Translation Project</a>."
 
-#: database-content.py:240
+#: database-content.py:241
 msgid ""
-"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
-"more."
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr ""
 "Seit GNOME 2.23 ist GAIL in GTK+ integriert. Bitte nicht mehr in »trunk« "
 "einspielen."
 
-#: database-content.py:241
+#: database-content.py:242
 msgid "A VNC client for GNOME"
 msgstr "Ein VNC-Client für GNOME"
 
-#: database-content.py:242
+#: database-content.py:243
 msgid ""
-"Please note that gtk+ has both po and po-properties UI domains.  If you add "
-"a new language in either domain, you have to commit both files in SVN even "
-"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"Please note that gtk+ has both po and po-properties UI domains.  If you add a "
+"new language in either domain, you have to commit both files in SVN even if "
+"one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
 "Bitte beachten Sie, dass GTK+ über die beiden UI-Domains »po« und »po-"
@@ -1033,11 +1036,11 @@ msgstr ""
 "Sie dies nicht, wird später die Erstellung von GTK+ in /po-properties "
 "scheitern."
 
-#: database-content.py:243
+#: database-content.py:244
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafische Oberfläche für die Navigation in GIT-Softwarebeständen"
 
-#: database-content.py:244
+#: database-content.py:245
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1045,7 +1048,7 @@ msgstr ""
 "moserial ist ein sauberes, nettes gtk-basiertes serielles Terminal für den "
 "GNOME-Desktop. Für noch bessere Qualität wurde es in Vala geschrieben."
 
-#: database-content.py:245
+#: database-content.py:246
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1053,12 +1056,12 @@ msgstr ""
 "Dies ist ein Klon der offiziellen Version von system-tools-backends im "
 "Softwarebestand von freedesktop.org."
 
-#: database-content.py:246
+#: database-content.py:247
 msgid "Passepartout is a DTP application for X."
 msgstr ""
 "Passepartout ist eine Desktop-Publishing-Anwendung mit grafischer Oberfläche."
 
-#: database-content.py:247
+#: database-content.py:248
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1066,81 +1069,83 @@ msgstr ""
 "gnome-disk-utility stellt Bibliotheken und Anwendungen für den Umgang mit "
 "Speichergeräten bereit."
 
-#: database-content.py:248
+#: database-content.py:249
 msgid "A note taking application"
 msgstr "Eine Notizzettel-Anwendung"
 
-#: database-content.py:249
+#: database-content.py:250
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Übersetzungen sollten als Fehlerberichte eingereicht werden (siehe Link "
 "unten)."
 
-#: database-content.py:250
-msgid ""
-"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
-"for GNOME."
-msgstr ""
-"GNOME Video Arcade ist ein MAME- (Multiple Arcade Machine Emulator) Front-"
-"end für GNOME."
-
 #: database-content.py:251
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for "
+"GNOME."
+msgstr ""
+"GNOME Video Arcade ist ein MAME- (Multiple Arcade Machine Emulator) Front-end "
+"für GNOME."
+
+#: database-content.py:252
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Videotext-Betrachter"
 
-#: database-content.py:252
+#: database-content.py:253
 msgid "Extra GNOME Applications"
 msgstr "Zusätzliche GNOME-Anwendungen"
 
-#: database-content.py:253
+#: database-content.py:254
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (alte stabile Version)"
 
-#: database-content.py:254
+#: database-content.py:255
 msgid "GNOME Infrastructure"
 msgstr "GNOME-Infrastruktur"
 
-#: database-content.py:255
+#: database-content.py:256
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (alte stabile Version)"
 
-#: database-content.py:256
+#: database-content.py:257
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (alte stabile Version)"
 
-#: database-content.py:257
+#: database-content.py:258
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nicht-GNOME)"
 
-#: database-content.py:258
+#: database-content.py:259
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (alte stabile Version)"
 
-#: database-content.py:259
+#: database-content.py:260
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (alte stabile Version)"
 
-#: database-content.py:260
+#: database-content.py:261
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Büroanwendungen"
 
-#: database-content.py:261
+#: database-content.py:262
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (alte stabile Version)"
 
-#: database-content.py:262
-msgid "GNOME 2.26 (stable)"
-msgstr "GNOME 2.26 (aktuelle stabile Version)"
-
 #: database-content.py:263
-msgid "GNOME 2.28 (development)"
-msgstr "GNOME 2.28 (Entwicklerversion)"
+#| msgid "GNOME 2.16 (old stable)"
+msgid "GNOME 2.26 (old stable)"
+msgstr "GNOME 2.26 (alte stabile Version)"
 
 #: database-content.py:264
+#| msgid "GNOME 2.26 (stable)"
+msgid "GNOME 2.28 (stable)"
+msgstr "GNOME 2.28 (aktuelle stabile Version)"
+
+#: database-content.py:265
 msgid "Obsolete GNOME Applications"
 msgstr "Veraltete GNOME-Anwendungen"
 
-#: database-content.py:265
+#: database-content.py:266
 msgid "External Dependencies (GNOME)"
 msgstr "Externe Abhängigkeiten (GNOME)"
 
@@ -1149,18 +1154,18 @@ msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Dieses Modul ist nicht Teil des GNOME-GIT-Softwarebestandes. Bitte prüfen "
-"Sie die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen "
-"senden können."
+"Dieses Modul ist nicht Teil des GNOME-GIT-Softwarebestandes. Bitte prüfen Sie "
+"die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen senden "
+"können."
 
 #: settings_sample.py:80
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
 msgstr ""
-"Dieses Modul ist nicht Teil des GNOME-GIT-Softwarebestandes. Bitte prüfen "
-"Sie die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen "
-"senden können."
+"Dieses Modul ist nicht Teil des GNOME-GIT-Softwarebestandes. Bitte prüfen Sie "
+"die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen senden "
+"können."
 
 #: common/views.py:34 djamnedlies-git/common/views.py:33
 msgid "translator-credits"
@@ -1183,8 +1188,8 @@ msgid ""
 "You have not joined any translation team yet. You can do it from <a href=\"%"
 "(url)s\">your profile</a>."
 msgstr ""
-"Sie sind dem Übersetzungsteam noch nicht beigetreten. Sie können das über "
-"Ihr <a href=\"%(url)s\">Profil</a> tun."
+"Sie sind dem Übersetzungsteam noch nicht beigetreten. Sie können das über Ihr "
+"<a href=\"%(url)s\">Profil</a> tun."
 
 #: common/views.py:75 djamnedlies-git/common/views.py:69
 msgid "We're sorry, but your account has been disabled."
@@ -1220,14 +1225,14 @@ msgid "Email:"
 msgstr "E-Mail:"
 
 #: djamnedlies-git/people/forms.py:17 djamnedlies-git/templates/login.html:37
-#: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:37
+#: django_openid/templates/django_openid/admin_login.html:34 people/forms.py:17
+#: templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
 #: djamnedlies-git/people/forms.py:20 djamnedlies-git/templates/login.html:21
-#: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20 templates/login.html:21
+#: django_openid/templates/django_openid/admin_login.html:23 people/forms.py:20
+#: templates/login.html:21
 msgid "Password:"
 msgstr "Passwort:"
 
@@ -1328,7 +1333,7 @@ msgstr "POT-Datei konnte nicht erstellt werden, alte Datei wird benutzt."
 msgid "Can't copy new POT file to public location."
 msgstr "Neue POT-Datei konnte nicht an öffentlichen Ort kopiert werden."
 
-#: djamnedlies-git/stats/models.py:380 stats/utils.py:326
+#: djamnedlies-git/stats/models.py:380 stats/utils.py:328
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Liste in DOC_LINGUAS enthält nicht diese Sprache."
 
@@ -1428,23 +1433,23 @@ msgstr ""
 "Folgende Dateien werden entweder in POTFILES.in oder POTFILES.skip "
 "aufgelistet, existieren aber nicht: %s"
 
-#: djamnedlies-git/stats/utils.py:112 stats/utils.py:123
+#: djamnedlies-git/stats/utils.py:112 stats/utils.py:125
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s scheint kein gnome-doc-utils-Modul zu sein."
 
-#: djamnedlies-git/stats/utils.py:115 stats/utils.py:126
+#: djamnedlies-git/stats/utils.py:115 stats/utils.py:128
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
-"DOC_MODULE kann nicht zu einer echten Datei aufgelöst werden, es wird »%s."
-"xml« benutzt."
+"DOC_MODULE kann nicht zu einer echten Datei aufgelöst werden, es wird »%s.xml« "
+"benutzt."
 
-#: djamnedlies-git/stats/utils.py:118 stats/utils.py:129
+#: djamnedlies-git/stats/utils.py:118 stats/utils.py:131
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE zeigt nicht auf eine echte Datei, wahrscheinlich ein Makro."
 
-#: djamnedlies-git/stats/utils.py:133 stats/utils.py:145
+#: djamnedlies-git/stats/utils.py:133 stats/utils.py:147
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1455,39 +1460,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206 stats/utils.py:230
+#: djamnedlies-git/stats/utils.py:206 stats/utils.py:232
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-Datei »%s« existiert nicht oder konnte nicht gelesen werden."
 
-#: djamnedlies-git/stats/utils.py:226 stats/utils.py:250
+#: djamnedlies-git/stats/utils.py:226 stats/utils.py:252
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "PO-Datei »%s« bestand nicht die Prüfung durch msgfmt, daher keine "
 "Aktualisierung."
 
-#: djamnedlies-git/stats/utils.py:228 stats/utils.py:252
+#: djamnedlies-git/stats/utils.py:228 stats/utils.py:254
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Statistiken für POT-Datei »%s« konnten nicht erhalten werden."
 
-#: djamnedlies-git/stats/utils.py:231 stats/utils.py:255
+#: djamnedlies-git/stats/utils.py:231 stats/utils.py:257
 msgid "This PO file has an executable bit set."
 msgstr "Diese PO-Datei hat das Ausführbar-Bit gesetzt."
 
-#: djamnedlies-git/stats/utils.py:259 stats/utils.py:283
+#: djamnedlies-git/stats/utils.py:259 stats/utils.py:285
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-Datei »%s« ist nicht als UTF-8 kodiert."
 
-#: djamnedlies-git/stats/utils.py:292 stats/utils.py:309
+#: djamnedlies-git/stats/utils.py:292 stats/utils.py:311
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Eintrag für diese Sprache ist nicht in der Datei LINGUAS vorhanden."
 
-#: djamnedlies-git/stats/utils.py:319 stats/utils.py:315
-msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
+#: djamnedlies-git/stats/utils.py:319 stats/utils.py:317
+msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Eintrag für diese Sprache ist nicht in ALL_LINGUAS in der Datei configure "
 "vorhanden."
@@ -1497,8 +1501,8 @@ msgid ""
 "Don't know where to look if this language is actually used, ask the module "
 "maintainer."
 msgstr ""
-"Es ist unbekannt wo geschaut werden soll, ob diese Sprache wirklich "
-"verwendet wird, bitte fragen Sie den Verwalter des Moduls."
+"Es ist unbekannt wo geschaut werden soll, ob diese Sprache wirklich verwendet "
+"wird, bitte fragen Sie den Verwalter des Moduls."
 
 #: djamnedlies-git/teams/models.py:112 teams/models.py:198
 #, python-format
@@ -1649,9 +1653,8 @@ msgid ""
 "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr ""
-"Verwaltet im Modul <a href='http://git.gnome.org/cgit/damned-"
-"lies/'>Verdammte Lügen</a> auf <a href='http://git.gnome.org/'>git.gnome."
-"org</a>."
+"Verwaltet im Modul <a href='http://git.gnome.org/cgit/damned-lies/'>Verdammte "
+"Lügen</a> auf <a href='http://git.gnome.org/'>git.gnome.org</a>."
 
 #: djamnedlies-git/templates/base.html:98 templates/base.html:98
 msgid "Hosted by"
@@ -1696,15 +1699,15 @@ msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
-"Falls kein Team für Ihre Sprache existiert, so können Sie einfach Ihr <a "
-"href=\"http://live.gnome.org/TranslationProject/StartingATeam/\">eigenes "
-"Team starten</a>."
+"Falls kein Team für Ihre Sprache existiert, so können Sie einfach Ihr <a href="
+"\"http://live.gnome.org/TranslationProject/StartingATeam/\">eigenes Team "
+"starten</a>."
 
 #: djamnedlies-git/templates/index.html:22 templates/index.html:22
 #, python-format
 msgid ""
-"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
-"a> for."
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> "
+"for."
 msgstr ""
 "Liste aller Sprachen, für die es <a href='%(teams_url)s'>Übersetzungsteams</"
 "a> gibt."
@@ -1737,8 +1740,8 @@ msgstr ""
 
 #: djamnedlies-git/templates/index.html:31 templates/index.html:31
 msgid ""
-"Official GNOME release sets are further divided into categories such as "
-"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+"Official GNOME release sets are further divided into categories such as &quot;"
+"Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr ""
 "Offizielle GNOME-Veröffentlichungen werden zudem weiter unterteilt in "
 "Kategorien wie »Desktop-Anwendungen« und »Entwicklerplattform«."
@@ -1765,8 +1768,8 @@ msgstr ""
 
 #: djamnedlies-git/templates/index.html:40 templates/index.html:40
 msgid ""
-"They are usually taken from CVS, and we keep all relevant information on "
-"them (Bugzilla details, web page, maintainer information,...)."
+"They are usually taken from CVS, and we keep all relevant information on them "
+"(Bugzilla details, web page, maintainer information,...)."
 msgstr ""
 "Diese werden normalerweise aus dem CVS abgerufen und enthalten alle "
 "relevanten Informationen (Bugzilla-Details, Webseite, Verwalter-"
@@ -1965,8 +1968,7 @@ msgstr "GNOME-Veröffentlichungen"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr ""
 "Wählen Sie nachfolgend eine Veröffentlichung oder eine "
-"Veröffentlichungsgruppe aus, um weitere Details darüber angezeigt zu "
-"bekommen:"
+"Veröffentlichungsgruppe aus, um weitere Details darüber angezeigt zu bekommen:"
 
 #: djamnedlies-git/templates/stats_show.html:13
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
@@ -2175,9 +2177,8 @@ msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
-"Bitte geben Sie Ihr altes Passwort ein und geben Sie danach zweimal Ihr "
-"neues Passwort ein, um sicher zu stellen, dass Sie dieses korrekt eingegeben "
-"haben."
+"Bitte geben Sie Ihr altes Passwort ein und geben Sie danach zweimal Ihr neues "
+"Passwort ein, um sicher zu stellen, dass Sie dieses korrekt eingegeben haben."
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
@@ -2266,8 +2267,8 @@ msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr ""
-"Bitte geben Sie zweimal Ihr neues Passwort ein, um sicher zu stellen dass "
-"Sie dieses korrekt eingegeben haben."
+"Bitte geben Sie zweimal Ihr neues Passwort ein, um sicher zu stellen dass Sie "
+"dieses korrekt eingegeben haben."
 
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:24
 #: templates/registration/password_reset_confirm.html:24
@@ -2305,8 +2306,8 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll e-mail "
 "instructions for setting a new one."
 msgstr ""
-"Passwort vergessen? Geben Sie unten Ihre E-Mail-Adresse ein. Wir senden "
-"Ihnen Anweisungen zum Festlegen eines neuen Passworts."
+"Passwort vergessen? Geben Sie unten Ihre E-Mail-Adresse ein. Wir senden Ihnen "
+"Anweisungen zum Festlegen eines neuen Passworts."
 
 #: djamnedlies-git/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
@@ -2326,11 +2327,11 @@ msgstr "Konto-Registrierung"
 #: djamnedlies-git/templates/registration/register.html:13
 #: templates/registration/register.html:13
 msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
+"You can register here for an account on this site. This is only useful if you "
+"plan to contribute to GNOME translations."
 msgstr ""
-"Sie können sich hier für ein Konto auf dieser Seite registieren. Dies ist "
-"nur nützlich falls Sie planen, Übersetzungen für GNOME beizusteuern."
+"Sie können sich hier für ein Konto auf dieser Seite registieren. Dies ist nur "
+"nützlich falls Sie planen, Übersetzungen für GNOME beizusteuern."
 
 #: djamnedlies-git/templates/registration/register.html:14
 #: templates/registration/register.html:14
@@ -2514,8 +2515,7 @@ msgstr "Abschicken"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
 #: templates/vertimus/vertimus_detail.html:181
 #, python-format
-msgid ""
-"You need to be authenticated and to be member of the %(team_name)s team."
+msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Sie müssen legitimiert und Mitglied des %(team_name)s-Teams sein."
 
 #: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
@@ -2629,10 +2629,10 @@ msgstr "Eingespielt"
 msgid "File in repository"
 msgstr "Datei im Softwarebestand"
 
-#: djamnedlies-git/vertimus/models.py:348
-#: djamnedlies-git/vertimus/views.py:130 djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146 vertimus/models.py:334
-#: vertimus/views.py:160 vertimus/views.py:166 vertimus/views.py:176
+#: djamnedlies-git/vertimus/models.py:348 djamnedlies-git/vertimus/views.py:130
+#: djamnedlies-git/vertimus/views.py:136 djamnedlies-git/vertimus/views.py:146
+#: vertimus/models.py:334 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Datei von %(name)s am %(date)s hochgeladen"
@@ -2642,8 +2642,8 @@ msgstr "Datei von %(name)s am %(date)s hochgeladen"
 msgid ""
 "Hello,\n"
 "\n"
-"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
-"'%(new_state)s'.\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%"
+"(new_state)s'.\n"
 "%(url)s\n"
 "\n"
 msgstr ""
@@ -2788,14 +2788,14 @@ msgstr ""
 "Eintrag für diese Sprache ist nicht in der Variable %(var)s in der Datei %"
 "(file)s vorhanden."
 
-#: stats/utils.py:317
+#: stats/utils.py:319
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Es ist unbekannt, wo nach der Variable LINGUAS geschaut werden soll, bitte "
 "fragen Sie den Verwalter des Moduls."
 
-#: stats/utils.py:324
+#: stats/utils.py:326
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -2877,6 +2877,9 @@ msgstr ""
 msgid "Archive the actions"
 msgstr "Aktionen archivieren"
 
+#~ msgid "GNOME 2.28 (development)"
+#~ msgstr "GNOME 2.28 (Entwicklerversion)"
+
 #~ msgid "Low German and Saxon"
 #~ msgstr "Plattdeutsch und Sächsisch"
 
@@ -2896,8 +2899,8 @@ msgstr "Aktionen archivieren"
 
 #~ msgid ""
 #~ "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-"
-#~ "lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn."
-#~ "gnome.org</a>"
+#~ "lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome."
+#~ "org</a>"
 #~ msgstr ""
 #~ "Verwaltet im Modul <a href='http://svn.gnome.org/viewvc/damned-"
 #~ "lies/'>Verdammte Lügen</a> auf <a href='http://svn.gnome.org/'>svn.gnome."
@@ -2911,8 +2914,8 @@ msgstr "Aktionen archivieren"
 #~ "repository.<br/>Note that the repository name in git.gnome.org is "
 #~ "<pre>system-tools-backends-clone</pre>"
 #~ msgstr ""
-#~ "Dies ist eine Kopie der offiziellen Softwarebestandes auf freedesktop."
-#~ "org. Beachten Sie, dass der Name des Softwarebestandes auf git.gnome.org "
+#~ "Dies ist eine Kopie der offiziellen Softwarebestandes auf freedesktop.org. "
+#~ "Beachten Sie, dass der Name des Softwarebestandes auf git.gnome.org "
 #~ "<pre>system-tools-backends-clone</pre> lautet."
 
 #~ msgid "GNOME Fifth Toe (Extra software)"
