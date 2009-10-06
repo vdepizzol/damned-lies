@@ -36,8 +36,8 @@ $(document).ready(function() {
 
 <h1>{{ module.get_description }}</h1>
 
-{% if module.comment %}
-  <p>{% trans module.comment %}</p>
+{% if module.get_comment %}
+  <p>{{ module.get_comment|safe }}</p>
 {% else %}
   {% if not module.has_standard_vcs %}
   <p><em><img src="/media/img/warn.png" alt="Warning logo" /> {{ non_standard_repo_msg }}</em></p>

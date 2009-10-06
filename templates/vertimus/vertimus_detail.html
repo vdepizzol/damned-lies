@@ -48,8 +48,8 @@ $(document).ready(function() {
 {% endifnotequal %}
 </h2>
 
-{% if module.comment %}
-  <p>{{ module.comment|safe }}</p>
+{% if module.get_comment %}
+  <p>{{ module.get_comment|safe }}</p>
 {% else %}
   {% if not module.has_standard_vcs %}
   <p><em><img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" /> {{ non_standard_repo_msg }}</em></p>

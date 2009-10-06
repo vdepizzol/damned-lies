@@ -79,10 +79,10 @@ class Module(models.Model):
         #FIXME: delete and recreate branch if vcs_root changed?
 
     def get_description(self):
-        if self.description:
-            return _(self.description)
-        else:
-            return self.name
+        return self.description and _(self.description) or self.name
+
+    def get_comment(self):
+        return self.comment and _(self.comment) or ""
 
     def has_standard_vcs(self):
         """ This function checks if the module is hosted in the standard VCS of the project """
