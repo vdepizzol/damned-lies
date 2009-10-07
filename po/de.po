@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-06 08:05+0000\n"
-"PO-Revision-Date: 2009-10-06 23:12+0100\n"
+"POT-Creation-Date: 2009-10-07 14:59+0000\n"
+"PO-Revision-Date: 2009-10-07 20:45+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -568,7 +568,6 @@ msgid "User Guide"
 msgstr "Benutzerhandbuch"
 
 #: database-content.py:138
-#| msgid "JHBuild Documentation"
 msgid "Mallard Documentation Guide"
 msgstr "Mallard-Dokumentation"
 
@@ -908,7 +907,6 @@ msgid "Human Interface Guidelines"
 msgstr "Richtlinien für Benutzeroberflächen"
 
 #: database-content.py:221
-#| msgid "Accessibility Guide"
 msgid "Accessibility Developers Guide"
 msgstr "Barrierefreiheits-Handbuch für Entwickler"
 
@@ -983,7 +981,6 @@ msgid "The Gimp Manual"
 msgstr "Gimp-Handbuch"
 
 #: database-content.py:239
-#| msgid "GNOME Desktop"
 msgid "GNOME Web Photo"
 msgstr "GNOME Web Photo"
 
@@ -1018,10 +1015,6 @@ msgstr ""
 "<a href=\"http://translationproject.org\">Translation Project</a>."
 
 #: database-content.py:244
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://translationproject.org\">Translation Project</"
-#| "a>."
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
@@ -1184,7 +1177,6 @@ msgid "External Dependencies (GNOME)"
 msgstr "Externe Abhängigkeiten (GNOME)"
 
 #: database-content.py:273
-#| msgid "GNOME 2.28 (development)"
 msgid "GNOME 2.30 (development)"
 msgstr "GNOME 2.30 (Entwicklerversion)"
 
@@ -1805,7 +1797,7 @@ msgstr ""
 "Module sind eigenständige Bibliotheken oder Anwendungen und beinhalten einen "
 "oder mehrere Entwicklungszweige."
 
-#: djamnedlies-git/templates/index.html:40 templates/index.html:40
+#: djamnedlies-git/templates/index.html:40
 msgid ""
 "They are usually taken from CVS, and we keep all relevant information on them "
 "(Bugzilla details, web page, maintainer information,...)."
@@ -1884,7 +1876,6 @@ msgid "Show existing i18n and l10n bugs"
 msgstr "Bereits berichtete Fehler anzeigen"
 
 #: djamnedlies-git/templates/module_detail.html:68
-#: templates/module_detail.html:68
 msgid "Report bugs to Bugzilla"
 msgstr "Fehler an Bugzilla berichten"
 
@@ -2852,6 +2843,22 @@ msgid ""
 "2.26&quot;."
 msgstr ""
 "Beispiele für Veröffentlichungsgruppen sind »GNOME-Büro« oder »GNOME 2.26«."
+
+#: templates/index.html:40
+#| msgid ""
+#| "They are usually taken from CVS, and we keep all relevant information on "
+#| "them (Bugzilla details, web page, maintainer information,...)."
+msgid ""
+"They are usually taken from the Git repository, and we keep all relevant "
+"information on them (Bugzilla details, web page, maintainer information,...)."
+msgstr ""
+"Diese werden normalerweise aus dem Git-Softwarebestand abgerufen und "
+"enthalten alle relevanten Informationen (Bugzilla-Details, Webseite, "
+"Verwalter-Informationen, …)."
+
+#: templates/module_detail.html:68
+msgid "Report a bug"
+msgstr "Einen Fehler melden"
 
 #: templates/release_detail.html:13
 msgid ""
