@@ -39,7 +39,7 @@ $(document).ready(function()
 <h2>{% trans "Maintains:" %}</h2>
 <ul>
   {% for module in person.maintains_modules.all %}
-  <li><a href="{{ module.get_absolute_url }}">{{ module.description }}</a></li>
+  <li><a href="{{ module.get_absolute_url }}">{{ module.get_description }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
