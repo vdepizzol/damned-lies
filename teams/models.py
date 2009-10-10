@@ -208,6 +208,9 @@ class FakeTeam(object):
         # FIXME: try to avoid using a hard-coded link
         return "/teams/%s" % self.language.locale
 
+    def can_edit(self, user):
+        return False
+
     def get_description(self):
         return self.language.locale
 
