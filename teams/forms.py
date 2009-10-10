@@ -1,5 +1,15 @@
 from django import forms
-from teams.models import ROLE_CHOICES
+from teams.models import Team, ROLE_CHOICES
+
+class EditTeamDetailsForm(forms.ModelForm):
+    class Meta:
+        model = Team
+        fields = ('webpage_url', 'mailing_list', 'mailing_list_subscribe')
+
+    def __init__(self, *args, **kwargs):
+        super(EditTeamDetailsForm, self).__init__(*args, **kwargs)
+        for f in ('webpage_url', 'mailing_list', 'mailing_list_subscribe'):
+            self.fields[f].widget.attrs['size'] = 60
 
 class EditMemberRoleForm(forms.Form):
 

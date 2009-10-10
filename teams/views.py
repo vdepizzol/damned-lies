@@ -20,11 +20,13 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.utils.translation import ugettext_lazy as _
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render_to_response, get_object_or_404
+from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from common import utils
 from teams.models import Team, FakeTeam, Role
-from teams.forms import EditMemberRoleForm
+from teams.forms import EditMemberRoleForm, EditTeamDetailsForm
 from languages.models import Language
 
 def teams(request):
@@ -72,8 +74,12 @@ def team(request, team_slug):
         coordinator = None
         mem_groups = ()
 
-    # Compare username because request.user is User and get_coordinator is Person
-    if request.user.is_authenticated() and coordinator and request.user.username == coordinator.username:
+    context = {
+        'pageSection': 'teams',
+        'team': team,
+        'can_edit_team': False,
+    }
+    if team.can_edit(request.user):
         if request.method == 'POST':
             form_type = request.POST['form_type']
             roles = Role.objects.filter(team=team, role=form_type)
@@ -98,9 +104,23 @@ def team(request, team_slug):
         translate_roles = Role.objects.filter(team=team, role='translator')
         if translate_roles:
             mem_groups[2]['form'] = EditMemberRoleForm(translate_roles)
-    context = {
-        'pageSection': 'teams',
-        'team': team,
-        'mem_groups': mem_groups
-    }
+        context['can_edit_team'] = True
+
+    context['mem_groups'] = mem_groups
     return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
+
+def team_edit(request, team_slug):
+    team = get_object_or_404(Team, name=team_slug)
+    if not team.can_edit(request.user):
+        return HttpResponseForbidden("You are not allowed to edit this team.")
+    form = EditTeamDetailsForm(request.POST or None, instance=team)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('team_slug', args=[team_slug]))
+    context = {
+        'team': team,
+        'form': form
+    }
+    return render_to_response('teams/team_edit.html', context, context_instance=RequestContext(request))
+

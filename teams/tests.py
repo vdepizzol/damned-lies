@@ -29,6 +29,7 @@ class TeamTest(TestCase):
 
         self.pcoo = Person(first_name='John', last_name='Coordinator',
             email='jcoo@imthebigboss.fr', username= 'jcoo')
+        self.pcoo.set_password('password')
         self.pcoo.save()
 
         self.t = Team(name='fr', description='French')
@@ -123,4 +124,21 @@ class TeamTest(TestCase):
         # Test coordinator receives email
         self.assertEquals(len(mail.outbox), 1)
         self.assertEquals(mail.outbox[0].recipients()[0], self.pcoo.email)
+
+    def test_edit_team(self):
+        """ Test team edit form """
+        c = Client()
+        edit_url = reverse('team_edit', args = ['fr'], current_app='teams')
+        response = c.get(edit_url)
+        self.assertEquals(response.status_code, 403)
+        # Login as team coordinator
+        response = c.post('/login/', {'username': self.pcoo.username, 'password': 'password'})
+        # Try team modification
+        response = c.post(edit_url, {
+            'webpage_url'  : u"http://www.gnomefr.org/",
+            'mailing_list' : u"gnomefr@traduc.org",
+            'mailing_list_subscribe': u""
+        })
+        team = Team.objects.get(name='fr')
+        self.assertEquals(team.webpage_url, u"http://www.gnomefr.org/")
 

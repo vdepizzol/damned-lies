@@ -80,7 +80,7 @@ $(document).ready(function() {
     <a href="#{{ branch.name }}">{{ branch.name }}</a>
   {% endfor %}
   {% if can_edit_branches %}
-    <a href="{% url stats.views.module_edit_branches module_name=module.name %}"><img src="/media/img/edit.png" alt="Edit" /></a>
+    <a href="{% url stats.views.module_edit_branches module_name=module.name %}"><img src="{{ MEDIA_URL }}img/edit.png" alt="Edit" /></a>
   {% endif %}
   </p>
 

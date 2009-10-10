@@ -85,9 +85,9 @@ class Team(models.Model):
     name = models.CharField(max_length=80)
     description = models.TextField()
     members = models.ManyToManyField(Person, through='Role', related_name='teams')
-    webpage_url = models.URLField(null=True, blank=True)
-    mailing_list = models.EmailField(null=True, blank=True)
-    mailing_list_subscribe = models.URLField(null=True, blank=True)
+    webpage_url = models.URLField(null=True, blank=True, verbose_name=_("Web page"))
+    mailing_list = models.EmailField(null=True, blank=True, verbose_name=_("Mailing list"))
+    mailing_list_subscribe = models.URLField(null=True, blank=True, verbose_name=_("URL to subscribe"))
     objects = TeamManager()
 
     class Meta:
@@ -104,6 +104,13 @@ class Team(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('team_slug', [self.name])
+
+    def can_edit(self, user):
+        """ Return True if user is allowed to edit this team
+            user is a User (from request.user), not a Person
+        """
+        coordinator = self.get_coordinator()
+        return user.is_authenticated() and coordinator and user.username == coordinator.username
 
     def fill_role(self, role, person):
         """ Used by TeamManager to prefill roles in team """
