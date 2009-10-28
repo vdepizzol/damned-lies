@@ -823,3 +823,9 @@ def delete_merged_file(sender, instance, **kwargs):
         if os.access(merged_file, os.W_OK):
              os.remove(merged_file)
 pre_delete.connect(delete_merged_file, sender=ActionDb)
+
+""" The following string is just reproduced from a template so as a translator comment
+    can be added (comments are not supported in templates) """
+# Translators: human_level is an ordinal expression ('1st',' 2nd',...)
+# which should be localized in Django itself
+dummy = ugettext("Archived Actions (%(human_level)s archived series)" % {'human_level':0})
