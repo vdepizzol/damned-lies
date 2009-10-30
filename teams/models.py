@@ -21,6 +21,7 @@
 
 from django.db import models
 from django.core import mail
+from django.utils import translation
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.conf import settings
 from django.contrib.sites.models import Site
@@ -184,14 +185,21 @@ class Team(models.Model):
             members = list(self.members.all())
         return members
 
-    def send_mail_to_coordinator(self, subject, message):
-        message += "\n--\n" + _(u"This is an automated message sent from %s.") % Site.objects.get_current()
+    def send_mail_to_coordinator(self, subject, message, messagekw={}):
+        """ Send a message to the coordinator, in her language if available
+            and if subject and message are lazy strings """
+        prev_lang = translation.get_language()
+        translation.activate(self.language_set.all()[0].locale)
+
+        message = u"%s\n--\n" % (message % messagekw,)
+        message += _(u"This is an automated message sent from %s.") % Site.objects.get_current()
         mail.send_mail(
             subject,
             message,
             settings.DEFAULT_FROM_EMAIL,
             [self.get_coordinator().email]
         )
+        translation.activate(prev_lang)
 
 class FakeTeam(object):
     """

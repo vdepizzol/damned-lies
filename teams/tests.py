@@ -6,6 +6,7 @@ from django.core import mail
 from django.contrib.auth import login
 from people.models import Person
 from teams.models import Team, Role
+from languages.models import Language
 
 class TeamTest(TestCase):
 
@@ -34,6 +35,9 @@ class TeamTest(TestCase):
 
         self.t = Team(name='fr', description='French')
         self.t.save()
+
+        self.l = Language(name='French', locale='fr', team=self.t)
+        self.l.save()
 
         self.role = Role(team=self.t, person=self.pt)
         self.role.save()
@@ -124,6 +128,8 @@ class TeamTest(TestCase):
         # Test coordinator receives email
         self.assertEquals(len(mail.outbox), 1)
         self.assertEquals(mail.outbox[0].recipients()[0], self.pcoo.email)
+        # Mail should be sent in the target team's language (i.e. French here)
+        self.assertTrue(u"rejoindre" in mail.outbox[0].body)
 
     def test_edit_team(self):
         """ Test team edit form """

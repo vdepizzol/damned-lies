@@ -21,7 +21,7 @@
 from django.core import urlresolvers
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext as _, get_date_formats
+from django.utils.translation import ugettext_lazy, ugettext as _, get_date_formats
 from django.template import RequestContext
 from django.db import transaction, IntegrityError
 from django.contrib.auth.decorators import login_required
@@ -85,9 +85,9 @@ def person_team_join(request):
             try:
                 new_role.save()
                 request.user.message_set.create(message=_("You have successfully joined the team '%s'.") % team.get_description())
-                team.send_mail_to_coordinator(subject=_("A new person joined your team"),
-                                              message=_("%(name)s has just joined your translation team on %(site)s") %
-                                                        {'name': person.name, 'site': Site.objects.get_current()})
+                team.send_mail_to_coordinator(subject=ugettext_lazy("A new person joined your team"),
+                                              message=ugettext_lazy("%(name)s has just joined your translation team on %(site)s"),
+                                              messagekw = {'name': person.name, 'site': Site.objects.get_current()})
             except IntegrityError:
                 transaction.rollback()
                 request.user.message_set.create(message=_("You are already member of this team."))
