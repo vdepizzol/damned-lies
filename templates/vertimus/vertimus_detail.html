@@ -122,7 +122,7 @@ $(document).ready(function() {
   {% for action,files in action_history %}
   <div class="vertimus_action">
     <div class="vertimus_action_head">
-      <img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>
+      <a name="{{ action.id }}"></a><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>
       <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
       , <strong>{{ action }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
     </div>
