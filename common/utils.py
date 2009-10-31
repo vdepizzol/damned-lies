@@ -19,7 +19,13 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.utils.translation import ugettext as _
+import operator
+from django.utils.translation import ugettext as _, get_language
+try:
+    import PyICU
+    pyicu_present = True
+except:
+    pyicu_present = False
 
 MIME_TYPES = {
     'json': 'application/json',
@@ -31,7 +37,11 @@ def trans_sort_object_list(lst, tr_field):
     for l in lst:
         l.translated_name = _(getattr(l, tr_field))
     templist = [(obj_.translated_name.lower(), obj_) for obj_ in lst]
-    templist.sort()
+    if pyicu_present:
+        collator = PyICU.Collator.createInstance(PyICU.Locale(get_language()))
+        templist.sort(key=operator.itemgetter(0), cmp=collator.compare)
+    else:
+        templist.sort()
     return [obj_ for (key1, obj_) in templist]
 
 def merge_sorted_by_field(object_list1, object_list2, field):
