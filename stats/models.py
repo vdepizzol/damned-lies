@@ -744,6 +744,9 @@ class Release(models.Model):
     def __unicode__(self):
         return self.description
 
+    def get_description(self):
+        return _(self.description)
+
     @classmethod
     def total_by_releases(cls, dtype, releases):
         """ Get summary stats for all languages and 'releases', and return a 'stats' dict with
