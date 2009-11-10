@@ -123,9 +123,11 @@ $(document).ready(function() {
   <div class="vertimus_action">
     <div class="vertimus_action_head">
       <a name="{{ action.id }}"></a>
-      {% if action.person.image %}<img src="{{ action.person.image }}" alt="face" height="18"/>
+      <div class="face_image">
+      {% if action.person.image %}<img src="{{ action.person.image }}" alt="face" style="max-height: 50px;"/>
       {% else %}<img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>
       {% endif %}
+      </div>
       <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
       , <strong>{{ action }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
     </div>
