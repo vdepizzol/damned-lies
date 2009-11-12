@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-03 14:05+0000\n"
-"PO-Revision-Date: 2009-11-08 20:12+0100\n"
+"POT-Creation-Date: 2009-11-11 19:48+0000\n"
+"PO-Revision-Date: 2009-11-12 09:49+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -473,7 +473,6 @@ msgid "Divehi"
 msgstr "Divehi"
 
 #: database-content.py:115
-#| msgid "Latvian"
 msgid "Shavian"
 msgstr "Shavian"
 
@@ -917,7 +916,6 @@ msgid "Accessibility Developers Guide"
 msgstr "Utvecklarguide för hjälpmedelsteknik"
 
 #: database-content.py:223
-#| msgid "Nibbles Manual"
 msgid "Audio Profiles Manual"
 msgstr "Handbok för Ljudprofiler"
 
@@ -1074,62 +1072,66 @@ msgid "A multimedia converter for the GNOME Desktop"
 msgstr "En multimediakonverterare för GNOME-skrivbordet"
 
 #: database-content.py:261
+msgid "Email client for netbooks"
+msgstr "E-postklient för ultraportabla datorer"
+
+#: database-content.py:262
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:262
+#: database-content.py:263
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:263
+#: database-content.py:264
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:264
+#: database-content.py:265
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (gammal stabil)"
 
-#: database-content.py:265
+#: database-content.py:266
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (gammal stabil)"
 
-#: database-content.py:266
+#: database-content.py:267
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
-#: database-content.py:267
+#: database-content.py:268
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
-#: database-content.py:268
+#: database-content.py:269
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:269
+#: database-content.py:270
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:270
+#: database-content.py:271
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:271
+#: database-content.py:272
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (gammal stabil)"
 
-#: database-content.py:272
+#: database-content.py:273
 msgid "GNOME 2.28 (stable)"
 msgstr "GNOME 2.28 (stabil)"
 
-#: database-content.py:273
+#: database-content.py:274
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
-#: database-content.py:274
+#: database-content.py:275
 msgid "External Dependencies (GNOME)"
 msgstr "Externa beroenden (GNOME)"
 
-#: database-content.py:275
+#: database-content.py:276
 msgid "GNOME 2.30 (development)"
 msgstr "GNOME 2.30 (utveckling)"
 
@@ -1342,40 +1344,40 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906
-#: stats/models.py:967
+#: stats/models.py:970
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
 #: djamnedlies-git/stats/models.py:907
-#: stats/models.py:968
+#: stats/models.py:971
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
 #: djamnedlies-git/stats/models.py:908
-#: stats/models.py:969
+#: stats/models.py:972
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
 #: djamnedlies-git/stats/models.py:909
-#: stats/models.py:970
+#: stats/models.py:973
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
 #: djamnedlies-git/stats/models.py:910
-#: stats/models.py:971
+#: stats/models.py:974
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
 #: djamnedlies-git/stats/models.py:986
 #: djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1047
-#: stats/models.py:1324
+#: stats/models.py:1050
+#: stats/models.py:1327
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017
-#: stats/models.py:1078
+#: stats/models.py:1081
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1383,7 +1385,7 @@ msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
 #: djamnedlies-git/stats/models.py:1018
-#: stats/models.py:1079
+#: stats/models.py:1082
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
@@ -1395,14 +1397,14 @@ msgstr "uppdaterad den %(date)s"
 #: djamnedlies-git/stats/models.py:1020
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1081
+#: stats/models.py:1084
 #: templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:130
+#: templates/vertimus/vertimus_detail.html:132
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
 #: djamnedlies-git/stats/models.py:1023
-#: stats/models.py:1084
+#: stats/models.py:1087
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1410,13 +1412,13 @@ msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
 #: djamnedlies-git/stats/models.py:1024
-#: stats/models.py:1085
+#: stats/models.py:1088
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027
-#: stats/models.py:1088
+#: stats/models.py:1091
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -2009,7 +2011,7 @@ msgstr "Admin för Förbannade lögner"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:157
+#: templates/vertimus/vertimus_detail.html:159
 msgid "No comment"
 msgstr "Ingen kommentar"
 
@@ -2475,22 +2477,22 @@ msgid "Action History"
 msgstr "Åtgärdshistorik"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:146
+#: templates/vertimus/vertimus_detail.html:148
 msgid "diff with:"
 msgstr "diff med:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:169
+#: templates/vertimus/vertimus_detail.html:171
 msgid "New Action"
 msgstr "Ny åtgärd"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:179
+#: templates/vertimus/vertimus_detail.html:181
 msgid "Submit"
 msgstr "Skicka"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:186
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
@@ -2872,7 +2874,7 @@ msgstr "(Återgå till aktuell)"
 msgid "(Previous action history)"
 msgstr "(Åtgärdshistorik)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:167
 msgid "No current actions."
 msgstr "Inga aktuella åtgärder."
 
