@@ -13,7 +13,7 @@ The Data model is in the /docs directory.
 Requirements
 ============
 
-1 - Django 1.0.X
+1 - Django 1.1.X
 
 2 - Python 2.5 (for hashlib module).
 
@@ -23,16 +23,11 @@ Requirements
     * jQuery growfield (http://kuindji.com/jquery/growfield/growfield.xml)
       in /media/js/jquery.growfield2.js
 
-4 - [Optional] Django Evolution is an extension to Django that allows
-    you to track changes in your models over time, and to update the
-    database to reflect those changes.
+4 - South >= 0.6 - http://south.aeracode.org/
+    South is a Django extension that allows you to track changes in your models
+    over time, and to update the database to reflect those changes.
 
-    svn checkout http://django-evolution.googlecode.com/svn/trunk/
-    
-    Define USE_DJANGO_EVOLUTION to True in settings.py to use it.
-
-    Run './manage.py syncdb' before any model changes and './manage.py
-    evolve --hint --execute' after.
+    See http://south.aeracode.org/wiki/Download for installation instructions
 
 5 - [Optional] Django Debug Toolbar
     git clone git://github.com/dcramer/django-debug-toolbar.git
@@ -52,7 +47,7 @@ Installation
     SCRATCHDIR should point to an existing directory, writable by
     the web application user.
 
-2 - Run 'python manage.py syncdb'
+2 - Run 'python manage.py syncdb', then 'python manage.py migrate'
 
 3 - Configure Sites in admin interface to define the 'View on site'
     link.
