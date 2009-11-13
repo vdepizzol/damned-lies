@@ -372,10 +372,7 @@ class Branch(models.Model):
             if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
                 errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
 
-            stat.untranslated = int(pot_stats['untranslated'])
-            stat.num_figures = int(pot_stats['num_figures'])
-            stat.date = datetime.now()
-            stat.save()
+            stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
             stat.set_errors(errors)
 
             # 6. Update language po files and update DB
@@ -414,11 +411,6 @@ class Branch(models.Model):
                 # Save in DB
                 try:
                     stat = Statistics.objects.get(language__locale=lang, branch=self, domain=dom)
-                    stat.translated = int(langstats['translated'])
-                    stat.fuzzy = int(langstats['fuzzy'])
-                    stat.untranslated = int(langstats['untranslated'])
-                    stat.num_figures = int(langstats['num_figures'])
-                    stat.date = datetime.now()
                     Information.objects.filter(statistics=stat).delete()
                 except Statistics.DoesNotExist:
                     try:
@@ -430,9 +422,13 @@ class Branch(models.Model):
                         else:
                             # Do not create language (and therefore ignore stats) for an 'old' branch
                             continue
-                    stat = Statistics(language = language, branch = self, domain = dom, translated = int(langstats['translated']),
-                                      fuzzy = int(langstats['fuzzy']), untranslated = int(langstats['untranslated']))
-                stat.save()
+                    stat = Statistics(language = language, branch = self, domain = dom)
+                    stat.save()
+                stat.set_translation_stats(outpo,
+                                           translated = int(langstats['translated']),
+                                           fuzzy = int(langstats['fuzzy']),
+                                           untranslated = int(langstats['untranslated']),
+                                           num_figures = int(langstats['num_figures']))
                 for err in langstats['errors']:
                     stat.information_set.add(Information(type=err[0], description=err[1]))
 
@@ -1078,13 +1074,15 @@ class Statistics(models.Model):
 
     def pot_text(self):
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
-        msg_text = ungettext(u"%(count)s message", "%(count)s messages", self.pot_size()) % {'count': self.pot_size()}
+        pot_size = self.pot_size()
+        fig_count = self.fig_count()
+        msg_text = ungettext(u"%(count)s message", "%(count)s messages", pot_size) % {'count': pot_size}
         upd_text = _(u"updated on %(date)s") % {
                         # Date format syntax is similar to PHP http://www.php.net/date
                         'date': dateformat.format(self.date, _("Y-m-d g:i a O"))
                         }
-        if self.fig_count():
-            fig_text = ungettext(u"%(count)s figure", "%(count)s figures", self.fig_count()) % {'count': self.fig_count()}
+        if fig_count:
+            fig_text = ungettext(u"%(count)s figure", "%(count)s figures", fig_count) % {'count': fig_count}
             text = _(u"POT file (%(messages)s, %(figures)s) — %(updated)s") % \
                               {'messages': msg_text, 'figures': fig_text, 'updated': upd_text}
         else:
@@ -1150,6 +1148,14 @@ class Statistics(models.Model):
 
     def pot_url(self):
         return self.po_url(potfile=True)
+
+    def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, num_figures=0):
+        self.translated = translated
+        self.fuzzy = fuzzy
+        self.untranslated = untranslated
+        self.num_figures = num_figures
+        self.date = datetime.now()
+        self.save()
 
     def set_errors(self, errors):
         for err in errors:

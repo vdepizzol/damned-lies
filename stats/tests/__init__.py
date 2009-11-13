@@ -75,7 +75,7 @@ class ModuleTestCase(TestCase):
         fr_po_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
         self.assertEquals(fr_po_stat.translated, 40)
         fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
-        self.assertEquals(fr_doc_stat.translated, 36)
+        self.assertEquals(fr_doc_stat.translated, 22)
 
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True
@@ -149,7 +149,7 @@ class ModuleTestCase(TestCase):
         self.b.update_stats(force=True) # At least POT stats needed
         c = Client()
         response = c.get('/module/po/gnome-hello.po.master.ta.po')
-        self.assertContains(response, """# Tamil translation of gnome-hello.
+        self.assertContains(response, """# Tamil translation for gnome-hello.
 # Copyright (C) 2009 gnome-hello's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-hello package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""")
