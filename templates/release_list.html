@@ -11,7 +11,7 @@
 <p>{% trans "Select a release or a release set below to see more details about it:" %}</p>
 
 <ul class="foot">
-{% for rel in releases %}
+{% for rel in active_releases %}
   {% ifchanged rel.status %}
     </ul>
     <ul class="foot">
@@ -20,6 +20,19 @@
     <a href="{% url stats.views.release rel.name %}">{% trans rel.description %}</a>
   </li>
 {% endfor %}
+</ul>
 
+<h2>{% trans "Older Releases" %}</h2>
+<ul class="foot">
+{% for rel in old_releases %}
+  {% ifchanged rel.status %}
+    </ul>
+    <ul class="foot">
+  {% endifchanged %}
+  <li>
+    <a href="{% url stats.views.release rel.name %}">{% trans rel.description %}</a>
+  </li>
+{% endfor %}
+</ul>
 </div>
 {% endblock %}

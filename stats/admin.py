@@ -71,7 +71,8 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'branch__module__name')
 
 class ReleaseAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status', 'string_frozen')
+    list_display = ('name', 'status', 'weight', 'string_frozen')
+    list_editable = ('weight',)
     inlines = [ CategoryInline ]
 
 class InformationInline(admin.TabularInline):

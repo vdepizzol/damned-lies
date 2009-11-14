@@ -217,14 +217,17 @@ def dynamic_po(request, filename):
     return HttpResponse(dyn_content, 'text/plain')
 
 def releases(request, format='html'):
-    all_releases = Release.objects.order_by('status', '-name')
+    active_releases = Release.objects.filter(weight__gte=0).order_by('status', '-weight', '-name')
+    old_releases    = Release.objects.filter(weight__lt=0).order_by('status', '-weight', '-name')
     if format in ('json', 'xml'):
-        data = serializers.serialize(format, all_releases)
+        from itertools import chain
+        data = serializers.serialize(format, chain(active_releases, old_releases))
         return HttpResponse(data, mimetype=MIME_TYPES[format])
     else:
         context = {
-            'pageSection':  "releases",
-            'releases': all_releases
+            'pageSection'    : "releases",
+            'active_releases': active_releases,
+            'old_releases'   : old_releases,
         }
         return render_to_response('release_list.html', context, context_instance=RequestContext(request))
 

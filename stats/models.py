@@ -731,6 +731,8 @@ class Release(models.Model):
     description = models.CharField(max_length=50)
     string_frozen = models.BooleanField(default=False)
     status = models.CharField(max_length=12, choices=RELEASE_STATUS_CHOICES)
+    # weight is used to sort releases, higher on top, below 0 in archives
+    weight   = models.IntegerField(default=0)
     branches = models.ManyToManyField(Branch, through='Category', related_name='releases')
 
     class Meta:
