@@ -29,7 +29,7 @@ from django.db.models import Max
 from django.db.models.signals import post_save, post_delete
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
-from stats.models import Branch, Domain, Statistics
+from stats.models import Branch, Domain, Statistics, PoFile
 from stats.signals import pot_has_changed
 from stats.utils import run_shell_command
 from languages.models import Language
@@ -342,6 +342,8 @@ class ActionDb(models.Model):
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_upload_filename, blank=True, null=True)
+    #up_file     = models.OneToOneField(PoFile, null=True, related_name='action_p')
+    #merged_file = models.OneToOneField(PoFile, null=True, related_name='action_m')
 
     class Meta:
         db_table = 'action'

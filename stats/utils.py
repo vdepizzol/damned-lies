@@ -222,7 +222,7 @@ def pot_diff_status(pota, potb):
     else:
         return CHANGED_NO_ADDITIONS, result_all
 
-def po_file_stats(pofile, msgfmt_checks = True):
+def po_file_stats(pofile, msgfmt_checks=True, count_images=True):
     """ Compute pofile translation statistics, and proceed to some validity checks if msgfmt_checks is True """
     res = {
         'translated' : 0,
@@ -270,11 +270,11 @@ def po_file_stats(pofile, msgfmt_checks = True):
     r_fz = re.search(r"([0-9]+) fuzzy", errs)
 
     if r_tr:
-        res['translated'] = r_tr.group(1)
+        res['translated'] = int(r_tr.group(1))
     if r_un:
-        res['untranslated'] = r_un.group(1)
+        res['untranslated'] = int(r_un.group(1))
     if r_fz:
-        res['fuzzy'] = r_fz.group(1)
+        res['fuzzy'] = int(r_fz.group(1))
 
     if msgfmt_checks:
         # Check if PO file is in UTF-8
@@ -292,9 +292,10 @@ def po_file_stats(pofile, msgfmt_checks = True):
             res['errors'].append(("warn",
                               ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
     # Count number of figures in PO(T) file
-    command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
-    (status, output, errs) = run_shell_command(command)
-    res['num_figures'] = int(output)
+    if count_images:
+        command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
+        (status, output, errs) = run_shell_command(command)
+        res['num_figures'] = int(output)
 
     return res
 

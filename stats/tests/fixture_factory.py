@@ -6,7 +6,7 @@ from django.test import TestCase
 from languages.models import Language
 from teams.models import Team, Role
 from people.models import Person
-from stats.models import Module, Domain, Branch, Release, Category, Statistics, Information
+from stats.models import Module, Domain, Branch, Release, Category, Statistics, Information, PoFile
 
 class FixtureFactory(TestCase):
     """ Fake Test case to create fixture.
@@ -106,29 +106,29 @@ class FixtureFactory(TestCase):
 
         # Creating models: Statistics
         # gnome-hello ui, gnome-hello doc (POT, fr, it)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=None, untranslated=47)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_fr, translated=47)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_it, translated=30, fuzzy=10, untranslated=7)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=None, untranslated=20, num_figures=1)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_fr, translated=20)
-        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_it, translated=20)
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=None, full_po=PoFile.objects.create(untranslated=47))
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_fr, full_po=PoFile.objects.create(translated=47))
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_it, full_po=PoFile.objects.create(translated=30, fuzzy=10, untranslated=7))
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=None, full_po=PoFile.objects.create(untranslated=20, num_figures=1))
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_fr, full_po=PoFile.objects.create(translated=20))
+        Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_it, full_po=PoFile.objects.create(translated=20))
         # zenity ui 2.30, zenity doc 2.30, zenity ui master, zenity doc master (POT, fr, it)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=None, untranslated=136)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=l_fr, translated=136)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=l_it, translated=130, untranslated=6)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=None, untranslated=259, num_figures=11)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=l_fr, untranslated=259)
-        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=l_it, translated=259)
-        stat1 = Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=None, untranslated=149)
-        Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=l_fr, translated=255, fuzzy=4)
-        Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=l_it, translated=259)
-        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=None, untranslated=259, num_figures=11)
-        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=l_fr, untranslated=259)
-        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=l_it, translated=259)
+        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=None, full_po=PoFile.objects.create(untranslated=136))
+        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=l_fr, full_po=PoFile.objects.create(translated=136))
+        Statistics.objects.create(branch=b2, domain=dom['zenity-ui'], language=l_it, full_po=PoFile.objects.create(translated=130, untranslated=6))
+        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=None, full_po=PoFile.objects.create(untranslated=259, num_figures=11))
+        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=l_fr, full_po=PoFile.objects.create(untranslated=259))
+        Statistics.objects.create(branch=b2, domain=dom['zenity-doc'], language=l_it, full_po=PoFile.objects.create(translated=259))
+        stat1 = Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=None, full_po=PoFile.objects.create(untranslated=149))
+        Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=l_fr, full_po=PoFile.objects.create(translated=255, fuzzy=4))
+        Statistics.objects.create(branch=b3, domain=dom['zenity-ui'], language=l_it, full_po=PoFile.objects.create(translated=259))
+        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=None, full_po=PoFile.objects.create(untranslated=259, num_figures=11))
+        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=l_fr, full_po=PoFile.objects.create(untranslated=259))
+        Statistics.objects.create(branch=b3, domain=dom['zenity-doc'], language=l_it, full_po=PoFile.objects.create(translated=259))
         # shared-mime-info ui (POT, fr, it)
-        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=None, untranslated=626)
-        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=l_fr, translated=598, fuzzy=20, untranslated=2)
-        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=l_it, translated=620, fuzzy=6)
+        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=None, full_po=PoFile.objects.create(untranslated=626))
+        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=l_fr, full_po=PoFile.objects.create(translated=598, fuzzy=20, untranslated=2))
+        Statistics.objects.create(branch=b4, domain=dom['shared-mime-info-ui'], language=l_it, full_po=PoFile.objects.create(translated=620, fuzzy=6))
 
         # Example of error
         stat1.information_set.add(Information(
