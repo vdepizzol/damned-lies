@@ -1,10 +1,35 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load stats_extras %}
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml"
       title="{% blocktrans with team.get_description as lang %}Last actions made by the {{ lang }} team of the GNOME Translation Project{% endblocktrans %}"
       href="/rss/teams/{{ team.name }}" />
+
+<script type="text/javascript">
+$(document).ready(function() {
+        $(".archives").click(function(event) {
+            event.preventDefault();
+            arch_div = $("#div-rel-archives-"+this.id);
+            is_visible = arch_div.is(':visible');
+            if (is_visible) {
+                arch_div.hide();
+                $(this).children('img').attr("src", "{{ MEDIA_URL }}img/closed.png");
+            } else {
+                if (arch_div.attr("class") == "empty") {
+                    // Load the archive stats dynamically
+                    arch_div.load("/languages/"+this.id.replace('__','@')+"/rel-archives/");
+                    arch_div.attr("class", "loaded");
+                }
+                arch_div.show();
+                $(this).children('img').attr("src", "{{ MEDIA_URL }}img/open.png");
+            }
+        });
+    }
+);
+</script>
 {% endblock %}
+
 {% block title %}{{ team.get_description }}{% endblock %}
 
 {% block content %}
@@ -22,48 +47,15 @@
 
 {% for lang in team.get_languages %}
   <h2>{{ lang.get_name }} ({{ lang.locale }})</h2>
-  <table class="stats">
-  <thead><tr><th>{% trans "Release" %}</th><th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th>
-         <th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th></tr></thead>
-  {% for stat in lang.get_release_stats %}
-    <tr>
-      <td class="leftcell">
-        {{ stat.description }}</a>
-      </td>
-  
-    <td><a href="{% url language_release lang.locale,stat.name,"ui" %}">
-        {{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</a>
-    </td>
-    <td style="width: 108px; text-align: center;"><div class="graph">
-      <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
-      {% with stat.uitransperc|add:stat.uifuzzyperc as upos %}
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
-      {% endwith %}
-      </div>
-    </td>
-
-    {% if stat.doctotal %}
-      <td><a href="{% url language_release lang.locale,stat.name,"doc" %}">
-          {{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</a>
-      </td>
-      <td style="width: 108px; text-align: center;"><div class="graph">
-        <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
-        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
-        {% with stat.doctransperc|add:stat.docfuzzyperc as upos %}
-        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
-        {% endwith %}
-        </div>
-      </td>
-    {% else %}
-      <td>-</td><td></td>
-    {% endif %}
-  </tr>
-  {% endfor %}
-  <tr><td></td><td><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
-      <td></td><td><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
-</table>
+  {% with 1 as show_all_modules_line %}
+  {% with lang.get_release_stats as stats %}
+  {% include "languages/language_release_summary.html" %}
+  {% endwith %}
+  {% endwith %}
 <p><strong>{% trans "Plural forms:" %}</strong> {{ lang.get_plurals }}</p>
+
+<h3><a href="." class="archives" id="{{ lang.locale|escapeat }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>&nbsp;Archives</h3>
+<div id="div-rel-archives-{{ lang.locale|escapeat }}" class="empty" style="display:none;"></div>
 
 {% endfor %}
 

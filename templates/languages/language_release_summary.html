@@ -1,0 +1,50 @@
+{% load i18n %}
+{% comment %}
+Following variables should be set:
+   lang : current language
+   stats : release stat list, obtained with get_release_stats
+   show_all_modules_line : boolean
+{% endcomment %}
+<table class="stats">
+  <thead><tr><th>{% trans "Release" %}</th><th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th>
+         <th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th></tr></thead>
+  {% for stat in stats %}
+    <tr>
+      <td class="leftcell">
+        {{ stat.description }}</a>
+      </td>
+  
+    <td><a href="{% url language_release lang.locale,stat.name,"ui" %}">
+        {{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</a>
+    </td>
+    <td style="width: 108px; text-align: center;"><div class="graph">
+      <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
+      {% with stat.uitransperc|add:stat.uifuzzyperc as upos %}
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
+      {% endwith %}
+      </div>
+    </td>
+
+    {% if stat.doctotal %}
+      <td><a href="{% url language_release lang.locale,stat.name,"doc" %}">
+          {{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</a>
+      </td>
+      <td style="width: 108px; text-align: center;"><div class="graph">
+        <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
+        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
+        {% with stat.doctransperc|add:stat.docfuzzyperc as upos %}
+        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
+        {% endwith %}
+        </div>
+      </td>
+    {% else %}
+      <td>-</td><td></td>
+    {% endif %}
+    </tr>
+  {% endfor %}
+  {% if show_all_modules_line %}
+  <tr><td></td><td><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
+      <td></td><td><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
+  {% endif %}
+</table>

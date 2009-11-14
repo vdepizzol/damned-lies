@@ -54,6 +54,19 @@ def language_all(request, locale, dtype):
     return render_to_response('languages/language_all_modules.html', context,
                               context_instance=RequestContext(request))
 
+def release_archives(request, locale):
+    """ This view is used to display archive release stats through Ajax call
+        Only the HTML table is produced
+    """
+    language = get_object_or_404(Language, locale=locale)
+    context = {
+        'lang': language,
+        'stats': language.get_release_stats(archives=True),
+        'show_all_modules_line': False,
+    }
+    return render_to_response('languages/language_release_summary.html', context,
+                              context_instance=RequestContext(request))
+
 def language_release(request, locale, release_name, dtype):
     if locale == 'C':
         language = None

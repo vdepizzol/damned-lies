@@ -18,6 +18,11 @@ def support_class(value):
         return "partially"
     return "not_supported"
 
+@register.filter
+def escapeat(value):
+    """Replace '@' with '__', accepted sequence in JS ids."""
+    return value.replace('@', '__')
+
 class IfLessNode(template.Node):
     def __init__(self, val1, val2, nodelist_true, nodelist_false):
         self.val1 = val1

@@ -31,12 +31,15 @@ class Language(models.Model):
     def bugs_url_show(self):
         return "http://bugzilla.gnome.org/buglist.cgi?product=l10n&amp;component=%s%%20[%s]&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED" % (self.name, self.locale)
 
-    def get_release_stats(self):
+    def get_release_stats(self, archives=False):
         # FIXME Here be dragons
         """ Get summary stats for all releases """
         from stats.models import Release
 
-        releases = Release.objects.all().order_by('status', '-name')
+        if archives:
+            releases = Release.objects.all().filter(weight__lt=0).order_by('status', '-weight', '-name')
+        else:
+            releases = Release.objects.all().filter(weight__gte=0).order_by('status', '-weight', '-name')
         stats = []
         for rel in releases:
             stats.append(rel.total_for_lang(self))
