@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-11 19:48+0000\n"
-"PO-Revision-Date: 2009-11-13 18:46+0100\n"
+"POT-Creation-Date: 2009-11-14 16:25+0000\n"
+"PO-Revision-Date: 2009-11-15 12:33+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -883,9 +883,9 @@ msgstr "Manual de la herramienta de administración de la hora"
 #: djamnedlies-git/templates/branch_detail.html:23
 #: djamnedlies-git/templates/release_detail.html:22
 #: djamnedlies-git/templates/teams/team_detail.html:27 languages/views.py:50
-#: languages/views.py:70 templates/branch_detail.html:23
+#: languages/views.py:83 templates/branch_detail.html:23
 #: templates/release_detail.html:22 templates/release_detail.html.py:68
-#: templates/teams/team_detail.html:27
+#: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -1198,7 +1198,7 @@ msgstr ""
 "Este módulo no forma parte del repositorio git de GNOME. Compruebe la página "
 "web del módulo para ver dónde enviar las traducciones."
 
-#: settings_sample.py:80
+#: settings_sample.py:79
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1240,7 +1240,7 @@ msgid "Your account has been activated."
 msgstr "Su cuenta ha sido activada."
 
 #: djamnedlies-git/languages/views.py:49 djamnedlies-git/languages/views.py:65
-#: languages/views.py:49 languages/views.py:69
+#: languages/views.py:49 languages/views.py:82
 msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
@@ -1366,7 +1366,7 @@ msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: djamnedlies-git/stats/models.py:659 stats/models.py:696
+#: djamnedlies-git/stats/models.py:659 stats/models.py:692
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1377,28 +1377,28 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906 stats/models.py:970
+#: djamnedlies-git/stats/models.py:906 stats/models.py:968
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: djamnedlies-git/stats/models.py:907 stats/models.py:971
+#: djamnedlies-git/stats/models.py:907 stats/models.py:969
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: djamnedlies-git/stats/models.py:908 stats/models.py:972
+#: djamnedlies-git/stats/models.py:908 stats/models.py:970
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: djamnedlies-git/stats/models.py:909 stats/models.py:973
+#: djamnedlies-git/stats/models.py:909 stats/models.py:971
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: djamnedlies-git/stats/models.py:910 stats/models.py:974
+#: djamnedlies-git/stats/models.py:910 stats/models.py:972
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
 #: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1050 stats/models.py:1327
+#: stats/models.py:1048 stats/models.py:1335
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
@@ -1963,7 +1963,7 @@ msgstr "Idioma"
 #: djamnedlies-git/templates/release_detail.html:20
 #: djamnedlies-git/templates/teams/team_detail.html:26
 #: templates/release_detail.html:20 templates/release_detail.html.py:67
-#: templates/teams/team_detail.html:26
+#: templates/languages/language_release_summary.html:9
 msgid "User Interface"
 msgstr "Interfaz de usuario"
 
@@ -1973,8 +1973,9 @@ msgstr "Interfaz de usuario"
 #: djamnedlies-git/templates/teams/team_detail.html:26
 #: djamnedlies-git/templates/teams/team_detail.html:27
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:27
+#: templates/stats_show.html:34
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
 msgid "Graph"
 msgstr "Gráfico"
 
@@ -2031,7 +2032,8 @@ msgstr "Sin comentarios"
 #: djamnedlies-git/templates/teams/team_detail.html:64
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
-#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
 msgid "All modules"
 msgstr "Todos los módulos"
 
@@ -2440,23 +2442,23 @@ msgstr ""
 "traducción de GNOME"
 
 #: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:14
+#: templates/teams/team_detail.html:39
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equipo de traducción al %(lang)s"
 
 #: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:26
+#: templates/languages/language_release_summary.html:9
 msgid "Release"
 msgstr "Publicación"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:71
+#: templates/teams/team_detail.html:63
 msgid "Team membership"
 msgstr "Membresía"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:82
+#: templates/teams/team_detail.html:74
 msgid "Apply modifications"
 msgstr "Aplicar modificaciones"
 
@@ -2784,7 +2786,7 @@ msgstr "Último archivo POT"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: languages/views.py:67 templates/release_detail.html:66
+#: languages/views.py:80 templates/release_detail.html:66
 msgid "Original strings"
 msgstr "Cadenas originales"
 
@@ -2801,7 +2803,7 @@ msgstr "%(name)s se acaba de unir a su equipo de traducción en %(site)s"
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
-#: stats/models.py:718
+#: stats/models.py:714
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -2866,6 +2868,11 @@ msgstr ""
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
+#: templates/release_list.html:25
+#| msgid "GNOME Releases"
+msgid "Older Releases"
+msgstr "Publicaciones antiguas"
+
 #: templates/languages/language_release.html:33
 msgid ""
 "The modules of this release are not part of the GNOME git repository. Please "
@@ -2875,14 +2882,14 @@ msgstr ""
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
-#: templates/teams/team_detail.html:5
+#: templates/teams/team_detail.html:6
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Últimas acciones realizadas por el equipo %(lang)s del Proyecto de "
 "traducción de GNOME"
 
-#: templates/teams/team_detail.html:66
+#: templates/teams/team_detail.html:55
 msgid "Plural forms:"
 msgstr "Formas plurales:"
 
