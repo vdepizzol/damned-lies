@@ -22,6 +22,7 @@
 import sys, os, re, time
 from itertools import islice
 from subprocess import Popen, PIPE
+import errno
 
 from django.utils.translation import ugettext_noop
 from django.contrib.sites.models import Site
@@ -63,7 +64,11 @@ def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
         env = os.environ
     pipe = Popen(cmd, shell=True, env=env, stdin=stdin, stdout=PIPE, stderr=PIPE)
     if input_data:
-        pipe.stdin.write(input_data)
+        try:
+            pipe.stdin.write(input_data)
+        except IOError, e:
+            if e.errno != errno.EPIPE:
+                raise
     (output, errout) = pipe.communicate()
     status = pipe.returncode
     if settings.DEBUG: print >>sys.stderr, output + errout
