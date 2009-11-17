@@ -38,7 +38,7 @@ def trans_sort_object_list(lst, tr_field):
         l.translated_name = _(getattr(l, tr_field))
     templist = [(obj_.translated_name.lower(), obj_) for obj_ in lst]
     if pyicu_present:
-        collator = PyICU.Collator.createInstance(PyICU.Locale(get_language()))
+        collator = PyICU.Collator.createInstance(PyICU.Locale(str(get_language())))
         templist.sort(key=operator.itemgetter(0), cmp=collator.compare)
     else:
         templist.sort()
