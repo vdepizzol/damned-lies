@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-11 19:48+0000\n"
-"PO-Revision-Date: 2009-11-12 09:49+0100\n"
+"POT-Creation-Date: 2009-11-14 16:25+0000\n"
+"PO-Revision-Date: 2009-11-22 21:30+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -883,11 +883,11 @@ msgstr "Handbok för Tidsadministrationsverktyg"
 #: djamnedlies-git/templates/release_detail.html:22
 #: djamnedlies-git/templates/teams/team_detail.html:27
 #: languages/views.py:50
-#: languages/views.py:70
+#: languages/views.py:83
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:22
 #: templates/release_detail.html.py:68
-#: templates/teams/team_detail.html:27
+#: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "Dokumentation"
 
@@ -1140,7 +1140,7 @@ msgstr "GNOME 2.30 (utveckling)"
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens webbsida om var översättningarna ska skickas."
 
-#: settings_sample.py:80
+#: settings_sample.py:79
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s Git-förråd. Kontrollera modulens webbsida för information om var översättningarna ska skickas."
 
@@ -1182,7 +1182,7 @@ msgstr "Ditt konto har aktiverats."
 #: djamnedlies-git/languages/views.py:49
 #: djamnedlies-git/languages/views.py:65
 #: languages/views.py:49
-#: languages/views.py:69
+#: languages/views.py:82
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
 
@@ -1332,7 +1332,7 @@ msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
 #: djamnedlies-git/stats/models.py:659
-#: stats/models.py:696
+#: stats/models.py:692
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1344,34 +1344,34 @@ msgstr ""
 "%(output)s</pre>"
 
 #: djamnedlies-git/stats/models.py:906
-#: stats/models.py:970
+#: stats/models.py:968
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
 #: djamnedlies-git/stats/models.py:907
-#: stats/models.py:971
+#: stats/models.py:969
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
 #: djamnedlies-git/stats/models.py:908
-#: stats/models.py:972
+#: stats/models.py:970
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
 #: djamnedlies-git/stats/models.py:909
-#: stats/models.py:973
+#: stats/models.py:971
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
 #: djamnedlies-git/stats/models.py:910
-#: stats/models.py:974
+#: stats/models.py:972
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
 #: djamnedlies-git/stats/models.py:986
 #: djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1050
-#: stats/models.py:1327
+#: stats/models.py:1048
+#: stats/models.py:1335
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
@@ -1946,7 +1946,7 @@ msgstr "Språk"
 #: djamnedlies-git/templates/teams/team_detail.html:26
 #: templates/release_detail.html:20
 #: templates/release_detail.html.py:67
-#: templates/teams/team_detail.html:26
+#: templates/languages/language_release_summary.html:9
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
@@ -1958,8 +1958,8 @@ msgstr "Användargränssnitt"
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:23
 #: templates/stats_show.html:34
-#: templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:27
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
 msgid "Graph"
 msgstr "Diagram"
 
@@ -2021,8 +2021,8 @@ msgstr "Ingen kommentar"
 #: djamnedlies-git/templates/teams/team_detail.html:64
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
-#: templates/teams/team_detail.html:63
-#: templates/teams/team_detail.html:64
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
 msgid "All modules"
 msgstr "Alla moduler"
 
@@ -2398,23 +2398,23 @@ msgid "Last actions made by the %(lang)s team of the GNOME translation project"
 msgstr "Senaste åtgärder gjorda av gruppen %(lang)s för GNOME-översättningsprojektet"
 
 #: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:14
+#: templates/teams/team_detail.html:39
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s översättningsgruppen"
 
 #: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:26
+#: templates/languages/language_release_summary.html:9
 msgid "Release"
 msgstr "Utgåva"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:71
+#: templates/teams/team_detail.html:63
 msgid "Team membership"
 msgstr "Gruppmedlemskap"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:82
+#: templates/teams/team_detail.html:74
 msgid "Apply modifications"
 msgstr "Verkställ ändringar"
 
@@ -2781,7 +2781,7 @@ msgstr "Senaste POT-fil"
 msgid "Unknown"
 msgstr "Okänt"
 
-#: languages/views.py:67
+#: languages/views.py:80
 #: templates/release_detail.html:66
 msgid "Original strings"
 msgstr "Ursprungliga strängar"
@@ -2799,7 +2799,7 @@ msgstr "%(name)s har precis gått med i din översättningsgrupp på %(site)s"
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Kan inte generera POT-fil, statistiken avbruten."
 
-#: stats/models.py:718
+#: stats/models.py:714
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Post för det här språket finns inte i variabeln %(var)s i filen %(file)s."
@@ -2840,16 +2840,21 @@ msgstr "Rapportera ett fel"
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s Git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
+#: templates/release_list.html:25
+#| msgid "GNOME Releases"
+msgid "Older Releases"
+msgstr "Äldre utgåvor"
+
 #: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
-#: templates/teams/team_detail.html:5
+#: templates/teams/team_detail.html:6
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr "Senaste åtgärder gjorda av gruppen %(lang)s i GNOME-översättningsprojektet"
 
-#: templates/teams/team_detail.html:66
+#: templates/teams/team_detail.html:55
 msgid "Plural forms:"
 msgstr "Pluralformer:"
 
