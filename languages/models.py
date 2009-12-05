@@ -15,11 +15,39 @@ class Language(models.Model):
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.locale)
 
+    @classmethod
+    def get_language_from_ianacode(cls, ianacode):
+        """ Return a matching Language object corresponding to LANGUAGE_CODE (BCP47-formatted)
+            This is a sort of BCP47 to ISO639 conversion function """
+        iana_splitted = ianacode.split("-", 1)
+        iana_suffix = len(iana_splitted) > 1 and iana_splitted[1] or ""
+        iana_suffix = iana_suffix.replace('Latn','latin').replace('Cyrl','cyrillic')
+        lang_list = cls.objects.filter(locale__startswith=iana_splitted[0])
+        if len(lang_list) == 0:
+            return None
+        elif len(lang_list) > 1:
+            # Find the best language to return
+            best_lang = lang_list[0]
+            for lang in lang_list:
+                if lang.get_suffix():
+                    if iana_suffix.lower() == lang.get_suffix().lower():
+                        return lang
+                else:
+                    best_lang = lang
+            return best_lang
+        return lang_list[0]
+
     def get_name(self):
         if self.name != self.locale:
             return _(self.name)
         else:
             return self.locale
+
+    def get_suffix(self):
+        splitted = self.locale.replace('@','_').split('_')
+        if len(splitted) > 1:
+            return splitted[-1]
+        return None
 
     def get_plurals(self):
         # Translators: this concerns an unknown plural form

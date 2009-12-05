@@ -28,18 +28,23 @@ from django.conf import settings
 from people.models import Person
 from teams.models import Role
 from people.forms import RegistrationForm
-
+from languages.models import Language
 
 def index(request):
+    """ Homepage view """
     translator_credits = _("translator-credits")
-    # FIXME Not sure the LANGUAGE_CODE test is useful
-    if request.LANGUAGE_CODE == 'en' or translator_credits == "translator-credits":
+    if translator_credits == "translator-credits":
         translator_credits = ''
     else:
         translator_credits = translator_credits.split('\n')
 
+    curlang = Language.get_language_from_ianacode(request.LANGUAGE_CODE)
+    if curlang.locale == 'en':
+        curlang = None
+
     context = {
         'pageSection': 'home',
+        'user_language': curlang,
         'translator_credits': translator_credits
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
