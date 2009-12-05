@@ -15,8 +15,8 @@
   {% trans "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>." %}
 {% if user_language %}
   {% with user_language.get_team_url as team_url %}
-  {% with user_language.name as language_name %}
-  <br /><strong>{% blocktrans %}Go to the <a href="{{ team_url }}">{{ language_name }} team page</a> and help us to translate GNOME!{% endblocktrans %}</strong>
+  {% with user_language.get_name as language_name %}
+  <br /><strong>{% blocktrans %}Go to the <a href='{{ team_url }}'>{{ language_name }} team page</a> and help us to translate GNOME!{% endblocktrans %}</strong>
   {% endwith %}
   {% endwith %}
 {% endif %}
