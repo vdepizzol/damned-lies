@@ -188,6 +188,9 @@ class Team(models.Model):
     def send_mail_to_coordinator(self, subject, message, messagekw={}):
         """ Send a message to the coordinator, in her language if available
             and if subject and message are lazy strings """
+        coordinator = self.get_coordinator()
+        if not coordinator or not coordinator.email:
+            return
         prev_lang = translation.get_language()
         translation.activate(self.language_set.all()[0].locale)
 
@@ -197,7 +200,7 @@ class Team(models.Model):
             subject,
             message,
             settings.DEFAULT_FROM_EMAIL,
-            [self.get_coordinator().email]
+            [coordinator.email]
         )
         translation.activate(prev_lang)
 
