@@ -43,6 +43,7 @@ $(document).ready(function() {
   {% endwith %}
 {% else %}
   <h1>{{ team.get_description }}</h1>
+  <p><em>{% blocktrans %}There is currently no established team for this language. See <a href="http://live.gnome.org/TranslationProject/StartingATeam">the GTP Wiki</a> to get more information about the process of building a new translation team.{% endblocktrans %}</em></p>
 {% endif %}
 
 {% for lang in team.get_languages %}
