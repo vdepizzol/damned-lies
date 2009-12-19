@@ -626,7 +626,7 @@ class Domain(models.Model):
         ordering = ('-dtype', 'name')
 
     def __unicode__(self):
-        return "%s (%s)" % (self.name, self.get_dtype_display())
+        return "%s (%s/%s)" % (self.name, self.module.name, self.get_dtype_display())
 
     def potbase(self):
         if self.name[:2] == 'po':

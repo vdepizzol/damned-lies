@@ -60,7 +60,8 @@ class BranchAdmin(admin.ModelAdmin):
     search_fields = ('name', 'module__name')
 
 class DomainAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('__unicode__', 'directory', 'pot_method')
+    search_fields = ('name', 'module__name','directory', 'pot_method')
 
 class CategoryInline(admin.TabularInline):
     model = Category
