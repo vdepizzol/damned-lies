@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-10 11:11+0000\n"
-"PO-Revision-Date: 2010-01-10 12:11+0100\n"
+"POT-Creation-Date: 2010-01-13 07:45+0000\n"
+"PO-Revision-Date: 2010-01-13 20:31+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -920,12 +920,10 @@ msgid "Audio Profiles Manual"
 msgstr "Handbok för Ljudprofiler"
 
 #: database-content.py:224
-#| msgid "Criawips Manual"
 msgid "Quadrapassel Manual"
 msgstr "Handbok för Quadrapassel"
 
 #: database-content.py:225
-#| msgid "GFloppy Manual"
 msgid "Swell-Foop Manual"
 msgstr "Handbok för Swell-Foop"
 
@@ -2883,6 +2881,10 @@ msgstr "Det finns för närvarande inte någon etablerad grupp för detta språk
 #: templates/teams/team_detail.html:56
 msgid "Plural forms:"
 msgstr "Pluralformer:"
+
+#: templates/teams/team_detail.html:58
+msgid "Archives"
+msgstr "Arkiv"
 
 #: templates/vertimus/vertimus_detail.html:105
 msgid "Actions"
