@@ -55,7 +55,7 @@ $(document).ready(function() {
   {% endwith %}
 <p><strong>{% trans "Plural forms:" %}</strong> {{ lang.get_plurals }}</p>
 
-<h3><a href="." class="archives" id="{{ lang.locale|escapeat }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>&nbsp;Archives</h3>
+<h3><a href="." class="archives" id="{{ lang.locale|escapeat }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>&nbsp;{% trans "Archives" %}</h3>
 <div id="div-rel-archives-{{ lang.locale|escapeat }}" class="empty" style="display:none;"></div>
 
 {% endfor %}
