@@ -77,10 +77,10 @@ $(document).ready(function() {
   {% endif %}
 </div>
 
-{% if stats.information_set.all %}
+{% if stats.informations %}
 <h4>{% trans "Notices" %}</h4>
 <table>
-  {% for info in stats.information_set.all %}
+  {% for info in stats.informations %}
   <tr>
     <td valign="top"><img src="{{ info.get_icon }}" alt="{{ info.type }}" /></td>
     <td>{{ info.get_description|safe }}</td>

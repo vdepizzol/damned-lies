@@ -1025,6 +1025,9 @@ class Statistics(models.Model):
     def is_fake(self):
         return False
 
+    def is_pot_file(self):
+        return self.language is None
+
     def tr_percentage(self):
         if self.pot_size() == 0:
             return 0
@@ -1044,7 +1047,7 @@ class Statistics(models.Model):
             return int(100*self.untranslated/self.pot_size())
 
     def get_lang(self):
-        if self.language:
+        if not self.is_pot_file():
             return _("%(lang_name)s (%(lang_locale)s)") % {
                 'lang_name': _(self.language.name),
                 'lang_locale': self.language.locale
@@ -1066,7 +1069,7 @@ class Statistics(models.Model):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
 
     def filename(self, potfile=False):
-        if self.language and not potfile:
+        if not self.is_pot_file() and not potfile:
             return "%s.%s.%s.po" % (self.domain.potbase(), self.branch.name, self.language.locale)
         else:
             return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
@@ -1162,6 +1165,21 @@ class Statistics(models.Model):
     def set_errors(self, errors):
         for err in errors:
             self.information_set.add(Information(type=err[0], description=err[1]))
+
+    def informations(self):
+        """ Returns information_set, optionally augmented by domain information """
+        info_set = [i for i in self.information_set.all()]
+        if self.is_pot_file() and self.domain.pot_method:
+            # Add a dynamic (ie not saved) Information
+            info_set.append(Information(
+                statistics  = self,
+                type        = 'info',
+                description = {
+                    'ui' : ugettext_noop("This POT file has not been generated through the standard intltool method."),
+                    'doc': ugettext_noop("This POT file has not been generated through the standard gnome-doc-utils method."),
+                }.get(self.domain.dtype, ""))
+            )
+        return info_set
 
     def most_important_message(self):
         """ Return a message of type 1.'error', or 2.'warn, or 3.'warn """

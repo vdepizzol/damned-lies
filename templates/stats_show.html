@@ -13,10 +13,10 @@
   <a href="{{ pot_stat.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
   {{ pot_stat.pot_text }}
   <!-- This is the title of the section that lists notices about a module -->
-  {% if pot_stat.information_set.all %}
+  {% if pot_stat.informations %}
   <h4>{% trans "Notices" %}</h4>
   <table>
-    {% for msg in pot_stat.information_set.all %}
+    {% for msg in pot_stat.informations %}
     <tr>
       <td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.type }}" /></td>
       <td>{{ msg.get_description|safe }}</td>
