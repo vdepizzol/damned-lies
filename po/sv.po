@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-13 07:45+0000\n"
-"PO-Revision-Date: 2010-01-13 20:31+0100\n"
+"POT-Creation-Date: 2010-01-17 21:23+0000\n"
+"PO-Revision-Date: 2010-01-18 01:15+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1386,14 +1386,14 @@ msgstr "Nya modulförslag"
 
 #: djamnedlies-git/stats/models.py:986
 #: djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1048
-#: stats/models.py:1335
+#: stats/models.py:1051
+#: stats/models.py:1353
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: djamnedlies-git/stats/models.py:1017
-#: stats/models.py:1081
+#: stats/models.py:1084
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1401,7 +1401,7 @@ msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
 #: djamnedlies-git/stats/models.py:1018
-#: stats/models.py:1082
+#: stats/models.py:1085
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
@@ -1413,14 +1413,14 @@ msgstr "uppdaterad den %(date)s"
 #: djamnedlies-git/stats/models.py:1020
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1084
+#: stats/models.py:1087
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:132
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
 #: djamnedlies-git/stats/models.py:1023
-#: stats/models.py:1087
+#: stats/models.py:1090
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1428,13 +1428,13 @@ msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
 #: djamnedlies-git/stats/models.py:1024
-#: stats/models.py:1088
+#: stats/models.py:1091
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
 #: djamnedlies-git/stats/models.py:1027
-#: stats/models.py:1091
+#: stats/models.py:1094
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
@@ -2819,6 +2819,14 @@ msgstr "Kan inte generera POT-fil, statistiken avbruten."
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Post för det här språket finns inte i variabeln %(var)s i filen %(file)s."
+
+#: stats/models.py:1178
+msgid "This POT file has not been generated through the standard intltool method."
+msgstr "Denna POT-fil har inte genererats med standardmetoden intltool."
+
+#: stats/models.py:1179
+msgid "This POT file has not been generated through the standard gnome-doc-utils method."
+msgstr "Denna POT-fil har inte genererats med standardmetoden gnome-doc-utils."
 
 #: stats/utils.py:324
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
