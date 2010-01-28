@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-27 11:15+0000\n"
-"PO-Revision-Date: 2010-01-28 08:07+0100\n"
+"PO-Revision-Date: 2010-01-28 12:14+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -1021,7 +1021,7 @@ msgstr "Evince je program za pregledovanje dokumentov različnih zapisov."
 
 #: database-content.py:247
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
-msgstr ""
+msgstr "Uveljavljeni prevodi se posodabljajo ročno preko l10n.gnome.org. Bodite strpni :-)"
 
 #: database-content.py:248
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1053,7 +1053,7 @@ msgstr ""
 
 #: database-content.py:255
 msgid "Graphical frontend for the git directory tracker"
-msgstr ""
+msgstr "Grafični vmesnik za git sledilnik mapam"
 
 #: database-content.py:256
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
@@ -1065,7 +1065,7 @@ msgstr ""
 
 #: database-content.py:258
 msgid "Passepartout is a DTP application for X."
-msgstr ""
+msgstr "Passepartout je DTP program za X okolje."
 
 #: database-content.py:259
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
@@ -1093,7 +1093,7 @@ msgstr ""
 
 #: database-content.py:265
 msgid "Email client for netbooks"
-msgstr ""
+msgstr "Enostavni odjemalec elektronske pošte"
 
 #: database-content.py:266
 msgid "Gnome Parental Control"
@@ -1755,12 +1755,12 @@ msgstr "Napaka:"
 #: djamnedlies-git/templates/index.html:14
 #: templates/index.html:14
 msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
-msgstr "Seznam vseh prevajalskih skupin namizja GNOME, s podrobnostmi o prevajalcih, spletnih straneh in dopisnih seznamih."
+msgstr "Seznam vseh prevajalskih skupin namizja GNOME s podrobnostmi o prevajalcih, spletnih straneh in dopisnih seznamih."
 
 #: djamnedlies-git/templates/index.html:15
 #: templates/index.html:15
 msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgstr "V kolikor skupina za nek jezik še ne obstaja, je mogoče enostavno <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>ustvariti novo skupino</a>."
+msgstr "V kolikor skupina za jezik še ne obstaja, je mogoče enostavno <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>ustvariti novo skupino</a>."
 
 #: djamnedlies-git/templates/index.html:22
 #: templates/index.html:29
@@ -1800,7 +1800,7 @@ msgstr "Na teh straneh si je mogoče ogledati jezikovno podporo za posamezno obj
 #: djamnedlies-git/templates/index.html:37
 #: templates/index.html:44
 msgid "List of all modules with statistics in here."
-msgstr "Seznam vseh programskih paketov, ki jih je mogoče pravajati."
+msgstr "Seznam vseh programskih paketov, ki jih je mogoče prevajati."
 
 #: djamnedlies-git/templates/index.html:39
 #: templates/index.html:46
@@ -1828,7 +1828,7 @@ msgstr "Trenutno ste prijavljeni kot %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
-msgstr ""
+msgstr "V primeru, da računa še niste ustvarili, se lahko <a href='%(link)s'>vpišete</a> za nov račun."
 
 #: djamnedlies-git/templates/login.html:15
 #: django_openid/templates/django_openid/admin_login.html:17
@@ -1868,7 +1868,7 @@ msgstr "Statistika modula: %(name)s"
 #: djamnedlies-git/templates/module_detail.html:55
 #: templates/module_detail.html:55
 msgid "Maintainers"
-msgstr "Vzdrževalci"
+msgstr "Vzdrževlec"
 
 #: djamnedlies-git/templates/module_detail.html:63
 #: templates/module_detail.html:63
@@ -1903,7 +1903,7 @@ msgstr ""
 #: djamnedlies-git/templates/module_images.html:12
 #: templates/module_images.html:12
 msgid "Figures translation status"
-msgstr ""
+msgstr "Stanje prevodov shem"
 
 #: djamnedlies-git/templates/module_images.html:17
 #: templates/module_images.html:17
@@ -2026,12 +2026,12 @@ msgstr "Prevedeno"
 #: templates/stats_show.html:50
 #: templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
-msgstr ""
+msgstr "Pokaži sheme dokumentov"
 
 #: djamnedlies-git/templates/admin/base_site.html:4
 #: templates/admin/base_site.html:4
 msgid "Damned Lies site admin"
-msgstr ""
+msgstr "Upravljanje spletišča presnetih laži"
 
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
@@ -2049,7 +2049,7 @@ msgstr "Ni opomb"
 #: templates/languages/language_release_summary.html:47
 #: templates/languages/language_release_summary.html:48
 msgid "All modules"
-msgstr "Vsi moduli"
+msgstr "Pokaži vse"
 
 #: djamnedlies-git/templates/languages/language_all_modules.html:23
 #: djamnedlies-git/templates/languages/language_release.html:25
@@ -2189,7 +2189,7 @@ msgstr "Gnome sodelavci"
 #: djamnedlies-git/templates/people/person_list.html:10
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
-msgstr ""
+msgstr "Okolje GNOME razvijajo :"
 
 #: djamnedlies-git/templates/people/person_overview.html:27
 #: templates/people/person_overview.html:27
@@ -2213,7 +2213,7 @@ msgstr "Sprememba gesla"
 #: djamnedlies-git/templates/people/person_password_change_form.html:8
 #: templates/people/person_password_change_form.html:8
 msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
-msgstr ""
+msgstr "Vnesite staro geslo zaradi varnostnih razlogov in nato vnesite novo geslo dvakrat zapored. S tem preverite ali je geslo vpisano pravilno."
 
 #: djamnedlies-git/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
@@ -2397,7 +2397,7 @@ msgstr "Bugzilla:"
 #: djamnedlies-git/templates/teams/team_base.html:15
 #: templates/teams/team_base.html:20
 msgid "Report Bug in Translation"
-msgstr "Poročilo o hrošču v prevodu"
+msgstr "Pošlji poročilo o hrošču v prevodu"
 
 #: djamnedlies-git/templates/teams/team_base.html:16
 #: templates/teams/team_base.html:21
@@ -2864,7 +2864,7 @@ msgstr ""
 
 #: templates/module_detail.html:68
 msgid "Report a bug"
-msgstr "Poročilo o hrošču"
+msgstr "Pošlji poročilo o hrošču"
 
 #: templates/release_detail.html:13
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
