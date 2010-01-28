@@ -1,13 +1,15 @@
-# This file is distributed under the same license as the package.
+# Slovenian translation for damned-lies.
+# Copyright (C) 2009 damned-lies COPYRIGHT HOLDER
+# This file is distributed under the same license as the damned-lies package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2009.
+# Matej Urbančič <mateju@svn.gnome.org>, 2009 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-24 23:06+0000\n"
-"PO-Revision-Date: 2010-01-27 07:46+0100\n"
+"POT-Creation-Date: 2010-01-27 11:15+0000\n"
+"PO-Revision-Date: 2010-01-28 08:07+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -575,9 +577,8 @@ msgid "User Guide"
 msgstr "Uporabniški priročnik"
 
 #: database-content.py:140
-#, fuzzy
 msgid "Mallard Documentation Guide"
-msgstr "Dokumentacija"
+msgstr "Priročnik Mallard dokumentacije"
 
 #: database-content.py:141
 msgid "Accessibility Guide"
@@ -624,9 +625,8 @@ msgid "Workspace Switcher Applet Manual"
 msgstr "Priročnik preklopnika delovnih površin"
 
 #: database-content.py:152
-#, fuzzy
 msgid "Window List Applet Manual"
-msgstr "Priročnik apleta seznama oken V2.8"
+msgstr "Priročnik apleta seznama oken"
 
 #: database-content.py:153
 msgid "Clock Applet Manual"
@@ -637,9 +637,8 @@ msgid "Iagno Manual"
 msgstr "Priročnik Iagno"
 
 #: database-content.py:155
-#, fuzzy
 msgid "Five or More Manual"
-msgstr "Pet ali več za GNOME"
+msgstr "Priročnik igre Pet ali več"
 
 #: database-content.py:156
 msgid "Nibbles Manual"
@@ -718,9 +717,8 @@ msgid "Layout Descriptions"
 msgstr "Opis razporeditve"
 
 #: database-content.py:175
-#, fuzzy
 msgid "Keyboard Indicator Manual"
-msgstr "Indikator razporeda tipkovnice"
+msgstr "Priročnik razporeda tipkovnice"
 
 #: database-content.py:176
 msgid "CPU Frequency Scaling Monitor Manual"
@@ -779,14 +777,12 @@ msgid "User Directories"
 msgstr "Uporabniške mape"
 
 #: database-content.py:190
-#, fuzzy
 msgid "Integration Guide"
-msgstr "Uporabniški priročnik"
+msgstr ""
 
 #: database-content.py:191
-#, fuzzy
 msgid "Platform Overview"
-msgstr "pregled oken"
+msgstr "Pregled sistema"
 
 #: database-content.py:192
 msgid "Encryption Applet Manual"
@@ -932,14 +928,12 @@ msgid "Audio Profiles Manual"
 msgstr "Priročnik zvočnih profilov"
 
 #: database-content.py:225
-#, fuzzy
 msgid "Quadrapassel Manual"
-msgstr "Uporabniški priročnik Anjuta"
+msgstr ""
 
 #: database-content.py:226
-#, fuzzy
 msgid "Swell-Foop Manual"
-msgstr "Priročnik orodja za iskanje"
+msgstr ""
 
 #: database-content.py:227
 msgid "GNOME 2 User Documentation"
@@ -1434,11 +1428,13 @@ msgstr "d.m.Y G:i O"
 
 #: djamnedlies-git/stats/models.py:1023
 #: stats/models.py:1090
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
-msgstr[0] "Ime skice"
-msgstr[1] ""
+msgstr[0] "%(count)s shem"
+msgstr[1] "%(count)s shema"
+msgstr[2] "%(count)s shemi"
+msgstr[3] "%(count)s sheme"
 
 #: djamnedlies-git/stats/models.py:1024
 #: stats/models.py:1091
@@ -1455,13 +1451,13 @@ msgstr "POTdatoteka (%(messages)s) — %(updated)s"
 #: djamnedlies-git/stats/utils.py:85
 #: stats/utils.py:90
 msgid "Errors while running 'intltool-update -m' check."
-msgstr ""
+msgstr "Napaka med zagonom ukaza 'intltool-update -m'."
 
 #: djamnedlies-git/stats/utils.py:91
 #: stats/utils.py:96
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
-msgstr ""
+msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 
 #: djamnedlies-git/stats/utils.py:100
 #: stats/utils.py:105
@@ -1508,7 +1504,7 @@ msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 #: stats/utils.py:257
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr ""
+msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
 #: djamnedlies-git/stats/utils.py:228
 #: stats/utils.py:259
@@ -2029,9 +2025,8 @@ msgstr "Prevedeno"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
 #: templates/stats_show.html:50
 #: templates/vertimus/vertimus_detail.html:75
-#, fuzzy
 msgid "Display document figures"
-msgstr "Stran dokumenta za prikaz"
+msgstr ""
 
 #: djamnedlies-git/templates/admin/base_site.html:4
 #: templates/admin/base_site.html:4
