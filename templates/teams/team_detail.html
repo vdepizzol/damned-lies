@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load stats_extras %}
+{% load markup %}
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml"
       title="{% blocktrans with team.get_description as lang %}Last actions made by the {{ lang }} team of the GNOME Translation Project{% endblocktrans %}"
@@ -37,6 +38,7 @@ $(document).ready(function() {
 
 {% if not team.fake %}
   <h1>{% blocktrans with team.get_description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
+  {% if team.presentation %}<p>{{ team.presentation|markdown }}</p>{% endif %}
 
   {% with team.get_languages.0 as language %}
   {% include "teams/team_base.html" %}

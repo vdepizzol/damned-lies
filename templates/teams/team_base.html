@@ -16,14 +16,14 @@
   {% endif %}
 
   <br/><strong>{% trans "Bugzilla:" %}</strong>
-  <ul>
+  <ul class="smallspacing">
     <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
     <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
   </ul>
 
   {% if team.mailing_list %}
   <br/><strong>{% trans "Mailing List:" %}</strong>
-  <ul>
+  <ul class="smallspacing">
     <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
     {% if team.mailing_list_subscribe %}
     <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>

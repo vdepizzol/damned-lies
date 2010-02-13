@@ -4,12 +4,13 @@ from teams.models import Team, ROLE_CHOICES
 class EditTeamDetailsForm(forms.ModelForm):
     class Meta:
         model = Team
-        fields = ('webpage_url', 'mailing_list', 'mailing_list_subscribe')
+        fields = ('webpage_url', 'mailing_list', 'mailing_list_subscribe', 'use_workflow', 'presentation')
 
     def __init__(self, *args, **kwargs):
         super(EditTeamDetailsForm, self).__init__(*args, **kwargs)
         for f in ('webpage_url', 'mailing_list', 'mailing_list_subscribe'):
             self.fields[f].widget.attrs['size'] = 60
+        self.fields['presentation'].widget.attrs["cols"] = 60
 
 class EditMemberRoleForm(forms.Form):
 

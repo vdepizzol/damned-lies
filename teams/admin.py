@@ -1,8 +1,15 @@
 from django.contrib import admin
 from teams.models import Team, Role
+from languages.models import Language
+
+class LanguageInline(admin.TabularInline):
+    model = Language
+    # Languages are not supposed to be created in this form
+    extra = 0
 
 class TeamAdmin(admin.ModelAdmin):
     search_fields = ('name',)
+    inlines = [ LanguageInline ]
 
     def formfield_for_dbfield(self, db_field, **kwargs):
         # Reduced text area for aliases

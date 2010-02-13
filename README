@@ -29,14 +29,16 @@ Requirements
 
     See http://south.aeracode.org/wiki/Download for installation instructions
 
-5 - [Optional] Django Debug Toolbar
+5 - Markdown (python-markdown) for Team presentation markup rendering
+
+6 - [Optional] Django Debug Toolbar
     git clone git://github.com/dcramer/django-debug-toolbar.git
     Define USE_DEBUG_TOOLBAR to True in settings.py to use it.
 
-6 - [Optional] python-openid and django-openid (see OpenID support
+7 - [Optional] python-openid and django-openid (see OpenID support
     below).
 
-7 - [Optional] python-pyicu for correct sorting in various languages
+8 - [Optional] python-pyicu for correct sorting in various languages
 
 Installation
 ============

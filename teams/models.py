@@ -85,6 +85,8 @@ class Team(models.Model):
 
     name = models.CharField(max_length=80)
     description = models.TextField()
+    use_workflow = models.BooleanField(default=True)
+    presentation = models.TextField(blank=True, verbose_name=_("Presentation"))
     members = models.ManyToManyField(Person, through='Role', related_name='teams')
     webpage_url = models.URLField(null=True, blank=True, verbose_name=_("Web page"))
     mailing_list = models.EmailField(null=True, blank=True, verbose_name=_("Mailing list"))

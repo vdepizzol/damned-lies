@@ -99,6 +99,7 @@ $(document).ready(function() {
 </div>
 {% endif %}
 
+{% if language.team.use_workflow %}
 <div id="vertimus_actions_title">
   <h2>
     {% ifequal level 0 %}
@@ -186,5 +187,6 @@ $(document).ready(function() {
   {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
   {% endif %}
 {% endifequal %}
+{% endif %}
 
 {% endblock %}
