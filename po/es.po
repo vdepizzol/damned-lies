@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-17 11:54+0000\n"
-"PO-Revision-Date: 2010-02-18 13:05+0100\n"
+"PO-Revision-Date: 2010-02-18 13:15+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1579,7 +1579,7 @@ msgstr "Revisor"
 
 #: djamnedlies-git/teams/models.py:131 teams/models.py:240
 msgid "Committer"
-msgstr "Efectúa cambios en el SVN"
+msgstr "Efectúa cambios en Git"
 
 #: djamnedlies-git/teams/models.py:132
 #: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:241
@@ -1589,11 +1589,11 @@ msgstr "Coordinador"
 
 #: djamnedlies-git/teams/views.py:44 teams/views.py:55
 msgid "Committers"
-msgstr "Personas que efectúan cambios en el SVN"
+msgstr "Personas que efectúan cambios en Git"
 
 #: djamnedlies-git/teams/views.py:47 teams/views.py:58
 msgid "No committers"
-msgstr "No hay ninguna persona que efectúe cambios en el SVN"
+msgstr "No hay ninguna persona que efectúe cambios en Git"
 
 #: djamnedlies-git/teams/views.py:49 teams/views.py:60
 msgid "Reviewers"
@@ -1829,8 +1829,9 @@ msgid ""
 "They are usually taken from CVS, and we keep all relevant information on "
 "them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
-"Generalmente se cogen del SVN, y guardamos información relevante sobre ellos "
-"(detalles de Bugzilla, página web, información de mantenimiento...)."
+"Generalmente se cogen del CVS/SVN/Git, y guardamos información relevante "
+"sobre ellos (detalles de Bugzilla, página web, información de "
+"mantenimiento...)."
 
 #: djamnedlies-git/templates/index.html:46 templates/index.html:53
 msgid "Translated by:"
