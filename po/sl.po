@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-09 14:40+0000\n"
-"PO-Revision-Date: 2010-02-17 11:37+0100\n"
+"POT-Creation-Date: 2010-02-18 11:09+0000\n"
+"PO-Revision-Date: 2010-02-18 12:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -722,7 +722,7 @@ msgstr "Priročnik razporeda tipkovnice"
 
 #: database-content.py:176
 msgid "CPU Frequency Scaling Monitor Manual"
-msgstr ""
+msgstr "Priročnik nadzora frekvence CPE"
 
 #: database-content.py:177
 msgid "Command Line Manual"
@@ -730,7 +730,7 @@ msgstr "Priročnik ukazne vrstice"
 
 #: database-content.py:178
 msgid "Keyboard Accessibility Monitor Manual"
-msgstr ""
+msgstr "Priročnik nadzora dostopnosti tipkovnice"
 
 #: database-content.py:179
 msgid "Invest Applet Manual"
@@ -866,23 +866,23 @@ msgstr "Priročnik GNOME Očesa"
 
 #: database-content.py:212
 msgid "GST User Management Manual"
-msgstr ""
+msgstr "Priročnik upravljanja uporabnikov GST"
 
 #: database-content.py:213
 msgid "GST Service Management Manual"
-msgstr ""
+msgstr "Priročnik upravljanja storitev GST"
 
 #: database-content.py:214
 msgid "GST Network Setup Manual"
-msgstr ""
+msgstr "Priročnik nastavitev omrežja GST"
 
 #: database-content.py:215
 msgid "GST Shared Folders Manual"
-msgstr ""
+msgstr "Priročnik souporabe map GST"
 
 #: database-content.py:216
 msgid "GST Time Setup Manual"
-msgstr ""
+msgstr "Priročnik časovnih nastavitev GST"
 
 #: database-content.py:217
 #: djamnedlies-git/languages/views.py:50
@@ -921,7 +921,7 @@ msgstr "Vodila za uporabniški vmesnik"
 
 #: database-content.py:223
 msgid "Accessibility Developers Guide"
-msgstr ""
+msgstr "Vodila razvoja pomožnih tehnologij"
 
 #: database-content.py:224
 msgid "Audio Profiles Manual"
@@ -933,7 +933,7 @@ msgstr "Priročnik igre Kvadetris"
 
 #: database-content.py:226
 msgid "Swell-Foop Manual"
-msgstr ""
+msgstr "Priročnik igre Pravi Pavliha"
 
 #: database-content.py:227
 msgid "Lights Off Manual"
@@ -1017,7 +1017,7 @@ msgstr "GNOME spletna slika"
 
 #: database-content.py:246
 msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr ""
+msgstr "program GNUCash ni vključen v GNOME skladiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o prevajanju."
 
 #: database-content.py:247
 msgid "Evince is a document viewer for multiple document formats."
@@ -1029,23 +1029,23 @@ msgstr "Uveljavljeni prevodi se posodabljajo ročno preko l10n.gnome.org. Bodite
 
 #: database-content.py:249
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr ""
+msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>."
 
 #: database-content.py:250
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
-msgstr ""
+msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
 
 #: database-content.py:251
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
-msgstr ""
+msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
 
 #: database-content.py:252
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
-msgstr ""
+msgstr "Za objavo prevodov, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">ustvarite novo poročilo o hrošču za paket NetworkManager</a>  na spletnih straneh GNOME Bugzilla. K poročilu priložite tudi datoteko prevoda."
 
 #: database-content.py:253
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
-msgstr ""
+msgstr "Od različice GNOME 2.23 dalje, je paket GAIL sestavni del paketa GTK+. Prevodov zato ne objavljaje v glavni veji."
 
 #: database-content.py:254
 msgid "A VNC client for GNOME"
@@ -1053,7 +1053,7 @@ msgstr "VNC odjemalec za GNOME"
 
 #: database-content.py:255
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
-msgstr ""
+msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoeki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
 #: database-content.py:256
 msgid "Graphical frontend for the git directory tracker"
@@ -1061,11 +1061,11 @@ msgstr "Grafični vmesnik za git sledilnik mapam"
 
 #: database-content.py:257
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
-msgstr ""
+msgstr "Paket moserial je na osnovi gtk postavljen serijski terminal za namizje GNOME. Napisan je v jeziku Vala."
 
 #: database-content.py:258
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
-msgstr ""
+msgstr "Paket je predelana različica uradne različice system-tools-backends iz skladišča freedesktop.org."
 
 #: database-content.py:259
 msgid "Passepartout is a DTP application for X."
@@ -1073,7 +1073,7 @@ msgstr "Passepartout je DTP program za X okolje."
 
 #: database-content.py:260
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
-msgstr ""
+msgstr "Paket gnome-disk-utility vsebuje knjižnice in programe za uporavljanje s napravami za shranjevanje podatkov."
 
 #: database-content.py:261
 msgid "A note taking application"
@@ -1081,11 +1081,11 @@ msgstr "Program za pisanje sporočilc"
 
 #: database-content.py:262
 msgid "Translations should be submitted as bug reports (see link below)."
-msgstr ""
+msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
 #: database-content.py:263
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
-msgstr ""
+msgstr "Paket GNOME Video Arcade je vmesniški emulator MAME (Multiple Arcade Machine Emulator) GNOME okolja."
 
 #: database-content.py:264
 msgid "GNOME Teletext viewer"
@@ -1170,11 +1170,11 @@ msgstr "GNOME 2.30 (razvojna veja)"
 #: settings.py:73
 #: djamnedlies-git/settings_sample.py:80
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
-msgstr ""
+msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
 #: settings_sample.py:79
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
-msgstr ""
+msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
 #: common/views.py:35
 #: djamnedlies-git/common/views.py:33
@@ -1194,7 +1194,7 @@ msgstr "Odjava je bila uspešna."
 #: common/views.py:71
 #, python-format
 msgid "You have not joined any translation team yet. You can do it from <a href=\"%(url)s\">your profile</a>."
-msgstr ""
+msgstr "Niste še pridruženi k nobeni prevajalski skupini. Pridružite se lahko preko <a href=\"%(url)s\">vašega profila</a>."
 
 #: common/views.py:80
 #: djamnedlies-git/common/views.py:69
@@ -1307,7 +1307,7 @@ msgstr "Naslov URL do hackergotchi slike (.jpg, .png, ...)"
 
 #: djamnedlies-git/people/models.py:38
 #: people/models.py:38
-#: teams/models.py:89
+#: teams/models.py:91
 msgid "Web page"
 msgstr "Spletna stran"
 
@@ -1324,7 +1324,7 @@ msgstr "Račun Bugzilla"
 #: djamnedlies-git/people/models.py:41
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr ""
+msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronski naslov'."
 
 #: djamnedlies-git/people/views.py:86
 #: people/views.py:87
@@ -1341,7 +1341,7 @@ msgstr "Ste že član te prevajalske skupine."
 #: people/views.py:116
 #, python-format
 msgid "You have been removed from the team '%s'."
-msgstr ""
+msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 
 #: djamnedlies-git/people/views.py:128
 #: people/views.py:132
@@ -1433,7 +1433,7 @@ msgstr "zadnjič posodobljeno %(date)s"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1087
 #: templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
@@ -1486,12 +1486,12 @@ msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 #: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr ""
+msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
 #: djamnedlies-git/stats/utils.py:118
 #: stats/utils.py:136
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr ""
+msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
 #: djamnedlies-git/stats/utils.py:133
 #: stats/utils.py:152
@@ -1542,36 +1542,36 @@ msgstr "Koda jezika ni določena v datoteki LINGUAS."
 #: djamnedlies-git/stats/utils.py:319
 #: stats/utils.py:322
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
-msgstr ""
+msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
 #: djamnedlies-git/stats/utils.py:322
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
 msgstr ""
 
 #: djamnedlies-git/teams/models.py:112
-#: teams/models.py:216
+#: teams/models.py:218
 #, python-format
 msgid "No team for locale %s"
 msgstr "Ni skupine za %s jezik"
 
 #: djamnedlies-git/teams/models.py:129
-#: teams/models.py:236
+#: teams/models.py:238
 msgid "Translator"
 msgstr "Prevajalec"
 
 #: djamnedlies-git/teams/models.py:130
-#: teams/models.py:237
+#: teams/models.py:239
 msgid "Reviewer"
 msgstr "Pregledovalec"
 
 #: djamnedlies-git/teams/models.py:131
-#: teams/models.py:238
+#: teams/models.py:240
 msgid "Committer"
 msgstr "Uveljavitelj"
 
 #: djamnedlies-git/teams/models.py:132
 #: djamnedlies-git/templates/teams/team_base.html:31
-#: teams/models.py:239
+#: teams/models.py:241
 #: templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Nadzornik"
@@ -1616,7 +1616,7 @@ msgstr "Napaka: strani ni mogoče najti"
 #: djamnedlies-git/templates/404.html:11
 #: templates/404.html:11
 msgid "The page you requested has not been found on this server."
-msgstr ""
+msgstr "Strani, ki jo želite obiskati, ni mogoče najti na strežniku."
 
 #: djamnedlies-git/templates/500.html:4
 #: templates/500.html:4
@@ -2047,7 +2047,7 @@ msgstr "Upravljanje spletišča presnetih laži"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:159
+#: templates/vertimus/vertimus_detail.html:160
 msgid "No comment"
 msgstr "Ni opomb"
 
@@ -2186,7 +2186,7 @@ msgstr "Stanje"
 
 #: djamnedlies-git/templates/people/person_detail_change_form.html:13
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:12
+#: templates/teams/team_edit.html:27
 msgid "Save"
 msgstr "Shrani"
 
@@ -2320,7 +2320,7 @@ msgstr "Neuspešno izbrisanje gesla"
 #: djamnedlies-git/templates/registration/password_reset_confirm.html:26
 #: templates/registration/password_reset_confirm.html:26
 msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
-msgstr ""
+msgstr "Geslo za ponovno nastavitev gesla ni veljavno, ker je bilo že uporabljeno. Postopek spreminjanja gesla začnite znova."
 
 #: djamnedlies-git/templates/registration/password_reset_done.html:4
 #: djamnedlies-git/templates/registration/password_reset_done.html:9
@@ -2436,7 +2436,8 @@ msgid "Last actions made by the %(lang)s team of the GNOME translation project"
 msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
 
 #: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:39
+#: templates/teams/team_detail.html:40
+#: templates/teams/team_edit.html:16
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Skupina za %(lang)s jezik"
@@ -2447,12 +2448,12 @@ msgid "Release"
 msgstr "Objava"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:64
+#: templates/teams/team_detail.html:66
 msgid "Team membership"
 msgstr "Članstvo"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:75
+#: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Uporabi spremembe"
 
@@ -2515,22 +2516,22 @@ msgid "Action History"
 msgstr "Zgodovina dejanj"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:148
+#: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
 msgstr "primerjaj z:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:171
+#: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
 msgstr "Novo dejanje"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:181
+#: templates/vertimus/vertimus_detail.html:182
 msgid "Submit"
 msgstr "Pošlji"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:186
+#: templates/vertimus/vertimus_detail.html:187
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Pred nadaljevanjem morajo biti vaši podatki overjeni in biti morate član skupine za %(team_name)s jezik."
@@ -2702,7 +2703,7 @@ msgstr "Brez opomb"
 
 #: djamnedlies-git/vertimus/models.py:475
 #: djamnedlies-git/vertimus/models.py:525
-#: teams/models.py:198
+#: teams/models.py:200
 #: vertimus/models.py:535
 #: vertimus/models.py:585
 #, python-format
@@ -2858,11 +2859,15 @@ msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zaht
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: teams/models.py:90
+#: teams/models.py:89
+msgid "Presentation"
+msgstr "Predstavitev"
+
+#: teams/models.py:92
 msgid "Mailing list"
 msgstr "Dopisni seznam"
 
-#: teams/models.py:91
+#: teams/models.py:93
 msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
@@ -2899,45 +2904,53 @@ msgstr "Starejše objave"
 msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
 msgstr "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
-#: templates/teams/team_detail.html:6
+#: templates/teams/team_detail.html:7
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
 
-#: templates/teams/team_detail.html:46
+#: templates/teams/team_detail.html:48
 msgid "There is currently no established team for this language. See <a href=\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> to get more information about the process of building a new translation team."
 msgstr "Trenutno ni skupine za ta jezik. Oglejte si <a href=\"http://live.gnome.org/TranslationProject/StartingATeam\">GTP Wiki</a> strani za več podrobnosti o postopku sestavljanja prevajalske skupine."
 
-#: templates/teams/team_detail.html:56
+#: templates/teams/team_detail.html:58
 msgid "Plural forms:"
 msgstr "Množinske oblike:"
 
-#: templates/teams/team_detail.html:58
+#: templates/teams/team_detail.html:60
 msgid "Archives"
 msgstr "Arhivi"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr "Prevajalska skupina uporablja Vertimus za vodenje dela."
+
+#: templates/teams/team_edit.html:25
+msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax</a>"
+msgstr ""
+
+#: templates/vertimus/vertimus_detail.html:106
 msgid "Actions"
 msgstr "Dejanja"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:108
 #: vertimus/models.py:831
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:110
 msgid "(Return to current)"
 msgstr "(Vrni na trenutno)"
 
-#: templates/vertimus/vertimus_detail.html:114
+#: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
 msgstr "(Predhodna zgodovina dejanj)"
 
-#: templates/vertimus/vertimus_detail.html:167
+#: templates/vertimus/vertimus_detail.html:168
 msgid "No current actions."
 msgstr "Ni trenutnih dejanj."
 
