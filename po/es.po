@@ -2,14 +2,13 @@
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2010.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-28 09:47+0000\n"
-"PO-Revision-Date: 2010-01-31 17:29+0100\n"
+"POT-Creation-Date: 2010-02-17 11:54+0000\n"
+"PO-Revision-Date: 2010-02-18 13:05+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -483,88 +482,88 @@ msgid "Burmese"
 msgstr "Birmano"
 
 #: database-content.py:117
+msgid "Lao"
+msgstr "Laosiano"
+
+#: database-content.py:118
 msgid "Belarusian Latin"
 msgstr "Bieloruso (latino)"
 
-#: database-content.py:118
+#: database-content.py:119
 msgid "Catalan (Valencian)"
 msgstr "Catalán (valenciano)"
 
-#: database-content.py:119
+#: database-content.py:120
 msgid "Uzbek (Cyrillic)"
 msgstr "Uzbeco (cirílico)"
 
-#: database-content.py:120
+#: database-content.py:121
 msgid "Uzbek (Latin)"
 msgstr "Uzbeco (latino)"
 
-#: database-content.py:121
+#: database-content.py:122
 msgid "Chinese (Hong Kong)"
 msgstr "Chino (Hong Kong)"
 
-#: database-content.py:122
+#: database-content.py:123
 msgid "Chinese (Taiwan)"
 msgstr "Chino (Taiwan)"
 
-#: database-content.py:123
+#: database-content.py:124
 msgid "Norwegian Bokmål"
 msgstr "Noruego bokmål"
 
-#: database-content.py:124
+#: database-content.py:125
 msgid "Norwegian Nynorsk"
 msgstr "Noruego nynorsk"
 
-#: database-content.py:125
+#: database-content.py:126
 msgid "Serbian Latin"
 msgstr "Serbio latino"
 
-#: database-content.py:126
+#: database-content.py:127
 msgid "Serbian Jekavian"
 msgstr "Serbio jekavian"
 
-#: database-content.py:127
+#: database-content.py:128
 msgid "Somali"
 msgstr "Somalí"
 
-#: database-content.py:128
+#: database-content.py:129
 msgid "Interlingua"
 msgstr "Interlingua"
 
-#: database-content.py:129
+#: database-content.py:130
 msgid "Luxembourgish"
 msgstr "Luxemburgués"
 
-#: database-content.py:130
+#: database-content.py:131
 msgid "Tsonga"
 msgstr "Tsonga"
 
-#: database-content.py:131
+#: database-content.py:132
 msgid "Swahili"
 msgstr "Suajili"
 
-#: database-content.py:132
+#: database-content.py:133
 msgid "South Ndebele"
 msgstr "Ndebele del sur"
 
-#: database-content.py:133
+#: database-content.py:134
 msgid "Southern Sotho"
 msgstr "Sesotho del sur"
 
-#: database-content.py:134
+#: database-content.py:135
 msgid "Maltese"
 msgstr "Maltés"
 
-#: database-content.py:135
+#: database-content.py:136
 msgid "Igbo"
 msgstr "Igbo"
 
-#: database-content.py:136
+#: database-content.py:137
 msgid "Frisian"
 msgstr "Frisón"
-
-#: database-content.py:137
-msgid "Lao"
-msgstr "Laosiano"
 
 #: database-content.py:138
 msgid "UI translations"
@@ -930,7 +929,6 @@ msgid "Swell-Foop Manual"
 msgstr "Manual de Swell-Foop"
 
 #: database-content.py:227
-#| msgid "glChess Manual"
 msgid "Lights Off Manual"
 msgstr "Manual de Lights Off"
 
@@ -1355,7 +1353,7 @@ msgstr "Imagen"
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "URL a un archivo de imagen (.jpg, .png, ...) de un hackergotchi"
 
-#: djamnedlies-git/people/models.py:38 people/models.py:38 teams/models.py:89
+#: djamnedlies-git/people/models.py:38 people/models.py:38 teams/models.py:91
 msgid "Web page"
 msgstr "Página web"
 
@@ -1459,7 +1457,7 @@ msgstr "actualizado el %(date)s"
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1087 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
@@ -1566,25 +1564,25 @@ msgstr ""
 "No se sabe dónde mirar si este idioma se usa actualmente, pregunta al "
 "mantenedor del módulo."
 
-#: djamnedlies-git/teams/models.py:112 teams/models.py:216
+#: djamnedlies-git/teams/models.py:112 teams/models.py:218
 #, python-format
 msgid "No team for locale %s"
 msgstr "No existe un equipo para el idioma %s"
 
-#: djamnedlies-git/teams/models.py:129 teams/models.py:236
+#: djamnedlies-git/teams/models.py:129 teams/models.py:238
 msgid "Translator"
 msgstr "Traductor"
 
-#: djamnedlies-git/teams/models.py:130 teams/models.py:237
+#: djamnedlies-git/teams/models.py:130 teams/models.py:239
 msgid "Reviewer"
 msgstr "Revisor"
 
-#: djamnedlies-git/teams/models.py:131 teams/models.py:238
+#: djamnedlies-git/teams/models.py:131 teams/models.py:240
 msgid "Committer"
 msgstr "Efectúa cambios en el SVN"
 
 #: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:239
+#: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:241
 #: templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Coordinador"
@@ -2058,7 +2056,7 @@ msgstr "Administrador de Malditas mentiras"
 #: djamnedlies-git/templates/feeds/actions_description.html:6
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:159
+#: templates/vertimus/vertimus_detail.html:160
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2195,7 +2193,7 @@ msgstr "Estado"
 
 #: djamnedlies-git/templates/people/person_detail_change_form.html:13
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:12
+#: templates/teams/team_edit.html:27
 msgid "Save"
 msgstr "Guardar"
 
@@ -2478,7 +2476,7 @@ msgstr ""
 "traducción de GNOME"
 
 #: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:39
+#: templates/teams/team_detail.html:40 templates/teams/team_edit.html:16
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Equipo de traducción al %(lang)s"
@@ -2489,12 +2487,12 @@ msgid "Release"
 msgstr "Publicación"
 
 #: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:64
+#: templates/teams/team_detail.html:66
 msgid "Team membership"
 msgstr "Membresía"
 
 #: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:75
+#: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Aplicar modificaciones"
 
@@ -2556,22 +2554,22 @@ msgid "Action History"
 msgstr "Histórico de acciones"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:148
+#: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
 msgstr "diff con:"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:171
+#: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
 msgstr "Acción nueva"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:181
+#: templates/vertimus/vertimus_detail.html:182
 msgid "Submit"
 msgstr "Enviar"
 
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:186
+#: templates/vertimus/vertimus_detail.html:187
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
@@ -2721,7 +2719,7 @@ msgid "Without comment"
 msgstr "Sin comentarios"
 
 #: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525 teams/models.py:198
+#: djamnedlies-git/vertimus/models.py:525 teams/models.py:200
 #: vertimus/models.py:535 vertimus/models.py:585
 #, python-format
 msgid "This is an automated message sent from %s."
@@ -2876,11 +2874,16 @@ msgstr ""
 "No se sabe dónde mirar la variable DOC_LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: teams/models.py:90
+#: teams/models.py:89
+#| msgid "Documentation"
+msgid "Presentation"
+msgstr "Presentación"
+
+#: teams/models.py:92
 msgid "Mailing list"
 msgstr "Lista de correo"
 
-#: teams/models.py:91
+#: teams/models.py:93
 msgid "URL to subscribe"
 msgstr "URL al que suscribirse"
 
@@ -2940,14 +2943,14 @@ msgstr ""
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
-#: templates/teams/team_detail.html:6
+#: templates/teams/team_detail.html:7
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Últimas acciones realizadas por el equipo %(lang)s del Proyecto de "
 "traducción de GNOME"
 
-#: templates/teams/team_detail.html:46
+#: templates/teams/team_detail.html:48
 msgid ""
 "There is currently no established team for this language. See <a href="
 "\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> "
@@ -2958,35 +2961,47 @@ msgstr ""
 "href=\"http://live.gnome.org/TranslationProject/StartingATeam\">wiki del "
 "«GTP»</a>."
 
-#: templates/teams/team_detail.html:56
+#: templates/teams/team_detail.html:58
 msgid "Plural forms:"
 msgstr "Formas plurales:"
 
-#: templates/teams/team_detail.html:58
+#: templates/teams/team_detail.html:60
 msgid "Archives"
 msgstr "Archivos"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr "Este elemento está usando el flujo de trabajo de Vertimus"
+
+#: templates/teams/team_edit.html:25
+msgid ""
+"This content may use <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a> syntax</a>"
+msgstr ""
+"Este contenido puede usar sintaxis <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a>."
+
+#: templates/vertimus/vertimus_detail.html:106
 msgid "Actions"
 msgstr "Acciones"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:107 vertimus/models.py:831
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:831
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:110
 msgid "(Return to current)"
 msgstr "(Volver a la actual)"
 
-#: templates/vertimus/vertimus_detail.html:114
+#: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
 msgstr "(Histórico de acciones anteriores)"
 
-#: templates/vertimus/vertimus_detail.html:167
+#: templates/vertimus/vertimus_detail.html:168
 msgid "No current actions."
 msgstr "Sin acción actual."
 
