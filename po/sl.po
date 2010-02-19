@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-18 11:09+0000\n"
-"PO-Revision-Date: 2010-02-19 09:27+0100\n"
+"POT-Creation-Date: 2010-02-19 20:52+0000\n"
+"PO-Revision-Date: 2010-02-19 21:55+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -885,11 +885,6 @@ msgid "GST Time Setup Manual"
 msgstr "Priročnik časovnih nastavitev GST"
 
 #: database-content.py:217
-#: djamnedlies-git/languages/views.py:50
-#: djamnedlies-git/languages/views.py:66
-#: djamnedlies-git/templates/branch_detail.html:23
-#: djamnedlies-git/templates/release_detail.html:22
-#: djamnedlies-git/templates/teams/team_detail.html:27
 #: languages/views.py:50
 #: languages/views.py:83
 #: templates/branch_detail.html:23
@@ -952,8 +947,6 @@ msgid "Beagle Desktop Search"
 msgstr "Beagle namizno iskanje"
 
 #: database-content.py:231
-#: djamnedlies-git/templates/base.html:35
-#: djamnedlies-git/templates/admin/base_site.html:7
 #: templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
@@ -1016,8 +1009,8 @@ msgid "GNOME Web Photo"
 msgstr "GNOME spletna slika"
 
 #: database-content.py:246
-msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "program GNUCash ni vključen v GNOME skladiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o prevajanju."
+msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
+msgstr "Program GNUCash ni vključen v GNOME skladiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
 
 #: database-content.py:247
 msgid "Evince is a document viewer for multiple document formats."
@@ -1168,7 +1161,6 @@ msgid "GNOME 2.30 (development)"
 msgstr "GNOME 2.30 (razvojna veja)"
 
 #: settings.py:73
-#: djamnedlies-git/settings_sample.py:80
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
 msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
@@ -1177,17 +1169,14 @@ msgid "This module is not part of the GNOME Git repository. Please check the mod
 msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
 #: common/views.py:35
-#: djamnedlies-git/common/views.py:33
 msgid "translator-credits"
 msgstr "prevajalska skupina GNOME"
 
 #: common/views.py:60
-#: djamnedlies-git/common/views.py:54
 msgid "You have been logged out."
 msgstr "Odjava je bila uspešna."
 
 #: common/views.py:68
-#: djamnedlies-git/common/views.py:62
 msgid "You have been successfully logged in."
 msgstr "Odjava je bila uspešna."
 
@@ -1197,173 +1186,183 @@ msgid "You have not joined any translation team yet. You can do it from <a href=
 msgstr "Niste še pridruženi k nobeni prevajalski skupini. Pridružite se lahko preko <a href=\"%(url)s\">vašega profila</a>."
 
 #: common/views.py:80
-#: djamnedlies-git/common/views.py:69
 msgid "We're sorry, but your account has been disabled."
 msgstr "Račun je bil onemogočen."
 
 #: common/views.py:82
-#: djamnedlies-git/common/views.py:71
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Prijava ni uspela. Preverite uporabniško ime in geslo."
 
 #: common/views.py:122
-#: djamnedlies-git/common/views.py:111
 msgid "Your account has been activated."
 msgstr "Račun je dejaven."
 
-#: djamnedlies-git/languages/views.py:49
-#: djamnedlies-git/languages/views.py:65
-#: languages/views.py:49
-#: languages/views.py:82
-msgid "UI Translations"
-msgstr "Prevodi uporabniških vmesnikov"
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "Prijavite se z uporabniškim imenom in geslom:"
 
-#: djamnedlies-git/people/forms.py:14
-#: people/forms.py:14
-msgid "Choose a username:"
-msgstr "Izbor uporabniškega imena:"
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+msgid "Username:"
+msgstr "Uporabniško ime:"
 
-#: djamnedlies-git/people/forms.py:15
-#: people/forms.py:15
-msgid "May contain only letters, numbers, underscores or hyphens"
-msgstr "Lahko uporabite le črke, številke, vezaj in podčrtaj."
-
-#: djamnedlies-git/people/forms.py:16
-#: people/forms.py:16
-msgid "Email:"
-msgstr "Elektronska pošta:"
-
-#: djamnedlies-git/people/forms.py:17
-#: djamnedlies-git/templates/login.html:37
-#: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17
-#: templates/login.html:37
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: djamnedlies-git/people/forms.py:20
-#: djamnedlies-git/templates/login.html:21
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Geslo:"
 
-#: djamnedlies-git/people/forms.py:21
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:77
+#: templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "Prijava"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "Prijavite se z OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17
+#: templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "Prijava z OpenID"
+
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:54
+msgid "Unknown"
+msgstr "Neznano"
+
+#: languages/views.py:49
+#: languages/views.py:82
+msgid "UI Translations"
+msgstr "Prevodi uporabniških vmesnikov"
+
+#: languages/views.py:80
+#: templates/release_detail.html:66
+msgid "Original strings"
+msgstr "Osnovni niz"
+
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "Izbor uporabniškega imena:"
+
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "Lahko uporabite le črke, številke, vezaj in podčrtaj."
+
+#: people/forms.py:16
+msgid "Email:"
+msgstr "Elektronska pošta:"
+
 #: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "Vsaj 7 znakov"
 
-#: djamnedlies-git/people/forms.py:23
-#: djamnedlies-git/templates/people/person_password_change_form.html:27
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:18
 #: people/forms.py:23
 #: templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Potrdi geslo:"
 
-#: djamnedlies-git/people/forms.py:31
 #: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "Uporabniško ime je zasedeno. Izberite drugo uporabniško ime."
 
-#: djamnedlies-git/people/forms.py:39
 #: people/forms.py:39
 msgid "You must either provide an OpenID or a password"
 msgstr "Vnesti je treba podatke OpenID ali pa geslo"
 
-#: djamnedlies-git/people/forms.py:42
 #: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "Gesli se ne skladata."
 
-#: djamnedlies-git/people/forms.py:65
 #: people/forms.py:65
 msgid "Account activation"
 msgstr "Vpis računa"
 
-#: djamnedlies-git/people/forms.py:66
 #: people/forms.py:66
 #, python-format
 msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
 msgstr "To sporočilo je potrditev, da je vpis na %s uspel. Za dokončno overitev računa, kliknite na spodnjo povezavo ali pa kopirajte in prilepite naslov v brskalnik."
 
-#: djamnedlies-git/people/forms.py:68
 #: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "Skrbnik %s"
 
-#: djamnedlies-git/people/models.py:36
 #: people/models.py:36
 msgid "Image"
 msgstr "Slika"
 
-#: djamnedlies-git/people/models.py:37
 #: people/models.py:37
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "Naslov URL do hackergotchi slike (.jpg, .png, ...)"
 
-#: djamnedlies-git/people/models.py:38
 #: people/models.py:38
 #: teams/models.py:91
 msgid "Web page"
 msgstr "Spletna stran"
 
-#: djamnedlies-git/people/models.py:39
 #: people/models.py:39
 msgid "IRC nickname"
 msgstr "IRC vzdevek"
 
-#: djamnedlies-git/people/models.py:40
 #: people/models.py:40
 msgid "Bugzilla account"
 msgstr "Račun Bugzilla"
 
-#: djamnedlies-git/people/models.py:41
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronski naslov'."
 
-#: djamnedlies-git/people/views.py:86
 #: people/views.py:87
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Uspešno ste pridruženi skupini '%s'."
 
-#: djamnedlies-git/people/views.py:89
+#: people/views.py:88
+msgid "A new person joined your team"
+msgstr "Nova oseba se je pridružila skupini."
+
+#: people/views.py:89
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "%(name)s se je pridružil prevajalski skupini preko %(site)s"
+
 #: people/views.py:93
 msgid "You are already member of this team."
 msgstr "Ste že član te prevajalske skupine."
 
-#: djamnedlies-git/people/views.py:112
 #: people/views.py:116
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 
-#: djamnedlies-git/people/views.py:128
 #: people/views.py:132
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
-#: djamnedlies-git/stats/models.py:320
 #: stats/models.py:351
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: djamnedlies-git/stats/models.py:341
+#: stats/models.py:353
+msgid "Can't generate POT file, statistics aborted."
+msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
+
 #: stats/models.py:373
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: djamnedlies-git/stats/models.py:380
-#: stats/utils.py:333
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
-
-#: djamnedlies-git/stats/models.py:659
 #: stats/models.py:692
 #, python-format
 msgid ""
@@ -1375,40 +1374,37 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906
+#: stats/models.py:714
+#, python-format
+msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
+msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
+
 #: stats/models.py:968
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: djamnedlies-git/stats/models.py:907
 #: stats/models.py:969
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: djamnedlies-git/stats/models.py:908
 #: stats/models.py:970
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: djamnedlies-git/stats/models.py:909
 #: stats/models.py:971
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: djamnedlies-git/stats/models.py:910
 #: stats/models.py:972
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: djamnedlies-git/stats/models.py:986
-#: djamnedlies-git/stats/models.py:1252
 #: stats/models.py:1051
 #: stats/models.py:1353
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017
 #: stats/models.py:1084
 #, python-format
 msgid "%(count)s message"
@@ -1418,7 +1414,6 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: djamnedlies-git/stats/models.py:1018
 #: stats/models.py:1085
 #, python-format
 msgid "updated on %(date)s"
@@ -1426,18 +1421,12 @@ msgstr "zadnjič posodobljeno %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: djamnedlies-git/stats/models.py:1020
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1087
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: djamnedlies-git/stats/models.py:1023
 #: stats/models.py:1090
 #, python-format
 msgid "%(count)s figure"
@@ -1447,53 +1436,52 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: djamnedlies-git/stats/models.py:1024
 #: stats/models.py:1091
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027
 #: stats/models.py:1094
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POTdatoteka (%(messages)s) — %(updated)s"
 
-#: djamnedlies-git/stats/utils.py:85
+#: stats/models.py:1178
+msgid "This POT file has not been generated through the standard intltool method."
+msgstr "Datoteka POT ni ustvarjena preko običajnega intltool načina."
+
+#: stats/models.py:1179
+msgid "This POT file has not been generated through the standard gnome-doc-utils method."
+msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
+
 #: stats/utils.py:90
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Napaka med zagonom ukaza 'intltool-update -m'."
 
-#: djamnedlies-git/stats/utils.py:91
 #: stats/utils.py:96
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 
-#: djamnedlies-git/stats/utils.py:100
 #: stats/utils.py:105
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: djamnedlies-git/stats/utils.py:112
 #: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 
-#: djamnedlies-git/stats/utils.py:115
 #: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
-#: djamnedlies-git/stats/utils.py:118
 #: stats/utils.py:136
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
-#: djamnedlies-git/stats/utils.py:133
 #: stats/utils.py:152
 #, python-format
 msgid ""
@@ -1505,1351 +1493,37 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206
 #: stats/utils.py:237
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: djamnedlies-git/stats/utils.py:226
 #: stats/utils.py:257
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: djamnedlies-git/stats/utils.py:228
 #: stats/utils.py:259
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: djamnedlies-git/stats/utils.py:231
 #: stats/utils.py:262
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: djamnedlies-git/stats/utils.py:259
 #: stats/utils.py:290
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: djamnedlies-git/stats/utils.py:292
 #: stats/utils.py:316
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: djamnedlies-git/stats/utils.py:319
 #: stats/utils.py:322
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
-
-#: djamnedlies-git/stats/utils.py:322
-msgid "Don't know where to look if this language is actually used, ask the module maintainer."
-msgstr "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
-
-#: djamnedlies-git/teams/models.py:112
-#: teams/models.py:218
-#, python-format
-msgid "No team for locale %s"
-msgstr "Ni skupine za %s jezik"
-
-#: djamnedlies-git/teams/models.py:129
-#: teams/models.py:238
-msgid "Translator"
-msgstr "Prevajalec"
-
-#: djamnedlies-git/teams/models.py:130
-#: teams/models.py:239
-msgid "Reviewer"
-msgstr "Pregledovalec"
-
-#: djamnedlies-git/teams/models.py:131
-#: teams/models.py:240
-msgid "Committer"
-msgstr "Uveljavitelj"
-
-#: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31
-#: teams/models.py:241
-#: templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "Nadzornik"
-
-#: djamnedlies-git/teams/views.py:44
-#: teams/views.py:55
-msgid "Committers"
-msgstr "Uveljavitelji"
-
-#: djamnedlies-git/teams/views.py:47
-#: teams/views.py:58
-msgid "No committers"
-msgstr "Ni uveljaviteljev"
-
-#: djamnedlies-git/teams/views.py:49
-#: teams/views.py:60
-msgid "Reviewers"
-msgstr "Pregledovalci"
-
-#: djamnedlies-git/teams/views.py:52
-#: teams/views.py:63
-msgid "No reviewers"
-msgstr "Ni prijavljenih pregledovalcev"
-
-#: djamnedlies-git/teams/views.py:54
-#: teams/views.py:65
-msgid "Translators"
-msgstr "Prevajalci"
-
-#: djamnedlies-git/teams/views.py:57
-#: teams/views.py:68
-msgid "No translators"
-msgstr "Ni prijavljenih prevajalcev"
-
-#: djamnedlies-git/templates/404.html:4
-#: djamnedlies-git/templates/404.html:9
-#: templates/404.html:4
-#: templates/404.html.py:9
-msgid "Error: page not found"
-msgstr "Napaka: strani ni mogoče najti"
-
-#: djamnedlies-git/templates/404.html:11
-#: templates/404.html:11
-msgid "The page you requested has not been found on this server."
-msgstr "Strani, ki jo želite obiskati, ni mogoče najti na strežniku."
-
-#: djamnedlies-git/templates/500.html:4
-#: templates/500.html:4
-msgid "Error: server error (500)"
-msgstr "Napaka: napaka na strežniku (500)"
-
-#: djamnedlies-git/templates/500.html:9
-#: templates/500.html:9
-msgid "Server Error"
-msgstr "Strežniška napaka"
-
-#: djamnedlies-git/templates/500.html:11
-#: templates/500.html:11
-msgid "We're sorry but a server error has occurred."
-msgstr "Prišlo je do napake strežnika."
-
-#: djamnedlies-git/templates/base.html:26
-#: djamnedlies-git/templates/base.html:42
-#: templates/base.html:26
-#: templates/base.html.py:42
-msgid "Home"
-msgstr "Domov"
-
-#: djamnedlies-git/templates/base.html:27
-#: templates/base.html:27
-msgid "News"
-msgstr "Novice"
-
-#: djamnedlies-git/templates/base.html:28
-#: templates/base.html:28
-msgid "Projects"
-msgstr "Projekti"
-
-#: djamnedlies-git/templates/base.html:29
-#: templates/base.html:29
-msgid "Art"
-msgstr "Oblikovanje"
-
-#: djamnedlies-git/templates/base.html:30
-#: templates/base.html:30
-msgid "Support"
-msgstr "Podpora"
-
-#: djamnedlies-git/templates/base.html:31
-#: templates/base.html:31
-msgid "Development"
-msgstr "Razvoj"
-
-#: djamnedlies-git/templates/base.html:32
-#: templates/base.html:32
-msgid "Community"
-msgstr "Skupnost"
-
-#: djamnedlies-git/templates/base.html:42
-#: templates/base.html:42
-msgid "Back to Damned Lies home page"
-msgstr "Nazaj na osnovno domačo stran"
-
-#: djamnedlies-git/templates/base.html:48
-#: djamnedlies-git/templates/index.html:13
-#: templates/base.html:48
-#: templates/index.html:13
-msgid "Teams"
-msgstr "Skupine"
-
-#: djamnedlies-git/templates/base.html:53
-#: djamnedlies-git/templates/index.html:20
-#: djamnedlies-git/templates/release_compare.html:25
-#: templates/base.html:53
-#: templates/index.html:27
-#: templates/release_compare.html:25
-msgid "Languages"
-msgstr "Jeziki"
-
-#: djamnedlies-git/templates/base.html:58
-#: templates/base.html:58
-msgid "Release sets"
-msgstr "Objave"
-
-#: djamnedlies-git/templates/base.html:63
-#: djamnedlies-git/templates/index.html:36
-#: templates/base.html:63
-#: templates/index.html:43
-msgid "Modules"
-msgstr "Moduli"
-
-#: djamnedlies-git/templates/base.html:74
-#: templates/base.html:74
-msgid "Log out"
-msgstr "Odjava"
-
-#: djamnedlies-git/templates/base.html:77
-#: djamnedlies-git/templates/login.html:29
-#: djamnedlies-git/templates/registration/password_reset_complete.html:12
-#: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77
-#: templates/login.html:29
-#: templates/registration/password_reset_complete.html:12
-msgid "Log in"
-msgstr "Prijava"
-
-#: djamnedlies-git/templates/base.html:94
-#: templates/base.html:94
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: djamnedlies-git/templates/base.html:96
-#: templates/base.html:96
-msgid "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
-msgstr "Upravljano preko <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> modula na <a href='http://git.gnome.org/'>git.gnome.org</a>"
-
-#: djamnedlies-git/templates/base.html:98
-#: templates/base.html:98
-msgid "Hosted by"
-msgstr "Spletišče gosti"
-
-#: djamnedlies-git/templates/branch_detail.html:4
-#: templates/branch_detail.html:4
-msgid "This branch is currently string-frozen."
-msgstr "Beja je trenutno zamrznjena za pravajanje."
-
-#: djamnedlies-git/templates/branch_detail.html:13
-#: templates/branch_detail.html:13
-msgid "Translation"
-msgstr "Prevod"
-
-#: djamnedlies-git/templates/error.html:4
-#: djamnedlies-git/templates/index.html:4
-#: djamnedlies-git/templates/index.html:9
-#: djamnedlies-git/templates/login.html:4
-#: djamnedlies-git/templates/registration/register.html:4
-#: djamnedlies-git/templates/registration/register_success.html:4
-#: templates/error.html:4
-#: templates/index.html:4
-#: templates/index.html.py:9
-#: templates/login.html:4
-#: templates/registration/register.html:4
-#: templates/registration/register_success.html:4
-msgid "Damned Lies about GNOME"
-msgstr "Presnete laži o namizju GNOME"
-
-#: djamnedlies-git/templates/error.html:9
-#: templates/error.html:9
-msgid "Error:"
-msgstr "Napaka:"
-
-#: djamnedlies-git/templates/index.html:14
-#: templates/index.html:14
-msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
-msgstr "Seznam vseh prevajalskih skupin namizja GNOME s podrobnostmi o prevajalcih, spletnih straneh in dopisnih seznamih."
-
-#: djamnedlies-git/templates/index.html:15
-#: templates/index.html:15
-msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgstr "V kolikor skupina za jezik še ne obstaja, je mogoče enostavno <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>ustvariti novo skupino</a>."
-
-#: djamnedlies-git/templates/index.html:22
-#: templates/index.html:29
-#, python-format
-msgid "List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> for."
-msgstr "Seznam vseh jezikov za katere je bila ustvarjena <a href='%(teams_url)s'>prevajalska skupina</a>."
-
-#: djamnedlies-git/templates/index.html:23
-#: templates/index.html:30
-msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
-msgstr "Nekatere skupine prevajajo več kot en jezik, katerih prevode si je mogoče ogledati."
-
-#: djamnedlies-git/templates/index.html:27
-#: templates/index.html:34
-msgid "Release Sets"
-msgstr "Objave"
-
-#: djamnedlies-git/templates/index.html:28
-#: templates/index.html:35
-msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr "Seznam vseh objavljenih projektov za katere se vodi statistika."
-
-#: djamnedlies-git/templates/index.html:30
-msgid "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; or &quot;GNOME 2.14&quot;."
-msgstr "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna veja&quot;."
-
-#: djamnedlies-git/templates/index.html:31
-#: templates/index.html:38
-msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr "Uradne objave GNOME so razdeljene v kategorije, kot so na primer &quot;namizni programi&quot; in &quot;razvojno okolje&quot;."
-
-#: djamnedlies-git/templates/index.html:33
-#: templates/index.html:40
-msgid "Look here if you want to compare language support in any of these release sets."
-msgstr "Na teh straneh si je mogoče ogledati jezikovno podporo za posamezno objavo."
-
-#: djamnedlies-git/templates/index.html:37
-#: templates/index.html:44
-msgid "List of all modules with statistics in here."
-msgstr "Seznam vseh programskih paketov, ki jih je mogoče prevajati."
-
-#: djamnedlies-git/templates/index.html:39
-#: templates/index.html:46
-msgid "Modules are separate libraries or applications, with one or more branches of development included."
-msgstr "Moduli so ločene knjižnice in programi z eno ali več razvojnimi vejami."
-
-#: djamnedlies-git/templates/index.html:40
-msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o paketih (Bugzilla, spletna stran, nadzornik, ...)."
-
-#: djamnedlies-git/templates/index.html:46
-#: templates/index.html:53
-msgid "Translated by:"
-msgstr "Prevevaja:"
-
-#: djamnedlies-git/templates/login.html:10
-#: djamnedlies-git/templates/registration/register.html:11
-#: templates/login.html:10
-#: templates/registration/register.html:11
-#, python-format
-msgid "You are already logged in as %(username)s."
-msgstr "Trenutno ste prijavljeni kot %(username)s."
-
-#: djamnedlies-git/templates/login.html:13
-#: templates/login.html:13
-#, python-format
-msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
-msgstr "V primeru, da računa še niste ustvarili, se lahko <a href='%(link)s'>vpišete</a> za nov račun."
-
-#: djamnedlies-git/templates/login.html:15
-#: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:15
-msgid "Log in with your username and password:"
-msgstr "Prijavite se z uporabniškim imenom in geslom:"
-
-#: djamnedlies-git/templates/login.html:18
-#: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:18
-msgid "Username:"
-msgstr "Uporabniško ime:"
-
-#: djamnedlies-git/templates/login.html:22
-#: templates/login.html:22
-msgid "Have you forgotten your password?"
-msgstr "Ali ste pozabili vaše geslo?"
-
-#: djamnedlies-git/templates/login.html:34
-#: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:34
-msgid "Or use your OpenID:"
-msgstr "Prijavite se z OpenID:"
-
-#: djamnedlies-git/templates/login.html:40
-#: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "Prijava z OpenID"
-
-#: djamnedlies-git/templates/module_detail.html:6
-#: templates/module_detail.html:6
-#, python-format
-msgid "Module Statistics: %(name)s"
-msgstr "Statistika modula: %(name)s"
-
-#: djamnedlies-git/templates/module_detail.html:55
-#: templates/module_detail.html:55
-msgid "Maintainers"
-msgstr "Vzdrževlec"
-
-#: djamnedlies-git/templates/module_detail.html:63
-#: templates/module_detail.html:63
-msgid "Bug reporting"
-msgstr "Prijavljanje napak"
-
-#: djamnedlies-git/templates/module_detail.html:66
-#: templates/module_detail.html:66
-msgid "Show existing i18n and l10n bugs"
-msgstr "Pokaži obstoječe i18n in l10n hrošče"
-
-#: djamnedlies-git/templates/module_detail.html:68
-msgid "Report bugs to Bugzilla"
-msgstr "Poročanje o hroščih preko Bugzillle"
-
-#: djamnedlies-git/templates/module_detail.html:77
-#: templates/module_detail.html:77
-msgid "Branches:"
-msgstr "Veje:"
-
-#: djamnedlies-git/templates/module_detail.html:97
-#: templates/module_detail.html:97
-msgid "Browse Repository"
-msgstr "Prebrskaj skladišče"
-
-#: djamnedlies-git/templates/module_images.html:4
-#: templates/module_images.html:4
-#, python-format
-msgid "Module Doc Figure Status: %(name)s"
-msgstr "Stanje shem v dokumentaciji modula: %(name)s"
-
-#: djamnedlies-git/templates/module_images.html:12
-#: templates/module_images.html:12
-msgid "Figures translation status"
-msgstr "Stanje prevodov shem"
-
-#: djamnedlies-git/templates/module_images.html:17
-#: templates/module_images.html:17
-msgid "Original"
-msgstr "Izvorno"
-
-#: djamnedlies-git/templates/module_images.html:32
-#: templates/module_images.html:30
-msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
-msgstr "Prevedeno, vendar uporablja uradno shemo (mora shema ne vključuje besedila za prevajanje)"
-
-#: djamnedlies-git/templates/module_images.html:36
-#: templates/module_images.html:34
-msgid "Fuzzy"
-msgstr "Ohlapno"
-
-#: djamnedlies-git/templates/module_images.html:41
-#: templates/module_images.html:39
-msgid "No existing file (&quot;Technical&quot; fuzzy)"
-msgstr "Ni obstoječe datoteke (&quot;Tehnicčno&quot; ohlapno)"
-
-#: djamnedlies-git/templates/module_images.html:44
-#: templates/module_images.html:42
-msgid "Not translated"
-msgstr "Neprevedeno"
-
-#: djamnedlies-git/templates/module_list.html:4
-#: djamnedlies-git/templates/module_list.html:9
-#: templates/module_list.html:4
-#: templates/module_list.html.py:9
-msgid "GNOME Modules"
-msgstr "GNOME moduli"
-
-#: djamnedlies-git/templates/module_list.html:11
-#: templates/module_list.html:11
-msgid "Select a module below to see some of the damned lies about it:"
-msgstr "Izberite modul za pregled podrobnosti prevoda:"
-
-#: djamnedlies-git/templates/release_compare.html:5
-#: djamnedlies-git/templates/release_compare.html:20
-#: templates/release_compare.html:5
-#: templates/release_compare.html.py:20
-msgid "Releases Comparison"
-msgstr "Primerjava objav"
-
-#: djamnedlies-git/templates/release_detail.html:10
-#: templates/release_detail.html:10
-#, python-format
-msgid "%(name)s Release"
-msgstr "%(name)s objava"
-
-#: djamnedlies-git/templates/release_detail.html:13
-#: djamnedlies-git/templates/languages/language_release.html:33
-msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran modula za podrobnosti o pošiljanju prevodov."
-
-#: djamnedlies-git/templates/release_detail.html:19
-#: djamnedlies-git/templates/stats_show.html:30
-#: templates/release_detail.html:19
-#: templates/stats_show.html:30
-msgid "Language"
-msgstr "Jezik"
-
-#: djamnedlies-git/templates/release_detail.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/release_detail.html:20
-#: templates/release_detail.html.py:67
-#: templates/languages/language_release_summary.html:9
-msgid "User Interface"
-msgstr "Uporabniški vmesnik "
-
-#: djamnedlies-git/templates/release_detail.html:21
-#: djamnedlies-git/templates/release_detail.html:23
-#: djamnedlies-git/templates/stats_show.html:34
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-git/templates/teams/team_detail.html:27
-#: templates/release_detail.html:21
-#: templates/release_detail.html.py:23
-#: templates/stats_show.html:34
-#: templates/languages/language_release_summary.html:9
-#: templates/languages/language_release_summary.html:10
-msgid "Graph"
-msgstr "Graf"
-
-#: djamnedlies-git/templates/release_list.html:4
-#: djamnedlies-git/templates/release_list.html:9
-#: templates/release_list.html:4
-#: templates/release_list.html.py:9
-msgid "GNOME Releases"
-msgstr "GNOME objave"
-
-#: djamnedlies-git/templates/release_list.html:11
-#: templates/release_list.html:11
-msgid "Select a release or a release set below to see more details about it:"
-msgstr "Izberite objavo za več podrobnosti:"
-
-#: djamnedlies-git/templates/stats_show.html:13
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
-#: templates/stats_show.html:13
-#: templates/vertimus/vertimus_detail.html:61
-msgid "Download POT file"
-msgstr "Prenos pot datoteke"
-
-#: djamnedlies-git/templates/stats_show.html:17
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
-#: templates/stats_show.html:17
-#: templates/vertimus/vertimus_detail.html:81
-msgid "Notices"
-msgstr "Oobvestila"
-
-#: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-git/vertimus/models.py:165
-#: templates/stats_show.html:30
-#: vertimus/models.py:189
-msgid "Translated"
-msgstr "Prevedeno"
-
-#: djamnedlies-git/templates/stats_show.html:50
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
-#: templates/stats_show.html:50
-#: templates/vertimus/vertimus_detail.html:75
-msgid "Display document figures"
-msgstr "Pokaži sheme dokumentov"
-
-#: djamnedlies-git/templates/admin/base_site.html:4
-#: templates/admin/base_site.html:4
-msgid "Damned Lies site admin"
-msgstr "Upravljanje spletišča presnetih laži"
-
-#: djamnedlies-git/templates/feeds/actions_description.html:6
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
-#: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:160
-msgid "No comment"
-msgstr "Ni opomb"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:4
-#: djamnedlies-git/templates/languages/language_all_modules.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:63
-#: djamnedlies-git/templates/teams/team_detail.html:64
-#: templates/languages/language_all_modules.html:4
-#: templates/languages/language_all_modules.html:20
-#: templates/languages/language_release_summary.html:47
-#: templates/languages/language_release_summary.html:48
-msgid "All modules"
-msgstr "Pokaži vse"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:23
-#: djamnedlies-git/templates/languages/language_release.html:25
-#: templates/languages/language_all_modules.html:23
-#: templates/languages/language_release.html:25
-msgid "Hide completed modules"
-msgstr "Skrij končane prevode"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:27
-#: djamnedlies-git/templates/languages/language_release.html:29
-#: templates/languages/language_all_modules.html:27
-#: templates/languages/language_release.html:29
-msgid "Show completed modules"
-msgstr "Pokaži tudi končane prevode"
-
-#: djamnedlies-git/templates/languages/language_list.html:4
-#: djamnedlies-git/templates/languages/language_list.html:9
-#: templates/languages/language_list.html:4
-#: templates/languages/language_list.html:9
-msgid "GNOME Languages"
-msgstr "GNOME jeziki"
-
-#: djamnedlies-git/templates/languages/language_list.html:11
-#: templates/languages/language_list.html:11
-#, python-format
-msgid "GNOME is being translated to following %(numb)s language.\n"
-msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
-msgstr[0] "Namizje GNOME se prevaja v %(numb)s jezikov.\n"
-msgstr[1] "Namizje GNOME se prevaja v %(numb)s jezik.\n"
-msgstr[2] "Namizje GNOME se prevaja v %(numb)s jezika.\n"
-msgstr[3] "Namizje GNOME se prevaja v %(numb)s jezike.\n"
-
-#: djamnedlies-git/templates/languages/language_release.html:42
-#: templates/languages/language_release.html:43
-msgid "Download all po files"
-msgstr "Prenos vseh po datotek."
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
-msgid "Module"
-msgstr "Modul"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: templates/languages/language_release_stats.html:21
-msgid "Branch"
-msgstr "Veja"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: templates/languages/language_release_stats.html:21
-msgid "Statistics"
-msgstr "Statistika"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: templates/languages/language_release_stats.html:22
-msgid "Status"
-msgstr "Stanje"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
-msgid "Date"
-msgstr "Datum"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:32
-#: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (%(percentage)s% prevedeno)"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:99
-#: templates/languages/language_release_stats.html:103
-msgid "Error summary"
-msgstr "Povzetek napak"
-
-#: djamnedlies-git/templates/people/person_base.html:5
-#: templates/people/person_base.html:5
-msgid "GNOME Contributor"
-msgstr "Gnome sodelavec"
-
-#: djamnedlies-git/templates/people/person_base.html:12
-#: djamnedlies-git/templates/people/person_detail_change_form.html:7
-#: templates/people/person_base.html:12
-#: templates/people/person_detail_change_form.html:7
-msgid "Change your details"
-msgstr "Spreminjanje podrobnosti"
-
-#: djamnedlies-git/templates/people/person_base.html:13
-#: templates/people/person_base.html:13
-msgid "Change your password"
-msgstr "Spreminjanje gesla"
-
-#: djamnedlies-git/templates/people/person_base.html:14
-#: templates/people/person_base.html:14
-msgid "Join a team"
-msgstr "Pridružitev k skupini"
-
-#: djamnedlies-git/templates/people/person_detail.html:22
-#: templates/people/person_detail.html:22
-msgid "Site Language:"
-msgstr "Jezik spletišča:"
-
-#: djamnedlies-git/templates/people/person_detail.html:33
-#: templates/people/person_detail.html:33
-msgid "Choose"
-msgstr "Izbor"
-
-#: djamnedlies-git/templates/people/person_detail.html:39
-#: templates/people/person_detail.html:39
-msgid "Maintains:"
-msgstr "Vzdrževalec:"
-
-#: djamnedlies-git/templates/people/person_detail.html:50
-#: templates/people/person_detail.html:50
-msgid "Working on"
-msgstr "Delo na"
-
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/people/person_detail.html:54
-msgid "State"
-msgstr "Stanje"
-
-#: djamnedlies-git/templates/people/person_detail_change_form.html:13
-#: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
-msgid "Save"
-msgstr "Shrani"
-
-#: djamnedlies-git/templates/people/person_list.html:4
-#: djamnedlies-git/templates/people/person_list.html:8
-#: templates/people/person_list.html:4
-#: templates/people/person_list.html:8
-msgid "GNOME Contributors"
-msgstr "Gnome sodelavci"
-
-#: djamnedlies-git/templates/people/person_list.html:10
-#: templates/people/person_list.html:10
-msgid "GNOME is being developed by following people:"
-msgstr "Okolje GNOME razvijajo :"
-
-#: djamnedlies-git/templates/people/person_overview.html:27
-#: templates/people/person_overview.html:27
-msgid "Instant messaging:"
-msgstr "Trenutno sporočanje:"
-
-#: djamnedlies-git/templates/people/person_overview.html:34
-#: templates/people/person_overview.html:34
-msgid "Bugzilla account:"
-msgstr "Bugzilla račun:"
-
-#: djamnedlies-git/templates/people/person_overview.html:38
-msgid "SVN account:"
-msgstr "SVN račun:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:6
-#: templates/people/person_password_change_form.html:6
-msgid "Password change"
-msgstr "Sprememba gesla"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:8
-#: templates/people/person_password_change_form.html:8
-msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
-msgstr "Vnesite staro geslo zaradi varnostnih razlogov in nato vnesite novo geslo dvakrat zapored. S tem preverite ali je geslo vpisano pravilno."
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:15
-#: templates/people/person_password_change_form.html:15
-msgid "Old password:"
-msgstr "Staro geslo:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:21
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:16
-#: templates/people/person_password_change_form.html:21
-#: templates/registration/password_reset_confirm.html:16
-msgid "New password:"
-msgstr "Novo geslo:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:30
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:19
-#: templates/people/person_password_change_form.html:30
-#: templates/registration/password_reset_confirm.html:19
-msgid "Change my password"
-msgstr "Spremeni geslo"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:8
-#: templates/people/person_team_join_form.html:8
-msgid "Join a new team"
-msgstr "Pridruži se skupini"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:11
-#: templates/people/person_team_join_form.html:11
-msgid "I would like to join the following team as 'translator':"
-msgstr "Kot 'prevajalec' bi se rad pridružil skupini:"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:13
-#: templates/people/person_team_join_form.html:13
-msgid "Join"
-msgstr "Pridruži se"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:5
-#: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "Član skupin"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:9
-#: templates/people/person_team_membership.html:9
-#, python-format
-msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr "Član med (%(role_name)s) skupine za %(team_name)s jezik"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:12
-#: templates/people/person_team_membership.html:12
-msgid "Leave"
-msgstr "Zapusti"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:13
-#: templates/people/person_team_membership.html:13
-msgid "Are you sure you want to leave the team?"
-msgstr "Ali ste prepričani, da želite zapustiti skupino?"
-
-#: djamnedlies-git/templates/registration/password_reset_complete.html:4
-#: djamnedlies-git/templates/registration/password_reset_complete.html:8
-#: templates/registration/password_reset_complete.html:4
-#: templates/registration/password_reset_complete.html:8
-msgid "Password reset complete"
-msgstr "Končano izbrisanje gesla"
-
-#: djamnedlies-git/templates/registration/password_reset_complete.html:10
-#: templates/registration/password_reset_complete.html:10
-msgid "Your password has been set. You may go ahead and log in now."
-msgstr "Geslo je bilo spremenjeno. Sedaj se lahko prijavite."
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:9
-#: templates/registration/password_reset_confirm.html:4
-#: templates/registration/password_reset_form.html:4
-#: templates/registration/password_reset_form.html:9
-msgid "Password reset"
-msgstr "Ponovna nastavitev gesla"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:10
-#: templates/registration/password_reset_confirm.html:10
-msgid "Enter new password"
-msgstr "Vnesite novo geslo"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:12
-#: templates/registration/password_reset_confirm.html:12
-msgid "Please enter your new password twice so we can verify you typed it in correctly."
-msgstr "Vnesite novo geslo dvakrat, da lahko potrdimo pravilni zapis gesla."
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:24
-#: templates/registration/password_reset_confirm.html:24
-msgid "Password reset unsuccessful"
-msgstr "Neuspešno izbrisanje gesla"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:26
-#: templates/registration/password_reset_confirm.html:26
-msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
-msgstr "Geslo za ponovno nastavitev gesla ni veljavno, ker je bilo že uporabljeno. Postopek spreminjanja gesla začnite znova."
-
-#: djamnedlies-git/templates/registration/password_reset_done.html:4
-#: djamnedlies-git/templates/registration/password_reset_done.html:9
-#: templates/registration/password_reset_done.html:4
-#: templates/registration/password_reset_done.html:9
-msgid "Password reset successful"
-msgstr "Uspešno izbrisanje gesla"
-
-#: djamnedlies-git/templates/registration/password_reset_done.html:11
-#: templates/registration/password_reset_done.html:11
-msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
-msgstr "Na prijavni elektronski naslov smo vam poslali navodila za nastavitev gesla. Sporočilo bi moralo prispeti v kratkem."
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:11
-#: templates/registration/password_reset_form.html:11
-msgid "Forgotten your password? Enter your e-mail address below, and we'll e-mail instructions for setting a new one."
-msgstr "Ali ste pozabili geslo? Vnesite elektronski naslov in poslali vam bomo navodila za določitev novega gesla."
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: templates/registration/password_reset_form.html:15
-msgid "E-mail address:"
-msgstr "Elektronski naslov:"
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: templates/registration/password_reset_form.html:15
-msgid "Reset my password"
-msgstr "Ponovna nastavitev gesla"
-
-#: djamnedlies-git/templates/registration/register.html:9
-#: templates/registration/register.html:9
-msgid "Account Registration"
-msgstr "Prijava računa"
-
-#: djamnedlies-git/templates/registration/register.html:13
-#: templates/registration/register.html:13
-msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
-msgstr "Vpisati za račun se je mogoče tukaj. Vpis ima prednosti le za tiste, ki nameravajo prevajati programe GNOME namizja."
-
-#: djamnedlies-git/templates/registration/register.html:14
-#: templates/registration/register.html:14
-msgid "After registration and connection, you will be able to join an existing team from your profile page."
-msgstr "Po vpisu in povezavi se boste lahko pridružili obstoječi skupini preko vašega profila."
-
-#: djamnedlies-git/templates/registration/register.html:28
-#: templates/registration/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "Overitev preko OpenID <strong>ali</strong> gesla:"
-
-#: djamnedlies-git/templates/registration/register.html:34
-#: templates/registration/register.html:34
-msgid "Register with OpenID"
-msgstr "Prijava z OpenID"
-
-#: djamnedlies-git/templates/registration/register.html:46
-#: templates/registration/register.html:46
-msgid "Register with password"
-msgstr "Prijava z geslom"
-
-#: djamnedlies-git/templates/registration/register_success.html:8
-#: templates/registration/register_success.html:8
-msgid "Registration Success"
-msgstr "Prijava je uspela"
-
-#: djamnedlies-git/templates/registration/register_success.html:10
-#: templates/registration/register_success.html:10
-msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
-msgstr "Vpis je bil uspešno zaključen. Prejeli boste elektronsko pošto s povezavo za overitev vašega računa."
-
-#: djamnedlies-git/templates/teams/team_base.html:6
-#: templates/teams/team_base.html:7
-msgid "Details"
-msgstr "Podrobnosti"
-
-#: djamnedlies-git/templates/teams/team_base.html:9
-#: templates/teams/team_base.html:14
-#, python-format
-msgid "%(lang)s Translation Team Page:"
-msgstr "Spletna stran skupine za %(lang)s jezik:"
-
-#: djamnedlies-git/templates/teams/team_base.html:13
-#: templates/teams/team_base.html:18
-msgid "Bugzilla:"
-msgstr "Bugzilla:"
-
-#: djamnedlies-git/templates/teams/team_base.html:15
-#: templates/teams/team_base.html:20
-msgid "Report Bug in Translation"
-msgstr "Pošlji poročilo o hrošču v prevodu"
-
-#: djamnedlies-git/templates/teams/team_base.html:16
-#: templates/teams/team_base.html:21
-msgid "Show Existing Bugs"
-msgstr "Pokaži obstoječe hrošče"
-
-#: djamnedlies-git/templates/teams/team_base.html:20
-#: templates/teams/team_base.html:25
-msgid "Mailing List:"
-msgstr "Dopisni seznam:"
-
-#: djamnedlies-git/templates/teams/team_base.html:22
-#: templates/teams/team_base.html:27
-msgid "Send e-mail to the list"
-msgstr "Pošlji sporočilo na dopisni seznam"
-
-#: djamnedlies-git/templates/teams/team_base.html:24
-#: templates/teams/team_base.html:29
-msgid "Subscribe"
-msgstr "Naroči se na dopisni seznam"
-
-#: djamnedlies-git/templates/teams/team_detail.html:5
-#, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
-
-#: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:40
-#: templates/teams/team_edit.html:16
-#, python-format
-msgid "%(lang)s Translation Team"
-msgstr "Skupina za %(lang)s jezik"
-
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/languages/language_release_summary.html:9
-msgid "Release"
-msgstr "Objava"
-
-#: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:66
-msgid "Team membership"
-msgstr "Članstvo"
-
-#: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:77
-msgid "Apply modifications"
-msgstr "Uporabi spremembe"
-
-#: djamnedlies-git/templates/teams/team_list.html:4
-#: djamnedlies-git/templates/teams/team_list.html:9
-#: templates/teams/team_list.html:4
-#: templates/teams/team_list.html.py:9
-msgid "GNOME Translation Teams"
-msgstr "Prevajalske skupine namizja GNOME"
-
-#: djamnedlies-git/templates/teams/team_list.html:12
-#: templates/teams/team_list.html:12
-msgid "Select a team below to see more information about it:"
-msgstr "Izberite skupino jezika za prikaz podrobnosti skupine:"
-
-#: djamnedlies-git/templates/teams/team_list.html:25
-#: templates/teams/team_list.html:25
-#, python-format
-msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
-msgstr "Nadzornik <a href=\"%(url)s\">%(name)s</a>"
-
-#: djamnedlies-git/templates/teams/team_list.html:34
-#: templates/teams/team_list.html:34
-msgid "There are currently no translation teams in GNOME. :("
-msgstr "Trenutno ni skupin za prevajanje v GNOME. :("
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
-#: templates/vertimus/vertimus_detail.html:6
-#, python-format
-msgid "Module Translation: %(name)s"
-msgstr "Prevod modula: %(name)s"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
-#: templates/vertimus/vertimus_detail.html:27
-msgid "Used in release(s):"
-msgstr "Uporabljeno v objavah:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
-#: templates/vertimus/vertimus_detail.html:45
-msgid "State:"
-msgstr "Stanje:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:65
-msgid "Download PO file"
-msgstr "Prenos po datoteke"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:65
-msgid "Translated:"
-msgstr "Prevedeno:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:95
-msgid "On-going activities in same module:"
-msgstr "Trenutne dejavnosti modula:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
-msgid "Action History"
-msgstr "Zgodovina dejanj"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:149
-msgid "diff with:"
-msgstr "primerjaj z:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:172
-msgid "New Action"
-msgstr "Novo dejanje"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:182
-msgid "Submit"
-msgstr "Pošlji"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:187
-#, python-format
-msgid "You need to be authenticated and to be member of the %(team_name)s team."
-msgstr "Pred nadaljevanjem morajo biti vaši podatki overjeni in biti morate član skupine za %(team_name)s jezik."
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
-#: templates/vertimus/vertimus_diff.html:5
-msgid "Diff between po files"
-msgstr "Primerjava med po datotekami"
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
-#: templates/vertimus/vertimus_diff.html:16
-msgid "&lt;- Back to actions"
-msgstr "&lt;- Nazaj na dejanja"
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
-#: templates/vertimus/vertimus_diff.html:20
-msgid "Note: both files are merged with latest POT file."
-msgstr "Opomba: obe datoteki sta združeni z najnovejšo POT datoteko."
-
-#: djamnedlies-git/vertimus/feeds.py:43
-#: vertimus/feeds.py:43
-#, python-format
-msgid "%(site)s - Vertimus actions for the %(lang)s language"
-msgstr "%(site)s - Vertimus dejanja za %(lang)s jezik"
-
-#: djamnedlies-git/vertimus/feeds.py:52
-#: vertimus/feeds.py:52
-#, python-format
-msgid "Latest actions of the GNOME Translation Project for the %s language"
-msgstr "Zadnja dejanja projekta prevajanja GNOME za %s jezik"
-
-#: djamnedlies-git/vertimus/feeds.py:88
-#: vertimus/feeds.py:89
-#, python-format
-msgid "%(site)s - Vertimus actions of the %(lang)s team"
-msgstr "%(site)s - Vertimus dejanja skupine za %(lang)s jezik"
-
-#: djamnedlies-git/vertimus/feeds.py:97
-#: vertimus/feeds.py:98
-#, python-format
-msgid "Latest actions made by the %s team of the GNOME Translation Project"
-msgstr "Zadnja dejanja skupine %s pri GNOME projektu slovenjenja"
-
-#: djamnedlies-git/vertimus/forms.py:38
-#: vertimus/forms.py:38
-msgid "Action"
-msgstr "Dejanje"
-
-#: djamnedlies-git/vertimus/forms.py:42
-#: vertimus/forms.py:42
-msgid "Comment"
-msgstr "Opomba"
-
-#: djamnedlies-git/vertimus/forms.py:47
-#: vertimus/forms.py:47
-msgid "File"
-msgstr "Datoteka"
-
-#: djamnedlies-git/vertimus/forms.py:48
-#: vertimus/forms.py:48
-msgid "Upload a .po, .gz, .bz2 or .png file"
-msgstr "Pošiljanje .po, .gz, .bz2 ali .png datoteke"
-
-#: djamnedlies-git/vertimus/forms.py:59
-#: vertimus/forms.py:59
-msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
-msgstr "Sprejete so le datoteke s končnicami .po, .gz, .bz2 ali .png."
-
-#: djamnedlies-git/vertimus/forms.py:64
-#: vertimus/forms.py:64
-msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr ".po datoteka ni prestala preizkusa z ukazom 'msgfmt -vc'. Popravite datoteko in poskusite znova."
-
-#: djamnedlies-git/vertimus/forms.py:74
-#: vertimus/forms.py:77
-msgid "A comment or a file is needed for this action."
-msgstr "Opomba ali datoteka je zahtevana za to dejanje."
-
-#: djamnedlies-git/vertimus/forms.py:77
-#: vertimus/forms.py:80
-msgid "A file is needed for this action."
-msgstr "Za dejanje morate izbrati tudi datoteko."
-
-#: djamnedlies-git/vertimus/forms.py:80
-#: vertimus/forms.py:83
-msgid "Please, don't send a file with a 'Reserve' action."
-msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
-
-#: djamnedlies-git/vertimus/models.py:139
-#: vertimus/models.py:163
-msgid "Inactive"
-msgstr "Nedejavno"
-
-#: djamnedlies-git/vertimus/models.py:152
-#: vertimus/models.py:176
-msgid "Translating"
-msgstr "Prevajanje"
-
-#: djamnedlies-git/vertimus/models.py:182
-#: vertimus/models.py:206
-msgid "Proofreading"
-msgstr "Jezikovno pregledovanje"
-
-#. Translators: This is a status, not a verb
-#: djamnedlies-git/vertimus/models.py:197
-#: vertimus/models.py:221
-msgid "Proofread"
-msgstr "Jezikovno pregledano"
-
-#: djamnedlies-git/vertimus/models.py:212
-#: vertimus/models.py:236
-msgid "To Review"
-msgstr "Za pregled"
-
-#: djamnedlies-git/vertimus/models.py:224
-#: vertimus/models.py:248
-msgid "To Commit"
-msgstr "Za uveljavitev"
-
-#: djamnedlies-git/vertimus/models.py:239
-#: vertimus/models.py:263
-msgid "Committing"
-msgstr "Uveljavljanje"
-
-#: djamnedlies-git/vertimus/models.py:253
-#: vertimus/models.py:277
-msgid "Committed"
-msgstr "Uveljavljeno"
-
-#: djamnedlies-git/vertimus/models.py:341
-#: vertimus/models.py:322
-msgid "File in repository"
-msgstr "Datoteka v skladišču"
-
-#: djamnedlies-git/vertimus/models.py:348
-#: djamnedlies-git/vertimus/views.py:130
-#: djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146
-#: vertimus/models.py:334
-#: vertimus/views.py:160
-#: vertimus/views.py:166
-#: vertimus/views.py:176
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "Poslal %(name)s dne %(date)s"
-
-#: djamnedlies-git/vertimus/models.py:460
-#: vertimus/models.py:520
-#, python-format
-msgid ""
-"Hello,\n"
-"\n"
-"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.\n"
-"%(url)s\n"
-"\n"
-msgstr ""
-"Pozdravljeni,\n"
-"\n"
-"Novo stanje %(module)s - %(branch)s - %(domain)s (%(language)s) je sedaj '%(new_state)s'.\n"
-"%(url)s\n"
-"\n"
-
-#: djamnedlies-git/vertimus/models.py:473
-#: djamnedlies-git/vertimus/models.py:523
-#: vertimus/models.py:533
-#: vertimus/models.py:583
-msgid "Without comment"
-msgstr "Brez opomb"
-
-#: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525
-#: teams/models.py:200
-#: vertimus/models.py:535
-#: vertimus/models.py:585
-#, python-format
-msgid "This is an automated message sent from %s."
-msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
-
-#: djamnedlies-git/vertimus/models.py:482
-#: vertimus/models.py:542
-msgid "Write a comment"
-msgstr "Zapiši opombo"
-
-#: djamnedlies-git/vertimus/models.py:511
-#: vertimus/models.py:571
-#, python-format
-msgid ""
-"Hello,\n"
-"\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
-"%(url)s\n"
-"\n"
-msgstr ""
-"Pozdravljeni,\n"
-"\n"
-"nova opomba je zabeležena pri %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
-"%(url)s\n"
-"\n"
-
-#: djamnedlies-git/vertimus/models.py:533
-#: vertimus/models.py:593
-msgid "Reserve for translation"
-msgstr "Pridrži za prevajanje"
-
-#: djamnedlies-git/vertimus/models.py:545
-#: vertimus/models.py:605
-msgid "Upload the new translation"
-msgstr "Pošlji novi prevod"
-
-#: djamnedlies-git/vertimus/models.py:560
-#: vertimus/models.py:620
-msgid "Reserve for proofreading"
-msgstr "Pridrži za jezikovni pregled"
-
-#: djamnedlies-git/vertimus/models.py:572
-#: vertimus/models.py:632
-msgid "Upload the proofread translation"
-msgstr "Naloži jezikovno pregledan prevod"
-
-#. Translators: this means the file is ready to be committed in repository
-#: djamnedlies-git/vertimus/models.py:588
-#: vertimus/models.py:648
-msgid "Ready for submission"
-msgstr "Pripravljeno za pošiljanje"
-
-#: djamnedlies-git/vertimus/models.py:604
-#: vertimus/models.py:664
-msgid "Submit to repository"
-msgstr "Pošlji v skladišče"
-
-#. Commit failed, state unchanged
-#: djamnedlies-git/vertimus/models.py:618
-#: vertimus/models.py:678
-#, python-format
-msgid "The commit failed. The error was: '%s'"
-msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
-
-#. Translators: this indicates a committer is going to commit the file in the repository
-#: djamnedlies-git/vertimus/models.py:628
-#: vertimus/models.py:688
-msgid "Reserve to submit"
-msgstr "Pridržano za pošiljanje"
-
-#. Translators: this is used to indicate the file has been committed in the repository
-#: djamnedlies-git/vertimus/models.py:641
-#: vertimus/models.py:701
-msgid "Inform of submission"
-msgstr "Obvesti o pošiljanju"
-
-#. Translators: regardless of the translation completion, this file need to be reviewed
-#: djamnedlies-git/vertimus/models.py:656
-#: vertimus/models.py:716
-msgid "Review required"
-msgstr "Jezikiovni pregled"
-
-#: djamnedlies-git/vertimus/models.py:695
-msgid "Backup the actions"
-msgstr "Napravi varnostno kopijo dejanja"
-
-#: djamnedlies-git/vertimus/models.py:734
-#: vertimus/models.py:770
-msgid "Undo the last state change"
-msgstr "Razveljavi zadnjo spremembo stanja"
-
-#: djamnedlies-git/vertimus/views.py:129
-#: djamnedlies-git/vertimus/views.py:161
-#: vertimus/views.py:159
-#: vertimus/views.py:191
-#, python-format
-msgid "Error: The file %s contains invalid characters."
-msgstr "Napaka: Datoteka %s vsebuje neveljavne znake."
-
-#: djamnedlies-git/vertimus/views.py:152
-#: vertimus/views.py:182
-#, python-format
-msgid "Latest committed file for %(lang)s"
-msgstr "Zadnje uveljavljena datoteka za %(lang)s"
-
-#: djamnedlies-git/vertimus/views.py:155
-#: vertimus/views.py:185
-msgid "Latest POT file"
-msgstr "Najnovejša POT datoteka"
-
-#. Translators: this concerns an unknown plural form
-#: languages/models.py:54
-msgid "Unknown"
-msgstr "Neznano"
-
-#: languages/views.py:80
-#: templates/release_detail.html:66
-msgid "Original strings"
-msgstr "Osnovni niz"
-
-#: people/views.py:88
-msgid "A new person joined your team"
-msgstr "Nova oseba se je pridružila skupini."
-
-#: people/views.py:89
-#, python-format
-msgid "%(name)s has just joined your translation team on %(site)s"
-msgstr "%(name)s se je pridružil prevajalski skupini preko %(site)s"
-
-#: stats/models.py:353
-msgid "Can't generate POT file, statistics aborted."
-msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
-
-#: stats/models.py:714
-#, python-format
-msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
-msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
-
-#: stats/models.py:1178
-msgid "This POT file has not been generated through the standard intltool method."
-msgstr "Datoteka POT ni ustvarjena preko običajnega intltool načina."
-
-#: stats/models.py:1179
-msgid "This POT file has not been generated through the standard gnome-doc-utils method."
-msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
 #: stats/utils.py:324
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
@@ -2858,6 +1532,10 @@ msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zaht
 #: stats/utils.py:331
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
+
+#: stats/utils.py:333
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
 #: teams/models.py:89
 msgid "Presentation"
@@ -2871,43 +1549,699 @@ msgstr "Dopisni seznam"
 msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
+#: teams/models.py:200
+#: vertimus/models.py:535
+#: vertimus/models.py:585
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
+
+#: teams/models.py:218
+#, python-format
+msgid "No team for locale %s"
+msgstr "Ni skupine za %s jezik"
+
+#: teams/models.py:238
+msgid "Translator"
+msgstr "Prevajalec"
+
+#: teams/models.py:239
+msgid "Reviewer"
+msgstr "Pregledovalec"
+
+#: teams/models.py:240
+msgid "Committer"
+msgstr "Uveljavitelj"
+
+#: teams/models.py:241
+#: templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "Nadzornik"
+
+#: teams/views.py:55
+msgid "Committers"
+msgstr "Uveljavitelji"
+
+#: teams/views.py:58
+msgid "No committers"
+msgstr "Ni uveljaviteljev"
+
+#: teams/views.py:60
+msgid "Reviewers"
+msgstr "Pregledovalci"
+
+#: teams/views.py:63
+msgid "No reviewers"
+msgstr "Ni prijavljenih pregledovalcev"
+
+#: teams/views.py:65
+msgid "Translators"
+msgstr "Prevajalci"
+
+#: teams/views.py:68
+msgid "No translators"
+msgstr "Ni prijavljenih prevajalcev"
+
+#: templates/404.html:4
+#: templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "Napaka: strani ni mogoče najti"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "Strani, ki jo želite obiskati, ni mogoče najti na strežniku."
+
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "Napaka: napaka na strežniku (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "Strežniška napaka"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "Prišlo je do napake strežnika."
+
+#: templates/base.html:26
+#: templates/base.html.py:42
+msgid "Home"
+msgstr "Domov"
+
+#: templates/base.html:27
+msgid "News"
+msgstr "Novice"
+
+#: templates/base.html:28
+msgid "Projects"
+msgstr "Projekti"
+
+#: templates/base.html:29
+msgid "Art"
+msgstr "Oblikovanje"
+
+#: templates/base.html:30
+msgid "Support"
+msgstr "Podpora"
+
+#: templates/base.html:31
+msgid "Development"
+msgstr "Razvoj"
+
+#: templates/base.html:32
+msgid "Community"
+msgstr "Skupnost"
+
+#: templates/base.html:42
+msgid "Back to Damned Lies home page"
+msgstr "Nazaj na osnovno domačo stran"
+
+#: templates/base.html:48
+#: templates/index.html:13
+msgid "Teams"
+msgstr "Skupine"
+
+#: templates/base.html:53
+#: templates/index.html:27
+#: templates/release_compare.html:25
+msgid "Languages"
+msgstr "Jeziki"
+
+#: templates/base.html:58
+msgid "Release sets"
+msgstr "Objave"
+
+#: templates/base.html:63
+#: templates/index.html:43
+msgid "Modules"
+msgstr "Moduli"
+
+#: templates/base.html:74
+msgid "Log out"
+msgstr "Odjava"
+
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
 msgstr "Avtorske pravice &copy; 2006-2009"
+
+#: templates/base.html:94
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
+#: templates/base.html:96
+msgid "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgstr "Upravljano preko <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> modula na <a href='http://git.gnome.org/'>git.gnome.org</a>"
+
+#: templates/base.html:98
+msgid "Hosted by"
+msgstr "Spletišče gosti"
+
+#: templates/branch_detail.html:4
+msgid "This branch is currently string-frozen."
+msgstr "Beja je trenutno zamrznjena za pravajanje."
+
+#: templates/branch_detail.html:13
+msgid "Translation"
+msgstr "Prevod"
+
+#: templates/error.html:4
+#: templates/index.html:4
+#: templates/index.html.py:9
+#: templates/login.html:4
+#: templates/registration/register.html:4
+#: templates/registration/register_success.html:4
+msgid "Damned Lies about GNOME"
+msgstr "Presnete laži o namizju GNOME"
+
+#: templates/error.html:9
+msgid "Error:"
+msgstr "Napaka:"
+
+#: templates/index.html:14
+msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
+msgstr "Seznam vseh prevajalskih skupin namizja GNOME s podrobnostmi o prevajalcih, spletnih straneh in dopisnih seznamih."
+
+#: templates/index.html:15
+msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
+msgstr "V kolikor skupina za jezik še ne obstaja, je mogoče enostavno <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>ustvariti novo skupino</a>."
 
 #: templates/index.html:19
 #, python-format
 msgid "Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us to translate GNOME!"
 msgstr "Obiščite spletne strani in se pridružite <a href='%(team_url)s'>%(language_name)s skupini</a>!"
 
+#: templates/index.html:29
+#, python-format
+msgid "List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> for."
+msgstr "Seznam vseh jezikov za katere je bila ustvarjena <a href='%(teams_url)s'>prevajalska skupina</a>."
+
+#: templates/index.html:30
+msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
+msgstr "Nekatere skupine prevajajo več kot en jezik, katerih prevode si je mogoče ogledati."
+
+#: templates/index.html:34
+msgid "Release Sets"
+msgstr "Objave"
+
+#: templates/index.html:35
+msgid "List of all GNOME release sets and releases we gather stats for."
+msgstr "Seznam vseh objavljenih projektov za katere se vodi statistika."
+
 #: templates/index.html:37
 msgid "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME 2.26&quot;."
 msgstr "Primeri objave so na primer &quot;GNOME Spletne strani&quot; ali &quot;GNOME 2.30&quot;."
+
+#: templates/index.html:38
+msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+msgstr "Uradne objave GNOME so razdeljene v kategorije, kot so na primer &quot;namizni programi&quot; in &quot;razvojno okolje&quot;."
+
+#: templates/index.html:40
+msgid "Look here if you want to compare language support in any of these release sets."
+msgstr "Na teh straneh si je mogoče ogledati jezikovno podporo za posamezno objavo."
+
+#: templates/index.html:44
+msgid "List of all modules with statistics in here."
+msgstr "Seznam vseh programskih paketov, ki jih je mogoče prevajati."
+
+#: templates/index.html:46
+msgid "Modules are separate libraries or applications, with one or more branches of development included."
+msgstr "Moduli so ločene knjižnice in programi z eno ali več razvojnimi vejami."
 
 #: templates/index.html:47
 msgid "They are usually taken from the Git repository, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
 msgstr "Običajno so povzeti iz skladišča Git, o njih pa se hranijo vsi pomembni podatki (podrobnosti Bugzille, spletna stran, nadzornik, ...)."
 
+#: templates/index.html:53
+msgid "Translated by:"
+msgstr "Prevevaja:"
+
+#: templates/login.html:10
+#: templates/registration/register.html:11
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "Trenutno ste prijavljeni kot %(username)s."
+
+#: templates/login.html:13
+#, python-format
+msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
+msgstr "V primeru, da računa še niste ustvarili, se lahko <a href='%(link)s'>vpišete</a> za nov račun."
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "Ali ste pozabili vaše geslo?"
+
+#: templates/module_detail.html:6
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "Statistika modula: %(name)s"
+
+#: templates/module_detail.html:55
+msgid "Maintainers"
+msgstr "Vzdrževlec"
+
+#: templates/module_detail.html:63
+msgid "Bug reporting"
+msgstr "Prijavljanje napak"
+
+#: templates/module_detail.html:66
+msgid "Show existing i18n and l10n bugs"
+msgstr "Pokaži obstoječe i18n in l10n hrošče"
+
 #: templates/module_detail.html:68
 msgid "Report a bug"
 msgstr "Pošlji poročilo o hrošču"
+
+#: templates/module_detail.html:77
+msgid "Branches:"
+msgstr "Veje:"
+
+#: templates/module_detail.html:97
+msgid "Browse Repository"
+msgstr "Prebrskaj skladišče"
+
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
+msgstr "Stanje shem v dokumentaciji modula: %(name)s"
+
+#: templates/module_images.html:12
+msgid "Figures translation status"
+msgstr "Stanje prevodov shem"
+
+#: templates/module_images.html:17
+msgid "Original"
+msgstr "Izvorno"
+
+#: templates/module_images.html:30
+msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
+msgstr "Prevedeno, vendar uporablja uradno shemo (mora shema ne vključuje besedila za prevajanje)"
+
+#: templates/module_images.html:34
+msgid "Fuzzy"
+msgstr "Ohlapno"
+
+#: templates/module_images.html:39
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
+msgstr "Ni obstoječe datoteke (&quot;Tehnicčno&quot; ohlapno)"
+
+#: templates/module_images.html:42
+msgid "Not translated"
+msgstr "Neprevedeno"
+
+#: templates/module_list.html:4
+#: templates/module_list.html.py:9
+msgid "GNOME Modules"
+msgstr "GNOME moduli"
+
+#: templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr "Izberite modul za pregled podrobnosti prevoda:"
+
+#: templates/release_compare.html:5
+#: templates/release_compare.html.py:20
+msgid "Releases Comparison"
+msgstr "Primerjava objav"
+
+#: templates/release_detail.html:10
+#, python-format
+msgid "%(name)s Release"
+msgstr "%(name)s objava"
 
 #: templates/release_detail.html:13
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
 msgstr "Moduli te objave niso del GNOME Git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
+#: templates/release_detail.html:19
+#: templates/stats_show.html:30
+msgid "Language"
+msgstr "Jezik"
+
+#: templates/release_detail.html:20
+#: templates/release_detail.html.py:67
+#: templates/languages/language_release_summary.html:9
+msgid "User Interface"
+msgstr "Uporabniški vmesnik "
+
+#: templates/release_detail.html:21
+#: templates/release_detail.html.py:23
+#: templates/stats_show.html:34
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
+msgid "Graph"
+msgstr "Graf"
+
+#: templates/release_list.html:4
+#: templates/release_list.html.py:9
+msgid "GNOME Releases"
+msgstr "GNOME objave"
+
+#: templates/release_list.html:11
+msgid "Select a release or a release set below to see more details about it:"
+msgstr "Izberite objavo za več podrobnosti:"
+
 #: templates/release_list.html:25
 msgid "Older Releases"
 msgstr "Starejše objave"
+
+#: templates/stats_show.html:13
+#: templates/vertimus/vertimus_detail.html:61
+msgid "Download POT file"
+msgstr "Prenos pot datoteke"
+
+#: templates/stats_show.html:17
+#: templates/vertimus/vertimus_detail.html:81
+msgid "Notices"
+msgstr "Oobvestila"
+
+#: templates/stats_show.html:30
+#: vertimus/models.py:189
+msgid "Translated"
+msgstr "Prevedeno"
+
+#: templates/stats_show.html:50
+#: templates/vertimus/vertimus_detail.html:75
+msgid "Display document figures"
+msgstr "Pokaži sheme dokumentov"
+
+#: templates/admin/base_site.html:4
+msgid "Damned Lies site admin"
+msgstr "Upravljanje spletišča presnetih laži"
+
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:160
+msgid "No comment"
+msgstr "Ni opomb"
+
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:20
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
+msgid "All modules"
+msgstr "Pokaži vse"
+
+#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_release.html:25
+msgid "Hide completed modules"
+msgstr "Skrij končane prevode"
+
+#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_release.html:29
+msgid "Show completed modules"
+msgstr "Pokaži tudi končane prevode"
+
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
+msgid "GNOME Languages"
+msgstr "GNOME jeziki"
+
+#: templates/languages/language_list.html:11
+#, python-format
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "Namizje GNOME se prevaja v %(numb)s jezikov.\n"
+msgstr[1] "Namizje GNOME se prevaja v %(numb)s jezik.\n"
+msgstr[2] "Namizje GNOME se prevaja v %(numb)s jezika.\n"
+msgstr[3] "Namizje GNOME se prevaja v %(numb)s jezike.\n"
 
 #: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
 msgstr "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "Prenos vseh po datotek."
+
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:54
+msgid "Module"
+msgstr "Modul"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Veja"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "Statistika"
+
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "Stanje"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:54
+msgid "Date"
+msgstr "Datum"
+
+#: templates/languages/language_release_stats.html:32
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr "%(categname)s (%(percentage)s% prevedeno)"
+
+#: templates/languages/language_release_stats.html:103
+msgid "Error summary"
+msgstr "Povzetek napak"
+
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "Objava"
+
+#: templates/people/person_base.html:5
+msgid "GNOME Contributor"
+msgstr "Gnome sodelavec"
+
+#: templates/people/person_base.html:12
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "Spreminjanje podrobnosti"
+
+#: templates/people/person_base.html:13
+msgid "Change your password"
+msgstr "Spreminjanje gesla"
+
+#: templates/people/person_base.html:14
+msgid "Join a team"
+msgstr "Pridružitev k skupini"
+
+#: templates/people/person_detail.html:22
+msgid "Site Language:"
+msgstr "Jezik spletišča:"
+
+#: templates/people/person_detail.html:33
+msgid "Choose"
+msgstr "Izbor"
+
+#: templates/people/person_detail.html:39
+msgid "Maintains:"
+msgstr "Vzdrževalec:"
+
+#: templates/people/person_detail.html:50
+msgid "Working on"
+msgstr "Delo na"
+
+#: templates/people/person_detail.html:54
+msgid "State"
+msgstr "Stanje"
+
+#: templates/people/person_detail_change_form.html:13
+#: templates/teams/team_edit.html:27
+msgid "Save"
+msgstr "Shrani"
+
+#: templates/people/person_list.html:4
+#: templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "Gnome sodelavci"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "Okolje GNOME razvijajo :"
+
+#: templates/people/person_overview.html:27
+msgid "Instant messaging:"
+msgstr "Trenutno sporočanje:"
+
+#: templates/people/person_overview.html:34
+msgid "Bugzilla account:"
+msgstr "Bugzilla račun:"
+
+#: templates/people/person_password_change_form.html:6
+msgid "Password change"
+msgstr "Sprememba gesla"
+
+#: templates/people/person_password_change_form.html:8
+msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Vnesite staro geslo zaradi varnostnih razlogov in nato vnesite novo geslo dvakrat zapored. S tem preverite ali je geslo vpisano pravilno."
+
+#: templates/people/person_password_change_form.html:15
+msgid "Old password:"
+msgstr "Staro geslo:"
+
+#: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
+msgid "New password:"
+msgstr "Novo geslo:"
+
+#: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
+msgid "Change my password"
+msgstr "Spremeni geslo"
+
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "Pridruži se skupini"
+
+#: templates/people/person_team_join_form.html:11
+msgid "I would like to join the following team as 'translator':"
+msgstr "Kot 'prevajalec' bi se rad pridružil skupini:"
+
+#: templates/people/person_team_join_form.html:13
+msgid "Join"
+msgstr "Pridruži se"
+
+#: templates/people/person_team_membership.html:5
+msgid "Member of teams"
+msgstr "Član skupin"
+
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "Član med (%(role_name)s) skupine za %(team_name)s jezik"
+
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr "Zapusti"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "Ali ste prepričani, da želite zapustiti skupino?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Končano izbrisanje gesla"
+
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "Geslo je bilo spremenjeno. Sedaj se lahko prijavite."
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "Ponovna nastavitev gesla"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Vnesite novo geslo"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid "Please enter your new password twice so we can verify you typed it in correctly."
+msgstr "Vnesite novo geslo dvakrat, da lahko potrdimo pravilni zapis gesla."
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Neuspešno izbrisanje gesla"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
+msgstr "Geslo za ponovno nastavitev gesla ni veljavno, ker je bilo že uporabljeno. Postopek spreminjanja gesla začnite znova."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "Uspešno izbrisanje gesla"
+
+#: templates/registration/password_reset_done.html:11
+msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
+msgstr "Na prijavni elektronski naslov smo vam poslali navodila za nastavitev gesla. Sporočilo bi moralo prispeti v kratkem."
+
+#: templates/registration/password_reset_form.html:11
+msgid "Forgotten your password? Enter your e-mail address below, and we'll e-mail instructions for setting a new one."
+msgstr "Ali ste pozabili geslo? Vnesite elektronski naslov in poslali vam bomo navodila za določitev novega gesla."
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "Elektronski naslov:"
+
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "Ponovna nastavitev gesla"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "Prijava računa"
+
+#: templates/registration/register.html:13
+msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
+msgstr "Vpisati za račun se je mogoče tukaj. Vpis ima prednosti le za tiste, ki nameravajo prevajati programe GNOME namizja."
+
+#: templates/registration/register.html:14
+msgid "After registration and connection, you will be able to join an existing team from your profile page."
+msgstr "Po vpisu in povezavi se boste lahko pridružili obstoječi skupini preko vašega profila."
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "Overitev preko OpenID <strong>ali</strong> gesla:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "Prijava z OpenID"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "Prijava z geslom"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "Prijava je uspela"
+
+#: templates/registration/register_success.html:10
+msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
+msgstr "Vpis je bil uspešno zaključen. Prejeli boste elektronsko pošto s povezavo za overitev vašega računa."
+
+#: templates/teams/team_base.html:7
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: templates/teams/team_base.html:14
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "Spletna stran skupine za %(lang)s jezik:"
+
+#: templates/teams/team_base.html:18
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: templates/teams/team_base.html:20
+msgid "Report Bug in Translation"
+msgstr "Pošlji poročilo o hrošču v prevodu"
+
+#: templates/teams/team_base.html:21
+msgid "Show Existing Bugs"
+msgstr "Pokaži obstoječe hrošče"
+
+#: templates/teams/team_base.html:25
+msgid "Mailing List:"
+msgstr "Dopisni seznam:"
+
+#: templates/teams/team_base.html:27
+msgid "Send e-mail to the list"
+msgstr "Pošlji sporočilo na dopisni seznam"
+
+#: templates/teams/team_base.html:29
+msgid "Subscribe"
+msgstr "Naroči se na dopisni seznam"
+
 #: templates/teams/team_detail.html:7
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
+
+#: templates/teams/team_detail.html:40
+#: templates/teams/team_edit.html:16
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "Skupina za %(lang)s jezik"
 
 #: templates/teams/team_detail.html:48
 msgid "There is currently no established team for this language. See <a href=\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> to get more information about the process of building a new translation team."
@@ -2921,13 +2255,64 @@ msgstr "Množinske oblike:"
 msgid "Archives"
 msgstr "Arhivi"
 
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "Članstvo"
+
+#: templates/teams/team_detail.html:77
+msgid "Apply modifications"
+msgstr "Uporabi spremembe"
+
 #: templates/teams/team_edit.html:23
 msgid "This team is using the Vertimus translation workflow"
 msgstr "Prevajalska skupina uporablja Vertimus za vodenje dela."
 
 #: templates/teams/team_edit.html:25
-msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax</a>"
+msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax"
 msgstr "Mogoče je uporabljati <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> skladnjo</a>"
+
+#: templates/teams/team_list.html:4
+#: templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "Prevajalske skupine namizja GNOME"
+
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "Izberite skupino jezika za prikaz podrobnosti skupine:"
+
+#: templates/teams/team_list.html:25
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "Nadzornik <a href=\"%(url)s\">%(name)s</a>"
+
+#: templates/teams/team_list.html:34
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "Trenutno ni skupin za prevajanje v GNOME. :("
+
+#: templates/vertimus/vertimus_detail.html:6
+#, python-format
+msgid "Module Translation: %(name)s"
+msgstr "Prevod modula: %(name)s"
+
+#: templates/vertimus/vertimus_detail.html:27
+msgid "Used in release(s):"
+msgstr "Uporabljeno v objavah:"
+
+#: templates/vertimus/vertimus_detail.html:45
+msgid "State:"
+msgstr "Stanje:"
+
+#: templates/vertimus/vertimus_detail.html:65
+msgid "Download PO file"
+msgstr "Prenos po datoteke"
+
+#: templates/vertimus/vertimus_detail.html:65
+msgid "Translated:"
+msgstr "Prevedeno:"
+
+#: templates/vertimus/vertimus_detail.html:95
+msgid "On-going activities in same module:"
+msgstr "Trenutne dejavnosti modula:"
 
 #: templates/vertimus/vertimus_detail.html:106
 msgid "Actions"
@@ -2950,18 +2335,287 @@ msgstr "(Vrni na trenutno)"
 msgid "(Previous action history)"
 msgstr "(Predhodna zgodovina dejanj)"
 
+#: templates/vertimus/vertimus_detail.html:149
+msgid "diff with:"
+msgstr "primerjaj z:"
+
 #: templates/vertimus/vertimus_detail.html:168
 msgid "No current actions."
 msgstr "Ni trenutnih dejanj."
+
+#: templates/vertimus/vertimus_detail.html:172
+msgid "New Action"
+msgstr "Novo dejanje"
+
+#: templates/vertimus/vertimus_detail.html:182
+msgid "Submit"
+msgstr "Pošlji"
+
+#: templates/vertimus/vertimus_detail.html:187
+#, python-format
+msgid "You need to be authenticated and to be member of the %(team_name)s team."
+msgstr "Pred nadaljevanjem morajo biti vaši podatki overjeni in biti morate član skupine za %(team_name)s jezik."
+
+#: templates/vertimus/vertimus_diff.html:5
+msgid "Diff between po files"
+msgstr "Primerjava med po datotekami"
+
+#: templates/vertimus/vertimus_diff.html:16
+msgid "&lt;- Back to actions"
+msgstr "&lt;- Nazaj na dejanja"
+
+#: templates/vertimus/vertimus_diff.html:20
+msgid "Note: both files are merged with latest POT file."
+msgstr "Opomba: obe datoteki sta združeni z najnovejšo POT datoteko."
+
+#: vertimus/feeds.py:43
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr "%(site)s - Vertimus dejanja za %(lang)s jezik"
+
+#: vertimus/feeds.py:52
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr "Zadnja dejanja projekta prevajanja GNOME za %s jezik"
+
+#: vertimus/feeds.py:89
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr "%(site)s - Vertimus dejanja skupine za %(lang)s jezik"
+
+#: vertimus/feeds.py:98
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr "Zadnja dejanja skupine %s pri GNOME projektu slovenjenja"
+
+#: vertimus/forms.py:38
+msgid "Action"
+msgstr "Dejanje"
+
+#: vertimus/forms.py:42
+msgid "Comment"
+msgstr "Opomba"
+
+#: vertimus/forms.py:47
+msgid "File"
+msgstr "Datoteka"
+
+#: vertimus/forms.py:48
+msgid "Upload a .po, .gz, .bz2 or .png file"
+msgstr "Pošiljanje .po, .gz, .bz2 ali .png datoteke"
+
+#: vertimus/forms.py:59
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "Sprejete so le datoteke s končnicami .po, .gz, .bz2 ali .png."
+
+#: vertimus/forms.py:64
+msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ".po datoteka ni prestala preizkusa z ukazom 'msgfmt -vc'. Popravite datoteko in poskusite znova."
 
 #: vertimus/forms.py:71
 msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Neveljavno dejanje. Najverjetneje je bilo pred tem dejanjem objavljeno drugo dejanje."
 
+#: vertimus/forms.py:77
+msgid "A comment or a file is needed for this action."
+msgstr "Opomba ali datoteka je zahtevana za to dejanje."
+
+#: vertimus/forms.py:80
+msgid "A file is needed for this action."
+msgstr "Za dejanje morate izbrati tudi datoteko."
+
+#: vertimus/forms.py:83
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
+
+#: vertimus/models.py:163
+msgid "Inactive"
+msgstr "Nedejavno"
+
+#: vertimus/models.py:176
+msgid "Translating"
+msgstr "Prevajanje"
+
+#: vertimus/models.py:206
+msgid "Proofreading"
+msgstr "Jezikovno pregledovanje"
+
+#. Translators: This is a status, not a verb
+#: vertimus/models.py:221
+msgid "Proofread"
+msgstr "Jezikovno pregledano"
+
+#: vertimus/models.py:236
+msgid "To Review"
+msgstr "Za pregled"
+
+#: vertimus/models.py:248
+msgid "To Commit"
+msgstr "Za uveljavitev"
+
+#: vertimus/models.py:263
+msgid "Committing"
+msgstr "Uveljavljanje"
+
+#: vertimus/models.py:277
+msgid "Committed"
+msgstr "Uveljavljeno"
+
+#: vertimus/models.py:322
+msgid "File in repository"
+msgstr "Datoteka v skladišču"
+
+#: vertimus/models.py:334
+#: vertimus/views.py:160
+#: vertimus/views.py:166
+#: vertimus/views.py:176
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "Poslal %(name)s dne %(date)s"
+
+#: vertimus/models.py:520
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Pozdravljeni,\n"
+"\n"
+"Novo stanje %(module)s - %(branch)s - %(domain)s (%(language)s) je sedaj '%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+
+#: vertimus/models.py:533
+#: vertimus/models.py:583
+msgid "Without comment"
+msgstr "Brez opomb"
+
+#: vertimus/models.py:542
+msgid "Write a comment"
+msgstr "Zapiši opombo"
+
+#: vertimus/models.py:571
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+"Pozdravljeni,\n"
+"\n"
+"nova opomba je zabeležena pri %(module)s - %(branch)s - %(domain)s (%(language)s).\n"
+"%(url)s\n"
+"\n"
+
+#: vertimus/models.py:593
+msgid "Reserve for translation"
+msgstr "Pridrži za prevajanje"
+
+#: vertimus/models.py:605
+msgid "Upload the new translation"
+msgstr "Pošlji novi prevod"
+
+#: vertimus/models.py:620
+msgid "Reserve for proofreading"
+msgstr "Pridrži za jezikovni pregled"
+
+#: vertimus/models.py:632
+msgid "Upload the proofread translation"
+msgstr "Naloži jezikovno pregledan prevod"
+
+#. Translators: this means the file is ready to be committed in repository
+#: vertimus/models.py:648
+msgid "Ready for submission"
+msgstr "Pripravljeno za pošiljanje"
+
+#: vertimus/models.py:664
+msgid "Submit to repository"
+msgstr "Pošlji v skladišče"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:678
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
+
+#. Translators: this indicates a committer is going to commit the file in the repository
+#: vertimus/models.py:688
+msgid "Reserve to submit"
+msgstr "Pridržano za pošiljanje"
+
+#. Translators: this is used to indicate the file has been committed in the repository
+#: vertimus/models.py:701
+msgid "Inform of submission"
+msgstr "Obvesti o pošiljanju"
+
+#. Translators: regardless of the translation completion, this file need to be reviewed
+#: vertimus/models.py:716
+msgid "Review required"
+msgstr "Jezikiovni pregled"
+
 #: vertimus/models.py:731
 msgid "Archive the actions"
 msgstr "Arhiviraj dejanja."
 
+#: vertimus/models.py:770
+msgid "Undo the last state change"
+msgstr "Razveljavi zadnjo spremembo stanja"
+
+#: vertimus/views.py:159
+#: vertimus/views.py:191
+#, python-format
+msgid "Error: The file %s contains invalid characters."
+msgstr "Napaka: Datoteka %s vsebuje neveljavne znake."
+
+#: vertimus/views.py:182
+#, python-format
+msgid "Latest committed file for %(lang)s"
+msgstr "Zadnje uveljavljena datoteka za %(lang)s"
+
+#: vertimus/views.py:185
+msgid "Latest POT file"
+msgstr "Najnovejša POT datoteka"
+
+#~ msgid ""
+#~ "Don't know where to look if this language is actually used, ask the "
+#~ "module maintainer."
+#~ msgstr ""
+#~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
+#~ msgid ""
+#~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
+#~ "Toe&quot; or &quot;GNOME 2.14&quot;."
+#~ msgstr ""
+#~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
+#~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
+#~ "veja&quot;."
+#~ msgid ""
+#~ "They are usually taken from CVS, and we keep all relevant information on "
+#~ "them (Bugzilla details, web page, maintainer information,...)."
+#~ msgstr ""
+#~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
+#~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
+#~ msgid "Report bugs to Bugzilla"
+#~ msgstr "Poročanje o hroščih preko Bugzillle"
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME SVN repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran "
+#~ "modula za podrobnosti o pošiljanju prevodov."
+#~ msgid "SVN account:"
+#~ msgstr "SVN račun:"
+#~ msgid ""
+#~ "Last actions made by the %(lang)s team of the GNOME translation project"
+#~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
+#~ msgid "Action History"
+#~ msgstr "Zgodovina dejanj"
+#~ msgid "Backup the actions"
+#~ msgstr "Napravi varnostno kopijo dejanja"
 #~ msgid "The Gimp Manual"
 #~ msgstr "Priročnik Gimp"
 #~ msgid "Git account:"
