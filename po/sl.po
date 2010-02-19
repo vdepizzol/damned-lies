@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-18 11:09+0000\n"
-"PO-Revision-Date: 2010-02-18 12:53+0100\n"
+"PO-Revision-Date: 2010-02-19 09:27+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "tamilski"
 
 #: database-content.py:16
 msgid "Yiddish"
-msgstr "jidiški"
+msgstr "jidiš"
 
 #: database-content.py:17
 msgid "Brazilian Portuguese"
@@ -198,7 +198,7 @@ msgstr "orijski"
 
 #: database-content.py:45
 msgid "Xhosa"
-msgstr "koski"
+msgstr "koški"
 
 #: database-content.py:46
 msgid "Northern Sotho"
@@ -1474,7 +1474,7 @@ msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 #: stats/utils.py:105
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
-msgstr ""
+msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
 #: djamnedlies-git/stats/utils.py:112
 #: stats/utils.py:130
@@ -1546,7 +1546,7 @@ msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
 #: djamnedlies-git/stats/utils.py:322
 msgid "Don't know where to look if this language is actually used, ask the module maintainer."
-msgstr ""
+msgstr "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
 
 #: djamnedlies-git/teams/models.py:112
 #: teams/models.py:218
@@ -1736,7 +1736,7 @@ msgstr "Spletišče gosti"
 #: djamnedlies-git/templates/branch_detail.html:4
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
-msgstr ""
+msgstr "Beja je trenutno zamrznjena za pravajanje."
 
 #: djamnedlies-git/templates/branch_detail.html:13
 #: templates/branch_detail.html:13
@@ -1801,7 +1801,7 @@ msgstr "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški paket
 #: djamnedlies-git/templates/index.html:31
 #: templates/index.html:38
 msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr ""
+msgstr "Uradne objave GNOME so razdeljene v kategorije, kot so na primer &quot;namizni programi&quot; in &quot;razvojno okolje&quot;."
 
 #: djamnedlies-git/templates/index.html:33
 #: templates/index.html:40
@@ -1816,11 +1816,11 @@ msgstr "Seznam vseh programskih paketov, ki jih je mogoče prevajati."
 #: djamnedlies-git/templates/index.html:39
 #: templates/index.html:46
 msgid "Modules are separate libraries or applications, with one or more branches of development included."
-msgstr ""
+msgstr "Moduli so ločene knjižnice in programi z eno ali več razvojnimi vejami."
 
 #: djamnedlies-git/templates/index.html:40
 msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr ""
+msgstr "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o paketih (Bugzilla, spletna stran, nadzornik, ...)."
 
 #: djamnedlies-git/templates/index.html:46
 #: templates/index.html:53
@@ -1924,7 +1924,7 @@ msgstr "Izvorno"
 #: djamnedlies-git/templates/module_images.html:32
 #: templates/module_images.html:30
 msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
-msgstr ""
+msgstr "Prevedeno, vendar uporablja uradno shemo (mora shema ne vključuje besedila za prevajanje)"
 
 #: djamnedlies-git/templates/module_images.html:36
 #: templates/module_images.html:34
@@ -1969,7 +1969,7 @@ msgstr "%(name)s objava"
 #: djamnedlies-git/templates/release_detail.html:13
 #: djamnedlies-git/templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr ""
+msgstr "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran modula za podrobnosti o pošiljanju prevodov."
 
 #: djamnedlies-git/templates/release_detail.html:19
 #: djamnedlies-git/templates/stats_show.html:30
@@ -2009,7 +2009,7 @@ msgstr "GNOME objave"
 #: djamnedlies-git/templates/release_list.html:11
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
-msgstr ""
+msgstr "Izberite objavo za več podrobnosti:"
 
 #: djamnedlies-git/templates/stats_show.html:13
 #: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
@@ -2927,7 +2927,7 @@ msgstr "Prevajalska skupina uporablja Vertimus za vodenje dela."
 
 #: templates/teams/team_edit.html:25
 msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax</a>"
-msgstr ""
+msgstr "Mogoče je uporabljati <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> skladnjo</a>"
 
 #: templates/vertimus/vertimus_detail.html:106
 msgid "Actions"
