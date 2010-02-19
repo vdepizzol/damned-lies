@@ -22,7 +22,7 @@ $(document).ready(function() {
   <tr><th>{{ form.mailing_list_subscribe.label }}:</th><td>{{ form.mailing_list_subscribe }}</td></tr>
   <tr><th></th><td>{{ form.use_workflow }} <label for="id_use_workflow">{% trans "This team is using the Vertimus translation workflow" %}</label>
   <tr><th valign="top"><span class="help">&nbsp;</span><br />{{ form.presentation.label }}:</th>
-      <td><span class="help">{% trans "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax</a>" %}<br />
+      <td><span class="help">{% trans "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax" %}<br />
           {{ form.presentation }}</td></tr>
   <tr><td colspan="2" align="right"><input type="submit" value="{% trans 'Save' %}"/></td></tr>
 </table>
