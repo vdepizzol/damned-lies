@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the damned-lies package.
 # Satoru SATOH <ss@gnome.gr.jp>, 2007.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2010.
+# OKANO Takayoshi <kano@na.rim.or.jp>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 20:10+0000\n"
-"PO-Revision-Date: 2010-02-09 23:38+0900\n"
-"Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
+"POT-Creation-Date: 2010-02-21 15:52+0000\n"
+"PO-Revision-Date: 2010-02-23 00:11+0900\n"
+"Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -883,13 +884,9 @@ msgstr "GST 共有フォルダマニュアル"
 msgid "GST Time Setup Manual"
 msgstr "GST 時刻設定マニュアル"
 
-#: database-content.py:217 djamnedlies-git/languages/views.py:50
-#: djamnedlies-git/languages/views.py:66
-#: djamnedlies-git/templates/branch_detail.html:23
-#: djamnedlies-git/templates/release_detail.html:22
-#: djamnedlies-git/templates/teams/team_detail.html:27 languages/views.py:50
-#: languages/views.py:83 templates/branch_detail.html:23
-#: templates/release_detail.html:22 templates/release_detail.html.py:68
+#: database-content.py:217 languages/views.py:50 languages/views.py:83
+#: templates/branch_detail.html:23 templates/release_detail.html:22
+#: templates/release_detail.html.py:68
 #: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -951,8 +948,7 @@ msgid "Beagle Desktop Search"
 msgstr "Beagle デスクトップ検索"
 
 # "Damned Lies" の訳語は ”嘘八百" だが...
-#: database-content.py:231 djamnedlies-git/templates/base.html:35
-#: djamnedlies-git/templates/admin/base_site.html:7 templates/base.html:35
+#: database-content.py:231 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "翻訳ステータス"
@@ -1015,7 +1011,7 @@ msgstr "GNOME ウェブ・フォト"
 
 #: database-content.py:246
 msgid ""
-"GNUCash is not part of the GNOME SVN repository. Please check <a href="
+"GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
 msgstr ""
@@ -1040,7 +1036,7 @@ msgid ""
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr ""
 "これはGNOME固有のモジュールではありません。<a href=\"http://"
-"translationproject.org\"Translation Project</a>から翻訳を送付してください。"
+"translationproject.org\">Translation Project</a>から翻訳を送付してください。"
 
 #: database-content.py:250
 msgid ""
@@ -1222,7 +1218,7 @@ msgstr "依存する外部モジュール (GNOME)"
 msgid "GNOME 2.30 (development)"
 msgstr "GNOME 2.30 (開発版)"
 
-#: settings.py:73 djamnedlies-git/settings_sample.py:80
+#: settings.py:73
 msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1238,18 +1234,19 @@ msgstr ""
 "このモジュールは GNOME Git リポジトリの一部ではありません。モジュールのウェブ"
 "ページで翻訳の送り先を確認してみて下さい。"
 
-#: common/views.py:35 djamnedlies-git/common/views.py:33
+#: common/views.py:35
 msgid "translator-credits"
 msgstr ""
 "Satoru SATOH <ss@gnome.gr.jp>\n"
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
+"OKANO Takayoshi <kano@na.rim.or.jp>\n"
 "日本GNOMEユーザー会 http://www.gnome.gr.jp/"
 
-#: common/views.py:60 djamnedlies-git/common/views.py:54
+#: common/views.py:60
 msgid "You have been logged out."
 msgstr "ログアウトしました。"
 
-#: common/views.py:68 djamnedlies-git/common/views.py:62
+#: common/views.py:68
 msgid "You have been successfully logged in."
 msgstr "ログインに成功しました。"
 
@@ -1262,76 +1259,105 @@ msgstr ""
 "あなたはまだどの翻訳チームにも参加していません。<a href=\"%(url)s\">あなたの"
 "プロフィール</a>から参加できます。"
 
-#: common/views.py:80 djamnedlies-git/common/views.py:69
+#: common/views.py:80
 msgid "We're sorry, but your account has been disabled."
 msgstr "申しわけありません。あなたのアカウントは使用できなくなっています。"
 
-#: common/views.py:82 djamnedlies-git/common/views.py:71
+#: common/views.py:82
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "ログインに失敗しました。ユーザー名とパスワードを確認してください。"
 
-#: common/views.py:122 djamnedlies-git/common/views.py:111
+#: common/views.py:122
 msgid "Your account has been activated."
 msgstr "あなたのアカウントが有効になりました。"
 
-#: djamnedlies-git/languages/views.py:49 djamnedlies-git/languages/views.py:65
-#: languages/views.py:49 languages/views.py:82
-msgid "UI Translations"
-msgstr "ユーザーインターフェースの翻訳"
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "あなたのユーザー名とパスワードでログイン:"
 
-#: djamnedlies-git/people/forms.py:14 people/forms.py:14
-msgid "Choose a username:"
-msgstr "ユーザー名を選んでください:"
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+msgid "Username:"
+msgstr "ユーザー名："
 
-#: djamnedlies-git/people/forms.py:15 people/forms.py:15
-msgid "May contain only letters, numbers, underscores or hyphens"
-msgstr "英字、数字、アンダースコア、およびハイフンのみが使えます"
-
-#: djamnedlies-git/people/forms.py:16 people/forms.py:16
-msgid "Email:"
-msgstr "メールアドレス:"
-
-#: djamnedlies-git/people/forms.py:17 djamnedlies-git/templates/login.html:37
-#: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:37
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: djamnedlies-git/people/forms.py:20 djamnedlies-git/templates/login.html:21
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20 templates/login.html:21
 msgid "Password:"
 msgstr "パスワード:"
 
-#: djamnedlies-git/people/forms.py:21 people/forms.py:21
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:77 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "ログイン"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "または OpenID で:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17 templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "OpenID でログイン"
+
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:54
+msgid "Unknown"
+msgstr "不明"
+
+#: languages/views.py:49 languages/views.py:82
+msgid "UI Translations"
+msgstr "ユーザーインターフェースの翻訳"
+
+#: languages/views.py:80 templates/release_detail.html:66
+msgid "Original strings"
+msgstr ""
+
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "ユーザー名を選んでください:"
+
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "英字、数字、アンダースコア、およびハイフンのみが使えます"
+
+#: people/forms.py:16
+msgid "Email:"
+msgstr "メールアドレス:"
+
+#: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "少なくとも7文字"
 
-#: djamnedlies-git/people/forms.py:23
-#: djamnedlies-git/templates/people/person_password_change_form.html:27
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:18
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "パスワードの確認:"
 
-#: djamnedlies-git/people/forms.py:31 people/forms.py:31
+#: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "このユーザー名は既に使われています。他のものを指定してください。"
 
-#: djamnedlies-git/people/forms.py:39 people/forms.py:39
+#: people/forms.py:39
 msgid "You must either provide an OpenID or a password"
 msgstr "OpenID またはパスワードを入力しなければなりません"
 
-#: djamnedlies-git/people/forms.py:42 people/forms.py:42
+#: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "パスワードがあっていません"
 
-#: djamnedlies-git/people/forms.py:65 people/forms.py:65
+#: people/forms.py:65
 msgid "Account activation"
 msgstr "アカウントの有効化"
 
-#: djamnedlies-git/people/forms.py:66 people/forms.py:66
+#: people/forms.py:66
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1339,66 +1365,75 @@ msgid ""
 "browser."
 msgstr ""
 
-#: djamnedlies-git/people/forms.py:68 people/forms.py:68
+#: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "%s の管理者"
 
-#: djamnedlies-git/people/models.py:36 people/models.py:36
+#: people/models.py:36
 msgid "Image"
 msgstr "画像"
 
-#: djamnedlies-git/people/models.py:37 people/models.py:37
+#: people/models.py:37
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "ハッカーゴッチの画像ファイル (.jpg .png など) の URL"
 
-#: djamnedlies-git/people/models.py:38 people/models.py:38 teams/models.py:89
+#: people/models.py:38 teams/models.py:91
 msgid "Web page"
 msgstr "ウェブページ"
 
-#: djamnedlies-git/people/models.py:39 people/models.py:39
+#: people/models.py:39
 msgid "IRC nickname"
 msgstr "IRC のニックネーム"
 
-#: djamnedlies-git/people/models.py:40 people/models.py:40
+#: people/models.py:40
 msgid "Bugzilla account"
 msgstr "Bugzilla アカウント:"
 
-#: djamnedlies-git/people/models.py:41 people/models.py:41
+#: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
 
-#: djamnedlies-git/people/views.py:86 people/views.py:87
+#: people/views.py:87
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "'%s' チームへの加入に成功しました。"
 
-#: djamnedlies-git/people/views.py:89 people/views.py:93
+#: people/views.py:88
+msgid "A new person joined your team"
+msgstr "新しいメンバーがあなたのチームに加わりました。"
+
+#: people/views.py:89
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "%(name)s が %(site)s 上のあなたの翻訳チームに参加しました。"
+
+#: people/views.py:93
 msgid "You are already member of this team."
 msgstr "既にこのチームのメンバーです。"
 
-#: djamnedlies-git/people/views.py:112 people/views.py:116
+#: people/views.py:116
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "'%s' チームから脱退しました。"
 
-#: djamnedlies-git/people/views.py:128 people/views.py:132
+#: people/views.py:132
 msgid "Your password has been changed."
 msgstr "パスワードを変更しました。"
 
-#: djamnedlies-git/stats/models.py:320 stats/models.py:351
+#: stats/models.py:351
 msgid "Can't generate POT file, using old one."
 msgstr "POT ファイルを生成できません。古いものを使います。"
 
-#: djamnedlies-git/stats/models.py:341 stats/models.py:373
+#: stats/models.py:353
+msgid "Can't generate POT file, statistics aborted."
+msgstr "POT ファイルを生成できません。統計処理を中断しました。"
+
+#: stats/models.py:373
 msgid "Can't copy new POT file to public location."
 msgstr "新しい POT ファイルをパブリックな場所にコピーできません。"
 
-#: djamnedlies-git/stats/models.py:380 stats/utils.py:333
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "DOC_LINGUAS リストにこの言語が含まれていません。"
-
-#: djamnedlies-git/stats/models.py:659 stats/models.py:692
+#: stats/models.py:692
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1409,1411 +1444,70 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906 stats/models.py:968
+#: stats/models.py:714
+#, python-format
+msgid ""
+"Entry for this language is not present in %(var)s variable in %(file)s file."
+msgstr "この言語のエントリがファイル %(file)s 中の変数 %(var)s にありません。"
+
+#: stats/models.py:968
 msgid "Administration Tools"
 msgstr "システム管理ツール"
 
-#: djamnedlies-git/stats/models.py:907 stats/models.py:969
+#: stats/models.py:969
 msgid "Development Tools"
 msgstr "開発ツール"
 
-#: djamnedlies-git/stats/models.py:908 stats/models.py:970
+#: stats/models.py:970
 msgid "GNOME Desktop"
 msgstr "GNOME デスクトップ"
 
-#: djamnedlies-git/stats/models.py:909 stats/models.py:971
+#: stats/models.py:971
 msgid "GNOME Developer Platform"
 msgstr "GNOME 開発プラットフォーム"
 
-#: djamnedlies-git/stats/models.py:910 stats/models.py:972
+#: stats/models.py:972
 msgid "New Module Proposals"
 msgstr "新しいモジュールの候補"
 
-#: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
 #: stats/models.py:1051 stats/models.py:1353
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017 stats/models.py:1084
+#: stats/models.py:1084
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 個のメッセージ"
 
-#: djamnedlies-git/stats/models.py:1018 stats/models.py:1085
+#: stats/models.py:1085
 #, python-format
 msgid "updated on %(date)s"
 msgstr "%(date)s に更新"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: djamnedlies-git/stats/models.py:1020
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
 #: stats/models.py:1087 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: djamnedlies-git/stats/models.py:1023 stats/models.py:1090
+#: stats/models.py:1090
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 個の画像"
 
-#: djamnedlies-git/stats/models.py:1024 stats/models.py:1091
+#: stats/models.py:1091
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT ファイル (%(messages)s, %(figures)s) - %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027 stats/models.py:1094
+#: stats/models.py:1094
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT ファイル (%(messages)s) - %(updated)s"
-
-#: djamnedlies-git/stats/utils.py:85 stats/utils.py:90
-msgid "Errors while running 'intltool-update -m' check."
-msgstr "'intltool-update -m' チェックを実行中にエラーが発生しました。"
-
-# ファイル 'missing' は intltool-update が生成する。 (intltool-update (8))
-# このファイルには POTFILES.in (または .skip) に記述がないファイルが
-# 出力される。
-#: djamnedlies-git/stats/utils.py:91 stats/utils.py:96
-#, python-format
-msgid "There are some missing files from POTFILES.in: %s"
-msgstr "POTFILES.in に記述されていないファイルがあります: %s"
-
-#: djamnedlies-git/stats/utils.py:100 stats/utils.py:105
-#, python-format
-msgid ""
-"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
-"they don't exist: %s"
-msgstr ""
-"次のファイルは POTFILES.in と POTFILES.skip の両方で参照されていますが、存在"
-"していません: %s"
-
-#: djamnedlies-git/stats/utils.py:112 stats/utils.py:130
-#, python-format
-msgid "Module %s doesn't look like gnome-doc-utils module."
-msgstr "モジュール %s は gnome-doc-utils モジュールではないようです。"
-
-#: djamnedlies-git/stats/utils.py:115 stats/utils.py:133
-#, python-format
-msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr "DOC_MODULE が実ファイルに解決されません。'%s.xml' を使います。"
-
-#: djamnedlies-git/stats/utils.py:118 stats/utils.py:136
-msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr "DOC_MODULE は実ファイルを参照していません。おそらくマクロです。"
-
-#: djamnedlies-git/stats/utils.py:133 stats/utils.py:152
-#, python-format
-msgid ""
-"Error regenerating POT file for document %(file)s:\n"
-"<pre>%(cmd)s\n"
-"%(output)s</pre>"
-msgstr ""
-"ドキュメント %(file)s の POT ファイルの再生成中にエラー:\n"
-"<pre>%(cmd)s\n"
-"%(output)s</pre>"
-
-#: djamnedlies-git/stats/utils.py:206 stats/utils.py:237
-#, python-format
-msgid "PO file '%s' does not exist or cannot be read."
-msgstr "PO ファイル '%s' は存在ないか、読みこめません。"
-
-#: djamnedlies-git/stats/utils.py:226 stats/utils.py:257
-#, python-format
-msgid "PO file '%s' doesn't pass msgfmt check: not updating."
-msgstr ""
-"PO ファイル '%s' は msgfmt チェックをパスしませんでした: 更新しません。"
-
-#: djamnedlies-git/stats/utils.py:228 stats/utils.py:259
-#, python-format
-msgid "Can't get statistics for POT file '%s'."
-msgstr "POT ファイル '%s' の統計情報を取得できません。"
-
-#: djamnedlies-git/stats/utils.py:231 stats/utils.py:262
-msgid "This PO file has an executable bit set."
-msgstr "この PO ファイルには実行可能属性がセットされています。"
-
-#: djamnedlies-git/stats/utils.py:259 stats/utils.py:290
-#, python-format
-msgid "PO file '%s' is not UTF-8 encoded."
-msgstr "PO ファイル '%s' は UTF-8 エンコーディングになっていません。"
-
-#: djamnedlies-git/stats/utils.py:292 stats/utils.py:316
-msgid "Entry for this language is not present in LINGUAS file."
-msgstr "LINGUAS ファイル内にこの言語のエントリがありません。"
-
-#: djamnedlies-git/stats/utils.py:319 stats/utils.py:322
-msgid ""
-"Entry for this language is not present in ALL_LINGUAS in configure file."
-msgstr "configure ファイル内の ALL_LINGUAS にこの言語のエントリがありません。"
-
-#: djamnedlies-git/stats/utils.py:322
-msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr ""
-"この言語が実際に使われているかどうか確認するためのファイルがありません。モ"
-"ジュールを保守されている方にたずねてみて下さい。"
-
-#: djamnedlies-git/teams/models.py:112 teams/models.py:216
-#, python-format
-msgid "No team for locale %s"
-msgstr "ロケール %s にはチームが存在しません"
-
-#: djamnedlies-git/teams/models.py:129 teams/models.py:236
-msgid "Translator"
-msgstr "翻訳者"
-
-#: djamnedlies-git/teams/models.py:130 teams/models.py:237
-msgid "Reviewer"
-msgstr "査読者"
-
-#: djamnedlies-git/teams/models.py:131 teams/models.py:238
-msgid "Committer"
-msgstr "コミッター"
-
-#: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:239
-#: templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "取りまとめ"
-
-#: djamnedlies-git/teams/views.py:44 teams/views.py:55
-msgid "Committers"
-msgstr "コミッター"
-
-#: djamnedlies-git/teams/views.py:47 teams/views.py:58
-msgid "No committers"
-msgstr "コミッターはいません"
-
-#: djamnedlies-git/teams/views.py:49 teams/views.py:60
-msgid "Reviewers"
-msgstr "査読者"
-
-#: djamnedlies-git/teams/views.py:52 teams/views.py:63
-msgid "No reviewers"
-msgstr "査読者はいません"
-
-#: djamnedlies-git/teams/views.py:54 teams/views.py:65
-msgid "Translators"
-msgstr "翻訳者"
-
-#: djamnedlies-git/teams/views.py:57 teams/views.py:68
-msgid "No translators"
-msgstr "翻訳者はいません"
-
-#: djamnedlies-git/templates/404.html:4 djamnedlies-git/templates/404.html:9
-#: templates/404.html:4 templates/404.html.py:9
-msgid "Error: page not found"
-msgstr "エラー: ページが見つかりません"
-
-#: djamnedlies-git/templates/404.html:11 templates/404.html:11
-msgid "The page you requested has not been found on this server."
-msgstr "あなたがリクエストしたページはこのサーバーに見つかりませんでした。"
-
-#: djamnedlies-git/templates/500.html:4 templates/500.html:4
-msgid "Error: server error (500)"
-msgstr "エラー: サーバーエラー (500)"
-
-#: djamnedlies-git/templates/500.html:9 templates/500.html:9
-msgid "Server Error"
-msgstr "サーバーエラー"
-
-#: djamnedlies-git/templates/500.html:11 templates/500.html:11
-msgid "We're sorry but a server error has occurred."
-msgstr "サーバーエラーが発生しました。申しわけありません。"
-
-#: djamnedlies-git/templates/base.html:26
-#: djamnedlies-git/templates/base.html:42 templates/base.html:26
-#: templates/base.html.py:42
-msgid "Home"
-msgstr "ホーム"
-
-#: djamnedlies-git/templates/base.html:27 templates/base.html:27
-msgid "News"
-msgstr "ニュース"
-
-#: djamnedlies-git/templates/base.html:28 templates/base.html:28
-msgid "Projects"
-msgstr "プロジェクト"
-
-#: djamnedlies-git/templates/base.html:29 templates/base.html:29
-msgid "Art"
-msgstr "アート"
-
-#: djamnedlies-git/templates/base.html:30 templates/base.html:30
-msgid "Support"
-msgstr "サポート"
-
-#: djamnedlies-git/templates/base.html:31 templates/base.html:31
-msgid "Development"
-msgstr "開発"
-
-#: djamnedlies-git/templates/base.html:32 templates/base.html:32
-msgid "Community"
-msgstr "コミュニティ"
-
-#: djamnedlies-git/templates/base.html:42 templates/base.html:42
-msgid "Back to Damned Lies home page"
-msgstr "Damned Lies のホームページへ戻る"
-
-#: djamnedlies-git/templates/base.html:48
-#: djamnedlies-git/templates/index.html:13 templates/base.html:48
-#: templates/index.html:13
-msgid "Teams"
-msgstr "チーム"
-
-#: djamnedlies-git/templates/base.html:53
-#: djamnedlies-git/templates/index.html:20
-#: djamnedlies-git/templates/release_compare.html:25 templates/base.html:53
-#: templates/index.html:27 templates/release_compare.html:25
-msgid "Languages"
-msgstr "言語"
-
-#: djamnedlies-git/templates/base.html:58 templates/base.html:58
-msgid "Release sets"
-msgstr "リリースセット"
-
-#: djamnedlies-git/templates/base.html:63
-#: djamnedlies-git/templates/index.html:36 templates/base.html:63
-#: templates/index.html:43
-msgid "Modules"
-msgstr "モジュール"
-
-#: djamnedlies-git/templates/base.html:74 templates/base.html:74
-msgid "Log out"
-msgstr "ログアウト"
-
-#: djamnedlies-git/templates/base.html:77
-#: djamnedlies-git/templates/login.html:29
-#: djamnedlies-git/templates/registration/password_reset_complete.html:12
-#: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77 templates/login.html:29
-#: templates/registration/password_reset_complete.html:12
-msgid "Log in"
-msgstr "ログイン"
-
-#: djamnedlies-git/templates/base.html:94 templates/base.html:94
-msgid "The GNOME Project"
-msgstr "GNOMEプロジェクト"
-
-#: djamnedlies-git/templates/base.html:96 templates/base.html:96
-msgid ""
-"Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
-"lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
-msgstr ""
-"<a href='http://git.gnome.org/'>git.gnome.org</a>の\n"
-"<a href='http://git.gnome.org/cgit/damned-lies'>damned-lies</a>モジュールでメ"
-"ンテナンスされています。"
-
-#: djamnedlies-git/templates/base.html:98 templates/base.html:98
-msgid "Hosted by"
-msgstr "ホスティング: "
-
-#: djamnedlies-git/templates/branch_detail.html:4
-#: templates/branch_detail.html:4
-msgid "This branch is currently string-frozen."
-msgstr "このブランチは現在 string-freeze されています"
-
-#: djamnedlies-git/templates/branch_detail.html:13
-#: templates/branch_detail.html:13
-msgid "Translation"
-msgstr "翻訳"
-
-# "Damned Lies" の訳語は "嘘八百" だが、そのとおり訳すのが適当かどうか.
-# とりあえず一番無難 souna訳語にしておく。
-#: djamnedlies-git/templates/error.html:4
-#: djamnedlies-git/templates/index.html:4
-#: djamnedlies-git/templates/index.html:9
-#: djamnedlies-git/templates/login.html:4
-#: djamnedlies-git/templates/registration/register.html:4
-#: djamnedlies-git/templates/registration/register_success.html:4
-#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
-#: templates/login.html:4 templates/registration/register.html:4
-#: templates/registration/register_success.html:4
-msgid "Damned Lies about GNOME"
-msgstr "GNOME 翻訳ステータス"
-
-#: djamnedlies-git/templates/error.html:9 templates/error.html:9
-msgid "Error:"
-msgstr "エラー:"
-
-#: djamnedlies-git/templates/index.html:14 templates/index.html:14
-msgid ""
-"List of all GNOME Translation Teams, with full information such as primary "
-"contact (coordinator), web pages and mailing list information."
-msgstr ""
-"すべての GNOME 翻訳チームの一覧です。一次の連絡先 (取りまとめ役) やウェブペー"
-"ジ、メーリングリストなどの完全な情報を含んでいます。"
-
-#: djamnedlies-git/templates/index.html:15 templates/index.html:15
-msgid ""
-"If there is no team for your language, you can easily <a href='http://live."
-"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgstr ""
-"もしあなたの言語のチームがなければ、簡単に <a href='http://live.gnome.org/"
-"TranslationProject/StartingATeam/'>チームを始められます</a>。"
-
-#: djamnedlies-git/templates/index.html:22 templates/index.html:29
-#, python-format
-msgid ""
-"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
-"a> for."
-msgstr "<a href='%(teams_url)s'>翻訳チーム</a> のある言語すべての一覧です。"
-
-#: djamnedlies-git/templates/index.html:23 templates/index.html:30
-msgid ""
-"Some teams manage more than one language (usually just simple variants), and "
-"here you can see all the languages GNOME is being translated to."
-msgstr ""
-"いくつかのチームは一つ以上の言語を管理しています (通常は単純な派生です)。そし"
-"て、ここでは翻訳されている GNOME のすべての言語について見ることができます。"
-
-#: djamnedlies-git/templates/index.html:27 templates/index.html:34
-msgid "Release Sets"
-msgstr "リリースセット"
-
-#: djamnedlies-git/templates/index.html:28 templates/index.html:35
-msgid "List of all GNOME release sets and releases we gather stats for."
-msgstr "統計をとる GNOME のすべてのリリースセットとリリースの一覧です。"
-
-#: djamnedlies-git/templates/index.html:30
-msgid ""
-"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
-"or &quot;GNOME 2.14&quot;."
-msgstr ""
-"リリースセットは例えば \"GNOME オフィス\", \"Fifth Toe\", \"GNOME 2.14\" など"
-"です。"
-
-#: djamnedlies-git/templates/index.html:31 templates/index.html:38
-msgid ""
-"Official GNOME release sets are further divided into categories such as "
-"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
-msgstr ""
-"公式の GNOME リリースセットはさらに &quot;デスクトップ・アプリケーション"
-"&quot; と&quot;開発プラットフォーム&quot; に分けられています。"
-
-#: djamnedlies-git/templates/index.html:33 templates/index.html:40
-msgid ""
-"Look here if you want to compare language support in any of these release "
-"sets."
-msgstr ""
-"これらの任意のリリースセットについて言語サポートの比較をしたいならこちらを参"
-"照して下さい。"
-
-#: djamnedlies-git/templates/index.html:37 templates/index.html:44
-msgid "List of all modules with statistics in here."
-msgstr "ここにはすべてのモジュールの統計の一覧があります。"
-
-#: djamnedlies-git/templates/index.html:39 templates/index.html:46
-msgid ""
-"Modules are separate libraries or applications, with one or more branches of "
-"development included."
-msgstr ""
-"モジュールは別々のライブラリまたはアプリケーションであり、一つ以上の開発ブラ"
-"ンチを含んでいます。"
-
-#: djamnedlies-git/templates/index.html:40
-msgid ""
-"They are usually taken from CVS, and we keep all relevant information on "
-"them (Bugzilla details, web page, maintainer information,...)."
-msgstr ""
-"これらは通常 CVS から取得して、Bugzilla の詳細やウェブページ、保守している人"
-"など、すべての関連情報を保っておきます。"
-
-#: djamnedlies-git/templates/index.html:46 templates/index.html:53
-msgid "Translated by:"
-msgstr "翻訳者:"
-
-#: djamnedlies-git/templates/login.html:10
-#: djamnedlies-git/templates/registration/register.html:11
-#: templates/login.html:10 templates/registration/register.html:11
-#, python-format
-msgid "You are already logged in as %(username)s."
-msgstr "あなたは既に%(username)sとしてログインしています。"
-
-#: djamnedlies-git/templates/login.html:13 templates/login.html:13
-#, python-format
-msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
-msgstr ""
-"このサイトのアカウントをまだ持っていないのであれば、新しいアカウントを<a "
-"href='%(link)s'>登録</a>できます。"
-
-#: djamnedlies-git/templates/login.html:15
-#: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:15
-msgid "Log in with your username and password:"
-msgstr "あなたのユーザー名とパスワードでログイン:"
-
-#: djamnedlies-git/templates/login.html:18
-#: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:18
-msgid "Username:"
-msgstr "ユーザー名："
-
-#: djamnedlies-git/templates/login.html:22 templates/login.html:22
-msgid "Have you forgotten your password?"
-msgstr "パスワードを忘れてしまいましたか?"
-
-#: djamnedlies-git/templates/login.html:34
-#: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:34
-msgid "Or use your OpenID:"
-msgstr "または OpenID で:"
-
-#: djamnedlies-git/templates/login.html:40
-#: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "OpenID でログイン"
-
-#: djamnedlies-git/templates/module_detail.html:6
-#: templates/module_detail.html:6
-#, python-format
-msgid "Module Statistics: %(name)s"
-msgstr "モジュールの統計: %(name)s"
-
-#: djamnedlies-git/templates/module_detail.html:55
-#: templates/module_detail.html:55
-msgid "Maintainers"
-msgstr "メンテナー"
-
-#: djamnedlies-git/templates/module_detail.html:63
-#: templates/module_detail.html:63
-msgid "Bug reporting"
-msgstr "バグ報告"
-
-#: djamnedlies-git/templates/module_detail.html:66
-#: templates/module_detail.html:66
-msgid "Show existing i18n and l10n bugs"
-msgstr "報告済みの i18n や l10n のバグを表示"
-
-#: djamnedlies-git/templates/module_detail.html:68
-msgid "Report bugs to Bugzilla"
-msgstr "Bugzilla にバグ報告"
-
-#: djamnedlies-git/templates/module_detail.html:77
-#: templates/module_detail.html:77
-msgid "Branches:"
-msgstr "ブランチ:"
-
-#: djamnedlies-git/templates/module_detail.html:97
-#: templates/module_detail.html:97
-msgid "Browse Repository"
-msgstr "リポジトリの閲覧"
-
-#: djamnedlies-git/templates/module_images.html:4
-#: templates/module_images.html:4
-#, python-format
-msgid "Module Doc Figure Status: %(name)s"
-msgstr "モジュールの文書の画像の状況: %(name)s"
-
-#: djamnedlies-git/templates/module_images.html:12
-#: templates/module_images.html:12
-msgid "Figures translation status"
-msgstr "画像の翻訳状況"
-
-#: djamnedlies-git/templates/module_images.html:17
-#: templates/module_images.html:17
-msgid "Original"
-msgstr "オリジナル"
-
-#: djamnedlies-git/templates/module_images.html:32
-#: templates/module_images.html:30
-msgid ""
-"Translated, but uses original one (maybe the figure doesn't contain any "
-"string to translate)"
-msgstr ""
-"翻訳されていますが、元のものをそのまま使っています (画像に翻訳すべき文字列が"
-"含まれていないのでしょう)"
-
-#: djamnedlies-git/templates/module_images.html:36
-#: templates/module_images.html:34
-msgid "Fuzzy"
-msgstr "曖昧"
-
-#: djamnedlies-git/templates/module_images.html:41
-#: templates/module_images.html:39
-msgid "No existing file (&quot;Technical&quot; fuzzy)"
-msgstr ""
-
-#: djamnedlies-git/templates/module_images.html:44
-#: templates/module_images.html:42
-msgid "Not translated"
-msgstr "未翻訳"
-
-#: djamnedlies-git/templates/module_list.html:4
-#: djamnedlies-git/templates/module_list.html:9 templates/module_list.html:4
-#: templates/module_list.html.py:9
-msgid "GNOME Modules"
-msgstr "GNOME のモジュール"
-
-#: djamnedlies-git/templates/module_list.html:11 templates/module_list.html:11
-msgid "Select a module below to see some of the damned lies about it:"
-msgstr "情報を表示するモジュールを選択して下さい:"
-
-#: djamnedlies-git/templates/release_compare.html:5
-#: djamnedlies-git/templates/release_compare.html:20
-#: templates/release_compare.html:5 templates/release_compare.html.py:20
-msgid "Releases Comparison"
-msgstr "リリースの比較"
-
-#: djamnedlies-git/templates/release_detail.html:10
-#: templates/release_detail.html:10
-#, python-format
-msgid "%(name)s Release"
-msgstr "%(name)s リリース"
-
-#: djamnedlies-git/templates/release_detail.html:13
-#: djamnedlies-git/templates/languages/language_release.html:33
-msgid ""
-"The modules of this release are not part of the GNOME SVN repository. Please "
-"check each module's web page to see where to send translations."
-msgstr ""
-"モジュールのこのリリースは GNOME SVN リポジトリの一部ではありません。各モ"
-"ジュールのウェブページで翻訳の送り先を確認してみて下さい。"
-
-#: djamnedlies-git/templates/release_detail.html:19
-#: djamnedlies-git/templates/stats_show.html:30
-#: templates/release_detail.html:19 templates/stats_show.html:30
-msgid "Language"
-msgstr "言語"
-
-#: djamnedlies-git/templates/release_detail.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/release_detail.html:20 templates/release_detail.html.py:67
-#: templates/languages/language_release_summary.html:9
-msgid "User Interface"
-msgstr "ユーザーインターフェース"
-
-#: djamnedlies-git/templates/release_detail.html:21
-#: djamnedlies-git/templates/release_detail.html:23
-#: djamnedlies-git/templates/stats_show.html:34
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-git/templates/teams/team_detail.html:27
-#: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34
-#: templates/languages/language_release_summary.html:9
-#: templates/languages/language_release_summary.html:10
-msgid "Graph"
-msgstr "グラフ"
-
-#: djamnedlies-git/templates/release_list.html:4
-#: djamnedlies-git/templates/release_list.html:9 templates/release_list.html:4
-#: templates/release_list.html.py:9
-msgid "GNOME Releases"
-msgstr "GNOME リリース"
-
-#: djamnedlies-git/templates/release_list.html:11
-#: templates/release_list.html:11
-msgid "Select a release or a release set below to see more details about it:"
-msgstr "さらなる詳細を見るにはリリースまたはリリースセットを選択して下さい:"
-
-#: djamnedlies-git/templates/stats_show.html:13
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
-msgid "Download POT file"
-msgstr "POT ファイルをダウンロード"
-
-#: djamnedlies-git/templates/stats_show.html:17
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
-msgid "Notices"
-msgstr "通知"
-
-#: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-git/vertimus/models.py:165 templates/stats_show.html:30
-#: vertimus/models.py:189
-msgid "Translated"
-msgstr "翻訳済"
-
-#: djamnedlies-git/templates/stats_show.html:50
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
-msgid "Display document figures"
-msgstr "ドキュメントの画像を表示"
-
-# "Damned Lies" の訳語は ”嘘八百" だが...
-#: djamnedlies-git/templates/admin/base_site.html:4
-#: templates/admin/base_site.html:4
-msgid "Damned Lies site admin"
-msgstr "翻訳ステータスサイト管理"
-
-#: djamnedlies-git/templates/feeds/actions_description.html:6
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
-#: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:159
-msgid "No comment"
-msgstr "コメント無し"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:4
-#: djamnedlies-git/templates/languages/language_all_modules.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:63
-#: djamnedlies-git/templates/teams/team_detail.html:64
-#: templates/languages/language_all_modules.html:4
-#: templates/languages/language_all_modules.html:20
-#: templates/languages/language_release_summary.html:47
-#: templates/languages/language_release_summary.html:48
-msgid "All modules"
-msgstr "すべてモジュール"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:23
-#: djamnedlies-git/templates/languages/language_release.html:25
-#: templates/languages/language_all_modules.html:23
-#: templates/languages/language_release.html:25
-msgid "Hide completed modules"
-msgstr "翻訳が完了したモジュールを隠す"
-
-#: djamnedlies-git/templates/languages/language_all_modules.html:27
-#: djamnedlies-git/templates/languages/language_release.html:29
-#: templates/languages/language_all_modules.html:27
-#: templates/languages/language_release.html:29
-msgid "Show completed modules"
-msgstr "翻訳が完了したモジュールも表示する"
-
-#: djamnedlies-git/templates/languages/language_list.html:4
-#: djamnedlies-git/templates/languages/language_list.html:9
-#: templates/languages/language_list.html:4
-#: templates/languages/language_list.html:9
-msgid "GNOME Languages"
-msgstr "GNOME 言語"
-
-#: djamnedlies-git/templates/languages/language_list.html:11
-#: templates/languages/language_list.html:11
-#, python-format
-msgid "GNOME is being translated to following %(numb)s language.\n"
-msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
-msgstr[0] "GNOME は次の %(numb)s の言語に翻訳されています。\n"
-
-#: djamnedlies-git/templates/languages/language_release.html:42
-#: templates/languages/language_release.html:43
-msgid "Download all po files"
-msgstr "すべての PO ファイルをダウンロード"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
-msgid "Module"
-msgstr "モジュール"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: templates/languages/language_release_stats.html:21
-msgid "Branch"
-msgstr "ブランチ"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: templates/languages/language_release_stats.html:21
-msgid "Statistics"
-msgstr "統計"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: templates/languages/language_release_stats.html:22
-msgid "Status"
-msgstr "状態"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
-msgid "Date"
-msgstr "日付"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:32
-#: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (%(percentage)s% 翻訳済み)"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:99
-#: templates/languages/language_release_stats.html:103
-msgid "Error summary"
-msgstr "エラーのサマリー"
-
-#: djamnedlies-git/templates/people/person_base.html:5
-#: templates/people/person_base.html:5
-msgid "GNOME Contributor"
-msgstr "GNOME への貢献者"
-
-#: djamnedlies-git/templates/people/person_base.html:12
-#: djamnedlies-git/templates/people/person_detail_change_form.html:7
-#: templates/people/person_base.html:12
-#: templates/people/person_detail_change_form.html:7
-msgid "Change your details"
-msgstr "詳細を変更"
-
-#: djamnedlies-git/templates/people/person_base.html:13
-#: templates/people/person_base.html:13
-msgid "Change your password"
-msgstr "パスワードを変更"
-
-#: djamnedlies-git/templates/people/person_base.html:14
-#: templates/people/person_base.html:14
-msgid "Join a team"
-msgstr "チームに参加"
-
-#: djamnedlies-git/templates/people/person_detail.html:22
-#: templates/people/person_detail.html:22
-msgid "Site Language:"
-msgstr "サイトの言語:"
-
-#: djamnedlies-git/templates/people/person_detail.html:33
-#: templates/people/person_detail.html:33
-msgid "Choose"
-msgstr "選択"
-
-#: djamnedlies-git/templates/people/person_detail.html:39
-#: templates/people/person_detail.html:39
-msgid "Maintains:"
-msgstr "保守:"
-
-#: djamnedlies-git/templates/people/person_detail.html:50
-#: templates/people/person_detail.html:50
-msgid "Working on"
-msgstr "作業中"
-
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: templates/people/person_detail.html:54
-msgid "State"
-msgstr "状態"
-
-#: djamnedlies-git/templates/people/person_detail_change_form.html:13
-#: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:12
-msgid "Save"
-msgstr "保存"
-
-#: djamnedlies-git/templates/people/person_list.html:4
-#: djamnedlies-git/templates/people/person_list.html:8
-#: templates/people/person_list.html:4 templates/people/person_list.html:8
-msgid "GNOME Contributors"
-msgstr "GNOME に貢献してくれている人々"
-
-#: djamnedlies-git/templates/people/person_list.html:10
-#: templates/people/person_list.html:10
-msgid "GNOME is being developed by following people:"
-msgstr "GNOME を開発しているのは次の人々です:"
-
-#: djamnedlies-git/templates/people/person_overview.html:27
-#: templates/people/person_overview.html:27
-msgid "Instant messaging:"
-msgstr "インスタント・メッセージ:"
-
-#: djamnedlies-git/templates/people/person_overview.html:34
-#: templates/people/person_overview.html:34
-msgid "Bugzilla account:"
-msgstr "Bugzilla アカウント:"
-
-#: djamnedlies-git/templates/people/person_overview.html:38
-msgid "SVN account:"
-msgstr "SVN アカウント:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:6
-#: templates/people/person_password_change_form.html:6
-msgid "Password change"
-msgstr "パスワード変更"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:8
-#: templates/people/person_password_change_form.html:8
-msgid ""
-"Please enter your old password, for security's sake, and then enter your new "
-"password twice so we can verify you typed it in correctly."
-msgstr ""
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:15
-#: templates/people/person_password_change_form.html:15
-msgid "Old password:"
-msgstr "古いパスワード:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:21
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:16
-#: templates/people/person_password_change_form.html:21
-#: templates/registration/password_reset_confirm.html:16
-msgid "New password:"
-msgstr "新しいパスワード:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:30
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:19
-#: templates/people/person_password_change_form.html:30
-#: templates/registration/password_reset_confirm.html:19
-msgid "Change my password"
-msgstr "パスワードを変更"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:8
-#: templates/people/person_team_join_form.html:8
-msgid "Join a new team"
-msgstr "新しくチームに参加"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:11
-#: templates/people/person_team_join_form.html:11
-msgid "I would like to join the following team as 'translator':"
-msgstr "以下のチームに「翻訳者」として参加したい"
-
-#: djamnedlies-git/templates/people/person_team_join_form.html:13
-#: templates/people/person_team_join_form.html:13
-msgid "Join"
-msgstr "参加"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:5
-#: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "参加中のチーム"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:9
-#: templates/people/person_team_membership.html:9
-#, python-format
-msgid "Member of %(team_name)s team (%(role_name)s)"
-msgstr "%(team_name)s チームのメンバー (%(role_name)s)"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:12
-#: templates/people/person_team_membership.html:12
-msgid "Leave"
-msgstr "外れる"
-
-#: djamnedlies-git/templates/people/person_team_membership.html:13
-#: templates/people/person_team_membership.html:13
-msgid "Are you sure you want to leave the team?"
-msgstr "本当にチームから離れますか?"
-
-#: djamnedlies-git/templates/registration/password_reset_complete.html:4
-#: djamnedlies-git/templates/registration/password_reset_complete.html:8
-#: templates/registration/password_reset_complete.html:4
-#: templates/registration/password_reset_complete.html:8
-msgid "Password reset complete"
-msgstr "パスワードのリセットが完了しました"
-
-#: djamnedlies-git/templates/registration/password_reset_complete.html:10
-#: templates/registration/password_reset_complete.html:10
-msgid "Your password has been set. You may go ahead and log in now."
-msgstr "パスワードを設定しました。さらに進んでログインしてください。"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:9
-#: templates/registration/password_reset_confirm.html:4
-#: templates/registration/password_reset_form.html:4
-#: templates/registration/password_reset_form.html:9
-msgid "Password reset"
-msgstr "パスワードのリセット"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:10
-#: templates/registration/password_reset_confirm.html:10
-msgid "Enter new password"
-msgstr "新しいパスワードを入力"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:12
-#: templates/registration/password_reset_confirm.html:12
-msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
-msgstr ""
-"新しいパスワードを2回入力してください。正確にタイプされたかどうか確認します。"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:24
-#: templates/registration/password_reset_confirm.html:24
-msgid "Password reset unsuccessful"
-msgstr "パスワードのリセットに失敗"
-
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:26
-#: templates/registration/password_reset_confirm.html:26
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a new password reset."
-msgstr ""
-
-#: djamnedlies-git/templates/registration/password_reset_done.html:4
-#: djamnedlies-git/templates/registration/password_reset_done.html:9
-#: templates/registration/password_reset_done.html:4
-#: templates/registration/password_reset_done.html:9
-msgid "Password reset successful"
-msgstr "パスワードのリセットに成功"
-
-#: djamnedlies-git/templates/registration/password_reset_done.html:11
-#: templates/registration/password_reset_done.html:11
-msgid ""
-"We've e-mailed you instructions for setting your password to the e-mail "
-"address you submitted. You should be receiving it shortly."
-msgstr ""
-"入力されたメールアドレスに、パスワードを設定する手順を書いて送りました。すぐ"
-"にメールが届くはずです。"
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:11
-#: templates/registration/password_reset_form.html:11
-msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
-"instructions for setting a new one."
-msgstr ""
-"パスワードを忘れてしましましたか? メールアドレスを以下に入力すれば、新しいパ"
-"スワードを設定する手順を書いたメールを送ります。"
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: templates/registration/password_reset_form.html:15
-msgid "E-mail address:"
-msgstr "メールアドレス:"
-
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: templates/registration/password_reset_form.html:15
-msgid "Reset my password"
-msgstr "自分のパスワードをリセット"
-
-#: djamnedlies-git/templates/registration/register.html:9
-#: templates/registration/register.html:9
-msgid "Account Registration"
-msgstr "アカウント登録"
-
-#: djamnedlies-git/templates/registration/register.html:13
-#: templates/registration/register.html:13
-msgid ""
-"You can register here for an account on this site. This is only useful if "
-"you plan to contribute to GNOME translations."
-msgstr ""
-"このサイトのアカウントをここで登録できます。GNOMEの翻訳に貢献するつもりがある"
-"のなら役に立ちます。"
-
-#: djamnedlies-git/templates/registration/register.html:14
-#: templates/registration/register.html:14
-msgid ""
-"After registration and connection, you will be able to join an existing team "
-"from your profile page."
-msgstr ""
-"登録した後に接続すると、自分のプロフィールのページから、既存のチームに参加す"
-"ることができます。"
-
-#: djamnedlies-git/templates/registration/register.html:28
-#: templates/registration/register.html:28
-msgid "Authenticate via OpenID <strong>or</strong> password:"
-msgstr "OpenID <strong>または</strong> パスワードで認証:"
-
-#: djamnedlies-git/templates/registration/register.html:34
-#: templates/registration/register.html:34
-msgid "Register with OpenID"
-msgstr "OpenID で登録"
-
-#: djamnedlies-git/templates/registration/register.html:46
-#: templates/registration/register.html:46
-msgid "Register with password"
-msgstr "パスワードで登録"
-
-#: djamnedlies-git/templates/registration/register_success.html:8
-#: templates/registration/register_success.html:8
-msgid "Registration Success"
-msgstr "登録に成功"
-
-#: djamnedlies-git/templates/registration/register_success.html:10
-#: templates/registration/register_success.html:10
-msgid ""
-"The registration succeeded. You will now receive an email containing a link "
-"to activate your account."
-msgstr ""
-"登録に成功しました。アカウントをアクティベートするためのリンクを記したメール"
-"を受信してください。"
-
-#: djamnedlies-git/templates/teams/team_base.html:6
-#: templates/teams/team_base.html:7
-msgid "Details"
-msgstr "詳細"
-
-#: djamnedlies-git/templates/teams/team_base.html:9
-#: templates/teams/team_base.html:14
-#, python-format
-msgid "%(lang)s Translation Team Page:"
-msgstr "%(lang)s 翻訳チームのページ:"
-
-#: djamnedlies-git/templates/teams/team_base.html:13
-#: templates/teams/team_base.html:18
-msgid "Bugzilla:"
-msgstr "Bugzilla:"
-
-#: djamnedlies-git/templates/teams/team_base.html:15
-#: templates/teams/team_base.html:20
-msgid "Report Bug in Translation"
-msgstr "翻訳のバグを報告"
-
-#: djamnedlies-git/templates/teams/team_base.html:16
-#: templates/teams/team_base.html:21
-msgid "Show Existing Bugs"
-msgstr "報告済みのバグを表示"
-
-#: djamnedlies-git/templates/teams/team_base.html:20
-#: templates/teams/team_base.html:25
-msgid "Mailing List:"
-msgstr "メーリングリスト:"
-
-#: djamnedlies-git/templates/teams/team_base.html:22
-#: templates/teams/team_base.html:27
-msgid "Send e-mail to the list"
-msgstr "リストにメールを送信"
-
-#: djamnedlies-git/templates/teams/team_base.html:24
-#: templates/teams/team_base.html:29
-msgid "Subscribe"
-msgstr "購読"
-
-#: djamnedlies-git/templates/teams/team_detail.html:5
-#, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr "GNOME翻訳プロジェクトの%(lang)sチームの最新のアクション"
-
-#: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:39
-#, python-format
-msgid "%(lang)s Translation Team"
-msgstr "%(lang)s 翻訳チーム"
-
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/languages/language_release_summary.html:9
-msgid "Release"
-msgstr "リリース"
-
-#: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:64
-msgid "Team membership"
-msgstr "チームのメンバー"
-
-#: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:75
-msgid "Apply modifications"
-msgstr "変更を適用"
-
-#: djamnedlies-git/templates/teams/team_list.html:4
-#: djamnedlies-git/templates/teams/team_list.html:9
-#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
-msgid "GNOME Translation Teams"
-msgstr "GNOME 翻訳チーム"
-
-#: djamnedlies-git/templates/teams/team_list.html:12
-#: templates/teams/team_list.html:12
-msgid "Select a team below to see more information about it:"
-msgstr "さらなる詳細を見るにはチームを選択して下さい:"
-
-#: djamnedlies-git/templates/teams/team_list.html:25
-#: templates/teams/team_list.html:25
-#, python-format
-msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
-msgstr "<a href=\"%(url)s\">%(name)s</a> によって取りまとめられています"
-
-#: djamnedlies-git/templates/teams/team_list.html:34
-#: templates/teams/team_list.html:34
-msgid "There are currently no translation teams in GNOME. :("
-msgstr "GNOME には現在翻訳チームは存在しません :("
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
-#: templates/vertimus/vertimus_detail.html:6
-#, python-format
-msgid "Module Translation: %(name)s"
-msgstr "モジュールの翻訳: %(name)s"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
-#: templates/vertimus/vertimus_detail.html:27
-msgid "Used in release(s):"
-msgstr ""
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
-#: templates/vertimus/vertimus_detail.html:45
-msgid "State:"
-msgstr "状態:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:65
-msgid "Download PO file"
-msgstr "PO ファイルをダウンード"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:65
-msgid "Translated:"
-msgstr "翻訳:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:95
-msgid "On-going activities in same module:"
-msgstr "同じモジュールで進行中の活動:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
-msgid "Action History"
-msgstr "活動履歴"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:148
-msgid "diff with:"
-msgstr "差分:"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:171
-msgid "New Action"
-msgstr "新しいアクション"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:181
-msgid "Submit"
-msgstr "送信"
-
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:186
-#, python-format
-msgid ""
-"You need to be authenticated and to be member of the %(team_name)s team."
-msgstr "ログインに成功し、%(team_name)s チームのメンバーでなくてはなりません。"
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
-#: templates/vertimus/vertimus_diff.html:5
-msgid "Diff between po files"
-msgstr ""
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
-#: templates/vertimus/vertimus_diff.html:16
-msgid "&lt;- Back to actions"
-msgstr ""
-
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
-#: templates/vertimus/vertimus_diff.html:20
-msgid "Note: both files are merged with latest POT file."
-msgstr ""
-
-#: djamnedlies-git/vertimus/feeds.py:43 vertimus/feeds.py:43
-#, python-format
-msgid "%(site)s - Vertimus actions for the %(lang)s language"
-msgstr ""
-
-#: djamnedlies-git/vertimus/feeds.py:52 vertimus/feeds.py:52
-#, python-format
-msgid "Latest actions of the GNOME Translation Project for the %s language"
-msgstr ""
-
-#: djamnedlies-git/vertimus/feeds.py:88 vertimus/feeds.py:89
-#, python-format
-msgid "%(site)s - Vertimus actions of the %(lang)s team"
-msgstr ""
-
-#: djamnedlies-git/vertimus/feeds.py:97 vertimus/feeds.py:98
-#, python-format
-msgid "Latest actions made by the %s team of the GNOME Translation Project"
-msgstr "GNOME翻訳プロジェクトの%sチームの最新の活動"
-
-#: djamnedlies-git/vertimus/forms.py:38 vertimus/forms.py:38
-msgid "Action"
-msgstr "アクション"
-
-#: djamnedlies-git/vertimus/forms.py:42 vertimus/forms.py:42
-msgid "Comment"
-msgstr "コメント"
-
-#: djamnedlies-git/vertimus/forms.py:47 vertimus/forms.py:47
-msgid "File"
-msgstr "ファイル"
-
-#: djamnedlies-git/vertimus/forms.py:48 vertimus/forms.py:48
-msgid "Upload a .po, .gz, .bz2 or .png file"
-msgstr ""
-
-#: djamnedlies-git/vertimus/forms.py:59 vertimus/forms.py:59
-msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
-msgstr ""
-
-#: djamnedlies-git/vertimus/forms.py:64 vertimus/forms.py:64
-msgid ""
-".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
-msgstr ""
-
-#: djamnedlies-git/vertimus/forms.py:74 vertimus/forms.py:77
-msgid "A comment or a file is needed for this action."
-msgstr ""
-
-#: djamnedlies-git/vertimus/forms.py:77 vertimus/forms.py:80
-msgid "A file is needed for this action."
-msgstr ""
-
-#: djamnedlies-git/vertimus/forms.py:80 vertimus/forms.py:83
-msgid "Please, don't send a file with a 'Reserve' action."
-msgstr ""
-
-#: djamnedlies-git/vertimus/models.py:139 vertimus/models.py:163
-msgid "Inactive"
-msgstr "現在未着手"
-
-#: djamnedlies-git/vertimus/models.py:152 vertimus/models.py:176
-msgid "Translating"
-msgstr "翻訳中"
-
-#: djamnedlies-git/vertimus/models.py:182 vertimus/models.py:206
-msgid "Proofreading"
-msgstr "校正中"
-
-#. Translators: This is a status, not a verb
-#: djamnedlies-git/vertimus/models.py:197 vertimus/models.py:221
-msgid "Proofread"
-msgstr "校正済み"
-
-#: djamnedlies-git/vertimus/models.py:212 vertimus/models.py:236
-msgid "To Review"
-msgstr "査読待ち"
-
-#: djamnedlies-git/vertimus/models.py:224 vertimus/models.py:248
-msgid "To Commit"
-msgstr "コミット待ち"
-
-#: djamnedlies-git/vertimus/models.py:239 vertimus/models.py:263
-msgid "Committing"
-msgstr "コミット中"
-
-#: djamnedlies-git/vertimus/models.py:253 vertimus/models.py:277
-msgid "Committed"
-msgstr "コミット済み"
-
-#: djamnedlies-git/vertimus/models.py:341 vertimus/models.py:322
-msgid "File in repository"
-msgstr "リポジトリ中のファイル"
-
-#: djamnedlies-git/vertimus/models.py:348
-#: djamnedlies-git/vertimus/views.py:130 djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146 vertimus/models.py:334
-#: vertimus/views.py:160 vertimus/views.py:166 vertimus/views.py:176
-#, python-format
-msgid "Uploaded file by %(name)s on %(date)s"
-msgstr "%(name)s が %(date)s にアップロードしたファイル"
-
-#: djamnedlies-git/vertimus/models.py:460 vertimus/models.py:520
-#, python-format
-msgid ""
-"Hello,\n"
-"\n"
-"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
-"'%(new_state)s'.\n"
-"%(url)s\n"
-"\n"
-msgstr ""
-
-#: djamnedlies-git/vertimus/models.py:473
-#: djamnedlies-git/vertimus/models.py:523 vertimus/models.py:533
-#: vertimus/models.py:583
-msgid "Without comment"
-msgstr "コメント無し"
-
-#: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525 teams/models.py:198
-#: vertimus/models.py:535 vertimus/models.py:585
-#, python-format
-msgid "This is an automated message sent from %s."
-msgstr "%s から自動的に送信されたメッセージです。"
-
-#: djamnedlies-git/vertimus/models.py:482 vertimus/models.py:542
-msgid "Write a comment"
-msgstr "コメントを書く"
-
-#: djamnedlies-git/vertimus/models.py:511 vertimus/models.py:571
-#, python-format
-msgid ""
-"Hello,\n"
-"\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
-"%(url)s\n"
-"\n"
-msgstr ""
-
-#: djamnedlies-git/vertimus/models.py:533 vertimus/models.py:593
-msgid "Reserve for translation"
-msgstr "翻訳を予約"
-
-#: djamnedlies-git/vertimus/models.py:545 vertimus/models.py:605
-msgid "Upload the new translation"
-msgstr "新しい翻訳をアップロード"
-
-#: djamnedlies-git/vertimus/models.py:560 vertimus/models.py:620
-msgid "Reserve for proofreading"
-msgstr "校正を予約"
-
-#: djamnedlies-git/vertimus/models.py:572 vertimus/models.py:632
-msgid "Upload the proofread translation"
-msgstr "校正した翻訳をアップロード"
-
-#. Translators: this means the file is ready to be committed in repository
-#: djamnedlies-git/vertimus/models.py:588 vertimus/models.py:648
-msgid "Ready for submission"
-msgstr "コミット待ち"
-
-#: djamnedlies-git/vertimus/models.py:604 vertimus/models.py:664
-msgid "Submit to repository"
-msgstr "リポジトリへ送る"
-
-#. Commit failed, state unchanged
-#: djamnedlies-git/vertimus/models.py:618 vertimus/models.py:678
-#, python-format
-msgid "The commit failed. The error was: '%s'"
-msgstr "コミットに失敗しました。エラー: '%s'"
-
-#. Translators: this indicates a committer is going to commit the file in the repository
-#: djamnedlies-git/vertimus/models.py:628 vertimus/models.py:688
-msgid "Reserve to submit"
-msgstr "コミットの予約"
-
-#. Translators: this is used to indicate the file has been committed in the repository
-#: djamnedlies-git/vertimus/models.py:641 vertimus/models.py:701
-msgid "Inform of submission"
-msgstr "コミットしたことを通知"
-
-#. Translators: regardless of the translation completion, this file need to be reviewed
-#: djamnedlies-git/vertimus/models.py:656 vertimus/models.py:716
-msgid "Review required"
-msgstr "査読待ち"
-
-#: djamnedlies-git/vertimus/models.py:695
-msgid "Backup the actions"
-msgstr "アクションをバックアップ"
-
-#: djamnedlies-git/vertimus/models.py:734 vertimus/models.py:770
-msgid "Undo the last state change"
-msgstr "最後の状態の変更を取り消し"
-
-#: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
-#: vertimus/views.py:159 vertimus/views.py:191
-#, python-format
-msgid "Error: The file %s contains invalid characters."
-msgstr "エラー: ファイル %s に無効な文字が含まれています。"
-
-#: djamnedlies-git/vertimus/views.py:152 vertimus/views.py:182
-#, python-format
-msgid "Latest committed file for %(lang)s"
-msgstr "%(lang)s にコミットされた最新のファイル"
-
-#: djamnedlies-git/vertimus/views.py:155 vertimus/views.py:185
-msgid "Latest POT file"
-msgstr "最新の POT ファイル"
-
-#. Translators: this concerns an unknown plural form
-#: languages/models.py:54
-msgid "Unknown"
-msgstr ""
-
-#: languages/views.py:80 templates/release_detail.html:66
-msgid "Original strings"
-msgstr ""
-
-#: people/views.py:88
-msgid "A new person joined your team"
-msgstr ""
-
-#: people/views.py:89
-#, python-format
-msgid "%(name)s has just joined your translation team on %(site)s"
-msgstr ""
-
-#: stats/models.py:353
-msgid "Can't generate POT file, statistics aborted."
-msgstr "POT ファイルを生成できません。統計処理を中断しました。"
-
-#: stats/models.py:714
-#, python-format
-msgid ""
-"Entry for this language is not present in %(var)s variable in %(file)s file."
-msgstr "この言語のエントリがファイル %(file)s 中の変数 %(var)s にありません。"
 
 #: stats/models.py:1178
 msgid ""
@@ -2825,6 +1519,86 @@ msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
 msgstr ""
+
+#: stats/utils.py:90
+msgid "Errors while running 'intltool-update -m' check."
+msgstr "'intltool-update -m' チェックを実行中にエラーが発生しました。"
+
+# ファイル 'missing' は intltool-update が生成する。 (intltool-update (8))
+# このファイルには POTFILES.in (または .skip) に記述がないファイルが
+# 出力される。
+#: stats/utils.py:96
+#, python-format
+msgid "There are some missing files from POTFILES.in: %s"
+msgstr "POTFILES.in に記述されていないファイルがあります: %s"
+
+#: stats/utils.py:105
+#, python-format
+msgid ""
+"Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
+"they don't exist: %s"
+msgstr ""
+"次のファイルは POTFILES.in と POTFILES.skip の両方で参照されていますが、存在"
+"していません: %s"
+
+#: stats/utils.py:130
+#, python-format
+msgid "Module %s doesn't look like gnome-doc-utils module."
+msgstr "モジュール %s は gnome-doc-utils モジュールではないようです。"
+
+#: stats/utils.py:133
+#, python-format
+msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgstr "DOC_MODULE が実ファイルに解決されません。'%s.xml' を使います。"
+
+#: stats/utils.py:136
+msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+msgstr "DOC_MODULE は実ファイルを参照していません。おそらくマクロです。"
+
+#: stats/utils.py:152
+#, python-format
+msgid ""
+"Error regenerating POT file for document %(file)s:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
+msgstr ""
+"ドキュメント %(file)s の POT ファイルの再生成中にエラー:\n"
+"<pre>%(cmd)s\n"
+"%(output)s</pre>"
+
+#: stats/utils.py:237
+#, python-format
+msgid "PO file '%s' does not exist or cannot be read."
+msgstr "PO ファイル '%s' は存在しないか、読みこめません。"
+
+#: stats/utils.py:257
+#, python-format
+msgid "PO file '%s' doesn't pass msgfmt check: not updating."
+msgstr ""
+"PO ファイル '%s' は msgfmt チェックをパスしませんでした: 更新しません。"
+
+#: stats/utils.py:259
+#, python-format
+msgid "Can't get statistics for POT file '%s'."
+msgstr "POT ファイル '%s' の統計情報を取得できません。"
+
+#: stats/utils.py:262
+msgid "This PO file has an executable bit set."
+msgstr "この PO ファイルには実行可能属性がセットされています。"
+
+#: stats/utils.py:290
+#, python-format
+msgid "PO file '%s' is not UTF-8 encoded."
+msgstr "PO ファイル '%s' は UTF-8 エンコーディングになっていません。"
+
+#: stats/utils.py:316
+msgid "Entry for this language is not present in LINGUAS file."
+msgstr "LINGUAS ファイル内にこの言語のエントリがありません。"
+
+#: stats/utils.py:322
+msgid ""
+"Entry for this language is not present in ALL_LINGUAS in configure file."
+msgstr "configure ファイル内の ALL_LINGUAS にこの言語のエントリがありません。"
 
 #: stats/utils.py:324
 msgid ""
@@ -2841,17 +1615,202 @@ msgstr ""
 "DOC_LINGUAS変数をどこから探し出せば良いのかわかりません。モジュールのメンテナ"
 "に問い合わせてください。"
 
-#: teams/models.py:90
+#: stats/utils.py:333
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "DOC_LINGUAS リストにこの言語が含まれていません。"
+
+#: teams/models.py:89
+#, fuzzy
+msgid "Presentation"
+msgstr "ドキュメント"
+
+#: teams/models.py:92
 msgid "Mailing list"
 msgstr "メーリングリスト"
 
-#: teams/models.py:91
+#: teams/models.py:93
 msgid "URL to subscribe"
 msgstr "購読するためのURL"
+
+#: teams/models.py:200 vertimus/models.py:535 vertimus/models.py:585
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "%s から自動的に送信されたメッセージです。"
+
+#: teams/models.py:218
+#, python-format
+msgid "No team for locale %s"
+msgstr "ロケール %s にはチームが存在しません"
+
+#: teams/models.py:238
+msgid "Translator"
+msgstr "翻訳者"
+
+#: teams/models.py:239
+msgid "Reviewer"
+msgstr "査読者"
+
+#: teams/models.py:240
+msgid "Committer"
+msgstr "コミッター"
+
+#: teams/models.py:241 templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "取りまとめ"
+
+#: teams/views.py:55
+msgid "Committers"
+msgstr "コミッター"
+
+#: teams/views.py:58
+msgid "No committers"
+msgstr "コミッターはいません"
+
+#: teams/views.py:60
+msgid "Reviewers"
+msgstr "査読者"
+
+#: teams/views.py:63
+msgid "No reviewers"
+msgstr "査読者はいません"
+
+#: teams/views.py:65
+msgid "Translators"
+msgstr "翻訳者"
+
+#: teams/views.py:68
+msgid "No translators"
+msgstr "翻訳者はいません"
+
+#: templates/404.html:4 templates/404.html.py:9
+msgid "Error: page not found"
+msgstr "エラー: ページが見つかりません"
+
+#: templates/404.html:11
+msgid "The page you requested has not been found on this server."
+msgstr "あなたがリクエストしたページはこのサーバーに見つかりませんでした。"
+
+#: templates/500.html:4
+msgid "Error: server error (500)"
+msgstr "エラー: サーバーエラー (500)"
+
+#: templates/500.html:9
+msgid "Server Error"
+msgstr "サーバーエラー"
+
+#: templates/500.html:11
+msgid "We're sorry but a server error has occurred."
+msgstr "サーバーエラーが発生しました。申しわけありません。"
+
+#: templates/base.html:26 templates/base.html.py:42
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/base.html:27
+msgid "News"
+msgstr "ニュース"
+
+#: templates/base.html:28
+msgid "Projects"
+msgstr "プロジェクト"
+
+#: templates/base.html:29
+msgid "Art"
+msgstr "アート"
+
+#: templates/base.html:30
+msgid "Support"
+msgstr "サポート"
+
+#: templates/base.html:31
+msgid "Development"
+msgstr "開発"
+
+#: templates/base.html:32
+msgid "Community"
+msgstr "コミュニティ"
+
+#: templates/base.html:42
+msgid "Back to Damned Lies home page"
+msgstr "Damned Lies のホームページへ戻る"
+
+#: templates/base.html:48 templates/index.html:13
+msgid "Teams"
+msgstr "チーム"
+
+#: templates/base.html:53 templates/index.html:27
+#: templates/release_compare.html:25
+msgid "Languages"
+msgstr "言語"
+
+#: templates/base.html:58
+msgid "Release sets"
+msgstr "リリースセット"
+
+#: templates/base.html:63 templates/index.html:43
+msgid "Modules"
+msgstr "モジュール"
+
+#: templates/base.html:74
+msgid "Log out"
+msgstr "ログアウト"
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
+
+#: templates/base.html:94
+msgid "The GNOME Project"
+msgstr "GNOMEプロジェクト"
+
+#: templates/base.html:96
+msgid ""
+"Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+"lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgstr ""
+"<a href='http://git.gnome.org/'>git.gnome.org</a>の\n"
+"<a href='http://git.gnome.org/cgit/damned-lies'>damned-lies</a>モジュールでメ"
+"ンテナンスされています。"
+
+#: templates/base.html:98
+msgid "Hosted by"
+msgstr "ホスティング: "
+
+#: templates/branch_detail.html:4
+msgid "This branch is currently string-frozen."
+msgstr "このブランチは現在 string-freeze されています"
+
+#: templates/branch_detail.html:13
+msgid "Translation"
+msgstr "翻訳"
+
+# "Damned Lies" の訳語は "嘘八百" だが、そのとおり訳すのが適当かどうか.
+# とりあえず一番無難 souna訳語にしておく。
+#: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
+#: templates/login.html:4 templates/registration/register.html:4
+#: templates/registration/register_success.html:4
+msgid "Damned Lies about GNOME"
+msgstr "GNOME 翻訳ステータス"
+
+#: templates/error.html:9
+msgid "Error:"
+msgstr "エラー:"
+
+#: templates/index.html:14
+msgid ""
+"List of all GNOME Translation Teams, with full information such as primary "
+"contact (coordinator), web pages and mailing list information."
+msgstr ""
+"すべての GNOME 翻訳チームの一覧です。一次の連絡先 (取りまとめ役) やウェブペー"
+"ジ、メーリングリストなどの完全な情報を含んでいます。"
+
+#: templates/index.html:15
+msgid ""
+"If there is no team for your language, you can easily <a href='http://live."
+"gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
+msgstr ""
+"もしあなたの言語のチームがなければ、簡単に <a href='http://live.gnome.org/"
+"TranslationProject/StartingATeam/'>チームを始められます</a>。"
 
 #: templates/index.html:19
 #, python-format
@@ -2862,6 +1821,29 @@ msgstr ""
 "<a href='%(team_url)s'>%(language_name)sチームのページ</a>にアクセスして、"
 "GNOMEの翻訳に力を貸してください!"
 
+#: templates/index.html:29
+#, python-format
+msgid ""
+"List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
+"a> for."
+msgstr "<a href='%(teams_url)s'>翻訳チーム</a> のある言語すべての一覧です。"
+
+#: templates/index.html:30
+msgid ""
+"Some teams manage more than one language (usually just simple variants), and "
+"here you can see all the languages GNOME is being translated to."
+msgstr ""
+"いくつかのチームは一つ以上の言語を管理しています (通常は単純な派生です)。そし"
+"て、ここでは翻訳されている GNOME のすべての言語について見ることができます。"
+
+#: templates/index.html:34
+msgid "Release Sets"
+msgstr "リリースセット"
+
+#: templates/index.html:35
+msgid "List of all GNOME release sets and releases we gather stats for."
+msgstr "統計をとる GNOME のすべてのリリースセットとリリースの一覧です。"
+
 #: templates/index.html:37
 msgid ""
 "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
@@ -2869,6 +1851,34 @@ msgid ""
 msgstr ""
 "リリースセットは例えば \"GNOME インフラストラクチャ\", \"GNOME 2.26\" などで"
 "す。"
+
+#: templates/index.html:38
+msgid ""
+"Official GNOME release sets are further divided into categories such as "
+"&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
+msgstr ""
+"公式の GNOME リリースセットはさらに &quot;デスクトップ・アプリケーション"
+"&quot; と&quot;開発プラットフォーム&quot; に分けられています。"
+
+#: templates/index.html:40
+msgid ""
+"Look here if you want to compare language support in any of these release "
+"sets."
+msgstr ""
+"これらの任意のリリースセットについて言語サポートの比較をしたいならこちらを参"
+"照して下さい。"
+
+#: templates/index.html:44
+msgid "List of all modules with statistics in here."
+msgstr "ここにはすべてのモジュールの統計の一覧があります。"
+
+#: templates/index.html:46
+msgid ""
+"Modules are separate libraries or applications, with one or more branches of "
+"development included."
+msgstr ""
+"モジュールは別々のライブラリまたはアプリケーションであり、一つ以上の開発ブラ"
+"ンチを含んでいます。"
 
 #: templates/index.html:47
 msgid ""
@@ -2878,9 +1888,106 @@ msgstr ""
 "これらは通常 Git リポジトリから取得して、Bugzilla の詳細やウェブページ、保守"
 "している人など、すべての関連情報を保っておきます。"
 
+#: templates/index.html:53
+msgid "Translated by:"
+msgstr "翻訳者:"
+
+#: templates/login.html:10 templates/registration/register.html:11
+#, python-format
+msgid "You are already logged in as %(username)s."
+msgstr "あなたは既に%(username)sとしてログインしています。"
+
+#: templates/login.html:13
+#, python-format
+msgid ""
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
+msgstr ""
+"このサイトのアカウントをまだ持っていないのであれば、新しいアカウントを<a "
+"href='%(link)s'>登録</a>できます。"
+
+#: templates/login.html:22
+msgid "Have you forgotten your password?"
+msgstr "パスワードを忘れてしまいましたか?"
+
+#: templates/module_detail.html:6
+#, python-format
+msgid "Module Statistics: %(name)s"
+msgstr "モジュールの統計: %(name)s"
+
+#: templates/module_detail.html:55
+msgid "Maintainers"
+msgstr "メンテナ"
+
+#: templates/module_detail.html:63
+msgid "Bug reporting"
+msgstr "バグ報告"
+
+#: templates/module_detail.html:66
+msgid "Show existing i18n and l10n bugs"
+msgstr "報告済みの i18n や l10n のバグを表示"
+
 #: templates/module_detail.html:68
 msgid "Report a bug"
 msgstr "バグを報告"
+
+#: templates/module_detail.html:77
+msgid "Branches:"
+msgstr "ブランチ:"
+
+#: templates/module_detail.html:97
+msgid "Browse Repository"
+msgstr "リポジトリの閲覧"
+
+#: templates/module_images.html:4
+#, python-format
+msgid "Module Doc Figure Status: %(name)s"
+msgstr "モジュールの文書の画像の状況: %(name)s"
+
+#: templates/module_images.html:12
+msgid "Figures translation status"
+msgstr "画像の翻訳状況"
+
+#: templates/module_images.html:17
+msgid "Original"
+msgstr "オリジナル"
+
+#: templates/module_images.html:30
+msgid ""
+"Translated, but uses original one (maybe the figure doesn't contain any "
+"string to translate)"
+msgstr ""
+"翻訳されていますが、元のものをそのまま使っています (画像に翻訳すべき文字列が"
+"含まれていないのでしょう)"
+
+#: templates/module_images.html:34
+msgid "Fuzzy"
+msgstr "曖昧"
+
+#: templates/module_images.html:39
+msgid "No existing file (&quot;Technical&quot; fuzzy)"
+msgstr ""
+
+#: templates/module_images.html:42
+msgid "Not translated"
+msgstr "未翻訳"
+
+#: templates/module_list.html:4 templates/module_list.html.py:9
+msgid "GNOME Modules"
+msgstr "GNOME のモジュール"
+
+#: templates/module_list.html:11
+msgid "Select a module below to see some of the damned lies about it:"
+msgstr "情報を表示するモジュールを選択して下さい:"
+
+#: templates/release_compare.html:5 templates/release_compare.html.py:20
+msgid "Releases Comparison"
+msgstr "リリースの比較"
+
+#: templates/release_detail.html:10
+#, python-format
+msgid "%(name)s Release"
+msgstr "%(name)s リリース"
 
 #: templates/release_detail.html:13
 msgid ""
@@ -2890,9 +1997,87 @@ msgstr ""
 "モジュールのこのリリースは GNOME Git リポジトリの一部ではありません。各モ"
 "ジュールのウェブページで翻訳の送り先を確認してみて下さい。"
 
+#: templates/release_detail.html:19 templates/stats_show.html:30
+msgid "Language"
+msgstr "言語"
+
+#: templates/release_detail.html:20 templates/release_detail.html.py:67
+#: templates/languages/language_release_summary.html:9
+msgid "User Interface"
+msgstr "ユーザーインターフェース"
+
+#: templates/release_detail.html:21 templates/release_detail.html.py:23
+#: templates/stats_show.html:34
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
+msgid "Graph"
+msgstr "グラフ"
+
+#: templates/release_list.html:4 templates/release_list.html.py:9
+msgid "GNOME Releases"
+msgstr "GNOME リリース"
+
+#: templates/release_list.html:11
+msgid "Select a release or a release set below to see more details about it:"
+msgstr "さらなる詳細を見るにはリリースまたはリリースセットを選択して下さい:"
+
 #: templates/release_list.html:25
 msgid "Older Releases"
 msgstr "古いリリース"
+
+#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
+msgid "Download POT file"
+msgstr "POT ファイルをダウンロード"
+
+#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
+msgid "Notices"
+msgstr "通知"
+
+#: templates/stats_show.html:30 vertimus/models.py:189
+msgid "Translated"
+msgstr "翻訳済"
+
+#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
+msgid "Display document figures"
+msgstr "ドキュメントの画像を表示"
+
+# "Damned Lies" の訳語は ”嘘八百" だが...
+#: templates/admin/base_site.html:4
+msgid "Damned Lies site admin"
+msgstr "翻訳ステータスサイト管理"
+
+#: templates/feeds/actions_description.html:6
+#: templates/vertimus/vertimus_detail.html:160
+msgid "No comment"
+msgstr "コメント無し"
+
+#: templates/languages/language_all_modules.html:4
+#: templates/languages/language_all_modules.html:20
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
+msgid "All modules"
+msgstr "すべてモジュール"
+
+#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_release.html:25
+msgid "Hide completed modules"
+msgstr "翻訳が完了したモジュールを隠す"
+
+#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_release.html:29
+msgid "Show completed modules"
+msgstr "翻訳が完了したモジュールも表示する"
+
+#: templates/languages/language_list.html:4
+#: templates/languages/language_list.html:9
+msgid "GNOME Languages"
+msgstr "GNOME 言語"
+
+#: templates/languages/language_list.html:11
+#, python-format
+msgid "GNOME is being translated to following %(numb)s language.\n"
+msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
+msgstr[0] "GNOME は次の %(numb)s の言語に翻訳されています。\n"
 
 #: templates/languages/language_release.html:33
 msgid ""
@@ -2902,12 +2087,308 @@ msgstr ""
 "モジュールのこのリリースは GNOME Git リポジトリの一部ではありません。各モ"
 "ジュールのウェブページで翻訳の送り先を確認してみて下さい。"
 
-#: templates/teams/team_detail.html:6
+#: templates/languages/language_release.html:43
+msgid "Download all po files"
+msgstr "すべての PO ファイルをダウンロード"
+
+#: templates/languages/language_release_stats.html:21
+#: templates/people/person_detail.html:54
+msgid "Module"
+msgstr "モジュール"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "ブランチ"
+
+#: templates/languages/language_release_stats.html:21
+msgid "Statistics"
+msgstr "統計"
+
+#: templates/languages/language_release_stats.html:22
+msgid "Status"
+msgstr "状態"
+
+#: templates/languages/language_release_stats.html:22
+#: templates/people/person_detail.html:54
+msgid "Date"
+msgstr "日付"
+
+#: templates/languages/language_release_stats.html:32
+msgid "%(categname)s (%(percentage)s% translated)"
+msgstr "%(categname)s (%(percentage)s% 翻訳済み)"
+
+#: templates/languages/language_release_stats.html:103
+msgid "Error summary"
+msgstr "エラーのサマリー"
+
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "リリース"
+
+#: templates/people/person_base.html:5
+msgid "GNOME Contributor"
+msgstr "GNOME への貢献者"
+
+#: templates/people/person_base.html:12
+#: templates/people/person_detail_change_form.html:7
+msgid "Change your details"
+msgstr "詳細を変更"
+
+#: templates/people/person_base.html:13
+msgid "Change your password"
+msgstr "パスワードを変更"
+
+#: templates/people/person_base.html:14
+msgid "Join a team"
+msgstr "チームに参加"
+
+#: templates/people/person_detail.html:22
+msgid "Site Language:"
+msgstr "サイトの言語:"
+
+#: templates/people/person_detail.html:33
+msgid "Choose"
+msgstr "選択"
+
+#: templates/people/person_detail.html:39
+msgid "Maintains:"
+msgstr "保守:"
+
+#: templates/people/person_detail.html:50
+msgid "Working on"
+msgstr "作業中"
+
+#: templates/people/person_detail.html:54
+msgid "State"
+msgstr "状態"
+
+#: templates/people/person_detail_change_form.html:13
+#: templates/teams/team_edit.html:27
+msgid "Save"
+msgstr "保存"
+
+#: templates/people/person_list.html:4 templates/people/person_list.html:8
+msgid "GNOME Contributors"
+msgstr "GNOME に貢献してくれている人々"
+
+#: templates/people/person_list.html:10
+msgid "GNOME is being developed by following people:"
+msgstr "GNOME を開発しているのは次の人々です:"
+
+#: templates/people/person_overview.html:27
+msgid "Instant messaging:"
+msgstr "インスタント・メッセージ:"
+
+#: templates/people/person_overview.html:34
+msgid "Bugzilla account:"
+msgstr "Bugzilla アカウント:"
+
+#: templates/people/person_password_change_form.html:6
+msgid "Password change"
+msgstr "パスワード変更"
+
+#: templates/people/person_password_change_form.html:8
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: templates/people/person_password_change_form.html:15
+msgid "Old password:"
+msgstr "古いパスワード:"
+
+#: templates/people/person_password_change_form.html:21
+#: templates/registration/password_reset_confirm.html:16
+msgid "New password:"
+msgstr "新しいパスワード:"
+
+#: templates/people/person_password_change_form.html:30
+#: templates/registration/password_reset_confirm.html:19
+msgid "Change my password"
+msgstr "パスワードを変更"
+
+#: templates/people/person_team_join_form.html:8
+msgid "Join a new team"
+msgstr "新しくチームに参加"
+
+#: templates/people/person_team_join_form.html:11
+msgid "I would like to join the following team as 'translator':"
+msgstr "以下のチームに「翻訳者」として参加したい"
+
+#: templates/people/person_team_join_form.html:13
+msgid "Join"
+msgstr "参加"
+
+#: templates/people/person_team_membership.html:5
+msgid "Member of teams"
+msgstr "参加中のチーム"
+
+#: templates/people/person_team_membership.html:9
+#, python-format
+msgid "Member of %(team_name)s team (%(role_name)s)"
+msgstr "%(team_name)s チームのメンバー (%(role_name)s)"
+
+#: templates/people/person_team_membership.html:12
+msgid "Leave"
+msgstr "外れる"
+
+#: templates/people/person_team_membership.html:13
+msgid "Are you sure you want to leave the team?"
+msgstr "本当にチームから離れますか?"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "パスワードのリセットが完了しました"
+
+#: templates/registration/password_reset_complete.html:10
+msgid "Your password has been set. You may go ahead and log in now."
+msgstr "パスワードを設定しました。さらに進んでログインしてください。"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:9
+msgid "Password reset"
+msgstr "パスワードのリセット"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "新しいパスワードを入力"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"新しいパスワードを2回入力してください。正確にタイプされたかどうか確認します。"
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "パスワードのリセットに失敗"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:9
+msgid "Password reset successful"
+msgstr "パスワードのリセットに成功"
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"入力されたメールアドレスに、パスワードを設定する手順を書いて送りました。すぐ"
+"にメールが届くはずです。"
+
+#: templates/registration/password_reset_form.html:11
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"パスワードを忘れてしましましたか? メールアドレスを以下に入力すれば、新しいパ"
+"スワードを設定する手順を書いたメールを送ります。"
+
+#: templates/registration/password_reset_form.html:15
+msgid "E-mail address:"
+msgstr "メールアドレス:"
+
+#: templates/registration/password_reset_form.html:15
+msgid "Reset my password"
+msgstr "自分のパスワードをリセット"
+
+#: templates/registration/register.html:9
+msgid "Account Registration"
+msgstr "アカウント登録"
+
+#: templates/registration/register.html:13
+msgid ""
+"You can register here for an account on this site. This is only useful if "
+"you plan to contribute to GNOME translations."
+msgstr ""
+"このサイトのアカウントをここで登録できます。GNOMEの翻訳に貢献するつもりがある"
+"のなら役に立ちます。"
+
+#: templates/registration/register.html:14
+msgid ""
+"After registration and connection, you will be able to join an existing team "
+"from your profile page."
+msgstr ""
+"登録した後に接続すると、自分のプロフィールのページから、既存のチームに参加す"
+"ることができます。"
+
+#: templates/registration/register.html:28
+msgid "Authenticate via OpenID <strong>or</strong> password:"
+msgstr "OpenID <strong>または</strong> パスワードで認証:"
+
+#: templates/registration/register.html:34
+msgid "Register with OpenID"
+msgstr "OpenID で登録"
+
+#: templates/registration/register.html:46
+msgid "Register with password"
+msgstr "パスワードで登録"
+
+#: templates/registration/register_success.html:8
+msgid "Registration Success"
+msgstr "登録に成功"
+
+#: templates/registration/register_success.html:10
+msgid ""
+"The registration succeeded. You will now receive an email containing a link "
+"to activate your account."
+msgstr ""
+"登録に成功しました。アカウントをアクティベートするためのリンクを記したメール"
+"を受信してください。"
+
+#: templates/teams/team_base.html:7
+msgid "Details"
+msgstr "詳細"
+
+#: templates/teams/team_base.html:14
+#, python-format
+msgid "%(lang)s Translation Team Page:"
+msgstr "%(lang)s 翻訳チームのページ:"
+
+#: templates/teams/team_base.html:18
+msgid "Bugzilla:"
+msgstr "Bugzilla:"
+
+#: templates/teams/team_base.html:20
+msgid "Report Bug in Translation"
+msgstr "翻訳のバグを報告"
+
+#: templates/teams/team_base.html:21
+msgid "Show Existing Bugs"
+msgstr "報告済みのバグを表示"
+
+#: templates/teams/team_base.html:25
+msgid "Mailing List:"
+msgstr "メーリングリスト:"
+
+#: templates/teams/team_base.html:27
+msgid "Send e-mail to the list"
+msgstr "リストにメールを送信"
+
+#: templates/teams/team_base.html:29
+msgid "Subscribe"
+msgstr "購読"
+
+#: templates/teams/team_detail.html:7
 #, python-format
 msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr "GNOME翻訳プロジェクトの %(lang)s チームの最新の活動"
 
-#: templates/teams/team_detail.html:46
+#: templates/teams/team_detail.html:40 templates/teams/team_edit.html:16
+#, python-format
+msgid "%(lang)s Translation Team"
+msgstr "%(lang)s 翻訳チーム"
+
+#: templates/teams/team_detail.html:48
 #, fuzzy
 msgid ""
 "There is currently no established team for this language. See <a href="
@@ -2917,37 +2398,174 @@ msgstr ""
 "もしあなたの言語のチームがなければ、簡単に <a href='http://live.gnome.org/"
 "TranslationProject/StartingATeam/'>チームを始められます</a>。"
 
-#: templates/teams/team_detail.html:56
+#: templates/teams/team_detail.html:58
 msgid "Plural forms:"
 msgstr "複数形:"
 
-#: templates/teams/team_detail.html:58
+#: templates/teams/team_detail.html:60
 msgid "Archives"
 msgstr "アーカイブ"
 
-#: templates/vertimus/vertimus_detail.html:105
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "チームのメンバー"
+
+#: templates/teams/team_detail.html:77
+msgid "Apply modifications"
+msgstr "変更を適用"
+
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr ""
+
+#: templates/teams/team_edit.html:25
+msgid ""
+"This content may use <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a> syntax"
+msgstr ""
+
+#: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
+msgid "GNOME Translation Teams"
+msgstr "GNOME 翻訳チーム"
+
+#: templates/teams/team_list.html:12
+msgid "Select a team below to see more information about it:"
+msgstr "さらなる詳細を見るにはチームを選択して下さい:"
+
+#: templates/teams/team_list.html:25
+#, python-format
+msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
+msgstr "<a href=\"%(url)s\">%(name)s</a> によって取りまとめられています"
+
+#: templates/teams/team_list.html:34
+msgid "There are currently no translation teams in GNOME. :("
+msgstr "GNOME には現在翻訳チームは存在しません :("
+
+#: templates/vertimus/vertimus_detail.html:6
+#, python-format
+msgid "Module Translation: %(name)s"
+msgstr "モジュールの翻訳: %(name)s"
+
+#: templates/vertimus/vertimus_detail.html:27
+msgid "Used in release(s):"
+msgstr ""
+
+#: templates/vertimus/vertimus_detail.html:45
+msgid "State:"
+msgstr "状態:"
+
+#: templates/vertimus/vertimus_detail.html:65
+msgid "Download PO file"
+msgstr "PO ファイルをダウンロード"
+
+#: templates/vertimus/vertimus_detail.html:65
+msgid "Translated:"
+msgstr "翻訳:"
+
+#: templates/vertimus/vertimus_detail.html:95
+msgid "On-going activities in same module:"
+msgstr "同じモジュールで進行中の活動:"
+
+#: templates/vertimus/vertimus_detail.html:106
 msgid "Actions"
 msgstr "アクション"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:107 vertimus/models.py:831
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:831
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "アーカイブ済アクション (%(human_level)sのアーカイブ)"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:110
 msgid "(Return to current)"
 msgstr "(現在へ戻る)"
 
-#: templates/vertimus/vertimus_detail.html:114
+#: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
 msgstr "(以前のアクションの履歴)"
 
-#: templates/vertimus/vertimus_detail.html:167
+#: templates/vertimus/vertimus_detail.html:149
+msgid "diff with:"
+msgstr "差分:"
+
+#: templates/vertimus/vertimus_detail.html:168
 msgid "No current actions."
 msgstr "現在も何の作業中でもありません。"
+
+#: templates/vertimus/vertimus_detail.html:172
+msgid "New Action"
+msgstr "新しいアクション"
+
+#: templates/vertimus/vertimus_detail.html:182
+msgid "Submit"
+msgstr "送信"
+
+#: templates/vertimus/vertimus_detail.html:187
+#, python-format
+msgid ""
+"You need to be authenticated and to be member of the %(team_name)s team."
+msgstr "ログインに成功し、%(team_name)s チームのメンバーでなくてはなりません。"
+
+#: templates/vertimus/vertimus_diff.html:5
+msgid "Diff between po files"
+msgstr ""
+
+#: templates/vertimus/vertimus_diff.html:16
+msgid "&lt;- Back to actions"
+msgstr ""
+
+#: templates/vertimus/vertimus_diff.html:20
+msgid "Note: both files are merged with latest POT file."
+msgstr ""
+
+#: vertimus/feeds.py:43
+#, python-format
+msgid "%(site)s - Vertimus actions for the %(lang)s language"
+msgstr ""
+
+#: vertimus/feeds.py:52
+#, python-format
+msgid "Latest actions of the GNOME Translation Project for the %s language"
+msgstr ""
+
+#: vertimus/feeds.py:89
+#, python-format
+msgid "%(site)s - Vertimus actions of the %(lang)s team"
+msgstr ""
+
+#: vertimus/feeds.py:98
+#, python-format
+msgid "Latest actions made by the %s team of the GNOME Translation Project"
+msgstr "GNOME翻訳プロジェクトの%sチームの最新の活動"
+
+#: vertimus/forms.py:38
+msgid "Action"
+msgstr "アクション"
+
+#: vertimus/forms.py:42
+msgid "Comment"
+msgstr "コメント"
+
+#: vertimus/forms.py:47
+msgid "File"
+msgstr "ファイル"
+
+#: vertimus/forms.py:48
+msgid "Upload a .po, .gz, .bz2 or .png file"
+msgstr ".po .gz .bz2 あるいは .png ファイルをアップロードしてください"
+
+#: vertimus/forms.py:59
+msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
+msgstr "拡張子が .po .gz .bz2 あるいは .png のファイルのみが許可されています。"
+
+#: vertimus/forms.py:64
+msgid ""
+".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
+msgstr ""
+".po ファイルが 'msgfmt -vc' に通りませんでした。ファイルを修正して再度挑戦し"
+"てください。"
 
 #: vertimus/forms.py:71
 msgid "Invalid action. Someone probably posted another action just before you."
@@ -2955,9 +2573,202 @@ msgstr ""
 "不正なアクションです。おそらく直前に他の誰かが他のアクションを投稿したのかも"
 "しれません。"
 
+#: vertimus/forms.py:77
+msgid "A comment or a file is needed for this action."
+msgstr "このアクションにはコメントかファイルの添付必要です。"
+
+#: vertimus/forms.py:80
+msgid "A file is needed for this action."
+msgstr "このアクションにはファイルが必要です。"
+
+#: vertimus/forms.py:83
+msgid "Please, don't send a file with a 'Reserve' action."
+msgstr ""
+
+#: vertimus/models.py:163
+msgid "Inactive"
+msgstr "現在未着手"
+
+#: vertimus/models.py:176
+msgid "Translating"
+msgstr "翻訳中"
+
+#: vertimus/models.py:206
+msgid "Proofreading"
+msgstr "校正中"
+
+#. Translators: This is a status, not a verb
+#: vertimus/models.py:221
+msgid "Proofread"
+msgstr "校正済み"
+
+#: vertimus/models.py:236
+msgid "To Review"
+msgstr "査読待ち"
+
+#: vertimus/models.py:248
+msgid "To Commit"
+msgstr "コミット待ち"
+
+#: vertimus/models.py:263
+msgid "Committing"
+msgstr "コミット中"
+
+#: vertimus/models.py:277
+msgid "Committed"
+msgstr "コミット済み"
+
+#: vertimus/models.py:322
+msgid "File in repository"
+msgstr "リポジトリ中のファイル"
+
+#: vertimus/models.py:334 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/views.py:176
+#, python-format
+msgid "Uploaded file by %(name)s on %(date)s"
+msgstr "%(name)s が %(date)s にアップロードしたファイル"
+
+#: vertimus/models.py:520
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now "
+"'%(new_state)s'.\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+
+#: vertimus/models.py:533 vertimus/models.py:583
+msgid "Without comment"
+msgstr "コメント無し"
+
+#: vertimus/models.py:542
+msgid "Write a comment"
+msgstr "コメントを書く"
+
+#: vertimus/models.py:571
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
+"%(url)s\n"
+"\n"
+msgstr ""
+
+#: vertimus/models.py:593
+msgid "Reserve for translation"
+msgstr "翻訳を予約"
+
+#: vertimus/models.py:605
+msgid "Upload the new translation"
+msgstr "新しい翻訳をアップロード"
+
+#: vertimus/models.py:620
+msgid "Reserve for proofreading"
+msgstr "校正を予約"
+
+#: vertimus/models.py:632
+msgid "Upload the proofread translation"
+msgstr "校正した翻訳をアップロード"
+
+#. Translators: this means the file is ready to be committed in repository
+#: vertimus/models.py:648
+msgid "Ready for submission"
+msgstr "コミット待ち"
+
+#: vertimus/models.py:664
+msgid "Submit to repository"
+msgstr "リポジトリへ送る"
+
+#. Commit failed, state unchanged
+#: vertimus/models.py:678
+#, python-format
+msgid "The commit failed. The error was: '%s'"
+msgstr "コミットに失敗しました。エラー: '%s'"
+
+#. Translators: this indicates a committer is going to commit the file in the repository
+#: vertimus/models.py:688
+msgid "Reserve to submit"
+msgstr "コミットの予約"
+
+#. Translators: this is used to indicate the file has been committed in the repository
+#: vertimus/models.py:701
+msgid "Inform of submission"
+msgstr "コミットしたことを通知"
+
+#. Translators: regardless of the translation completion, this file need to be reviewed
+#: vertimus/models.py:716
+msgid "Review required"
+msgstr "査読待ち"
+
 #: vertimus/models.py:731
 msgid "Archive the actions"
 msgstr "アクションをアーカイブする"
+
+#: vertimus/models.py:770
+msgid "Undo the last state change"
+msgstr "最後の状態の変更を取り消し"
+
+#: vertimus/views.py:159 vertimus/views.py:191
+#, python-format
+msgid "Error: The file %s contains invalid characters."
+msgstr "エラー: ファイル %s に無効な文字が含まれています。"
+
+#: vertimus/views.py:182
+#, python-format
+msgid "Latest committed file for %(lang)s"
+msgstr "%(lang)s にコミットされた最新のファイル"
+
+#: vertimus/views.py:185
+msgid "Latest POT file"
+msgstr "最新の POT ファイル"
+
+#~ msgid ""
+#~ "Don't know where to look if this language is actually used, ask the "
+#~ "module maintainer."
+#~ msgstr ""
+#~ "この言語が実際に使われているかどうか確認するためのファイルがありません。モ"
+#~ "ジュールを保守されている方にたずねてみて下さい。"
+
+#~ msgid ""
+#~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
+#~ "Toe&quot; or &quot;GNOME 2.14&quot;."
+#~ msgstr ""
+#~ "リリースセットは例えば \"GNOME オフィス\", \"Fifth Toe\", \"GNOME 2.14\" "
+#~ "などです。"
+
+#~ msgid ""
+#~ "They are usually taken from CVS, and we keep all relevant information on "
+#~ "them (Bugzilla details, web page, maintainer information,...)."
+#~ msgstr ""
+#~ "これらは通常 CVS から取得して、Bugzilla の詳細やウェブページ、保守している"
+#~ "人など、すべての関連情報を保っておきます。"
+
+#~ msgid "Report bugs to Bugzilla"
+#~ msgstr "Bugzilla にバグ報告"
+
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME SVN repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "モジュールのこのリリースは GNOME SVN リポジトリの一部ではありません。各モ"
+#~ "ジュールのウェブページで翻訳の送り先を確認してみて下さい。"
+
+#~ msgid "SVN account:"
+#~ msgstr "SVN アカウント:"
+
+#~ msgid ""
+#~ "Last actions made by the %(lang)s team of the GNOME translation project"
+#~ msgstr "GNOME翻訳プロジェクトの%(lang)sチームの最新のアクション"
+
+#~ msgid "Action History"
+#~ msgstr "活動履歴"
+
+#~ msgid "Backup the actions"
+#~ msgstr "アクションをバックアップ"
 
 #~ msgid "The Gimp Manual"
 #~ msgstr "GIMP マニュアル"
