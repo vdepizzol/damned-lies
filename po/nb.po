@@ -2,14 +2,14 @@
 # Copyright (C) 2007  Free Software Foundation, Inc.
 # This file is distributed under the same license as the damned-lies package.
 # Espen A. Stefansen <espens@svn.gnome.org>, 2007.
-# Kjartan Maraas <kmaraas@gnome.org>, 2008
+# Kjartan Maraas <kmaraas@gnome.org>, 2008-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-08 13:56+0200\n"
-"PO-Revision-Date: 2008-10-08 14:07+0200\n"
+"PO-Revision-Date: 2010-02-23 11:16+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -1120,7 +1120,7 @@ msgstr ""
 
 #: ../templates/header.tmpl:70 ../templates/index.tmpl:13
 msgid "Teams"
-msgstr ""
+msgstr "Lag"
 
 #: ../templates/header.tmpl:75 ../templates/index.tmpl:20
 msgid "Languages"
@@ -1136,7 +1136,7 @@ msgstr "Moduler"
 
 #: ../templates/index.tmpl:9
 msgid "Damned Lies about GNOME"
-msgstr ""
+msgstr "Fordømte løgner om GNOME"
 
 #: ../templates/index.tmpl:14
 msgid ""
@@ -1235,7 +1235,7 @@ msgstr "Bugzilla:"
 
 #: ../templates/language-release.tmpl:24 ../templates/team.tmpl:24
 msgid "Report Bug in Translation"
-msgstr ""
+msgstr "Rapporter feil i oversettelse"
 
 #: ../templates/language-release.tmpl:25 ../templates/team.tmpl:25
 msgid "Show Existing Bugs"
@@ -1247,11 +1247,11 @@ msgstr "E-postlister:"
 
 #: ../templates/language-release.tmpl:32 ../templates/team.tmpl:32
 msgid "Send e-mail to the list"
-msgstr ""
+msgstr "Send e-post til listen"
 
 #: ../templates/language-release.tmpl:34 ../templates/team.tmpl:34
 msgid "Subscribe"
-msgstr ""
+msgstr "Abonner"
 
 #: ../templates/language-release.tmpl:41 ../templates/team.tmpl:41
 msgid "Coordinator"
@@ -1264,11 +1264,11 @@ msgstr "Språkkode: %s"
 
 #: ../templates/language-release.tmpl:55
 msgid "Hide completed modules"
-msgstr ""
+msgstr "Skjul ferdigstilte moduler"
 
 #: ../templates/language-release.tmpl:59
 msgid "Show completed modules"
-msgstr ""
+msgstr "Vis ferdigstilte moduler"
 
 #: ../templates/language-release.tmpl:63 ../templates/release.tmpl:9
 msgid ""
@@ -1283,7 +1283,7 @@ msgstr "Dokumentasjon"
 
 #: ../templates/list-languages.tmpl:7
 msgid "GNOME Languages"
-msgstr ""
+msgstr "GNOME språk"
 
 #: ../templates/list-languages.tmpl:11
 msgid "GNOME is being translated to following %(count)s language:"
@@ -1297,7 +1297,7 @@ msgstr ""
 
 #: ../templates/list-modules.tmpl:7
 msgid "GNOME modules"
-msgstr ""
+msgstr "GNOME moduler"
 
 #: ../templates/list-modules.tmpl:10
 msgid "Select a module below to see some of the damned lies about it:"
@@ -1323,7 +1323,7 @@ msgstr ""
 
 #: ../templates/list-teams.tmpl:7
 msgid "GNOME Translation Teams"
-msgstr ""
+msgstr "GNOME oversettelseslag"
 
 #: ../templates/list-teams.tmpl:10
 msgid "Select a team below to see more information about it:"
@@ -1375,9 +1375,8 @@ msgid "Bug reporting"
 msgstr "Feilrapportering"
 
 #: ../templates/module.tmpl:39
-#, fuzzy
 msgid "Show existing i18n and l10n bugs"
-msgstr "Vis eksisterende feil"
+msgstr "Vis eksisterende feil for internasjonalisering og lokalisering"
 
 #: ../templates/module.tmpl:41
 msgid "Report bugs to Bugzilla"
@@ -1385,7 +1384,7 @@ msgstr "Rapporter feil til Bugzilla"
 
 #: ../templates/module.tmpl:48
 msgid "Branches:"
-msgstr ""
+msgstr "Grener:"
 
 #: ../templates/module.tmpl:63
 msgid "Browse CVS"
@@ -1405,11 +1404,11 @@ msgstr "Oversettelse"
 
 #: ../templates/people.tmpl:7
 msgid "GNOME Contributors"
-msgstr ""
+msgstr "GNOME bidragsytere"
 
 #: ../templates/people.tmpl:10
 msgid "GNOME is being developed by following people:"
-msgstr ""
+msgstr "GNOME utvikles av følgende personer:"
 
 #: ../templates/people.tmpl:32
 msgid "There are no contributors, GNOME turned itself up from nothing."
@@ -1417,7 +1416,7 @@ msgstr ""
 
 #: ../templates/person-base.tmpl:26
 msgid "Instant messaging:"
-msgstr ""
+msgstr "Lynmeldinger:"
 
 #: ../templates/person-base.tmpl:40
 msgid "Bugzilla account:"
@@ -1429,7 +1428,7 @@ msgstr "SVN-konto:"
 
 #: ../templates/person-base.tmpl:47
 msgid "Maintains:"
-msgstr ""
+msgstr "Vedlikeholder:"
 
 #: ../templates/person-base.tmpl:57
 msgid "Translates:"
@@ -1450,11 +1449,11 @@ msgstr ""
 #: ../templates/release.tmpl:15 ../templates/show-stats.tmpl:43
 #: ../templates/team.tmpl:60
 msgid "Graph"
-msgstr ""
+msgstr "Graf"
 
 #: ../templates/release.tmpl:15 ../templates/team.tmpl:60
 msgid "User Interface"
-msgstr ""
+msgstr "Brukergrensesnitt"
 
 #: ../templates/release.tmpl:29 ../templates/team.tmpl:72
 msgid "-"
@@ -1481,7 +1480,7 @@ msgstr "oppdatert den %(date)s"
 #. This is the title of the section that lists notices about a module
 #: ../templates/show-stats.tmpl:28
 msgid "Notices"
-msgstr ""
+msgstr "Merknader"
 
 #: ../templates/show-stats.tmpl:39
 msgid "Language"
