@@ -118,6 +118,9 @@ class Person(User):
         except:
             return False
 
+    def is_maintainer_of(self, module):
+        return module in self.maintains_modules.all()
+
     def get_languages(self):
         all_teams = [role.team for role in self.role_set.select_related('team')]
         all_languages = []

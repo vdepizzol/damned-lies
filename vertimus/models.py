@@ -165,7 +165,7 @@ class StateNone(StateAbstract):
     def get_available_actions(self, person):
         action_names = []
 
-        if person.is_translator(self.language.team):
+        if person.is_translator(self.language.team) or person.is_maintainer_of(self.branch.module):
             action_names = ['RT']
 
         return self._get_available_actions(person, action_names)
