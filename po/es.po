@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-19 20:50+0000\n"
-"PO-Revision-Date: 2010-02-20 00:18+0100\n"
+"POT-Creation-Date: 2010-03-03 13:00+0000\n"
+"PO-Revision-Date: 2010-03-03 18:30+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -893,119 +893,277 @@ msgid "UI translation"
 msgstr "Traducción del IU"
 
 #: database-content.py:219
+msgid "glossary"
+msgstr "glosario"
+
+#: database-content.py:220
+msgid "filters"
+msgstr "filtros"
+
+#: database-content.py:221
+msgid "preface"
+msgstr "prefacio"
+
+#: database-content.py:222
+#| msgid "CD Player Manual"
+msgid "layer menu"
+msgstr "menú de distribución"
+
+#: database-content.py:223
 msgid "tags"
 msgstr "etiquetas"
 
-#: database-content.py:220
+#: database-content.py:224
+msgid "appendix"
+msgstr "apéndice"
+
+#: database-content.py:225
+msgid "concepts"
+msgstr "conceptos"
+
+#: database-content.py:226
+msgid "dialogs"
+msgstr "diálogos"
+
+#: database-content.py:227
+#| msgid "libgimp"
+msgid "gimp"
+msgstr "gimp"
+
+#: database-content.py:228
+msgid "menus"
+msgstr "menús"
+
+#: database-content.py:229
+msgid "toolbox"
+msgstr "caja de herramientas"
+
+#: database-content.py:230
+#| msgid "Asturian"
+msgid "tutorial"
+msgstr "tutorial"
+
+#: database-content.py:231
+msgid "using gimp"
+msgstr "usar gimp"
+
+#: database-content.py:232
+msgid "alpha-to-logo filter"
+msgstr "filtro alfa a logotipo"
+
+#: database-content.py:233
+msgid "animation filter"
+msgstr "filtro de animación"
+
+#: database-content.py:234
+#| msgid "Latest POT file"
+msgid "artistic filter"
+msgstr "filtro artístico"
+
+#: database-content.py:235
+msgid "blur filter"
+msgstr "filtro de desenfoque"
+
+#: database-content.py:236
+msgid "combine filter"
+msgstr "filtro de combinación"
+
+#: database-content.py:237
+msgid "decor filter"
+msgstr "filtro de decoración"
+
+#: database-content.py:238
+msgid "distort filter"
+msgstr "filtro de distorsión"
+
+#: database-content.py:239
+msgid "edge-detect filter"
+msgstr "filtro de detectar bordes"
+
+#: database-content.py:240
+msgid "enhance filter"
+msgstr "filtro de realzar"
+
+#: database-content.py:241
+msgid "generic filter"
+msgstr "filtro genérico"
+
+#: database-content.py:242
+msgid "light-effects filter"
+msgstr "filtro de luces y sombras"
+
+#: database-content.py:243
+msgid "map filter"
+msgstr "filtro de mapa"
+
+#: database-content.py:244
+msgid "noise filter"
+msgstr "filtro de ruido"
+
+#: database-content.py:245
+msgid "render filter"
+msgstr "filtro de renderizado"
+
+#: database-content.py:246
+msgid "web filter"
+msgstr "filtro web"
+
+#: database-content.py:247
+msgid "colors auto menu"
+msgstr "menú de colores -> auto"
+
+#: database-content.py:248
+msgid "colors component menu"
+msgstr "menú de colores -> componentes"
+
+#: database-content.py:249
+msgid "colors info menu"
+msgstr "menú de colores -> info"
+
+#: database-content.py:250
+msgid "colors map menu"
+msgstr "menú de colores -> mapa"
+
+#: database-content.py:251
+msgid "colors menus"
+msgstr "menús de «Colores»"
+
+#: database-content.py:252
+msgid "edit menu"
+msgstr "menú «Editar»"
+
+#: database-content.py:253
+msgid "file menu"
+msgstr "menú «Archivo»"
+
+#: database-content.py:254
+#| msgid "Development"
+msgid "help menu"
+msgstr "menú «Ayuda»"
+
+#: database-content.py:255
+msgid "image menu"
+msgstr "menú «Imagen»"
+
+#: database-content.py:256
+msgid "select menu"
+msgstr "menú «Seleccionar»"
+
+#: database-content.py:257
+msgid "view menu"
+msgstr "menú «Ver»"
+
+#: database-content.py:258
+#| msgid "Quick Reference"
+msgid "preferences"
+msgstr "preferencias"
+
+#: database-content.py:259
 msgid "Quick Reference"
 msgstr "Referencia rápida"
 
-#: database-content.py:221
+#: database-content.py:260
 msgid "Optimization Guide"
 msgstr "Guía de optimización"
 
-#: database-content.py:222
+#: database-content.py:261
 msgid "Human Interface Guidelines"
 msgstr "Guías de interfaz humana"
 
-#: database-content.py:223
+#: database-content.py:262
 msgid "Accessibility Developers Guide"
 msgstr "Guía de accesibilidad para desarrolladores"
 
-#: database-content.py:224
+#: database-content.py:263
 msgid "Audio Profiles Manual"
 msgstr "Manual de los Perfiles de sonido"
 
-#: database-content.py:225
+#: database-content.py:264
 msgid "Quadrapassel Manual"
 msgstr "Manual de Quadrapassel"
 
-#: database-content.py:226
+#: database-content.py:265
 msgid "Swell-Foop Manual"
 msgstr "Manual de Swell-Foop"
 
-#: database-content.py:227
+#: database-content.py:266
 msgid "Lights Off Manual"
 msgstr "Manual de Lights Off"
 
-#: database-content.py:228
+#: database-content.py:267
 msgid "GNOME 2 User Documentation"
 msgstr "Documentación del usuario de GNOME 2"
 
-#: database-content.py:229
+#: database-content.py:268
 msgid "Evince Document Viewer"
 msgstr "Visor de documentos Evince"
 
-#: database-content.py:230
+#: database-content.py:269
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:231 templates/base.html:35
+#: database-content.py:270 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
-#: database-content.py:232
+#: database-content.py:271
 msgid "Banshee Music Player"
 msgstr "Reproductor de música Banshee"
 
-#: database-content.py:233
+#: database-content.py:272
 msgid "Shared MIME Info"
 msgstr "Información MIME compartida"
 
-#: database-content.py:234
+#: database-content.py:273
 msgid "GNOME Applets"
 msgstr "Miniaplicaciones de GNOME"
 
-#: database-content.py:235
+#: database-content.py:274
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentación del desarrollador de GNOME 2"
 
-#: database-content.py:236
+#: database-content.py:275
 msgid "GNOME Release Notes"
 msgstr "Notas de publicación de GNOME"
 
-#: database-content.py:237
+#: database-content.py:276
 msgid "Rhythmbox Music Player"
 msgstr "Reproductor de música Rhythmbox"
 
-#: database-content.py:238
+#: database-content.py:277
 msgid "Epiphany Web Browser"
 msgstr "Navegador web Epiphany"
 
-#: database-content.py:239
+#: database-content.py:278
 msgid "GNOME Library Web site"
 msgstr "Página web de la biblioteca de GNOME"
 
-#: database-content.py:240
+#: database-content.py:279
 msgid "Eye of GNOME"
 msgstr "Visor de imágenes (EOG)"
 
-#: database-content.py:241
+#: database-content.py:280
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:242
+#: database-content.py:281
 msgid "Deskbar Applet"
 msgstr "Miniaplicación Deskbar"
 
-#: database-content.py:243
+#: database-content.py:282
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:244
+#: database-content.py:283
 msgid "GIMP User Manual"
 msgstr "Manual del usuario de GIMP"
 
-#: database-content.py:245
+#: database-content.py:284
 msgid "GNOME Web Photo"
 msgstr "GNOME Web foto"
 
-#: database-content.py:246
-#| msgid ""
-#| "GNUCash is not part of the GNOME SVN repository. Please check <a href="
-#| "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
-#| "a> to see where to send translations."
+#: database-content.py:285
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -1015,11 +1173,11 @@ msgstr ""
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de GNUCash</"
 "a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:247
+#: database-content.py:286
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
-#: database-content.py:248
+#: database-content.py:287
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -1027,7 +1185,7 @@ msgstr ""
 "Las traducciones subidas se actualizan manualmente en l10n.gnome.org de vez "
 "en cuando. Sé paciente :-)."
 
-#: database-content.py:249
+#: database-content.py:288
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1035,7 +1193,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:250
+#: database-content.py:289
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
@@ -1045,7 +1203,7 @@ msgstr ""
 "través de <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/"
 "default/\">la plataforma Transifex</a>."
 
-#: database-content.py:251
+#: database-content.py:290
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1058,7 +1216,7 @@ msgstr ""
 "dirs.html\">la página de traducción para xdg-user-dits en Translation "
 "Project</a>."
 
-#: database-content.py:252
+#: database-content.py:291
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1069,7 +1227,7 @@ msgstr ""
 "paquete NetworkManager en el bugzilla de GNOME</a>. Después, añada su "
 "archivo de traducción."
 
-#: database-content.py:253
+#: database-content.py:292
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -1077,11 +1235,11 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:254
+#: database-content.py:293
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:255
+#: database-content.py:294
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1093,11 +1251,11 @@ msgstr ""
 "archivos en Git incluso si uno de los dos no contiene traducciones, de otra "
 "forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:256
+#: database-content.py:295
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:257
+#: database-content.py:296
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1105,7 +1263,7 @@ msgstr ""
 "moserial es un terminal serie limpio y amigable basado en GTK para el "
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
-#: database-content.py:258
+#: database-content.py:297
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1113,11 +1271,11 @@ msgstr ""
 "Este es un clon de la versión oficial de system-tools-backends del "
 "repositorio de freedesktop.org."
 
-#: database-content.py:259
+#: database-content.py:298
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout es una aplicación DTP para las X."
 
-#: database-content.py:260
+#: database-content.py:299
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1125,17 +1283,17 @@ msgstr ""
 "gnome-disk-utility proporciona bibliotecas y aplicaciones para comunicarse "
 "con dispositivos de almacenamiento."
 
-#: database-content.py:261
+#: database-content.py:300
 msgid "A note taking application"
 msgstr "Una aplicación para tomar notas"
 
-#: database-content.py:262
+#: database-content.py:301
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Las traducciones se deben enviar como informes de error (consultar el enlace "
 "inferior)."
 
-#: database-content.py:263
+#: database-content.py:302
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1143,85 +1301,89 @@ msgstr ""
 "GNOME Vídeo Arcade es un frontal de MAME (Multiple Arcade Machine Emulator) "
 "para GNOME."
 
-#: database-content.py:264
+#: database-content.py:303
 msgid "GNOME Teletext viewer"
 msgstr "Visor de teletexto de GNOME"
 
-#: database-content.py:265
+#: database-content.py:304
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Un conversor multimedia para el Escritorio GNOME"
 
-#: database-content.py:266
+#: database-content.py:305
 msgid "Email client for netbooks"
 msgstr "Cliente de correo-e para «netbooks»"
 
-#: database-content.py:267
+#: database-content.py:306
 msgid "Gnome Parental Control"
 msgstr "Control parental de GNOME"
 
-#: database-content.py:268
+#: database-content.py:307
 msgid "A photo manager for GNOME"
 msgstr "Un gestor de fotos para GNOME"
 
-#: database-content.py:269
+#: database-content.py:308
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:270
+#: database-content.py:309
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:271
+#: database-content.py:310
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:272
+#: database-content.py:311
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:273
+#: database-content.py:312
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:274
+#: database-content.py:313
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: database-content.py:275
+#: database-content.py:314
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:276
+#: database-content.py:315
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:277
+#: database-content.py:316
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:278
+#: database-content.py:317
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:279
+#: database-content.py:318
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (estable, antigua)"
 
-#: database-content.py:280
+#: database-content.py:319
 msgid "GNOME 2.28 (stable)"
 msgstr "GNOME 2.28 (estable)"
 
-#: database-content.py:281
+#: database-content.py:320
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
 
-#: database-content.py:282
+#: database-content.py:321
 msgid "External Dependencies (GNOME)"
 msgstr "Dependencias externas (GNOME)"
 
-#: database-content.py:283
+#: database-content.py:322
 msgid "GNOME 2.30 (development)"
 msgstr "GNOME 2.30 (desarrollo)"
+
+#: database-content.py:323
+msgid "GIMP and Friends"
+msgstr "GIMP y amigos"
 
 #: settings.py:73
 msgid ""
@@ -2441,9 +2603,6 @@ msgid "This team is using the Vertimus translation workflow"
 msgstr "Este elemento está usando el flujo de trabajo de Vertimus"
 
 #: templates/teams/team_edit.html:25
-#| msgid ""
-#| "This content may use <a href='http://en.wikipedia.org/wiki/"
-#| "Markdown'>Markdown</a> syntax</a>"
 msgid ""
 "This content may use <a href='http://en.wikipedia.org/wiki/"
 "Markdown'>Markdown</a> syntax"
