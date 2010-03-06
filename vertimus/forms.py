@@ -73,6 +73,9 @@ class ActionForm(forms.Form):
         comment = cleaned_data.get('comment')
         file = cleaned_data.get('file')
 
+        if action.comment_is_required and not comment:
+            raise forms.ValidationError(_("A comment is needed for this action."))
+
         if action.arg_is_required and not comment and not file:
             raise forms.ValidationError(_("A comment or a file is needed for this action."))
 

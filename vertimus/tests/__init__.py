@@ -36,9 +36,6 @@ class VertimusTest(TeamTest):
     def setUp(self):
         super(VertimusTest, self).setUp()
 
-        self.l = Language(name='french', locale='fr', team=self.t)
-        self.l.save()
-
         self.m = Module(name='gedit', description='GNOME Editor',
             bugs_base="http://bugzilla.gnome.org/",
             bugs_product='gedit', bugs_component='general',
@@ -70,7 +67,6 @@ class VertimusTest(TeamTest):
         self.r.delete()
         self.b.delete()
         self.m.delete()
-        self.l.delete()
         super(VertimusTest, self).tearDown()
 
     def test_state_none(self):
@@ -230,6 +226,9 @@ class VertimusTest(TeamTest):
         action = ActionAbstract.new_by_name('WC')
         new_state = state.apply_action(action, self.pt, "Hi!", None)
         new_state.save()
+        # Test that submitting a comment without text generates a validation error
+        form = ActionForm([('WC', u'Write a comment')], QueryDict('action=WC&comment='))
+        self.assertTrue("A comment is needed" in str(form.errors))
 
     def test_action_rt(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='None').get_state()

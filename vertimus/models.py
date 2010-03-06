@@ -420,6 +420,7 @@ class ActionAbstract(object):
 
     # A comment or a file is required
     arg_is_required = False
+    comment_is_required = False
     file_is_required = False
     file_is_prohibited = False
 
@@ -540,7 +541,7 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
 class ActionWC(ActionAbstract):
     name = 'WC'
     description = _('Write a comment')
-    arg_is_required = True
+    comment_is_required = True
 
     def _new_state(self):
         return None
