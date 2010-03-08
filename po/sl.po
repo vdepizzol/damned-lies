@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 13:00+0000\n"
-"PO-Revision-Date: 2010-03-03 14:21+0100\n"
-"Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
+"POT-Creation-Date: 2010-03-08 11:49+0000\n"
+"PO-Revision-Date: 2010-03-08 14:11+0100\n"
+"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1024,7 +1024,7 @@ msgstr "meni podrobnosti barv"
 
 #: database-content.py:250
 msgid "colors map menu"
-msgstr "mani izbire barv"
+msgstr "meni izbire barv"
 
 #: database-content.py:251
 msgid "colors menus"
@@ -1122,7 +1122,7 @@ msgstr "GNOME Apleti"
 
 #: database-content.py:274
 msgid "GNOME 2 Development Documentation"
-msgstr "GNOME 2 razvojna dokumentacija"
+msgstr "GNOME 2 Razvojna dokumentacija"
 
 #: database-content.py:275
 msgid "GNOME Release Notes"
@@ -1146,7 +1146,7 @@ msgstr "Gnomeovo oko"
 
 #: database-content.py:280
 msgid "Gnome Specimen"
-msgstr "Gnome Aplet"
+msgstr "Gnome Specimen"
 
 #: database-content.py:281
 msgid "Deskbar Applet"
@@ -1202,7 +1202,7 @@ msgstr "VNC odjemalec za GNOME"
 
 #: database-content.py:294
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
-msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoeki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
+msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoteki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
 #: database-content.py:295
 msgid "Graphical frontend for the git directory tracker"
@@ -1604,11 +1604,11 @@ msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 #: stats/models.py:1094
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "POTdatoteka (%(messages)s) — %(updated)s"
+msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
 #: stats/models.py:1178
 msgid "This POT file has not been generated through the standard intltool method."
-msgstr "Datoteka POT ni ustvarjena preko običajnega intltool načina."
+msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
 #: stats/models.py:1179
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
@@ -1710,8 +1710,8 @@ msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
 #: teams/models.py:200
-#: vertimus/models.py:535
-#: vertimus/models.py:585
+#: vertimus/models.py:536
+#: vertimus/models.py:586
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
@@ -1858,7 +1858,7 @@ msgstr "Spletišče gosti"
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
-msgstr "Beja je trenutno zamrznjena za pravajanje."
+msgstr "Veja je trenutno zamrznjena za prevajanje."
 
 #: templates/branch_detail.html:13
 msgid "Translation"
@@ -1888,7 +1888,7 @@ msgstr "V kolikor skupina za jezik še ne obstaja, je mogoče enostavno <a href=
 #: templates/index.html:19
 #, python-format
 msgid "Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us to translate GNOME!"
-msgstr "Obiščite spletne strani in se pridružite <a href='%(team_url)s'>%(language_name)s skupini</a>!"
+msgstr "Obiščite spletne strani in se pridružite <a href='%(team_url)s'>%(language_name)s</a> skupini!"
 
 #: templates/index.html:29
 #, python-format
@@ -1933,7 +1933,7 @@ msgstr "Običajno so povzeti iz skladišča Git, o njih pa se hranijo vsi pomemb
 
 #: templates/index.html:53
 msgid "Translated by:"
-msgstr "Prevevaja:"
+msgstr "Prevaja:"
 
 #: templates/login.html:10
 #: templates/registration/register.html:11
@@ -1957,7 +1957,7 @@ msgstr "Statistika modula: %(name)s"
 
 #: templates/module_detail.html:55
 msgid "Maintainers"
-msgstr "Vzdrževlec"
+msgstr "Vzdrževalec"
 
 #: templates/module_detail.html:63
 msgid "Bug reporting"
@@ -2071,7 +2071,7 @@ msgstr "Prenos pot datoteke"
 #: templates/stats_show.html:17
 #: templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
-msgstr "Oobvestila"
+msgstr "Obvestila"
 
 #: templates/stats_show.html:30
 #: vertimus/models.py:189
@@ -2210,7 +2210,7 @@ msgstr "Shrani"
 #: templates/people/person_list.html:4
 #: templates/people/person_list.html:8
 msgid "GNOME Contributors"
-msgstr "Gnome sodelavci"
+msgstr "GNOME sodelavci"
 
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
@@ -2278,7 +2278,7 @@ msgstr "Ali ste prepričani, da želite zapustiti skupino?"
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_complete.html:8
 msgid "Password reset complete"
-msgstr "Končano izbrisanje gesla"
+msgstr "Geslo je uspešno počiščeno"
 
 #: templates/registration/password_reset_complete.html:10
 msgid "Your password has been set. You may go ahead and log in now."
@@ -2296,11 +2296,11 @@ msgstr "Vnesite novo geslo"
 
 #: templates/registration/password_reset_confirm.html:12
 msgid "Please enter your new password twice so we can verify you typed it in correctly."
-msgstr "Vnesite novo geslo dvakrat, da lahko potrdimo pravilni zapis gesla."
+msgstr "Vnesite novo geslo dvakrat za potrditev pravilnosti vpisa."
 
 #: templates/registration/password_reset_confirm.html:24
 msgid "Password reset unsuccessful"
-msgstr "Neuspešno izbrisanje gesla"
+msgstr "Geslo ni počiščeno"
 
 #: templates/registration/password_reset_confirm.html:26
 msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
@@ -2309,7 +2309,7 @@ msgstr "Geslo za ponovno nastavitev gesla ni veljavno, ker je bilo že uporablje
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
 msgid "Password reset successful"
-msgstr "Uspešno izbrisanje gesla"
+msgstr "Geslo je počiščeno"
 
 #: templates/registration/password_reset_done.html:11
 msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
@@ -2482,7 +2482,7 @@ msgstr "Dejanja"
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:108
-#: vertimus/models.py:831
+#: vertimus/models.py:832
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
@@ -2577,14 +2577,18 @@ msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Neveljavno dejanje. Najverjetneje je bilo pred tem dejanjem objavljeno drugo dejanje."
 
 #: vertimus/forms.py:77
+msgid "A comment is needed for this action."
+msgstr "Za to dejanje je treba določiti opombo."
+
+#: vertimus/forms.py:80
 msgid "A comment or a file is needed for this action."
 msgstr "Opomba ali datoteka je zahtevana za to dejanje."
 
-#: vertimus/forms.py:80
-msgid "A file is needed for this action."
-msgstr "Za dejanje morate izbrati tudi datoteko."
-
 #: vertimus/forms.py:83
+msgid "A file is needed for this action."
+msgstr "Za dejanje je treba izbrati tudi datoteko."
+
+#: vertimus/forms.py:86
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
 
@@ -2633,7 +2637,7 @@ msgstr "Datoteka v skladišču"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Poslal %(name)s dne %(date)s"
 
-#: vertimus/models.py:520
+#: vertimus/models.py:521
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2648,16 +2652,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:533
-#: vertimus/models.py:583
+#: vertimus/models.py:534
+#: vertimus/models.py:584
 msgid "Without comment"
 msgstr "Brez opomb"
 
-#: vertimus/models.py:542
+#: vertimus/models.py:543
 msgid "Write a comment"
 msgstr "Zapiši opombo"
 
-#: vertimus/models.py:571
+#: vertimus/models.py:572
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2672,57 +2676,57 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:593
+#: vertimus/models.py:594
 msgid "Reserve for translation"
 msgstr "Pridrži za prevajanje"
 
-#: vertimus/models.py:605
+#: vertimus/models.py:606
 msgid "Upload the new translation"
 msgstr "Pošlji novi prevod"
 
-#: vertimus/models.py:620
+#: vertimus/models.py:621
 msgid "Reserve for proofreading"
 msgstr "Pridrži za jezikovni pregled"
 
-#: vertimus/models.py:632
+#: vertimus/models.py:633
 msgid "Upload the proofread translation"
 msgstr "Naloži jezikovno pregledan prevod"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:648
+#: vertimus/models.py:649
 msgid "Ready for submission"
 msgstr "Pripravljeno za pošiljanje"
 
-#: vertimus/models.py:664
+#: vertimus/models.py:665
 msgid "Submit to repository"
 msgstr "Pošlji v skladišče"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:678
+#: vertimus/models.py:679
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:688
+#: vertimus/models.py:689
 msgid "Reserve to submit"
 msgstr "Pridržano za pošiljanje"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:701
+#: vertimus/models.py:702
 msgid "Inform of submission"
 msgstr "Obvesti o pošiljanju"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:716
+#: vertimus/models.py:717
 msgid "Review required"
-msgstr "Jezikiovni pregled"
+msgstr "Jezikovni pregled"
 
-#: vertimus/models.py:731
+#: vertimus/models.py:732
 msgid "Archive the actions"
 msgstr "Arhiviraj dejanja."
 
-#: vertimus/models.py:770
+#: vertimus/models.py:771
 msgid "Undo the last state change"
 msgstr "Razveljavi zadnjo spremembo stanja"
 
