@@ -196,6 +196,11 @@ class Branch(models.Model):
     def is_head(self):
         return self.name in BRANCH_HEAD_NAMES
 
+    def warnings(self):
+        if self.releases.count() < 1:
+            return _(u"This branch is not linked from any release")
+        return ""
+
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
         return self.releases.filter(string_frozen=True).count() and True or False

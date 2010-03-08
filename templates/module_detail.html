@@ -78,6 +78,9 @@ $(document).ready(function() {
   {% for branch in branches %}
     {% ifnotequal forloop.counter 1 %} - {% endifnotequal %}
     <a href="#{{ branch.name }}">{{ branch.name }}</a>
+    {% if branch.warnings %}
+    <img src="{{ MEDIA_URL }}img/warn.png" title="{{ branch.warnings }}" />
+    {% endif %}
   {% endfor %}
   {% if can_edit_branches %}
     <a href="{% url stats.views.module_edit_branches module_name=module.name %}"><img src="{{ MEDIA_URL }}img/edit.png" alt="Edit" /></a>
