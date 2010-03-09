@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:33+0000\n"
-"PO-Revision-Date: 2010-03-08 07:37+0100\n"
+"POT-Creation-Date: 2010-03-08 06:46+0000\n"
+"PO-Revision-Date: 2010-03-09 09:01+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1796,7 +1796,7 @@ msgstr "Lista de correo"
 msgid "URL to subscribe"
 msgstr "URL al que suscribirse"
 
-#: teams/models.py:200 vertimus/models.py:535 vertimus/models.py:585
+#: teams/models.py:200 vertimus/models.py:536 vertimus/models.py:586
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
@@ -2653,7 +2653,7 @@ msgstr "Acciones"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:831
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:832
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
@@ -2753,14 +2753,19 @@ msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Acción no válida. Probablemente alguien publicó otra acción antes."
 
 #: vertimus/forms.py:77
-msgid "A comment or a file is needed for this action."
+#| msgid "A comment or a file is needed for this action."
+msgid "A comment is needed for this action."
 msgstr "Se necesita un comentario para esta acción."
 
 #: vertimus/forms.py:80
+msgid "A comment or a file is needed for this action."
+msgstr "Se necesita un comentario para esta acción."
+
+#: vertimus/forms.py:83
 msgid "A file is needed for this action."
 msgstr "Se necesita un archivo para esta acción."
 
-#: vertimus/forms.py:83
+#: vertimus/forms.py:86
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
@@ -2807,7 +2812,7 @@ msgstr "Archivo en el repositorio"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
-#: vertimus/models.py:520
+#: vertimus/models.py:521
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2824,15 +2829,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:533 vertimus/models.py:583
+#: vertimus/models.py:534 vertimus/models.py:584
 msgid "Without comment"
 msgstr "Sin comentarios"
 
-#: vertimus/models.py:542
+#: vertimus/models.py:543
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:571
+#: vertimus/models.py:572
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2849,57 +2854,57 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:593
+#: vertimus/models.py:594
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:605
+#: vertimus/models.py:606
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: vertimus/models.py:620
+#: vertimus/models.py:621
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: vertimus/models.py:632
+#: vertimus/models.py:633
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:648
+#: vertimus/models.py:649
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
-#: vertimus/models.py:664
+#: vertimus/models.py:665
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:678
+#: vertimus/models.py:679
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Falló la carga. El error fue: «%s»"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:688
+#: vertimus/models.py:689
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:701
+#: vertimus/models.py:702
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:716
+#: vertimus/models.py:717
 msgid "Review required"
 msgstr "Necesita revisión"
 
-#: vertimus/models.py:731
+#: vertimus/models.py:732
 msgid "Archive the actions"
 msgstr "Archivar las acciones"
 
-#: vertimus/models.py:770
+#: vertimus/models.py:771
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
