@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-08 11:49+0000\n"
-"PO-Revision-Date: 2010-03-08 14:11+0100\n"
+"POT-Creation-Date: 2010-03-09 08:02+0000\n"
+"PO-Revision-Date: 2010-03-09 12:08+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -1511,19 +1511,23 @@ msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
-#: stats/models.py:351
+#: stats/models.py:201
+msgid "This branch is not linked from any release"
+msgstr "Ta veja ni vezana nobeno objavljeno različico"
+
+#: stats/models.py:356
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: stats/models.py:353
+#: stats/models.py:358
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 
-#: stats/models.py:373
+#: stats/models.py:378
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:692
+#: stats/models.py:697
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1534,38 +1538,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:714
+#: stats/models.py:719
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:968
+#: stats/models.py:973
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:969
+#: stats/models.py:974
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:970
+#: stats/models.py:975
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:971
+#: stats/models.py:976
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:972
+#: stats/models.py:977
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1051
-#: stats/models.py:1353
+#: stats/models.py:1056
+#: stats/models.py:1358
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1084
+#: stats/models.py:1089
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1574,20 +1578,20 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1085
+#: stats/models.py:1090
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1087
+#: stats/models.py:1092
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1090
+#: stats/models.py:1095
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1596,21 +1600,21 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1091
+#: stats/models.py:1096
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1094
+#: stats/models.py:1099
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1178
+#: stats/models.py:1183
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1179
+#: stats/models.py:1184
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
@@ -1975,7 +1979,7 @@ msgstr "Pošlji poročilo o hrošču"
 msgid "Branches:"
 msgstr "Veje:"
 
-#: templates/module_detail.html:97
+#: templates/module_detail.html:100
 msgid "Browse Repository"
 msgstr "Prebrskaj skladišče"
 
