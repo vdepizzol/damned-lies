@@ -76,10 +76,10 @@ class ActionForm(forms.Form):
         if action.comment_is_required and not comment:
             raise forms.ValidationError(_("A comment is needed for this action."))
 
-        if action.arg_is_required and not comment and not file:
+        if self.is_valid() and action.arg_is_required and not comment and not file:
             raise forms.ValidationError(_("A comment or a file is needed for this action."))
 
-        if action.file_is_required and not file:
+        if self.is_valid() and action.file_is_required and not file:
             raise forms.ValidationError(_("A file is needed for this action."))
 
         if action.file_is_prohibited and file:
