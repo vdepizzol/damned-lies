@@ -217,9 +217,9 @@ class FakeTeam(object):
         self.language = language
         self.description = _("No team for locale %s") % self.language.locale
 
+    @models.permalink
     def get_absolute_url(self):
-        # FIXME: try to avoid using a hard-coded link
-        return "/teams/%s" % self.language.locale
+        return ('teams.views.team', [self.language.locale])
 
     def can_edit(self, user):
         return False
