@@ -29,7 +29,7 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 
 from common.utils import MIME_TYPES
-from stats.models import Statistics, Module, Branch, Category, Release
+from stats.models import Statistics, FakeStatistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
 from stats import utils
 from languages.models import Language
@@ -143,11 +143,14 @@ def module_edit_branches(request, module_name):
 
 def docimages(request, module_name, potbase, branch_name, langcode):
     mod = get_object_or_404(Module, name=module_name)
-    stat = get_object_or_404(Statistics,
-                             branch__module=mod.id,
-                             branch__name=branch_name,
-                             domain__name=potbase,
-                             language__locale=langcode)
+    try:
+        stat = Statistics.objects.get(branch__module=mod.id,
+                                      branch__name=branch_name,
+                                      domain__name=potbase,
+                                      language__locale=langcode)
+    except Statistics.DoesNotExist:
+        lang = get_object_or_404(Language, locale=langcode)
+        stat = FakeStatistics(mod, mod.branch_set.get(name=branch_name), 'doc', lang)
     context = {
         'pageSection':  "module",
         'module': mod,

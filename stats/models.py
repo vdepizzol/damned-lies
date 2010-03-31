@@ -265,7 +265,7 @@ class Branch(models.Model):
         for lang in mandatory_langs:
             for domain in stats.keys():
                 if lang not in stats_langs[domain]:
-                    fake_stat = FakeStatistics(self.module, typ, lang)
+                    fake_stat = FakeStatistics(self.module, self, typ, lang)
                     fake_stat.untranslated = stats[domain][0].untranslated
                     stats[domain].append(fake_stat)
         # Sort
@@ -1304,7 +1304,7 @@ class Statistics(models.Model):
                 # Here we add the 2nd or more stat to the same module-branch
                 if len(stats['categs'][categdescr]['modules'][modname][branchname]) == 2:
                     # Create a fake statistics object for module summary
-                    stats['categs'][categdescr]['modules'][modname][branchname][0][1] = FakeStatistics(stat.domain.module, dtype)
+                    stats['categs'][categdescr]['modules'][modname][branchname][0][1] = FakeStatistics(stat.domain.module, stat.branch, dtype)
                     stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stats['categs'][categdescr]['modules'][modname][branchname][1][1])
                 stats['categs'][categdescr]['modules'][modname][branchname].append((domname, stat))
                 stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stat)
@@ -1335,14 +1335,16 @@ class Statistics(models.Model):
 class FakeStatistics(object):
     """ This is a fake statistics class where a summary value is needed for a multi-domain module
         This is used in get_lang_stats for the language-release-stats template """
-    def __init__(self, module, dtype, lang=None):
+    def __init__(self, module, branch, dtype, lang=None):
         self.module = module
-        self.dtype = dtype
+        self.branch = branch
+        self.domain = module.domain_set.filter(dtype=dtype)[0]
         self.language = lang
         self.translated = 0
         self.fuzzy = 0
         self.untranslated = 0
         self.partial_po = False
+        self.figures = None
 
     def trans(self, stat):
         self.translated += stat.translated
@@ -1364,6 +1366,39 @@ class FakeStatistics(object):
 
     def get_translationstat(self):
         return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
+
+    def fig_stats(self):
+        stats = {'fuzzy':0, 'translated':0, 'untranslated':0, 'total':0, 'prc':0}
+        for fig in self.get_figures():
+            stats['total'] += 1
+            stats['untranslated'] += 1
+        return stats
+
+    def get_figures(self):
+        """ self.figures is a list of dicts:
+            [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
+        if self.figures is None and self.domain.dtype == 'doc':
+            self.figures = utils.get_fig_stats(self.po_path())
+            # something like: "http://git.gnome.org/cgit/vinagre / plain / help / %s / %s ?h=master"
+            url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
+                                       self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
+            for fig in self.figures:
+                fig['orig_remote_url'] = url_model % ('C', fig['path'])
+                fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
+                fig['translated_file'] = False
+                if self.language:
+                    # Check if a translated figure really exists or if the English one is used
+                    if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
+                        fig['translated_file'] = True
+        return self.figures
+
+    def po_path(self):
+        """ Return path of pot file on local filesystem """
+        subdir = ""
+        if self.domain.dtype == "doc":
+            subdir = "docs"
+        filename = "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
+        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, filename)
 
     def pot_size(self):
         return int(self.translated) + int(self.fuzzy) + int(self.untranslated)
