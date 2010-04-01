@@ -149,8 +149,9 @@ def docimages(request, module_name, potbase, branch_name, langcode):
                                       domain__name=potbase,
                                       language__locale=langcode)
     except Statistics.DoesNotExist:
-        lang = get_object_or_404(Language, locale=langcode)
-        stat = FakeStatistics(mod, mod.branch_set.get(name=branch_name), 'doc', lang)
+        lang   = get_object_or_404(Language, locale=langcode)
+        branch = get_object_or_404(Branch, module__pk=mod.id, name=branch_name)
+        stat   = FakeStatistics(mod, branch, 'doc', lang)
     context = {
         'pageSection':  "module",
         'module': mod,
