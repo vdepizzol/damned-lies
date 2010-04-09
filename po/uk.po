@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-09 08:02+0000\n"
-"PO-Revision-Date: 2010-01-04 21:25+0300\n"
+"POT-Creation-Date: 2010-04-09 08:08+0000\n"
+"PO-Revision-Date: 2010-04-09 21:25+0300\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -905,7 +905,6 @@ msgid "preface"
 msgstr "пролог"
 
 #: database-content.py:222
-#| msgid "CD Player Manual"
 msgid "layer menu"
 msgstr "шар меню"
 
@@ -926,7 +925,6 @@ msgid "dialogs"
 msgstr "діалоги"
 
 #: database-content.py:227
-#| msgid "libgimp"
 msgid "gimp"
 msgstr "gimp"
 
@@ -939,7 +937,6 @@ msgid "toolbox"
 msgstr "панель інструментів"
 
 #: database-content.py:230
-#| msgid "Asturian"
 msgid "tutorial"
 msgstr "підручник"
 
@@ -956,7 +953,6 @@ msgid "animation filter"
 msgstr "фільтр анімації"
 
 #: database-content.py:234
-#| msgid "Latest POT file"
 msgid "artistic filter"
 msgstr "художній фільтр"
 
@@ -1037,7 +1033,6 @@ msgid "file menu"
 msgstr "меню файл"
 
 #: database-content.py:254
-#| msgid "Development"
 msgid "help menu"
 msgstr "меню довідка"
 
@@ -1054,7 +1049,6 @@ msgid "view menu"
 msgstr "меню вигляд"
 
 #: database-content.py:258
-#| msgid "Quick Reference"
 msgid "preferences"
 msgstr "параметри"
 
@@ -1079,17 +1073,14 @@ msgid "Audio Profiles Manual"
 msgstr "Довідка до профілю аудіо"
 
 #: database-content.py:264
-#| msgid "Criawips Manual"
 msgid "Quadrapassel Manual"
 msgstr "Довідка до Quadrapassel"
 
 #: database-content.py:265
-#| msgid "Search Tool Manual"
 msgid "Swell-Foop Manual"
 msgstr "Довідка до Swell-Foop"
 
 #: database-content.py:266
-#| msgid "glChess Manual"
 msgid "Lights Off Manual"
 msgstr "Довідка до Вимкнути світло"
 
@@ -1167,18 +1158,14 @@ msgid "GNOME Web Photo"
 msgstr "GNOME веб-фотографії"
 
 #: database-content.py:285
-#| msgid ""
-#| "GNUCash is not part of the GNOME SVN repository. Please check <a href="
-#| "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
-#| "a> to see where to send translations."
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
 "to see where to send translations."
 msgstr ""
 "GNUCash не є частиною репозиторію GNOME Git. Перевірте веб-сторінку <a href="
-"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">вікі-сторінку GNUCash</a> "
-"щоб дізнатись, куди надсилати переклади."
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">вікі-сторінку "
+"GNUCash</a> щоб дізнатись, куди надсилати переклади."
 
 #: database-content.py:286
 msgid "Evince is a document viewer for multiple document formats."
@@ -1372,8 +1359,9 @@ msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (стара стабільна версія)"
 
 #: database-content.py:319
-msgid "GNOME 2.28 (stable)"
-msgstr "GNOME 2.28 (стабільна версія)"
+#| msgid "GNOME 2.18 (old stable)"
+msgid "GNOME 2.28 (old stable)"
+msgstr "GNOME 2.28 (стара стабільна версія)"
 
 #: database-content.py:320
 msgid "Obsolete GNOME Applications"
@@ -1384,8 +1372,9 @@ msgid "External Dependencies (GNOME)"
 msgstr "Зовнішні залежності (GNOME)"
 
 #: database-content.py:322
-msgid "GNOME 2.30 (development)"
-msgstr "GNOME 2.30 (версія у розробці)"
+#| msgid "GNOME 2.28 (stable)"
+msgid "GNOME 2.30 (stable)"
+msgstr "GNOME 2.30 (стабільна версія)"
 
 #: database-content.py:323
 msgid "GIMP and Friends"
@@ -1647,7 +1636,7 @@ msgstr "Платформа розробки GNOME"
 msgid "New Module Proposals"
 msgstr "Нові запропоновані модулі"
 
-#: stats/models.py:1056 stats/models.py:1358
+#: stats/models.py:1056 stats/models.py:1360
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
@@ -1701,7 +1690,8 @@ msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
 msgstr ""
-"Цей POT-файл не був створений стандартним шляхом - з використанням gnome-doc-utils."
+"Цей POT-файл не був створений стандартним шляхом - з використанням gnome-doc-"
+"utils."
 
 #: stats/utils.py:90
 msgid "Errors while running 'intltool-update -m' check."
@@ -1799,7 +1789,6 @@ msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Список DOC_LINGUAS не включає цю мову."
 
 #: teams/models.py:89
-#| msgid "Documentation"
 msgid "Presentation"
 msgstr "Презентація"
 
@@ -2610,8 +2599,8 @@ msgid ""
 "This content may use <a href='http://en.wikipedia.org/wiki/"
 "Markdown'>Markdown</a> syntax"
 msgstr ""
-"Цей вміст може використовувати синтаксис <a href='http://en.wikipedia.org/wiki/"
-"Markdown'>Markdown</a>"
+"Цей вміст може використовувати синтаксис <a href='http://en.wikipedia.org/"
+"wiki/Markdown'>Markdown</a>"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
@@ -2762,7 +2751,6 @@ msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Неправильна дія. Можливо, хтось надіслав іншу дію прямо перед вами."
 
 #: vertimus/forms.py:77
-#| msgid "A comment or a file is needed for this action."
 msgid "A comment is needed for this action."
 msgstr "Для цієї дії треба вказати коментар."
 
@@ -2927,4 +2915,5 @@ msgstr "Останній записаний файл для мови %(lang)s"
 msgid "Latest POT file"
 msgstr "Останній POT-файл"
 
-
+#~ msgid "GNOME 2.30 (development)"
+#~ msgstr "GNOME 2.30 (версія у розробці)"
