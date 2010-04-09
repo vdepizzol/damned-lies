@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-09 08:02+0000\n"
-"PO-Revision-Date: 2010-03-09 22:13+0100\n"
+"POT-Creation-Date: 2010-04-09 08:08+0000\n"
+"PO-Revision-Date: 2010-04-09 21:36+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1365,8 +1365,9 @@ msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (alte stabile Version)"
 
 #: database-content.py:319
-msgid "GNOME 2.28 (stable)"
-msgstr "GNOME 2.28 (aktuelle stabile Version)"
+#| msgid "GNOME 2.18 (old stable)"
+msgid "GNOME 2.28 (old stable)"
+msgstr "GNOME 2.28 (alte stabile Version)"
 
 #: database-content.py:320
 msgid "Obsolete GNOME Applications"
@@ -1377,8 +1378,9 @@ msgid "External Dependencies (GNOME)"
 msgstr "Externe Abhängigkeiten (GNOME)"
 
 #: database-content.py:322
-msgid "GNOME 2.30 (development)"
-msgstr "GNOME 2.30 (Entwicklerversion)"
+#| msgid "GNOME 2.28 (stable)"
+msgid "GNOME 2.30 (stable)"
+msgstr "GNOME 2.30 (aktuelle stabile Version)"
 
 #: database-content.py:323
 msgid "GIMP and Friends"
@@ -1654,7 +1656,7 @@ msgstr "GNOME-Entwicklerplattform"
 msgid "New Module Proposals"
 msgstr "Neue Module (vorläufig)"
 
-#: stats/models.py:1056 stats/models.py:1358
+#: stats/models.py:1056 stats/models.py:1360
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
@@ -2949,6 +2951,9 @@ msgstr "Zuletzt eingespielte Datei für %(lang)s"
 #: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
+
+#~ msgid "GNOME 2.30 (development)"
+#~ msgstr "GNOME 2.30 (Entwicklerversion)"
 
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the module "
