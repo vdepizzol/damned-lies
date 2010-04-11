@@ -5,13 +5,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Automatically generated, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2008, 2009.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-26 11:56+0000\n"
-"PO-Revision-Date: 2009-12-27 23:55+0300\n"
+"POT-Creation-Date: 2010-04-09 08:08+0000\n"
+"PO-Revision-Date: 2010-04-11 21:03+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.5.0\n"
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.3-rc1\n"
 
 #: database-content.py:1
 msgid "Gujarati"
@@ -481,547 +481,725 @@ msgid "Divehi"
 msgstr "الدفهية"
 
 #: database-content.py:115
-#| msgid "Latvian"
 msgid "Shavian"
 msgstr "شافيان"
 
 #: database-content.py:116
-msgid "Belarusian Latin"
-msgstr "البلاروسية (لاتيني)"
+msgid "Burmese"
+msgstr "البورمية"
 
 #: database-content.py:117
-msgid "Catalan (Valencian)"
-msgstr "الكتلانية (بلنسية)"
-
-#: database-content.py:118
-msgid "Uzbek (Cyrillic)"
-msgstr "الأزبكية (سريلي)"
-
-#: database-content.py:119
-msgid "Uzbek (Latin)"
-msgstr "الأزبكية (لاتيني)"
-
-#: database-content.py:120
-msgid "Chinese (Hong Kong)"
-msgstr "الصينية (هونج كونج)"
-
-#: database-content.py:121
-msgid "Chinese (Taiwan)"
-msgstr "الصينية (تايوان)"
-
-#: database-content.py:122
-msgid "Norwegian Bokmål"
-msgstr "النرويجية البكمالية"
-
-#: database-content.py:123
-msgid "Norwegian Nynorsk"
-msgstr "النرويجية النينورسكية"
-
-#: database-content.py:124
-msgid "Serbian Latin"
-msgstr "اللاتينية الصربية"
-
-#: database-content.py:125
-msgid "Serbian Jekavian"
-msgstr "الصربية الجيكافيانية"
-
-#: database-content.py:126
-msgid "Somali"
-msgstr "الصومالية"
-
-#: database-content.py:127
-msgid "Interlingua"
-msgstr "الإنترلنجوا"
-
-#: database-content.py:128
-msgid "Luxembourgish"
-msgstr "اللوكسبورجية"
-
-#: database-content.py:129
-msgid "Tsonga"
-msgstr "التسونجية"
-
-#: database-content.py:130
-msgid "Swahili"
-msgstr "السواحلية"
-
-#: database-content.py:131
-msgid "South Ndebele"
-msgstr "النديبيلية الجنوبية"
-
-#: database-content.py:132
-msgid "Southern Sotho"
-msgstr "السوثو الشمالية"
-
-#: database-content.py:133
-msgid "Maltese"
-msgstr "المالطيّة"
-
-#: database-content.py:134
-msgid "Igbo"
-msgstr "الإجبوية"
-
-#: database-content.py:135
-msgid "Frisian"
-msgstr "الفريسية"
-
-#: database-content.py:136
 msgid "Lao"
 msgstr "اللاوية"
 
+#: database-content.py:118
+msgid "Belarusian Latin"
+msgstr "البلاروسية (لاتيني)"
+
+#: database-content.py:119
+msgid "Catalan (Valencian)"
+msgstr "الكتلانية (بلنسية)"
+
+#: database-content.py:120
+msgid "Uzbek (Cyrillic)"
+msgstr "الأزبكية (سريلي)"
+
+#: database-content.py:121
+msgid "Uzbek (Latin)"
+msgstr "الأزبكية (لاتيني)"
+
+#: database-content.py:122
+msgid "Chinese (Hong Kong)"
+msgstr "الصينية (هونج كونج)"
+
+#: database-content.py:123
+msgid "Chinese (Taiwan)"
+msgstr "الصينية (تايوان)"
+
+#: database-content.py:124
+msgid "Norwegian Bokmål"
+msgstr "النرويجية البكمالية"
+
+#: database-content.py:125
+msgid "Norwegian Nynorsk"
+msgstr "النرويجية النينورسكية"
+
+#: database-content.py:126
+msgid "Serbian Latin"
+msgstr "اللاتينية الصربية"
+
+#: database-content.py:127
+msgid "Serbian Jekavian"
+msgstr "الصربية الجيكافيانية"
+
+#: database-content.py:128
+msgid "Somali"
+msgstr "الصومالية"
+
+#: database-content.py:129
+msgid "Interlingua"
+msgstr "الإنترلنجوا"
+
+#: database-content.py:130
+msgid "Luxembourgish"
+msgstr "اللوكسبورجية"
+
+#: database-content.py:131
+msgid "Tsonga"
+msgstr "التسونجية"
+
+#: database-content.py:132
+msgid "Swahili"
+msgstr "السواحلية"
+
+#: database-content.py:133
+msgid "South Ndebele"
+msgstr "النديبيلية الجنوبية"
+
+#: database-content.py:134
+msgid "Southern Sotho"
+msgstr "السوثو الشمالية"
+
+#: database-content.py:135
+msgid "Maltese"
+msgstr "المالطيّة"
+
+#: database-content.py:136
+msgid "Igbo"
+msgstr "الإجبوية"
+
 #: database-content.py:137
+msgid "Frisian"
+msgstr "الفريسية"
+
+#: database-content.py:138
 msgid "UI translations"
 msgstr "ترجمات الواجهة"
 
-#: database-content.py:138
+#: database-content.py:139
 msgid "User Guide"
 msgstr "دليل المستخدم"
 
-#: database-content.py:139
+#: database-content.py:140
 msgid "Mallard Documentation Guide"
 msgstr "دليل توثيق ملّارد"
 
-#: database-content.py:140
+#: database-content.py:141
 msgid "Accessibility Guide"
 msgstr "دليل الإتاحة"
 
-#: database-content.py:141
+#: database-content.py:142
 msgid "System Administration Guide"
 msgstr "دليل إدارة النظام"
 
-#: database-content.py:142
+#: database-content.py:143
 msgid "GDM Manual"
 msgstr "كتيّب GDM"
 
-#: database-content.py:143
+#: database-content.py:144
 msgid "Anjuta Manual"
 msgstr "كتيّب أنجوتا"
 
-#: database-content.py:144
+#: database-content.py:145
 msgid "GConf Editor Manual"
 msgstr "كتيّب محرر GConf"
 
-#: database-content.py:145
+#: database-content.py:146
 msgid "F-Spot Manual"
 msgstr "كتيّب إف-سبوت"
 
-#: database-content.py:146
+#: database-content.py:147
 msgid "FDL License"
 msgstr "ترخيص FDL"
 
-#: database-content.py:147
+#: database-content.py:148
 msgid "LGPL License"
 msgstr "ترخيص LGPL"
 
-#: database-content.py:148
+#: database-content.py:149
 msgid "GPL License"
 msgstr "ترخيص GPL"
 
-#: database-content.py:149
+#: database-content.py:150
 msgid "Fish Applet Manual"
 msgstr "كتيّب بريمج السمكة"
 
-#: database-content.py:150
+#: database-content.py:151
 msgid "Workspace Switcher Applet Manual"
 msgstr "كتيّب بريمج محول مساحات العمل"
 
-#: database-content.py:151
+#: database-content.py:152
 msgid "Window List Applet Manual"
 msgstr "كتيّب بريمج قائمة النوافذ"
 
-#: database-content.py:152
+#: database-content.py:153
 msgid "Clock Applet Manual"
 msgstr "كتيّب بريمج الساعة"
 
-#: database-content.py:153
+#: database-content.py:154
 msgid "Iagno Manual"
 msgstr "كتيّب إيانجو"
 
-#: database-content.py:154
+#: database-content.py:155
 msgid "Five or More Manual"
 msgstr "كتيّب خمسة أو أكثر"
 
-#: database-content.py:155
+#: database-content.py:156
 msgid "Nibbles Manual"
 msgstr "كتيّب نبلس"
 
-#: database-content.py:156
+#: database-content.py:157
 msgid "GNOME Robots Manual"
 msgstr "كتيّب أناس آليون"
 
-#: database-content.py:157
+#: database-content.py:158
 msgid "Four-in-a-row Manual"
 msgstr "كتيّب أربعة في صف"
 
-#: database-content.py:158
+#: database-content.py:159
 msgid "GNOME Sudoku Manual"
 msgstr "كتيّب سودوكو"
 
-#: database-content.py:159
+#: database-content.py:160
 msgid "glChess Manual"
 msgstr "كتيّب لعبة الشطرنج"
 
-#: database-content.py:160
+#: database-content.py:161
 msgid "GNOME Tali Manual"
 msgstr "كتيّب تالي"
 
-#: database-content.py:161
+#: database-content.py:162
 msgid "Gnometris Manual"
 msgstr "كتيّب Gnometris"
 
-#: database-content.py:162
+#: database-content.py:163
 msgid "GNOME Klotski Manual"
 msgstr "كتيّب Klotski"
 
-#: database-content.py:163
+#: database-content.py:164
 msgid "GNOME Tetravex Manual"
 msgstr "كتيّب تترافكس"
 
-#: database-content.py:164
+#: database-content.py:165
 msgid "GNOME Mahjongg Manual"
 msgstr "كتيّب Mahjongg"
 
-#: database-content.py:165
+#: database-content.py:166
 msgid "AisleRiot Manual"
 msgstr "كتيّب AisleRiot"
 
-#: database-content.py:166
+#: database-content.py:167
 msgid "Mines Manual"
 msgstr "كتيّب لعبة الألغام"
 
-#: database-content.py:167
+#: database-content.py:168
 msgid "Same GNOME Manual"
 msgstr "كتيّب سام جنوم"
 
-#: database-content.py:168
+#: database-content.py:169
 msgid "Blackjack Manual"
 msgstr "كتيّب بلاك جاك"
 
-#: database-content.py:169
+#: database-content.py:170
 msgid "CD Player Manual"
 msgstr "كتيّب مُشغِّل CD"
 
-#: database-content.py:170
+#: database-content.py:171
 msgid "Sound Recorder Manual"
 msgstr "كتيّب مسجّل الصوت"
 
-#: database-content.py:171
+#: database-content.py:172
 msgid "GStreamer Properties Manual"
 msgstr "كتيّب خصائص GStreamer"
 
-#: database-content.py:172
+#: database-content.py:173
 msgid "GNOME Volume Control Manual"
 msgstr "كتيّب متحكم شدة صوت جنوم"
 
-#: database-content.py:173
+#: database-content.py:174
 msgid "Layout Descriptions"
 msgstr "أوصاف التصميم"
 
-#: database-content.py:174
+#: database-content.py:175
 msgid "Keyboard Indicator Manual"
 msgstr "كتيّب مؤشر لوحة المفاتيح"
 
-#: database-content.py:175
+#: database-content.py:176
 msgid "CPU Frequency Scaling Monitor Manual"
 msgstr "كتيّب مراقب تمديد تردد المعالج"
 
-#: database-content.py:176
+#: database-content.py:177
 msgid "Command Line Manual"
 msgstr "كتيّب سطر الأوامر"
 
-#: database-content.py:177
+#: database-content.py:178
 msgid "Keyboard Accessibility Monitor Manual"
 msgstr "كتيّب مراقب إعانة لوحة المفاتيح"
 
-#: database-content.py:178
+#: database-content.py:179
 msgid "Invest Applet Manual"
 msgstr "كتيّب بريمج الاستثمار"
 
-#: database-content.py:179
+#: database-content.py:180
 msgid "System Monitor Manual"
 msgstr "كتيّب مراقب النظام"
 
-#: database-content.py:180
+#: database-content.py:181
 msgid "Geyes Manual"
 msgstr "كتيّب عيون جنوم"
 
-#: database-content.py:181
+#: database-content.py:182
 msgid "Panel Trash Manual"
 msgstr "كتيّب سلة مهملات اللوحة"
 
-#: database-content.py:182
+#: database-content.py:183
 msgid "Character Palette Manual"
 msgstr "كتيّب لوحة المحارف"
 
-#: database-content.py:183
+#: database-content.py:184
 msgid "Volume Control Manual"
 msgstr "كتيّب متحكم شدة الصوت"
 
-#: database-content.py:184
+#: database-content.py:185
 msgid "Weather Report Manual"
 msgstr "كتيّب حالة الطقس"
 
-#: database-content.py:185
+#: database-content.py:186
 msgid "Sticky Notes Manual"
 msgstr "كتيّب الملاحظات اللاصقة"
 
-#: database-content.py:186
+#: database-content.py:187
 msgid "Disk Mounter Manual"
 msgstr "كتيّب ضامّ الأقراض"
 
-#: database-content.py:187
+#: database-content.py:188
 msgid "Battery Charge Monitor Manual"
 msgstr "كتيِّب مراقب شحن البطارية"
 
-#: database-content.py:188
+#: database-content.py:189
 msgid "User Directories"
 msgstr "دلائل المستخدمين"
 
-#: database-content.py:189
+#: database-content.py:190
 msgid "Integration Guide"
 msgstr "دليل التكامل"
 
-#: database-content.py:190
+#: database-content.py:191
 msgid "Platform Overview"
 msgstr "معاينة المنصّة"
 
-#: database-content.py:191
+#: database-content.py:192
 msgid "Encryption Applet Manual"
 msgstr "كتيّب بريمج التعمية"
 
-#: database-content.py:192
+#: database-content.py:193
 msgid "Release Notes"
 msgstr "ملاحظات الإصدار"
 
-#: database-content.py:193
+#: database-content.py:194
 msgid "GNOME Keyring Manager Manual"
 msgstr "كتيّب مدير حلقة مفاتيح جنوم"
 
-#: database-content.py:194
+#: database-content.py:195
 msgid "Criawips Manual"
 msgstr "كتيّب كرياوبس"
 
-#: database-content.py:195
+#: database-content.py:196
 msgid "Sound Juicer Manual"
 msgstr "كتيّب مستخرج الصوتيات"
 
-#: database-content.py:196
+#: database-content.py:197
 msgid "Property Nicks"
 msgstr "أسماء الخصائص"
 
-#: database-content.py:197
+#: database-content.py:198
 msgid "tips"
 msgstr "فوائد"
 
-#: database-content.py:198
+#: database-content.py:199
 msgid "script-fu"
 msgstr "سكربت-فو"
 
-#: database-content.py:199
+#: database-content.py:200
 msgid "libgimp"
 msgstr "مكتبة جِمب"
 
-#: database-content.py:200
+#: database-content.py:201
 msgid "python"
 msgstr "بيثون"
 
-#: database-content.py:201
+#: database-content.py:202
 msgid "plug-ins"
 msgstr "ملحقات"
 
-#: database-content.py:202
+#: database-content.py:203
 msgid "Functions"
 msgstr "الدوال"
 
-#: database-content.py:203
+#: database-content.py:204
 msgid "Dasher Manual"
 msgstr "كتيّب داشر"
 
-#: database-content.py:204
+#: database-content.py:205
 msgid "Weather Applet Locations"
 msgstr "مواقع بريمج الطقس"
 
-#: database-content.py:205
+#: database-content.py:206
 msgid "Dictionary Manual"
 msgstr "كتيّب القاموس"
 
-#: database-content.py:206
+#: database-content.py:207
 msgid "Disk Usage Analyzer Manual"
 msgstr "كتيّب محلّل استخدام القرص"
 
-#: database-content.py:207
+#: database-content.py:208
 msgid "Log Viewer Manual"
 msgstr "كتيّب معاين السجلّ"
 
-#: database-content.py:208
+#: database-content.py:209
 msgid "Search Tool Manual"
 msgstr "كتيّب أداة البحث"
 
-#: database-content.py:209
+#: database-content.py:210
 msgid "GNOME Library help"
 msgstr "مساعدة مكتبة جنوم"
 
-#: database-content.py:210
+#: database-content.py:211
 msgid "Eye of GNOME Manual"
 msgstr "كتيّب عين جنوم"
 
-#: database-content.py:211
+#: database-content.py:212
 msgid "GST User Management Manual"
 msgstr "كتيّب إدارة المستخدمين GST"
 
-#: database-content.py:212
+#: database-content.py:213
 msgid "GST Service Management Manual"
 msgstr "كتيّب إدارة الخدمات GST"
 
-#: database-content.py:213
+#: database-content.py:214
 msgid "GST Network Setup Manual"
 msgstr "كتيّب إعداد الشبكة GST"
 
-#: database-content.py:214
+#: database-content.py:215
 msgid "GST Shared Folders Manual"
 msgstr "كتيّب الأدلة المشتركة GST"
 
-#: database-content.py:215
+#: database-content.py:216
 msgid "GST Time Setup Manual"
 msgstr "كتيّب إعداد الوقت GST"
 
-#: database-content.py:216 djamnedlies-git/languages/views.py:50
-#: djamnedlies-git/languages/views.py:66
-#: djamnedlies-git/templates/branch_detail.html:23
-#: djamnedlies-git/templates/release_detail.html:22
-#: djamnedlies-git/templates/teams/team_detail.html:27 languages/views.py:50
-#: languages/views.py:83 templates/branch_detail.html:23
-#: templates/release_detail.html:22 templates/release_detail.html.py:68
+#: database-content.py:217 languages/views.py:50 languages/views.py:83
+#: templates/branch_detail.html:23 templates/release_detail.html:22
+#: templates/release_detail.html.py:68
 #: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "التوثيق"
 
-#: database-content.py:217
+#: database-content.py:218
 msgid "UI translation"
 msgstr "ترجمات الواجهة"
 
-#: database-content.py:218
+#: database-content.py:219
+msgid "glossary"
+msgstr "مُسرَد"
+
+#: database-content.py:220
+msgid "filters"
+msgstr "مرشحات"
+
+#: database-content.py:221
+msgid "preface"
+msgstr "تقديم"
+
+#: database-content.py:222
+#| msgid "CD Player Manual"
+msgid "layer menu"
+msgstr "قائمة الطبقات"
+
+#: database-content.py:223
 msgid "tags"
 msgstr "الوسوم"
 
-#: database-content.py:219
+#: database-content.py:224
+msgid "appendix"
+msgstr "ملحق"
+
+#: database-content.py:225
+msgid "concepts"
+msgstr "مصطلحات"
+
+#: database-content.py:226
+msgid "dialogs"
+msgstr "الحوارات"
+
+#: database-content.py:227
+#| msgid "libgimp"
+msgid "gimp"
+msgstr "جِمب"
+
+#: database-content.py:228
+msgid "menus"
+msgstr "القوائم"
+
+#: database-content.py:229
+msgid "toolbox"
+msgstr "صندوق الأدوات"
+
+#: database-content.py:230
+#| msgid "Asturian"
+msgid "tutorial"
+msgstr "درس تعليمي"
+
+#: database-content.py:231
+msgid "using gimp"
+msgstr "استخدام جمب"
+
+#: database-content.py:232
+msgid "alpha-to-logo filter"
+msgstr ""
+
+#: database-content.py:233
+msgid "animation filter"
+msgstr ""
+
+#: database-content.py:234
+#, fuzzy
+#| msgid "Latest POT file"
+msgid "artistic filter"
+msgstr "آخر ملف POT"
+
+#: database-content.py:235
+msgid "blur filter"
+msgstr ""
+
+#: database-content.py:236
+msgid "combine filter"
+msgstr ""
+
+#: database-content.py:237
+msgid "decor filter"
+msgstr ""
+
+#: database-content.py:238
+msgid "distort filter"
+msgstr ""
+
+#: database-content.py:239
+msgid "edge-detect filter"
+msgstr ""
+
+#: database-content.py:240
+msgid "enhance filter"
+msgstr ""
+
+#: database-content.py:241
+msgid "generic filter"
+msgstr ""
+
+#: database-content.py:242
+msgid "light-effects filter"
+msgstr ""
+
+#: database-content.py:243
+msgid "map filter"
+msgstr ""
+
+#: database-content.py:244
+msgid "noise filter"
+msgstr ""
+
+#: database-content.py:245
+msgid "render filter"
+msgstr ""
+
+#: database-content.py:246
+msgid "web filter"
+msgstr ""
+
+#: database-content.py:247
+msgid "colors auto menu"
+msgstr ""
+
+#: database-content.py:248
+msgid "colors component menu"
+msgstr "قائمة مكونات الألوان"
+
+#: database-content.py:249
+msgid "colors info menu"
+msgstr "قائمة معلومات الألوان"
+
+#: database-content.py:250
+msgid "colors map menu"
+msgstr "قائمة مخطط الألوان"
+
+#: database-content.py:251
+msgid "colors menus"
+msgstr "قائمة ألوان"
+
+#: database-content.py:252
+msgid "edit menu"
+msgstr "قائمة تحرير"
+
+#: database-content.py:253
+msgid "file menu"
+msgstr "قائمة ملف"
+
+#: database-content.py:254
+#| msgid "Development"
+msgid "help menu"
+msgstr "قائمة مساعدة"
+
+#: database-content.py:255
+msgid "image menu"
+msgstr "قائمة صورة"
+
+#: database-content.py:256
+msgid "select menu"
+msgstr "قائمة تحديد"
+
+#: database-content.py:257
+msgid "view menu"
+msgstr "قائمة عرض"
+
+#: database-content.py:258
+#| msgid "Quick Reference"
+msgid "preferences"
+msgstr "التفضيلات"
+
+#: database-content.py:259
 msgid "Quick Reference"
 msgstr "مرجع سريع"
 
-#: database-content.py:220
+#: database-content.py:260
 msgid "Optimization Guide"
 msgstr "دليل الأمثَلة"
 
-#: database-content.py:221
+#: database-content.py:261
 msgid "Human Interface Guidelines"
 msgstr "دليل الواجهة البشرية"
 
-#: database-content.py:222
+#: database-content.py:262
 msgid "Accessibility Developers Guide"
 msgstr "دليل الإتاحة للمطورين"
 
-#: database-content.py:223
-#| msgid "Nibbles Manual"
+#: database-content.py:263
 msgid "Audio Profiles Manual"
 msgstr "كتيّب لاحات الصوت"
 
-#: database-content.py:224
+#: database-content.py:264
+#| msgid "Criawips Manual"
+msgid "Quadrapassel Manual"
+msgstr "كتيّب Quadrapassel"
+
+#: database-content.py:265
+#| msgid "GFloppy Manual"
+msgid "Swell-Foop Manual"
+msgstr "كتيّب Swell-Foop"
+
+#: database-content.py:266
+#| msgid "glChess Manual"
+msgid "Lights Off Manual"
+msgstr "كتيّب Lights Off"
+
+#: database-content.py:267
 msgid "GNOME 2 User Documentation"
 msgstr "وثائق مستخدم جنوم 2"
 
-#: database-content.py:225
+#: database-content.py:268
 msgid "Evince Document Viewer"
 msgstr "عارض المستندات جلاء"
 
-#: database-content.py:226
+#: database-content.py:269
 msgid "Beagle Desktop Search"
 msgstr "بحث سطح المكتب بيجل"
 
-#: database-content.py:227 djamnedlies-git/templates/base.html:35
-#: djamnedlies-git/templates/admin/base_site.html:7 templates/base.html:35
+#: database-content.py:270 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "الأكاذيب اللعينة"
 
-#: database-content.py:228
+#: database-content.py:271
 msgid "Banshee Music Player"
 msgstr "عازف الموسيقى بانشي"
 
-#: database-content.py:229
+#: database-content.py:272
 msgid "Shared MIME Info"
 msgstr "معلومات MIME مشتركة"
 
-#: database-content.py:230
+#: database-content.py:273
 msgid "GNOME Applets"
 msgstr "بريمجات جنوم"
 
-#: database-content.py:231
+#: database-content.py:274
 msgid "GNOME 2 Development Documentation"
 msgstr "وثائق تطوير جنوم 2"
 
-#: database-content.py:232
+#: database-content.py:275
 msgid "GNOME Release Notes"
 msgstr "ملاحظات إصدار جنوم"
 
-#: database-content.py:233
+#: database-content.py:276
 msgid "Rhythmbox Music Player"
 msgstr "عازف الموسيقى أنغام"
 
-#: database-content.py:234
+#: database-content.py:277
 msgid "Epiphany Web Browser"
 msgstr "متصفّح الوِب إيبِفَني"
 
-#: database-content.py:235
+#: database-content.py:278
 msgid "GNOME Library Web site"
 msgstr "موقع مكتبة جنوم"
 
-#: database-content.py:236
+#: database-content.py:279
 msgid "Eye of GNOME"
 msgstr "عين جنوم"
 
-#: database-content.py:237
+#: database-content.py:280
 msgid "Gnome Specimen"
 msgstr "عيّنة جنوم"
 
-#: database-content.py:238
+#: database-content.py:281
 msgid "Deskbar Applet"
 msgstr "بريمج شريط المكتب"
 
-#: database-content.py:239
+#: database-content.py:282
 msgid "WebKitGTK+"
 msgstr "وب‌كِت‌جتك+"
 
-#: database-content.py:240
-#| msgid "GDM Manual"
+#: database-content.py:283
 msgid "GIMP User Manual"
 msgstr "كتيّب مستخدمي جِمب"
 
-#: database-content.py:241
+#: database-content.py:284
 msgid "GNOME Web Photo"
 msgstr "صورة وِب جنوم"
 
-#: database-content.py:242
+#: database-content.py:285
+#| msgid ""
+#| "GNUCash is not part of the GNOME SVN repository. Please check <a href="
+#| "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
+#| "a> to see where to send translations."
 msgid ""
-"GNUCash is not part of the GNOME SVN repository. Please check <a href="
-"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
-"to see where to send translations."
+"GNUCash is not part of the GNOME Git repository. Please check <a "
+"href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash "
+"Wiki</a> to see where to send translations."
 msgstr ""
-"‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a href=\"http://wiki.gnucash."
-"org/wiki/Translation#Submitting\">ويكي GNUCash</a> لمزيد من المعلومات عن "
-"طريقة إرسال الترجمة."
+"‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a "
+"href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">ويكي GNUCash</a> "
+"لمزيد من المعلومات عن طريقة إرسال الترجمة."
 
-#: database-content.py:243
+#: database-content.py:286
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "جلاء هو عارض للعديد من أنساق المستندات."
 
-#: database-content.py:244
+#: database-content.py:287
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
 msgstr ""
 "الترجمات المودعة تحدث يدويا على l10n.gnome.org من وقت لآخر، فلا تتعجل :-)"
 
-#: database-content.py:245
+#: database-content.py:288
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1029,7 +1207,7 @@ msgstr ""
 "هذه ليست وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عبر <a href=\"http://"
 "translationproject.org\">مشروع الترجمة</a>."
 
-#: database-content.py:246
+#: database-content.py:289
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
@@ -1038,7 +1216,7 @@ msgstr ""
 "هذه ليست وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عبر <a href=\"http://www."
 "transifex.net/projects/p/shared-mime-info/c/default/\">منصة ترانسفِكس</a>."
 
-#: database-content.py:247
+#: database-content.py:290
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1050,29 +1228,28 @@ msgstr ""
 "translationproject.org/domain/xdg-user-dirs.html\">صفحة ترجمة xdg-user-dirs "
 "في مشروع الترجمة</a>."
 
-#: database-content.py:248
+#: database-content.py:291
 msgid ""
-"To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cg"
-"i?product=NetworkManager&component=general\">create a bug report for "
-"NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation "
-"file."
+"To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
+"cgi?product=NetworkManager&component=general\">create a bug report for "
+"NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr ""
-"لإرسال الترجمات، <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=N"
-"etworkManager&component=general\">افتح بلاغ علة في بجزيلا جنوم</a>، وأرفق به "
-"ملف الترجمة."
+"لإرسال الترجمات، <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\">افتح بلاغ علة في بجزيلا جنوم</a>، "
+"وأرفق به ملف الترجمة."
 
-#: database-content.py:249
+#: database-content.py:292
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
 msgstr ""
 "بداية من جنوم 2.23، تم دمج GAIL في GTK+. لذا لا تُرسِل إلى الجذغ بعد الآن."
 
-#: database-content.py:250
+#: database-content.py:293
 msgid "A VNC client for GNOME"
 msgstr "عميل VNC لجنوم"
 
-#: database-content.py:251
+#: database-content.py:294
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1083,11 +1260,11 @@ msgstr ""
 "لأحد النطاقين فيتعين عليك إيداع كلا الملفين في المستودع حتى لو لم يحتوي "
 "أحدهما على أي ترجمة، وإلا فسيتعطّل نظام بناء جتك+ عند ‪/po-properties‬."
 
-#: database-content.py:252
+#: database-content.py:295
 msgid "Graphical frontend for the git directory tracker"
 msgstr "واجهة رسومية لمتتبع مجلدات git"
 
-#: database-content.py:253
+#: database-content.py:296
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1095,115 +1272,125 @@ msgstr ""
 "‏moserial هو طرفية تسلسلية سهلة ونظيفة، مبنية على جتك+، لمكتب جنوم. مكتوبة "
 "بڤالا لمزيد من الروعة."
 
-#: database-content.py:254
+#: database-content.py:297
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
 msgstr ""
 "هذه نسخة من إصدارة system-tools-backends الرسمية من مستودع freedesktop.org."
 
-#: database-content.py:255
+#: database-content.py:298
 msgid "Passepartout is a DTP application for X."
 msgstr "‏Passepartout هو برنامج للنشر المكتبي"
 
-#: database-content.py:256
+#: database-content.py:299
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
 msgstr "توفر gnome-disk-utility مكتبات وأدوات للتعامل مع أجهزة التخزين."
 
-#: database-content.py:257
+#: database-content.py:300
 msgid "A note taking application"
 msgstr "تطبيق لكتابة الملاحظات"
 
-#: database-content.py:258
+#: database-content.py:301
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "يجب أن ترسل الترجمات كبلاغات عن علل (راجع الرابط أسفل)"
 
-#: database-content.py:259
+#: database-content.py:302
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
 msgstr ""
 "‏GNOME Video Arcade هي واجهة MAME‏ (Multiple Arcade Machine Emulator) لجنوم."
 
-#: database-content.py:260
+#: database-content.py:303
 msgid "GNOME Teletext viewer"
 msgstr "عارض تليتكست جنوم"
 
-#: database-content.py:261
+#: database-content.py:304
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "محوّل وسائط لسطح مكتب جنوم"
 
-#: database-content.py:262
+#: database-content.py:305
 msgid "Email client for netbooks"
 msgstr "عميل بريد لحواسيب النت"
 
-#: database-content.py:263
+#: database-content.py:306
 msgid "Gnome Parental Control"
 msgstr "تحكم جنوم الأبوي"
 
-#: database-content.py:264
+#: database-content.py:307
+msgid "A photo manager for GNOME"
+msgstr "مدير صور لجنوم"
+
+#: database-content.py:308
 msgid "Extra GNOME Applications"
 msgstr "تطبيقات جنوم إضافية"
 
-#: database-content.py:265
+#: database-content.py:309
 msgid "GNOME 2.18 (old stable)"
 msgstr "جنوم 2.18 (مُستقر قديم)"
 
-#: database-content.py:266
+#: database-content.py:310
 msgid "GNOME Infrastructure"
 msgstr "بنية جنوم التحتيّة"
 
-#: database-content.py:267
+#: database-content.py:311
 msgid "GNOME 2.16 (old stable)"
 msgstr "جنوم 2.16 (مُستقر قديم)"
 
-#: database-content.py:268
+#: database-content.py:312
 msgid "GNOME 2.14 (old stable)"
 msgstr "جنوم 2.14 (مُستقر قديم)"
 
-#: database-content.py:269
+#: database-content.py:313
 msgid "freedesktop.org (non-GNOME)"
 msgstr "المكتب الحر (ليس جنوم)"
 
-#: database-content.py:270
+#: database-content.py:314
 msgid "GNOME 2.24 (old stable)"
 msgstr "جنوم 2.24 (مُستقر قديم)"
 
-#: database-content.py:271
+#: database-content.py:315
 msgid "GNOME 2.22 (old stable)"
 msgstr "جنوم 2.22 (مُستقر قديم)"
 
-#: database-content.py:272
+#: database-content.py:316
 msgid "GNOME-Office Productivity Applications"
 msgstr "تطبيقات جنوم للأعمال المكتبيّة"
 
-#: database-content.py:273
+#: database-content.py:317
 msgid "GNOME 2.20 (old stable)"
 msgstr "جنوم 2.20 (مُستقر قديم)"
 
-#: database-content.py:274
+#: database-content.py:318
 msgid "GNOME 2.26 (old stable)"
 msgstr "جنوم 2.26 (مُستقر قديم)"
 
-#: database-content.py:275
-msgid "GNOME 2.28 (stable)"
-msgstr "جنوم 2.28 (مُستقر)"
+#: database-content.py:319
+#| msgid "GNOME 2.18 (old stable)"
+msgid "GNOME 2.28 (old stable)"
+msgstr "جنوم 2.28 (مُستقر قديم)"
 
-#: database-content.py:276
+#: database-content.py:320
 msgid "Obsolete GNOME Applications"
 msgstr "تطبيقات جنوم بائدة"
 
-#: database-content.py:277
+#: database-content.py:321
 msgid "External Dependencies (GNOME)"
 msgstr "اعتمادية خارجية (جنوم)"
 
-#: database-content.py:278
-msgid "GNOME 2.30 (development)"
-msgstr "جنوم 2.30 (تطويري)"
+#: database-content.py:322
+#| msgid "GNOME 2.28 (stable)"
+msgid "GNOME 2.30 (stable)"
+msgstr "جنوم 2.30 (مُستقر)"
 
-#: settings.py:73 djamnedlies-git/settings_sample.py:80
+#: database-content.py:323
+msgid "GIMP and Friends"
+msgstr "جمب وأصدقاؤه"
+
+#: settings.py:73
 msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1219,18 +1406,18 @@ msgstr ""
 "هذه الوحدة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة الوحدة لترى إلى أين "
 "ترسل الترجمات."
 
-#: common/views.py:35 djamnedlies-git/common/views.py:33
+#: common/views.py:35
 msgid "translator-credits"
 msgstr ""
 "فريق عربآيز للترجمة http:www.arabeyes.org :\n"
 "يوسف الشهيبي\t<chahibi@gmail.com>\n"
 "خالد حسني\t<khaledhosny@eglug.org>"
 
-#: common/views.py:60 djamnedlies-git/common/views.py:54
+#: common/views.py:60
 msgid "You have been logged out."
 msgstr "لقد خرجت."
 
-#: common/views.py:68 djamnedlies-git/common/views.py:62
+#: common/views.py:68
 msgid "You have been successfully logged in."
 msgstr "لقد ولجت بنجاح."
 
@@ -1243,76 +1430,105 @@ msgstr ""
 "لم تنضم إلى أي فريق ترجمة بعد. يمكنك الانضمام من <a href=\"%(url)s\">لاحتك</"
 "a>."
 
-#: common/views.py:80 djamnedlies-git/common/views.py:69
+#: common/views.py:80
 msgid "We're sorry, but your account has been disabled."
 msgstr "نأسف، لقد عُطِّل حسابك."
 
-#: common/views.py:82 djamnedlies-git/common/views.py:71
+#: common/views.py:82
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "فشل الولوج. من فضلك تحقق من اسم المستخدم وكلمة السر."
 
-#: common/views.py:122 djamnedlies-git/common/views.py:111
+#: common/views.py:122
 msgid "Your account has been activated."
 msgstr "لقد فُعِّل حسابك."
 
-#: djamnedlies-git/languages/views.py:49 djamnedlies-git/languages/views.py:65
-#: languages/views.py:49 languages/views.py:82
-msgid "UI Translations"
-msgstr "ترجمات الواجهة"
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "لُج باسمك وكلمة السر:"
 
-#: djamnedlies-git/people/forms.py:14 people/forms.py:14
-msgid "Choose a username:"
-msgstr "اختر اسم مستخدم:"
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+msgid "Username:"
+msgstr "اسم المستخدم:"
 
-#: djamnedlies-git/people/forms.py:15 people/forms.py:15
-msgid "May contain only letters, numbers, underscores or hyphens"
-msgstr "يمكن أن يحتوي حروفا وأرقاما وشرطة أو شرطة سفلية"
-
-#: djamnedlies-git/people/forms.py:16 people/forms.py:16
-msgid "Email:"
-msgstr "البريد:"
-
-#: djamnedlies-git/people/forms.py:17 djamnedlies-git/templates/login.html:37
-#: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:37
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: djamnedlies-git/people/forms.py:20 djamnedlies-git/templates/login.html:21
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20 templates/login.html:21
 msgid "Password:"
 msgstr "كلمة السر:"
 
-#: djamnedlies-git/people/forms.py:21 people/forms.py:21
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:77 templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "لُج"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "او استخدم OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17 templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:41
+msgid "Log in with OpenID"
+msgstr "لُج مستخدما OpenID"
+
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:54
+msgid "Unknown"
+msgstr "مجهول"
+
+#: languages/views.py:49 languages/views.py:82
+msgid "UI Translations"
+msgstr "ترجمات الواجهة"
+
+#: languages/views.py:80 templates/release_detail.html:66
+msgid "Original strings"
+msgstr "المقاطع الأصلية"
+
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "اختر اسم مستخدم:"
+
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "يمكن أن يحتوي حروفا وأرقاما وشرطة أو شرطة سفلية"
+
+#: people/forms.py:16
+msgid "Email:"
+msgstr "البريد:"
+
+#: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "سبعة حروف على الأقل"
 
-#: djamnedlies-git/people/forms.py:23
-#: djamnedlies-git/templates/people/person_password_change_form.html:27
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:18
 #: people/forms.py:23 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "أكّد كلمة السر:"
 
-#: djamnedlies-git/people/forms.py:31 people/forms.py:31
+#: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "اسم المستخدم مأخوذ. اختر واحدا آخر."
 
-#: djamnedlies-git/people/forms.py:39 people/forms.py:39
+#: people/forms.py:39
 msgid "You must either provide an OpenID or a password"
 msgstr "يجب أن تدخل إما كلمة سر أو OpenID"
 
-#: djamnedlies-git/people/forms.py:42 people/forms.py:42
+#: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "لا تتطابق كلما السر"
 
-#: djamnedlies-git/people/forms.py:65 people/forms.py:65
+#: people/forms.py:65
 msgid "Account activation"
 msgstr "تفعيل الحساب"
 
-#: djamnedlies-git/people/forms.py:66 people/forms.py:66
+#: people/forms.py:66
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1322,67 +1538,80 @@ msgstr ""
 "هذا تأكيد على نجاح تسجيلك في %s. لتنشيط حسابك انقر على الرابط التالي أو "
 "انسخه والصقه في المتصفح."
 
-#: djamnedlies-git/people/forms.py:68 people/forms.py:68
+#: people/forms.py:68
 #, python-format
 msgid "Administrators of %s"
 msgstr "مدراء %s"
 
-#: djamnedlies-git/people/models.py:36 people/models.py:36
+#: people/models.py:36
 msgid "Image"
 msgstr "صورة"
 
-#: djamnedlies-git/people/models.py:37 people/models.py:37
+#: people/models.py:37
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgstr "مسار إلى صورة (‫.jpg‬، ‫.png، ...) لتستخدم كصورتك"
 
-#: djamnedlies-git/people/models.py:38 people/models.py:38 teams/models.py:89
+#: people/models.py:38 teams/models.py:91
 msgid "Web page"
 msgstr "صفحة الوب"
 
-#: djamnedlies-git/people/models.py:39 people/models.py:39
+#: people/models.py:39
 msgid "IRC nickname"
 msgstr "كنية IRC"
 
-#: djamnedlies-git/people/models.py:40 people/models.py:40
+#: people/models.py:40
 msgid "Bugzilla account"
 msgstr "حساب بجزيلا"
 
-#: djamnedlies-git/people/models.py:41 people/models.py:41
+#: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
 msgstr ""
 "يجب لأن يكون هذا عنوانا بريديا، مفيد إذا لم يكن متطابقا مع خانة \"البريد\""
 
-#: djamnedlies-git/people/views.py:86 people/views.py:87
+#: people/views.py:87
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "لقد انضممت إلى فريق '%s' بنجاح."
 
-#: djamnedlies-git/people/views.py:89 people/views.py:93
+#: people/views.py:88
+msgid "A new person joined your team"
+msgstr "انضم شخص جديد إلي الفريق"
+
+#: people/views.py:89
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "انضم %(name)s إلى فريقك على %(site)s"
+
+#: people/views.py:93
 msgid "You are already member of this team."
 msgstr "أنت عضو في هذا الفريق بالفعل."
 
-#: djamnedlies-git/people/views.py:112 people/views.py:116
+#: people/views.py:116
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "لقد أُزِلت من الفريق '%s'."
 
-#: djamnedlies-git/people/views.py:128 people/views.py:132
+#: people/views.py:132
 msgid "Your password has been changed."
 msgstr "لقد تم تغيير كلمة السر."
 
-#: djamnedlies-git/stats/models.py:320 stats/models.py:351
+#: stats/models.py:201
+msgid "This branch is not linked from any release"
+msgstr "ليس هذا الفرع مرتبطا بأي إصدارة"
+
+#: stats/models.py:356
 msgid "Can't generate POT file, using old one."
 msgstr "لم أستطع توليد ملف POT، سأستخدم القديم."
 
-#: djamnedlies-git/stats/models.py:341 stats/models.py:373
+#: stats/models.py:358
+msgid "Can't generate POT file, statistics aborted."
+msgstr "لم أستطع توليد ملف POT، أُجهضت الإحصائيات."
+
+#: stats/models.py:378
 msgid "Can't copy new POT file to public location."
 msgstr "لم أستطع نسخ ملف POT الجديد للمكان العام."
 
-#: djamnedlies-git/stats/models.py:380 stats/utils.py:333
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "قائمة DOC_LINGUAS لا تحتوي هذه اللغة."
-
-#: djamnedlies-git/stats/models.py:659 stats/models.py:692
+#: stats/models.py:697
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1393,33 +1622,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906 stats/models.py:968
+#: stats/models.py:719
+#, python-format
+msgid ""
+"Entry for this language is not present in %(var)s variable in %(file)s file."
+msgstr "لا خانة لهذه اللغة في ‪%(var)s‬ في ملف ‪%(file)s‬."
+
+#: stats/models.py:973
 msgid "Administration Tools"
 msgstr "أدوات الإدارة"
 
-#: djamnedlies-git/stats/models.py:907 stats/models.py:969
+#: stats/models.py:974
 msgid "Development Tools"
 msgstr "أدوات التطوير"
 
-#: djamnedlies-git/stats/models.py:908 stats/models.py:970
+#: stats/models.py:975
 msgid "GNOME Desktop"
 msgstr "سطح مكتب جنوم"
 
-#: djamnedlies-git/stats/models.py:909 stats/models.py:971
+#: stats/models.py:976
 msgid "GNOME Developer Platform"
 msgstr "منصّة مطوّري جنوم"
 
-#: djamnedlies-git/stats/models.py:910 stats/models.py:972
+#: stats/models.py:977
 msgid "New Module Proposals"
 msgstr "اقتراحات الوحدات الجديدة"
 
-#: djamnedlies-git/stats/models.py:986 djamnedlies-git/stats/models.py:1252
-#: stats/models.py:1048 stats/models.py:1335
+#: stats/models.py:1056 stats/models.py:1360
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017 stats/models.py:1081
+#: stats/models.py:1089
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1430,24 +1664,19 @@ msgstr[3] "%(count)s رسائل"
 msgstr[4] "%(count)s رسالة"
 msgstr[5] "%(count)s رسالة"
 
-#: djamnedlies-git/stats/models.py:1018 stats/models.py:1082
+#: stats/models.py:1090
 #, python-format
 msgid "updated on %(date)s"
 msgstr "حُدِّث في %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: djamnedlies-git/stats/models.py:1020
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1084 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:132
+#: stats/models.py:1092 templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d-Y-m g:i a O"
 
-#: djamnedlies-git/stats/models.py:1023 stats/models.py:1087
+#: stats/models.py:1095
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1458,26 +1687,37 @@ msgstr[3] "%(count)s أشكال"
 msgstr[4] "%(count)s شكلا"
 msgstr[5] "%(count)s شكل"
 
-#: djamnedlies-git/stats/models.py:1024 stats/models.py:1088
+#: stats/models.py:1096
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "ملف POT‏ (%(messages)s، %(figures)s) — %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027 stats/models.py:1091
+#: stats/models.py:1099
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "ملف POT‏ (%(messages)s) — %(updated)s"
 
-#: djamnedlies-git/stats/utils.py:85 stats/utils.py:90
+#: stats/models.py:1183
+msgid ""
+"This POT file has not been generated through the standard intltool method."
+msgstr "لم يولد ملف POT عبر الطريقة المعتادة."
+
+#: stats/models.py:1184
+msgid ""
+"This POT file has not been generated through the standard gnome-doc-utils "
+"method."
+msgstr "لم يولد ملف POT عبر الطريقة المعتادة."
+
+#: stats/utils.py:90
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "خطأ أثناء تشغيل فحص 'intltool-update -m'."
 
-#: djamnedlies-git/stats/utils.py:91 stats/utils.py:96
+#: stats/utils.py:96
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "هناك بعض الملفات المفقودة من POTFILES.in: %s"
 
-#: djamnedlies-git/stats/utils.py:100 stats/utils.py:105
+#: stats/utils.py:105
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1486,21 +1726,21 @@ msgstr ""
 "الملفات التالية مشار إليها في POTFILES.in أو POTFILES.skip، لكن لا وجود لها: "
 "%s"
 
-#: djamnedlies-git/stats/utils.py:112 stats/utils.py:130
+#: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "لا تبدو الوحدة %s كوحدة gnome-doc-utils."
 
-#: djamnedlies-git/stats/utils.py:115 stats/utils.py:133
+#: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE لا يؤدي إلى ملف حقيقي، سأستخدم '%s.xml'."
 
-#: djamnedlies-git/stats/utils.py:118 stats/utils.py:136
+#: stats/utils.py:136
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE لا يشير إلى ملف حقيقي، ربما ماكرو."
 
-#: djamnedlies-git/stats/utils.py:133 stats/utils.py:152
+#: stats/utils.py:152
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1511,188 +1751,199 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206 stats/utils.py:237
+#: stats/utils.py:237
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "ملف PO '%s' لا وجود له أو لا يمكن قرائته."
 
-#: djamnedlies-git/stats/utils.py:226 stats/utils.py:257
+#: stats/utils.py:257
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "لم يجتز ملف PO '%s' فحص msgfmt: لن أُحدِّثه."
 
-#: djamnedlies-git/stats/utils.py:228 stats/utils.py:259
+#: stats/utils.py:259
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "لم أستطع الحصول على إحصائيات ملف POT '%s'."
 
-#: djamnedlies-git/stats/utils.py:231 stats/utils.py:262
+#: stats/utils.py:262
 msgid "This PO file has an executable bit set."
 msgstr "ملف PO هذا مضبوط كملف تنفيذي."
 
-#: djamnedlies-git/stats/utils.py:259 stats/utils.py:290
+#: stats/utils.py:290
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "ملف PO '%s' ليس مرمّزا UTF-8."
 
-#: djamnedlies-git/stats/utils.py:292 stats/utils.py:316
+#: stats/utils.py:316
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "لا يوجد خانة لهذه اللغة في ملف LINGUAS."
 
-#: djamnedlies-git/stats/utils.py:319 stats/utils.py:322
+#: stats/utils.py:322
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "لا يوجد خانة لهذه اللغة في ALL_LINGUAS في ملف configure."
 
-#: djamnedlies-git/stats/utils.py:322
+#: stats/utils.py:324
 msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr "لا أعرف أن أنظر هل هذه اللغة مستخدمة حقيقة، اسأل المسؤول عن الوحدة."
+"Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr "لا أعرف أين أبحث عن متغير LINGUAS، اسأل المسؤول عن الوحدة."
 
-#: djamnedlies-git/teams/models.py:112 teams/models.py:216
+#: stats/utils.py:331
+msgid ""
+"Don't know where to look for the DOC_LINGUAS variable, ask the module "
+"maintainer."
+msgstr "لا أعرف أين أبحث عن متغير DOC_LINGUAS، اسأل المسؤول عن الوحدة."
+
+#: stats/utils.py:333
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "قائمة DOC_LINGUAS لا تحتوي هذه اللغة."
+
+#: teams/models.py:89
+#| msgid "Documentation"
+msgid "Presentation"
+msgstr "عرض تقديمي"
+
+#: teams/models.py:92
+msgid "Mailing list"
+msgstr "القائمة البريدية"
+
+#: teams/models.py:93
+msgid "URL to subscribe"
+msgstr "مسار الاشتراك"
+
+#: teams/models.py:200 vertimus/models.py:536 vertimus/models.py:586
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "هذه رسالة آلية أُرسلت من %s."
+
+#: teams/models.py:218
 #, python-format
 msgid "No team for locale %s"
 msgstr "لا فريق للغة %s"
 
-#: djamnedlies-git/teams/models.py:129 teams/models.py:236
+#: teams/models.py:238
 msgid "Translator"
 msgstr "مُترجم"
 
-#: djamnedlies-git/teams/models.py:130 teams/models.py:237
+#: teams/models.py:239
 msgid "Reviewer"
 msgstr "مُراجع"
 
-#: djamnedlies-git/teams/models.py:131 teams/models.py:238
+#: teams/models.py:240
 msgid "Committer"
 msgstr "مُودِع"
 
-#: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31 teams/models.py:239
-#: templates/teams/team_base.html:36
+#: teams/models.py:241 templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "المنسّق"
 
-#: djamnedlies-git/teams/views.py:44 teams/views.py:55
+#: teams/views.py:55
 msgid "Committers"
 msgstr "المُودِعون"
 
-#: djamnedlies-git/teams/views.py:47 teams/views.py:58
+#: teams/views.py:58
 msgid "No committers"
 msgstr "لا مُودِعين"
 
-#: djamnedlies-git/teams/views.py:49 teams/views.py:60
+#: teams/views.py:60
 msgid "Reviewers"
 msgstr "المُراجعون"
 
-#: djamnedlies-git/teams/views.py:52 teams/views.py:63
+#: teams/views.py:63
 msgid "No reviewers"
 msgstr "لا مُراجعين"
 
-#: djamnedlies-git/teams/views.py:54 teams/views.py:65
+#: teams/views.py:65
 msgid "Translators"
 msgstr "المُترجِمون"
 
-#: djamnedlies-git/teams/views.py:57 teams/views.py:68
+#: teams/views.py:68
 msgid "No translators"
 msgstr "لا مُترجِمين"
 
-#: djamnedlies-git/templates/404.html:4 djamnedlies-git/templates/404.html:9
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "خطأ: الصفحة غير موجودة"
 
-#: djamnedlies-git/templates/404.html:11 templates/404.html:11
+#: templates/404.html:11
 msgid "The page you requested has not been found on this server."
 msgstr "الصفحة التي طلبتها لا وجود لها على هذا الخادوم"
 
-#: djamnedlies-git/templates/500.html:4 templates/500.html:4
+#: templates/500.html:4
 msgid "Error: server error (500)"
 msgstr "خطأ: خطأ من الخادوم (٥٠٠)"
 
-#: djamnedlies-git/templates/500.html:9 templates/500.html:9
+#: templates/500.html:9
 msgid "Server Error"
 msgstr "خطأ من الخادوم"
 
-#: djamnedlies-git/templates/500.html:11 templates/500.html:11
+#: templates/500.html:11
 msgid "We're sorry but a server error has occurred."
 msgstr "نأسف، حدث خطأ من الخادوم."
 
-#: djamnedlies-git/templates/base.html:26
-#: djamnedlies-git/templates/base.html:42 templates/base.html:26
-#: templates/base.html.py:42
+#: templates/base.html:26 templates/base.html.py:42
 msgid "Home"
 msgstr "البداية"
 
-#: djamnedlies-git/templates/base.html:27 templates/base.html:27
+#: templates/base.html:27
 msgid "News"
 msgstr "أخبار"
 
-#: djamnedlies-git/templates/base.html:28 templates/base.html:28
+#: templates/base.html:28
 msgid "Projects"
 msgstr "مشاريع"
 
-#: djamnedlies-git/templates/base.html:29 templates/base.html:29
+#: templates/base.html:29
 msgid "Art"
 msgstr "فن"
 
-#: djamnedlies-git/templates/base.html:30 templates/base.html:30
+#: templates/base.html:30
 msgid "Support"
 msgstr "دعم"
 
-#: djamnedlies-git/templates/base.html:31 templates/base.html:31
+#: templates/base.html:31
 msgid "Development"
 msgstr "تطوير"
 
-#: djamnedlies-git/templates/base.html:32 templates/base.html:32
+#: templates/base.html:32
 msgid "Community"
 msgstr "مجتمع"
 
-#: djamnedlies-git/templates/base.html:42 templates/base.html:42
+#: templates/base.html:42
 msgid "Back to Damned Lies home page"
 msgstr "عُد إلى صفحة الأكاذيب اللعينة الرئيسية"
 
-#: djamnedlies-git/templates/base.html:48
-#: djamnedlies-git/templates/index.html:13 templates/base.html:48
-#: templates/index.html:13
+#: templates/base.html:48 templates/index.html:13
 msgid "Teams"
 msgstr "الفرق"
 
-#: djamnedlies-git/templates/base.html:53
-#: djamnedlies-git/templates/index.html:20
-#: djamnedlies-git/templates/release_compare.html:25 templates/base.html:53
-#: templates/index.html:27 templates/release_compare.html:25
+#: templates/base.html:53 templates/index.html:27
+#: templates/release_compare.html:25
 msgid "Languages"
 msgstr "اللغات"
 
-#: djamnedlies-git/templates/base.html:58 templates/base.html:58
+#: templates/base.html:58
 msgid "Release sets"
 msgstr "أطقم الإصدارات"
 
-#: djamnedlies-git/templates/base.html:63
-#: djamnedlies-git/templates/index.html:36 templates/base.html:63
-#: templates/index.html:43
+#: templates/base.html:63 templates/index.html:43
 msgid "Modules"
 msgstr "الوحدات"
 
-#: djamnedlies-git/templates/base.html:74 templates/base.html:74
+#: templates/base.html:74
 msgid "Log out"
 msgstr "اخرج"
 
-#: djamnedlies-git/templates/base.html:77
-#: djamnedlies-git/templates/login.html:29
-#: djamnedlies-git/templates/registration/password_reset_complete.html:12
-#: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77 templates/login.html:29
-#: templates/registration/password_reset_complete.html:12
-msgid "Log in"
-msgstr "لُج"
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "حقوق النشر &copy; ٢٠٠٦-٢٠٠٩ "
 
-#: djamnedlies-git/templates/base.html:94 templates/base.html:94
+#: templates/base.html:94
 msgid "The GNOME Project"
 msgstr "مشروع جنوم"
 
-#: djamnedlies-git/templates/base.html:96 templates/base.html:96
+#: templates/base.html:96
 msgid ""
 "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -1700,37 +1951,29 @@ msgstr ""
 "يُدار في وحدة <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</"
 "a> في <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
-#: djamnedlies-git/templates/base.html:98 templates/base.html:98
+#: templates/base.html:98
 msgid "Hosted by"
 msgstr "تستضيفها"
 
-#: djamnedlies-git/templates/branch_detail.html:4
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
 msgstr "جُمّدت عبارات الترجمة لهذا الفرع."
 
-#: djamnedlies-git/templates/branch_detail.html:13
 #: templates/branch_detail.html:13
 msgid "Translation"
 msgstr "ترجمة"
 
-#: djamnedlies-git/templates/error.html:4
-#: djamnedlies-git/templates/index.html:4
-#: djamnedlies-git/templates/index.html:9
-#: djamnedlies-git/templates/login.html:4
-#: djamnedlies-git/templates/registration/register.html:4
-#: djamnedlies-git/templates/registration/register_success.html:4
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
 #: templates/login.html:4 templates/registration/register.html:4
 #: templates/registration/register_success.html:4
 msgid "Damned Lies about GNOME"
 msgstr "أكاذيب لعينة عن جنوم"
 
-#: djamnedlies-git/templates/error.html:9 templates/error.html:9
+#: templates/error.html:9
 msgid "Error:"
 msgstr "خطأ:"
 
-#: djamnedlies-git/templates/index.html:14 templates/index.html:14
+#: templates/index.html:14
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -1738,7 +1981,7 @@ msgstr ""
 "قائمة بكل فرق ترجمة جنوم، مع معلومات كاملة مثل المنسِّق، صفحات الوِب ومعلومات "
 "القوائم البريدية."
 
-#: djamnedlies-git/templates/index.html:15 templates/index.html:15
+#: templates/index.html:15
 msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
@@ -1746,14 +1989,23 @@ msgstr ""
 "إذا لم يكن هناك أي فريق للغتك، يمكنك بسهولة <a href='http://live.gnome.org/"
 "TranslationProject/StartingATeam/'>بدأ فريقك</a>."
 
-#: djamnedlies-git/templates/index.html:22 templates/index.html:29
+#: templates/index.html:19
+#, python-format
+msgid ""
+"Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us "
+"to translate GNOME!"
+msgstr ""
+"اذهب إلى <a href='%(team_url)s'>صفحة فريق %(language_name)s</a> وساعدنا في "
+"ترجمة جنوم."
+
+#: templates/index.html:29
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
 msgstr "قائمة بكل اللغات التي لها <a href='%(teams_url)s'>فرق ترجمة</a>."
 
-#: djamnedlies-git/templates/index.html:23 templates/index.html:30
+#: templates/index.html:30
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1761,23 +2013,22 @@ msgstr ""
 "بعض الفرق تدير أكثر من لغة واحدة (عادة مجرد تنويعات بسيطة)، يمكنك هنا معاينة "
 "كل اللغات التي تُترجم جنوم اليها."
 
-#: djamnedlies-git/templates/index.html:27 templates/index.html:34
+#: templates/index.html:34
 msgid "Release Sets"
 msgstr "الإصدارات"
 
-#: djamnedlies-git/templates/index.html:28 templates/index.html:35
+#: templates/index.html:35
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr "قائمة بكل أطقم الإصدار وإصدارات جنوم التي نُجمِّع إحصائياتها."
 
-#: djamnedlies-git/templates/index.html:30
+#: templates/index.html:37
 msgid ""
-"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
-"or &quot;GNOME 2.14&quot;."
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
 msgstr ""
-"أمثلة للإصدارات: &quot;مكتب جنوم&quot;، أو &quot;الاصبع الخامس&quot; أو "
-"&quot;جنوم 2.14&quot;."
+"أمثلة للإصدارات: &quot;بنية جنوم التحتية&quot; أو &quot;جنوم 2.26&quot;."
 
-#: djamnedlies-git/templates/index.html:31 templates/index.html:38
+#: templates/index.html:38
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
@@ -1785,42 +2036,40 @@ msgstr ""
 "الإصدارات الرسمية لجنوم مقسمة أكثر إلى فئات مثل &quot;تطبيقات سطح "
 "المكتب&quot; و &quot;منصّة المطوّرين&quot;."
 
-#: djamnedlies-git/templates/index.html:33 templates/index.html:40
+#: templates/index.html:40
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
 msgstr "انظر هنا إذا أردت مقارنة دعم اللغات في أي من الإصدارات."
 
-#: djamnedlies-git/templates/index.html:37 templates/index.html:44
+#: templates/index.html:44
 msgid "List of all modules with statistics in here."
 msgstr "قائمة الوحدات مع إحصائياتها."
 
-#: djamnedlies-git/templates/index.html:39 templates/index.html:46
+#: templates/index.html:46
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
 msgstr "الوحدات هي تطبيقات أو مكتبات منفصلة، مع فرع أو أكثر للتطوير."
 
-#: djamnedlies-git/templates/index.html:40
+#: templates/index.html:47
 msgid ""
-"They are usually taken from CVS, and we keep all relevant information on "
-"them (Bugzilla details, web page, maintainer information,...)."
+"They are usually taken from the Git repository, and we keep all relevant "
+"information on them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
-"عادة تؤخذ من CVS، بالإضافة إلى معلومات ذات صلة (تفاصيل بجزيلا، صفحة الوِب، "
-"المشرف، ...)"
+"عادة تؤخذ من المستودع، بالإضافة إلى معلومات ذات صلة (تفاصيل بجزيلا، صفحة "
+"الوِب، المشرف، ...)"
 
-#: djamnedlies-git/templates/index.html:46 templates/index.html:53
+#: templates/index.html:53
 msgid "Translated by:"
 msgstr "ترجَمَه:"
 
-#: djamnedlies-git/templates/login.html:10
-#: djamnedlies-git/templates/registration/register.html:11
 #: templates/login.html:10 templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "لقد ولجت بالفعل باسم %(username)s."
 
-#: djamnedlies-git/templates/login.html:13 templates/login.html:13
+#: templates/login.html:13
 #, python-format
 msgid ""
 "If you do not own an account on this site, you can <a href='%(link)"
@@ -1829,156 +2078,104 @@ msgstr ""
 "إذا لم تمتلك حسابا على هذا الموقع، فيمكنك <a href='%(link)s'>تسجيل</a> حساب "
 "جديد."
 
-#: djamnedlies-git/templates/login.html:15
-#: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:15
-msgid "Log in with your username and password:"
-msgstr "لُج باسمك وكلمة السر:"
-
-#: djamnedlies-git/templates/login.html:18
-#: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:18
-msgid "Username:"
-msgstr "اسم المستخدم:"
-
-#: djamnedlies-git/templates/login.html:22 templates/login.html:22
+#: templates/login.html:22
 msgid "Have you forgotten your password?"
 msgstr "هل نسيت كلمة السر؟"
 
-#: djamnedlies-git/templates/login.html:34
-#: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:34
-msgid "Or use your OpenID:"
-msgstr "او استخدم OpenID:"
-
-#: djamnedlies-git/templates/login.html:40
-#: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "لُج مستخدما OpenID"
-
-#: djamnedlies-git/templates/module_detail.html:6
 #: templates/module_detail.html:6
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "إحصائيات الوحدة: %(name)s"
 
-#: djamnedlies-git/templates/module_detail.html:55
 #: templates/module_detail.html:55
 msgid "Maintainers"
 msgstr "المشرفون"
 
-#: djamnedlies-git/templates/module_detail.html:63
 #: templates/module_detail.html:63
 msgid "Bug reporting"
 msgstr "الإبلاغ عن العلل"
 
-#: djamnedlies-git/templates/module_detail.html:66
 #: templates/module_detail.html:66
 msgid "Show existing i18n and l10n bugs"
 msgstr "اعرض علل التوطين والعولمة الموجودة"
 
-#: djamnedlies-git/templates/module_detail.html:68
-msgid "Report bugs to Bugzilla"
-msgstr "أبلغ عن علة في بجزيلا"
+#: templates/module_detail.html:68
+msgid "Report a bug"
+msgstr "بلغ عن علّة"
 
-#: djamnedlies-git/templates/module_detail.html:77
 #: templates/module_detail.html:77
 msgid "Branches:"
 msgstr "الفروع:"
 
-#: djamnedlies-git/templates/module_detail.html:97
-#: templates/module_detail.html:97
+#: templates/module_detail.html:100
 msgid "Browse Repository"
 msgstr "تصفح المستودع"
 
-#: djamnedlies-git/templates/module_images.html:4
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
 msgstr "حالة أشكال توثيق الوحدة: %(name)s"
 
-#: djamnedlies-git/templates/module_images.html:12
 #: templates/module_images.html:12
 msgid "Figures translation status"
 msgstr "حالة ترجمة الأشكال"
 
-#: djamnedlies-git/templates/module_images.html:17
 #: templates/module_images.html:17
 msgid "Original"
 msgstr "الأصل"
 
-#: djamnedlies-git/templates/module_images.html:32
 #: templates/module_images.html:30
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
 msgstr "مترجم، لكن يستخدم الأصل (ربما الشكل لا يحتوي أي مقطع يُترجم)"
 
-#: djamnedlies-git/templates/module_images.html:36
 #: templates/module_images.html:34
 msgid "Fuzzy"
 msgstr "مبهم"
 
-#: djamnedlies-git/templates/module_images.html:41
 #: templates/module_images.html:39
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "لا يوجد ملف (مبهم &quot;تقنيا&quot;)"
 
-#: djamnedlies-git/templates/module_images.html:44
 #: templates/module_images.html:42
 msgid "Not translated"
 msgstr "غير مُتَرجَم"
 
-#: djamnedlies-git/templates/module_list.html:4
-#: djamnedlies-git/templates/module_list.html:9 templates/module_list.html:4
-#: templates/module_list.html.py:9
+#: templates/module_list.html:4 templates/module_list.html.py:9
 msgid "GNOME Modules"
 msgstr "وحدات جنوم"
 
-#: djamnedlies-git/templates/module_list.html:11 templates/module_list.html:11
+#: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "اختر وحدة أسفله لترى بعض الأكاذيب اللعينة عنها:"
 
-#: djamnedlies-git/templates/release_compare.html:5
-#: djamnedlies-git/templates/release_compare.html:20
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
 msgstr "مقارنة الإصدارات"
 
-#: djamnedlies-git/templates/release_detail.html:10
 #: templates/release_detail.html:10
 #, python-format
 msgid "%(name)s Release"
 msgstr "إصدار %(name)s"
 
-#: djamnedlies-git/templates/release_detail.html:13
-#: djamnedlies-git/templates/languages/language_release.html:33
+#: templates/release_detail.html:13
 msgid ""
-"The modules of this release are not part of the GNOME SVN repository. Please "
+"The modules of this release are not part of the GNOME Git repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"الوحدات في هذه ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة لتعرف إلى "
-"أين ترسل الترجمات."
+"الوحدات في هذه الإصدارة ليست جزءا من مستودع جنوم. من فضلك راجع موقع كل وحدة "
+"لتعرف إلى أين ترسل الترجمات."
 
-#: djamnedlies-git/templates/release_detail.html:19
-#: djamnedlies-git/templates/stats_show.html:30
 #: templates/release_detail.html:19 templates/stats_show.html:30
 msgid "Language"
 msgstr "اللغة"
 
-#: djamnedlies-git/templates/release_detail.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:26
 #: templates/release_detail.html:20 templates/release_detail.html.py:67
 #: templates/languages/language_release_summary.html:9
 msgid "User Interface"
 msgstr "واجهة المستخدم"
 
-#: djamnedlies-git/templates/release_detail.html:21
-#: djamnedlies-git/templates/release_detail.html:23
-#: djamnedlies-git/templates/stats_show.html:34
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-git/templates/teams/team_detail.html:27
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
 #: templates/stats_show.html:34
 #: templates/languages/language_release_summary.html:9
@@ -1986,57 +2183,43 @@ msgstr "واجهة المستخدم"
 msgid "Graph"
 msgstr "رسم بياني"
 
-#: djamnedlies-git/templates/release_list.html:4
-#: djamnedlies-git/templates/release_list.html:9 templates/release_list.html:4
-#: templates/release_list.html.py:9
+#: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "إصدارات جنوم"
 
-#: djamnedlies-git/templates/release_list.html:11
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "اختر إصدارا أسفله للتعرف على تفاصيل أكثر حوله:"
 
-#: djamnedlies-git/templates/stats_show.html:13
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
+#: templates/release_list.html:25
+msgid "Older Releases"
+msgstr "الإصدارات الأقدم"
+
 #: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "نزّل ملف POT"
 
-#: djamnedlies-git/templates/stats_show.html:17
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
 #: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "ملاحظات"
 
-#: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-git/vertimus/models.py:165 templates/stats_show.html:30
-#: vertimus/models.py:189
+#: templates/stats_show.html:30 vertimus/models.py:189
 msgid "Translated"
 msgstr "تُرجِم"
 
-#: djamnedlies-git/templates/stats_show.html:50
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
 #: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "اعرض أشكال المستند"
 
-#: djamnedlies-git/templates/admin/base_site.html:4
 #: templates/admin/base_site.html:4
 msgid "Damned Lies site admin"
 msgstr "مدير موقع الأكاذيب اللعينة"
 
-#: djamnedlies-git/templates/feeds/actions_description.html:6
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:159
+#: templates/vertimus/vertimus_detail.html:160
 msgid "No comment"
 msgstr "لا تعليق"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:4
-#: djamnedlies-git/templates/languages/language_all_modules.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:63
-#: djamnedlies-git/templates/teams/team_detail.html:64
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:47
@@ -2044,28 +2227,21 @@ msgstr "لا تعليق"
 msgid "All modules"
 msgstr "كل الوحدات"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:23
-#: djamnedlies-git/templates/languages/language_release.html:25
 #: templates/languages/language_all_modules.html:23
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
 msgstr "أخفِ الوحدات المكتملة"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:27
-#: djamnedlies-git/templates/languages/language_release.html:29
 #: templates/languages/language_all_modules.html:27
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
 msgstr "أظهر الوحدات المكتملة"
 
-#: djamnedlies-git/templates/languages/language_list.html:4
-#: djamnedlies-git/templates/languages/language_list.html:9
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
 msgstr "لغات جنوم"
 
-#: djamnedlies-git/templates/languages/language_list.html:11
 #: templates/languages/language_list.html:11
 #, python-format
 msgid "GNOME is being translated to following %(numb)s language.\n"
@@ -2077,134 +2253,114 @@ msgstr[3] "تُترجم جنوم للغات ال‍ %(numb)s التالية.\n"
 msgstr[4] "تُترجم جنوم للغات ال‍ %(numb)s التالية.\n"
 msgstr[5] "تُترجم جنوم للغات ال‍ %(numb)s التالية.\n"
 
-#: djamnedlies-git/templates/languages/language_release.html:42
+#: templates/languages/language_release.html:33
+msgid ""
+"The modules of this release are not part of the GNOME git repository. Please "
+"check each module's web page to see where to send translations."
+msgstr ""
+"الوحدات في هذه الإصدارة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة "
+"لتعرف إلى أين ترسل الترجمات."
+
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
 msgstr "نزّل كل ملفات po"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-git/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:21
 #: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "وحدة"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
 #: templates/languages/language_release_stats.html:21
 msgid "Branch"
 msgstr "فرع"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
 #: templates/languages/language_release_stats.html:21
 msgid "Statistics"
 msgstr "إحصائيات"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
 #: templates/languages/language_release_stats.html:22
 msgid "Status"
 msgstr "الحالة"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-git/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:22
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "التاريخ"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:32
 #: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% مُترجم)"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:99
 #: templates/languages/language_release_stats.html:103
 msgid "Error summary"
 msgstr "ملخّص الخطأ"
 
-#: djamnedlies-git/templates/people/person_base.html:5
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "الإصدار"
+
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
 msgstr "مساهم في جنوم"
 
-#: djamnedlies-git/templates/people/person_base.html:12
-#: djamnedlies-git/templates/people/person_detail_change_form.html:7
 #: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "غيّر بياناتك"
 
-#: djamnedlies-git/templates/people/person_base.html:13
 #: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "غيّر كلمة السر"
 
-#: djamnedlies-git/templates/people/person_base.html:14
 #: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "التحق بفريق"
 
-#: djamnedlies-git/templates/people/person_detail.html:22
 #: templates/people/person_detail.html:22
 msgid "Site Language:"
 msgstr "لغة الموقع:"
 
-#: djamnedlies-git/templates/people/person_detail.html:33
 #: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "اختر"
 
-#: djamnedlies-git/templates/people/person_detail.html:39
 #: templates/people/person_detail.html:39
 msgid "Maintains:"
 msgstr "يشرف على:"
 
-#: djamnedlies-git/templates/people/person_detail.html:50
 #: templates/people/person_detail.html:50
 msgid "Working on"
 msgstr "يعمل على"
 
-#: djamnedlies-git/templates/people/person_detail.html:54
 #: templates/people/person_detail.html:54
 msgid "State"
 msgstr "الحالة"
 
-#: djamnedlies-git/templates/people/person_detail_change_form.html:13
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:12
+#: templates/teams/team_edit.html:27
 msgid "Save"
 msgstr "احفظ"
 
-#: djamnedlies-git/templates/people/person_list.html:4
-#: djamnedlies-git/templates/people/person_list.html:8
 #: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "مساهمو جنوم"
 
-#: djamnedlies-git/templates/people/person_list.html:10
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
 msgstr "يطور جنوم الأشخاص التاليون:"
 
-#: djamnedlies-git/templates/people/person_overview.html:27
 #: templates/people/person_overview.html:27
 msgid "Instant messaging:"
 msgstr "التراسل الفوري:"
 
-#: djamnedlies-git/templates/people/person_overview.html:34
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
 msgstr "حساب بجزيلا:"
 
-#: djamnedlies-git/templates/people/person_overview.html:38
-msgid "SVN account:"
-msgstr "حساب المستودع:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:6
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
 msgstr "تغيير كلمة السر"
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:8
 #: templates/people/person_password_change_form.html:8
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
@@ -2213,100 +2369,78 @@ msgstr ""
 "من فضلك أدخل كلمة السر القديمة، ثم أدخل كلمة السر الجديدة مرتين حتى نتأكد من "
 "أنك كتبتها بشكل صحيح."
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
 msgstr "كلمة السر القديمة:"
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:21
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:16
 #: templates/people/person_password_change_form.html:21
 #: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "كلمة السر الجديدة:"
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:30
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:19
 #: templates/people/person_password_change_form.html:30
 #: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "غيّر كلمة السر"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:8
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
 msgstr "التحق بفريق جديد"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:11
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
 msgstr "أريد الالتحاق بهذا الفريق كمترجم:"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:13
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
 msgstr "التحق"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:5
 #: templates/people/person_team_membership.html:5
 msgid "Member of teams"
 msgstr "عضو في فرق"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:9
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "عضو في فريق %(team_name)s (%(role_name)s)"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:12
 #: templates/people/person_team_membership.html:12
 msgid "Leave"
 msgstr "اترك"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:13
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "أتريد ترك هذا الفريق؟"
 
-#: djamnedlies-git/templates/registration/password_reset_complete.html:4
-#: djamnedlies-git/templates/registration/password_reset_complete.html:8
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_complete.html:8
 msgid "Password reset complete"
 msgstr "اكتملت إعادة ضبط كلمة السر"
 
-#: djamnedlies-git/templates/registration/password_reset_complete.html:10
 #: templates/registration/password_reset_complete.html:10
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "وُضعت كلمة السر. يمكنك الولوج الآن."
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:9
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
 msgid "Password reset"
 msgstr "إعادة ضبط كلمة السر"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:10
 #: templates/registration/password_reset_confirm.html:10
 msgid "Enter new password"
 msgstr "أدخل كلمة السر الجديدة"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:12
 #: templates/registration/password_reset_confirm.html:12
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr "من فضلك أدخل كلمة السر الجديدة مرتين لنتأكد أنك كتبتها بشكل صحيح."
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:24
 #: templates/registration/password_reset_confirm.html:24
 msgid "Password reset unsuccessful"
 msgstr "أعيد ضبط كلمة السر بنجاح"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:26
 #: templates/registration/password_reset_confirm.html:26
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
@@ -2315,21 +2449,17 @@ msgstr ""
 "وصلة إعادة ضبط كلمة السر ليست صحيحة، ربما لأنك استخدمتها من قبل.  من فضلك "
 "اطلب إعادة ضبط جديدة لكلمة السر."
 
-#: djamnedlies-git/templates/registration/password_reset_done.html:4
-#: djamnedlies-git/templates/registration/password_reset_done.html:9
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
 msgid "Password reset successful"
 msgstr "نجحت إعادة ضبط كلمة السر"
 
-#: djamnedlies-git/templates/registration/password_reset_done.html:11
 #: templates/registration/password_reset_done.html:11
 msgid ""
 "We've e-mailed you instructions for setting your password to the e-mail "
 "address you submitted. You should be receiving it shortly."
 msgstr "لقد أرسلنا إلى بريدك تعليمات وضع كلمة السر. يفترض أن تستلمها بعد قليل."
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:11
 #: templates/registration/password_reset_form.html:11
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll e-mail "
@@ -2338,22 +2468,18 @@ msgstr ""
 "أنسيت كلمة السر؟ أدخل عنوانك البريدي أسفل وسنرسل إلى بريدك تعليمات وضع واحدة "
 "جديدة."
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
 msgstr "عنوان البريد:"
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "Reset my password"
 msgstr "أعد ضبط كلمة السر"
 
-#: djamnedlies-git/templates/registration/register.html:9
 #: templates/registration/register.html:9
 msgid "Account Registration"
 msgstr "تسجيل حساب"
 
-#: djamnedlies-git/templates/registration/register.html:13
 #: templates/registration/register.html:13
 msgid ""
 "You can register here for an account on this site. This is only useful if "
@@ -2362,7 +2488,6 @@ msgstr ""
 "يمكنك أن تسجل هنا حسابا على الموقع. لا يفيدك هذا إلا إذا كنت تنوي المشاركة "
 "في ترجمة جنوم."
 
-#: djamnedlies-git/templates/registration/register.html:14
 #: templates/registration/register.html:14
 msgid ""
 "After registration and connection, you will be able to join an existing team "
@@ -2370,297 +2495,315 @@ msgid ""
 msgstr ""
 "بعد التسجيل والولوج، ستستطيع الاشتراك في أي فريق موجود من صفحتك الخاصة."
 
-#: djamnedlies-git/templates/registration/register.html:28
 #: templates/registration/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "استوثق عبر OpenID <strong>أو</strong> كلمة سر:"
 
-#: djamnedlies-git/templates/registration/register.html:34
 #: templates/registration/register.html:34
 msgid "Register with OpenID"
 msgstr "سجّل مستخدما OpenID"
 
-#: djamnedlies-git/templates/registration/register.html:46
 #: templates/registration/register.html:46
 msgid "Register with password"
 msgstr "سجل بكلمة سر"
 
-#: djamnedlies-git/templates/registration/register_success.html:8
 #: templates/registration/register_success.html:8
 msgid "Registration Success"
 msgstr "نجاح التسجيل"
 
-#: djamnedlies-git/templates/registration/register_success.html:10
 #: templates/registration/register_success.html:10
 msgid ""
 "The registration succeeded. You will now receive an email containing a link "
 "to activate your account."
 msgstr "نجح التسجيل. سيصلك الآن بريد يحتوي على وصلة لتفعيل حسابك."
 
-#: djamnedlies-git/templates/teams/team_base.html:6
 #: templates/teams/team_base.html:7
 msgid "Details"
 msgstr "تفاصيل"
 
-#: djamnedlies-git/templates/teams/team_base.html:9
 #: templates/teams/team_base.html:14
 #, python-format
 msgid "%(lang)s Translation Team Page:"
 msgstr "صفحة فريق الترجمة %(lang)s:"
 
-#: djamnedlies-git/templates/teams/team_base.html:13
 #: templates/teams/team_base.html:18
 msgid "Bugzilla:"
 msgstr "بجزيلا:"
 
-#: djamnedlies-git/templates/teams/team_base.html:15
 #: templates/teams/team_base.html:20
 msgid "Report Bug in Translation"
 msgstr "أبلِغ عن علّة في الترجمة"
 
-#: djamnedlies-git/templates/teams/team_base.html:16
 #: templates/teams/team_base.html:21
 msgid "Show Existing Bugs"
 msgstr "اعرض العلل الموجودة"
 
-#: djamnedlies-git/templates/teams/team_base.html:20
 #: templates/teams/team_base.html:25
 msgid "Mailing List:"
 msgstr "القائمة البريدية:"
 
-#: djamnedlies-git/templates/teams/team_base.html:22
 #: templates/teams/team_base.html:27
 msgid "Send e-mail to the list"
 msgstr "أرسل رسالة بريد إلكتروني للقائمة البريدية"
 
-#: djamnedlies-git/templates/teams/team_base.html:24
 #: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "اشترِك"
 
-#: djamnedlies-git/templates/teams/team_detail.html:5
+#: templates/teams/team_detail.html:7
 #, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr "آخر الإجراءات التي قام بها فريق %(lang)s في مشروع ترجمة جنوم"
 
-#: djamnedlies-git/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:39
+#: templates/teams/team_detail.html:40 templates/teams/team_edit.html:16
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "فريق ترجمة %(lang)s"
 
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: templates/languages/language_release_summary.html:9
-msgid "Release"
-msgstr "الإصدار"
+#: templates/teams/team_detail.html:48
+msgid ""
+"There is currently no established team for this language. See <a href="
+"\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> "
+"to get more information about the process of building a new translation team."
+msgstr ""
+"لا يوجد حاليا فريق لهذه اللغة. طالع <a href=\"http://live.gnome.org/"
+"TranslationProject/StartingATeam\">ويكي مشروع ترجمة جنوم</a> لمزيد من "
+"المعلومات عن عملية تكوين فريق ترجمة جديدة."
 
-#: djamnedlies-git/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:64
+#: templates/teams/team_detail.html:58
+msgid "Plural forms:"
+msgstr "صيغ الجموع:"
+
+#: templates/teams/team_detail.html:60
+msgid "Archives"
+msgstr "أرشيفات"
+
+#: templates/teams/team_detail.html:66
 msgid "Team membership"
 msgstr "عضوية الفريق"
 
-#: djamnedlies-git/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:75
+#: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "طبّق التعديلات"
 
-#: djamnedlies-git/templates/teams/team_list.html:4
-#: djamnedlies-git/templates/teams/team_list.html:9
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr "يستخدم هذا الفريق Vertimus لإدارة الترجمة"
+
+#: templates/teams/team_edit.html:25
+msgid ""
+"This content may use <a "
+"href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax"
+msgstr ""
+"يمكن أم يستخدم هذا المحتوى نسق <a "
+"href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a>"
+
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
 msgstr "فِرَق ترجمة جنوم"
 
-#: djamnedlies-git/templates/teams/team_list.html:12
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
 msgstr "اختر فريقا للتعرف على معلومات إضافية عنه:"
 
-#: djamnedlies-git/templates/teams/team_list.html:25
 #: templates/teams/team_list.html:25
 #, python-format
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "يُنّسقه <a href=\"%(url)s\">%(name)s</a>"
 
-#: djamnedlies-git/templates/teams/team_list.html:34
 #: templates/teams/team_list.html:34
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "لا يوجد حاليا أي فريق ترجمة في جنوم. :("
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
 #: templates/vertimus/vertimus_detail.html:6
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "ترجمة الوحدة: %(name)s"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
 #: templates/vertimus/vertimus_detail.html:27
 msgid "Used in release(s):"
 msgstr "استخدم في الإصدارة:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
 #: templates/vertimus/vertimus_detail.html:45
 msgid "State:"
 msgstr "الحالة:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
 #: templates/vertimus/vertimus_detail.html:65
 msgid "Download PO file"
 msgstr "نزّل ملف PO"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
 #: templates/vertimus/vertimus_detail.html:65
 msgid "Translated:"
 msgstr "مُتَرجَم:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
 #: templates/vertimus/vertimus_detail.html:95
 msgid "On-going activities in same module:"
 msgstr "النشاطات الجارية على نفس الوحدة:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
-msgid "Action History"
-msgstr "تأريخ الإجراءات"
+#: templates/vertimus/vertimus_detail.html:106
+msgid "Actions"
+msgstr "الإجراءات"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:148
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
+#. which should be localized in Django itself
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:832
+#, python-format
+msgid "Archived Actions (%(human_level)s archived series)"
+msgstr "إجراءات مؤرشفة (سلسلة %(human_level)s المؤرشفة)"
+
+#: templates/vertimus/vertimus_detail.html:110
+msgid "(Return to current)"
+msgstr "(ارجع للحالي)"
+
+#: templates/vertimus/vertimus_detail.html:115
+msgid "(Previous action history)"
+msgstr "(تأريخ الإجراءات)"
+
+#: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
 msgstr "قارن مع:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:171
+#: templates/vertimus/vertimus_detail.html:168
+msgid "No current actions."
+msgstr "لا إجراء حالي"
+
+#: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
 msgstr "إجراء جديد"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:181
+#: templates/vertimus/vertimus_detail.html:182
 msgid "Submit"
 msgstr "أودِع"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:186
+#: templates/vertimus/vertimus_detail.html:187
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "تحتاج إلى الولوج وأن تكون عضوا في فريق %(team_name)s"
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
 msgstr "قارن مع ملفات po"
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
 msgstr "&lt;- عُد إلى الإجراءات"
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
 msgstr "ملاحظة: كلا الملفين دُمجا مع آخر ملف POT."
 
-#: djamnedlies-git/vertimus/feeds.py:43 vertimus/feeds.py:43
+#: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "‏%(site)s - إجراءات ڤرتسمس للغة %(lang)s"
 
-#: djamnedlies-git/vertimus/feeds.py:52 vertimus/feeds.py:52
+#: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "آخر إجراءات مشروع ترجمة جنوم للغة %s"
 
-#: djamnedlies-git/vertimus/feeds.py:88 vertimus/feeds.py:89
+#: vertimus/feeds.py:89
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "‏%(site)s - إجراءات ڤرتسمس لفريق %(lang)s"
 
-#: djamnedlies-git/vertimus/feeds.py:97 vertimus/feeds.py:98
+#: vertimus/feeds.py:98
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "آخر إجراءات قام بها فريق %s من مشروع ترجمة جنوم"
 
-#: djamnedlies-git/vertimus/forms.py:38 vertimus/forms.py:38
+#: vertimus/forms.py:38
 msgid "Action"
 msgstr "الإجراء"
 
-#: djamnedlies-git/vertimus/forms.py:42 vertimus/forms.py:42
+#: vertimus/forms.py:42
 msgid "Comment"
 msgstr "التعليق"
 
-#: djamnedlies-git/vertimus/forms.py:47 vertimus/forms.py:47
+#: vertimus/forms.py:47
 msgid "File"
 msgstr "الملف"
 
-#: djamnedlies-git/vertimus/forms.py:48 vertimus/forms.py:48
+#: vertimus/forms.py:48
 msgid "Upload a .po, .gz, .bz2 or .png file"
 msgstr "ارفع ملف ‪.po‬ أو ‪.gz‬ أو ‪.bz2‬ أو ‪.png‬"
 
-#: djamnedlies-git/vertimus/forms.py:59 vertimus/forms.py:59
+#: vertimus/forms.py:59
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "لا يُسمح إلا بالملفات ذات الامتدادات ‪.po‬ أو ‪.gz‬ أو ‪.bz2‬ أو ‪.png‬"
 
-#: djamnedlies-git/vertimus/forms.py:64 vertimus/forms.py:64
+#: vertimus/forms.py:64
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr "ملف ‪.po‬ لا يجتاز اختبار 'msgfmt -vc'. من فضلك أصلحه ثم أعد إرساله."
 
-#: djamnedlies-git/vertimus/forms.py:74 vertimus/forms.py:77
+#: vertimus/forms.py:71
+msgid "Invalid action. Someone probably posted another action just before you."
+msgstr "إجراء غير سليم. ربما نشر شخصا ما إجراءا قُبيلك مباشرة."
+
+#: vertimus/forms.py:77
+#| msgid "A comment or a file is needed for this action."
+msgid "A comment is needed for this action."
+msgstr "يحتاج هذا الإجراء إلى تعليق."
+
+#: vertimus/forms.py:80
 msgid "A comment or a file is needed for this action."
 msgstr "يحتاج هذا الإجراء إلى تعليق أو ملف."
 
-#: djamnedlies-git/vertimus/forms.py:77 vertimus/forms.py:80
+#: vertimus/forms.py:83
 msgid "A file is needed for this action."
 msgstr "يحتاج هذا الإجراء ملف."
 
-#: djamnedlies-git/vertimus/forms.py:80 vertimus/forms.py:83
+#: vertimus/forms.py:86
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "من فضلك لا ترسل ملفا بإجراء \"احجز\""
 
-#: djamnedlies-git/vertimus/models.py:139 vertimus/models.py:163
+#: vertimus/models.py:163
 msgid "Inactive"
 msgstr "غير نشط"
 
-#: djamnedlies-git/vertimus/models.py:152 vertimus/models.py:176
+#: vertimus/models.py:176
 msgid "Translating"
 msgstr "يترجم"
 
-#: djamnedlies-git/vertimus/models.py:182 vertimus/models.py:206
+#: vertimus/models.py:206
 msgid "Proofreading"
 msgstr "يراجع"
 
 #. Translators: This is a status, not a verb
-#: djamnedlies-git/vertimus/models.py:197 vertimus/models.py:221
+#: vertimus/models.py:221
 msgid "Proofread"
 msgstr "مُراجَع"
 
-#: djamnedlies-git/vertimus/models.py:212 vertimus/models.py:236
+#: vertimus/models.py:236
 msgid "To Review"
 msgstr "للمراجعة"
 
-#: djamnedlies-git/vertimus/models.py:224 vertimus/models.py:248
+#: vertimus/models.py:248
 msgid "To Commit"
 msgstr "للإيداع"
 
-#: djamnedlies-git/vertimus/models.py:239 vertimus/models.py:263
+#: vertimus/models.py:263
 msgid "Committing"
 msgstr "يُودِع"
 
-#: djamnedlies-git/vertimus/models.py:253 vertimus/models.py:277
+#: vertimus/models.py:277
 msgid "Committed"
 msgstr "أُودِع"
 
-#: djamnedlies-git/vertimus/models.py:341 vertimus/models.py:322
+#: vertimus/models.py:322
 msgid "File in repository"
 msgstr "الملف في المستودع"
 
-#: djamnedlies-git/vertimus/models.py:348
-#: djamnedlies-git/vertimus/views.py:130 djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146 vertimus/models.py:334
-#: vertimus/views.py:160 vertimus/views.py:166 vertimus/views.py:176
+#: vertimus/models.py:334 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "رفع الملف %(name)s في %(date)s"
 
-#: djamnedlies-git/vertimus/models.py:460 vertimus/models.py:520
+#: vertimus/models.py:521
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2677,24 +2820,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: djamnedlies-git/vertimus/models.py:473
-#: djamnedlies-git/vertimus/models.py:523 vertimus/models.py:533
-#: vertimus/models.py:583
+#: vertimus/models.py:534 vertimus/models.py:584
 msgid "Without comment"
 msgstr "بلا تعليق"
 
-#: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525 teams/models.py:198
-#: vertimus/models.py:535 vertimus/models.py:585
-#, python-format
-msgid "This is an automated message sent from %s."
-msgstr "هذه رسالة آلية أُرسلت من %s."
-
-#: djamnedlies-git/vertimus/models.py:482 vertimus/models.py:542
+#: vertimus/models.py:543
 msgid "Write a comment"
 msgstr "اكتب تعليقا"
 
-#: djamnedlies-git/vertimus/models.py:511 vertimus/models.py:571
+#: vertimus/models.py:572
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2710,229 +2844,118 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: djamnedlies-git/vertimus/models.py:533 vertimus/models.py:593
+#: vertimus/models.py:594
 msgid "Reserve for translation"
 msgstr "حجز الترجمة"
 
-#: djamnedlies-git/vertimus/models.py:545 vertimus/models.py:605
+#: vertimus/models.py:606
 msgid "Upload the new translation"
 msgstr "ارفع ترجمة جديدة"
 
-#: djamnedlies-git/vertimus/models.py:560 vertimus/models.py:620
+#: vertimus/models.py:621
 msgid "Reserve for proofreading"
 msgstr "احجز للمراجعة"
 
-#: djamnedlies-git/vertimus/models.py:572 vertimus/models.py:632
+#: vertimus/models.py:633
 msgid "Upload the proofread translation"
 msgstr "ارفع ترجمة مُراجعة"
 
 #. Translators: this means the file is ready to be committed in repository
-#: djamnedlies-git/vertimus/models.py:588 vertimus/models.py:648
+#: vertimus/models.py:649
 msgid "Ready for submission"
 msgstr "جاهزة للإرسال"
 
-#: djamnedlies-git/vertimus/models.py:604 vertimus/models.py:664
+#: vertimus/models.py:665
 msgid "Submit to repository"
 msgstr "أودع في المستودع"
 
 #. Commit failed, state unchanged
-#: djamnedlies-git/vertimus/models.py:618 vertimus/models.py:678
+#: vertimus/models.py:679
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "فشل الإيداع. الخطأ: '%s'"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: djamnedlies-git/vertimus/models.py:628 vertimus/models.py:688
+#: vertimus/models.py:689
 msgid "Reserve to submit"
 msgstr "احجز للإرسال"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: djamnedlies-git/vertimus/models.py:641 vertimus/models.py:701
+#: vertimus/models.py:702
 msgid "Inform of submission"
 msgstr "أعلِم بالإرسال"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: djamnedlies-git/vertimus/models.py:656 vertimus/models.py:716
+#: vertimus/models.py:717
 msgid "Review required"
 msgstr "تحتاج للمراجعة"
 
-#: djamnedlies-git/vertimus/models.py:695
-msgid "Backup the actions"
-msgstr "احتفظ بالإجراءات"
+#: vertimus/models.py:732
+msgid "Archive the actions"
+msgstr "أرشف الإجراءات"
 
-#: djamnedlies-git/vertimus/models.py:734 vertimus/models.py:770
+#: vertimus/models.py:771
 msgid "Undo the last state change"
 msgstr "اعكس آخر تعديل"
 
-#: djamnedlies-git/vertimus/views.py:129 djamnedlies-git/vertimus/views.py:161
 #: vertimus/views.py:159 vertimus/views.py:191
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "خطأ: يحتوي الملف %s على محارف غير سليمة."
 
-#: djamnedlies-git/vertimus/views.py:152 vertimus/views.py:182
+#: vertimus/views.py:182
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "آخر ملف مودع للغة %(lang)s"
 
-#: djamnedlies-git/vertimus/views.py:155 vertimus/views.py:185
+#: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "آخر ملف POT"
 
-#. Translators: this concerns an unknown plural form
-#: languages/models.py:54
-msgid "Unknown"
-msgstr "مجهول"
+#~ msgid "GNOME 2.30 (development)"
+#~ msgstr "جنوم 2.30 (تطويري)"
 
-#: languages/views.py:80 templates/release_detail.html:66
-msgid "Original strings"
-msgstr "المقاطع الأصلية"
+#~ msgid ""
+#~ "Don't know where to look if this language is actually used, ask the "
+#~ "module maintainer."
+#~ msgstr "لا أعرف أن أنظر هل هذه اللغة مستخدمة حقيقة، اسأل المسؤول عن الوحدة."
 
-#: people/views.py:88
-msgid "A new person joined your team"
-msgstr "انضم شخص جديد إلي الفريق"
+#~ msgid ""
+#~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
+#~ "Toe&quot; or &quot;GNOME 2.14&quot;."
+#~ msgstr ""
+#~ "أمثلة للإصدارات: &quot;مكتب جنوم&quot;، أو &quot;الاصبع الخامس&quot; أو "
+#~ "&quot;جنوم 2.14&quot;."
 
-#: people/views.py:89
-#, python-format
-msgid "%(name)s has just joined your translation team on %(site)s"
-msgstr "انضم %(name)s إلى فريقك على %(site)s"
+#~ msgid ""
+#~ "They are usually taken from CVS, and we keep all relevant information on "
+#~ "them (Bugzilla details, web page, maintainer information,...)."
+#~ msgstr ""
+#~ "عادة تؤخذ من CVS، بالإضافة إلى معلومات ذات صلة (تفاصيل بجزيلا، صفحة الوِب، "
+#~ "المشرف، ...)"
 
-#: stats/models.py:353
-msgid "Can't generate POT file, statistics aborted."
-msgstr "لم أستطع توليد ملف POT، أُجهضت الإحصائيات."
+#~ msgid "Report bugs to Bugzilla"
+#~ msgstr "أبلغ عن علة في بجزيلا"
 
-#: stats/models.py:714
-#, python-format
-msgid ""
-"Entry for this language is not present in %(var)s variable in %(file)s file."
-msgstr "لا خانة لهذه اللغة في ‪%(var)s‬ في ملف ‪%(file)s‬."
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME SVN repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "الوحدات في هذه ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة لتعرف "
+#~ "إلى أين ترسل الترجمات."
 
-#: stats/utils.py:324
-msgid ""
-"Don't know where to look for the LINGUAS variable, ask the module maintainer."
-msgstr "لا أعرف أين أبحث عن متغير LINGUAS، اسأل المسؤول عن الوحدة."
+#~ msgid "SVN account:"
+#~ msgstr "حساب المستودع:"
 
-#: stats/utils.py:331
-msgid ""
-"Don't know where to look for the DOC_LINGUAS variable, ask the module "
-"maintainer."
-msgstr "لا أعرف أين أبحث عن متغير DOC_LINGUAS، اسأل المسؤول عن الوحدة."
+#~ msgid ""
+#~ "Last actions made by the %(lang)s team of the GNOME translation project"
+#~ msgstr "آخر الإجراءات التي قام بها فريق %(lang)s في مشروع ترجمة جنوم"
 
-#: teams/models.py:90
-msgid "Mailing list"
-msgstr "القائمة البريدية"
+#~ msgid "Action History"
+#~ msgstr "تأريخ الإجراءات"
 
-#: teams/models.py:91
-msgid "URL to subscribe"
-msgstr "مسار الاشتراك"
-
-#: templates/base.html:94
-msgid "Copyright &copy; 2006-2009"
-msgstr "حقوق النشر &copy; ٢٠٠٦-٢٠٠٩ "
-
-#: templates/index.html:19
-#, python-format
-msgid ""
-"Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us "
-"to translate GNOME!"
-msgstr ""
-"اذهب إلى <a href='%(team_url)s'>صفحة فريق %(language_name)s</a> وساعدنا في "
-"ترجمة جنوم."
-
-#: templates/index.html:37
-msgid ""
-"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
-"2.26&quot;."
-msgstr ""
-"أمثلة للإصدارات: &quot;بنية جنوم التحتية&quot; أو &quot;جنوم 2.26&quot;."
-
-#: templates/index.html:47
-msgid ""
-"They are usually taken from the Git repository, and we keep all relevant "
-"information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr ""
-"عادة تؤخذ من المستودع، بالإضافة إلى معلومات ذات صلة (تفاصيل بجزيلا، صفحة "
-"الوِب، المشرف، ...)"
-
-#: templates/module_detail.html:68
-msgid "Report a bug"
-msgstr "بلغ عن علّة"
-
-#: templates/release_detail.html:13
-msgid ""
-"The modules of this release are not part of the GNOME Git repository. Please "
-"check each module's web page to see where to send translations."
-msgstr ""
-"الوحدات في هذه الإصدارة ليست جزءا من مستودع جنوم. من فضلك راجع موقع كل وحدة "
-"لتعرف إلى أين ترسل الترجمات."
-
-#: templates/release_list.html:25
-#| msgid "GNOME Releases"
-msgid "Older Releases"
-msgstr "الإصدارات الأقدم"
-
-#: templates/languages/language_release.html:33
-msgid ""
-"The modules of this release are not part of the GNOME git repository. Please "
-"check each module's web page to see where to send translations."
-msgstr ""
-"الوحدات في هذه الإصدارة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة كل وحدة "
-"لتعرف إلى أين ترسل الترجمات."
-
-#: templates/teams/team_detail.html:6
-#, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
-msgstr "آخر الإجراءات التي قام بها فريق %(lang)s في مشروع ترجمة جنوم"
-
-#: templates/teams/team_detail.html:46
-#| msgid ""
-#| "If there is no team for your language, you can easily <a href='http://"
-#| "live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
-msgid ""
-"There is currently no established team for this language. See <a "
-"href=\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP "
-"Wiki</a> to get more information about the process of building a new "
-"translation team."
-msgstr ""
-"لا يوجد حاليا فريق لهذه اللغة. طالع <a "
-"href=\"http://live.gnome.org/TranslationProject/StartingATeam\">ويكي مشروع "
-"ترجمة جنوم</a> لمزيد من المعلومات عن عملية تكوين فريق ترجمة جديدة."
-
-#: templates/teams/team_detail.html:56
-msgid "Plural forms:"
-msgstr "صيغ الجموع:"
-
-#: templates/vertimus/vertimus_detail.html:105
-msgid "Actions"
-msgstr "الإجراءات"
-
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
-#. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:107 vertimus/models.py:831
-#, python-format
-msgid "Archived Actions (%(human_level)s archived series)"
-msgstr "إجراءات مؤرشفة (سلسلة %(human_level)s المؤرشفة)"
-
-#: templates/vertimus/vertimus_detail.html:109
-msgid "(Return to current)"
-msgstr "(ارجع للحالي)"
-
-#: templates/vertimus/vertimus_detail.html:114
-msgid "(Previous action history)"
-msgstr "(تأريخ الإجراءات)"
-
-#: templates/vertimus/vertimus_detail.html:167
-msgid "No current actions."
-msgstr "لا إجراء حالي"
-
-#: vertimus/forms.py:71
-msgid "Invalid action. Someone probably posted another action just before you."
-msgstr "إجراء غير سليم. ربما نشر شخصا ما إجراءا قُبيلك مباشرة."
-
-#: vertimus/models.py:731
-msgid "Archive the actions"
-msgstr "أرشف الإجراءات"
+#~ msgid "Backup the actions"
+#~ msgstr "احتفظ بالإجراءات"
 
 #~ msgid "The Gimp Manual"
 #~ msgstr "كتيّب جمب"
@@ -2971,6 +2994,3 @@ msgstr "أرشف الإجراءات"
 #~ msgstr ""
 #~ "هذه نسخة من المستودع الرسمي من freedesktop.org.<br/>لاحظ أن اسم المستودع "
 #~ "في جنوم هو <pre>system-tools-backends-clone</pre>"
-
-#~ msgid "GFloppy Manual"
-#~ msgstr "كتيّب GFloppy"
