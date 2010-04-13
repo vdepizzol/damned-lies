@@ -23,7 +23,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.utils.translation import ugettext_lazy, ugettext as _, get_date_formats
 from django.template import RequestContext
-from django.db import transaction, IntegrityError
+from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.sites.models import Site
@@ -72,7 +72,6 @@ def person_detail_change(request):
             context_instance=RequestContext(request))
 
 @login_required
-@transaction.commit_manually
 def person_team_join(request):
     """Handle the form to join a team"""
     person = get_object_or_404(Person, username=request.user.username)
@@ -89,7 +88,6 @@ def person_team_join(request):
                                               message=ugettext_lazy("%(name)s has just joined your translation team on %(site)s"),
                                               messagekw = {'name': person.name, 'site': Site.objects.get_current()})
             except IntegrityError:
-                transaction.rollback()
                 request.user.message_set.create(message=_("You are already member of this team."))
     else:
         form = TeamJoinForm()
@@ -102,7 +100,6 @@ def person_team_join(request):
     }
 
     context_instance = RequestContext(request)
-    transaction.commit()
     return render_to_response('people/person_team_join_form.html', context,
             context_instance=context_instance)
 

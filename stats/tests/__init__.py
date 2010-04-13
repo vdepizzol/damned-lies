@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os, shutil
+from datetime import date
 from django.test import TestCase
 from django.test.client import Client
 from django.core import mail
@@ -73,7 +74,7 @@ class ModuleTestCase(TestCase):
         # Check stats
         self.b.update_stats(force=True)
         fr_po_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
-        self.assertEquals(fr_po_stat.translated, 40)
+        self.assertEquals(fr_po_stat.translated, 47)
         fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
         self.assertEquals(fr_doc_stat.translated, 22)
 
@@ -150,7 +151,7 @@ class ModuleTestCase(TestCase):
         c = Client()
         response = c.get('/module/po/gnome-hello.po.master.ta.po')
         self.assertContains(response, """# Tamil translation for gnome-hello.
-# Copyright (C) 2009 gnome-hello's COPYRIGHT HOLDER
+# Copyright (C) %s gnome-hello's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-hello package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""")
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""" % date.today().year)
         self.assertContains(response, "Language-Team: Tamil <ta@li.org>")
