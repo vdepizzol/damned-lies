@@ -14,6 +14,10 @@ urlpatterns = patterns('vertimus.views',
         view = 'vertimus_diff',
         name = 'vertimus_diff'),
     url(
+        regex = r'^uploads/(?P<module_name>[\w\+\-\.]+)/(?P<branch_name>[\w\-\.]+)/(?P<domain_name>[\w~\-]+)/(?P<locale_name>[\w\-@]+)/latest/$',
+        view = 'latest_uploaded_po',
+        name = 'latest_uploaded_po'),
+    url(
         regex = '^(?P<module_name>[\w\+\-\.]+)/(?P<branch_name>[\w\-\.]+)/(?P<domain_name>[\w~\-]+)/(?P<locale_name>[\w\-@]+)/level(?P<level>\d+)/$',
         view = 'vertimus_by_names',
         name = 'vertimus_archives_by_names'),

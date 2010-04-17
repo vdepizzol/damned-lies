@@ -21,7 +21,7 @@
 from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.template import RequestContext
 from django.core import urlresolvers
 
@@ -199,3 +199,17 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     }
     return render_to_response('vertimus/vertimus_diff.html', context,
                               context_instance=RequestContext(request))
+
+def latest_uploaded_po(request, module_name, branch_name, domain_name, locale_name):
+    """ Redirect to the latest uploaded po for a module/branch/language """
+    branch = get_object_or_404(Branch, module__name=module_name, name=branch_name)
+    domain = get_object_or_404(Domain, module__name=module_name, name=domain_name)
+    lang   = get_object_or_404(Language, locale=locale_name)
+    latest_upload = ActionDb.objects.filter(state_db__branch=branch,
+                                            state_db__domain=domain,
+                                            state_db__language=lang,
+                                            file__endswith=".po").order_by('-created')[:1]
+    if not latest_upload:
+        raise Http404
+    merged_file = latest_upload[0].get_action().merged_file()
+    return HttpResponseRedirect(merged_file['url'])
