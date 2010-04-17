@@ -67,10 +67,10 @@ urlpatterns += patterns('stats.views',
         regex = r'^module/(?P<module_name>[\w\-\+]+)/edit/branches/$',
         view = 'module_edit_branches'),
     url(
-        regex = r'^module/(?P<module_name>[\w\-\+]+)/branch/(?P<branch_name>[\w-]+)/$',
+        regex = r'^module/(?P<module_name>[\w\-\+]+)/branch/(?P<branch_name>[\w\-\.]+)/$',
         view = 'module_branch'),
     url(
-        regex = r'^module/(?P<module_name>[\w\-\+]+)/(?P<potbase>[\w~-]+)/(?P<branch_name>[\w-]+)/(?P<langcode>[\w@]+)/images/$',
+        regex = r'^module/(?P<module_name>[\w\-\+]+)/(?P<potbase>[\w~-]+)/(?P<branch_name>[\w\-\.]+)/(?P<langcode>[\w@]+)/images/$',
         view = 'docimages'),
     url(
         regex = r'^releases/(?P<format>(html|json|xml))?/?$',
