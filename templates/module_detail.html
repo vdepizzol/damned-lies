@@ -11,7 +11,7 @@
 $(document).ready(function() { 
         $(".branch").click(function(event) {
             event.preventDefault();
-            branch_div = $("#div-"+this.id);
+            branch_div = $("#div-"+this.id.replace(".","\\."));
             is_visible = branch_div.is(':visible');
             if (is_visible) {
                 branch_div.hide();
