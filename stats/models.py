@@ -105,6 +105,7 @@ class Module(models.Model):
             return self.bugs_base
 
     def get_branches(self, reverse=False):
+        """ Return module branches, in ascending order by default (descending order if reverse == True) """
         branches = list(self.branch_set.all())
         branches.sort(reverse=reverse)
         return branches
@@ -141,7 +142,8 @@ class Branch(models.Model):
     name = BranchCharField(max_length=50)
     #description = models.TextField(null=True)
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
-    module = models.ForeignKey(Module)
+    module      = models.ForeignKey(Module)
+    weight      = models.IntegerField(default=0, help_text="Smaller weight is displayed first")
     # 'releases' is the backward relation name from Release model
 
     # May be set to False by test suite
@@ -182,8 +184,7 @@ class Branch(models.Model):
             return -1
         elif other.name in BRANCH_HEAD_NAMES:
             return 1
-        else:
-            return -cmp(self.name, other.name)
+        return cmp(self.weight, other.weight) or -cmp(self.name, other.name)
 
     @property
     def img_url_prefix(self):

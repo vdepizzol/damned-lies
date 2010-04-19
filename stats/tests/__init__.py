@@ -90,6 +90,16 @@ class ModuleTestCase(TestCase):
         # FIXME: deleting a git branch doesn't delete the repo
         #self.assertFalse(os.access(checkout_path, os.F_OK))
 
+    def testBranchSorting(self):
+        b1 = Branch(name='a-branch', module=self.mod)
+        b1.save(update_statistics=False)
+        b2 = Branch(name='p-branch', module=self.mod)
+        b2.save(update_statistics=False)
+        self.assertEquals([b.name for b in sorted(self.mod.branch_set.all())], ['master','p-branch','a-branch'])
+        b1.weight = -1
+        b1.save(update_statistics=False)
+        self.assertEquals([b.name for b in sorted(self.mod.branch_set.all())], ['master','a-branch','p-branch'])
+
     def testStringFrozenMail(self):
         """ String change for a module of a string_frozen release should generate a message """
         mail.outbox = []
