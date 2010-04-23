@@ -334,7 +334,7 @@ def get_doc_linguas(module_path, po_path):
 
 def get_fig_stats(pofile):
     """ Extract image strings from pofile and return a list of figures dict:
-        [{'path':, 'hash':, 'fuzzy':, 'translated':}, ...] """
+        [{'path':, 'video':, 'hash':, 'fuzzy':, 'translated':}, ...] """
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
     command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
     (status, output, errs) = run_shell_command(command)
@@ -349,11 +349,12 @@ def get_fig_stats(pofile):
     figures = []
 
     for i, line in islice(enumerate(lines), 0, None, 4):
-        fig = {'path': '', 'hash': ''}
+        fig = {'path': '', 'hash': '', 'video': False}
         fig['fuzzy'] = (line=='#, fuzzy' or line[:8]=='#| msgid')
         path_match = re_path.match(lines[i+1])
         if path_match and len(path_match.groups()):
             fig['path'] = path_match.group(1)
+            fig['video'] = fig['path'].endswith(".ogv")
         hash_match = re_hash.match(lines[i+1])
         if hash_match and len(hash_match.groups()):
             fig['hash'] = hash_match.group(1)

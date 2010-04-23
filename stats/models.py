@@ -1103,7 +1103,7 @@ class Statistics(models.Model):
 
     def get_figures(self):
         """ self.figures is a list of dicts:
-            [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
+            [{'path':, 'video':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
         if self.figures is None and self.domain.dtype == 'doc':
             self.figures = utils.get_fig_stats(self.po_path())
             # something like: "http://git.gnome.org/cgit/vinagre / plain / help / %s / %s ?h=master"
