@@ -49,7 +49,12 @@ Installation
     SCRATCHDIR should point to an existing directory, writable by
     the web application user.
 
-2 - Run 'python manage.py syncdb', then 'python manage.py migrate'
+2 - Run './manage.py syncdb' then:
+    ./manage.py migrate people
+    ./manage.py migrate teams
+    ./manage.py migrate
+
+    Note: The automatic migration fails on interdependencies.
 
 3 - Configure Sites in admin interface to define the 'View on site'
     link.
