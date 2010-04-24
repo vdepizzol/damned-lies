@@ -44,7 +44,7 @@ class ModuleTestCase(TestCase):
                   bugs_component="test",
                   vcs_type="git",
                   vcs_root="git://git.gnome.org/gnome-hello",
-                  vcs_web="http://git.gnome.org/cgit/gnome-hello/")
+                  vcs_web="http://git.gnome.org/browse/gnome-hello/")
         self.mod.save()
         dom = Domain(module=self.mod, name='po', description='UI Translations', dtype='ui', directory='po')
         dom.save()
@@ -68,7 +68,7 @@ class ModuleTestCase(TestCase):
     def testBranchFunctions(self):
         self.assertTrue(self.b.is_head())
         self.assertEquals(self.b.get_vcs_url(), "git://git.gnome.org/gnome-hello")
-        self.assertEquals(self.b.get_vcs_web_url(), "http://git.gnome.org/cgit/gnome-hello/")
+        self.assertEquals(self.b.get_vcs_web_url(), "http://git.gnome.org/browse/gnome-hello/")
 
     def testBranchStats(self):
         # Check stats
@@ -142,8 +142,8 @@ class ModuleTestCase(TestCase):
         self.b.update_stats(force=True)
         stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='fr')
         figs = stat.get_figures()
-        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/cgit/gnome-hello/plain/help/C/figures/gnome-hello.png?h=master')
-        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/cgit/gnome-hello/plain/help/fr/figures/gnome-hello.png?h=master')
+        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello.png?h=master')
+        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/fr/figures/gnome-hello.png?h=master')
 
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """

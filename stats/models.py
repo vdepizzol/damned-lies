@@ -1106,7 +1106,7 @@ class Statistics(models.Model):
             [{'path':, 'video':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
         if self.figures is None and self.domain.dtype == 'doc':
             self.figures = utils.get_fig_stats(self.po_path())
-            # something like: "http://git.gnome.org/cgit/vinagre / plain / help / %s / %s ?h=master"
+            # something like: "http://git.gnome.org/browse/vinagre / plain / help / %s / %s ?h=master"
             url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
                                        self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
             for fig in self.figures:
@@ -1380,7 +1380,7 @@ class FakeStatistics(object):
             [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
         if self.figures is None and self.domain.dtype == 'doc':
             self.figures = utils.get_fig_stats(self.po_path())
-            # something like: "http://git.gnome.org/cgit/vinagre / plain / help / %s / %s ?h=master"
+            # something like: "http://git.gnome.org/browse/vinagre / plain / help / %s / %s ?h=master"
             url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
                                        self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
             for fig in self.figures:
