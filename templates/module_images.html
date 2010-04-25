@@ -19,15 +19,17 @@
   {% with stat.language.locale as locale %}
   <tr><td valign="top">
     <a href="{{ fig.orig_remote_url }}"><span class="path">C/{{ fig.path }}</span><br/></a>
-    <a href="{{ fig.orig_remote_url }}">{% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
-                                        {% else %}<img class="screenshot" src="{{ fig.orig_remote_url }}"/>{% endif %}</a>
+    {% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+    {% else %}<a href="{{ fig.orig_remote_url }}"><img class="screenshot" src="{{ fig.orig_remote_url }}"/></a>
+    {% endif %}
     </td>
     <td valign="top" class="{{ fig.fuzzy|yesno:"fuzzy," }}">
     {% if fig.translated %}
       {% if fig.translated_file %}
-      <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
-      <a href="{{ fig.trans_remote_url }}">{% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
-                                           {% else %}<img class="screenshot" src="{{ fig.trans_remote_url }}"/>{% endif %}</a>
+        <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
+        {% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+        {% else %}<a href="{{ fig.trans_remote_url }}"><img class="screenshot" src="{{ fig.trans_remote_url }}"/></a>
+        {% endif %}
       {% else %}
       <p><em>{% trans "Translated, but uses original one (maybe the figure doesn't contain any string to translate)" %}</em></p>
       {% endif %}
@@ -35,9 +37,10 @@
       {% if fig.fuzzy %}
         <em>{% trans "Fuzzy" %}</em><br/>
         {% if fig.translated_file %}
-      <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
-      <a href="{{ fig.trans_remote_url }}">{% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
-                                           {% else %}<img class="screenshot" src="{{ fig.trans_remote_url }}"/>{% endif %}</a>
+          <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
+          {% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+          {% else %}<a href="{{ fig.trans_remote_url }}"><img class="screenshot" src="{{ fig.trans_remote_url }}"/></a>
+          {% endif %}
         {% else %}
       <p><em><small>{% trans "No existing file (&quot;Technical&quot; fuzzy)" %}</small></em></p>
         {% endif %}
