@@ -46,7 +46,7 @@ plurals = {
     'hy': "nplurals=1; plural=0",
     'hr': "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10< =4 && (n%100<10 || n%100>=20) ? 1 : 2)",
     'hu': "nplurals=1; plural=0",
-    'id': "plurals=1; plural=0",
+    'id': "nplurals=1; plural=0",
     'is': "nplurals=2; plural=(n % 100 != 1 && n % 100 != 21 && n % 100 != 31 && n % 100 != 41 && n % 100 != 51 && n % 100 != 61 && n % 100 != 71 && n % 100 != 81 && n % 100 != 91)",
     'it': "nplurals=2; plural=(n != 1)",
     'ja': "nplurals=1; plural=0",
