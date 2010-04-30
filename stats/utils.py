@@ -133,8 +133,13 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
                 errors.append(("warn", ugettext_noop("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
                 modulename = moduleid
             else:
-                errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
-                return "", errors
+                # Last try: only one xml file in C/...
+                xml_files = [f for f in os.listdir(os.path.join(vcs_path, "C")) if f.endswith(".xml")]
+                if len(xml_files) == 1:
+                    modulename = os.path.basename(xml_files[0])[:-4]
+                else:
+                    errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
+                    return "", errors
         files = os.path.join("C", modulename + ".xml")
 
     includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
