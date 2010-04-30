@@ -43,6 +43,7 @@ DEFAULT_FROM_EMAIL = 'gnomeweb@gnome.org'
 SERVER_EMAIL = 'gnomeweb@gnome.org'
 # When in STRINGFREEZE, where to send notifications (gnome-i18n@gnome.org) on any POT changes
 NOTIFICATIONS_TO = ['gnome-i18n@gnome.org']
+ENTER_BUG_URL = 'http://bugzilla.gnome.org/enter_bug.cgi?product=damned-lies&component=l10n.gnome.org'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

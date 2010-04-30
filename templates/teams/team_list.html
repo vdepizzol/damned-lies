@@ -30,6 +30,8 @@
     {% endfor %}
     </ul>
 
+    <p class="comment">{% blocktrans %}If anything should be changed on this page, please <a href="{{ bug_url }}">submit a bug report</a>.{% endblocktrans %}</p>
+
 {% else %}
 <p>{% trans "There are currently no translation teams in GNOME. :(" %}</p>
 {% endif %}

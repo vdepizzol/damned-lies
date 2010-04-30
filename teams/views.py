@@ -24,6 +24,7 @@ from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
+from django.conf import settings
 from common import utils
 from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm, EditTeamDetailsForm
@@ -42,7 +43,8 @@ def teams(request):
     else:
         context = {
             'pageSection': 'teams',
-            'teams': utils.trans_sort_object_list(teams, 'description')
+            'teams': utils.trans_sort_object_list(teams, 'description'),
+            'bug_url': settings.ENTER_BUG_URL,
         }
         return render_to_response('teams/team_list.html', context,
                                   context_instance=RequestContext(request))

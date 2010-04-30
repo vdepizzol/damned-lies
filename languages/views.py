@@ -35,7 +35,8 @@ def languages(request):
     languages = Language.objects.select_related("team").all()
     context = {
         'pageSection': "languages",
-        'languages': utils.trans_sort_object_list(languages, 'name')
+        'languages': utils.trans_sort_object_list(languages, 'name'),
+        'bug_url': settings.ENTER_BUG_URL,
     }
     return render_to_response('languages/language_list.html', context,
                               context_instance=RequestContext(request))
