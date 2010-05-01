@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-27 06:44+0000\n"
-"PO-Revision-Date: 2010-04-27 22:21+0100\n"
+"POT-Creation-Date: 2010-04-30 17:32+0000\n"
+"PO-Revision-Date: 2010-05-02 00:52+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -889,7 +889,7 @@ msgstr "Handbuch des Verwaltungswerkzeugs für freigegebene Ordner"
 msgid "GST Time Setup Manual"
 msgstr "Zeiteinstellungs-Handbuch"
 
-#: database-content.py:218 languages/views.py:50 languages/views.py:83
+#: database-content.py:218 languages/views.py:51 languages/views.py:84
 #: templates/branch_detail.html:23 templates/release_detail.html:22
 #: templates/release_detail.html.py:68
 #: templates/languages/language_release_summary.html:10
@@ -1396,7 +1396,7 @@ msgstr "GIMP und Freunde"
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (Entwicklerversion)"
 
-#: settings.py:73
+#: settings.py:74
 msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1405,7 +1405,7 @@ msgstr ""
 "die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen senden "
 "können."
 
-#: settings_sample.py:79
+#: settings_sample.py:80
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1493,11 +1493,11 @@ msgstr "Mit OpenID anmelden"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: languages/views.py:49 languages/views.py:82
+#: languages/views.py:50 languages/views.py:83
 msgid "UI Translations"
 msgstr "Übersetzungen der Benutzeroberflächen"
 
-#: languages/views.py:80 templates/release_detail.html:66
+#: languages/views.py:81 templates/release_detail.html:66
 msgid "Original strings"
 msgstr "Originalzeichenketten"
 
@@ -1860,27 +1860,27 @@ msgstr "Einspieler"
 msgid "Coordinator"
 msgstr "Koordinator"
 
-#: teams/views.py:55
+#: teams/views.py:57
 msgid "Committers"
 msgstr "Einspieler"
 
-#: teams/views.py:58
+#: teams/views.py:60
 msgid "No committers"
 msgstr "Keine Einspieler"
 
-#: teams/views.py:60
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "Überarbeiter"
 
-#: teams/views.py:63
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "Keine Überarbeiter"
 
-#: teams/views.py:65
+#: teams/views.py:67
 msgid "Translators"
 msgstr "Übersetzer"
 
-#: teams/views.py:68
+#: teams/views.py:70
 msgid "No translators"
 msgstr "Keine Übersetzer"
 
@@ -1968,9 +1968,6 @@ msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
 #: templates/base.html:96
-#| msgid ""
-#| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
-#| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgid ""
 "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -2191,6 +2188,16 @@ msgid "Select a module below to see some of the damned lies about it:"
 msgstr ""
 "Wählen Sie ein Modul aus, um die verdammten Lügen darüber angezeigt zu "
 "bekommen:"
+
+#: templates/module_list.html:28 templates/release_list.html:38
+#: templates/languages/language_list.html:35 templates/teams/team_list.html:33
+#, python-format
+msgid ""
+"If anything should be changed on this page, please <a href=\"%(bug_url)s"
+"\">submit a bug report</a>."
+msgstr ""
+"Bitte <a href=\"%(bug_url)s\">erstellen Sie einen Fehlerbericht</a>, falls "
+"auf dieser Seite etwas geändert werden sollte."
 
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
@@ -2662,7 +2669,7 @@ msgstr ""
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Koordiniert von <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Es gibt momentan keine Übersetzungsteams in GNOME. :("
 
