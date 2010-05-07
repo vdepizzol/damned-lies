@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-28 14:53+0000\n"
-"PO-Revision-Date: 2010-04-30 12:46+0100\n"
+"POT-Creation-Date: 2010-05-01 22:55+0000\n"
+"PO-Revision-Date: 2010-05-07 14:03+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -889,8 +889,8 @@ msgid "GST Time Setup Manual"
 msgstr "priročnik časovnih nastavitev GST"
 
 #: database-content.py:218
-#: languages/views.py:50
-#: languages/views.py:83
+#: languages/views.py:51
+#: languages/views.py:84
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:22
 #: templates/release_detail.html.py:68
@@ -1332,11 +1332,11 @@ msgstr "GIMP in sorodni paketi"
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (razvojna veja)"
 
-#: settings.py:73
+#: settings.py:74
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
 msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
-#: settings_sample.py:79
+#: settings_sample.py:80
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
@@ -1413,12 +1413,12 @@ msgstr "Prijava z OpenID"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: languages/views.py:49
-#: languages/views.py:82
+#: languages/views.py:50
+#: languages/views.py:83
 msgid "UI Translations"
 msgstr "Prevodi uporabniških vmesnikov"
 
-#: languages/views.py:80
+#: languages/views.py:81
 #: templates/release_detail.html:66
 msgid "Original strings"
 msgstr "Osnovni niz"
@@ -1654,11 +1654,11 @@ msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
-#: stats/utils.py:136
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
-#: stats/utils.py:152
+#: stats/utils.py:157
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1669,47 +1669,47 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:237
+#: stats/utils.py:242
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:257
+#: stats/utils.py:262
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:259
+#: stats/utils.py:264
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:262
+#: stats/utils.py:267
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:290
+#: stats/utils.py:295
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:316
+#: stats/utils.py:321
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:322
+#: stats/utils.py:327
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:324
+#: stats/utils.py:329
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:331
+#: stats/utils.py:336
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:333
+#: stats/utils.py:338
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
@@ -1754,27 +1754,27 @@ msgstr "Uveljavitelj"
 msgid "Coordinator"
 msgstr "Nadzornik"
 
-#: teams/views.py:55
+#: teams/views.py:57
 msgid "Committers"
 msgstr "Uveljavitelji"
 
-#: teams/views.py:58
+#: teams/views.py:60
 msgid "No committers"
 msgstr "Ni uveljaviteljev"
 
-#: teams/views.py:60
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "Pregledovalci"
 
-#: teams/views.py:63
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "Ni prijavljenih pregledovalcev"
 
-#: teams/views.py:65
+#: teams/views.py:67
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: teams/views.py:68
+#: teams/views.py:70
 msgid "No translators"
 msgstr "Ni prijavljenih prevajalcev"
 
@@ -2032,6 +2032,14 @@ msgstr "GNOME moduli"
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Izberite modul za pregled podrobnosti prevoda:"
+
+#: templates/module_list.html:28
+#: templates/release_list.html:38
+#: templates/languages/language_list.html:35
+#: templates/teams/team_list.html:33
+#, python-format
+msgid "If anything should be changed on this page, please <a href=\"%(bug_url)s\">submit a bug report</a>."
+msgstr "V kolikor je treba na strani kaj spremeniti, pošljite <a href=\"%(bug_url)s\">poročilo o hrošču</a>."
 
 #: templates/release_compare.html:5
 #: templates/release_compare.html.py:20
@@ -2461,7 +2469,7 @@ msgstr "Izberite skupino jezika za prikaz podrobnosti skupine:"
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Nadzornik <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Trenutno ni skupin za prevajanje v GNOME. :("
 
@@ -2766,7 +2774,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "module maintainer."
 #~ msgstr ""
 #~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
-
 #~ msgid ""
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
@@ -2774,42 +2781,33 @@ msgstr "Najnovejša POT datoteka"
 #~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
 #~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
 #~ "veja&quot;."
-
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
 #~ "them (Bugzilla details, web page, maintainer information,...)."
 #~ msgstr ""
 #~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
 #~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
-
 #~ msgid "Report bugs to Bugzilla"
 #~ msgstr "Poročanje o hroščih preko Bugzillle"
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
-
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
-
 #~ msgid ""
 #~ "Last actions made by the %(lang)s team of the GNOME translation project"
 #~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
-
 #~ msgid "Action History"
 #~ msgstr "Zgodovina dejanj"
-
 #~ msgid "Backup the actions"
 #~ msgstr "Napravi varnostno kopijo dejanja"
-
 #~ msgid "The Gimp Manual"
 #~ msgstr "priročnik Gimp"
-
 #~ msgid "Git account:"
 #~ msgstr "Git račun:"
-
 #~ msgid "Browse SVN"
 #~ msgstr "Brskanje po SVN"
+
