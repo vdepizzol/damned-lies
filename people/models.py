@@ -55,11 +55,11 @@ class Person(User):
         for account in accounts:
             account.delete()
 
-    def save(self):
+    def save(self, *args, **kwargs):
         if not self.password or self.password == "!":
             self.password = None
             self.set_unusable_password()
-        super(User, self).save()
+        super(User, self).save(*args, **kwargs)
 
     def activate(self):
         self.activation_key = None
