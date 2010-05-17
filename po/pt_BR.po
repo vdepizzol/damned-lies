@@ -2,17 +2,17 @@
 # This package is distributed under the same license as the damned-lies package.
 # Copyright (C) the Damned Lies maintainer(s).
 # Leonardo Ferreira Fontenelle <leonardof@gnome.org> 2008.
-# Jonh Wendell <wendell@bani.com.br> 2008, 2009.
 # Enrico Nicoletto <liverig@gmail.com> 2009.
 # Henrique P. Machado <hpmachado@gnome.org> 2009-2010.
+# Jonh Wendell <jwendell@gnome.org>, 2009, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-30 20:57+0000\n"
-"PO-Revision-Date: 2010-04-01 17:27-0300\n"
-"Last-Translator: Henrique P. Machado <hpmachado@gnome.org>\n"
+"POT-Creation-Date: 2010-05-17 12:53+0000\n"
+"PO-Revision-Date: 2010-05-17 10:02-0300\n"
+"Last-Translator: Jonh Wendell <jwendell@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -498,7 +498,7 @@ msgstr "Frísio"
 
 #: database-content.py:119
 msgid "Aragonese"
-msgstr ""
+msgstr "Aragonês"
 
 #: database-content.py:120
 msgid "Belarusian Latin"
@@ -1098,10 +1098,9 @@ msgid "Lights Off Manual"
 msgstr "Manual do Lights Off"
 
 #: database-content.py:268
-#, fuzzy
 #| msgid "Browse CVS"
 msgid "Browser Help"
-msgstr "Navegar no CVS"
+msgstr "Ajuda do Navegador"
 
 #: database-content.py:269
 msgid "GNOME 2 User Documentation"
@@ -1380,10 +1379,9 @@ msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (antiga)"
 
 #: database-content.py:321
-#, fuzzy
 #| msgid "GNOME 2.18 (old stable)"
 msgid "GNOME 2.28 (old stable)"
-msgstr "GNOME 2.18 (antiga)"
+msgstr "GNOME 2.28 (antiga)"
 
 #: database-content.py:322
 msgid "Obsolete GNOME Applications"
@@ -1394,20 +1392,18 @@ msgid "External Dependencies (GNOME)"
 msgstr "Dependências externas (GNOME)"
 
 #: database-content.py:324
-#, fuzzy
 #| msgid "GNOME 2.28 (stable)"
 msgid "GNOME 2.30 (stable)"
-msgstr "GNOME 2.28 (atual)"
+msgstr "GNOME 2.30 (atual)"
 
 #: database-content.py:325
 msgid "GIMP and Friends"
 msgstr "GIMP e amigos"
 
 #: database-content.py:326
-#, fuzzy
 #| msgid "GNOME 2.30 (development)"
 msgid "GNOME 3.0 (development)"
-msgstr "GNOME 2.30 (Em desenvolvimento)"
+msgstr "GNOME 3.0 (Em desenvolvimento)"
 
 #: settings.py:74
 msgid ""
@@ -1963,7 +1959,6 @@ msgid "The GNOME Project"
 msgstr "Projeto GNOME"
 
 #: templates/base.html:96
-#, fuzzy
 #| msgid ""
 #| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
 #| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -1971,7 +1966,7 @@ msgid ""
 "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr ""
-"Mantido no módulo <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
+"Mantido no módulo <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> em <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
 #: templates/base.html:98
@@ -2190,6 +2185,8 @@ msgid ""
 "If anything should be changed on this page, please <a href=\"%(bug_url)s"
 "\">submit a bug report</a>."
 msgstr ""
+"Se algo deve ser mudado nesta página, por favor, <a href=\"%(bug_url)s"
+"\">relate um erro</a>."
 
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
