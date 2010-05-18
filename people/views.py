@@ -21,7 +21,8 @@
 from django.core import urlresolvers
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext_lazy, ugettext as _, get_date_formats
+from django.utils.translation import ugettext_lazy, ugettext as _
+from django.utils import formats
 from django.template import RequestContext
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
@@ -44,7 +45,7 @@ def person_detail(request, person_id=None, person_username=None):
         'person': person,
         'on_own_page': request.user.is_authenticated() and person.username == request.user.username,
         'states': states,
-        'dateformat': get_date_formats()[0],
+        'dateformat': formats.get_format('DATE_FORMAT'),
     }
     return render_to_response('people/person_detail.html', context,
             context_instance=RequestContext(request))
