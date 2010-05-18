@@ -784,7 +784,7 @@ class Release(models.Model):
         cursor.execute(query, (dtype,))
         stats = {}; totals = [0] * len(releases)
         for row in cursor.fetchall():
-            if row[LOCALE] not in stats:
+            if row[LOCALE] and row[LOCALE] not in stats:
                 stats[row[LOCALE]] = [0] * len(releases)
                 stats[row[LOCALE]].insert(0, _(row[NAME])) # translated language name
             if row[LOCALE] is None: # POT stats
