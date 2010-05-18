@@ -24,6 +24,7 @@ import threading
 from datetime import datetime
 
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
 from django.utils.datastructures import SortedDict
@@ -127,19 +128,9 @@ class Module(models.Model):
             return True
         return False
 
-class BranchCharField(models.CharField):
-    def pre_save(self, model_instance, add):
-        """ Check if branch is valid before saving the instance """
-        if model_instance.checkout_on_creation:
-            try:
-                model_instance.checkout()
-            except:
-                raise ValueError("Branch not valid: error while checking out the branch (%s)." % sys.exc_info()[1])
-        return getattr(model_instance, self.attname)
-
 class Branch(models.Model):
     """ Branch of a module """
-    name = BranchCharField(max_length=50)
+    name        = models.CharField(max_length=50)
     #description = models.TextField(null=True)
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module      = models.ForeignKey(Module)
@@ -163,6 +154,13 @@ class Branch(models.Model):
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.module)
+
+    def clean(self):
+        if self.checkout_on_creation:
+            try:
+                self.checkout()
+            except:
+                raise ValidationError("Branch not valid: error while checking out the branch (%s)." % sys.exc_info()[1])
 
     def save(self, force_insert=False, force_update=False, update_statistics=True):
         super(Branch, self).save(force_insert, force_update)
@@ -471,6 +469,7 @@ class Branch(models.Model):
                     "localdir" : modulepath,
                     })
             elif vcs_type == "git":
+                # tester "cd \"%(localdir)s\" && git checkout %(branch)s && git clean -dfq && git pull origin/%(branch)s"
                 commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s && git fetch && git reset --hard origin/%(branch)s && git clean -dfq" % {
                     "localdir" : modulepath,
                     "branch" : self.name,

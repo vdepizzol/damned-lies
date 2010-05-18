@@ -1,12 +1,12 @@
 Django patches for damned-lies
 ==============================
 
-Django version: 1.1
+Django version: 1.2
 
 *   Add support for translator comments
     File: django/core/management/commands/makemessages.py
     Add -c flag to xgettext calls, to extract translator comments in po files,
-    at lines 126 and 151
+    at lines 193 and 228
     See http://code.djangoproject.com/ticket/10004
 
 *   Add support for nds (Low German) language

@@ -77,7 +77,7 @@ class Migration:
             'Meta': {'unique_together': "(('name', 'module'),)", 'db_table': "'branch'"},
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'module': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['stats.Module']"}),
-            'name': ('BranchCharField', [], {'max_length': '50'}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
             'vcs_subpath': ('django.db.models.fields.CharField', [], {'max_length': '50', 'null': 'True', 'blank': 'True'}),
             'weight': ('django.db.models.fields.IntegerField', [], {'default': '0'})
         },

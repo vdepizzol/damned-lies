@@ -23,6 +23,7 @@ from datetime import date
 from django.test import TestCase
 from django.test.client import Client
 from django.core import mail
+from django.core.exceptions import ValidationError
 from django.conf import settings
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
 from languages.models import Language
@@ -150,8 +151,7 @@ class ModuleTestCase(TestCase):
         Branch.checkout_on_creation = True
         branch = Branch(name="trunk2",
                         module = self.mod)
-        self.assertRaises(ValueError, branch.save)
-        Branch.checkout_on_creation = False
+        self.assertRaises(ValidationError, branch.clean)
 
     def testDynamicPO(self):
         """ Test the creation of a blank po file for a new language """
