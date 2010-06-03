@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-24 15:31+0000\n"
-"PO-Revision-Date: 2010-04-25 08:08+0100\n"
+"POT-Creation-Date: 2010-04-30 17:32+0000\n"
+"PO-Revision-Date: 2010-06-03 22:22+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -885,8 +885,8 @@ msgid "GST Time Setup Manual"
 msgstr "Handbok för Tidsadministrationsverktyg"
 
 #: database-content.py:218
-#: languages/views.py:50
-#: languages/views.py:83
+#: languages/views.py:51
+#: languages/views.py:84
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:22
 #: templates/release_detail.html.py:68
@@ -959,7 +959,6 @@ msgid "animation filter"
 msgstr "animationsfilter"
 
 #: database-content.py:235
-#| msgid "Latest POT file"
 msgid "artistic filter"
 msgstr "artistiskt filter"
 
@@ -1092,7 +1091,6 @@ msgid "Lights Off Manual"
 msgstr "Handbok för Släck lyset"
 
 #: database-content.py:268
-#| msgid "Browse Repository"
 msgid "Browser Help"
 msgstr "Bläddringshjälp"
 
@@ -1307,7 +1305,6 @@ msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (gammal stabil)"
 
 #: database-content.py:321
-#| msgid "GNOME 2.18 (old stable)"
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (gammal stabil)"
 
@@ -1320,7 +1317,6 @@ msgid "External Dependencies (GNOME)"
 msgstr "Externa beroenden (GNOME)"
 
 #: database-content.py:324
-#| msgid "GNOME 2.28 (stable)"
 msgid "GNOME 2.30 (stable)"
 msgstr "GNOME 2.30 (stabil)"
 
@@ -1329,15 +1325,14 @@ msgid "GIMP and Friends"
 msgstr "GIMP med vänner"
 
 #: database-content.py:326
-#| msgid "GNOME 2.30 (development)"
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (utveckling)"
 
-#: settings.py:73
+#: settings.py:74
 msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens webbsida om var översättningarna ska skickas."
 
-#: settings_sample.py:79
+#: settings_sample.py:80
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s Git-förråd. Kontrollera modulens webbsida för information om var översättningarna ska skickas."
 
@@ -1414,12 +1409,12 @@ msgstr "Logga in med OpenID"
 msgid "Unknown"
 msgstr "Okänt"
 
-#: languages/views.py:49
-#: languages/views.py:82
+#: languages/views.py:50
+#: languages/views.py:83
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
 
-#: languages/views.py:80
+#: languages/views.py:81
 #: templates/release_detail.html:66
 msgid "Original strings"
 msgstr "Ursprungliga strängar"
@@ -1751,27 +1746,27 @@ msgstr "Insändare"
 msgid "Coordinator"
 msgstr "Koordinator"
 
-#: teams/views.py:55
+#: teams/views.py:57
 msgid "Committers"
 msgstr "Insändare"
 
-#: teams/views.py:58
+#: teams/views.py:60
 msgid "No committers"
 msgstr "Inga insändare"
 
-#: teams/views.py:60
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "Granskare"
 
-#: teams/views.py:63
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "Inga granskare"
 
-#: teams/views.py:65
+#: teams/views.py:67
 msgid "Translators"
 msgstr "Översättare"
 
-#: teams/views.py:68
+#: teams/views.py:70
 msgid "No translators"
 msgstr "Inga översättare"
 
@@ -1862,8 +1857,11 @@ msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
 #: templates/base.html:96
-msgid "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
-msgstr "Underhålls i modulen <a href=\"http://git.gnome.org/cgit/damned-lies/\">damned-lies</a> på <a href='http://git.gnome.org/'>git.gnome.org</a>"
+#| msgid ""
+#| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+#| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgid "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgstr "Underhålls i modulen <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> på <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
 #: templates/base.html:98
 msgid "Hosted by"
@@ -2005,19 +2003,19 @@ msgstr "Status för lokalanpassade bilder"
 msgid "Original"
 msgstr "Original"
 
-#: templates/module_images.html:32
+#: templates/module_images.html:34
 msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
 msgstr "Översatt, men använder originalet (kanske figuren inte innehåller någon sträng att översätta)"
 
-#: templates/module_images.html:36
+#: templates/module_images.html:38
 msgid "Fuzzy"
 msgstr "Luddiga"
 
-#: templates/module_images.html:42
+#: templates/module_images.html:45
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "Ingen befintlig fil (&quot;Technical&quot; luddig)"
 
-#: templates/module_images.html:45
+#: templates/module_images.html:48
 msgid "Not translated"
 msgstr "Inte översatt"
 
@@ -2029,6 +2027,14 @@ msgstr "GNOME-moduler"
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Välj en modul nedan för att se några förbannade lögner om den:"
+
+#: templates/module_list.html:28
+#: templates/release_list.html:38
+#: templates/languages/language_list.html:35
+#: templates/teams/team_list.html:33
+#, python-format
+msgid "If anything should be changed on this page, please <a href=\"%(bug_url)s\">submit a bug report</a>."
+msgstr "<a href=\"%(bug_url)s\">Skicka in en felrapport</a> om någonting ska ändras på denna sida."
 
 #: templates/release_compare.html:5
 #: templates/release_compare.html.py:20
@@ -2456,7 +2462,7 @@ msgstr "Välj en grupp nedan för att se mer information om den."
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Koordineras av <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Det finns för närvarande inga översättningsgrupper i GNOME. :("
 
@@ -2588,7 +2594,6 @@ msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "Ogiltig åtgärd. Antagligen så postade någon en annan åtgärd precis före dig."
 
 #: vertimus/forms.py:77
-#| msgid "A comment or a file is needed for this action."
 msgid "A comment is needed for this action."
 msgstr "En kommentar behövs för denna åtgärd."
 
