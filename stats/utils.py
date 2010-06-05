@@ -300,6 +300,14 @@ def po_file_stats(pofile, msgfmt_checks = True):
 
     return res
 
+def read_linguas_file(full_path):
+    """ Read a LINGUAS file (each language code on a line by itself) """
+    langs = []
+    lfile = open(full_path, "r")
+    [langs.extend(line.split()) for line in lfile if line[:1]!='#']
+    lfile.close()
+    return {'langs':langs,
+            'error': ugettext_noop("Entry for this language is not present in LINGUAS file.") }
 
 def get_ui_linguas(module_path, po_path):
     """Get language list in one of po/LINGUAS, configure.ac or configure.in"""
@@ -309,17 +317,10 @@ def get_ui_linguas(module_path, po_path):
     configureac = os.path.join(module_path, "configure.ac")
     configurein = os.path.join(module_path, "configure.in")
 
-    langs = []
-
     # is "lang" listed in either of po/LINGUAS, ./configure.ac(ALL_LINGUAS) or ./configure.in(ALL_LINGUAS)
     for LINGUAS in [LINGUAShere, LINGUASpo]:
         if os.access(LINGUAS, os.R_OK):
-            lfile = open(LINGUAS, "r")
-            [langs.extend(line.split()) for line in lfile if line[:1]!='#']
-            lfile.close()
-            return {'langs':langs,
-                    'error': ugettext_noop("Entry for this language is not present in LINGUAS file.") }
-
+            return read_linguas_file(LINGUAS)
     for configure in [configureac, configurein]:
         found = search_variable_in_file(configure, 'ALL_LINGUAS')
         if found is not None:

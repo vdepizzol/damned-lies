@@ -708,6 +708,8 @@ class Domain(models.Model):
             # Custom (or no) linguas location
             if self.linguas_location == 'no':
                 return {'langs':None, 'error':''}
+            elif self.linguas_location.split('/')[-1] == "LINGUAS":
+                return utils.read_linguas_file(os.path.join(base_path, self.linguas_location))
             else:
                 variable = "ALL_LINGUAS"
                 if "#" in self.linguas_location:
