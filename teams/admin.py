@@ -9,6 +9,7 @@ class LanguageInline(admin.TabularInline):
 
 class TeamAdmin(admin.ModelAdmin):
     search_fields = ('name',)
+    list_display = ('description', 'use_workflow')
     inlines = [ LanguageInline ]
 
     def formfield_for_dbfield(self, db_field, **kwargs):

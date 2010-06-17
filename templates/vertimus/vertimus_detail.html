@@ -187,6 +187,8 @@ $(document).ready(function() {
   {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
   {% endif %}
 {% endifequal %}
+{% else %}
+  <p><img src="{{ MEDIA_URL }}img/warn.png"/>&nbsp;{% trans "This team is not using the Vertimus translation workflow." %}</p>
 {% endif %}
 
 {% endblock %}
