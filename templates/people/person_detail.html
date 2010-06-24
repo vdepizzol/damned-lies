@@ -8,7 +8,11 @@
 <script type="text/javascript">
 $(document).ready(function() 
     { 
-        $("#working_on").tablesorter(); 
+        $("#working_on").tablesorter({
+            headers: {
+                0: { sorter:'text' }
+            },
+            sortList: [[0,0]] });
     }
 );
 </script>
@@ -51,12 +55,12 @@ $(document).ready(function()
 
 <table class="tablesorter" id="working_on">
 <thead><tr>
-  <th class="header">{% trans "Date" %}</th><th>{% trans "Module" %}</th><th>{% trans "State" %}</th>
+  <th>{% trans "Date" %}</th><th>{% trans "Module" %}</th><th>{% trans "State" %}</th>
 </tr></thead>
 <tbody>
 {% for state in states %}
 <tr>
-  <td><span style="display: none;">{{ state.updated }}</span>{{ state.updated|naturalday:dateformat }}</td>
+  <td><span style="display: none;">{{ state.updated|date:"c" }}</span>{{ state.updated|naturalday:dateformat }}</td>
   <td><a href="{{ state.get_absolute_url }}">{{ state.branch.module.get_description }} - {{ state.branch.name }} - {{ state.domain.get_description }} - {{ state.language.get_name }}</a></td>
   <td>{{ state.get_state }}</td>
 </tr>
