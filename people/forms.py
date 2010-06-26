@@ -77,8 +77,41 @@ class DetailForm(forms.ModelForm):
         model = Person
         fields = ('first_name', 'last_name', 'email', 'image', 'webpage_url', 'irc_nick', 'bugzilla_account')
 
+    def clean_image(self):
+        url = self.cleaned_data['image']
+        if not url:
+            return
+        size = get_image_size(url)
+        if size[0]>100 or size[1]>100:
+            raise forms.ValidationError(_(u"Image too high or too wide (%dx%d, maximum is 100x100 pixels)") % size) 
+        
 class TeamJoinForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(TeamJoinForm, self).__init__(*args, **kwargs)
         # FIXME: exclude team to which user is already member
         self.fields['teams'] = forms.ModelChoiceField(queryset=Team.objects.all())
+
+def get_image_size(url):
+    """ Returns width and height (as tuple) of the image poited at by the url
+        Code partially copied from http://effbot.org/zone/pil-image-size.htm """
+    import urllib
+    import ImageFile
+
+    try:
+        file = urllib.urlopen(url)
+    except IOError:
+        raise forms.ValidationError(_(u"The URL you provided is not valid"))
+    size = None
+    p = ImageFile.Parser()
+    while 1:
+        data = file.read(1024)
+        if not data:
+            break
+        p.feed(data)
+        if p.image:
+            size = p.image.size
+            break
+    file.close()
+    if not size:
+        raise forms.ValidationError(_(u"The URL you provided seems not to correspond to a valid image"))
+    return size

@@ -34,7 +34,7 @@ class Person(User):
 
     svn_account = models.SlugField(max_length=20, null=True, blank=True)
     image = models.URLField(_("Image"), null=True, blank=True,
-                            help_text=_("URL to an image file (.jpg, .png, ...) of an hackergotchi"))
+                            help_text=_("URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 pixels)"))
     webpage_url = models.URLField(_("Web page"), null=True, blank=True)
     irc_nick = models.SlugField(_("IRC nickname"), max_length=20, null=True, blank=True)
     bugzilla_account = models.EmailField(_("Bugzilla account"), null=True, blank=True,
