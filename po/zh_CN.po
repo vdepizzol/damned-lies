@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-09 19:07+0000\n"
+"POT-Creation-Date: 2010-06-17 16:14+0000\n"
 "PO-Revision-Date: 2010-01-24 17:13+0800\n"
 "Last-Translator: 甘露(Gan Lu) <rhythm.gan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -1693,7 +1693,7 @@ msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
 "they don't exist: %s"
 msgstr ""
-"下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而他们并不存在：%s"
+"下列文件在 POTFILES.in 或者 POTFILES.skip 中涉及到，然而这些文件已不存在：%s"
 
 #: stats/utils.py:130
 #, python-format
@@ -1994,8 +1994,7 @@ msgid ""
 "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
 "2.26&quot;."
 msgstr ""
-"发行系列的例子有&quot;GNOME 办公&quot;、&quot;第五脚趾&quot;和&quot;GNOME "
-"2.26&quot;。"
+"发行系列的例子有“GNOME 基础架构”、“GNOME 2.26”之类。"
 
 #: templates/index.html:38
 msgid ""
@@ -2122,8 +2121,8 @@ msgstr "选择下列的某个模块以查看关于它的“胡言乱语”："
 msgid ""
 "If anything should be changed on this page, please <a href=\"%(bug_url)s"
 "\">submit a bug report</a>."
-msgstr "如果此页面中的内容需要更改，请<a href=\"%(bug_url)s"
-"\">提交错误报告</a>。"
+msgstr ""
+"如果此页面中的内容需要更改，请<a href=\"%(bug_url)s\">提交错误报告</a>。"
 
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
@@ -2647,6 +2646,10 @@ msgstr "提交"
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "您需要先登录，并且必须是%(team_name)s团队的成员。"
+
+#: templates/vertimus/vertimus_detail.html:191
+msgid "This team is not using the Vertimus translation workflow."
+msgstr "此团队未在使用 Vertimus 翻译工作流。"
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
