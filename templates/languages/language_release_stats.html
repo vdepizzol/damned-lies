@@ -77,7 +77,7 @@
            {% if stat.state.name %}
              {% ifnotequal stat.state.name "None" %}
              <em><small>{{ stat.state.get_state }}</small></em></td>
-             <td><span style="display: none;">{{ stat.state.updated }}</span><em><small>{{ stat.state.updated|date:dateformat }}
+             <td><span style="display: none;">{{ stat.state.updated|date:"c" }}</span><em><small>{{ stat.state.updated|date:dateformat }}
              {% else %}
                {% if stat.state.last_comment %}
                  <span class="comment">{{ stat.state.last_comment|truncatewords:12 }}</span>
