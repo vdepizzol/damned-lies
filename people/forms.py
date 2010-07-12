@@ -83,7 +83,8 @@ class DetailForm(forms.ModelForm):
             return
         size = get_image_size(url)
         if size[0]>100 or size[1]>100:
-            raise forms.ValidationError(_(u"Image too high or too wide (%dx%d, maximum is 100x100 pixels)") % size) 
+            raise forms.ValidationError(_(u"Image too high or too wide (%dx%d, maximum is 100x100 pixels)") % size)
+        return url
 
 class TeamJoinForm(forms.Form):
     def __init__(self, *args, **kwargs):
@@ -99,18 +100,21 @@ def get_image_size(url):
 
     try:
         file = urllib.urlopen(url)
-    except IOError:
+    except (IOError, UnicodeError):
         raise forms.ValidationError(_(u"The URL you provided is not valid"))
     size = None
     p = ImageFile.Parser()
-    while 1:
-        data = file.read(1024)
-        if not data:
-            break
-        p.feed(data)
-        if p.image:
-            size = p.image.size
-            break
+    try:
+        while 1:
+            data = file.read(1024)
+            if not data:
+                break
+            p.feed(data)
+            if p.image:
+                size = p.image.size
+                break
+    except Exception, e:
+        raise forms.ValidationError(u"Sorry, an error occurred while trying to get image size (%s)" % str(e))
     file.close()
     if not size:
         raise forms.ValidationError(_(u"The URL you provided seems not to correspond to a valid image"))
