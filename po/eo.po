@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-17 16:14+0000\n"
-"PO-Revision-Date: 2010-07-13 16:42+0200\n"
+"PO-Revision-Date: 2010-07-14 08:55+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <ubuntu-l10n-eo@lists.launchpad.net>\n"
 "MIME-Version: 1.0\n"
@@ -470,23 +470,23 @@ msgstr "Napola"
 
 #: database-content.py:114
 msgid "Divehi"
-msgstr ""
+msgstr "Mahla"
 
 #: database-content.py:115
 msgid "Shavian"
-msgstr ""
+msgstr "Ŝava alfabeto"
 
 #: database-content.py:116
 msgid "Burmese"
-msgstr ""
+msgstr "Birma"
 
 #: database-content.py:117
 msgid "Lao"
-msgstr ""
+msgstr "Laŭa"
 
 #: database-content.py:118
 msgid "Frisian"
-msgstr ""
+msgstr "Frisa"
 
 #: database-content.py:119
 msgid "Aragonese"
@@ -494,27 +494,27 @@ msgstr "Aragona"
 
 #: database-content.py:120
 msgid "Belarusian Latin"
-msgstr ""
+msgstr "Belorusa (latina)"
 
 #: database-content.py:121
 msgid "Catalan (Valencian)"
-msgstr ""
+msgstr "Kataluna (valencia)"
 
 #: database-content.py:122
 msgid "Uzbek (Cyrillic)"
-msgstr ""
+msgstr "Uzbeka (cirila)"
 
 #: database-content.py:123
 msgid "Uzbek (Latin)"
-msgstr ""
+msgstr "Uzbeka (latina)"
 
 #: database-content.py:124
 msgid "Chinese (Hong Kong)"
-msgstr ""
+msgstr "Ĉina (Honkongo)"
 
 #: database-content.py:125
 msgid "Chinese (Taiwan)"
-msgstr ""
+msgstr "Ĉina (tajvano)"
 
 #: database-content.py:126
 msgid "Norwegian Bokmål"
@@ -542,31 +542,31 @@ msgstr "Interlingua"
 
 #: database-content.py:132
 msgid "Luxembourgish"
-msgstr ""
+msgstr "Luksemburga"
 
 #: database-content.py:133
 msgid "Tsonga"
-msgstr ""
+msgstr "Conga"
 
 #: database-content.py:134
 msgid "Swahili"
-msgstr ""
+msgstr "Svahila"
 
 #: database-content.py:135
 msgid "South Ndebele"
-msgstr ""
+msgstr "Suda ndebela"
 
 #: database-content.py:136
 msgid "Southern Sotho"
-msgstr ""
+msgstr "Suda sota"
 
 #: database-content.py:137
 msgid "Maltese"
-msgstr ""
+msgstr "Malta"
 
 #: database-content.py:138
 msgid "Igbo"
-msgstr ""
+msgstr "Igba"
 
 #: database-content.py:139
 msgid "UI translations"
@@ -602,15 +602,15 @@ msgstr ""
 
 #: database-content.py:147
 msgid "FDL License"
-msgstr ""
+msgstr "FDL-permesilo"
 
 #: database-content.py:148
 msgid "LGPL License"
-msgstr ""
+msgstr "LGPL-permesilo"
 
 #: database-content.py:149
 msgid "GPL License"
-msgstr ""
+msgstr "GPL-permesilo"
 
 #: database-content.py:150
 msgid "Fish Applet Manual"
@@ -889,7 +889,7 @@ msgstr "Dokumentado"
 
 #: database-content.py:218
 msgid "UI translation"
-msgstr ""
+msgstr "UI-traduko"
 
 #: database-content.py:219
 msgid "glossary"
@@ -1293,7 +1293,7 @@ msgstr "GNOME 2.18 (malnova stabilaĵo)"
 
 #: database-content.py:311
 msgid "GNOME Infrastructure"
-msgstr ""
+msgstr "GNOME-infrastrukturo"
 
 #: database-content.py:312
 msgid "GNOME 2.16 (old stable)"
@@ -1437,7 +1437,7 @@ msgstr "Nekonate"
 
 #: languages/views.py:51 languages/views.py:84
 msgid "UI Translations"
-msgstr ""
+msgstr "UI-tradukoj"
 
 #: languages/views.py:82 templates/release_detail.html:66
 msgid "Original strings"
@@ -1511,7 +1511,7 @@ msgstr ""
 
 #: people/models.py:40
 msgid "Bugzilla account"
-msgstr ""
+msgstr "Bugzilla-konto"
 
 #: people/models.py:41
 msgid "This should be an email address, useful if not equal to 'email' field"
@@ -1576,7 +1576,7 @@ msgstr ""
 
 #: stats/models.py:975
 msgid "Administration Tools"
-msgstr ""
+msgstr "Administrad-iloj"
 
 #: stats/models.py:976
 msgid "Development Tools"
@@ -1603,8 +1603,8 @@ msgstr ""
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)s mesaĝo"
+msgstr[1] "%(count)s mesaĝoj"
 
 #: stats/models.py:1092
 #, python-format
@@ -1628,12 +1628,12 @@ msgstr[1] ""
 #: stats/models.py:1098
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr ""
+msgstr "POT-dosiero (%(messages)s, %(figures)s) — %(updated)s"
 
 #: stats/models.py:1101
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
-msgstr ""
+msgstr "POT-dosiero (%(messages)s) — %(updated)s"
 
 #: stats/models.py:1185
 msgid ""
@@ -1796,7 +1796,7 @@ msgstr "Neniu tradukanto"
 
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
-msgstr ""
+msgstr "Eraro: ne trovis paĝon"
 
 #: templates/404.html:11
 msgid "The page you requested has not been found on this server."
@@ -1869,7 +1869,7 @@ msgstr "Elsaluti"
 
 #: templates/base.html:94
 msgid "Copyright &copy; 2006-2009"
-msgstr ""
+msgstr "Kopirajto &copy; 2006-2009"
 
 #: templates/base.html:94
 msgid "The GNOME Project"
@@ -1883,7 +1883,7 @@ msgstr ""
 
 #: templates/base.html:98
 msgid "Hosted by"
-msgstr ""
+msgstr "Gastigo per"
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
@@ -1995,7 +1995,7 @@ msgstr ""
 
 #: templates/login.html:22
 msgid "Have you forgotten your password?"
-msgstr ""
+msgstr "Ĉu vi forgesis vian pasvorton?"
 
 #: templates/module_detail.html:6
 #, python-format
@@ -2012,7 +2012,7 @@ msgstr "Cim-raportado"
 
 #: templates/module_detail.html:66
 msgid "Show existing i18n and l10n bugs"
-msgstr ""
+msgstr "Montri ekzistantajn i18n- kaj l10n-cimojn"
 
 #: templates/module_detail.html:68
 msgid "Report a bug"
@@ -2059,7 +2059,7 @@ msgstr "Ne tradukite"
 
 #: templates/module_list.html:4 templates/module_list.html.py:9
 msgid "GNOME Modules"
-msgstr ""
+msgstr "GNOME-moduloj"
 
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
@@ -2151,12 +2151,12 @@ msgstr "Ĉiuj moduloj"
 #: templates/languages/language_all_modules.html:23
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
-msgstr ""
+msgstr "Kaŝi komletajn modulojn"
 
 #: templates/languages/language_all_modules.html:27
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
-msgstr ""
+msgstr "Montri komletajn modulojn"
 
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
@@ -2178,7 +2178,7 @@ msgstr ""
 
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
-msgstr ""
+msgstr "Elŝuti ĉiujn PO-dosierojn"
 
 #: templates/languages/language_release_stats.html:21
 #: templates/people/person_detail.html:54
@@ -2204,11 +2204,12 @@ msgstr "Dato"
 
 #: templates/languages/language_release_stats.html:32
 msgid "%(categname)s (%(percentage)s% translated)"
-msgstr ""
+msgstr "%(categname)s (%(percentage)s% tradukite)"
 
 #: templates/languages/language_release_stats.html:103
+#, fuzzy
 msgid "Error summary"
-msgstr ""
+msgstr "Erarojn sume"
 
 #: templates/languages/language_release_summary.html:9
 msgid "Release"
@@ -2241,11 +2242,11 @@ msgstr "Elekti"
 
 #: templates/people/person_detail.html:39
 msgid "Maintains:"
-msgstr ""
+msgstr "Prizorgas:"
 
 #: templates/people/person_detail.html:50
 msgid "Working on"
-msgstr ""
+msgstr "Laborente ĉe"
 
 #: templates/people/person_detail.html:54
 msgid "State"
@@ -2270,7 +2271,7 @@ msgstr "Tujmesaĝado:"
 
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
-msgstr ""
+msgstr "Bugzilla-konto:"
 
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
@@ -2430,7 +2431,7 @@ msgstr "Detaloj"
 #: templates/teams/team_base.html:14
 #, python-format
 msgid "%(lang)s Translation Team Page:"
-msgstr ""
+msgstr "%(lang)s Traduk-team-paĝo:"
 
 #: templates/teams/team_base.html:18
 msgid "Bugzilla:"
@@ -2510,7 +2511,7 @@ msgstr ""
 #: templates/teams/team_list.html:25
 #, python-format
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
-msgstr ""
+msgstr "Koordinate per  <a href=\"%(url)s\">%(name)s</a>"
 
 #: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
@@ -2519,7 +2520,7 @@ msgstr ""
 #: templates/vertimus/vertimus_detail.html:6
 #, python-format
 msgid "Module Translation: %(name)s"
-msgstr ""
+msgstr "Modul-traduko: %(name)s"
 
 #: templates/vertimus/vertimus_detail.html:27
 msgid "Used in release(s):"
@@ -2555,11 +2556,11 @@ msgstr ""
 
 #: templates/vertimus/vertimus_detail.html:110
 msgid "(Return to current)"
-msgstr ""
+msgstr "(Reen al aktuala)"
 
 #: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
-msgstr ""
+msgstr "(Antaŭa ago-historio)"
 
 #: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
@@ -2567,7 +2568,7 @@ msgstr ""
 
 #: templates/vertimus/vertimus_detail.html:168
 msgid "No current actions."
-msgstr ""
+msgstr "Neniu aktuala ago."
 
 #: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
@@ -2589,11 +2590,11 @@ msgstr ""
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
-msgstr ""
+msgstr "Diferenco inter PO-dosieroj"
 
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
-msgstr ""
+msgstr "&lt;- Reen al agoj"
 
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
