@@ -7,11 +7,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: damned-lies HEAD\n"
+"Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-17 16:14+0000\n"
-"PO-Revision-Date: 2010-01-24 17:13+0800\n"
-"Last-Translator: 甘露(Gan Lu) <rhythm.gan@gmail.com>\n"
+"POT-Creation-Date: 2010-06-26 12:34+0000\n"
+"PO-Revision-Date: 2010-07-19 00:38+0800\n"
+"Last-Translator: Yinghua Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -903,13 +903,11 @@ msgstr "滤镜"
 
 #: database-content.py:221
 msgid "preface"
-msgstr ""
+msgstr "序"
 
 #: database-content.py:222
-#, fuzzy
-#| msgid "CD Player Manual"
 msgid "layer menu"
-msgstr "CD 播放器手册"
+msgstr "图层菜单"
 
 #: database-content.py:223
 msgid "tags"
@@ -917,7 +915,7 @@ msgstr "标记"
 
 #: database-content.py:224
 msgid "appendix"
-msgstr ""
+msgstr "附录"
 
 #: database-content.py:225
 msgid "concepts"
@@ -940,14 +938,12 @@ msgid "toolbox"
 msgstr "工具箱"
 
 #: database-content.py:230
-#, fuzzy
-#| msgid "Asturian"
 msgid "tutorial"
-msgstr "阿斯图里亚斯语"
+msgstr "教程"
 
 #: database-content.py:231
 msgid "using gimp"
-msgstr ""
+msgstr "使用 gimp"
 
 #: database-content.py:232
 msgid "alpha-to-logo filter"
@@ -955,77 +951,75 @@ msgstr ""
 
 #: database-content.py:233
 msgid "animation filter"
-msgstr ""
+msgstr "动画滤镜"
 
 #: database-content.py:234
-#, fuzzy
-#| msgid "Latest POT file"
 msgid "artistic filter"
-msgstr "最新的 POT 文件"
+msgstr "艺术滤镜"
 
 #: database-content.py:235
 msgid "blur filter"
-msgstr ""
+msgstr "模糊滤镜"
 
 #: database-content.py:236
 msgid "combine filter"
-msgstr ""
+msgstr "复合滤镜"
 
 #: database-content.py:237
 msgid "decor filter"
-msgstr ""
+msgstr "装饰滤镜"
 
 #: database-content.py:238
 msgid "distort filter"
-msgstr ""
+msgstr "扭曲滤镜"
 
 #: database-content.py:239
 msgid "edge-detect filter"
-msgstr ""
+msgstr "边缘检测滤镜"
 
 #: database-content.py:240
 msgid "enhance filter"
-msgstr ""
+msgstr "增强滤镜"
 
 #: database-content.py:241
 msgid "generic filter"
-msgstr ""
+msgstr "常规滤镜"
 
 #: database-content.py:242
 msgid "light-effects filter"
-msgstr ""
+msgstr "光效果滤镜"
 
 #: database-content.py:243
 msgid "map filter"
-msgstr ""
+msgstr "映射滤镜"
 
 #: database-content.py:244
 msgid "noise filter"
-msgstr ""
+msgstr "噪声滤镜"
 
 #: database-content.py:245
 msgid "render filter"
-msgstr ""
+msgstr "渲染滤镜"
 
 #: database-content.py:246
 msgid "web filter"
-msgstr ""
+msgstr "网络滤镜"
 
 #: database-content.py:247
 msgid "colors auto menu"
-msgstr ""
+msgstr "颜色 自动 菜单"
 
 #: database-content.py:248
 msgid "colors component menu"
-msgstr ""
+msgstr "颜色 成分 菜单"
 
 #: database-content.py:249
 msgid "colors info menu"
-msgstr ""
+msgstr "颜色 信息 菜单"
 
 #: database-content.py:250
 msgid "colors map menu"
-msgstr ""
+msgstr "颜色映射菜单"
 
 #: database-content.py:251
 msgid "colors menus"
@@ -1455,7 +1449,7 @@ msgid "OpenID:"
 msgstr "OpenID："
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
+#: templates/login.html:40
 msgid "Log in with OpenID"
 msgstr "使用 OpenID 登录"
 
@@ -1993,8 +1987,7 @@ msgstr "这里列出了所有 GNOME 发行套件，以及我们为其收集统�
 msgid ""
 "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
 "2.26&quot;."
-msgstr ""
-"发行系列的例子有“GNOME 基础架构”、“GNOME 2.26”之类。"
+msgstr "发行系列的例子有“GNOME 基础架构”、“GNOME 2.26”之类。"
 
 #: templates/index.html:38
 msgid ""
@@ -2235,7 +2228,7 @@ msgid "Download all po files"
 msgstr "下载全部 po 文件"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "Module"
 msgstr "模块"
 
@@ -2252,7 +2245,7 @@ msgid "Status"
 msgstr "状态"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "Date"
 msgstr "日期"
 
@@ -2285,23 +2278,23 @@ msgstr "更改您的密码"
 msgid "Join a team"
 msgstr "加入团队"
 
-#: templates/people/person_detail.html:22
+#: templates/people/person_detail.html:26
 msgid "Site Language:"
 msgstr "网站语言："
 
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:37
 msgid "Choose"
 msgstr "选择"
 
-#: templates/people/person_detail.html:39
+#: templates/people/person_detail.html:43
 msgid "Maintains:"
 msgstr "维护："
 
-#: templates/people/person_detail.html:50
+#: templates/people/person_detail.html:54
 msgid "Working on"
 msgstr "当前任务"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "State"
 msgstr "状态"
 
