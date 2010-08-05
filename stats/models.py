@@ -436,17 +436,22 @@ class Branch(models.Model):
                 for err in langstats['errors']:
                     stat.information_set.add(Information(type=err[0], description=err[1]))
 
+    def _exists(self):
+        """ Determine if branch (self) already exists (i.e. already checked out) on local FS """
+        if self.module.vcs_type == 'git':
+            command = "cd %s && git branch | grep %s" % (self.co_path(), self.name)
+            status, output, errs = utils.run_shell_command(command)
+            return output != ""
+        elif self.module.vcs_type == 'hg':
+            return self.id != None and os.access(self.co_path(), os.X_OK | os.W_OK)
+        else:
+            return os.access(self.co_path(), os.X_OK | os.W_OK)
+
     def checkout(self):
         """ Do a checkout or an update of the VCS files """
         module_name = self.module.name
         vcs_type = self.module.vcs_type
         localroot = os.path.join(settings.SCRATCHDIR, vcs_type)
-        if vcs_type in ('hg', 'git'):
-            moduledir = self.module.name
-            branch_exists = self.id != None and os.access(self.co_path(), os.X_OK | os.W_OK)
-        else:
-            moduledir = self.module.name + "." + self.name
-            branch_exists = os.access(self.co_path(), os.X_OK | os.W_OK)
         modulepath = self.co_path()
         scmroot = self.module.vcs_root
 
@@ -454,7 +459,7 @@ class Branch(models.Model):
         except: pass
 
         commandList = []
-        if branch_exists:
+        if self._exists():
             # Path exists, update repos
             if vcs_type == "cvs":
                 commandList.append("cd \"%(localdir)s\" && cvs -z4 up -Pd" % {
@@ -481,6 +486,11 @@ class Branch(models.Model):
         else:
             # Checkout
             vcs_path = self.get_vcs_url()
+            if vcs_type in ('hg', 'git'):
+                moduledir = self.module.name
+            else:
+                moduledir = self.module.name + "." + self.name
+
             if vcs_type == "cvs":
                 commandList.append("cd \"%(localroot)s\" && cvs -d%(cvsroot)s -z4 co -d%(dir)s -r%(branch)s %(module)s" % {
                 "localroot" : localroot,
@@ -513,7 +523,7 @@ class Branch(models.Model):
                         "gitpath" : vcs_path,
                         "dir" : moduledir,
                         })
-                    commandList.append("cd \"%(localdir)s\" && git checkout %(branch)s" % {
+                    commandList.append("cd \"%(localdir)s\" && git remote update && git checkout %(branch)s" % {
                         "localdir" : modulepath,
                         "branch" : self.name,
                         })
