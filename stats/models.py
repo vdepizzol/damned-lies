@@ -767,7 +767,10 @@ class Release(models.Model):
         """ Get summary stats for all languages and 'releases', and return a 'stats' dict with
             each language locale as the key:
             stats{
-              'll': (<language name>, percentage for release 1, percentage for release 2, ...),
+              'll': {'lang': <language object>,
+                     'stats': [percentage for release 1, percentage for release 2, ...],
+                     'diff': difference in % between first and last release,
+                    }
               'll': ...
             }
         """
@@ -796,16 +799,17 @@ class Release(models.Model):
         stats = {}; totals = [0] * len(releases)
         for row in cursor.fetchall():
             if row[LOCALE] and row[LOCALE] not in stats:
-                stats[row[LOCALE]] = [0] * len(releases)
-                stats[row[LOCALE]].insert(0, _(row[NAME])) # translated language name
+                stats[row[LOCALE]] = {'lang': Language.objects.get(locale=row[LOCALE]),
+                                      'stats': [0] * len(releases)}
             if row[LOCALE] is None: # POT stats
                 totals[rel_ids.index(str(row[REL_ID]))] = row[UNTRANS]
             else:
-                stats[row[LOCALE]][rel_ids.index(str(row[REL_ID]))+1] = row[TRANS]
+                stats[row[LOCALE]]['stats'][rel_ids.index(str(row[REL_ID]))] = row[TRANS]
         # Compute percentages
         def perc(x, y): return int(x/y * 100)
         for k in stats.keys():
-            stats[k] = [stats[k][0]] + map(perc, stats[k][1:], totals)
+            stats[k]['stats'] = map(perc, stats[k]['stats'], totals)
+            stats[k]['diff'] = stats[k]['stats'][-1] - stats[k]['stats'][0]
         return stats
 
     def total_strings(self):

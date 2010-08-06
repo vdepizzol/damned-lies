@@ -26,20 +26,20 @@ $(document).ready(function()
     {% for rel in releases %}
       <th class="header">{{ rel.name }}</th>
     {% endfor %}
+    <th class="header">{% trans "Progress" %}</th>
     </tr>
   </thead>
 
 {% for locale, stat in stats.items %}
 <tr class="stats">
-  {% for perc in stat %}
-    {% if forloop.first %}
-      <td class="stats leftcell">
-        {{ perc }} ({{ locale }})
-      </td>
-    {% else %}
-      <td class="stats {{ perc|support_class }}">{{ perc }}%</td>
-    {% endif %}
+  <td class="stats leftcell">
+    <span class="hidden">{{ stat.lang.get_name }}</span><!-- for sorting purpose -->
+    <a href="{{ perc.get_team_url }}">{{ stat.lang.get_name }}</a> ({{ locale }})
+  </td>
+  {% for perc in stat.stats %}
+    <td class="stats {{ perc|support_class }}">{{ perc }}%</td>
   {% endfor %}
+  <td class="stats">{{ stat.diff }}%</td>
 </tr>
 {% endfor %}
 </table>

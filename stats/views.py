@@ -251,9 +251,14 @@ def release(request, release_name, format='html'):
 
 def compare_by_releases(request, dtype, rels_to_compare):
     releases = []
-    for rel_id in rels_to_compare.split("-"):
-        # Important to keep the ordering of the url
-        releases.append(Release.objects.get(id=rel_id))
+    try:
+        if "/" in rels_to_compare:
+            # This is release names
+            releases = [Release.objects.get(name='gnome-%s' % rel_name) for rel_name in rels_to_compare.split("/")]
+        else:
+            releases = [Release.objects.get(id=rel_id) for rel_id in rels_to_compare.split("-")]
+    except Release.DoesNotExist:
+        raise Http404
     stats = Release.total_by_releases(dtype, releases)
     context = {
         'releases': releases,

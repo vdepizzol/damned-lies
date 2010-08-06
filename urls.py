@@ -80,7 +80,7 @@ urlpatterns += patterns('stats.views',
         regex = r'^releases/(?P<release_name>[\w-]+)/(?P<format>(html|xml))?/?$',
         view = 'release'),
     url(
-        regex = r'^releases/compare/(?P<dtype>\w+)/(?P<rels_to_compare>[\w-]+)/$',
+        regex = r'^releases/compare/(?P<dtype>\w+)/(?P<rels_to_compare>[/\w-]+)/$',
         view = 'compare_by_releases'),
 )
 
