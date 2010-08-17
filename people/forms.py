@@ -83,7 +83,8 @@ class DetailForm(forms.ModelForm):
             return
         size = get_image_size(url)
         if size[0]>100 or size[1]>100:
-            raise forms.ValidationError(_(u"Image too high or too wide (%dx%d, maximum is 100x100 pixels)") % size)
+            raise forms.ValidationError(_(u"Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)") % {
+                'width': size[0], 'height': size[1]})
         return url
 
 class TeamJoinForm(forms.Form):

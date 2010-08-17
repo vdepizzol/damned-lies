@@ -1,10 +1,14 @@
 import os
 import shutil
+import itertools
 
 from django.core.management.base import BaseCommand
 from django.core.management.commands import makemessages
-from django.db import connection
-from django.conf import settings
+from django.db.models import F
+
+from teams.models import Team
+from languages.models import Language
+from stats.models import Module, Domain, Release
 
 class Command(BaseCommand):
     help = "Update translations of djamnedlies ('en' is a special case, and generate damned-lies.pot)"
@@ -37,19 +41,16 @@ class Command(BaseCommand):
         # Extract DB translatable strings into database-content.py
         dbfile = os.path.join(os.path.abspath('.'), 'database-content.py')
         f=open(dbfile, 'w')
-        query = """SELECT description FROM team UNION
-                   SELECT name from language WHERE name <> locale UNION
-                   SELECT description FROM domain UNION
-                   SELECT description FROM module WHERE description <> name UNION
-                   SELECT comment FROM module WHERE comment IS NOT NULL AND comment <> '' UNION
-                   SELECT description FROM "release" """
-        cursor = connection.cursor()
-        if settings.DATABASE_ENGINE == 'mysql':
-            cursor.execute("SET sql_mode='ANSI_QUOTES'")
-        cursor.execute(query)
-        for row in cursor.fetchall():
-            if row[0] is not None and row[0] != '':
-                f.write("_(u\"\"\"%s\"\"\")\n" % row[0].encode('utf-8'))
+
+        for value in itertools.chain(
+            Team.objects.values_list('description', flat=True),
+            Language.objects.exclude(name__exact=F('locale')).values_list('name', flat=True),
+            Domain.objects.distinct().values_list('description', flat=True),
+            Module.objects.exclude(name__exact=F('description')).values_list('description', flat=True),
+            Module.objects.filter(comment__isnull=False).values_list('comment', flat=True),
+            Release.objects.values_list('description', flat=True)):
+            if value:
+                f.write("_(u\"\"\"%s\"\"\")\n" % value.encode('utf-8'))
         f.close()
 
         # Run makemessages -l ll
