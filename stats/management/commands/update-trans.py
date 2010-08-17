@@ -1,4 +1,5 @@
 import os
+import re
 import shutil
 import itertools
 
@@ -50,6 +51,7 @@ class Command(BaseCommand):
             Module.objects.filter(comment__isnull=False).values_list('comment', flat=True),
             Release.objects.values_list('description', flat=True)):
             if value:
+                re.sub(r'\r\n|\r|\n', '\n', value)
                 f.write("_(u\"\"\"%s\"\"\")\n" % value.encode('utf-8'))
         f.close()
 
