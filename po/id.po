@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-26 12:34+0000\n"
-"PO-Revision-Date: 2010-08-15 16:58+0700\n"
+"PO-Revision-Date: 2010-08-19 01:09+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
@@ -803,12 +803,13 @@ msgid "Sound Juicer Manual"
 msgstr "Manual Sound Juicer"
 
 #: database-content.py:197
+#, fuzzy
 msgid "Property Nicks"
-msgstr ""
+msgstr "Perca Properti"
 
 #: database-content.py:198
 msgid "tips"
-msgstr ""
+msgstr "tips"
 
 #: database-content.py:199
 msgid "script-fu"
@@ -1244,7 +1245,7 @@ msgid ""
 "if one of them contains 0 translations, unless GTK+ build will break in /po-"
 "properties."
 msgstr ""
-"Mohon dicatata bahwa gtk+ memiliki domain UI po dan po-properties. Bila Anda "
+"Mohon dicatat bahwa gtk+ memiliki domain UI po dan po-properties. Bila Anda "
 "menambah suatu bahasa baru di salah satu domain, Anda mesti meng-commit "
 "kedua berkas ke git walaupun jika satu dari keduanya memuat 0 terjemahan, "
 "kalau tidak, build GTK+ akan terhenti di /po-properties."
@@ -2646,7 +2647,7 @@ msgstr "Dipakai di rilis:"
 
 #: templates/vertimus/vertimus_detail.html:45
 msgid "State:"
-msgstr "Kondisi:"
+msgstr "Keadaan:"
 
 #: templates/vertimus/vertimus_detail.html:65
 msgid "Download PO file"
@@ -2818,7 +2819,7 @@ msgstr "Sedang komit"
 
 #: vertimus/models.py:277
 msgid "Committed"
-msgstr "Di-komit"
+msgstr "Telah Di-komit"
 
 #: vertimus/models.py:322
 msgid "File in repository"
@@ -2853,7 +2854,7 @@ msgstr "Tanpa komentar"
 
 #: vertimus/models.py:543
 msgid "Write a comment"
-msgstr "Tulis suatu komentar"
+msgstr "Menulis komentar"
 
 #: vertimus/models.py:572
 #, python-format
@@ -2874,19 +2875,19 @@ msgstr ""
 
 #: vertimus/models.py:594
 msgid "Reserve for translation"
-msgstr "Dipesan untuk diterjemahkan"
+msgstr "Memesan untuk menerjemahkan"
 
 #: vertimus/models.py:606
 msgid "Upload the new translation"
-msgstr "Unggah terjemahan baru"
+msgstr "Mengunggah terjemahan baru"
 
 #: vertimus/models.py:621
 msgid "Reserve for proofreading"
-msgstr "Pesan untuk di-baca-periksa"
+msgstr "Memesan untuk di-baca-periksa"
 
 #: vertimus/models.py:633
 msgid "Upload the proofread translation"
-msgstr "Unggah terjemahan yang teah di-baca-periksa"
+msgstr "Mengunggah terjemahan yang telah di-baca-periksa"
 
 #. Translators: this means the file is ready to be committed in repository
 #: vertimus/models.py:649
@@ -2895,7 +2896,7 @@ msgstr "Siap untuk dikirim"
 
 #: vertimus/models.py:665
 msgid "Submit to repository"
-msgstr "Kirim ke repositori"
+msgstr "Mengirim ke repositori"
 
 #. Commit failed, state unchanged
 #: vertimus/models.py:679
@@ -2906,12 +2907,12 @@ msgstr "Komit gagal. Galatnya: '%s'"
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: vertimus/models.py:689
 msgid "Reserve to submit"
-msgstr "Pesan untuk dikirim"
+msgstr "Memesan untuk dikirim"
 
 #. Translators: this is used to indicate the file has been committed in the repository
 #: vertimus/models.py:702
 msgid "Inform of submission"
-msgstr "Pemberitahuan pengiriman"
+msgstr "Memberitahu pengiriman"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:717
@@ -2920,11 +2921,11 @@ msgstr "Perlu pemeriksaan"
 
 #: vertimus/models.py:732
 msgid "Archive the actions"
-msgstr "Arsipkan aksi"
+msgstr "Mengarsipkan aksi"
 
 #: vertimus/models.py:771
 msgid "Undo the last state change"
-msgstr "Kembalikan perubahan keadaan terakhir"
+msgstr "Mengembalikan perubahan keadaan terakhir"
 
 #: vertimus/views.py:159 vertimus/views.py:191
 #, python-format
