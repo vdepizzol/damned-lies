@@ -658,6 +658,16 @@ class Domain(models.Model):
         else:
             return self.potbase()
 
+    def get_type(self, branch):
+        """ Returns the type of the domain (ui, docbook, mallard) """
+        if self.dtype == "ui":
+            return "ui"
+        else:
+            if os.access(os.path.join(branch.co_path(), self.directory, "C", "index.page"), os.R_OK):
+                return "mallard"
+            else:
+                return "docbook"
+
     def get_lang_files(self, base_path):
         """ Returns a list of language files on filesystem, as tuple (lang, lang_file) -> lang_file with complete path """
         flist = []

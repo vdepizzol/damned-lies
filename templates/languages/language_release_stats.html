@@ -1,6 +1,6 @@
 {# parent template has to define variable modstats #}
 
-{% load i18n %}
+{% load i18n stats_extras %}
 
 <table>
 <tr>
@@ -61,6 +61,9 @@
           {% for err in stat.info_list %}
             <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}
+          {% if stat|domain_type == "mallard" %}
+            <img src="{{ MEDIA_URL }}img/mallard.png" width="16" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
+          {% endif %}
         </td>
           <td><span class="branch">{{ branch }}</span></td>
           <td><span style="display:none;">{{ stat.tr_percentage }}</span>

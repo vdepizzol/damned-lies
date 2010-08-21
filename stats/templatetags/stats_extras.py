@@ -23,6 +23,10 @@ def escapeat(value):
     """Replace '@' with '__', accepted sequence in JS ids."""
     return value.replace('@', '__')
 
+@register.filter
+def domain_type(stat):
+    return stat.domain.get_type(stat.branch)
+
 class IfLessNode(template.Node):
     def __init__(self, val1, val2, nodelist_true, nodelist_false):
         self.val1 = val1

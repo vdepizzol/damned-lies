@@ -1,8 +1,11 @@
-{% load i18n %}
+{% load i18n stats_extras %}
 
 {% for dname, stat in stats.items %}
   {% with stat|first as pot_stat %}
   <h3>{% trans pot_stat.domain.get_description %}
+  {% if pot_stat|domain_type == "mallard" %}
+    <img src="{{ MEDIA_URL }}img/mallard.png" width="20" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
+  {% endif %}
   {% ifnotequal pot_stat.domain.directory 'help' %}
     {% ifnotequal pot_stat.domain.directory 'po' %}
     <br />
