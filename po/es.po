@@ -1,4 +1,4 @@
-# translation of damned-lies.HEAD.po to Español
+# translation of damned-lies.master.po to Español
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: damned-lies.HEAD\n"
+"Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-17 15:25+0000\n"
-"PO-Revision-Date: 2010-08-17 18:42+0200\n"
+"POT-Creation-Date: 2010-08-20 19:23+0000\n"
+"PO-Revision-Date: 2010-08-21 12:19+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1193,6 +1193,21 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
 #: database-content.py:413
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+"module. Please submit your translation through the <a href=\"http://www."
+"transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+msgstr ""
+"Servicio de D-Bus para acceder a lectores de huellas. Este no es un módulo "
+"específico de GNOME. Por favor, envíe su traducción a través de <a href="
+"\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">la "
+"plataforma Transifex</a>."
+
+#: database-content.py:414
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -1200,15 +1215,15 @@ msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. No haga actualizaciones sobre "
 "el «trunk»."
 
-#: database-content.py:414
+#: database-content.py:415
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Entorno gráfico para el seguidor del directorio git"
 
-#: database-content.py:415
+#: database-content.py:416
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Un conversor multimedia para el Escritorio GNOME"
 
-#: database-content.py:416
+#: database-content.py:417
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1216,7 +1231,7 @@ msgstr ""
 "gnome-disk-utility proporciona bibliotecas y aplicaciones para comunicarse "
 "con dispositivos de almacenamiento."
 
-#: database-content.py:417
+#: database-content.py:418
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1224,11 +1239,11 @@ msgstr ""
 "GNOME Vídeo Arcade es un frontal de MAME (Multiple Arcade Machine Emulator) "
 "para GNOME."
 
-#: database-content.py:418
+#: database-content.py:419
 msgid "A note taking application"
 msgstr "Una aplicación para tomar notas"
 
-#: database-content.py:419
+#: database-content.py:420
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -1238,8 +1253,8 @@ msgstr ""
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">el wiki de GNUCash</"
 "a> para para ver dónde enviar las traducciones."
 
-#: database-content.py:420 database-content.py:421 database-content.py:422
-#: database-content.py:423 database-content.py:424 database-content.py:439
+#: database-content.py:421 database-content.py:422 database-content.py:423
+#: database-content.py:424 database-content.py:425 database-content.py:440
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1247,7 +1262,7 @@ msgstr ""
 "Este no es un módulo específico de GNOME. Por favor, envíe su traducción a "
 "través de <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:425
+#: database-content.py:426
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1259,7 +1274,7 @@ msgstr ""
 "archivos en Git incluso si uno de los dos no contiene traducciones, de otra "
 "forma la construcción de GTK+ fallará en /po-properties."
 
-#: database-content.py:426
+#: database-content.py:427
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1267,11 +1282,11 @@ msgstr ""
 "moserial es un terminal serie limpio y amigable basado en GTK para el "
 "Escritorio GNOME. Para mayor deleite, está escrito en Vala."
 
-#: database-content.py:427
+#: database-content.py:428
 msgid "Gnome Parental Control"
 msgstr "Control parental de GNOME"
 
-#: database-content.py:428
+#: database-content.py:429
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1282,11 +1297,11 @@ msgstr ""
 "paquete NetworkManager en el bugzilla de GNOME</a>. Después, añada su "
 "archivo de traducción."
 
-#: database-content.py:429
+#: database-content.py:430
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout es una aplicación DTP para las X."
 
-#: database-content.py:430
+#: database-content.py:431
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
@@ -1296,11 +1311,11 @@ msgstr ""
 "través de <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/"
 "default/\">la plataforma Transifex</a>."
 
-#: database-content.py:431
+#: database-content.py:432
 msgid "A photo manager for GNOME"
 msgstr "Un gestor de fotos para GNOME"
 
-#: database-content.py:432
+#: database-content.py:433
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1308,11 +1323,11 @@ msgstr ""
 "Este es un clon de la versión oficial de system-tools-backends del "
 "repositorio de freedesktop.org."
 
-#: database-content.py:433
+#: database-content.py:434
 msgid "GNOME Teletext viewer"
 msgstr "Visor de teletexto de GNOME"
 
-#: database-content.py:434
+#: database-content.py:435
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
@@ -1322,17 +1337,17 @@ msgstr ""
 "Consulte <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</"
 "a> para obtener más información."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid "A VNC client for GNOME"
 msgstr "Un cliente VNC para GNOME"
 
-#: database-content.py:437
+#: database-content.py:438
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Las traducciones se deben enviar como informes de error (consultar el enlace "
 "inferior)."
 
-#: database-content.py:438
+#: database-content.py:439
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1345,72 +1360,71 @@ msgstr ""
 "dirs.html\">la página de traducción para xdg-user-dits en Translation "
 "Project</a>."
 
-#: database-content.py:440
-#| msgid "GNOME 3.0 (development)"
+#: database-content.py:441
 msgid "GNOME 2.32 (development)"
 msgstr "GNOME 2.32 (desarrollo)"
 
-#: database-content.py:441
+#: database-content.py:442
 msgid "GNOME 2.30 (stable)"
 msgstr "GNOME 2.30 (estable)"
 
-#: database-content.py:442
+#: database-content.py:443
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (estable, antigua)"
 
-#: database-content.py:443
+#: database-content.py:444
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (estable, antigua)"
 
-#: database-content.py:444
+#: database-content.py:445
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estable, antigua)"
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estable, antigua)"
 
-#: database-content.py:446
+#: database-content.py:447
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estable, antigua)"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estable, antigua)"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (estable, antigua)"
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (estable, antigua)"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "External Dependencies (GNOME)"
 msgstr "Dependencias externas (GNOME)"
 
-#: database-content.py:451
+#: database-content.py:452
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicaciones obsoletas de GNOME"
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicaciones de productividad"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME Infrastructure"
 msgstr "Infraestructura de GNOME"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GIMP and Friends"
 msgstr "GIMP y amigos"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
@@ -1586,7 +1600,6 @@ msgid "Image"
 msgstr "Imagen"
 
 #: people/models.py:37
-#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgid ""
 "URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 "
 "pixels)"
@@ -2224,7 +2237,6 @@ msgid "Releases Comparison"
 msgstr "Comparación entre publicaciones"
 
 #: templates/release_compare.html:29
-#| msgid "Projects"
 msgid "Progress"
 msgstr "Progreso"
 
