@@ -26,11 +26,11 @@ $(document).ready(function()
       {% trans "Site Language:" %}
       <select name="language">
       {% for lang in LANGUAGES %}
-        {% ifequal lang.0 LANGUAGE_CODE %}
+        {% if lang.0 == LANGUAGE_CODE %}
         <option value="{{ lang.0 }}" selected="selected">{% trans lang.1 %}</option>
         {% else %}
         <option value="{{ lang.0 }}" >{% trans lang.1 %}</option>
-        {% endifequal %}
+        {% endif %}
       {% endfor %}
       </select>
       <br/>

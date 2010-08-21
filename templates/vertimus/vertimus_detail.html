@@ -43,9 +43,9 @@ $(document).ready(function() {
 
 <h2 class="plain">
 {% trans "State:" %} {{ state.description }}
-{% ifnotequal state.name 'None' %}
+{% if state.name != 'None' %}
 ({{ state.updated|date:_("Y-m-d g:i a O") }})
-{% endifnotequal %}
+{% endif %}
 </h2>
 
 {% if module.get_comment %}
@@ -102,14 +102,14 @@ $(document).ready(function() {
 {% if language.team.use_workflow %}
 <div id="vertimus_actions_title">
   <h2>
-    {% ifequal level 0 %}
+    {% if level == 0 %}
       {% trans "Actions" %}
     {% else %}
       {% blocktrans with level|ordinal|safe as human_level %}Archived Actions ({{ human_level }} archived series){% endblocktrans %}
       <a href="{% url vertimus_by_names module.name,branch.name,domain.name,language.locale %}">
         {% trans "(Return to current)" %}
       </a>
-    {% endifequal %}
+    {% endif %}
     {% if grandparent_level %}
       <a href="{% url vertimus_archives_by_names module.name,branch.name,domain.name,language.locale,grandparent_level %}">
         {% trans "(Previous action history)" %}
@@ -168,7 +168,7 @@ $(document).ready(function() {
   <p><em>{% trans "No current actions." %}</em></p>
 {% endif %}
 
-{% ifequal level 0 %}
+{% if level == 0 %}
   <h2>{% trans "New Action" %}</h2>
 
   {% if action_form %}
@@ -186,7 +186,7 @@ $(document).ready(function() {
   {% else %}
   {% blocktrans with language.team.get_description as team_name %}You need to be authenticated and to be member of the {{ team_name }} team.{% endblocktrans %}
   {% endif %}
-{% endifequal %}
+{% endif %}
 {% else %}
   <p><img src="{{ MEDIA_URL }}img/warn.png"/>&nbsp;{% trans "This team is not using the Vertimus translation workflow." %}</p>
 {% endif %}

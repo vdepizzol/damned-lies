@@ -9,9 +9,9 @@
 
 <h1>{% blocktrans with release.get_description as name %}{{ name }} Release{% endblocktrans %}</h1>
 
-{% ifequal release.status "external" %}
+{% if release.status == "external" %}
   <p><i>{% trans "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations." %}</i></p>
-{% endifequal %}
+{% endif %}
 
 <table class="stats">
   <thead>
@@ -42,13 +42,13 @@
      </div>
   </td>
 
-  {% ifnotequal lstats.doc_trans|add:lstats.doc_fuzzy "0" %}
+  {% if lstats.doc_trans|add:lstats.doc_fuzzy != "0" %}
   <td><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
       {{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</a>
   </td>
   {% else %}
   <td>-</td>
-  {% endifnotequal %}
+  {% endif %}
   
   <td style="width: 108px; text-align: center;">
     <div class="graph">

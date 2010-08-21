@@ -29,9 +29,9 @@ $(document).ready(function()
    <a href="#" onclick="return showHideCompleted();">{% trans "Show completed modules" %}</a>
 </p>
 
-{% ifequal release.status "xternal" %}
+{% if release.status == "xternal" %}
 <p><i>{% trans "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations." %}</i></p>
-{% endifequal %}
+{% endif %}
 
 <h3>{{ stats_title }}</h3>
 {% with stats as modstats %}

@@ -25,7 +25,7 @@
  {# empty line to not disturb tablesorter if 1st line is a colspan #}
  <tr style="display:none;"><td>mod</td><td>br</td><td>100</td><td></td><td>state</td><td></td></tr>
 {% for catname,categ in modstats.categs.items %}
-  {% ifnotequal catname "default" %}
+  {% if catname != "default" %}
     <tr class="subheader"><td colspan="4" class="leftcell" style="font-weight: bold; padding-top:1em;">
      {% with categ.cattransperc as percentage %}
      {% with categ.catname as categname %}
@@ -33,7 +33,7 @@
      {% endwith %}
      {% endwith %}
     </td><td></td></tr>
-  {% endifnotequal %}
+  {% endif %}
 
   {% for module in categ.modules %}
     {% with module.0 as modname %}
@@ -42,11 +42,11 @@
       {% with dom.0 as domname %}
       {% with dom.1 as stat %}
       {% if stat and not stat.is_fake %}
-        {% ifequal stat.tr_percentage 100 %}
+        {% if stat.tr_percentage == 100 %}
           <tr id="{{ modname }}-{{ stat.domain.id }}-complete">
         {% else %}
           <tr>
-        {% endifequal %}
+        {% endif %}
         <td class="leftcell">
           {% if language %}
           <a href="{% url vertimus_by_names modname,branch,stat.domain.name,language.locale %}">{{ stat.module_description }}
@@ -78,7 +78,7 @@
            </td>
            <td>
            {% if stat.state.name %}
-             {% ifnotequal stat.state.name "None" %}
+             {% if stat.state.name != "None" %}
              <em><small>{{ stat.state.get_state }}</small></em></td>
              <td><span style="display: none;">{{ stat.state.updated|date:"c" }}</span><em><small>{{ stat.state.updated|date:dateformat }}
              {% else %}
@@ -86,7 +86,7 @@
                  <span class="comment">{{ stat.state.last_comment|truncatewords:12 }}</span>
                {% endif %}
                </td><td>
-             {% endifnotequal %}
+             {% endif %}
            {% else %} </td><td>
            {% endif %}
            </td>

@@ -26,30 +26,3 @@ def escapeat(value):
 @register.filter
 def domain_type(stat):
     return stat.domain.get_type(stat.branch)
-
-class IfLessNode(template.Node):
-    def __init__(self, val1, val2, nodelist_true, nodelist_false):
-        self.val1 = val1
-        self.val2 = val2
-        self.nodelist_true = nodelist_true
-        self.nodelist_false = nodelist_false
-
-    def render(self, context):
-        if self.val1.resolve(context) < self.val2.resolve(context):
-            return self.nodelist_true.render(context)
-        else:
-            return self.nodelist_false.render(context)
-
-@register.tag
-def ifless(parser, token):
-    bits = list(token.split_contents())
-    if len(bits) != 3:
-        raise template.TemplateSyntaxError, "%r takes two arguments" % bits[0]
-    nodelist_true = parser.parse(('else', 'endifless'))
-    token = parser.next_token()
-    if token.contents == 'else':
-        nodelist_false = parser.parse(('endifless',))
-        parser.delete_first_token()
-    else:
-        nodelist_false = template.NodeList()
-    return IfLessNode(parser.compile_filter(bits[1]), parser.compile_filter(bits[2]), nodelist_true, nodelist_false)

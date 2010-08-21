@@ -6,12 +6,10 @@
   {% if pot_stat|domain_type == "mallard" %}
     <img src="{{ MEDIA_URL }}img/mallard.png" width="20" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
   {% endif %}
-  {% ifnotequal pot_stat.domain.directory 'help' %}
-    {% ifnotequal pot_stat.domain.directory 'po' %}
+  {% if pot_stat.domain.directory != 'help' and pot_stat.domain.directory != 'po' %}
     <br />
     <span class="path">{{ pot_stat.domain.directory }}</span>
-    {% endifnotequal %}
-  {% endifnotequal %}
+  {% endif %}
   </h3>
   <a href="{{ pot_stat.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
   {{ pot_stat.pot_text }}

@@ -36,31 +36,31 @@
       <div id="tabs">
         <ul id="portal-globalnav">
           <li
-{% ifequal pageSection "home" %}
-	  class="selected"
-{% endifequal %}
+{% if pageSection == "home" %}
+      class="selected"
+{% endif %}
             ><a href="{% url home %}" title="{% trans "Back to Damned Lies home page" %}"><span>{% trans "Home" %}</span></a>
           </li>
-	  <li
-{% ifequal pageSection "teams" %}
-	  class="selected"
-{% endifequal %}
-	   ><a href="{% url teams %}"><span>{% trans "Teams" %}</span></a></li>
-	  <li
-{% ifequal pageSection "languages" %}
-	  class="selected"
-{% endifequal %}
-	   ><a href="{% url languages %}"><span>{% trans "Languages" %}</span></a></li>
-	  <li
-{% ifequal pageSection "releases" %}
-	  class="selected"
-{% endifequal %}
-	   ><a href="{% url releases %}"><span>{% trans "Release sets" %}</span></a></li>
-	  <li
-{% ifequal pageSection "module" %}
-	  class="selected"
-{% endifequal %}
-	   ><a href="{% url modules %}"><span>{% trans "Modules" %}</span></a></li>
+      <li
+{% if pageSection == "teams" %}
+      class="selected"
+{% endif %}
+       ><a href="{% url teams %}"><span>{% trans "Teams" %}</span></a></li>
+      <li
+{% if pageSection == "languages" %}
+      class="selected"
+{% endif %}
+       ><a href="{% url languages %}"><span>{% trans "Languages" %}</span></a></li>
+      <li
+{% if pageSection == "releases" %}
+      class="selected"
+{% endif %}
+       ><a href="{% url releases %}"><span>{% trans "Release sets" %}</span></a></li>
+      <li
+{% if pageSection == "module" %}
+      class="selected"
+{% endif %}
+       ><a href="{% url modules %}"><span>{% trans "Modules" %}</span></a></li>
         </ul>
       </div> <!-- end of #tabs -->
     </div> <!-- end of #header -->
