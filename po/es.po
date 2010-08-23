@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-20 19:23+0000\n"
-"PO-Revision-Date: 2010-08-21 12:19+0200\n"
+"POT-Creation-Date: 2010-08-21 10:34+0000\n"
+"PO-Revision-Date: 2010-08-23 19:42+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1193,10 +1193,6 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince es un visor de documentos para varios formatos de documento."
 
 #: database-content.py:413
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 "module. Please submit your translation through the <a href=\"http://www."
@@ -1667,7 +1663,7 @@ msgstr "No se puede general el archivo POT, estadísticas abortadas."
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:707
+#: stats/models.py:717
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1678,7 +1674,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:731
+#: stats/models.py:741
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1686,74 +1682,74 @@ msgstr ""
 "La entrada para este idioma no está presente en la variable %(var)s del "
 "archivo %(file)s."
 
-#: stats/models.py:989
+#: stats/models.py:999
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:990
+#: stats/models.py:1000
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:991
+#: stats/models.py:1001
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:992
+#: stats/models.py:1002
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:993
+#: stats/models.py:1003
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1072 stats/models.py:1376
+#: stats/models.py:1082 stats/models.py:1386
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1105
+#: stats/models.py:1115
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1106
+#: stats/models.py:1116
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1108 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1118 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1111
+#: stats/models.py:1121
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1112
+#: stats/models.py:1122
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:1115
+#: stats/models.py:1125
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/models.py:1199
+#: stats/models.py:1209
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1200
+#: stats/models.py:1210
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2151,32 +2147,32 @@ msgstr ""
 msgid "Have you forgotten your password?"
 msgstr "¿Ha olvidado su contraseña?"
 
-#: templates/module_detail.html:6
+#: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Estadísticas del módulo: %(name)s"
 
-#: templates/module_detail.html:55
+#: templates/module_detail.html:54
 msgid "Maintainers"
 msgstr "Mantenedores"
 
-#: templates/module_detail.html:63
+#: templates/module_detail.html:62
 msgid "Bug reporting"
 msgstr "Informar de errores"
 
-#: templates/module_detail.html:66
+#: templates/module_detail.html:65
 msgid "Show existing i18n and l10n bugs"
 msgstr "Mostrar los errores de i18n y l10n existentes"
 
-#: templates/module_detail.html:68
+#: templates/module_detail.html:67
 msgid "Report a bug"
 msgstr "Informar de un error"
 
-#: templates/module_detail.html:77
+#: templates/module_detail.html:76
 msgid "Branches:"
 msgstr "Ramas:"
 
-#: templates/module_detail.html:100
+#: templates/module_detail.html:99
 msgid "Browse Repository"
 msgstr "Examinar el repositorio"
 
@@ -2254,7 +2250,7 @@ msgstr ""
 "GNOME. Compruebe la página web de cada módulo para ver dónde enviar las "
 "traducciones."
 
-#: templates/release_detail.html:19 templates/stats_show.html:30
+#: templates/release_detail.html:19 templates/stats_show.html:31
 msgid "Language"
 msgstr "Idioma"
 
@@ -2264,7 +2260,7 @@ msgid "User Interface"
 msgstr "Interfaz de usuario"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34
+#: templates/stats_show.html:35
 #: templates/languages/language_release_summary.html:9
 #: templates/languages/language_release_summary.html:10
 msgid "Graph"
@@ -2282,19 +2278,25 @@ msgstr "Seleccione una publicación para ver más detalles acerca de ella:"
 msgid "Older Releases"
 msgstr "Publicaciones antiguas"
 
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:7
+#: templates/languages/language_release_stats.html:65
+#| msgid "Evince is a document viewer for multiple document formats."
+msgid "This document is written in Mallard documentation format"
+msgstr "Este documento está escrito en el formato de documentación Mallard"
+
+#: templates/stats_show.html:14 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Descargar el archivo POT"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
+#: templates/stats_show.html:18 templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "Notas"
 
-#: templates/stats_show.html:30 vertimus/models.py:189
+#: templates/stats_show.html:31 vertimus/models.py:189
 msgid "Translated"
 msgstr "Traducido"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
+#: templates/stats_show.html:51 templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "Mostrar las figuras del documento"
 
@@ -2375,7 +2377,7 @@ msgstr "Fecha"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% traducido)"
 
-#: templates/languages/language_release_stats.html:103
+#: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "Resumen del error"
 
