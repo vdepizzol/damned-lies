@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-09 08:08+0000\n"
-"PO-Revision-Date: 2010-04-11 21:03+0300\n"
+"POT-Creation-Date: 2010-08-21 10:11+0000\n"
+"PO-Revision-Date: 2010-08-27 04:24+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -20,1186 +20,1244 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.5.3-rc1\n"
+"X-Generator: Virtaal 0.6.1\n"
 
-#: database-content.py:1
-msgid "Gujarati"
-msgstr "الكوجراتية"
-
-#: database-content.py:2
-msgid "Irish"
-msgstr "الأيرلندية"
-
-#: database-content.py:3
-msgid "Guarani"
-msgstr "الجوارانية"
-
-#: database-content.py:4
-msgid "Galician"
-msgstr "الغاليتشية"
-
-#: database-content.py:5
-msgid "Latin"
-msgstr "اللاتينية"
-
-#: database-content.py:6
-msgid "Tatar"
-msgstr "التتارية"
-
-#: database-content.py:7
-msgid "Turkish"
-msgstr "التركيّة"
-
-#: database-content.py:8
-msgid "Limburgian"
-msgstr "الليمبرجية"
-
-#: database-content.py:9
-msgid "Latvian"
-msgstr "اللتفية"
-
-#: database-content.py:10
-msgid "Tagalog"
-msgstr "التجالوقية"
-
-#: database-content.py:11
-msgid "Turkmen"
-msgstr "التركمانية"
-
-#: database-content.py:12
-msgid "Thai"
-msgstr "التايلندية"
-
-#: database-content.py:13
-msgid "Tajik"
-msgstr "الطاجكستانية"
-
-#: database-content.py:14
-msgid "Telugu"
-msgstr "التلوجوية"
-
-#: database-content.py:15
-msgid "Tamil"
-msgstr "التاميلية"
-
-#: database-content.py:16
-msgid "Yiddish"
-msgstr "اليديشية"
-
-#: database-content.py:17
-msgid "Brazilian Portuguese"
-msgstr "البرازيلية البرتغاليّة"
-
-#: database-content.py:18
-msgid "German"
-msgstr "الألمانية"
-
-#: database-content.py:19
-msgid "Danish"
-msgstr "الدانماركية"
-
-#: database-content.py:20
-msgid "Dzongkha"
-msgstr "الدزونخية"
-
-#: database-content.py:21
-msgid "Chinese (China)"
-msgstr "الصينية (الصين)"
-
-#: database-content.py:22
-msgid "Balochi"
-msgstr "البالوشية"
-
-#: database-content.py:23
-msgid "Crimean Tatar"
-msgstr "التتارية (القرم)"
-
-#: database-content.py:24
-msgid "Greek"
-msgstr "اليونانيّة"
-
-#: database-content.py:25
-msgid "Esperanto"
-msgstr "الإسبرانتو"
-
-#: database-content.py:26
-msgid "Belarusian"
-msgstr "البلا روسية"
-
-#: database-content.py:27
-msgid "Basque"
-msgstr "الباسكية"
-
-#: database-content.py:28
-msgid "Estonian"
-msgstr "الإستونيّة"
-
-#: database-content.py:29
-msgid "Spanish"
-msgstr "الإسبانية"
-
-#: database-content.py:30
-msgid "Russian"
-msgstr "الروسية"
-
-#: database-content.py:31
-msgid "Kinyarwanda"
-msgstr "الكنيارونداوية"
-
-#: database-content.py:32
-msgid "Romanian"
-msgstr "الرومانية"
-
-#: database-content.py:33
-msgid "Canadian English"
-msgstr "الإنجليزية الكندية"
-
-#: database-content.py:34
-msgid "Bulgarian"
-msgstr "البلغارية"
-
-#: database-content.py:35
-msgid "Ukrainian"
-msgstr "الأكرانية"
-
-#: database-content.py:36
-msgid "Walloon"
-msgstr "الوالونية"
-
-#: database-content.py:37
-msgid "Asturian"
-msgstr "الإستوريانية"
-
-#: database-content.py:38
-msgid "Bengali"
-msgstr "البنغالية"
-
-#: database-content.py:39
-msgid "Breton"
-msgstr "البروطونية"
-
-#: database-content.py:40
-msgid "Bosnian"
-msgstr "البوسنية"
-
-#: database-content.py:41
-msgid "Japanese"
-msgstr "اليابانية"
-
-#: database-content.py:42
-msgid "Occitan"
-msgstr "الأوكسيتانية"
-
-#: database-content.py:43
-msgid "Low German"
-msgstr "الألمانية السفلى"
-
-#: database-content.py:44
-msgid "Oriya"
-msgstr "الأورياوية"
-
-#: database-content.py:45
-msgid "Xhosa"
-msgstr "الزوشاوية"
-
-#: database-content.py:46
-msgid "Northern Sotho"
-msgstr "السوثو الشمالي"
-
-#: database-content.py:47
-msgid "Iranian Azerbaijani"
-msgstr "الأذربيجانية الإيرانية"
-
-#: database-content.py:48
-msgid "Catalan"
-msgstr "الكاتالونية"
-
-#: database-content.py:49
-msgid "Welsh"
-msgstr "الغالية"
-
-#: database-content.py:50
-msgid "Czech"
-msgstr "التشيكية"
-
-#: database-content.py:51
-msgid "Pashto"
-msgstr "الباشتو"
-
-#: database-content.py:52
-msgid "Portuguese"
-msgstr "البرتغالية"
-
-#: database-content.py:53
-msgid "Lithuanian"
-msgstr "اللتوانية"
-
-#: database-content.py:54
-msgid "Punjabi"
-msgstr "البنجابية"
-
-#: database-content.py:55
-msgid "British English"
-msgstr "الإنجليزية البريطانية"
-
-#: database-content.py:56
-msgid "Armenian"
-msgstr "الأرمينية"
-
-#: database-content.py:57
-msgid "Croatian"
-msgstr "الكرواتية"
-
-#: database-content.py:58
-msgid "Hungarian"
-msgstr "المجرية"
-
-#: database-content.py:59
-msgid "Hindi"
-msgstr "الهندية"
-
-#: database-content.py:60
-msgid "Hebrew"
-msgstr "العبريّة"
-
-#: database-content.py:61
-msgid "Malagasy"
-msgstr "الملغاسية"
-
-#: database-content.py:62
-msgid "Friulian"
-msgstr "الفرايليانية"
-
-#: database-content.py:63
-msgid "Uzbek"
-msgstr "الأزبكية"
-
-#: database-content.py:64
-msgid "Malayalam"
-msgstr "الملايلامية"
-
-#: database-content.py:65
-msgid "Mongolian"
-msgstr "المنغولية"
-
-#: database-content.py:66
-msgid "Maori"
-msgstr "الماورية"
-
-#: database-content.py:67
-msgid "Macedonian"
-msgstr "المقدونية"
-
-#: database-content.py:68
-msgid "Urdu"
-msgstr "الأردية"
-
-#: database-content.py:69
-msgid "Polish"
-msgstr "البولندية"
-
-#: database-content.py:70
-msgid "Malay"
-msgstr "الماليزية"
-
-#: database-content.py:71
-msgid "Marathi"
-msgstr "الماراتية"
-
-#: database-content.py:72
-msgid "Uighur"
-msgstr "الأيغورية"
-
-#: database-content.py:73
-msgid "Old English"
-msgstr "الإنجليزية القديمة"
-
-#: database-content.py:74
+#: database-content.py:1 database-content.py:121
 msgid "Afrikaans"
 msgstr "الأفريكانية"
 
-#: database-content.py:75
-msgid "Vietnamese"
-msgstr "الفيتنامية"
-
-#: database-content.py:76
-msgid "Icelandic"
-msgstr "الأيسلندية"
-
-#: database-content.py:77
-msgid "Amharic"
-msgstr "الإثيوبية"
-
-#: database-content.py:78
-msgid "Italian"
-msgstr "الإيطالية"
-
-#: database-content.py:79
-msgid "Kannada"
-msgstr "الكنّادية"
-
-#: database-content.py:80
-msgid "Assamese"
-msgstr "الأسامية"
-
-#: database-content.py:81
-msgid "Arabic"
-msgstr "العربيّة"
-
-#: database-content.py:82
-msgid "Ido"
-msgstr "الإيدو"
-
-#: database-content.py:83
-msgid "Zulu"
-msgstr "الزولو"
-
-#: database-content.py:84
-msgid "Azerbaijani"
-msgstr "الأذريبيجانيّة"
-
-#: database-content.py:85
-msgid "Indonesian"
-msgstr "الإندونيسية"
-
-#: database-content.py:86
-msgid "Bengali (India)"
-msgstr "البنغالية (الهند)"
-
-#: database-content.py:87
-msgid "Kashmiri"
-msgstr "الكشميرية"
-
-#: database-content.py:88
-msgid "Chinese Traditional"
-msgstr "الصينية التقليدية"
-
-#: database-content.py:89
-msgid "Dutch"
-msgstr "الهولندية"
-
-#: database-content.py:90
-msgid "Yoruba"
-msgstr "اليوروباوية"
-
-#: database-content.py:91
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "النرويجية (بكمالية و نيروساك)"
-
-# نيبال
-#: database-content.py:92
-msgid "Nepali"
-msgstr "النيبالية"
-
-#: database-content.py:93
-msgid "Australian English"
-msgstr "الإنجليزية الإسترالية"
-
-#: database-content.py:94
-msgid "French"
-msgstr "الفرنسية"
-
-#: database-content.py:95
-msgid "Persian"
-msgstr "الفارسية"
-
-#: database-content.py:96
-msgid "Fula"
-msgstr "الفولا"
-
-#: database-content.py:97
-msgid "Maithili"
-msgstr "الميثيلية"
-
-#: database-content.py:98
-msgid "Finnish"
-msgstr "الفنلندية"
-
-#: database-content.py:99
-msgid "Georgian"
-msgstr "الجيورجية"
-
-#: database-content.py:100
-msgid "Kazakh"
-msgstr "الكازاخستانية"
-
-#: database-content.py:101
-msgid "Serbian"
-msgstr "الصربية"
-
-#: database-content.py:102
+#: database-content.py:2 database-content.py:122
 msgid "Albanian"
 msgstr "الألبانية"
 
-#: database-content.py:103
-msgid "Korean"
-msgstr "الكوريّة"
+#: database-content.py:3 database-content.py:123
+msgid "Amharic"
+msgstr "الإثيوبية"
 
-#: database-content.py:104
-msgid "Swedish"
-msgstr "السويدية"
+#: database-content.py:4 database-content.py:124
+msgid "Arabic"
+msgstr "العربيّة"
 
-#: database-content.py:105
-msgid "Khmer"
-msgstr "الكامبودجية"
+#: database-content.py:5 database-content.py:125
+msgid "Aragonese"
+msgstr "الأراجونية"
 
-#: database-content.py:106
-msgid "Slovak"
-msgstr "السلوفاكية"
+#: database-content.py:6 database-content.py:126
+msgid "Armenian"
+msgstr "الأرمينية"
 
-#: database-content.py:107
-msgid "Sinhala"
-msgstr "الصنهالاوية"
+#: database-content.py:7 database-content.py:127
+msgid "Assamese"
+msgstr "الأسامية"
 
-#: database-content.py:108
-msgid "Kurdish"
-msgstr "الكردية"
+#: database-content.py:8 database-content.py:128
+msgid "Asturian"
+msgstr "الإستوريانية"
 
-#: database-content.py:109
-msgid "Slovenian"
-msgstr "السلوفينية"
+#: database-content.py:9 database-content.py:129
+msgid "Australian English"
+msgstr "الإنجليزية الإسترالية"
 
-#: database-content.py:110
-msgid "Kirghiz"
-msgstr "الكرغيزية"
+#: database-content.py:10 database-content.py:130
+msgid "Azerbaijani"
+msgstr "الأذريبيجانيّة"
 
-#: database-content.py:111
-msgid "Hausa"
-msgstr "الهَوْسا"
+#: database-content.py:11 database-content.py:131
+msgid "Balochi"
+msgstr "البالوشية"
 
-#: database-content.py:112
+#: database-content.py:12 database-content.py:132
+msgid "Basque"
+msgstr "الباسكية"
+
+#: database-content.py:13 database-content.py:133
+msgid "Belarusian"
+msgstr "البلا روسية"
+
+#: database-content.py:14 database-content.py:135
 msgid "Bemba"
 msgstr "البِمْبا"
 
-# نيبال
-#: database-content.py:113
-msgid "Neapolitan"
-msgstr "النابولية"
+#: database-content.py:15 database-content.py:136
+msgid "Bengali"
+msgstr "البنغالية"
 
-#: database-content.py:114
-msgid "Divehi"
-msgstr "الدفهية"
+#: database-content.py:16 database-content.py:137
+msgid "Bengali (India)"
+msgstr "البنغالية (الهند)"
 
-#: database-content.py:115
-msgid "Shavian"
-msgstr "شافيان"
+#: database-content.py:17 database-content.py:138
+msgid "Bosnian"
+msgstr "البوسنية"
 
-#: database-content.py:116
+#: database-content.py:18 database-content.py:139
+msgid "Brazilian Portuguese"
+msgstr "البرازيلية البرتغاليّة"
+
+#: database-content.py:19 database-content.py:140
+msgid "Breton"
+msgstr "البروطونية"
+
+#: database-content.py:20 database-content.py:141
+msgid "British English"
+msgstr "الإنجليزية البريطانية"
+
+#: database-content.py:21 database-content.py:142
+msgid "Bulgarian"
+msgstr "البلغارية"
+
+#: database-content.py:22 database-content.py:143
 msgid "Burmese"
 msgstr "البورمية"
 
-#: database-content.py:117
-msgid "Lao"
-msgstr "اللاوية"
+#: database-content.py:23 database-content.py:144
+msgid "Canadian English"
+msgstr "الإنجليزية الكندية"
 
-#: database-content.py:118
-msgid "Belarusian Latin"
-msgstr "البلاروسية (لاتيني)"
+#: database-content.py:24 database-content.py:145
+msgid "Catalan"
+msgstr "الكاتالونية"
 
-#: database-content.py:119
-msgid "Catalan (Valencian)"
-msgstr "الكتلانية (بلنسية)"
+#: database-content.py:25 database-content.py:147
+msgid "Chinese (China)"
+msgstr "الصينية (الصين)"
 
-#: database-content.py:120
-msgid "Uzbek (Cyrillic)"
-msgstr "الأزبكية (سريلي)"
+#: database-content.py:26
+msgid "Chinese Traditional"
+msgstr "الصينية التقليدية"
 
-#: database-content.py:121
-msgid "Uzbek (Latin)"
-msgstr "الأزبكية (لاتيني)"
+#: database-content.py:27 database-content.py:150
+msgid "Crimean Tatar"
+msgstr "التتارية (القرم)"
 
-#: database-content.py:122
-msgid "Chinese (Hong Kong)"
-msgstr "الصينية (هونج كونج)"
+#: database-content.py:28 database-content.py:151
+msgid "Croatian"
+msgstr "الكرواتية"
 
-#: database-content.py:123
-msgid "Chinese (Taiwan)"
-msgstr "الصينية (تايوان)"
+#: database-content.py:29 database-content.py:152
+msgid "Czech"
+msgstr "التشيكية"
 
-#: database-content.py:124
-msgid "Norwegian Bokmål"
-msgstr "النرويجية البكمالية"
+#: database-content.py:30 database-content.py:153
+msgid "Danish"
+msgstr "الدانماركية"
 
-#: database-content.py:125
-msgid "Norwegian Nynorsk"
-msgstr "النرويجية النينورسكية"
+#: database-content.py:31 database-content.py:154
+msgid "Divehi"
+msgstr "الدفهية"
 
-#: database-content.py:126
-msgid "Serbian Latin"
-msgstr "اللاتينية الصربية"
+#: database-content.py:32 database-content.py:155
+msgid "Dutch"
+msgstr "الهولندية"
 
-#: database-content.py:127
-msgid "Serbian Jekavian"
-msgstr "الصربية الجيكافيانية"
+#: database-content.py:33 database-content.py:156
+msgid "Dzongkha"
+msgstr "الدزونخية"
 
-#: database-content.py:128
-msgid "Somali"
-msgstr "الصومالية"
+#: database-content.py:34 database-content.py:157
+msgid "Esperanto"
+msgstr "الإسبرانتو"
 
-#: database-content.py:129
-msgid "Interlingua"
-msgstr "الإنترلنجوا"
+#: database-content.py:35 database-content.py:158
+msgid "Estonian"
+msgstr "الإستونيّة"
 
-#: database-content.py:130
-msgid "Luxembourgish"
-msgstr "اللوكسبورجية"
+#: database-content.py:36 database-content.py:159
+msgid "Finnish"
+msgstr "الفنلندية"
 
-#: database-content.py:131
-msgid "Tsonga"
-msgstr "التسونجية"
+#: database-content.py:37 database-content.py:160
+msgid "French"
+msgstr "الفرنسية"
 
-#: database-content.py:132
-msgid "Swahili"
-msgstr "السواحلية"
-
-#: database-content.py:133
-msgid "South Ndebele"
-msgstr "النديبيلية الجنوبية"
-
-#: database-content.py:134
-msgid "Southern Sotho"
-msgstr "السوثو الشمالية"
-
-#: database-content.py:135
-msgid "Maltese"
-msgstr "المالطيّة"
-
-#: database-content.py:136
-msgid "Igbo"
-msgstr "الإجبوية"
-
-#: database-content.py:137
+#: database-content.py:38 database-content.py:161
 msgid "Frisian"
 msgstr "الفريسية"
 
-#: database-content.py:138
-msgid "UI translations"
-msgstr "ترجمات الواجهة"
+#: database-content.py:39 database-content.py:162
+msgid "Friulian"
+msgstr "الفرايليانية"
 
-#: database-content.py:139
-msgid "User Guide"
-msgstr "دليل المستخدم"
+#: database-content.py:40 database-content.py:163
+msgid "Fula"
+msgstr "الفولا"
 
-#: database-content.py:140
-msgid "Mallard Documentation Guide"
-msgstr "دليل توثيق ملّارد"
+#: database-content.py:41 database-content.py:164
+msgid "Galician"
+msgstr "الغاليتشية"
 
-#: database-content.py:141
-msgid "Accessibility Guide"
-msgstr "دليل الإتاحة"
+#: database-content.py:42 database-content.py:165
+msgid "Georgian"
+msgstr "الجيورجية"
 
-#: database-content.py:142
-msgid "System Administration Guide"
-msgstr "دليل إدارة النظام"
+#: database-content.py:43 database-content.py:166
+msgid "German"
+msgstr "الألمانية"
 
-#: database-content.py:143
-msgid "GDM Manual"
-msgstr "كتيّب GDM"
+#: database-content.py:44 database-content.py:167
+msgid "Greek"
+msgstr "اليونانيّة"
 
-#: database-content.py:144
-msgid "Anjuta Manual"
-msgstr "كتيّب أنجوتا"
+#: database-content.py:45 database-content.py:168
+msgid "Guarani"
+msgstr "الجوارانية"
 
-#: database-content.py:145
-msgid "GConf Editor Manual"
-msgstr "كتيّب محرر GConf"
+#: database-content.py:46 database-content.py:169
+msgid "Gujarati"
+msgstr "الكوجراتية"
+
+#: database-content.py:47 database-content.py:170
+msgid "Hausa"
+msgstr "الهَوْسا"
+
+#: database-content.py:48 database-content.py:171
+msgid "Hebrew"
+msgstr "العبريّة"
+
+#: database-content.py:49 database-content.py:172
+msgid "Hindi"
+msgstr "الهندية"
+
+#: database-content.py:50 database-content.py:173
+msgid "Hungarian"
+msgstr "المجرية"
+
+#: database-content.py:51 database-content.py:174
+msgid "Icelandic"
+msgstr "الأيسلندية"
+
+#: database-content.py:52 database-content.py:175
+msgid "Ido"
+msgstr "الإيدو"
+
+#: database-content.py:53 database-content.py:177
+msgid "Indonesian"
+msgstr "الإندونيسية"
+
+#: database-content.py:54 database-content.py:179
+msgid "Iranian Azerbaijani"
+msgstr "الأذربيجانية الإيرانية"
+
+#: database-content.py:55 database-content.py:180
+msgid "Irish"
+msgstr "الأيرلندية"
+
+#: database-content.py:56 database-content.py:181
+msgid "Italian"
+msgstr "الإيطالية"
+
+#: database-content.py:57 database-content.py:182
+msgid "Japanese"
+msgstr "اليابانية"
+
+#: database-content.py:58 database-content.py:183
+msgid "Kannada"
+msgstr "الكنّادية"
+
+#: database-content.py:59 database-content.py:184
+msgid "Kashmiri"
+msgstr "الكشميرية"
+
+#: database-content.py:60 database-content.py:185
+msgid "Kazakh"
+msgstr "الكازاخستانية"
+
+#: database-content.py:61 database-content.py:186
+msgid "Khmer"
+msgstr "الكامبودجية"
+
+#: database-content.py:62 database-content.py:187
+msgid "Kinyarwanda"
+msgstr "الكنيارونداوية"
+
+#: database-content.py:63 database-content.py:188
+msgid "Kirghiz"
+msgstr "الكرغيزية"
+
+#: database-content.py:64 database-content.py:189
+msgid "Korean"
+msgstr "الكوريّة"
+
+#: database-content.py:65 database-content.py:190
+msgid "Kurdish"
+msgstr "الكردية"
+
+#: database-content.py:66 database-content.py:191
+msgid "Lao"
+msgstr "اللاوية"
+
+#: database-content.py:67 database-content.py:192
+msgid "Latin"
+msgstr "اللاتينية"
+
+#: database-content.py:68 database-content.py:193
+msgid "Latvian"
+msgstr "اللتفية"
+
+#: database-content.py:69 database-content.py:194
+msgid "Limburgian"
+msgstr "الليمبرجية"
+
+#: database-content.py:70 database-content.py:195
+msgid "Lithuanian"
+msgstr "اللتوانية"
+
+#: database-content.py:71 database-content.py:196
+msgid "Low German"
+msgstr "الألمانية السفلى"
+
+#: database-content.py:72 database-content.py:198
+msgid "Macedonian"
+msgstr "المقدونية"
+
+#: database-content.py:73 database-content.py:199
+msgid "Maithili"
+msgstr "الميثيلية"
+
+#: database-content.py:74 database-content.py:200
+msgid "Malagasy"
+msgstr "الملغاسية"
+
+#: database-content.py:75 database-content.py:201
+msgid "Malay"
+msgstr "الماليزية"
+
+#: database-content.py:76 database-content.py:202
+msgid "Malayalam"
+msgstr "الملايلامية"
+
+#: database-content.py:77 database-content.py:204
+msgid "Manx"
+msgstr "المانكسية"
+
+#: database-content.py:78 database-content.py:205
+msgid "Maori"
+msgstr "الماورية"
+
+#: database-content.py:79 database-content.py:206
+msgid "Marathi"
+msgstr "الماراتية"
+
+#: database-content.py:80 database-content.py:207
+msgid "Mongolian"
+msgstr "المنغولية"
+
+# نيبال
+#: database-content.py:81
+msgid "Neapolitan"
+msgstr "النابولية"
+
+# نيبال
+#: database-content.py:82 database-content.py:208
+msgid "Nepali"
+msgstr "النيبالية"
+
+#: database-content.py:83 database-content.py:209
+msgid "Northern Sotho"
+msgstr "السوثو الشمالي"
+
+#: database-content.py:84
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "النرويجية (بكمالية و نيروساك)"
+
+#: database-content.py:85 database-content.py:212
+msgid "Occitan"
+msgstr "الأوكسيتانية"
+
+#: database-content.py:86 database-content.py:213
+msgid "Old English"
+msgstr "الإنجليزية القديمة"
+
+#: database-content.py:87 database-content.py:214
+msgid "Oriya"
+msgstr "الأورياوية"
+
+#: database-content.py:88 database-content.py:215
+msgid "Pashto"
+msgstr "الباشتو"
+
+#: database-content.py:89 database-content.py:216
+msgid "Persian"
+msgstr "الفارسية"
+
+#: database-content.py:90 database-content.py:217
+msgid "Polish"
+msgstr "البولندية"
+
+#: database-content.py:91 database-content.py:218
+msgid "Portuguese"
+msgstr "البرتغالية"
+
+#: database-content.py:92 database-content.py:219
+msgid "Punjabi"
+msgstr "البنجابية"
+
+#: database-content.py:93 database-content.py:220
+msgid "Romanian"
+msgstr "الرومانية"
+
+#: database-content.py:94 database-content.py:221
+msgid "Russian"
+msgstr "الروسية"
+
+#: database-content.py:95 database-content.py:222
+msgid "Serbian"
+msgstr "الصربية"
+
+#: database-content.py:96 database-content.py:225
+msgid "Shavian"
+msgstr "شافيان"
+
+#: database-content.py:97 database-content.py:226
+msgid "Sinhala"
+msgstr "الصنهالاوية"
+
+#: database-content.py:98 database-content.py:227
+msgid "Slovak"
+msgstr "السلوفاكية"
+
+#: database-content.py:99 database-content.py:228
+msgid "Slovenian"
+msgstr "السلوفينية"
+
+#: database-content.py:100 database-content.py:232
+msgid "Spanish"
+msgstr "الإسبانية"
+
+#: database-content.py:101 database-content.py:234
+msgid "Swedish"
+msgstr "السويدية"
+
+#: database-content.py:102 database-content.py:235
+msgid "Tagalog"
+msgstr "التجالوقية"
+
+#: database-content.py:103 database-content.py:236
+msgid "Tajik"
+msgstr "الطاجكستانية"
+
+#: database-content.py:104 database-content.py:237
+msgid "Tamil"
+msgstr "التاميلية"
+
+#: database-content.py:105 database-content.py:238
+msgid "Tatar"
+msgstr "التتارية"
+
+#: database-content.py:106 database-content.py:239
+msgid "Telugu"
+msgstr "التلوجوية"
+
+#: database-content.py:107 database-content.py:240
+msgid "Thai"
+msgstr "التايلندية"
+
+#: database-content.py:108 database-content.py:242
+msgid "Turkish"
+msgstr "التركيّة"
+
+#: database-content.py:109 database-content.py:243
+msgid "Turkmen"
+msgstr "التركمانية"
+
+#: database-content.py:110 database-content.py:244
+msgid "Uighur"
+msgstr "الأيغورية"
+
+#: database-content.py:111 database-content.py:245
+msgid "Ukrainian"
+msgstr "الأكرانية"
+
+#: database-content.py:112 database-content.py:246
+msgid "Urdu"
+msgstr "الأردية"
+
+#: database-content.py:113
+msgid "Uzbek"
+msgstr "الأزبكية"
+
+#: database-content.py:114 database-content.py:249
+msgid "Vietnamese"
+msgstr "الفيتنامية"
+
+#: database-content.py:115 database-content.py:250
+msgid "Walloon"
+msgstr "الوالونية"
+
+#: database-content.py:116 database-content.py:251
+msgid "Welsh"
+msgstr "الغالية"
+
+#: database-content.py:117 database-content.py:252
+msgid "Xhosa"
+msgstr "الزوشاوية"
+
+#: database-content.py:118 database-content.py:253
+msgid "Yiddish"
+msgstr "اليديشية"
+
+#: database-content.py:119 database-content.py:254
+msgid "Yoruba"
+msgstr "اليوروباوية"
+
+#: database-content.py:120 database-content.py:255
+msgid "Zulu"
+msgstr "الزولو"
+
+#: database-content.py:134
+msgid "Belarusian Latin"
+msgstr "البلاروسية (لاتيني)"
 
 #: database-content.py:146
-msgid "F-Spot Manual"
-msgstr "كتيّب إف-سبوت"
-
-#: database-content.py:147
-msgid "FDL License"
-msgstr "ترخيص FDL"
+msgid "Catalan (Valencian)"
+msgstr "الكتلانية (بلنسية)"
 
 #: database-content.py:148
-msgid "LGPL License"
-msgstr "ترخيص LGPL"
+msgid "Chinese (Hong Kong)"
+msgstr "الصينية (هونج كونج)"
 
 #: database-content.py:149
-msgid "GPL License"
-msgstr "ترخيص GPL"
-
-#: database-content.py:150
-msgid "Fish Applet Manual"
-msgstr "كتيّب بريمج السمكة"
-
-#: database-content.py:151
-msgid "Workspace Switcher Applet Manual"
-msgstr "كتيّب بريمج محول مساحات العمل"
-
-#: database-content.py:152
-msgid "Window List Applet Manual"
-msgstr "كتيّب بريمج قائمة النوافذ"
-
-#: database-content.py:153
-msgid "Clock Applet Manual"
-msgstr "كتيّب بريمج الساعة"
-
-#: database-content.py:154
-msgid "Iagno Manual"
-msgstr "كتيّب إيانجو"
-
-#: database-content.py:155
-msgid "Five or More Manual"
-msgstr "كتيّب خمسة أو أكثر"
-
-#: database-content.py:156
-msgid "Nibbles Manual"
-msgstr "كتيّب نبلس"
-
-#: database-content.py:157
-msgid "GNOME Robots Manual"
-msgstr "كتيّب أناس آليون"
-
-#: database-content.py:158
-msgid "Four-in-a-row Manual"
-msgstr "كتيّب أربعة في صف"
-
-#: database-content.py:159
-msgid "GNOME Sudoku Manual"
-msgstr "كتيّب سودوكو"
-
-#: database-content.py:160
-msgid "glChess Manual"
-msgstr "كتيّب لعبة الشطرنج"
-
-#: database-content.py:161
-msgid "GNOME Tali Manual"
-msgstr "كتيّب تالي"
-
-#: database-content.py:162
-msgid "Gnometris Manual"
-msgstr "كتيّب Gnometris"
-
-#: database-content.py:163
-msgid "GNOME Klotski Manual"
-msgstr "كتيّب Klotski"
-
-#: database-content.py:164
-msgid "GNOME Tetravex Manual"
-msgstr "كتيّب تترافكس"
-
-#: database-content.py:165
-msgid "GNOME Mahjongg Manual"
-msgstr "كتيّب Mahjongg"
-
-#: database-content.py:166
-msgid "AisleRiot Manual"
-msgstr "كتيّب AisleRiot"
-
-#: database-content.py:167
-msgid "Mines Manual"
-msgstr "كتيّب لعبة الألغام"
-
-#: database-content.py:168
-msgid "Same GNOME Manual"
-msgstr "كتيّب سام جنوم"
-
-#: database-content.py:169
-msgid "Blackjack Manual"
-msgstr "كتيّب بلاك جاك"
-
-#: database-content.py:170
-msgid "CD Player Manual"
-msgstr "كتيّب مُشغِّل CD"
-
-#: database-content.py:171
-msgid "Sound Recorder Manual"
-msgstr "كتيّب مسجّل الصوت"
-
-#: database-content.py:172
-msgid "GStreamer Properties Manual"
-msgstr "كتيّب خصائص GStreamer"
-
-#: database-content.py:173
-msgid "GNOME Volume Control Manual"
-msgstr "كتيّب متحكم شدة صوت جنوم"
-
-#: database-content.py:174
-msgid "Layout Descriptions"
-msgstr "أوصاف التصميم"
-
-#: database-content.py:175
-msgid "Keyboard Indicator Manual"
-msgstr "كتيّب مؤشر لوحة المفاتيح"
+msgid "Chinese (Taiwan)"
+msgstr "الصينية (تايوان)"
 
 #: database-content.py:176
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "كتيّب مراقب تمديد تردد المعالج"
-
-#: database-content.py:177
-msgid "Command Line Manual"
-msgstr "كتيّب سطر الأوامر"
+msgid "Igbo"
+msgstr "الإجبوية"
 
 #: database-content.py:178
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "كتيّب مراقب إعانة لوحة المفاتيح"
-
-#: database-content.py:179
-msgid "Invest Applet Manual"
-msgstr "كتيّب بريمج الاستثمار"
-
-#: database-content.py:180
-msgid "System Monitor Manual"
-msgstr "كتيّب مراقب النظام"
-
-#: database-content.py:181
-msgid "Geyes Manual"
-msgstr "كتيّب عيون جنوم"
-
-#: database-content.py:182
-msgid "Panel Trash Manual"
-msgstr "كتيّب سلة مهملات اللوحة"
-
-#: database-content.py:183
-msgid "Character Palette Manual"
-msgstr "كتيّب لوحة المحارف"
-
-#: database-content.py:184
-msgid "Volume Control Manual"
-msgstr "كتيّب متحكم شدة الصوت"
-
-#: database-content.py:185
-msgid "Weather Report Manual"
-msgstr "كتيّب حالة الطقس"
-
-#: database-content.py:186
-msgid "Sticky Notes Manual"
-msgstr "كتيّب الملاحظات اللاصقة"
-
-#: database-content.py:187
-msgid "Disk Mounter Manual"
-msgstr "كتيّب ضامّ الأقراض"
-
-#: database-content.py:188
-msgid "Battery Charge Monitor Manual"
-msgstr "كتيِّب مراقب شحن البطارية"
-
-#: database-content.py:189
-msgid "User Directories"
-msgstr "دلائل المستخدمين"
-
-#: database-content.py:190
-msgid "Integration Guide"
-msgstr "دليل التكامل"
-
-#: database-content.py:191
-msgid "Platform Overview"
-msgstr "معاينة المنصّة"
-
-#: database-content.py:192
-msgid "Encryption Applet Manual"
-msgstr "كتيّب بريمج التعمية"
-
-#: database-content.py:193
-msgid "Release Notes"
-msgstr "ملاحظات الإصدار"
-
-#: database-content.py:194
-msgid "GNOME Keyring Manager Manual"
-msgstr "كتيّب مدير حلقة مفاتيح جنوم"
-
-#: database-content.py:195
-msgid "Criawips Manual"
-msgstr "كتيّب كرياوبس"
-
-#: database-content.py:196
-msgid "Sound Juicer Manual"
-msgstr "كتيّب مستخرج الصوتيات"
+msgid "Interlingua"
+msgstr "الإنترلنجوا"
 
 #: database-content.py:197
-msgid "Property Nicks"
-msgstr "أسماء الخصائص"
-
-#: database-content.py:198
-msgid "tips"
-msgstr "فوائد"
-
-#: database-content.py:199
-msgid "script-fu"
-msgstr "سكربت-فو"
-
-#: database-content.py:200
-msgid "libgimp"
-msgstr "مكتبة جِمب"
-
-#: database-content.py:201
-msgid "python"
-msgstr "بيثون"
-
-#: database-content.py:202
-msgid "plug-ins"
-msgstr "ملحقات"
+msgid "Luxembourgish"
+msgstr "اللوكسبورجية"
 
 #: database-content.py:203
-msgid "Functions"
-msgstr "الدوال"
+msgid "Maltese"
+msgstr "المالطيّة"
 
-#: database-content.py:204
-msgid "Dasher Manual"
-msgstr "كتيّب داشر"
+#: database-content.py:210
+msgid "Norwegian Bokmål"
+msgstr "النرويجية البكمالية"
 
-#: database-content.py:205
+#: database-content.py:211
+msgid "Norwegian Nynorsk"
+msgstr "النرويجية النينورسكية"
+
+#: database-content.py:223
+msgid "Serbian Jekavian"
+msgstr "الصربية الجيكافيانية"
+
+#: database-content.py:224
+msgid "Serbian Latin"
+msgstr "اللاتينية الصربية"
+
+#: database-content.py:229
+msgid "Somali"
+msgstr "الصومالية"
+
+#: database-content.py:230
+msgid "South Ndebele"
+msgstr "النديبيلية الجنوبية"
+
+#: database-content.py:231
+msgid "Southern Sotho"
+msgstr "السوثو الشمالية"
+
+#: database-content.py:233
+msgid "Swahili"
+msgstr "السواحلية"
+
+#: database-content.py:241
+msgid "Tsonga"
+msgstr "التسونجية"
+
+#: database-content.py:247
+msgid "Uzbek (Cyrillic)"
+msgstr "الأزبكية (سريلي)"
+
+#: database-content.py:248
+msgid "Uzbek (Latin)"
+msgstr "الأزبكية (لاتيني)"
+
+#: database-content.py:256
 msgid "Weather Applet Locations"
 msgstr "مواقع بريمج الطقس"
 
-#: database-content.py:206
-msgid "Dictionary Manual"
-msgstr "كتيّب القاموس"
+#: database-content.py:257
+msgid "Nelly Kroes on Open Source"
+msgstr ""
 
-#: database-content.py:207
+#: database-content.py:258
+msgid "Layout Descriptions"
+msgstr "أوصاف التصميم"
+
+#: database-content.py:259
+msgid "UI translation"
+msgstr "ترجمات الواجهة"
+
+#: database-content.py:260 database-content.py:270
+msgid "UI translations"
+msgstr "ترجمات الواجهة"
+
+#: database-content.py:261
+msgid "User Directories"
+msgstr "دلائل المستخدمين"
+
+#: database-content.py:262
+msgid "Functions"
+msgstr "الدوال"
+
+#: database-content.py:263
+msgid "libgimp"
+msgstr "مكتبة جِمب"
+
+#: database-content.py:264
+msgid "plug-ins"
+msgstr "ملحقات"
+
+#: database-content.py:265
+msgid "Property Nicks"
+msgstr "أسماء الخصائص"
+
+#: database-content.py:266
+msgid "python"
+msgstr "بيثون"
+
+#: database-content.py:267
+msgid "script-fu"
+msgstr "سكربت-فو"
+
+#: database-content.py:268
+msgid "tags"
+msgstr "الوسوم"
+
+#: database-content.py:269
+msgid "tips"
+msgstr "فوائد"
+
+#: database-content.py:271
+msgid "Accessibility Developers Guide"
+msgstr "دليل الإتاحة للمطورين"
+
+#: database-content.py:272
+msgid "Accessibility Guide"
+msgstr "دليل الإتاحة"
+
+#: database-content.py:273
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "كتيّب مراقب إعانة لوحة المفاتيح"
+
+#: database-content.py:274
+msgid "AisleRiot Manual"
+msgstr "كتيّب AisleRiot"
+
+#: database-content.py:275
+msgid "appendix"
+msgstr "ملحق"
+
+#: database-content.py:276
+msgid "Audio Profiles Manual"
+msgstr "كتيّب لاحات الصوت"
+
+#: database-content.py:277
 msgid "Disk Usage Analyzer Manual"
 msgstr "كتيّب محلّل استخدام القرص"
 
-#: database-content.py:208
-msgid "Log Viewer Manual"
-msgstr "كتيّب معاين السجلّ"
+#: database-content.py:278
+msgid "Battery Charge Monitor Manual"
+msgstr "كتيِّب مراقب شحن البطارية"
 
-#: database-content.py:209
+#: database-content.py:279
+msgid "Blackjack Manual"
+msgstr "كتيّب بلاك جاك"
+
+#: database-content.py:280
+#| msgid "Browse Repository"
+msgid "Browser Help"
+msgstr "تصفح المساعدة"
+
+#: database-content.py:281
+msgid "Character Palette Manual"
+msgstr "كتيّب لوحة المحارف"
+
+#: database-content.py:282
+msgid "Clock Applet Manual"
+msgstr "كتيّب بريمج الساعة"
+
+#: database-content.py:283
+msgid "Command Line Manual"
+msgstr "كتيّب سطر الأوامر"
+
+#: database-content.py:284
+msgid "concepts"
+msgstr "مصطلحات"
+
+#: database-content.py:285
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "كتيّب مراقب تمديد تردد المعالج"
+
+#: database-content.py:286
+msgid "FDL License"
+msgstr "ترخيص FDL"
+
+#: database-content.py:287
+msgid "GPL License"
+msgstr "ترخيص GPL"
+
+#: database-content.py:288
+msgid "LGPL License"
+msgstr "ترخيص LGPL"
+
+#: database-content.py:289
+msgid "dialogs"
+msgstr "الحوارات"
+
+#: database-content.py:290
+msgid "Dictionary Manual"
+msgstr "كتيّب القاموس"
+
+#: database-content.py:291
+msgid "Disk Mounter Manual"
+msgstr "كتيّب ضامّ الأقراض"
+
+#: database-content.py:292
+msgid "filters"
+msgstr "مرشحات"
+
+#: database-content.py:293
+msgid "alpha-to-logo filter"
+msgstr ""
+
+#: database-content.py:294
+msgid "animation filter"
+msgstr ""
+
+#: database-content.py:295
+#, fuzzy
+#| msgid "Latest POT file"
+msgid "artistic filter"
+msgstr "آخر ملف POT"
+
+#: database-content.py:296
+msgid "blur filter"
+msgstr ""
+
+#: database-content.py:297
+msgid "combine filter"
+msgstr ""
+
+#: database-content.py:298
+msgid "decor filter"
+msgstr ""
+
+#: database-content.py:299
+msgid "distort filter"
+msgstr ""
+
+#: database-content.py:300
+msgid "edge-detect filter"
+msgstr ""
+
+#: database-content.py:301
+msgid "enhance filter"
+msgstr ""
+
+#: database-content.py:302
+msgid "generic filter"
+msgstr ""
+
+#: database-content.py:303
+msgid "light-effects filter"
+msgstr ""
+
+#: database-content.py:304
+msgid "map filter"
+msgstr ""
+
+#: database-content.py:305
+msgid "noise filter"
+msgstr ""
+
+#: database-content.py:306
+msgid "render filter"
+msgstr ""
+
+#: database-content.py:307
+msgid "web filter"
+msgstr ""
+
+#: database-content.py:308
+msgid "Fish Applet Manual"
+msgstr "كتيّب بريمج السمكة"
+
+#: database-content.py:309
+msgid "Geyes Manual"
+msgstr "كتيّب عيون جنوم"
+
+#: database-content.py:310
+msgid "gimp"
+msgstr "جِمب"
+
+#: database-content.py:311
+msgid "Quick Reference"
+msgstr "مرجع سريع"
+
+#: database-content.py:312
+msgid "glChess Manual"
+msgstr "كتيّب لعبة الشطرنج"
+
+#: database-content.py:313
+msgid "Five or More Manual"
+msgstr "كتيّب خمسة أو أكثر"
+
+#: database-content.py:314 database-content.py:353
+msgid "glossary"
+msgstr "مُسرَد"
+
+#: database-content.py:315
+msgid "Four-in-a-row Manual"
+msgstr "كتيّب أربعة في صف"
+
+#: database-content.py:316
+msgid "Nibbles Manual"
+msgstr "كتيّب نبلس"
+
+#: database-content.py:317
+msgid "GNOME Robots Manual"
+msgstr "كتيّب أناس آليون"
+
+#: database-content.py:318
+msgid "CD Player Manual"
+msgstr "كتيّب مُشغِّل CD"
+
+#: database-content.py:319
+msgid "GNOME Sudoku Manual"
+msgstr "كتيّب سودوكو"
+
+#: database-content.py:320
+msgid "Gnometris Manual"
+msgstr "كتيّب Gnometris"
+
+#: database-content.py:321
+msgid "Mines Manual"
+msgstr "كتيّب لعبة الألغام"
+
+#: database-content.py:322
+msgid "GNOME Tetravex Manual"
+msgstr "كتيّب تترافكس"
+
+#: database-content.py:323
+msgid "GNOME Klotski Manual"
+msgstr "كتيّب Klotski"
+
+#: database-content.py:324
+msgid "Sound Recorder Manual"
+msgstr "كتيّب مسجّل الصوت"
+
+#: database-content.py:325
 msgid "Search Tool Manual"
 msgstr "كتيّب أداة البحث"
 
-#: database-content.py:210
-msgid "GNOME Library help"
-msgstr "مساعدة مكتبة جنوم"
+#: database-content.py:326
+msgid "GNOME Volume Control Manual"
+msgstr "كتيّب متحكم شدة صوت جنوم"
 
-#: database-content.py:211
-msgid "Eye of GNOME Manual"
-msgstr "كتيّب عين جنوم"
-
-#: database-content.py:212
-msgid "GST User Management Manual"
-msgstr "كتيّب إدارة المستخدمين GST"
-
-#: database-content.py:213
-msgid "GST Service Management Manual"
-msgstr "كتيّب إدارة الخدمات GST"
-
-#: database-content.py:214
+#: database-content.py:327
 msgid "GST Network Setup Manual"
 msgstr "كتيّب إعداد الشبكة GST"
 
-#: database-content.py:215
+#: database-content.py:328
+msgid "GST Service Management Manual"
+msgstr "كتيّب إدارة الخدمات GST"
+
+#: database-content.py:329
 msgid "GST Shared Folders Manual"
 msgstr "كتيّب الأدلة المشتركة GST"
 
-#: database-content.py:216
+#: database-content.py:330
 msgid "GST Time Setup Manual"
 msgstr "كتيّب إعداد الوقت GST"
 
-#: database-content.py:217 languages/views.py:50 languages/views.py:83
+#: database-content.py:331
+msgid "GST User Management Manual"
+msgstr "كتيّب إدارة المستخدمين GST"
+
+#: database-content.py:332
+msgid "GStreamer Properties Manual"
+msgstr "كتيّب خصائص GStreamer"
+
+#: database-content.py:333
+msgid "Keyboard Indicator Manual"
+msgstr "كتيّب مؤشر لوحة المفاتيح"
+
+#: database-content.py:334
+msgid "GNOME Tali Manual"
+msgstr "كتيّب تالي"
+
+#: database-content.py:335
+msgid "Weather Report Manual"
+msgstr "كتيّب حالة الطقس"
+
+#: database-content.py:336
+msgid "Anjuta Manual"
+msgstr "كتيّب أنجوتا"
+
+#: database-content.py:337
+msgid "Criawips Manual"
+msgstr "كتيّب كرياوبس"
+
+#: database-content.py:338
+msgid "Dasher Manual"
+msgstr "كتيّب داشر"
+
+#: database-content.py:339 languages/views.py:52 languages/views.py:85
 #: templates/branch_detail.html:23 templates/release_detail.html:22
 #: templates/release_detail.html.py:68
 #: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "التوثيق"
 
-#: database-content.py:218
-msgid "UI translation"
-msgstr "ترجمات الواجهة"
+#: database-content.py:340
+msgid "Encryption Applet Manual"
+msgstr "كتيّب بريمج التعمية"
 
-#: database-content.py:219
-msgid "glossary"
-msgstr "مُسرَد"
+#: database-content.py:341
+msgid "Eye of GNOME Manual"
+msgstr "كتيّب عين جنوم"
 
-#: database-content.py:220
-msgid "filters"
-msgstr "مرشحات"
+#: database-content.py:342
+msgid "GConf Editor Manual"
+msgstr "كتيّب محرر GConf"
 
-#: database-content.py:221
-msgid "preface"
-msgstr "تقديم"
+#: database-content.py:343
+msgid "GDM Manual"
+msgstr "كتيّب GDM"
 
-#: database-content.py:222
-#| msgid "CD Player Manual"
-msgid "layer menu"
-msgstr "قائمة الطبقات"
+#: database-content.py:344
+msgid "GNOME Keyring Manager Manual"
+msgstr "كتيّب مدير حلقة مفاتيح جنوم"
 
-#: database-content.py:223
-msgid "tags"
-msgstr "الوسوم"
+#: database-content.py:345
+msgid "GNOME Library help"
+msgstr "مساعدة مكتبة جنوم"
 
-#: database-content.py:224
-msgid "appendix"
-msgstr "ملحق"
+#: database-content.py:346
+msgid "Release Notes"
+msgstr "ملاحظات الإصدار"
 
-#: database-content.py:225
-msgid "concepts"
-msgstr "مصطلحات"
+#: database-content.py:347
+msgid "Sound Juicer Manual"
+msgstr "كتيّب مستخرج الصوتيات"
 
-#: database-content.py:226
-msgid "dialogs"
-msgstr "الحوارات"
+#: database-content.py:348 database-content.py:349 database-content.py:385
+#: database-content.py:386
+msgid "User Guide"
+msgstr "دليل المستخدم"
 
-#: database-content.py:227
-#| msgid "libgimp"
-msgid "gimp"
-msgstr "جِمب"
-
-#: database-content.py:228
-msgid "menus"
-msgstr "القوائم"
-
-#: database-content.py:229
-msgid "toolbox"
-msgstr "صندوق الأدوات"
-
-#: database-content.py:230
-#| msgid "Asturian"
-msgid "tutorial"
-msgstr "درس تعليمي"
-
-#: database-content.py:231
-msgid "using gimp"
-msgstr "استخدام جمب"
-
-#: database-content.py:232
-msgid "alpha-to-logo filter"
-msgstr ""
-
-#: database-content.py:233
-msgid "animation filter"
-msgstr ""
-
-#: database-content.py:234
-#, fuzzy
-#| msgid "Latest POT file"
-msgid "artistic filter"
-msgstr "آخر ملف POT"
-
-#: database-content.py:235
-msgid "blur filter"
-msgstr ""
-
-#: database-content.py:236
-msgid "combine filter"
-msgstr ""
-
-#: database-content.py:237
-msgid "decor filter"
-msgstr ""
-
-#: database-content.py:238
-msgid "distort filter"
-msgstr ""
-
-#: database-content.py:239
-msgid "edge-detect filter"
-msgstr ""
-
-#: database-content.py:240
-msgid "enhance filter"
-msgstr ""
-
-#: database-content.py:241
-msgid "generic filter"
-msgstr ""
-
-#: database-content.py:242
-msgid "light-effects filter"
-msgstr ""
-
-#: database-content.py:243
-msgid "map filter"
-msgstr ""
-
-#: database-content.py:244
-msgid "noise filter"
-msgstr ""
-
-#: database-content.py:245
-msgid "render filter"
-msgstr ""
-
-#: database-content.py:246
-msgid "web filter"
-msgstr ""
-
-#: database-content.py:247
-msgid "colors auto menu"
-msgstr ""
-
-#: database-content.py:248
-msgid "colors component menu"
-msgstr "قائمة مكونات الألوان"
-
-#: database-content.py:249
-msgid "colors info menu"
-msgstr "قائمة معلومات الألوان"
-
-#: database-content.py:250
-msgid "colors map menu"
-msgstr "قائمة مخطط الألوان"
-
-#: database-content.py:251
-msgid "colors menus"
-msgstr "قائمة ألوان"
-
-#: database-content.py:252
-msgid "edit menu"
-msgstr "قائمة تحرير"
-
-#: database-content.py:253
-msgid "file menu"
-msgstr "قائمة ملف"
-
-#: database-content.py:254
-#| msgid "Development"
-msgid "help menu"
-msgstr "قائمة مساعدة"
-
-#: database-content.py:255
-msgid "image menu"
-msgstr "قائمة صورة"
-
-#: database-content.py:256
-msgid "select menu"
-msgstr "قائمة تحديد"
-
-#: database-content.py:257
-msgid "view menu"
-msgstr "قائمة عرض"
-
-#: database-content.py:258
-#| msgid "Quick Reference"
-msgid "preferences"
-msgstr "التفضيلات"
-
-#: database-content.py:259
-msgid "Quick Reference"
-msgstr "مرجع سريع"
-
-#: database-content.py:260
-msgid "Optimization Guide"
-msgstr "دليل الأمثَلة"
-
-#: database-content.py:261
+#: database-content.py:350
 msgid "Human Interface Guidelines"
 msgstr "دليل الواجهة البشرية"
 
-#: database-content.py:262
-msgid "Accessibility Developers Guide"
-msgstr "دليل الإتاحة للمطورين"
+#: database-content.py:351
+msgid "Iagno Manual"
+msgstr "كتيّب إيانجو"
 
-#: database-content.py:263
-msgid "Audio Profiles Manual"
-msgstr "كتيّب لاحات الصوت"
+#: database-content.py:352
+msgid "Integration Guide"
+msgstr "دليل التكامل"
 
-#: database-content.py:264
-#| msgid "Criawips Manual"
-msgid "Quadrapassel Manual"
-msgstr "كتيّب Quadrapassel"
+#: database-content.py:354
+msgid "Invest Applet Manual"
+msgstr "كتيّب بريمج الاستثمار"
 
-#: database-content.py:265
-#| msgid "GFloppy Manual"
-msgid "Swell-Foop Manual"
-msgstr "كتيّب Swell-Foop"
-
-#: database-content.py:266
-#| msgid "glChess Manual"
+#: database-content.py:355
 msgid "Lights Off Manual"
 msgstr "كتيّب Lights Off"
 
-#: database-content.py:267
-msgid "GNOME 2 User Documentation"
-msgstr "وثائق مستخدم جنوم 2"
+#: database-content.py:356
+msgid "Log Viewer Manual"
+msgstr "كتيّب معاين السجلّ"
 
-#: database-content.py:268
-msgid "Evince Document Viewer"
-msgstr "عارض المستندات جلاء"
+#: database-content.py:357
+msgid "GNOME Mahjongg Manual"
+msgstr "كتيّب Mahjongg"
 
-#: database-content.py:269
+#: database-content.py:358
+msgid "Mallard Documentation Guide"
+msgstr "دليل توثيق ملّارد"
+
+#: database-content.py:359
+msgid "menus"
+msgstr "القوائم"
+
+#: database-content.py:360
+msgid "colors menus"
+msgstr "قائمة ألوان"
+
+#: database-content.py:361
+msgid "colors auto menu"
+msgstr ""
+
+#: database-content.py:362
+msgid "colors component menu"
+msgstr "قائمة مكونات الألوان"
+
+#: database-content.py:363
+msgid "colors info menu"
+msgstr "قائمة معلومات الألوان"
+
+#: database-content.py:364
+msgid "colors map menu"
+msgstr "قائمة مخطط الألوان"
+
+#: database-content.py:365
+msgid "edit menu"
+msgstr "قائمة تحرير"
+
+#: database-content.py:366
+msgid "file menu"
+msgstr "قائمة ملف"
+
+#: database-content.py:367
+msgid "help menu"
+msgstr "قائمة مساعدة"
+
+#: database-content.py:368
+msgid "image menu"
+msgstr "قائمة صورة"
+
+#: database-content.py:369
+msgid "layer menu"
+msgstr "قائمة الطبقات"
+
+#: database-content.py:370
+msgid "select menu"
+msgstr "قائمة تحديد"
+
+#: database-content.py:371
+msgid "view menu"
+msgstr "قائمة عرض"
+
+#: database-content.py:372
+msgid "Volume Control Manual"
+msgstr "كتيّب متحكم شدة الصوت"
+
+#: database-content.py:373
+msgid "System Monitor Manual"
+msgstr "كتيّب مراقب النظام"
+
+#: database-content.py:374
+msgid "Optimization Guide"
+msgstr "دليل الأمثَلة"
+
+#: database-content.py:375
+msgid "Platform Overview"
+msgstr "معاينة المنصّة"
+
+#: database-content.py:376
+msgid "preface"
+msgstr "تقديم"
+
+#: database-content.py:377
+msgid "Quadrapassel Manual"
+msgstr "كتيّب Quadrapassel"
+
+#: database-content.py:378
+msgid "Same GNOME Manual"
+msgstr "كتيّب سام جنوم"
+
+#: database-content.py:379
+msgid "Sticky Notes Manual"
+msgstr "كتيّب الملاحظات اللاصقة"
+
+#: database-content.py:380
+msgid "Swell-Foop Manual"
+msgstr "كتيّب Swell-Foop"
+
+#: database-content.py:381
+msgid "System Administration Guide"
+msgstr "دليل إدارة النظام"
+
+#: database-content.py:382
+msgid "toolbox"
+msgstr "صندوق الأدوات"
+
+#: database-content.py:383
+msgid "Panel Trash Manual"
+msgstr "كتيّب سلة مهملات اللوحة"
+
+#: database-content.py:384
+msgid "tutorial"
+msgstr "درس تعليمي"
+
+#: database-content.py:387
+msgid "using gimp"
+msgstr "استخدام جمب"
+
+#: database-content.py:388
+msgid "preferences"
+msgstr "التفضيلات"
+
+#: database-content.py:389
+msgid "Window List Applet Manual"
+msgstr "كتيّب بريمج قائمة النوافذ"
+
+#: database-content.py:390
+msgid "Workspace Switcher Applet Manual"
+msgstr "كتيّب بريمج محول مساحات العمل"
+
+#: database-content.py:391
+msgid "Banshee Music Player"
+msgstr "عازف الموسيقى بانشي"
+
+#: database-content.py:392
 msgid "Beagle Desktop Search"
 msgstr "بحث سطح المكتب بيجل"
 
-#: database-content.py:270 templates/base.html:35
+#: database-content.py:393 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "الأكاذيب اللعينة"
 
-#: database-content.py:271
-msgid "Banshee Music Player"
-msgstr "عازف الموسيقى بانشي"
-
-#: database-content.py:272
-msgid "Shared MIME Info"
-msgstr "معلومات MIME مشتركة"
-
-#: database-content.py:273
-msgid "GNOME Applets"
-msgstr "بريمجات جنوم"
-
-#: database-content.py:274
-msgid "GNOME 2 Development Documentation"
-msgstr "وثائق تطوير جنوم 2"
-
-#: database-content.py:275
-msgid "GNOME Release Notes"
-msgstr "ملاحظات إصدار جنوم"
-
-#: database-content.py:276
-msgid "Rhythmbox Music Player"
-msgstr "عازف الموسيقى أنغام"
-
-#: database-content.py:277
-msgid "Epiphany Web Browser"
-msgstr "متصفّح الوِب إيبِفَني"
-
-#: database-content.py:278
-msgid "GNOME Library Web site"
-msgstr "موقع مكتبة جنوم"
-
-#: database-content.py:279
-msgid "Eye of GNOME"
-msgstr "عين جنوم"
-
-#: database-content.py:280
-msgid "Gnome Specimen"
-msgstr "عيّنة جنوم"
-
-#: database-content.py:281
+#: database-content.py:394
 msgid "Deskbar Applet"
 msgstr "بريمج شريط المكتب"
 
-#: database-content.py:282
-msgid "WebKitGTK+"
-msgstr "وب‌كِت‌جتك+"
+#: database-content.py:395
+msgid "Eye of GNOME"
+msgstr "عين جنوم"
 
-#: database-content.py:283
+#: database-content.py:396
+msgid "Epiphany Web Browser"
+msgstr "متصفّح الوِب إيبِفَني"
+
+#: database-content.py:397
+msgid "Evince Document Viewer"
+msgstr "عارض المستندات جلاء"
+
+#: database-content.py:398
 msgid "GIMP User Manual"
 msgstr "كتيّب مستخدمي جِمب"
 
-#: database-content.py:284
+#: database-content.py:399
+msgid "GNOME Applets"
+msgstr "بريمجات جنوم"
+
+#: database-content.py:400
+msgid "GNOME 2 Development Documentation"
+msgstr "وثائق تطوير جنوم 2"
+
+#: database-content.py:401
+msgid "Gnome Specimen"
+msgstr "عيّنة جنوم"
+
+#: database-content.py:402
+msgid "GNOME 2 User Documentation"
+msgstr "وثائق مستخدم جنوم 2"
+
+#: database-content.py:403
 msgid "GNOME Web Photo"
 msgstr "صورة وِب جنوم"
 
-#: database-content.py:285
-#| msgid ""
-#| "GNUCash is not part of the GNOME SVN repository. Please check <a href="
-#| "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
-#| "a> to see where to send translations."
-msgid ""
-"GNUCash is not part of the GNOME Git repository. Please check <a "
-"href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash "
-"Wiki</a> to see where to send translations."
-msgstr ""
-"‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a "
-"href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">ويكي GNUCash</a> "
-"لمزيد من المعلومات عن طريقة إرسال الترجمة."
+#: database-content.py:404
+msgid "GNOME Library Web site"
+msgstr "موقع مكتبة جنوم"
 
-#: database-content.py:286
-msgid "Evince is a document viewer for multiple document formats."
-msgstr "جلاء هو عارض للعديد من أنساق المستندات."
+#: database-content.py:405
+msgid "GNOME Release Notes"
+msgstr "ملاحظات إصدار جنوم"
 
-#: database-content.py:287
+#: database-content.py:406
+msgid "Rhythmbox Music Player"
+msgstr "عازف الموسيقى أنغام"
+
+#: database-content.py:407
+msgid "Shared MIME Info"
+msgstr "معلومات MIME مشتركة"
+
+#: database-content.py:408
+msgid "Video subtitles translations for selected GNOME videos"
+msgstr "ترجمات لفديوهات جنوم المختارة"
+
+#: database-content.py:409
+msgid "WebKitGTK+"
+msgstr "وب‌كِت‌جتك+"
+
+#: database-content.py:410
+msgid "Email client for netbooks"
+msgstr "عميل بريد لحواسيب النت"
+
+#: database-content.py:411
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
 msgstr ""
 "الترجمات المودعة تحدث يدويا على l10n.gnome.org من وقت لآخر، فلا تتعجل :-)"
 
-#: database-content.py:288
+#: database-content.py:412
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "جلاء هو عارض للعديد من أنساق المستندات."
+
+#: database-content.py:413
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+"module. Please submit your translation through the <a href=\"http://www."
+"transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+msgstr ""
+"خدمة د-بص للوصول إلى قارئات البصمة. هذه ليست وحدة خاصة بجنوم. من فضلك أرسل "
+"ترجماتك عبر <a "
+"href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">منصة "
+"ترانسفِكس</a>."
+
+#: database-content.py:414
+msgid ""
+"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
+"more."
+msgstr ""
+"بداية من جنوم 2.23، تم دمج GAIL في GTK+. لذا لا تُرسِل إلى الجذغ بعد الآن."
+
+#: database-content.py:415
+msgid "Graphical frontend for the git directory tracker"
+msgstr "واجهة رسومية لمتتبع مجلدات git"
+
+#: database-content.py:416
+msgid "A multimedia converter for the GNOME Desktop"
+msgstr "محوّل وسائط لسطح مكتب جنوم"
+
+#: database-content.py:417
+msgid ""
+"gnome-disk-utility provides libraries and applications for dealing with "
+"storage devices."
+msgstr "توفر gnome-disk-utility مكتبات وأدوات للتعامل مع أجهزة التخزين."
+
+#: database-content.py:418
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr ""
+"‏GNOME Video Arcade هي واجهة MAME‏ (Multiple Arcade Machine Emulator) لجنوم."
+
+#: database-content.py:419
+msgid "A note taking application"
+msgstr "تطبيق لكتابة الملاحظات"
+
+#: database-content.py:420
+msgid ""
+"GNUCash is not part of the GNOME Git repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
+msgstr ""
+"‏GNUCash ليس جزءا من مستودع جنوم. من فضلك راجع <a href=\"http://wiki.gnucash."
+"org/wiki/Translation#Submitting\">ويكي GNUCash</a> لمزيد من المعلومات عن "
+"طريقة إرسال الترجمة."
+
+#: database-content.py:421 database-content.py:422 database-content.py:423
+#: database-content.py:424 database-content.py:425 database-content.py:440
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1207,7 +1265,44 @@ msgstr ""
 "هذه ليست وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عبر <a href=\"http://"
 "translationproject.org\">مشروع الترجمة</a>."
 
-#: database-content.py:289
+#: database-content.py:426
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in Git even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr ""
+"من فضلك لاحظ أن جتك+ تحتوي على نطاقي po و po-properties.  إذا أضفت لغة جديدة "
+"لأحد النطاقين فيتعين عليك إيداع كلا الملفين في المستودع حتى لو لم يحتوي "
+"أحدهما على أي ترجمة، وإلا فسيتعطّل نظام بناء جتك+ عند ‪/po-properties‬."
+
+#: database-content.py:427
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the GNOME "
+"desktop. It is written in Vala for extra goodness."
+msgstr ""
+"‏moserial هو طرفية تسلسلية سهلة ونظيفة، مبنية على جتك+، لمكتب جنوم. مكتوبة "
+"بڤالا لمزيد من الروعة."
+
+#: database-content.py:428
+msgid "Gnome Parental Control"
+msgstr "تحكم جنوم الأبوي"
+
+#: database-content.py:429
+msgid ""
+"To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
+"cgi?product=NetworkManager&component=general\">create a bug report for "
+"NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
+msgstr ""
+"لإرسال الترجمات، <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=NetworkManager&component=general\">افتح بلاغ علة في بجزيلا جنوم</a>، "
+"وأرفق به ملف الترجمة."
+
+#: database-content.py:430
+msgid "Passepartout is a DTP application for X."
+msgstr "‏Passepartout هو برنامج للنشر المكتبي"
+
+#: database-content.py:431
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
@@ -1216,7 +1311,40 @@ msgstr ""
 "هذه ليست وحدة خاصة بجنوم. من فضلك أرسل ترجماتك عبر <a href=\"http://www."
 "transifex.net/projects/p/shared-mime-info/c/default/\">منصة ترانسفِكس</a>."
 
-#: database-content.py:290
+#: database-content.py:432
+msgid "A photo manager for GNOME"
+msgstr "مدير صور لجنوم"
+
+#: database-content.py:433
+msgid ""
+"This is a clone of the official system-tools-backends version from the "
+"freedesktop.org repository."
+msgstr ""
+"هذه نسخة من إصدارة system-tools-backends الرسمية من مستودع freedesktop.org."
+
+#: database-content.py:434
+msgid "GNOME Teletext viewer"
+msgstr "عارض تليتكست جنوم"
+
+#: database-content.py:435
+msgid ""
+"Here we translate the subtitles of selected GNOME videos.\n"
+"See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
+"more."
+msgstr ""
+"نترجم هنا فديوهات جنوم المختارة.\n"
+"طالع <a href=\"http://live.gnome.org/VideoSubtitles\">ترجمات الفديو</a> "
+"للمزيد."
+
+#: database-content.py:437
+msgid "A VNC client for GNOME"
+msgstr "عميل VNC لجنوم"
+
+#: database-content.py:438
+msgid "Translations should be submitted as bug reports (see link below)."
+msgstr "يجب أن ترسل الترجمات كبلاغات عن علل (راجع الرابط أسفل)"
+
+#: database-content.py:439
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1228,169 +1356,76 @@ msgstr ""
 "translationproject.org/domain/xdg-user-dirs.html\">صفحة ترجمة xdg-user-dirs "
 "في مشروع الترجمة</a>."
 
-#: database-content.py:291
-msgid ""
-"To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
-"cgi?product=NetworkManager&component=general\">create a bug report for "
-"NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
-msgstr ""
-"لإرسال الترجمات، <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=NetworkManager&component=general\">افتح بلاغ علة في بجزيلا جنوم</a>، "
-"وأرفق به ملف الترجمة."
+#: database-content.py:441
+#| msgid "GNOME 2.30 (development)"
+msgid "GNOME 2.32 (development)"
+msgstr "جنوم 2.32 (تطويري)"
 
-#: database-content.py:292
-msgid ""
-"From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
-"more."
-msgstr ""
-"بداية من جنوم 2.23، تم دمج GAIL في GTK+. لذا لا تُرسِل إلى الجذغ بعد الآن."
-
-#: database-content.py:293
-msgid "A VNC client for GNOME"
-msgstr "عميل VNC لجنوم"
-
-#: database-content.py:294
-msgid ""
-"Please note that gtk+ has both po and po-properties UI domains.  If you add "
-"a new language in either domain, you have to commit both files in Git even "
-"if one of them contains 0 translations, unless GTK+ build will break in /po-"
-"properties."
-msgstr ""
-"من فضلك لاحظ أن جتك+ تحتوي على نطاقي po و po-properties.  إذا أضفت لغة جديدة "
-"لأحد النطاقين فيتعين عليك إيداع كلا الملفين في المستودع حتى لو لم يحتوي "
-"أحدهما على أي ترجمة، وإلا فسيتعطّل نظام بناء جتك+ عند ‪/po-properties‬."
-
-#: database-content.py:295
-msgid "Graphical frontend for the git directory tracker"
-msgstr "واجهة رسومية لمتتبع مجلدات git"
-
-#: database-content.py:296
-msgid ""
-"moserial is a clean, friendly gtk-based serial terminal for the GNOME "
-"desktop. It is written in Vala for extra goodness."
-msgstr ""
-"‏moserial هو طرفية تسلسلية سهلة ونظيفة، مبنية على جتك+، لمكتب جنوم. مكتوبة "
-"بڤالا لمزيد من الروعة."
-
-#: database-content.py:297
-msgid ""
-"This is a clone of the official system-tools-backends version from the "
-"freedesktop.org repository."
-msgstr ""
-"هذه نسخة من إصدارة system-tools-backends الرسمية من مستودع freedesktop.org."
-
-#: database-content.py:298
-msgid "Passepartout is a DTP application for X."
-msgstr "‏Passepartout هو برنامج للنشر المكتبي"
-
-#: database-content.py:299
-msgid ""
-"gnome-disk-utility provides libraries and applications for dealing with "
-"storage devices."
-msgstr "توفر gnome-disk-utility مكتبات وأدوات للتعامل مع أجهزة التخزين."
-
-#: database-content.py:300
-msgid "A note taking application"
-msgstr "تطبيق لكتابة الملاحظات"
-
-#: database-content.py:301
-msgid "Translations should be submitted as bug reports (see link below)."
-msgstr "يجب أن ترسل الترجمات كبلاغات عن علل (راجع الرابط أسفل)"
-
-#: database-content.py:302
-msgid ""
-"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
-"for GNOME."
-msgstr ""
-"‏GNOME Video Arcade هي واجهة MAME‏ (Multiple Arcade Machine Emulator) لجنوم."
-
-#: database-content.py:303
-msgid "GNOME Teletext viewer"
-msgstr "عارض تليتكست جنوم"
-
-#: database-content.py:304
-msgid "A multimedia converter for the GNOME Desktop"
-msgstr "محوّل وسائط لسطح مكتب جنوم"
-
-#: database-content.py:305
-msgid "Email client for netbooks"
-msgstr "عميل بريد لحواسيب النت"
-
-#: database-content.py:306
-msgid "Gnome Parental Control"
-msgstr "تحكم جنوم الأبوي"
-
-#: database-content.py:307
-msgid "A photo manager for GNOME"
-msgstr "مدير صور لجنوم"
-
-#: database-content.py:308
-msgid "Extra GNOME Applications"
-msgstr "تطبيقات جنوم إضافية"
-
-#: database-content.py:309
-msgid "GNOME 2.18 (old stable)"
-msgstr "جنوم 2.18 (مُستقر قديم)"
-
-#: database-content.py:310
-msgid "GNOME Infrastructure"
-msgstr "بنية جنوم التحتيّة"
-
-#: database-content.py:311
-msgid "GNOME 2.16 (old stable)"
-msgstr "جنوم 2.16 (مُستقر قديم)"
-
-#: database-content.py:312
-msgid "GNOME 2.14 (old stable)"
-msgstr "جنوم 2.14 (مُستقر قديم)"
-
-#: database-content.py:313
-msgid "freedesktop.org (non-GNOME)"
-msgstr "المكتب الحر (ليس جنوم)"
-
-#: database-content.py:314
-msgid "GNOME 2.24 (old stable)"
-msgstr "جنوم 2.24 (مُستقر قديم)"
-
-#: database-content.py:315
-msgid "GNOME 2.22 (old stable)"
-msgstr "جنوم 2.22 (مُستقر قديم)"
-
-#: database-content.py:316
-msgid "GNOME-Office Productivity Applications"
-msgstr "تطبيقات جنوم للأعمال المكتبيّة"
-
-#: database-content.py:317
-msgid "GNOME 2.20 (old stable)"
-msgstr "جنوم 2.20 (مُستقر قديم)"
-
-#: database-content.py:318
-msgid "GNOME 2.26 (old stable)"
-msgstr "جنوم 2.26 (مُستقر قديم)"
-
-#: database-content.py:319
-#| msgid "GNOME 2.18 (old stable)"
-msgid "GNOME 2.28 (old stable)"
-msgstr "جنوم 2.28 (مُستقر قديم)"
-
-#: database-content.py:320
-msgid "Obsolete GNOME Applications"
-msgstr "تطبيقات جنوم بائدة"
-
-#: database-content.py:321
-msgid "External Dependencies (GNOME)"
-msgstr "اعتمادية خارجية (جنوم)"
-
-#: database-content.py:322
-#| msgid "GNOME 2.28 (stable)"
+#: database-content.py:442
 msgid "GNOME 2.30 (stable)"
 msgstr "جنوم 2.30 (مُستقر)"
 
-#: database-content.py:323
+#: database-content.py:443
+msgid "GNOME 2.28 (old stable)"
+msgstr "جنوم 2.28 (مُستقر قديم)"
+
+#: database-content.py:444
+msgid "GNOME 2.26 (old stable)"
+msgstr "جنوم 2.26 (مُستقر قديم)"
+
+#: database-content.py:445
+msgid "GNOME 2.24 (old stable)"
+msgstr "جنوم 2.24 (مُستقر قديم)"
+
+#: database-content.py:446
+msgid "GNOME 2.22 (old stable)"
+msgstr "جنوم 2.22 (مُستقر قديم)"
+
+#: database-content.py:447
+msgid "GNOME 2.20 (old stable)"
+msgstr "جنوم 2.20 (مُستقر قديم)"
+
+#: database-content.py:448
+msgid "GNOME 2.18 (old stable)"
+msgstr "جنوم 2.18 (مُستقر قديم)"
+
+#: database-content.py:449
+msgid "GNOME 2.16 (old stable)"
+msgstr "جنوم 2.16 (مُستقر قديم)"
+
+#: database-content.py:450
+msgid "GNOME 2.14 (old stable)"
+msgstr "جنوم 2.14 (مُستقر قديم)"
+
+#: database-content.py:451
+msgid "External Dependencies (GNOME)"
+msgstr "اعتمادية خارجية (جنوم)"
+
+#: database-content.py:452
+msgid "Obsolete GNOME Applications"
+msgstr "تطبيقات جنوم بائدة"
+
+#: database-content.py:453
+msgid "GNOME-Office Productivity Applications"
+msgstr "تطبيقات جنوم للأعمال المكتبيّة"
+
+#: database-content.py:454
+msgid "GNOME Infrastructure"
+msgstr "بنية جنوم التحتيّة"
+
+#: database-content.py:455
 msgid "GIMP and Friends"
 msgstr "جمب وأصدقاؤه"
 
-#: settings.py:73
+#: database-content.py:456
+msgid "Extra GNOME Applications"
+msgstr "تطبيقات جنوم إضافية"
+
+#: database-content.py:457
+msgid "freedesktop.org (non-GNOME)"
+msgstr "المكتب الحر (ليس جنوم)"
+
+#: settings.py:75
 msgid ""
 "This module is not part of the GNOME git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1398,7 +1433,7 @@ msgstr ""
 "هذه الوحدة ليست جزءا من مستودع جنوم. من فضلك راجع صفحة الوحدة لترى إلى أين "
 "ترسل الترجمات."
 
-#: settings_sample.py:79
+#: settings_sample.py:81
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1474,7 +1509,7 @@ msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
+#: templates/login.html:40
 msgid "Log in with OpenID"
 msgstr "لُج مستخدما OpenID"
 
@@ -1483,11 +1518,11 @@ msgstr "لُج مستخدما OpenID"
 msgid "Unknown"
 msgstr "مجهول"
 
-#: languages/views.py:49 languages/views.py:82
+#: languages/views.py:51 languages/views.py:84
 msgid "UI Translations"
 msgstr "ترجمات الواجهة"
 
-#: languages/views.py:80 templates/release_detail.html:66
+#: languages/views.py:82 templates/release_detail.html:66
 msgid "Original strings"
 msgstr "المقاطع الأصلية"
 
@@ -1543,13 +1578,32 @@ msgstr ""
 msgid "Administrators of %s"
 msgstr "مدراء %s"
 
+#: people/forms.py:86
+#, python-format
+msgid ""
+"Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
+msgstr ""
+"الصورة طويلة أو عريضة جدا (%(width)d×%(height)d، الحد الأقصى 100×100 بكسل)"
+
+#: people/forms.py:105
+msgid "The URL you provided is not valid"
+msgstr "المسار المعطى غير سليم"
+
+#: people/forms.py:121
+msgid "The URL you provided seems not to correspond to a valid image"
+msgstr "لا يبدو أن المسار المعطى يخص صورة سليمة"
+
 #: people/models.py:36
 msgid "Image"
 msgstr "صورة"
 
 #: people/models.py:37
-msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
-msgstr "مسار إلى صورة (‫.jpg‬، ‫.png، ...) لتستخدم كصورتك"
+#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+msgid ""
+"URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 "
+"pixels)"
+msgstr ""
+"مسار إلى صورة (‫.jpg‬، ‫.png، ...) لتستخدم كصورتك (بحد أقصى 100×100 بكسل)"
 
 #: people/models.py:38 teams/models.py:91
 msgid "Web page"
@@ -1582,36 +1636,36 @@ msgstr "انضم شخص جديد إلي الفريق"
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "انضم %(name)s إلى فريقك على %(site)s"
 
-#: people/views.py:93
+#: people/views.py:92
 msgid "You are already member of this team."
 msgstr "أنت عضو في هذا الفريق بالفعل."
 
-#: people/views.py:116
+#: people/views.py:114
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "لقد أُزِلت من الفريق '%s'."
 
-#: people/views.py:132
+#: people/views.py:130
 msgid "Your password has been changed."
 msgstr "لقد تم تغيير كلمة السر."
 
-#: stats/models.py:201
+#: stats/models.py:200
 msgid "This branch is not linked from any release"
 msgstr "ليس هذا الفرع مرتبطا بأي إصدارة"
 
-#: stats/models.py:356
+#: stats/models.py:355
 msgid "Can't generate POT file, using old one."
 msgstr "لم أستطع توليد ملف POT، سأستخدم القديم."
 
-#: stats/models.py:358
+#: stats/models.py:357
 msgid "Can't generate POT file, statistics aborted."
 msgstr "لم أستطع توليد ملف POT، أُجهضت الإحصائيات."
 
-#: stats/models.py:378
+#: stats/models.py:377
 msgid "Can't copy new POT file to public location."
 msgstr "لم أستطع نسخ ملف POT الجديد للمكان العام."
 
-#: stats/models.py:697
+#: stats/models.py:717
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1622,38 +1676,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:719
+#: stats/models.py:741
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "لا خانة لهذه اللغة في ‪%(var)s‬ في ملف ‪%(file)s‬."
 
-#: stats/models.py:973
+#: stats/models.py:999
 msgid "Administration Tools"
 msgstr "أدوات الإدارة"
 
-#: stats/models.py:974
+#: stats/models.py:1000
 msgid "Development Tools"
 msgstr "أدوات التطوير"
 
-#: stats/models.py:975
+#: stats/models.py:1001
 msgid "GNOME Desktop"
 msgstr "سطح مكتب جنوم"
 
-#: stats/models.py:976
+#: stats/models.py:1002
 msgid "GNOME Developer Platform"
 msgstr "منصّة مطوّري جنوم"
 
-#: stats/models.py:977
+#: stats/models.py:1003
 msgid "New Module Proposals"
 msgstr "اقتراحات الوحدات الجديدة"
 
-#: stats/models.py:1056 stats/models.py:1360
+#: stats/models.py:1082 stats/models.py:1386
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1089
+#: stats/models.py:1115
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1664,19 +1718,19 @@ msgstr[3] "%(count)s رسائل"
 msgstr[4] "%(count)s رسالة"
 msgstr[5] "%(count)s رسالة"
 
-#: stats/models.py:1090
+#: stats/models.py:1116
 #, python-format
 msgid "updated on %(date)s"
 msgstr "حُدِّث في %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1092 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1118 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d-Y-m g:i a O"
 
-#: stats/models.py:1095
+#: stats/models.py:1121
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1687,22 +1741,22 @@ msgstr[3] "%(count)s أشكال"
 msgstr[4] "%(count)s شكلا"
 msgstr[5] "%(count)s شكل"
 
-#: stats/models.py:1096
+#: stats/models.py:1122
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "ملف POT‏ (%(messages)s، %(figures)s) — %(updated)s"
 
-#: stats/models.py:1099
+#: stats/models.py:1125
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "ملف POT‏ (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1183
+#: stats/models.py:1209
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "لم يولد ملف POT عبر الطريقة المعتادة."
 
-#: stats/models.py:1184
+#: stats/models.py:1210
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1736,11 +1790,11 @@ msgstr "لا تبدو الوحدة %s كوحدة gnome-doc-utils."
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE لا يؤدي إلى ملف حقيقي، سأستخدم '%s.xml'."
 
-#: stats/utils.py:136
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE لا يشير إلى ملف حقيقي، ربما ماكرو."
 
-#: stats/utils.py:152
+#: stats/utils.py:157
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1751,56 +1805,55 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:237
+#: stats/utils.py:242
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "ملف PO '%s' لا وجود له أو لا يمكن قرائته."
 
-#: stats/utils.py:257
+#: stats/utils.py:262
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "لم يجتز ملف PO '%s' فحص msgfmt: لن أُحدِّثه."
 
-#: stats/utils.py:259
+#: stats/utils.py:264
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "لم أستطع الحصول على إحصائيات ملف POT '%s'."
 
-#: stats/utils.py:262
+#: stats/utils.py:267
 msgid "This PO file has an executable bit set."
 msgstr "ملف PO هذا مضبوط كملف تنفيذي."
 
-#: stats/utils.py:290
+#: stats/utils.py:295
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "ملف PO '%s' ليس مرمّزا UTF-8."
 
-#: stats/utils.py:316
+#: stats/utils.py:310
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "لا يوجد خانة لهذه اللغة في ملف LINGUAS."
 
-#: stats/utils.py:322
+#: stats/utils.py:328
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "لا يوجد خانة لهذه اللغة في ALL_LINGUAS في ملف configure."
 
-#: stats/utils.py:324
+#: stats/utils.py:330
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "لا أعرف أين أبحث عن متغير LINGUAS، اسأل المسؤول عن الوحدة."
 
-#: stats/utils.py:331
+#: stats/utils.py:337
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
 msgstr "لا أعرف أين أبحث عن متغير DOC_LINGUAS، اسأل المسؤول عن الوحدة."
 
-#: stats/utils.py:333
+#: stats/utils.py:339
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "قائمة DOC_LINGUAS لا تحتوي هذه اللغة."
 
 #: teams/models.py:89
-#| msgid "Documentation"
 msgid "Presentation"
 msgstr "عرض تقديمي"
 
@@ -1838,27 +1891,27 @@ msgstr "مُودِع"
 msgid "Coordinator"
 msgstr "المنسّق"
 
-#: teams/views.py:55
+#: teams/views.py:57
 msgid "Committers"
 msgstr "المُودِعون"
 
-#: teams/views.py:58
+#: teams/views.py:60
 msgid "No committers"
 msgstr "لا مُودِعين"
 
-#: teams/views.py:60
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "المُراجعون"
 
-#: teams/views.py:63
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "لا مُراجعين"
 
-#: teams/views.py:65
+#: teams/views.py:67
 msgid "Translators"
 msgstr "المُترجِمون"
 
-#: teams/views.py:68
+#: teams/views.py:70
 msgid "No translators"
 msgstr "لا مُترجِمين"
 
@@ -1944,12 +1997,15 @@ msgid "The GNOME Project"
 msgstr "مشروع جنوم"
 
 #: templates/base.html:96
+#| msgid ""
+#| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+#| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgid ""
-"Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+"Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr ""
-"يُدار في وحدة <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</"
-"a> في <a href='http://git.gnome.org/'>git.gnome.org</a>"
+"يُدار في وحدة <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
+"lies</a> في <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
 #: templates/base.html:98
 msgid "Hosted by"
@@ -2124,21 +2180,21 @@ msgstr "حالة ترجمة الأشكال"
 msgid "Original"
 msgstr "الأصل"
 
-#: templates/module_images.html:30
+#: templates/module_images.html:34
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
 msgstr "مترجم، لكن يستخدم الأصل (ربما الشكل لا يحتوي أي مقطع يُترجم)"
 
-#: templates/module_images.html:34
+#: templates/module_images.html:38
 msgid "Fuzzy"
 msgstr "مبهم"
 
-#: templates/module_images.html:39
+#: templates/module_images.html:45
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "لا يوجد ملف (مبهم &quot;تقنيا&quot;)"
 
-#: templates/module_images.html:42
+#: templates/module_images.html:48
 msgid "Not translated"
 msgstr "غير مُتَرجَم"
 
@@ -2150,9 +2206,24 @@ msgstr "وحدات جنوم"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "اختر وحدة أسفله لترى بعض الأكاذيب اللعينة عنها:"
 
+#: templates/module_list.html:28 templates/release_list.html:38
+#: templates/languages/language_list.html:35 templates/teams/team_list.html:33
+#, python-format
+msgid ""
+"If anything should be changed on this page, please <a href=\"%(bug_url)s"
+"\">submit a bug report</a>."
+msgstr ""
+"إذا كان أي شيء في هذه الصفحة بحاجة للتغيير، فمن فضلك <a href=\"%"
+"(bug_url)s\">أبلغ عن هذا</a>."
+
 #: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
 msgstr "مقارنة الإصدارات"
+
+#: templates/release_compare.html:29
+#| msgid "Projects"
+msgid "Progress"
+msgstr "التقدم"
 
 #: templates/release_detail.html:10
 #, python-format
@@ -2167,7 +2238,7 @@ msgstr ""
 "الوحدات في هذه الإصدارة ليست جزءا من مستودع جنوم. من فضلك راجع موقع كل وحدة "
 "لتعرف إلى أين ترسل الترجمات."
 
-#: templates/release_detail.html:19 templates/stats_show.html:30
+#: templates/release_detail.html:19 templates/stats_show.html:33
 msgid "Language"
 msgstr "اللغة"
 
@@ -2177,7 +2248,7 @@ msgid "User Interface"
 msgstr "واجهة المستخدم"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34
+#: templates/stats_show.html:37
 #: templates/languages/language_release_summary.html:9
 #: templates/languages/language_release_summary.html:10
 msgid "Graph"
@@ -2195,19 +2266,25 @@ msgstr "اختر إصدارا أسفله للتعرف على تفاصيل أكث
 msgid "Older Releases"
 msgstr "الإصدارات الأقدم"
 
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:7
+#: templates/languages/language_release_stats.html:65
+#| msgid "Evince is a document viewer for multiple document formats."
+msgid "This document is written in Mallard documentation format"
+msgstr "كتب هذا المستند بنسق التوثيق ملّارد"
+
+#: templates/stats_show.html:16 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "نزّل ملف POT"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:81
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "ملاحظات"
 
-#: templates/stats_show.html:30 vertimus/models.py:189
+#: templates/stats_show.html:33 vertimus/models.py:189
 msgid "Translated"
 msgstr "تُرجِم"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:75
+#: templates/stats_show.html:53 templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "اعرض أشكال المستند"
 
@@ -2266,7 +2343,7 @@ msgid "Download all po files"
 msgstr "نزّل كل ملفات po"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "Module"
 msgstr "وحدة"
 
@@ -2283,7 +2360,7 @@ msgid "Status"
 msgstr "الحالة"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "Date"
 msgstr "التاريخ"
 
@@ -2291,7 +2368,7 @@ msgstr "التاريخ"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% مُترجم)"
 
-#: templates/languages/language_release_stats.html:103
+#: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "ملخّص الخطأ"
 
@@ -2316,23 +2393,23 @@ msgstr "غيّر كلمة السر"
 msgid "Join a team"
 msgstr "التحق بفريق"
 
-#: templates/people/person_detail.html:22
+#: templates/people/person_detail.html:26
 msgid "Site Language:"
 msgstr "لغة الموقع:"
 
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:37
 msgid "Choose"
 msgstr "اختر"
 
-#: templates/people/person_detail.html:39
+#: templates/people/person_detail.html:43
 msgid "Maintains:"
 msgstr "يشرف على:"
 
-#: templates/people/person_detail.html:50
+#: templates/people/person_detail.html:54
 msgid "Working on"
 msgstr "يعمل على"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "State"
 msgstr "الحالة"
 
@@ -2592,11 +2669,11 @@ msgstr "يستخدم هذا الفريق Vertimus لإدارة الترجمة"
 
 #: templates/teams/team_edit.html:25
 msgid ""
-"This content may use <a "
-"href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax"
+"This content may use <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a> syntax"
 msgstr ""
-"يمكن أم يستخدم هذا المحتوى نسق <a "
-"href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a>"
+"يمكن أم يستخدم هذا المحتوى نسق <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a>"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
@@ -2611,7 +2688,7 @@ msgstr "اختر فريقا للتعرف على معلومات إضافية عن
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "يُنّسقه <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "لا يوجد حاليا أي فريق ترجمة في جنوم. :("
 
@@ -2682,6 +2759,11 @@ msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "تحتاج إلى الولوج وأن تكون عضوا في فريق %(team_name)s"
 
+#: templates/vertimus/vertimus_detail.html:191
+#| msgid "This team is using the Vertimus translation workflow"
+msgid "This team is not using the Vertimus translation workflow."
+msgstr "لا يستخدم هذا الفريق ڤِرتِسْمَس لإدارة الترجمة"
+
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
 msgstr "قارن مع ملفات po"
@@ -2744,7 +2826,6 @@ msgid "Invalid action. Someone probably posted another action just before you."
 msgstr "إجراء غير سليم. ربما نشر شخصا ما إجراءا قُبيلك مباشرة."
 
 #: vertimus/forms.py:77
-#| msgid "A comment or a file is needed for this action."
 msgid "A comment is needed for this action."
 msgstr "يحتاج هذا الإجراء إلى تعليق."
 
@@ -2912,8 +2993,8 @@ msgstr "آخر ملف مودع للغة %(lang)s"
 msgid "Latest POT file"
 msgstr "آخر ملف POT"
 
-#~ msgid "GNOME 2.30 (development)"
-#~ msgstr "جنوم 2.30 (تطويري)"
+#~ msgid "F-Spot Manual"
+#~ msgstr "كتيّب إف-سبوت"
 
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the "
