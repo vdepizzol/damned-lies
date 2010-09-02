@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-17 15:25+0000\n"
-"PO-Revision-Date: 2010-08-18 21:50+0100\n"
+"POT-Creation-Date: 2010-09-02 20:52+0000\n"
+"PO-Revision-Date: 2010-09-03 01:01+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1310,79 +1310,87 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince är en dokumentvisare för flera typer av dokumentformat."
 
 #: database-content.py:413
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+msgstr "D-Bus-tjänst för att komma åt fingeravtrycksläsare. Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex-plattformen</a>."
+
+#: database-content.py:414
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar i trunk längre."
 
-#: database-content.py:414
+#: database-content.py:415
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafisk framände för git-katalogbevakaren"
 
-#: database-content.py:415
+#: database-content.py:416
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "En multimediakonverterare för GNOME-skrivbordet"
 
-#: database-content.py:416
+#: database-content.py:417
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "gnome-disk-utility tillhandahåller bibliotek och program för att hantera lagringsenheter."
 
-#: database-content.py:417
+#: database-content.py:418
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "GNOME Video Arcade är en grafisk klient för MAME (Multiple Arcade Machine Emulator) för GNOME."
 
-#: database-content.py:418
+#: database-content.py:419
 msgid "A note taking application"
 msgstr "Ett anteckningsblock"
 
-#: database-content.py:419
+#: database-content.py:420
 msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
 msgstr "GNUCash är inte en del av GNOME:s Git-förråd. Se <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information om var översättningar ska skickas."
 
-#: database-content.py:420
 #: database-content.py:421
 #: database-content.py:422
 #: database-content.py:423
 #: database-content.py:424
-#: database-content.py:439
+#: database-content.py:425
+#: database-content.py:440
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:425
+#: database-content.py:426
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Observera att gtk+ innehåller både domänerna po och po-properties.  Om du lägger till ett nytt språk i någon av domänerna så måste du skicka in båda filerna i Git även om en av dem bara innehåller 0 översättningar, annars kommer GTK+-byggnationen inte att fungera i /po-properties."
 
-#: database-content.py:426
+#: database-content.py:427
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "moserial är en ren, vänlig gtk-baserad serieterminal för GNOME-skrivbordet. Det har skrivits i Vala för extra brahet."
 
-#: database-content.py:427
+#: database-content.py:428
 msgid "Gnome Parental Control"
 msgstr "Gnome-föräldrakontroll"
 
-#: database-content.py:428
+#: database-content.py:429
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "<a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">Skapa en felrapport för Nätverkshanterare på GNOME Bugzilla</a> för att skicka in din översättning. Bifoga sedan din översättningsfil till rapporten."
 
-#: database-content.py:429
+#: database-content.py:430
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout är ett layoutprogram för X."
 
-#: database-content.py:430
+#: database-content.py:431
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex-plattformen</a>."
 
-#: database-content.py:431
+#: database-content.py:432
 msgid "A photo manager for GNOME"
 msgstr "En fotohanterare för GNOME"
 
-#: database-content.py:432
+#: database-content.py:433
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Detta är en klon av den officiella versionen av system-tools-backends från förrådet hos freedesktop.org."
 
-#: database-content.py:433
+#: database-content.py:434
 msgid "GNOME Teletext viewer"
 msgstr "GNOME-texttv-visare"
 
-#: database-content.py:434
+#: database-content.py:435
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1390,91 +1398,87 @@ msgstr ""
 "Här översätter vi undertexterna för utvalda GNOME-videor.\n"
 "Se <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> för mer information."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid "A VNC client for GNOME"
 msgstr "En VNC-klient för GNOME"
 
-#: database-content.py:437
+#: database-content.py:438
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
-#: database-content.py:438
+#: database-content.py:439
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>. Se även <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">översättningssidan för xdg-user-dirs hos Translation Project</a>."
 
-#: database-content.py:440
-#| msgid "GNOME 3.0 (development)"
+#: database-content.py:441
 msgid "GNOME 2.32 (development)"
 msgstr "GNOME 2.32 (utveckling)"
 
-#: database-content.py:441
+#: database-content.py:442
 msgid "GNOME 2.30 (stable)"
 msgstr "GNOME 2.30 (stabil)"
 
-#: database-content.py:442
+#: database-content.py:443
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (gammal stabil)"
 
-#: database-content.py:443
+#: database-content.py:444
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (gammal stabil)"
 
-#: database-content.py:444
+#: database-content.py:445
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:446
+#: database-content.py:447
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (gammal stabil)"
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (gammal stabil)"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "External Dependencies (GNOME)"
 msgstr "Externa beroenden (GNOME)"
 
-#: database-content.py:451
+#: database-content.py:452
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GIMP and Friends"
 msgstr "GIMP med vänner"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
 #: settings.py:75
-msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
-msgstr "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens webbsida om var översättningarna ska skickas."
-
 #: settings_sample.py:81
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s Git-förråd. Kontrollera modulens webbsida för information om var översättningarna ska skickas."
@@ -1628,7 +1632,6 @@ msgid "Image"
 msgstr "Bild"
 
 #: people/models.py:37
-#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 pixels)"
 msgstr "URL till en bildfil (.jpg, .png, ...) för en hackergotchi (max. 100x100 bildpunkter)"
 
@@ -1646,8 +1649,10 @@ msgid "Bugzilla account"
 msgstr "Bugzilla-konto"
 
 #: people/models.py:41
-msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr "Detta bör vara en e-postadress, användbar om den inte är samma som \"email\"-fältet"
+#| msgid ""
+#| "This should be an email address, useful if not equal to 'email' field"
+msgid "This should be an email address, useful if not equal to 'E-mail address' field"
+msgstr "Detta bör vara en e-postadress, användbar om den inte är samma som \"E-postadress\"-fältet"
 
 #: people/views.py:87
 #, python-format
@@ -1692,7 +1697,7 @@ msgstr "Kan inte generera POT-fil, statistiken avbruten."
 msgid "Can't copy new POT file to public location."
 msgstr "Kan inte kopiera ny POT-fil till publik plats."
 
-#: stats/models.py:707
+#: stats/models.py:717
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1703,79 +1708,79 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:731
+#: stats/models.py:741
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Post för det här språket finns inte i variabeln %(var)s i filen %(file)s."
 
-#: stats/models.py:989
+#: stats/models.py:999
 msgid "Administration Tools"
 msgstr "Administrationsverktyg"
 
-#: stats/models.py:990
+#: stats/models.py:1000
 msgid "Development Tools"
 msgstr "Utvecklingsverktyg"
 
-#: stats/models.py:991
+#: stats/models.py:1001
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivbordet"
 
-#: stats/models.py:992
+#: stats/models.py:1002
 msgid "GNOME Developer Platform"
 msgstr "GNOME-utvecklingsplattform"
 
-#: stats/models.py:993
+#: stats/models.py:1003
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:1072
-#: stats/models.py:1376
+#: stats/models.py:1082
+#: stats/models.py:1386
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1105
+#: stats/models.py:1115
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:1106
+#: stats/models.py:1116
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1108
+#: stats/models.py:1118
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g.i O"
 
-#: stats/models.py:1111
+#: stats/models.py:1121
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:1112
+#: stats/models.py:1122
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1115
+#: stats/models.py:1125
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1199
+#: stats/models.py:1209
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden intltool."
 
-#: stats/models.py:1200
+#: stats/models.py:1210
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden gnome-doc-utils."
 
@@ -2018,8 +2023,10 @@ msgid "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damn
 msgstr "Underhålls i modulen <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> på <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
 #: templates/base.html:98
-msgid "Hosted by"
-msgstr "Driftas av"
+#, python-format
+#| msgid "Hosted by"
+msgid "Hosted by %(link)s."
+msgstr "Driftas av %(link)s."
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
@@ -2115,32 +2122,32 @@ msgstr "Om du inte har ett konto för denna plats så kan du <a href='%(link)s'>
 msgid "Have you forgotten your password?"
 msgstr "Har du glömt ditt lösenord?"
 
-#: templates/module_detail.html:6
+#: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Modulstatistik: %(name)s"
 
-#: templates/module_detail.html:55
+#: templates/module_detail.html:54
 msgid "Maintainers"
 msgstr "Ansvariga"
 
-#: templates/module_detail.html:63
+#: templates/module_detail.html:62
 msgid "Bug reporting"
 msgstr "Felrapportering"
 
-#: templates/module_detail.html:66
+#: templates/module_detail.html:65
 msgid "Show existing i18n and l10n bugs"
 msgstr "Visa befintliga felrapporter (i18n och l10n)"
 
-#: templates/module_detail.html:68
+#: templates/module_detail.html:67
 msgid "Report a bug"
 msgstr "Rapportera ett fel"
 
-#: templates/module_detail.html:77
+#: templates/module_detail.html:76
 msgid "Branches:"
 msgstr "Grenar:"
 
-#: templates/module_detail.html:100
+#: templates/module_detail.html:99
 msgid "Browse Repository"
 msgstr "Bläddra i förråd"
 
@@ -2196,7 +2203,6 @@ msgid "Releases Comparison"
 msgstr "Jämförelse av utgåvor"
 
 #: templates/release_compare.html:29
-#| msgid "Projects"
 msgid "Progress"
 msgstr "Förlopp"
 
@@ -2206,11 +2212,12 @@ msgid "%(name)s Release"
 msgstr "Utgåvan %(name)s"
 
 #: templates/release_detail.html:13
+#: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s Git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
 #: templates/release_detail.html:19
-#: templates/stats_show.html:30
+#: templates/stats_show.html:31
 msgid "Language"
 msgstr "Språk"
 
@@ -2222,7 +2229,7 @@ msgstr "Användargränssnitt"
 
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:23
-#: templates/stats_show.html:34
+#: templates/stats_show.html:35
 #: templates/languages/language_release_summary.html:9
 #: templates/languages/language_release_summary.html:10
 msgid "Graph"
@@ -2241,22 +2248,28 @@ msgstr "Välj en utgåva eller en utgåvesamling nedan för att se mer detaljer 
 msgid "Older Releases"
 msgstr "Äldre utgåvor"
 
-#: templates/stats_show.html:13
+#: templates/stats_show.html:7
+#: templates/languages/language_release_stats.html:65
+#| msgid "Evince is a document viewer for multiple document formats."
+msgid "This document is written in Mallard documentation format"
+msgstr "Detta dokument skrivs i dokumentationsformatet Mallard"
+
+#: templates/stats_show.html:14
 #: templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Hämta POT-fil"
 
-#: templates/stats_show.html:17
+#: templates/stats_show.html:18
 #: templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "Anteckningar"
 
-#: templates/stats_show.html:30
+#: templates/stats_show.html:31
 #: vertimus/models.py:189
 msgid "Translated"
 msgstr "Översatt"
 
-#: templates/stats_show.html:50
+#: templates/stats_show.html:51
 #: templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
@@ -2299,10 +2312,6 @@ msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME översätts till följande %(numb)s språk.\n"
 msgstr[1] "GNOME översätts till följande %(numb)s språk.\n"
 
-#: templates/languages/language_release.html:33
-msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
-msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
-
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
 msgstr "Hämta alla po-filer"
@@ -2333,7 +2342,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% översatt)"
 
-#: templates/languages/language_release_stats.html:103
+#: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "Sammandrag av fel"
 
@@ -2367,12 +2376,13 @@ msgid "Choose"
 msgstr "Välj"
 
 #: templates/people/person_detail.html:43
-msgid "Maintains:"
-msgstr "Underhåller:"
+msgid "Module maintenance"
+msgstr "Modulunderhåll"
 
 #: templates/people/person_detail.html:54
-msgid "Working on"
-msgstr "Arbetar på"
+#| msgid "No current actions."
+msgid "Current activity"
+msgstr "Nuvarande aktivitet"
 
 #: templates/people/person_detail.html:58
 msgid "State"
@@ -2435,8 +2445,9 @@ msgid "Join"
 msgstr "Gå med"
 
 #: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "Medlem av grupperna"
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "Gruppmedlemskap"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
@@ -2591,10 +2602,6 @@ msgstr "Pluralformer:"
 msgid "Archives"
 msgstr "Arkiv"
 
-#: templates/teams/team_detail.html:66
-msgid "Team membership"
-msgstr "Gruppmedlemskap"
-
 #: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Verkställ ändringar"
@@ -2664,8 +2671,9 @@ msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arkiverade åtgärder (%(human_level)s arkiverade serier)"
 
 #: templates/vertimus/vertimus_detail.html:110
-msgid "(Return to current)"
-msgstr "(Återgå till aktuell)"
+#| msgid "(Return to current)"
+msgid "(Return to current actions)"
+msgstr "(Återgå till aktuella åtgärder)"
 
 #: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
@@ -2925,6 +2933,25 @@ msgstr "Senaste insända fil för %(lang)s"
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
+#~ msgid ""
+#~ "This module is not part of the GNOME git repository. Please check the "
+#~ "module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens "
+#~ "webbsida om var översättningarna ska skickas."
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME git repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Modulerna i den här utgåvan är inte en del av GNOME:s git-förråd. "
+#~ "Kontrollera webbsidan för varje modul för att se var översättningarna ska "
+#~ "skickas."
+#~ msgid "Maintains:"
+#~ msgstr "Underhåller:"
+#~ msgid "Working on"
+#~ msgstr "Arbetar på"
+#~ msgid "Member of teams"
+#~ msgstr "Medlem av grupperna"
 #~ msgid "F-Spot Manual"
 #~ msgstr "Handbok för F-Spot"
 #~ msgid ""
