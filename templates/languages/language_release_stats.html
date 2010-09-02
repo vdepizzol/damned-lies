@@ -62,7 +62,7 @@
             <img src="{{ err.get_icon }}" title="{{ err.get_description|striptags }}" alt="{{ err.type }}" />
           {% endfor %}
           {% if stat|domain_type == "mallard" %}
-            <img src="{{ MEDIA_URL }}img/mallard.png" width="16" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
+            <img src="{{ MEDIA_URL }}img/mallard.png" width="18" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
           {% endif %}
         </td>
           <td><span class="branch">{{ branch }}</span></td>

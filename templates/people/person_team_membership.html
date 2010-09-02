@@ -2,7 +2,7 @@
 {% load stats_extras %}
 
 {% if person.role_set.all %}
-<h2>{% trans "Member of teams" %}</h2>
+<h2>{% trans "Team membership" %}</h2>
 <ul>
   {% for role in person.role_set.all %}
   {% with role.get_role_display as role_name %}

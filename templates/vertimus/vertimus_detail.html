@@ -107,7 +107,7 @@ $(document).ready(function() {
     {% else %}
       {% blocktrans with level|ordinal|safe as human_level %}Archived Actions ({{ human_level }} archived series){% endblocktrans %}
       <a href="{% url vertimus_by_names module.name,branch.name,domain.name,language.locale %}">
-        {% trans "(Return to current)" %}
+        {% trans "(Return to current actions)" %}
       </a>
     {% endif %}
     {% if grandparent_level %}

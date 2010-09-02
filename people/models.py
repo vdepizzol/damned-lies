@@ -38,7 +38,7 @@ class Person(User):
     webpage_url = models.URLField(_("Web page"), null=True, blank=True)
     irc_nick = models.SlugField(_("IRC nickname"), max_length=20, null=True, blank=True)
     bugzilla_account = models.EmailField(_("Bugzilla account"), null=True, blank=True,
-                                         help_text=_("This should be an email address, useful if not equal to 'email' field"))
+                                         help_text=_("This should be an email address, useful if not equal to 'E-mail address' field"))
     activation_key = models.CharField(max_length=40, null=True, blank=True)
 
     # Use UserManager to get the create_user method, etc.

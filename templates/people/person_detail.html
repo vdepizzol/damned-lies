@@ -40,7 +40,7 @@ $(document).ready(function()
 {% endif %}
 
 {% if person.maintains_modules.all %}
-<h2>{% trans "Maintains:" %}</h2>
+<h2>{% trans "Module maintenance" %}</h2>
 <ul>
   {% for module in person.maintains_modules.all %}
   <li><a href="{{ module.get_absolute_url }}">{{ module.get_description }}</a></li>
@@ -51,7 +51,7 @@ $(document).ready(function()
 {% include "people/person_team_membership.html" %}
 
 {% if states %}
-<h2>{% trans "Working on" %}</h2>
+<h2>{% trans "Current activity" %}</h2>
 
 <table class="tablesorter" id="working_on">
 <thead><tr>
