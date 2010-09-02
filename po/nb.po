@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-04 15:06+0200\n"
-"PO-Revision-Date: 2010-08-04 15:11+0200\n"
+"POT-Creation-Date: 2010-09-02 18:11+0200\n"
+"PO-Revision-Date: 2010-09-02 18:13+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
 "Language: no\n"
@@ -35,7 +35,7 @@ msgstr "Du har fullført innlogging."
 msgid ""
 "You have not joined any translation team yet. You can do it from <a href="
 "\"%(url)s\">your profile</a>."
-msgstr ""
+msgstr "Du har ikke blitt med i et oversettelseslag ennå. Du kan gjøre det fra <a href=\"«%(url)s»>profilen din</a>."
 
 #: ../common/views.py:80
 msgid "We're sorry, but your account has been disabled."
@@ -43,7 +43,7 @@ msgstr "Vi beklager, men din konto har blitt deaktivert."
 
 #: ../common/views.py:82
 msgid "Login unsuccessful. Please verify your username and password."
-msgstr ""
+msgstr "Innlogging feilet. Vennligst sjekk ditt brukernavn og passord."
 
 #: ../common/views.py:122
 msgid "Your account has been activated."
@@ -109,41 +109,41 @@ msgstr "Passordet ditt er endret."
 msgid "This branch is not linked from any release"
 msgstr ""
 
-#: ../stats/models.py:1058 ../stats/models.py:1362
+#: ../stats/models.py:1082 ../stats/models.py:1386
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: ../stats/models.py:1091
+#: ../stats/models.py:1115
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s melding"
 msgstr[1] "%(count)s meldinger"
 
-#: ../stats/models.py:1092
+#: ../stats/models.py:1116
 #, python-format
 msgid "updated on %(date)s"
 msgstr "oppdatert den %(date)s"
 
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: ../stats/models.py:1094
+#: ../stats/models.py:1118
 msgid "Y-m-d g:i a O"
 msgstr ""
 
-#: ../stats/models.py:1097
+#: ../stats/models.py:1121
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figur"
 msgstr[1] "%(count)s figurer"
 
-#: ../stats/models.py:1098
+#: ../stats/models.py:1122
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s – %(updated)s"
 
-#: ../stats/models.py:1101
+#: ../stats/models.py:1125
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s – %(updated)s"
@@ -172,11 +172,11 @@ msgstr "Ingen lag for locale %s"
 
 #: ../teams/views.py:57
 msgid "Committers"
-msgstr ""
+msgstr "Innsjekkere"
 
 #: ../teams/views.py:60
 msgid "No committers"
-msgstr ""
+msgstr "Ingen innsjekkere"
 
 #: ../teams/views.py:62
 msgid "Reviewers"
@@ -262,7 +262,7 @@ msgstr ""
 #: ../vertimus/views.py:159 ../vertimus/views.py:191
 #, python-format
 msgid "Error: The file %s contains invalid characters."
-msgstr ""
+msgstr "Feil: Filen %s inneholder ugyldige tegn."
 
 #: ../vertimus/views.py:160 ../vertimus/views.py:166 ../vertimus/views.py:176
 #, python-format
@@ -272,505 +272,8 @@ msgstr ""
 #: ../vertimus/views.py:182
 #, python-format
 msgid "Latest committed file for %(lang)s"
-msgstr ""
+msgstr "Siste innsjekkede fil for %(lang)s"
 
 #: ../vertimus/views.py:185
 msgid "Latest POT file"
-msgstr ""
-
-#~ msgid "Accessibility Guide"
-#~ msgstr "Tilgjengelighetsguide"
-
-#~ msgid "AisleRiot Manual"
-#~ msgstr "Manual for AisleRiot"
-
-#~ msgid "Anjuta Manual"
-#~ msgstr "Manual for Anjuta"
-
-#~ msgid "Blackjack Manual"
-#~ msgstr "Manual for Blackjack"
-
-#~ msgid "Criawips Manual"
-#~ msgstr "Manual for Criawips"
-
-#~ msgid "Damned Lies"
-#~ msgstr "Fordømte løgner"
-
-#~ msgid "Dasher Manual"
-#~ msgstr "Manual for Dasher"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Nettleseren Epiphany"
-
-#~ msgid "Eye of GNOME"
-#~ msgstr "Eye of GNOME"
-
-#~ msgid "Eye of GNOME Manual"
-#~ msgstr "Manual for Eye of GNOME"
-
-#~ msgid "F-Spot Manual"
-#~ msgstr "Manual for F-Spot"
-
-#~ msgid "GDM Manual"
-#~ msgstr "Manual for GDM"
-
-#~ msgid "GFloppy Manual"
-#~ msgstr "Manual for GFloppy"
-
-#~ msgid "GLib"
-#~ msgstr "GLib"
-
-#~ msgid "Gnometris Manual"
-#~ msgstr "Manual for Gnometris"
-
-#~ msgid "Gtk+"
-#~ msgstr "Gtk+"
-
-#~ msgid "Invest Applet Manual"
-#~ msgstr "Manual for panelprogrammet Invest"
-
-#~ msgid "JHBuild Documentation"
-#~ msgstr "Dokumentasjon for JHBuild"
-
-#~ msgid "Sabayon"
-#~ msgstr "Sabayon"
-
-#~ msgid "glChess Manual"
-#~ msgstr "Manual for glChess"
-
-#~ msgid "Administration Tools"
-#~ msgstr "Administrasjonsverktøy"
-
-#~ msgid "Development Tools"
-#~ msgstr "Utviklingsverktøy"
-
-#~ msgid "GNOME 2.14 (old stable)"
-#~ msgstr "GNOME 2.14 (gammel stabil)"
-
-#~ msgid "GNOME 2.16 (old stable)"
-#~ msgstr "GNOME 2.16 (gammel stabil)"
-
-#~ msgid "GNOME 2.18 (old stable)"
-#~ msgstr "GNOME 2.18 (tidligere stabil)"
-
-#~ msgid "GNOME 2.20 (old stable)"
-#~ msgstr "GNOME 2.20 (gammel stabil)"
-
-#~ msgid "GNOME 2.22 (old stable)"
-#~ msgstr "GNOME 2.22 (gammel stabil)"
-
-#~ msgid "GNOME 2.24 (stable)"
-#~ msgstr "GNOME 2.24 (stabil)"
-
-#~ msgid "GNOME Fifth Toe (Extra software)"
-#~ msgstr "GNOME Fifth Toe (ekstra programmer)"
-
-#~ msgid "GNOME Infrastructure"
-#~ msgstr "GNOME infrastruktur"
-
-#~ msgid "GNOME desktop"
-#~ msgstr "GNOME skrivebord"
-
-#~ msgid "GNOME developer platform"
-#~ msgstr "GNOME utviklerplattform"
-
-#~ msgid "System Administration"
-#~ msgstr "Systemadministrasjon"
-
-#~ msgid "freedesktop.org (non-GNOME)"
-#~ msgstr "freedesktop.org (ikke GNOME)"
-
-#~ msgid "%(lang)s Translation Team"
-#~ msgstr "%(lang)s oversettelseslag"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikaans"
-
-#~ msgid "Albanian"
-#~ msgstr "Albansk"
-
-#~ msgid "Amharic"
-#~ msgstr "Amharisk"
-
-#~ msgid "Arabic"
-#~ msgstr "Arabisk"
-
-#~ msgid "Armenian"
-#~ msgstr "Armensk"
-
-#~ msgid "Australian English"
-#~ msgstr "Australsk engelsk"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Aserbajdsjansk"
-
-#~ msgid "Basque"
-#~ msgstr "Baskisk"
-
-#~ msgid "Belarusian"
-#~ msgstr "Hviterussisk"
-
-#~ msgid "Belarusian Latin"
-#~ msgstr "Hviterussisk (latin)"
-
-#~ msgid "Bengali"
-#~ msgstr "Bengali"
-
-#~ msgid "Bengali (India)"
-#~ msgstr "Bengali (India)"
-
-#~ msgid "Bosnian"
-#~ msgstr "Bosnisk"
-
-#~ msgid "Breton"
-#~ msgstr "Bretonsk"
-
-#~ msgid "British English"
-#~ msgstr "Britisk engelsk"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bulgarsk"
-
-#~ msgid "Catalan"
-#~ msgstr "Katalansk"
-
-#~ msgid "Chinese (China)"
-#~ msgstr "Kinesisk (Kina)"
-
-#~ msgid "Chinese (Hong Kong)"
-#~ msgstr "Kinesisk (Hong Kong)"
-
-#~ msgid "Chinese (Taiwan)"
-#~ msgstr "Kinesisk (Taiwan)"
-
-#~ msgid "Croatian"
-#~ msgstr "Kroatisk"
-
-#~ msgid "Czech"
-#~ msgstr "Tsjekkisk"
-
-#~ msgid "Danish"
-#~ msgstr "Dansk"
-
-#~ msgid "Dutch"
-#~ msgstr "Nederlandsk"
-
-#~ msgid "Esperanto"
-#~ msgstr "Esperanto"
-
-#~ msgid "Estonian"
-#~ msgstr "Estisk"
-
-#~ msgid "Finnish"
-#~ msgstr "Finsk"
-
-#~ msgid "French"
-#~ msgstr "Fransk"
-
-#~ msgid "Galician"
-#~ msgstr "Galisisk"
-
-#~ msgid "Georgian"
-#~ msgstr "Georgisk"
-
-#~ msgid "German"
-#~ msgstr "Tysk"
-
-#~ msgid "Greek"
-#~ msgstr "Gresk"
-
-#~ msgid "Guarani"
-#~ msgstr "Guarani"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Hebrew"
-#~ msgstr "Hebraisk"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Hungarian"
-#~ msgstr "Ungarsk"
-
-#~ msgid "Icelandic"
-#~ msgstr "Islandsk"
-
-#~ msgid "Indonesian"
-#~ msgstr "Indonesisk"
-
-#~ msgid "Irish"
-#~ msgstr "Irsk"
-
-#~ msgid "Italian"
-#~ msgstr "Italiensk"
-
-#~ msgid "Japanese"
-#~ msgstr "Japansk"
-
-#~ msgid "Kannada"
-#~ msgstr "Kannada"
-
-#~ msgid "Kashmiri"
-#~ msgstr "Kashmiri"
-
-#~ msgid "Kazakh"
-#~ msgstr "Kasakhisk"
-
-#~ msgid "Khmer"
-#~ msgstr "Khmer"
-
-#~ msgid "Kinyarwanda"
-#~ msgstr "Kinyarwanda"
-
-#~ msgid "Korean"
-#~ msgstr "Koreansk"
-
-#~ msgid "Kurdish"
-#~ msgstr "Kurdisk"
-
-#~ msgid "Latvian"
-#~ msgstr "Latvisk"
-
-#~ msgid "Lithuanian"
-#~ msgstr "Litauisk"
-
-#~ msgid "Macedonian"
-#~ msgstr "Makedonsk"
-
-#~ msgid "Malagasy"
-#~ msgstr "Madagassisk"
-
-#~ msgid "Malay"
-#~ msgstr "Malayisk"
-
-#~ msgid "Malayalam"
-#~ msgstr "Malayalam"
-
-#~ msgid "Maori"
-#~ msgstr "Maori"
-
-#~ msgid "Marathi"
-#~ msgstr "Marathi"
-
-#~ msgid "Mongolian"
-#~ msgstr "Mongolsk"
-
-#~ msgid "Norwegian (Bokmål and Nynorsk)"
-#~ msgstr "Norsk (bokmål og nynorsk)"
-
-#~ msgid "Norwegian Bokmål"
-#~ msgstr "Norsk bokmål"
-
-#~ msgid "Norwegian Nynorsk"
-#~ msgstr "Norsk nynorsk"
-
-#~ msgid "Occitan"
-#~ msgstr "Oksitansk"
-
-#~ msgid "Oriya"
-#~ msgstr "Oriya"
-
-#~ msgid "Pashto"
-#~ msgstr "Pashto"
-
-#~ msgid "Persian"
-#~ msgstr "Persisk"
-
-#~ msgid "Polish"
-#~ msgstr "Polsk"
-
-#~ msgid "Portuguese"
-#~ msgstr "Portugisisk"
-
-#~ msgid "Romanian"
-#~ msgstr "Rumensk"
-
-#~ msgid "Russian"
-#~ msgstr "Russisk"
-
-#~ msgid "Serbian"
-#~ msgstr "Serbisk"
-
-#~ msgid "Sinhala"
-#~ msgstr "Singalesisk"
-
-#~ msgid "Slovak"
-#~ msgstr "Slovakisk"
-
-#~ msgid "Slovenian"
-#~ msgstr "Slovensk"
-
-#~ msgid "Spanish"
-#~ msgstr "Spansk"
-
-#~ msgid "Swedish"
-#~ msgstr "Svensk"
-
-#~ msgid "Tagalog"
-#~ msgstr "Tagalog"
-
-#~ msgid "Tajik"
-#~ msgstr "Tadsjikisk"
-
-#~ msgid "Tamil"
-#~ msgstr "Tamil"
-
-#~ msgid "Tatar"
-#~ msgstr "Tatarisk"
-
-#~ msgid "Telugu"
-#~ msgstr "Telugu"
-
-#~ msgid "Thai"
-#~ msgstr "Thai"
-
-#~ msgid "Turkish"
-#~ msgstr "Tyrkisk"
-
-#~ msgid "Turkmen"
-#~ msgstr "Turkmensk"
-
-#~ msgid "Uighur"
-#~ msgstr "Uigurisk"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ukrainsk"
-
-#~ msgid "Urdu"
-#~ msgstr "Urdu"
-
-#~ msgid "Uzbek"
-#~ msgstr "Usbekisk"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamesisk"
-
-#~ msgid "Welsh"
-#~ msgstr "Walisisk"
-
-#~ msgid "Xhosa"
-#~ msgstr "Xhosa"
-
-#~ msgid "Yiddish"
-#~ msgstr "Jiddisch"
-
-#~ msgid "Yoruba"
-#~ msgstr "Joruba"
-
-#~ msgid "Zulu"
-#~ msgstr "Zulu"
-
-#~ msgid "PO file '%s' doesn't exist."
-#~ msgstr "PO-filen «%s» eksisterer ikke."
-
-#~ msgid "Damned Lies about GNOME"
-#~ msgstr "Fordømte løgner om GNOME"
-
-#~ msgid "Translated by:"
-#~ msgstr "Oversatt av:"
-
-#~ msgid "%(cat)s (%(percent)s%% translated)"
-#~ msgstr "%(cat)s (%(percent)s%% oversatt)"
-
-#~ msgid "Details"
-#~ msgstr "Detaljer"
-
-#~ msgid "Bugzilla:"
-#~ msgstr "Bugzilla:"
-
-#~ msgid "Report Bug in Translation"
-#~ msgstr "Rapporter feil i oversettelse"
-
-#~ msgid "Show Existing Bugs"
-#~ msgstr "Vis eksisterende feil"
-
-#~ msgid "Send e-mail to the list"
-#~ msgstr "Send e-post til listen"
-
-#~ msgid "Coordinator"
-#~ msgstr "Koordinator"
-
-#~ msgid "Language code: %s"
-#~ msgstr "Språkkode: %s"
-
-#~ msgid "Hide completed modules"
-#~ msgstr "Skjul ferdigstilte moduler"
-
-#~ msgid "Show completed modules"
-#~ msgstr "Vis ferdigstilte moduler"
-
-#~ msgid "GNOME Languages"
-#~ msgstr "GNOME språk"
-
-#~ msgid "GNOME modules"
-#~ msgstr "GNOME moduler"
-
-#~ msgid "GNOME Translation Teams"
-#~ msgstr "GNOME oversettelseslag"
-
-#~ msgid "Coordinated by %(coordinator)s"
-#~ msgstr "Koordineres av %(coordinator)s"
-
-#~ msgid "Bug reporting"
-#~ msgstr "Feilrapportering"
-
-#~ msgid "Show existing i18n and l10n bugs"
-#~ msgstr "Vis eksisterende feil for internasjonalisering og lokalisering"
-
-#~ msgid "Report bugs to Bugzilla"
-#~ msgstr "Rapporter feil til Bugzilla"
-
-#~ msgid "Branches:"
-#~ msgstr "Grener:"
-
-#~ msgid "Browse CVS"
-#~ msgstr "Se på CVS"
-
-#~ msgid "Browse SVN"
-#~ msgstr "Se på SVN"
-
-#~ msgid "GNOME Contributors"
-#~ msgstr "GNOME bidragsytere"
-
-#~ msgid "GNOME is being developed by following people:"
-#~ msgstr "GNOME utvikles av følgende personer:"
-
-#~ msgid "Instant messaging:"
-#~ msgstr "Lynmeldinger:"
-
-#~ msgid "SVN account:"
-#~ msgstr "SVN-konto:"
-
-#~ msgid "Maintains:"
-#~ msgstr "Vedlikeholder:"
-
-#~ msgid "Translates:"
-#~ msgstr "Oversetter:"
-
-#~ msgid "Coordinates %(team)s"
-#~ msgstr "Koordinerer %(team)s"
-
-#~ msgid "Graph"
-#~ msgstr "Graf"
-
-#~ msgid "User Interface"
-#~ msgstr "Brukergrensesnitt"
-
-#~ msgid "-"
-#~ msgstr "-"
-
-#~ msgid "POT file (%(potsize)s message)"
-#~ msgid_plural "POT file (%(potsize)s messages)"
-#~ msgstr[0] "POT-fil (%(potsize)s beskjed)"
-#~ msgstr[1] "POT-fil (%(potsize)s beskjeder)"
-
-#~ msgid "Notices"
-#~ msgstr "Merknader"
-
-#~ msgid "Language"
-#~ msgstr "Språk"
-
-#~ msgid "Translated"
-#~ msgstr "Oversatt"
+msgstr "Siste POT-fil"
