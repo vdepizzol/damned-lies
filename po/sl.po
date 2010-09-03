@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-21 10:34+0000\n"
-"PO-Revision-Date: 2010-08-23 08:26+0100\n"
+"POT-Creation-Date: 2010-09-02 23:01+0000\n"
+"PO-Revision-Date: 2010-09-03 08:28+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -1479,9 +1479,6 @@ msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
 #: settings.py:75
-msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
-msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
-
 #: settings_sample.py:81
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
@@ -1652,8 +1649,8 @@ msgid "Bugzilla account"
 msgstr "Račun Bugzilla"
 
 #: people/models.py:41
-msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronski naslov'."
+msgid "This should be an email address, useful if not equal to 'E-mail address' field"
+msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronskega naslova'."
 
 #: people/views.py:87
 #, python-format
@@ -2028,8 +2025,9 @@ msgid "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damn
 msgstr "Upravljano preko modula <a href='http://git.gnome.org/browse/damned-lies/'>presnete laži</a> na <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
 #: templates/base.html:98
-msgid "Hosted by"
-msgstr "Spletišče gosti"
+#, python-format
+msgid "Hosted by %(link)s."
+msgstr "Gostuje pri %(link)s."
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
@@ -2215,6 +2213,7 @@ msgid "%(name)s Release"
 msgstr "%(name)s objava"
 
 #: templates/release_detail.html:13
+#: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
 msgstr "Moduli te objave niso del GNOME Git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
@@ -2315,10 +2314,6 @@ msgstr[1] "Namizje GNOME se prevaja v %(numb)s jezik.\n"
 msgstr[2] "Namizje GNOME se prevaja v %(numb)s jezika.\n"
 msgstr[3] "Namizje GNOME se prevaja v %(numb)s jezike.\n"
 
-#: templates/languages/language_release.html:33
-msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
-msgstr "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
-
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
 msgstr "Prenos vseh po datotek."
@@ -2383,12 +2378,12 @@ msgid "Choose"
 msgstr "Izbor"
 
 #: templates/people/person_detail.html:43
-msgid "Maintains:"
-msgstr "Vzdrževalec:"
+msgid "Module maintenance"
+msgstr "Upravljanje modula"
 
 #: templates/people/person_detail.html:54
-msgid "Working on"
-msgstr "Delo na"
+msgid "Current activity"
+msgstr "Trenutna dejavnost"
 
 #: templates/people/person_detail.html:58
 msgid "State"
@@ -2451,8 +2446,9 @@ msgid "Join"
 msgstr "Pridruži se"
 
 #: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "Član skupin"
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "Članstvo"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
@@ -2607,10 +2603,6 @@ msgstr "Množinske oblike:"
 msgid "Archives"
 msgstr "Arhivi"
 
-#: templates/teams/team_detail.html:66
-msgid "Team membership"
-msgstr "Članstvo"
-
 #: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Uporabi spremembe"
@@ -2680,8 +2672,8 @@ msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
 
 #: templates/vertimus/vertimus_detail.html:110
-msgid "(Return to current)"
-msgstr "(Vrni na trenutno)"
+msgid "(Return to current actions)"
+msgstr "(Vrni na trenutno dejanje)"
 
 #: templates/vertimus/vertimus_detail.html:115
 msgid "(Previous action history)"
@@ -2940,6 +2932,29 @@ msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 #: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
+
+#~ msgid ""
+#~ "This module is not part of the GNOME git repository. Please check the "
+#~ "module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula "
+#~ "za podrobnosti, kam poslati prevode."
+
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME git repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega "
+#~ "modula posebej za podrobnosti o objavljanju prevodov."
+
+#~ msgid "Maintains:"
+#~ msgstr "Vzdrževalec:"
+
+#~ msgid "Working on"
+#~ msgstr "Delo na"
+
+#~ msgid "Member of teams"
+#~ msgstr "Član skupin"
 
 #~ msgid "F-Spot Manual"
 #~ msgstr "priročnik F-Spot"
