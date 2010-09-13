@@ -1,5 +1,4 @@
-import sys, os, traceback
-import time
+import sys, traceback
 from optparse import make_option
 from django.core.management.base import BaseCommand
 from django.core.mail import mail_admins
@@ -33,14 +32,11 @@ class Command(BaseCommand):
                     return "Update unsuccessful."
                 print "Updating stats for %s.%s..." % (module_arg, branch_arg)
                 try:
-                    self.get_lock_for_module(module_arg, branch_arg)
                     branch.update_stats(options['force'])
                 except:
                     tbtext = traceback.format_exc()
                     mail_admins("Error while updating %s %s" % (module_arg, branch_arg), tbtext)
                     print >> sys.stderr, "Error during updating, mail sent to admins"
-                finally:
-                    self.release_lock_for_module(module_arg, branch_arg)
 
         elif len(args) == 1:
             # Update all branches of a module
@@ -49,13 +45,10 @@ class Command(BaseCommand):
             branches = Branch.objects.filter(module__name=module_arg)
             for branch in branches.all():
                 try:
-                    self.get_lock_for_module(module_arg, branch.name)
                     branch.update_stats(options['force'])
                 except:
                     print >> sys.stderr, traceback.format_exc()
                     print "Error while updating stats for %s (branch '%s')" % (module_arg, branch.name)
-                finally:
-                    self.release_lock_for_module(module_arg, branch.name)
         else:
             # Update all modules
             if options['non-gnome']:
@@ -67,28 +60,9 @@ class Command(BaseCommand):
                 branches = Branch.objects.filter(module__name=mod)
                 for branch in branches.all():
                     try:
-                        self.get_lock_for_module(mod.name, branch.name)
                         branch.update_stats(options['force'])
                     except:
                         print >> sys.stderr, traceback.format_exc()
                         print "Error while updating stats for %s (branch '%s')" % (mod.name, branch.name)
-                    finally:
-                        self.release_lock_for_module(mod.name, branch.name)
 
         return "Update completed."
-
-    # Weird things happen when multiple updates run in parallel for the same module
-    # We use filesystem directories creation/deletion to act as global lock mecanism
-    def get_lock_for_module(self, module_name, branch_name):
-        dirpath = os.path.join("/tmp", "updating-%s" % (module_name,))
-        while True:
-            try:
-                os.mkdir(dirpath)
-                break;
-            except OSError:
-                time.sleep(60)
-        return # Lock acquired
-
-    def release_lock_for_module(self, module_name, branch_name):
-        dirpath = os.path.join("/tmp", "updating-%s" % (module_name,))
-        os.rmdir(dirpath)

@@ -19,8 +19,10 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from __future__ import with_statement
 import os, sys, re, hashlib
 import threading
+from time import sleep
 from datetime import datetime
 
 from django.conf import settings
@@ -127,6 +129,26 @@ class Module(models.Model):
            user.username in [ p.username for p in self.maintainers.all() ]:
             return True
         return False
+
+class ModuleLock(object):
+    """ Weird things happen when multiple updates run in parallel for the same module
+        We use filesystem directories creation/deletion to act as global lock mecanism
+    """
+    def __init__(self, mod):
+        assert isinstance(mod, Module)
+        self.module = mod
+
+    def __enter__(self):
+        self.dirpath = os.path.join("/tmp", "updating-%s" % (self.module.name,))
+        while True:
+            try:
+                os.mkdir(self.dirpath)
+                break;
+            except OSError:
+                sleep(30)
+
+    def __exit__(self, *exc_info):
+        os.rmdir(self.dirpath)
 
 class Branch(models.Model):
     """ Branch of a module """
@@ -296,145 +318,146 @@ class Branch(models.Model):
 
     def update_stats(self, force, checkout=True):
         """ Update statistics for all po files from the branch """
-        if checkout:
-            self.checkout()
-        domains = Domain.objects.filter(module=self.module).all()
-        string_frozen = self.has_string_frozen()
-        for dom in domains:
-            # 1. Initial settings
-            # *******************
-            domain_path = os.path.join(self.co_path(), dom.directory)
-            if not os.access(domain_path, os.X_OK):
-                # TODO: should check if existing stats, and delete (archive) them in this case
-                continue
-            errors = []
+        with ModuleLock(self.module):
+            if checkout:
+                self.checkout()
+            domains = Domain.objects.filter(module=self.module).all()
+            string_frozen = self.has_string_frozen()
+            for dom in domains:
+                # 1. Initial settings
+                # *******************
+                domain_path = os.path.join(self.co_path(), dom.directory)
+                if not os.access(domain_path, os.X_OK):
+                    # TODO: should check if existing stats, and delete (archive) them in this case
+                    continue
+                errors = []
 
-            # 2. Pre-check, if available (intltool-update -m)
-            # **************************
-            if dom.dtype == 'ui' and not dom.pot_method:
-                # Run intltool-update -m to check for some errors
-                errors.extend(utils.check_potfiles(domain_path))
+                # 2. Pre-check, if available (intltool-update -m)
+                # **************************
+                if dom.dtype == 'ui' and not dom.pot_method:
+                    # Run intltool-update -m to check for some errors
+                    errors.extend(utils.check_potfiles(domain_path))
 
-            # 3. Generate a fresh pot file
-            # ****************************
-            if dom.dtype == 'ui':
-                potfile, errs = dom.generate_pot_file(self)
-            elif dom.dtype == 'doc':
-                if dom.pot_method:
+                # 3. Generate a fresh pot file
+                # ****************************
+                if dom.dtype == 'ui':
                     potfile, errs = dom.generate_pot_file(self)
+                elif dom.dtype == 'doc':
+                    if dom.pot_method:
+                        potfile, errs = dom.generate_pot_file(self)
+                    else:
+                        # Standard gnome-doc-utils pot generation
+                        potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
+                    if not potfile:
+                        print >> sys.stderr, "\n".join([e[1] for e in errs])
+                        continue
                 else:
-                    # Standard gnome-doc-utils pot generation
-                    potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
-                if not potfile:
-                    print >> sys.stderr, "\n".join([e[1] for e in errs])
+                    print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                     continue
-            else:
-                print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
-                continue
-            errors.extend(errs)
-            linguas = dom.get_linguas(self.co_path())
-            if linguas['langs'] is None and linguas['error']:
-                errors.append(("warn", linguas['error']))
+                errors.extend(errs)
+                linguas = dom.get_linguas(self.co_path())
+                if linguas['langs'] is None and linguas['error']:
+                    errors.append(("warn", linguas['error']))
 
-            # Prepare statistics object
-            try:
-                stat = Statistics.objects.get(language=None, branch=self, domain=dom)
-                Information.objects.filter(statistics=stat).delete() # Reset errors
-            except Statistics.DoesNotExist:
-                stat = Statistics(language=None, branch=self, domain=dom)
-                stat.save()
-
-            # 4. Compare with old pot files, various checks
-            # *****************************
-            previous_pot = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + ".pot")
-            if not potfile:
-                if settings.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module.name, dom.directory)
-                if os.access(previous_pot, os.R_OK):
-                    # Use old POT file
-                    potfile = previous_pot
-                    errors.append(("error", ugettext_noop("Can't generate POT file, using old one.")))
-                else:
-                    errors.append(("error", ugettext_noop("Can't generate POT file, statistics aborted.")))
-                    stat.set_errors(errors)
-                    continue
-
-            changed_status = utils.CHANGED_WITH_ADDITIONS
-
-            if os.access(previous_pot, os.R_OK):
-                # Compare old and new POT
-                changed_status, diff = utils.pot_diff_status(previous_pot, potfile)
-                if string_frozen and dom.dtype == 'ui' and changed_status == utils.CHANGED_WITH_ADDITIONS:
-                    utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
-
-                if changed_status != utils.NOT_CHANGED:
-                    signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
-
-            # 5. Generate pot stats and update DB
-            # ***********************************
-            pot_stats = utils.po_file_stats(potfile, False)
-            errors.extend(pot_stats['errors'])
-            if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
-                errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
-
-            stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
-            stat.set_errors(errors)
-
-            # 6. Update language po files and update DB
-            # *****************************************
-            command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
-            stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
-            langs_with_ext_errors = [stat.language.locale for stat in stats_with_ext_errors]
-            for lang, pofile in dom.get_lang_files(self.co_path()):
-                outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
-
-                if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
-                   and os.stat(pofile)[8] < os.stat(outpo)[8] and not lang in langs_with_ext_errors :
-                    continue
-
-                realcmd = command % {
-                    'outpo' : outpo,
-                    'pofile' : pofile,
-                    'potfile' : potfile,
-                    }
-                utils.run_shell_command(realcmd)
-
-                langstats = utils.po_file_stats(outpo, True)
-                if linguas['langs'] is not None and lang not in linguas['langs']:
-                    langstats['errors'].append(("warn-ext", linguas['error']))
-                if dom.dtype == "doc":
-                    fig_stats = utils.get_fig_stats(outpo)
-                    for fig in fig_stats:
-                        trans_path = os.path.join(domain_path, lang, fig['path'])
-                        if os.access(trans_path, os.R_OK):
-                            fig_file = open(trans_path, 'rb').read()
-                            trans_hash = hashlib.md5(fig_file).hexdigest()
-                            if fig['hash'] == trans_hash:
-                                langstats['errors'].append(("warn-ext", "Figures should not be copied when identical to original (%s)." % trans_path))
-
-                if settings.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
-                # Save in DB
+                # Prepare statistics object
                 try:
-                    stat = Statistics.objects.get(language__locale=lang, branch=self, domain=dom)
-                    Information.objects.filter(statistics=stat).delete()
+                    stat = Statistics.objects.get(language=None, branch=self, domain=dom)
+                    Information.objects.filter(statistics=stat).delete() # Reset errors
                 except Statistics.DoesNotExist:
-                    try:
-                        language = Language.objects.get(locale=lang)
-                    except Language.DoesNotExist:
-                        if self.is_head():
-                            language = Language(name=lang, locale=lang)
-                            language.save()
-                        else:
-                            # Do not create language (and therefore ignore stats) for an 'old' branch
-                            continue
-                    stat = Statistics(language = language, branch = self, domain = dom)
+                    stat = Statistics(language=None, branch=self, domain=dom)
                     stat.save()
-                stat.set_translation_stats(outpo,
-                                           translated = int(langstats['translated']),
-                                           fuzzy = int(langstats['fuzzy']),
-                                           untranslated = int(langstats['untranslated']),
-                                           num_figures = int(langstats['num_figures']))
-                for err in langstats['errors']:
-                    stat.information_set.add(Information(type=err[0], description=err[1]))
+
+                # 4. Compare with old pot files, various checks
+                # *****************************
+                previous_pot = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + ".pot")
+                if not potfile:
+                    if settings.DEBUG: print >> sys.stderr, "Can't generate POT file for %s/%s." % (self.module.name, dom.directory)
+                    if os.access(previous_pot, os.R_OK):
+                        # Use old POT file
+                        potfile = previous_pot
+                        errors.append(("error", ugettext_noop("Can't generate POT file, using old one.")))
+                    else:
+                        errors.append(("error", ugettext_noop("Can't generate POT file, statistics aborted.")))
+                        stat.set_errors(errors)
+                        continue
+
+                changed_status = utils.CHANGED_WITH_ADDITIONS
+
+                if os.access(previous_pot, os.R_OK):
+                    # Compare old and new POT
+                    changed_status, diff = utils.pot_diff_status(previous_pot, potfile)
+                    if string_frozen and dom.dtype == 'ui' and changed_status == utils.CHANGED_WITH_ADDITIONS:
+                        utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
+
+                    if changed_status != utils.NOT_CHANGED:
+                        signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
+
+                # 5. Generate pot stats and update DB
+                # ***********************************
+                pot_stats = utils.po_file_stats(potfile, False)
+                errors.extend(pot_stats['errors'])
+                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
+                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
+
+                stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
+                stat.set_errors(errors)
+
+                # 6. Update language po files and update DB
+                # *****************************************
+                command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
+                stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
+                langs_with_ext_errors = [stat.language.locale for stat in stats_with_ext_errors]
+                for lang, pofile in dom.get_lang_files(self.co_path()):
+                    outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
+
+                    if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
+                       and os.stat(pofile)[8] < os.stat(outpo)[8] and not lang in langs_with_ext_errors :
+                        continue
+
+                    realcmd = command % {
+                        'outpo' : outpo,
+                        'pofile' : pofile,
+                        'potfile' : potfile,
+                        }
+                    utils.run_shell_command(realcmd)
+
+                    langstats = utils.po_file_stats(outpo, True)
+                    if linguas['langs'] is not None and lang not in linguas['langs']:
+                        langstats['errors'].append(("warn-ext", linguas['error']))
+                    if dom.dtype == "doc":
+                        fig_stats = utils.get_fig_stats(outpo)
+                        for fig in fig_stats:
+                            trans_path = os.path.join(domain_path, lang, fig['path'])
+                            if os.access(trans_path, os.R_OK):
+                                fig_file = open(trans_path, 'rb').read()
+                                trans_hash = hashlib.md5(fig_file).hexdigest()
+                                if fig['hash'] == trans_hash:
+                                    langstats['errors'].append(("warn-ext", "Figures should not be copied when identical to original (%s)." % trans_path))
+
+                    if settings.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
+                    # Save in DB
+                    try:
+                        stat = Statistics.objects.get(language__locale=lang, branch=self, domain=dom)
+                        Information.objects.filter(statistics=stat).delete()
+                    except Statistics.DoesNotExist:
+                        try:
+                            language = Language.objects.get(locale=lang)
+                        except Language.DoesNotExist:
+                            if self.is_head():
+                                language = Language(name=lang, locale=lang)
+                                language.save()
+                            else:
+                                # Do not create language (and therefore ignore stats) for an 'old' branch
+                                continue
+                        stat = Statistics(language = language, branch = self, domain = dom)
+                        stat.save()
+                    stat.set_translation_stats(outpo,
+                                               translated = int(langstats['translated']),
+                                               fuzzy = int(langstats['fuzzy']),
+                                               untranslated = int(langstats['untranslated']),
+                                               num_figures = int(langstats['num_figures']))
+                    for err in langstats['errors']:
+                        stat.information_set.add(Information(type=err[0], description=err[1]))
 
     def _exists(self):
         """ Determine if branch (self) already exists (i.e. already checked out) on local FS """
