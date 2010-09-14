@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2006-2007 Danilo Segan <danilo@gnome.org>.
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2010 Claude Paroz <claude@2xlibre.net>.
 #
 # This file is part of Damned Lies.
 #
@@ -20,6 +20,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import sys, os, re, time
+import hashlib
 from itertools import islice
 from subprocess import Popen, PIPE
 import errno
@@ -379,6 +380,19 @@ def copy_file(file1, file2):
             return 0
     except:
         return 0
+
+def compute_md5(full_path):
+    m = hashlib.md5()
+    block_size=2**13
+    f = open(full_path)
+    while True:
+        data = f.read(block_size)
+        if not data:
+            break
+        m.update(data)
+    f.close()
+    return m.hexdigest()
+
 
 def notify_list(out_domain, diff):
     """Send notification about string changes described in diff."""

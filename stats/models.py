@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2010 Claude Paroz <claude@2xlibre.net>.
 # Copyright (c) 2008 Stephane Raimbault <stephane.raimbault@gmail.com>.
 #
 # This file is part of Damned Lies.
@@ -32,7 +32,9 @@ from django.utils import dateformat
 from django.utils.datastructures import SortedDict
 from django.db import models, connection
 
+from common.fields import DictionaryField
 from stats import utils, signals
+from stats.doap import update_maintainers
 from people.models import Person
 from languages.models import Language
 
@@ -157,6 +159,7 @@ class Branch(models.Model):
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module      = models.ForeignKey(Module)
     weight      = models.IntegerField(default=0, help_text="Smaller weight is displayed first")
+    file_hashes = DictionaryField(null=True, blank=True)
     # 'releases' is the backward relation name from Release model
 
     # May be set to False by test suite
@@ -221,6 +224,21 @@ class Branch(models.Model):
         if self.releases.count() < 1:
             return _(u"This branch is not linked from any release")
         return ""
+
+    def file_changed(self, rel_path):
+        """ This method determine if some file has changed based on its hash
+            Always returns true if this is the first time the path is checked
+        """
+        full_path = os.path.join(self.co_path(), rel_path)
+        if not os.access(full_path, os.R_OK):
+            return False # Raise exception?
+        new_hash = utils.compute_md5(full_path)
+        if self.file_hashes.get(rel_path, None) == new_hash:
+            return False
+        else:
+            self.file_hashes[rel_path] = new_hash
+            self.save(update_statistics=False)
+            return True
 
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
@@ -458,6 +476,9 @@ class Branch(models.Model):
                                                num_figures = int(langstats['num_figures']))
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
+            # Check if doap file changed
+            if self.file_changed("%s.doap" % self.module.name):
+                update_maintainers(self.module)
 
     def _exists(self):
         """ Determine if branch (self) already exists (i.e. already checked out) on local FS """
