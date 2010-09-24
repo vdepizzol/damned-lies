@@ -583,7 +583,7 @@ class Branch(models.Model):
             raise Exception, "Commit is not implemented for '%s'" % vcs_type
 
         locale = language.locale
-        commit_dir = os.path.join(settings.SCRATCHDIR, vcs_type, self.module.name + "." + self.name, domain.directory)
+        commit_dir = os.path.join(self.co_path(), domain.directory)
         dest_filename = "%s.po" % locale
         dest_path = os.path.join(commit_dir, dest_filename)
         already_exist = os.access(dest_path, os.F_OK)
@@ -592,50 +592,41 @@ class Branch(models.Model):
         utils.copy_file(po_file, dest_path)
 
         if vcs_type == "git":
-            # git add file.po
-            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git add %(po_file)s" % {
-                       'dest':    commit_dir,
-                       'branch':  self.name,
-                       'po_file': dest_filename,
-                       }, raise_on_error=True)
-            if not already_exist:
-                # Add locale to LINGUAS
-                linguas_file = os.path.join(commit_dir, "LINGUAS")
-                if os.access(linguas_file, os.F_OK):
-                    fin = open(linguas_file, 'r')
-                    fout = open(linguas_file+"~", 'w')
-                    lang_written = False
-                    for line in fin:
-                        if not lang_written and line[0] != "#" and line[:5] > locale[:5]:
-                            fout.write(locale + "\n")
-                            lang_written = True
-                        fout.write(line)
-                    fout.close()
-                    fin.close()
-                    os.rename(linguas_file+"~", linguas_file)
-                    utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git add %(lg_file)s" % {
-                               'dest':    commit_dir,
-                               'branch':  self.name,
-                               'lg_file': "LINGUAS",
-                               })
-                commit_message = "Added %s translation." % language.name
-            else:
-                commit_message = "Updated %s translation." % language.name
-            # FIXME: edit changelog?
-            # git commit -m "Updated %s translation."
-            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git commit -m \"%(msg)s\" --author \"%(name)s <%(email)s>\"" % {
-                       'dest':    commit_dir,
-                       'branch':  self.name,
-                       'msg': commit_message,
-                       'name': user.name,
-                       'email': user.email,
-                       }, raise_on_error=True)
-            # git push
-            utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s && git push" % {
-                       'dest':    commit_dir,
-                       'branch':  self.name,
-                       'msg': commit_message,
-                       }, raise_on_error=True)
+            var_dict = {
+                'dest':    commit_dir,
+                'branch':  self.name,
+                'po_file': dest_filename,
+                'lg_file': "LINGUAS",
+                'name':    user.name,
+                'email':   user.email,
+                'msg':     "Updated %s translation" % language.name,
+            }
+            with ModuleLock(self.module):
+                utils.run_shell_command("cd \"%(dest)s\" && git checkout %(branch)s" % var_dict, raise_on_error=True)
+                # git add file.po
+                utils.run_shell_command("cd \"%(dest)s\" && git add %(po_file)s" % var_dict, raise_on_error=True)
+                if not already_exist:
+                    # Add locale to LINGUAS
+                    linguas_file = os.path.join(commit_dir, "LINGUAS")
+                    if os.access(linguas_file, os.F_OK):
+                        fin = open(linguas_file, 'r')
+                        fout = open(linguas_file+"~", 'w')
+                        lang_written = False
+                        for line in fin:
+                            if not lang_written and line[0] != "#" and line[:5] > locale[:5]:
+                                fout.write(locale + "\n")
+                                lang_written = True
+                            fout.write(line)
+                        fout.close()
+                        fin.close()
+                        os.rename(linguas_file+"~", linguas_file)
+                        utils.run_shell_command("cd \"%(dest)s\" && git add %(lg_file)s" % var_dict, raise_on_error=True)
+                    var_dict['msg'] = "Added %s translation" % language.name
+                # git commit -m "Updated %s translation."
+                utils.run_shell_command("cd \"%(dest)s\" && git commit -m \"%(msg)s\" --author \"%(name)s <%(email)s>\"" % var_dict,
+                    raise_on_error=True)
+                # git push
+                utils.run_shell_command("cd \"%(dest)s\" && git push" % var_dict, raise_on_error=True)
         # Finish by updating stats
         self.update_stats(force=False)
 

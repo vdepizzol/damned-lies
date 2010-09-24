@@ -364,7 +364,7 @@ class ActionDb(models.Model):
         same state.
         """
         try:
-            action_db = self.objects.filter(file__endswith=".po", state_db=self.state_db,
+            action_db = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
                 id__lt=self.id).latest('id')
             return action_db
         except ActionDb.DoesNotExist:
