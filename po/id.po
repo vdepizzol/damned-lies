@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-03 16:33+0000\n"
-"PO-Revision-Date: 2010-09-05 04:37+0700\n"
+"POT-Creation-Date: 2010-09-23 18:56+0000\n"
+"PO-Revision-Date: 2010-09-24 13:11+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "Bemba"
 
 #: database-content.py:15 database-content.py:136
 msgid "Bengali"
-msgstr "Bengali"
+msgstr "Bengal"
 
 #: database-content.py:16 database-content.py:137
 msgid "Bengali (India)"
@@ -1180,10 +1180,6 @@ msgid "Email client for netbooks"
 msgstr "Klien email bagi netbook"
 
 #: database-content.py:411
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "Avahi is a system which facilitates service discovery on a local network via "
 "the mDNS/DNS-SD protocol suite. Please submit your translation through the "
@@ -1208,10 +1204,6 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince adalah suatu penilik dokumen untuk berbagai format dokumen."
 
 #: database-content.py:414
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 "module. Please submit your translation through the <a href=\"http://www."
@@ -1312,10 +1304,6 @@ msgstr ""
 "berkas terjemahan Anda."
 
 #: database-content.py:431
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier. This is not a GNOME-specific module. Please submit "
@@ -1376,7 +1364,7 @@ msgstr "Suatu klien VNC bagi GNOME"
 
 #: database-content.py:440
 msgid "Translations should be submitted as bug reports (see link below)."
-msgstr "Terjemahan mesti di-submit sebagai laporan bug (lihat baris di bawa)."
+msgstr "Terjemahan mesti dikirim sebagai laporan bug (lihat baris di bawah)."
 
 #: database-content.py:441
 msgid ""
@@ -1643,8 +1631,6 @@ msgid "Bugzilla account"
 msgstr "Akun Bugzilla"
 
 #: people/models.py:41
-#| msgid ""
-#| "This should be an email address, useful if not equal to 'email' field"
 msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
@@ -1680,23 +1666,23 @@ msgstr "Anda telah dikeluarkan dari tim '%s'."
 msgid "Your password has been changed."
 msgstr "Kata sandi Anda telah diganti."
 
-#: stats/models.py:200
+#: stats/models.py:222
 msgid "This branch is not linked from any release"
 msgstr "Branch ini tak ditaut dari rilis manapun"
 
-#: stats/models.py:355
+#: stats/models.py:378
 msgid "Can't generate POT file, using old one."
 msgstr "Tak bisa menjangkitkan berkas POT, menggunakan yang lama."
 
-#: stats/models.py:357
+#: stats/models.py:380
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Tak bisa menjangkitkan berkas POT, statistik digugurkan."
 
-#: stats/models.py:377
+#: stats/models.py:400
 msgid "Can't copy new POT file to public location."
 msgstr "Tak bisa menyalin berkas POT baru ke lokasi publik."
 
-#: stats/models.py:717
+#: stats/models.py:740
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1707,78 +1693,78 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:741
+#: stats/models.py:764
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr ""
 "Entri untuk bahasa ini tak ada di variabel %(var)s pada berkas %(file)s."
 
-#: stats/models.py:999
+#: stats/models.py:1022
 msgid "Administration Tools"
 msgstr "Perkakas Administrasi"
 
-#: stats/models.py:1000
+#: stats/models.py:1023
 msgid "Development Tools"
 msgstr "Perkakas Pengembangan"
 
-#: stats/models.py:1001
+#: stats/models.py:1024
 msgid "GNOME Desktop"
 msgstr "Desktop GNOME"
 
-#: stats/models.py:1002
+#: stats/models.py:1025
 msgid "GNOME Developer Platform"
 msgstr "Platform Pengembang GNOME"
 
-#: stats/models.py:1003
+#: stats/models.py:1026
 msgid "New Module Proposals"
 msgstr "Proposal Modul Baru"
 
-#: stats/models.py:1082 stats/models.py:1386
+#: stats/models.py:1105 stats/models.py:1409
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1115
+#: stats/models.py:1138
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s pesan"
 
-#: stats/models.py:1116
+#: stats/models.py:1139
 #, python-format
 msgid "updated on %(date)s"
 msgstr "dimutakhirkan pada %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1118 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1141 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i O"
 
-#: stats/models.py:1121
+#: stats/models.py:1144
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s gambar"
 
-#: stats/models.py:1122
+#: stats/models.py:1145
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Berkas POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1125
+#: stats/models.py:1148
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Berkas POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1209
+#: stats/models.py:1232
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Berkas POT ini tidak dibuat melalui metoda intltool standar."
 
-#: stats/models.py:1210
+#: stats/models.py:1233
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2031,7 +2017,6 @@ msgstr ""
 
 #: templates/base.html:98
 #, python-format
-#| msgid "Hosted by"
 msgid "Hosted by %(link)s."
 msgstr "Di-host oleh %(link)s."
 
@@ -2306,7 +2291,6 @@ msgstr "Rilis Lebih Lama"
 
 #: templates/stats_show.html:7
 #: templates/languages/language_release_stats.html:65
-#| msgid "Evince is a document viewer for multiple document formats."
 msgid "This document is written in Mallard documentation format"
 msgstr "Dokumen ini ditulis dalam format dokumentasi Mallard"
 
@@ -2431,7 +2415,6 @@ msgid "Module maintenance"
 msgstr "Perawatan modul"
 
 #: templates/people/person_detail.html:54
-#| msgid "No current actions."
 msgid "Current activity"
 msgstr "Aktivitas kini"
 
@@ -2649,7 +2632,7 @@ msgstr "Laporkan Bug di Terjemahan"
 
 #: templates/teams/team_base.html:21
 msgid "Show Existing Bugs"
-msgstr "Tampilkan Bug Yang Telah Ada"
+msgstr "Tampilkan Bug Yang Ada"
 
 #: templates/teams/team_base.html:25
 msgid "Mailing List:"
@@ -2764,7 +2747,6 @@ msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Aksi Terarsip (seri arsip %(human_level)s)"
 
 #: templates/vertimus/vertimus_detail.html:110
-#| msgid "(Return to current)"
 msgid "(Return to current actions)"
 msgstr "(Kembali ke aksi kini)"
 
