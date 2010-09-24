@@ -115,13 +115,8 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     xml2po_options = ""
     if os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK):
         # a Mallard document
-        files = os.path.join("C", "index.page")
-
-        pages = read_makefile_variable([vcs_path], "DOC_PAGES")
-        if pages:
-            for f in pages.split():
-                if f.strip() != "":
-                    files += " %s" % (os.path.join("C", f.strip()))
+        files = ["index.page"]
+        includes = read_makefile_variable([vcs_path], "DOC_PAGES")
         xml2po_options = "-m mallard"
 
     else:
@@ -140,14 +135,11 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
                 else:
                     errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
                     return "", errors
-        files = os.path.join("C", modulename + ".xml")
+        files = [modulename + ".xml"]
+        includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
 
-    includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
-    if includes:
-        for f in includes.split(" "):
-            if f.strip() != "":
-                files += " %s" % (os.path.join("C", f.strip()))
-
+    files.extend(filter(lambda x:x not in ("", "$(NULL)"), includes.split()))
+    files = " ".join([os.path.join("C", f) for f in files])
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
     command = "cd \"%s\" && xml2po %s -o %s -e %s" % (vcs_path, xml2po_options, potfile, files)
     (status, output, errs) = run_shell_command(command)

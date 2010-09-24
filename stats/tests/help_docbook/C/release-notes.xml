@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY urlfiguresbase "figures/">
+<!ENTITY gnomeversion "2.32">
+<!ENTITY lastversion "2.30">
+]>
+
+<article lang="en" id="index">
+  <articleinfo>
+     <title>GNOME &gnomeversion; Release Notes</title>
+
+    <copyright>
+			<year>2010</year>
+			<holder>GNOME Foundation</holder>
+		</copyright>
+
+		<publisher>
+			<publishername>GNOME Foundation</publishername>
+		</publisher>
+		<pubdate>2010-09-30</pubdate>
+		<edition>&gnomeversion;</edition>
+		<abstract role="description">
+			<para>GNOME has a time-based release schedule. This means that there is a
+			new GNOME release with accompanying notes every six months, to the minute.</para>
+		</abstract>
+
+		<authorgroup>
+			<author role="maintainer">
+				<firstname>Paul</firstname>
+				<surname>Cutler</surname>
+				<affiliation>
+					<orgname>GNOME Documentation Project</orgname>
+				</affiliation>
+			</author>
+
+			<othercredit role="translator">
+			  <!-- TRANSLATOR: write your first name -->
+			  <firstname></firstname>
+				<!-- TRANSLATOR: write your surname -->
+				<surname></surname>
+				<affiliation>
+				 <!-- TRANSLATOR: change your affiliation if required -->
+				 <orgname>GNOME Translation Project</orgname>
+				</affiliation>
+			</othercredit>
+		</authorgroup>
+
+  </articleinfo>
+
+	<sect1 id="intro">
+		<title>Introduction</title>
+
+			<para><ulink url="http://live.gnome.org/JoinGnome">Join us today</ulink> and see what 
+			a difference you can make.</para>
+
+	</sect1>
+	
+		<include href="rnusers.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+		<include href="rnlookingforward.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+</article>
+<!-- vi:set tw=80 ts=2: -->

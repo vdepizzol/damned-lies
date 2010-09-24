@@ -124,6 +124,22 @@ class ModuleTestCase(TestCase):
         self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.master'")
         self.assertTrue(mail.outbox[0].message().as_string().find(new_string)>-1)
 
+    def testReadFileVariable(self):
+        from stats.utils import search_variable_in_file
+        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_docbook", "Makefile.am")
+        var_content = search_variable_in_file(file_path, "DOC_INCLUDES")
+        self.assertEquals(var_content.split(), ['rnusers.xml', 'rnlookingforward.xml', '$(NULL)'])
+
+    def testGenerateDocPotfile(self):
+        from stats.utils import generate_doc_pot_file
+        # Docbook-style help
+        help_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_docbook")
+        generate_doc_pot_file(help_path, 'release-notes', 'release-notes', None)
+        pot_path = os.path.join(help_path, "C", "release-notes.pot")
+        self.assertTrue(os.access(pot_path, os.R_OK))
+        os.remove(pot_path)
+        # TODO: Mallard-style help
+
     def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """
         self.b.checkout()
