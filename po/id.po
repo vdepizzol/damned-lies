@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-23 18:56+0000\n"
-"PO-Revision-Date: 2010-09-24 13:11+0700\n"
+"POT-Creation-Date: 2010-09-24 21:24+0000\n"
+"PO-Revision-Date: 2010-09-25 09:55+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
@@ -1682,7 +1682,7 @@ msgstr "Tak bisa menjangkitkan berkas POT, statistik digugurkan."
 msgid "Can't copy new POT file to public location."
 msgstr "Tak bisa menyalin berkas POT baru ke lokasi publik."
 
-#: stats/models.py:740
+#: stats/models.py:731
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1693,78 +1693,78 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:764
+#: stats/models.py:755
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr ""
 "Entri untuk bahasa ini tak ada di variabel %(var)s pada berkas %(file)s."
 
-#: stats/models.py:1022
+#: stats/models.py:1013
 msgid "Administration Tools"
 msgstr "Perkakas Administrasi"
 
-#: stats/models.py:1023
+#: stats/models.py:1014
 msgid "Development Tools"
 msgstr "Perkakas Pengembangan"
 
-#: stats/models.py:1024
+#: stats/models.py:1015
 msgid "GNOME Desktop"
 msgstr "Desktop GNOME"
 
-#: stats/models.py:1025
+#: stats/models.py:1016
 msgid "GNOME Developer Platform"
 msgstr "Platform Pengembang GNOME"
 
-#: stats/models.py:1026
+#: stats/models.py:1017
 msgid "New Module Proposals"
 msgstr "Proposal Modul Baru"
 
-#: stats/models.py:1105 stats/models.py:1409
+#: stats/models.py:1096 stats/models.py:1400
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1138
+#: stats/models.py:1129
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s pesan"
 
-#: stats/models.py:1139
+#: stats/models.py:1130
 #, python-format
 msgid "updated on %(date)s"
 msgstr "dimutakhirkan pada %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1141 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1132 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i O"
 
-#: stats/models.py:1144
+#: stats/models.py:1135
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s gambar"
 
-#: stats/models.py:1145
+#: stats/models.py:1136
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Berkas POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1148
+#: stats/models.py:1139
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Berkas POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1232
+#: stats/models.py:1223
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Berkas POT ini tidak dibuat melalui metoda intltool standar."
 
-#: stats/models.py:1233
+#: stats/models.py:1224
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1788,21 +1788,21 @@ msgstr ""
 "Berkas berikut diacu di POTFILES.in atau POTFILES.skip, tapi mereka tak ada: "
 "%s"
 
-#: stats/utils.py:130
+#: stats/utils.py:125
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s sepertinya bukan modul gnome-doc-utils."
 
-#: stats/utils.py:133
+#: stats/utils.py:128
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE tak terurai ke suatu berkas nyata, memakai '%s.xml'."
 
-#: stats/utils.py:141
+#: stats/utils.py:136
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE tak menunjuk ke suatu berkas nyata, mungkin suatu makro."
 
-#: stats/utils.py:157
+#: stats/utils.py:150
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1813,46 +1813,46 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:242
+#: stats/utils.py:235
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Berkas PO '%s' tak ada atau tak bisa dibaca."
 
-#: stats/utils.py:262
+#: stats/utils.py:255
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Berkas PO '%s' tak lolos uji msgfmt: tak diperbarui."
 
-#: stats/utils.py:264
+#: stats/utils.py:257
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Tak bisa mendapat statistik bagi berkas POT '%s'."
 
-#: stats/utils.py:267
+#: stats/utils.py:260
 msgid "This PO file has an executable bit set."
 msgstr "Bit executable berkas PO ini di set."
 
-#: stats/utils.py:295
+#: stats/utils.py:288
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Berkas PO '%s' tidak dikodekan dalam UTF-8."
 
-#: stats/utils.py:310
+#: stats/utils.py:303
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Entri bagi bahasa ini tak ada di berkas LINGUAS."
 
-#: stats/utils.py:328
+#: stats/utils.py:321
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Entri bagi bahasa ini tak ada di berkas konfigurasi ALL_LINGUAS."
 
-#: stats/utils.py:330
+#: stats/utils.py:323
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Tak tahu mesti mencari variabel LINGUAS kemana, tanyakan ke pemelihara modul."
 
-#: stats/utils.py:337
+#: stats/utils.py:330
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1860,9 +1860,14 @@ msgstr ""
 "Tak tahu mesti mencari variabel DOC_LINGUAS kemana, tanyakan ke pemelihara "
 "modul."
 
-#: stats/utils.py:339
+#: stats/utils.py:332
 msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "Daftar DOC_LINGUAS tak termasuk bahasa ini."
+msgstr "Daftar DOC_LINGUAS tak menyertakan bahasa ini."
+
+#. exclude last element: coordinator
+#: teams/forms.py:21
+msgid "Remove From Team"
+msgstr "Keluarkan Dari Tim"
 
 #: teams/models.py:89
 msgid "Presentation"
@@ -1896,7 +1901,7 @@ msgstr "Pemeriksa"
 
 #: teams/models.py:240
 msgid "Committer"
-msgstr "Peng-komit"
+msgstr "Pengomit"
 
 #: teams/models.py:241 templates/teams/team_base.html:36
 msgid "Coordinator"
@@ -1904,11 +1909,11 @@ msgstr "Koordinator"
 
 #: teams/views.py:57
 msgid "Committers"
-msgstr "Para peng-komit"
+msgstr "Para pengomit"
 
 #: teams/views.py:60
 msgid "No committers"
-msgstr "Tak ada peng-komit"
+msgstr "Tak ada pengomit"
 
 #: teams/views.py:62
 msgid "Reviewers"
@@ -1920,7 +1925,7 @@ msgstr "Tak ada pemeriksa"
 
 #: teams/views.py:67
 msgid "Translators"
-msgstr "Penerjemah"
+msgstr "Para penerjemah"
 
 #: teams/views.py:70
 msgid "No translators"
@@ -2018,7 +2023,7 @@ msgstr ""
 #: templates/base.html:98
 #, python-format
 msgid "Hosted by %(link)s."
-msgstr "Di-host oleh %(link)s."
+msgstr "Dihost oleh %(link)s."
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
@@ -2137,7 +2142,7 @@ msgstr ""
 
 #: templates/index.html:53
 msgid "Translated by:"
-msgstr "Alih bahasa oleh:"
+msgstr "Diterjemahkan oleh:"
 
 #: templates/login.html:10 templates/registration/register.html:11
 #, python-format
@@ -2379,7 +2384,7 @@ msgstr "%(categname)s (%(percentage)s% diterjemahkan)"
 
 #: templates/languages/language_release_stats.html:106
 msgid "Error summary"
-msgstr "Ringkasan kesalahan"
+msgstr "Ringkasan galat"
 
 #: templates/languages/language_release_summary.html:9
 msgid "Release"
