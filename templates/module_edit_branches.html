@@ -14,13 +14,13 @@
 
 <form action="#" method="POST">
 <table>
-<tr><th>Branch</th><th>Release</th><th>Category</th></tr>
+<tr><th>{% trans "Branch" %}</th><th>{% trans "Release" %}</th><th>{% trans "Category" %}</th></tr>
 {% for field1, field2 in form.get_branches %}
   <tr><td>{{ field1.label }}</td><td>{{ field1 }}</td><td>{{ field2 }}</td></tr>
 {% endfor %}
 
   <tr><td>{{ form.new_branch }}</td><td>{{ form.new_branch_release }}</td><td>{{ form.new_branch_category }}</td></tr>
-  <tr><td colspan="3" align="right"><input type="submit" value="Save" /></td></tr> 
+  <tr><td colspan="3" align="right"><input type="submit" value="{% trans "Save" %}" /></td></tr>
 </table>
 </form>
 
