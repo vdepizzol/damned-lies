@@ -198,6 +198,9 @@ class StateTranslated(StateAbstract):
             action_names.append('RT')
             action_names.append('TR')
 
+        if person.is_committer(self.language.team):
+            action_names.append('TC')
+
         return self._get_available_actions(person, action_names)
 
 
