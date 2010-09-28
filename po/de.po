@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-27 17:22+0000\n"
-"PO-Revision-Date: 2010-09-27 20:55+0100\n"
+"POT-Creation-Date: 2010-09-28 17:17+0000\n"
+"PO-Revision-Date: 2010-09-28 21:10+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1910,7 +1910,7 @@ msgstr "Mailingliste"
 msgid "URL to subscribe"
 msgstr "Adresse zum Abonnieren"
 
-#: teams/models.py:200 vertimus/models.py:536 vertimus/models.py:586
+#: teams/models.py:200 vertimus/models.py:539 vertimus/models.py:589
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Dies ist eine automatisch versendete Nachricht von %s."
@@ -2223,6 +2223,26 @@ msgstr "Zweige:"
 msgid "Browse Repository"
 msgstr "Softwarebestand durchsuchen"
 
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Zweig"
+
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "Veröffentlichung"
+
+#: templates/module_edit_branches.html:17
+msgid "Category"
+msgstr "Kategorie"
+
+#: templates/module_edit_branches.html:23
+#: templates/people/person_detail_change_form.html:13
+#: templates/teams/team_edit.html:27
+msgid "Save"
+msgstr "Speichern"
+
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
@@ -2398,10 +2418,6 @@ msgid "Module"
 msgstr "Modul"
 
 #: templates/languages/language_release_stats.html:21
-msgid "Branch"
-msgstr "Zweig"
-
-#: templates/languages/language_release_stats.html:21
 msgid "Statistics"
 msgstr "Statistiken"
 
@@ -2421,10 +2437,6 @@ msgstr "%(categname)s (%(percentage)s% übersetzt)"
 #: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "Fehler-Zusammenfassung"
-
-#: templates/languages/language_release_summary.html:9
-msgid "Release"
-msgstr "Veröffentlichung"
 
 #: templates/people/person_base.html:5
 msgid "GNOME Contributor"
@@ -2462,11 +2474,6 @@ msgstr "Gegenwärtige Aktivität"
 #: templates/people/person_detail.html:58
 msgid "State"
 msgstr "Status"
-
-#: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
-msgid "Save"
-msgstr "Speichern"
 
 #: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
@@ -2780,7 +2787,7 @@ msgstr "Aktionen"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:832
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:835
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Archivierte Aktionen (%(human_level)s archivierte Gruppen)"
@@ -2908,42 +2915,42 @@ msgstr "Inaktiv"
 msgid "Translating"
 msgstr "Übersetzung läuft"
 
-#: vertimus/models.py:206
+#: vertimus/models.py:209
 msgid "Proofreading"
 msgstr "Korrekturlesen läuft"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:221
+#: vertimus/models.py:224
 msgid "Proofread"
 msgstr "Korrekturgelesen"
 
-#: vertimus/models.py:236
+#: vertimus/models.py:239
 msgid "To Review"
 msgstr "Überarbeitung erforderlich"
 
-#: vertimus/models.py:248
+#: vertimus/models.py:251
 msgid "To Commit"
 msgstr "Einspielen"
 
-#: vertimus/models.py:263
+#: vertimus/models.py:266
 msgid "Committing"
 msgstr "Einspielen läuft"
 
-#: vertimus/models.py:277
+#: vertimus/models.py:280
 msgid "Committed"
 msgstr "Eingespielt"
 
-#: vertimus/models.py:322
+#: vertimus/models.py:325
 msgid "File in repository"
 msgstr "Datei im Softwarebestand"
 
-#: vertimus/models.py:334 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:337 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Datei von %(name)s am %(date)s hochgeladen"
 
-#: vertimus/models.py:521
+#: vertimus/models.py:524
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2960,15 +2967,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:534 vertimus/models.py:584
+#: vertimus/models.py:537 vertimus/models.py:587
 msgid "Without comment"
 msgstr "Ohne Kommentar"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:546
 msgid "Write a comment"
 msgstr "Einen Kommentar schreiben"
 
-#: vertimus/models.py:572
+#: vertimus/models.py:575
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2985,57 +2992,57 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:594
+#: vertimus/models.py:597
 msgid "Reserve for translation"
 msgstr "Zur Übersetzung reservieren"
 
-#: vertimus/models.py:606
+#: vertimus/models.py:609
 msgid "Upload the new translation"
 msgstr "Die neue Übersetzung hochladen"
 
-#: vertimus/models.py:621
+#: vertimus/models.py:624
 msgid "Reserve for proofreading"
 msgstr "Zum Korrekturlesen reservieren"
 
-#: vertimus/models.py:633
+#: vertimus/models.py:636
 msgid "Upload the proofread translation"
 msgstr "Die korrigierte Übersetzung hochladen"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:649
+#: vertimus/models.py:652
 msgid "Ready for submission"
 msgstr "Bereit zur Einbringung"
 
-#: vertimus/models.py:665
+#: vertimus/models.py:668
 msgid "Submit to repository"
 msgstr "In Softwarebestand einspielen"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:679
+#: vertimus/models.py:682
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Einspielen ist gescheitert. Die Fehlermeldung war: »%s«"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:689
+#: vertimus/models.py:692
 msgid "Reserve to submit"
 msgstr "Zur Einbringung reservieren"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:702
+#: vertimus/models.py:705
 msgid "Inform of submission"
 msgstr "Über Einbringung informieren"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:717
+#: vertimus/models.py:720
 msgid "Review required"
 msgstr "Überarbeitung ist erforderlich"
 
-#: vertimus/models.py:732
+#: vertimus/models.py:735
 msgid "Archive the actions"
 msgstr "Aktionen archivieren"
 
-#: vertimus/models.py:771
+#: vertimus/models.py:774
 msgid "Undo the last state change"
 msgstr "Die letzte Statusänderung rückgängig machen"
 
