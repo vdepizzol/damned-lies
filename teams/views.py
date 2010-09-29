@@ -30,9 +30,9 @@ from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm, EditTeamDetailsForm
 from languages.models import Language
 
-def teams(request):
+def teams(request, format='html'):
     teams = Team.objects.all_with_coordinator()
-    format = request.GET.get('format', 'html')
+    format = request.GET.get('format') or format
     if format == 'xml':
         return render_to_response(
             'teams/team_list.xml',

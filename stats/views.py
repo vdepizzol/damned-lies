@@ -34,8 +34,11 @@ from stats.forms import ModuleBranchForm
 from stats import utils
 from languages.models import Language
 
-def modules(request):
+def modules(request, format='html'):
     all_modules = Module.objects.all()
+    if format in ('json', 'xml'):
+        data = serializers.serialize(format, all_modules)
+        return HttpResponse(data, mimetype=MIME_TYPES[format])
     context = {
         'pageSection':  "module",
         'modules': utils.sort_object_list(all_modules, 'get_description'),
@@ -226,28 +229,26 @@ def releases(request, format='html'):
     old_releases    = Release.objects.filter(weight__lt=0).order_by('status', '-weight', '-name')
     if format in ('json', 'xml'):
         from itertools import chain
-        data = serializers.serialize(format, chain(active_releases, old_releases))
+        data = serializers.serialize(format, itertools.chain(active_releases, old_releases))
         return HttpResponse(data, mimetype=MIME_TYPES[format])
-    else:
-        context = {
-            'pageSection'    : "releases",
-            'active_releases': active_releases,
-            'old_releases'   : old_releases,
-            'bug_url'        : settings.ENTER_BUG_URL,
-        }
-        return render_to_response('release_list.html', context, context_instance=RequestContext(request))
+    context = {
+        'pageSection'    : "releases",
+        'active_releases': active_releases,
+        'old_releases'   : old_releases,
+        'bug_url'        : settings.ENTER_BUG_URL,
+    }
+    return render_to_response('release_list.html', context, context_instance=RequestContext(request))
 
 def release(request, release_name, format='html'):
     release = get_object_or_404(Release, name=release_name)
     if format == 'xml':
         return render_to_response('release_detail.xml', { 'release' : release },
                                   mimetype=MIME_TYPES[format])
-    else:
-        context = {
-            'pageSection': "releases",
-            'release': release
-        }
-        return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
+    context = {
+        'pageSection': "releases",
+        'release': release
+    }
+    return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
 
 def compare_by_releases(request, dtype, rels_to_compare):
     releases = []

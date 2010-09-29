@@ -12,7 +12,7 @@ info_dict = {
 
 urlpatterns = patterns('',
     url(
-        regex = r'^$',
+        regex = r'^(?P<format>(xml))?/?$',
         view = 'teams.views.teams',
         name = 'teams'),
     url(

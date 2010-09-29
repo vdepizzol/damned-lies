@@ -53,7 +53,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('stats.views',
     url(
-        regex = r'^module/$',
+        regex = r'^module/(?P<format>(html|json|xml))?/?$',
         view = 'modules',
         name = 'modules'),
     url(
