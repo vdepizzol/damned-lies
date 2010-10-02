@@ -229,7 +229,7 @@ def releases(request, format='html'):
     old_releases    = Release.objects.filter(weight__lt=0).order_by('status', '-weight', '-name')
     if format in ('json', 'xml'):
         from itertools import chain
-        data = serializers.serialize(format, itertools.chain(active_releases, old_releases))
+        data = serializers.serialize(format, chain(active_releases, old_releases))
         return HttpResponse(data, mimetype=MIME_TYPES[format])
     context = {
         'pageSection'    : "releases",
