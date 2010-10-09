@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-29 20:05+0000\n"
-"PO-Revision-Date: 2010-09-30 14:00+0100\n"
+"POT-Creation-Date: 2010-10-07 09:46+0000\n"
+"PO-Revision-Date: 2010-10-09 20:10+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1424,70 +1425,74 @@ msgid "This is not a GNOME-specific module. Please submit your translation throu
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
 
 #: database-content.py:445
-msgid "GNOME 2.32 (development)"
-msgstr "GNOME 2.32 (razvojna veja)"
+msgid "GNOME 3.0 (development)"
+msgstr "GNOME 3.0 (razvojna veja)"
 
 #: database-content.py:446
+msgid "GNOME 2.32 (stable)"
+msgstr "GNOME 2.32 (stabilna različica)"
+
+#: database-content.py:447
 msgid "GNOME 2.30 (stable)"
 msgstr "GNOME 2.30 (stabilna različica)"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:451
+#: database-content.py:452
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (stara stabilna različica)"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (stara stabilna različica)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli GNOME programi"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
@@ -2964,32 +2969,25 @@ msgstr "Najnovejša POT datoteka"
 #~ msgstr ""
 #~ "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula "
 #~ "za podrobnosti, kam poslati prevode."
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME git repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega "
 #~ "modula posebej za podrobnosti o objavljanju prevodov."
-
 #~ msgid "Maintains:"
 #~ msgstr "Vzdrževalec:"
-
 #~ msgid "Working on"
 #~ msgstr "Delo na"
-
 #~ msgid "Member of teams"
 #~ msgstr "Član skupin"
-
 #~ msgid "F-Spot Manual"
 #~ msgstr "priročnik F-Spot"
-
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the "
 #~ "module maintainer."
 #~ msgstr ""
 #~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
-
 #~ msgid ""
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
@@ -2997,42 +2995,33 @@ msgstr "Najnovejša POT datoteka"
 #~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
 #~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
 #~ "veja&quot;."
-
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
 #~ "them (Bugzilla details, web page, maintainer information,...)."
 #~ msgstr ""
 #~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
 #~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
-
 #~ msgid "Report bugs to Bugzilla"
 #~ msgstr "Poročanje o hroščih preko Bugzillle"
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
-
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
-
 #~ msgid ""
 #~ "Last actions made by the %(lang)s team of the GNOME translation project"
 #~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
-
 #~ msgid "Action History"
 #~ msgstr "Zgodovina dejanj"
-
 #~ msgid "Backup the actions"
 #~ msgstr "Napravi varnostno kopijo dejanja"
-
 #~ msgid "The Gimp Manual"
 #~ msgstr "priročnik Gimp"
-
 #~ msgid "Git account:"
 #~ msgstr "Git račun:"
-
 #~ msgid "Browse SVN"
 #~ msgstr "Brskanje po SVN"
+
