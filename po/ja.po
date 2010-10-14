@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-10-07 09:46+0000\n"
-"PO-Revision-Date: 2010-10-07 23:31+0900\n"
+"PO-Revision-Date: 2010-10-13 22:52+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -654,6 +654,7 @@ msgid "AisleRiot Manual"
 msgstr "AisleRiot マニュアル"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# DocBookでの標準的訳語?
 #: database-content.py:277
 msgid "appendix"
 msgstr "付録"
@@ -691,9 +692,10 @@ msgid "Command Line Manual"
 msgstr "コマンドラインのマニュアル"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/concepts.po
 #: database-content.py:286
 msgid "concepts"
-msgstr ""
+msgstr "概念"
 
 #: database-content.py:287
 msgid "CPU Frequency Scaling Monitor Manual"
@@ -712,6 +714,7 @@ msgid "LGPL License"
 msgstr "LGPL ライセンス"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/dialogs.po
 #: database-content.py:291
 msgid "dialogs"
 msgstr "ダイアログ"
@@ -725,84 +728,100 @@ msgid "Disk Mounter Manual"
 msgstr "Disk Mounter マニュアル"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters.po
 #: database-content.py:294
 msgid "filters"
-msgstr ""
+msgstr "フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/alpha-to-logo.po
 #: database-content.py:295
 msgid "alpha-to-logo filter"
-msgstr ""
+msgstr "ロゴ効果フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/animation.po
 #: database-content.py:296
 msgid "animation filter"
-msgstr ""
+msgstr "アニメーションフィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/artistic.po
 #: database-content.py:297
 msgid "artistic filter"
-msgstr ""
+msgstr "芸術的効果フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/blur.po
 #: database-content.py:298
 msgid "blur filter"
-msgstr ""
+msgstr "ぼかしフィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/combine.po
 #: database-content.py:299
 msgid "combine filter"
-msgstr ""
+msgstr "合成フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/decor.po
 #: database-content.py:300
 msgid "decor filter"
-msgstr ""
+msgstr "装飾フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/distort.po
 #: database-content.py:301
 msgid "distort filter"
-msgstr ""
+msgstr "変形フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/edge-detect.po
 #: database-content.py:302
 msgid "edge-detect filter"
-msgstr ""
+msgstr "輪郭抽出フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/enhance.po
 #: database-content.py:303
 msgid "enhance filter"
-msgstr ""
+msgstr "強調フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/generic.po
 #: database-content.py:304
 msgid "generic filter"
-msgstr ""
+msgstr "汎用フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/light-and-shadow.po
 #: database-content.py:305
 msgid "light-effects filter"
-msgstr ""
+msgstr "ライト効果フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/map.po
 #: database-content.py:306
 msgid "map filter"
-msgstr ""
+msgstr "マップフィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/noise.po
 #: database-content.py:307
 msgid "noise filter"
-msgstr ""
+msgstr "ノイズフィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/render.po
 #: database-content.py:308
 msgid "render filter"
-msgstr ""
+msgstr "下塗りフィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/filters/web.po
 #: database-content.py:309
 msgid "web filter"
-msgstr ""
+msgstr "ウェブフィルタ"
 
 #: database-content.py:310
 msgid "Fish Applet Manual"
@@ -829,9 +848,10 @@ msgid "Five or More Manual"
 msgstr "Five or More マニュアル"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/glossary.po
 #: database-content.py:316 database-content.py:355
 msgid "glossary"
-msgstr ""
+msgstr "用語集"
 
 #: database-content.py:317
 msgid "Four-in-a-row Manual"
@@ -1006,69 +1026,82 @@ msgid "Mallard Documentation Guide"
 msgstr "Mallard 文書ガイド"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus.po
 #: database-content.py:361
 msgid "menus"
 msgstr "メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/colors.po
 #: database-content.py:362
 msgid "colors menus"
-msgstr ""
+msgstr "色メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/colors/auto.po
 #: database-content.py:363
 msgid "colors auto menu"
-msgstr ""
+msgstr "色自動調整メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/colors/components.po
 #: database-content.py:364
 msgid "colors component menu"
-msgstr ""
+msgstr "色要素メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/colors/info.po
 #: database-content.py:365
 msgid "colors info menu"
-msgstr ""
+msgstr "色の情報メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/colors/maps.po
 #: database-content.py:366
 msgid "colors map menu"
-msgstr ""
+msgstr "色マップメニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/edit.po
 #: database-content.py:367
 msgid "edit menu"
-msgstr ""
+msgstr "編集メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/file.po
 #: database-content.py:368
 msgid "file menu"
-msgstr ""
+msgstr "ファイルメニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/help.po
 #: database-content.py:369
 msgid "help menu"
-msgstr ""
+msgstr "ヘルプメニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/image.po
 #: database-content.py:370
 msgid "image menu"
-msgstr ""
+msgstr "画像メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/layer.po
 #: database-content.py:371
 msgid "layer menu"
-msgstr ""
+msgstr "レイヤーメニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/select.po
 #: database-content.py:372
 msgid "select menu"
-msgstr ""
+msgstr "選択メニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/menus/view.po
 #: database-content.py:373
 msgid "view menu"
-msgstr ""
+msgstr "表示メニュー"
 
 #: database-content.py:374
 msgid "Volume Control Manual"
@@ -1087,9 +1120,10 @@ msgid "Platform Overview"
 msgstr "プラットフォームの概要"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/gimp.po
 #: database-content.py:378
 msgid "preface"
-msgstr ""
+msgstr "まえがき"
 
 #: database-content.py:379
 msgid "Quadrapassel Manual"
@@ -1112,28 +1146,32 @@ msgid "System Administration Guide"
 msgstr "システム管理ガイド"
 
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/toolbox.po
 #: database-content.py:384
 msgid "toolbox"
-msgstr ""
+msgstr "ツールボックス"
 
 #: database-content.py:385
 msgid "Panel Trash Manual"
 msgstr "パネルのゴミ箱のマニュアル"
 
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/tutorial.po
 #: database-content.py:386
 msgid "tutorial"
-msgstr "チュートリアル"
+msgstr "演習"
 
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/using.po
 #: database-content.py:389
 msgid "using gimp"
-msgstr ""
+msgstr "GIMP利用法"
 
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
+# 参考: gimp-help-2/po/ja/using/preferences.po
 #: database-content.py:390
 msgid "preferences"
-msgstr ""
+msgstr "環境設定"
 
 #: database-content.py:391
 msgid "Window List Applet Manual"
