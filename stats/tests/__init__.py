@@ -188,12 +188,19 @@ class ModuleTestCase(TestCase):
         self.assertFalse(self.mod.get_head_branch().file_changed("gnome-hello.doap"))
 
     def testUpdateMaintainersFromDoapFile(self):
-        from stats.doap import update_maintainers
+        from stats.doap import update_doap_infos
         from people.models import Person
         settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
         # Add a maintainer which will be removed
         pers = Person(username="toto")
         pers.save()
         self.mod.maintainers.add(pers)
-        update_maintainers(self.mod)
+        update_doap_infos(self.mod)
         self.assertEquals(self.mod.maintainers.count(), 6)
+
+    def testUpdateDoapInfos(self):
+        from stats.doap import update_doap_infos
+        settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
+        update_doap_infos(self.mod)
+        self.assertEquals(self.mod.homepage, "http://git.gnome.org/browse/gnome-hello")
+

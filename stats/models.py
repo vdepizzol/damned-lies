@@ -34,7 +34,7 @@ from django.db import models, connection
 
 from common.fields import DictionaryField
 from stats import utils, signals
-from stats.doap import update_maintainers
+from stats.doap import update_doap_infos
 from people.models import Person
 from languages.models import Language
 
@@ -54,7 +54,8 @@ BRANCH_HEAD_NAMES = (
 
 class Module(models.Model):
     name = models.CharField(max_length=50)
-    homepage = models.URLField(null=True, blank=True)
+    homepage    = models.URLField(null=True, blank=True,
+                      help_text="Automatically updated if the module contains a doap file.")
     description = models.TextField(null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
     bugs_base = models.CharField(max_length=50, null=True, blank=True)
@@ -66,7 +67,8 @@ class Module(models.Model):
     vcs_web = models.URLField()
 
     maintainers = models.ManyToManyField(Person, db_table='module_maintainer',
-        related_name='maintains_modules', blank=True)
+        related_name='maintains_modules', blank=True,
+        help_text="Automatically updated if the module contains a doap file.")
 
     class Meta:
         db_table = 'module'
@@ -159,7 +161,7 @@ class Branch(models.Model):
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module      = models.ForeignKey(Module)
     weight      = models.IntegerField(default=0, help_text="Smaller weight is displayed first")
-    file_hashes = DictionaryField(default='', blank=True)
+    file_hashes = DictionaryField(default='', blank=True, editable=False)
     # 'releases' is the backward relation name from Release model
 
     # May be set to False by test suite
@@ -478,7 +480,7 @@ class Branch(models.Model):
                         stat.information_set.add(Information(type=err[0], description=err[1]))
             # Check if doap file changed
             if self.file_changed("%s.doap" % self.module.name):
-                update_maintainers(self.module)
+                update_doap_infos(self.module)
 
     def _exists(self):
         """ Determine if branch (self) already exists (i.e. already checked out) on local FS """
