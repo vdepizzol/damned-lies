@@ -159,7 +159,7 @@ class Branch(models.Model):
     vcs_subpath = models.CharField(max_length=50, null=True, blank=True)
     module      = models.ForeignKey(Module)
     weight      = models.IntegerField(default=0, help_text="Smaller weight is displayed first")
-    file_hashes = DictionaryField(null=True, blank=True)
+    file_hashes = DictionaryField(default='', blank=True)
     # 'releases' is the backward relation name from Release model
 
     # May be set to False by test suite

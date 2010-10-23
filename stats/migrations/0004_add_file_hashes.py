@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         
         # Adding field 'Branch.file_hashes'
-        db.add_column('branch', 'file_hashes', self.gf('common.fields.DictionaryField')(null=True, blank=True), keep_default=False)
+        db.add_column('branch', 'file_hashes', self.gf('common.fields.DictionaryField')(default='', blank=True), keep_default=False)
     
     
     def backwards(self, orm):
@@ -75,7 +75,7 @@ class Migration(SchemaMigration):
         },
         'stats.branch': {
             'Meta': {'unique_together': "(('name', 'module'),)", 'object_name': 'Branch', 'db_table': "'branch'"},
-            'file_hashes': ('common.fields.DictionaryField', [], {'null': 'True', 'blank': 'True'}),
+            'file_hashes': ('common.fields.DictionaryField', [], {'default': "''", 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'module': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['stats.Module']"}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
