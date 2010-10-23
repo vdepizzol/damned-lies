@@ -197,6 +197,8 @@ class ModuleTestCase(TestCase):
         self.mod.maintainers.add(pers)
         update_doap_infos(self.mod)
         self.assertEquals(self.mod.maintainers.count(), 6)
+        claude = self.mod.maintainers.get(email='claude@2xlibre.net')
+        self.assertEquals(claude.username, 'claudep')
 
     def testUpdateDoapInfos(self):
         from stats.doap import update_doap_infos
