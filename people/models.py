@@ -55,6 +55,16 @@ class Person(User):
         for account in accounts:
             account.delete()
 
+    @classmethod
+    def get_by_attr(cls, key, val):
+        if not val:
+            return None
+        try:
+            person = Person.objects.get(**{key: val})
+        except Person.DoesNotExist:
+            return None
+        return person
+
     def save(self, *args, **kwargs):
         if not self.password or self.password == "!":
             self.password = None

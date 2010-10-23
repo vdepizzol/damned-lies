@@ -51,10 +51,10 @@ def update_doap_infos(module):
             del current_maintainers[maint_key]
         else:
             # Add new maintainer
-            query_param = {maint['email'] and 'email' or 'username': maint_key }
-            try:
-                pers = Person.objects.get(**query_param)
-            except Person.DoesNotExist:
+            pers = Person.get_by_attr('email', maint['email'])
+            if not pers:
+                pers = Person.get_by_attr('username', maint['account'] or slugify(maint['name']))
+            if not pers:
                 pers = Person(username=maint['account'] or slugify(maint['name']), email=maint['email'] or '',
                               password='!', svn_account=maint['account'], last_name=maint['name'])
                 pers.save()

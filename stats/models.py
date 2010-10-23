@@ -479,7 +479,7 @@ class Branch(models.Model):
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
             # Check if doap file changed
-            if self.file_changed("%s.doap" % self.module.name):
+            if self.is_head() and self.file_changed("%s.doap" % self.module.name):
                 update_doap_infos(self.module)
 
     def _exists(self):
