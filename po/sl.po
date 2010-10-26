@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-07 09:46+0000\n"
-"PO-Revision-Date: 2010-10-09 20:10+0100\n"
+"POT-Creation-Date: 2010-10-24 19:21+0000\n"
+"PO-Revision-Date: 2010-10-26 19:16+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1095,7 +1095,7 @@ msgstr "priročnik apleta Invest"
 
 #: database-content.py:357
 msgid "Lights Off Manual"
-msgstr "priročnik Lights Off"
+msgstr "priročnik igre Ugasni luči"
 
 #: database-content.py:358
 msgid "Log Viewer Manual"
@@ -1222,189 +1222,191 @@ msgid "preferences"
 msgstr "možnosti"
 
 #: database-content.py:391
-msgid "Window List Applet Manual"
-msgstr "priročnik apleta seznama oken"
-
-#: database-content.py:392
-msgid "Workspace Switcher Applet Manual"
-msgstr "priročnik preklopnika delovnih površin"
-
-#: database-content.py:393
 msgid "Banshee Music Player"
 msgstr "Banshee predvajalnik glasbe"
 
-#: database-content.py:394
+#: database-content.py:392
 msgid "Beagle Desktop Search"
 msgstr "Beagle namizno iskanje"
 
-#: database-content.py:395
+#: database-content.py:393
 #: templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Presnete laži"
 
-#: database-content.py:396
+#: database-content.py:394
 msgid "Deskbar Applet"
 msgstr "Deskbar Aplet"
 
-#: database-content.py:397
+#: database-content.py:395
 msgid "Eye of GNOME"
 msgstr "Gnomeovo oko"
 
-#: database-content.py:398
+#: database-content.py:396
 msgid "Epiphany Web Browser"
 msgstr "Spletni brskalnik Epiphany"
 
-#: database-content.py:399
+#: database-content.py:397
 msgid "Evince Document Viewer"
 msgstr "Evince pregledovalnik dokumentov"
 
-#: database-content.py:400
+#: database-content.py:398
 msgid "GIMP User Manual"
 msgstr "priročnik programa GIMP"
 
-#: database-content.py:401
+#: database-content.py:399
 msgid "GNOME Applets"
 msgstr "GNOME Apleti"
 
-#: database-content.py:402
+#: database-content.py:400
 msgid "GNOME 2 Development Documentation"
 msgstr "GNOME 2 Razvojna dokumentacija"
 
-#: database-content.py:403
+#: database-content.py:401
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:404
+#: database-content.py:402
 msgid "GNOME 2 User Documentation"
 msgstr "GNOME 2 uporabniška dokumentacija"
 
-#: database-content.py:405
+#: database-content.py:403
 msgid "GNOME Web Photo"
 msgstr "GNOME spletna slika"
 
-#: database-content.py:406
+#: database-content.py:404
 msgid "GNOME Library Web site"
 msgstr "Spletišče GNOME knjižnic"
 
-#: database-content.py:407
+#: database-content.py:405
 msgid "GNOME Release Notes"
 msgstr "Opombe objav GNOME"
 
-#: database-content.py:408
+#: database-content.py:406
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox predvajalnik glasbe"
 
-#: database-content.py:409
+#: database-content.py:407
 msgid "Shared MIME Info"
 msgstr "Souporabne MIME podrobnosti"
 
-#: database-content.py:410
+#: database-content.py:408
 msgid "Video subtitles translations for selected GNOME videos"
 msgstr "Prevod podnapisov izbranih GNOME posnetkov"
 
-#: database-content.py:411
+#: database-content.py:409
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:412
+#: database-content.py:410
 msgid "Email client for netbooks"
 msgstr "Enostavni odjemalec elektronske pošte"
 
-#: database-content.py:413
+#: database-content.py:411
 msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/\">Transifex platform</a>."
 msgstr "Avahi je sistem za odkrivanje storitev krajevnega omrežja preko protokolov mDNS/DNS-SD. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/\">Transifex</a>."
 
-#: database-content.py:414
+#: database-content.py:412
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "Uveljavljeni prevodi se posodabljajo ročno preko l10n.gnome.org. Bodite strpni :-)"
 
-#: database-content.py:415
+#: database-content.py:413
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince je program za pregledovanje dokumentov različnih zapisov."
 
-#: database-content.py:416
+#: database-content.py:414
 msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
 msgstr "Storitev vodila D-Bus za dostop do bralnikov prstnih odtisov. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex</a>."
 
-#: database-content.py:417
+#: database-content.py:415
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Od različice GNOME 2.23 dalje, je paket GAIL sestavni del paketa GTK+. Prevodov zato ne objavljaje v glavni veji."
 
-#: database-content.py:418
+#: database-content.py:416
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafični vmesnik za git sledilnik mapam"
 
-#: database-content.py:419
+#: database-content.py:417
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Medijski pretvornik za GNOME namizje"
 
-#: database-content.py:420
+#: database-content.py:418
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "Paket gnome-disk-utility vsebuje knjižnice in programe za upravljanje z napravami za shranjevanje podatkov."
 
-#: database-content.py:421
+#: database-content.py:419
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "Paket GNOME Video Arcade je vmesniški posnemovalnik MAME (Multiple Arcade Machine Emulator) GNOME okolja."
 
-#: database-content.py:422
+#: database-content.py:420
 msgid "A note taking application"
 msgstr "Program za pisanje sporočilc"
 
-#: database-content.py:423
+#: database-content.py:421
 msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "Program GNUCash ni vključen v GNOME skladiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
+msgstr "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
 
+#: database-content.py:422
+#: database-content.py:423
 #: database-content.py:424
 #: database-content.py:425
 #: database-content.py:426
-#: database-content.py:427
-#: database-content.py:428
-#: database-content.py:444
+#: database-content.py:445
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:429
+#: database-content.py:427
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoteki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
-#: database-content.py:430
+#: database-content.py:428
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "Paket moserial je na osnovi gtk postavljen serijski terminal za namizje GNOME. Napisan je v jeziku Vala."
 
-#: database-content.py:431
+#: database-content.py:429
 msgid "Gnome Parental Control"
 msgstr "GNOME starševski nadzor"
 
-#: database-content.py:432
+#: database-content.py:430
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "Za objavo prevodov, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">ustvarite novo poročilo o hrošču za paket NetworkManager</a>  na spletnih straneh GNOME Bugzilla. K poročilu priložite tudi datoteko prevoda."
 
-#: database-content.py:433
+#: database-content.py:431
 msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"https://translate.fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's Transifex platform</a>."
 msgstr "PackageKit je sistem nameščanja paketov, ki storitev poenostavi. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"https://translate.fedoraproject.org/projects/p/packagekit/c/master/\">Fedora Transifex</a>."
 
-#: database-content.py:434
+#: database-content.py:432
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je DTP program za X okolje."
 
-#: database-content.py:435
+#: database-content.py:433
+msgid ""
+"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
+"Please submit your translation through the <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex platform</a>."
+msgstr ""
+"PulseAudio je zvočni sistem za POSIX operacijske sisteme, kar pomeni, da deluje kot posredniški strežnik zvočnim programom.\n"
+"Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex</a>."
+
+#: database-content.py:436
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid "A photo manager for GNOME"
 msgstr "Upravljalnik fotografij za GNOME namizje"
 
-#: database-content.py:437
-msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
-msgstr "Paket je predelana različica uradne različice system-tools-backends iz skladišča freedesktop.org."
-
 #: database-content.py:438
+msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
+msgstr "Paket je predelana različica uradne različice system-tools-backends iz odložišča freedesktop.org."
+
+#: database-content.py:439
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Teletekst pregledovalnik"
 
-#: database-content.py:439
+#: database-content.py:440
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1412,94 +1414,94 @@ msgstr ""
 "Prevodi podnapisov izbranih GNOME posnetkov.\n"
 "Več na <a href=\"http://live.gnome.org/VideoSubtitles\">Podnapisi video posnetkov</a>."
 
-#: database-content.py:441
+#: database-content.py:442
 msgid "A VNC client for GNOME"
 msgstr "VNC odjemalec za GNOME"
 
-#: database-content.py:442
+#: database-content.py:443
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
-#: database-content.py:443
+#: database-content.py:444
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (razvojna veja)"
 
-#: database-content.py:446
+#: database-content.py:447
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilna različica)"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "GNOME 2.30 (stable)"
 msgstr "GNOME 2.30 (stabilna različica)"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:451
+#: database-content.py:452
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GNOME 2.16 (old stable)"
 msgstr "GNOME 2.16 (stara stabilna različica)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.14 (old stable)"
 msgstr "GNOME 2.14 (stara stabilna različica)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli GNOME programi"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
 #: settings.py:75
 #: settings_sample.py:81
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
-msgstr "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
+msgstr "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
 #: common/views.py:35
 msgid "translator-credits"
@@ -1697,23 +1699,23 @@ msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
-#: stats/models.py:222
+#: stats/models.py:227
 msgid "This branch is not linked from any release"
 msgstr "Ta veja ni vezana nobeno objavljeno različico"
 
-#: stats/models.py:378
+#: stats/models.py:398
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: stats/models.py:380
+#: stats/models.py:400
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 
-#: stats/models.py:400
+#: stats/models.py:420
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:731
+#: stats/models.py:754
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1724,38 +1726,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:755
+#: stats/models.py:778
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:1013
+#: stats/models.py:1036
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:1014
+#: stats/models.py:1037
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:1015
+#: stats/models.py:1038
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:1016
+#: stats/models.py:1039
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:1017
+#: stats/models.py:1040
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1096
-#: stats/models.py:1400
+#: stats/models.py:1119
+#: stats/models.py:1423
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1129
+#: stats/models.py:1152
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1764,20 +1766,20 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1130
+#: stats/models.py:1153
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1132
+#: stats/models.py:1155
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1135
+#: stats/models.py:1158
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1786,53 +1788,53 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1136
+#: stats/models.py:1159
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1139
+#: stats/models.py:1162
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1223
+#: stats/models.py:1246
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1224
+#: stats/models.py:1247
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
-#: stats/utils.py:90
+#: stats/utils.py:91
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Napaka med zagonom ukaza 'intltool-update -m'."
 
-#: stats/utils.py:96
+#: stats/utils.py:97
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 
-#: stats/utils.py:105
+#: stats/utils.py:106
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: stats/utils.py:125
+#: stats/utils.py:126
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 
-#: stats/utils.py:128
+#: stats/utils.py:129
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
-#: stats/utils.py:136
+#: stats/utils.py:137
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
-#: stats/utils.py:150
+#: stats/utils.py:151
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1843,47 +1845,47 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:235
+#: stats/utils.py:236
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:255
+#: stats/utils.py:256
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:257
+#: stats/utils.py:258
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:260
+#: stats/utils.py:261
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:288
+#: stats/utils.py:289
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:303
+#: stats/utils.py:304
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:321
+#: stats/utils.py:322
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:323
+#: stats/utils.py:324
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:330
+#: stats/utils.py:331
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:332
+#: stats/utils.py:333
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
@@ -2125,7 +2127,7 @@ msgstr "Moduli so ločene knjižnice in programi z eno ali več razvojnimi vejam
 
 #: templates/index.html:47
 msgid "They are usually taken from the Git repository, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "Običajno so povzeti iz skladišča Git, o njih pa se hranijo vsi pomembni podatki (podrobnosti Bugzille, spletna stran, nadzornik, ...)."
+msgstr "Običajno so povzeti iz odložišča Git, o njih pa se hranijo vsi pomembni podatki (podrobnosti Bugzille, spletna stran, nadzornik, ...)."
 
 #: templates/index.html:53
 msgid "Translated by:"
@@ -2173,7 +2175,7 @@ msgstr "Veje:"
 
 #: templates/module_detail.html:99
 msgid "Browse Repository"
-msgstr "Prebrskaj skladišče"
+msgstr "Prebrskaj odložišče"
 
 #: templates/module_edit_branches.html:17
 #: templates/languages/language_release_stats.html:21
@@ -2258,7 +2260,7 @@ msgstr "%(name)s objava"
 #: templates/release_detail.html:13
 #: templates/languages/language_release.html:33
 msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
-msgstr "Moduli te objave niso del GNOME Git skladišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
+msgstr "Moduli te objave niso del GNOME Git odložišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
 #: templates/release_detail.html:19
 #: templates/stats_show.html:31
@@ -2845,7 +2847,7 @@ msgstr "Uveljavljeno"
 
 #: vertimus/models.py:325
 msgid "File in repository"
-msgstr "Datoteka v skladišču"
+msgstr "Datoteka v odložišču"
 
 #: vertimus/models.py:337
 #: vertimus/views.py:160
@@ -2917,7 +2919,7 @@ msgstr "Pripravljeno za pošiljanje"
 
 #: vertimus/models.py:668
 msgid "Submit to repository"
-msgstr "Pošlji v skladišče"
+msgstr "Pošlji v odložišče"
 
 #. Commit failed, state unchanged
 #: vertimus/models.py:682
@@ -2963,17 +2965,21 @@ msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
 
+#~ msgid "Window List Applet Manual"
+#~ msgstr "priročnik apleta seznama oken"
+#~ msgid "Workspace Switcher Applet Manual"
+#~ msgstr "priročnik preklopnika delovnih površin"
 #~ msgid ""
 #~ "This module is not part of the GNOME git repository. Please check the "
 #~ "module's web page to see where to send translations."
 #~ msgstr ""
-#~ "Modul ni objavljen v GNOME Git skladišču. Preverite spletno stran modula "
+#~ "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula "
 #~ "za podrobnosti, kam poslati prevode."
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME git repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
-#~ "Moduli te objave niso del GNOME git skladišča. Preverite stran vsakega "
+#~ "Moduli te objave niso del GNOME git odložišča. Preverite stran vsakega "
 #~ "modula posebej za podrobnosti o objavljanju prevodov."
 #~ msgid "Maintains:"
 #~ msgstr "Vzdrževalec:"
@@ -3007,7 +3013,7 @@ msgstr "Najnovejša POT datoteka"
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
-#~ "Moduli te objave niso del GNOME SVN skladišč. Preverite spletno stran "
+#~ "Moduli te objave niso del GNOME SVN odložišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
