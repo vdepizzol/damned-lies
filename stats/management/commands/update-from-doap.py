@@ -1,7 +1,7 @@
 import sys
 from django.core.management.base import BaseCommand
 
-from stats.models import Module
+from stats.models import Module, ModuleLock
 from stats.doap import update_doap_infos
 
 class Command(BaseCommand):
@@ -19,5 +19,7 @@ class Command(BaseCommand):
             except Module.DoesNotExist:
                 sys.stderr.write("No module named '%s'. Ignoring.\n" % mod_name)
                 continue
-            update_doap_infos(mod)
-            sys.stdout.write("Module '%s' updated from its doap file.\n" % mod_name)
+            with ModuleLock(mod):
+                mod.get_head_branch().checkout()
+                update_doap_infos(mod)
+                sys.stdout.write("Module '%s' updated from its doap file.\n" % mod_name)
