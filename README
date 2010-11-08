@@ -56,6 +56,9 @@ Installation
 
     Note: The automatic migration fails on interdependencies.
 
+2b- If you want to populate the database with sample data, run:
+    ./manage.py loaddata sample_data
+
 3 - Configure Sites in admin interface to define the 'View on site'
     link.
 

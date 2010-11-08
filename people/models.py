@@ -56,6 +56,19 @@ class Person(User):
             account.delete()
 
     @classmethod
+    def get_by_user(cls, user):
+        if user.is_anonymous():
+            return None
+        try:
+            return user.person
+        except Person.DoesNotExist:
+            _dict = user.__dict__.copy()
+            del _dict['_state']
+            user.person = Person(**_dict)
+            user.person.save()
+            return user.person
+
+    @classmethod
     def get_by_attr(cls, key, val):
         if not val:
             return None

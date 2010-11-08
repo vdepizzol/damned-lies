@@ -33,6 +33,7 @@ from stats.models import Statistics, FakeStatistics, Module, Branch, Category, R
 from stats.forms import ModuleBranchForm
 from stats import utils
 from languages.models import Language
+from people.models import Person
 
 def modules(request, format='html'):
     all_modules = Module.objects.all()
@@ -50,7 +51,7 @@ def module(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
     branches = mod.get_branches()
     if request.user.is_authenticated():
-        person = request.user.person
+        person = Person.get_by_user(request.user)
         langs = person.get_languages()
         for branch in branches:
             branch.get_ui_stats(mandatory_langs=langs)
@@ -187,7 +188,7 @@ def dynamic_po(request, filename):
         'year': date.today().year
     }
     if request.user.is_authenticated():
-        person = request.user.person
+        person = Person.get_by_user(request.user)
         dyn_content += u"# %(name)s <%(email)s>, %(year)s.\n#\n" % {
             'name' : person.name,
             'email': person.email,

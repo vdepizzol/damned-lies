@@ -47,7 +47,7 @@ urlpatterns = patterns('',
     url(r'^languages/', include('languages.urls')),
     url(r'^vertimus/', include('vertimus.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^admin/(.*)', admin.site.root),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^rss/', include('feeds.urls')),
 )
 
