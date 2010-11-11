@@ -28,6 +28,16 @@ from django.conf import settings
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
 from languages.models import Language
 
+def test_scratchdir(test_func):
+    """ Decorator to temporarily use the scratchdir inside the test directory """
+    def decorator(self):
+        old_SCRATCHDIR = settings.SCRATCHDIR
+        settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
+        test_func(self)
+        settings.SCRATCHDIR = old_SCRATCHDIR
+    return decorator
+
+
 class ModuleTestCase(TestCase):
     def __init__(self, name):
         TestCase.__init__(self, name)
@@ -77,7 +87,7 @@ class ModuleTestCase(TestCase):
         fr_po_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
         self.assertEquals(fr_po_stat.translated, 47)
         fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
-        self.assertEquals(fr_doc_stat.translated, 22)
+        self.assertEquals(fr_doc_stat.translated, 20)
 
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True
@@ -106,6 +116,7 @@ class ModuleTestCase(TestCase):
         mail.outbox = []
         self.rel.string_frozen = True
         self.rel.save()
+        self.b.update_stats(force=False)
 
         # Create a new file with translation
         new_file_path = os.path.join(self.b.co_path(), "dummy_file.py")
@@ -182,15 +193,15 @@ class ModuleTestCase(TestCase):
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""" % date.today().year)
         self.assertContains(response, "Language-Team: Tamil <ta@li.org>")
 
+    @test_scratchdir
     def testBranchFileChanged(self):
-        settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
         self.assertTrue(self.mod.get_head_branch().file_changed("gnome-hello.doap"))
         self.assertFalse(self.mod.get_head_branch().file_changed("gnome-hello.doap"))
 
+    @test_scratchdir
     def testUpdateMaintainersFromDoapFile(self):
         from stats.doap import update_doap_infos
         from people.models import Person
-        settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
         # Add a maintainer which will be removed
         pers = Person(username="toto")
         pers.save()
@@ -200,9 +211,9 @@ class ModuleTestCase(TestCase):
         claude = self.mod.maintainers.get(email='claude@2xlibre.net')
         self.assertEquals(claude.username, 'claudep')
 
+    @test_scratchdir
     def testUpdateDoapInfos(self):
         from stats.doap import update_doap_infos
-        settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
         update_doap_infos(self.mod)
         self.assertEquals(self.mod.homepage, "http://git.gnome.org/browse/gnome-hello")
 
