@@ -121,7 +121,7 @@ class VertimusTest(TeamTest):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC', None, 'IC', 'AA'])
+            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'TC', 'WC', None, 'IC', 'AA'])
 
     def test_state_proofreading(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l, person=self.pr)
