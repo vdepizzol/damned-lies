@@ -6,6 +6,10 @@ from teams.models import *
 
 class Migration:
     
+    depends_on = (
+        ("people", "0001_initial"),
+    )
+
     def forwards(self, orm):
         
         # Adding model 'Team'

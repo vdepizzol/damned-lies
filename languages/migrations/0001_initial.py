@@ -5,6 +5,10 @@ from languages.models import *
 
 class Migration:
     
+    depends_on = (
+        ("teams", "0001_initial"),
+    )
+
     def forwards(self, orm):
         
         # Adding model 'Language'
