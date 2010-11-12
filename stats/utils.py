@@ -78,6 +78,10 @@ def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
 
     return (status, output, errout)
 
+def check_program_presence(prog_name):
+    """ Test if prog_name is an available command on the system """
+    status, output, err = run_shell_command("which %s" % prog_name)
+    return status == 0
 
 def check_potfiles(po_path):
     """Check if there were any problems regenerating a POT file (intltool-update -m).

@@ -25,7 +25,9 @@ from django.test.client import Client
 from django.core import mail
 from django.core.exceptions import ValidationError
 from django.conf import settings
+
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
+from stats.utils import check_program_presence
 from languages.models import Language
 
 def test_scratchdir(test_func):
@@ -39,8 +41,16 @@ def test_scratchdir(test_func):
 
 
 class ModuleTestCase(TestCase):
+    SYS_DEPENDENCIES = (
+        ('gettext', 'msgfmt'),
+        ('intltool', 'intltool-update'),
+        ('gnome-doc-utils', 'xml2po'),
+    )
     def __init__(self, name):
         TestCase.__init__(self, name)
+        for package, prog in self.SYS_DEPENDENCIES:
+            if not check_program_presence(prog):
+                raise Exception("You are missing a required system package needed by Damned Lies (%s)" % package)
         # Delete the checkout if it exists prior to running the test suite
         path = os.path.join(settings.SCRATCHDIR, 'git', 'gnome-hello')
         if os.access(path, os.X_OK):
