@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-11 19:25+0000\n"
-"PO-Revision-Date: 2010-10-24 02:34+0100\n"
-"Last-Translator: Daniel Șerbănescu <cyber19rider@gmail.com>\n"
+"PO-Revision-Date: 2010-11-14 21:23+0300\n"
+"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
 "X-Generator: Virtaal 0.6.1\n"
@@ -311,7 +311,7 @@ msgstr "Germană de jos"
 
 #: database-content.py:73 database-content.py:200
 msgid "Luganda"
-msgstr ""
+msgstr "Luganda"
 
 #: database-content.py:74 database-content.py:202
 msgid "Macedonian"
@@ -643,7 +643,7 @@ msgstr "sfaturi"
 
 #: database-content.py:275
 msgid "Accessibility Developers Guide"
-msgstr "Ghidul de accesibilitate al dezvoltatorilor"
+msgstr "Ghidul de accesibilitate pentru dezvoltatori"
 
 #: database-content.py:276
 msgid "Accessibility Guide"
@@ -651,8 +651,7 @@ msgstr "Ghid de accesibilitate"
 
 #: database-content.py:277
 msgid "Keyboard Accessibility Monitor Manual"
-msgstr ""
-"Monitorizare tastatură pentru accesibilitate - Manualul utilizatorului "
+msgstr "Monitorizare tastatură pentru accesibilitate - Manualul utilizatorului "
 
 #: database-content.py:278
 msgid "AisleRiot Manual"
@@ -700,8 +699,7 @@ msgstr "concepte"
 
 #: database-content.py:289
 msgid "CPU Frequency Scaling Monitor Manual"
-msgstr ""
-"Monitorizare scalarea frecvenței procesorului - Manualul utilizatorului"
+msgstr "Monitorizare scalarea frecvenței procesorului - Manualul utilizatorului"
 
 #: database-content.py:290
 msgid "FDL License"
@@ -733,7 +731,7 @@ msgstr "filtre"
 
 #: database-content.py:297
 msgid "alpha-to-logo filter"
-msgstr "filtru aplha-to-logo"
+msgstr "filtru alpha-to-logo"
 
 #: database-content.py:298
 msgid "animation filter"
@@ -1242,12 +1240,11 @@ msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Un convertor multimedia pentru GNOME"
 
 #: database-content.py:421
-#, fuzzy
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
 msgstr ""
-"gnome-disc-utility oferă biblioteci și aplicații pentru a se ocupa cu "
+"gnome-disc-utility oferă biblioteci și aplicații pentru administra  "
 "dispozitive de stocare."
 
 #: database-content.py:422
@@ -1326,7 +1323,6 @@ msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout este o aplicație DTP pentru X."
 
 #: database-content.py:436
-#, fuzzy
 #| msgid ""
 #| "Avahi is a system which facilitates service discovery on a local network "
 #| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
@@ -1339,10 +1335,11 @@ msgid ""
 "http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex "
 "platform</a>."
 msgstr ""
-"Avahi este un sistem care facilitează descoperirea serviciilor într-o rețea "
-"locală prin intermediul suitei de protocoale mDNS/DNS-SD. Trimiteți "
-"traducerea dumneavoastră prin intermediul <a href=\"http://www.transifex.net/"
-"projects/p/avahi/c/master-tx/\">platformei Transifex</a>."
+"PulseAudio este un sistem de sunet pentru sisteme de operare POSIX, ceea ce "
+"înseamnă că este un proxy de sunet pentru aplicaţiile dumneavoastră. "
+"Trimiteţi traducerea dumneavoastră prin intermediul <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">platformei "
+"Transifex</a>."
 
 #: database-content.py:439
 msgid ""
@@ -1351,8 +1348,8 @@ msgid ""
 "\">Transifex platform</a>."
 msgstr ""
 "Acesta nu este un modul specific GNOME. Trimiteți traducerea prin "
-"intermediul <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/"
-"default/\">platformei Transifex</a>."
+"intermediul <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+"info/c/default/\">platformei Transifex</a>."
 
 #: database-content.py:440
 msgid "A photo manager for GNOME"
@@ -1404,26 +1401,23 @@ msgstr ""
 "Project</a>."
 
 #: database-content.py:449
-#, fuzzy
 #| msgid "GNOME 2.32 (development)"
 msgid "GNOME 3.0 (development)"
-msgstr "GNOME 2.32 (se dezvoltă)"
+msgstr "GNOME 2.32 (versiunea de dezvoltare)"
 
 #: database-content.py:450
-#, fuzzy
 #| msgid "GNOME 2.30 (stable)"
 msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.30 (versiune stabilă)"
+msgstr "GNOME 2.32 (versiune stabilă)"
 
 #: database-content.py:451
-#, fuzzy
 #| msgid "GNOME 2.20 (old stable)"
 msgid "GNOME 2.30 (old stable)"
-msgstr "GNOME 2.20 (veche versiune stabilă)"
+msgstr "GNOME 2.30 (veche versiune stabilă)"
 
 #: database-content.py:452
 msgid "GNOME 2.28 (old stable)"
-msgstr "GNOME 2.24 (veche versiune stabilă)"
+msgstr "GNOME 2.28 (veche versiune stabilă)"
 
 #: database-content.py:453
 msgid "GNOME 2.26 (old stable)"
