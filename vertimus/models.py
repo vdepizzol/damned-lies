@@ -53,6 +53,7 @@ class StateDb(models.Model):
 
     class Meta:
         db_table = 'state'
+        verbose_name = 'state'
         unique_together = ('branch', 'domain', 'language')
 
     def get_state(self):
@@ -61,7 +62,8 @@ class StateDb(models.Model):
         return state
 
     def __unicode__(self):
-        return self.name
+        return "%s: %s %s (%s - %s)" % (self.name, self.branch.module.name,
+            self.branch.name, self.language.name, self.domain.name)
 
     @models.permalink
     def get_absolute_url(self):
@@ -352,6 +354,7 @@ class ActionDb(models.Model):
 
     class Meta:
         db_table = 'action'
+        verbose_name = 'action'
 
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.id)
