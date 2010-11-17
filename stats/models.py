@@ -368,9 +368,6 @@ class Branch(models.Model):
                     else:
                         # Standard gnome-doc-utils pot generation
                         potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
-                    if not potfile:
-                        print >> sys.stderr, "\n".join([e[1] for e in errs])
-                        continue
                 else:
                     print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                     continue
