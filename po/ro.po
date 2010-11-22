@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-11 19:25+0000\n"
-"PO-Revision-Date: 2010-11-14 21:23+0300\n"
+"POT-Creation-Date: 2010-11-22 12:17+0000\n"
+"PO-Revision-Date: 2010-11-22 14:19+0300\n"
 "Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
@@ -267,7 +267,7 @@ msgstr "Khmeră"
 
 #: database-content.py:62 database-content.py:189
 msgid "Kikongo"
-msgstr ""
+msgstr "Kikongo"
 
 #: database-content.py:63 database-content.py:190
 msgid "Kinyarwanda"
@@ -651,7 +651,8 @@ msgstr "Ghid de accesibilitate"
 
 #: database-content.py:277
 msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Monitorizare tastatură pentru accesibilitate - Manualul utilizatorului "
+msgstr ""
+"Monitorizare tastatură pentru accesibilitate - Manualul utilizatorului "
 
 #: database-content.py:278
 msgid "AisleRiot Manual"
@@ -699,7 +700,8 @@ msgstr "concepte"
 
 #: database-content.py:289
 msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "Monitorizare scalarea frecvenței procesorului - Manualul utilizatorului"
+msgstr ""
+"Monitorizare scalarea frecvenței procesorului - Manualul utilizatorului"
 
 #: database-content.py:290
 msgid "FDL License"
@@ -1230,6 +1232,9 @@ msgid ""
 "GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons"
 "\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr ""
+"Ramura principală nu este întreținută. Pentru probleme legate de localizarea "
+"GCompris, vedeți  <a href=\"http://gcompris.net/wiki/Translation_addons\">htt"
+"p://gcompris.net/wiki/Translation_addons</a>."
 
 #: database-content.py:419
 msgid "Graphical frontend for the git directory tracker"
@@ -1323,11 +1328,6 @@ msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout este o aplicație DTP pentru X."
 
 #: database-content.py:436
-#| msgid ""
-#| "Avahi is a system which facilitates service discovery on a local network "
-#| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-"
-#| "tx/\">Transifex platform</a>."
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications. \n"
@@ -1348,8 +1348,8 @@ msgid ""
 "\">Transifex platform</a>."
 msgstr ""
 "Acesta nu este un modul specific GNOME. Trimiteți traducerea prin "
-"intermediul <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-"info/c/default/\">platformei Transifex</a>."
+"intermediul <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/"
+"default/\">platformei Transifex</a>."
 
 #: database-content.py:440
 msgid "A photo manager for GNOME"
@@ -1405,12 +1405,10 @@ msgid "GNOME 3.0 (development)"
 msgstr "GNOME 2.30 (versiunea de dezvoltare)"
 
 #: database-content.py:450
-#| msgid "GNOME 2.30 (stable)"
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (versiune stabilă)"
 
 #: database-content.py:451
-#| msgid "GNOME 2.20 (old stable)"
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (veche versiune stabilă)"
 
@@ -1700,19 +1698,19 @@ msgstr "Parola a fost schimbată."
 msgid "This branch is not linked from any release"
 msgstr "Această ramură nu aparține unei ediții"
 
-#: stats/models.py:398
+#: stats/models.py:395
 msgid "Can't generate POT file, using old one."
 msgstr "Nu se poate genera fișierul POT, va fi folosit unul vechi."
 
-#: stats/models.py:400
+#: stats/models.py:397
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Nu se poate genera fișierul POT, s-au anulat statisticile."
 
-#: stats/models.py:420
+#: stats/models.py:417
 msgid "Can't copy new POT file to public location."
 msgstr "Nu se poate copia noul fișier POT într-o locație publică."
 
-#: stats/models.py:754
+#: stats/models.py:751
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1723,7 +1721,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:778
+#: stats/models.py:775
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1731,32 +1729,32 @@ msgstr ""
 "Nu este prezentă nicio înregistrare pentru această limbă în variabila %(var)"
 "s din fișierul %(file)s."
 
-#: stats/models.py:1036
+#: stats/models.py:1033
 msgid "Administration Tools"
 msgstr "Unelte de administrare"
 
-#: stats/models.py:1037
+#: stats/models.py:1034
 msgid "Development Tools"
 msgstr "Unelte pentru dezvoltare"
 
-#: stats/models.py:1038
+#: stats/models.py:1035
 msgid "GNOME Desktop"
 msgstr "GNOME Desktop"
 
-#: stats/models.py:1039
+#: stats/models.py:1036
 msgid "GNOME Developer Platform"
 msgstr "Platforma de dezvoltare GNOME"
 
-#: stats/models.py:1040
+#: stats/models.py:1037
 msgid "New Module Proposals"
 msgstr "Propuneri de module noi"
 
-#: stats/models.py:1119 stats/models.py:1423
+#: stats/models.py:1116 stats/models.py:1420
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1152
+#: stats/models.py:1149
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1764,19 +1762,19 @@ msgstr[0] "%(count)s mesaj"
 msgstr[1] "%(count)s mesaje"
 msgstr[2] "%(count)s de mesaje"
 
-#: stats/models.py:1153
+#: stats/models.py:1150
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizat la %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1155 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1152 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1158
+#: stats/models.py:1155
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1784,38 +1782,38 @@ msgstr[0] "%(count)s figură"
 msgstr[1] "%(count)s figuri"
 msgstr[2] "%(count)s de figuri"
 
-#: stats/models.py:1159
+#: stats/models.py:1156
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "fișier POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1162
+#: stats/models.py:1159
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "fișier POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1246
+#: stats/models.py:1243
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Acest fișier POT nu a fost generat prin metoda standard intltool."
 
-#: stats/models.py:1247
+#: stats/models.py:1244
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
 msgstr ""
 "Acest fișier POT nu a fost generat prin metoda standard gnome-doc-utils."
 
-#: stats/utils.py:91
+#: stats/utils.py:95
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Erori întâlnite în timpul verificării 'intltool-update -m'."
 
-#: stats/utils.py:97
+#: stats/utils.py:101
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Lipsesc niște fișiere din POTFILES.in: %s"
 
-#: stats/utils.py:106
+#: stats/utils.py:110
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1824,21 +1822,21 @@ msgstr ""
 "Următoarele fișiere sunt referite în POTFILES.in sau POTFILES.skip, dar "
 "acestea nu există: %s"
 
-#: stats/utils.py:126
+#: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modulul %s nu pare a fi un modul gnome-doc-utils."
 
-#: stats/utils.py:129
+#: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 
-#: stats/utils.py:137
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE nu indică spre un fișier real, probabil o macrocomandă."
 
-#: stats/utils.py:151
+#: stats/utils.py:155
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1849,50 +1847,50 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:236
+#: stats/utils.py:240
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Fișierul PO „%s” nu există sau nu poate fi citit."
 
-#: stats/utils.py:256
+#: stats/utils.py:260
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "fișierul PO „%s” nu a trecut de verificarea msgfmt: nu se actualizează."
 
-#: stats/utils.py:258
+#: stats/utils.py:262
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Nu se poate obține statisticile pentru fișierul POT „%s”."
 
-#: stats/utils.py:261
+#: stats/utils.py:265
 msgid "This PO file has an executable bit set."
 msgstr "Acest fișier PO are un set de bit executabil ."
 
-#: stats/utils.py:289
+#: stats/utils.py:293
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Fișierul PO „%s” nu este codat în UTF-8."
 
-#: stats/utils.py:304
+#: stats/utils.py:308
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr ""
 "Nicio înregistrare pentru această limbă nu este prezentă în fișierul LINGUAS."
 
-#: stats/utils.py:322
+#: stats/utils.py:326
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Nicio înregistrare pentru această limbă nu este prezentă în fișierul de "
 "configurare ALL_LINGUAS."
 
-#: stats/utils.py:324
+#: stats/utils.py:328
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Nu știu unde să caut variabila LINGUAS, întrebați responsabilul modulului."
 
-#: stats/utils.py:331
+#: stats/utils.py:335
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1900,13 +1898,13 @@ msgstr ""
 "Nu știu unde să caut variabila DOC_LINGUAS, întrebați responsabilul "
 "modulului."
 
-#: stats/utils.py:333
+#: stats/utils.py:337
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Lista DOC_LINGUAS nu include această limbă."
 
 #: teams/forms.py:21
 msgid "Remove From Team"
-msgstr ""
+msgstr "Eliminați din echipă"
 
 #: teams/models.py:89
 msgid "Presentation"
@@ -1920,7 +1918,7 @@ msgstr "Listă de discuții"
 msgid "URL to subscribe"
 msgstr "URL pentru abonare"
 
-#: teams/models.py:200 vertimus/models.py:539 vertimus/models.py:589
+#: teams/models.py:200 vertimus/models.py:542 vertimus/models.py:592
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Acesta este un mesaj automat trimis de la %s."
@@ -2097,8 +2095,9 @@ msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr ""
-"Dacă nu există nicio echipă pentru limba dumneavoastră, vă puteți <a href='http://live."
-"gnome.org/TranslationProject/StartingATeam/'>crea propria echipă</a>."
+"Dacă nu există nicio echipă pentru limba dumneavoastră, vă puteți <a "
+"href='http://live.gnome.org/TranslationProject/StartingATeam/'>crea propria "
+"echipă</a>."
 
 #: templates/index.html:19
 #, python-format
@@ -2241,7 +2240,7 @@ msgstr "Ediție"
 
 #: templates/module_edit_branches.html:17
 msgid "Category"
-msgstr ""
+msgstr "Categorie"
 
 #: templates/module_edit_branches.html:23
 #: templates/people/person_detail_change_form.html:13
@@ -2368,7 +2367,7 @@ msgstr "Descarcă fișierul POT"
 msgid "Notices"
 msgstr "Atenționări"
 
-#: templates/stats_show.html:31 vertimus/models.py:189
+#: templates/stats_show.html:31 vertimus/models.py:191
 msgid "Translated"
 msgstr "Tradus"
 
@@ -2799,7 +2798,7 @@ msgstr "Acțiuni"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:835
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:838
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Acțiuni arhivate (%(human_level)s serie arhivată)"
@@ -2921,50 +2920,50 @@ msgstr "Este necesar un fișier pentru această acțiune."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Nu trimiteți un fișier prin acțiunea „Rezervă”."
 
-#: vertimus/models.py:163
+#: vertimus/models.py:165
 msgid "Inactive"
 msgstr "Inactiv"
 
-#: vertimus/models.py:176
+#: vertimus/models.py:178
 msgid "Translating"
 msgstr "Se traduce"
 
-#: vertimus/models.py:209
+#: vertimus/models.py:211
 msgid "Proofreading"
 msgstr "Se corectează"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:224
+#: vertimus/models.py:226
 msgid "Proofread"
 msgstr "Corectat"
 
-#: vertimus/models.py:239
+#: vertimus/models.py:241
 msgid "To Review"
 msgstr "De revizuit"
 
-#: vertimus/models.py:251
+#: vertimus/models.py:253
 msgid "To Commit"
 msgstr "De comis"
 
-#: vertimus/models.py:266
+#: vertimus/models.py:268
 msgid "Committing"
 msgstr "Se comite"
 
-#: vertimus/models.py:280
+#: vertimus/models.py:282
 msgid "Committed"
 msgstr "Comis"
 
-#: vertimus/models.py:325
+#: vertimus/models.py:327
 msgid "File in repository"
 msgstr "Fișier în depozit"
 
-#: vertimus/models.py:337 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:339 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Fișier încărcat de %(name)s la %(date)s"
 
-#: vertimus/models.py:524
+#: vertimus/models.py:527
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2981,15 +2980,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:537 vertimus/models.py:587
+#: vertimus/models.py:540 vertimus/models.py:590
 msgid "Without comment"
 msgstr "Fără comentariu"
 
-#: vertimus/models.py:546
+#: vertimus/models.py:549
 msgid "Write a comment"
 msgstr "Scrie un comentariu"
 
-#: vertimus/models.py:575
+#: vertimus/models.py:578
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3005,57 +3004,57 @@ msgstr ""
 "(language)s).\n"
 "%(url)s\n"
 
-#: vertimus/models.py:597
+#: vertimus/models.py:600
 msgid "Reserve for translation"
 msgstr "Rezervă pentru traducere"
 
-#: vertimus/models.py:609
+#: vertimus/models.py:612
 msgid "Upload the new translation"
 msgstr "Încarcă noua traducere"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:627
 msgid "Reserve for proofreading"
 msgstr "Rezervă pentru corectare"
 
-#: vertimus/models.py:636
+#: vertimus/models.py:639
 msgid "Upload the proofread translation"
 msgstr "Încarcă traducerea corectată"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:652
+#: vertimus/models.py:655
 msgid "Ready for submission"
 msgstr "Gata pentru trimitere"
 
-#: vertimus/models.py:668
+#: vertimus/models.py:671
 msgid "Submit to repository"
 msgstr "Trimite în depozit"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:682
+#: vertimus/models.py:685
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Comiterea nu a reușit. Eroarea a fost: „%s”"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:692
+#: vertimus/models.py:695
 msgid "Reserve to submit"
 msgstr "Rezervă pentru trimitere"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:705
+#: vertimus/models.py:708
 msgid "Inform of submission"
 msgstr "Informează despre trimitere"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:720
+#: vertimus/models.py:723
 msgid "Review required"
 msgstr "Necesită o recenzie"
 
-#: vertimus/models.py:735
+#: vertimus/models.py:738
 msgid "Archive the actions"
 msgstr "Arhivează acțiunile"
 
-#: vertimus/models.py:774
+#: vertimus/models.py:777
 msgid "Undo the last state change"
 msgstr "Anulează ultima modificare de stare"
 
