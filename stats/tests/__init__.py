@@ -30,6 +30,8 @@ from stats.models import Module, Domain, Branch, Category, Release, Statistics, 
 from stats.utils import check_program_presence
 from languages.models import Language
 
+from fixture_factory import *
+
 def test_scratchdir(test_func):
     """ Decorator to temporarily use the scratchdir inside the test directory """
     def decorator(self):

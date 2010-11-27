@@ -1,20 +1,98 @@
 [
  {
   "pk": 1, 
-  "model": "sites.site", 
+  "model": "auth.user", 
   "fields": {
-   "domain": "localhost:8000", 
-   "name": "localhost:8000"
+   "username": "bob", 
+   "first_name": "Robert", 
+   "last_name": "Translator", 
+   "is_active": true, 
+   "is_superuser": false, 
+   "is_staff": false, 
+   "last_login": "2010-11-23 12:08:32", 
+   "groups": [], 
+   "user_permissions": [], 
+   "password": "!", 
+   "email": "bob@example.org", 
+   "date_joined": "2010-11-23 12:08:32"
   }
- },
+ }, 
+ {
+  "pk": 2, 
+  "model": "auth.user", 
+  "fields": {
+   "username": "coord", 
+   "first_name": "John", 
+   "last_name": "Coordinator", 
+   "is_active": true, 
+   "is_superuser": false, 
+   "is_staff": false, 
+   "last_login": "2010-11-23 12:08:32", 
+   "groups": [], 
+   "user_permissions": [], 
+   "password": "!", 
+   "email": "coord@example.org", 
+   "date_joined": "2010-11-23 12:08:32"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "auth.user", 
+  "fields": {
+   "username": "alessio", 
+   "first_name": "Alessio", 
+   "last_name": "Reviewer", 
+   "is_active": true, 
+   "is_superuser": false, 
+   "is_staff": false, 
+   "last_login": "2010-11-23 12:08:32", 
+   "groups": [], 
+   "user_permissions": [], 
+   "password": "!", 
+   "email": "alessio@example.org", 
+   "date_joined": "2010-11-23 12:08:32"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "people.person", 
+  "fields": {
+   "bugzilla_account": null, 
+   "groups": [], 
+   "image": null, 
+   "activation_key": null, 
+   "irc_nick": null, 
+   "svn_account": null, 
+   "webpage_url": null, 
+   "user_permissions": []
+  }
+ }, 
  {
   "pk": 1, 
-  "model": "languages.language", 
+  "model": "people.person", 
   "fields": {
-   "locale": "en", 
-   "plurals": "nplurals=2; plural=(n != 1)", 
-   "name": "en", 
-   "team": null
+   "bugzilla_account": null, 
+   "groups": [], 
+   "image": null, 
+   "activation_key": null, 
+   "irc_nick": "bobby", 
+   "svn_account": "bob1", 
+   "webpage_url": null, 
+   "user_permissions": []
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "people.person", 
+  "fields": {
+   "bugzilla_account": null, 
+   "groups": [], 
+   "image": null, 
+   "activation_key": null, 
+   "irc_nick": null, 
+   "svn_account": "coord_fr", 
+   "webpage_url": null, 
+   "user_permissions": []
   }
  }, 
  {
@@ -39,476 +117,12 @@
  }, 
  {
   "pk": 1, 
-  "model": "stats.module", 
+  "model": "languages.language", 
   "fields": {
-   "comment": "", 
-   "vcs_web": "http://git.gnome.org/browse/gnome-hello/", 
-   "name": "gnome-hello", 
-   "vcs_root": "git://git.gnome.org/gnome-hello", 
-   "bugs_product": "test", 
-   "maintainers": [], 
-   "bugs_component": "test", 
-   "bugs_base": "http://bugzilla.gnome.org", 
-   "vcs_type": "git", 
-   "homepage": "", 
-   "description": ""
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.module", 
-  "fields": {
-   "comment": "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>.", 
-   "vcs_web": "http://cgit.freedesktop.org/xdg/shared-mime-info/", 
-   "name": "shared-mime-info", 
-   "vcs_root": "git://anongit.freedesktop.org/xdg/shared-mime-info", 
-   "bugs_product": "shared-mime-info", 
-   "maintainers": [], 
-   "bugs_component": "general", 
-   "bugs_base": "https://bugs.freedesktop.org/", 
-   "vcs_type": "git", 
-   "homepage": "http://www.freedesktop.org/wiki/Software/shared-mime-info", 
-   "description": "Shared MIME Info"
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "stats.module", 
-  "fields": {
-   "comment": null, 
-   "vcs_web": "http://git.gnome.org/browse/zenity/", 
-   "name": "zenity", 
-   "vcs_root": "git://git.gnome.org/zenity", 
-   "bugs_product": "zenity", 
-   "maintainers": [], 
-   "bugs_component": "general", 
-   "bugs_base": "http://bugzilla.gnome.org/", 
-   "vcs_type": "git", 
-   "homepage": "", 
-   "description": "Zenity"
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "stats.branch", 
-  "fields": {
-   "vcs_subpath": null, 
-   "file_hashes": "", 
-   "weight": 0, 
-   "name": "gnome-2-22", 
-   "module": 1
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.branch", 
-  "fields": {
-   "vcs_subpath": null, 
-   "file_hashes": "", 
-   "weight": 0, 
-   "name": "master", 
-   "module": 1
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "stats.branch", 
-  "fields": {
-   "vcs_subpath": null, 
-   "file_hashes": "", 
-   "weight": 0, 
-   "name": "master", 
-   "module": 2
-  }
- }, 
- {
-  "pk": 4, 
-  "model": "stats.branch", 
-  "fields": {
-   "vcs_subpath": "", 
-   "file_hashes": "", 
-   "weight": 0, 
-   "name": "master", 
-   "module": 3
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "po", 
-   "dtype": "ui", 
-   "pot_method": null, 
-   "module": 3, 
-   "linguas_location": null, 
-   "directory": "po", 
-   "description": "UI translations"
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "po", 
-   "dtype": "ui", 
-   "pot_method": null, 
-   "module": 1, 
-   "linguas_location": null, 
-   "directory": "po", 
-   "description": "UI Translations"
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "po", 
-   "dtype": "ui", 
-   "pot_method": null, 
-   "module": 2, 
-   "linguas_location": null, 
-   "directory": "po", 
-   "description": "UI translations"
-  }
- }, 
- {
-  "pk": 4, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "help", 
-   "dtype": "doc", 
-   "pot_method": null, 
-   "module": 3, 
-   "linguas_location": null, 
-   "directory": "help", 
-   "description": "User Guide"
-  }
- }, 
- {
-  "pk": 5, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "help", 
-   "dtype": "doc", 
-   "pot_method": null, 
-   "module": 1, 
-   "linguas_location": null, 
-   "directory": "help", 
-   "description": "User Guide"
-  }
- }, 
- {
-  "pk": 6, 
-  "model": "stats.domain", 
-  "fields": {
-   "name": "help", 
-   "dtype": "doc", 
-   "pot_method": null, 
-   "module": 2, 
-   "linguas_location": null, 
-   "directory": "help", 
-   "description": "User Guide"
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "stats.release", 
-  "fields": {
-   "status": "official", 
-   "string_frozen": false, 
-   "name": "gnome-2-26", 
-   "weight": 0, 
-   "description": "GNOME 2.26 (Development)"
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.release", 
-  "fields": {
-   "status": "xternal", 
-   "string_frozen": false, 
-   "name": "freedesktop-org", 
-   "weight": 0, 
-   "description": "freedesktop.org (non-GNOME)"
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "stats.category", 
-  "fields": {
-   "release": 2, 
-   "name": "default", 
-   "branch": 3
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.category", 
-  "fields": {
-   "release": 1, 
-   "name": "desktop", 
-   "branch": 2
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "stats.category", 
-  "fields": {
-   "release": 1, 
-   "name": "desktop", 
-   "branch": 4
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 3, 
-   "language": null, 
-   "num_figures": 0, 
-   "untranslated": 567, 
-   "translated": 0, 
-   "branch": 3, 
-   "date": "2008-11-08 19:14:23", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 2, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 3, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 4, 
-   "translated": 546, 
-   "branch": 3, 
-   "date": "2008-11-07 15:41:43", 
-   "fuzzy": 17
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 3, 
-   "language": 3, 
-   "num_figures": 0, 
-   "untranslated": 17, 
-   "translated": 541, 
-   "branch": 3, 
-   "date": "2008-11-07 15:41:44", 
-   "fuzzy": 9
-  }
- }, 
- {
-  "pk": 4, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": null, 
-   "num_figures": 0, 
-   "untranslated": 135, 
-   "translated": 0, 
-   "branch": 2, 
-   "date": "2009-02-11 22:31:19", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 5, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 135, 
-   "branch": 2, 
-   "date": "2008-11-07 15:58:07", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 6, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": 3, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 135, 
-   "branch": 2, 
-   "date": "2008-11-07 15:58:13", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 7, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 4, 
-   "language": null, 
-   "num_figures": 11, 
-   "untranslated": 257, 
-   "translated": 0, 
-   "branch": 2, 
-   "date": "2009-02-11 22:31:20", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 8, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 4, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 257, 
-   "branch": 2, 
-   "date": "2009-02-11 22:21:30", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 9, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": null, 
-   "num_figures": 0, 
-   "untranslated": 130, 
-   "translated": 0, 
-   "branch": 1, 
-   "date": "2009-02-11 22:30:17", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 10, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 130, 
-   "branch": 1, 
-   "date": "2009-02-11 22:29:53", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 11, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 1, 
-   "language": 3, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 130, 
-   "branch": 1, 
-   "date": "2009-02-11 22:30:00", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 12, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 4, 
-   "language": null, 
-   "num_figures": 11, 
-   "untranslated": 253, 
-   "translated": 0, 
-   "branch": 1, 
-   "date": "2009-02-11 22:30:18", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 13, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 4, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 253, 
-   "branch": 1, 
-   "date": "2009-02-11 22:30:04", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 14, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 2, 
-   "language": null, 
-   "num_figures": 0, 
-   "untranslated": 47, 
-   "translated": 0, 
-   "branch": 4, 
-   "date": "2010-09-13 23:01:47", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 15, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 2, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 47, 
-   "branch": 4, 
-   "date": "2010-08-21 11:30:24", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 16, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 2, 
-   "language": 3, 
-   "num_figures": 0, 
-   "untranslated": 30, 
-   "translated": 9, 
-   "branch": 4, 
-   "date": "2010-08-21 11:30:25", 
-   "fuzzy": 8
-  }
- }, 
- {
-  "pk": 17, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 5, 
-   "language": null, 
-   "num_figures": 1, 
-   "untranslated": 22, 
-   "translated": 0, 
-   "branch": 4, 
-   "date": "2010-09-13 23:01:47", 
-   "fuzzy": 0
-  }
- }, 
- {
-  "pk": 18, 
-  "model": "stats.statistics", 
-  "fields": {
-   "domain": 5, 
-   "language": 2, 
-   "num_figures": 0, 
-   "untranslated": 0, 
-   "translated": 22, 
-   "branch": 4, 
-   "date": "2010-08-21 11:30:31", 
-   "fuzzy": 0
+   "locale": "en", 
+   "plurals": "nplurals=2; plural=(n != 1)", 
+   "name": "en", 
+   "team": null
   }
  }, 
  {
@@ -541,7 +155,7 @@
   "pk": 1, 
   "model": "teams.role", 
   "fields": {
-   "person": 2, 
+   "person": 1, 
    "role": "translator", 
    "team": 1
   }
@@ -550,9 +164,9 @@
   "pk": 2, 
   "model": "teams.role", 
   "fields": {
-   "person": 4, 
+   "person": 2, 
    "role": "coordinator", 
-   "team": 2
+   "team": 1
   }
  }, 
  {
@@ -560,128 +174,544 @@
   "model": "teams.role", 
   "fields": {
    "person": 3, 
-   "role": "coordinator", 
-   "team": 1
+   "role": "reviewer", 
+   "team": 2
   }
  }, 
  {
   "pk": 1, 
-  "model": "vertimus.statedb", 
+  "model": "stats.module", 
   "fields": {
-   "domain": 5, 
-   "name": "None", 
-   "language": 2, 
-   "updated": "2009-05-29 23:20:51", 
-   "person": null, 
-   "branch": 4
+   "comment": null, 
+   "vcs_web": "http://git.gnome.org/browse/gnome-hello/", 
+   "name": "gnome-hello", 
+   "vcs_root": "git://git.gnome.org/gnome-hello", 
+   "bugs_product": "gnome-hello", 
+   "maintainers": [], 
+   "bugs_component": "test", 
+   "bugs_base": "http://bugzilla.gnome.org", 
+   "vcs_type": "git", 
+   "homepage": null, 
+   "description": null
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "stats.module", 
+  "fields": {
+   "comment": "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>.", 
+   "vcs_web": "http://cgit.freedesktop.org/xdg/shared-mime-info/", 
+   "name": "shared-mime-info", 
+   "vcs_root": "git://anongit.freedesktop.org/xdg/shared-mime-info", 
+   "bugs_product": "shared-mime-info", 
+   "maintainers": [], 
+   "bugs_component": "general", 
+   "bugs_base": "https://bugs.freedesktop.org/", 
+   "vcs_type": "git", 
+   "homepage": null, 
+   "description": "Shared MIME Info"
   }
  }, 
  {
   "pk": 2, 
-  "model": "vertimus.statedb", 
+  "model": "stats.module", 
   "fields": {
-   "domain": 4, 
-   "name": "None", 
-   "language": 2, 
-   "updated": "2009-06-16 19:53:36", 
-   "person": null, 
+   "comment": null, 
+   "vcs_web": "http://git.gnome.org/browse/zenity/", 
+   "name": "zenity", 
+   "vcs_root": "git://git.gnome.org/zenity", 
+   "bugs_product": "zenity", 
+   "maintainers": [], 
+   "bugs_component": "general", 
+   "bugs_base": "http://bugzilla.gnome.org", 
+   "vcs_type": "git", 
+   "homepage": null, 
+   "description": null
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "stats.branch", 
+  "fields": {
+   "vcs_subpath": null, 
+   "file_hashes": "", 
+   "weight": 0, 
+   "name": "gnome-2-30", 
+   "module": 2
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.branch", 
+  "fields": {
+   "vcs_subpath": null, 
+   "file_hashes": "", 
+   "weight": 0, 
+   "name": "master", 
+   "module": 1
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "stats.branch", 
+  "fields": {
+   "vcs_subpath": null, 
+   "file_hashes": "", 
+   "weight": 0, 
+   "name": "master", 
+   "module": 2
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "stats.branch", 
+  "fields": {
+   "vcs_subpath": null, 
+   "file_hashes": "", 
+   "weight": 0, 
+   "name": "master", 
+   "module": 3
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "po", 
+   "dtype": "ui", 
+   "pot_method": null, 
+   "module": 1, 
+   "linguas_location": null, 
+   "directory": "po", 
+   "description": "UI Translations"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "po", 
+   "dtype": "ui", 
+   "pot_method": null, 
+   "module": 2, 
+   "linguas_location": null, 
+   "directory": "po", 
+   "description": "UI Translations"
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "po", 
+   "dtype": "ui", 
+   "pot_method": null, 
+   "module": 3, 
+   "linguas_location": null, 
+   "directory": "po", 
+   "description": "UI Translations"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "help", 
+   "dtype": "doc", 
+   "pot_method": null, 
+   "module": 1, 
+   "linguas_location": null, 
+   "directory": "help", 
+   "description": "User Guide"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "help", 
+   "dtype": "doc", 
+   "pot_method": null, 
+   "module": 2, 
+   "linguas_location": null, 
+   "directory": "help", 
+   "description": "User Guide"
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "stats.domain", 
+  "fields": {
+   "name": "help", 
+   "dtype": "doc", 
+   "pot_method": null, 
+   "module": 3, 
+   "linguas_location": null, 
+   "directory": "help", 
+   "description": "User Guide"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "stats.release", 
+  "fields": {
+   "status": "official", 
+   "string_frozen": false, 
+   "name": "gnome-dev", 
+   "weight": 0, 
+   "description": "GNOME in Development"
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.release", 
+  "fields": {
+   "status": "official", 
+   "string_frozen": true, 
+   "name": "gnome-2-30", 
+   "weight": 0, 
+   "description": "GNOME 2.30 (stable)"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "stats.release", 
+  "fields": {
+   "status": "xternal", 
+   "string_frozen": false, 
+   "name": "freedesktop-org", 
+   "weight": 0, 
+   "description": "freedesktop.org (non-GNOME)"
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.category", 
+  "fields": {
+   "release": 1, 
+   "name": "desktop", 
+   "branch": 1
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "stats.category", 
+  "fields": {
+   "release": 2, 
+   "name": "desktop", 
+   "branch": 1
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "stats.category", 
+  "fields": {
+   "release": 1, 
+   "name": "desktop", 
    "branch": 2
   }
  }, 
  {
-  "pk": 2, 
-  "model": "auth.user", 
-  "fields": {
-   "username": "bob", 
-   "first_name": "Robert", 
-   "last_name": "Translator", 
-   "is_active": true, 
-   "is_superuser": false, 
-   "is_staff": false, 
-   "last_login": "2008-11-06 23:49:39", 
-   "groups": [], 
-   "user_permissions": [], 
-   "password": "sha1$4c846$3af94fa0135321db2ebc84866b323037028726ab", 
-   "email": "bob@example.org", 
-   "date_joined": "2008-11-06 23:49:39"
-  }
- }, 
- {
-  "pk": 3, 
-  "model": "auth.user", 
-  "fields": {
-   "username": "coord_fr", 
-   "first_name": "French", 
-   "last_name": "Coordinator", 
-   "is_active": true, 
-   "is_superuser": false, 
-   "is_staff": false, 
-   "last_login": "2010-11-08 09:57:34", 
-   "groups": [], 
-   "user_permissions": [], 
-   "password": "sha1$0a578$c2f596f33f967c98bc5ed10ec48c490e3fe93199", 
-   "email": "coord_fr@example.org", 
-   "date_joined": "2008-11-06 23:49:39"
-  }
- }, 
- {
   "pk": 4, 
-  "model": "auth.user", 
+  "model": "stats.category", 
   "fields": {
-   "username": "coord_it", 
-   "first_name": "Alessio", 
-   "last_name": "Coordinator", 
-   "is_active": true, 
-   "is_superuser": false, 
-   "is_staff": false, 
-   "last_login": "2008-11-06 23:49:40", 
-   "groups": [], 
-   "user_permissions": [], 
-   "password": "sha1$52068$c609bd5b681c6818c91aeaa2a712043fa63b4306", 
-   "email": "alessio@example.org", 
-   "date_joined": "2008-11-06 23:49:40"
+   "release": 3, 
+   "name": "desktop", 
+   "branch": 4
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 1, 
+   "language": null, 
+   "num_figures": 0, 
+   "untranslated": 47, 
+   "translated": 0, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
   }
  }, 
  {
   "pk": 2, 
-  "model": "people.person", 
+  "model": "stats.statistics", 
   "fields": {
-   "bugzilla_account": "", 
-   "groups": [], 
-   "image": "", 
-   "activation_key": "", 
-   "irc_nick": "bobby", 
-   "svn_account": "bob1", 
-   "webpage_url": "", 
-   "user_permissions": []
+   "domain": 1, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 47, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
   }
  }, 
  {
   "pk": 3, 
-  "model": "people.person", 
+  "model": "stats.statistics", 
   "fields": {
-   "bugzilla_account": "", 
-   "groups": [], 
-   "image": "", 
-   "activation_key": "", 
-   "irc_nick": "", 
-   "svn_account": "coord_fr", 
-   "webpage_url": "", 
-   "user_permissions": []
+   "domain": 1, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 7, 
+   "translated": 30, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 10
   }
  }, 
  {
   "pk": 4, 
-  "model": "people.person", 
+  "model": "stats.statistics", 
   "fields": {
-   "bugzilla_account": "", 
-   "groups": [], 
-   "image": "", 
-   "activation_key": "", 
-   "irc_nick": "", 
-   "svn_account": "", 
-   "webpage_url": "", 
-   "user_permissions": []
+   "domain": 2, 
+   "language": null, 
+   "num_figures": 1, 
+   "untranslated": 20, 
+   "translated": 0, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 2, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 20, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 2, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 20, 
+   "branch": 1, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": null, 
+   "num_figures": 0, 
+   "untranslated": 136, 
+   "translated": 0, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 136, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 9, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 6, 
+   "translated": 130, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 10, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": null, 
+   "num_figures": 11, 
+   "untranslated": 259, 
+   "translated": 0, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 11, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 259, 
+   "translated": 0, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 12, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 259, 
+   "branch": 2, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 13, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": null, 
+   "num_figures": 0, 
+   "untranslated": 149, 
+   "translated": 0, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 14, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 255, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 4
+  }
+ }, 
+ {
+  "pk": 15, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 3, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 259, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 16, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": null, 
+   "num_figures": 11, 
+   "untranslated": 259, 
+   "translated": 0, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 17, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 259, 
+   "translated": 0, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 18, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 4, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 259, 
+   "branch": 3, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 19, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 5, 
+   "language": null, 
+   "num_figures": 0, 
+   "untranslated": 626, 
+   "translated": 0, 
+   "branch": 4, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 0
+  }
+ }, 
+ {
+  "pk": 20, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 5, 
+   "language": 2, 
+   "num_figures": 0, 
+   "untranslated": 2, 
+   "translated": 598, 
+   "branch": 4, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 20
+  }
+ }, 
+ {
+  "pk": 21, 
+  "model": "stats.statistics", 
+  "fields": {
+   "domain": 5, 
+   "language": 3, 
+   "num_figures": 0, 
+   "untranslated": 0, 
+   "translated": 620, 
+   "branch": 4, 
+   "date": "2010-11-23 12:08:32", 
+   "fuzzy": 6
   }
  }
 ]
