@@ -19,6 +19,8 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from datetime import datetime, timedelta
+
 from django.db import models
 from django.core import mail
 from django.utils import translation
@@ -37,7 +39,8 @@ class TeamManager(models.Manager):
         roles.
         """
         teams = self.all()
-        roles = Role.objects.select_related("person").filter(role='coordinator')
+        roles = Role.objects.select_related("person").filter(role='coordinator',
+                                                                is_active=True)
         role_dict = {}
 
         for role in roles:
@@ -60,7 +63,7 @@ class TeamManager(models.Manager):
         reduce subsequent database access.
         """
         teams = self.all()
-        roles = Role.objects.select_related("person").all()
+        roles = Role.objects.select_related("person").filter(is_active=True)
         role_dict = {}
 
         for role in roles:
@@ -143,11 +146,13 @@ class Team(models.Model):
                 return None
 
     def get_members_by_role_exact(self, role):
+        """ Return a list of active members """
         try:
             return self.roles[role]
         except:
             members = list(Person.objects.filter(role__team__id=self.id,
-                                                 role__role=role))
+                                                 role__role=role,
+                                                 role__is_active=True))
             return members
 
     def get_committers_exact(self):
@@ -167,7 +172,8 @@ class Team(models.Model):
                 members += self.roles[role]
         except:
             members = list(Person.objects.filter(role__team__id=self.id,
-                                                 role__role__in=roles))
+                                                 role__role__in=roles,
+                                                 role__is_active=True))
         return members
 
     def get_committers(self):
@@ -185,6 +191,12 @@ class Team(models.Model):
         except:
             # Not necessary to filter as for other roles
             members = list(self.members.all())
+        return members
+
+    def get_inactive_members(self):
+        """ Return the inactive members """
+        members = list(Person.objects.filter(role__team__id=self.id,
+                                             role__is_active=False)) 
         return members
 
     def send_mail_to_coordinator(self, subject, message, messagekw={}):
@@ -250,6 +262,7 @@ class Role(models.Model):
     person = models.ForeignKey(Person)
     role = models.CharField(max_length=15, choices=ROLE_CHOICES,
                             default='translator')
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         db_table = 'role'
@@ -258,3 +271,10 @@ class Role(models.Model):
     def __unicode__(self):
         return "%s is %s in %s team" % (self.person.name, self.role,
                                         self.team.description)
+
+    @classmethod
+    def inactivate_unused_roles(cls):
+         """ Inactivate the roles when login older than 180 days  """
+         last_login = datetime.now() - timedelta(days=30*6)
+         cls.objects.filter(person__last_login__lt=last_login,
+                            is_active=True).update(is_active=False)

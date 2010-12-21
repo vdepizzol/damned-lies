@@ -34,6 +34,8 @@ from stats.utils import run_shell_command
 from languages.models import Language
 from people.models import Person
 
+from teams.models import Role
+
 #
 # States
 #
@@ -620,6 +622,13 @@ class ActionUT(ActionAbstract):
 
         new_state = self._new_state()
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
+
+        # Reactivating the role if needed      
+        role = Role.objects.get(person=person, team=state.language.team)
+        if not role.is_active:
+            role.is_active = True
+            role.save()
+
         return new_state
 
 class ActionRP(ActionAbstract):

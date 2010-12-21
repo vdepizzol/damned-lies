@@ -69,6 +69,11 @@ def team(request, team_slug):
                 'form': None,
                 'no_member': _("No translators")
                },
+               {'title': _("Inactive members"),
+                'members': team.get_inactive_members(),
+                'form': None,
+                'no_member': _("No inactive members")
+               },
         )
     except Team.DoesNotExist:
         lang = get_object_or_404(Language, locale=team_slug)

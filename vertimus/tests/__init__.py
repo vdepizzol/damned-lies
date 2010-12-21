@@ -26,12 +26,12 @@ from django.http import QueryDict
 from django.utils.datastructures import MultiValueDict
 from django.conf import settings
 
-from teams.tests import TeamTest
+from teams.tests import TeamsAndRolesTests
 from stats.models import Module, Branch, Release, Category, Domain
 from vertimus.models import *
 from vertimus.forms import ActionForm
 
-class VertimusTest(TeamTest):
+class VertimusTest(TeamsAndRolesTests):
 
     def setUp(self):
         super(VertimusTest, self).setUp()
@@ -60,14 +60,6 @@ class VertimusTest(TeamTest):
             description='UI translations',
             dtype='ui', directory='po')
         self.d.save()
-
-    def tearDown(self):
-        self.d.delete()
-        self.c.delete()
-        self.r.delete()
-        self.b.delete()
-        self.m.delete()
-        super(VertimusTest, self).tearDown()
 
     def test_state_none(self):
         sdb = StateDb(branch=self.b, domain=self.d, language=self.l)
@@ -239,15 +231,24 @@ class VertimusTest(TeamTest):
         new_state.save()
 
     def test_action_ut(self):
+        # Disabling the role
+        role = Role.objects.get(person=self.pt, team=self.l.team)
+        role.is_active = False
+        role.save()
+        
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translating', person=self.pt).get_state()
         state.save()
 
         test_file = ContentFile('test content')
         test_file.name = 'mytestfile.po'
-
+        
         action = ActionAbstract.new_by_name('UT')
         new_state = state.apply_action(action, self.pt, "Done by translator.", test_file)
         new_state.save()
+
+        # Testing if the role was activated
+        role = Role.objects.get(person=self.pt, team=self.l.team)
+        self.assertTrue(role.is_active)
 
     def test_action_rp(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translated').get_state()

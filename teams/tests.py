@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+from datetime import datetime, timedelta
+
 from django.test import TestCase
 from django.test.client import Client
 from django.core.urlresolvers import reverse
@@ -8,8 +11,8 @@ from people.models import Person
 from teams.models import Team, Role
 from languages.models import Language
 
-class TeamTest(TestCase):
 
+class TeamsAndRolesTests(TestCase):
     def setUp(self):
         self.pn = Person(first_name='John', last_name='Nothing',
             email='jn@devnull.com', username= 'jn')
@@ -25,7 +28,8 @@ class TeamTest(TestCase):
         self.pr.save()
 
         self.pc = Person(first_name='John', last_name='Committer',
-            email='jc@alinsudesonpleingre.fr', username= 'jc')
+            email='jc@alinsudesonpleingre.fr', username= 'jc',
+            last_login=datetime.now()-timedelta(days=30*6-1)) #active person, but in limit date
         self.pc.save()
 
         self.pcoo = Person(first_name='John', last_name='Coordinator',
@@ -36,10 +40,16 @@ class TeamTest(TestCase):
         self.t = Team(name='fr', description='French')
         self.t.save()
 
+        self.t2 = Team(name='pt', description='Portuguese')
+        self.t2.save()
+
         self.l = Language(name='French', locale='fr', team=self.t)
         self.l.save()
 
         self.role = Role(team=self.t, person=self.pt)
+        self.role.save()
+
+        self.role = Role(team=self.t2, person=self.pt, role='reviewer')
         self.role.save()
 
         self.role = Role(team=self.t, person=self.pr, role='reviewer')
@@ -51,16 +61,36 @@ class TeamTest(TestCase):
         self.role = Role(team=self.t, person=self.pcoo, role='coordinator')
         self.role.save()
 
-    def tearDown(self):
-        for role in Role.objects.all():
-            role.delete()
-        self.pcoo.delete()
-        self.pc.delete()
-        self.pr.delete()
-        self.pt.delete()
-        self.pn.delete()
-        self.t.delete()
+class TeamTest(TeamsAndRolesTests):
+    def setUp(self):
+        super(TeamTest, self).setUp()
 
+    def test_get_members_by_role_exact(self):
+        members = self.t.get_members_by_role_exact('committer')
+        t = Team.objects.get(name='fr')
+        self.assertEqual(len(members), 1)
+        self.assertEqual(members[0], self.pc)
+
+        role = Role.objects.get(person=self.pc, team=t)
+        role.is_active = False
+        role.save()
+    
+        members = self.t.get_members_by_role_exact('committer')
+        self.assertEqual(len(members), 0)
+        
+    def test_get_inactive_members(self):
+        members = self.t.get_inactive_members()
+        self.assertEqual(len(members), 0)
+
+        t = Team.objects.get(name='fr')
+        role = Role.objects.get(person=self.pc, team=t)
+        role.is_active = False
+        role.save()
+        
+        members = self.t.get_inactive_members()
+        self.assertEqual(len(members), 1)
+        self.assertEqual(members[0], self.pc)
+    
     def run_roles_exact_test(self, team):
         pcoo = team.get_coordinator()
         self.assertEqual(pcoo, self.pcoo)
@@ -147,4 +177,44 @@ class TeamTest(TestCase):
         })
         team = Team.objects.get(name='fr')
         self.assertEquals(team.webpage_url, u"http://www.gnomefr.org/")
+
+
+class RoleTest(TeamsAndRolesTests):
+
+    def setUp(self):
+        super(RoleTest, self).setUp()
+
+        self.pt.last_login = datetime.now()-timedelta(days=10) # active person
+        self.pt.save()
+
+        self.pr.last_login = datetime.now()-timedelta(days=30*6) # inactive person
+        self.pr.save()
+
+        self.pc.last_login = datetime.now()-timedelta(days=30*6-1) #active person, but in limit date
+        self.pc.save()
+
+        self.role = Role.objects.get(team=self.t, person=self.pt)
+        self.role2 = Role.objects.get(team=self.t2, person=self.pt)
+        self.role_inactive = Role.objects.get(team=self.t, person=self.pr)
+        self.role_limit_date = Role.objects.get(team=self.t, person=self.pc)
+
+    def test_inactivating_roles(self):
+        # Testing if is_active is True by default
+        self.assertTrue(self.role.is_active)
+        self.assertTrue(self.role2.is_active)
+        self.assertTrue(self.role_limit_date.is_active)
+        self.assertTrue(self.role_inactive.is_active)        
+
+        Role.inactivate_unused_roles()
+
+        # Getting roles from database after update the unused roles
+        self.role = Role.objects.get(team=self.t, person=self.pt)
+        self.role2 = Role.objects.get(team=self.t2, person=self.pt)
+        self.role_inactive = Role.objects.get(team=self.t, person=self.pr)
+        self.role_limit_date = Role.objects.get(team=self.t, person=self.pc)
+
+        self.assertTrue(self.role.is_active)
+        self.assertTrue(self.role2.is_active)
+        self.assertTrue(self.role_limit_date.is_active)         
+        self.assertFalse(self.role_inactive.is_active)
 
