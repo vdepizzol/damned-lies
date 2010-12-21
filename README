@@ -63,6 +63,13 @@ Installation
 4 - Download jQuery and tablesorter .min.js files and copy them in
     /media/js directory. Rename jquery-x.y.z.min.js into jquery.min.js
 
+Maintenance tasks
+=================
+
+There is a management command to run maintenance tasks (clean never-activated
+accounts, inactivate unused roles, ...):
+./manage.py run-maintenance
+It might be useful to add the command in a cron schedule.
 
 OpenID support
 ==============

@@ -118,8 +118,4 @@ def activate_account(request, key):
     except Person.DoesNotExist:
         return render_to_response('error.html', {'error':"Sorry, the key you provided is not valid."})
     person.activate()
-    #TODO: Here does not seem to be a good place for this. 
-    # We should move this in a cron-like system
-    Person.clean_unactivated_accounts()
-    Role.inactivate_unused_roles()
     return site_login(request, msgs=[_("Your account has been activated.")])
