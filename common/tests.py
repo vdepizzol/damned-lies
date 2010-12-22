@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2010 Adorilson Bezerra <adorilson@gmail.com>
+# Copyright (c) 2010 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -20,8 +21,8 @@
 
 from datetime import datetime, timedelta
 
+from django.core.urlresolvers import reverse
 from django.test import TestCase
-from django.test.client import Client
 
 from common import views
 from people.models import Person
@@ -58,25 +59,29 @@ class CommonTest(TestCase):
 
     def test_activate_account(self):
         # Testing if is_active is False by default
-        self.pn = Person.objects.get(first_name='John', last_name='Note')
-        self.assertTrue(self.pn.is_active)
-        
-        c = Client()
+        response = self.client.post(reverse('register'),
+            {'username':'newuser', 'email': 'newuser@example.org',
+             'password1': 'blah012', 'password2': 'blah012'})
 
+        self.newu = Person.objects.get(username='newuser')
+        self.assertFalse(self.newu.is_active)
+        
         # Testing with a invalid activation key
-        response = c.get('/register/activate/a_invalid_key')
+        response = self.client.get('/register/activate/a_invalid_key')
         self.assertContains(response, 'Sorry, the key you provided is not valid.')        
 
-        response = c.get('/register/activate/a_activation_key')
+        response = self.client.get('/register/activate/%s' % self.newu.activation_key)
         self.assertContains(response,  'Your account has been activated.')
         
-        self.pn = Person.objects.get(first_name='John', last_name='Note')
-        self.assertTrue(self.pn.is_active)
+        self.newu = Person.objects.get(username='newuser')
+        self.assertTrue(self.newu.is_active)
 
     def test_house_keeping(self):
-        c = Client()
-        response = c.get('/register/activate/a_activation_key')
+        response = self.client.get('/register/activate/a_activation_key')
         self.assertContains(response,  'Your account has been activated.')
+
+        from django.core import management
+        management.call_command('run-maintenance')
 
         # Testing if the non-activated accounts were deleted
         jn = Person.objects.filter(first_name='John', last_name='Note')
