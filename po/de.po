@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-15 21:55+0000\n"
-"PO-Revision-Date: 2010-12-17 20:14+0100\n"
+"POT-Creation-Date: 2010-12-28 21:40+0000\n"
+"PO-Revision-Date: 2010-12-30 20:36+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -953,78 +953,81 @@ msgstr "GNOME-Neuerungen (Release Notes)"
 msgid "Sound Juicer Manual"
 msgstr "Soundjuicer-Handbuch"
 
-#: database-content.py:352 database-content.py:353 database-content.py:390
-#: database-content.py:391
+#: database-content.py:352 database-content.py:390 database-content.py:391
 msgid "User Guide"
 msgstr "Benutzerhandbuch"
 
-#: database-content.py:354
+#: database-content.py:353
 msgid "Human Interface Guidelines"
 msgstr "Richtlinien für Benutzeroberflächen"
 
-#: database-content.py:355
+#: database-content.py:354
 msgid "Iagno Manual"
 msgstr "Iagno-Handbuch"
 
-#: database-content.py:356
+#: database-content.py:355
 msgid "Integration Guide"
 msgstr "Integrations-Handbuch"
 
-#: database-content.py:357
+#: database-content.py:356
 msgid "introduction"
 msgstr "Einführung"
 
-#: database-content.py:358
+#: database-content.py:357
 msgid "Invest Applet Manual"
 msgstr "Börsenticker-Applet-Handbuch"
 
-#: database-content.py:359
+#: database-content.py:358
 msgid "Lights Off Manual"
 msgstr "Lichter-aus-Handbuch"
 
-#: database-content.py:360
+#: database-content.py:359
 msgid "Log Viewer Manual"
 msgstr "Systemprotokollbetrachter-Handbuch"
 
-#: database-content.py:361
+#: database-content.py:360
 msgid "GNOME Mahjongg Manual"
 msgstr "GNOME Mahjongg-Handbuch"
 
-#: database-content.py:362
+#: database-content.py:361
 msgid "Mallard Documentation Guide"
 msgstr "Mallard-Dokumentation"
 
-#: database-content.py:363
+#: database-content.py:362
 msgid "menus"
 msgstr "Menüs"
 
-#: database-content.py:364
+#: database-content.py:363
 msgid "colors menus"
 msgstr "Farben-Menüs"
 
-#: database-content.py:365
+#: database-content.py:364
 msgid "colors auto menu"
 msgstr "Automatische Menüs für Farben"
 
-#: database-content.py:366
+#: database-content.py:365
 msgid "colors component menu"
 msgstr "Komponentenmenüs für Farben"
 
-#: database-content.py:367
+#: database-content.py:366
 msgid "colors info menu"
 msgstr "Info-Menüs für Farben"
 
-#: database-content.py:368
+#: database-content.py:367
 msgid "colors map menu"
 msgstr "Farbtabellen-Menüs"
 
-#: database-content.py:369
+#: database-content.py:368
 msgid "edit menu"
 msgstr "Bearbeiten-Menü"
 
-#: database-content.py:370
+#: database-content.py:369
 msgid "file menu"
 msgstr "Datei-Menü"
+
+#: database-content.py:370
+msgid "filters menu"
+msgstr "Filter-Menü"
 
 #: database-content.py:371
 msgid "help menu"
@@ -1531,7 +1534,7 @@ msgstr ""
 "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihren Benutzernamen und Ihr "
 "Passwort."
 
-#: common/views.py:122
+#: common/views.py:121
 msgid "Your account has been activated."
 msgstr "Ihr Konto wurde aktiviert."
 
@@ -1668,7 +1671,7 @@ msgstr ""
 "Adresse zu einer Bilddatei (.jpg, .png, …) eines Hackergotchis (max. 100x100 "
 "Pixel)"
 
-#: people/models.py:38 teams/models.py:91
+#: people/models.py:38 teams/models.py:94
 msgid "Web page"
 msgstr "Webseite"
 
@@ -1930,41 +1933,41 @@ msgstr "Liste in DOC_LINGUAS enthält nicht diese Sprache."
 msgid "Remove From Team"
 msgstr "Aus dem Team entfernen"
 
-#: teams/models.py:89
+#: teams/models.py:92
 msgid "Presentation"
 msgstr "Präsentation"
 
-#: teams/models.py:92
+#: teams/models.py:95
 msgid "Mailing list"
 msgstr "Mailingliste"
 
-#: teams/models.py:93
+#: teams/models.py:96
 msgid "URL to subscribe"
 msgstr "Adresse zum Abonnieren"
 
-#: teams/models.py:200 vertimus/models.py:542 vertimus/models.py:592
+#: teams/models.py:212 vertimus/models.py:544 vertimus/models.py:594
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Dies ist eine automatisch versendete Nachricht von %s."
 
-#: teams/models.py:218
+#: teams/models.py:230
 #, python-format
 msgid "No team for locale %s"
 msgstr "Kein Team für die Sprache %s"
 
-#: teams/models.py:238
+#: teams/models.py:250
 msgid "Translator"
 msgstr "Übersetzer"
 
-#: teams/models.py:239
+#: teams/models.py:251
 msgid "Reviewer"
 msgstr "Überarbeiter"
 
-#: teams/models.py:240
+#: teams/models.py:252
 msgid "Committer"
 msgstr "Einspieler"
 
-#: teams/models.py:241 templates/teams/team_base.html:36
+#: teams/models.py:253 templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Koordinator"
 
@@ -1991,6 +1994,15 @@ msgstr "Übersetzer"
 #: teams/views.py:70
 msgid "No translators"
 msgstr "Keine Übersetzer"
+
+#: teams/views.py:72
+#| msgid "Inactive"
+msgid "Inactive members"
+msgstr "Inaktive Mitglieder"
+
+#: teams/views.py:75
+msgid "No inactive members"
+msgstr "Keine inaktiven Mitglieder"
 
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
@@ -2394,7 +2406,7 @@ msgstr "POT-Datei herunterladen"
 msgid "Notices"
 msgstr "Notizen"
 
-#: templates/stats_show.html:31 vertimus/models.py:191
+#: templates/stats_show.html:31 vertimus/models.py:193
 msgid "Translated"
 msgstr "Übersetzt"
 
@@ -2819,7 +2831,7 @@ msgstr "Aktionen"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:838
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:847
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Archivierte Aktionen (%(human_level)s archivierte Gruppen)"
@@ -2939,50 +2951,50 @@ msgstr "Für diese Aktion wird eine Datei benötigt."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Bitte senden Sie keine Datei mit der Aktion »Reservieren«."
 
-#: vertimus/models.py:165
+#: vertimus/models.py:167
 msgid "Inactive"
 msgstr "Inaktiv"
 
-#: vertimus/models.py:178
+#: vertimus/models.py:180
 msgid "Translating"
 msgstr "Übersetzung läuft"
 
-#: vertimus/models.py:211
+#: vertimus/models.py:213
 msgid "Proofreading"
 msgstr "Korrekturlesen läuft"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:226
+#: vertimus/models.py:228
 msgid "Proofread"
 msgstr "Korrekturgelesen"
 
-#: vertimus/models.py:241
+#: vertimus/models.py:243
 msgid "To Review"
 msgstr "Überarbeitung erforderlich"
 
-#: vertimus/models.py:253
+#: vertimus/models.py:255
 msgid "To Commit"
 msgstr "Einspielen"
 
-#: vertimus/models.py:268
+#: vertimus/models.py:270
 msgid "Committing"
 msgstr "Einspielen läuft"
 
-#: vertimus/models.py:282
+#: vertimus/models.py:284
 msgid "Committed"
 msgstr "Eingespielt"
 
-#: vertimus/models.py:327
+#: vertimus/models.py:329
 msgid "File in repository"
 msgstr "Datei im Softwarebestand"
 
-#: vertimus/models.py:339 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:341 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Datei von %(name)s am %(date)s hochgeladen"
 
-#: vertimus/models.py:527
+#: vertimus/models.py:529
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2999,15 +3011,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:540 vertimus/models.py:590
+#: vertimus/models.py:542 vertimus/models.py:592
 msgid "Without comment"
 msgstr "Ohne Kommentar"
 
-#: vertimus/models.py:549
+#: vertimus/models.py:551
 msgid "Write a comment"
 msgstr "Einen Kommentar schreiben"
 
-#: vertimus/models.py:578
+#: vertimus/models.py:580
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3024,57 +3036,57 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:600
+#: vertimus/models.py:602
 msgid "Reserve for translation"
 msgstr "Zur Übersetzung reservieren"
 
-#: vertimus/models.py:612
+#: vertimus/models.py:614
 msgid "Upload the new translation"
 msgstr "Die neue Übersetzung hochladen"
 
-#: vertimus/models.py:627
+#: vertimus/models.py:636
 msgid "Reserve for proofreading"
 msgstr "Zum Korrekturlesen reservieren"
 
-#: vertimus/models.py:639
+#: vertimus/models.py:648
 msgid "Upload the proofread translation"
 msgstr "Die korrigierte Übersetzung hochladen"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:655
+#: vertimus/models.py:664
 msgid "Ready for submission"
 msgstr "Bereit zur Einbringung"
 
-#: vertimus/models.py:671
+#: vertimus/models.py:680
 msgid "Submit to repository"
 msgstr "In Softwarebestand einspielen"
 
 #. Commit failed, state unchanged
-#: vertimus/models.py:685
+#: vertimus/models.py:694
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Einspielen ist gescheitert. Die Fehlermeldung war: »%s«"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:695
+#: vertimus/models.py:704
 msgid "Reserve to submit"
 msgstr "Zur Einbringung reservieren"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:708
+#: vertimus/models.py:717
 msgid "Inform of submission"
 msgstr "Über Einbringung informieren"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:723
+#: vertimus/models.py:732
 msgid "Review required"
 msgstr "Überarbeitung ist erforderlich"
 
-#: vertimus/models.py:738
+#: vertimus/models.py:747
 msgid "Archive the actions"
 msgstr "Aktionen archivieren"
 
-#: vertimus/models.py:777
+#: vertimus/models.py:786
 msgid "Undo the last state change"
 msgstr "Die letzte Statusänderung rückgängig machen"
 
