@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-28 21:40+0000\n"
-"PO-Revision-Date: 2011-01-07 09:12+0800\n"
+"POT-Creation-Date: 2011-01-07 01:13+0000\n"
+"PO-Revision-Date: 2011-01-08 07:31+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
@@ -145,7 +145,7 @@ msgstr "中文（中國）"
 
 #: database-content.py:26
 msgid "Chinese Traditional"
-msgstr "傳統漢語"
+msgstr "繁體中文"
 
 #: database-content.py:27
 #: database-content.py:152
@@ -665,8 +665,9 @@ msgid "Norwegian Nynorsk"
 msgstr "新挪威語(Nynorsk)"
 
 #: database-content.py:227
+#, fuzzy
 msgid "Serbian Jekavian"
-msgstr ""
+msgstr "塞爾維亞文鍵盤對應表"
 
 #: database-content.py:228
 msgid "Serbian Latin"
@@ -738,8 +739,9 @@ msgid "plug-ins"
 msgstr "外掛程式"
 
 #: database-content.py:269
+#, fuzzy
 msgid "Property Nicks"
-msgstr ""
+msgstr "屬性類別"
 
 #: database-content.py:270
 msgid "python"
@@ -846,8 +848,9 @@ msgid "filters"
 msgstr "濾鏡"
 
 #: database-content.py:297
+#, fuzzy
 msgid "alpha-to-logo filter"
-msgstr ""
+msgstr "傳送透明度到遮罩"
 
 #: database-content.py:298
 msgid "animation filter"
@@ -862,48 +865,59 @@ msgid "blur filter"
 msgstr "模糊濾鏡"
 
 #: database-content.py:301
+#, fuzzy
 msgid "combine filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:302
+#, fuzzy
 msgid "decor filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:303
+#, fuzzy
 msgid "distort filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:304
+#, fuzzy
 msgid "edge-detect filter"
-msgstr ""
+msgstr "樹狀模型過濾條件"
 
 #: database-content.py:305
+#, fuzzy
 msgid "enhance filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:306
+#, fuzzy
 msgid "generic filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:307
+#, fuzzy
 msgid "light-effects filter"
-msgstr ""
+msgstr "樹狀模型過濾條件"
 
 #: database-content.py:308
+#, fuzzy
 msgid "map filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:309
+#, fuzzy
 msgid "noise filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:310
+#, fuzzy
 msgid "render filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:311
+#, fuzzy
 msgid "web filter"
-msgstr ""
+msgstr "檔案過濾條件"
 
 #: database-content.py:312
 msgid "Fish Applet Manual"
@@ -1091,7 +1105,7 @@ msgstr "整合指南"
 
 #: database-content.py:356
 msgid "introduction"
-msgstr ""
+msgstr "導覽"
 
 #: database-content.py:357
 msgid "Invest Applet Manual"
@@ -1146,7 +1160,6 @@ msgid "file menu"
 msgstr "檔案選單"
 
 #: database-content.py:370
-#| msgid "file menu"
 msgid "filters menu"
 msgstr "過濾條件選單"
 
@@ -1318,11 +1331,12 @@ msgstr "給小筆電使用的電子郵件客戶端"
 
 #: database-content.py:414
 #| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
-msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/\">Transifex platform</a>."
-msgstr "Avahi 是一套系統，提供透過 mDNS/DNS-SD 通訊協定在本地端網絡探索的好用服務。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/\">Transifex platform</a> 提交。"
+#| "Avahi is a system which facilitates service discovery on a local network "
+#| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-"
+#| "tx/\">Transifex platform</a>."
+msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a>."
+msgstr "Avahi 是一套系統，提供透過 mDNS/DNS-SD 通訊協定在本地端網絡探索的好用服務。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a> 提交。"
 
 #: database-content.py:415
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
@@ -1334,11 +1348,11 @@ msgstr "Evince 是適用於多種文件格式的文件檢視器。"
 
 #: database-content.py:417
 #| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
-msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
-msgstr "使用指紋辨識讀取器的 D-Bus 服務。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a> 提交。"
+#| "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+#| "module. Please submit your translation through the <a href=\"http://www."
+#| "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a>."
+msgstr "使用指紋辨識讀取器的 D-Bus 服務。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a> 提交。"
 
 #: database-content.py:418
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
@@ -1399,11 +1413,13 @@ msgstr "要提交你的翻譯，<a href=\"https://bugzilla.gnome.org/enter_bug.c
 
 #: database-content.py:435
 #| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
-msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"https://translate.fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's Transifex platform</a>."
-msgstr "PackageKit 是一套設計來讓安裝和升級你電腦上的軟件更簡單的系統。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"https://translate.fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's Transifex platform</a> 提交。"
+#| "PackageKit is a system designed to make installing and updating software "
+#| "on your computer easier. This is not a GNOME-specific module. Please "
+#| "submit your translation through the <a href=\"https://translate."
+#| "fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's "
+#| "Transifex platform</a>."
+msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
+msgstr "PackageKit 是一套設計來讓安裝和升級你電腦上的軟件更簡單的系統。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a> 提交。"
 
 #: database-content.py:436
 msgid "Passepartout is a DTP application for X."
@@ -1411,21 +1427,26 @@ msgstr "Passepartout 是一個適用於 X 的 DTP 應用程式。"
 
 #: database-content.py:437
 #| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
+#| "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
+#| "for your sound applications. \n"
+#| "Please submit your translation through the <a href=\"\n"
+#| "http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex "
+#| "platform</a>."
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
 "Please submit your translation through the <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex platform</a>."
+"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex platform</a>."
 msgstr ""
 "PulseAudio 是用於 POSIX OSes 的音效系統，它是音效應用程式的代理伺服器。\n"
-"請將你的翻譯送至 <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex platform</a> 提交。"
+"請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a> 提交。"
 
 #: database-content.py:440
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>."
-msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/\">Transifex platform</a> 提交。"
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
+msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a> 提交。"
 
 #: database-content.py:441
 msgid "A photo manager for GNOME"
@@ -1436,8 +1457,9 @@ msgid "This is a clone of the official system-tools-backends version from the fr
 msgstr "這是從 freedesktop.org 檔案庫抓回來官方版 system-tools-backends 的複本。"
 
 #: database-content.py:443
+#, fuzzy
 msgid "GNOME Teletext viewer"
-msgstr ""
+msgstr "GNOME 圖片瀏覽程式。"
 
 #: database-content.py:444
 msgid ""
@@ -1464,12 +1486,10 @@ msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (開發版)"
 
 #: database-content.py:451
-#| msgid "GNOME 2.30 (stable)"
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (穩定版)"
 
 #: database-content.py:452
-#| msgid "GNOME 2.20 (old stable)"
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (舊的穩定版)"
 
@@ -1687,7 +1707,6 @@ msgid "Image"
 msgstr "圖片"
 
 #: people/models.py:37
-#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
 msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 pixels)"
 msgstr "用於 hackergotchi 的圖片檔案 (.jpg, .png, ...) 網址 (最大 100x100 像素)"
 
@@ -1705,8 +1724,6 @@ msgid "Bugzilla account"
 msgstr "Bugzilla 帳號"
 
 #: people/models.py:41
-#| msgid ""
-#| "This should be an email address, useful if not equal to 'email' field"
 msgid "This should be an email address, useful if not equal to 'E-mail address' field"
 msgstr "這裏應該是電子郵件位址，用在如果它不等於「E-mail address」欄位時"
 
@@ -1991,7 +2008,6 @@ msgid "No translators"
 msgstr "沒有翻譯者"
 
 #: teams/views.py:72
-#| msgid "Inactive"
 msgid "Inactive members"
 msgstr "不活躍的使用者"
 
@@ -2086,15 +2102,11 @@ msgid "The GNOME Project"
 msgstr "GNOME 計畫"
 
 #: templates/base.html:96
-#| msgid ""
-#| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
-#| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgid "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr "維護於 <a href='http://git.gnome.org/'>git.gnome.org</a> 的 <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> 模組"
 
 #: templates/base.html:98
 #, python-format
-#| msgid "Hosted by"
 msgid "Hosted by %(link)s."
 msgstr "主機提供：%(link)s。"
 
@@ -2293,7 +2305,6 @@ msgid "Releases Comparison"
 msgstr "推出版本比較"
 
 #: templates/release_compare.html:29
-#| msgid "Projects"
 msgid "Progress"
 msgstr "進度"
 
@@ -2341,7 +2352,6 @@ msgstr "較早的推出版"
 
 #: templates/stats_show.html:7
 #: templates/languages/language_release_stats.html:65
-#| msgid "Evince is a document viewer for multiple document formats."
 msgid "This document is written in Mallard documentation format"
 msgstr "這份文件是以 Mallard 文件格式編寫"
 
@@ -2462,7 +2472,6 @@ msgid "Module maintenance"
 msgstr "模組維護"
 
 #: templates/people/person_detail.html:54
-#| msgid "No current actions."
 msgid "Current activity"
 msgstr "目前的活動"
 
@@ -2748,7 +2757,6 @@ msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "已封存的動作 (%(human_level)s 個封存系列) "
 
 #: templates/vertimus/vertimus_detail.html:110
-#| msgid "(Return to current)"
 msgid "(Return to current actions)"
 msgstr "(回到目前的動作)"
 
@@ -2778,7 +2786,6 @@ msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "你需要被驗證同時必須是%(team_name)s隊伍的成員。"
 
 #: templates/vertimus/vertimus_detail.html:191
-#| msgid "This team is using the Vertimus translation workflow"
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "這個隊伍沒有使用 Vertimus 翻譯工作流程。"
 
