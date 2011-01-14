@@ -98,10 +98,11 @@ def get_image_size(url):
         Code partially copied from http://effbot.org/zone/pil-image-size.htm """
     import urllib
     import ImageFile
+    from httplib import InvalidURL
 
     try:
         file = urllib.urlopen(url)
-    except (IOError, UnicodeError):
+    except (IOError, UnicodeError, InvalidURL):
         raise forms.ValidationError(_(u"The URL you provided is not valid"))
     size = None
     p = ImageFile.Parser()
