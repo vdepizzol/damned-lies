@@ -17,22 +17,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = os.path.join(PROJECT_PATH,'database.db')            # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
-
-# If you can't use PostgreSQL :-/, here is the MySQL configuration:
-#
-# DATABASE_HOST = '/var/run/mysqld/mysqld.sock'
-#
-# DATABASE_OPTIONS = {
-#    'read_default_file': '/etc/mysql/my.cnf',
-#    'init_command': 'SET storage_engine=INNODB'
-# }
-#
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME'  : os.path.join(PROJECT_PATH, 'database.db'),
+    }
+}
 # Please refer to the README file to create an UTF-8 database with MySQL.
 
 EMAIL_HOST = 'localhost'
@@ -98,9 +88,8 @@ SECRET_KEY = 'zk!^92901p458c8lo0(fox-&k7jj(aple76_k%eva7b1)xjo8-'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
