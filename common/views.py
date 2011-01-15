@@ -24,6 +24,7 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.contrib.auth import login, authenticate, logout
+from django.contrib import messages
 from django.conf import settings
 from people.models import Person
 from teams.models import Role
@@ -49,15 +50,14 @@ def index(request):
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
 
-def site_login(request, msgs=[]):
+def site_login(request):
     """ Site-specific login page. Not named 'login' to not confuse with auth.login """
     referer = None
     openid_path = ''
-    messages = list(msgs)
     if request.method == 'POST':
         if 'logout' in request.POST and request.POST['logout']:
             logout(request)
-            messages.append(_("You have been logged out."))
+            messages.success(request, _("You have been logged out."))
         elif 'username' in request.POST:
             username = request.POST['username']
             password = request.POST['password']
@@ -65,21 +65,20 @@ def site_login(request, msgs=[]):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    message = _("You have been successfully logged in.")
-                    user.message_set.create(message=message)
+                    messages.success(request, _("You have been successfully logged in."))
                     if Role.objects.filter(person__username=user.username).count() < 1:
                         message = _("You have not joined any translation team yet. You can do it from <a href=\"%(url)s\">your profile</a>.") % {
                             'url': reverse('person_team_join'),
                         }
-                        user.message_set.create(message=message)
+                        messages.info(request, message)
                     if 'referer' in request.POST:
                         return HttpResponseRedirect(request.POST['referer'])
                     else:
                         return HttpResponseRedirect(reverse("home"))
                 else:
-                    messages.append(_("We're sorry, but your account has been disabled."))
+                    messages.error(request, _("We're sorry, but your account has been disabled."))
             else:
-                messages.append(_("Login unsuccessful. Please verify your username and password."))
+                messages.error(request, _("Login unsuccessful. Please verify your username and password."))
     else:
         referer = request.META.get('HTTP_REFERER', None)
 
@@ -88,7 +87,6 @@ def site_login(request, msgs=[]):
     context = {
         'pageSection': 'home',
         'openid_path': openid_path,
-        'messages': messages,
         'referer': referer,
     }
     return render_to_response('login.html', context, context_instance=RequestContext(request))
@@ -118,4 +116,5 @@ def activate_account(request, key):
     except Person.DoesNotExist:
         return render_to_response('error.html', {'error':"Sorry, the key you provided is not valid."})
     person.activate()
-    return site_login(request, msgs=[_("Your account has been activated.")])
+    messages.success(request, _("Your account has been activated."))
+    return site_login(request)

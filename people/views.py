@@ -27,6 +27,7 @@ from django.template import RequestContext
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib import messages
 from django.contrib.sites.models import Site
 from people.models import Person
 from teams.models import Team, Role
@@ -59,7 +60,7 @@ def person_detail_change(request):
         if form.is_valid():
             form.save()
         else:
-            request.user.message_set.create(message="Sorry, the form is not valid.")
+            messages.error(request, _("Sorry, the form is not valid."))
     else:
         form = DetailForm(instance=person)
 
@@ -84,12 +85,12 @@ def person_team_join(request):
             new_role = Role(team=team, person=person)
             try:
                 new_role.save()
-                request.user.message_set.create(message=_("You have successfully joined the team '%s'.") % team.get_description())
+                messages.success(request, _("You have successfully joined the team '%s'.") % team.get_description())
                 team.send_mail_to_coordinator(subject=ugettext_lazy("A new person joined your team"),
                                               message=ugettext_lazy("%(name)s has just joined your translation team on %(site)s"),
                                               messagekw = {'name': person.name, 'site': Site.objects.get_current()})
             except IntegrityError:
-                request.user.message_set.create(message=_("You are already member of this team."))
+                messages.info(request, _("You are already member of this team."))
     else:
         form = TeamJoinForm()
 
@@ -111,10 +112,10 @@ def person_team_leave(request, team_slug):
     try:
         role = Role.objects.get(team=team, person=person)
         role.delete()
-        person.message_set.create(message=_("You have been removed from the team '%s'.") % team.get_description())
+        messages.success(request, _("You have been removed from the team '%s'.") % team.get_description())
     except Role.DoesNotExist:
         # Message no i18n'ed, should never happen under normal conditions
-        person.message_set.create(message="You are not a member of this team.")
+        messages.error(request, _("You are not a member of this team."))
     # redirect to normal person detail
     return HttpResponseRedirect(urlresolvers.reverse('person_detail_username',
                                                      args=(person.username,)))
@@ -127,7 +128,7 @@ def person_password_change(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
-            request.user.message_set.create(message=_("Your password has been changed."))
+            messages.success(request, _("Your password has been changed."))
             form.save()
     else:
         form = PasswordChangeForm(request.user)

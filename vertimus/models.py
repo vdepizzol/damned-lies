@@ -691,9 +691,10 @@ class ActionCI(ActionAbstract):
             new_state = self._new_state()
         except:
             # Commit failed, state unchanged
-            person.message_set.create(message=_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
             self._action_db.delete()
-            new_state = state
+            # FIXME: somewhere the error should be catched and handled properly
+            #new_state = state
+            raise Exception(_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
         if state != new_state:
             self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
         return new_state

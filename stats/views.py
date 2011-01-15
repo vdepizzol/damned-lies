@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008-2009 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>.
 #
 # This file is part of Damned Lies.
 #
@@ -23,6 +23,7 @@ import os
 from django.conf import settings
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.core import serializers
 from django.http import HttpResponse, Http404
 from django.template import RequestContext
@@ -79,9 +80,8 @@ def module_branch(request, module_name, branch_name):
 @login_required
 def module_edit_branches(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
-    messages = []
     if not mod.can_edit_branches(request.user):
-        request.user.message_set.create(message="Sorry, you're not allowed to edit this module's branches")
+        messages.error(request, "Sorry, you're not allowed to edit this module's branches")
         return module(request, module_name)
     if request.method == 'POST':
         form = ModuleBranchForm(mod, request.POST)
@@ -122,11 +122,11 @@ def module_edit_branches(request, module_name):
                     try:
                         branch = Branch(module=mod, name=branch_name)
                         branch.save()
-                        messages.append("The new branch %s has been added" % branch_name)
+                        messages.success(request, "The new branch %s has been added" % branch_name)
                         updated = True
                         # Send message to gnome-i18n?
                     except Exception, e:
-                        messages.append("Error adding the branch '%s': %s" % (branch_name, str(e)))
+                        messages.error(request, "Error adding the branch '%s': %s" % (branch_name, str(e)))
                         branch = None
                 if branch and form.cleaned_data['new_branch_release']:
                     rel = Release.objects.get(pk=form.cleaned_data['new_branch_release'].pk)
@@ -136,13 +136,12 @@ def module_edit_branches(request, module_name):
             if updated:
                 form = ModuleBranchForm(mod) # Redisplay a clean form
         else:
-            messages.append("Sorry, form is not valid")
+            messages.error(request, "Sorry, the form is not valid")
     else:
         form = ModuleBranchForm(mod)
     context = {
         'module': mod,
         'form': form,
-        'messages': messages
     }
     return render_to_response('module_edit_branches.html', context, context_instance=RequestContext(request))
 
