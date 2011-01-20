@@ -95,8 +95,9 @@ performances.
 PostgreSQL
 ----------
 
-You just need to define DATABASE_ENGINE = 'postgresql_psycopg2' and
-DATABASE_NAME. Leave DATABASE_HOST setting empty to use UDS.
+In the DATABASES['default'] dictionary, you just need to define
+ENGINE = 'django.db.backends.postgresql_psycopg2' and the NAME key.
+Leave HOST setting empty to use UDS.
 
 MySQL
 -----
@@ -107,11 +108,18 @@ database bla charset=utf8;'
 
 In settings.py:
 
-DATABASE_HOST = '/var/run/mysqld/mysqld.sock'
-
-DATABASE_OPTIONS = {
-    'read_default_file': '/etc/mysql/my.cnf',
-    "init_command": "SET storage_engine=INNODB"
+DATABASES = {
+    'default' {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '<your database name>',
+        'USER': '<your user>',
+        'PASSWORD': '<your password>',
+        'HOST' = '/var/run/mysqld/mysqld.sock',
+        'OPTIONS' = {
+            'read_default_file': '/etc/mysql/my.cnf',
+            'init_command': 'SET storage_engine=INNODB'
+        }
+    }
 }
 
 Grep for ANSI_QUOTES in the source code to find the models.py which

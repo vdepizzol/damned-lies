@@ -875,7 +875,7 @@ class Release(models.Model):
               AND stat.language_id IS NULL
             GROUP BY domain.dtype"""
         cursor = connection.cursor()
-        if settings.DATABASE_ENGINE == 'mysql':
+        if settings.DATABASES['default']['ENGINE'].endswith('mysql'):
             cursor.execute("SET sql_mode='ANSI_QUOTES'")
         cursor.execute(query, (self.id,))
 
