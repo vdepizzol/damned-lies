@@ -197,11 +197,26 @@ class Branch(models.Model):
             upd_thread.start()
 
     def delete(self):
+        import shutil # os.rmdir cannot delete non-empty dirs
         # Remove the repo checkout
-        localdir = os.path.join(settings.SCRATCHDIR, self.module.vcs_type, self.module.name + "." + self.name)
-        if os.access(localdir, os.W_OK):
-            import shutil # os.rmdir cannot delete non-empty dirs
-            shutil.rmtree(localdir)
+        if self.module.vcs_type in ('cvs', 'svn'):
+            if os.access(self.co_path(), os.W_OK):
+                shutil.rmtree(self.co_path())
+        elif self.module.vcs_type == 'git':
+            if self.is_head():
+                if os.access(self.co_path(), os.W_OK):
+                    shutil.rmtree(self.co_path())
+            else:
+                cmd = "cd \"%(localdir)s\" && git checkout master && git branch -D %(branch)s" % {
+                    'localdir': self.co_path(),
+                    'branch': self.name,
+                }
+                utils.run_shell_command(cmd)
+        #To be implemented for hg/bzr
+
+        # Remove the pot/po generated files
+        if os.access(self.output_dir('ui'), os.W_OK):
+            shutil.rmtree(self.output_dir('ui'))
         super(Branch, self).delete()
 
     def __cmp__(self, other):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>.
 #
 # This file is part of Damned Lies.
 #
@@ -19,6 +19,10 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.contrib import admin
+from django.contrib.admin import helpers
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.utils.encoding import force_unicode
 from django import forms
 from stats.models import Statistics, Information, Module, Branch, Domain, Category, Release
 
@@ -75,6 +79,39 @@ class ReleaseAdmin(admin.ModelAdmin):
     list_display = ('name', 'status', 'weight', 'string_frozen')
     list_editable = ('weight',)
     inlines = [ CategoryInline ]
+    actions = ['delete_release']
+
+    def delete_release(self, request, queryset):
+        """ Admin action to delete releases *with* branches which are not linked to another release """
+        if not self.has_delete_permission(request):
+            raise PermissionDenied
+        if request.POST.get('post'):
+            # Already confirmed
+            for obj in queryset:
+                self.log_deletion(request, obj, force_unicode(obj))
+            n = queryset.count()
+            b = 0
+            for release in queryset:
+                branches = Branch.objects.filter(category__release=release)
+                for branch in branches:
+                    if branch.releases.count() < 2 and not branch.is_head():
+                        branch.delete()
+                        b += 1
+            queryset.delete()
+            self.message_user(request, "Successfully deleted %(countr)d release(s) and %(countb)d branch(es)." % {
+                "countr": n, "countb": b,
+            })
+            # Return None to display the change list page again.
+            return None
+        context = {
+            "title": "Are you sure?",
+            "queryset": queryset,
+            "app_label": self.model._meta.app_label,
+            "model_label": self.model._meta.verbose_name_plural,
+            "action_checkbox_name": helpers.ACTION_CHECKBOX_NAME,
+        }
+        return render_to_response('admin/delete_release_confirmation.html', context, context_instance=RequestContext(request))
+    delete_release.short_description = "Delete release (and associated branches)"
 
 class InformationInline(admin.TabularInline):
     model = Information
