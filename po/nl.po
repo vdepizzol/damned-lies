@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the damned-lies package.
 #
 # Vincent van Adrighem <adrighem@gnome.org>, 2009
-# Wouter Bolsterlee <wbolster@gnome.org>, 2009.
-#
+# Wouter Bolsterlee <wbolster@gnome.org>, 2009, 2011.
+# Sense Hofstede <sense@ubuntu.com>, 2010.
 #
 # locale          - taalgebied?
 # fuzzy           - vaag gelijkend  (gebruikt msgfmt ook)
@@ -16,926 +16,1257 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-16 21:34+0000\n"
-"PO-Revision-Date: 2009-03-23 18:05+0100\n"
+"POT-Creation-Date: 2011-01-23 04:33+0000\n"
+"PO-Revision-Date: 2011-01-25 00:22+0100\n"
 "Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\\n\n"
 
-#: database-content.py:1
-msgid "Gujarati"
-msgstr "Gujarati"
-
-#: database-content.py:2
-msgid "Irish"
-msgstr "Iers"
-
-#: database-content.py:3
-msgid "Guarani"
-msgstr "Guaraní"
-
-#: database-content.py:4
-msgid "Galician"
-msgstr "Galiciaans"
-
-#: database-content.py:5
-msgid "Latin"
-msgstr "Latijn"
-
-#: database-content.py:6
-msgid "Tatar"
-msgstr "Tataars"
-
-#: database-content.py:7
-msgid "Turkish"
-msgstr "Turks"
-
-#: database-content.py:8
-msgid "Limburgian"
-msgstr "Limburgs"
-
-#: database-content.py:9
-msgid "Latvian"
-msgstr "Lets"
-
-#: database-content.py:10
-msgid "Tagalog"
-msgstr "Tagalog"
-
-#: database-content.py:11
-msgid "Turkmen"
-msgstr "Turkmeens"
-
-#: database-content.py:12
-msgid "Thai"
-msgstr "Thai"
-
-#: database-content.py:13
-msgid "Tajik"
-msgstr "Tadzjieks"
-
-#: database-content.py:14
-msgid "Telugu"
-msgstr "Telugu"
-
-#: database-content.py:15
-msgid "Tamil"
-msgstr "Tamil"
-
-#: database-content.py:16
-msgid "Yiddish"
-msgstr "Jiddisch"
-
-#: database-content.py:17
-msgid "Brazilian Portuguese"
-msgstr "Braziliaans Portugees"
-
-#: database-content.py:18
-msgid "German"
-msgstr "Duits"
-
-#: database-content.py:19
-msgid "Danish"
-msgstr "Deens"
-
-#: database-content.py:20
-msgid "Dzongkha"
-msgstr "Dzongkha"
-
-#: database-content.py:21
-msgid "Chinese (China)"
-msgstr "Chinees"
-
-#: database-content.py:22
-msgid "Balochi"
-msgstr "Balochi"
-
-#: database-content.py:23
-msgid "Crimean Tatar"
-msgstr "Krim-Tataars"
-
-#: database-content.py:24
-msgid "Greek"
-msgstr "Grieks"
-
-#: database-content.py:25
-msgid "Esperanto"
-msgstr "Esperanto"
-
-#: database-content.py:26
-msgid "Belarusian"
-msgstr "Wit-Russisch"
-
-#: database-content.py:27
-msgid "Basque"
-msgstr "Baskisch"
-
-#: database-content.py:28
-msgid "Estonian"
-msgstr "Ests"
-
-#: database-content.py:29
-msgid "Spanish"
-msgstr "Spaans"
-
-#: database-content.py:30
-msgid "Russian"
-msgstr "Russisch"
-
-#: database-content.py:31
-msgid "Kinyarwanda"
-msgstr "Kinyarwanda"
-
-#: database-content.py:32
-msgid "Romanian"
-msgstr "Roemeens"
-
-#: database-content.py:33
-msgid "Canadian English"
-msgstr "Canadees Engels"
-
-#: database-content.py:34
-msgid "Bulgarian"
-msgstr "Bulgaars"
-
-#: database-content.py:35
-msgid "Ukrainian"
-msgstr "Oekraïens"
-
-#: database-content.py:36
-msgid "Walloon"
-msgstr "Waals"
-
-#: database-content.py:37
-msgid "Asturian"
-msgstr "Asturisch"
-
-#: database-content.py:38
-msgid "Bengali"
-msgstr "Bengali"
-
-#: database-content.py:39
-msgid "Breton"
-msgstr "Bretons"
-
-#: database-content.py:40
-msgid "Bosnian"
-msgstr "Bosnisch"
-
-#: database-content.py:41
-msgid "Japanese"
-msgstr "Japans"
-
-#: database-content.py:42
-msgid "Occitan"
-msgstr "Occitaans"
-
-#: database-content.py:43
-msgid "Low German and Saxon"
-msgstr "Nederduits en Nedersaksisch"
-
-#: database-content.py:44
-msgid "Oriya"
-msgstr "Oriya"
-
-#: database-content.py:45
-msgid "Xhosa"
-msgstr "Xhosa"
-
-#: database-content.py:46
-msgid "Northern Sotho"
-msgstr "Noord-Sotho"
-
-#: database-content.py:47
-msgid "Iranian Azerbaijani"
-msgstr "Iraans Azerbeidjaans"
-
-#: database-content.py:48
-msgid "Catalan"
-msgstr "Catalaans"
-
-#: database-content.py:49
-msgid "Welsh"
-msgstr "Welsh"
-
-#: database-content.py:50
-msgid "Czech"
-msgstr "Tsjechisch"
-
-#: database-content.py:51
-msgid "Pashto"
-msgstr "Pasjtoe"
-
-#: database-content.py:52
-msgid "Portuguese"
-msgstr "Portugees"
-
-#: database-content.py:53
-msgid "Lithuanian"
-msgstr "Litouws"
-
-#: database-content.py:54
-msgid "Punjabi"
-msgstr "Punjabi"
-
-#: database-content.py:55
-msgid "British English"
-msgstr "Brits Engels"
-
-#: database-content.py:56
-msgid "Armenian"
-msgstr "Armeens"
-
-#: database-content.py:57
-msgid "Croatian"
-msgstr "Kroatisch"
-
-#: database-content.py:58
-msgid "Hungarian"
-msgstr "Hongaars"
-
-#: database-content.py:59
-msgid "Hindi"
-msgstr "Hindi"
-
-#: database-content.py:60
-msgid "Hebrew"
-msgstr "Hebreeuws"
-
-#: database-content.py:61
-msgid "Malagasy"
-msgstr "Malagasy"
-
-#: database-content.py:62
-msgid "Friulian"
-msgstr "Friulisch"
-
-#: database-content.py:63
-msgid "Uzbek"
-msgstr "Oezbeeks"
-
-#: database-content.py:64
-msgid "Malayalam"
-msgstr "Malayalam"
-
-#: database-content.py:65
-msgid "Mongolian"
-msgstr "Mongools"
-
-#: database-content.py:66
-msgid "Maori"
-msgstr "Maori"
-
-#: database-content.py:67
-msgid "Macedonian"
-msgstr "Macedonisch"
-
-#: database-content.py:68
-msgid "Urdu"
-msgstr "Urdu"
-
-#: database-content.py:69
-msgid "Polish"
-msgstr "Pools"
-
-#: database-content.py:70
-msgid "Malay"
-msgstr "Maleis"
-
-#: database-content.py:71
-msgid "Marathi"
-msgstr "Marathi"
-
-#: database-content.py:72
-msgid "Uighur"
-msgstr "Oeigoers"
-
-#: database-content.py:73
-msgid "Old English"
-msgstr "Oudengels"
-
-#: database-content.py:74
+#: database-content.py:1 database-content.py:123
 msgid "Afrikaans"
 msgstr "Afrikaans"
 
-#: database-content.py:75
-msgid "Vietnamese"
-msgstr "Vietnamees"
-
-#: database-content.py:76
-msgid "Icelandic"
-msgstr "IJslands"
-
-#: database-content.py:77
-msgid "Amharic"
-msgstr "Amhaars"
-
-#: database-content.py:78
-msgid "Italian"
-msgstr "Italiaans"
-
-#: database-content.py:79
-msgid "Kannada"
-msgstr "Kannada"
-
-#: database-content.py:80
-msgid "Assamese"
-msgstr "Assamees"
-
-#: database-content.py:81
-msgid "Arabic"
-msgstr "Arabisch"
-
-#: database-content.py:82
-msgid "Ido"
-msgstr "Ido"
-
-#: database-content.py:83
-msgid "Zulu"
-msgstr "Zulu"
-
-#: database-content.py:84
-msgid "Azerbaijani"
-msgstr "Azerbeidjaans"
-
-#: database-content.py:85
-msgid "Indonesian"
-msgstr "Indonesisch"
-
-#: database-content.py:86
-msgid "Bengali (India)"
-msgstr "Bengalees (India)"
-
-#: database-content.py:87
-msgid "Kashmiri"
-msgstr "Kashmiri"
-
-#: database-content.py:88
-msgid "Chinese Traditional"
-msgstr "Traditioneel Chinees"
-
-#: database-content.py:89
-msgid "Dutch"
-msgstr "Nederlands"
-
-#: database-content.py:90
-msgid "Yoruba"
-msgstr "Yoruba"
-
-#: database-content.py:91
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Noors (Bokmål en Nynorsk)"
-
-#: database-content.py:92
-msgid "Nepali"
-msgstr "Nepalees"
-
-#: database-content.py:93
-msgid "Australian English"
-msgstr "Australisch Engels"
-
-#: database-content.py:94
-msgid "French"
-msgstr "Frans"
-
-#: database-content.py:95
-msgid "Persian"
-msgstr "Persisch"
-
-#: database-content.py:96
-msgid "Fula"
-msgstr "Fula"
-
-#: database-content.py:97
-msgid "Maithili"
-msgstr "Maithili"
-
-#: database-content.py:98
-msgid "Finnish"
-msgstr "Fins"
-
-#: database-content.py:99
-msgid "Georgian"
-msgstr "Georgisch"
-
-#: database-content.py:100
-msgid "Kazakh"
-msgstr "Kazachs"
-
-#: database-content.py:101
-msgid "Serbian"
-msgstr "Servisch"
-
-#: database-content.py:102
+#: database-content.py:2 database-content.py:124
 msgid "Albanian"
 msgstr "Albanees"
 
-#: database-content.py:103
-msgid "Korean"
-msgstr "Koreaans"
+#: database-content.py:3 database-content.py:125
+msgid "Amharic"
+msgstr "Amhaars"
 
-#: database-content.py:104
-msgid "Swedish"
-msgstr "Zweeds"
+#: database-content.py:4 database-content.py:126
+msgid "Arabic"
+msgstr "Arabisch"
 
-#: database-content.py:105
-msgid "Khmer"
-msgstr "Khmer"
+#: database-content.py:5 database-content.py:127
+msgid "Aragonese"
+msgstr "Aragonees"
 
-#: database-content.py:106
-msgid "Slovak"
-msgstr "Slowaaks"
+#: database-content.py:6 database-content.py:128
+msgid "Armenian"
+msgstr "Armeens"
 
-#: database-content.py:107
-msgid "Sinhala"
-msgstr "Sinhala"
+#: database-content.py:7 database-content.py:129
+msgid "Assamese"
+msgstr "Assamees"
 
-#: database-content.py:108
-msgid "Kurdish"
-msgstr "Koerdisch"
+#: database-content.py:8 database-content.py:130
+msgid "Asturian"
+msgstr "Asturisch"
 
-#: database-content.py:109
-msgid "Slovenian"
-msgstr "Sloveens"
+#: database-content.py:9 database-content.py:131
+msgid "Australian English"
+msgstr "Australisch Engels"
 
-#: database-content.py:110
-msgid "Kirghiz"
-msgstr "Kirgizisch"
+#: database-content.py:10 database-content.py:132
+msgid "Azerbaijani"
+msgstr "Azerbeidjaans"
 
-#: database-content.py:111
-msgid "Belarusian Latin"
-msgstr "Witrussisch (Latijn)"
+#: database-content.py:11 database-content.py:133
+msgid "Balochi"
+msgstr "Balochi"
 
-#: database-content.py:112
-msgid "Low German"
-msgstr "Nederduits"
+#: database-content.py:12 database-content.py:134
+msgid "Basque"
+msgstr "Baskisch"
 
-#: database-content.py:113
-msgid "Low Saxon, Germany"
-msgstr "Nedersaksisch"
+#: database-content.py:13 database-content.py:135
+msgid "Belarusian"
+msgstr "Wit-Russisch"
 
-#: database-content.py:114
-msgid "Valencian (Southern Catalan)"
-msgstr "Valenciaans (Zuid-Catalonië)"
+#: database-content.py:14 database-content.py:137
+msgid "Bemba"
+msgstr "Bemba"
 
-#: database-content.py:115
-msgid "Uzbek (Cyrillic)"
-msgstr "Oezbeeks (Cyrillisch)"
+#: database-content.py:15 database-content.py:138
+msgid "Bengali"
+msgstr "Bengali"
 
-#: database-content.py:116
-msgid "Uzbek (Latin)"
-msgstr "Oezbeeks (Latijn)"
+#: database-content.py:16 database-content.py:139
+msgid "Bengali (India)"
+msgstr "Bengalees (India)"
 
-#: database-content.py:117
-msgid "Chinese (Hong Kong)"
-msgstr "Chinees (Hong Kong)"
+#: database-content.py:17 database-content.py:140
+msgid "Bosnian"
+msgstr "Bosnisch"
 
-#: database-content.py:118
-msgid "Chinese (Taiwan)"
-msgstr "Chinees (Taiwan)"
+#: database-content.py:18 database-content.py:141
+msgid "Brazilian Portuguese"
+msgstr "Braziliaans Portugees"
 
-#: database-content.py:119
-msgid "Norwegian Bokmål"
-msgstr "Noors (Bokmål)"
+#: database-content.py:19 database-content.py:142
+msgid "Breton"
+msgstr "Bretons"
 
-#: database-content.py:120
-msgid "Norwegian Nynorsk"
-msgstr "Noors (Nynorsk)"
+#: database-content.py:20 database-content.py:143
+msgid "British English"
+msgstr "Brits Engels"
 
-#: database-content.py:121
-msgid "Serbian Latin"
-msgstr "Servisch (Latijn)"
+#: database-content.py:21 database-content.py:144
+msgid "Bulgarian"
+msgstr "Bulgaars"
 
-#: database-content.py:122
-msgid "Serbian Jekavian"
-msgstr "Servisch (Jekavisch)"
+#: database-content.py:22 database-content.py:145
+msgid "Burmese"
+msgstr "Birmaans"
 
-#: database-content.py:123
+#: database-content.py:23 database-content.py:146
+msgid "Canadian English"
+msgstr "Canadees Engels"
+
+#: database-content.py:24 database-content.py:147
+msgid "Catalan"
+msgstr "Catalaans"
+
+#: database-content.py:25 database-content.py:149
+msgid "Chinese (China)"
+msgstr "Chinees"
+
+#: database-content.py:26
+msgid "Chinese Traditional"
+msgstr "Traditioneel Chinees"
+
+#: database-content.py:27 database-content.py:152
+msgid "Crimean Tatar"
+msgstr "Krim-Tataars"
+
+#: database-content.py:28 database-content.py:153
+msgid "Croatian"
+msgstr "Kroatisch"
+
+#: database-content.py:29 database-content.py:154
+msgid "Czech"
+msgstr "Tsjechisch"
+
+#: database-content.py:30 database-content.py:155
+msgid "Danish"
+msgstr "Deens"
+
+#: database-content.py:31 database-content.py:156
+msgid "Divehi"
+msgstr "Dhivehi"
+
+#: database-content.py:32 database-content.py:157
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: database-content.py:33 database-content.py:158
+msgid "Dzongkha"
+msgstr "Dzongkha"
+
+#: database-content.py:34 database-content.py:159
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: database-content.py:35 database-content.py:160
+msgid "Estonian"
+msgstr "Ests"
+
+#: database-content.py:36 database-content.py:161
+msgid "Finnish"
+msgstr "Fins"
+
+#: database-content.py:37 database-content.py:162
+msgid "French"
+msgstr "Frans"
+
+#: database-content.py:38 database-content.py:163
+msgid "Frisian"
+msgstr "Fries"
+
+#: database-content.py:39 database-content.py:164
+msgid "Friulian"
+msgstr "Friulisch"
+
+#: database-content.py:40 database-content.py:165
+msgid "Fula"
+msgstr "Fula"
+
+#: database-content.py:41 database-content.py:166
+msgid "Galician"
+msgstr "Galiciaans"
+
+#: database-content.py:42 database-content.py:167
+msgid "Georgian"
+msgstr "Georgisch"
+
+#: database-content.py:43 database-content.py:168
+msgid "German"
+msgstr "Duits"
+
+#: database-content.py:44 database-content.py:169
+msgid "Greek"
+msgstr "Grieks"
+
+#: database-content.py:45 database-content.py:170
+msgid "Guarani"
+msgstr "Guaraní"
+
+#: database-content.py:46 database-content.py:171
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: database-content.py:47 database-content.py:172
 msgid "Hausa"
 msgstr "Hausa"
 
-#: database-content.py:124
+#: database-content.py:48 database-content.py:173
+msgid "Hebrew"
+msgstr "Hebreeuws"
+
+#: database-content.py:49 database-content.py:174
+msgid "Hindi"
+msgstr "Hindi"
+
+#: database-content.py:50 database-content.py:175
+msgid "Hungarian"
+msgstr "Hongaars"
+
+#: database-content.py:51 database-content.py:176
+msgid "Icelandic"
+msgstr "IJslands"
+
+#: database-content.py:52 database-content.py:177
+msgid "Ido"
+msgstr "Ido"
+
+#: database-content.py:53 database-content.py:179
+msgid "Indonesian"
+msgstr "Indonesisch"
+
+#: database-content.py:54 database-content.py:181
+msgid "Iranian Azerbaijani"
+msgstr "Iraans Azerbeidjaans"
+
+#: database-content.py:55 database-content.py:182
+msgid "Irish"
+msgstr "Iers"
+
+#: database-content.py:56 database-content.py:183
+msgid "Italian"
+msgstr "Italiaans"
+
+#: database-content.py:57 database-content.py:184
+msgid "Japanese"
+msgstr "Japans"
+
+#: database-content.py:58 database-content.py:185
+msgid "Kannada"
+msgstr "Kannada"
+
+#: database-content.py:59 database-content.py:186
+msgid "Kashmiri"
+msgstr "Kashmiri"
+
+#: database-content.py:60 database-content.py:187
+msgid "Kazakh"
+msgstr "Kazachs"
+
+#: database-content.py:61 database-content.py:188
+msgid "Khmer"
+msgstr "Khmer"
+
+#: database-content.py:62 database-content.py:189
+msgid "Kikongo"
+msgstr "Kikongo"
+
+#: database-content.py:63 database-content.py:190
+msgid "Kinyarwanda"
+msgstr "Kinyarwanda"
+
+#: database-content.py:64 database-content.py:191
+msgid "Kirghiz"
+msgstr "Kirgizisch"
+
+#: database-content.py:65 database-content.py:192
+msgid "Korean"
+msgstr "Koreaans"
+
+#: database-content.py:66 database-content.py:193
+msgid "Kurdish"
+msgstr "Koerdisch"
+
+#: database-content.py:67 database-content.py:194
+msgid "Lao"
+msgstr "Laotiaans"
+
+#: database-content.py:68 database-content.py:195
+msgid "Latin"
+msgstr "Latijn"
+
+#: database-content.py:69 database-content.py:196
+msgid "Latvian"
+msgstr "Lets"
+
+#: database-content.py:70 database-content.py:197
+msgid "Limburgian"
+msgstr "Limburgs"
+
+#: database-content.py:71 database-content.py:198
+msgid "Lithuanian"
+msgstr "Litouws"
+
+#: database-content.py:72 database-content.py:199
+msgid "Low German"
+msgstr "Nederduits"
+
+#: database-content.py:73 database-content.py:200
+msgid "Luganda"
+msgstr "Luganda"
+
+#: database-content.py:74 database-content.py:202
+msgid "Macedonian"
+msgstr "Macedonisch"
+
+#: database-content.py:75 database-content.py:203
+msgid "Maithili"
+msgstr "Maithili"
+
+#: database-content.py:76 database-content.py:204
+msgid "Malagasy"
+msgstr "Malagasy"
+
+#: database-content.py:77 database-content.py:205
+msgid "Malay"
+msgstr "Maleis"
+
+#: database-content.py:78 database-content.py:206
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: database-content.py:79 database-content.py:208
+msgid "Manx"
+msgstr "Manx"
+
+#: database-content.py:80 database-content.py:209
+msgid "Maori"
+msgstr "Maori"
+
+#: database-content.py:81 database-content.py:210
+msgid "Marathi"
+msgstr "Marathi"
+
+#: database-content.py:82 database-content.py:211
+msgid "Mongolian"
+msgstr "Mongools"
+
+#: database-content.py:83
+msgid "Neapolitan"
+msgstr "Napolitaans"
+
+#: database-content.py:84 database-content.py:212
+msgid "Nepali"
+msgstr "Nepalees"
+
+#: database-content.py:85 database-content.py:213
+msgid "Northern Sotho"
+msgstr "Noord-Sotho"
+
+#: database-content.py:86
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Noors (Bokmål en Nynorsk)"
+
+#: database-content.py:87 database-content.py:216
+msgid "Occitan"
+msgstr "Occitaans"
+
+#: database-content.py:88 database-content.py:217
+msgid "Old English"
+msgstr "Oudengels"
+
+#: database-content.py:89 database-content.py:218
+msgid "Oriya"
+msgstr "Oriya"
+
+#: database-content.py:90 database-content.py:219
+msgid "Pashto"
+msgstr "Pasjtoe"
+
+#: database-content.py:91 database-content.py:220
+msgid "Persian"
+msgstr "Persisch"
+
+#: database-content.py:92 database-content.py:221
+msgid "Polish"
+msgstr "Pools"
+
+#: database-content.py:93 database-content.py:222
+msgid "Portuguese"
+msgstr "Portugees"
+
+#: database-content.py:94 database-content.py:223
+msgid "Punjabi"
+msgstr "Punjabi"
+
+#: database-content.py:95 database-content.py:224
+msgid "Romanian"
+msgstr "Roemeens"
+
+#: database-content.py:96 database-content.py:225
+msgid "Russian"
+msgstr "Russisch"
+
+#: database-content.py:97 database-content.py:226
+msgid "Serbian"
+msgstr "Servisch"
+
+#: database-content.py:98 database-content.py:229
+msgid "Shavian"
+msgstr "Shavian"
+
+#: database-content.py:99 database-content.py:230
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: database-content.py:100 database-content.py:231
+msgid "Slovak"
+msgstr "Slowaaks"
+
+#: database-content.py:101 database-content.py:232
+msgid "Slovenian"
+msgstr "Sloveens"
+
+#: database-content.py:102 database-content.py:236
+msgid "Spanish"
+msgstr "Spaans"
+
+#: database-content.py:103 database-content.py:238
+msgid "Swedish"
+msgstr "Zweeds"
+
+#: database-content.py:104 database-content.py:239
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: database-content.py:105 database-content.py:240
+msgid "Tajik"
+msgstr "Tadzjieks"
+
+#: database-content.py:106 database-content.py:241
+msgid "Tamil"
+msgstr "Tamil"
+
+#: database-content.py:107 database-content.py:242
+msgid "Tatar"
+msgstr "Tataars"
+
+#: database-content.py:108 database-content.py:243
+msgid "Telugu"
+msgstr "Telugu"
+
+#: database-content.py:109 database-content.py:244
+msgid "Thai"
+msgstr "Thai"
+
+#: database-content.py:110 database-content.py:246
+msgid "Turkish"
+msgstr "Turks"
+
+#: database-content.py:111 database-content.py:247
+msgid "Turkmen"
+msgstr "Turkmeens"
+
+#: database-content.py:112 database-content.py:248
+msgid "Uighur"
+msgstr "Oeigoers"
+
+#: database-content.py:113 database-content.py:249
+msgid "Ukrainian"
+msgstr "Oekraïens"
+
+#: database-content.py:114 database-content.py:250
+msgid "Urdu"
+msgstr "Urdu"
+
+#: database-content.py:115
+msgid "Uzbek"
+msgstr "Oezbeeks"
+
+#: database-content.py:116 database-content.py:253
+msgid "Vietnamese"
+msgstr "Vietnamees"
+
+#: database-content.py:117 database-content.py:254
+msgid "Walloon"
+msgstr "Waals"
+
+#: database-content.py:118 database-content.py:255
+msgid "Welsh"
+msgstr "Welsh"
+
+#: database-content.py:119 database-content.py:256
+msgid "Xhosa"
+msgstr "Xhosa"
+
+#: database-content.py:120 database-content.py:257
+msgid "Yiddish"
+msgstr "Jiddisch"
+
+#: database-content.py:121 database-content.py:258
+msgid "Yoruba"
+msgstr "Yoruba"
+
+#: database-content.py:122 database-content.py:259
+msgid "Zulu"
+msgstr "Zulu"
+
+#: database-content.py:136
+msgid "Belarusian Latin"
+msgstr "Witrussisch (Latijn)"
+
+#: database-content.py:148
+msgid "Catalan (Valencian)"
+msgstr "Catalaans (Valencia)"
+
+#: database-content.py:150
+msgid "Chinese (Hong Kong)"
+msgstr "Chinees (Hong Kong)"
+
+#: database-content.py:151
+msgid "Chinese (Taiwan)"
+msgstr "Chinees (Taiwan)"
+
+#: database-content.py:178
 msgid "Igbo"
 msgstr "Igbo"
 
-#: database-content.py:125
-msgid "UI translations"
-msgstr "Interface-vertaling"
-
-#: database-content.py:126
-msgid "User Guide"
-msgstr "Gebruikershandleiding"
-
-#: database-content.py:127
-msgid "Accessibility Guide"
-msgstr "Toegankelijkheidshandleiding"
-
-#: database-content.py:128
-msgid "System Administration Guide"
-msgstr "Systeembeheerdershandleiding"
-
-#: database-content.py:129
-msgid "GDM Manual"
-msgstr "GDM-handleiding"
-
-#: database-content.py:130
-msgid "Anjuta Manual"
-msgstr "Anjuta-handleiding"
-
-#: database-content.py:131
-msgid "GConf Editor Manual"
-msgstr "GConf-editor-handleiding"
-
-#: database-content.py:132
-msgid "F-Spot Manual"
-msgstr "F-Spot-handleiding"
-
-#: database-content.py:133
-msgid "FDL License"
-msgstr "FDL-licentie"
-
-#: database-content.py:134
-msgid "LGPL License"
-msgstr "LGPL-licentie"
-
-#: database-content.py:135
-msgid "GPL License"
-msgstr "GPL-licentie"
-
-#: database-content.py:136
-msgid "Fish Applet Manual"
-msgstr "Wanda de vis-handleiding"
-
-#: database-content.py:137
-msgid "Workspace Switcher Applet Manual"
-msgstr "Werkbladwisselaar-handleiding"
-
-#: database-content.py:138
-msgid "Window List Applet Manual"
-msgstr "Vensterlijst-handleiding"
-
-#: database-content.py:139
-msgid "Clock Applet Manual"
-msgstr "Klok-handleiding"
-
-#: database-content.py:140
-msgid "Iagno Manual"
-msgstr "Iagno-handleiding"
-
-#: database-content.py:141
-msgid "Five or More Manual"
-msgstr "Vijf-of-meer-handleiding"
-
-#: database-content.py:142
-msgid "Nibbles Manual"
-msgstr "Nibbles-handleiding"
-
-#: database-content.py:143
-msgid "GNOME Robots Manual"
-msgstr "Robots-handleiding"
-
-#: database-content.py:144
-msgid "Four-in-a-row Manual"
-msgstr "Vier-op-een-rij-handleiding"
-
-#: database-content.py:145
-msgid "GNOME Sudoku Manual"
-msgstr "Sudoku-handleiding"
-
-#: database-content.py:146
-msgid "glChess Manual"
-msgstr "Schaken-handleiding"
-
-#: database-content.py:147
-msgid "GNOME Tali Manual"
-msgstr "Tali-handleiding"
-
-#: database-content.py:148
-msgid "Gnometris Manual"
-msgstr "Gnometris-handleiding"
-
-#: database-content.py:149
-msgid "GNOME Klotski Manual"
-msgstr "Klotski-handleiding"
-
-#: database-content.py:150
-msgid "GNOME Tetravex Manual"
-msgstr "Tetravex-handleiding"
-
-#: database-content.py:151
-msgid "GNOME Mahjongg Manual"
-msgstr "Mahjongg-handleiding"
-
-#: database-content.py:152
-msgid "AisleRiot Manual"
-msgstr "AisleRiot-handleiding"
-
-#: database-content.py:153
-msgid "Mines Manual"
-msgstr "Mijnenveger-handleiding"
-
-#: database-content.py:154
-msgid "Same GNOME Manual"
-msgstr "Same Gnome-handleiding"
-
-#: database-content.py:155
-msgid "Blackjack Manual"
-msgstr "Blackjack-handleiding"
-
-#: database-content.py:156
-msgid "CD Player Manual"
-msgstr "CD-speler-handleiding"
-
-#: database-content.py:157
-msgid "Sound Recorder Manual"
-msgstr "Geluidsrecorder-handleiding"
-
-#: database-content.py:158
-msgid "GStreamer Properties Manual"
-msgstr "GStreamer-handleiding"
-
-#: database-content.py:159
-msgid "GNOME Volume Control Manual"
-msgstr "Gnome Volumeregeling-handleiding"
-
-#: database-content.py:160
-msgid "Layout Descriptions"
-msgstr "Layoutomschrijvingen"
-
-#: database-content.py:161
-msgid "Keyboard Indicator Manual"
-msgstr "Toetsenbordindicator-handleiding"
-
-#: database-content.py:162
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "CPU-frequentiemonitor-handleiding"
-
-#: database-content.py:163
-msgid "Command Line Manual"
-msgstr "Opdrachtregel-handleiding"
-
-#: database-content.py:164
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Toetsenbordtoegankelijkheidsmonitor-handleiding"
-
-#: database-content.py:165
-msgid "Invest Applet Manual"
-msgstr "Investeringsapplet-handleiding"
-
-#: database-content.py:166
-msgid "System Monitor Manual"
-msgstr "Systeembelastingsmeter-handleiding"
-
-#: database-content.py:167
-msgid "Stock Ticker Manual"
-msgstr "Koersen-handleiding"
-
-#: database-content.py:168
-msgid "Geyes Manual"
-msgstr "Ogen-handleiding"
-
-#: database-content.py:169
-msgid "Panel Trash Manual"
-msgstr "Prullenbak-handleiding"
-
-#: database-content.py:170
-msgid "Character Palette Manual"
-msgstr "Tekenset-handleiding"
-
-#: database-content.py:171
-msgid "Volume Control Manual"
-msgstr "Volumeregeling-handleiding"
-
-#: database-content.py:172
-msgid "Weather Report Manual"
-msgstr "Weerbericht-handleiding"
-
-#: database-content.py:173
-msgid "Sticky Notes Manual"
-msgstr "Plakbriefjes-handleiding"
-
-#: database-content.py:174
-msgid "Disk Mounter Manual"
-msgstr "Schijfkoppel-handleiding"
-
-#: database-content.py:175
-msgid "Battery Charge Monitor Manual"
-msgstr "Batterijmonitor-handleiding"
-
-#: database-content.py:176
-msgid "User Directories"
-msgstr "Gebruikerswoordenboeken"
-
-#: database-content.py:177
-msgid "Integration Guide"
-msgstr "Integratiehandleiding"
-
-#: database-content.py:178
-msgid "Platform Overview"
-msgstr "Platformoverzicht"
-
-#: database-content.py:179
-msgid "Encryption Applet Manual"
-msgstr "Coderingsapplet-handleiding"
-
 #: database-content.py:180
-msgid "Release Notes"
-msgstr "Aankondiging"
+msgid "Interlingua"
+msgstr "Interlingua"
 
-#: database-content.py:181
-msgid "GNOME Keyring Manager Manual"
-msgstr "Sleutelhanger-handleiding"
+#: database-content.py:201
+msgid "Luxembourgish"
+msgstr "Luxemburgs"
 
-#: database-content.py:182
-msgid "Criawips Manual"
-msgstr "Criawips-handleiding"
+#: database-content.py:207
+msgid "Maltese"
+msgstr "Maltees"
 
-#: database-content.py:183
-msgid "Sound Juicer Manual"
-msgstr "Sound Juicer-handleiding"
+#: database-content.py:214
+msgid "Norwegian Bokmål"
+msgstr "Noors (Bokmål)"
 
-#: database-content.py:184
-msgid "Property Nicks"
-msgstr "Eigenschap-bijnamen"
+#: database-content.py:215
+msgid "Norwegian Nynorsk"
+msgstr "Noors (Nynorsk)"
 
-#: database-content.py:185
-msgid "tips"
-msgstr "tips"
+#: database-content.py:227
+msgid "Serbian Jekavian"
+msgstr "Servisch (Jekavisch)"
 
-#: database-content.py:186
-msgid "script-fu"
-msgstr "script-fu"
+#: database-content.py:228
+msgid "Serbian Latin"
+msgstr "Servisch (Latijn)"
 
-#: database-content.py:187
-msgid "libgimp"
-msgstr "libgimp"
+#: database-content.py:233
+msgid "Somali"
+msgstr "Somalisch"
 
-#: database-content.py:188
-msgid "python"
-msgstr "python"
+#: database-content.py:234
+msgid "South Ndebele"
+msgstr "Zuid-Ndebele"
 
-#: database-content.py:189
-msgid "plug-ins"
-msgstr "plug-ins"
+#: database-content.py:235
+msgid "Southern Sotho"
+msgstr "Zuid-Sotho"
 
-#: database-content.py:190
-#| msgid "Action"
-msgid "Functions"
-msgstr "Functies"
+#: database-content.py:237
+msgid "Swahili"
+msgstr "Swahili"
 
-#: database-content.py:191
-msgid "Dasher Manual"
-msgstr "Dasher-handleiding"
+#: database-content.py:245
+msgid "Tsonga"
+msgstr "Tsonga"
 
-#: database-content.py:192
+#: database-content.py:251
+msgid "Uzbek (Cyrillic)"
+msgstr "Oezbeeks (Cyrillisch)"
+
+#: database-content.py:252
+msgid "Uzbek (Latin)"
+msgstr "Oezbeeks (Latijn)"
+
+#: database-content.py:260
 msgid "Weather Applet Locations"
 msgstr "Weerapplet-locaties"
 
-#: database-content.py:193
-msgid "Dictionary Manual"
-msgstr "Woordenboek-handleiding"
+#: database-content.py:261
+msgid "Nelly Kroes on Open Source"
+msgstr "Neelie Kroes over Open Source"
 
-#: database-content.py:194
+#: database-content.py:262
+msgid "Layout Descriptions"
+msgstr "Layoutomschrijvingen"
+
+#: database-content.py:263
+msgid "UI translation"
+msgstr "Interface-vertaling"
+
+#: database-content.py:264 database-content.py:274
+msgid "UI translations"
+msgstr "Interface-vertaling"
+
+#: database-content.py:265
+msgid "User Directories"
+msgstr "Gebruikerswoordenboeken"
+
+#: database-content.py:266
+msgid "Functions"
+msgstr "Functies"
+
+#: database-content.py:267
+msgid "libgimp"
+msgstr "libgimp"
+
+#: database-content.py:268
+msgid "plug-ins"
+msgstr "plug-ins"
+
+#: database-content.py:269
+msgid "Property Nicks"
+msgstr "Eigenschap-bijnamen"
+
+#: database-content.py:270
+msgid "python"
+msgstr "python"
+
+#: database-content.py:271
+msgid "script-fu"
+msgstr "script-fu"
+
+#: database-content.py:272
+msgid "tags"
+msgstr "tags"
+
+#: database-content.py:273
+msgid "tips"
+msgstr "tips"
+
+#: database-content.py:275
+msgid "Accessibility Developers Guide"
+msgstr "Toegankelijkheidshandleiding voor ontwikkelaars"
+
+#: database-content.py:276
+msgid "Accessibility Guide"
+msgstr "Toegankelijkheidshandleiding"
+
+#: database-content.py:277
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "Toetsenbordtoegankelijkheidsmonitor-handleiding"
+
+#: database-content.py:278
+msgid "AisleRiot Manual"
+msgstr "AisleRiot-handleiding"
+
+#: database-content.py:279
+msgid "appendix"
+msgstr "bijlage"
+
+#: database-content.py:280
+msgid "Audio Profiles Manual"
+msgstr "Geluidsprofielen-handleiding"
+
+#: database-content.py:281
 msgid "Disk Usage Analyzer Manual"
 msgstr "Schijfgebruik-handleiding"
 
-#: database-content.py:195
-msgid "Log Viewer Manual"
-msgstr "Logweergave-handleiding"
+#: database-content.py:282
+msgid "Battery Charge Monitor Manual"
+msgstr "Batterijmonitor-handleiding"
 
-#: database-content.py:196
+#: database-content.py:283
+msgid "Blackjack Manual"
+msgstr "Blackjack-handleiding"
+
+# Bewust onvertaald gelaten (Wouter Bolsterlee)
+#: database-content.py:284
+msgid "Browser Help"
+msgstr "Browserhelp"
+
+#: database-content.py:285
+msgid "Character Palette Manual"
+msgstr "Tekenset-handleiding"
+
+#: database-content.py:286
+msgid "Clock Applet Manual"
+msgstr "Klok-handleiding"
+
+#: database-content.py:287
+msgid "Command Line Manual"
+msgstr "Opdrachtregel-handleiding"
+
+#: database-content.py:288
+msgid "concepts"
+msgstr "concepten"
+
+#: database-content.py:289
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "CPU-frequentiemonitor-handleiding"
+
+#: database-content.py:290
+msgid "FDL License"
+msgstr "FDL-licentie"
+
+#: database-content.py:291
+msgid "GPL License"
+msgstr "GPL-licentie"
+
+#: database-content.py:292
+msgid "LGPL License"
+msgstr "LGPL-licentie"
+
+#: database-content.py:293
+msgid "dialogs"
+msgstr "dialogen"
+
+#: database-content.py:294
+msgid "Dictionary Manual"
+msgstr "Woordenboek-handleiding"
+
+#: database-content.py:295
+msgid "Disk Mounter Manual"
+msgstr "Schijfkoppel-handleiding"
+
+#: database-content.py:296
+msgid "filters"
+msgstr "filters"
+
+#: database-content.py:297
+msgid "alpha-to-logo filter"
+msgstr "alpha-naar-logofilter"
+
+#: database-content.py:298
+msgid "animation filter"
+msgstr "animatiefilter"
+
+#: database-content.py:299
+msgid "artistic filter"
+msgstr "artistiek filter"
+
+#: database-content.py:300
+msgid "blur filter"
+msgstr "vervaagfilter"
+
+#: database-content.py:301
+msgid "combine filter"
+msgstr "combinatiefilter"
+
+#: database-content.py:302
+msgid "decor filter"
+msgstr "decorfilter"
+
+#: database-content.py:303
+msgid "distort filter"
+msgstr "vervormingsfilter"
+
+#: database-content.py:304
+msgid "edge-detect filter"
+msgstr "randendetectiefilter"
+
+#: database-content.py:305
+msgid "enhance filter"
+msgstr "verbeteringsfilter"
+
+#: database-content.py:306
+msgid "generic filter"
+msgstr "algemeen filter"
+
+#: database-content.py:307
+msgid "light-effects filter"
+msgstr "lichteffectenfilter"
+
+#: database-content.py:308
+msgid "map filter"
+msgstr "projectiefilter"
+
+#: database-content.py:309
+msgid "noise filter"
+msgstr "ruisfilter"
+
+#: database-content.py:310
+msgid "render filter"
+msgstr "renderfilter"
+
+#: database-content.py:311
+msgid "web filter"
+msgstr "webfilter"
+
+#: database-content.py:312
+msgid "Fish Applet Manual"
+msgstr "Wanda de vis-handleiding"
+
+#: database-content.py:313
+msgid "Geyes Manual"
+msgstr "Ogen-handleiding"
+
+#: database-content.py:314
+msgid "gimp"
+msgstr "gimp"
+
+#: database-content.py:315
+msgid "Quick Reference"
+msgstr "Verkorte handleiding"
+
+#: database-content.py:316
+msgid "glChess Manual"
+msgstr "Schaken-handleiding"
+
+#: database-content.py:317
+msgid "Five or More Manual"
+msgstr "Vijf-of-meer-handleiding"
+
+#: database-content.py:318
+msgid "glossary"
+msgstr "glossarium"
+
+#: database-content.py:319
+msgid "Four-in-a-row Manual"
+msgstr "Vier-op-een-rij-handleiding"
+
+#: database-content.py:320
+msgid "Nibbles Manual"
+msgstr "Nibbles-handleiding"
+
+#: database-content.py:321
+msgid "GNOME Robots Manual"
+msgstr "Robots-handleiding"
+
+#: database-content.py:322
+msgid "CD Player Manual"
+msgstr "CD-speler-handleiding"
+
+#: database-content.py:323
+msgid "GNOME Sudoku Manual"
+msgstr "Sudoku-handleiding"
+
+#: database-content.py:324
+msgid "Gnometris Manual"
+msgstr "Gnometris-handleiding"
+
+#: database-content.py:325
+msgid "Mines Manual"
+msgstr "Mijnenveger-handleiding"
+
+#: database-content.py:326
+msgid "GNOME Tetravex Manual"
+msgstr "Tetravex-handleiding"
+
+#: database-content.py:327
+msgid "GNOME Klotski Manual"
+msgstr "Klotski-handleiding"
+
+#: database-content.py:328
+msgid "Sound Recorder Manual"
+msgstr "Geluidsrecorder-handleiding"
+
+#: database-content.py:329
 msgid "Search Tool Manual"
 msgstr "Zoekopdracht-handleiding"
 
-#: database-content.py:197
-msgid "GFloppy Manual"
-msgstr "GFloppy-handleiding"
+#: database-content.py:330
+msgid "GNOME Volume Control Manual"
+msgstr "Gnome Volumeregeling-handleiding"
 
-#: database-content.py:198
-msgid "GNOME Library help"
-msgstr "Hulp voor Gnome Bibliotheek"
-
-#: database-content.py:199
-msgid "Eye of GNOME Manual"
-msgstr "EOG Afbeeldingweergave-handleiding"
-
-#: database-content.py:200
-msgid "GST User Management Manual"
-msgstr "GST Gebruikersbeheer-handleiding"
-
-#: database-content.py:201
-msgid "GST Service Management Manual"
-msgstr "GST Servicesbeheer-handleiding"
-
-#: database-content.py:202
+#: database-content.py:331
 msgid "GST Network Setup Manual"
 msgstr "GST Netwerk-handleiding"
 
-#: database-content.py:203
+#: database-content.py:332
+msgid "GST Service Management Manual"
+msgstr "GST Servicesbeheer-handleiding"
+
+#: database-content.py:333
 msgid "GST Shared Folders Manual"
 msgstr "GST Gedeelde mappen-handleiding"
 
-#: database-content.py:204
+#: database-content.py:334
 msgid "GST Time Setup Manual"
 msgstr "GST Datum & Tijd-handleiding"
 
-#: database-content.py:205 languages/views.py:50 languages/views.py:66
-#: templates/module_detail.html:88 templates/release_detail.html:22
-#: templates/teams/team_detail.html:27
+#: database-content.py:335
+msgid "GST User Management Manual"
+msgstr "GST Gebruikersbeheer-handleiding"
+
+#: database-content.py:336
+msgid "GStreamer Properties Manual"
+msgstr "GStreamer-handleiding"
+
+#: database-content.py:337
+msgid "Keyboard Indicator Manual"
+msgstr "Toetsenbordindicator-handleiding"
+
+#: database-content.py:338
+msgid "GNOME Tali Manual"
+msgstr "Tali-handleiding"
+
+#: database-content.py:339
+msgid "Weather Report Manual"
+msgstr "Weerbericht-handleiding"
+
+#: database-content.py:340
+msgid "Anjuta Manual"
+msgstr "Anjuta-handleiding"
+
+#: database-content.py:341
+msgid "Criawips Manual"
+msgstr "Criawips-handleiding"
+
+#: database-content.py:342
+msgid "Dasher Manual"
+msgstr "Dasher-handleiding"
+
+#: database-content.py:343 languages/views.py:52 languages/views.py:85
+#: templates/branch_detail.html:23 templates/release_detail.html:22
+#: templates/release_detail.html.py:68
+#: templates/languages/language_release_summary.html:10
 msgid "Documentation"
 msgstr "Documentatie"
 
-#: database-content.py:206
-msgid "GNOME 2 User Documentation"
-msgstr "Gnome Gebruikershandleiding"
+#: database-content.py:344
+msgid "Encryption Applet Manual"
+msgstr "Coderingsapplet-handleiding"
 
-#: database-content.py:207
-msgid "Evince Document Viewer"
-msgstr "Evince-documentviewer"
+#: database-content.py:345
+msgid "Eye of GNOME Manual"
+msgstr "EOG Afbeeldingweergave-handleiding"
 
-#: database-content.py:208
+#: database-content.py:346
+msgid "GConf Editor Manual"
+msgstr "GConf-editor-handleiding"
+
+#: database-content.py:347
+msgid "GDM Manual"
+msgstr "GDM-handleiding"
+
+#: database-content.py:348
+msgid "GNOME Keyring Manager Manual"
+msgstr "Sleutelhanger-handleiding"
+
+#: database-content.py:349
+msgid "GNOME Library help"
+msgstr "Hulp voor Gnome Bibliotheek"
+
+#: database-content.py:350
+msgid "Release Notes"
+msgstr "Aankondiging"
+
+#: database-content.py:351
+msgid "Sound Juicer Manual"
+msgstr "Sound Juicer-handleiding"
+
+#: database-content.py:352 database-content.py:390 database-content.py:391
+msgid "User Guide"
+msgstr "Gebruikershandleiding"
+
+#: database-content.py:353
+msgid "Human Interface Guidelines"
+msgstr "Human Interface-richtlijnen"
+
+#: database-content.py:354
+msgid "Iagno Manual"
+msgstr "Iagno-handleiding"
+
+#: database-content.py:355
+msgid "Integration Guide"
+msgstr "Integratiehandleiding"
+
+#: database-content.py:356
+msgid "introduction"
+msgstr "inleiding"
+
+#: database-content.py:357
+msgid "Invest Applet Manual"
+msgstr "Investeringsapplet-handleiding"
+
+#: database-content.py:358
+msgid "Lights Off Manual"
+msgstr "Lichten-uit-handleiding"
+
+#: database-content.py:359
+msgid "Log Viewer Manual"
+msgstr "Logweergave-handleiding"
+
+#: database-content.py:360
+msgid "GNOME Mahjongg Manual"
+msgstr "Mahjongg-handleiding"
+
+#: database-content.py:361
+msgid "Mallard Documentation Guide"
+msgstr "Mallard-Documentatiegids"
+
+#: database-content.py:362
+msgid "menus"
+msgstr "menus"
+
+#: database-content.py:363
+msgid "colors menus"
+msgstr "kleurenmenu"
+
+#: database-content.py:364
+msgid "colors auto menu"
+msgstr "kleurenautomenu"
+
+#: database-content.py:365
+msgid "colors component menu"
+msgstr "kleurcomponentenmenu"
+
+#: database-content.py:366
+msgid "colors info menu"
+msgstr "kleureninfomenu"
+
+#: database-content.py:367
+msgid "colors map menu"
+msgstr "kleurenkaartmenu"
+
+#: database-content.py:368
+msgid "edit menu"
+msgstr "bewerkmenu"
+
+#: database-content.py:369
+msgid "file menu"
+msgstr "bestandsmenu"
+
+#: database-content.py:370
+#, fuzzy
+#| msgid "file menu"
+msgid "filters menu"
+msgstr "bestandsmenu"
+
+#: database-content.py:371
+msgid "help menu"
+msgstr "helpmenu"
+
+#: database-content.py:372
+msgid "image menu"
+msgstr "afbeeldingsmenu"
+
+#: database-content.py:373
+msgid "layer menu"
+msgstr "laagmenu"
+
+#: database-content.py:374
+msgid "select menu"
+msgstr "selecterenmenu"
+
+#: database-content.py:375
+msgid "view menu"
+msgstr "beeldmenu"
+
+#: database-content.py:376
+msgid "Volume Control Manual"
+msgstr "Volumeregeling-handleiding"
+
+#: database-content.py:377
+msgid "System Monitor Manual"
+msgstr "Systeembelastingsmeter-handleiding"
+
+#: database-content.py:378
+msgid "Optimization Guide"
+msgstr "Optimalisatiegids"
+
+#: database-content.py:379
+msgid "Platform Overview"
+msgstr "Platformoverzicht"
+
+#: database-content.py:380
+msgid "preface"
+msgstr "inleiding"
+
+#: database-content.py:381
+msgid "Quadrapassel Manual"
+msgstr "Quadrapassel-handleiding"
+
+#: database-content.py:382
+msgid "Same GNOME Manual"
+msgstr "Same Gnome-handleiding"
+
+#: database-content.py:383
+msgid "Website"
+msgstr "Website"
+
+#: database-content.py:384
+msgid "Sticky Notes Manual"
+msgstr "Plakbriefjes-handleiding"
+
+#: database-content.py:385
+msgid "Swell-Foop Manual"
+msgstr "Swell-Foop-handleiding"
+
+#: database-content.py:386
+msgid "System Administration Guide"
+msgstr "Systeembeheerdershandleiding"
+
+#: database-content.py:387
+msgid "toolbox"
+msgstr "gereedschapskist"
+
+#: database-content.py:388
+msgid "Panel Trash Manual"
+msgstr "Prullenbak-handleiding"
+
+#: database-content.py:389
+msgid "tutorial"
+msgstr "tutorial"
+
+#: database-content.py:392
+msgid "using gimp"
+msgstr "gimp gebruiken"
+
+#: database-content.py:393
+msgid "preferences"
+msgstr "voorkeuren"
+
+#: database-content.py:394
+msgid "Banshee Music Player"
+msgstr "Banshee Muziekspeler"
+
+#: database-content.py:395
 msgid "Beagle Desktop Search"
 msgstr "Beagle zoekopdracht"
 
-#: database-content.py:209 templates/base.html:34
+#: database-content.py:396 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: database-content.py:210
-msgid "Banshee Music Player"
-msgstr "Banshee Muziekspeler"
-
-#: database-content.py:211
-msgid "Shared MIME Info"
-msgstr "Gezamenlijke MIME-info"
-
-#: database-content.py:212
-msgid "GNOME Applets"
-msgstr "Gnome-applets"
-
-#: database-content.py:213
-msgid "GNOME 2 Development Documentation"
-msgstr "Gnome ontwikkelaarsdocumentatie"
-
-#: database-content.py:214
-msgid "GNOME Release Notes"
-msgstr "Gnome-aankondiging"
-
-#: database-content.py:215
-msgid "Rhythmbox Music Player"
-msgstr "Rhythmbox"
-
-#: database-content.py:216
-msgid "Epiphany Web Browser"
-msgstr "Epiphany webbrowser"
-
-#: database-content.py:217
-msgid "GNOME Library Web site"
-msgstr "Gnome-bibliotheekwebsite"
-
-#: database-content.py:218
-msgid "Eye of GNOME"
-msgstr "Eye of GNOME"
-
-#: database-content.py:219
-msgid "Gnome Specimen"
-msgstr "Gnome Specimen"
-
-#: database-content.py:220
+#: database-content.py:397
 msgid "Deskbar Applet"
 msgstr "Actiebalk"
 
-#: database-content.py:221
-msgid "Niepce Digital"
-msgstr "Niepce Digital"
+#: database-content.py:398
+msgid "Eye of GNOME"
+msgstr "Eye of GNOME"
 
-#: database-content.py:222
+#: database-content.py:399
+msgid "Epiphany Web Browser"
+msgstr "Epiphany webbrowser"
+
+#: database-content.py:400
+msgid "Evince Document Viewer"
+msgstr "Evince-documentviewer"
+
+#: database-content.py:401
+msgid "GIMP User Manual"
+msgstr "GIMP Gebruikershandleiding"
+
+#: database-content.py:402
+msgid "GNOME Applets"
+msgstr "Gnome-applets"
+
+#: database-content.py:403
+msgid "GNOME 2 Development Documentation"
+msgstr "Gnome ontwikkelaarsdocumentatie"
+
+#: database-content.py:404
+msgid "Gnome Specimen"
+msgstr "Gnome Specimen"
+
+#: database-content.py:405
+msgid "GNOME 2 User Documentation"
+msgstr "Gnome Gebruikershandleiding"
+
+#: database-content.py:406
+msgid "GNOME Web Photo"
+msgstr "Gnome Webfoto"
+
+#: database-content.py:407
+msgid "GNOME Library Web site"
+msgstr "Gnome-bibliotheekwebsite"
+
+#: database-content.py:408
+msgid "GNOME Release Notes"
+msgstr "Gnome-aankondiging"
+
+#: database-content.py:409
+msgid "Rhythmbox Music Player"
+msgstr "Rhythmbox"
+
+#: database-content.py:410
+msgid "Shared MIME Info"
+msgstr "Gezamenlijke MIME-info"
+
+#: database-content.py:411
+msgid "Video subtitles translations for selected GNOME videos"
+msgstr "Video-ondertiteling voor geselecteerde Gnome-video's"
+
+#: database-content.py:412
+msgid "WebKitGTK+"
+msgstr "WebKitGTK+"
+
+#: database-content.py:413
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
 msgid ""
-"GNUCash is not part of the GNOME SVN repository. Please check <a href="
-"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
-"to see where to send translations."
+"Please submit your translation through the <a href=\"http://www.transifex."
+"net/projects/p/accountsservice/\">Transifex platform</a>."
 msgstr ""
-"GNUCash is geen onderdeel van de Gnome SVN. Kijk op <a href=\"http://wiki."
-"gnucash.org/wiki/Translation#Submitting\">de GNUCash-wiki</a> voor meer "
-"informatie over het vertaalproces."
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
 
-#: database-content.py:223
+#: database-content.py:414
+msgid "Email client for netbooks"
+msgstr "E-mailcliënt voor netbooks"
+
+#: database-content.py:415
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"Avahi is a system which facilitates service discovery on a local network via "
+"the mDNS/DNS-SD protocol suite. Please submit your translation through the "
+"<a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-"
+"avahi-pot/\">Transifex platform</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
+
+#: database-content.py:416
+msgid ""
+"There is a glossary that will help translators in Chronojump localization: "
+"<a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/"
+"chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
+"chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
+msgstr ""
+
+#: database-content.py:418
+msgid ""
+"Committed translations are updated manually on l10n.gnome.org from time to "
+"time. Be patient :-)"
+msgstr ""
+"Gecommitteerde vertalingen worden van tijd tot tijd handmatig bijgewerkt op "
+"l10n.gnome.org. Wees geduldig :-)"
+
+#: database-content.py:419
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince is een documentviewer voor meedere documentformaten."
 
-#: database-content.py:224
+#: database-content.py:420
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
 msgid ""
-"This is not a GNOME-specific module. Please submit your translation through "
-"the <a href=\"http://translationproject.org\">Translation Project</a>."
+"D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+"module. Please submit your translation through the <a href=\"http://www."
+"transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/"
+"\">Transifex platform</a>."
 msgstr ""
-"Dit is geen Gnome-specifieke module. Stuur uw vertalingen op via het <a href="
-"\"http://translationproject.org\">Translation Project</a>."
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
 
-#: database-content.py:225
+#: database-content.py:421
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -943,90 +1274,268 @@ msgstr ""
 "Sinds Gnome 2.23 is GAIL geïntegreerd in GTK+. Zet geen vertalingen meer in "
 "trunk."
 
-#: database-content.py:226
-msgid "A VNC client for GNOME"
-msgstr "Een VNC-client voor Gnome"
-
-# Vrij vertaald (Wouter Bolsterlee)
-#: database-content.py:227
+#: database-content.py:422
 msgid ""
-"Please note that gtk+ has both po and po-properties UI domains.  If you add "
-"a new language in either domain, you have to commit both files in SVN even "
-"if one of them contains 0 translations, unless GTK+ build will break in /po-"
-"properties."
+"For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/"
+"wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr ""
-"Let er op dat gtk+ zowel ‘po’ als ‘po-properties’ bevat. Als u enkel een "
-"vertaling voor een van deze toevoegt, dient u een leeg bestand voor de "
-"andere in SVN toe te voegen."
 
-#: database-content.py:228
+#: database-content.py:423
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafische interface voor git-versiebeheer"
 
-#: database-content.py:229
+#: database-content.py:424
+msgid "A multimedia converter for the GNOME Desktop"
+msgstr "Een multimedia-conversieprogramma voor de Gnome-werkomgeving"
+
+#: database-content.py:425
 msgid ""
-"moserial is a clean, friendly gtk-based serial terminal for the gnome "
+"gnome-disk-utility provides libraries and applications for dealing with "
+"storage devices."
+msgstr ""
+"gnome-disk-utility voorziet in bibliotheken en toepassingen voor het omgaan "
+"met opslagapparaten."
+
+#: database-content.py:426
+msgid ""
+"GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
+"for GNOME."
+msgstr ""
+"Gnome Video-arcade is een MAME (Meerdere Arcade Machine Emulator) voorkant "
+"voor Gnome."
+
+#: database-content.py:427
+msgid "A note taking application"
+msgstr "Een notitietoepassing"
+
+#: database-content.py:428
+msgid ""
+"GNUCash is not part of the GNOME Git repository. Please check <a href="
+"\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
+"to see where to send translations."
+msgstr ""
+"GNUCash is geen onderdeel van de Gnome Git. Kijk op <a href=\"http://wiki."
+"gnucash.org/wiki/Translation#Submitting\">de GNUCash-wiki</a> om te zien "
+"waar vertalingen naartoe te sturen."
+
+#: database-content.py:429 database-content.py:430 database-content.py:431
+#: database-content.py:432 database-content.py:433 database-content.py:452
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen op via het <a href="
+"\"http://translationproject.org\">Translation Project</a>."
+
+# Vrij vertaald (Wouter Bolsterlee)
+#: database-content.py:434
+msgid ""
+"Please note that gtk+ has both po and po-properties UI domains.  If you add "
+"a new language in either domain, you have to commit both files in Git even "
+"if one of them contains 0 translations, unless GTK+ build will break in /po-"
+"properties."
+msgstr ""
+"Let er op dat gtk+ zowel ‘po’ als ‘po-properties’ interface-domein heeft. "
+"Als u enkel een nieuwe taal voor een van deze domeinen toevoegt, dient beide "
+"bestanden te committeren in Git zelfs wanneer een van de twee 0 vertalingen "
+"bevat. Anders zal de Gtk+-bouw falen in /po-properties."
+
+#: database-content.py:435
+msgid ""
+"moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
 msgstr ""
-"Moserial is een simpele GTK+-gebaseerde seriële terminal voor de Gnome-werkomgeving. Het is in Vala geschreven, voor extra hipheid."
+"Moserial is een simpele, vriendelijke GTK+-gebaseerde seriële terminal voor "
+"de Gnome-werkomgeving. Het is in Vala geschreven, voor extra hipheid."
 
-#: database-content.py:230
-msgid "GNOME Fifth Toe (Extra software)"
-msgstr "Gnome Fifth Toe (Extra toepassingen)"
+#: database-content.py:436
+msgid "Gnome Parental Control"
+msgstr "Gnome Ouderlijk Toezicht"
 
-#: database-content.py:231
-msgid "Extra GNOME Applications"
-msgstr "Extra Gnome-toepassingen"
+#: database-content.py:437
+msgid ""
+"To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
+"cgi?product=NetworkManager&component=general\">create a bug report for "
+"NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
+msgstr ""
+"Om je vertaling op te sturen, <a href=\"https://bugzilla.gnome.org/enter_bug."
+"cgi?product=NetworkManager&component=general\">maak een foutmelding aan voor "
+"NetworkManager op Gnome Bugzilla</a>. Voeg dan je vertaling bij."
 
-#: database-content.py:232
-msgid "GNOME 2.18 (old stable)"
-msgstr "Gnome 2.18 (oude versie)"
+#: database-content.py:438
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"PackageKit is a system designed to make installing and updating software on "
+"your computer easier. This is not a GNOME-specific module. Please submit "
+"your translation through the <a href=\"http://www.transifex.net/projects/p/"
+"packagekit/resource/master/\">Transifex platform</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
 
-#: database-content.py:233
-msgid "GNOME Infrastructure"
-msgstr "Gnome-infrastructuur"
+#: database-content.py:439
+msgid "Passepartout is a DTP application for X."
+msgstr "Passepartout is een DTP-toepassing voor X."
 
-#: database-content.py:234
-msgid "GNOME 2.16 (old stable)"
-msgstr "Gnome 2.16 (oude versie)"
+#: database-content.py:440
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
+"your sound applications. \n"
+"Please submit your translation through the <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
+"pulseaudio-pot/\">Transifex platform</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
 
-#: database-content.py:235
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (oude versie)"
+#: database-content.py:443
+#, fuzzy
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#| "info/c/default/\">Transifex platform</a>."
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
+"efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen a.u.b. op via het "
+"<a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
+"\">Transifex-platform</a>."
 
-#: database-content.py:236
-msgid "freedesktop.org (non-GNOME)"
-msgstr "freedesktop.org (niet-Gnome)"
+#: database-content.py:444
+msgid "A photo manager for GNOME"
+msgstr "Een fotobeheerder voor Gnome"
 
-#: database-content.py:237
-msgid "GNOME 2.24 (stable)"
-msgstr "Gnome 2.24 (huidige versie)"
+#: database-content.py:445
+msgid ""
+"This is a clone of the official system-tools-backends version from the "
+"freedesktop.org repository."
+msgstr ""
+"Dit is een kloon van de officiële system-tools-backends versie van de "
+"freedesktop.org opslagplaats."
 
-#: database-content.py:237
+#: database-content.py:446
+msgid "GNOME Teletext viewer"
+msgstr "Gnome Teletekstweergave"
+
+#: database-content.py:447
+msgid ""
+"Here we translate the subtitles of selected GNOME videos.\n"
+"See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
+"more."
+msgstr ""
+
+#: database-content.py:449
+msgid "A VNC client for GNOME"
+msgstr "Een VNC-client voor Gnome"
+
+#: database-content.py:450
+msgid "Translations should be submitted as bug reports (see link below)."
+msgstr ""
+"Vertalingen zouden ingestuurd moeten worden als foutmeldingen (zie de link "
+"hieronder)."
+
+#: database-content.py:451
+msgid ""
+"This is not a GNOME-specific module. Please submit your translation through "
+"the <a href=\"http://translationproject.org\">Translation Project</a>. See "
+"also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the "
+"translation page for xdg-user-dirs at the Translation Project</a>."
+msgstr ""
+"Dit is geen Gnome-specifieke module. Stuur uw vertalingen op via <a href="
+"\"http://translationproject.org\">Translation Project</a>. Zie ook <a href="
+"\"http://translationproject.org/domain/xdg-user-dirs.html\">de vertaalpagina "
+"voor xdg-user-dirs in Translation Project</a>."
+
+#: database-content.py:453
+msgid "GNOME 3.0 (development)"
+msgstr "Gnome 3.0 (ontwikkelversie)"
+
+#: database-content.py:454
+#, fuzzy
+#| msgid "GNOME 2.30 (stable)"
+msgid "GNOME 2.32 (stable)"
+msgstr "Gnome 2.30 (stabiel)"
+
+#: database-content.py:455
+#, fuzzy
+#| msgid "GNOME 2.20 (old stable)"
+msgid "GNOME 2.30 (old stable)"
+msgstr "Gnome 2.20 (oude versie)"
+
+#: database-content.py:456
+msgid "GNOME 2.28 (old stable)"
+msgstr "Gnome 2.28 (oude versie)"
+
+#: database-content.py:457
+msgid "GNOME 2.26 (old stable)"
+msgstr "Gnome 2.26 (oude versie)"
+
+#: database-content.py:458
 msgid "GNOME 2.24 (old stable)"
 msgstr "Gnome 2.24 (oude versie)"
 
-#: database-content.py:238
+#: database-content.py:459
 msgid "GNOME 2.22 (old stable)"
 msgstr "Gnome 2.22 (oude versie)"
 
-#: database-content.py:239
-msgid "GNOME-Office Productivity Applications"
-msgstr "Gnome-Office productiviteitsapplicaties"
-
-#: database-content.py:240
+#: database-content.py:460
 msgid "GNOME 2.20 (old stable)"
 msgstr "Gnome 2.20 (oude versie)"
 
-#: database-content.py:241
-msgid "GNOME 2.26 (Development)"
-msgstr "Gnome 2.26 (ontwikkelversie)"
+#: database-content.py:461
+msgid "GNOME 2.18 (old stable)"
+msgstr "Gnome 2.18 (oude versie)"
 
-#: database-content.py:241
-msgid "GNOME 2.26 (stable)"
-msgstr "Gnome 2.26 (huidige versie)"
+#: database-content.py:462
+msgid "External Dependencies (GNOME)"
+msgstr "Externe afhankelijkheden (Gnome)"
 
-#: common/views.py:33
+#: database-content.py:463
+msgid "Obsolete GNOME Applications"
+msgstr "Verouderde Gnome-toepassingen"
+
+#: database-content.py:464
+msgid "GNOME-Office Productivity Applications"
+msgstr "Gnome-Office productiviteitsapplicaties"
+
+#: database-content.py:465
+msgid "GNOME Infrastructure"
+msgstr "Gnome-infrastructuur"
+
+#: database-content.py:466
+msgid "GIMP and Friends"
+msgstr "GIMP en zijn vrienden"
+
+#: database-content.py:467
+msgid "Extra GNOME Applications"
+msgstr "Extra Gnome-toepassingen"
+
+#: database-content.py:468
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (niet-Gnome)"
+
+#: settings.py:77 settings_sample.py:71
+msgid ""
+"This module is not part of the GNOME Git repository. Please check the "
+"module's web page to see where to send translations."
+msgstr ""
+"Deze module is geen onderdeel van Gnome Git. Kijk op de webpagina van deze "
+"module om te zien waar vertalingen naartoe te sturen."
+
+#: common/views.py:36
 msgid "translator-credits"
 msgstr ""
 "Wouter Bolsterlee\n"
@@ -1034,23 +1543,32 @@ msgstr ""
 "\n"
 "Kijk voor meer info op http://nl.gnome.org/"
 
-#: common/views.py:54
+#: common/views.py:60
 msgid "You have been logged out."
 msgstr "U heeft zich afgemeld."
 
-#: common/views.py:62
+#: common/views.py:68
 msgid "You have been successfully logged in."
 msgstr "U heeft zich aangemeld."
 
-#: common/views.py:69
+#: common/views.py:70
+#, python-format
+msgid ""
+"You have not joined any translation team yet. You can do it from <a href=\"%"
+"(url)s\">your profile</a>."
+msgstr ""
+"Je bent nog niet lid geworden van een vertaalteam. Je kunt dat doen in <a "
+"href=\"%(url)s\">je profiel</a>."
+
+#: common/views.py:79
 msgid "We're sorry, but your account has been disabled."
 msgstr "Sorry, uw account is uitgeschakeld."
 
-#: common/views.py:71
+#: common/views.py:81
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Aanmelden mislukt. Controleer uw accountgegevens."
 
-#: common/views.py:111
+#: common/views.py:119
 msgid "Your account has been activated."
 msgstr "Uw account is ingeschakeld."
 
@@ -1070,7 +1588,7 @@ msgid "Password:"
 msgstr "Wachtwoord:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:76 templates/login.html:29
+#: templates/base.html:77 templates/login.html:29
 #: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Aanmelden"
@@ -1086,13 +1604,22 @@ msgid "OpenID:"
 msgstr "OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
+#: templates/login.html:40
 msgid "Log in with OpenID"
 msgstr "Aanmelden met OpenID"
 
-#: languages/views.py:49 languages/views.py:65
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:54
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: languages/views.py:51 languages/views.py:84
 msgid "UI Translations"
 msgstr "Interface-vertaling"
+
+#: languages/views.py:82 templates/release_detail.html:66
+msgid "Original strings"
+msgstr "Originele tekenreeksen"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1147,15 +1674,33 @@ msgstr ""
 msgid "Administrators of %s"
 msgstr "Beheerders van %s"
 
+#: people/forms.py:86
+#, python-format
+msgid ""
+"Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
+msgstr ""
+
+#: people/forms.py:106
+msgid "The URL you provided is not valid"
+msgstr ""
+
+#: people/forms.py:122
+msgid "The URL you provided seems not to correspond to a valid image"
+msgstr ""
+
 #: people/models.py:36
 msgid "Image"
 msgstr "Afbeelding"
 
 #: people/models.py:37
-msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+#, fuzzy
+#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+msgid ""
+"URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 "
+"pixels)"
 msgstr "URL naar een afbeelding (.jpeg, .png, …) van een hackergotchi"
 
-#: people/models.py:38
+#: people/models.py:38 teams/models.py:94
 msgid "Web page"
 msgstr "Webpagina"
 
@@ -1168,42 +1713,71 @@ msgid "Bugzilla account"
 msgstr "Bugzilla-account"
 
 #: people/models.py:41
-msgid "This should be an email address, useful if not equal to 'email' field"
+#, fuzzy
+#| msgid ""
+#| "This should be an email address, useful if not equal to 'email' field"
+msgid ""
+"This should be an email address, useful if not equal to 'E-mail address' "
+"field"
 msgstr ""
 "Dit zou een e-mailadres moeten zijn, handig indien niet gelijk aan standaard "
 "e-mailadres."
 
-#: people/views.py:86
+#: people/views.py:63
+msgid "Sorry, the form is not valid."
+msgstr "Sorry, het formulier is ongeldig."
+
+#: people/views.py:88
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "U ben nu lid van het team ‘%s’."
 
 #: people/views.py:89
+msgid "A new person joined your team"
+msgstr "Een nieuw persoon is zojuist lid geworden van jouw team"
+
+#: people/views.py:90
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "%(name)s is zojuist lid geworden van jouw vertaalteam op %(site)s"
+
+#: people/views.py:93
 msgid "You are already member of this team."
 msgstr "U bent reeds lid van dit team."
 
-#: people/views.py:112
+#: people/views.py:115
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "U bent niet langer lid van het team ‘%s’."
 
-#: people/views.py:128
+#. Message no i18n'ed, should never happen under normal conditions
+#: people/views.py:118
+#, fuzzy
+#| msgid "You are already member of this team."
+msgid "You are not a member of this team."
+msgstr "U bent reeds lid van dit team."
+
+#: people/views.py:131
 msgid "Your password has been changed."
 msgstr "Uw wachtwoord is gewijzigd."
 
-#: stats/models.py:293
+#: stats/models.py:242
+msgid "This branch is not linked from any release"
+msgstr "Deze branch wordt niet gelinkt vanuit enige uitgave"
+
+#: stats/models.py:410
 msgid "Can't generate POT file, using old one."
 msgstr "Kan POT-bestand niet aanmaken. Oude versie wordt gebruikt."
 
-#: stats/models.py:314
+#: stats/models.py:412
+msgid "Can't generate POT file, statistics aborted."
+msgstr "Kan POT-bestand niet genereren, statistieken afgebroken."
+
+#: stats/models.py:432
 msgid "Can't copy new POT file to public location."
 msgstr "Kan POT-bestand niet naar openbare locatie kopiëren."
 
-#: stats/models.py:353
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "Deze taal staat niet in DOC_LINGUAS."
-
-#: stats/models.py:620
+#: stats/models.py:766
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1214,77 +1788,97 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:867
+#: stats/models.py:790
+#, python-format
+msgid ""
+"Entry for this language is not present in %(var)s variable in %(file)s file."
+msgstr ""
+"Inschrijving voor deze taal is niet aanwezig in %(var)s variabele in bestand "
+"%(file)s."
+
+#: stats/models.py:1048
 msgid "Administration Tools"
 msgstr "Beheertoepassingen"
 
-#: stats/models.py:868
+#: stats/models.py:1049
 msgid "Development Tools"
 msgstr "Ontwikkeltoepassingen"
 
-#: stats/models.py:869
+#: stats/models.py:1050
 msgid "GNOME Desktop"
 msgstr "Gnome-werkomgeving"
 
-#: stats/models.py:870
+#: stats/models.py:1051
 msgid "GNOME Developer Platform"
 msgstr "Gnome-ontwikkelplatform"
 
-#: stats/models.py:871
+#: stats/models.py:1052
 msgid "New Module Proposals"
 msgstr "Voorgestelde modules"
 
-#: stats/models.py:947
+#: stats/models.py:1131 stats/models.py:1435
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:978
+#: stats/models.py:1164
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s bericht"
 msgstr[1] "%(count)s berichten"
 
-#: stats/models.py:979
+#: stats/models.py:1165
 #, python-format
 msgid "updated on %(date)s"
 msgstr "bijgewerkt op %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:981 templates/vertimus/vertimus_detail.html:33
-#: templates/vertimus/vertimus_detail.html:71
+#: stats/models.py:1167 templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d-m-Y H:i O"
 
-#: stats/models.py:984
+#: stats/models.py:1170
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s afbeelding"
 msgstr[1] "%(count)s afbeeldingen"
 
-#: stats/models.py:985
+#: stats/models.py:1171
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-bestand (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:988
+#: stats/models.py:1174
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-bestand (%(messages)s) — %(updated)s"
 
-#: stats/utils.py:85
+#: stats/models.py:1258
+msgid ""
+"This POT file has not been generated through the standard intltool method."
+msgstr "Dit POT-bestand is niet gegenereerd met de standaard intltool-methode."
+
+#: stats/models.py:1259
+msgid ""
+"This POT file has not been generated through the standard gnome-doc-utils "
+"method."
+msgstr ""
+"Dit POT-bestand is niet gegenereerd met de standaard gnome-doc-utilsmethode."
+
+#: stats/utils.py:95
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fout bij uitvoeren van controle met ‘intltool-update -m’."
 
-#: stats/utils.py:91
+#: stats/utils.py:101
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Er ontbreken enkele bestanden in POTFILES.in: %s"
 
-#: stats/utils.py:100
+#: stats/utils.py:110
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1293,22 +1887,22 @@ msgstr ""
 "De volgende bestanden worden in POTFILES.in of POTFILES.skip genoemd, maar "
 "bestaan niet: %s"
 
-#: stats/utils.py:112
+#: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "De module %s ziet er niet uit als een module voor gnome-doc-utils."
 
-#: stats/utils.py:115
+#: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "DOC_MODULE wijst niet naar een bestaand bestand, '%s.xml' wordt gebruikt."
 
-#: stats/utils.py:118
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE is geen echt bestand, maar wellicht een macro."
 
-#: stats/utils.py:133
+#: stats/utils.py:155
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1319,90 +1913,133 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:206
+#: stats/utils.py:240
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-bestand ‘%s’ bestaat niet of kan niet gelezen worden."
 
-#: stats/utils.py:226
+#: stats/utils.py:260
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-bestand ‘%s’ niet bijgewerkt wegens mislukte ‘msgfmt’-controle."
 
-#: stats/utils.py:228
+#: stats/utils.py:262
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan statistieken voor POT-bestand ‘%s’ niet verkrijgen."
 
-#: stats/utils.py:231
+#: stats/utils.py:265
 msgid "This PO file has an executable bit set."
 msgstr "Het PO-bestand is als uitvoerbaar gemarkeerd."
 
-#: stats/utils.py:259
+#: stats/utils.py:293
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-bestand ‘%s’ is niet in UTF-8 gecodeerd."
 
-#: stats/utils.py:292
+#: stats/utils.py:308
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Deze taal staat niet in het LINGUAS-bestand."
 
-#: stats/utils.py:319
+#: stats/utils.py:326
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Deze taal wordt niet genoemd in ALL_LINGUAS in het ‘configure’-bestand."
 
-#: stats/utils.py:322
+#: stats/utils.py:328
 msgid ""
-"Don't know where to look if this language is actually used, ask the module "
-"maintainer."
-msgstr "Onbekend of de taal in gebruik is. Informeer bij de modulebeheerder."
+"Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr ""
+"Weet niet waar te zoeken voor de LINGUAS variabel, vraag de modulebeheerder."
 
-#: teams/models.py:112
+#: stats/utils.py:335
+msgid ""
+"Don't know where to look for the DOC_LINGUAS variable, ask the module "
+"maintainer."
+msgstr ""
+"Weet niet waar te zoeken voor de DOC_LINGUAS variabel, vraag de "
+"modulebeheerder."
+
+#: stats/utils.py:337
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "Deze taal staat niet in DOC_LINGUAS."
+
+#: teams/forms.py:21
+msgid "Remove From Team"
+msgstr "Uit team verwijderen"
+
+#: teams/models.py:92
+msgid "Presentation"
+msgstr "Presentatie"
+
+#: teams/models.py:95
+msgid "Mailing list"
+msgstr "Maillijst"
+
+#: teams/models.py:96
+msgid "URL to subscribe"
+msgstr "URL om in te schrijven"
+
+#: teams/models.py:212 vertimus/models.py:544 vertimus/models.py:594
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Dit is een automatische berichtgeving van %s."
+
+#: teams/models.py:230
 #, python-format
 msgid "No team for locale %s"
 msgstr "Geen team voor taalgebied %s"
 
-#: teams/models.py:129
+#: teams/models.py:250
 msgid "Translator"
 msgstr "Vertaler"
 
-#: teams/models.py:130
+#: teams/models.py:251
 msgid "Reviewer"
 msgstr "Tweede lezer"
 
-#: teams/models.py:131
+#: teams/models.py:252
 msgid "Committer"
 msgstr "Eindredactie"
 
-#: teams/models.py:132 templates/teams/team_base.html:31
+#: teams/models.py:253 templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Coördinator"
 
-#: teams/views.py:44
+#: teams/views.py:57
 msgid "Committers"
 msgstr "Eindredactie"
 
-#: teams/views.py:47
+#: teams/views.py:60
 msgid "No committers"
 msgstr "Geen eindredactie"
 
-#: teams/views.py:49
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "Tweede lezers"
 
-#: teams/views.py:52
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "Geen tweede lezers"
 
-#: teams/views.py:54
+#: teams/views.py:67
 msgid "Translators"
 msgstr "Vertalers"
 
-#: teams/views.py:57
+#: teams/views.py:70
 msgid "No translators"
 msgstr "Geen vertalers"
+
+#: teams/views.py:72
+#, fuzzy
+#| msgid "Inactive"
+msgid "Inactive members"
+msgstr "Inactief"
+
+#: teams/views.py:75
+msgid "No inactive members"
+msgstr "Geen inactieve leden"
 
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
@@ -1424,75 +2061,90 @@ msgstr "Serverfout"
 msgid "We're sorry but a server error has occurred."
 msgstr "Sorry, er is een serverfout opgetreden."
 
-#: templates/base.html:25 templates/base.html.py:41
+#: templates/base.html:26 templates/base.html.py:42
+#: templates/admin/delete_release_confirmation.html:6
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:26
+#: templates/base.html:27
 msgid "News"
 msgstr "Nieuws"
 
-#: templates/base.html:27
+#: templates/base.html:28
 msgid "Projects"
 msgstr "Projecten"
 
-#: templates/base.html:28
+#: templates/base.html:29
 msgid "Art"
 msgstr "Kunst"
 
-#: templates/base.html:29
+#: templates/base.html:30
 msgid "Support"
 msgstr "Hulp en ondersteuning"
 
-#: templates/base.html:30
+#: templates/base.html:31
 msgid "Development"
 msgstr "Ontwikkeling"
 
-#: templates/base.html:31
+#: templates/base.html:32
 msgid "Community"
 msgstr "Gemeenschap"
 
-#: templates/base.html:41
+#: templates/base.html:42
 msgid "Back to Damned Lies home page"
 msgstr "Naar de homepage van Damned Lies"
 
-#: templates/base.html:47 templates/index.html:13
+#: templates/base.html:48 templates/index.html:13
 msgid "Teams"
 msgstr "Teams"
 
-#: templates/base.html:52 templates/index.html:20
-#: templates/release_compare.html:26
+#: templates/base.html:53 templates/index.html:27
+#: templates/release_compare.html:25
 msgid "Languages"
 msgstr "Talen"
 
-#: templates/base.html:57
+#: templates/base.html:58
 msgid "Release sets"
 msgstr "Uitgave-sets"
 
-#: templates/base.html:62 templates/index.html:36
+#: templates/base.html:63 templates/index.html:43
 msgid "Modules"
 msgstr "Modules"
 
-#: templates/base.html:73
+#: templates/base.html:74
 msgid "Log out"
 msgstr "Afmelden"
 
-#: templates/base.html:93
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "Copyright &copy; 2006–2009"
+
+#: templates/base.html:94
 msgid "The GNOME Project"
 msgstr "Het Gnome-project"
 
-#: templates/base.html:95
+#: templates/base.html:96
 msgid ""
-"Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-"
-"lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
+"Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
+"lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr ""
-"Wordt onderhouden in de <a href='http://svn.gnome.org/viewvc/damned-"
-"lies/'>damned-lies</a>-module op <a href='http://svn.gnome.org/'>svn.gnome."
+"Wordt onderhouden in de <a href='http://git.gnome.org/browse/damned-"
+"lies/'>damned-lies</a>-module op <a href='http://git.gnome.org/'>git.gnome."
 "org</a>"
 
-#: templates/base.html:97
-msgid "Hosted by"
+#: templates/base.html:98
+#, fuzzy, python-format
+#| msgid "Hosted by"
+msgid "Hosted by %(link)s."
 msgstr "Gehost door"
+
+#: templates/branch_detail.html:4
+msgid "This branch is currently string-frozen."
+msgstr "Deze branch is string-frozen."
+
+#: templates/branch_detail.html:13
+msgid "Translation"
+msgstr "Vertaling"
 
 #: templates/error.html:4 templates/index.html:4 templates/index.html.py:9
 #: templates/login.html:4 templates/registration/register.html:4
@@ -1520,7 +2172,16 @@ msgstr ""
 "Als er nog geen team bestaat voor uw taal, kunt u deze <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>eenvoudig aanmaken</a>."
 
-#: templates/index.html:22
+#: templates/index.html:19
+#, python-format
+msgid ""
+"Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us "
+"to translate GNOME!"
+msgstr ""
+"Ga naar de<a href='%(team_url)s'>%(language_name)s teampagina</a> en help "
+"ons Gnome te vertalen!"
+
+#: templates/index.html:29
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
@@ -1529,7 +2190,7 @@ msgstr ""
 "Lijst van alle talen waar <a href='%(teams_url)s'>vertaalteams</a> voor "
 "bestaan."
 
-#: templates/index.html:23
+#: templates/index.html:30
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -1537,23 +2198,23 @@ msgstr ""
 "Sommige teams beheren meer dan een taal (vaak dialecten), en hier kunt u "
 "alle talen zien waarin Gnome beschikbaar is."
 
-#: templates/index.html:27
+#: templates/index.html:34
 msgid "Release Sets"
 msgstr "Uitgave-versies"
 
-#: templates/index.html:28
+#: templates/index.html:35
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr "Lijst van alle Gnome-versies waar we statistieken voor bijhouden."
 
-#: templates/index.html:30
+#: templates/index.html:37
 msgid ""
-"Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; "
-"or &quot;GNOME 2.14&quot;."
+"Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
+"2.26&quot;."
 msgstr ""
-"Voorbeelden zijn: &quot;Gnome Office&quot;, &quot;Fifth Toe&quot; en &quot;"
-"Gnome 2.26&quot;."
+"Voorbeelden van uitgaveverzamelingen zijn &quot;Gnome Infrastructuur&quot; "
+"of &quot;Gnome 2.26&quot;."
 
-#: templates/index.html:31
+#: templates/index.html:38
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
@@ -1561,7 +2222,7 @@ msgstr ""
 "Officiële Gnome-versies zijn weer opgedeeld in categoriën als &quot;"
 "Werkomgeving&quot; en &quot;Ontwikkelplatform&quot;."
 
-#: templates/index.html:33
+#: templates/index.html:40
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -1569,11 +2230,11 @@ msgstr ""
 "Neem  hier een kijkje als u de ondersteuning voor bepaalde talen wilt "
 "vergelijken tussen verschillende versies."
 
-#: templates/index.html:37
+#: templates/index.html:44
 msgid "List of all modules with statistics in here."
 msgstr "Lijst van alle modules met statistieken."
 
-#: templates/index.html:39
+#: templates/index.html:46
 msgid ""
 "Modules are separate libraries or applications, with one or more branches of "
 "development included."
@@ -1581,16 +2242,15 @@ msgstr ""
 "Modules zijn bibliotheken met functies, of programma's. Deze kunnen een of "
 "meer versies bevatten."
 
-#: templates/index.html:40
+#: templates/index.html:47
 msgid ""
-"They are usually taken from CVS, and we keep all relevant information on "
-"them (Bugzilla details, web page, maintainer information,...)."
+"They are usually taken from the Git repository, and we keep all relevant "
+"information on them (Bugzilla details, web page, maintainer information,...)."
 msgstr ""
-"Deze worden meestal uit een vorm van versiebeheer gehaald. Alle relevante "
-"informatie over deze modules wordt bijgehouden (bugzillagegevens, webpagina, "
-"beheerder, etc…)"
+"Deze worden meestal uit de Git opslagplaats gehaald, en we bewaren alle "
+"relevantie informatie van ze (Bugzilla-gegevens, webpagina, beheerder,…)"
 
-#: templates/index.html:46
+#: templates/index.html:53
 msgid "Translated by:"
 msgstr "Vertaald door:"
 
@@ -1616,47 +2276,51 @@ msgstr "Ben u uw wachtwoord vergeten?"
 msgid "Module Statistics: %(name)s"
 msgstr "Modulestatistieken: %(name)s"
 
-#: templates/module_detail.html:17 templates/vertimus/vertimus_detail.html:27
-msgid ""
-"This module is not part of the GNOME SVN repository. Please check the "
-"module's web page to see where to send translations."
-msgstr ""
-"Deze module is geen onderdeel van Gnome-versiebeheer. Kijk op de webpagina "
-"van deze module voor gegevens over insturen van vertalingen."
-
-#: templates/module_detail.html:29
+#: templates/module_detail.html:54
 msgid "Maintainers"
 msgstr "Beheerders"
 
-#: templates/module_detail.html:37
+#: templates/module_detail.html:62
 msgid "Bug reporting"
 msgstr "Foutrapportage"
 
-#: templates/module_detail.html:40
+#: templates/module_detail.html:65
 msgid "Show existing i18n and l10n bugs"
 msgstr "Openstaande internationalisering- en vertaalfouten tonen"
 
-#: templates/module_detail.html:42
-msgid "Report bugs to Bugzilla"
-msgstr "Fouten melden via Bugzilla"
+#: templates/module_detail.html:67
+msgid "Report a bug"
+msgstr "Een bug melden"
 
 # Bewust onvertaald gelaten (Wouter Bolsterlee)
-#: templates/module_detail.html:51
+#: templates/module_detail.html:76
 msgid "Branches:"
 msgstr "Branches:"
 
 # Bewust onvertaald gelaten (Wouter Bolsterlee)
-#: templates/module_detail.html:65
+#: templates/module_detail.html:99
 msgid "Browse Repository"
 msgstr "Repository doorbladeren"
 
-#: templates/module_detail.html:69
-msgid "This branch is currently string-frozen."
-msgstr "Deze branch is string-frozen."
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Branch"
 
-#: templates/module_detail.html:78
-msgid "Translation"
-msgstr "Vertaling"
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "Versie"
+
+#: templates/module_edit_branches.html:17
+msgid "Category"
+msgstr "Categorie"
+
+#: templates/module_edit_branches.html:23
+#: templates/people/person_detail_change_form.html:13
+#: templates/teams/team_edit.html:27
+msgid "Save"
+msgstr "Opslaan"
 
 #: templates/module_images.html:4
 #, python-format
@@ -1671,7 +2335,7 @@ msgstr "Vertaalstatus afbeeldingen"
 msgid "Original"
 msgstr "Origineel"
 
-#: templates/module_images.html:32
+#: templates/module_images.html:34
 msgid ""
 "Translated, but uses original one (maybe the figure doesn't contain any "
 "string to translate)"
@@ -1679,15 +2343,15 @@ msgstr ""
 "Vertaald, maar gebruikt origineel (waarschijnlijk bevat afbeelding geen "
 "vertaalbare onderdelen)"
 
-#: templates/module_images.html:36
+#: templates/module_images.html:38
 msgid "Fuzzy"
 msgstr "Vaag gelijkend"
 
-#: templates/module_images.html:41
+#: templates/module_images.html:45
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "Geen bestand (&quot;Technisch&quot; vaag gelijkend)"
 
-#: templates/module_images.html:44
+#: templates/module_images.html:48
 msgid "Not translated"
 msgstr "Onvertaald"
 
@@ -1699,10 +2363,25 @@ msgstr "Gnome-modules"
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Kies een module voor meer gegevens:"
 
-#: templates/release_compare.html:5 templates/release_compare.html.py:21
-#| msgid "Release Notes"
+#: templates/module_list.html:28 templates/release_list.html:38
+#: templates/languages/language_list.html:35 templates/teams/team_list.html:33
+#, python-format
+msgid ""
+"If anything should be changed on this page, please <a href=\"%(bug_url)s"
+"\">submit a bug report</a>."
+msgstr ""
+"Wanneer er iets veranderd moet worden op deze pagina, stuur a.u.b. <a href="
+"\"%(bug_url)s\">een foutmelding in</a>."
+
+#: templates/release_compare.html:5 templates/release_compare.html.py:20
 msgid "Releases Comparison"
 msgstr "Aankondigings-vergelijking"
+
+#: templates/release_compare.html:29
+#, fuzzy
+#| msgid "Projects"
+msgid "Progress"
+msgstr "Projecten"
 
 #: templates/release_detail.html:10
 #, python-format
@@ -1710,26 +2389,28 @@ msgid "%(name)s Release"
 msgstr "%(name)s-versie"
 
 #: templates/release_detail.html:13
-#: templates/languages/language_release.html:34
+#: templates/languages/language_release.html:33
 msgid ""
-"The modules of this release are not part of the GNOME SVN repository. Please "
+"The modules of this release are not part of the GNOME Git repository. Please "
 "check each module's web page to see where to send translations."
 msgstr ""
-"De modules in deze versie zijn geen onderdeel van Gnome-versiebeheer. Kijk "
-"op de webpagina van elke module voor informatie over insturen van "
-"vertalingen."
+"De modules in deze versie zijn geen onderdeel van Gnome Git. Kijk op de "
+"webpagina van de respectievelijke modules voor informatie over het insturen "
+"van vertalingen."
 
-#: templates/release_detail.html:19 templates/stats_show.html:30
+#: templates/release_detail.html:19 templates/stats_show.html:31
 msgid "Language"
 msgstr "Taal"
 
-#: templates/release_detail.html:20 templates/teams/team_detail.html:26
+#: templates/release_detail.html:20 templates/release_detail.html.py:67
+#: templates/languages/language_release_summary.html:9
 msgid "User Interface"
 msgstr "Gebruikersinterface"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:23
-#: templates/stats_show.html:34 templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:27
+#: templates/stats_show.html:35
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
 msgid "Graph"
 msgstr "Grafiek"
 
@@ -1741,19 +2422,30 @@ msgstr "Gnome-versies"
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "Kies een versie voor meer gegevens:"
 
-#: templates/stats_show.html:13 templates/vertimus/vertimus_detail.html:38
+#: templates/release_list.html:25
+msgid "Older Releases"
+msgstr "Oudere uitgaven"
+
+#: templates/stats_show.html:7
+#: templates/languages/language_release_stats.html:65
+#, fuzzy
+#| msgid "Evince is a document viewer for multiple document formats."
+msgid "This document is written in Mallard documentation format"
+msgstr "Evince is een documentviewer voor meedere documentformaten."
+
+#: templates/stats_show.html:14 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "POT-bestand downloaden"
 
-#: templates/stats_show.html:17 templates/vertimus/vertimus_detail.html:53
+#: templates/stats_show.html:18 templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "Opmerkingen"
 
-#: templates/stats_show.html:30 vertimus/models.py:163
+#: templates/stats_show.html:31 vertimus/models.py:193
 msgid "Translated"
 msgstr "Vertaald"
 
-#: templates/stats_show.html:50 templates/vertimus/vertimus_detail.html:48
+#: templates/stats_show.html:51 templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "Afbeeldingen weergeven"
 
@@ -1762,23 +2454,24 @@ msgid "Damned Lies site admin"
 msgstr "Beheerder Damned Lies"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:92
+#: templates/vertimus/vertimus_detail.html:160
 msgid "No comment"
 msgstr "Geen commentaar"
 
 #: templates/languages/language_all_modules.html:4
-#: templates/languages/language_all_modules.html:21
-#: templates/teams/team_detail.html:63 templates/teams/team_detail.html:64
+#: templates/languages/language_all_modules.html:20
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
 msgid "All modules"
 msgstr "Alle modules"
 
-#: templates/languages/language_all_modules.html:24
-#: templates/languages/language_release.html:26
+#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_release.html:25
 msgid "Hide completed modules"
 msgstr "Volledig vertaalde modules verbergen"
 
-#: templates/languages/language_all_modules.html:28
-#: templates/languages/language_release.html:30
+#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_release.html:29
 msgid "Show completed modules"
 msgstr "Volledig vertaalde modules tonen"
 
@@ -1799,13 +2492,9 @@ msgid "Download all po files"
 msgstr "Alle po-bestanden ophalen"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:55
+#: templates/people/person_detail.html:58
 msgid "Module"
 msgstr "Module"
-
-#: templates/languages/language_release_stats.html:21
-msgid "Branch"
-msgstr "Branch"
 
 #: templates/languages/language_release_stats.html:21
 msgid "Statistics"
@@ -1816,7 +2505,7 @@ msgid "Status"
 msgstr "Status"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:55
+#: templates/people/person_detail.html:58
 msgid "Date"
 msgstr "Datum"
 
@@ -1824,7 +2513,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% vertaald)"
 
-#: templates/languages/language_release_stats.html:99
+#: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "Foutoverzicht"
 
@@ -1845,29 +2534,27 @@ msgstr "Wachtwoord wijzigen"
 msgid "Join a team"
 msgstr "Lid worden van een team"
 
-#: templates/people/person_detail.html:23
+#: templates/people/person_detail.html:26
 msgid "Site Language:"
 msgstr "Taal website:"
 
-#: templates/people/person_detail.html:34
+#: templates/people/person_detail.html:37
 msgid "Choose"
 msgstr "Kiezen"
 
-#: templates/people/person_detail.html:40
-msgid "Maintains:"
-msgstr "Beheert:"
+#: templates/people/person_detail.html:43
+msgid "Module maintenance"
+msgstr "Module-onderhoud"
 
-#: templates/people/person_detail.html:51
-msgid "Working on"
-msgstr "Werkt aan"
+#: templates/people/person_detail.html:54
+#, fuzzy
+#| msgid "No current actions."
+msgid "Current activity"
+msgstr "Geen huidige acties."
 
-#: templates/people/person_detail.html:55
+#: templates/people/person_detail.html:58
 msgid "State"
 msgstr "Status"
-
-#: templates/people/person_detail_change_form.html:13
-msgid "Save"
-msgstr "Opslaan"
 
 #: templates/people/person_list.html:4 templates/people/person_list.html:8
 msgid "GNOME Contributors"
@@ -1884,10 +2571,6 @@ msgstr "Expresberichten:"
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
 msgstr "Bugzilla-account:"
-
-#: templates/people/person_overview.html:38
-msgid "SVN account:"
-msgstr "SVN-account:"
 
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
@@ -1928,8 +2611,9 @@ msgid "Join"
 msgstr "Lid worden"
 
 #: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "Team-lidmaatschappen"
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "Uw teams"
 
 #: templates/people/person_team_membership.html:9
 #, python-format
@@ -2054,61 +2738,83 @@ msgstr ""
 "Registratie is voltooid. Er is een e-mail gestuurd waarmee u uw account kunt "
 "activeren."
 
-#: templates/teams/team_base.html:6
+#: templates/teams/team_base.html:7
 msgid "Details"
 msgstr "Details"
 
-#: templates/teams/team_base.html:9
+#: templates/teams/team_base.html:14
 #, python-format
 msgid "%(lang)s Translation Team Page:"
 msgstr "Webpagina vertaalteam voor %(lang)s:"
 
-#: templates/teams/team_base.html:13
+#: templates/teams/team_base.html:18
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: templates/teams/team_base.html:15
+#: templates/teams/team_base.html:20
 msgid "Report Bug in Translation"
 msgstr "Vertaalfout doorgeven"
 
-#: templates/teams/team_base.html:16
+#: templates/teams/team_base.html:21
 msgid "Show Existing Bugs"
 msgstr "Openstaande bugs tonen"
 
-#: templates/teams/team_base.html:20
+#: templates/teams/team_base.html:25
 msgid "Mailing List:"
 msgstr "E-maillijst:"
 
-#: templates/teams/team_base.html:22
+#: templates/teams/team_base.html:27
 msgid "Send e-mail to the list"
 msgstr "E-mail sturen aan de lijst"
 
-#: templates/teams/team_base.html:24
+#: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "Lid worden"
 
-#: templates/teams/team_detail.html:5
+#: templates/teams/team_detail.html:7
 #, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME translation project"
+msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
 msgstr ""
 "Laatste acties door het team voor %(lang)s van het Gnome-vertaalproject"
 
-#: templates/teams/team_detail.html:14
+#: templates/teams/team_detail.html:40 templates/teams/team_edit.html:16
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "Vertaalteam %(lang)s"
 
-#: templates/teams/team_detail.html:26
-msgid "Release"
-msgstr "Versie"
+#: templates/teams/team_detail.html:48
+msgid ""
+"There is currently no established team for this language. See <a href="
+"\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> "
+"to get more information about the process of building a new translation team."
+msgstr ""
+"Er is op dit moment geen gevestigd team voor deze taal. Zie <a href=\"http://"
+"live.gnome.org/TranslationProject/StartingATeam\">de GTP-Wiki</a> voor meer "
+"informatie over het proces van het opzetten van een nieuw vertaalteam."
 
-#: templates/teams/team_detail.html:69
-msgid "Team membership"
-msgstr "Uw teams"
+#: templates/teams/team_detail.html:58
+msgid "Plural forms:"
+msgstr "Meervoudsvormen:"
 
-#: templates/teams/team_detail.html:80
+#: templates/teams/team_detail.html:60
+msgid "Archives"
+msgstr "Archief"
+
+#: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Wijzigingen doorvoeren"
+
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr "Dit team gebruikt de Vertimus-vertalingsprocedure"
+
+#: templates/teams/team_edit.html:25
+msgid ""
+"This content may use <a href='http://en.wikipedia.org/wiki/"
+"Markdown'>Markdown</a> syntax"
+msgstr ""
+"Deze inhoud kan <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown-"
+"syntaxis</a> (Engels) gebruiken"
 
 #: templates/teams/team_list.html:4 templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
@@ -2123,53 +2829,83 @@ msgstr "Kies een team voor meer informatie:"
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Gecoördineerd door <a href=\"%(url)s\">%(name)s</a>"
 
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Er zijn geen vertaalteams voor Gnome. :("
 
-#: templates/vertimus/vertimus_detail.html:5
+#: templates/vertimus/vertimus_detail.html:6
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Vertaling module: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:13
+#: templates/vertimus/vertimus_detail.html:27
 msgid "Used in release(s):"
 msgstr "Gebruikt in versie(s):"
 
-#: templates/vertimus/vertimus_detail.html:31
+#: templates/vertimus/vertimus_detail.html:45
 msgid "State:"
 msgstr "Status:"
 
-#: templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Download PO file"
 msgstr "PO-bestand downloaden"
 
-#: templates/vertimus/vertimus_detail.html:39
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Translated:"
 msgstr "Vertaald:"
 
-# Vrij vertaald (Wouter Bolsterlee)
-#: templates/vertimus/vertimus_detail.html:65
-msgid "Action History"
-msgstr "Overzicht van wijzigingen:"
+#: templates/vertimus/vertimus_detail.html:95
+msgid "On-going activities in same module:"
+msgstr "Activiteiten aan de gang in dezelfde module:"
 
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:106
+msgid "Actions"
+msgstr "Acties"
+
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
+#. which should be localized in Django itself
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:848
+#, python-format
+msgid "Archived Actions (%(human_level)s archived series)"
+msgstr "Gearchiveerde acties  (%(human_level)s gearchiveerde serie)"
+
+#: templates/vertimus/vertimus_detail.html:110
+#, fuzzy
+#| msgid "(Return to current)"
+msgid "(Return to current actions)"
+msgstr "(Teruggaan naar huidige)"
+
+# Vrij vertaald (Wouter Bolsterlee)
+#: templates/vertimus/vertimus_detail.html:115
+msgid "(Previous action history)"
+msgstr "(Vorige actiegeschiedenis)"
+
+#: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
 msgstr "vergelijken met:"
 
-#: templates/vertimus/vertimus_detail.html:101
+#: templates/vertimus/vertimus_detail.html:168
+msgid "No current actions."
+msgstr "Geen huidige acties."
+
+#: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
 msgstr "Actie toevoegen"
 
-#: templates/vertimus/vertimus_detail.html:108
+#: templates/vertimus/vertimus_detail.html:182
 msgid "Submit"
 msgstr "Verzenden"
 
-#: templates/vertimus/vertimus_detail.html:112
+#: templates/vertimus/vertimus_detail.html:187
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "U dient hiervoor lid te zijn van het vertaalteam (%(team_name)s)."
+
+#: templates/vertimus/vertimus_detail.html:191
+msgid "This team is not using the Vertimus translation workflow."
+msgstr "Dit team gebruikt de Vertimus vertalingsprocedure niet."
 
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
@@ -2194,99 +2930,109 @@ msgstr "%(site)s — Vertimus-acties voor taal %(lang)s"
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Laatste acties van het Gnome-vertaalproject voor taal %s"
 
-#: vertimus/feeds.py:88
+#: vertimus/feeds.py:89
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s — Vertimus-acties van het team voor %(lang)s"
 
-#: vertimus/feeds.py:97
+#: vertimus/feeds.py:98
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Laatste acties door het team voor %s van het Gnome-vertaalproject"
 
-#: vertimus/forms.py:30
+#: vertimus/forms.py:38
 msgid "Action"
 msgstr "Actie"
 
-#: vertimus/forms.py:33
+#: vertimus/forms.py:42
 msgid "Comment"
 msgstr "Commentaar"
 
-#: vertimus/forms.py:38
+#: vertimus/forms.py:47
 msgid "File"
 msgstr "Bestand"
 
-#: vertimus/forms.py:39
+#: vertimus/forms.py:48
 msgid "Upload a .po, .gz, .bz2 or .png file"
 msgstr "Een .po-, .g-z, .bz2- of .png-bestand uploaden"
 
-#: vertimus/forms.py:50
+#: vertimus/forms.py:59
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Alleen bestanden met .po, .gz, .bz2 en .png zijn toegestaan."
 
-#: vertimus/forms.py:55
+#: vertimus/forms.py:64
 msgid ""
 ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ""
 "Vertaling komt niet door de msgfmt-check. Corrigeer de vertaling en probeer "
 "opnieuw."
 
-#: vertimus/forms.py:65
+#: vertimus/forms.py:71
+msgid "Invalid action. Someone probably posted another action just before you."
+msgstr ""
+"Ongeldige actie. Iemand heeft waarschijnlijk net voor jou een andere actie "
+"geplaatst."
+
+#: vertimus/forms.py:77
+msgid "A comment is needed for this action."
+msgstr "Een opmerking is nodig voor deze actie."
+
+#: vertimus/forms.py:80
 msgid "A comment or a file is needed for this action."
 msgstr "Er is een opmerking of een bestand nodig."
 
-#: vertimus/forms.py:68
+#: vertimus/forms.py:83
 msgid "A file is needed for this action."
 msgstr "Er is een bestand nodig."
 
-#: vertimus/forms.py:71
+#: vertimus/forms.py:86
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "U kunt geen bestand insturen bij het reserveren voor vertaling."
 
-#: vertimus/models.py:137
+#: vertimus/models.py:167
 msgid "Inactive"
 msgstr "Inactief"
 
-#: vertimus/models.py:150
+#: vertimus/models.py:180
 msgid "Translating"
 msgstr "Bezig met vertalen"
 
-#: vertimus/models.py:180
+#: vertimus/models.py:213
 msgid "Proofreading"
 msgstr "Bezig met proeflezen"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:195
+#: vertimus/models.py:228
 msgid "Proofread"
 msgstr "Gecontroleerd"
 
-#: vertimus/models.py:210
+#: vertimus/models.py:243
 msgid "To Review"
 msgstr "Aangeboden ter controle"
 
-#: vertimus/models.py:222
+#: vertimus/models.py:255
 msgid "To Commit"
 msgstr "Klaar voor committen"
 
-#: vertimus/models.py:237
+#: vertimus/models.py:270
 msgid "Committing"
 msgstr "Committen"
 
-#: vertimus/models.py:251
+#: vertimus/models.py:284
 msgid "Committed"
 msgstr "Gecommit"
 
-#: vertimus/models.py:339
+#: vertimus/models.py:329
 msgid "File in repository"
 msgstr "Bestand in repository"
 
-#: vertimus/models.py:346 vertimus/views.py:122 vertimus/views.py:128
-#: vertimus/views.py:138
+#: vertimus/models.py:341 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Bestand door %(name)s geüpload op %(date)s"
 
-#: vertimus/models.py:458
+#: vertimus/models.py:529
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2303,20 +3049,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:471 vertimus/models.py:521
+#: vertimus/models.py:542 vertimus/models.py:592
 msgid "Without comment"
 msgstr "Geen commentaar"
 
-#: vertimus/models.py:473 vertimus/models.py:523
-#, python-format
-msgid "This is an automated message sent from %s."
-msgstr "Dit is een automatische berichtgeving van %s."
-
-#: vertimus/models.py:480
+#: vertimus/models.py:551
 msgid "Write a comment"
 msgstr "Opmerking plaatsen"
 
-#: vertimus/models.py:509
+#: vertimus/models.py:580
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2333,65 +3074,143 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:531
+#: vertimus/models.py:602
 msgid "Reserve for translation"
 msgstr "Reserveren voor vertaling"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:614
 msgid "Upload the new translation"
 msgstr "Nieuwe vertaling uploaden"
 
-#: vertimus/models.py:558
+#: vertimus/models.py:636
 msgid "Reserve for proofreading"
 msgstr "Reserveren voor proeflezen"
 
-#: vertimus/models.py:570
+#: vertimus/models.py:648
 msgid "Upload the proofread translation"
 msgstr "Gecontroleerde vertaling uploaden"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:586
+#: vertimus/models.py:664
 msgid "Ready for submission"
-msgstr "Klaar voor inzending"
+msgstr "Klaar voor committen"
 
-#: vertimus/models.py:602
+#: vertimus/models.py:680
 msgid "Submit to repository"
 msgstr "Naar repository inzenden"
 
-#. Commit failed, state unchanged
-#: vertimus/models.py:616
+#. FIXME: somewhere the error should be catched and handled properly
+#. new_state = state
+#: vertimus/models.py:697
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Committen mislukt. Foutmelding: %s"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:626
+#: vertimus/models.py:705
 msgid "Reserve to submit"
 msgstr "Reserveren voor inzenden"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:639
+#: vertimus/models.py:718
 msgid "Inform of submission"
-msgstr "Inzending melden"
+msgstr "Commit melden"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:654
+#: vertimus/models.py:733
 msgid "Review required"
 msgstr "Tweede lezer nodig"
 
-#: vertimus/models.py:693
-msgid "Backup the actions"
-msgstr "Acties ongedaan maken"
+#: vertimus/models.py:748
+msgid "Archive the actions"
+msgstr "De acties archiveren"
 
-#: vertimus/models.py:732
+#: vertimus/models.py:787
 msgid "Undo the last state change"
 msgstr "Laatste actie annuleren"
 
-#: vertimus/views.py:144
+#: vertimus/views.py:159 vertimus/views.py:191
+#, python-format
+msgid "Error: The file %s contains invalid characters."
+msgstr "Fout: Het bestand %s bevat ongeldige tekens."
+
+#: vertimus/views.py:182
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Meest recente commit voor %(lang)s"
 
-#: vertimus/views.py:147
+#: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Meest recente POT-bestand"
+
+#~ msgid "Workspace Switcher Applet Manual"
+#~ msgstr "Werkbladwisselaar-handleiding"
+
+#~ msgid "Window List Applet Manual"
+#~ msgstr "Vensterlijst-handleiding"
+
+#~ msgid "GNOME 2.16 (old stable)"
+#~ msgstr "Gnome 2.16 (oude versie)"
+
+#~ msgid "GNOME 2.14 (old stable)"
+#~ msgstr "GNOME 2.14 (oude versie)"
+
+#~| msgid ""
+#~| "This module is not part of the GNOME SVN repository. Please check the "
+#~| "module's web page to see where to send translations."
+#~ msgid ""
+#~ "This module is not part of the GNOME git repository. Please check the "
+#~ "module's web page to see where to send translations."
+#~ msgstr ""
+#~ "Deze module is geen onderdeel van Gnome Git. Kijk op de webpagina van "
+#~ "deze module om te zien waar vertalingen naartoe te sturen."
+
+#~| msgid ""
+#~| "The modules of this release are not part of the GNOME SVN repository. "
+#~| "Please check each module's web page to see where to send translations."
+#~ msgid ""
+#~ "The modules of this release are not part of the GNOME git repository. "
+#~ "Please check each module's web page to see where to send translations."
+#~ msgstr ""
+#~ "De modules in deze versie zijn geen onderdeel van Gnome Git. Kijk op de "
+#~ "webpagina van de respectievelijke modules voor informatie over het "
+#~ "insturen van vertalingen."
+
+#~ msgid "Maintains:"
+#~ msgstr "Beheert:"
+
+#~ msgid "Working on"
+#~ msgstr "Werkt aan"
+
+#~ msgid "Member of teams"
+#~ msgstr "Team-lidmaatschappen"
+
+#~ msgid "Low German and Saxon"
+#~ msgstr "Nederduits en Nedersaksisch"
+
+#~ msgid "Low Saxon, Germany"
+#~ msgstr "Nedersaksisch"
+
+#~ msgid "Valencian (Southern Catalan)"
+#~ msgstr "Valenciaans (Zuid-Catalonië)"
+
+#~ msgid "F-Spot Manual"
+#~ msgstr "F-Spot-handleiding"
+
+#~ msgid "Stock Ticker Manual"
+#~ msgstr "Koersen-handleiding"
+
+#~ msgid "Niepce Digital"
+#~ msgstr "Niepce Digital"
+
+#~ msgid "GNOME Fifth Toe (Extra software)"
+#~ msgstr "Gnome Fifth Toe (Extra toepassingen)"
+
+#~ msgid "GNOME 2.26 (stable)"
+#~ msgstr "Gnome 2.26 (huidige versie)"
+
+#~ msgid "Report bugs to Bugzilla"
+#~ msgstr "Fouten melden via Bugzilla"
+
+#~ msgid "SVN account:"
+#~ msgstr "SVN-account:"
