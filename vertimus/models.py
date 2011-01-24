@@ -19,14 +19,15 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os, sys
+from datetime import datetime, timedelta
 
-from django.db import models
-from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
-from django.core import mail, urlresolvers
-from django.contrib.sites.models import Site
 from django.conf import settings
+from django.contrib.sites.models import Site
+from django.core import mail, urlresolvers
+from django.db import models
+from django.db.models import Max
 from django.db.models.signals import post_save, pre_delete
-from django.db import connection
+from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
 from stats.models import Branch, Domain, Statistics
 from stats.signals import pot_has_changed
@@ -138,24 +139,12 @@ class StateAbstract(object):
     def get_action_sequence_from_level(self, level):
         """Get the sequence corresponding to the requested level.
            The first level is 1."""
-        if level <= 0:
-            raise Exception("Level must be greater than 0")
+        assert level > 0, "Level must be greater than 0"
 
-        # Raw SQL in waiting for Django 1.1.
-        query = """
-            SELECT sequence
-              FROM action_archived
-             WHERE state_db_id = %s
-             GROUP BY sequence
-             ORDER BY sequence DESC
-             LIMIT 1 OFFSET %s"""
-        cursor = connection.cursor()
-        cursor.execute(query, (self._state_db.id, level - 1))
-        try:
-            sequence = cursor.fetchone()[0]
-        except:
-            sequence = None
-
+        query = ActionDbArchived.objects.filter(state_db=self._state_db).values('sequence').distinct().order_by('-sequence')[level-1:level]
+        sequence = None
+        if len(query) > 0:
+            sequence = query[0]['sequence']
         return sequence
 
     def save(self):
@@ -422,6 +411,17 @@ class ActionDbArchived(models.Model):
     @classmethod
     def get_action_history(cls, sequence):
         return action_db_get_action_history(cls, state_db=None, sequence=sequence)
+
+    @classmethod
+    def clean_old_actions(cls, days):
+        """ Delete old archived actions after some (now-days) time """
+        # In each sequence, test date of the latest action, to delete whole sequences instead of individual actions
+        for action in ActionDbArchived.objects.values('sequence'
+            ).annotate(max_created=Max('created')
+            ).filter(max_created__lt=datetime.now()-timedelta(days=days)):
+            # Call each action delete() so as file is also deleted
+            for act in ActionDbArchived.objects.filter(sequence=action['sequence']):
+                action.delete()
 
 class ActionAbstract(object):
     """Abstract class"""
