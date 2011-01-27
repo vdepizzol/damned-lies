@@ -298,7 +298,7 @@ class VertimusTest(TeamsAndRolesTests):
         state.save()
 
         file_path = os.path.join(settings.MEDIA_ROOT, action.file.name)
-        self.assert_(os.access(file_path, os.W_OK))
+        self.assertTrue(os.access(file_path, os.W_OK))
 
         action = ActionAbstract.new_by_name('TC')
         state = state.apply_action(action, self.pc, "To commit.")
@@ -312,13 +312,13 @@ class VertimusTest(TeamsAndRolesTests):
         state = state.apply_action(action, self.pc, "Committed.")
         state.save()
 
-        self.assert_(not os.access(file_path, os.F_OK))
+        self.assertTrue(not os.access(file_path, os.F_OK), "%s not deleted" % file_path)
 
         # Remove test file
         action_db_archived = ActionDbArchived.objects.get(comment="Done.")
         filename_archived = os.path.join(settings.MEDIA_ROOT, action_db_archived.file.name)
         action_db_archived.delete()
-        self.assert_(not os.access(filename_archived, os.F_OK))
+        self.assertTrue(not os.access(filename_archived, os.F_OK), "%s not deleted" % filename_archived)
 
     def test_action_tr(self):
         state = StateDb(branch=self.b, domain=self.d, language=self.l, name='Translated').get_state()

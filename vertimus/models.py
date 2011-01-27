@@ -26,7 +26,7 @@ from django.contrib.sites.models import Site
 from django.core import mail, urlresolvers
 from django.db import models
 from django.db.models import Max
-from django.db.models.signals import post_save, pre_delete
+from django.db.models.signals import post_save, post_delete
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
 from stats.models import Branch, Domain, Statistics
@@ -421,7 +421,7 @@ class ActionDbArchived(models.Model):
             ).filter(max_created__lt=datetime.now()-timedelta(days=days)):
             # Call each action delete() so as file is also deleted
             for act in ActionDbArchived.objects.filter(sequence=action['sequence']):
-                action.delete()
+                act.delete()
 
 class ActionAbstract(object):
     """Abstract class"""
@@ -830,16 +830,20 @@ def merge_uploaded_file(sender, instance, **kwargs):
         instance.merge_file_with_pot(potfile)
 post_save.connect(merge_uploaded_file, sender=ActionDb)
 
-def delete_merged_file(sender, instance, **kwargs):
+def delete_action_files(sender, instance, **kwargs):
     """
-    pre_delete callback for ActionDb that deletes the merged file from upload
+    post_delete callback for ActionDb that deletes the file + the merged file from upload
     directory.
     """
-    if instance.file and instance.file.path.endswith('.po'):
-        merged_file = instance.file.path[:-3] + ".merged.po"
-        if os.access(merged_file, os.W_OK):
-             os.remove(merged_file)
-pre_delete.connect(delete_merged_file, sender=ActionDb)
+    if instance.file:
+        if instance.file.path.endswith('.po'):
+            merged_file = instance.file.path[:-3] + ".merged.po"
+            if os.access(merged_file, os.W_OK):
+                 os.remove(merged_file)
+        if os.access(instance.file.path, os.W_OK):
+             os.remove(instance.file.path)
+post_delete.connect(delete_action_files, sender=ActionDb)
+post_delete.connect(delete_action_files, sender=ActionDbArchived)
 
 """ The following string is just reproduced from a template so as a translator comment
     can be added (comments are not supported in templates) """
