@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 04:33+0000\n"
-"PO-Revision-Date: 2011-01-23 19:27+0100\n"
+"POT-Creation-Date: 2011-01-27 20:00+0000\n"
+"PO-Revision-Date: 2011-01-28 18:02+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -772,8 +772,9 @@ msgid "generic filter"
 msgstr "obecný filtr"
 
 #: database-content.py:307
-msgid "light-effects filter"
-msgstr "filtr světelných efektů"
+#| msgid "light-effects filter"
+msgid "light-and-shadow filter"
+msgstr "filtr světla a stínů"
 
 #: database-content.py:308
 msgid "map filter"
@@ -1027,7 +1028,6 @@ msgid "file menu"
 msgstr "nabídka Soubor"
 
 #: database-content.py:370
-#| msgid "file menu"
 msgid "filters menu"
 msgstr "nabídka Filtry"
 
@@ -1193,10 +1193,6 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:413
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "Please submit your translation through the <a href=\"http://www.transifex."
 "net/projects/p/accountsservice/\">Transifex platform</a>."
@@ -1209,11 +1205,6 @@ msgid "Email client for netbooks"
 msgstr "E-mailový klient pro netbooky"
 
 #: database-content.py:415
-#| msgid ""
-#| "Avahi is a system which facilitates service discovery on a local network "
-#| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-"
-#| "tx/\">Transifex platform</a>."
 msgid ""
 "Avahi is a system which facilitates service discovery on a local network via "
 "the mDNS/DNS-SD protocol suite. Please submit your translation through the "
@@ -1250,10 +1241,6 @@ msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince je prohlížeč dokumentů mnoha formátů."
 
 #: database-content.py:420
-#| msgid ""
-#| "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
-#| "module. Please submit your translation through the <a href=\"http://www."
-#| "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
 msgid ""
 "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 "module. Please submit your translation through the <a href=\"http://www."
@@ -1365,12 +1352,6 @@ msgstr ""
 "soubor s překladem."
 
 #: database-content.py:438
-#| msgid ""
-#| "PackageKit is a system designed to make installing and updating software "
-#| "on your computer easier. This is not a GNOME-specific module. Please "
-#| "submit your translation through the <a href=\"https://translate."
-#| "fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's "
-#| "Transifex platform</a>."
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier. This is not a GNOME-specific module. Please submit "
@@ -1387,11 +1368,6 @@ msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je aplikací DTP pro X."
 
 #: database-content.py:440
-#| msgid ""
-#| "Avahi is a system which facilitates service discovery on a local network "
-#| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-"
-#| "tx/\">Transifex platform</a>."
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications. \n"
@@ -1405,10 +1381,6 @@ msgstr ""
 "p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">platformu Transifex</a>."
 
 #: database-content.py:443
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/c/default/\">Transifex platform</a>."
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
@@ -1466,17 +1438,14 @@ msgstr ""
 "user-dirs v rámci Translation Project</a>."
 
 #: database-content.py:453
-#| msgid "GNOME 2.32 (development)"
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (vývojové)"
 
 #: database-content.py:454
-#| msgid "GNOME 2.30 (stable)"
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilní)"
 
 #: database-content.py:455
-#| msgid "GNOME 2.20 (old stable)"
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (zastaralé)"
 
@@ -1757,7 +1726,6 @@ msgstr "Opustili jste tým „%s“."
 
 #. Message no i18n'ed, should never happen under normal conditions
 #: people/views.py:118
-#| msgid "You are already member of this team."
 msgid "You are not a member of this team."
 msgstr "Nejste členem tohoto týmu."
 
@@ -2039,7 +2007,6 @@ msgid "No translators"
 msgstr "Bez překladatelů"
 
 #: teams/views.py:72
-#| msgid "Inactive"
 msgid "Inactive members"
 msgstr "Neaktivní členové"
 
@@ -2444,7 +2411,7 @@ msgstr "Stáhnout šablonu POT"
 msgid "Notices"
 msgstr "Upozornění"
 
-#: templates/stats_show.html:31 vertimus/models.py:193
+#: templates/stats_show.html:31 vertimus/models.py:182
 msgid "Translated"
 msgstr "Přeloženo"
 
@@ -2990,44 +2957,44 @@ msgstr "Tento krok vyžaduje soubor."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Neodesílejte soubor spolu s kroky typu „Rezervace“."
 
-#: vertimus/models.py:167
+#: vertimus/models.py:156
 msgid "Inactive"
 msgstr "Neaktivní"
 
-#: vertimus/models.py:180
+#: vertimus/models.py:169
 msgid "Translating"
 msgstr "Překládá se"
 
-#: vertimus/models.py:213
+#: vertimus/models.py:202
 msgid "Proofreading"
 msgstr "Kontroluje se"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:228
+#: vertimus/models.py:217
 msgid "Proofread"
 msgstr "Zkontrolováno"
 
-#: vertimus/models.py:243
+#: vertimus/models.py:232
 msgid "To Review"
 msgstr "Na revizi"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:244
 msgid "To Commit"
 msgstr "K zařazení"
 
-#: vertimus/models.py:270
+#: vertimus/models.py:259
 msgid "Committing"
 msgstr "Zařazuje se"
 
-#: vertimus/models.py:284
+#: vertimus/models.py:273
 msgid "Committed"
 msgstr "Zařazeno"
 
-#: vertimus/models.py:329
+#: vertimus/models.py:318
 msgid "File in repository"
 msgstr "Soubor v úložišti"
 
-#: vertimus/models.py:341 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:330 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
