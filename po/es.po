@@ -2,16 +2,16 @@
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 04:33+0000\n"
-"PO-Revision-Date: 2011-01-23 16:11+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2011-01-27 20:00+0000\n"
+"PO-Revision-Date: 2011-01-28 10:40+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -768,7 +768,8 @@ msgid "generic filter"
 msgstr "filtro «Genérico»"
 
 #: database-content.py:307
-msgid "light-effects filter"
+#| msgid "light-effects filter"
+msgid "light-and-shadow filter"
 msgstr "filtro «Luces y sombras»"
 
 #: database-content.py:308
@@ -1527,8 +1528,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href="
-"\"%(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href=\"%"
+"(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1692,8 +1693,7 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
-"e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
 
 #: people/views.py:63
 msgid "Sorry, the form is not valid."
@@ -2235,8 +2235,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a "
-"href='%(link)s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2410,7 +2410,7 @@ msgstr "Descargar el archivo POT"
 msgid "Notices"
 msgstr "Notas"
 
-#: templates/stats_show.html:31 vertimus/models.py:193
+#: templates/stats_show.html:31 vertimus/models.py:182
 msgid "Translated"
 msgstr "Traducido"
 
@@ -2955,44 +2955,44 @@ msgstr "Se necesita un archivo para esta acción."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
-#: vertimus/models.py:167
+#: vertimus/models.py:156
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: vertimus/models.py:180
+#: vertimus/models.py:169
 msgid "Translating"
 msgstr "Traduciéndose"
 
-#: vertimus/models.py:213
+#: vertimus/models.py:202
 msgid "Proofreading"
 msgstr "En revisión"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:228
+#: vertimus/models.py:217
 msgid "Proofread"
 msgstr "Revisado"
 
-#: vertimus/models.py:243
+#: vertimus/models.py:232
 msgid "To Review"
 msgstr "Para revisar"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:244
 msgid "To Commit"
 msgstr "Para subir"
 
-#: vertimus/models.py:270
+#: vertimus/models.py:259
 msgid "Committing"
 msgstr "Subiéndose"
 
-#: vertimus/models.py:284
+#: vertimus/models.py:273
 msgid "Committed"
 msgstr "Subido"
 
-#: vertimus/models.py:329
+#: vertimus/models.py:318
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:341 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:330 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
@@ -3028,15 +3028,15 @@ msgstr "Escribir un comentario"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
-"(%(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
-"(%(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3162,8 +3162,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
-#~ "«GNOME 2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
+#~ "2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
