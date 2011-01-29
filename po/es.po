@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-27 20:00+0000\n"
-"PO-Revision-Date: 2011-01-28 10:40+0100\n"
+"POT-Creation-Date: 2011-01-28 18:36+0000\n"
+"PO-Revision-Date: 2011-01-29 18:30+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -597,7 +597,7 @@ msgstr "Descripciones de los esquemas"
 
 #: database-content.py:263
 msgid "UI translation"
-msgstr "Traducción del IU"
+msgstr "Traducción de la IU"
 
 #: database-content.py:264 database-content.py:274
 msgid "UI translations"
@@ -768,7 +768,6 @@ msgid "generic filter"
 msgstr "filtro «Genérico»"
 
 #: database-content.py:307
-#| msgid "light-effects filter"
 msgid "light-and-shadow filter"
 msgstr "filtro «Luces y sombras»"
 
@@ -1528,8 +1527,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1693,7 +1692,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:63
 msgid "Sorry, the form is not valid."
@@ -2235,8 +2235,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2836,7 +2836,7 @@ msgstr "Acciones"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:848
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:852
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
@@ -3028,15 +3028,15 @@ msgstr "Escribir un comentario"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3162,8 +3162,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
