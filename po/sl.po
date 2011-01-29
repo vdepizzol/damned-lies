@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-23 18:30+0000\n"
-"PO-Revision-Date: 2011-01-24 21:45+0100\n"
+"POT-Creation-Date: 2011-01-28 18:36+0000\n"
+"PO-Revision-Date: 2011-01-29 12:15+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -889,8 +889,8 @@ msgid "generic filter"
 msgstr "osnovni filter"
 
 #: database-content.py:307
-msgid "light-effects filter"
-msgstr "filter svetlobnih učinkov"
+msgid "light-and-shadow filter"
+msgstr "filter svetlobe in sence"
 
 #: database-content.py:308
 msgid "map filter"
@@ -2346,7 +2346,7 @@ msgid "Notices"
 msgstr "Obvestila"
 
 #: templates/stats_show.html:31
-#: vertimus/models.py:193
+#: vertimus/models.py:182
 msgid "Translated"
 msgstr "Prevedeno"
 
@@ -2734,7 +2734,7 @@ msgstr "Dejanja"
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:108
-#: vertimus/models.py:848
+#: vertimus/models.py:852
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
@@ -2848,44 +2848,44 @@ msgstr "Za dejanje je treba izbrati tudi datoteko."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
 
-#: vertimus/models.py:167
+#: vertimus/models.py:156
 msgid "Inactive"
 msgstr "Nedejavno"
 
-#: vertimus/models.py:180
+#: vertimus/models.py:169
 msgid "Translating"
 msgstr "Prevajanje"
 
-#: vertimus/models.py:213
+#: vertimus/models.py:202
 msgid "Proofreading"
 msgstr "Jezikovno pregledovanje"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:228
+#: vertimus/models.py:217
 msgid "Proofread"
 msgstr "Jezikovno pregledano"
 
-#: vertimus/models.py:243
+#: vertimus/models.py:232
 msgid "To Review"
 msgstr "Za pregled"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:244
 msgid "To Commit"
 msgstr "Za uveljavitev"
 
-#: vertimus/models.py:270
+#: vertimus/models.py:259
 msgid "Committing"
 msgstr "Uveljavljanje"
 
-#: vertimus/models.py:284
+#: vertimus/models.py:273
 msgid "Committed"
 msgstr "Uveljavljeno"
 
-#: vertimus/models.py:329
+#: vertimus/models.py:318
 msgid "File in repository"
 msgstr "Datoteka v odložišču"
 
-#: vertimus/models.py:341
+#: vertimus/models.py:330
 #: vertimus/views.py:160
 #: vertimus/views.py:166
 #: vertimus/views.py:176
@@ -3004,39 +3004,51 @@ msgstr "Najnovejša POT datoteka"
 
 #~ msgid "GNOME 2.16 (old stable)"
 #~ msgstr "GNOME 2.16 (stara stabilna različica)"
+
 #~ msgid "GNOME 2.14 (old stable)"
 #~ msgstr "GNOME 2.14 (stara stabilna različica)"
+
 #~ msgid "GNOME 2.30 (stable)"
 #~ msgstr "GNOME 2.30 (stabilna različica)"
+
 #~ msgid "Window List Applet Manual"
 #~ msgstr "priročnik apleta seznama oken"
+
 #~ msgid "Workspace Switcher Applet Manual"
 #~ msgstr "priročnik preklopnika delovnih površin"
+
 #~ msgid ""
 #~ "This module is not part of the GNOME git repository. Please check the "
 #~ "module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula "
 #~ "za podrobnosti, kam poslati prevode."
+
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME git repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME git odložišča. Preverite stran vsakega "
 #~ "modula posebej za podrobnosti o objavljanju prevodov."
+
 #~ msgid "Maintains:"
 #~ msgstr "Vzdrževalec:"
+
 #~ msgid "Working on"
 #~ msgstr "Delo na"
+
 #~ msgid "Member of teams"
 #~ msgstr "Član skupin"
+
 #~ msgid "F-Spot Manual"
 #~ msgstr "priročnik F-Spot"
+
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the "
 #~ "module maintainer."
 #~ msgstr ""
 #~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
+
 #~ msgid ""
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
@@ -3044,33 +3056,42 @@ msgstr "Najnovejša POT datoteka"
 #~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
 #~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
 #~ "veja&quot;."
+
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
 #~ "them (Bugzilla details, web page, maintainer information,...)."
 #~ msgstr ""
 #~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
 #~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
+
 #~ msgid "Report bugs to Bugzilla"
 #~ msgstr "Poročanje o hroščih preko Bugzillle"
+
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME SVN odložišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
+
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
+
 #~ msgid ""
 #~ "Last actions made by the %(lang)s team of the GNOME translation project"
 #~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
+
 #~ msgid "Action History"
 #~ msgstr "Zgodovina dejanj"
+
 #~ msgid "Backup the actions"
 #~ msgstr "Napravi varnostno kopijo dejanja"
+
 #~ msgid "The Gimp Manual"
 #~ msgstr "priročnik Gimp"
+
 #~ msgid "Git account:"
 #~ msgstr "Git račun:"
+
 #~ msgid "Browse SVN"
 #~ msgstr "Brskanje po SVN"
-
