@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-27 20:00+0000\n"
-"PO-Revision-Date: 2011-01-28 18:02+0100\n"
+"POT-Creation-Date: 2011-02-01 12:31+0000\n"
+"PO-Revision-Date: 2011-02-06 10:51+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -772,7 +772,6 @@ msgid "generic filter"
 msgstr "obecný filtr"
 
 #: database-content.py:307
-#| msgid "light-effects filter"
 msgid "light-and-shadow filter"
 msgstr "filtr světla a stínů"
 
@@ -1294,10 +1293,20 @@ msgstr ""
 "Emulator) pro GNOME."
 
 #: database-content.py:427
+msgid ""
+"To ease localization, gallery of GNOME Video Effects has been set up here: "
+"<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
+"gnome.org/GnomeVideoEffects/Effects</a>."
+msgstr ""
+"Pro snadnější lokalizaci byla vytvořena galerie efektů knihovny GNOME Video "
+"Effects. Najdete ji na <a href=\"http://live.gnome.org/GnomeVideoEffects/"
+"Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
+
+#: database-content.py:428
 msgid "A note taking application"
 msgstr "Poznámková aplikace"
 
-#: database-content.py:428
+#: database-content.py:429
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -1307,8 +1316,8 @@ msgstr ""
 "překlady, podívejte se prosím na <a href=\"http://wiki.gnucash.org/wiki/"
 "Translation#Submitting\">wiki GNUCash</a>."
 
-#: database-content.py:429 database-content.py:430 database-content.py:431
-#: database-content.py:432 database-content.py:433 database-content.py:452
+#: database-content.py:430 database-content.py:431 database-content.py:432
+#: database-content.py:433 database-content.py:434 database-content.py:453
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1316,7 +1325,7 @@ msgstr ""
 "Toto není projekt GNOME. Prosím zašlete svůj překlad do <a href=\"http://"
 "translationproject.org\">Translation Project</a>."
 
-#: database-content.py:434
+#: database-content.py:435
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1328,7 +1337,7 @@ msgstr ""
 "soubory, i když jeden z nich nebude obsahovat žádné překlady, jinak se "
 "sestavení GTK+ v /po-properties nezdaří."
 
-#: database-content.py:435
+#: database-content.py:436
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1336,11 +1345,11 @@ msgstr ""
 "moserial je nekomplikovaný, přívětivý, na GTK+ založený sériový terminál pro "
 "prostředí GNOME. Navíc je napsán v jazyce Vala."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid "Gnome Parental Control"
 msgstr "Rodičovská kontrola GNOME"
 
-#: database-content.py:437
+#: database-content.py:438
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1351,7 +1360,7 @@ msgstr ""
 "softwaru NetworkManager v rámci systému GNOME Bugzilla</a>. Poté přiložte "
 "soubor s překladem."
 
-#: database-content.py:438
+#: database-content.py:439
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier. This is not a GNOME-specific module. Please submit "
@@ -1363,11 +1372,11 @@ msgstr ""
 "href=\"http://www.transifex.net/projects/p/packagekit/resource/master/"
 "\">platformu Transifex</a>."
 
-#: database-content.py:439
+#: database-content.py:440
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je aplikací DTP pro X."
 
-#: database-content.py:440
+#: database-content.py:441
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications. \n"
@@ -1380,7 +1389,7 @@ msgstr ""
 "Zašlete prosím svůj překlad přes <a href=\"http://www.transifex.net/projects/"
 "p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">platformu Transifex</a>."
 
-#: database-content.py:443
+#: database-content.py:444
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
@@ -1390,11 +1399,11 @@ msgstr ""
 "www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-"
 "info-pot_0/\">platformu Transifex</a>."
 
-#: database-content.py:444
+#: database-content.py:445
 msgid "A photo manager for GNOME"
 msgstr "Správce fotografií pro GNOME"
 
-#: database-content.py:445
+#: database-content.py:446
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1402,11 +1411,11 @@ msgstr ""
 "Jedná se o klon oficiální verze system-tools-backends z úložiště freedesktop."
 "org."
 
-#: database-content.py:446
+#: database-content.py:447
 msgid "GNOME Teletext viewer"
 msgstr "Prohlížení teletextu v GNOME"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
@@ -1416,16 +1425,16 @@ msgstr ""
 "Více viz <a href=\"http://live.gnome.org/VideoSubtitles\">stránka o "
 "titulcích</a>."
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "A VNC client for GNOME"
 msgstr "Klient VNC pro GNOME"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
-#: database-content.py:451
+#: database-content.py:452
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1437,67 +1446,67 @@ msgstr ""
 "translationproject.org/domain/xdg-user-dirs.html\">překladová stránka xdg-"
 "user-dirs v rámci Translation Project</a>."
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (vývojové)"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilní)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (zastaralé)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (zastaralé)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (zastaralé)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (zastaralé)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (zastaralé)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (zastaralé)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (zastaralé)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "External Dependencies (GNOME)"
 msgstr "Externí závislosti (GNOME)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "Obsolete GNOME Applications"
 msgstr "Zastaralé aplikace GNOME"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "GNOME-Office Productivity Applications"
 msgstr "Kancelářské aplikace GNOME"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME Infrastructure"
 msgstr "Infrastruktura GNOME"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GIMP and Friends"
 msgstr "GIMP a spol."
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "Extra GNOME Applications"
 msgstr "Další aplikace GNOME"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
@@ -2107,7 +2116,7 @@ msgstr ""
 #: templates/base.html:98
 #, python-format
 msgid "Hosted by %(link)s."
-msgstr "Hosting u %(link)s."
+msgstr "Hostováno u %(link)s."
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
@@ -2840,7 +2849,7 @@ msgstr "Kroky"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:848
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:852
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Zálohované kroky (%(human_level)s série záloh)"
