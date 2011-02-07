@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-28 18:36+0000\n"
-"PO-Revision-Date: 2011-01-29 12:15+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"POT-Creation-Date: 2011-02-01 14:11+0000\n"
+"PO-Revision-Date: 2011-02-03 08:48+0100\n"
+"Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -1367,47 +1367,51 @@ msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end
 msgstr "Paket GNOME Video Arcade je vmesniški posnemovalnik MAME (Multiple Arcade Machine Emulator) GNOME okolja."
 
 #: database-content.py:427
+msgid "To ease localization, gallery of GNOME Video Effects has been set up here: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
+msgstr "Za pomoč pri krajevnem prilagajanju programa, je na voljo spletna galerija video učinkov programa na naslovu: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
+
+#: database-content.py:428
 msgid "A note taking application"
 msgstr "Program za pisanje sporočilc"
 
-#: database-content.py:428
+#: database-content.py:429
 msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
 msgstr "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
 
-#: database-content.py:429
 #: database-content.py:430
 #: database-content.py:431
 #: database-content.py:432
 #: database-content.py:433
-#: database-content.py:452
+#: database-content.py:434
+#: database-content.py:453
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:434
+#: database-content.py:435
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoteki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
-#: database-content.py:435
+#: database-content.py:436
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "Paket moserial je na osnovi gtk postavljen serijski terminal za namizje GNOME. Napisan je v jeziku Vala."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid "Gnome Parental Control"
 msgstr "GNOME starševski nadzor"
 
-#: database-content.py:437
+#: database-content.py:438
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "Za objavo prevodov, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">ustvarite novo poročilo o hrošču za paket NetworkManager</a>  na spletnih straneh GNOME Bugzilla. K poročilu priložite tudi datoteko prevoda."
 
-#: database-content.py:438
+#: database-content.py:439
 msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
 msgstr "PackageKit je sistem nameščanja paketov, ki storitev poenostavi. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex</a>."
 
-#: database-content.py:439
+#: database-content.py:440
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je DTP program za X okolje."
 
-#: database-content.py:440
+#: database-content.py:441
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
 "Please submit your translation through the <a href=\"\n"
@@ -1417,23 +1421,23 @@ msgstr ""
 "Modul ni privzeto GNOME modul. Prevode lahko pošljete preko  okolja <a href=\"\n"
 "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex</a>."
 
-#: database-content.py:443
+#: database-content.py:444
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex</a>."
 
-#: database-content.py:444
+#: database-content.py:445
 msgid "A photo manager for GNOME"
 msgstr "Upravljalnik fotografij za GNOME namizje"
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Paket je predelana različica uradne različice system-tools-backends iz odložišča freedesktop.org."
 
-#: database-content.py:446
+#: database-content.py:447
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Teletekst pregledovalnik"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1441,79 +1445,79 @@ msgstr ""
 "Prevodi podnapisov izbranih GNOME posnetkov.\n"
 "Več na <a href=\"http://live.gnome.org/VideoSubtitles\">Podnapisi video posnetkov</a>."
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "A VNC client for GNOME"
 msgstr "VNC odjemalec za GNOME"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
-#: database-content.py:451
+#: database-content.py:452
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (razvojna veja)"
 
-#: database-content.py:454
+#: database-content.py:455
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilna različica)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (stara stabilna različica)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli programi GNOME"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
@@ -3004,51 +3008,39 @@ msgstr "Najnovejša POT datoteka"
 
 #~ msgid "GNOME 2.16 (old stable)"
 #~ msgstr "GNOME 2.16 (stara stabilna različica)"
-
 #~ msgid "GNOME 2.14 (old stable)"
 #~ msgstr "GNOME 2.14 (stara stabilna različica)"
-
 #~ msgid "GNOME 2.30 (stable)"
 #~ msgstr "GNOME 2.30 (stabilna različica)"
-
 #~ msgid "Window List Applet Manual"
 #~ msgstr "priročnik apleta seznama oken"
-
 #~ msgid "Workspace Switcher Applet Manual"
 #~ msgstr "priročnik preklopnika delovnih površin"
-
 #~ msgid ""
 #~ "This module is not part of the GNOME git repository. Please check the "
 #~ "module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula "
 #~ "za podrobnosti, kam poslati prevode."
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME git repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME git odložišča. Preverite stran vsakega "
 #~ "modula posebej za podrobnosti o objavljanju prevodov."
-
 #~ msgid "Maintains:"
 #~ msgstr "Vzdrževalec:"
-
 #~ msgid "Working on"
 #~ msgstr "Delo na"
-
 #~ msgid "Member of teams"
 #~ msgstr "Član skupin"
-
 #~ msgid "F-Spot Manual"
 #~ msgstr "priročnik F-Spot"
-
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the "
 #~ "module maintainer."
 #~ msgstr ""
 #~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
-
 #~ msgid ""
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
@@ -3056,42 +3048,33 @@ msgstr "Najnovejša POT datoteka"
 #~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
 #~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
 #~ "veja&quot;."
-
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
 #~ "them (Bugzilla details, web page, maintainer information,...)."
 #~ msgstr ""
 #~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
 #~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
-
 #~ msgid "Report bugs to Bugzilla"
 #~ msgstr "Poročanje o hroščih preko Bugzillle"
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME SVN odložišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
-
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
-
 #~ msgid ""
 #~ "Last actions made by the %(lang)s team of the GNOME translation project"
 #~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
-
 #~ msgid "Action History"
 #~ msgstr "Zgodovina dejanj"
-
 #~ msgid "Backup the actions"
 #~ msgstr "Napravi varnostno kopijo dejanja"
-
 #~ msgid "The Gimp Manual"
 #~ msgstr "priročnik Gimp"
-
 #~ msgid "Git account:"
 #~ msgstr "Git račun:"
-
 #~ msgid "Browse SVN"
 #~ msgstr "Brskanje po SVN"
+
