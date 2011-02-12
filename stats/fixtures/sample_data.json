@@ -1,6 +1,6 @@
 [
  {
-  "pk": 1, 
+  "pk": 2, 
   "model": "auth.user", 
   "fields": {
    "username": "bob", 
@@ -18,7 +18,7 @@
   }
  }, 
  {
-  "pk": 2, 
+  "pk": 3, 
   "model": "auth.user", 
   "fields": {
    "username": "coord", 
@@ -36,7 +36,7 @@
   }
  }, 
  {
-  "pk": 3, 
+  "pk": 4, 
   "model": "auth.user", 
   "fields": {
    "username": "alessio", 
@@ -54,21 +54,7 @@
   }
  }, 
  {
-  "pk": 3, 
-  "model": "people.person", 
-  "fields": {
-   "bugzilla_account": null, 
-   "groups": [], 
-   "image": null, 
-   "activation_key": null, 
-   "irc_nick": null, 
-   "svn_account": null, 
-   "webpage_url": null, 
-   "user_permissions": []
-  }
- }, 
- {
-  "pk": 1, 
+  "pk": 2, 
   "model": "people.person", 
   "fields": {
    "bugzilla_account": null, 
@@ -82,7 +68,7 @@
   }
  }, 
  {
-  "pk": 2, 
+  "pk": 3, 
   "model": "people.person", 
   "fields": {
    "bugzilla_account": null, 
@@ -91,6 +77,20 @@
    "activation_key": null, 
    "irc_nick": null, 
    "svn_account": "coord_fr", 
+   "webpage_url": null, 
+   "user_permissions": []
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "people.person", 
+  "fields": {
+   "bugzilla_account": null, 
+   "groups": [], 
+   "image": null, 
+   "activation_key": null, 
+   "irc_nick": null, 
+   "svn_account": null, 
    "webpage_url": null, 
    "user_permissions": []
   }
@@ -155,7 +155,8 @@
   "pk": 1, 
   "model": "teams.role", 
   "fields": {
-   "person": 1, 
+   "is_active": true, 
+   "person": 2, 
    "role": "translator", 
    "team": 1
   }
@@ -164,7 +165,8 @@
   "pk": 2, 
   "model": "teams.role", 
   "fields": {
-   "person": 2, 
+   "is_active": true, 
+   "person": 3, 
    "role": "coordinator", 
    "team": 1
   }
@@ -173,7 +175,8 @@
   "pk": 3, 
   "model": "teams.role", 
   "fields": {
-   "person": 3, 
+   "is_active": true, 
+   "person": 4, 
    "role": "reviewer", 
    "team": 2
   }

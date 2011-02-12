@@ -40,7 +40,7 @@ def index(request):
         translator_credits = translator_credits.split('\n')
 
     curlang = Language.get_language_from_ianacode(request.LANGUAGE_CODE)
-    if curlang.locale == 'en':
+    if curlang and curlang.locale == 'en':
         curlang = None
 
     context = {

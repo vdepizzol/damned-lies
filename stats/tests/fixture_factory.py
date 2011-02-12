@@ -37,6 +37,7 @@ class FixtureFactory(TestCase):
         l_it.save()
 
         # Creating models: Persons/Roles
+        p0 = Person.objects.create(username='admin1') # Fake person (deleted below), just not to use pk=1 for user
         p1 = Person(first_name='Robert', last_name='Translator',
             email='bob@example.org', username='bob', irc_nick='bobby',
             svn_account='bob1')
@@ -56,6 +57,7 @@ class FixtureFactory(TestCase):
         p1.set_password('alessio')
         r3 = Role(team=t2, person=p3, role='reviewer')
         r3.save()
+        p0.delete()
 
         # Creating models: Modules
         gnome_hello = Module(name="gnome-hello", vcs_type="git",
