@@ -53,6 +53,9 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 USE_L10N = True
+LOCALE_PATHS = (
+    os.path.join(PROJECT_PATH, 'locale'),
+)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
