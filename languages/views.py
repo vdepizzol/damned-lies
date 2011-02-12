@@ -185,4 +185,4 @@ def clean_tar_files():
         return
     for tarfile in os.listdir(tar_directory):
         if not tarfile.endswith("%s.tar.gz" % date.today()):
-            os.remove(tarfile)
+            os.remove(os.path.join(tar_directory, tarfile))

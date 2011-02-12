@@ -7,12 +7,13 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 STATIC_SERVE = True
 USE_DEBUG_TOOLBAR = False
+USE_DJANGO_OPENID = False
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+PROJECT_NAME = PROJECT_PATH.split('/')[-1]
 
 ADMINS = (
-    ('Claude Paroz', 'claude@2xlibre.net'),
-    ('Stephane Raimbault', 'stephane.raimbault@gmail.com'),
+    ('Your Name', 'your_address@example.org'),
 )
 
 MANAGERS = ADMINS
@@ -101,8 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.transaction.TransactionMiddleware',
 )
 
-# Make sure to change 'damned-lies' to match your site's name
-ROOT_URLCONF = 'damned-lies.urls'
+ROOT_URLCONF = '%s.urls' % PROJECT_NAME
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
@@ -117,7 +117,6 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.contrib.markup',
     'django.contrib.messages',
-#    'django_openid',
     'south',
     'common',
     'languages',
@@ -132,6 +131,14 @@ INTERNAL_IPS=('127.0.0.1',)
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
 
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
 if USE_DEBUG_TOOLBAR:
     MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     INSTALLED_APPS += ('debug_toolbar',)
+
+if USE_DJANGO_OPENID:
+    INSTALLED_APPS += ('django_openid',)

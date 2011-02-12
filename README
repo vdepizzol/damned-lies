@@ -35,7 +35,7 @@ Requirements
 
 7 - [Optional] Django Debug Toolbar
     git clone git://github.com/dcramer/django-debug-toolbar.git
-    Define USE_DEBUG_TOOLBAR to True in settings.py to use it.
+    Define USE_DEBUG_TOOLBAR to True in local_settings.py to use it.
 
 8 - [Optional] python-openid and django-openid (see OpenID support
     below).
@@ -45,11 +45,17 @@ Requirements
 Installation
 ============
 
-1 - Rename settings_sample.py to settings.py and review settings
+1 - Create a local_settings.py and overwrite settings to match your requirements
+    and your configuration layouts. Typical settings to customize include:
+    DATABASES, DEBUG, TEMPLATE_DEBUG, STATIC_SERVE, ADMINS, MANAGERS, SCRATCHDIR and
+    various EMAIL settings.
     (please refer to Database configuration below for more
     informations).
     SCRATCHDIR should point to an existing directory, writable by
     the web application user.
+    Note also that if you don't want to really send mail when testing the app, you
+    can set the EMAIL_BACKEND setting as follows to redirect mail to the console:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 2 - Run './manage.py syncdb' then:
     ./manage.py migrate
@@ -79,8 +85,8 @@ package:
 
 git clone git://github.com/simonw/django-openid.git
 
-Put it somewhere in your Python path and uncomment 'django_openid' in
-your settings.py INSTALLED_APPS.
+Put it somewhere in your Python path and set USE_DJANGO_OPENID to True in your
+local_settings.py.
 
 This package is dependant on the python-openid package to be installed
 on your system. Run 'python manage.py syncdb' and here we go!
@@ -106,7 +112,7 @@ Create a database in UTF8, either with default-character-set = utf8
 under [mysqld] section in the my.cnf file or with an explicit 'create
 database bla charset=utf8;'
 
-In settings.py:
+In local_settings.py:
 
 DATABASES = {
     'default' {
