@@ -18,6 +18,7 @@ class EditMemberRoleForm(forms.Form):
     def __init__(self, roles, *args, **kwargs):
         super(EditMemberRoleForm, self).__init__(*args, **kwargs)
         choices = list(filter(lambda x:x[0]!='coordinator', ROLE_CHOICES))
+        choices.append(('inactivate', _("Mark as Inactive")))
         choices.append(('remove', _("Remove From Team")))
         for role in roles:
             self.fields[str(role.pk)] = forms.ChoiceField(

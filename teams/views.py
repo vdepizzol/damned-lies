@@ -98,6 +98,9 @@ def team(request, team_slug):
                         role = Role.objects.get(pk=key)
                         if form_value == "remove":
                             role.delete()
+                        elif form_value == "inactivate":
+                            role.is_active = False
+                            role.save()
                         else:
                             role.role = form_value
                             role.save()
