@@ -6,14 +6,14 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Antón Méixome <meixome@certima.net>, 2009,2010.
 # Fran Dieguez <frandieguez@ubuntu.com>, 2010.
-# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-08 11:24+0000\n"
-"PO-Revision-Date: 2010-11-15 10:49+0100\n"
+"POT-Creation-Date: 2011-02-10 16:59+0000\n"
+"PO-Revision-Date: 2011-02-13 15:38+0100\n"
 "Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
 "Language-Team: Galician <gnome-gl-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -771,8 +771,9 @@ msgid "generic filter"
 msgstr "filtro xenérico"
 
 #: database-content.py:307
-msgid "light-effects filter"
-msgstr "filtro de efectos de luz"
+#| msgid "light-effects filter"
+msgid "light-and-shadow filter"
+msgstr "filtro «Luces e sombras»"
 
 #: database-content.py:308
 msgid "map filter"
@@ -814,7 +815,7 @@ msgstr "Manual do glChess"
 msgid "Five or More Manual"
 msgstr "Manual do Cinco ou máis"
 
-#: database-content.py:318 database-content.py:357
+#: database-content.py:318
 msgid "glossary"
 msgstr "glosario"
 
@@ -953,74 +954,82 @@ msgstr "Notas da versión"
 msgid "Sound Juicer Manual"
 msgstr "Manual do Sound Juicer"
 
-#: database-content.py:352 database-content.py:353 database-content.py:389
-#: database-content.py:390
+#: database-content.py:352 database-content.py:394 database-content.py:395
 msgid "User Guide"
 msgstr "Guía do usuario"
 
-#: database-content.py:354
+#: database-content.py:353
 msgid "Human Interface Guidelines"
 msgstr "Guías de interface de humanas"
 
-#: database-content.py:355
+#: database-content.py:354
 msgid "Iagno Manual"
 msgstr "Manual do Iagno"
 
-#: database-content.py:356
+#: database-content.py:355
 msgid "Integration Guide"
 msgstr "Guía de introdución"
 
-#: database-content.py:358
+#: database-content.py:356
+msgid "introduction"
+msgstr "introdución"
+
+#: database-content.py:357
 msgid "Invest Applet Manual"
 msgstr "Inverter o manual de miniaplicativo"
 
-#: database-content.py:359
+#: database-content.py:358
 msgid "Lights Off Manual"
 msgstr "Manual de Lights Off"
 
-#: database-content.py:360
+#: database-content.py:359
 msgid "Log Viewer Manual"
 msgstr "Manual do visor de rexistros"
 
-#: database-content.py:361
+#: database-content.py:360
 msgid "GNOME Mahjongg Manual"
 msgstr "Manual do Mahjongg"
 
-#: database-content.py:362
+#: database-content.py:361
 msgid "Mallard Documentation Guide"
 msgstr "Guía de documentación de Mallard"
 
-#: database-content.py:363
+#: database-content.py:362
 msgid "menus"
 msgstr "menús"
 
-#: database-content.py:364
+#: database-content.py:363
 msgid "colors menus"
 msgstr "menús das cores"
 
-#: database-content.py:365
+#: database-content.py:364
 msgid "colors auto menu"
 msgstr "menú de autocores"
 
-#: database-content.py:366
+#: database-content.py:365
 msgid "colors component menu"
 msgstr "menú dos compoñentes das cores"
 
-#: database-content.py:367
+#: database-content.py:366
 msgid "colors info menu"
 msgstr "menú da información das cores"
 
-#: database-content.py:368
+#: database-content.py:367
 msgid "colors map menu"
 msgstr "menú do mapa de cores"
 
-#: database-content.py:369
+#: database-content.py:368
 msgid "edit menu"
 msgstr "menú editar"
 
-#: database-content.py:370
+#: database-content.py:369
 msgid "file menu"
 msgstr "menú ficheiro"
+
+#: database-content.py:370
+#| msgid "file menu"
+msgid "filters menu"
+msgstr "menú «Filtros»"
 
 #: database-content.py:371
 msgid "help menu"
@@ -1071,136 +1080,176 @@ msgid "Same GNOME Manual"
 msgstr "Manual do Same GNOME"
 
 #: database-content.py:383
+msgid "Website"
+msgstr "Sitio web"
+
+#: database-content.py:384
 msgid "Sticky Notes Manual"
 msgstr "Manual das Notas adhesivas"
 
-#: database-content.py:384
+#: database-content.py:385
 msgid "Swell-Foop Manual"
 msgstr "Manual da Swell-Foop"
 
-#: database-content.py:385
+#: database-content.py:386
 msgid "System Administration Guide"
 msgstr "Guía de administración do sistema"
 
-#: database-content.py:386
+#: database-content.py:387
 msgid "toolbox"
 msgstr "caixa de ferramentas"
 
-#: database-content.py:387
+#: database-content.py:388
+#| msgid "toolbox"
+msgid "toolbox (color)"
+msgstr "caixa de ferramentas (color)"
+
+#: database-content.py:389
+#| msgid "toolbox"
+msgid "toolbox (paint)"
+msgstr "caixa de ferramentas (debuxo)"
+
+#: database-content.py:390
+msgid "toolbox (selection)"
+msgstr "caixa de ferramentas (selección)"
+
+#: database-content.py:391
+msgid "toolbox (transform)"
+msgstr "caixa de ferramentas (transformación)"
+
+#: database-content.py:392
 msgid "Panel Trash Manual"
 msgstr "Manual do Lixo do panel"
 
-#: database-content.py:388
+#: database-content.py:393
 msgid "tutorial"
 msgstr "titorial"
 
-#: database-content.py:391
+#: database-content.py:396
 msgid "using gimp"
 msgstr "usando gimp"
 
-#: database-content.py:392
+#: database-content.py:397
 msgid "preferences"
 msgstr "preferenzas"
 
-#: database-content.py:393
+#: database-content.py:398
 msgid "Banshee Music Player"
 msgstr "Reprodutor de música Banshee"
 
-#: database-content.py:394
+#: database-content.py:399
 msgid "Beagle Desktop Search"
 msgstr "Buscas de escritorio Beagle"
 
-#: database-content.py:395 templates/base.html:35
+#: database-content.py:400 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
 
-#: database-content.py:396
+#: database-content.py:401
 msgid "Deskbar Applet"
 msgstr "Barra de miniaplicativos"
 
-#: database-content.py:397
+#: database-content.py:402
 msgid "Eye of GNOME"
 msgstr "Ollo de GNOME"
 
-#: database-content.py:398
+#: database-content.py:403
 msgid "Epiphany Web Browser"
 msgstr "Navegador web Epiphany"
 
-#: database-content.py:399
+#: database-content.py:404
 msgid "Evince Document Viewer"
 msgstr "Visualizador de documentos Evince"
 
-#: database-content.py:400
+#: database-content.py:405
 msgid "GIMP User Manual"
 msgstr "Manual de usuario de GIMP"
 
-#: database-content.py:401
+#: database-content.py:406
 msgid "GNOME Applets"
 msgstr "Miniaplicativos de GNOME"
 
-#: database-content.py:402
+#: database-content.py:407
 msgid "GNOME 2 Development Documentation"
 msgstr "Documentación de desenvolvemento de GNOME 2"
 
-#: database-content.py:403
+#: database-content.py:408
 msgid "Gnome Specimen"
 msgstr "Espécime GNOME"
 
-#: database-content.py:404
+#: database-content.py:409
 msgid "GNOME 2 User Documentation"
 msgstr "Documentación de usuario de GNOME 2"
 
-#: database-content.py:405
+#: database-content.py:410
 msgid "GNOME Web Photo"
 msgstr "Foto web de GNOME"
 
-#: database-content.py:406
+#: database-content.py:411
+#| msgid "GNOME Library Web site"
+msgid "GNOME 3 Website"
+msgstr "Página web de GNOME 3"
+
+#: database-content.py:412
 msgid "GNOME Library Web site"
 msgstr "Páxina web da biblioteca de GNOME"
 
-#: database-content.py:407
+#: database-content.py:413
 msgid "GNOME Release Notes"
 msgstr "Notas de versión de GNOME"
 
-#: database-content.py:408
+#: database-content.py:414
 msgid "Rhythmbox Music Player"
 msgstr "Reprodutor de música Rhythmbox"
 
-#: database-content.py:409
+#: database-content.py:415
 msgid "Shared MIME Info"
 msgstr "Información MIME compartida"
 
-#: database-content.py:410
+#: database-content.py:416
 msgid "Video subtitles translations for selected GNOME videos"
 msgstr ""
 "Traducións de subtítulos de vídeos para os vídeos seleccionados de GNOME"
 
-#: database-content.py:411
+#: database-content.py:417
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:412
+#: database-content.py:418
 msgid "Email client for netbooks"
 msgstr "Cliente de correo para netbooks"
 
-#: database-content.py:413
+#: database-content.py:419
 #| msgid ""
-#| "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
-#| "module. Please submit your translation through the <a href=\"http://www."
-#| "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+#| "Avahi is a system which facilitates service discovery on a local network "
+#| "via the mDNS/DNS-SD protocol suite. Please submit your translation "
+#| "through the <a href=\"http://www.transifex.net/projects/p/avahi/c/master-"
+#| "tx/\">Transifex platform</a>."
 msgid ""
 "Avahi is a system which facilitates service discovery on a local network via "
 "the mDNS/DNS-SD protocol suite. Please submit your translation through the "
-"<a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/\">Transifex "
-"platform</a>."
+"<a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-"
+"avahi-pot/\">Transifex platform</a>."
 msgstr ""
 "Avahi é un sistema que facilita o descubrimento de servizos nunha rede local "
 "a través dos protocolos mDNS/DNS-SD. Por favor, envíe a súa tradución a "
-"través da <a href=\"http://www.transifex.net/projects/p/avahi/c/master-tx/"
-"\">plataforma Transifex</a>."
+"través da <a href=\"http://www.transifex.net/projects/p/avahi/resource/"
+"master-tx-po-avahi-pot/\">plataforma Transifex</a>."
 
-#: database-content.py:414
+#: database-content.py:420
+msgid ""
+"There is a glossary that will help translators in Chronojump localization: "
+"<a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/"
+"chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
+"chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
+msgstr ""
+"Existe un glosario que pode axudar aos tradutores na localización de "
+"Chronojump: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/"
+"chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
+"chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
+
+#: database-content.py:422
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -1208,47 +1257,55 @@ msgstr ""
 "As traducións remitidas son actualizadas manualmente en l10n.gnome.org de "
 "tempo en tempo. Teña paciencia :-)"
 
-#: database-content.py:415
+#: database-content.py:423
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince é un visor documental para múltiples formatos de documentos."
 
-#: database-content.py:416
+#: database-content.py:424
+#| msgid ""
+#| "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+#| "module. Please submit your translation through the <a href=\"http://www."
+#| "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
 msgid ""
 "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 "module. Please submit your translation through the <a href=\"http://www."
-"transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+"transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/"
+"\">Transifex platform</a>."
 msgstr ""
 "Servizo de D-Bus para acceder a lectores de pegadas dixitais. Non é un "
 "módulo específico de GNOME. Envíe a súa tradución a través de <a href="
-"\"http://www.transifex.net/projects/p/fprintd/c/fprintd/\">a plataforma "
-"Transifex</a>."
+"\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-"
+"pot/\">a plataforma Transifex</a>."
 
-#: database-content.py:417
+#: database-content.py:425
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
 msgstr ""
 "Desde GNOME 2.23, GAIL está integrado en GTK+. Non remita xa nada na troncal."
 
-#: database-content.py:418
+#: database-content.py:426
+#| msgid ""
+#| "The master branch is currently unmaintained. For other localisation needs "
+#| "of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons"
+#| "\">http://gcompris.net/wiki/Translation_addons</a>."
 msgid ""
-"The master branch is currently unmaintained. For other localisation needs of "
-"GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons"
-"\">http://gcompris.net/wiki/Translation_addons</a>."
+"For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/"
+"wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr ""
-"Actualmente non se mantén a rama «master». Para outras necesidades de "
-"localización de GCompris consulte <a href=\"http://gcompris.net/wiki/"
-"Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
+"Para outras necesidades de localización de GCompris consulte <a href="
+"\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/"
+"Translation_addons</a>."
 
-#: database-content.py:419
+#: database-content.py:427
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Interface gráfica para o tracker do cartafol git"
 
-#: database-content.py:420
+#: database-content.py:428
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Un conversor multimedia para o Escritorio GNOME"
 
-#: database-content.py:421
+#: database-content.py:429
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1256,7 +1313,7 @@ msgstr ""
 "gnome-disk-utility fornece bibliotecas e aplicativos para conectar con "
 "dispositivos de almacenamento."
 
-#: database-content.py:422
+#: database-content.py:430
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1264,11 +1321,21 @@ msgstr ""
 "GNOME Video Arcade é unha interface de MAME (Multiple Arcade Machine "
 "Emulator) para GNOME."
 
-#: database-content.py:423
+#: database-content.py:431
+msgid ""
+"To ease localization, gallery of GNOME Video Effects has been set up here: "
+"<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
+"gnome.org/GnomeVideoEffects/Effects</a>."
+msgstr ""
+"Para facilitar a localización, a galería de GNOME Video Effects configurouse "
+"aquí: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://"
+"live.gnome.org/GnomeVideoEffects/Effects</a>."
+
+#: database-content.py:432
 msgid "A note taking application"
 msgstr "Un aplicativo para tomar notas"
 
-#: database-content.py:424
+#: database-content.py:433
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -1278,8 +1345,16 @@ msgstr ""
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">o Wiki de GNUCash</"
 "a> para ver a onde enviar as traducións."
 
-#: database-content.py:425 database-content.py:426 database-content.py:427
-#: database-content.py:428 database-content.py:429 database-content.py:448
+#: database-content.py:434
+msgid ""
+"This a low-priority module to translate, as there are currently no user "
+"interface that show those strings."
+msgstr ""
+"A prioridade de tradución deste módulo é baixa, xa que actualmente non hai "
+"ningunha interface de usuario que mostre as cadeas."
+
+#: database-content.py:435 database-content.py:436 database-content.py:437
+#: database-content.py:438 database-content.py:439 database-content.py:458
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1288,7 +1363,7 @@ msgstr ""
 "por medio do <a href=\"http://translationproject.org\">Translation Project</"
 "a>."
 
-#: database-content.py:430
+#: database-content.py:440
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1300,7 +1375,7 @@ msgstr ""
 "ambos ficheiros ao SVN, mesmo que un deles conteña 0 traducións, para evitar "
 "que GTK+ rompa en /po-properties."
 
-#: database-content.py:431
+#: database-content.py:441
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1309,11 +1384,11 @@ msgstr ""
 "escritorio GNOME. Está escrito en Vala, para aproveitar as súas bondades "
 "extra."
 
-#: database-content.py:432
+#: database-content.py:442
 msgid "Gnome Parental Control"
 msgstr "Control parental de GNOME"
 
-#: database-content.py:433
+#: database-content.py:443
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1324,59 +1399,68 @@ msgstr ""
 "o NetworkManager en GNOME Bugzilla</a>. Logo, anexe o seu ficheiro de "
 "tradución."
 
-#: database-content.py:434
+#: database-content.py:444
 #| msgid ""
-#| "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
-#| "module. Please submit your translation through the <a href=\"http://www."
-#| "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
+#| "PackageKit is a system designed to make installing and updating software "
+#| "on your computer easier. This is not a GNOME-specific module. Please "
+#| "submit your translation through the <a href=\"https://translate."
+#| "fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's "
+#| "Transifex platform</a>."
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier. This is not a GNOME-specific module. Please submit "
-"your translation through the <a href=\"https://translate.fedoraproject.org/"
-"projects/p/packagekit/c/master/\">Fedora project's Transifex platform</a>."
+"your translation through the <a href=\"http://www.transifex.net/projects/p/"
+"packagekit/resource/master/\">Transifex platform</a>."
 msgstr ""
 "PackageKit é un sistema deseñado para facer sinxela a instalación e "
 "actualización de software no seu equipo. Este non é un módulo específico de "
-"GNOME. Por favor, envíe a súa tradución a través da <a href=\"https://"
-"translate.fedoraproject.org/projects/p/packagekit/c/master/\">plataforma "
-"Transifex do proxecto Fedora</a>."
+"GNOME. Por favor, envíe a súa tradución a través da <a href=\"http://www."
+"transifex.net/projects/p/packagekit/resource/master/\">plataforma Transifex "
+"do proxecto Fedora</a>."
 
-#: database-content.py:435
+#: database-content.py:445
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout é un aplicativo DTP para X."
 
-#: database-content.py:436
+#: database-content.py:446
+#| msgid ""
+#| "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
+#| "for your sound applications. \n"
+#| "Please submit your translation through the <a href=\"\n"
+#| "http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex "
+#| "platform</a>."
+msgid ""
+"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
+"your sound applications. \n"
+"Please submit your translation through the <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
+"pulseaudio-pot/\">Transifex platform</a>."
+msgstr ""
+"PulseAudio é un sistema de son para sistemas operativos POSIX; é un proxy "
+"para os seus aplicativos de son.\n"
+"Por favor, envíe a súa tradución a través da <a href=\"http://www.transifex."
+"net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">plataforma "
+"Transifex</a>."
+
+#: database-content.py:449
 #| msgid ""
 #| "This is not a GNOME-specific module. Please submit your translation "
 #| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
 #| "info/c/default/\">Transifex platform</a>."
 msgid ""
-"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
-"your sound applications. \n"
-"Please submit your translation through the <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/c/master-tx/\">Transifex "
-"platform</a>."
-msgstr ""
-"PulseAudio é un sistema de son para sistemas operativos POSIX; é un proxy "
-"para os seus aplicativos de son.\n"
-"Por favor, envíe a súa tradución a través da <a href=\"http://www.transifex."
-"net/projects/p/pulseaudio/c/master-tx/\">plataforma Transifex</a>."
-
-#: database-content.py:439
-msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
-"the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/c/default/"
-"\">Transifex platform</a>."
+"the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
+"efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
 msgstr ""
 "Este non é un módulo específico de GNOME. Por favor envíe a súa tradución "
 "por medio do <a href=\"http://www.transifex.net/projects/p/shared-mime-info/"
-"c/default/\">Translation Project</a>."
+"resource/efault-po-shared-mime-info-pot_0/\">Translation Project</a>."
 
-#: database-content.py:440
+#: database-content.py:450
 msgid "A photo manager for GNOME"
 msgstr "Xestor de fotos para GNOME"
 
-#: database-content.py:441
+#: database-content.py:451
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1384,11 +1468,11 @@ msgstr ""
 "É un clon da versión oficial de system-tools-backends do repositorio "
 "freedesktop.org."
 
-#: database-content.py:442
+#: database-content.py:452
 msgid "GNOME Teletext viewer"
 msgstr "Visor de teletexto GNOME"
 
-#: database-content.py:443
+#: database-content.py:453
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
@@ -1398,17 +1482,17 @@ msgstr ""
 "Consulte <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</"
 "a> para obter máis información."
 
-#: database-content.py:445
+#: database-content.py:455
 msgid "A VNC client for GNOME"
 msgstr "Cliente VNC para o GNOME"
 
-#: database-content.py:446
+#: database-content.py:456
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "As traducións debería ser enviadas como informes de erro (vexa a ligazón "
 "seguinte)."
 
-#: database-content.py:447
+#: database-content.py:457
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1420,82 +1504,71 @@ msgstr ""
 "Véxasetameń <a href=\"http://translationproject.org/domain/xdg-user-dirs.html"
 "\">a páxina de tradución para xdg-user-dirs no Translation Project</a>."
 
-#: database-content.py:449
-#| msgid "GNOME 2.32 (development)"
+#: database-content.py:459
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (desenvolvemento)"
 
-#: database-content.py:450
-#| msgid "GNOME 2.30 (stable)"
+#: database-content.py:460
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (estábel)"
 
-#: database-content.py:451
-#| msgid "GNOME 2.20 (old stable)"
+#: database-content.py:461
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (estábel antiga)"
 
-#: database-content.py:452
+#: database-content.py:462
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (estábel antiga)"
 
-#: database-content.py:453
+#: database-content.py:463
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (estábel antiga)"
 
-#: database-content.py:454
+#: database-content.py:464
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (estábel antiga)"
 
-#: database-content.py:455
+#: database-content.py:465
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (estábel antiga)"
 
-#: database-content.py:456
+#: database-content.py:466
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (estábel antiga)"
 
-#: database-content.py:457
+#: database-content.py:467
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (estábel antiga)"
 
-#: database-content.py:458
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (estábel antiga)"
-
-#: database-content.py:459
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (estábel antiga)"
-
-#: database-content.py:460
+#: database-content.py:468
 msgid "External Dependencies (GNOME)"
 msgstr "Depencias externas (GNOME)"
 
-#: database-content.py:461
+#: database-content.py:469
 msgid "Obsolete GNOME Applications"
 msgstr "Aplicativos obsoletos de GNOME"
 
-#: database-content.py:462
+#: database-content.py:470
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office aplicativos de produtividade"
 
-#: database-content.py:463
+#: database-content.py:471
 msgid "GNOME Infrastructure"
 msgstr "Infraestrutura de GNOME"
 
-#: database-content.py:464
+#: database-content.py:472
 msgid "GIMP and Friends"
 msgstr "Gimp e amigos"
 
-#: database-content.py:465
+#: database-content.py:473
 msgid "Extra GNOME Applications"
 msgstr "Aplicativos extra de GNOME"
 
-#: database-content.py:466
+#: database-content.py:474
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non GNOME)"
 
-#: settings.py:75 settings_sample.py:81
+#: settings.py:77 settings_sample.py:71
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1503,7 +1576,7 @@ msgstr ""
 "Este módulo non forma parte do repositorio Git de GNOME. Comprobe a páxina "
 "web do módulo para ver onde enviar as traducións."
 
-#: common/views.py:35
+#: common/views.py:36
 msgid "translator-credits"
 msgstr ""
 "Fran Diéguez <frandieguez@ubuntu.com>, 2009, 2010;\n"
@@ -1518,7 +1591,7 @@ msgstr "Acaba de cerrar a sesión."
 msgid "You have been successfully logged in."
 msgstr "Acaba de iniciar sesión correctamente."
 
-#: common/views.py:71
+#: common/views.py:70
 #, python-format
 msgid ""
 "You have not joined any translation team yet. You can do it from <a href="
@@ -1527,16 +1600,16 @@ msgstr ""
 "Aínda non se uniu a ningún equipo de tradución. Pode facelo desde <a href="
 "\"%(url)s\">o seu perfil</a>."
 
-#: common/views.py:80
+#: common/views.py:79
 msgid "We're sorry, but your account has been disabled."
 msgstr "Desculpe, a súa conta foi desactivada."
 
-#: common/views.py:82
+#: common/views.py:81
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr ""
 "Fallou o inicio de sesión. Verifique o seu nome de usuario e contrasinal."
 
-#: common/views.py:122
+#: common/views.py:119
 msgid "Your account has been activated."
 msgstr "A súa conta acaba de ser activada."
 
@@ -1649,11 +1722,11 @@ msgid ""
 msgstr ""
 "A imaxe é demasiado ancha (%(width)dx%(height)d, o máximo é 100x100 píxeles)"
 
-#: people/forms.py:105
+#: people/forms.py:106
 msgid "The URL you provided is not valid"
 msgstr "O URL que forneceu non é válido"
 
-#: people/forms.py:121
+#: people/forms.py:122
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr "O URL que forneceu semella non parecer unha imaxe válida"
 
@@ -1669,7 +1742,7 @@ msgstr ""
 "URL a un ficheiro de imaxe (.jpg, .png, ...) co seu hackergotchi (máx. "
 "100x100 píxeles)"
 
-#: people/models.py:38 teams/models.py:91
+#: people/models.py:38 teams/models.py:94
 msgid "Web page"
 msgstr "Páxina web"
 
@@ -1682,8 +1755,6 @@ msgid "Bugzilla account"
 msgstr "Conta no Bugzilla"
 
 #: people/models.py:41
-#| msgid ""
-#| "This should be an email address, useful if not equal to 'email' field"
 msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
@@ -1691,50 +1762,60 @@ msgstr ""
 "Isto debería ser un enderezo de correo electrónico, parecido senón igual a "
 "un campo «enderezo de correo electrónico»"
 
-#: people/views.py:87
+#: people/views.py:63
+msgid "Sorry, the form is not valid."
+msgstr "Desculpe, o formulario non é válido."
+
+#: people/views.py:88
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Vostede uniuse correctamente ao equipo '%s'."
 
-#: people/views.py:88
+#: people/views.py:89
 msgid "A new person joined your team"
 msgstr "Unha nova persona uniuse ao seu equipo"
 
-#: people/views.py:89
+#: people/views.py:90
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s acaba de unirse ao grupo de tradución en %(site)s"
 
-#: people/views.py:92
+#: people/views.py:93
 msgid "You are already member of this team."
 msgstr "Vostede xa é membro deste equipo."
 
-#: people/views.py:114
+#: people/views.py:115
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Foi borrado do equipo '%s'."
 
-#: people/views.py:130
+#. Message no i18n'ed, should never happen under normal conditions
+#: people/views.py:118
+#| msgid "You are already member of this team."
+msgid "You are not a member of this team."
+msgstr "Vostede non é membro deste equipo."
+
+#: people/views.py:131
 msgid "Your password has been changed."
 msgstr "Modificouse o seu contrasinal."
 
-#: stats/models.py:227
+#: stats/models.py:242
 msgid "This branch is not linked from any release"
 msgstr "Esta rama non está ligada a ningunha versión"
 
-#: stats/models.py:398
+#: stats/models.py:410
 msgid "Can't generate POT file, using old one."
 msgstr "Non é posíbel xerar o ficheiro POT, usarase un antigo."
 
-#: stats/models.py:400
+#: stats/models.py:412
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Non é posíbel xerar o ficheiro POT, interrómpense as estatísticas."
 
-#: stats/models.py:420
+#: stats/models.py:432
 msgid "Can't copy new POT file to public location."
 msgstr "Non é posíbel copiar o novo ficheiro POT á localización pública."
 
-#: stats/models.py:754
+#: stats/models.py:766
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1745,7 +1826,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:778
+#: stats/models.py:790
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1753,88 +1834,88 @@ msgstr ""
 "A entrada para este idioma non está presente no ficheiro de configuración "
 "%(var)s variábel en %(file)s."
 
-#: stats/models.py:1036
+#: stats/models.py:1048
 msgid "Administration Tools"
 msgstr "Ferramentas de administración"
 
-#: stats/models.py:1037
+#: stats/models.py:1049
 msgid "Development Tools"
 msgstr "Ferramentas de desenvolvemento"
 
-#: stats/models.py:1038
+#: stats/models.py:1050
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:1039
+#: stats/models.py:1051
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desenvolvemento GNOME"
 
-#: stats/models.py:1040
+#: stats/models.py:1052
 msgid "New Module Proposals"
 msgstr "Propostas para un novo módulo"
 
-#: stats/models.py:1119 stats/models.py:1423
+#: stats/models.py:1131 stats/models.py:1435
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1152
+#: stats/models.py:1164
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaxe"
 msgstr[1] "%(count)s mensaxes"
 
-#: stats/models.py:1153
+#: stats/models.py:1165
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado o %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1155 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1167 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "d-m-Y g:i a O"
 
-#: stats/models.py:1158
+#: stats/models.py:1170
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s elemento"
 msgstr[1] "%(count)s elementos"
 
-#: stats/models.py:1159
+#: stats/models.py:1171
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Ficheiro POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1162
+#: stats/models.py:1174
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Ficheiro POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1246
+#: stats/models.py:1258
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Este ficheiro POT non foi xerado co método intltool estándar.."
 
-#: stats/models.py:1247
+#: stats/models.py:1259
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
 msgstr "Este ficheiro POT non foi xerado co método gnome-doc-utils estándar."
 
-#: stats/utils.py:91
+#: stats/utils.py:95
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Producíronse erros ao executar a comprobación 'intltool-update -m'."
 
-#: stats/utils.py:97
+#: stats/utils.py:101
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Faltan algúns ficheiros desde o ficheiro POTFILES.in: %s"
 
-#: stats/utils.py:106
+#: stats/utils.py:110
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1843,21 +1924,21 @@ msgstr ""
 "Os seguintes ficheiros está referenciados en POTFILES.in ou POTFILES.skip, "
 "pero aínda non existen: %s"
 
-#: stats/utils.py:126
+#: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "O módulo %s non parece ser o módulo gnome-doc-utils."
 
-#: stats/utils.py:129
+#: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE non resolve a un ficheiro real, usando '%s.xml'."
 
-#: stats/utils.py:137
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE non apunta a un ficheiro real, probablemente é unha macro."
 
-#: stats/utils.py:151
+#: stats/utils.py:155
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1868,49 +1949,49 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:236
+#: stats/utils.py:240
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "O ficheiro PO '%s' non existe ou Non é posíbel ler."
 
-#: stats/utils.py:256
+#: stats/utils.py:260
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "O ficheiro PO '%s' non pasa a comprobación msgfmt: non se actualizará."
 
-#: stats/utils.py:258
+#: stats/utils.py:262
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Non é posíbel obter as estatísticas para o ficheiro POT '%s'."
 
-#: stats/utils.py:261
+#: stats/utils.py:265
 msgid "This PO file has an executable bit set."
 msgstr "Este ficheiro PO ten o bit de execución establecido."
 
-#: stats/utils.py:289
+#: stats/utils.py:293
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "O ficheiro PO '%s' non está codificado en UTF-8."
 
-#: stats/utils.py:304
+#: stats/utils.py:308
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "A entrada para este idioma non está presente no ficheiro LINGUAS."
 
-#: stats/utils.py:322
+#: stats/utils.py:326
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "A entrada para este idioma non está presente no ficheiro de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:324
+#: stats/utils.py:328
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Se non sabe onde mirar a variábel para LINGUAS, pregúntelle ao mantedor do "
 "módulo."
 
-#: stats/utils.py:331
+#: stats/utils.py:335
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1918,50 +1999,49 @@ msgstr ""
 "Se non sabe onde mirar a variábel DOC_LINGUAS, pregúntelle ao mantedor do "
 "módulo."
 
-#: stats/utils.py:333
+#: stats/utils.py:337
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma non está incluído en DOC_LINGUAS."
 
-#. exclude last element: coordinator
 #: teams/forms.py:21
 msgid "Remove From Team"
 msgstr "Quitar do equipo"
 
-#: teams/models.py:89
+#: teams/models.py:92
 msgid "Presentation"
 msgstr "Presentación"
 
-#: teams/models.py:92
+#: teams/models.py:95
 msgid "Mailing list"
 msgstr "Lista de correo"
 
-#: teams/models.py:93
+#: teams/models.py:96
 msgid "URL to subscribe"
 msgstr "URL para subscribirse"
 
-#: teams/models.py:200 vertimus/models.py:539 vertimus/models.py:589
+#: teams/models.py:212 vertimus/models.py:544 vertimus/models.py:594
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Esta é unha mensaxe automática enviada desde %s."
 
-#: teams/models.py:218
+#: teams/models.py:230
 #, python-format
 msgid "No team for locale %s"
 msgstr "Non hai equipo para o local %s"
 
-#: teams/models.py:238
+#: teams/models.py:250
 msgid "Translator"
 msgstr "Tradutor"
 
-#: teams/models.py:239
+#: teams/models.py:251
 msgid "Reviewer"
 msgstr "Revisor"
 
-#: teams/models.py:240
+#: teams/models.py:252
 msgid "Committer"
 msgstr "Remisor"
 
-#: teams/models.py:241 templates/teams/team_base.html:36
+#: teams/models.py:253 templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Coordinador"
 
@@ -1989,6 +2069,15 @@ msgstr "Tradutores"
 msgid "No translators"
 msgstr "Sen tradutores"
 
+#: teams/views.py:72
+#| msgid "Inactive"
+msgid "Inactive members"
+msgstr "Membros inactivos"
+
+#: teams/views.py:75
+msgid "No inactive members"
+msgstr "No hai membros inactivos"
+
 #: templates/404.html:4 templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "Erro: non se encontrou a páxina"
@@ -2010,6 +2099,7 @@ msgid "We're sorry but a server error has occurred."
 msgstr "Sentímolo, mais produciuse un erro no servidor."
 
 #: templates/base.html:26 templates/base.html.py:42
+#: templates/admin/delete_release_confirmation.html:6
 msgid "Home"
 msgstr "Inicio"
 
@@ -2080,7 +2170,6 @@ msgstr ""
 
 #: templates/base.html:98
 #, python-format
-#| msgid "Hosted by"
 msgid "Hosted by %(link)s."
 msgstr "Hospedado por %(link)s."
 
@@ -2386,7 +2475,7 @@ msgstr "Descargar este ficheiro POT"
 msgid "Notices"
 msgstr "Notas"
 
-#: templates/stats_show.html:31 vertimus/models.py:189
+#: templates/stats_show.html:31 vertimus/models.py:182
 msgid "Translated"
 msgstr "Traducido"
 
@@ -2492,7 +2581,6 @@ msgid "Module maintenance"
 msgstr "Mantemento do módulo"
 
 #: templates/people/person_detail.html:54
-#| msgid "No current actions."
 msgid "Current activity"
 msgstr "Actividade actual"
 
@@ -2813,13 +2901,12 @@ msgstr "Accións"
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:835
+#: templates/vertimus/vertimus_detail.html:108 vertimus/models.py:852
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Accións arquivadas (%(human_level)s archived series)"
 
 #: templates/vertimus/vertimus_detail.html:110
-#| msgid "(Return to current)"
 msgid "(Return to current actions)"
 msgstr "(Volver ás accións actuais)"
 
@@ -2935,50 +3022,50 @@ msgstr "Necesítase un ficheiro para esta acción."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Non envíe un ficheiro que teña unha acción de 'Reservado'."
 
-#: vertimus/models.py:163
+#: vertimus/models.py:156
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: vertimus/models.py:176
+#: vertimus/models.py:169
 msgid "Translating"
 msgstr "Traducindo"
 
-#: vertimus/models.py:209
+#: vertimus/models.py:202
 msgid "Proofreading"
 msgstr "Corrixindo"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:224
+#: vertimus/models.py:217
 msgid "Proofread"
 msgstr "Corrixido"
 
-#: vertimus/models.py:239
+#: vertimus/models.py:232
 msgid "To Review"
 msgstr "Para revisar"
 
-#: vertimus/models.py:251
+#: vertimus/models.py:244
 msgid "To Commit"
 msgstr "Para remitir"
 
-#: vertimus/models.py:266
+#: vertimus/models.py:259
 msgid "Committing"
 msgstr "Remitindo"
 
-#: vertimus/models.py:280
+#: vertimus/models.py:273
 msgid "Committed"
 msgstr "Remitido"
 
-#: vertimus/models.py:325
+#: vertimus/models.py:318
 msgid "File in repository"
 msgstr "Ficheiro no repositorio"
 
-#: vertimus/models.py:337 vertimus/views.py:160 vertimus/views.py:166
+#: vertimus/models.py:330 vertimus/views.py:160 vertimus/views.py:166
 #: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Ficheiro enviado por %(name)s o %(date)s"
 
-#: vertimus/models.py:524
+#: vertimus/models.py:529
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2995,15 +3082,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:537 vertimus/models.py:587
+#: vertimus/models.py:542 vertimus/models.py:592
 msgid "Without comment"
 msgstr "Sen comentarios"
 
-#: vertimus/models.py:546
+#: vertimus/models.py:551
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:575
+#: vertimus/models.py:580
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3020,57 +3107,58 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:597
+#: vertimus/models.py:602
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:609
+#: vertimus/models.py:614
 msgid "Upload the new translation"
 msgstr "Cargar a nova tradución"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:636
 msgid "Reserve for proofreading"
 msgstr "Reservada para corrixir"
 
-#: vertimus/models.py:636
+#: vertimus/models.py:648
 msgid "Upload the proofread translation"
 msgstr "Cargar a tradución corrixida"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:652
+#: vertimus/models.py:664
 msgid "Ready for submission"
 msgstr "Lista para remitir"
 
-#: vertimus/models.py:668
+#: vertimus/models.py:680
 msgid "Submit to repository"
 msgstr "Mandar ao repositorio"
 
-#. Commit failed, state unchanged
-#: vertimus/models.py:682
+#. FIXME: somewhere the error should be catched and handled properly
+#. new_state = state
+#: vertimus/models.py:697
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Produciuse un erro ao remitir. O error foi: '%s'"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:692
+#: vertimus/models.py:705
 msgid "Reserve to submit"
 msgstr "Reservado para mandar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:705
+#: vertimus/models.py:718
 msgid "Inform of submission"
 msgstr "Informar da remisión"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:720
+#: vertimus/models.py:733
 msgid "Review required"
 msgstr "Requírese unha revisión"
 
-#: vertimus/models.py:735
+#: vertimus/models.py:748
 msgid "Archive the actions"
 msgstr "Arquivar as accións"
 
-#: vertimus/models.py:774
+#: vertimus/models.py:787
 msgid "Undo the last state change"
 msgstr "Desfacer o último cambio de estado"
 
@@ -3087,6 +3175,12 @@ msgstr "Último ficheiro remitido para %(lang)s"
 #: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Último ficheiro POT"
+
+#~ msgid "GNOME 2.16 (old stable)"
+#~ msgstr "GNOME 2.16 (estábel antiga)"
+
+#~ msgid "GNOME 2.14 (old stable)"
+#~ msgstr "GNOME 2.14 (estábel antiga)"
 
 #~ msgid "Window List Applet Manual"
 #~ msgstr "Manual do miniaplicativo de Lista de xanelas"
