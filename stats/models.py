@@ -81,8 +81,8 @@ class Module(models.Model):
     def get_absolute_url(self):
         return ('stats.views.module', [self.name])
 
-    def save(self, force_insert=False, force_update=False):
-        super(Module, self).save(force_insert, force_update)
+    def save(self, *args, **kwargs):
+        super(Module, self).save(*args, **kwargs)
         #FIXME: delete and recreate branch if vcs_root changed?
 
     def get_description(self):

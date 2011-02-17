@@ -9,12 +9,12 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2010-11-23 12:08:32", 
+   "last_login": "2011-02-17 22:15:33", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "bob@example.org", 
-   "date_joined": "2010-11-23 12:08:32"
+   "date_joined": "2011-02-17 22:15:33"
   }
  }, 
  {
@@ -27,12 +27,12 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2010-11-23 12:08:32", 
+   "last_login": "2011-02-17 22:15:33", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "coord@example.org", 
-   "date_joined": "2010-11-23 12:08:32"
+   "date_joined": "2011-02-17 22:15:33"
   }
  }, 
  {
@@ -45,12 +45,26 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2010-11-23 12:08:32", 
+   "last_login": "2011-02-17 22:15:33", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "alessio@example.org", 
-   "date_joined": "2010-11-23 12:08:32"
+   "date_joined": "2011-02-17 22:15:33"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "people.person", 
+  "fields": {
+   "bugzilla_account": null, 
+   "groups": [], 
+   "image": null, 
+   "activation_key": null, 
+   "irc_nick": null, 
+   "svn_account": null, 
+   "webpage_url": null, 
+   "user_permissions": []
   }
  }, 
  {
@@ -82,17 +96,13 @@
   }
  }, 
  {
-  "pk": 4, 
-  "model": "people.person", 
+  "pk": 1, 
+  "model": "languages.language", 
   "fields": {
-   "bugzilla_account": null, 
-   "groups": [], 
-   "image": null, 
-   "activation_key": null, 
-   "irc_nick": null, 
-   "svn_account": null, 
-   "webpage_url": null, 
-   "user_permissions": []
+   "locale": "en", 
+   "plurals": "nplurals=2; plural=(n != 1)", 
+   "name": "en", 
+   "team": null
   }
  }, 
  {
@@ -113,16 +123,6 @@
    "plurals": "nplurals=2; plural=(n != 1)", 
    "name": "Italian", 
    "team": 2
-  }
- }, 
- {
-  "pk": 1, 
-  "model": "languages.language", 
-  "fields": {
-   "locale": "en", 
-   "plurals": "nplurals=2; plural=(n != 1)", 
-   "name": "en", 
-   "team": null
   }
  }, 
  {
@@ -433,7 +433,7 @@
    "untranslated": 47, 
    "translated": 0, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -447,7 +447,7 @@
    "untranslated": 0, 
    "translated": 47, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -461,7 +461,7 @@
    "untranslated": 7, 
    "translated": 30, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 10
   }
  }, 
@@ -475,7 +475,7 @@
    "untranslated": 20, 
    "translated": 0, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -489,7 +489,7 @@
    "untranslated": 0, 
    "translated": 20, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -503,7 +503,7 @@
    "untranslated": 0, 
    "translated": 20, 
    "branch": 1, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -517,7 +517,7 @@
    "untranslated": 136, 
    "translated": 0, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -531,7 +531,7 @@
    "untranslated": 0, 
    "translated": 136, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -545,7 +545,7 @@
    "untranslated": 6, 
    "translated": 130, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -559,7 +559,7 @@
    "untranslated": 259, 
    "translated": 0, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -573,7 +573,7 @@
    "untranslated": 259, 
    "translated": 0, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -587,7 +587,7 @@
    "untranslated": 0, 
    "translated": 259, 
    "branch": 2, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -601,7 +601,7 @@
    "untranslated": 149, 
    "translated": 0, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -615,7 +615,7 @@
    "untranslated": 0, 
    "translated": 255, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 4
   }
  }, 
@@ -629,7 +629,7 @@
    "untranslated": 0, 
    "translated": 259, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -643,7 +643,7 @@
    "untranslated": 259, 
    "translated": 0, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -657,7 +657,7 @@
    "untranslated": 259, 
    "translated": 0, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -671,7 +671,7 @@
    "untranslated": 0, 
    "translated": 259, 
    "branch": 3, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -685,7 +685,7 @@
    "untranslated": 626, 
    "translated": 0, 
    "branch": 4, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 0
   }
  }, 
@@ -699,7 +699,7 @@
    "untranslated": 2, 
    "translated": 598, 
    "branch": 4, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 20
   }
  }, 
@@ -713,8 +713,17 @@
    "untranslated": 0, 
    "translated": 620, 
    "branch": 4, 
-   "date": "2010-11-23 12:08:32", 
+   "date": "2011-02-17 22:15:33", 
    "fuzzy": 6
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "stats.information", 
+  "fields": {
+   "statistics": 13, 
+   "type": "error", 
+   "description": "Error regenerating POT file for zenity:\n<pre>intltool-update -g 'zenity' -p\nERROR: xgettext failed to generate PO template file.</pre>"
   }
  }
 ]
