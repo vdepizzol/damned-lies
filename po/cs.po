@@ -4,15 +4,15 @@
 #
 # Pavel Šefránek <ps@pjoul.cz>, 2008.
 # Lucas Lommer <llommer@svn.gnome.org>, 2008, 2009.
-# Petr Kovar <pknbe@volny.cz>, 2008 – 2010.
+# Petr Kovar <pknbe@volny.cz>, 2008, 2009, 2010.
 # Marek Černocký <marek@manet.cz>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-01 12:31+0000\n"
-"PO-Revision-Date: 2011-02-06 10:51+0100\n"
+"POT-Creation-Date: 2011-02-10 16:59+0000\n"
+"PO-Revision-Date: 2011-02-18 07:02+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -954,7 +954,7 @@ msgstr "Poznámky k vydání"
 msgid "Sound Juicer Manual"
 msgstr "Příručka k Sound Juicer"
 
-#: database-content.py:352 database-content.py:390 database-content.py:391
+#: database-content.py:352 database-content.py:394 database-content.py:395
 msgid "User Guide"
 msgstr "Uživatelská příručka"
 
@@ -1099,111 +1099,126 @@ msgid "toolbox"
 msgstr "nástroje"
 
 #: database-content.py:388
+#| msgid "toolbox"
+msgid "toolbox (color)"
+msgstr "nástroje (barva)"
+
+#: database-content.py:389
+#| msgid "toolbox"
+msgid "toolbox (paint)"
+msgstr "nástroje (malování)"
+
+#: database-content.py:390
+msgid "toolbox (selection)"
+msgstr "nástroje (výběr)"
+
+#: database-content.py:391
+msgid "toolbox (transform)"
+msgstr "nástroje (transformace)"
+
+#: database-content.py:392
 msgid "Panel Trash Manual"
 msgstr "Příručka k appletu Koše"
 
-#: database-content.py:389
+#: database-content.py:393
 msgid "tutorial"
 msgstr "průvodce"
 
-#: database-content.py:392
+#: database-content.py:396
 msgid "using gimp"
 msgstr "používání programu gimp"
 
-#: database-content.py:393
+#: database-content.py:397
 msgid "preferences"
 msgstr "předvolby"
 
-#: database-content.py:394
+#: database-content.py:398
 msgid "Banshee Music Player"
 msgstr "Hudební přehrávač Banshee"
 
-#: database-content.py:395
+#: database-content.py:399
 msgid "Beagle Desktop Search"
 msgstr "Prohledávač Beagle"
 
-#: database-content.py:396 templates/base.html:35
+#: database-content.py:400 templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Damned Lies"
 
-#: database-content.py:397
+#: database-content.py:401
 msgid "Deskbar Applet"
 msgstr "Applet Deskbar"
 
-#: database-content.py:398
+#: database-content.py:402
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:399
+#: database-content.py:403
 msgid "Epiphany Web Browser"
 msgstr "Webový prohlížeč Epiphany"
 
-#: database-content.py:400
+#: database-content.py:404
 msgid "Evince Document Viewer"
 msgstr "Prohlížeč dokumentů Evince"
 
-#: database-content.py:401
+#: database-content.py:405
 msgid "GIMP User Manual"
 msgstr "Uživatelská příručka programu GIMP"
 
-#: database-content.py:402
+#: database-content.py:406
 msgid "GNOME Applets"
 msgstr "Applety GNOME"
 
-#: database-content.py:403
+#: database-content.py:407
 msgid "GNOME 2 Development Documentation"
 msgstr "Vývojářská dokumentace ke GNOME 2"
 
-#: database-content.py:404
+#: database-content.py:408
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:405
+#: database-content.py:409
 msgid "GNOME 2 User Documentation"
 msgstr "Uživatelská dokumentace ke GNOME 2"
 
-#: database-content.py:406
+#: database-content.py:410
 msgid "GNOME Web Photo"
 msgstr "Webová fotografie GNOME"
 
-#: database-content.py:407
+#: database-content.py:411
+#| msgid "GNOME Library Web site"
+msgid "GNOME 3 Website"
+msgstr "Webové stránky GNOME 3"
+
+#: database-content.py:412
 msgid "GNOME Library Web site"
 msgstr "Knihovna GNOME"
 
-#: database-content.py:408
+#: database-content.py:413
 msgid "GNOME Release Notes"
 msgstr "Poznámky k vydání GNOME"
 
-#: database-content.py:409
+#: database-content.py:414
 msgid "Rhythmbox Music Player"
 msgstr "Hudební přehrávač Rhythmbox"
 
-#: database-content.py:410
+#: database-content.py:415
 msgid "Shared MIME Info"
 msgstr "Sdílené informace MIME"
 
-#: database-content.py:411
+#: database-content.py:416
 msgid "Video subtitles translations for selected GNOME videos"
 msgstr "Překlady titulků k vybraným videím GNOME"
 
-#: database-content.py:412
+#: database-content.py:417
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:413
-msgid ""
-"Please submit your translation through the <a href=\"http://www.transifex."
-"net/projects/p/accountsservice/\">Transifex platform</a>."
-msgstr ""
-"Toto není projekt GNOME. Zašlete prosím svůj překlad přes <a href=\"http://"
-"www.transifex.net/projects/p/accountsservice/\">platformu Transifex</a>."
-
-#: database-content.py:414
+#: database-content.py:418
 msgid "Email client for netbooks"
 msgstr "E-mailový klient pro netbooky"
 
-#: database-content.py:415
+#: database-content.py:419
 msgid ""
 "Avahi is a system which facilitates service discovery on a local network via "
 "the mDNS/DNS-SD protocol suite. Please submit your translation through the "
@@ -1215,7 +1230,7 @@ msgstr ""
 "www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/"
 "\">platformu Transifex</a>."
 
-#: database-content.py:416
+#: database-content.py:420
 msgid ""
 "There is a glossary that will help translators in Chronojump localization: "
 "<a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/"
@@ -1227,7 +1242,7 @@ msgstr ""
 "chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
 "chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 
-#: database-content.py:418
+#: database-content.py:422
 msgid ""
 "Committed translations are updated manually on l10n.gnome.org from time to "
 "time. Be patient :-)"
@@ -1235,11 +1250,11 @@ msgstr ""
 "Zařazené překlady jsou čas od času ručně aktualizovány na l10n.gnome.org. "
 "Buďte trpěliví. :-)"
 
-#: database-content.py:419
+#: database-content.py:423
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince je prohlížeč dokumentů mnoha formátů."
 
-#: database-content.py:420
+#: database-content.py:424
 msgid ""
 "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 "module. Please submit your translation through the <a href=\"http://www."
@@ -1251,7 +1266,7 @@ msgstr ""
 "projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">platformu Transifex</"
 "a>."
 
-#: database-content.py:421
+#: database-content.py:425
 msgid ""
 "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any "
 "more."
@@ -1259,7 +1274,7 @@ msgstr ""
 "Od GNOME 2.23 je GAIL obsažen přímo v GTK+. Od této chvíle ho už prosím "
 "nezařazujte do větve trunk."
 
-#: database-content.py:422
+#: database-content.py:426
 msgid ""
 "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/"
 "wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
@@ -1268,15 +1283,15 @@ msgstr ""
 "gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/"
 "Translation_addons</a>."
 
-#: database-content.py:423
+#: database-content.py:427
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafické rozhraní sledování adresářů v git"
 
-#: database-content.py:424
+#: database-content.py:428
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Konverze multimédií pro prostředí GNOME"
 
-#: database-content.py:425
+#: database-content.py:429
 msgid ""
 "gnome-disk-utility provides libraries and applications for dealing with "
 "storage devices."
@@ -1284,7 +1299,7 @@ msgstr ""
 "gnome-disk-utility poskytuje knihovny a aplikace nakládající s úložnými "
 "zařízeními."
 
-#: database-content.py:426
+#: database-content.py:430
 msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
@@ -1292,7 +1307,7 @@ msgstr ""
 "GNOME Video Arcade je uživatelské rozhraní MAME (Multiple Arcade Machine "
 "Emulator) pro GNOME."
 
-#: database-content.py:427
+#: database-content.py:431
 msgid ""
 "To ease localization, gallery of GNOME Video Effects has been set up here: "
 "<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
@@ -1302,11 +1317,11 @@ msgstr ""
 "Effects. Najdete ji na <a href=\"http://live.gnome.org/GnomeVideoEffects/"
 "Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 
-#: database-content.py:428
+#: database-content.py:432
 msgid "A note taking application"
 msgstr "Poznámková aplikace"
 
-#: database-content.py:429
+#: database-content.py:433
 msgid ""
 "GNUCash is not part of the GNOME Git repository. Please check <a href="
 "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> "
@@ -1316,8 +1331,16 @@ msgstr ""
 "překlady, podívejte se prosím na <a href=\"http://wiki.gnucash.org/wiki/"
 "Translation#Submitting\">wiki GNUCash</a>."
 
-#: database-content.py:430 database-content.py:431 database-content.py:432
-#: database-content.py:433 database-content.py:434 database-content.py:453
+#: database-content.py:434
+msgid ""
+"This a low-priority module to translate, as there are currently no user "
+"interface that show those strings."
+msgstr ""
+"Tento modul má nízkou prioritu pro překlad, protože zatím neexistuje žádné "
+"uživatelské rozhraní, které by tyto řetězce zobrazovalo."
+
+#: database-content.py:435 database-content.py:436 database-content.py:437
+#: database-content.py:438 database-content.py:439 database-content.py:458
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>."
@@ -1325,7 +1348,7 @@ msgstr ""
 "Toto není projekt GNOME. Prosím zašlete svůj překlad do <a href=\"http://"
 "translationproject.org\">Translation Project</a>."
 
-#: database-content.py:435
+#: database-content.py:440
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1337,7 +1360,7 @@ msgstr ""
 "soubory, i když jeden z nich nebude obsahovat žádné překlady, jinak se "
 "sestavení GTK+ v /po-properties nezdaří."
 
-#: database-content.py:436
+#: database-content.py:441
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1345,11 +1368,11 @@ msgstr ""
 "moserial je nekomplikovaný, přívětivý, na GTK+ založený sériový terminál pro "
 "prostředí GNOME. Navíc je napsán v jazyce Vala."
 
-#: database-content.py:437
+#: database-content.py:442
 msgid "Gnome Parental Control"
 msgstr "Rodičovská kontrola GNOME"
 
-#: database-content.py:438
+#: database-content.py:443
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1360,7 +1383,7 @@ msgstr ""
 "softwaru NetworkManager v rámci systému GNOME Bugzilla</a>. Poté přiložte "
 "soubor s překladem."
 
-#: database-content.py:439
+#: database-content.py:444
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier. This is not a GNOME-specific module. Please submit "
@@ -1372,11 +1395,11 @@ msgstr ""
 "href=\"http://www.transifex.net/projects/p/packagekit/resource/master/"
 "\">platformu Transifex</a>."
 
-#: database-content.py:440
+#: database-content.py:445
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je aplikací DTP pro X."
 
-#: database-content.py:441
+#: database-content.py:446
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications. \n"
@@ -1389,7 +1412,7 @@ msgstr ""
 "Zašlete prosím svůj překlad přes <a href=\"http://www.transifex.net/projects/"
 "p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">platformu Transifex</a>."
 
-#: database-content.py:444
+#: database-content.py:449
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
@@ -1399,11 +1422,11 @@ msgstr ""
 "www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-"
 "info-pot_0/\">platformu Transifex</a>."
 
-#: database-content.py:445
+#: database-content.py:450
 msgid "A photo manager for GNOME"
 msgstr "Správce fotografií pro GNOME"
 
-#: database-content.py:446
+#: database-content.py:451
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1411,11 +1434,11 @@ msgstr ""
 "Jedná se o klon oficiální verze system-tools-backends z úložiště freedesktop."
 "org."
 
-#: database-content.py:447
+#: database-content.py:452
 msgid "GNOME Teletext viewer"
 msgstr "Prohlížení teletextu v GNOME"
 
-#: database-content.py:448
+#: database-content.py:453
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
@@ -1425,16 +1448,16 @@ msgstr ""
 "Více viz <a href=\"http://live.gnome.org/VideoSubtitles\">stránka o "
 "titulcích</a>."
 
-#: database-content.py:450
+#: database-content.py:455
 msgid "A VNC client for GNOME"
 msgstr "Klient VNC pro GNOME"
 
-#: database-content.py:451
+#: database-content.py:456
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
-#: database-content.py:452
+#: database-content.py:457
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://translationproject.org\">Translation Project</a>. See "
@@ -1446,67 +1469,67 @@ msgstr ""
 "translationproject.org/domain/xdg-user-dirs.html\">překladová stránka xdg-"
 "user-dirs v rámci Translation Project</a>."
 
-#: database-content.py:454
+#: database-content.py:459
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (vývojové)"
 
-#: database-content.py:455
+#: database-content.py:460
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilní)"
 
-#: database-content.py:456
+#: database-content.py:461
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (zastaralé)"
 
-#: database-content.py:457
+#: database-content.py:462
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (zastaralé)"
 
-#: database-content.py:458
+#: database-content.py:463
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (zastaralé)"
 
-#: database-content.py:459
+#: database-content.py:464
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (zastaralé)"
 
-#: database-content.py:460
+#: database-content.py:465
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (zastaralé)"
 
-#: database-content.py:461
+#: database-content.py:466
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (zastaralé)"
 
-#: database-content.py:462
+#: database-content.py:467
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (zastaralé)"
 
-#: database-content.py:463
+#: database-content.py:468
 msgid "External Dependencies (GNOME)"
 msgstr "Externí závislosti (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:469
 msgid "Obsolete GNOME Applications"
 msgstr "Zastaralé aplikace GNOME"
 
-#: database-content.py:465
+#: database-content.py:470
 msgid "GNOME-Office Productivity Applications"
 msgstr "Kancelářské aplikace GNOME"
 
-#: database-content.py:466
+#: database-content.py:471
 msgid "GNOME Infrastructure"
 msgstr "Infrastruktura GNOME"
 
-#: database-content.py:467
+#: database-content.py:472
 msgid "GIMP and Friends"
 msgstr "GIMP a spol."
 
-#: database-content.py:468
+#: database-content.py:473
 msgid "Extra GNOME Applications"
 msgstr "Další aplikace GNOME"
 
-#: database-content.py:469
+#: database-content.py:474
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
@@ -3119,6 +3142,14 @@ msgstr "Poslední zařazený soubor týmu %(lang)s"
 #: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Nejnovější šablona POT"
+
+#~ msgid ""
+#~ "Please submit your translation through the <a href=\"http://www.transifex."
+#~ "net/projects/p/accountsservice/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "Toto není projekt GNOME. Zašlete prosím svůj překlad přes <a href="
+#~ "\"http://www.transifex.net/projects/p/accountsservice/\">platformu "
+#~ "Transifex</a>."
 
 #~ msgid "Window List Applet Manual"
 #~ msgstr "Příručka k appletu Seznam oken"
