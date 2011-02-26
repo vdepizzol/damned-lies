@@ -1208,9 +1208,9 @@ class Statistics(models.Model):
     def get_reducedstat(self):
         return self.part_po.translation_stat()
 
-    def filename(self, potfile=False):
+    def filename(self, potfile=False, reduced=False):
         if not self.is_pot_stats() and not potfile:
-            return "%s.%s.%s.po" % (self.domain.potbase(), self.branch.name, self.language.locale)
+            return "%s.%s.%s.%spo" % (self.domain.potbase(), self.branch.name, self.language.locale, reduced and "reduced." or "")
         else:
             return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
 
@@ -1277,12 +1277,12 @@ class Statistics(models.Model):
             subdir = "docs"
         return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile))
 
-    def po_url(self, potfile=False):
+    def po_url(self, potfile=False, reduced=False):
         """ Return URL of po file, e.g. for downloading the file """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs/"
-        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename(potfile))
+        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename(potfile, reduced))
 
     def pot_url(self):
         return self.po_url(potfile=True)
