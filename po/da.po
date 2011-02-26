@@ -1,1091 +1,1585 @@
-# Copyright (C) 2008 Free Software Foundation, Inc.
-# M.P. Rommedahl <Lhademmor@gmail.com>, 2008, 2009.
-# Lasse Bang Mikkelsen <lbm@lbm.dk>, 2008.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: damned-lies\n"
+"Project-Id-Version: Damned Lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-30 10:09+0000\n"
-"PO-Revision-Date: 2009-06-10 23:36+0100\n"
-"Last-Translator: M.P. Rommedahl <Lhademmor@gmail.com>\n"
+"POT-Creation-Date: 2011-01-09 20:49+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gitte Illum Petersen <pillum@msn.com>\n"
 "Language-Team: dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
 
 #: database-content.py:1
-msgid "Gujarati"
-msgstr "Gujarati"
-
-#: database-content.py:2
-msgid "Irish"
-msgstr "Irsk"
-
-#: database-content.py:3
-msgid "Guarani"
-msgstr "Guarani"
-
-#: database-content.py:4
-msgid "Galician"
-msgstr "Galicisk"
-
-#: database-content.py:5
-msgid "Latin"
-msgstr "Latin"
-
-#: database-content.py:6
-msgid "Tatar"
-msgstr "Tatar"
-
-#: database-content.py:7
-msgid "Turkish"
-msgstr "Tyrkisk"
-
-#: database-content.py:8
-msgid "Limburgian"
-msgstr "Limburgisk"
-
-#: database-content.py:9
-msgid "Latvian"
-msgstr "Lettisk"
-
-#: database-content.py:10
-msgid "Tagalog"
-msgstr "Tagalog"
-
-#: database-content.py:11
-msgid "Turkmen"
-msgstr "Turkmensk"
-
-#: database-content.py:12
-msgid "Thai"
-msgstr "Thai"
-
-#: database-content.py:13
-msgid "Tajik"
-msgstr "Tadsjikisk"
-
-#: database-content.py:14
-msgid "Telugu"
-msgstr "Telugu"
-
-#: database-content.py:15
-msgid "Tamil"
-msgstr "Tamil"
-
-#: database-content.py:16
-msgid "Yiddish"
-msgstr "Jiddisch"
-
-#: database-content.py:17
-msgid "Brazilian Portuguese"
-msgstr "Brasiliansk-portugisisk"
-
-#: database-content.py:18
-msgid "German"
-msgstr "Tysk"
-
-#: database-content.py:19
-msgid "Danish"
-msgstr "Dansk"
-
-#: database-content.py:20
-msgid "Dzongkha"
-msgstr "Dzongkha"
-
-#: database-content.py:21
-msgid "Chinese (China)"
-msgstr "Kinesisk (Kina)"
-
-#: database-content.py:22
-msgid "Balochi"
-msgstr "Balochi"
-
-#: database-content.py:23
-msgid "Crimean Tatar"
-msgstr "Krimtatarisk"
-
-#: database-content.py:24
-msgid "Greek"
-msgstr "Græsk"
-
-#: database-content.py:25
-msgid "Esperanto"
-msgstr "Esperanto"
-
-#: database-content.py:26
-msgid "Belarusian"
-msgstr "Hviderussisk"
-
-#: database-content.py:27
-msgid "Basque"
-msgstr "Baskisk"
-
-#: database-content.py:28
-msgid "Estonian"
-msgstr "Estisk"
-
-#: database-content.py:29
-msgid "Spanish"
-msgstr "Spansk"
-
-#: database-content.py:30
-msgid "Russian"
-msgstr "Russisk"
-
-#: database-content.py:31
-msgid "Kinyarwanda"
-msgstr "Kinyarwanda"
-
-#: database-content.py:32
-msgid "Romanian"
-msgstr "Rumænsk"
-
-#: database-content.py:33
-msgid "Canadian English"
-msgstr "Canadisk-engelsk"
-
-#: database-content.py:34
-msgid "Bulgarian"
-msgstr "Bulgarsk"
-
-#: database-content.py:35
-msgid "Ukrainian"
-msgstr "Ukrainsk"
-
-#: database-content.py:36
-msgid "Walloon"
-msgstr "Vallonsk"
-
-#: database-content.py:37
-msgid "Asturian"
-msgstr "Asturisk"
-
-#: database-content.py:38
-msgid "Bengali"
-msgstr "Bengalsk"
-
-#: database-content.py:39
-msgid "Breton"
-msgstr "Bretonsk"
-
-#: database-content.py:40
-msgid "Bosnian"
-msgstr "Bosnisk"
-
-#: database-content.py:41
-msgid "Japanese"
-msgstr "Japansk"
-
-#: database-content.py:42
-msgid "Occitan"
-msgstr "Occitansk"
-
-#: database-content.py:43
-msgid "Low German and Saxon"
-msgstr "Nedersaksisk"
-
-#: database-content.py:44
-msgid "Oriya"
-msgstr "Oriya"
-
-#: database-content.py:45
-msgid "Xhosa"
-msgstr "Xhosa"
-
-#: database-content.py:46
-msgid "Northern Sotho"
-msgstr "Sepedi"
-
-#: database-content.py:47
-msgid "Iranian Azerbaijani"
-msgstr "Iransk aserbajdsjan"
-
-#: database-content.py:48
-msgid "Catalan"
-msgstr "Katalansk"
-
-#: database-content.py:49
-msgid "Welsh"
-msgstr "Walisisk"
-
-#: database-content.py:50
-msgid "Czech"
-msgstr "Tjekkisk"
-
-#: database-content.py:51
-msgid "Pashto"
-msgstr "Pashto"
-
-#: database-content.py:52
-msgid "Portuguese"
-msgstr "Portugisisk"
-
-#: database-content.py:53
-msgid "Lithuanian"
-msgstr "Litauisk"
-
-#: database-content.py:54
-msgid "Punjabi"
-msgstr "Punjabisk"
-
-#: database-content.py:55
-msgid "British English"
-msgstr "Britisk-engelsk"
-
-#: database-content.py:56
-msgid "Armenian"
-msgstr "Armensk"
-
-#: database-content.py:57
-msgid "Croatian"
-msgstr "Kroatisk"
-
-#: database-content.py:58
-msgid "Hungarian"
-msgstr "Ungarsk"
-
-#: database-content.py:59
-msgid "Hindi"
-msgstr "Hindi"
-
-#: database-content.py:60
-msgid "Hebrew"
-msgstr "Hebraisk"
-
-#: database-content.py:61
-msgid "Malagasy"
-msgstr "Madagashi"
-
-#: database-content.py:62
-msgid "Friulian"
-msgstr "Friulisk"
-
-#: database-content.py:63
-msgid "Uzbek"
-msgstr "Uzbekisk"
-
-#: database-content.py:64
-msgid "Malayalam"
-msgstr "Malayalam"
-
-#: database-content.py:65
-msgid "Mongolian"
-msgstr "Mongolsk"
-
-#: database-content.py:66
-msgid "Maori"
-msgstr "Maori"
-
-#: database-content.py:67
-msgid "Macedonian"
-msgstr "Makedonsk"
-
-#: database-content.py:68
-msgid "Urdu"
-msgstr "Urdu"
-
-#: database-content.py:69
-msgid "Polish"
-msgstr "Polsk"
-
-#: database-content.py:70
-msgid "Malay"
-msgstr "Malajisk"
-
-#: database-content.py:71
-msgid "Marathi"
-msgstr "Marathi"
-
-#: database-content.py:72
-msgid "Uighur"
-msgstr "Uigurisk"
-
-#: database-content.py:73
-msgid "Old English"
-msgstr "Oldengelsk"
-
-#: database-content.py:74
+#: database-content.py:123
 msgid "Afrikaans"
 msgstr "Afrikaans"
 
-#: database-content.py:75
-msgid "Vietnamese"
-msgstr "Vietnamesisk"
-
-#: database-content.py:76
-msgid "Icelandic"
-msgstr "Islandsk"
-
-#: database-content.py:77
-msgid "Amharic"
-msgstr "Amharisk"
-
-#: database-content.py:78
-msgid "Italian"
-msgstr "Italiensk"
-
-#: database-content.py:79
-msgid "Kannada"
-msgstr "Kannada"
-
-#: database-content.py:80
-msgid "Assamese"
-msgstr "Assamesisk"
-
-#: database-content.py:81
-msgid "Arabic"
-msgstr "Arabisk"
-
-#: database-content.py:82
-msgid "Ido"
-msgstr "Ido"
-
-#: database-content.py:83
-msgid "Zulu"
-msgstr "Zulu"
-
-#: database-content.py:84
-msgid "Azerbaijani"
-msgstr "Azeri"
-
-#: database-content.py:85
-msgid "Indonesian"
-msgstr "Indonesisk"
-
-#: database-content.py:86
-msgid "Bengali (India)"
-msgstr "Bengalsk (Indien)"
-
-#: database-content.py:87
-msgid "Kashmiri"
-msgstr "Kashmirisk"
-
-#: database-content.py:88
-msgid "Chinese Traditional"
-msgstr "Kinesisk (traditionelt)"
-
-#: database-content.py:89
-msgid "Dutch"
-msgstr "Hollandsk"
-
-#: database-content.py:90
-msgid "Yoruba"
-msgstr "Joruba"
-
-#: database-content.py:91
-msgid "Norwegian (Bokmål and Nynorsk)"
-msgstr "Norsk (bogmål og nynorsk)"
-
-#: database-content.py:92
-msgid "Nepali"
-msgstr "Nepalesisk"
-
-#: database-content.py:93
-msgid "Australian English"
-msgstr "Australsk-engelsk"
-
-#: database-content.py:94
-msgid "French"
-msgstr "Fransk"
-
-#: database-content.py:95
-msgid "Persian"
-msgstr "Persisk"
-
-#: database-content.py:96
-msgid "Fula"
-msgstr "Fula"
-
-#: database-content.py:97
-msgid "Maithili"
-msgstr "Maithili"
-
-#: database-content.py:98
-msgid "Finnish"
-msgstr "Finsk"
-
-#: database-content.py:99
-msgid "Georgian"
-msgstr "Georgisk"
-
-#: database-content.py:100
-msgid "Kazakh"
-msgstr "Kasakhisk"
-
-#: database-content.py:101
-msgid "Serbian"
-msgstr "Serbisk"
-
-#: database-content.py:102
+#: database-content.py:2
+#: database-content.py:124
 msgid "Albanian"
 msgstr "Albansk"
 
-#: database-content.py:103
-msgid "Korean"
-msgstr "Koreansk"
+#: database-content.py:3
+#: database-content.py:125
+msgid "Amharic"
+msgstr "Amharisk"
 
-#: database-content.py:104
-msgid "Swedish"
-msgstr "Svensk"
+#: database-content.py:4
+#: database-content.py:126
+msgid "Arabic"
+msgstr "Arabisk"
 
-#: database-content.py:105
-msgid "Khmer"
-msgstr "Khmer"
+# Aragonesisk er et romansk sprog, der stadig tales af 10-30.000 mennesker.
+#: database-content.py:5
+#: database-content.py:127
+msgid "Aragonese"
+msgstr "Aragonesisk"
 
-#: database-content.py:106
-msgid "Slovak"
-msgstr "Slovakisk"
+#: database-content.py:6
+#: database-content.py:128
+msgid "Armenian"
+msgstr "Armensk"
 
-#: database-content.py:107
-msgid "Sinhala"
-msgstr "Singalesisk"
+#: database-content.py:7
+#: database-content.py:129
+msgid "Assamese"
+msgstr "Assamesisk"
 
-#: database-content.py:108
-msgid "Kurdish"
-msgstr "Kurdisk"
+#: database-content.py:8
+#: database-content.py:130
+msgid "Asturian"
+msgstr "Asturisk"
 
-#: database-content.py:109
-msgid "Slovenian"
-msgstr "Slovensk"
+#: database-content.py:9
+#: database-content.py:131
+msgid "Australian English"
+msgstr "Australsk-engelsk"
 
-#: database-content.py:110
-msgid "Kirghiz"
-msgstr "Kirgisisk"
+#: database-content.py:10
+#: database-content.py:132
+msgid "Azerbaijani"
+msgstr "Azeri"
 
-#: database-content.py:111
-msgid "Hausa"
-msgstr "Hausa"
+#: database-content.py:11
+#: database-content.py:133
+msgid "Balochi"
+msgstr "Balochi"
 
-#: database-content.py:112
+#: database-content.py:12
+#: database-content.py:134
+msgid "Basque"
+msgstr "Baskisk"
+
+#: database-content.py:13
+#: database-content.py:135
+msgid "Belarusian"
+msgstr "Hviderussisk"
+
+#: database-content.py:14
+#: database-content.py:137
 msgid "Bemba"
 msgstr "Bemba"
 
-#: database-content.py:113
-#| msgid "Nepali"
-msgid "Neapolitan"
-msgstr "Napolitansk"
+#: database-content.py:15
+#: database-content.py:138
+msgid "Bengali"
+msgstr "Bengalsk"
 
-#: database-content.py:114
+#: database-content.py:16
+#: database-content.py:139
+msgid "Bengali (India)"
+msgstr "Bengalsk (Indien)"
+
+#: database-content.py:17
+#: database-content.py:140
+msgid "Bosnian"
+msgstr "Bosnisk"
+
+#: database-content.py:18
+#: database-content.py:141
+msgid "Brazilian Portuguese"
+msgstr "Brasiliansk-portugisisk"
+
+#: database-content.py:19
+#: database-content.py:142
+msgid "Breton"
+msgstr "Bretonsk"
+
+#: database-content.py:20
+#: database-content.py:143
+msgid "British English"
+msgstr "Britisk-engelsk"
+
+#: database-content.py:21
+#: database-content.py:144
+msgid "Bulgarian"
+msgstr "Bulgarsk"
+
+#: database-content.py:22
+#: database-content.py:145
+msgid "Burmese"
+msgstr "Burmesisk"
+
+#: database-content.py:23
+#: database-content.py:146
+msgid "Canadian English"
+msgstr "Canadisk-engelsk"
+
+#: database-content.py:24
+#: database-content.py:147
+msgid "Catalan"
+msgstr "Katalansk"
+
+#: database-content.py:25
+#: database-content.py:149
+msgid "Chinese (China)"
+msgstr "Kinesisk (Kina)"
+
+#: database-content.py:26
+msgid "Chinese Traditional"
+msgstr "Kinesisk (traditionelt)"
+
+#: database-content.py:27
+#: database-content.py:152
+msgid "Crimean Tatar"
+msgstr "Krimtatarisk"
+
+#: database-content.py:28
+#: database-content.py:153
+msgid "Croatian"
+msgstr "Kroatisk"
+
+#: database-content.py:29
+#: database-content.py:154
+msgid "Czech"
+msgstr "Tjekkisk"
+
+#: database-content.py:30
+#: database-content.py:155
+msgid "Danish"
+msgstr "Dansk"
+
+#: database-content.py:31
+#: database-content.py:156
 msgid "Divehi"
 msgstr "Maldivisk"
 
-#: database-content.py:115
-msgid "Belarusian Latin"
-msgstr "Łacinka"
+#: database-content.py:32
+#: database-content.py:157
+msgid "Dutch"
+msgstr "Hollandsk"
 
-#: database-content.py:116
-msgid "Low German"
-msgstr "Plattysk"
+#: database-content.py:33
+#: database-content.py:158
+msgid "Dzongkha"
+msgstr "Dzongkha"
 
-#: database-content.py:117
-msgid "Low Saxon, Germany"
-msgstr "Plattysk, Tyskland"
+#: database-content.py:34
+#: database-content.py:159
+msgid "Esperanto"
+msgstr "Esperanto"
 
-#: database-content.py:118
-#| msgid "Valencian-Catalan"
-msgid "Valencian (Southern Catalan)"
-msgstr "Valenciansk (sydlig katalansk)"
+#: database-content.py:35
+#: database-content.py:160
+msgid "Estonian"
+msgstr "Estisk"
 
-#: database-content.py:119
-msgid "Uzbek (Cyrillic)"
-msgstr "Uzbekisk (kyrillisk)"
+#: database-content.py:36
+#: database-content.py:161
+msgid "Finnish"
+msgstr "Finsk"
 
-#: database-content.py:120
-msgid "Uzbek (Latin)"
-msgstr "Uzbekisk (latin)"
+#: database-content.py:37
+#: database-content.py:162
+msgid "French"
+msgstr "Fransk"
 
-#: database-content.py:121
-msgid "Chinese (Hong Kong)"
-msgstr "Kinesisk (Hong Kong)"
+#: database-content.py:38
+#: database-content.py:163
+#| msgid "Friulian"
+msgid "Frisian"
+msgstr "Frisisk"
 
-#: database-content.py:122
-msgid "Chinese (Taiwan)"
-msgstr "Kinesisk (Taiwan)"
+#: database-content.py:39
+#: database-content.py:164
+msgid "Friulian"
+msgstr "Friulisk"
 
-#: database-content.py:123
-msgid "Norwegian Bokmål"
-msgstr "Norsk bogmål"
+#: database-content.py:40
+#: database-content.py:165
+msgid "Fula"
+msgstr "Fula"
 
-#: database-content.py:124
-msgid "Norwegian Nynorsk"
-msgstr "Norsk nynorsk"
+#: database-content.py:41
+#: database-content.py:166
+msgid "Galician"
+msgstr "Galicisk"
 
-#: database-content.py:125
-msgid "Serbian Latin"
-msgstr "Serbisk latin"
+#: database-content.py:42
+#: database-content.py:167
+msgid "Georgian"
+msgstr "Georgisk"
 
-#: database-content.py:126
-msgid "Serbian Jekavian"
-msgstr "Serbisk Štokavisk"
+#: database-content.py:43
+#: database-content.py:168
+msgid "German"
+msgstr "Tysk"
 
-#: database-content.py:127
-msgid "Igbo"
-msgstr "Igbo"
+#: database-content.py:44
+#: database-content.py:169
+msgid "Greek"
+msgstr "Græsk"
 
-#: database-content.py:128
+#: database-content.py:45
+#: database-content.py:170
+msgid "Guarani"
+msgstr "Guarani"
+
+#: database-content.py:46
+#: database-content.py:171
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: database-content.py:47
+#: database-content.py:172
+msgid "Hausa"
+msgstr "Hausa"
+
+#: database-content.py:48
+#: database-content.py:173
+msgid "Hebrew"
+msgstr "Hebraisk"
+
+#: database-content.py:49
+#: database-content.py:174
+msgid "Hindi"
+msgstr "Hindi"
+
+#: database-content.py:50
+#: database-content.py:175
+msgid "Hungarian"
+msgstr "Ungarsk"
+
+#: database-content.py:51
+#: database-content.py:176
+msgid "Icelandic"
+msgstr "Islandsk"
+
+#: database-content.py:52
+#: database-content.py:177
+msgid "Ido"
+msgstr "Ido"
+
+#: database-content.py:53
+#: database-content.py:179
+msgid "Indonesian"
+msgstr "Indonesisk"
+
+#: database-content.py:54
+#: database-content.py:181
+msgid "Iranian Azerbaijani"
+msgstr "Iransk aserbajdsjan"
+
+#: database-content.py:55
+#: database-content.py:182
+msgid "Irish"
+msgstr "Irsk"
+
+#: database-content.py:56
+#: database-content.py:183
+msgid "Italian"
+msgstr "Italiensk"
+
+#: database-content.py:57
+#: database-content.py:184
+msgid "Japanese"
+msgstr "Japansk"
+
+#: database-content.py:58
+#: database-content.py:185
+msgid "Kannada"
+msgstr "Kannada"
+
+#: database-content.py:59
+#: database-content.py:186
+msgid "Kashmiri"
+msgstr "Kashmirisk"
+
+#: database-content.py:60
+#: database-content.py:187
+msgid "Kazakh"
+msgstr "Kasakhisk"
+
+#: database-content.py:61
+#: database-content.py:188
+msgid "Khmer"
+msgstr "Khmer"
+
+# Eller Kongo-sproget
+#: database-content.py:62
+#: database-content.py:189
+msgid "Kikongo"
+msgstr "Kikongo"
+
+#: database-content.py:63
+#: database-content.py:190
+msgid "Kinyarwanda"
+msgstr "Kinyarwanda"
+
+#: database-content.py:64
+#: database-content.py:191
+msgid "Kirghiz"
+msgstr "Kirgisisk"
+
+#: database-content.py:65
+#: database-content.py:192
+msgid "Korean"
+msgstr "Koreansk"
+
+#: database-content.py:66
+#: database-content.py:193
+msgid "Kurdish"
+msgstr "Kurdisk"
+
+#: database-content.py:67
+#: database-content.py:194
 msgid "Lao"
 msgstr "Laotisk"
 
-#: database-content.py:129
-msgid "UI translations"
-msgstr "Brugerflade-oversættelser"
+#: database-content.py:68
+#: database-content.py:195
+msgid "Latin"
+msgstr "Latin"
 
-#: database-content.py:130
-msgid "User Guide"
-msgstr "Brugervejledning"
+#: database-content.py:69
+#: database-content.py:196
+msgid "Latvian"
+msgstr "Lettisk"
 
-#: database-content.py:131
-msgid "Accessibility Guide"
-msgstr "Tilgængeligheds-vejledning"
+#: database-content.py:70
+#: database-content.py:197
+msgid "Limburgian"
+msgstr "Limburgisk"
 
-#: database-content.py:132
-msgid "System Administration Guide"
-msgstr "Systemadministrations-vejledning"
+#: database-content.py:71
+#: database-content.py:198
+msgid "Lithuanian"
+msgstr "Litauisk"
 
-#: database-content.py:133
-msgid "GDM Manual"
-msgstr "Manual til GDM"
+#: database-content.py:72
+#: database-content.py:199
+msgid "Low German"
+msgstr "Plattysk"
 
-#: database-content.py:134
-msgid "Anjuta Manual"
-msgstr "Manual til Anjuta"
+# Også kaldet Ganda.
+#: database-content.py:73
+#: database-content.py:200
+msgid "Luganda"
+msgstr "Luganda"
 
-#: database-content.py:135
-msgid "GConf Editor Manual"
-msgstr "Manual til GConf-redigering"
+#: database-content.py:74
+#: database-content.py:202
+msgid "Macedonian"
+msgstr "Makedonsk"
+
+#: database-content.py:75
+#: database-content.py:203
+msgid "Maithili"
+msgstr "Maithili"
+
+#: database-content.py:76
+#: database-content.py:204
+msgid "Malagasy"
+msgstr "Madagashi"
+
+#: database-content.py:77
+#: database-content.py:205
+msgid "Malay"
+msgstr "Malajisk"
+
+#: database-content.py:78
+#: database-content.py:206
+msgid "Malayalam"
+msgstr "Malayalam"
+
+# Keltisk sprog tæt beslægtet med irsk og skotsk gælisk
+#: database-content.py:79
+#: database-content.py:208
+msgid "Manx"
+msgstr "Manx"
+
+#: database-content.py:80
+#: database-content.py:209
+msgid "Maori"
+msgstr "Maori"
+
+#: database-content.py:81
+#: database-content.py:210
+msgid "Marathi"
+msgstr "Marathi"
+
+#: database-content.py:82
+#: database-content.py:211
+msgid "Mongolian"
+msgstr "Mongolsk"
+
+#: database-content.py:83
+msgid "Neapolitan"
+msgstr "Napolitansk"
+
+#: database-content.py:84
+#: database-content.py:212
+msgid "Nepali"
+msgstr "Nepalesisk"
+
+#: database-content.py:85
+#: database-content.py:213
+msgid "Northern Sotho"
+msgstr "Sepedi"
+
+#: database-content.py:86
+msgid "Norwegian (Bokmål and Nynorsk)"
+msgstr "Norsk (bogmål og nynorsk)"
+
+#: database-content.py:87
+#: database-content.py:216
+msgid "Occitan"
+msgstr "Occitansk"
+
+#: database-content.py:88
+#: database-content.py:217
+msgid "Old English"
+msgstr "Oldengelsk"
+
+#: database-content.py:89
+#: database-content.py:218
+msgid "Oriya"
+msgstr "Oriya"
+
+#: database-content.py:90
+#: database-content.py:219
+msgid "Pashto"
+msgstr "Pashto"
+
+#: database-content.py:91
+#: database-content.py:220
+msgid "Persian"
+msgstr "Persisk"
+
+#: database-content.py:92
+#: database-content.py:221
+msgid "Polish"
+msgstr "Polsk"
+
+#: database-content.py:93
+#: database-content.py:222
+msgid "Portuguese"
+msgstr "Portugisisk"
+
+#: database-content.py:94
+#: database-content.py:223
+msgid "Punjabi"
+msgstr "Punjabisk"
+
+#: database-content.py:95
+#: database-content.py:224
+msgid "Romanian"
+msgstr "Rumænsk"
+
+#: database-content.py:96
+#: database-content.py:225
+msgid "Russian"
+msgstr "Russisk"
+
+#: database-content.py:97
+#: database-content.py:226
+msgid "Serbian"
+msgstr "Serbisk"
+
+#: database-content.py:98
+#: database-content.py:229
+#| msgid "Latvian"
+msgid "Shavian"
+msgstr "Shaviansk"
+
+#: database-content.py:99
+#: database-content.py:230
+msgid "Sinhala"
+msgstr "Singalesisk"
+
+#: database-content.py:100
+#: database-content.py:231
+msgid "Slovak"
+msgstr "Slovakisk"
+
+#: database-content.py:101
+#: database-content.py:232
+msgid "Slovenian"
+msgstr "Slovensk"
+
+#: database-content.py:102
+#: database-content.py:236
+msgid "Spanish"
+msgstr "Spansk"
+
+#: database-content.py:103
+#: database-content.py:238
+msgid "Swedish"
+msgstr "Svensk"
+
+#: database-content.py:104
+#: database-content.py:239
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: database-content.py:105
+#: database-content.py:240
+msgid "Tajik"
+msgstr "Tadsjikisk"
+
+#: database-content.py:106
+#: database-content.py:241
+msgid "Tamil"
+msgstr "Tamil"
+
+#: database-content.py:107
+#: database-content.py:242
+msgid "Tatar"
+msgstr "Tatar"
+
+#: database-content.py:108
+#: database-content.py:243
+msgid "Telugu"
+msgstr "Telugu"
+
+#: database-content.py:109
+#: database-content.py:244
+msgid "Thai"
+msgstr "Thai"
+
+#: database-content.py:110
+#: database-content.py:246
+msgid "Turkish"
+msgstr "Tyrkisk"
+
+#: database-content.py:111
+#: database-content.py:247
+msgid "Turkmen"
+msgstr "Turkmensk"
+
+#: database-content.py:112
+#: database-content.py:248
+msgid "Uighur"
+msgstr "Uigurisk"
+
+#: database-content.py:113
+#: database-content.py:249
+msgid "Ukrainian"
+msgstr "Ukrainsk"
+
+#: database-content.py:114
+#: database-content.py:250
+msgid "Urdu"
+msgstr "Urdu"
+
+#: database-content.py:115
+msgid "Uzbek"
+msgstr "Uzbekisk"
+
+#: database-content.py:116
+#: database-content.py:253
+msgid "Vietnamese"
+msgstr "Vietnamesisk"
+
+#: database-content.py:117
+#: database-content.py:254
+msgid "Walloon"
+msgstr "Vallonsk"
+
+#: database-content.py:118
+#: database-content.py:255
+msgid "Welsh"
+msgstr "Walisisk"
+
+#: database-content.py:119
+#: database-content.py:256
+msgid "Xhosa"
+msgstr "Xhosa"
+
+#: database-content.py:120
+#: database-content.py:257
+msgid "Yiddish"
+msgstr "Jiddisch"
+
+#: database-content.py:121
+#: database-content.py:258
+msgid "Yoruba"
+msgstr "Joruba"
+
+#: database-content.py:122
+#: database-content.py:259
+msgid "Zulu"
+msgstr "Zulu"
 
 #: database-content.py:136
-msgid "F-Spot Manual"
-msgstr "Manual til F-Spot"
-
-#: database-content.py:137
-msgid "FDL License"
-msgstr "FDL-licens"
-
-#: database-content.py:138
-msgid "LGPL License"
-msgstr "LGPL-licens"
-
-#: database-content.py:139
-msgid "GPL License"
-msgstr "GPL-licens"
-
-#: database-content.py:140
-msgid "Fish Applet Manual"
-msgstr "Manual til Fisk-panelprogram"
-
-#: database-content.py:141
-msgid "Workspace Switcher Applet Manual"
-msgstr "Manual til Arbejdsområde-skifterpanelprogram"
-
-#: database-content.py:142
-msgid "Window List Applet Manual"
-msgstr "Manual til Vinduesliste-applet"
-
-#: database-content.py:143
-msgid "Clock Applet Manual"
-msgstr "Manual til Ur-panelprogram"
-
-#: database-content.py:144
-msgid "Iagno Manual"
-msgstr "Manual til Iagno"
-
-#: database-content.py:145
-msgid "Five or More Manual"
-msgstr "Manual til Kugler på stribe"
-
-#: database-content.py:146
-msgid "Nibbles Manual"
-msgstr "Manual til Orme"
-
-#: database-content.py:147
-msgid "GNOME Robots Manual"
-msgstr "Manual til GNOME Robotter"
+msgid "Belarusian Latin"
+msgstr "Łacinka"
 
 #: database-content.py:148
-msgid "Four-in-a-row Manual"
-msgstr "Manual til Fire på stribe"
-
-#: database-content.py:149
-msgid "GNOME Sudoku Manual"
-msgstr "Manual til GNOME Sudoku"
+msgid "Catalan (Valencian)"
+msgstr "Catalansk"
 
 #: database-content.py:150
-msgid "glChess Manual"
-msgstr "Manual til glChess"
+msgid "Chinese (Hong Kong)"
+msgstr "Kinesisk (Hong Kong)"
 
 #: database-content.py:151
-msgid "GNOME Tali Manual"
-msgstr "Manual til GNOME Tali"
-
-#: database-content.py:152
-msgid "Gnometris Manual"
-msgstr "Manual til Gnometris"
-
-#: database-content.py:153
-msgid "GNOME Klotski Manual"
-msgstr "Manual til GNOME Klotski"
-
-#: database-content.py:154
-msgid "GNOME Tetravex Manual"
-msgstr "Manual til GNOME Tetravex"
-
-#: database-content.py:155
-msgid "GNOME Mahjongg Manual"
-msgstr "Manual til GNOME Mahjongg"
-
-#: database-content.py:156
-msgid "AisleRiot Manual"
-msgstr "Manual til Kabale"
-
-#: database-content.py:157
-msgid "Mines Manual"
-msgstr "Manual til Minestryger"
-
-#: database-content.py:158
-msgid "Same GNOME Manual"
-msgstr "Manual til Samspil"
-
-#: database-content.py:159
-msgid "Blackjack Manual"
-msgstr "Manual til Blackjack"
-
-#: database-content.py:160
-msgid "CD Player Manual"
-msgstr "Manual til cd-afspiller"
-
-#: database-content.py:161
-msgid "Sound Recorder Manual"
-msgstr "Manual til Lydoptager"
-
-#: database-content.py:162
-msgid "GStreamer Properties Manual"
-msgstr "Manual til GStreamer-egenskaber"
-
-#: database-content.py:163
-msgid "GNOME Volume Control Manual"
-msgstr "Manual til GNOME Lydstyrkekontrol"
-
-#: database-content.py:164
-msgid "Layout Descriptions"
-msgstr "Layoutbeskrivelser"
-
-#: database-content.py:165
-msgid "Keyboard Indicator Manual"
-msgstr "Manual til Tastaturindikator"
-
-# Rent gæt. Jeg kan ikke finde modulet.
-#: database-content.py:166
-msgid "CPU Frequency Scaling Monitor Manual"
-msgstr "Manual til CPU-frekvensskalerings-overvågning"
-
-#: database-content.py:167
-msgid "Command Line Manual"
-msgstr "Manual til Kommandolinje"
-
-#: database-content.py:168
-msgid "Keyboard Accessibility Monitor Manual"
-msgstr "Manual til Tastaturtilgængeligheds-overvågning"
-
-#: database-content.py:169
-msgid "Invest Applet Manual"
-msgstr "Manual til investerings-panelprogram"
-
-#: database-content.py:170
-msgid "System Monitor Manual"
-msgstr "Manual til System-overvågning"
-
-#: database-content.py:171
-msgid "Geyes Manual"
-msgstr "Manual til Øjne"
-
-#: database-content.py:172
-msgid "Panel Trash Manual"
-msgstr "Manual til Papirkurv"
-
-#: database-content.py:173
-msgid "Character Palette Manual"
-msgstr "Manual til Tegnpalet"
-
-#: database-content.py:174
-msgid "Volume Control Manual"
-msgstr "Manual til Lydstyrkekontrol"
-
-#: database-content.py:175
-msgid "Weather Report Manual"
-msgstr "Manual til Vejrrapport"
-
-#: database-content.py:176
-msgid "Sticky Notes Manual"
-msgstr "Manual til notessedler"
-
-#: database-content.py:177
-msgid "Disk Mounter Manual"
-msgstr "Manual til Diskmontering"
+msgid "Chinese (Taiwan)"
+msgstr "Kinesisk (Taiwan)"
 
 #: database-content.py:178
-msgid "Battery Charge Monitor Manual"
-msgstr "Manual til Batteriovervåger"
+msgid "Igbo"
+msgstr "Igbo"
 
-#: database-content.py:179
-msgid "User Directories"
-msgstr "Brugerkataloger"
-
+# Det internationale hjælpesprog.
 #: database-content.py:180
-#| msgid "System Administration Guide"
-msgid "Integration Guide"
-msgstr "Integrationsvejledning"
+msgid "Interlingua"
+msgstr "Interlingua"
 
-#: database-content.py:181
-msgid "Platform Overview"
-msgstr "Platformoversigt"
+#: database-content.py:201
+#| msgid "Limburgian"
+msgid "Luxembourgish"
+msgstr "Luxembourgsk"
 
-#: database-content.py:182
-msgid "Encryption Applet Manual"
-msgstr "Manual til Krypteringspanelprogram"
+#: database-content.py:207
+msgid "Maltese"
+msgstr "Maltesisk"
 
-#: database-content.py:183
-msgid "Release Notes"
-msgstr "Udgivelsesnoter"
+#: database-content.py:214
+msgid "Norwegian Bokmål"
+msgstr "Norsk bogmål"
 
-#: database-content.py:184
-msgid "GNOME Keyring Manager Manual"
-msgstr "Manual til GNOME Nøgleringshåndtering"
+#: database-content.py:215
+msgid "Norwegian Nynorsk"
+msgstr "Norsk nynorsk"
 
-# Rent gæt. Jeg kan ikke finde modulet.
-#: database-content.py:185
-msgid "Criawips Manual"
-msgstr "Manual til Criawips"
+#: database-content.py:227
+msgid "Serbian Jekavian"
+msgstr "Serbisk Štokavisk"
 
-#: database-content.py:186
-msgid "Sound Juicer Manual"
-msgstr "Manual til lyd-cd-udtrækker"
+#: database-content.py:228
+msgid "Serbian Latin"
+msgstr "Serbisk latin"
 
-#: database-content.py:187
-msgid "Property Nicks"
-msgstr "Property Nicks"
+#: database-content.py:233
+msgid "Somali"
+msgstr "Somali"
 
-#: database-content.py:188
-msgid "tips"
-msgstr "tips"
+#: database-content.py:234
+msgid "South Ndebele"
+msgstr "Syd-ndebele"
 
-#: database-content.py:189
-msgid "script-fu"
-msgstr "script-fu"
+#: database-content.py:235
+#| msgid "Northern Sotho"
+msgid "Southern Sotho"
+msgstr "Sydlig sotho"
 
-#: database-content.py:190
-msgid "libgimp"
-msgstr "libgimp"
+#: database-content.py:237
+#| msgid "Maithili"
+msgid "Swahili"
+msgstr "Swahili"
 
-#: database-content.py:191
-msgid "python"
-msgstr "python"
+#: database-content.py:245
+msgid "Tsonga"
+msgstr "Tsonga"
 
-#: database-content.py:192
-msgid "plug-ins"
-msgstr "udvidelsesmoduler"
+#: database-content.py:251
+msgid "Uzbek (Cyrillic)"
+msgstr "Uzbekisk (kyrillisk)"
 
-#: database-content.py:193
-msgid "Functions"
-msgstr "Funktioner"
+#: database-content.py:252
+msgid "Uzbek (Latin)"
+msgstr "Uzbekisk (latin)"
 
-#: database-content.py:194
-msgid "Dasher Manual"
-msgstr "Manual til Dasher"
-
-#: database-content.py:195
+#: database-content.py:260
 msgid "Weather Applet Locations"
 msgstr "Lokationer til vejr-panelprogram"
 
-#: database-content.py:196
-msgid "Dictionary Manual"
-msgstr "Manual til Ordbog"
+#: database-content.py:261
+msgid "Nelly Kroes on Open Source"
+msgstr "Nelly Kroes om open source"
 
-#: database-content.py:197
-msgid "Disk Usage Analyzer Manual"
-msgstr "Manual til Diskforbrugs-analyse"
+#: database-content.py:262
+msgid "Layout Descriptions"
+msgstr "Layoutbeskrivelser"
 
-#: database-content.py:198
-msgid "Log Viewer Manual"
-msgstr "Manual til Systemlog-fremviser"
-
-#: database-content.py:199
-msgid "Search Tool Manual"
-msgstr "Manual til Søgeværktøj"
-
-#: database-content.py:200
-msgid "GNOME Library help"
-msgstr "Hjælp til GNOME-biblioteket"
-
-#: database-content.py:201
-msgid "Eye of GNOME Manual"
-msgstr "Manual til GNOME's Øje"
-
-#: database-content.py:202
-msgid "GST User Management Manual"
-msgstr "Manual til GST-brugerhåndtering"
-
-#: database-content.py:203
-msgid "GST Service Management Manual"
-msgstr "Manual til GST-tjenestehåndtering"
-
-#: database-content.py:204
-msgid "GST Network Setup Manual"
-msgstr "Manual til opsætning af GST-netværk"
-
-#: database-content.py:205
-msgid "GST Shared Folders Manual"
-msgstr "Manual til GST delte mapper"
-
-#: database-content.py:206
-msgid "GST Time Setup Manual"
-msgstr "Manual til opsætning af GST-tid"
-
-#: database-content.py:207
-#: djamnedlies-git/languages/views.py:50
-#: djamnedlies-git/languages/views.py:66
-#: djamnedlies-git/templates/branch_detail.html:23
-#: djamnedlies-git/templates/release_detail.html:22
-#: djamnedlies-git/templates/teams/team_detail.html:27
-#: djamnedlies-svn/languages/views.py:50
-#: djamnedlies-svn/languages/views.py:66
-#: djamnedlies-svn/templates/branch_detail.html:23
-#: djamnedlies-svn/templates/release_detail.html:22
-#: djamnedlies-svn/templates/teams/team_detail.html:27
-#: languages/views.py:50
-#: languages/views.py:70
-#: templates/branch_detail.html:23
-#: templates/release_detail.html:22
-#: templates/release_detail.html.py:68
-#: templates/teams/team_detail.html:27
-msgid "Documentation"
-msgstr "Dokumentation"
-
-#: database-content.py:208
-#| msgid "UI translations"
+#: database-content.py:263
 msgid "UI translation"
 msgstr "Brugerfladeoversættelse"
 
-#: database-content.py:209
-msgid "GNOME 2 User Documentation"
-msgstr "GNOME 2 brugerdokumentation"
+#: database-content.py:264
+#: database-content.py:274
+msgid "UI translations"
+msgstr "Brugerflade-oversættelser"
 
-#: database-content.py:210
-msgid "Evince Document Viewer"
-msgstr "Dokumentfremviseren Evince"
+#: database-content.py:265
+msgid "User Directories"
+msgstr "Brugerkataloger"
+
+#: database-content.py:266
+msgid "Functions"
+msgstr "Funktioner"
+
+#: database-content.py:267
+msgid "libgimp"
+msgstr "libgimp"
+
+#: database-content.py:268
+msgid "plug-ins"
+msgstr "udvidelsesmoduler"
+
+#: database-content.py:269
+msgid "Property Nicks"
+msgstr "Property Nicks"
+
+#: database-content.py:270
+msgid "python"
+msgstr "python"
+
+#: database-content.py:271
+msgid "script-fu"
+msgstr "script-fu"
+
+#: database-content.py:272
+#| msgid "Status"
+msgid "tags"
+msgstr "mærker"
+
+#: database-content.py:273
+msgid "tips"
+msgstr "tips"
+
+#: database-content.py:275
+#| msgid "Accessibility Guide"
+msgid "Accessibility Developers Guide"
+msgstr "Vejledning til udviklerne om tilgængelighedsfunktioner"
+
+#: database-content.py:276
+msgid "Accessibility Guide"
+msgstr "Tilgængeligheds-vejledning"
+
+#: database-content.py:277
+msgid "Keyboard Accessibility Monitor Manual"
+msgstr "Manual til Tastaturtilgængeligheds-overvågning"
+
+#: database-content.py:278
+msgid "AisleRiot Manual"
+msgstr "Manual til Kabale"
+
+#: database-content.py:279
+msgid "appendix"
+msgstr "tillæg"
+
+#: database-content.py:280
+#| msgid "Nibbles Manual"
+msgid "Audio Profiles Manual"
+msgstr "Manual til lydprofiler"
+
+#: database-content.py:281
+msgid "Disk Usage Analyzer Manual"
+msgstr "Manual til Diskforbrugs-analyse"
+
+#: database-content.py:282
+msgid "Battery Charge Monitor Manual"
+msgstr "Manual til Batteriovervåger"
+
+#: database-content.py:283
+msgid "Blackjack Manual"
+msgstr "Manual til Blackjack"
+
+#: database-content.py:284
+#| msgid "Browse Repository"
+msgid "Browser Help"
+msgstr "Hjælp til browser"
+
+#: database-content.py:285
+msgid "Character Palette Manual"
+msgstr "Manual til Tegnpalet"
+
+#: database-content.py:286
+msgid "Clock Applet Manual"
+msgstr "Manual til Ur-panelprogram"
+
+#: database-content.py:287
+msgid "Command Line Manual"
+msgstr "Manual til Kommandolinje"
+
+#: database-content.py:288
+msgid "concepts"
+msgstr "koncepter"
+
+# Rent gæt. Jeg kan ikke finde modulet.
+#: database-content.py:289
+msgid "CPU Frequency Scaling Monitor Manual"
+msgstr "Manual til CPU-frekvensskalerings-overvågning"
+
+#: database-content.py:290
+msgid "FDL License"
+msgstr "FDL-licens"
+
+#: database-content.py:291
+msgid "GPL License"
+msgstr "GPL-licens"
+
+#: database-content.py:292
+msgid "LGPL License"
+msgstr "LGPL-licens"
+
+#: database-content.py:293
+msgid "dialogs"
+msgstr "dialoger"
+
+#: database-content.py:294
+msgid "Dictionary Manual"
+msgstr "Manual til Ordbog"
+
+#: database-content.py:295
+msgid "Disk Mounter Manual"
+msgstr "Manual til Diskmontering"
+
+#: database-content.py:296
+msgid "filters"
+msgstr "filtre"
+
+#: database-content.py:297
+msgid "alpha-to-logo filter"
+msgstr "alfa til logo-filter"
+
+#: database-content.py:298
+msgid "animation filter"
+msgstr "animationsfilter"
+
+#: database-content.py:299
+#| msgid "Latest POT file"
+msgid "artistic filter"
+msgstr "kunstnerisk filter"
+
+#: database-content.py:300
+msgid "blur filter"
+msgstr "sløringsfilter"
+
+#: database-content.py:301
+msgid "combine filter"
+msgstr "kombinationsfilter"
+
+#: database-content.py:302
+msgid "decor filter"
+msgstr "dekorationsfilter"
+
+#: database-content.py:303
+msgid "distort filter"
+msgstr "forvrængningsfilter"
+
+#: database-content.py:304
+msgid "edge-detect filter"
+msgstr "kantgenkendelsesfilter"
+
+#: database-content.py:305
+msgid "enhance filter"
+msgstr "forbedringsfilter"
+
+# Knappen i GIMP hedder generel, men det lyder ikke korrekt.
+#: database-content.py:306
+msgid "generic filter"
+msgstr "generelt filter"
+
+#: database-content.py:307
+msgid "light-effects filter"
+msgstr "lyseffektfilter"
+
+# Formoder det er det der henvises til
+#: database-content.py:308
+msgid "map filter"
+msgstr "afbildningsfilter"
+
+#: database-content.py:309
+msgid "noise filter"
+msgstr "støjfilter"
+
+# Kan ikke se hvad det skal være for et filter.
+#: database-content.py:310
+msgid "render filter"
+msgstr "renderingsfilter"
+
+#: database-content.py:311
+msgid "web filter"
+msgstr "internetfilter"
+
+#: database-content.py:312
+msgid "Fish Applet Manual"
+msgstr "Manual til Fisk-panelprogram"
+
+#: database-content.py:313
+msgid "Geyes Manual"
+msgstr "Manual til Øjne"
+
+#: database-content.py:314
+#| msgid "libgimp"
+msgid "gimp"
+msgstr "GIMP"
+
+#: database-content.py:315
+msgid "Quick Reference"
+msgstr "Oversigt"
+
+#: database-content.py:316
+msgid "glChess Manual"
+msgstr "Manual til glChess"
+
+#: database-content.py:317
+msgid "Five or More Manual"
+msgstr "Manual til Kugler på stribe"
+
+#: database-content.py:318
+msgid "glossary"
+msgstr "ordliste"
+
+#: database-content.py:319
+msgid "Four-in-a-row Manual"
+msgstr "Manual til Fire på stribe"
+
+#: database-content.py:320
+msgid "Nibbles Manual"
+msgstr "Manual til Orme"
+
+#: database-content.py:321
+msgid "GNOME Robots Manual"
+msgstr "Manual til GNOME Robotter"
+
+#: database-content.py:322
+msgid "CD Player Manual"
+msgstr "Manual til cd-afspiller"
+
+#: database-content.py:323
+msgid "GNOME Sudoku Manual"
+msgstr "Manual til GNOME Sudoku"
+
+#: database-content.py:324
+msgid "Gnometris Manual"
+msgstr "Manual til Gnometris"
+
+#: database-content.py:325
+msgid "Mines Manual"
+msgstr "Manual til Minestryger"
+
+#: database-content.py:326
+msgid "GNOME Tetravex Manual"
+msgstr "Manual til GNOME Tetravex"
+
+#: database-content.py:327
+msgid "GNOME Klotski Manual"
+msgstr "Manual til GNOME Klotski"
+
+#: database-content.py:328
+msgid "Sound Recorder Manual"
+msgstr "Manual til Lydoptager"
+
+#: database-content.py:329
+msgid "Search Tool Manual"
+msgstr "Manual til Søgeværktøj"
+
+#: database-content.py:330
+msgid "GNOME Volume Control Manual"
+msgstr "Manual til GNOME Lydstyrkekontrol"
+
+#: database-content.py:331
+msgid "GST Network Setup Manual"
+msgstr "Manual til opsætning af GST-netværk"
+
+#: database-content.py:332
+msgid "GST Service Management Manual"
+msgstr "Manual til GST-tjenestehåndtering"
+
+#: database-content.py:333
+msgid "GST Shared Folders Manual"
+msgstr "Manual til GST delte mapper"
+
+#: database-content.py:334
+msgid "GST Time Setup Manual"
+msgstr "Manual til opsætning af GST-tid"
+
+#: database-content.py:335
+msgid "GST User Management Manual"
+msgstr "Manual til GST-brugerhåndtering"
+
+#: database-content.py:336
+msgid "GStreamer Properties Manual"
+msgstr "Manual til GStreamer-egenskaber"
+
+#: database-content.py:337
+msgid "Keyboard Indicator Manual"
+msgstr "Manual til Tastaturindikator"
+
+#: database-content.py:338
+msgid "GNOME Tali Manual"
+msgstr "Manual til GNOME Tali"
+
+#: database-content.py:339
+msgid "Weather Report Manual"
+msgstr "Manual til Vejrrapport"
+
+#: database-content.py:340
+msgid "Anjuta Manual"
+msgstr "Manual til Anjuta"
+
+# Rent gæt. Jeg kan ikke finde modulet.
+#: database-content.py:341
+msgid "Criawips Manual"
+msgstr "Manual til Criawips"
+
+#: database-content.py:342
+msgid "Dasher Manual"
+msgstr "Manual til Dasher"
+
+#: database-content.py:343
+#: languages/views.py:52
+#: languages/views.py:85
+#: templates/branch_detail.html:23
+#: templates/release_detail.html:22
+#: templates/release_detail.html.py:68
+#: templates/languages/language_release_summary.html:10
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: database-content.py:344
+msgid "Encryption Applet Manual"
+msgstr "Manual til Krypteringspanelprogram"
+
+#: database-content.py:345
+msgid "Eye of GNOME Manual"
+msgstr "Manual til GNOMEs Øje"
+
+#: database-content.py:346
+msgid "GConf Editor Manual"
+msgstr "Manual til GConf-redigering"
+
+#: database-content.py:347
+msgid "GDM Manual"
+msgstr "Manual til GDM"
+
+#: database-content.py:348
+msgid "GNOME Keyring Manager Manual"
+msgstr "Manual til GNOME Nøgleringshåndtering"
+
+#: database-content.py:349
+msgid "GNOME Library help"
+msgstr "Hjælp til GNOME-biblioteket"
+
+#: database-content.py:350
+msgid "Release Notes"
+msgstr "Udgivelsesnoter"
+
+#: database-content.py:351
+msgid "Sound Juicer Manual"
+msgstr "Manual til lyd-cd-udtrækker"
+
+#: database-content.py:352
+#: database-content.py:390
+#: database-content.py:391
+msgid "User Guide"
+msgstr "Brugervejledning"
+
+#: database-content.py:353
+msgid "Human Interface Guidelines"
+msgstr "Retningslinier"
+
+#: database-content.py:354
+msgid "Iagno Manual"
+msgstr "Manual til Iagno"
+
+#: database-content.py:355
+msgid "Integration Guide"
+msgstr "Integrationsvejledning"
+
+#: database-content.py:356
+msgid "introduction"
+msgstr "introduktion"
+
+#: database-content.py:357
+msgid "Invest Applet Manual"
+msgstr "Manual til investerings-panelprogram"
+
+#: database-content.py:358
+#| msgid "glChess Manual"
+msgid "Lights Off Manual"
+msgstr "Manual til Lights Off"
+
+#: database-content.py:359
+msgid "Log Viewer Manual"
+msgstr "Manual til Systemlog-fremviser"
+
+#: database-content.py:360
+msgid "GNOME Mahjongg Manual"
+msgstr "Manual til GNOME Mahjongg"
+
+#: database-content.py:361
+#| msgid "JHBuild Documentation"
+msgid "Mallard Documentation Guide"
+msgstr "Vejledning til Mallard"
+
+#: database-content.py:362
+msgid "menus"
+msgstr "menuer"
+
+#: database-content.py:363
+msgid "colors menus"
+msgstr "menuen farver"
+
+#: database-content.py:364
+msgid "colors auto menu"
+msgstr "menuen autofarver"
+
+#: database-content.py:365
+msgid "colors component menu"
+msgstr "menuen farvekomponenter"
+
+#: database-content.py:366
+msgid "colors info menu"
+msgstr "menuen farveinformation"
+
+#: database-content.py:367
+msgid "colors map menu"
+msgstr "menuen farvekort"
+
+#: database-content.py:368
+msgid "edit menu"
+msgstr "menuen redigér"
+
+#: database-content.py:369
+msgid "file menu"
+msgstr "menuen filer"
+
+#: database-content.py:370
+msgid "filters menu"
+msgstr "menuen filtre"
+
+#: database-content.py:371
+#| msgid "Development"
+msgid "help menu"
+msgstr "menuen hjælp"
+
+#: database-content.py:372
+msgid "image menu"
+msgstr "menuen billede"
+
+#: database-content.py:373
+#| msgid "CD Player Manual"
+msgid "layer menu"
+msgstr "menuen lag"
+
+#: database-content.py:374
+msgid "select menu"
+msgstr "menuen vælg"
+
+#: database-content.py:375
+msgid "view menu"
+msgstr "menuen vis"
+
+#: database-content.py:376
+msgid "Volume Control Manual"
+msgstr "Manual til Lydstyrkekontrol"
+
+#: database-content.py:377
+msgid "System Monitor Manual"
+msgstr "Manual til System-overvågning"
+
+#: database-content.py:378
+#| msgid "Integration Guide"
+msgid "Optimization Guide"
+msgstr "Guide til optimering"
+
+#: database-content.py:379
+msgid "Platform Overview"
+msgstr "Platformoversigt"
+
+#: database-content.py:380
+msgid "preface"
+msgstr "forord"
+
+# Rent gæt. Jeg kan ikke finde modulet.
+#: database-content.py:381
+#| msgid "Criawips Manual"
+msgid "Quadrapassel Manual"
+msgstr "Manual til Quadrapassel"
+
+#: database-content.py:382
+msgid "Same GNOME Manual"
+msgstr "Manual til Samspil"
+
+#: database-content.py:383
+msgid "Website"
+msgstr "Hjemmeside"
+
+#: database-content.py:384
+msgid "Sticky Notes Manual"
+msgstr "Manual til notessedler"
+
+#: database-content.py:385
+#| msgid "GFloppy Manual"
+msgid "Swell-Foop Manual"
+msgstr "Manual til Swell-Foop"
+
+#: database-content.py:386
+msgid "System Administration Guide"
+msgstr "Systemadministrations-vejledning"
+
+#: database-content.py:387
+msgid "toolbox"
+msgstr "værktøjskasse"
+
+#: database-content.py:388
+msgid "Panel Trash Manual"
+msgstr "Manual til Papirkurv"
+
+#: database-content.py:389
+#| msgid "Asturian"
+msgid "tutorial"
+msgstr "vejledning"
+
+#: database-content.py:392
+msgid "using gimp"
+msgstr "bruger GIMP"
+
+#: database-content.py:393
+msgid "preferences"
+msgstr "indstillinger"
+
+#: database-content.py:394
+msgid "Banshee Music Player"
+msgstr "Banshee medieafspiller"
 
 # Rent gæt - jeg kan ikke finde modulet
-#: database-content.py:211
+#: database-content.py:395
 msgid "Beagle Desktop Search"
 msgstr "Beagle-skrivebordssøgning"
 
-#: database-content.py:212
-#: djamnedlies-git/templates/base.html:35
-#: djamnedlies-git/templates/admin/base_site.html:7
-#: djamnedlies-svn/templates/base.html:35
-#: djamnedlies-svn/templates/admin/base_site.html:7
+#: database-content.py:396
 #: templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Forbandede Løgne"
 
-#: database-content.py:213
-msgid "Banshee Music Player"
-msgstr "Banshee medieafspiller"
-
-#: database-content.py:214
-msgid "Shared MIME Info"
-msgstr "Delt MIME-info"
-
-#: database-content.py:215
-msgid "GNOME Applets"
-msgstr "GNOME Applets"
-
-#: database-content.py:216
-msgid "GNOME 2 Development Documentation"
-msgstr "GNOME 2 udviklingsdokumentation"
-
-#: database-content.py:217
-msgid "GNOME Release Notes"
-msgstr "Udgivelsesnoter til GNOME"
-
-#: database-content.py:218
-msgid "Rhythmbox Music Player"
-msgstr "Rhythmbox-musikafspiller"
-
-#: database-content.py:219
-msgid "Epiphany Web Browser"
-msgstr "Epiphany-webbrowser"
-
-#: database-content.py:220
-msgid "GNOME Library Web site"
-msgstr "GNOME-bibliotekets webside"
-
-#: database-content.py:221
-msgid "Eye of GNOME"
-msgstr "GNOME's Øje"
-
-#: database-content.py:222
-msgid "Gnome Specimen"
-msgstr "Gnome Specimen"
-
-#: database-content.py:223
+#: database-content.py:397
 msgid "Deskbar Applet"
 msgstr "Deskbar-panelprogram"
 
-#: database-content.py:224
+#: database-content.py:398
+msgid "Eye of GNOME"
+msgstr "GNOMEs Øje"
+
+#: database-content.py:399
+msgid "Epiphany Web Browser"
+msgstr "Epiphany-webbrowser"
+
+#: database-content.py:400
+msgid "Evince Document Viewer"
+msgstr "Dokumentfremviseren Evince"
+
+#: database-content.py:401
+#| msgid "GDM Manual"
+msgid "GIMP User Manual"
+msgstr "Brugermanual til GIMP"
+
+#: database-content.py:402
+msgid "GNOME Applets"
+msgstr "GNOME Applets"
+
+#: database-content.py:403
+msgid "GNOME 2 Development Documentation"
+msgstr "GNOME 2 udviklingsdokumentation"
+
+#: database-content.py:404
+msgid "Gnome Specimen"
+msgstr "Gnome Specimen"
+
+#: database-content.py:405
+msgid "GNOME 2 User Documentation"
+msgstr "GNOME 2 brugerdokumentation"
+
+#: database-content.py:406
+#| msgid "GNOME Desktop"
+msgid "GNOME Web Photo"
+msgstr "GNOME Webfoto"
+
+#: database-content.py:407
+msgid "GNOME Library Web site"
+msgstr "GNOME-bibliotekets webside"
+
+#: database-content.py:408
+msgid "GNOME Release Notes"
+msgstr "Udgivelsesnoter til GNOME"
+
+#: database-content.py:409
+msgid "Rhythmbox Music Player"
+msgstr "Rhythmbox-musikafspiller"
+
+#: database-content.py:410
+msgid "Shared MIME Info"
+msgstr "Delt MIME-info"
+
+#: database-content.py:411
+msgid "Video subtitles translations for selected GNOME videos"
+msgstr "Oversættelser af undertekster til udvalgte GNOME-videoer"
+
+#: database-content.py:412
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:225
-msgid "GNUCash is not part of the GNOME SVN repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "GNUCash er ikke en del af GNOME SVN-arkivet. Tjek venligst <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash-wikien</a> for at se hvortil du skal sende oversættelser."
+#: database-content.py:413
+msgid "Email client for netbooks"
+msgstr "E-post-klient til netbook"
 
-#: database-content.py:226
-msgid "Evince is a document viewer for multiple document formats."
-msgstr "Evince er en dokumentfremviser til mange forskellige dokumentformater."
+#: database-content.py:414
+msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a>."
+msgstr "Avahi er et system der letter opdagelsen af tjenester på lokalnetværket med protokolsamlingen mDNS/DNS-SD. Send venligst dine oversættelser gennem <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex-platformen</a>."
 
-#: database-content.py:227
+#: database-content.py:415
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "Integrerede oversættelser opdateres manuelt på l10n.gnome.org fra tid til anden. Vær tålmodig :-)"
 
-#: database-content.py:228
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr "Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse igennem <a href=\"http://translationproject.org\">Translation Project</a>."
+#: database-content.py:416
+msgid "Evince is a document viewer for multiple document formats."
+msgstr "Evince er en dokumentfremviser til mange forskellige dokumentformater."
 
-#: database-content.py:229
+#: database-content.py:417
 #| msgid ""
 #| "This is not a GNOME-specific module. Please submit your translation "
 #| "through the <a href=\"http://translationproject.org\">Translation "
 #| "Project</a>."
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
-msgstr "Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse gennem <a href=\"http://translationproject.org\">Translation Project</a>. Se også <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">oversættelsessiden for xdg-user-dirs på Translation Project</a>."
+msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a>."
+msgstr "D-Bus-tjeneste for adgang til fingeraftrykslæsere. Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse igennem <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platformen</a>."
 
-#: database-content.py:230
+#: database-content.py:418
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Fra GNOME 2.23 af er GAIL integreret i GTK+. Lad derfor være med at sende ændringer til udviklergrenen."
 
-#: database-content.py:231
-msgid "A VNC client for GNOME"
-msgstr "En VNC-klient til GNOME"
+#: database-content.py:419
+msgid "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
+msgstr "Yderligere oplysninger om lokalisering af GCompris kan findes på <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 
-#: database-content.py:232
-msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in SVN even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
-msgstr "Bemærk at gtk+ både har både brugerfladedomænerne po og po-properties. Hvis du tilføjer et nyt sprog i et af domænerne, skal du integrere begge filer i SVN, selv hvis en af dem indeholder 0 oversættelser, medmindre GTK+ vil fejle i /po-properties."
-
-#: database-content.py:233
+#: database-content.py:420
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafisk brugerflade til arkivtrackeren git"
 
-# Hva?
-#: database-content.py:234
-msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
-msgstr "moserial er en ren, venlig gtk-baseret seriel terminal til GNOME-skrivebordet. Den er skrevet i Vala for ekstra godhed."
+#: database-content.py:421
+msgid "A multimedia converter for the GNOME Desktop"
+msgstr "En multimediekonverter til GNOME-skrivebordet"
 
-# Der skulle egentlig være bindestreg mellem
-# 'system-tools-backends' og 'version', men det ville få det til at lyde som om det var en del af pakken.
-#: database-content.py:235
-msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
-msgstr "Dette er en klon af den officielle system-tools-backends version fra arkivet på freedesktop.org."
-
-#: database-content.py:236
-msgid "Passepartout is a DTP application for X."
-msgstr "Passepartout er et DTP-program til X."
-
-#: database-content.py:237
+#: database-content.py:422
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "gnome-disk-utility indeholder programbiblioteker og programmer til at håndtere lagerenheder."
 
-#: database-content.py:238
-msgid "A note taking application"
-msgstr "Et program til at tage noter"
-
-#: database-content.py:239
-msgid "Translations should be submitted as bug reports (see link below)."
-msgstr "Oversættelser bør indsendes som fejlrapporter (se link nedenfor)."
-
-#: database-content.py:240
+#: database-content.py:423
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "GNOME Video Arcade er en MAME (Multiple Arcade Machine Emulator)-grænseflade til GNOME."
 
-#: database-content.py:241
-#| msgid "GNOME Release Notes"
+#: database-content.py:424
+msgid "A note taking application"
+msgstr "Et program til at tage noter"
+
+#: database-content.py:425
+#| msgid ""
+#| "GNUCash is not part of the GNOME SVN repository. Please check <a href="
+#| "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
+#| "a> to see where to send translations."
+msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
+msgstr "GNUCash er ikke en del af GNOMEs Git-arkiv. Tjek venligst <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash-wikien</a> for at se hvortil du skal sende oversættelser."
+
+#: database-content.py:426
+#: database-content.py:427
+#: database-content.py:428
+#: database-content.py:429
+#: database-content.py:430
+#: database-content.py:449
+msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
+msgstr "Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse igennem <a href=\"http://translationproject.org\">Translation Project</a>."
+
+#: database-content.py:431
+#| msgid ""
+#| "Please note that gtk+ has both po and po-properties UI domains.  If you "
+#| "add a new language in either domain, you have to commit both files in SVN "
+#| "even if one of them contains 0 translations, unless GTK+ build will break "
+#| "in /po-properties."
+msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
+msgstr "Bemærk at gtk+ både har brugerfladedomænerne po og po-properties. Hvis du tilføjer et nyt sprog i et af domænerne, skal du integrere begge filer i SVN, også selvom en af dem indeholder 0. Ellers vil kompilering af GTK+ slå fejl i /po-properties"
+
+# Hva?
+#: database-content.py:432
+msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
+msgstr "moserial er en ren, venlig gtk-baseret seriel terminal til GNOME-skrivebordet. Den er skrevet i Vala for ekstra godhed."
+
+#: database-content.py:433
+msgid "Gnome Parental Control"
+msgstr "Forældrekontrol til Gnome"
+
+#: database-content.py:434
+msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
+msgstr "For at indsende din oversættelse skal du <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">oprette en fejlrapport i GNOMEs Bugzilla</a>.  Vedhæft dernæst din oversættelsesfil."
+
+#: database-content.py:435
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://translationproject.org\">Translation "
+#| "Project</a>."
+msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
+msgstr "PackageKit er et system designet til at gøre installation og opdatering af din computer lettere. Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse igennem <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex-platformen</a>."
+
+#: database-content.py:436
+msgid "Passepartout is a DTP application for X."
+msgstr "Passepartout er et DTP-program til X."
+
+#: database-content.py:437
+msgid ""
+"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
+"Please submit your translation through the <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex platform</a>."
+msgstr ""
+"PulseAudio er et lydsystem til POSIX-operativsystemer, hvilket betyder, at det er en proxy for dine lydapplikationer. \n"
+"Indsend venligst din oversættelse via <a href=\"\n"
+"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex-platformen</a>."
+
+#: database-content.py:440
+#| msgid ""
+#| "This is not a GNOME-specific module. Please submit your translation "
+#| "through the <a href=\"http://translationproject.org\">Translation "
+#| "Project</a>."
+msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
+msgstr "Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse igennem <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex-platformen</a>."
+
+#: database-content.py:441
+msgid "A photo manager for GNOME"
+msgstr "Et fotohåndteringsprogram til GNOME"
+
+# Der skulle egentlig være bindestreg mellem
+# 'system-tools-backends' og 'version', men det ville få det til at lyde som om det var en del af pakken.
+#: database-content.py:442
+msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
+msgstr "Dette er en klon af den officielle system-tools-backends version fra arkivet på freedesktop.org."
+
+#: database-content.py:443
 msgid "GNOME Teletext viewer"
 msgstr "GNOME tekst-tv-visning"
 
-#: database-content.py:242
-msgid "Extra GNOME Applications"
-msgstr "Ekstra GNOME-programmer"
+#: database-content.py:444
+msgid ""
+"Here we translate the subtitles of selected GNOME videos.\n"
+"See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
+msgstr ""
+"Her oversætter vi undertekster til udvalgte GNOME-videoer.\n"
+"Yderligere information kan findes i <a href=\"http://live.gnome.org/VideoSubtitles\">Videoundertekster</a>."
 
-#: database-content.py:243
-msgid "GNOME 2.18 (old stable)"
-msgstr "GNOME 2.18 (gammel stabil)"
+#: database-content.py:446
+msgid "A VNC client for GNOME"
+msgstr "En VNC-klient til GNOME"
 
-#: database-content.py:244
-msgid "GNOME Infrastructure"
-msgstr "GNOME-infrastruktur"
+#: database-content.py:447
+msgid "Translations should be submitted as bug reports (see link below)."
+msgstr "Oversættelser bør indsendes som fejlrapporter (se link nedenfor)."
 
-#: database-content.py:245
-msgid "GNOME 2.16 (old stable)"
-msgstr "GNOME 2.16 (gammel stabil)"
+#: database-content.py:448
+msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
+msgstr "Dette er ikke et GNOME-specifikt modul. Indsend venligst din oversættelse gennem <a href=\"http://translationproject.org\">Translation Project</a>. Se også <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">oversættelsessiden for xdg-user-dirs på Translation Project</a>."
 
-#: database-content.py:246
-msgid "GNOME 2.14 (old stable)"
-msgstr "GNOME 2.14 (gammel stabil)"
+#: database-content.py:450
+#| msgid "GNOME 2.28 (development)"
+msgid "GNOME 3.0 (development)"
+msgstr "GNOME 3.0 (udvikling)"
 
-#: database-content.py:247
-msgid "freedesktop.org (non-GNOME)"
-msgstr "freedesktop.org (ikke-GNOME)"
+#: database-content.py:451
+#| msgid "GNOME 2.26 (stable)"
+msgid "GNOME 2.32 (stable)"
+msgstr "GNOME 2.32 (stabil)"
 
-#: database-content.py:248
-#| msgid "GNOME 2.14 (old stable)"
+#: database-content.py:452
+#| msgid "GNOME 2.20 (old stable)"
+msgid "GNOME 2.30 (old stable)"
+msgstr "GNOME 2.30 (gammel stabil)"
+
+#: database-content.py:453
+#| msgid "GNOME 2.18 (old stable)"
+msgid "GNOME 2.28 (old stable)"
+msgstr "GNOME 2.28 (gammel stabil)"
+
+#: database-content.py:454
+#| msgid "GNOME 2.16 (old stable)"
+msgid "GNOME 2.26 (old stable)"
+msgstr "GNOME 2.26 (gammel stabil)"
+
+#: database-content.py:455
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammel stabil)"
 
-#: database-content.py:249
-#| msgid "GNOME 2.20 (old stable)"
+#: database-content.py:456
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammel stabil)"
 
-#: database-content.py:250
-msgid "GNOME-Office Productivity Applications"
-msgstr "GNOME-kontorprogrammer"
-
-#: database-content.py:251
+#: database-content.py:457
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammel stabil)"
 
-#: database-content.py:252
-#| msgid "GNOME 2.22 (stable)"
-msgid "GNOME 2.26 (stable)"
-msgstr "GNOME 2.26 (stabil)"
+#: database-content.py:458
+msgid "GNOME 2.18 (old stable)"
+msgstr "GNOME 2.18 (gammel stabil)"
 
-#: database-content.py:253
-#| msgid "GNOME 2.24 (development)"
-msgid "GNOME 2.28 (development)"
-msgstr "GNOME 2.28 (udvikling)"
+#: database-content.py:459
+msgid "GNOME 2.16 (old stable)"
+msgstr "GNOME 2.16 (gammel stabil)"
 
-#: database-content.py:254
-#| msgid "Extra GNOME Applications"
+#: database-content.py:460
+msgid "GNOME 2.14 (old stable)"
+msgstr "GNOME 2.14 (gammel stabil)"
+
+#: database-content.py:461
+msgid "External Dependencies (GNOME)"
+msgstr "Eksterne afhængigheder (GNOME)"
+
+#: database-content.py:462
 msgid "Obsolete GNOME Applications"
 msgstr "Forældede GNOME-programmer"
 
-#: settings.py:73
-#: settings_sample.py:80
-#: djamnedlies-git/settings_sample.py:80
-#| msgid ""
-#| "This module is not part of the GNOME SVN repository. Please check the "
-#| "module's web page to see where to send translations."
-msgid "This module is not part of the GNOME git repository. Please check the module's web page to see where to send translations."
-msgstr "Dette modul er ikke en del af GNOME git-arkivet. Tjek venligst modulets hjemmeside for at se, hvortil du skal sende oversættelser."
+#: database-content.py:463
+msgid "GNOME-Office Productivity Applications"
+msgstr "GNOME-kontorprogrammer"
 
-#: common/views.py:34
-#: djamnedlies-git/common/views.py:33
-#: djamnedlies-svn/common/views.py:33
+#: database-content.py:464
+msgid "GNOME Infrastructure"
+msgstr "GNOME-infrastruktur"
+
+#: database-content.py:465
+msgid "GIMP and Friends"
+msgstr "GIMP og venner"
+
+#: database-content.py:466
+msgid "Extra GNOME Applications"
+msgstr "Ekstra GNOME-programmer"
+
+#: database-content.py:467
+msgid "freedesktop.org (non-GNOME)"
+msgstr "freedesktop.org (ikke-GNOME)"
+
+#: settings.py:75
+#: settings_sample.py:81
+#| msgid ""
+#| "This module is not part of the GNOME git repository. Please check the "
+#| "module's web page to see where to send translations."
+msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
+msgstr "Dette modul er ikke en del af GNOMEs Git-arkiv. Tjek venligst modulets hjemmeside for at se, hvortil du skal sende oversættelser."
+
+#: common/views.py:35
 msgid "translator-credits"
 msgstr ""
 "M.P. Rommedahl\n"
@@ -1093,239 +1587,220 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: common/views.py:55
-#: djamnedlies-git/common/views.py:54
-#: djamnedlies-svn/common/views.py:54
+#: common/views.py:60
 msgid "You have been logged out."
 msgstr "Du er blevet logget ud."
 
-#: common/views.py:63
-#: djamnedlies-git/common/views.py:62
-#: djamnedlies-svn/common/views.py:62
+#: common/views.py:68
 msgid "You have been successfully logged in."
 msgstr "Du er nu logget ind."
 
-#: common/views.py:66
+#: common/views.py:71
 #, python-format
 msgid "You have not joined any translation team yet. You can do it from <a href=\"%(url)s\">your profile</a>."
 msgstr "Du har ikke tilmeldt dig nogen oversættelseshold endnu. Det kan du gøre fra <a href=\"%(url)s\">din profil</a>."
 
-#: common/views.py:75
-#: djamnedlies-git/common/views.py:69
-#: djamnedlies-svn/common/views.py:69
+#: common/views.py:80
 msgid "We're sorry, but your account has been disabled."
 msgstr "Vi beklager, men din konto er blevet deaktiveret."
 
-#: common/views.py:77
-#: djamnedlies-git/common/views.py:71
-#: djamnedlies-svn/common/views.py:71
+#: common/views.py:82
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Logind fejlede. Tjek venligst dit brugernavn og adgangskode."
 
-#: common/views.py:117
-#: djamnedlies-git/common/views.py:111
-#: djamnedlies-svn/common/views.py:111
+#: common/views.py:121
 msgid "Your account has been activated."
 msgstr "Din konto er blevet aktiveret."
 
-#: djamnedlies-git/languages/views.py:49
-#: djamnedlies-git/languages/views.py:65
-#: djamnedlies-svn/languages/views.py:49
-#: djamnedlies-svn/languages/views.py:65
-#: languages/views.py:49
-#: languages/views.py:69
-#| msgid "UI translations"
-msgid "UI Translations"
-msgstr "Brugerfladeoversættelser"
+#: django_openid/templates/django_openid/admin_login.html:17
+#: templates/login.html:15
+msgid "Log in with your username and password:"
+msgstr "Log ind med dit brugernavn og adgangskode:"
 
-#: djamnedlies-git/people/forms.py:14
-#: djamnedlies-svn/people/forms.py:14
-#: people/forms.py:14
-msgid "Choose a username:"
-msgstr "Vælg et brugernavn:"
+#: django_openid/templates/django_openid/admin_login.html:20
+#: templates/login.html:18
+msgid "Username:"
+msgstr "Brugernavn:"
 
-# Wikipedia kalder det 'bundstreg'.
-#: djamnedlies-git/people/forms.py:15
-#: djamnedlies-svn/people/forms.py:15
-#: people/forms.py:15
-msgid "May contain only letters, numbers, underscores or hyphens"
-msgstr "Må kun indeholde bogstaver, tal, bundstreger eller bindestreger"
-
-#: djamnedlies-git/people/forms.py:16
-#: djamnedlies-svn/people/forms.py:16
-#: people/forms.py:16
-msgid "Email:"
-msgstr "E-post:"
-
-#: djamnedlies-git/people/forms.py:17
-#: djamnedlies-git/templates/login.html:37
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:34
-#: djamnedlies-svn/people/forms.py:17
-#: djamnedlies-svn/templates/login.html:37
-#: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17
-#: templates/login.html:37
-msgid "OpenID:"
-msgstr "OpenID:"
-
-#: djamnedlies-git/people/forms.py:20
-#: djamnedlies-git/templates/login.html:21
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:23
-#: djamnedlies-svn/people/forms.py:20
-#: djamnedlies-svn/templates/login.html:21
 #: django_openid/templates/django_openid/admin_login.html:23
 #: people/forms.py:20
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Adgangskode:"
 
-#: djamnedlies-git/people/forms.py:21
-#: djamnedlies-svn/people/forms.py:21
+#: django_openid/templates/django_openid/admin_login.html:28
+#: templates/base.html:77
+#: templates/login.html:29
+#: templates/registration/password_reset_complete.html:12
+msgid "Log in"
+msgstr "Log ind"
+
+#: django_openid/templates/django_openid/admin_login.html:31
+#: templates/login.html:34
+msgid "Or use your OpenID:"
+msgstr "Eller brug din OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:34
+#: people/forms.py:17
+#: templates/login.html:37
+msgid "OpenID:"
+msgstr "OpenID:"
+
+#: django_openid/templates/django_openid/admin_login.html:37
+#: templates/login.html:40
+msgid "Log in with OpenID"
+msgstr "Log ind med OpenID"
+
+#. Translators: this concerns an unknown plural form
+#: languages/models.py:54
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: languages/views.py:51
+#: languages/views.py:84
+msgid "UI Translations"
+msgstr "Brugerfladeoversættelser"
+
+#: languages/views.py:82
+#: templates/release_detail.html:66
+msgid "Original strings"
+msgstr "Oprindelige strenge"
+
+#: people/forms.py:14
+msgid "Choose a username:"
+msgstr "Vælg et brugernavn:"
+
+# Wikipedia kalder det 'bundstreg'.
+#: people/forms.py:15
+msgid "May contain only letters, numbers, underscores or hyphens"
+msgstr "Må kun indeholde bogstaver, tal, bundstreger eller bindestreger"
+
+#: people/forms.py:16
+msgid "Email:"
+msgstr "E-post:"
+
 #: people/forms.py:21
 msgid "At least 7 characters"
 msgstr "Mindst 7 tegn"
 
-#: djamnedlies-git/people/forms.py:23
-#: djamnedlies-git/templates/people/person_password_change_form.html:27
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:18
-#: djamnedlies-svn/people/forms.py:23
-#: djamnedlies-svn/templates/people/person_password_change_form.html:27
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:18
 #: people/forms.py:23
 #: templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Bekræft adgangskode:"
 
-#: djamnedlies-git/people/forms.py:31
-#: djamnedlies-svn/people/forms.py:31
 #: people/forms.py:31
 msgid "This username is already taken. Please choose another."
 msgstr "Dette brugernavn er allerede taget. Vælg venligst et andet."
 
-#: djamnedlies-git/people/forms.py:39
-#: djamnedlies-svn/people/forms.py:39
 #: people/forms.py:39
 msgid "You must either provide an OpenID or a password"
 msgstr "Du skal enten angive et OpenID eller en adgangskode"
 
-#: djamnedlies-git/people/forms.py:42
-#: djamnedlies-svn/people/forms.py:42
 #: people/forms.py:42
 msgid "The passwords do not match"
 msgstr "De to adgangskoder er ikke ens"
 
-#: djamnedlies-git/people/forms.py:65
-#: djamnedlies-svn/people/forms.py:65
 #: people/forms.py:65
 msgid "Account activation"
 msgstr "Kontoaktivering"
 
-#: djamnedlies-git/people/forms.py:66
-#: djamnedlies-svn/people/forms.py:66
 #: people/forms.py:66
 #, python-format
 msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
 msgstr "Dette er en bekræftelse på, at din registrering på %s lykkedes. For at aktivere din konto skal du klikke på linket herunder eller kopiere og indsætte det i en browser."
 
-#: djamnedlies-git/people/forms.py:68
-#: djamnedlies-svn/people/forms.py:68
 #: people/forms.py:68
 #, python-format
-#| msgid "Administration Tools"
 msgid "Administrators of %s"
 msgstr "Administratorer af %s"
 
-#: djamnedlies-git/people/models.py:36
-#: djamnedlies-svn/people/models.py:36
+#: people/forms.py:86
+#, python-format
+msgid "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
+msgstr "Billedet er for højt eller for bredt (%(width)dx%(height)d. Maksimum er 100x100 billedpunkter"
+
+#: people/forms.py:105
+msgid "The URL you provided is not valid"
+msgstr "Den angivne URL er ikke gyldig"
+
+#: people/forms.py:121
+msgid "The URL you provided seems not to correspond to a valid image"
+msgstr "Den angivne URL synes ikke at svare til et gyldigt billede"
+
 #: people/models.py:36
 msgid "Image"
 msgstr "Billede"
 
-#: djamnedlies-git/people/models.py:37
-#: djamnedlies-svn/people/models.py:37
 #: people/models.py:37
-msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
-msgstr "URL til en billedfil (.jpg, .png, ...) af en hackergotchi"
+#| msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi"
+msgid "URL to an image file (.jpg, .png, ...) of an hackergotchi (max. 100x100 pixels)"
+msgstr "URL til en billedfil (.jpg, .png, ...) af en hackergotchi (max. 100*100 billedpunkter)"
 
-#: djamnedlies-git/people/models.py:38
-#: djamnedlies-svn/people/models.py:38
 #: people/models.py:38
-#| msgid "Users Web Page:"
+#: teams/models.py:94
 msgid "Web page"
 msgstr "Hjemmeside"
 
-#: djamnedlies-git/people/models.py:39
-#: djamnedlies-svn/people/models.py:39
 #: people/models.py:39
 msgid "IRC nickname"
 msgstr "IRC-kaldenavn"
 
-#: djamnedlies-git/people/models.py:40
-#: djamnedlies-svn/people/models.py:40
 #: people/models.py:40
-#| msgid "Bugzilla account:"
 msgid "Bugzilla account"
 msgstr "Bugzilla-konto"
 
-#: djamnedlies-git/people/models.py:41
-#: djamnedlies-svn/people/models.py:41
 #: people/models.py:41
-msgid "This should be an email address, useful if not equal to 'email' field"
-msgstr "Dette bør være en e-post-adresse, brugbar hvis den ikke er den samme som \"e-mail\"-feltet"
+#| msgid ""
+#| "This should be an email address, useful if not equal to 'email' field"
+msgid "This should be an email address, useful if not equal to 'E-mail address' field"
+msgstr "Dette bør være en e-post-adresse. Dette kan være nyttigt hvis den ikke er lig med \"e-mail\"-feltet"
 
-#: djamnedlies-git/people/views.py:86
-#: djamnedlies-svn/people/views.py:86
-#: people/views.py:86
+#: people/views.py:87
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Du er nu tilmeldt holdet \"%s\"."
 
-#: djamnedlies-git/people/views.py:89
-#: djamnedlies-svn/people/views.py:89
+#: people/views.py:88
+msgid "A new person joined your team"
+msgstr "En ny person er blevet medlem af din gruppe"
+
 #: people/views.py:89
+#, python-format
+msgid "%(name)s has just joined your translation team on %(site)s"
+msgstr "%(name)s har netop tiltrådt din oversættelsesgruppe på %(site)s"
+
+#: people/views.py:92
 msgid "You are already member of this team."
 msgstr "Du er allerede medlem af dette hold."
 
-#: djamnedlies-git/people/views.py:112
-#: djamnedlies-svn/people/views.py:112
-#: people/views.py:112
+#: people/views.py:114
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Du er blevet fjernet fra holdet \"%s\"."
 
-#: djamnedlies-git/people/views.py:128
-#: djamnedlies-svn/people/views.py:128
-#: people/views.py:128
+#: people/views.py:130
 msgid "Your password has been changed."
 msgstr "Din adgangskode er blevet ændret."
 
-#: djamnedlies-git/stats/models.py:320
-#: djamnedlies-svn/stats/models.py:320
-#: stats/models.py:342
+#: stats/models.py:227
+msgid "This branch is not linked from any release"
+msgstr "Ingen udgave henviser til denne gren"
+
+#: stats/models.py:395
 msgid "Can't generate POT file, using old one."
 msgstr "Kan ikke generere POT-fil, bruger gammel version."
 
-#: djamnedlies-git/stats/models.py:341
-#: djamnedlies-svn/stats/models.py:341
-#: stats/models.py:364
+#: stats/models.py:397
+msgid "Can't generate POT file, statistics aborted."
+msgstr "Kan ikke generere POT-fil, statistik afbrudt."
+
+#: stats/models.py:417
 msgid "Can't copy new POT file to public location."
 msgstr "Kan ikke kopiere ny POT-fil til offentlig placering."
 
-#: djamnedlies-git/stats/models.py:380
-#: djamnedlies-svn/stats/models.py:380
-#: stats/models.py:396
-msgid "DOC_LINGUAS list doesn't include this language."
-msgstr "DOC_LINGUAS-listen inkluderer ikke dette sprog."
-
-#: djamnedlies-git/stats/models.py:659
-#: djamnedlies-svn/stats/models.py:659
-#: stats/models.py:675
+#: stats/models.py:751
 #, python-format
-#| msgid ""
-#| "Error regenerating POT file for document %s:\n"
-#| "<pre>%s\n"
-#| "%s</pre>"
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
 "<pre>%(cmd)s\n"
@@ -1335,61 +1810,47 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/models.py:906
-#: djamnedlies-svn/stats/models.py:906
-#: stats/models.py:922
+#: stats/models.py:775
+#, python-format
+#| msgid ""
+#| "Entry for this language is not present in ALL_LINGUAS in configure file."
+msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
+msgstr "Der findes ikke nogen indgang for dette sprog i variablen %(var)s i filen %(file)s.'"
+
+#: stats/models.py:1033
 msgid "Administration Tools"
 msgstr "Administrationsværktøjer"
 
-#: djamnedlies-git/stats/models.py:907
-#: djamnedlies-svn/stats/models.py:907
-#: stats/models.py:923
+#: stats/models.py:1034
 msgid "Development Tools"
 msgstr "Udviklingsværktøjer"
 
-#: djamnedlies-git/stats/models.py:908
-#: djamnedlies-svn/stats/models.py:908
-#: stats/models.py:924
-#| msgid "GNOME desktop"
+#: stats/models.py:1035
 msgid "GNOME Desktop"
 msgstr "GNOME-skrivebord"
 
-#: djamnedlies-git/stats/models.py:909
-#: djamnedlies-svn/stats/models.py:909
-#: stats/models.py:925
-#| msgid "GNOME developer platform"
+#: stats/models.py:1036
 msgid "GNOME Developer Platform"
 msgstr "GNOME-udviklerplatform"
 
-#: djamnedlies-git/stats/models.py:910
-#: djamnedlies-svn/stats/models.py:910
-#: stats/models.py:926
-#| msgid "New module proposals"
+#: stats/models.py:1037
 msgid "New Module Proposals"
 msgstr "Forslag til nye moduler"
 
-#: djamnedlies-git/stats/models.py:986
-#: djamnedlies-git/stats/models.py:1252
-#: djamnedlies-svn/stats/models.py:986
-#: djamnedlies-svn/stats/models.py:1252
-#: stats/models.py:1002
-#: stats/models.py:1279
+#: stats/models.py:1116
+#: stats/models.py:1420
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: djamnedlies-git/stats/models.py:1017
-#: djamnedlies-svn/stats/models.py:1017
-#: stats/models.py:1033
+#: stats/models.py:1149
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s besked"
 msgstr[1] "%(count)s beskeder"
 
-#: djamnedlies-git/stats/models.py:1018
-#: djamnedlies-svn/stats/models.py:1018
-#: stats/models.py:1034
+#: stats/models.py:1150
 #, python-format
 msgid "updated on %(date)s"
 msgstr "opdateret %(date)s"
@@ -1397,97 +1858,67 @@ msgstr "opdateret %(date)s"
 # Har ingen anelse om hvad her menes --mp
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: djamnedlies-git/stats/models.py:1020
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:80
-#: djamnedlies-svn/stats/models.py:1020
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:33
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:80
-#: stats/models.py:1036
-#: templates/vertimus/vertimus_detail.html:34
-#: templates/vertimus/vertimus_detail.html:112
+#: stats/models.py:1152
+#: templates/vertimus/vertimus_detail.html:47
+#: templates/vertimus/vertimus_detail.html:133
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: djamnedlies-git/stats/models.py:1023
-#: djamnedlies-svn/stats/models.py:1023
-#: stats/models.py:1039
+#: stats/models.py:1155
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figur"
 msgstr[1] "%(count)s figurer"
 
-#: djamnedlies-git/stats/models.py:1024
-#: djamnedlies-svn/stats/models.py:1024
-#: stats/models.py:1040
+#: stats/models.py:1156
 #, python-format
-#| msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
-#| msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: djamnedlies-git/stats/models.py:1027
-#: djamnedlies-svn/stats/models.py:1027
-#: stats/models.py:1043
+#: stats/models.py:1159
 #, python-format
-#| msgid "POT file (%(potsize)s message, %(number)s %(figures)s)"
-#| msgid_plural "POT file (%(potsize)s messages, %(number)s %(figures)s)"
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
 
-#: djamnedlies-git/stats/utils.py:85
-#: djamnedlies-svn/stats/utils.py:85
-#: stats/utils.py:85
+#: stats/models.py:1243
+msgid "This POT file has not been generated through the standard intltool method."
+msgstr "Denne POT-fil er ikke genereret via standardmetoden med intltool."
+
+#: stats/models.py:1244
+msgid "This POT file has not been generated through the standard gnome-doc-utils method."
+msgstr "Denne POT-fil er ikke genereret via standardmetoden til gnome-doc-utils."
+
+#: stats/utils.py:95
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Fejl mens der blev kørt tjek med \"intltool-update -m\"."
 
-#: djamnedlies-git/stats/utils.py:91
-#: djamnedlies-svn/stats/utils.py:91
-#: stats/utils.py:91
+#: stats/utils.py:101
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Der mangler nogle filer fra POTFILES.in: %s"
 
-#: djamnedlies-git/stats/utils.py:100
-#: djamnedlies-svn/stats/utils.py:100
-#: stats/utils.py:100
+#: stats/utils.py:110
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "De følgende filer henvises til i enten POTFILES.in eller POTFILES.skip, men de eksisterer ikke: %s"
 
-#: djamnedlies-git/stats/utils.py:112
-#: djamnedlies-svn/stats/utils.py:112
-#: stats/utils.py:112
+#: stats/utils.py:130
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ligner ikke gnome-doc-utils modulet."
 
-#: djamnedlies-git/stats/utils.py:115
-#: djamnedlies-svn/stats/utils.py:115
-#: stats/utils.py:115
+#: stats/utils.py:133
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE fører ikke til en virkelig fil, bruger \"%s.xml\"."
 
-#: djamnedlies-git/stats/utils.py:118
-#: djamnedlies-svn/stats/utils.py:118
-#: stats/utils.py:118
+#: stats/utils.py:141
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE henviser ikke til en virkelig fil, muligvis en makro."
 
-#: djamnedlies-git/stats/utils.py:133
-#: djamnedlies-svn/stats/utils.py:133
-#: stats/utils.py:133
+#: stats/utils.py:155
 #, python-format
-#| msgid ""
-#| "Error regenerating POT file for document %s:\n"
-#| "<pre>%s\n"
-#| "%s</pre>"
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
 "<pre>%(cmd)s\n"
@@ -1497,320 +1928,245 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: djamnedlies-git/stats/utils.py:206
-#: djamnedlies-svn/stats/utils.py:206
-#: stats/utils.py:206
+#: stats/utils.py:240
 #, python-format
-#| msgid "PO file '%s' doesn't exist."
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-filen \"%s\" eksisterer ikke eller kan ikke læses."
 
-#: djamnedlies-git/stats/utils.py:226
-#: djamnedlies-svn/stats/utils.py:226
-#: stats/utils.py:226
+#: stats/utils.py:260
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "PO-fil \"%s\" klarer ikke et msgfmt-tjek: opdaterer ikke."
 
-#: djamnedlies-git/stats/utils.py:228
-#: djamnedlies-svn/stats/utils.py:228
-#: stats/utils.py:228
+#: stats/utils.py:262
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Kan ikke hente statistik for POT-filen \"%s\"."
 
-#: djamnedlies-git/stats/utils.py:231
-#: djamnedlies-svn/stats/utils.py:231
-#: stats/utils.py:231
+#: stats/utils.py:265
 msgid "This PO file has an executable bit set."
 msgstr "Denne PO-fil har et kørbart bitsæt."
 
-#: djamnedlies-git/stats/utils.py:259
-#: djamnedlies-svn/stats/utils.py:259
-#: stats/utils.py:259
+#: stats/utils.py:293
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-filen \"%s\" er ikke kodet i UTF-8."
 
-#: djamnedlies-git/stats/utils.py:292
-#: djamnedlies-svn/stats/utils.py:292
-#: stats/utils.py:292
+#: stats/utils.py:308
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Der findes ikke en entitet for dette sprog i LINGUAS-filen."
 
-#: djamnedlies-git/stats/utils.py:319
-#: djamnedlies-svn/stats/utils.py:319
-#: stats/utils.py:319
+#: stats/utils.py:326
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Der findes ikke en entitet for dette sprog i ALL_LINGUAS i konfigurationsfilen."
 
-#: djamnedlies-git/stats/utils.py:322
-#: djamnedlies-svn/stats/utils.py:322
-#: stats/utils.py:322
-msgid "Don't know where to look if this language is actually used, ask the module maintainer."
-msgstr "Ved ikke hvor der skal ledes hvis dette sprog rent faktisk bruges, spørg vedligeholderen af modulet."
+#: stats/utils.py:328
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
+msgstr "Ved ikke hvor der skal ledes efter LINGUAS-variablen. Spørg vedligeholderen af modulet."
 
-#: djamnedlies-git/teams/models.py:112
-#: djamnedlies-svn/teams/models.py:112
-#: teams/models.py:115
+#: stats/utils.py:335
+#| msgid ""
+#| "Don't know where to look if this language is actually used, ask the "
+#| "module maintainer."
+msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
+msgstr "Ved ikke hvor der skal ledes efter DOC_LINGUAS-variablen. Spørg vedligeholderen af modulet."
+
+#: stats/utils.py:337
+msgid "DOC_LINGUAS list doesn't include this language."
+msgstr "DOC_LINGUAS-listen inkluderer ikke dette sprog."
+
+#: teams/forms.py:21
+msgid "Remove From Team"
+msgstr "Fjern fra gruppe"
+
+#: teams/models.py:92
+#| msgid "Documentation"
+msgid "Presentation"
+msgstr "Præsentation"
+
+#: teams/models.py:95
+#| msgid "Mailing List:"
+msgid "Mailing list"
+msgstr "Postliste"
+
+#: teams/models.py:96
+#| msgid "Subscribe"
+msgid "URL to subscribe"
+msgstr "URL for at tilmelde"
+
+#: teams/models.py:212
+#: vertimus/models.py:544
+#: vertimus/models.py:594
+#, python-format
+msgid "This is an automated message sent from %s."
+msgstr "Dette er en automatisk besked sendt fra %s."
+
+#: teams/models.py:230
 #, python-format
 msgid "No team for locale %s"
 msgstr "Intet hold for sproget %s"
 
-#: djamnedlies-git/teams/models.py:129
-#: djamnedlies-svn/teams/models.py:129
-#: teams/models.py:132
-#| msgid "Translation"
+#: teams/models.py:250
 msgid "Translator"
 msgstr "Oversætter"
 
 # ?
-#: djamnedlies-git/teams/models.py:130
-#: djamnedlies-svn/teams/models.py:130
-#: teams/models.py:133
+#: teams/models.py:251
 msgid "Reviewer"
 msgstr "Gennemlæser"
 
-#: djamnedlies-git/teams/models.py:131
-#: djamnedlies-svn/teams/models.py:131
-#: teams/models.py:134
-#| msgid "Community"
+#: teams/models.py:252
 msgid "Committer"
 msgstr "Har integreringsrettigheder"
 
-#: djamnedlies-git/teams/models.py:132
-#: djamnedlies-git/templates/teams/team_base.html:31
-#: djamnedlies-svn/teams/models.py:132
-#: djamnedlies-svn/templates/teams/team_base.html:31
-#: teams/models.py:135
-#: templates/teams/team_base.html:31
+#: teams/models.py:253
+#: templates/teams/team_base.html:36
 msgid "Coordinator"
 msgstr "Koordinator"
 
-#: djamnedlies-git/teams/views.py:44
-#: djamnedlies-svn/teams/views.py:44
-#: teams/views.py:44
-#| msgid "Community"
+#: teams/views.py:57
 msgid "Committers"
 msgstr "Folk med integreringsrettigheder"
 
-#: djamnedlies-git/teams/views.py:47
-#: djamnedlies-svn/teams/views.py:47
-#: teams/views.py:47
+#: teams/views.py:60
 msgid "No committers"
 msgstr "Ingen til at integrere"
 
-#: djamnedlies-git/teams/views.py:49
-#: djamnedlies-svn/teams/views.py:49
-#: teams/views.py:49
+#: teams/views.py:62
 msgid "Reviewers"
 msgstr "Gennemlæsere"
 
-#: djamnedlies-git/teams/views.py:52
-#: djamnedlies-svn/teams/views.py:52
-#: teams/views.py:52
+#: teams/views.py:65
 msgid "No reviewers"
 msgstr "Ingen gennemlæsere"
 
-#: djamnedlies-git/teams/views.py:54
-#: djamnedlies-svn/teams/views.py:54
-#: teams/views.py:54
-#| msgid "Translation"
+#: teams/views.py:67
 msgid "Translators"
 msgstr "Oversættere"
 
-#: djamnedlies-git/teams/views.py:57
-#: djamnedlies-svn/teams/views.py:57
-#: teams/views.py:57
-#| msgid "Not translated"
+#: teams/views.py:70
 msgid "No translators"
 msgstr "Ingen oversættere"
 
-#: djamnedlies-git/templates/404.html:4
-#: djamnedlies-git/templates/404.html:9
-#: djamnedlies-svn/templates/404.html:4
-#: djamnedlies-svn/templates/404.html:9
+#: teams/views.py:72
+#| msgid "Inactive"
+msgid "Inactive members"
+msgstr "Inaktive medlemmer"
+
+#: teams/views.py:75
+msgid "No inactive members"
+msgstr "Ingen inaktive medlemmer"
+
 #: templates/404.html:4
 #: templates/404.html.py:9
 msgid "Error: page not found"
 msgstr "Fejl: side ikke fundet"
 
-#: djamnedlies-git/templates/404.html:11
-#: djamnedlies-svn/templates/404.html:11
 #: templates/404.html:11
 msgid "The page you requested has not been found on this server."
 msgstr "Siden, du anmodede om, er ikke blevet fundet på denne server."
 
-#: djamnedlies-git/templates/500.html:4
-#: djamnedlies-svn/templates/500.html:4
 #: templates/500.html:4
 msgid "Error: server error (500)"
 msgstr "Fejl: serverfejl (500)"
 
-#: djamnedlies-git/templates/500.html:9
-#: djamnedlies-svn/templates/500.html:9
 #: templates/500.html:9
 msgid "Server Error"
 msgstr "Serverfejl"
 
-#: djamnedlies-git/templates/500.html:11
-#: djamnedlies-svn/templates/500.html:11
 #: templates/500.html:11
 msgid "We're sorry but a server error has occurred."
 msgstr "Vi beklager, men der er sket en serverfejl."
 
-#: djamnedlies-git/templates/base.html:26
-#: djamnedlies-git/templates/base.html:42
-#: djamnedlies-svn/templates/base.html:26
-#: djamnedlies-svn/templates/base.html:42
 #: templates/base.html:26
 #: templates/base.html.py:42
 msgid "Home"
 msgstr "Hjem"
 
-#: djamnedlies-git/templates/base.html:27
-#: djamnedlies-svn/templates/base.html:27
 #: templates/base.html:27
 msgid "News"
 msgstr "Nyheder"
 
-#: djamnedlies-git/templates/base.html:28
-#: djamnedlies-svn/templates/base.html:28
 #: templates/base.html:28
 msgid "Projects"
 msgstr "Projekter"
 
-#: djamnedlies-git/templates/base.html:29
-#: djamnedlies-svn/templates/base.html:29
 #: templates/base.html:29
 msgid "Art"
 msgstr "Kunst"
 
-#: djamnedlies-git/templates/base.html:30
-#: djamnedlies-svn/templates/base.html:30
 #: templates/base.html:30
 msgid "Support"
 msgstr "Support"
 
-#: djamnedlies-git/templates/base.html:31
-#: djamnedlies-svn/templates/base.html:31
 #: templates/base.html:31
 msgid "Development"
 msgstr "Udvikling"
 
-#: djamnedlies-git/templates/base.html:32
-#: djamnedlies-svn/templates/base.html:32
 #: templates/base.html:32
 msgid "Community"
 msgstr "Fællesskab"
 
-#: djamnedlies-git/templates/base.html:42
-#: djamnedlies-svn/templates/base.html:42
 #: templates/base.html:42
 msgid "Back to Damned Lies home page"
 msgstr "Tilbage til Forbandede Løgne-hjemmesiden"
 
-#: djamnedlies-git/templates/base.html:48
-#: djamnedlies-git/templates/index.html:13
-#: djamnedlies-svn/templates/base.html:48
-#: djamnedlies-svn/templates/index.html:13
 #: templates/base.html:48
 #: templates/index.html:13
 msgid "Teams"
 msgstr "Hold"
 
-#: djamnedlies-git/templates/base.html:53
-#: djamnedlies-git/templates/index.html:20
-#: djamnedlies-git/templates/release_compare.html:25
-#: djamnedlies-svn/templates/base.html:53
-#: djamnedlies-svn/templates/index.html:20
-#: djamnedlies-svn/templates/release_compare.html:25
 #: templates/base.html:53
-#: templates/index.html:20
+#: templates/index.html:27
 #: templates/release_compare.html:25
 msgid "Languages"
 msgstr "Sprog"
 
-#: djamnedlies-git/templates/base.html:58
-#: djamnedlies-svn/templates/base.html:58
 #: templates/base.html:58
 msgid "Release sets"
 msgstr "Udgivelsessæt"
 
-#: djamnedlies-git/templates/base.html:63
-#: djamnedlies-git/templates/index.html:36
-#: djamnedlies-svn/templates/base.html:63
-#: djamnedlies-svn/templates/index.html:36
 #: templates/base.html:63
-#: templates/index.html:36
+#: templates/index.html:43
 msgid "Modules"
 msgstr "Moduler"
 
-#: djamnedlies-git/templates/base.html:74
-#: djamnedlies-svn/templates/base.html:74
 #: templates/base.html:74
 msgid "Log out"
 msgstr "Log ud"
 
-#: djamnedlies-git/templates/base.html:77
-#: djamnedlies-git/templates/login.html:29
-#: djamnedlies-git/templates/registration/password_reset_complete.html:12
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:28
-#: djamnedlies-svn/templates/base.html:77
-#: djamnedlies-svn/templates/login.html:29
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:12
-#: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77
-#: templates/login.html:29
-#: templates/registration/password_reset_complete.html:12
-msgid "Log in"
-msgstr "Log ind"
+#: templates/base.html:94
+msgid "Copyright &copy; 2006-2009"
+msgstr "Ophavsret &copy; 2006-2009"
 
-#: djamnedlies-git/templates/base.html:94
-#: djamnedlies-svn/templates/base.html:94
 #: templates/base.html:94
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: djamnedlies-git/templates/base.html:96
 #: templates/base.html:96
 #| msgid ""
-#| "Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-#| "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
-#| "org</a>"
-msgid "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+#| "Maintained in the <a href='http://git.gnome.org/cgit/damned-lies/'>damned-"
+#| "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
+msgid "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
 msgstr "Vedligeholdes i <a href='http://git.gnome.org/cgit/damned-lies/'>damned-lies</a>-modulet på <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
-#: djamnedlies-git/templates/base.html:98
-#: djamnedlies-svn/templates/base.html:98
 #: templates/base.html:98
-msgid "Hosted by"
-msgstr "Hosted af"
+#, python-format
+#| msgid "Hosted by"
+msgid "Hosted by %(link)s."
+msgstr "Vært for denne side: %(link)s."
 
-#: djamnedlies-git/templates/branch_detail.html:4
-#: djamnedlies-svn/templates/branch_detail.html:4
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
 msgstr "Denne gren er i øjeblikket strengfrossen."
 
-#: djamnedlies-git/templates/branch_detail.html:13
-#: djamnedlies-svn/templates/branch_detail.html:13
 #: templates/branch_detail.html:13
 msgid "Translation"
 msgstr "Oversættelse"
 
-#: djamnedlies-git/templates/error.html:4
-#: djamnedlies-git/templates/index.html:4
-#: djamnedlies-git/templates/index.html:9
-#: djamnedlies-git/templates/login.html:4
-#: djamnedlies-git/templates/registration/register.html:4
-#: djamnedlies-git/templates/registration/register_success.html:4
-#: djamnedlies-svn/templates/error.html:4
-#: djamnedlies-svn/templates/index.html:4
-#: djamnedlies-svn/templates/index.html:9
-#: djamnedlies-svn/templates/login.html:4
-#: djamnedlies-svn/templates/registration/register.html:4
-#: djamnedlies-svn/templates/registration/register_success.html:4
 #: templates/error.html:4
 #: templates/index.html:4
 #: templates/index.html.py:9
@@ -1820,1172 +2176,809 @@ msgstr "Oversættelse"
 msgid "Damned Lies about GNOME"
 msgstr "Forbandede Løgne om GNOME"
 
-#: djamnedlies-git/templates/error.html:9
-#: djamnedlies-svn/templates/error.html:9
 #: templates/error.html:9
 msgid "Error:"
 msgstr "Fejl:"
 
-#: djamnedlies-git/templates/index.html:14
-#: djamnedlies-svn/templates/index.html:14
 #: templates/index.html:14
 msgid "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information."
 msgstr "Liste over alle GNOME-oversættelseshold, med fuld information såsom primær kontakt (koordinator), websider og postlisteinformation."
 
-#: djamnedlies-git/templates/index.html:15
-#: djamnedlies-svn/templates/index.html:15
 #: templates/index.html:15
-#| msgid ""
-#| "If there is no team for your language, you can easily <a href=\"http://"
-#| "live.gnome.org/TranslationProject/StartingATeam/\">start your own team</"
-#| "a>."
 msgid "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
 msgstr "Hvis der ikke er noget hold for dit sprog, kan du nemt <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>starte dit eget hold</a>."
 
-#: djamnedlies-git/templates/index.html:22
-#: djamnedlies-svn/templates/index.html:22
-#: templates/index.html:22
+#: templates/index.html:19
 #, python-format
-#| msgid ""
-#| "List of all languages there are <a href=\"teams/\">Translation Teams</a> "
-#| "for."
+msgid "Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us to translate GNOME!"
+msgstr "Gå til <a href='%(team_url)s'>%(language_name)s-gruppens side</a> og hjælp os med at oversætte GNOME!"
+
+#: templates/index.html:29
+#, python-format
 msgid "List of all languages there are <a href='%(teams_url)s'>Translation Teams</a> for."
 msgstr "Liste over alle sprog, der er <a href='%(teams_url)s'>oversættelseshold</a> til."
 
-#: djamnedlies-git/templates/index.html:23
-#: djamnedlies-svn/templates/index.html:23
-#: templates/index.html:23
+#: templates/index.html:30
 msgid "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to."
 msgstr "Nogle hold håndterer mere end et sprog (ofte blot en simpel variant), og her kan du se alle de sprog som GNOME oversættes til."
 
-#: djamnedlies-git/templates/index.html:27
-#: djamnedlies-svn/templates/index.html:27
-#: templates/index.html:27
+#: templates/index.html:34
 msgid "Release Sets"
 msgstr "Udgivelsessæt"
 
-#: djamnedlies-git/templates/index.html:28
-#: djamnedlies-svn/templates/index.html:28
-#: templates/index.html:28
+#: templates/index.html:35
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr "Liste over alle GNOME-udgivelsessæt og udgivelser, som vi indsamler statistik om."
 
-#: djamnedlies-git/templates/index.html:30
-#: djamnedlies-svn/templates/index.html:30
-#| msgid ""
-#| "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME "
-#| "2.14\"."
-msgid "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth Toe&quot; or &quot;GNOME 2.14&quot;."
-msgstr "Eksempler på udgivelsessæt er &quot;GNOME-kontorprogrammer&quot;, &quot;Femte tå&quot; eller &quot;GNOME 2.14&quot;."
+#: templates/index.html:37
+msgid "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME 2.26&quot;."
+msgstr "Eksempler på udgivelsessæt er &quot;GNOME-infrastruktur&quot; eller &quot;GNOME 2.26&quot;."
 
-#: djamnedlies-git/templates/index.html:31
-#: djamnedlies-svn/templates/index.html:31
-#: templates/index.html:31
-#| msgid ""
-#| "Official GNOME release sets are further divided into categories such as "
-#| "\"Desktop Applications\" and \"Developer Platform\"."
+#: templates/index.html:38
 msgid "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
 msgstr "Officielle GNOME-udgivelsessæt er yderligere inddelt i kategorier såsom &quot;Skrivebordsprogrammer&quot; og &quot;Udviklerplatform&quot;."
 
-#: djamnedlies-git/templates/index.html:33
-#: djamnedlies-svn/templates/index.html:33
-#: templates/index.html:33
+#: templates/index.html:40
 msgid "Look here if you want to compare language support in any of these release sets."
 msgstr "Se her hvis du ønsker at sammenligne sprogunderstøttelse i nogle af disse udgivelsessæt."
 
-#: djamnedlies-git/templates/index.html:37
-#: djamnedlies-svn/templates/index.html:37
-#: templates/index.html:37
+#: templates/index.html:44
 msgid "List of all modules with statistics in here."
 msgstr "Liste over alle moduler med statistik herinde."
 
-#: djamnedlies-git/templates/index.html:39
-#: djamnedlies-svn/templates/index.html:39
-#: templates/index.html:39
+#: templates/index.html:46
 msgid "Modules are separate libraries or applications, with one or more branches of development included."
 msgstr "Moduler er separate biblioteker eller programmer, med en eller flere grene af udvikling inkluderet."
 
-#: djamnedlies-git/templates/index.html:40
-#: djamnedlies-svn/templates/index.html:40
-#: templates/index.html:40
-msgid "They are usually taken from CVS, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
-msgstr "De tages oftest fra CVS, og vi beholder al relevant information om dem (Bugzilla-detaljer, hjemmeside, vedligeholderinformation,...)."
+#: templates/index.html:47
+#| msgid ""
+#| "They are usually taken from CVS, and we keep all relevant information on "
+#| "them (Bugzilla details, web page, maintainer information,...)."
+msgid "They are usually taken from the Git repository, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)."
+msgstr "De tages oftest fra Git-arkivet, og vi beholder al relevant information om dem (Bugzilla-detaljer, hjemmeside, vedligeholderinformation...)."
 
-#: djamnedlies-git/templates/index.html:46
-#: djamnedlies-svn/templates/index.html:46
-#: templates/index.html:46
+#: templates/index.html:53
 msgid "Translated by:"
 msgstr "Oversat af:"
 
-#: djamnedlies-git/templates/login.html:10
-#: djamnedlies-git/templates/registration/register.html:11
-#: djamnedlies-svn/templates/login.html:10
-#: djamnedlies-svn/templates/registration/register.html:11
 #: templates/login.html:10
 #: templates/registration/register.html:11
 #, python-format
 msgid "You are already logged in as %(username)s."
 msgstr "Du er allerede logget ind som %(username)s."
 
-#: djamnedlies-git/templates/login.html:13
-#: djamnedlies-svn/templates/login.html:13
 #: templates/login.html:13
 #, python-format
 msgid "If you do not own an account on this site, you can <a href='%(link)s'>register</a> for a new account."
 msgstr "Hvi du ikke ejer en konto på denne side kan du <a href='%(link)s'>registrere</a> en ny konto."
 
-#: djamnedlies-git/templates/login.html:15
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:17
-#: djamnedlies-svn/templates/login.html:15
-#: django_openid/templates/django_openid/admin_login.html:17
-#: templates/login.html:15
-msgid "Log in with your username and password:"
-msgstr "Log ind med dit brugernavn og adgangskode:"
-
-#: djamnedlies-git/templates/login.html:18
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:20
-#: djamnedlies-svn/templates/login.html:18
-#: django_openid/templates/django_openid/admin_login.html:20
-#: templates/login.html:18
-#| msgid "User Interface"
-msgid "Username:"
-msgstr "Brugernavn:"
-
-#: djamnedlies-git/templates/login.html:22
-#: djamnedlies-svn/templates/login.html:22
 #: templates/login.html:22
 msgid "Have you forgotten your password?"
 msgstr "Har du glemt din adgangskode?"
 
-#: djamnedlies-git/templates/login.html:34
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:31
-#: djamnedlies-svn/templates/login.html:34
-#: django_openid/templates/django_openid/admin_login.html:31
-#: templates/login.html:34
-msgid "Or use your OpenID:"
-msgstr "Eller brug din OpenID:"
-
-#: djamnedlies-git/templates/login.html:40
-#: djamnedlies-svn/django_openid/templates/django_openid/admin_login.html:37
-#: djamnedlies-svn/templates/login.html:41
-#: django_openid/templates/django_openid/admin_login.html:37
-#: templates/login.html:41
-msgid "Log in with OpenID"
-msgstr "Log ind med OpenID"
-
-#: djamnedlies-git/templates/module_detail.html:6
-#: djamnedlies-svn/templates/module_detail.html:6
-#: templates/module_detail.html:6
+#: templates/module_detail.html:5
 #, python-format
 msgid "Module Statistics: %(name)s"
 msgstr "Modulstatistikker: %(name)s"
 
-#: djamnedlies-git/templates/module_detail.html:55
-#: djamnedlies-svn/templates/module_detail.html:55
-#: templates/module_detail.html:55
+#: templates/module_detail.html:54
 msgid "Maintainers"
 msgstr "Vedligeholdere"
 
-#: djamnedlies-git/templates/module_detail.html:63
-#: djamnedlies-svn/templates/module_detail.html:63
-#: templates/module_detail.html:63
+#: templates/module_detail.html:62
 msgid "Bug reporting"
 msgstr "Fejlrapportering"
 
-#: djamnedlies-git/templates/module_detail.html:66
-#: djamnedlies-svn/templates/module_detail.html:66
-#: templates/module_detail.html:66
+#: templates/module_detail.html:65
 msgid "Show existing i18n and l10n bugs"
 msgstr "Vis eksisterende i18n- og l10n-fejl"
 
-#: djamnedlies-git/templates/module_detail.html:68
-#: djamnedlies-svn/templates/module_detail.html:68
-#: templates/module_detail.html:68
-msgid "Report bugs to Bugzilla"
-msgstr "Rapportér fejl til Bugzilla"
+#: templates/module_detail.html:67
+msgid "Report a bug"
+msgstr "Rapportér en fejl"
 
-#: djamnedlies-git/templates/module_detail.html:77
-#: djamnedlies-svn/templates/module_detail.html:77
-#: templates/module_detail.html:77
+#: templates/module_detail.html:76
 msgid "Branches:"
 msgstr "Grene:"
 
-#: djamnedlies-git/templates/module_detail.html:97
-#: djamnedlies-svn/templates/module_detail.html:97
-#: templates/module_detail.html:97
+#: templates/module_detail.html:99
 msgid "Browse Repository"
 msgstr "Gennemse arkiv"
 
-#: djamnedlies-git/templates/module_images.html:4
-#: djamnedlies-svn/templates/module_images.html:4
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_stats.html:21
+msgid "Branch"
+msgstr "Gren"
+
+#: templates/module_edit_branches.html:17
+#: templates/languages/language_release_summary.html:9
+msgid "Release"
+msgstr "Udgivelse"
+
+#: templates/module_edit_branches.html:17
+msgid "Category"
+msgstr "Kategori"
+
+#: templates/module_edit_branches.html:23
+#: templates/people/person_detail_change_form.html:13
+#: templates/teams/team_edit.html:27
+msgid "Save"
+msgstr "Gem"
+
 #: templates/module_images.html:4
 #, python-format
 msgid "Module Doc Figure Status: %(name)s"
 msgstr "Moduldokumentation figurstatus: %(name)s"
 
-#: djamnedlies-git/templates/module_images.html:12
-#: djamnedlies-svn/templates/module_images.html:12
 #: templates/module_images.html:12
 msgid "Figures translation status"
 msgstr "Figurers oversættelsesstatus"
 
-#: djamnedlies-git/templates/module_images.html:17
-#: djamnedlies-svn/templates/module_images.html:17
 #: templates/module_images.html:17
 msgid "Original"
 msgstr "Oprindelig"
 
-#: djamnedlies-git/templates/module_images.html:32
-#: djamnedlies-svn/templates/module_images.html:32
-#: templates/module_images.html:30
+#: templates/module_images.html:34
 msgid "Translated, but uses original one (maybe the figure doesn't contain any string to translate)"
 msgstr "Oversat, men bruger den oprindelige (måske indeholder figuren ikke nogle oversættelige strenge)"
 
 # Er vist ikke oversat de fleste andre steder
-#: djamnedlies-git/templates/module_images.html:36
-#: djamnedlies-svn/templates/module_images.html:36
-#: templates/module_images.html:34
+#: templates/module_images.html:38
 msgid "Fuzzy"
 msgstr "Fuzzy"
 
-#: djamnedlies-git/templates/module_images.html:41
-#: djamnedlies-svn/templates/module_images.html:41
-#: templates/module_images.html:39
-#| msgid "No existing file (\"Technical\" fuzzy)"
+#: templates/module_images.html:45
 msgid "No existing file (&quot;Technical&quot; fuzzy)"
 msgstr "Ingen eksisterende fil (&quot;Teknisk&quot; fuzzy)"
 
-#: djamnedlies-git/templates/module_images.html:44
-#: djamnedlies-svn/templates/module_images.html:44
-#: templates/module_images.html:42
+#: templates/module_images.html:48
 msgid "Not translated"
 msgstr "Ikke oversat"
 
-#: djamnedlies-git/templates/module_list.html:4
-#: djamnedlies-git/templates/module_list.html:9
-#: djamnedlies-svn/templates/module_list.html:4
-#: djamnedlies-svn/templates/module_list.html:9
 #: templates/module_list.html:4
 #: templates/module_list.html.py:9
-#| msgid "GNOME modules"
 msgid "GNOME Modules"
 msgstr "GNOME-moduler"
 
-#: djamnedlies-git/templates/module_list.html:11
-#: djamnedlies-svn/templates/module_list.html:11
 #: templates/module_list.html:11
 msgid "Select a module below to see some of the damned lies about it:"
 msgstr "Vælg et modul herunder for at se nogle af de forbandede løgne om det:"
 
-#: djamnedlies-git/templates/release_compare.html:5
-#: djamnedlies-git/templates/release_compare.html:20
-#: djamnedlies-svn/templates/release_compare.html:5
-#: djamnedlies-svn/templates/release_compare.html:20
+#: templates/module_list.html:28
+#: templates/release_list.html:38
+#: templates/languages/language_list.html:35
+#: templates/teams/team_list.html:33
+#, python-format
+msgid "If anything should be changed on this page, please <a href=\"%(bug_url)s\">submit a bug report</a>."
+msgstr "Hvis noget bør ændres på denne side, så <a href=\"%(bug_url)s\">indsend venligt en fejlrapport</a>."
+
 #: templates/release_compare.html:5
 #: templates/release_compare.html.py:20
-#| msgid "Release Notes"
 msgid "Releases Comparison"
 msgstr "Sammenligning af udgivelser"
 
-#: djamnedlies-git/templates/release_detail.html:10
-#: djamnedlies-svn/templates/release_detail.html:10
+#: templates/release_compare.html:29
+#| msgid "Projects"
+msgid "Progress"
+msgstr "Status"
+
 #: templates/release_detail.html:10
 #, python-format
-#| msgid "%(release)s Release"
 msgid "%(name)s Release"
 msgstr "%(name)s udgivelse"
 
-#: djamnedlies-git/templates/release_detail.html:13
-#: djamnedlies-git/templates/languages/language_release.html:33
-#: djamnedlies-svn/templates/release_detail.html:13
-#: djamnedlies-svn/templates/languages/language_release.html:33
 #: templates/release_detail.html:13
-msgid "The modules of this release are not part of the GNOME SVN repository. Please check each module's web page to see where to send translations."
-msgstr "Modulerne i dette sæt er ikke en del af GNOME SVN-arkivet. Tjek venligst hvert moduls hjemmeside for at se hvor du skal sende oversættelser til."
+#: templates/languages/language_release.html:33
+#| msgid ""
+#| "The modules of this release are not part of the GNOME git repository. "
+#| "Please check each module's web page to see where to send translations."
+msgid "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations."
+msgstr "Modulerne i denne udgivelse er ikke en del af GNOMEs Git-arkiv. Tjek venligst hvert moduls hjemmeside for at se, hvor du skal sende oversættelser hen."
 
-#: djamnedlies-git/templates/release_detail.html:19
-#: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-svn/templates/release_detail.html:19
-#: djamnedlies-svn/templates/stats_show.html:30
 #: templates/release_detail.html:19
-#: templates/stats_show.html:30
+#: templates/stats_show.html:31
 msgid "Language"
 msgstr "Sprog"
 
-#: djamnedlies-git/templates/release_detail.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/release_detail.html:20
-#: djamnedlies-svn/templates/teams/team_detail.html:26
 #: templates/release_detail.html:20
 #: templates/release_detail.html.py:67
-#: templates/teams/team_detail.html:26
+#: templates/languages/language_release_summary.html:9
 msgid "User Interface"
 msgstr "Brugerflade"
 
-#: djamnedlies-git/templates/release_detail.html:21
-#: djamnedlies-git/templates/release_detail.html:23
-#: djamnedlies-git/templates/stats_show.html:34
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-git/templates/teams/team_detail.html:27
-#: djamnedlies-svn/templates/release_detail.html:21
-#: djamnedlies-svn/templates/release_detail.html:23
-#: djamnedlies-svn/templates/stats_show.html:34
-#: djamnedlies-svn/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/teams/team_detail.html:27
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:23
-#: templates/stats_show.html:34
-#: templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:27
+#: templates/stats_show.html:35
+#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
 msgid "Graph"
 msgstr "Graf"
 
-#: djamnedlies-git/templates/release_list.html:4
-#: djamnedlies-git/templates/release_list.html:9
-#: djamnedlies-svn/templates/release_list.html:4
-#: djamnedlies-svn/templates/release_list.html:9
 #: templates/release_list.html:4
 #: templates/release_list.html.py:9
 msgid "GNOME Releases"
 msgstr "GNOME-udgivelser"
 
-#: djamnedlies-git/templates/release_list.html:11
-#: djamnedlies-svn/templates/release_list.html:11
 #: templates/release_list.html:11
 msgid "Select a release or a release set below to see more details about it:"
 msgstr "Vælg en udgivelse eller et udgivelsessæt herunder for at se flere detaljer om det:"
 
-#: djamnedlies-git/templates/stats_show.html:13
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:38
-#: djamnedlies-svn/templates/stats_show.html:13
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:38
-#: templates/stats_show.html:13
-#: templates/vertimus/vertimus_detail.html:48
+#: templates/release_list.html:25
+#| msgid "GNOME Releases"
+msgid "Older Releases"
+msgstr "Ældre udgivelser"
+
+#: templates/stats_show.html:7
+#: templates/languages/language_release_stats.html:65
+#| msgid "Evince is a document viewer for multiple document formats."
+msgid "This document is written in Mallard documentation format"
+msgstr "Dette dokument er skrevet i dokumentationsformatet Mallard"
+
+#: templates/stats_show.html:14
+#: templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Hent POT-fil"
 
-#: djamnedlies-git/templates/stats_show.html:17
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:53
-#: djamnedlies-svn/templates/stats_show.html:17
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:53
-#: templates/stats_show.html:17
-#: templates/vertimus/vertimus_detail.html:66
+#: templates/stats_show.html:18
+#: templates/vertimus/vertimus_detail.html:81
 msgid "Notices"
 msgstr "Bemærkninger"
 
-#: djamnedlies-git/templates/stats_show.html:30
-#: djamnedlies-git/vertimus/models.py:165
-#: djamnedlies-svn/templates/stats_show.html:30
-#: djamnedlies-svn/vertimus/models.py:165
-#: templates/stats_show.html:30
-#: vertimus/models.py:189
+#: templates/stats_show.html:31
+#: vertimus/models.py:193
 msgid "Translated"
 msgstr "Oversat"
 
-#: djamnedlies-git/templates/stats_show.html:50
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:48
-#: djamnedlies-svn/templates/stats_show.html:50
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:48
-#: templates/stats_show.html:50
-#: templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:51
+#: templates/vertimus/vertimus_detail.html:75
 msgid "Display document figures"
 msgstr "Vis dokumentfigurer"
 
-#: djamnedlies-git/templates/admin/base_site.html:4
-#: djamnedlies-svn/templates/admin/base_site.html:4
 #: templates/admin/base_site.html:4
-#| msgid "Damned Lies"
 msgid "Damned Lies site admin"
 msgstr "Administrator for hjemmesiden \"Forbandede Løgne\""
 
-#: djamnedlies-git/templates/feeds/actions_description.html:6
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:101
-#: djamnedlies-svn/templates/feeds/actions_description.html:6
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:101
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:139
+#: templates/vertimus/vertimus_detail.html:160
 msgid "No comment"
 msgstr "Ingen kommentar"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:4
-#: djamnedlies-git/templates/languages/language_all_modules.html:20
-#: djamnedlies-git/templates/teams/team_detail.html:63
-#: djamnedlies-git/templates/teams/team_detail.html:64
-#: djamnedlies-svn/templates/languages/language_all_modules.html:4
-#: djamnedlies-svn/templates/languages/language_all_modules.html:20
-#: djamnedlies-svn/templates/teams/team_detail.html:63
-#: djamnedlies-svn/templates/teams/team_detail.html:64
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
-#: templates/teams/team_detail.html:63
-#: templates/teams/team_detail.html:64
-#| msgid "Modules"
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
 msgid "All modules"
 msgstr "Alle moduler"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:23
-#: djamnedlies-git/templates/languages/language_release.html:25
-#: djamnedlies-svn/templates/languages/language_all_modules.html:23
-#: djamnedlies-svn/templates/languages/language_release.html:25
 #: templates/languages/language_all_modules.html:23
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
 msgstr "Skjul færdiggjorte moduler"
 
-#: djamnedlies-git/templates/languages/language_all_modules.html:27
-#: djamnedlies-git/templates/languages/language_release.html:29
-#: djamnedlies-svn/templates/languages/language_all_modules.html:27
-#: djamnedlies-svn/templates/languages/language_release.html:29
 #: templates/languages/language_all_modules.html:27
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
 msgstr "Vis færdiggjorte moduler"
 
-#: djamnedlies-git/templates/languages/language_list.html:4
-#: djamnedlies-git/templates/languages/language_list.html:9
-#: djamnedlies-svn/templates/languages/language_list.html:4
-#: djamnedlies-svn/templates/languages/language_list.html:9
 #: templates/languages/language_list.html:4
 #: templates/languages/language_list.html:9
 msgid "GNOME Languages"
 msgstr "GNOME-sprog"
 
-#: djamnedlies-git/templates/languages/language_list.html:11
-#: djamnedlies-svn/templates/languages/language_list.html:11
 #: templates/languages/language_list.html:11
 #, python-format
-#| msgid "GNOME is being translated to following %(count)s language:"
-#| msgid_plural "GNOME is being translated to following %(count)s languages:"
 msgid "GNOME is being translated to following %(numb)s language.\n"
 msgid_plural "GNOME is being translated to following %(numb)s languages.\n"
 msgstr[0] "GNOME oversættes til det følgende %(numb)s sprog.\n"
 msgstr[1] "GNOME oversættes til de følgende %(numb)s sprog.\n"
 
-#: djamnedlies-git/templates/languages/language_release.html:42
-#: djamnedlies-svn/templates/languages/language_release.html:42
 #: templates/languages/language_release.html:43
 msgid "Download all po files"
 msgstr "Hent alle po-filer"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:54
-#| msgid "Modules"
+#: templates/people/person_detail.html:58
 msgid "Module"
 msgstr "Modul"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
-#: templates/languages/language_release_stats.html:21
-#| msgid "Branches:"
-msgid "Branch"
-msgstr "Gren"
-
-#: djamnedlies-git/templates/languages/language_release_stats.html:21
-#: djamnedlies-svn/templates/languages/language_release_stats.html:21
 #: templates/languages/language_release_stats.html:21
 msgid "Statistics"
 msgstr "Statistik"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-svn/templates/languages/language_release_stats.html:22
 #: templates/languages/language_release_stats.html:22
 msgid "Status"
 msgstr "Status"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:22
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/languages/language_release_stats.html:22
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:58
 msgid "Date"
 msgstr "Dato"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:32
-#: djamnedlies-svn/templates/languages/language_release_stats.html:32
 #: templates/languages/language_release_stats.html:32
-#| msgid "%(cat)s (%(percent)s%% translated)"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% oversat)"
 
-#: djamnedlies-git/templates/languages/language_release_stats.html:99
-#: djamnedlies-svn/templates/languages/language_release_stats.html:99
-#: templates/languages/language_release_stats.html:103
+#: templates/languages/language_release_stats.html:106
 msgid "Error summary"
 msgstr "Fejlresumé"
 
-#: djamnedlies-git/templates/people/person_base.html:5
-#: djamnedlies-svn/templates/people/person_base.html:5
 #: templates/people/person_base.html:5
-#| msgid "GNOME Contributors"
 msgid "GNOME Contributor"
 msgstr "GNOME-bidragsyder"
 
-#: djamnedlies-git/templates/people/person_base.html:12
-#: djamnedlies-git/templates/people/person_detail_change_form.html:7
-#: djamnedlies-svn/templates/people/person_base.html:12
-#: djamnedlies-svn/templates/people/person_detail_change_form.html:7
 #: templates/people/person_base.html:12
 #: templates/people/person_detail_change_form.html:7
 msgid "Change your details"
 msgstr "Redigér dine detaljer"
 
-#: djamnedlies-git/templates/people/person_base.html:13
-#: djamnedlies-svn/templates/people/person_base.html:13
 #: templates/people/person_base.html:13
 msgid "Change your password"
 msgstr "Ændr adgangskode"
 
-#: djamnedlies-git/templates/people/person_base.html:14
-#: djamnedlies-svn/templates/people/person_base.html:14
 #: templates/people/person_base.html:14
 msgid "Join a team"
 msgstr "Tilmeld dig et hold"
 
-#: djamnedlies-git/templates/people/person_detail.html:22
-#: djamnedlies-svn/templates/people/person_detail.html:22
-#: templates/people/person_detail.html:22
-#| msgid "Language"
+#: templates/people/person_detail.html:26
 msgid "Site Language:"
 msgstr "Sidesprog:"
 
-#: djamnedlies-git/templates/people/person_detail.html:33
-#: djamnedlies-svn/templates/people/person_detail.html:33
-#: templates/people/person_detail.html:33
+#: templates/people/person_detail.html:37
 msgid "Choose"
 msgstr "Vælg"
 
-#: djamnedlies-git/templates/people/person_detail.html:39
-#: djamnedlies-svn/templates/people/person_detail.html:39
-#: templates/people/person_detail.html:39
-msgid "Maintains:"
-msgstr "Vedligeholder:"
+#: templates/people/person_detail.html:43
+msgid "Module maintenance"
+msgstr "Vedligeholdelse af modul"
 
-#: djamnedlies-git/templates/people/person_detail.html:50
-#: djamnedlies-svn/templates/people/person_detail.html:50
-#: templates/people/person_detail.html:50
-msgid "Working on"
-msgstr "Arbejder på"
-
-#: djamnedlies-git/templates/people/person_detail.html:54
-#: djamnedlies-svn/templates/people/person_detail.html:54
 #: templates/people/person_detail.html:54
+#| msgid "No current actions."
+msgid "Current activity"
+msgstr "Nuværende aktivitet"
+
+#: templates/people/person_detail.html:58
 msgid "State"
 msgstr "Tilstand"
 
-#: djamnedlies-git/templates/people/person_detail_change_form.html:13
-#: djamnedlies-svn/templates/people/person_detail_change_form.html:13
-#: templates/people/person_detail_change_form.html:13
-msgid "Save"
-msgstr "Gem"
-
-#: djamnedlies-git/templates/people/person_list.html:4
-#: djamnedlies-git/templates/people/person_list.html:8
-#: djamnedlies-svn/templates/people/person_list.html:4
-#: djamnedlies-svn/templates/people/person_list.html:8
 #: templates/people/person_list.html:4
 #: templates/people/person_list.html:8
 msgid "GNOME Contributors"
 msgstr "GNOME-bidragsydere"
 
-#: djamnedlies-git/templates/people/person_list.html:10
-#: djamnedlies-svn/templates/people/person_list.html:10
 #: templates/people/person_list.html:10
 msgid "GNOME is being developed by following people:"
 msgstr "GNOME udvikles af de følgende personer:"
 
-#: djamnedlies-git/templates/people/person_overview.html:27
-#: djamnedlies-svn/templates/people/person_overview.html:27
 #: templates/people/person_overview.html:27
 msgid "Instant messaging:"
 msgstr "Kvikbeskeder:"
 
-#: djamnedlies-git/templates/people/person_overview.html:34
-#: djamnedlies-svn/templates/people/person_overview.html:34
 #: templates/people/person_overview.html:34
 msgid "Bugzilla account:"
 msgstr "Bugzilla-konto:"
 
-#: djamnedlies-git/templates/people/person_overview.html:38
-#: djamnedlies-svn/templates/people/person_overview.html:38
-#: templates/people/person_overview.html:38
-msgid "SVN account:"
-msgstr "SVN-konto:"
-
-#: djamnedlies-git/templates/people/person_password_change_form.html:6
-#: djamnedlies-svn/templates/people/person_password_change_form.html:6
 #: templates/people/person_password_change_form.html:6
 msgid "Password change"
 msgstr "Ændring af adgangskode"
 
 # Ikke "for en sikkerheds skyld" - det har en helt anden betydning på dansk
-#: djamnedlies-git/templates/people/person_password_change_form.html:8
-#: djamnedlies-svn/templates/people/person_password_change_form.html:8
 #: templates/people/person_password_change_form.html:8
 msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
 msgstr "Indtast venligst din gamle adgangskode af sikkerhedsmæssige årsager, og indtast derefter din nye adgangskode to gange, så vi kan verificere at du indtastede det korrekt."
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:15
-#: djamnedlies-svn/templates/people/person_password_change_form.html:15
 #: templates/people/person_password_change_form.html:15
 msgid "Old password:"
 msgstr "Gammel adgangskode:"
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:21
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:16
-#: djamnedlies-svn/templates/people/person_password_change_form.html:21
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:16
 #: templates/people/person_password_change_form.html:21
 #: templates/registration/password_reset_confirm.html:16
 msgid "New password:"
 msgstr "Ny adgangskode:"
 
-#: djamnedlies-git/templates/people/person_password_change_form.html:30
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:19
-#: djamnedlies-svn/templates/people/person_password_change_form.html:30
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:19
 #: templates/people/person_password_change_form.html:30
 #: templates/registration/password_reset_confirm.html:19
 msgid "Change my password"
 msgstr "Ændr min adgangskode"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:8
-#: djamnedlies-svn/templates/people/person_team_join_form.html:8
 #: templates/people/person_team_join_form.html:8
 msgid "Join a new team"
 msgstr "Tilmeld dig et nyt hold"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:11
-#: djamnedlies-svn/templates/people/person_team_join_form.html:11
 #: templates/people/person_team_join_form.html:11
 msgid "I would like to join the following team as 'translator':"
 msgstr "Jeg vil gerne tilmelde mig det følgende hold som \"oversætter\":"
 
-#: djamnedlies-git/templates/people/person_team_join_form.html:13
-#: djamnedlies-svn/templates/people/person_team_join_form.html:13
 #: templates/people/person_team_join_form.html:13
 msgid "Join"
 msgstr "Tilmeld"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:5
-#: djamnedlies-svn/templates/people/person_team_membership.html:5
 #: templates/people/person_team_membership.html:5
-msgid "Member of teams"
-msgstr "Medlemmer af hold"
+#: templates/teams/team_detail.html:66
+msgid "Team membership"
+msgstr "Holdmedlemskab"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:9
-#: djamnedlies-svn/templates/people/person_team_membership.html:9
 #: templates/people/person_team_membership.html:9
 #, python-format
 msgid "Member of %(team_name)s team (%(role_name)s)"
 msgstr "Medlemmer af %(team_name)s hold (%(role_name)s)"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:12
-#: djamnedlies-svn/templates/people/person_team_membership.html:12
 #: templates/people/person_team_membership.html:12
 msgid "Leave"
 msgstr "Forlad"
 
-#: djamnedlies-git/templates/people/person_team_membership.html:13
-#: djamnedlies-svn/templates/people/person_team_membership.html:13
 #: templates/people/person_team_membership.html:13
 msgid "Are you sure you want to leave the team?"
 msgstr "Er du sikker på, at du vil forlade holdet?"
 
-#: djamnedlies-git/templates/registration/password_reset_complete.html:4
-#: djamnedlies-git/templates/registration/password_reset_complete.html:8
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:4
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:8
 #: templates/registration/password_reset_complete.html:4
 #: templates/registration/password_reset_complete.html:8
 msgid "Password reset complete"
 msgstr "Adgangskode nulstillet"
 
-#: djamnedlies-git/templates/registration/password_reset_complete.html:10
-#: djamnedlies-svn/templates/registration/password_reset_complete.html:10
 #: templates/registration/password_reset_complete.html:10
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "Din adgangskode er blevet indstillet. Du kan nu logge ind."
 
 # Hvad menes der her?
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:4
-#: djamnedlies-git/templates/registration/password_reset_form.html:9
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:4
-#: djamnedlies-svn/templates/registration/password_reset_form.html:4
-#: djamnedlies-svn/templates/registration/password_reset_form.html:9
 #: templates/registration/password_reset_confirm.html:4
 #: templates/registration/password_reset_form.html:4
 #: templates/registration/password_reset_form.html:9
 msgid "Password reset"
 msgstr "Adgangskode nulstillet"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:10
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:10
 #: templates/registration/password_reset_confirm.html:10
 msgid "Enter new password"
 msgstr "Indtast ny adgangskode"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:12
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:12
 #: templates/registration/password_reset_confirm.html:12
 msgid "Please enter your new password twice so we can verify you typed it in correctly."
 msgstr "Indtast venligst din nye adgangskode to gange, så vi kan verificere, at du indtastede den korrekt."
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:24
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:24
 #: templates/registration/password_reset_confirm.html:24
 msgid "Password reset unsuccessful"
 msgstr "Adgangskode ikke nulstillet"
 
-#: djamnedlies-git/templates/registration/password_reset_confirm.html:26
-#: djamnedlies-svn/templates/registration/password_reset_confirm.html:26
 #: templates/registration/password_reset_confirm.html:26
 msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
 msgstr "Linket til nulstilling af adgangskoden var ugyldigt, måske fordi det allerede har været brugt. Vær venlig at anmode om en ny nulstilling af adgangskode."
 
-#: djamnedlies-git/templates/registration/password_reset_done.html:4
-#: djamnedlies-git/templates/registration/password_reset_done.html:9
-#: djamnedlies-svn/templates/registration/password_reset_done.html:4
-#: djamnedlies-svn/templates/registration/password_reset_done.html:9
 #: templates/registration/password_reset_done.html:4
 #: templates/registration/password_reset_done.html:9
 msgid "Password reset successful"
 msgstr "Adgangskode nulstillet"
 
-#: djamnedlies-git/templates/registration/password_reset_done.html:11
-#: djamnedlies-svn/templates/registration/password_reset_done.html:11
 #: templates/registration/password_reset_done.html:11
 msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
 msgstr "Vi har sendt dig instruktioner om, hvordan du indstiller din adgangskode til e-post-adressen, du angav. Du bør modtage instruktionerne om kort tid."
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:11
-#: djamnedlies-svn/templates/registration/password_reset_form.html:11
 #: templates/registration/password_reset_form.html:11
 msgid "Forgotten your password? Enter your e-mail address below, and we'll e-mail instructions for setting a new one."
 msgstr "Glemt din adgangskode? Indtast din e-post-adresse herunder, og vi tilsender dig instruktioner om, hvordan du får en ny."
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: djamnedlies-svn/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "E-mail address:"
 msgstr "E-post-adresse:"
 
-#: djamnedlies-git/templates/registration/password_reset_form.html:15
-#: djamnedlies-svn/templates/registration/password_reset_form.html:15
 #: templates/registration/password_reset_form.html:15
 msgid "Reset my password"
 msgstr "Nulstil min adgangskode"
 
-#: djamnedlies-git/templates/registration/register.html:9
-#: djamnedlies-svn/templates/registration/register.html:9
 #: templates/registration/register.html:9
 msgid "Account Registration"
 msgstr "Kontoregistrering"
 
-#: djamnedlies-git/templates/registration/register.html:13
-#: djamnedlies-svn/templates/registration/register.html:13
 #: templates/registration/register.html:13
 msgid "You can register here for an account on this site. This is only useful if you plan to contribute to GNOME translations."
 msgstr "Her kan du registrere en konto til denne side. Dette er kun nyttigt, hvis du planlægger at bidrage til GNOME-oversættelser."
 
-#: djamnedlies-git/templates/registration/register.html:14
-#: djamnedlies-svn/templates/registration/register.html:14
 #: templates/registration/register.html:14
 msgid "After registration and connection, you will be able to join an existing team from your profile page."
 msgstr "Efter registrering og forbindelse vil du kunne tilmelde dig et eksisterende hold fra din profilside."
 
-#: djamnedlies-git/templates/registration/register.html:28
-#: djamnedlies-svn/templates/registration/register.html:28
 #: templates/registration/register.html:28
 msgid "Authenticate via OpenID <strong>or</strong> password:"
 msgstr "Godkendelse via OpenID <strong>eller</strong> adgangskode:"
 
-#: djamnedlies-git/templates/registration/register.html:34
-#: djamnedlies-svn/templates/registration/register.html:34
 #: templates/registration/register.html:34
 msgid "Register with OpenID"
 msgstr "Registrér med OpenID"
 
-#: djamnedlies-git/templates/registration/register.html:46
-#: djamnedlies-svn/templates/registration/register.html:46
 #: templates/registration/register.html:46
 msgid "Register with password"
 msgstr "Registrér med adgangskode"
 
-#: djamnedlies-git/templates/registration/register_success.html:8
-#: djamnedlies-svn/templates/registration/register_success.html:8
 #: templates/registration/register_success.html:8
 msgid "Registration Success"
 msgstr "Registrering lykkedes"
 
-#: djamnedlies-git/templates/registration/register_success.html:10
-#: djamnedlies-svn/templates/registration/register_success.html:10
 #: templates/registration/register_success.html:10
 msgid "The registration succeeded. You will now receive an email containing a link to activate your account."
 msgstr "Registreringen lykkedes. Du vil nu modtage en e-post med et link til at aktivere din konto."
 
-#: djamnedlies-git/templates/teams/team_base.html:6
-#: djamnedlies-svn/templates/teams/team_base.html:6
-#: templates/teams/team_base.html:6
+#: templates/teams/team_base.html:7
 msgid "Details"
 msgstr "Detaljer"
 
-#: djamnedlies-git/templates/teams/team_base.html:9
-#: djamnedlies-svn/templates/teams/team_base.html:9
-#: templates/teams/team_base.html:9
+#: templates/teams/team_base.html:14
 #, python-format
 msgid "%(lang)s Translation Team Page:"
 msgstr "%(lang)s oversættelseshold-side:"
 
-#: djamnedlies-git/templates/teams/team_base.html:13
-#: djamnedlies-svn/templates/teams/team_base.html:13
-#: templates/teams/team_base.html:13
+#: templates/teams/team_base.html:18
 msgid "Bugzilla:"
 msgstr "Bugzilla:"
 
-#: djamnedlies-git/templates/teams/team_base.html:15
-#: djamnedlies-svn/templates/teams/team_base.html:15
-#: templates/teams/team_base.html:15
+#: templates/teams/team_base.html:20
 msgid "Report Bug in Translation"
 msgstr "Rapportér om fejl i oversættelse"
 
-#: djamnedlies-git/templates/teams/team_base.html:16
-#: djamnedlies-svn/templates/teams/team_base.html:16
-#: templates/teams/team_base.html:16
+#: templates/teams/team_base.html:21
 msgid "Show Existing Bugs"
 msgstr "Vis eksisterende fejl"
 
-#: djamnedlies-git/templates/teams/team_base.html:20
-#: djamnedlies-svn/templates/teams/team_base.html:20
-#: templates/teams/team_base.html:20
+#: templates/teams/team_base.html:25
 msgid "Mailing List:"
 msgstr "Postliste:"
 
-#: djamnedlies-git/templates/teams/team_base.html:22
-#: djamnedlies-svn/templates/teams/team_base.html:22
-#: templates/teams/team_base.html:22
+#: templates/teams/team_base.html:27
 msgid "Send e-mail to the list"
 msgstr "Send e-post til listen"
 
-#: djamnedlies-git/templates/teams/team_base.html:24
-#: djamnedlies-svn/templates/teams/team_base.html:24
-#: templates/teams/team_base.html:24
+#: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "Abonnér"
 
-#: djamnedlies-git/templates/teams/team_detail.html:5
-#: djamnedlies-svn/templates/teams/team_detail.html:5
+#: templates/teams/team_detail.html:7
 #, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME translation project"
-msgstr "Seneste handlinger foretaget af  %(lang)s holdet i GNOME-oversættelsesprojektet"
+msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
+msgstr "Seneste handling foretaget af GNOME-oversættelsesprojektets %(lang)s-hold"
 
-#: djamnedlies-git/templates/teams/team_detail.html:14
-#: djamnedlies-svn/templates/teams/team_detail.html:14
-#: templates/teams/team_detail.html:14
+#: templates/teams/team_detail.html:40
+#: templates/teams/team_edit.html:16
 #, python-format
 msgid "%(lang)s Translation Team"
 msgstr "%(lang)s oversættelseshold"
 
-#: djamnedlies-git/templates/teams/team_detail.html:26
-#: djamnedlies-svn/templates/teams/team_detail.html:26
-#: templates/teams/team_detail.html:26
-msgid "Release"
-msgstr "Udgivelse"
+#: templates/teams/team_detail.html:48
+#| msgid ""
+#| "If there is no team for your language, you can easily <a href='http://"
+#| "live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
+msgid "There is currently no established team for this language. See <a href=\"http://live.gnome.org/TranslationProject/StartingATeam\">the GTP Wiki</a> to get more information about the process of building a new translation team."
+msgstr "Der er på nuværende tidspunkt ikke etableret en gruppe for dette sprog. Se <a href=\"http://live.gnome.org/TranslationProject/StartingATeam\">GTP-Wikien</a> for mere information om at starte en ny oversættelsesgruppe."
 
-#: djamnedlies-git/templates/teams/team_detail.html:69
-#: djamnedlies-svn/templates/teams/team_detail.html:69
-#: templates/teams/team_detail.html:71
-msgid "Team membership"
-msgstr "Holdmedlemskab"
+#: templates/teams/team_detail.html:58
+msgid "Plural forms:"
+msgstr "Flertalsformer:"
 
-#: djamnedlies-git/templates/teams/team_detail.html:80
-#: djamnedlies-svn/templates/teams/team_detail.html:80
-#: templates/teams/team_detail.html:82
-#| msgid "Desktop Applications"
+#: templates/teams/team_detail.html:60
+msgid "Archives"
+msgstr "Arkiver"
+
+#: templates/teams/team_detail.html:77
 msgid "Apply modifications"
 msgstr "Anvend ændringer"
 
-#: djamnedlies-git/templates/teams/team_list.html:4
-#: djamnedlies-git/templates/teams/team_list.html:9
-#: djamnedlies-svn/templates/teams/team_list.html:4
-#: djamnedlies-svn/templates/teams/team_list.html:9
+#: templates/teams/team_edit.html:23
+msgid "This team is using the Vertimus translation workflow"
+msgstr "Denne gruppe bruger Vertimus' oversættelsesarbejdsgange"
+
+#: templates/teams/team_edit.html:25
+msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax"
+msgstr "Dette indhold kan bruge <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown-syntaks</ a>"
+
 #: templates/teams/team_list.html:4
 #: templates/teams/team_list.html.py:9
 msgid "GNOME Translation Teams"
 msgstr "GNOME-oversættelseshold"
 
-#: djamnedlies-git/templates/teams/team_list.html:12
-#: djamnedlies-svn/templates/teams/team_list.html:12
 #: templates/teams/team_list.html:12
 msgid "Select a team below to see more information about it:"
 msgstr "Vælg et hold herunder for at se mere information om det:"
 
-#: djamnedlies-git/templates/teams/team_list.html:25
-#: djamnedlies-svn/templates/teams/team_list.html:25
 #: templates/teams/team_list.html:25
 #, python-format
 msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgstr "Koordineret af <a href=\"%(url)s\">%(name)s</a>"
 
-#: djamnedlies-git/templates/teams/team_list.html:34
-#: djamnedlies-svn/templates/teams/team_list.html:34
-#: templates/teams/team_list.html:34
+#: templates/teams/team_list.html:36
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Der er i øjeblikket ikke nogle oversættelseshold i GNOME. :("
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:5
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:5
 #: templates/vertimus/vertimus_detail.html:6
 #, python-format
-#| msgid "GNOME Translation Teams"
 msgid "Module Translation: %(name)s"
 msgstr "Moduloversættelse: %(name)s"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:13
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:13
-#: templates/vertimus/vertimus_detail.html:14
+#: templates/vertimus/vertimus_detail.html:27
 msgid "Used in release(s):"
 msgstr "Brugt i udgivelse(r):"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:31
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:31
-#: templates/vertimus/vertimus_detail.html:32
+#: templates/vertimus/vertimus_detail.html:45
 msgid "State:"
 msgstr "Tilstand:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:52
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Download PO file"
 msgstr "Hent PO-fil"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:39
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:39
-#: templates/vertimus/vertimus_detail.html:52
-#| msgid "Translated"
+#: templates/vertimus/vertimus_detail.html:65
 msgid "Translated:"
 msgstr "Oversat:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:66
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:80
+#: templates/vertimus/vertimus_detail.html:95
 msgid "On-going activities in same module:"
 msgstr "Igangværende aktiviteter i samme modul:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:74
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:74
-msgid "Action History"
-msgstr "Handlingshistorik"
+#: templates/vertimus/vertimus_detail.html:106
+msgid "Actions"
+msgstr "Handlinger"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:90
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:90
-#: templates/vertimus/vertimus_detail.html:128
+#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
+#. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
+#. which should be localized in Django itself
+#: templates/vertimus/vertimus_detail.html:108
+#: vertimus/models.py:847
+#, python-format
+msgid "Archived Actions (%(human_level)s archived series)"
+msgstr "Arkiverede handlinger (%(human_level)s arkiverede serier)"
+
+#: templates/vertimus/vertimus_detail.html:110
+#| msgid "(Return to current)"
+msgid "(Return to current actions)"
+msgstr "(Tilbage til nuværende handling)"
+
+#: templates/vertimus/vertimus_detail.html:115
+msgid "(Previous action history)"
+msgstr "(Tidligere handlingshistorik)"
+
+#: templates/vertimus/vertimus_detail.html:149
 msgid "diff with:"
 msgstr "diff med:"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:110
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:110
-#: templates/vertimus/vertimus_detail.html:151
+#: templates/vertimus/vertimus_detail.html:168
+msgid "No current actions."
+msgstr "Ingen igangværende handlinger."
+
+#: templates/vertimus/vertimus_detail.html:172
 msgid "New Action"
 msgstr "Ny handling"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:117
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:117
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:182
 msgid "Submit"
 msgstr "Indsend"
 
-#: djamnedlies-git/templates/vertimus/vertimus_detail.html:121
-#: djamnedlies-svn/templates/vertimus/vertimus_detail.html:121
-#: templates/vertimus/vertimus_detail.html:166
+#: templates/vertimus/vertimus_detail.html:187
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du skal være godkendt, og være medlem af holdet %(team_name)s."
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:5
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:5
+#: templates/vertimus/vertimus_detail.html:191
+msgid "This team is not using the Vertimus translation workflow."
+msgstr "Denne gruppe bruger ikke Vertimus' oversættelsesarbejdsgange."
+
 #: templates/vertimus/vertimus_diff.html:5
 msgid "Diff between po files"
 msgstr "Diff mellem po-filer"
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:16
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:16
 #: templates/vertimus/vertimus_diff.html:16
 msgid "&lt;- Back to actions"
 msgstr "&lt;- Tilbage til handlinger"
 
-#: djamnedlies-git/templates/vertimus/vertimus_diff.html:20
-#: djamnedlies-svn/templates/vertimus/vertimus_diff.html:20
 #: templates/vertimus/vertimus_diff.html:20
 msgid "Note: both files are merged with latest POT file."
 msgstr "Bemærk: begge filer er flettet sammen med den seneste POT-fil."
 
-#: djamnedlies-git/vertimus/feeds.py:43
-#: djamnedlies-svn/vertimus/feeds.py:43
 #: vertimus/feeds.py:43
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Vertimus-handlinger for sproget %(lang)s"
 
-#: djamnedlies-git/vertimus/feeds.py:52
-#: djamnedlies-svn/vertimus/feeds.py:52
 #: vertimus/feeds.py:52
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Seneste handlinger i GNOME-oversættelsesprojektet for sproget %s"
 
-#: djamnedlies-git/vertimus/feeds.py:88
-#: djamnedlies-svn/vertimus/feeds.py:88
-#: vertimus/feeds.py:88
+#: vertimus/feeds.py:89
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Vertimus-handlinger for %(lang)s-holdet"
 
-#: djamnedlies-git/vertimus/feeds.py:97
-#: djamnedlies-svn/vertimus/feeds.py:97
-#: vertimus/feeds.py:97
+#: vertimus/feeds.py:98
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Seneste handlinger foretaget af %s-holdet i GNOME-oversættelsesprojektet"
 
-#: djamnedlies-git/vertimus/forms.py:38
-#: djamnedlies-svn/vertimus/forms.py:38
 #: vertimus/forms.py:38
 msgid "Action"
 msgstr "Handling"
 
-#: djamnedlies-git/vertimus/forms.py:42
-#: djamnedlies-svn/vertimus/forms.py:42
 #: vertimus/forms.py:42
-#| msgid "Community"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: djamnedlies-git/vertimus/forms.py:47
-#: djamnedlies-svn/vertimus/forms.py:47
 #: vertimus/forms.py:47
 msgid "File"
 msgstr "Fil"
 
-#: djamnedlies-git/vertimus/forms.py:48
-#: djamnedlies-svn/vertimus/forms.py:48
 #: vertimus/forms.py:48
 msgid "Upload a .po, .gz, .bz2 or .png file"
 msgstr "Send en .po, .gz, .bz2 eller .png-fil"
 
-#: djamnedlies-git/vertimus/forms.py:59
-#: djamnedlies-svn/vertimus/forms.py:59
 #: vertimus/forms.py:59
 msgid "Only files with extension .po, .gz, .bz2 or .png are admitted."
 msgstr "Kun filer med endelserne .po, .gz, .bz2 eller .png kan accepteres."
 
-#: djamnedlies-git/vertimus/forms.py:64
-#: djamnedlies-svn/vertimus/forms.py:64
 #: vertimus/forms.py:64
 msgid ".po file does not pass 'msgfmt -vc'. Please correct the file and try again."
 msgstr ".po-filen kan ikke godkendes af \"msgfmt -vc\". Vær venlig at rette filen og prøve igen."
 
-#: djamnedlies-git/vertimus/forms.py:74
-#: djamnedlies-svn/vertimus/forms.py:74
-#: vertimus/forms.py:74
+#: vertimus/forms.py:71
+msgid "Invalid action. Someone probably posted another action just before you."
+msgstr "Ugyldig handling. En anden har muligvis sendt en anden handling lige før dig."
+
+#: vertimus/forms.py:77
+#| msgid "A comment or a file is needed for this action."
+msgid "A comment is needed for this action."
+msgstr "Denne handling kræver en kommentar."
+
+#: vertimus/forms.py:80
 msgid "A comment or a file is needed for this action."
 msgstr "Denne handling kræver en kommentar eller fil."
 
-#: djamnedlies-git/vertimus/forms.py:77
-#: djamnedlies-svn/vertimus/forms.py:77
-#: vertimus/forms.py:77
+#: vertimus/forms.py:83
 msgid "A file is needed for this action."
 msgstr "En fil kræves til denne handling."
 
-#: djamnedlies-git/vertimus/forms.py:80
-#: djamnedlies-svn/vertimus/forms.py:80
-#: vertimus/forms.py:80
+#: vertimus/forms.py:86
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Vær venlig ikke at sende en fil med en \"Reservér\"-handling."
 
-#: djamnedlies-git/vertimus/models.py:139
-#: djamnedlies-svn/vertimus/models.py:139
-#: vertimus/models.py:163
+#: vertimus/models.py:167
 msgid "Inactive"
 msgstr "Inaktiv"
 
-#: djamnedlies-git/vertimus/models.py:152
-#: djamnedlies-svn/vertimus/models.py:152
-#: vertimus/models.py:176
-#| msgid "Translation"
+#: vertimus/models.py:180
 msgid "Translating"
 msgstr "Oversætter"
 
-#: djamnedlies-git/vertimus/models.py:182
-#: djamnedlies-svn/vertimus/models.py:182
-#: vertimus/models.py:206
+#: vertimus/models.py:213
 msgid "Proofreading"
 msgstr "Korrekturlæsning"
 
 #. Translators: This is a status, not a verb
-#: djamnedlies-git/vertimus/models.py:197
-#: djamnedlies-svn/vertimus/models.py:197
-#: vertimus/models.py:221
+#: vertimus/models.py:228
 msgid "Proofread"
 msgstr "Læs korrektur"
 
-#: djamnedlies-git/vertimus/models.py:212
-#: djamnedlies-svn/vertimus/models.py:212
-#: vertimus/models.py:236
+#: vertimus/models.py:243
 msgid "To Review"
 msgstr "Til gennemlæsning"
 
-#: djamnedlies-git/vertimus/models.py:224
-#: djamnedlies-svn/vertimus/models.py:224
-#: vertimus/models.py:248
-#| msgid "Community"
+#: vertimus/models.py:255
 msgid "To Commit"
 msgstr "Til integrering"
 
-#: djamnedlies-git/vertimus/models.py:239
-#: djamnedlies-svn/vertimus/models.py:239
-#: vertimus/models.py:263
-#| msgid "Community"
+#: vertimus/models.py:270
 msgid "Committing"
 msgstr "Integrerer"
 
-#: djamnedlies-git/vertimus/models.py:253
-#: djamnedlies-svn/vertimus/models.py:253
-#: vertimus/models.py:277
-#| msgid "Community"
+#: vertimus/models.py:284
 msgid "Committed"
 msgstr "Integreret"
 
-#: djamnedlies-git/vertimus/models.py:341
-#: djamnedlies-svn/vertimus/models.py:341
-#: vertimus/models.py:322
+#: vertimus/models.py:329
 msgid "File in repository"
 msgstr "Fil i arkiv"
 
-#: djamnedlies-git/vertimus/models.py:348
-#: djamnedlies-git/vertimus/views.py:130
-#: djamnedlies-git/vertimus/views.py:136
-#: djamnedlies-git/vertimus/views.py:146
-#: djamnedlies-svn/vertimus/models.py:348
-#: djamnedlies-svn/vertimus/views.py:130
-#: djamnedlies-svn/vertimus/views.py:136
-#: djamnedlies-svn/vertimus/views.py:146
-#: vertimus/models.py:334
-#: vertimus/views.py:158
-#: vertimus/views.py:164
-#: vertimus/views.py:174
+#: vertimus/models.py:341
+#: vertimus/views.py:160
+#: vertimus/views.py:166
+#: vertimus/views.py:176
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Sendte fil af %(name)s d. %(date)s"
 
-#: djamnedlies-git/vertimus/models.py:460
-#: djamnedlies-svn/vertimus/models.py:460
-#: vertimus/models.py:518
+#: vertimus/models.py:529
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3000,34 +2993,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: djamnedlies-git/vertimus/models.py:473
-#: djamnedlies-git/vertimus/models.py:523
-#: djamnedlies-svn/vertimus/models.py:473
-#: djamnedlies-svn/vertimus/models.py:523
-#: vertimus/models.py:531
-#: vertimus/models.py:581
+#: vertimus/models.py:542
+#: vertimus/models.py:592
 msgid "Without comment"
 msgstr "Uden kommentar"
 
-#: djamnedlies-git/vertimus/models.py:475
-#: djamnedlies-git/vertimus/models.py:525
-#: djamnedlies-svn/vertimus/models.py:475
-#: djamnedlies-svn/vertimus/models.py:525
-#: vertimus/models.py:533
-#: vertimus/models.py:583
-#, python-format
-msgid "This is an automated message sent from %s."
-msgstr "Dette er en automatisk besked sendt fra %s."
-
-#: djamnedlies-git/vertimus/models.py:482
-#: djamnedlies-svn/vertimus/models.py:482
-#: vertimus/models.py:540
+#: vertimus/models.py:551
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: djamnedlies-git/vertimus/models.py:511
-#: djamnedlies-svn/vertimus/models.py:511
-#: vertimus/models.py:569
+#: vertimus/models.py:580
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3042,200 +3017,78 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: djamnedlies-git/vertimus/models.py:533
-#: djamnedlies-svn/vertimus/models.py:533
-#: vertimus/models.py:591
-#| msgid "UI translations"
+#: vertimus/models.py:602
 msgid "Reserve for translation"
 msgstr "Reservér til oversættelse"
 
-#: djamnedlies-git/vertimus/models.py:545
-#: djamnedlies-svn/vertimus/models.py:545
-#: vertimus/models.py:603
-#| msgid "UI translations"
+#: vertimus/models.py:614
 msgid "Upload the new translation"
 msgstr "Send den nye oversættelse"
 
-#: djamnedlies-git/vertimus/models.py:560
-#: djamnedlies-svn/vertimus/models.py:560
-#: vertimus/models.py:618
+#: vertimus/models.py:636
 msgid "Reserve for proofreading"
 msgstr "Reservér til korrekturlæsning"
 
-#: djamnedlies-git/vertimus/models.py:572
-#: djamnedlies-svn/vertimus/models.py:572
-#: vertimus/models.py:630
+#: vertimus/models.py:648
 msgid "Upload the proofread translation"
 msgstr "Send den korrekturlæste oversættelse"
 
 #. Translators: this means the file is ready to be committed in repository
-#: djamnedlies-git/vertimus/models.py:588
-#: djamnedlies-svn/vertimus/models.py:588
-#: vertimus/models.py:646
+#: vertimus/models.py:664
 msgid "Ready for submission"
 msgstr "Klar til indsendelse"
 
-#: djamnedlies-git/vertimus/models.py:604
-#: djamnedlies-svn/vertimus/models.py:604
-#: vertimus/models.py:662
+#: vertimus/models.py:680
 msgid "Submit to repository"
 msgstr "Indsend til arkiv"
 
 #. Commit failed, state unchanged
-#: djamnedlies-git/vertimus/models.py:618
-#: djamnedlies-svn/vertimus/models.py:618
-#: vertimus/models.py:676
+#: vertimus/models.py:694
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Integreringen fejlede. Fejlen var: \"%s\""
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: djamnedlies-git/vertimus/models.py:628
-#: djamnedlies-svn/vertimus/models.py:628
-#: vertimus/models.py:686
+#: vertimus/models.py:704
 msgid "Reserve to submit"
 msgstr "Reservér til indsendelse"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: djamnedlies-git/vertimus/models.py:641
-#: djamnedlies-svn/vertimus/models.py:641
-#: vertimus/models.py:699
+#: vertimus/models.py:717
 msgid "Inform of submission"
 msgstr "Informér om indsendelse"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: djamnedlies-git/vertimus/models.py:656
-#: djamnedlies-svn/vertimus/models.py:656
-#: vertimus/models.py:714
+#: vertimus/models.py:732
 msgid "Review required"
 msgstr "Gennemlæsning mangler"
 
-#: djamnedlies-git/vertimus/models.py:695
-#: djamnedlies-svn/vertimus/models.py:695
-msgid "Backup the actions"
-msgstr "Sikkerhedskopiér handlingerne"
+#: vertimus/models.py:747
+msgid "Archive the actions"
+msgstr "Arkivér denne handling"
 
-#: djamnedlies-git/vertimus/models.py:734
-#: djamnedlies-svn/vertimus/models.py:734
-#: vertimus/models.py:768
+#: vertimus/models.py:786
 msgid "Undo the last state change"
 msgstr "Fortryd den seneste tilstandsændring"
 
-#: djamnedlies-git/vertimus/views.py:129
-#: djamnedlies-git/vertimus/views.py:161
-#: djamnedlies-svn/vertimus/views.py:129
-#: djamnedlies-svn/vertimus/views.py:161
-#: vertimus/views.py:157
-#: vertimus/views.py:189
+#: vertimus/views.py:159
+#: vertimus/views.py:191
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Fejl: Filen %s indeholder ugyldige tegn."
 
-#: djamnedlies-git/vertimus/views.py:152
-#: djamnedlies-svn/vertimus/views.py:152
-#: vertimus/views.py:180
+#: vertimus/views.py:182
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Seneste integrerede fil for %(lang)s"
 
-#: djamnedlies-git/vertimus/views.py:155
-#: djamnedlies-svn/vertimus/views.py:155
-#: vertimus/views.py:183
+#: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Seneste POT-fil"
 
-#: djamnedlies-svn/settings.py:73
-#: djamnedlies-svn/settings_sample.py:80
-msgid "This module is not part of the GNOME SVN repository. Please check the module's web page to see where to send translations."
-msgstr "Dette modul er ikke en del af GNOME SVN-arkivet. Tjek venligst modulets hjemmeside for at se hvortil du skal sende oversættelser."
+msgid "Low German and Saxon"
+msgstr "Nedersaksisk"
 
-#: djamnedlies-svn/templates/base.html:96
-#| msgid ""
-#| "Maintained in the <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-#| "\">damned-lies</a> module on <a href=\"http://svn.gnome.org/\">svn.gnome."
-#| "org</a>"
-msgid "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-msgstr "Vedligeholdt i <a href='http://svn.gnome.org/viewvc/damned-lies/'>damned-lies</a>-modulet på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-
-#. Translators: this concerns an unknown plural form
-#: languages/models.py:26
-msgid "Unknown"
-msgstr "Ukendt"
-
-#: languages/views.py:67
-#: templates/release_detail.html:66
-#| msgid "Original"
-msgid "Original strings"
-msgstr "Oprindelige strenge"
-
-#: stats/models.py:344
-#| msgid "Can't generate POT file, using old one."
-msgid "Can't generate POT file, statistics aborted."
-msgstr "Kan ikke generere POT-fil, statistik afbrudt."
-
-#: templates/base.html:94
-msgid "Copyright &copy; 2006-2009"
-msgstr "Ophavsret &copy; 2006-2009"
-
-#: templates/index.html:30
-#| msgid ""
-#| "Examples of release sets are \"GNOME Office\", \"Fifth Toe\" or \"GNOME "
-#| "2.14\"."
-msgid "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME 2.26&quot;."
-msgstr "Eksempler på udgivelsessæt er &quot;GNOME-infrastruktur&quot; eller &quot;GNOME 2.26&quot;."
-
-#: templates/languages/language_release.html:33
-#| msgid ""
-#| "The modules of this release are not part of the GNOME SVN repository. "
-#| "Please check each module's web page to see where to send translations."
-msgid "The modules of this release are not part of the GNOME git repository. Please check each module's web page to see where to send translations."
-msgstr "Modulerne i denne udgivelse er ikke en del af GNOME git-arkivet. Tjek venligst hvert moduls hjemmeside for at se, hvor du skal sende oversættelser hen."
-
-#: templates/teams/team_detail.html:5
-#, python-format
-msgid "Last actions made by the %(lang)s team of the GNOME Translation Project"
-msgstr "Seneste handling foretaget af GNOME-oversættelsesprojektets %(lang)s-hold"
-
-#: templates/teams/team_detail.html:66
-msgid "Plural forms:"
-msgstr "Flertalsformer:"
-
-#: templates/vertimus/vertimus_detail.html:90
-msgid "Actions"
-msgstr "Handlinger"
-
-#: templates/vertimus/vertimus_detail.html:92
-#, python-format
-msgid "Archived Actions (%(human_level)s archived series)"
-msgstr "Arkiverede handlinger (%(human_level)s arkiverede serier)"
-
-#: templates/vertimus/vertimus_detail.html:94
-msgid "(Return to current)"
-msgstr "(Tilbage til aktuel)"
-
-#: templates/vertimus/vertimus_detail.html:99
-msgid "(Previous action history)"
-msgstr "(Tidligere handlingshistorik)"
-
-#: templates/vertimus/vertimus_detail.html:147
-#| msgid "Documentation"
-msgid "No current actions."
-msgstr "Ingen igangværende handlinger."
-
-#: vertimus/models.py:729
-msgid "Archive the actions"
-msgstr "Arkivér denne handling"
-
-#~ msgid "Bug Buddy Manual"
-#~ msgstr "Fejl-Frede-manual"
-#~ msgid "GFloppy Manual"
-#~ msgstr "Manual til GFloppy"
-#~ msgid "GLib"
-#~ msgstr "GLib"
-#~ msgid "Gtk+"
-#~ msgstr "Gtk+"
-#~ msgid "JHBuild Documentation"
-#~ msgstr "JHBuild-dokumentation"
-#~ msgid "Sabayon"
-#~ msgstr "Sabayon"
+msgid "Low Saxon, Germany"
+msgstr "Plattysk, Tyskland"
 
