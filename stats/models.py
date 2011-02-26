@@ -1344,7 +1344,7 @@ class Statistics(models.Model):
             categdescr = "default"
             if release:
                 categdescr = stat.categ_name
-            domname = _(stat.domain.description)
+            domname = stat.domain.description and _(stat.domain.description) or ""
             branchname = stat.branch.name
             modname = stat.branch.module.name
             if categdescr not in stats['categs']:
