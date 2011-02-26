@@ -105,13 +105,13 @@ def team(request, team_slug):
                             role.role = form_value
                             role.save()
         # Create forms for template
-        commit_roles = Role.objects.filter(team=team, role='committer')
+        commit_roles = Role.objects.filter(team=team, role='committer', is_active=True)
         if commit_roles:
             mem_groups[0]['form'] = EditMemberRoleForm(commit_roles)
-        review_roles = Role.objects.filter(team=team, role='reviewer')
+        review_roles = Role.objects.filter(team=team, role='reviewer', is_active=True)
         if review_roles:
             mem_groups[1]['form'] = EditMemberRoleForm(review_roles)
-        translate_roles = Role.objects.filter(team=team, role='translator')
+        translate_roles = Role.objects.filter(team=team, role='translator', is_active=True)
         if translate_roles:
             mem_groups[2]['form'] = EditMemberRoleForm(translate_roles)
         context['can_edit_team'] = True
