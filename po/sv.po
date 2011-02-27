@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-01 12:31+0000\n"
-"PO-Revision-Date: 2011-02-01 15:11+0100\n"
+"POT-Creation-Date: 2011-02-10 16:59+0000\n"
+"PO-Revision-Date: 2011-02-27 17:48+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -884,7 +884,6 @@ msgid "generic filter"
 msgstr "allmänna filter"
 
 #: database-content.py:307
-#| msgid "light-effects filter"
 msgid "light-and-shadow filter"
 msgstr "ljus-och-skuggeffekter-filter"
 
@@ -1071,8 +1070,8 @@ msgid "Sound Juicer Manual"
 msgstr "Handbok för Sound Juicer"
 
 #: database-content.py:352
-#: database-content.py:390
-#: database-content.py:391
+#: database-content.py:394
+#: database-content.py:395
 msgid "User Guide"
 msgstr "Användarguide"
 
@@ -1217,201 +1216,220 @@ msgid "toolbox"
 msgstr "verktygslåda"
 
 #: database-content.py:388
+#| msgid "toolbox"
+msgid "toolbox (color)"
+msgstr "verktygslåda (färg)"
+
+#: database-content.py:389
+#| msgid "toolbox"
+msgid "toolbox (paint)"
+msgstr "verktygslåda (måla)"
+
+#: database-content.py:390
+msgid "toolbox (selection)"
+msgstr "verktygslåda (markering)"
+
+#: database-content.py:391
+msgid "toolbox (transform)"
+msgstr "verktygslåda (transformera)"
+
+#: database-content.py:392
 msgid "Panel Trash Manual"
 msgstr "Handbok för panelprogrammet Papperskorg"
 
-#: database-content.py:389
+#: database-content.py:393
 msgid "tutorial"
 msgstr "handledning"
 
-#: database-content.py:392
+#: database-content.py:396
 msgid "using gimp"
 msgstr "använda gimp"
 
-#: database-content.py:393
+#: database-content.py:397
 msgid "preferences"
 msgstr "inställningar"
 
-#: database-content.py:394
+#: database-content.py:398
 msgid "Banshee Music Player"
 msgstr "Musikspelaren Banshee"
 
-#: database-content.py:395
+#: database-content.py:399
 msgid "Beagle Desktop Search"
 msgstr "Skrivbordssökaren Beagle"
 
-#: database-content.py:396
+#: database-content.py:400
 #: templates/base.html:35
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Förbannade lögner"
 
-#: database-content.py:397
+#: database-content.py:401
 msgid "Deskbar Applet"
 msgstr "Panelprogrammet Skrivbordsrad"
 
-#: database-content.py:398
+#: database-content.py:402
 msgid "Eye of GNOME"
 msgstr "Eye of GNOME"
 
-#: database-content.py:399
+#: database-content.py:403
 msgid "Epiphany Web Browser"
 msgstr "Webbläsaren Epiphany"
 
-#: database-content.py:400
+#: database-content.py:404
 msgid "Evince Document Viewer"
 msgstr "Dokumentvisaren Evince"
 
-#: database-content.py:401
+#: database-content.py:405
 msgid "GIMP User Manual"
 msgstr "Användarhandbok för GIMP"
 
-#: database-content.py:402
+#: database-content.py:406
 msgid "GNOME Applets"
 msgstr "GNOME-panelprogram"
 
-#: database-content.py:403
+#: database-content.py:407
 msgid "GNOME 2 Development Documentation"
 msgstr "Utvecklardokumentation för GNOME 2"
 
-#: database-content.py:404
+#: database-content.py:408
 msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
-#: database-content.py:405
+#: database-content.py:409
 msgid "GNOME 2 User Documentation"
 msgstr "Användardokumentation för GNOME 2"
 
-#: database-content.py:406
+#: database-content.py:410
 msgid "GNOME Web Photo"
 msgstr "GNOME-webbfoto"
 
-#: database-content.py:407
+#: database-content.py:411
+#| msgid "GNOME Library Web site"
+msgid "GNOME 3 Website"
+msgstr "Webbplatsen för GNOME 3"
+
+#: database-content.py:412
 msgid "GNOME Library Web site"
 msgstr "Webbplatsen GNOME-biblioteket"
 
-#: database-content.py:408
+#: database-content.py:413
 msgid "GNOME Release Notes"
 msgstr "Kommentarer till GNOME-utgåva"
 
-#: database-content.py:409
+#: database-content.py:414
 msgid "Rhythmbox Music Player"
 msgstr "Musikspelaren Rhythmbox"
 
-#: database-content.py:410
+#: database-content.py:415
 msgid "Shared MIME Info"
 msgstr "Delad MIME-information"
 
-#: database-content.py:411
+#: database-content.py:416
 msgid "Video subtitles translations for selected GNOME videos"
 msgstr "Översatta videoundertexter för utvalda GNOME-videor"
 
-#: database-content.py:412
+#: database-content.py:417
 msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
-#: database-content.py:413
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
-msgid "Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/accountsservice/\">Transifex platform</a>."
-msgstr "Skicka in din översättning via <a href=\"http://www.transifex.net/projects/p/accountsservice/\">Transifex-plattformen</a>."
-
-#: database-content.py:414
+#: database-content.py:418
 msgid "Email client for netbooks"
 msgstr "E-postklient för ultraportabla datorer"
 
-#: database-content.py:415
+#: database-content.py:419
 msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a>."
 msgstr "Avahi är ett system som innehåller funktioner för att identifiera tjänster på ett lokalt nätverk via protokollsviten mDNS/DNS-SD. Skicka in din översättning via <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex-plattformen</a>."
 
-#: database-content.py:416
+#: database-content.py:420
 msgid "There is a glossary that will help translators in Chronojump localization: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 msgstr "Det finns en ordlista som hjälper översättare i lokalanpassning av Chronojump: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 
-#: database-content.py:418
+#: database-content.py:422
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "Verkställda översättningar uppdateras manuellt på l10n.gnome.org med jämna mellanrum. Stressa inte :-)"
 
-#: database-content.py:419
+#: database-content.py:423
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince är en dokumentvisare för flera typer av dokumentformat."
 
-#: database-content.py:420
+#: database-content.py:424
 msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a>."
 msgstr "D-Bus-tjänst för att komma åt fingeravtrycksläsare. Det här är inte en GNOME-specifik modul. Skicka in din översättning via <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex-plattformen</a>."
 
-#: database-content.py:421
+#: database-content.py:425
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Från och med GNOME 2.23 är GAIL integrerat i GTK+. Skicka inte in ändringar i trunk längre."
 
-#: database-content.py:422
+#: database-content.py:426
 msgid "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr "För andra lokalanpassningsbehov för GCompris, se  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 
-#: database-content.py:423
+#: database-content.py:427
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafisk framände för git-katalogbevakaren"
 
-#: database-content.py:424
+#: database-content.py:428
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "En multimediakonverterare för GNOME-skrivbordet"
 
-#: database-content.py:425
+#: database-content.py:429
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "gnome-disk-utility tillhandahåller bibliotek och program för att hantera lagringsenheter."
 
-#: database-content.py:426
+#: database-content.py:430
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "GNOME Video Arcade är en grafisk klient för MAME (Multiple Arcade Machine Emulator) för GNOME."
 
-#: database-content.py:427
+#: database-content.py:431
 msgid "To ease localization, gallery of GNOME Video Effects has been set up here: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 msgstr "Ett galleri av GNOME-videoeffekter finns här för att förenkla lokalanpassningen: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 
-#: database-content.py:428
+#: database-content.py:432
 msgid "A note taking application"
 msgstr "Ett anteckningsblock"
 
-#: database-content.py:429
+#: database-content.py:433
 msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
 msgstr "GNUCash är inte en del av GNOME:s Git-förråd. Se <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för information om var översättningar ska skickas."
 
-#: database-content.py:430
-#: database-content.py:431
-#: database-content.py:432
-#: database-content.py:433
 #: database-content.py:434
-#: database-content.py:453
+msgid "This a low-priority module to translate, as there are currently no user interface that show those strings."
+msgstr "Detta är en lågprioriterad modul att översätta eftersom det för närvarande inte finns något användargränssnitt som visar dessa strängar."
+
+#: database-content.py:435
+#: database-content.py:436
+#: database-content.py:437
+#: database-content.py:438
+#: database-content.py:439
+#: database-content.py:458
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:435
+#: database-content.py:440
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Observera att gtk+ innehåller både domänerna po och po-properties.  Om du lägger till ett nytt språk i någon av domänerna så måste du skicka in båda filerna i Git även om en av dem bara innehåller 0 översättningar, annars kommer GTK+-byggnationen inte att fungera i /po-properties."
 
-#: database-content.py:436
+#: database-content.py:441
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "moserial är en ren, vänlig gtk-baserad serieterminal för GNOME-skrivbordet. Det har skrivits i Vala för extra brahet."
 
-#: database-content.py:437
+#: database-content.py:442
 msgid "Gnome Parental Control"
 msgstr "Gnome-föräldrakontroll"
 
-#: database-content.py:438
+#: database-content.py:443
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "<a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">Skapa en felrapport för Nätverkshanterare på GNOME Bugzilla</a> för att skicka in din översättning. Bifoga sedan din översättningsfil till rapporten."
 
-#: database-content.py:439
+#: database-content.py:444
 msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
 msgstr "PackageKit är ett system designat att göra installation och uppdatering av programvara enklare på din dator. Detta är inte en GNOME-specifik modul. Skicka in din översättning via <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex-plattformen</a>."
 
-#: database-content.py:440
+#: database-content.py:445
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout är ett layoutprogram för X."
 
-#: database-content.py:441
+#: database-content.py:446
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
 "Please submit your translation through the <a href=\"\n"
@@ -1421,23 +1439,23 @@ msgstr ""
 "Skicka in din översättning via <a href=\"\n"
 "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex-plattformen</a>."
 
-#: database-content.py:444
+#: database-content.py:449
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning via <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex-plattformen</a>."
 
-#: database-content.py:445
+#: database-content.py:450
 msgid "A photo manager for GNOME"
 msgstr "En fotohanterare för GNOME"
 
-#: database-content.py:446
+#: database-content.py:451
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Detta är en klon av den officiella versionen av system-tools-backends från förrådet hos freedesktop.org."
 
-#: database-content.py:447
+#: database-content.py:452
 msgid "GNOME Teletext viewer"
 msgstr "GNOME-texttv-visare"
 
-#: database-content.py:448
+#: database-content.py:453
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1445,79 +1463,79 @@ msgstr ""
 "Här översätter vi undertexterna för utvalda GNOME-videor.\n"
 "Se <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> för mer information."
 
-#: database-content.py:450
+#: database-content.py:455
 msgid "A VNC client for GNOME"
 msgstr "En VNC-klient för GNOME"
 
-#: database-content.py:451
+#: database-content.py:456
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
-#: database-content.py:452
+#: database-content.py:457
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom <a href=\"http://translationproject.org\">Translation Project</a>. Se även <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">översättningssidan för xdg-user-dirs hos Translation Project</a>."
 
-#: database-content.py:454
+#: database-content.py:459
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (utveckling)"
 
-#: database-content.py:455
+#: database-content.py:460
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabil)"
 
-#: database-content.py:456
+#: database-content.py:461
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (gammal stabil)"
 
-#: database-content.py:457
+#: database-content.py:462
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (gammal stabil)"
 
-#: database-content.py:458
+#: database-content.py:463
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (gammal stabil)"
 
-#: database-content.py:459
+#: database-content.py:464
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
-#: database-content.py:460
+#: database-content.py:465
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:461
+#: database-content.py:466
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:462
+#: database-content.py:467
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:463
+#: database-content.py:468
 msgid "External Dependencies (GNOME)"
 msgstr "Externa beroenden (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:469
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
-#: database-content.py:465
+#: database-content.py:470
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:466
+#: database-content.py:471
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:467
+#: database-content.py:472
 msgid "GIMP and Friends"
 msgstr "GIMP med vänner"
 
-#: database-content.py:468
+#: database-content.py:473
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:469
+#: database-content.py:474
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
@@ -1724,7 +1742,6 @@ msgstr "Du har tagits bort från gruppen \"%s\"."
 
 #. Message no i18n'ed, should never happen under normal conditions
 #: people/views.py:118
-#| msgid "You are already member of this team."
 msgid "You are not a member of this team."
 msgstr "Du är inte medlem av denna grupp."
 
@@ -3000,105 +3017,4 @@ msgstr "Senaste insända fil för %(lang)s"
 #: vertimus/views.py:185
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
-
-#~ msgid "GNOME 2.16 (old stable)"
-#~ msgstr "GNOME 2.16 (gammal stabil)"
-#~ msgid "GNOME 2.14 (old stable)"
-#~ msgstr "GNOME 2.14 (gammal stabil)"
-#~ msgid "Window List Applet Manual"
-#~ msgstr "Handbok för panelprogrammet Fönsterlista"
-#~ msgid "Workspace Switcher Applet Manual"
-#~ msgstr "Handbok för panelprogrammet Arbetsyteväxlare"
-#~ msgid ""
-#~ "This module is not part of the GNOME git repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Den här modulen är inte en del av GNOME:s git-förråd. Se modulens "
-#~ "webbsida om var översättningarna ska skickas."
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME git repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Modulerna i den här utgåvan är inte en del av GNOME:s git-förråd. "
-#~ "Kontrollera webbsidan för varje modul för att se var översättningarna ska "
-#~ "skickas."
-#~ msgid "Maintains:"
-#~ msgstr "Underhåller:"
-#~ msgid "Working on"
-#~ msgstr "Arbetar på"
-#~ msgid "Member of teams"
-#~ msgstr "Medlem av grupperna"
-#~ msgid "F-Spot Manual"
-#~ msgstr "Handbok för F-Spot"
-#~ msgid ""
-#~ "Don't know where to look if this language is actually used, ask the "
-#~ "module maintainer."
-#~ msgstr ""
-#~ "Vet inte var jag ska kontrollera om det här språket faktiskt används, "
-#~ "fråga modulansvarig. "
-#~ msgid ""
-#~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
-#~ "Toe&quot; or &quot;GNOME 2.14&quot;."
-#~ msgstr ""
-#~ "Exempel på utgåvesamlingar är &quot;GNOME Office&quot;, &quot;Fifth "
-#~ "Toe&quot; eller &quot;Gnome 2.14&quot;."
-#~ msgid ""
-#~ "They are usually taken from CVS, and we keep all relevant information on "
-#~ "them (Bugzilla details, web page, maintainer information,...)."
-#~ msgstr ""
-#~ "De hämtas oftast från CVS, och vi håller alla relevant information om dem "
-#~ "(Bugzilla-detaljer, webbsida, underhållare,...)."
-#~ msgid "Report bugs to Bugzilla"
-#~ msgstr "Rapportera fel via Bugzilla"
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME SVN repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Modulerna i den här utgåvan är inte en del av GNOME:s SVN-förråd. "
-#~ "Kontrollera webbsidan för varje modul för att se var översättningarna ska "
-#~ "skickas."
-#~ msgid "SVN account:"
-#~ msgstr "SVN-konto:"
-#~ msgid ""
-#~ "Last actions made by the %(lang)s team of the GNOME translation project"
-#~ msgstr ""
-#~ "Senaste åtgärder gjorda av gruppen %(lang)s för GNOME-"
-#~ "översättningsprojektet"
-#~ msgid "Action History"
-#~ msgstr "Åtgärdshistorik"
-#~ msgid "Backup the actions"
-#~ msgstr "Säkerhetskopiera åtgärderna"
-#~ msgid "The Gimp Manual"
-#~ msgstr "Handbok för Gimp"
-#~ msgid "Git account:"
-#~ msgstr "Git-konto:"
-#~ msgid "Low German and Saxon"
-#~ msgstr "Lågtyska och lågsaxiska"
-#~ msgid "Low Saxon, Germany"
-#~ msgstr "Lågsaxiska (Tyskland)"
-#~ msgid ""
-#~ "This module is not part of the GNOME SVN repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Den här modulen är inte en del av GNOME:s SVN-förråd. Se modulens "
-#~ "webbsida om var översättningarna ska skickas."
-#~ msgid ""
-#~ "Maintained in the <a href='http://svn.gnome.org/viewvc/damned-"
-#~ "lies/'>damned-lies</a> module on <a href='http://svn.gnome.org/'>svn."
-#~ "gnome.org</a>"
-#~ msgstr ""
-#~ "Underhålls i modulen <a href=\"http://svn.gnome.org/viewvc/damned-lies/"
-#~ "\">damned-lies</a> på <a href='http://svn.gnome.org/'>svn.gnome.org</a>"
-#~ msgid "Valencian (Southern Catalan)"
-#~ msgstr "Valensiska (Sydkatalanska)"
-#~ msgid ""
-#~ "This is a clone of the official version from the freedesktop.org "
-#~ "repository.<br/>Note that the repository name in git.gnome.org is "
-#~ "<pre>system-tools-backends-clone</pre>"
-#~ msgstr ""
-#~ "Detta är en klon av den officiella versionen från förrådet på freedesktop."
-#~ "org.<br/>Observera att förrådsnamnet i git.gnome.org är <pre>system-tools-"
-#~ "backends-clone</pre>"
-#~ msgid "GNOME Fifth Toe (Extra software)"
-#~ msgstr "GNOME Fifth Toe (Extra programvara)"
 
