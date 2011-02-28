@@ -2,16 +2,16 @@
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-10 16:59+0000\n"
-"PO-Revision-Date: 2011-02-12 18:33+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2011-02-27 16:49+0000\n"
+"PO-Revision-Date: 2011-02-28 07:36+0100\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1095,12 +1095,10 @@ msgid "toolbox"
 msgstr "caja de herramientas"
 
 #: database-content.py:388
-#| msgid "toolbox"
 msgid "toolbox (color)"
 msgstr "caja de herramientas (color)"
 
 #: database-content.py:389
-#| msgid "toolbox"
 msgid "toolbox (paint)"
 msgstr "caja de herramientas (dibujo)"
 
@@ -1182,7 +1180,6 @@ msgid "GNOME Web Photo"
 msgstr "GNOME Web foto"
 
 #: database-content.py:411
-#| msgid "GNOME Library Web site"
 msgid "GNOME 3 Website"
 msgstr "Página web de GNOME 3"
 
@@ -1535,7 +1532,7 @@ msgstr "Aplicaciones adicionales para GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: settings.py:77 settings_sample.py:71
+#: settings.py:75
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1972,6 +1969,11 @@ msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
 #: teams/forms.py:21
+#| msgid "Inactive"
+msgid "Mark as Inactive"
+msgstr "Marcar como inactivo"
+
+#: teams/forms.py:22
 msgid "Remove From Team"
 msgstr "Quitar del equipo"
 
