@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-10 16:59+0000\n"
-"PO-Revision-Date: 2011-02-18 07:02+0100\n"
+"POT-Creation-Date: 2011-02-27 16:49+0000\n"
+"PO-Revision-Date: 2011-02-28 15:05+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1099,12 +1099,10 @@ msgid "toolbox"
 msgstr "nástroje"
 
 #: database-content.py:388
-#| msgid "toolbox"
 msgid "toolbox (color)"
 msgstr "nástroje (barva)"
 
 #: database-content.py:389
-#| msgid "toolbox"
 msgid "toolbox (paint)"
 msgstr "nástroje (malování)"
 
@@ -1186,7 +1184,6 @@ msgid "GNOME Web Photo"
 msgstr "Webová fotografie GNOME"
 
 #: database-content.py:411
-#| msgid "GNOME Library Web site"
 msgid "GNOME 3 Website"
 msgstr "Webové stránky GNOME 3"
 
@@ -1533,7 +1530,7 @@ msgstr "Další aplikace GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
-#: settings.py:77 settings_sample.py:71
+#: settings.py:75
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1973,6 +1970,11 @@ msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V souboru DOC_LINGUAS se nenachází tento jazyk."
 
 #: teams/forms.py:21
+#| msgid "Inactive"
+msgid "Mark as Inactive"
+msgstr "Označit jako neaktivní"
+
+#: teams/forms.py:22
 msgid "Remove From Team"
 msgstr "Odebrat z týmu"
 
