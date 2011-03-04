@@ -14,7 +14,7 @@ urlpatterns = patterns('',
         view = 'languages.views.release_archives',
         name = 'language_release_archives'),
     url(
-        regex = r'^(?P<locale>[\w\-@]+)/(?P<release_name>[\w-]+)/(?P<dtype>(ui|doc)+)/$',
+        regex = r'^(?P<locale>[\w\-@]+)/(?P<release_name>[\w-]+)/(?P<dtype>(ui|ui-part|doc)+)/$',
         view = 'languages.views.language_release',
         name = 'language_release'),
     url(

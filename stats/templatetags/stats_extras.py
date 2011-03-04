@@ -1,4 +1,5 @@
 from django import template
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
@@ -26,3 +27,11 @@ def escapeat(value):
 @register.filter
 def domain_type(stat):
     return stat.domain.get_type(stat.branch)
+
+@register.filter
+def num_stats(stat, scope):
+    """ Produce stat numbers as in: 85% (1265/162/85) """
+    return mark_safe("%s%%&nbsp;(%s/%s/%s)" % (
+        stat.tr_percentage(scope), stat.translated(scope),
+        stat.fuzzy(scope), stat.untranslated(scope))
+    )

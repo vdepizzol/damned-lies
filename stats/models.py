@@ -323,7 +323,7 @@ class Branch(models.Model):
             for domain in stats.keys():
                 if lang not in stats_langs[domain]:
                     fake_stat = FakeStatistics(self.module, self, typ, lang)
-                    fake_stat.untranslated = stats[domain][0].untranslated
+                    fake_stat.untranslated = stats[domain][0].untranslated()
                     stats[domain].append(fake_stat)
         # Sort
         for key, doms in stats.items():
@@ -337,7 +337,7 @@ class Branch(models.Model):
         elif not b.language:
             return 1
         else:
-            res = -cmp(a.translated, b.translated)
+            res = -cmp(a.translated(), b.translated())
             if not res:
                 res = cmp(a.get_lang(), b.get_lang())
         return res
@@ -1186,15 +1186,14 @@ class Statistics(models.Model):
         return "%s (%s-%s) %s (%s)" % (self.branch.module.name, self.domain.dtype, self.domain.name,
                                        self.branch.name, self.get_lang())
 
-    @property
-    def translated(self):
-        return getattr(self.full_po, 'translated', 0)
-    @property
-    def fuzzy(self):
-        return getattr(self.full_po, 'fuzzy', 0)
-    @property
-    def untranslated(self):
-        return getattr(self.full_po, 'untranslated', 0)
+    def translated(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'translated', 0)
+
+    def fuzzy(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'fuzzy', 0)
+
+    def untranslated(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'untranslated', 0)
 
     def is_fake(self):
         return False
@@ -1202,14 +1201,26 @@ class Statistics(models.Model):
     def is_pot_stats(self):
         return self.language is None
 
-    def tr_percentage(self):
-        return self.full_po and self.full_po.tr_percentage() or 0
+    def tr_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.tr_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.tr_percentage()
+        return 0
 
-    def fu_percentage(self):
-        return self.full_po and self.full_po.fu_percentage() or 0
+    def fu_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.fu_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.fu_percentage()
+        return 0
 
-    def un_percentage(self):
-        return self.full_po and self.full_po.un_percentage() or 0
+    def un_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.un_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.un_percentage()
+        return 0
 
     def get_lang(self):
         if not self.is_pot_stats():
@@ -1416,17 +1427,23 @@ class Statistics(models.Model):
         """
         from vertimus.models import StateDb, ActionDb # import here to prevent a circular dependency
 
+        if dtype.endswith('-part'):
+            dtype = dtype[:-5]
+            scope = "part"
+        else:
+            scope = "full"
+
         stats = {'dtype':dtype, 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0,
                  'totaltransperc': 0, 'totalfuzzyperc': 0, 'totaluntransperc': 0,
                  'categs':{}, 'all_errors':[]}
         # Sorted by module to allow grouping ('fake' stats)
-        pot_stats = Statistics.objects.select_related('domain', 'branch__module', 'full_po')
+        pot_stats = Statistics.objects.select_related('domain', 'branch__module', 'full_po', 'part_po')
         if release:
             pot_stats = pot_stats.extra(select={'categ_name': "category.name"}).filter(language=None, branch__releases=release, domain__dtype=dtype).order_by('branch__module__id')
         else:
             pot_stats = pot_stats.filter(language=None, domain__dtype=dtype).order_by('branch__module__id')
 
-        tr_stats = Statistics.objects.select_related('domain', 'language', 'branch__module', 'full_po')
+        tr_stats = Statistics.objects.select_related('domain', 'language', 'branch__module', 'full_po', 'part_po')
         if release:
             tr_stats = tr_stats.filter(language=lang, branch__releases=release, domain__dtype=dtype).order_by('branch__module__id')
         else:
@@ -1473,12 +1490,12 @@ class Statistics(models.Model):
             if br_dom_key in vt_states_dict:
                 stat.state = vt_states_dict[br_dom_key]
 
-            stats['totaltrans'] += stat.translated
-            stats['totalfuzzy'] += stat.fuzzy
-            stats['totaluntrans'] += stat.untranslated
-            stats['categs'][categdescr]['cattrans'] += stat.translated
-            stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy
-            stats['categs'][categdescr]['catuntrans'] += stat.untranslated
+            stats['totaltrans'] += stat.translated(scope)
+            stats['totalfuzzy'] += stat.fuzzy(scope)
+            stats['totaluntrans'] += stat.untranslated(scope)
+            stats['categs'][categdescr]['cattrans'] += stat.translated(scope)
+            stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy(scope)
+            stats['categs'][categdescr]['catuntrans'] += stat.untranslated(scope)
             if modname not in stats['categs'][categdescr]['modules']:
                 # first element is a placeholder for a fake stat
                 stats['categs'][categdescr]['modules'][modname] = {branchname:[[' fake', None], (domname, stat)]}
@@ -1532,9 +1549,9 @@ class FakeStatistics(object):
         self.figures = None
 
     def trans(self, stat):
-        self.translated += stat.translated
-        self.fuzzy += stat.fuzzy
-        self.untranslated += stat.untranslated
+        self.translated += stat.translated()
+        self.fuzzy += stat.fuzzy()
+        self.untranslated += stat.untranslated()
         stat.partial_po = True
 
     def is_fake(self):
