@@ -916,8 +916,10 @@ class Release(models.Model):
         total_doc, total_ui, total_ui_part = self.total_strings()
         query = """
             SELECT domain.dtype,
-                   SUM(pofile.translated),
-                   SUM(pofile.fuzzy)
+                   SUM(pofull.translated) AS trans,
+                   SUM(pofull.fuzzy),
+                   SUM(popart.translated) AS trans_p,
+                   SUM(popart.fuzzy) AS fuzzy_p
             FROM statistics AS stat
             LEFT JOIN domain
                    ON stat.domain_id = domain.id
@@ -925,8 +927,10 @@ class Release(models.Model):
                    ON stat.branch_id = branch.id
             LEFT JOIN category
                    ON category.branch_id = branch.id
-            LEFT JOIN pofile
-                   ON pofile.id = stat.full_po_id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE language_id = %s
               AND category.release_id = %s
             GROUP BY domain.dtype"""
@@ -934,21 +938,30 @@ class Release(models.Model):
         cursor.execute(query, (lang.id, self.id))
         stats = {'id': self.id, 'name': self.name, 'description': _(self.description),
                  'uitrans': 0, 'uifuzzy': 0, 'uitotal': total_ui,
+                 'uitrans_part': 0, 'uifuzzy_part': 0, 'uitotal_part': total_ui_part,
                  'doctrans': 0, 'docfuzzy': 0, 'doctotal': total_doc,
                  'uitransperc': 0, 'uifuzzyperc': 0, 'uiuntransperc': 0,
+                 'uitransperc_part': 0, 'uifuzzyperc_part': 0, 'uiuntransperc_part': 0,
                  'doctransperc': 0, 'docfuzzyperc': 0, 'docuntransperc': 0}
         for res in cursor.fetchall():
             if res[0] == 'ui':
                 stats['uitrans'] = res[1]
                 stats['uifuzzy'] = res[2]
+                stats['uitrans_part'] = res[3]
+                stats['uifuzzy_part'] = res[4]
             if res[0] == 'doc':
                 stats['doctrans'] = res[1]
                 stats['docfuzzy'] = res[2]
         stats['uiuntrans'] = total_ui - (stats['uitrans'] + stats['uifuzzy'])
+        stats['uiuntrans_part'] = total_ui_part - (stats['uitrans_part'] + stats['uifuzzy_part'])
         if total_ui > 0:
             stats['uitransperc'] = int(100*stats['uitrans']/total_ui)
             stats['uifuzzyperc'] = int(100*stats['uifuzzy']/total_ui)
             stats['uiuntransperc'] = int(100*stats['uiuntrans']/total_ui)
+        if total_ui_part > 0:
+            stats['uitransperc_part'] = int(100*stats['uitrans_part']/total_ui_part)
+            stats['uifuzzyperc_part'] = int(100*stats['uifuzzy_part']/total_ui_part)
+            stats['uiuntransperc_part'] = int(100*stats['uiuntrans_part']/total_ui_part)
         stats['docuntrans'] = total_doc - (stats['doctrans'] + stats['docfuzzy'])
         if total_doc > 0:
             stats['doctransperc'] = int(100*stats['doctrans']/total_doc)

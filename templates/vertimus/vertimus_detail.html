@@ -70,7 +70,7 @@ $(document).ready(function() {
       <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
     </div>
   </div>
-  {% if stats.part_po %}
+  {% if stats.part_po != stats.full_po %}
   <div style="float:left; margin-left: 150px;">
     <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated (reduced):" %}
     {{ stats.get_reducedstat|safe }}&nbsp;

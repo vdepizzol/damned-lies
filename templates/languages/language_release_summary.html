@@ -6,15 +6,22 @@ Following variables should be set:
    show_all_modules_line : boolean
 {% endcomment %}
 <table class="stats">
-  <thead><tr><th>{% trans "Release" %}</th><th>{% trans "User Interface" %}</th><th>{% trans "Graph" %}</th>
-         <th>{% trans "Documentation" %}</th><th>{% trans "Graph" %}</th></tr></thead>
+  <thead><tr>
+    <th>{% trans "Release" %}</th>
+    <th>{% trans "User Interface" %}</th>
+    <th>{% trans "Graph" %}</th>
+    <th>{% trans "User Interface (red.)" %}</th>
+    <th>{% trans "Documentation" %}</th>
+    <th>{% trans "Graph" %}</th>
+    </tr>
+  </thead>
   {% for stat in stats %}
     <tr>
       <td class="leftcell">
         {{ stat.description }}</a>
       </td>
   
-    <td><a href="{% url language_release lang.locale,stat.name,"ui" %}">
+    <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"ui" %}">
         {{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</a>
     </td>
     <td style="width: 108px; text-align: center;"><div class="graph">
@@ -25,9 +32,12 @@ Following variables should be set:
       {% endwith %}
       </div>
     </td>
+    <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"ui" %}">
+        {{ stat.uitransperc_part }}% ({{ stat.uitrans_part }}/{{ stat.uifuzzy_part }}/{{ stat.uiuntrans_part }})</a>
+    </td>
 
     {% if stat.doctotal %}
-      <td><a href="{% url language_release lang.locale,stat.name,"doc" %}">
+      <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"doc" %}">
           {{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</a>
       </td>
       <td style="width: 108px; text-align: center;"><div class="graph">
