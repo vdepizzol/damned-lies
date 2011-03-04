@@ -9,9 +9,15 @@ class Migration(DataMigration):
     def forwards(self, orm):
         from stats.models import Statistics, PoFile
         for st in Statistics.objects.all():
+            must_save = False
             if not st.full_po:
                 st.full_po = PoFile.objects.create(path=st.po_path(), translated=st.old_translated, fuzzy=st.old_fuzzy,
                     untranslated=st.old_untranslated, updated=st.old_date, num_figures=st.old_num_figures)
+                must_save = True
+            if not st.part_po:
+                st.part_po = st.full_po
+                must_save = True
+            if must_save:
                 st.save()
 
 

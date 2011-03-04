@@ -877,7 +877,8 @@ class Release(models.Model):
         # Uses the special statistics record where language_id is NULL to compute the sum.
         query = """
             SELECT domain.dtype,
-                   SUM(pofile.untranslated)
+                   SUM(pofull.untranslated),
+                   SUM(popart.untranslated)
             FROM statistics AS stat
             LEFT JOIN domain
                    ON domain.id = stat.domain_id
@@ -887,8 +888,10 @@ class Release(models.Model):
                    ON cat.branch_id = br.id
             LEFT JOIN "release" AS rel
                    ON rel.id = cat.release_id
-            LEFT JOIN pofile
-                   ON pofile.id = stat.full_po_id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE rel.id = %s
               AND stat.language_id IS NULL
             GROUP BY domain.dtype"""
@@ -897,19 +900,20 @@ class Release(models.Model):
             cursor.execute("SET sql_mode='ANSI_QUOTES'")
         cursor.execute(query, (self.id,))
 
-        total_doc, total_ui = 0, 0
+        total_doc, total_ui, total_ui_part = 0, 0, 0
         for row in cursor.fetchall():
             if row[0] == 'ui':
                 total_ui = row[1]
+                total_ui_part = row[2]
             elif row[0] == 'doc':
                 total_doc = row[1]
-        return (total_doc, total_ui)
+        return (total_doc, total_ui, total_ui_part)
 
     def total_for_lang(self, lang):
         """ Returns total translated/fuzzy/untranslated strings for a specific
             language """
 
-        total_doc, total_ui = self.total_strings()
+        total_doc, total_ui, total_ui_part = self.total_strings()
         query = """
             SELECT domain.dtype,
                    SUM(pofile.translated),
@@ -961,8 +965,10 @@ class Release(models.Model):
             SELECT MIN(lang.name),
                    MIN(lang.locale),
                    domain.dtype,
-                   SUM(pofile.translated) AS trans,
-                   SUM(pofile.fuzzy)
+                   SUM(pofull.translated) AS trans,
+                   SUM(pofull.fuzzy),
+                   SUM(popart.translated) AS trans_p,
+                   SUM(popart.fuzzy) AS fuzzy_p
             FROM statistics AS stat
             LEFT JOIN domain
                    ON domain.id = stat.domain_id
@@ -972,15 +978,17 @@ class Release(models.Model):
                    ON br.id = stat.branch_id
             LEFT JOIN category
                    ON category.branch_id = br.id
-            LEFT JOIN pofile
-                   ON pofile.id = stat.full_po_id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE category.release_id = %s AND stat.language_id IS NOT NULL
             GROUP BY domain.dtype, stat.language_id
             ORDER BY domain.dtype, trans DESC"""
         cursor = connection.cursor()
         cursor.execute(query, (self.id,))
         stats = {}
-        total_docstrings, total_uistrings = self.total_strings()
+        total_docstrings, total_uistrings, total_uistrings_part = self.total_strings()
         for row in cursor.fetchall():
             if row[1] not in stats:
                 # Initialize stats dict
@@ -1002,10 +1010,17 @@ class Release(models.Model):
                 stats[row[1]]['ui_trans'] = row[3]
                 stats[row[1]]['ui_fuzzy'] = row[4]
                 stats[row[1]]['ui_untrans'] = total_uistrings - (row[3] + row[4])
+                stats[row[1]]['ui_trans_part'] = row[5]
+                stats[row[1]]['ui_fuzzy_part'] = row[6]
+                stats[row[1]]['ui_untrans_part'] = total_uistrings_part - (row[5] + row[6])
                 if total_uistrings > 0:
                     stats[row[1]]['ui_percent'] = int(100*row[3]/total_uistrings)
                     stats[row[1]]['ui_percentfuzzy'] = int(100*row[4]/total_uistrings)
                     stats[row[1]]['ui_percentuntrans'] = int(100*stats[row[1]]['ui_untrans']/total_uistrings)
+                if total_uistrings_part > 0:
+                    stats[row[1]]['ui_percent_part'] = int(100*row[5]/total_uistrings_part)
+                    stats[row[1]]['ui_percentfuzzy_part'] = int(100*row[6]/total_uistrings_part)
+                    stats[row[1]]['ui_percentuntrans_part'] = int(100*stats[row[1]]['ui_untrans_part']/total_uistrings_part)
         cursor.close()
 
         results = stats.values()
@@ -1309,10 +1324,9 @@ class Statistics(models.Model):
             utils.run_shell_command(cmd)
             part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
             if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
-                # No possible gain
-                if self.part_po:
-                    self.part_po = None
-                    self.save()
+                # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
+                self.part_po = self.full_po
+                self.save()
                 os.remove(part_po_path)
                 return
             if not self.part_po:

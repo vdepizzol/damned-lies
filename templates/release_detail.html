@@ -19,6 +19,7 @@
       <th>{% trans "Language" %}</th>
       <th>{% trans "User Interface" %}</th>
       <th>{% trans "Graph" %}</th>
+      <th>{% trans "User Interface (red.)" %}</th>
       <th>{% trans "Documentation" %}</th>
       <th>{% trans "Graph" %}</th>
   </tr>
@@ -30,7 +31,7 @@
     <a href="{% url team_slug lstats.lang_locale %}">{% trans lstats.lang_name %}</a>
   </td>
   
-  <td><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
+  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
       {{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</a>
   </td>
   <td style="width: 108px; text-align: center;"><div class="graph">
@@ -41,9 +42,12 @@
       {% endwith %}
      </div>
   </td>
+  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
+      {{ lstats.ui_percent_part }}% ({{ lstats.ui_trans_part }}/{{ lstats.ui_fuzzy_part }}/{{ lstats.ui_untrans_part }})</a>
+  </td>
 
   {% if lstats.doc_trans|add:lstats.doc_fuzzy != "0" %}
-  <td><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
+  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
       {{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</a>
   </td>
   {% else %}
