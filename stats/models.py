@@ -394,11 +394,11 @@ class Branch(models.Model):
 
                 # Prepare statistics object
                 try:
-                    stat = Statistics.objects.get(language=None, branch=self, domain=dom)
-                    Information.objects.filter(statistics=stat).delete() # Reset errors
+                    pot_stat = Statistics.objects.get(language=None, branch=self, domain=dom)
+                    Information.objects.filter(statistics=pot_stat).delete() # Reset errors
                 except Statistics.DoesNotExist:
-                    stat = Statistics(language=None, branch=self, domain=dom)
-                    stat.save()
+                    pot_stat = Statistics(language=None, branch=self, domain=dom)
+                    pot_stat.save()
 
                 # 4. Compare with old pot files, various checks
                 # *****************************
@@ -411,9 +411,21 @@ class Branch(models.Model):
                         errors.append(("error", ugettext_noop("Can't generate POT file, using old one.")))
                     else:
                         errors.append(("error", ugettext_noop("Can't generate POT file, statistics aborted.")))
-                        stat.set_errors(errors)
+                        pot_stat.set_errors(errors)
                         continue
 
+                # 5. Generate pot stats and update DB
+                # ***********************************
+                pot_stats = utils.po_file_stats(potfile, False)
+                errors.extend(pot_stats['errors'])
+                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
+                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
+
+                pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
+                pot_stat.set_errors(errors)
+
+                # 6. Check if pot changed
+                # ***********************************
                 changed_status = utils.CHANGED_WITH_ADDITIONS
 
                 if os.access(previous_pot, os.R_OK):
@@ -425,17 +437,7 @@ class Branch(models.Model):
                     if changed_status != utils.NOT_CHANGED:
                         signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
 
-                # 5. Generate pot stats and update DB
-                # ***********************************
-                pot_stats = utils.po_file_stats(potfile, False)
-                errors.extend(pot_stats['errors'])
-                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
-                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
-
-                stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
-                stat.set_errors(errors)
-
-                # 6. Update language po files and update DB
+                # 7. Update language po files and update DB
                 # *****************************************
                 command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
                 stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
@@ -1251,7 +1253,7 @@ class Statistics(models.Model):
         if not self.is_pot_stats() and not potfile:
             return "%s.%s.%s.%spo" % (self.domain.potbase(), self.branch.name, self.language.locale, reduced and "reduced." or "")
         else:
-            return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
+            return "%s.%s.%spot" % (self.domain.potbase(), self.branch.name, reduced and "reduced." or "")
 
     def pot_text(self):
         pot_size = self.full_po.pot_size()
@@ -1309,12 +1311,12 @@ class Statistics(models.Model):
         """ Return the Web interface path of file on remote vcs """
         return utils.url_join(self.branch.get_vcs_web_url(), self.domain.directory)
 
-    def po_path(self, potfile=False):
+    def po_path(self, potfile=False, reduced=False):
         """ Return path of po file on local filesystem """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs"
-        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile))
+        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile, reduced))
 
     def po_url(self, potfile=False, reduced=False):
         """ Return URL of po file, e.g. for downloading the file """
@@ -1337,31 +1339,42 @@ class Statistics(models.Model):
         self.full_po.num_figures = num_figures
         self.full_po.updated = datetime.now()
         self.full_po.save()
-        # Try to compute a reduced po file
-        if self.domain.dtype == "ui" and (self.full_po.fuzzy + self.full_po.untranslated) > 0:
-            # Generate partial_po and store partial stats
-            part_po_path = self.full_po.path[:-3] + ".reduced.po"
-            cmd = "pogrep --invert-match --header --search=locations \"gschema.xml.in\" %(full_po)s %(part_po)s" % {
-                'full_po': self.full_po.path,
-                'part_po': part_po_path,
-            }
-            utils.run_shell_command(cmd)
-            part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
-            if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
-                # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
+        if self.domain.dtype == "ui":
+            def part_po_equals_full_po():
+                if self.part_po and self.part_po != self.full_po:
+                    self.part_po.delete()
                 self.part_po = self.full_po
                 self.save()
-                os.remove(part_po_path)
-                return
-            if not self.part_po:
-                self.part_po = PoFile.objects.create(path=part_po_path)
-                self.save()
-            self.part_po.path = part_po_path
-            self.part_po.translated = part_stats['translated']
-            self.part_po.fuzzy = part_stats['fuzzy']
-            self.part_po.untranslated = part_stats['untranslated']
-            self.part_po.updated = datetime.now()
-            self.part_po.save()
+            # Try to compute a reduced po file
+            if (self.full_po.fuzzy + self.full_po.untranslated) > 0:
+                # Generate partial_po and store partial stats
+                if self.full_po.path.endswith('.pot'):
+                    part_po_path = self.full_po.path[:-3] + "reduced.pot"
+                else:
+                    part_po_path = self.full_po.path[:-3] + ".reduced.po"
+                cmd = "pogrep --invert-match --header --search=locations \"gschema.xml.in\" %(full_po)s %(part_po)s" % {
+                    'full_po': self.full_po.path,
+                    'part_po': part_po_path,
+                }
+                utils.run_shell_command(cmd)
+                part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
+                if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
+                    # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
+                    part_po_equals_full_po()
+                    os.remove(part_po_path)
+                    return
+                utils.add_custom_header(part_po_path, "X-DamnedLies-Scope", "partial")
+                if not self.part_po:
+                    self.part_po = PoFile.objects.create(path=part_po_path)
+                    self.save()
+                self.part_po.path = part_po_path
+                self.part_po.translated = part_stats['translated']
+                self.part_po.fuzzy = part_stats['fuzzy']
+                self.part_po.untranslated = part_stats['untranslated']
+                self.part_po.updated = datetime.now()
+                self.part_po.save()
+            else:
+                part_po_equals_full_po()
 
     def set_errors(self, errors):
         for err in errors:

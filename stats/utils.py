@@ -367,6 +367,26 @@ def get_fig_stats(pofile):
         figures.append(fig)
     return figures
 
+def add_custom_header(po_path, header, value):
+    """ Add a custom po file header """
+    grep_cmd = """grep "%s" %s""" % (header, po_path)
+    status = 1
+    last_headers = ["Content-Transfer-Encoding", "Plural-Forms"]
+    while status != 0 and last_headers != []:
+        (status, output, errs) = run_shell_command(grep_cmd)
+        if status != 0:
+            # Try to add header
+            cmd = '''sed -i '/^\"%s/ a\\"%s: %s\\\\n"' %s''' % (last_headers.pop(), header, value, po_path)
+            (stat, out, err) = run_shell_command(cmd)
+    if status == 0 and not "%s: %s" % (header, value) in output:
+        # Set header value
+        cmd = '''sed -i '/^\"%s/ c\\"%s: %s\\\\n"' %s''' % (header, header, value, po_path)
+        (stat, out, err) = run_shell_command(cmd)
+
+def is_po_reduced(file_path):
+    status, output, errs = run_shell_command("""grep "X-DamnedLies-Scope: partial" %s""" % file_path)
+    return (status == 0)
+
 def copy_file(file1, file2):
     try:
         fin = open(file1, "rb")
