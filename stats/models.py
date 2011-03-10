@@ -1571,7 +1571,7 @@ class Information(models.Model):
         link = self.statistics.branch.module.get_bugs_enter_url()
         link += "&short_desc=%(short)s&content=%(short)s&comment=%(long)s" % {
             'short': "Error regenerating POT file",
-            'long' : utils.stripHTML(self.get_description()),
+            'long' : utils.ellipsize(utils.stripHTML(self.get_description()), 1600),
         }
         return link
 

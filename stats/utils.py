@@ -54,6 +54,11 @@ def stripHTML(string):
     replacements = {"<ul>": "\n", "</ul>": "\n", "<li>": " * ", "\n</li>": "", "</li>": ""}
     return multiple_replace(replacements, string)
 
+def ellipsize(val, length):
+    if len(val) > length:
+        val = "%s..." % val[:length]
+    return val
+
 def run_shell_command(cmd, env=None, input_data=None, raise_on_error=False):
     if settings.DEBUG: print >>sys.stderr, cmd
 
