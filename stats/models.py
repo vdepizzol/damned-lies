@@ -95,19 +95,24 @@ class Module(models.Model):
         """ This function checks if the module is hosted in the standard VCS of the project """
         return re.search(settings.VCS_HOME_REGEX, self.vcs_root) is not None
 
-    def get_bugs_i18n_url(self):
+    def get_bugs_i18n_url(self, content=None):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
-            return utils.url_join(self.bugs_base,
-                                    "buglist.cgi?product=%s&keywords_type=anywords&keywords=I18N+L10N&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=NEEDINFO" % (self.bugs_product,))
+            link = utils.url_join(
+                self.bugs_base,
+                "buglist.cgi?product=%s&keywords_type=anywords&keywords=I18N+L10N"
+                "&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=NEEDINFO" % (self.bugs_product,))
+            if content:
+                link += "&content=%s" % content
+            return link
         else:
             return None
 
     def get_bugs_enter_url(self):
         if self.bugs_base.find("bugzilla") != -1 or self.bugs_base.find("freedesktop") != -1:
+            link = utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s&keywords=I18N+L10N" % (self.bugs_product,))
             if self.bugs_component:
-                return utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s&component=%s" % (self.bugs_product, self.bugs_component))
-            else:
-                return utils.url_join(self.bugs_base, "enter_bug.cgi?product=%s" % (self.bugs_product,))
+                link += "&component=%s" % self.bugs_component
+            return link
         else:
             return self.bugs_base
 
@@ -1561,6 +1566,14 @@ class Information(models.Model):
         for match in matches:
             text = text.replace('%s',match,1)
         return text
+
+    def report_bug_url(self):
+        link = self.statistics.branch.module.get_bugs_enter_url()
+        link += "&short_desc=%(short)s&content=%(short)s&comment=%(long)s" % {
+            'short': "Error regenerating POT file",
+            'long' : utils.stripHTML(self.get_description()),
+        }
+        return link
 
 class InformationArchived(models.Model):
     statistics = models.ForeignKey('StatisticsArchived')

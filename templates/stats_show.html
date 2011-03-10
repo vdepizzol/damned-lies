@@ -21,6 +21,20 @@
     <tr>
       <td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.type }}" /></td>
       <td>{{ msg.get_description|safe }}</td>
+      {% if user.is_authenticated %}
+        {% if msg.type == 'error' or msg.type == 'error-ext' %}
+        <td>
+           <a href='{{ module|browse_bugs:"error+pot+file" }}' target='_blank'>
+             <img src="{{ MEDIA_URL }}img/search.png" alt="{% trans "Search for similar bugs before reporting it" %}" title="{% trans "Search for similar bugs before reporting it" %}"/>
+           </a>
+        </td>
+        <td>
+          <a href='{{ msg.report_bug_url }}' target='_blank'>
+            <img src="{{ MEDIA_URL }}img/bug.png" alt="{% trans "Report this bug" %}" title="{% trans "Report this bug" %}"/>
+          </a>
+        </td>
+        {% endif %}
+      {% endif %}
     </tr>
     {% endfor %}
   </table>

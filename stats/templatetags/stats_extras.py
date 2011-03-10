@@ -26,3 +26,7 @@ def escapeat(value):
 @register.filter
 def domain_type(stat):
     return stat.domain.get_type(stat.branch)
+
+@register.filter
+def browse_bugs(module, content):
+    return module.get_bugs_i18n_url(content)
