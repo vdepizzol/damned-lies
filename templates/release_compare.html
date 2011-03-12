@@ -34,7 +34,7 @@ $(document).ready(function()
 <tr class="stats">
   <td class="stats leftcell">
     <span class="hidden">{{ stat.lang.get_name }}</span><!-- for sorting purpose -->
-    <a href="{{ perc.get_team_url }}">{{ stat.lang.get_name }}</a> ({{ locale }})
+    <a href="{{ stat.lang.get_team_url }}">{{ stat.lang.get_name }}</a> ({{ locale }})
   </td>
   {% for perc in stat.stats %}
     <td class="stats {{ perc|support_class }}">{{ perc }}%</td>
