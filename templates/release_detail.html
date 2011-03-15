@@ -42,7 +42,7 @@
       {% endwith %}
      </div>
   </td>
-  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
+  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui-part" %}">
       {{ lstats.ui_percent_part }}% ({{ lstats.ui_trans_part }}/{{ lstats.ui_fuzzy_part }}/{{ lstats.ui_untrans_part }})</a>
   </td>
 

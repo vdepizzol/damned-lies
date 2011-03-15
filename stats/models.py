@@ -1341,6 +1341,8 @@ class Statistics(models.Model):
         self.full_po.save()
         if self.domain.dtype == "ui":
             def part_po_equals_full_po():
+                if self.part_po == self.full_po:
+                    return
                 if self.part_po and self.part_po != self.full_po:
                     self.part_po.delete()
                 self.part_po = self.full_po
@@ -1352,11 +1354,7 @@ class Statistics(models.Model):
                     part_po_path = self.full_po.path[:-3] + "reduced.pot"
                 else:
                     part_po_path = self.full_po.path[:-3] + ".reduced.po"
-                cmd = "pogrep --invert-match --header --search=locations \"gschema.xml.in\" %(full_po)s %(part_po)s" % {
-                    'full_po': self.full_po.path,
-                    'part_po': part_po_path,
-                }
-                utils.run_shell_command(cmd)
+                utils.pogrep(self.full_po.path, part_po_path)
                 part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
                 if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
                     # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level

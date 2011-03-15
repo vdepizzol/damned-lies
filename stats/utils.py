@@ -25,6 +25,12 @@ from itertools import islice
 from subprocess import Popen, PIPE
 import errno
 
+try:
+    from translate.tools import pogrep
+    has_toolkit = True
+except ImportError:
+    has_toolkit = False
+
 from django.utils.translation import ugettext_noop
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
@@ -82,6 +88,21 @@ def check_program_presence(prog_name):
     """ Test if prog_name is an available command on the system """
     status, output, err = run_shell_command("which %s" % prog_name)
     return status == 0
+
+def pogrep(in_file, out_file):
+    if not has_toolkit:
+        return
+    grepfilter = pogrep.GrepFilter("gschema.xml.in", "locations", invertmatch=True, keeptranslations=True)
+    out = open(out_file, "w")
+    pogrep.rungrep(in_file, out, None, grepfilter)
+    out.close()
+    # command-line variant:
+    """
+    cmd = "pogrep --invert-match --header --search=locations \"gschema.xml.in\" %(full_po)s %(part_po)s" % {
+        'full_po': in_file,
+        'part_po': out_file,
+    }
+    run_shell_command(cmd)"""
 
 def check_potfiles(po_path):
     """Check if there were any problems regenerating a POT file (intltool-update -m).
