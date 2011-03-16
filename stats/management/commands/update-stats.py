@@ -13,11 +13,15 @@ class Command(BaseCommand):
             help="force statistics generation, even if files didn't change"),
         make_option('--non-gnome', action='store_true', dest='non-gnome', default=False,
             help="generate statistics for non-gnome modules (externally hosted)"),
+        make_option('--debug', action='store_true', dest='debug', default=False,
+            help="activate interactive debug mode"),
     )
 
     output_transaction = False
 
     def handle(self, *args, **options):
+        if options['debug']:
+            import pdb; pdb.set_trace()
         if len(args) >= 2:
             # Update the specific branch(es) of a module
             module_arg = args[0]

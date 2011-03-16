@@ -1077,8 +1077,8 @@ class Release(models.Model):
         last_modif_date = datetime(1970, 01, 01)
         # Create list of files
         for stat in pot_stats:
-            if stat.date > last_modif_date:
-                last_modif_date = stat.date
+            if stat.full_po.updated > last_modif_date:
+                last_modif_date = stat.full_po.updated
             try:
                 lang_stat = po_stats.get(branch = stat.branch, domain = stat.domain)
             except Statistics.DoesNotExist:
@@ -1363,7 +1363,7 @@ class Statistics(models.Model):
                     part_po_path = self.full_po.path[:-3] + "reduced.pot"
                 else:
                     part_po_path = self.full_po.path[:-3] + ".reduced.po"
-                utils.pogrep(self.full_po.path, part_po_path)
+                utils.po_grep(self.full_po.path, part_po_path)
                 part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
                 if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
                     # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
@@ -1371,7 +1371,7 @@ class Statistics(models.Model):
                     os.remove(part_po_path)
                     return
                 utils.add_custom_header(part_po_path, "X-DamnedLies-Scope", "partial")
-                if not self.part_po:
+                if not self.part_po or self.part_po == self.full_po:
                     self.part_po = PoFile.objects.create(path=part_po_path)
                     self.save()
                 self.part_po.path = part_po_path
@@ -1562,16 +1562,25 @@ class FakeStatistics(object):
         self.branch = branch
         self.domain = module.domain_set.filter(dtype=dtype)[0]
         self.language = lang
-        self.translated = 0
-        self.fuzzy = 0
-        self.untranslated = 0
+        self._translated = 0
+        self._fuzzy      = 0
+        self._untranslated = 0
         self.partial_po = False
         self.figures = None
 
+    def translated(self, scope=None):
+        return self._translated
+
+    def fuzzy(self, scope=None):
+        return self._fuzzy
+
+    def untranslated(self, scope=None):
+        return self._untranslated
+
     def trans(self, stat):
-        self.translated += stat.translated()
-        self.fuzzy += stat.fuzzy()
-        self.untranslated += stat.untranslated()
+        self._translated   += stat.translated()
+        self._fuzzy        += stat.fuzzy()
+        self._untranslated += stat.untranslated()
         stat.partial_po = True
 
     def is_fake(self):
@@ -1587,7 +1596,7 @@ class FakeStatistics(object):
             return "pot file"
 
     def get_translationstat(self):
-        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
+        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self._translated, self._fuzzy, self._untranslated)
 
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'untranslated':0, 'total':0, 'prc':0}
@@ -1623,22 +1632,22 @@ class FakeStatistics(object):
         return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, filename)
 
     def pot_size(self):
-        return int(self.translated) + int(self.fuzzy) + int(self.untranslated)
+        return int(self._translated) + int(self._fuzzy) + int(self._untranslated)
     def tr_percentage(self):
         if self.pot_size() == 0:
             return 0
         else:
-            return int(100*self.translated/self.pot_size())
+            return int(100*self._translated/self.pot_size())
     def fu_percentage(self):
         if self.pot_size() == 0:
             return 0
         else:
-            return int(100*self.fuzzy/self.pot_size())
+            return int(100*self._fuzzy/self.pot_size())
     def un_percentage(self):
         if self.pot_size() == 0:
             return 0
         else:
-            return int(100*self.untranslated/self.pot_size())
+            return int(100*self._untranslated/self.pot_size())
     def module_name(self):
         return self.module.name
     def module_description(self):

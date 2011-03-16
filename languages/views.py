@@ -51,6 +51,7 @@ def language_all(request, locale, dtype):
         'stats_title': {'ui':  _("UI Translations"),
                         'doc': _("Documentation")}.get(dtype),
         'stats': stats,
+        'scope': dtype.endswith('-part') and 'part' or 'full',
         'dateformat': formats.get_format('DATE_FORMAT'),
     }
     return render_to_response('languages/language_all_modules.html', context,

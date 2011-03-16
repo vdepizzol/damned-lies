@@ -94,7 +94,7 @@ def check_program_presence(prog_name):
     status, output, err = run_shell_command("which %s" % prog_name)
     return status == 0
 
-def pogrep(in_file, out_file):
+def po_grep(in_file, out_file):
     if not has_toolkit:
         return
     grepfilter = pogrep.GrepFilter("gschema.xml.in", "locations", invertmatch=True, keeptranslations=True)
