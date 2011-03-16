@@ -849,9 +849,9 @@ class Release(models.Model):
         LOCALE, NAME, REL_ID, TRANS, FUZZY, UNTRANS = 0, 1, 2, 3, 4, 5
         query = """
             SELECT language.locale, language.name, category.release_id,
-                   SUM(stat.translated),
-                   SUM(stat.fuzzy),
-                   SUM(stat.untranslated)
+                   SUM(pofull.translated),
+                   SUM(pofull.fuzzy),
+                   SUM(pofull.untranslated)
             FROM statistics AS stat
             LEFT JOIN language
                    ON stat.language_id = language.id
@@ -859,6 +859,8 @@ class Release(models.Model):
                    ON stat.domain_id = domain.id
             INNER JOIN branch
                    ON stat.branch_id = branch.id
+            INNER JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
             INNER JOIN category
                    ON category.branch_id = branch.id
             WHERE domain.dtype = %%s
@@ -926,7 +928,7 @@ class Release(models.Model):
             ).filter(language__isnull=False, branch__releases=self, domain__dtype='ui'
             ).values('branch_id', 'domain_id', 'language__locale', 'part_po__translated', 'part_po__fuzzy', 'part_po__untranslated')
         stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
-                        st['part_po__translated'] + st['part_po__translated'] + st['part_po__untranslated']) for st in all_ui_stats])
+                        st['part_po__translated'] + st['part_po__fuzzy'] + st['part_po__untranslated']) for st in all_ui_stats])
         for lang in Language.objects.all():
             total_part_ui_strings[lang.locale] = self.total_part_for_lang(lang.locale, all_ui_pots, stats_d)
         return total_part_ui_strings
@@ -941,7 +943,7 @@ class Release(models.Model):
                 ).filter(language__locale=lang, branch__releases=self, domain__dtype='ui'
                 ).values('branch_id', 'domain_id', 'language__locale', 'part_po__translated', 'part_po__fuzzy', 'part_po__untranslated')
             all_stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
-                                st['part_po__translated'] + st['part_po__translated'] + st['part_po__untranslated']) for st in all_stats])
+                                st['part_po__translated'] + st['part_po__fuzzy'] + st['part_po__untranslated']) for st in all_stats])
         total = 0
         for stat in all_pots:
             key = "%d-%d-%s" % (stat.branch_id, stat.domain_id, locale)
@@ -1024,8 +1026,7 @@ class Release(models.Model):
                    SUM(pofull.translated) AS trans,
                    SUM(pofull.fuzzy),
                    SUM(popart.translated) AS trans_p,
-                   SUM(popart.fuzzy) AS fuzzy_p,
-                   SUM(popart.untranslated) AS untrans_p
+                   SUM(popart.fuzzy) AS fuzzy_p
             FROM statistics AS stat
             LEFT JOIN domain
                    ON domain.id = stat.domain_id
@@ -1048,7 +1049,7 @@ class Release(models.Model):
         total_docstrings, total_uistrings = self.total_strings()
         total_uistrings_part = self.total_part_for_all_langs()
         for row in cursor.fetchall():
-            lang_name, locale, dtype, trans, fuzzy, trans_p, fuzzy_p, untrans_p = row
+            lang_name, locale, dtype, trans, fuzzy, trans_p, fuzzy_p = row
             if locale not in stats:
                 # Initialize stats dict
                 stats[locale] = {
@@ -1071,7 +1072,7 @@ class Release(models.Model):
                 stats[locale]['ui_untrans'] = total_uistrings - (trans + fuzzy)
                 stats[locale]['ui_trans_part'] = trans_p
                 stats[locale]['ui_fuzzy_part'] = fuzzy_p
-                stats[locale]['ui_untrans_part'] = untrans_p
+                stats[locale]['ui_untrans_part'] = total_uistrings_part[locale] - (trans_p + fuzzy_p)
                 if total_uistrings > 0:
                     stats[locale]['ui_percent'] = int(100*trans/total_uistrings)
                     stats[locale]['ui_percentfuzzy'] = int(100*fuzzy/total_uistrings)
