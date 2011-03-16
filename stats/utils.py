@@ -25,6 +25,12 @@ from itertools import islice
 from subprocess import Popen, PIPE
 import errno
 
+try:
+    from translate.tools import pogrep
+    has_toolkit = True
+except ImportError:
+    has_toolkit = False
+
 from django.utils.translation import ugettext_noop
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
@@ -87,6 +93,21 @@ def check_program_presence(prog_name):
     """ Test if prog_name is an available command on the system """
     status, output, err = run_shell_command("which %s" % prog_name)
     return status == 0
+
+def pogrep(in_file, out_file):
+    if not has_toolkit:
+        return
+    grepfilter = pogrep.GrepFilter("gschema.xml.in", "locations", invertmatch=True, keeptranslations=True)
+    out = open(out_file, "w")
+    pogrep.rungrep(in_file, out, None, grepfilter)
+    out.close()
+    # command-line variant:
+    """
+    cmd = "pogrep --invert-match --header --search=locations \"gschema.xml.in\" %(full_po)s %(part_po)s" % {
+        'full_po': in_file,
+        'part_po': out_file,
+    }
+    run_shell_command(cmd)"""
 
 def check_potfiles(po_path):
     """Check if there were any problems regenerating a POT file (intltool-update -m).
@@ -227,7 +248,7 @@ def pot_diff_status(pota, potb):
     else:
         return CHANGED_NO_ADDITIONS, result_all
 
-def po_file_stats(pofile, msgfmt_checks = True):
+def po_file_stats(pofile, msgfmt_checks=True, count_images=True):
     """ Compute pofile translation statistics, and proceed to some validity checks if msgfmt_checks is True """
     res = {
         'translated' : 0,
@@ -275,11 +296,11 @@ def po_file_stats(pofile, msgfmt_checks = True):
     r_fz = re.search(r"([0-9]+) fuzzy", errs)
 
     if r_tr:
-        res['translated'] = r_tr.group(1)
+        res['translated'] = int(r_tr.group(1))
     if r_un:
-        res['untranslated'] = r_un.group(1)
+        res['untranslated'] = int(r_un.group(1))
     if r_fz:
-        res['fuzzy'] = r_fz.group(1)
+        res['fuzzy'] = int(r_fz.group(1))
 
     if msgfmt_checks:
         # Check if PO file is in UTF-8
@@ -297,9 +318,10 @@ def po_file_stats(pofile, msgfmt_checks = True):
             res['errors'].append(("warn",
                               ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
     # Count number of figures in PO(T) file
-    command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
-    (status, output, errs) = run_shell_command(command)
-    res['num_figures'] = int(output)
+    if count_images:
+        command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
+        (status, output, errs) = run_shell_command(command)
+        res['num_figures'] = int(output)
 
     return res
 
@@ -370,6 +392,26 @@ def get_fig_stats(pofile):
         fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
         figures.append(fig)
     return figures
+
+def add_custom_header(po_path, header, value):
+    """ Add a custom po file header """
+    grep_cmd = """grep "%s" %s""" % (header, po_path)
+    status = 1
+    last_headers = ["Content-Transfer-Encoding", "Plural-Forms"]
+    while status != 0 and last_headers != []:
+        (status, output, errs) = run_shell_command(grep_cmd)
+        if status != 0:
+            # Try to add header
+            cmd = '''sed -i '/^\"%s/ a\\"%s: %s\\\\n"' %s''' % (last_headers.pop(), header, value, po_path)
+            (stat, out, err) = run_shell_command(cmd)
+    if status == 0 and not "%s: %s" % (header, value) in output:
+        # Set header value
+        cmd = '''sed -i '/^\"%s/ c\\"%s: %s\\\\n"' %s''' % (header, header, value, po_path)
+        (stat, out, err) = run_shell_command(cmd)
+
+def is_po_reduced(file_path):
+    status, output, errs = run_shell_command("""grep "X-DamnedLies-Scope: partial" %s""" % file_path)
+    return (status == 0)
 
 def copy_file(file1, file2):
     try:

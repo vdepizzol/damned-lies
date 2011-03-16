@@ -29,9 +29,9 @@ from django.db.models import Max
 from django.db.models.signals import post_save, post_delete
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
-from stats.models import Branch, Domain, Statistics
+from stats.models import Branch, Domain, Statistics, PoFile
 from stats.signals import pot_has_changed
-from stats.utils import run_shell_command
+from stats.utils import run_shell_command, is_po_reduced
 from languages.models import Language
 from people.models import Person
 
@@ -342,6 +342,8 @@ class ActionDb(models.Model):
     created = models.DateTimeField(auto_now_add=True, editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_upload_filename, blank=True, null=True)
+    #up_file     = models.OneToOneField(PoFile, null=True, related_name='action_p')
+    #merged_file = models.OneToOneField(PoFile, null=True, related_name='action_m')
 
     class Meta:
         db_table = 'action'
@@ -370,6 +372,9 @@ class ActionDb(models.Model):
     def merge_file_with_pot(self, pot_file):
         """Merge the uploaded translated file with current pot."""
         if self.file:
+            pot_file_reduced = pot_file[:-3] + "reduced.pot"
+            if is_po_reduced(self.file) and os.path.exists(pot_file_reduced):
+                pot_file = pot_file_reduced
             command = "msgmerge --previous -o %(out_po)s %(po_file)s %(pot_file)s" % {
                 'out_po': self.file.path[:-3] + ".merged.po",
                 'po_file': self.file.path,
@@ -826,7 +831,7 @@ def merge_uploaded_file(sender, instance, **kwargs):
             stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
         except Statistics.DoesNotExist:
             return
-        potfile = stat.po_path()
+        potfile = stat.po_path(reduced=is_po_reduced(instance.file.path))
         instance.merge_file_with_pot(potfile)
 post_save.connect(merge_uploaded_file, sender=ActionDb)
 

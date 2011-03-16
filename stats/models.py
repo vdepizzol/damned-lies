@@ -264,7 +264,11 @@ class Branch(models.Model):
 
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
-        return self.releases.filter(string_frozen=True).count() and True or False
+        return bool(self.releases.filter(string_frozen=True).count())
+
+    def is_archive_only(self):
+        """ Return True if the branch only appears in 'archived' releases """
+        return bool(self.releases.filter(weight__gt=0).count())
 
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
@@ -312,13 +316,14 @@ class Branch(models.Model):
             mandatory_langs is a list of language objects whose stats should be added even if no translation exists.
         """
         stats = SortedDict(); stats_langs = {}
-        pot_stats = Statistics.objects.select_related("language", "domain", "branch"
+        pot_stats = Statistics.objects.select_related("language", "domain", "branch", "full_po"
                         ).filter(branch=self, language__isnull=True, domain__dtype=typ
                         ).order_by('domain__name')
         for stat in pot_stats.all():
             stats[stat.domain.name] = [stat,]
             stats_langs[stat.domain.name] = []
-        tr_stats = Statistics.objects.select_related("language", "domain", "branch").filter(branch=self, language__isnull=False, domain__dtype=typ)
+        tr_stats = Statistics.objects.select_related("language", "domain", "branch", "full_po"
+                        ).filter(branch=self, language__isnull=False, domain__dtype=typ)
         for stat in tr_stats.all():
             stats[stat.domain.name].append(stat)
             stats_langs[stat.domain.name].append(stat.language)
@@ -327,7 +332,7 @@ class Branch(models.Model):
             for domain in stats.keys():
                 if lang not in stats_langs[domain]:
                     fake_stat = FakeStatistics(self.module, self, typ, lang)
-                    fake_stat.untranslated = stats[domain][0].untranslated
+                    fake_stat.untranslated = stats[domain][0].untranslated()
                     stats[domain].append(fake_stat)
         # Sort
         for key, doms in stats.items():
@@ -341,7 +346,7 @@ class Branch(models.Model):
         elif not b.language:
             return 1
         else:
-            res = -cmp(a.translated, b.translated)
+            res = -cmp(a.translated(), b.translated())
             if not res:
                 res = cmp(a.get_lang(), b.get_lang())
         return res
@@ -398,11 +403,11 @@ class Branch(models.Model):
 
                 # Prepare statistics object
                 try:
-                    stat = Statistics.objects.get(language=None, branch=self, domain=dom)
-                    Information.objects.filter(statistics=stat).delete() # Reset errors
+                    pot_stat = Statistics.objects.get(language=None, branch=self, domain=dom)
+                    Information.objects.filter(statistics=pot_stat).delete() # Reset errors
                 except Statistics.DoesNotExist:
-                    stat = Statistics(language=None, branch=self, domain=dom)
-                    stat.save()
+                    pot_stat = Statistics(language=None, branch=self, domain=dom)
+                    pot_stat.save()
 
                 # 4. Compare with old pot files, various checks
                 # *****************************
@@ -415,9 +420,21 @@ class Branch(models.Model):
                         errors.append(("error", ugettext_noop("Can't generate POT file, using old one.")))
                     else:
                         errors.append(("error", ugettext_noop("Can't generate POT file, statistics aborted.")))
-                        stat.set_errors(errors)
+                        pot_stat.set_errors(errors)
                         continue
 
+                # 5. Generate pot stats and update DB
+                # ***********************************
+                pot_stats = utils.po_file_stats(potfile, False)
+                errors.extend(pot_stats['errors'])
+                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
+                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
+
+                pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
+                pot_stat.set_errors(errors)
+
+                # 6. Check if pot changed
+                # ***********************************
                 changed_status = utils.CHANGED_WITH_ADDITIONS
 
                 if os.access(previous_pot, os.R_OK):
@@ -429,17 +446,7 @@ class Branch(models.Model):
                     if changed_status != utils.NOT_CHANGED:
                         signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
 
-                # 5. Generate pot stats and update DB
-                # ***********************************
-                pot_stats = utils.po_file_stats(potfile, False)
-                errors.extend(pot_stats['errors'])
-                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
-                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
-
-                stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
-                stat.set_errors(errors)
-
-                # 6. Update language po files and update DB
+                # 7. Update language po files and update DB
                 # *****************************************
                 command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
                 stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
@@ -458,7 +465,7 @@ class Branch(models.Model):
                         }
                     utils.run_shell_command(realcmd)
 
-                    langstats = utils.po_file_stats(outpo, True)
+                    langstats = utils.po_file_stats(outpo, msgfmt_checks=True, count_images=(dom.dtype == "doc"))
                     if linguas['langs'] is not None and lang not in linguas['langs']:
                         langstats['errors'].append(("warn-ext", linguas['error']))
                     if dom.dtype == "doc":
@@ -492,7 +499,7 @@ class Branch(models.Model):
                                                translated = int(langstats['translated']),
                                                fuzzy = int(langstats['fuzzy']),
                                                untranslated = int(langstats['untranslated']),
-                                               num_figures = int(langstats['num_figures']))
+                                               num_figures = int(langstats.get('num_figures', 0)))
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
             # Check if doap file changed
@@ -741,7 +748,7 @@ class Domain(models.Model):
         return flist
 
     def generate_pot_file(self, current_branch):
-        """ Return the pot file generated, and the error if any """
+        """ Return the pot file generated (in the checkout tree), and the error if any """
 
         vcs_path = os.path.join(current_branch.co_path(), self.directory)
         pot_command = self.pot_method
@@ -881,7 +888,8 @@ class Release(models.Model):
         # Uses the special statistics record where language_id is NULL to compute the sum.
         query = """
             SELECT domain.dtype,
-                   SUM(stat.untranslated)
+                   SUM(pofull.untranslated),
+                   SUM(popart.untranslated)
             FROM statistics AS stat
             LEFT JOIN domain
                    ON domain.id = stat.domain_id
@@ -891,6 +899,10 @@ class Release(models.Model):
                    ON cat.branch_id = br.id
             LEFT JOIN "release" AS rel
                    ON rel.id = cat.release_id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE rel.id = %s
               AND stat.language_id IS NULL
             GROUP BY domain.dtype"""
@@ -899,23 +911,26 @@ class Release(models.Model):
             cursor.execute("SET sql_mode='ANSI_QUOTES'")
         cursor.execute(query, (self.id,))
 
-        total_doc, total_ui = 0, 0
+        total_doc, total_ui, total_ui_part = 0, 0, 0
         for row in cursor.fetchall():
             if row[0] == 'ui':
                 total_ui = row[1]
+                total_ui_part = row[2]
             elif row[0] == 'doc':
                 total_doc = row[1]
-        return (total_doc, total_ui)
+        return (total_doc, total_ui, total_ui_part)
 
     def total_for_lang(self, lang):
         """ Returns total translated/fuzzy/untranslated strings for a specific
             language """
 
-        total_doc, total_ui = self.total_strings()
+        total_doc, total_ui, total_ui_part = self.total_strings()
         query = """
             SELECT domain.dtype,
-                   SUM(stat.translated),
-                   SUM(stat.fuzzy)
+                   SUM(pofull.translated) AS trans,
+                   SUM(pofull.fuzzy),
+                   SUM(popart.translated) AS trans_p,
+                   SUM(popart.fuzzy) AS fuzzy_p
             FROM statistics AS stat
             LEFT JOIN domain
                    ON stat.domain_id = domain.id
@@ -923,6 +938,10 @@ class Release(models.Model):
                    ON stat.branch_id = branch.id
             LEFT JOIN category
                    ON category.branch_id = branch.id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE language_id = %s
               AND category.release_id = %s
             GROUP BY domain.dtype"""
@@ -930,21 +949,30 @@ class Release(models.Model):
         cursor.execute(query, (lang.id, self.id))
         stats = {'id': self.id, 'name': self.name, 'description': _(self.description),
                  'uitrans': 0, 'uifuzzy': 0, 'uitotal': total_ui,
+                 'uitrans_part': 0, 'uifuzzy_part': 0, 'uitotal_part': total_ui_part,
                  'doctrans': 0, 'docfuzzy': 0, 'doctotal': total_doc,
                  'uitransperc': 0, 'uifuzzyperc': 0, 'uiuntransperc': 0,
+                 'uitransperc_part': 0, 'uifuzzyperc_part': 0, 'uiuntransperc_part': 0,
                  'doctransperc': 0, 'docfuzzyperc': 0, 'docuntransperc': 0}
         for res in cursor.fetchall():
             if res[0] == 'ui':
                 stats['uitrans'] = res[1]
                 stats['uifuzzy'] = res[2]
+                stats['uitrans_part'] = res[3]
+                stats['uifuzzy_part'] = res[4]
             if res[0] == 'doc':
                 stats['doctrans'] = res[1]
                 stats['docfuzzy'] = res[2]
         stats['uiuntrans'] = total_ui - (stats['uitrans'] + stats['uifuzzy'])
+        stats['uiuntrans_part'] = total_ui_part - (stats['uitrans_part'] + stats['uifuzzy_part'])
         if total_ui > 0:
             stats['uitransperc'] = int(100*stats['uitrans']/total_ui)
             stats['uifuzzyperc'] = int(100*stats['uifuzzy']/total_ui)
             stats['uiuntransperc'] = int(100*stats['uiuntrans']/total_ui)
+        if total_ui_part > 0:
+            stats['uitransperc_part'] = int(100*stats['uitrans_part']/total_ui_part)
+            stats['uifuzzyperc_part'] = int(100*stats['uifuzzy_part']/total_ui_part)
+            stats['uiuntransperc_part'] = int(100*stats['uiuntrans_part']/total_ui_part)
         stats['docuntrans'] = total_doc - (stats['doctrans'] + stats['docfuzzy'])
         if total_doc > 0:
             stats['doctransperc'] = int(100*stats['doctrans']/total_doc)
@@ -961,8 +989,10 @@ class Release(models.Model):
             SELECT MIN(lang.name),
                    MIN(lang.locale),
                    domain.dtype,
-                   SUM(stat.translated) AS trans,
-                   SUM(stat.fuzzy)
+                   SUM(pofull.translated) AS trans,
+                   SUM(pofull.fuzzy),
+                   SUM(popart.translated) AS trans_p,
+                   SUM(popart.fuzzy) AS fuzzy_p
             FROM statistics AS stat
             LEFT JOIN domain
                    ON domain.id = stat.domain_id
@@ -972,13 +1002,17 @@ class Release(models.Model):
                    ON br.id = stat.branch_id
             LEFT JOIN category
                    ON category.branch_id = br.id
+            LEFT JOIN pofile AS pofull
+                   ON pofull.id = stat.full_po_id
+            LEFT JOIN pofile AS popart
+                   ON popart.id = stat.part_po_id
             WHERE category.release_id = %s AND stat.language_id IS NOT NULL
             GROUP BY domain.dtype, stat.language_id
             ORDER BY domain.dtype, trans DESC"""
         cursor = connection.cursor()
         cursor.execute(query, (self.id,))
         stats = {}
-        total_docstrings, total_uistrings = self.total_strings()
+        total_docstrings, total_uistrings, total_uistrings_part = self.total_strings()
         for row in cursor.fetchall():
             if row[1] not in stats:
                 # Initialize stats dict
@@ -1000,10 +1034,17 @@ class Release(models.Model):
                 stats[row[1]]['ui_trans'] = row[3]
                 stats[row[1]]['ui_fuzzy'] = row[4]
                 stats[row[1]]['ui_untrans'] = total_uistrings - (row[3] + row[4])
+                stats[row[1]]['ui_trans_part'] = row[5]
+                stats[row[1]]['ui_fuzzy_part'] = row[6]
+                stats[row[1]]['ui_untrans_part'] = total_uistrings_part - (row[5] + row[6])
                 if total_uistrings > 0:
                     stats[row[1]]['ui_percent'] = int(100*row[3]/total_uistrings)
                     stats[row[1]]['ui_percentfuzzy'] = int(100*row[4]/total_uistrings)
                     stats[row[1]]['ui_percentuntrans'] = int(100*stats[row[1]]['ui_untrans']/total_uistrings)
+                if total_uistrings_part > 0:
+                    stats[row[1]]['ui_percent_part'] = int(100*row[5]/total_uistrings_part)
+                    stats[row[1]]['ui_percentfuzzy_part'] = int(100*row[6]/total_uistrings_part)
+                    stats[row[1]]['ui_percentuntrans_part'] = int(100*stats[row[1]]['ui_untrans_part']/total_uistrings_part)
         cursor.close()
 
         results = stats.values()
@@ -1076,17 +1117,66 @@ class Category(models.Model):
                 return _(entry[1])
         return key
 
+class PoFile(models.Model):
+    # File type fields of Django may not be flexible enough for our use case
+    path         = models.CharField(max_length=255, blank=True, null=True)
+    updated      = models.DateTimeField(auto_now_add=True)
+    translated   = models.IntegerField(default=0)
+    fuzzy        = models.IntegerField(default=0)
+    untranslated = models.IntegerField(default=0)
+    # Number of figures in doc templates
+    num_figures  = models.IntegerField(default=0)
+
+    class Meta:
+        db_table = 'pofile'
+
+    def __unicode__(self):
+        return "%s (%s/%s/%s)" % (self.path, self.translated, self.fuzzy, self.untranslated)
+
+    def pot_size(self):
+        return self.translated + self.fuzzy + self.untranslated
+
+    def fig_count(self):
+        """ If stat of a document type, get the number of figures in the document """
+        return self.num_figures
+
+    def tr_percentage(self):
+        if self.pot_size() == 0:
+            return 0
+        else:
+            return int(100*self.translated/self.pot_size())
+
+    def fu_percentage(self):
+        if self.pot_size() == 0:
+            return 0
+        else:
+            return int(100*self.fuzzy/self.pot_size())
+
+    def un_percentage(self):
+        if self.pot_size() == 0:
+            return 0
+        else:
+            return int(100*self.untranslated/self.pot_size())
+
+    def translation_stat(self):
+        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
+
+
 class Statistics(models.Model):
     branch = models.ForeignKey(Branch)
     domain = models.ForeignKey(Domain)
     language = models.ForeignKey(Language, null=True)
 
-    date = models.DateTimeField(auto_now_add=True)
-    translated = models.IntegerField(default=0)
-    fuzzy = models.IntegerField(default=0)
-    untranslated = models.IntegerField(default=0)
+    # obsolete fields (deleted after migration)
+    old_date = models.DateTimeField(auto_now_add=True) # obsolete
+    old_translated   = models.IntegerField(default=0) # obsolete
+    old_fuzzy        = models.IntegerField(default=0) # obsolete
+    old_untranslated = models.IntegerField(default=0) # obsolete
     # Number of figures in doc templates
-    num_figures = models.IntegerField(default=0)
+    old_num_figures = models.IntegerField(default=0) # obsolete
+
+    full_po = models.OneToOneField(PoFile, null=True, related_name='stat_f')
+    part_po = models.OneToOneField(PoFile, null=True, related_name='stat_p')
 
     class Meta:
         db_table = 'statistics'
@@ -1107,32 +1197,44 @@ class Statistics(models.Model):
         return "%s (%s-%s) %s (%s)" % (self.branch.module.name, self.domain.dtype, self.domain.name,
                                        self.branch.name, self.get_lang())
 
+    def translated(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'translated', 0)
+
+    def fuzzy(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'fuzzy', 0)
+
+    def untranslated(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'untranslated', 0)
+
     def is_fake(self):
         return False
 
-    def is_pot_file(self):
+    def is_pot_stats(self):
         return self.language is None
 
-    def tr_percentage(self):
-        if self.pot_size() == 0:
-            return 0
-        else:
-            return int(100*self.translated/self.pot_size())
+    def tr_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.tr_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.tr_percentage()
+        return 0
 
-    def fu_percentage(self):
-        if self.pot_size() == 0:
-            return 0
-        else:
-            return int(100*self.fuzzy/self.pot_size())
+    def fu_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.fu_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.fu_percentage()
+        return 0
 
-    def un_percentage(self):
-        if self.pot_size() == 0:
-            return 0
-        else:
-            return int(100*self.untranslated/self.pot_size())
+    def un_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.un_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.un_percentage()
+        return 0
 
     def get_lang(self):
-        if not self.is_pot_file():
+        if not self.is_pot_stats():
             return _("%(lang_name)s (%(lang_locale)s)") % {
                 'lang_name': _(self.language.name),
                 'lang_locale': self.language.locale
@@ -1151,25 +1253,25 @@ class Statistics(models.Model):
         return self.moddescription
 
     def get_translationstat(self):
-        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
+        return self.full_po.translation_stat()
 
-    def filename(self, potfile=False):
-        if not self.is_pot_file() and not potfile:
-            return "%s.%s.%s.po" % (self.domain.potbase(), self.branch.name, self.language.locale)
+    def get_reducedstat(self):
+        return self.part_po.translation_stat()
+
+    def filename(self, potfile=False, reduced=False):
+        if not self.is_pot_stats() and not potfile:
+            return "%s.%s.%s.%spo" % (self.domain.potbase(), self.branch.name, self.language.locale, reduced and "reduced." or "")
         else:
-            return "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
-
-    def pot_size(self):
-        return int(self.translated) + int(self.fuzzy) + int(self.untranslated)
+            return "%s.%s.%spot" % (self.domain.potbase(), self.branch.name, reduced and "reduced." or "")
 
     def pot_text(self):
+        pot_size = self.full_po.pot_size()
+        fig_count = self.full_po.fig_count()
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
-        pot_size = self.pot_size()
-        fig_count = self.fig_count()
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", pot_size) % {'count': pot_size}
         upd_text = _(u"updated on %(date)s") % {
                         # Date format syntax is similar to PHP http://www.php.net/date
-                        'date': dateformat.format(self.date, _("Y-m-d g:i a O"))
+                        'date': dateformat.format(self.full_po.updated, _("Y-m-d g:i a O"))
                         }
         if fig_count:
             fig_text = ungettext(u"%(count)s figure", "%(count)s figures", fig_count) % {'count': fig_count}
@@ -1198,10 +1300,6 @@ class Statistics(models.Model):
                         fig['translated_file'] = True
         return self.figures
 
-    def fig_count(self):
-        """ If stat of a document type, get the number of figures in the document """
-        return self.num_figures
-
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'total':0, 'prc':0}
         for fig in self.get_figures():
@@ -1222,30 +1320,68 @@ class Statistics(models.Model):
         """ Return the Web interface path of file on remote vcs """
         return utils.url_join(self.branch.get_vcs_web_url(), self.domain.directory)
 
-    def po_path(self, potfile=False):
+    def po_path(self, potfile=False, reduced=False):
         """ Return path of po file on local filesystem """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs"
-        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile))
+        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile, reduced))
 
-    def po_url(self, potfile=False):
+    def po_url(self, potfile=False, reduced=False):
         """ Return URL of po file, e.g. for downloading the file """
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs/"
-        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename(potfile))
+        return utils.url_join("/POT/", "%s.%s" % (self.module_name(), self.branch.name), subdir, self.filename(potfile, reduced))
 
     def pot_url(self):
         return self.po_url(potfile=True)
 
     def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, num_figures=0):
-        self.translated = translated
-        self.fuzzy = fuzzy
-        self.untranslated = untranslated
-        self.num_figures = num_figures
-        self.date = datetime.now()
-        self.save()
+        if not self.full_po:
+            self.full_po = PoFile.objects.create(path=po_path)
+            self.save()
+        self.full_po.path = po_path
+        self.full_po.translated = translated
+        self.full_po.fuzzy = fuzzy
+        self.full_po.untranslated = untranslated
+        self.full_po.num_figures = num_figures
+        self.full_po.updated = datetime.now()
+        self.full_po.save()
+        if self.domain.dtype == "ui":
+            def part_po_equals_full_po():
+                if self.part_po == self.full_po:
+                    return
+                if self.part_po and self.part_po != self.full_po:
+                    self.part_po.delete()
+                self.part_po = self.full_po
+                self.save()
+            # Try to compute a reduced po file
+            if (self.full_po.fuzzy + self.full_po.untranslated) > 0 and not self.branch.is_archive_only():
+                # Generate partial_po and store partial stats
+                if self.full_po.path.endswith('.pot'):
+                    part_po_path = self.full_po.path[:-3] + "reduced.pot"
+                else:
+                    part_po_path = self.full_po.path[:-3] + ".reduced.po"
+                utils.pogrep(self.full_po.path, part_po_path)
+                part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
+                if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
+                    # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
+                    part_po_equals_full_po()
+                    os.remove(part_po_path)
+                    return
+                utils.add_custom_header(part_po_path, "X-DamnedLies-Scope", "partial")
+                if not self.part_po:
+                    self.part_po = PoFile.objects.create(path=part_po_path)
+                    self.save()
+                self.part_po.path = part_po_path
+                self.part_po.translated = part_stats['translated']
+                self.part_po.fuzzy = part_stats['fuzzy']
+                self.part_po.untranslated = part_stats['untranslated']
+                self.part_po.updated = datetime.now()
+                self.part_po.save()
+            else:
+                part_po_equals_full_po()
 
     def set_errors(self, errors):
         for err in errors:
@@ -1254,7 +1390,7 @@ class Statistics(models.Model):
     def informations(self):
         """ Returns information_set, optionally augmented by domain information """
         info_set = [i for i in self.information_set.all()]
-        if self.is_pot_file() and self.domain.pot_method:
+        if self.is_pot_stats() and self.domain.pot_method:
             # Add a dynamic (ie not saved) Information
             info_set.append(Information(
                 statistics  = self,
@@ -1311,17 +1447,23 @@ class Statistics(models.Model):
         """
         from vertimus.models import StateDb, ActionDb # import here to prevent a circular dependency
 
+        if dtype.endswith('-part'):
+            dtype = dtype[:-5]
+            scope = "part"
+        else:
+            scope = "full"
+
         stats = {'dtype':dtype, 'totaltrans':0, 'totalfuzzy':0, 'totaluntrans':0,
                  'totaltransperc': 0, 'totalfuzzyperc': 0, 'totaluntransperc': 0,
                  'categs':{}, 'all_errors':[]}
         # Sorted by module to allow grouping ('fake' stats)
-        pot_stats = Statistics.objects.select_related('domain', 'branch__module')
+        pot_stats = Statistics.objects.select_related('domain', 'branch__module', 'full_po', 'part_po')
         if release:
             pot_stats = pot_stats.extra(select={'categ_name': "category.name"}).filter(language=None, branch__releases=release, domain__dtype=dtype).order_by('branch__module__id')
         else:
             pot_stats = pot_stats.filter(language=None, domain__dtype=dtype).order_by('branch__module__id')
 
-        tr_stats = Statistics.objects.select_related('domain', 'language', 'branch__module')
+        tr_stats = Statistics.objects.select_related('domain', 'language', 'branch__module', 'full_po', 'part_po')
         if release:
             tr_stats = tr_stats.filter(language=lang, branch__releases=release, domain__dtype=dtype).order_by('branch__module__id')
         else:
@@ -1368,12 +1510,12 @@ class Statistics(models.Model):
             if br_dom_key in vt_states_dict:
                 stat.state = vt_states_dict[br_dom_key]
 
-            stats['totaltrans'] += stat.translated
-            stats['totalfuzzy'] += stat.fuzzy
-            stats['totaluntrans'] += stat.untranslated
-            stats['categs'][categdescr]['cattrans'] += stat.translated
-            stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy
-            stats['categs'][categdescr]['catuntrans'] += stat.untranslated
+            stats['totaltrans'] += stat.translated(scope)
+            stats['totalfuzzy'] += stat.fuzzy(scope)
+            stats['totaluntrans'] += stat.untranslated(scope)
+            stats['categs'][categdescr]['cattrans'] += stat.translated(scope)
+            stats['categs'][categdescr]['catfuzzy'] += stat.fuzzy(scope)
+            stats['categs'][categdescr]['catuntrans'] += stat.untranslated(scope)
             if modname not in stats['categs'][categdescr]['modules']:
                 # first element is a placeholder for a fake stat
                 stats['categs'][categdescr]['modules'][modname] = {branchname:[[' fake', None], (domname, stat)]}
@@ -1427,9 +1569,9 @@ class FakeStatistics(object):
         self.figures = None
 
     def trans(self, stat):
-        self.translated += stat.translated
-        self.fuzzy += stat.fuzzy
-        self.untranslated += stat.untranslated
+        self.translated += stat.translated()
+        self.fuzzy += stat.fuzzy()
+        self.untranslated += stat.untranslated()
         stat.partial_po = True
 
     def is_fake(self):

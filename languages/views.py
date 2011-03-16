@@ -81,9 +81,12 @@ def language_release(request, locale, release_name, dtype):
         'language': language,
         'language_name': language and language.get_name() or _("Original strings"),
         'release': release,
-        'stats_title': {'ui':  _("UI Translations"),
-                        'doc': _("Documentation")}.get(dtype),
+        'stats_title': {
+            'ui':  _("UI Translations"),
+            'ui-part': _("UI Translations (reduced)"),
+            'doc': _("Documentation")}.get(dtype),
         'stats': stats,
+        'scope': dtype.endswith('-part') and 'part' or 'full',
         'dateformat': formats.get_format('DATE_FORMAT'),
     }
     return render_to_response('languages/language_release.html', context,

@@ -57,18 +57,30 @@ $(document).ready(function() {
 {% endif %}
 
 <div style="line-height: 1.7">
-  <em><a href="{{ pot_stats.pot_url }}">
+  <div><em><a href="{{ pot_stats.pot_url }}">
       <img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
     {{ pot_stats.pot_text }}
-  </em>
-  <br/>
-  <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
-  {{ stats.get_translationstat|safe }}&nbsp;
-  <div class="graph graphinline">
-    <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
-    <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
-    <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+  </em></div>
+  <div style="float:left">
+    <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
+    {{ stats.get_translationstat|safe }}&nbsp;
+    <div class="graph graphinline">
+      <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+    </div>
   </div>
+  {% if stats.part_po != stats.full_po %}
+  <div style="float:left; margin-left: 150px;">
+    <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated (reduced):" %}
+    {{ stats.get_reducedstat|safe }}&nbsp;
+    <div class="graph graphinline">
+      <div class="translated" style="width: {{ stats.part_po.tr_percentage }}px;"></div>
+      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.part_po.tr_percentage }}px; width:{{ stats.part_po.fu_percentage }}px;"></div>
+      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.part_po.tr_percentage|add:stats.part_po.fu_percentage }}px; width: {{ stats.part_po.un_percentage }}px;"></div>
+    </div>
+  </div>
+  {% endif %}
   {% if pot_stats.fig_count and stats.language %}
   <div class="docimages">
     <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">

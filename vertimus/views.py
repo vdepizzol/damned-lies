@@ -26,6 +26,7 @@ from django.template import RequestContext
 from django.core import urlresolvers
 
 from stats.models import Statistics, Module, Branch, Domain, Language
+from stats.utils import is_po_reduced
 from vertimus.models import StateDb, ActionDb, ActionDbArchived, ActionAbstract
 from vertimus.forms import ActionForm
 
@@ -124,6 +125,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
         'stats': stats,
         'pot_stats': pot_stats,
         'po_url': po_url,
+        'po_url_reduced': stats.part_po and stats.po_url(reduced=True) or None,
         'branch': branch,
         'other_states': other_branch_states,
         'domain': domain,
@@ -151,6 +153,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     state = action_1.state
 
     file_path_1 = action_1.merged_file()['path'] or action_1.file.path
+    reduced = is_po_reduced(file_path_1)
 
     try:
         content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
@@ -183,7 +186,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
             except Statistics.DoesNotExist:
                 stats = get_object_or_404(Statistics, branch=state.branch, domain=state.domain, language=None)
                 descr_2 = _("Latest POT file")
-            file_path_2 = stats.po_path()
+            file_path_2 = stats.po_path(reduced=reduced)
     try:
         content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
     except UnicodeDecodeError:

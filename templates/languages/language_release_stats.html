@@ -66,8 +66,7 @@
           {% endif %}
         </td>
           <td><span class="branch">{{ branch }}</span></td>
-          <td><span style="display:none;">{{ stat.tr_percentage }}</span>
-              {{ stat.tr_percentage }}%&nbsp;({{ stat.translated }}/{{ stat.fuzzy }}/{{ stat.untranslated }})</td>
+          <td><span style="display:none;">{{ stat.tr_percentage }}</span>{{ stat|num_stats:scope }}</td>
           <td style="width: 108px; text-align: center;"><div class="graph">
               <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
               <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
