@@ -918,6 +918,36 @@ class Release(models.Model):
                 total_doc = row[1]
         return (total_doc, total_ui)
 
+    def total_part_for_all_langs(self):
+        """ Return total partial UI strings for each language """
+        total_part_ui_strings = {}
+        all_ui_pots = Statistics.objects.select_related('part_po').filter(language__isnull=True, branch__releases=self, domain__dtype='ui')
+        all_ui_stats = Statistics.objects.select_related('part_po', 'language'
+            ).filter(language__isnull=False, branch__releases=self, domain__dtype='ui'
+            ).values('branch_id', 'domain_id', 'language__locale', 'part_po__translated', 'part_po__fuzzy', 'part_po__untranslated')
+        stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
+                        st['part_po__translated'] + st['part_po__translated'] + st['part_po__untranslated']) for st in all_ui_stats])
+        for lang in Language.objects.all():
+            total_part_ui_strings[lang.locale] = self.total_part_for_lang(lang.locale, all_ui_pots, stats_d)
+        return total_part_ui_strings
+
+    def total_part_for_lang(self, locale, all_pots=None, all_stats_d=None):
+        """ For partial UI stats, the total number can differ from lang to lang, so we
+            are bound to iterate each stats to sum it """
+        if all_pots is None:
+            all_pots = Statistics.objects.select_related('part_po').filter(language__isnull=True, branch__releases=self, domain__dtype='ui')
+        if all_stats_d is None:
+            all_stats = Statistics.objects.select_related('part_po', 'language'
+                ).filter(language__locale=lang, branch__releases=self, domain__dtype='ui'
+                ).values('branch_id', 'domain_id', 'language__locale', 'part_po__translated', 'part_po__fuzzy', 'part_po__untranslated')
+            all_stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
+                                st['part_po__translated'] + st['part_po__translated'] + st['part_po__untranslated']) for st in all_stats])
+        total = 0
+        for stat in all_pots:
+            key = "%d-%d-%s" % (stat.branch_id, stat.domain_id, locale)
+            total += all_stats_d.get(key, stat.part_po.untranslated)
+        return total
+
     def total_for_lang(self, lang):
         """ Returns total translated/fuzzy/untranslated strings for a specific
             language """
@@ -1016,6 +1046,7 @@ class Release(models.Model):
         cursor.execute(query, (self.id,))
         stats = {}
         total_docstrings, total_uistrings = self.total_strings()
+        total_uistrings_part = self.total_part_for_all_langs()
         for row in cursor.fetchall():
             lang_name, locale, dtype, trans, fuzzy, trans_p, fuzzy_p, untrans_p = row
             if locale not in stats:
@@ -1035,7 +1066,6 @@ class Release(models.Model):
                     stats[locale]['doc_percentfuzzy'] = int(100*fuzzy/total_docstrings)
                     stats[locale]['doc_percentuntrans'] = int(100*stats[locale]['doc_untrans']/total_docstrings)
             if dtype == 'ui':
-                total_uistrings_part = trans_p + fuzzy_p + untrans_p
                 stats[locale]['ui_trans'] = trans
                 stats[locale]['ui_fuzzy'] = fuzzy
                 stats[locale]['ui_untrans'] = total_uistrings - (trans + fuzzy)
@@ -1046,10 +1076,10 @@ class Release(models.Model):
                     stats[locale]['ui_percent'] = int(100*trans/total_uistrings)
                     stats[locale]['ui_percentfuzzy'] = int(100*fuzzy/total_uistrings)
                     stats[locale]['ui_percentuntrans'] = int(100*stats[locale]['ui_untrans']/total_uistrings)
-                if total_uistrings_part > 0:
-                    stats[locale]['ui_percent_part'] = int(100*trans_p/total_uistrings_part)
-                    stats[locale]['ui_percentfuzzy_part'] = int(100*fuzzy_p/total_uistrings_part)
-                    stats[locale]['ui_percentuntrans_part'] = int(100*stats[locale]['ui_untrans_part']/total_uistrings_part)
+                if total_uistrings_part.get(locale, 0) > 0:
+                    stats[locale]['ui_percent_part'] = int(100*trans_p/total_uistrings_part[locale])
+                    stats[locale]['ui_percentfuzzy_part'] = int(100*fuzzy_p/total_uistrings_part[locale])
+                    stats[locale]['ui_percentuntrans_part'] = int(100*stats[locale]['ui_untrans_part']/total_uistrings_part[locale])
         cursor.close()
 
         results = stats.values()
