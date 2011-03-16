@@ -259,7 +259,11 @@ class Branch(models.Model):
 
     def has_string_frozen(self):
         """ Returns true if the branch is contained in at least one string frozen release """
-        return self.releases.filter(string_frozen=True).count() and True or False
+        return bool(self.releases.filter(string_frozen=True).count())
+
+    def is_archive_only(self):
+        """ Return True if the branch only appears in 'archived' releases """
+        return bool(self.releases.filter(weight__gt=0).count())
 
     def get_vcs_url(self):
         if self.module.vcs_type in ('hg', 'git'):
@@ -1348,7 +1352,7 @@ class Statistics(models.Model):
                 self.part_po = self.full_po
                 self.save()
             # Try to compute a reduced po file
-            if (self.full_po.fuzzy + self.full_po.untranslated) > 0:
+            if (self.full_po.fuzzy + self.full_po.untranslated) > 0 and not self.branch.is_archive_only():
                 # Generate partial_po and store partial stats
                 if self.full_po.path.endswith('.pot'):
                     part_po_path = self.full_po.path[:-3] + "reduced.pot"
