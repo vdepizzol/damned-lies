@@ -2,14 +2,14 @@
 # Copyright (C) 2009 damned-lies COPYRIGHT HOLDER
 # This file is distributed under the same license as the damned-lies package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2009 - 2011.
+# Matej Urbančič <mateju@svn.gnome.org>, 2009 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-11 01:08+0000\n"
-"PO-Revision-Date: 2011-03-11 19:43+0100\n"
+"POT-Creation-Date: 2011-03-17 16:19+0000\n"
+"PO-Revision-Date: 2011-03-17 18:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1041,11 +1041,11 @@ msgstr "priročnik Dasher"
 
 #: database-content.py:344
 #: languages/views.py:52
-#: languages/views.py:85
+#: languages/views.py:88
 #: templates/branch_detail.html:23
-#: templates/release_detail.html:22
-#: templates/release_detail.html.py:68
-#: templates/languages/language_release_summary.html:10
+#: templates/release_detail.html:23
+#: templates/release_detail.html.py:72
+#: templates/languages/language_release_summary.html:14
 msgid "Documentation"
 msgstr "Dokumentacija"
 
@@ -1396,43 +1396,51 @@ msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"h
 msgstr "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
 
 #: database-content.py:435
+msgid "Useful information on localization of the gnumeric analysis tools can be found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a> file."
+msgstr "Uporabne podrobnosti o krajevnem prilagajanju orodij gnumeric, si lahko pogledate v datoteki <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a>."
+
+#: database-content.py:436
 msgid "This a low-priority module to translate, as there are currently no user interface that show those strings."
 msgstr "Trenutno še ni ustreznega uporabniškega vmesnika za prikaz nizov, zato paket ni ključen za prevajanje."
 
-#: database-content.py:436
 #: database-content.py:437
 #: database-content.py:438
 #: database-content.py:439
 #: database-content.py:440
-#: database-content.py:459
+#: database-content.py:441
+#: database-content.py:461
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>."
 
-#: database-content.py:441
+#: database-content.py:442
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoteki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
-#: database-content.py:442
+#: database-content.py:443
+msgid "A plugin manager library for other GNOME modules"
+msgstr "Knjižnica uporavljalnika vstavkov za druge GNOME module"
+
+#: database-content.py:444
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "Paket moserial je na osnovi gtk postavljen serijski terminal za namizje GNOME. Napisan je v jeziku Vala."
 
-#: database-content.py:443
+#: database-content.py:445
 msgid "Gnome Parental Control"
 msgstr "GNOME starševski nadzor"
 
-#: database-content.py:444
+#: database-content.py:446
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "Za objavo prevodov, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">ustvarite novo poročilo o hrošču za paket NetworkManager</a>  na spletnih straneh GNOME Bugzilla. K poročilu priložite tudi datoteko prevoda."
 
-#: database-content.py:445
+#: database-content.py:447
 msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
 msgstr "PackageKit je sistem nameščanja paketov, ki storitev poenostavi. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex</a>."
 
-#: database-content.py:446
+#: database-content.py:448
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je DTP program za X okolje."
 
-#: database-content.py:447
+#: database-content.py:449
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
 "Please submit your translation through the <a href=\"\n"
@@ -1442,23 +1450,23 @@ msgstr ""
 "Modul ni privzeto GNOME modul. Prevode lahko pošljete preko  okolja <a href=\"\n"
 "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex</a>."
 
-#: database-content.py:450
+#: database-content.py:452
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex</a>."
 
-#: database-content.py:451
+#: database-content.py:453
 msgid "A photo manager for GNOME"
 msgstr "Upravljalnik fotografij za GNOME namizje"
 
-#: database-content.py:452
+#: database-content.py:454
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Paket je predelana različica uradne različice system-tools-backends iz odložišča freedesktop.org."
 
-#: database-content.py:453
+#: database-content.py:455
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Teletekst pregledovalnik"
 
-#: database-content.py:454
+#: database-content.py:456
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1466,79 +1474,79 @@ msgstr ""
 "Prevodi podnapisov izbranih GNOME posnetkov.\n"
 "Več na <a href=\"http://live.gnome.org/VideoSubtitles\">Podnapisi video posnetkov</a>."
 
-#: database-content.py:456
+#: database-content.py:458
 msgid "A VNC client for GNOME"
 msgstr "VNC odjemalec za GNOME"
 
-#: database-content.py:457
+#: database-content.py:459
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
-#: database-content.py:458
+#: database-content.py:460
 msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
 msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
 
-#: database-content.py:460
+#: database-content.py:462
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (razvojna veja)"
 
-#: database-content.py:461
+#: database-content.py:463
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilna različica)"
 
-#: database-content.py:462
+#: database-content.py:464
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (stara stabilna različica)"
 
-#: database-content.py:463
+#: database-content.py:465
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:464
+#: database-content.py:466
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:465
+#: database-content.py:467
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:466
+#: database-content.py:468
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:467
+#: database-content.py:469
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:468
+#: database-content.py:470
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:469
+#: database-content.py:471
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:470
+#: database-content.py:472
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli programi GNOME"
 
-#: database-content.py:471
+#: database-content.py:473
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:472
+#: database-content.py:474
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:473
+#: database-content.py:475
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:474
+#: database-content.py:476
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:475
+#: database-content.py:477
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
@@ -1620,14 +1628,18 @@ msgid "Unknown"
 msgstr "Neznano"
 
 #: languages/views.py:51
-#: languages/views.py:84
+#: languages/views.py:86
 msgid "UI Translations"
 msgstr "Prevodi uporabniških vmesnikov"
 
-#: languages/views.py:82
-#: templates/release_detail.html:66
+#: languages/views.py:83
+#: templates/release_detail.html:70
 msgid "Original strings"
 msgstr "Osnovni niz"
+
+#: languages/views.py:87
+msgid "UI Translations (reduced)"
+msgstr "Prevodi vmesnikov (obrezani prevodi)"
 
 #: people/forms.py:14
 msgid "Choose a username:"
@@ -1755,19 +1767,19 @@ msgstr "Geslo je bilo spremenjeno."
 msgid "This branch is not linked from any release"
 msgstr "Ta veja ni vezana nobeno objavljeno različico"
 
-#: stats/models.py:415
+#: stats/models.py:420
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: stats/models.py:417
+#: stats/models.py:422
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 
-#: stats/models.py:437
+#: stats/models.py:441
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:771
+#: stats/models.py:779
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1778,38 +1790,38 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:795
+#: stats/models.py:803
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:1053
+#: stats/models.py:1131
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:1054
+#: stats/models.py:1132
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:1055
+#: stats/models.py:1133
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:1056
+#: stats/models.py:1134
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:1057
+#: stats/models.py:1135
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1136
-#: stats/models.py:1440
+#: stats/models.py:1275
+#: stats/models.py:1631
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1169
+#: stats/models.py:1311
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1818,20 +1830,20 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1170
+#: stats/models.py:1312
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1172
+#: stats/models.py:1314
 #: templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:133
+#: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1175
+#: stats/models.py:1317
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1840,53 +1852,53 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1176
+#: stats/models.py:1318
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1179
+#: stats/models.py:1321
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1263
+#: stats/models.py:1439
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1264
+#: stats/models.py:1440
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
-#: stats/utils.py:100
+#: stats/utils.py:124
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Napaka med zagonom ukaza 'intltool-update -m'."
 
-#: stats/utils.py:106
+#: stats/utils.py:130
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 
-#: stats/utils.py:115
+#: stats/utils.py:139
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: stats/utils.py:135
+#: stats/utils.py:159
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 
-#: stats/utils.py:138
+#: stats/utils.py:162
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
-#: stats/utils.py:146
+#: stats/utils.py:170
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
-#: stats/utils.py:160
+#: stats/utils.py:184
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1897,47 +1909,47 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:245
+#: stats/utils.py:269
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:265
+#: stats/utils.py:289
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:267
+#: stats/utils.py:291
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:270
+#: stats/utils.py:294
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:298
+#: stats/utils.py:322
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:313
+#: stats/utils.py:338
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:331
+#: stats/utils.py:356
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:333
+#: stats/utils.py:358
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:340
+#: stats/utils.py:365
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:342
+#: stats/utils.py:367
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
@@ -1962,8 +1974,8 @@ msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
 #: teams/models.py:212
-#: vertimus/models.py:544
-#: vertimus/models.py:594
+#: vertimus/models.py:549
+#: vertimus/models.py:599
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
@@ -2247,7 +2259,7 @@ msgid "Branch"
 msgstr "Veja"
 
 #: templates/module_edit_branches.html:17
-#: templates/languages/language_release_summary.html:9
+#: templates/languages/language_release_summary.html:10
 msgid "Release"
 msgstr "Objava"
 
@@ -2332,18 +2344,23 @@ msgid "Language"
 msgstr "Jezik"
 
 #: templates/release_detail.html:20
-#: templates/release_detail.html.py:67
-#: templates/languages/language_release_summary.html:9
+#: templates/release_detail.html.py:71
+#: templates/languages/language_release_summary.html:11
 msgid "User Interface"
 msgstr "Uporabniški vmesnik "
 
 #: templates/release_detail.html:21
-#: templates/release_detail.html.py:23
+#: templates/release_detail.html.py:24
 #: templates/stats_show.html:49
-#: templates/languages/language_release_summary.html:9
-#: templates/languages/language_release_summary.html:10
+#: templates/languages/language_release_summary.html:12
+#: templates/languages/language_release_summary.html:15
 msgid "Graph"
 msgstr "Graf"
+
+#: templates/release_detail.html:22
+#: templates/languages/language_release_summary.html:13
+msgid "User Interface (red.)"
+msgstr "Uporabniški vmesnik (obrezano)"
 
 #: templates/release_list.html:4
 #: templates/release_list.html.py:9
@@ -2369,7 +2386,7 @@ msgid "Download POT file"
 msgstr "Prenos pot datoteke"
 
 #: templates/stats_show.html:18
-#: templates/vertimus/vertimus_detail.html:81
+#: templates/vertimus/vertimus_detail.html:93
 msgid "Notices"
 msgstr "Obvestila"
 
@@ -2387,7 +2404,7 @@ msgid "Translated"
 msgstr "Prevedeno"
 
 #: templates/stats_show.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:87
 msgid "Display document figures"
 msgstr "Pokaži sheme dokumentov"
 
@@ -2396,14 +2413,14 @@ msgid "Damned Lies site admin"
 msgstr "Upravljanje spletišča presnetih laži"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:160
+#: templates/vertimus/vertimus_detail.html:172
 msgid "No comment"
 msgstr "Ni opomb"
 
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
-#: templates/languages/language_release_summary.html:47
-#: templates/languages/language_release_summary.html:48
+#: templates/languages/language_release_summary.html:57
+#: templates/languages/language_release_summary.html:58
 msgid "All modules"
 msgstr "Pokaži vse"
 
@@ -2457,7 +2474,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s% translated)"
 msgstr "%(categname)s (%(percentage)s% prevedeno)"
 
-#: templates/languages/language_release_stats.html:106
+#: templates/languages/language_release_stats.html:105
 msgid "Error summary"
 msgstr "Povzetek napak"
 
@@ -2751,6 +2768,7 @@ msgid "State:"
 msgstr "Stanje:"
 
 #: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:75
 msgid "Download PO file"
 msgstr "Prenos po datoteke"
 
@@ -2758,53 +2776,57 @@ msgstr "Prenos po datoteke"
 msgid "Translated:"
 msgstr "Prevedeno:"
 
-#: templates/vertimus/vertimus_detail.html:95
+#: templates/vertimus/vertimus_detail.html:75
+msgid "Translated (reduced):"
+msgstr "Prevedeno (obrezani prevodi)"
+
+#: templates/vertimus/vertimus_detail.html:107
 msgid "On-going activities in same module:"
 msgstr "Trenutne dejavnosti modula:"
 
-#: templates/vertimus/vertimus_detail.html:106
+#: templates/vertimus/vertimus_detail.html:118
 msgid "Actions"
 msgstr "Dejanja"
 
 #. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:108
-#: vertimus/models.py:852
+#: templates/vertimus/vertimus_detail.html:120
+#: vertimus/models.py:857
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
 
-#: templates/vertimus/vertimus_detail.html:110
+#: templates/vertimus/vertimus_detail.html:122
 msgid "(Return to current actions)"
 msgstr "(Vrni na trenutno dejanje)"
 
-#: templates/vertimus/vertimus_detail.html:115
+#: templates/vertimus/vertimus_detail.html:127
 msgid "(Previous action history)"
 msgstr "(Predhodna zgodovina dejanj)"
 
-#: templates/vertimus/vertimus_detail.html:149
+#: templates/vertimus/vertimus_detail.html:161
 msgid "diff with:"
 msgstr "primerjaj z:"
 
-#: templates/vertimus/vertimus_detail.html:168
+#: templates/vertimus/vertimus_detail.html:180
 msgid "No current actions."
 msgstr "Ni trenutnih dejanj."
 
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:184
 msgid "New Action"
 msgstr "Novo dejanje"
 
-#: templates/vertimus/vertimus_detail.html:182
+#: templates/vertimus/vertimus_detail.html:194
 msgid "Submit"
 msgstr "Pošlji"
 
-#: templates/vertimus/vertimus_detail.html:187
+#: templates/vertimus/vertimus_detail.html:199
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Pred nadaljevanjem morajo biti vaši podatki overjeni in biti morate član skupine za %(team_name)s jezik."
 
-#: templates/vertimus/vertimus_detail.html:191
+#: templates/vertimus/vertimus_detail.html:203
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Prevajalska skupina ne uporablja orodja Vertimus za vodenje dela."
 
@@ -2922,14 +2944,14 @@ msgid "File in repository"
 msgstr "Datoteka v odložišču"
 
 #: vertimus/models.py:330
-#: vertimus/views.py:160
-#: vertimus/views.py:166
-#: vertimus/views.py:176
+#: vertimus/views.py:163
+#: vertimus/views.py:169
+#: vertimus/views.py:179
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Poslal %(name)s dne %(date)s"
 
-#: vertimus/models.py:529
+#: vertimus/models.py:534
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2944,16 +2966,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:542
-#: vertimus/models.py:592
+#: vertimus/models.py:547
+#: vertimus/models.py:597
 msgid "Without comment"
 msgstr "Brez opomb"
 
-#: vertimus/models.py:551
+#: vertimus/models.py:556
 msgid "Write a comment"
 msgstr "Zapiši opombo"
 
-#: vertimus/models.py:580
+#: vertimus/models.py:585
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2968,73 +2990,73 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:602
+#: vertimus/models.py:607
 msgid "Reserve for translation"
 msgstr "Pridrži za prevajanje"
 
-#: vertimus/models.py:614
+#: vertimus/models.py:619
 msgid "Upload the new translation"
 msgstr "Pošlji novi prevod"
 
-#: vertimus/models.py:636
+#: vertimus/models.py:641
 msgid "Reserve for proofreading"
 msgstr "Pridrži za jezikovni pregled"
 
-#: vertimus/models.py:648
+#: vertimus/models.py:653
 msgid "Upload the proofread translation"
 msgstr "Naloži jezikovno pregledan prevod"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:664
+#: vertimus/models.py:669
 msgid "Ready for submission"
 msgstr "Pripravljeno za pošiljanje"
 
-#: vertimus/models.py:680
+#: vertimus/models.py:685
 msgid "Submit to repository"
 msgstr "Pošlji v odložišče"
 
 #. FIXME: somewhere the error should be catched and handled properly
 #. new_state = state
-#: vertimus/models.py:697
+#: vertimus/models.py:702
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:705
+#: vertimus/models.py:710
 msgid "Reserve to submit"
 msgstr "Pridržano za pošiljanje"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:718
+#: vertimus/models.py:723
 msgid "Inform of submission"
 msgstr "Obvesti o pošiljanju"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:733
+#: vertimus/models.py:738
 msgid "Review required"
 msgstr "Jezikovni pregled"
 
-#: vertimus/models.py:748
+#: vertimus/models.py:753
 msgid "Archive the actions"
 msgstr "Arhiviraj dejanja."
 
-#: vertimus/models.py:787
+#: vertimus/models.py:792
 msgid "Undo the last state change"
 msgstr "Razveljavi zadnjo spremembo stanja"
 
-#: vertimus/views.py:159
-#: vertimus/views.py:191
+#: vertimus/views.py:162
+#: vertimus/views.py:194
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Napaka: Datoteka %s vsebuje neveljavne znake."
 
-#: vertimus/views.py:182
+#: vertimus/views.py:185
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 
-#: vertimus/views.py:185
+#: vertimus/views.py:188
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
 
