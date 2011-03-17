@@ -125,7 +125,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
         'stats': stats,
         'pot_stats': pot_stats,
         'po_url': po_url,
-        'po_url_reduced': stats.part_po and stats.po_url(reduced=True) or None,
+        'po_url_reduced': stats.has_reducedstat() and stats.po_url(reduced=True) or '',
         'branch': branch,
         'other_states': other_branch_states,
         'domain': domain,

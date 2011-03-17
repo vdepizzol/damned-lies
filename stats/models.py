@@ -1291,6 +1291,9 @@ class Statistics(models.Model):
     def get_translationstat(self):
         return self.full_po.translation_stat()
 
+    def has_reducedstat(self):
+        return bool(self.part_po is not None and self.part_po != self.full_po)
+
     def get_reducedstat(self):
         return self.part_po.translation_stat()
 
