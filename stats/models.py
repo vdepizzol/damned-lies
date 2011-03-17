@@ -423,17 +423,7 @@ class Branch(models.Model):
                         pot_stat.set_errors(errors)
                         continue
 
-                # 5. Generate pot stats and update DB
-                # ***********************************
-                pot_stats = utils.po_file_stats(potfile, False)
-                errors.extend(pot_stats['errors'])
-                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
-                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
-
-                pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
-                pot_stat.set_errors(errors)
-
-                # 6. Check if pot changed
+                # 5. Check if pot changed
                 # ***********************************
                 changed_status = utils.CHANGED_WITH_ADDITIONS
 
@@ -443,8 +433,19 @@ class Branch(models.Model):
                     if string_frozen and dom.dtype == 'ui' and changed_status == utils.CHANGED_WITH_ADDITIONS:
                         utils.notify_list("%s.%s" % (self.module.name, self.name), diff)
 
-                    if changed_status != utils.NOT_CHANGED:
-                        signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
+                # 6. Generate pot stats and update DB
+                # ***********************************
+                pot_stats = utils.po_file_stats(potfile, False)
+                errors.extend(pot_stats['errors'])
+                if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
+                    errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
+
+                pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
+                pot_stat.set_errors(errors)
+
+                # Send pot_has_changed signal (must come after set_translation_stats because reduced pot has to be available)
+                if os.access(previous_pot, os.R_OK) and changed_status != utils.NOT_CHANGED:
+                    signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
 
                 # 7. Update language po files and update DB
                 # *****************************************
