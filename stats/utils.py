@@ -94,10 +94,18 @@ def check_program_presence(prog_name):
     status, output, err = run_shell_command("which %s" % prog_name)
     return status == 0
 
-def po_grep(in_file, out_file):
-    if not has_toolkit:
+def po_grep(in_file, out_file, filter_):
+    if not has_toolkit or filter_ == u"-":
         return
-    grepfilter = pogrep.GrepFilter("gschema.xml.in", "locations", invertmatch=True, keeptranslations=True)
+    if not filter_:
+        filter_loc, filter_str = "gschema.xml.in", "locations"
+    else:
+        try:
+            filter_loc, filter_str = filter_.strip("|")
+        except:
+            # Probably bad filter syntax in DB (TODO: log it)
+            return
+    grepfilter = pogrep.GrepFilter(filter_loc, filter_str, invertmatch=True, keeptranslations=True)
     out = open(out_file, "w")
     pogrep.rungrep(in_file, out, None, grepfilter)
     out.close()

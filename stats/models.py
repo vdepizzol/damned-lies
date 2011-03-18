@@ -697,6 +697,8 @@ class Domain(models.Model):
     linguas_location = models.CharField(max_length=50, null=True, blank=True,
         help_text="""Use 'no' for no LINGUAS check, or path/to/file#variable for a non-standard location.
             Leave blank for standard location (ALL_LINGUAS in LINGUAS/configure.ac/.in for UI and DOC_LINGUAS in Makefile.am for DOC)""")
+    red_filter = models.TextField(null=True, blank=True,
+        help_text="""pogrep filter to strip po file from unprioritized strings (format: location|string, "-" for no filter)""")
 
     class Meta:
         db_table = 'domain'
@@ -1403,7 +1405,7 @@ class Statistics(models.Model):
                     part_po_path = self.full_po.path[:-3] + "reduced.pot"
                 else:
                     part_po_path = self.full_po.path[:-3] + ".reduced.po"
-                utils.po_grep(self.full_po.path, part_po_path)
+                utils.po_grep(self.full_po.path, part_po_path, self.domain.red_filter)
                 part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
                 if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
                     # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
