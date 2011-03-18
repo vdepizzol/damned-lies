@@ -34,8 +34,10 @@ class DomainInline(admin.TabularInline):
     def formfield_for_dbfield(self, db_field, **kwargs):
         if db_field.name == 'description':
             kwargs['widget'] = forms.Textarea(attrs={'rows':'1', 'cols':'20'})
-        if db_field.name in ('name', 'directory'):
+        elif db_field.name in ('name', 'directory'):
             kwargs['widget'] = forms.TextInput(attrs={'size':'20'})
+        elif db_field.name == 'red_filter':
+            kwargs['widget'] = forms.Textarea(attrs={'rows':'1', 'cols':'40'})
         return super(DomainInline, self).formfield_for_dbfield(db_field, **kwargs)
 
 class ModuleAdmin(admin.ModelAdmin):

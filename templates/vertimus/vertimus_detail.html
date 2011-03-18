@@ -102,7 +102,7 @@ $(document).ready(function() {
 {% endif %}
 
 {% if other_states %}
-<div style="margin-top:0.5em;">
+<div style="margin-top:0.5em; clear: both;">
   <img src="{{ MEDIA_URL }}img/warn.png" alt="Warning logo" />
   {% trans "On-going activities in same module:" %}
   {% for st in other_states %}

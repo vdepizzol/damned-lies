@@ -98,14 +98,14 @@ def po_grep(in_file, out_file, filter_):
     if not has_toolkit or filter_ == u"-":
         return
     if not filter_:
-        filter_loc, filter_str = "gschema.xml.in", "locations"
+        filter_loc, filter_str = "locations", "gschema.xml.in"
     else:
         try:
             filter_loc, filter_str = filter_.strip("|")
         except:
             # Probably bad filter syntax in DB (TODO: log it)
             return
-    grepfilter = pogrep.GrepFilter(filter_loc, filter_str, invertmatch=True, keeptranslations=True)
+    grepfilter = pogrep.GrepFilter(filter_str, filter_loc, invertmatch=True, keeptranslations=True)
     out = open(out_file, "w")
     pogrep.rungrep(in_file, out, None, grepfilter)
     out.close()
