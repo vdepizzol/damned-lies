@@ -1369,7 +1369,10 @@ class Statistics(models.Model):
         subdir = ""
         if self.domain.dtype == "doc":
             subdir = "docs"
-        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile, reduced))
+        path = os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, self.filename(potfile, reduced))
+        if reduced and not os.path.exists(path):
+            path = self.po_path(potfile=potfile, reduced=False)
+        return path
 
     def po_url(self, potfile=False, reduced=False):
         """ Return URL of po file, e.g. for downloading the file """
