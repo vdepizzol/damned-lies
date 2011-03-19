@@ -40,7 +40,7 @@ $(document).ready(function()
 
 {% if language %}
 <hr />
-<p><a href="{% url languages.views.language_release_tar locale=language.locale release_name=release.name dtype=stats.dtype %}"><img src="{{ MEDIA_URL }}img/download.png" /> {% trans "Download all po files" %}</a></p>
+<p><a href="{% url languages.views.language_release_tar locale=language.locale release_name=release.name dtype=dtype %}"><img src="{{ MEDIA_URL }}img/download.png" /> {% trans "Download all po files" %}</a></p>
 {% endif %}
 
 </div>

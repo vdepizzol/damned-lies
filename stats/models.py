@@ -1110,19 +1110,21 @@ class Release(models.Model):
     def get_lang_files(self, lang, dtype):
         """ Return a list of all po files of a lang for this release, preceded by the more recent modification date
             It uses the POT file if there is no po for a module """
+        partial = False
+        if dtype == "ui-part":
+            dtype, partial = "ui", True
         pot_stats = Statistics.objects.filter(language=None, branch__releases=self, domain__dtype=dtype)
-        po_stats = Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)
+        po_stats = dict([("%s-%s" % (st.branch_id, st.domain_id), st)
+                         for st in Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)])
         lang_files = []
         last_modif_date = datetime(1970, 01, 01)
         # Create list of files
         for stat in pot_stats:
             if stat.full_po.updated > last_modif_date:
                 last_modif_date = stat.full_po.updated
-            try:
-                lang_stat = po_stats.get(branch = stat.branch, domain = stat.domain)
-            except Statistics.DoesNotExist:
-                lang_stat = stat
-            file_path = lang_stat.po_path()
+            key = "%s-%s" % (stat.branch_id, stat.domain_id)
+            lang_stat = po_stats.get(key, stat)
+            file_path = lang_stat.po_path(reduced=partial)
             if os.access(file_path, os.R_OK):
                 lang_files.append(file_path)
         return last_modif_date, lang_files

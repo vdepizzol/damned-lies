@@ -21,7 +21,7 @@ urlpatterns = patterns('',
         regex = r'^(?P<locale>[\w\-@]+)/(?P<release_name>[\w-]+).xml$',
         view = 'languages.views.language_release_xml'),
     url(
-        regex = r'^(?P<locale>[\w\-@]+)/(?P<release_name>[\w-]+)/(?P<dtype>(ui|doc)+).tar.gz$',
+        regex = r'^(?P<locale>[\w\-@]+)/(?P<release_name>[\w-]+)/(?P<dtype>(ui|ui-part|doc)+).tar.gz$',
         view = 'languages.views.language_release_tar'),
     url(
         regex = r'^(?P<team_slug>[\w\-@]+)/$',

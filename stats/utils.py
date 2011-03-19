@@ -101,7 +101,7 @@ def po_grep(in_file, out_file, filter_):
         filter_loc, filter_str = "locations", "gschema.xml.in"
     else:
         try:
-            filter_loc, filter_str = filter_.strip("|")
+            filter_loc, filter_str = filter_.split("|")
         except:
             # Probably bad filter syntax in DB (TODO: log it)
             return

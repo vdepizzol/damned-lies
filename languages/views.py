@@ -87,6 +87,7 @@ def language_release(request, locale, release_name, dtype):
             'ui-part': _("UI Translations (reduced)"),
             'doc': _("Documentation")}.get(dtype),
         'stats': stats,
+        'dtype': dtype,
         'scope': dtype.endswith('-part') and 'part' or 'full',
         'dateformat': formats.get_format('DATE_FORMAT'),
     }
