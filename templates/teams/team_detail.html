@@ -82,7 +82,10 @@ $(document).ready(function() {
       {% else %}
         <ul>
         {% for member in group.members %}
-          <li><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></li>
+          <li><a href="{{ member.get_absolute_url }}"
+              {% if can_edit_team %}
+                 title="{% blocktrans with member.last_login|date as last_login %}Last login on {{ last_login }}{% endblocktrans %}"
+              {% endif %}>{{ member.name }}</a></li>
         {% endfor %}
         </ul>
       {% endif %}
