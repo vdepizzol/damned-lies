@@ -43,7 +43,7 @@
   <table class="stats">
     <thead><tr>
         <th>{% trans "Language" %}</th><th>{% trans "Translated" %}</th>
-        {% if pot_stat.fig_count %}
+        {% if pot_stat.full_po.fig_count %}
         <th></th>
         {% endif %}
         <th>{% trans "Graph" %}</th>
@@ -60,7 +60,7 @@
         {% endwith %}
       </td>
       <td>{{ line.get_translationstat|safe }}</td>
-      {% if pot_stat.fig_count %}
+      {% if pot_stat.full_po.fig_count %}
       <td><a href="{% url stats.views.docimages module_name=module.name,potbase=pot_stat.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
           <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
       </td>
