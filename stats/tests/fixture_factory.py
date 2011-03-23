@@ -136,7 +136,7 @@ class FixtureFactory(TestCase):
             description="Error regenerating POT file for zenity:\n<pre>intltool-update -g 'zenity' -p\nERROR: xgettext failed to generate PO template file.</pre>"))
 
         # Output fixture
-        data = Dumpdata().handle(*['auth.User', 'people', 'languages', 'teams', 'stats'],
+        data = Dumpdata().handle(*['auth.User', 'people', 'teams', 'languages', 'stats'],
                                  **{'indent':1})
         out_file = NamedTemporaryFile(suffix=".json", dir=".", delete=False)
         out_file.write(data)
