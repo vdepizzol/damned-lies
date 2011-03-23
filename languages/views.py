@@ -174,9 +174,9 @@ def get_domain_stats(mods, node_name):
         if dom_key == ' fake':
             continue
         content += "<%s id=\"%s\">" % (node_name, stat.domain.name)
-        content += "<translated>%s</translated>" % stat.translated
-        content += "<fuzzy>%s</fuzzy>" % stat.fuzzy
-        content += "<untranslated>%s</untranslated>" % stat.untranslated
+        content += "<translated>%s</translated>" % stat.translated()
+        content += "<fuzzy>%s</fuzzy>" % stat.fuzzy()
+        content += "<untranslated>%s</untranslated>" % stat.untranslated()
         content += "<pofile>%s</pofile>" % stat.po_url()
         content += "<svnpath>%s</svnpath>" % stat.vcs_web_path()
         content += "</%s>" % node_name
