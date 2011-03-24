@@ -20,8 +20,7 @@
 
 from itertools import islice
 from django.core import urlresolvers
-from django.core.exceptions import ObjectDoesNotExist
-from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
+from django.contrib.syndication.views import Feed, FeedDoesNotExist
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.sites.models import Site
 from languages.models import Language
@@ -33,10 +32,8 @@ class LatestActionsByLanguage(Feed):
     title_template = 'feeds/actions_title.html'
     description_template = 'feeds/actions_description.html'
 
-    def get_object(self, bits):
-        if len(bits) != 1:
-            raise ObjectDoesNotExist
-        return Language.objects.get(locale=bits[0])
+    def get_object(self, request, locale):
+        return Language.objects.get(locale=locale)
 
     def title(self, obj):
         current_site = Site.objects.get_current()
@@ -79,10 +76,8 @@ class LatestActionsByTeam(Feed):
     title_template = 'feeds/actions_title.html'
     description_template = 'feeds/actions_description.html'
 
-    def get_object(self, bits):
-        if len(bits) != 1:
-            raise ObjectDoesNotExist
-        return Team.objects.get(name=bits[0])
+    def get_object(self, request, team_name):
+        return Team.objects.get(name=team_name)
 
     def title(self, obj):
         current_site = Site.objects.get_current()

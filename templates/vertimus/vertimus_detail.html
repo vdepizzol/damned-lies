@@ -81,7 +81,7 @@ $(document).ready(function() {
     </div>
   </div>
   {% endif %}
-  {% if pot_stats.fig_count and stats.language %}
+  {% if pot_stats.full_po.fig_count and stats.language %}
   <div class="docimages">
     <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
     <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
