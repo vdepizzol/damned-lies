@@ -259,6 +259,19 @@ p#show, p#hide {
 }
 
 /* Used in vertimus_detail */
+div#vertimus_stats {
+  line-height: 1.7em;
+}
+/* Trick to clear floats after div */
+div#vertimus_stats:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
 #vertimus_actions_title a {
   font-size: small;
   font-weight: normal;
