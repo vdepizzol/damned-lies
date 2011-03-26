@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-22 10:00+0000\n"
-"PO-Revision-Date: 2011-03-26 15:57+0100\n"
+"POT-Creation-Date: 2011-03-26 14:58+0000\n"
+"PO-Revision-Date: 2011-03-26 16:00+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1064,7 +1064,6 @@ msgid "Optimization Guide"
 msgstr "Příručka optimalizace GNOME"
 
 #: database-content.py:381
-#| msgid "tutorial"
 msgid "Tutorial demos"
 msgstr "Ukázky průvodce"
 
@@ -1218,10 +1217,6 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:421
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
 msgid ""
 "This is not a GNOME-specific module. Please submit your translation through "
 "the <a href=\"http://www.transifex.net/projects/p/accountsservice/resource/"
@@ -1663,7 +1658,6 @@ msgid "Original strings"
 msgstr "Původní řetězce"
 
 #: languages/views.py:87
-#| msgid "UI Translations"
 msgid "UI Translations (reduced)"
 msgstr "Překlady uživatelského rozhraní (redukované)"
 
@@ -1796,7 +1790,6 @@ msgstr "Již jste členem tohoto týmu."
 msgid "You have been removed from the team '%s'."
 msgstr "Opustili jste tým „%s“."
 
-#. Message no i18n'ed, should never happen under normal conditions
 #: people/views.py:118
 msgid "You are not a member of this team."
 msgstr "Nejste členem tohoto týmu."
@@ -1878,8 +1871,6 @@ msgid "updated on %(date)s"
 msgstr "aktualizováno %(date)s"
 
 # Was: d. F Y G:i O
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:1318 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
@@ -2462,7 +2453,6 @@ msgstr "Graf"
 
 #: templates/release_detail.html:22
 #: templates/languages/language_release_summary.html:13
-#| msgid "User Interface"
 msgid "User Interface (red.)"
 msgstr "Uživatelské rozhraní (red.)"
 
@@ -2571,8 +2561,10 @@ msgid "Date"
 msgstr "Datum"
 
 #: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (%(percentage)s% přeloženo)"
+#, python-format
+#| msgid "%(categname)s (%(percentage)s% translated)"
+msgid "%(categname)s (%(percentage)s%% translated)"
+msgstr "%(categname)s (přeloženo %(percentage)s %%)"
 
 #: templates/languages/language_release_stats.html:105
 msgid "Error summary"
@@ -2926,7 +2918,6 @@ msgid "Translated:"
 msgstr "Přeloženo:"
 
 #: templates/vertimus/vertimus_detail.html:75
-#| msgid "Translated:"
 msgid "Translated (reduced):"
 msgstr "Přeloženo (redukované):"
 
@@ -2938,7 +2929,6 @@ msgstr "Probíhající kroky ve stejném modulu:"
 msgid "Actions"
 msgstr "Kroky"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:857
@@ -2992,22 +2982,22 @@ msgstr "&lt;- Zpět na kroky"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Poznámka: oba soubory jsou sloučeny s nejnovějším souborem POT."
 
-#: vertimus/feeds.py:43
+#: vertimus/feeds.py:40
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - kroky systému Vertimus u jazyka %(lang)s"
 
-#: vertimus/feeds.py:52
+#: vertimus/feeds.py:49
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Poslední kroky Překladatelského projektu GNOME u jazyka %s"
 
-#: vertimus/feeds.py:89
+#: vertimus/feeds.py:84
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - kroky systému Vertimus týmu %(lang)s"
 
-#: vertimus/feeds.py:98
+#: vertimus/feeds.py:93
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Poslední kroky provedené týmem %s z Překladatelského projektu GNOME"
@@ -3168,8 +3158,6 @@ msgstr "Připraveno na zařazení"
 msgid "Submit to repository"
 msgstr "Zařadit do úložiště"
 
-#. FIXME: somewhere the error should be catched and handled properly
-#. new_state = state
 #: vertimus/models.py:702
 #, python-format
 msgid "The commit failed. The error was: '%s'"
