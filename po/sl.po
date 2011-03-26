@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-22 10:00+0000\n"
-"PO-Revision-Date: 2011-03-22 21:57+0100\n"
+"POT-Creation-Date: 2011-03-26 15:01+0000\n"
+"PO-Revision-Date: 2011-03-26 19:59+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1767,7 +1767,6 @@ msgstr "Ste že član te prevajalske skupine."
 msgid "You have been removed from the team '%s'."
 msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 
-#. Message no i18n'ed, should never happen under normal conditions
 #: people/views.py:118
 msgid "You are not a member of this team."
 msgstr "Ni podatkov o članstvu v skupini."
@@ -1848,8 +1847,6 @@ msgstr[3] "%(count)s sporočila"
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:1318
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
@@ -2484,8 +2481,9 @@ msgid "Date"
 msgstr "Datum"
 
 #: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (%(percentage)s% prevedeno)"
+#, python-format
+msgid "%(categname)s (%(percentage)s%% translated)"
+msgstr "%(categname)s (%(percentage)s%% prevedeno)"
 
 #: templates/languages/language_release_stats.html:105
 msgid "Error summary"
@@ -2806,7 +2804,6 @@ msgstr "Trenutne dejavnosti modula:"
 msgid "Actions"
 msgstr "Dejanja"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:120
@@ -2860,22 +2857,22 @@ msgstr "&lt;- Nazaj na dejanja"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Opomba: obe datoteki sta združeni z najnovejšo POT datoteko."
 
-#: vertimus/feeds.py:43
+#: vertimus/feeds.py:40
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Vertimus dejanja za %(lang)s jezik"
 
-#: vertimus/feeds.py:52
+#: vertimus/feeds.py:49
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Zadnja dejanja projekta prevajanja GNOME za %s jezik"
 
-#: vertimus/feeds.py:89
+#: vertimus/feeds.py:84
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Vertimus dejanja skupine za %(lang)s jezik"
 
-#: vertimus/feeds.py:98
+#: vertimus/feeds.py:93
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "Zadnja dejanja skupine %s pri GNOME projektu slovenjenja"
@@ -3033,8 +3030,6 @@ msgstr "Pripravljeno za pošiljanje"
 msgid "Submit to repository"
 msgstr "Pošlji v odložišče"
 
-#. FIXME: somewhere the error should be catched and handled properly
-#. new_state = state
 #: vertimus/models.py:702
 #, python-format
 msgid "The commit failed. The error was: '%s'"
