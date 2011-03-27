@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-22 10:00+0000\n"
-"PO-Revision-Date: 2011-03-25 10:27+0100\n"
+"POT-Creation-Date: 2011-03-26 14:58+0000\n"
+"PO-Revision-Date: 2011-03-27 22:11+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1060,7 +1060,6 @@ msgid "Optimization Guide"
 msgstr "Guía de optimización"
 
 #: database-content.py:381
-#| msgid "tutorial"
 msgid "Tutorial demos"
 msgstr "Demostraciones de tutoriales"
 
@@ -1591,8 +1590,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1760,7 +1759,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:63
 msgid "Sorry, the form is not valid."
@@ -1789,7 +1789,6 @@ msgstr "Ya es miembro de este equipo."
 msgid "You have been removed from the team '%s'."
 msgstr "Ha sido eliminado del equipo «%s»."
 
-#. Message no i18n'ed, should never happen under normal conditions
 #: people/views.py:118
 msgid "You are not a member of this team."
 msgstr "Usted no es miembro de este equipo."
@@ -1870,8 +1869,6 @@ msgstr[1] "%(count)s mensajes"
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
 #: stats/models.py:1318 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
@@ -2306,8 +2303,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2563,8 +2560,10 @@ msgid "Date"
 msgstr "Fecha"
 
 #: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (%(percentage)s% traducido)"
+#, python-format
+#| msgid "%(categname)s (%(percentage)s% translated)"
+msgid "%(categname)s (%(percentage)s%% translated)"
+msgstr "%(categname)s (%(percentage)s%% traducido)"
 
 #: templates/languages/language_release_stats.html:105
 msgid "Error summary"
@@ -2927,7 +2926,6 @@ msgstr "Actividades en desarrollo sobre el mismo módulo:"
 msgid "Actions"
 msgstr "Acciones"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:857
@@ -2981,22 +2979,22 @@ msgstr "&lt;- Volver a las acciones"
 msgid "Note: both files are merged with latest POT file."
 msgstr "Nota: ambos archivos están mezclados con el último archivo POT"
 
-#: vertimus/feeds.py:43
+#: vertimus/feeds.py:40
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - Acciones en Vertimus para el idioma %(lang)s"
 
-#: vertimus/feeds.py:52
+#: vertimus/feeds.py:49
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "Últimas acciones del Proyecto de traducción de GNOME para el idioma %s"
 
-#: vertimus/feeds.py:89
+#: vertimus/feeds.py:84
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - Acciones en Vertimus para el equipo %(lang)s"
 
-#: vertimus/feeds.py:98
+#: vertimus/feeds.py:93
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr ""
@@ -3122,15 +3120,15 @@ msgstr "Escribir un comentario"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3159,8 +3157,6 @@ msgstr "Listo para enviar"
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
-#. FIXME: somewhere the error should be catched and handled properly
-#. new_state = state
 #: vertimus/models.py:702
 #, python-format
 msgid "The commit failed. The error was: '%s'"
@@ -3263,8 +3259,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
