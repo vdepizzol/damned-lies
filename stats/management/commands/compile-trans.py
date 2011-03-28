@@ -22,4 +22,4 @@ class Command(NoArgsCommand):
             shutil.copy(os.path.join(podir, pofile), os.path.join(localedir, 'django.po'))
 
         # Run compilemessages -l ll
-        compilemessages.compile_messages()
+        compilemessages.compile_messages(self.stderr)
