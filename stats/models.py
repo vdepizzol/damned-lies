@@ -443,7 +443,7 @@ class Branch(models.Model):
                 pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
                 pot_stat.set_errors(errors)
 
-                # Send pot_has_changed signal (must come after set_translation_stats because reduced pot has to be available)
+                # Send pot_has_changed signal
                 if os.access(previous_pot, os.R_OK) and changed_status != utils.NOT_CHANGED:
                     signals.pot_has_changed.send(sender=self, potfile=potfile, branch=self, domain=dom)
 

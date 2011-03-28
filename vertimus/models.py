@@ -19,6 +19,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os, sys
+import shutil
 from datetime import datetime, timedelta
 
 from django.conf import settings
@@ -31,7 +32,7 @@ from django.utils.translation import get_language, activate, ugettext, ugettext_
 
 from stats.models import Branch, Domain, Statistics, PoFile
 from stats.signals import pot_has_changed
-from stats.utils import run_shell_command, is_po_reduced
+from stats.utils import run_shell_command, is_po_reduced, po_grep
 from languages.models import Language
 from people.models import Person
 
@@ -372,15 +373,19 @@ class ActionDb(models.Model):
     def merge_file_with_pot(self, pot_file):
         """Merge the uploaded translated file with current pot."""
         if self.file:
-            pot_file_reduced = pot_file[:-3] + "reduced.pot"
-            if is_po_reduced(self.file) and os.path.exists(pot_file_reduced):
-                pot_file = pot_file_reduced
+            merged_path = "%s.merged.po" % self.file.path[:-3]
             command = "msgmerge --previous -o %(out_po)s %(po_file)s %(pot_file)s" % {
-                'out_po': self.file.path[:-3] + ".merged.po",
-                'po_file': self.file.path,
+                'out_po':   merged_path,
+                'po_file':  self.file.path,
                 'pot_file': pot_file
             }
             run_shell_command(command)
+            # If uploaded file is reduced, run po_grep *after* merge
+            if is_po_reduced(self.file):
+                temp_path = "%s.temp.po" % self.file.path[:-3]
+                shutil.copy(merged_path, temp_path)
+                po_grep(temp_path, merged_path, self.state_db.domain.red_filter)
+                os.remove(temp_path)
 
     @classmethod
     def get_action_history(cls, state_db):
@@ -831,7 +836,7 @@ def merge_uploaded_file(sender, instance, **kwargs):
             stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
         except Statistics.DoesNotExist:
             return
-        potfile = stat.po_path(reduced=is_po_reduced(instance.file.path))
+        potfile = stat.po_path()
         instance.merge_file_with_pot(potfile)
 post_save.connect(merge_uploaded_file, sender=ActionDb)
 
