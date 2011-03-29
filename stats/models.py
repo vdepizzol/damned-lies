@@ -65,6 +65,8 @@ class Module(models.Model):
     # URLField is too restrictive for vcs_root
     vcs_root = models.CharField(max_length=200)
     vcs_web = models.URLField()
+    ext_platform = models.URLField(null=True, blank=True,
+        help_text="URL to external translation platform, if any")
 
     maintainers = models.ManyToManyField(Person, db_table='module_maintainer',
         related_name='maintains_modules', blank=True,
@@ -89,7 +91,17 @@ class Module(models.Model):
         return self.description and _(self.description) or self.name
 
     def get_comment(self):
-        return self.comment and _(self.comment) or ""
+        comment = self.comment and _(self.comment) or ""
+        if self.ext_platform:
+            if comment:
+                comment += "<br/>"
+            comment = "%s<em>%s</em>" % (
+                comment,
+                _("""Translations for this module are externally hosted. Please go to the <a href="%(link)s">external platform</a> to see how you can submit your translation.""") % {
+                    'link': self.ext_platform
+                }
+            )
+        return comment
 
     def has_standard_vcs(self):
         """ This function checks if the module is hosted in the standard VCS of the project """
