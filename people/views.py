@@ -18,17 +18,22 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.core import urlresolvers
-from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext_lazy, ugettext as _
-from django.utils import formats
-from django.template import RequestContext
-from django.db import IntegrityError
+from operator import itemgetter
+
+from django.conf import settings
+from django.conf.locale import LANG_INFO
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
 from django.contrib.sites.models import Site
+from django.core import urlresolvers
+from django.db import IntegrityError
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
+from django.utils import formats
+from django.utils.translation import ugettext_lazy, ugettext as _
+
 from people.models import Person
 from teams.models import Team, Role
 from people.forms import TeamJoinForm, DetailForm
@@ -41,8 +46,11 @@ def person_detail(request, person_id=None, person_username=None):
         person = get_object_or_404(Person, username=person_username)
 
     states = StateDb.objects.filter(actiondb__person=person).distinct()
+    all_languages = [(lg[0], LANG_INFO.get(lg[0], {'name_local': lg[1]})['name_local']) for lg in settings.LANGUAGES]
+    all_languages.sort(key=itemgetter(1))
     context = {
         'pageSection': "teams",
+        'all_languages': all_languages,
         'person': person,
         'on_own_page': request.user.is_authenticated() and person.username == request.user.username,
         'states': states,

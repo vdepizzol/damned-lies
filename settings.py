@@ -1,6 +1,7 @@
 # Django settings for djamnedlies project.
 
 import os
+from django.conf import global_settings
 gettext_noop = lambda s: s
 
 DEBUG = True
@@ -46,6 +47,10 @@ TIME_ZONE = 'Europe/Zurich'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-US'
+LANGUAGES = list(global_settings.LANGUAGES) + [
+    # Add here languages with translations for D-L but not for Django
+    ('eo', gettext_noop('Esperanto'))
+]
 
 SITE_ID = 1
 
