@@ -494,6 +494,15 @@ class ActionAbstract(object):
             self._action_db.file.save(file.name, file, save=False)
         self._action_db.save()
 
+        # Reactivating the role if needed
+        try:
+            role = person.role_set.get(team=state.language.team)
+            if not role.is_active:
+                role.is_active = True
+                role.save()
+        except Role.DoesNotExist:
+            pass
+
     def __unicode__(self):
         return unicode(self.description) # needs unicode() because description is lazy
 
@@ -632,13 +641,6 @@ class ActionUT(ActionAbstract):
 
         new_state = self._new_state()
         self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-
-        # Reactivating the role if needed      
-        role = Role.objects.get(person=person, team=state.language.team)
-        if not role.is_active:
-            role.is_active = True
-            role.save()
-
         return new_state
 
 class ActionRP(ActionAbstract):
