@@ -11,7 +11,9 @@
     <span class="path">{{ pot_stat.domain.directory }}</span>
   {% endif %}
   </h3>
+  {% if pot_stat.full_po %}
   <a href="{{ pot_stat.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
+  {% endif %}
   {{ pot_stat.pot_text }}
   <!-- This is the title of the section that lists notices about a module -->
   {% if pot_stat.informations %}

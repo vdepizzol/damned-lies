@@ -342,7 +342,7 @@ class Branch(models.Model):
         # Check if all mandatory languages are present
         for lang in mandatory_langs:
             for domain in stats.keys():
-                if lang not in stats_langs[domain]:
+                if lang not in stats_langs[domain] and stats[domain][0].full_po:
                     fake_stat = FakeStatistics(self.module, self, typ, lang)
                     fake_stat.untranslated = stats[domain][0].untranslated()
                     stats[domain].append(fake_stat)
@@ -1321,6 +1321,8 @@ class Statistics(models.Model):
             return "%s.%s.%spot" % (self.domain.potbase(), self.branch.name, reduced and "reduced." or "")
 
     def pot_text(self):
+        if not self.full_po:
+            return _("POT file unavailable")
         pot_size = self.full_po.pot_size()
         fig_count = self.full_po.fig_count()
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
