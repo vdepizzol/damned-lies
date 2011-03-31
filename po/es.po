@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-29 10:06+0000\n"
-"PO-Revision-Date: 2011-03-29 15:19+0200\n"
+"POT-Creation-Date: 2011-03-31 12:27+0000\n"
+"PO-Revision-Date: 2011-03-31 17:09+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "Holandés"
 msgid "Dzongkha"
 msgstr "Dzongkha"
 
-#: database-content.py:34 database-content.py:160
+#: database-content.py:34 database-content.py:160 settings.py:52
 msgid "Esperanto"
 msgstr "Esperanto"
 
@@ -1489,7 +1489,7 @@ msgstr "Aplicaciones adicionales para GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: settings.py:75
+#: settings.py:80
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1685,38 +1685,38 @@ msgid ""
 msgstr ""
 "Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
 
-#: people/views.py:63
+#: people/views.py:71
 msgid "Sorry, the form is not valid."
 msgstr "Disculpe, el formulario no es válido."
 
-#: people/views.py:88
+#: people/views.py:96
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Se ha unido satisfactoriamente al equipo «%s»."
 
-#: people/views.py:89
+#: people/views.py:97
 msgid "A new person joined your team"
 msgstr "Se unió una persona nueva a su equipo"
 
-#: people/views.py:90
+#: people/views.py:98
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s se acaba de unir a su equipo de traducción en %(site)s"
 
-#: people/views.py:93
+#: people/views.py:101
 msgid "You are already member of this team."
 msgstr "Ya es miembro de este equipo."
 
-#: people/views.py:115
+#: people/views.py:123
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Ha sido eliminado del equipo «%s»."
 
-#: people/views.py:118
+#: people/views.py:126
 msgid "You are not a member of this team."
 msgstr "Usted no es miembro de este equipo."
 
-#: people/views.py:131
+#: people/views.py:139
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
@@ -1785,52 +1785,56 @@ msgstr "Plataforma de desarrollo de GNOME"
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1291 stats/models.py:1650
+#: stats/models.py:1291 stats/models.py:1652
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1327
+#: stats/models.py:1325
+msgid "POT file unavailable"
+msgstr "Archivo POT no disponible"
+
+#: stats/models.py:1329
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1328
+#: stats/models.py:1330
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:1330 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1332 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1333
+#: stats/models.py:1335
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1334
+#: stats/models.py:1336
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:1337
+#: stats/models.py:1339
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/models.py:1458
+#: stats/models.py:1460
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1459
+#: stats/models.py:1461
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2475,7 +2479,7 @@ msgid "Download all po files"
 msgstr "Descargar todos los archivos po"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Módulo"
 
@@ -2488,7 +2492,7 @@ msgid "Status"
 msgstr "Estado"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Fecha"
 
@@ -2522,19 +2526,19 @@ msgstr "Unirse a un equipo"
 msgid "Site Language:"
 msgstr "Idioma del sitio:"
 
-#: templates/people/person_detail.html:37
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Elija"
 
-#: templates/people/person_detail.html:43
+#: templates/people/person_detail.html:39
 msgid "Module maintenance"
 msgstr "Mantenimiento del módulo"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:50
 msgid "Current activity"
 msgstr "Actividad actual"
 
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Estado"
 
