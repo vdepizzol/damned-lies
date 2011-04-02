@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-29 10:06+0000\n"
-"PO-Revision-Date: 2011-03-29 17:05+0200\n"
+"POT-Creation-Date: 2011-03-31 12:27+0000\n"
+"PO-Revision-Date: 2011-04-02 23:22+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -154,7 +154,7 @@ msgstr "holandština"
 msgid "Dzongkha"
 msgstr "dzongkä"
 
-#: database-content.py:34 database-content.py:160
+#: database-content.py:34 database-content.py:160 settings.py:52
 msgid "Esperanto"
 msgstr "esperanto"
 
@@ -1389,8 +1389,8 @@ msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications."
 msgstr ""
-"PulseAudio je zvukový systém pro operační systémy kompatabilní s normou POSIX, "
-"funguje jako proxy vašich zvukových aplikací."
+"PulseAudio je zvukový systém pro operační systémy kompatabilní s normou "
+"POSIX, funguje jako proxy vašich zvukových aplikací."
 
 #: database-content.py:447
 msgid "A photo manager for GNOME"
@@ -1491,7 +1491,7 @@ msgstr "Další aplikace GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
-#: settings.py:75
+#: settings.py:80
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1517,8 +1517,8 @@ msgstr "Úspěšně jste se přihlásili."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Zatím jste se nepřipojili k žádnému překladatelskému týmu. Můžete tak učinit "
 "ze <a href=\"%(url)s\">svého profilu</a>."
@@ -1691,38 +1691,38 @@ msgstr ""
 "Mělo by jít o e-mailovou adresu, užitečné pokud není stejná jako v poli „E-"
 "mailová adresa“"
 
-#: people/views.py:63
+#: people/views.py:71
 msgid "Sorry, the form is not valid."
 msgstr "Bohužel, tento formulář není platný."
 
-#: people/views.py:88
+#: people/views.py:96
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Úspěšně jste se připojili k týmu „%s“."
 
-#: people/views.py:89
+#: people/views.py:97
 msgid "A new person joined your team"
 msgstr "Tým posílila nová osoba"
 
-#: people/views.py:90
+#: people/views.py:98
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s právě posílil(a) překladatelský tým na %(site)s"
 
-#: people/views.py:93
+#: people/views.py:101
 msgid "You are already member of this team."
 msgstr "Již jste členem tohoto týmu."
 
-#: people/views.py:115
+#: people/views.py:123
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Opustili jste tým „%s“."
 
-#: people/views.py:118
+#: people/views.py:126
 msgid "You are not a member of this team."
 msgstr "Nejste členem tohoto týmu."
 
-#: people/views.py:131
+#: people/views.py:139
 msgid "Your password has been changed."
 msgstr "Vaše heslo bylo změněno."
 
@@ -1791,12 +1791,16 @@ msgstr "Vývojářská platforma GNOME"
 msgid "New Module Proposals"
 msgstr "Návrhy nových modulů"
 
-#: stats/models.py:1291 stats/models.py:1650
+#: stats/models.py:1291 stats/models.py:1652
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1327
+#: stats/models.py:1325
+msgid "POT file unavailable"
+msgstr "Soubor POT není dostupný"
+
+#: stats/models.py:1329
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1804,18 +1808,18 @@ msgstr[0] "%(count)s zpráva"
 msgstr[1] "%(count)s zprávy"
 msgstr[2] "%(count)s zpráv"
 
-#: stats/models.py:1328
+#: stats/models.py:1330
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualizováno %(date)s"
 
 # Was: d. F Y G:i O
-#: stats/models.py:1330 templates/vertimus/vertimus_detail.html:47
+#: stats/models.py:1332 templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i O"
 
-#: stats/models.py:1333
+#: stats/models.py:1335
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1824,23 +1828,23 @@ msgstr[1] "%(count)s obrázky"
 msgstr[2] "%(count)s obrázků"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1334
+#: stats/models.py:1336
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s, %(figures)s) — %(updated)s"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1337
+#: stats/models.py:1339
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1458
+#: stats/models.py:1460
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Tento soubor POT nebyl vytvořen pomocí standardní metody intltool."
 
-#: stats/models.py:1459
+#: stats/models.py:1461
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2166,8 +2170,8 @@ msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
 "a> for."
 msgstr ""
-"Seznam všech jazyků, pro které existují <a href='%(teams_url)"
-"s'>překladatelské týmy</a>."
+"Seznam všech jazyků, pro které existují <a "
+"href='%(teams_url)s'>překladatelské týmy</a>."
 
 #: templates/index.html:30
 msgid ""
@@ -2242,8 +2246,8 @@ msgstr "Již jste přihlášení jako %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Pokud na této stránce nemáte účet, <a href='%(link)s'>registrací</a> jej "
 "můžete získat."
@@ -2482,7 +2486,7 @@ msgid "Download all po files"
 msgstr "Stáhnout všechny soubory PO"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Modul"
 
@@ -2495,7 +2499,7 @@ msgid "Status"
 msgstr "Stav"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Datum"
 
@@ -2529,19 +2533,19 @@ msgstr "Připojit se k týmu"
 msgid "Site Language:"
 msgstr "Jazyk stránky:"
 
-#: templates/people/person_detail.html:37
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Vybrat"
 
-#: templates/people/person_detail.html:43
+#: templates/people/person_detail.html:39
 msgid "Module maintenance"
 msgstr "Údržba modulu"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:50
 msgid "Current activity"
 msgstr "Aktuální krok"
 
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Stav"
 
@@ -3059,15 +3063,15 @@ msgstr "Napsat komentář"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Dobrý den,\n"
 "\n"
-"byl přidán nový komentář k modulu %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"byl přidán nový komentář k modulu %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3137,4 +3141,3 @@ msgstr "Poslední zařazený soubor týmu %(lang)s"
 #: vertimus/views.py:188
 msgid "Latest POT file"
 msgstr "Nejnovější šablona POT"
-
