@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-26 15:01+0000\n"
-"PO-Revision-Date: 2011-03-26 19:59+0100\n"
+"POT-Creation-Date: 2011-04-04 08:05+0000\n"
+"PO-Revision-Date: 2011-04-04 19:57+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -187,6 +187,7 @@ msgstr "dzongkha"
 
 #: database-content.py:34
 #: database-content.py:160
+#: settings.py:52
 msgid "Esperanto"
 msgstr "esperanto"
 
@@ -1341,145 +1342,118 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:421
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/accountsservice/resource/accounts-servicepot/\">Transifex platform</a>."
-msgstr "Modul ni del osnovnih paketov GNOME. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/accountsservice/resource/accounts-servicepot/\">Transifex</a>."
-
-#: database-content.py:422
 msgid "Email client for netbooks"
 msgstr "Enostavni odjemalec elektronske pošte"
 
-#: database-content.py:423
-msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a>."
-msgstr "Avahi je sistem za odkrivanje storitev krajevnega omrežja preko protokolov mDNS/DNS-SD. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex</a>."
+#: database-content.py:422
+msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite."
+msgstr "Avahi je sistem, ki olajša odkrivanje storitev znotraj krajevnega omrežja preko protokola mDNS/DNS-SD."
 
-#: database-content.py:424
+#: database-content.py:423
 msgid "There is a glossary that will help translators in Chronojump localization: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 msgstr "Pripravljen je slovar izrazov, ki pomaga prevajalcem pri krajevnem prilagajanju in prevajanju programa Chronojump: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 
-#: database-content.py:426
+#: database-content.py:425
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "Uveljavljeni prevodi se posodabljajo ročno preko l10n.gnome.org. Bodite strpni :-)"
 
-#: database-content.py:427
+#: database-content.py:426
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince je program za pregledovanje dokumentov različnih zapisov."
 
-#: database-content.py:428
-msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a>."
-msgstr "Storitev vodila D-Bus za dostop do bralnikov prstnih odtisov. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex</a>."
+#: database-content.py:427
+msgid "D-Bus service to access fingerprint readers."
+msgstr "Storitev D-Bus service za dostop do bralnikov prstnih odtisov."
 
-#: database-content.py:429
+#: database-content.py:428
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "Od različice GNOME 2.23 dalje, je paket GAIL sestavni del paketa GTK+. Prevodov zato ne objavljaje v glavni veji."
 
-#: database-content.py:430
+#: database-content.py:429
 msgid "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr "Za druge jezikovne prilagoditve programa GCompris, si oglejte  spletišče <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 
-#: database-content.py:431
+#: database-content.py:430
 msgid "Graphical frontend for the git directory tracker"
 msgstr "Grafični vmesnik za git sledilnik mapam"
 
-#: database-content.py:432
+#: database-content.py:431
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "Medijski pretvornik za GNOME namizje"
 
-#: database-content.py:433
+#: database-content.py:432
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "Paket gnome-disk-utility vsebuje knjižnice in programe za upravljanje z napravami za shranjevanje podatkov."
 
-#: database-content.py:434
+#: database-content.py:433
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "Paket GNOME Video Arcade je vmesniški posnemovalnik MAME (Multiple Arcade Machine Emulator) GNOME okolja."
 
-#: database-content.py:435
+#: database-content.py:434
 msgid "To ease localization, gallery of GNOME Video Effects has been set up here: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 msgstr "Za pomoč pri krajevnem prilagajanju programa, je na voljo spletna galerija video učinkov programa na naslovu: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 
-#: database-content.py:436
+#: database-content.py:435
 msgid "A note taking application"
 msgstr "Program za pisanje sporočilc"
 
-#: database-content.py:437
-msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za več podrobnosti o pošiljanju prevodov."
-
-#: database-content.py:438
+#: database-content.py:436
 msgid "Useful information on localization of the gnumeric analysis tools can be found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a> file."
 msgstr "Uporabne podrobnosti o krajevnem prilagajanju orodij gnumeric, si lahko pogledate v datoteki <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a>."
 
-#: database-content.py:439
+#: database-content.py:437
 msgid "This a low-priority module to translate, as there are currently no user interface that show those strings."
 msgstr "Trenutno še ni ustreznega uporabniškega vmesnika za prikaz nizov, zato paket ni ključen za prevajanje."
 
-#: database-content.py:440
-#: database-content.py:441
-#: database-content.py:442
-#: database-content.py:443
-#: database-content.py:444
-#: database-content.py:465
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>."
-
-#: database-content.py:445
+#: database-content.py:438
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "Bodite pozorni, da ima paket gtk+  po in po-properties domene uporabniškega vmesnika. Ob dodajanju novega jezika v katerokoli izmed domen, je treba obvezno dodati obe datoteki prevodov v Git, čeprav je ena izmed datotek lahko prazna. V kolikor je dodana le ena datoteka se izgradnja GTK+ ne izvede do konca v domeni /po-properties."
 
-#: database-content.py:446
+#: database-content.py:439
 msgid "A plugin manager library for other GNOME modules"
 msgstr "Knjižnica uporavljalnika vstavkov za druge GNOME module"
 
-#: database-content.py:447
+#: database-content.py:440
 msgid "Desktop entries for MESS ROMs"
 msgstr "Vnosi namizja za MESS ROM enote"
 
-#: database-content.py:448
+#: database-content.py:441
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "Paket moserial je na osnovi gtk postavljen serijski terminal za namizje GNOME. Napisan je v jeziku Vala."
 
-#: database-content.py:449
+#: database-content.py:442
 msgid "Gnome Parental Control"
 msgstr "GNOME starševski nadzor"
 
-#: database-content.py:450
+#: database-content.py:443
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "Za objavo prevodov, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">ustvarite novo poročilo o hrošču za paket NetworkManager</a>  na spletnih straneh GNOME Bugzilla. K poročilu priložite tudi datoteko prevoda."
 
-#: database-content.py:451
-msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
-msgstr "PackageKit je sistem nameščanja paketov, ki storitev poenostavi. Modul ni privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex</a>."
+#: database-content.py:444
+msgid "PackageKit is a system designed to make installing and updating software on your computer easier."
+msgstr "PackageKit je sistem za poenostavitev nameščanja in posodabljanja programske opreme računalnika."
 
-#: database-content.py:452
+#: database-content.py:445
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout je DTP program za X okolje."
 
-#: database-content.py:453
-msgid ""
-"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
-"Please submit your translation through the <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex platform</a>."
-msgstr ""
-"PulseAudio je zvočni sistem za POSIX operacijske sisteme, kar pomeni, da deluje kot posredniški strežnik zvočnim programom.\n"
-"Modul ni privzeto GNOME modul. Prevode lahko pošljete preko  okolja <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex</a>."
+#: database-content.py:446
+msgid "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications."
+msgstr "PulseAudio je zvočno okolje za POSIX operacijske sisteme in omogoča delovanje programov za predvajanje in upravljanje z zvokom."
 
-#: database-content.py:456
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
-msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex</a>."
-
-#: database-content.py:457
+#: database-content.py:447
 msgid "A photo manager for GNOME"
 msgstr "Upravljalnik fotografij za GNOME namizje"
 
-#: database-content.py:458
+#: database-content.py:448
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "Paket je predelana različica uradne različice system-tools-backends iz odložišča freedesktop.org."
 
-#: database-content.py:459
+#: database-content.py:449
 msgid "GNOME Teletext viewer"
 msgstr "GNOME Teletekst pregledovalnik"
 
-#: database-content.py:460
+#: database-content.py:450
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1487,83 +1461,79 @@ msgstr ""
 "Prevodi podnapisov izbranih GNOME posnetkov.\n"
 "Več na <a href=\"http://live.gnome.org/VideoSubtitles\">Podnapisi video posnetkov</a>."
 
-#: database-content.py:462
+#: database-content.py:452
 msgid "A VNC client for GNOME"
 msgstr "VNC odjemalec za GNOME"
 
-#: database-content.py:463
+#: database-content.py:453
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
-#: database-content.py:464
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
-msgstr "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete preko projekta <a href=\"http://translationproject.org\">Translation Project</a>. Več podrobnosti lahko najdete na <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh xdg-user-dirs paketov</a>."
-
-#: database-content.py:466
+#: database-content.py:454
 msgid "GNOME 3.0 (development)"
 msgstr "GNOME 3.0 (razvojna veja)"
 
-#: database-content.py:467
+#: database-content.py:455
 msgid "GNOME 2.32 (stable)"
 msgstr "GNOME 2.32 (stabilna različica)"
 
-#: database-content.py:468
+#: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (stara stabilna različica)"
 
-#: database-content.py:469
+#: database-content.py:457
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:470
+#: database-content.py:458
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:471
+#: database-content.py:459
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:472
+#: database-content.py:460
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:473
+#: database-content.py:461
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:474
+#: database-content.py:462
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:475
+#: database-content.py:463
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:476
+#: database-content.py:464
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli programi GNOME"
 
-#: database-content.py:477
+#: database-content.py:465
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:478
+#: database-content.py:466
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:479
+#: database-content.py:467
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:480
+#: database-content.py:468
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:481
+#: database-content.py:469
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
-#: settings.py:75
+#: settings.py:80
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula za podrobnosti, kam poslati prevode."
 
@@ -1740,58 +1710,63 @@ msgstr "Račun Bugzilla"
 msgid "This should be an email address, useful if not equal to 'E-mail address' field"
 msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronskega naslova'."
 
-#: people/views.py:63
+#: people/views.py:71
 msgid "Sorry, the form is not valid."
 msgstr "Obrazec ni veljaven."
 
-#: people/views.py:88
+#: people/views.py:96
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Uspešno ste pridruženi skupini '%s'."
 
-#: people/views.py:89
+#: people/views.py:97
 msgid "A new person joined your team"
 msgstr "Nova oseba se je pridružila skupini."
 
-#: people/views.py:90
+#: people/views.py:98
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s se je pridružil prevajalski skupini preko %(site)s"
 
-#: people/views.py:93
+#: people/views.py:101
 msgid "You are already member of this team."
 msgstr "Ste že član te prevajalske skupine."
 
-#: people/views.py:115
+#: people/views.py:123
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 
-#: people/views.py:118
+#: people/views.py:126
 msgid "You are not a member of this team."
 msgstr "Ni podatkov o članstvu v skupini."
 
-#: people/views.py:131
+#: people/views.py:139
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
-#: stats/models.py:247
+#: stats/models.py:100
+#, python-format
+msgid "Translations for this module are externally hosted. Please go to the <a href=\"%(link)s\">external platform</a> to see how you can submit your translation."
+msgstr "Prevodi za ta modul so objavljeni na <a href=\"%(link)s\">zunanjih strežnikih</a>, kjer je mogoče posodobitve tudi objaviti."
+
+#: stats/models.py:259
 msgid "This branch is not linked from any release"
 msgstr "Ta veja ni vezana nobeno objavljeno različico"
 
-#: stats/models.py:420
+#: stats/models.py:432
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: stats/models.py:422
+#: stats/models.py:434
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 
-#: stats/models.py:441
+#: stats/models.py:453
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:781
+#: stats/models.py:793
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1802,38 +1777,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:805
+#: stats/models.py:817
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:1135
+#: stats/models.py:1147
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:1136
+#: stats/models.py:1148
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:1137
+#: stats/models.py:1149
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:1138
+#: stats/models.py:1150
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:1139
+#: stats/models.py:1151
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1279
-#: stats/models.py:1638
+#: stats/models.py:1291
+#: stats/models.py:1652
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1315
+#: stats/models.py:1325
+msgid "POT file unavailable"
+msgstr "Datoteka POT ni na voljo"
+
+#: stats/models.py:1329
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1842,18 +1821,18 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1316
+#: stats/models.py:1330
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
-#: stats/models.py:1318
+#: stats/models.py:1332
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1321
+#: stats/models.py:1335
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1862,21 +1841,21 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1322
+#: stats/models.py:1336
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1325
+#: stats/models.py:1339
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1446
+#: stats/models.py:1460
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1447
+#: stats/models.py:1461
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
@@ -1984,8 +1963,8 @@ msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
 #: teams/models.py:212
-#: vertimus/models.py:549
-#: vertimus/models.py:599
+#: vertimus/models.py:563
+#: vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
@@ -2349,7 +2328,7 @@ msgid "The modules of this release are not part of the GNOME Git repository. Ple
 msgstr "Moduli te objave niso del GNOME Git odložišča. Preverite stran vsakega modula posebej za podrobnosti o objavljanju prevodov."
 
 #: templates/release_detail.html:19
-#: templates/stats_show.html:45
+#: templates/stats_show.html:47
 msgid "Language"
 msgstr "Jezik"
 
@@ -2361,7 +2340,7 @@ msgstr "Uporabniški vmesnik "
 
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2390,30 +2369,30 @@ msgstr "Starejše objave"
 msgid "This document is written in Mallard documentation format"
 msgstr "Dokument je zapisan v zapisu dokumentacije Mallard."
 
-#: templates/stats_show.html:14
+#: templates/stats_show.html:15
 #: templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Prenos pot datoteke"
 
-#: templates/stats_show.html:18
+#: templates/stats_show.html:20
 #: templates/vertimus/vertimus_detail.html:93
 msgid "Notices"
 msgstr "Obvestila"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "Poišči podobna poročila o hroščih pred pošiljanjem"
 
-#: templates/stats_show.html:33
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "Poročanje o hroščih"
 
-#: templates/stats_show.html:45
-#: vertimus/models.py:182
+#: templates/stats_show.html:47
+#: vertimus/models.py:183
 msgid "Translated"
 msgstr "Prevedeno"
 
-#: templates/stats_show.html:65
+#: templates/stats_show.html:67
 #: templates/vertimus/vertimus_detail.html:87
 msgid "Display document figures"
 msgstr "Pokaži sheme dokumentov"
@@ -2463,7 +2442,7 @@ msgid "Download all po files"
 msgstr "Prenos vseh po datotek."
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Modul"
 
@@ -2476,7 +2455,7 @@ msgid "Status"
 msgstr "Stanje"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Datum"
 
@@ -2510,19 +2489,19 @@ msgstr "Pridružitev k skupini"
 msgid "Site Language:"
 msgstr "Jezik spletišča:"
 
-#: templates/people/person_detail.html:37
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Izbor"
 
-#: templates/people/person_detail.html:43
+#: templates/people/person_detail.html:39
 msgid "Module maintenance"
 msgstr "Upravljanje modula"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:50
 msgid "Current activity"
 msgstr "Trenutna dejavnost"
 
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "Stanje"
 
@@ -2807,7 +2786,7 @@ msgstr "Dejanja"
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:120
-#: vertimus/models.py:857
+#: vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
@@ -2921,44 +2900,44 @@ msgstr "Za dejanje je treba izbrati tudi datoteko."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
 
-#: vertimus/models.py:156
+#: vertimus/models.py:157
 msgid "Inactive"
 msgstr "Nedejavno"
 
-#: vertimus/models.py:169
+#: vertimus/models.py:170
 msgid "Translating"
 msgstr "Prevajanje"
 
-#: vertimus/models.py:202
+#: vertimus/models.py:203
 msgid "Proofreading"
 msgstr "Jezikovno pregledovanje"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:217
+#: vertimus/models.py:218
 msgid "Proofread"
 msgstr "Jezikovno pregledano"
 
-#: vertimus/models.py:232
+#: vertimus/models.py:233
 msgid "To Review"
 msgstr "Za pregled"
 
-#: vertimus/models.py:244
+#: vertimus/models.py:245
 msgid "To Commit"
 msgstr "Za uveljavitev"
 
-#: vertimus/models.py:259
+#: vertimus/models.py:260
 msgid "Committing"
 msgstr "Uveljavljanje"
 
-#: vertimus/models.py:273
+#: vertimus/models.py:274
 msgid "Committed"
 msgstr "Uveljavljeno"
 
-#: vertimus/models.py:318
+#: vertimus/models.py:319
 msgid "File in repository"
 msgstr "Datoteka v odložišču"
 
-#: vertimus/models.py:330
+#: vertimus/models.py:331
 #: vertimus/views.py:163
 #: vertimus/views.py:169
 #: vertimus/views.py:179
@@ -2966,7 +2945,7 @@ msgstr "Datoteka v odložišču"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Poslal %(name)s dne %(date)s"
 
-#: vertimus/models.py:534
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2981,16 +2960,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:547
-#: vertimus/models.py:597
+#: vertimus/models.py:561
+#: vertimus/models.py:611
 msgid "Without comment"
 msgstr "Brez opomb"
 
-#: vertimus/models.py:556
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "Zapiši opombo"
 
-#: vertimus/models.py:585
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3005,56 +2984,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:607
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "Pridrži za prevajanje"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "Pošlji novi prevod"
 
-#: vertimus/models.py:641
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "Pridrži za jezikovni pregled"
 
-#: vertimus/models.py:653
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "Naloži jezikovno pregledan prevod"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:669
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "Pripravljeno za pošiljanje"
 
-#: vertimus/models.py:685
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "Pošlji v odložišče"
 
-#: vertimus/models.py:702
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:710
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "Pridržano za pošiljanje"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:723
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "Obvesti o pošiljanju"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:738
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "Jezikovni pregled"
 
-#: vertimus/models.py:753
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "Arhiviraj dejanja."
 
-#: vertimus/models.py:792
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "Razveljavi zadnjo spremembo stanja"
 
@@ -3073,6 +3052,93 @@ msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
 
+#~ msgid ""
+#~ "This is not a GNOME-specific module. Please submit your translation "
+#~ "through the <a href=\"http://www.transifex.net/projects/p/accountsservice/"
+#~ "resource/accounts-servicepot/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "Modul ni del osnovnih paketov GNOME. Prevode lahko pošljete preko okolja "
+#~ "<a href=\"http://www.transifex.net/projects/p/accountsservice/resource/"
+#~ "accounts-servicepot/\">Transifex</a>."
+#~ msgid ""
+#~ "Avahi is a system which facilitates service discovery on a local network "
+#~ "via the mDNS/DNS-SD protocol suite. Please submit your translation "
+#~ "through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/"
+#~ "master-tx-po-avahi-pot/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "Avahi je sistem za odkrivanje storitev krajevnega omrežja preko "
+#~ "protokolov mDNS/DNS-SD. Modul ni privzeto GNOME modul. Prevode lahko "
+#~ "pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/avahi/"
+#~ "resource/master-tx-po-avahi-pot/\">Transifex</a>."
+#~ msgid ""
+#~ "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
+#~ "module. Please submit your translation through the <a href=\"http://www."
+#~ "transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/"
+#~ "\">Transifex platform</a>."
+#~ msgstr ""
+#~ "Storitev vodila D-Bus za dostop do bralnikov prstnih odtisov. Modul ni "
+#~ "privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href="
+#~ "\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-"
+#~ "pot/\">Transifex</a>."
+#~ msgid ""
+#~ "GNUCash is not part of the GNOME Git repository. Please check <a href="
+#~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
+#~ "a> to see where to send translations."
+#~ msgstr ""
+#~ "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href="
+#~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> "
+#~ "strani za več podrobnosti o pošiljanju prevodov."
+#~ msgid ""
+#~ "This is not a GNOME-specific module. Please submit your translation "
+#~ "through the <a href=\"http://translationproject.org\">Translation "
+#~ "Project</a>."
+#~ msgstr ""
+#~ "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete "
+#~ "preko projekta <a href=\"http://translationproject.org\">Translation "
+#~ "Project</a>."
+#~ msgid ""
+#~ "PackageKit is a system designed to make installing and updating software "
+#~ "on your computer easier. This is not a GNOME-specific module. Please "
+#~ "submit your translation through the <a href=\"http://www.transifex.net/"
+#~ "projects/p/packagekit/resource/master/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "PackageKit je sistem nameščanja paketov, ki storitev poenostavi. Modul ni "
+#~ "privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href="
+#~ "\"http://www.transifex.net/projects/p/packagekit/resource/master/"
+#~ "\">Transifex</a>."
+#~ msgid ""
+#~ "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
+#~ "for your sound applications. \n"
+#~ "Please submit your translation through the <a href=\"\n"
+#~ "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
+#~ "pulseaudio-pot/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "PulseAudio je zvočni sistem za POSIX operacijske sisteme, kar pomeni, da "
+#~ "deluje kot posredniški strežnik zvočnim programom.\n"
+#~ "Modul ni privzeto GNOME modul. Prevode lahko pošljete preko  okolja <a "
+#~ "href=\"\n"
+#~ "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
+#~ "pulseaudio-pot/\">Transifex</a>."
+#~ msgid ""
+#~ "This is not a GNOME-specific module. Please submit your translation "
+#~ "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#~ "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
+#~ msgstr ""
+#~ "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete "
+#~ "preko okolja <a href=\"http://www.transifex.net/projects/p/shared-mime-"
+#~ "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex</a>."
+#~ msgid ""
+#~ "This is not a GNOME-specific module. Please submit your translation "
+#~ "through the <a href=\"http://translationproject.org\">Translation "
+#~ "Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-"
+#~ "user-dirs.html\">the translation page for xdg-user-dirs at the "
+#~ "Translation Project</a>."
+#~ msgstr ""
+#~ "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete "
+#~ "preko projekta <a href=\"http://translationproject.org\">Translation "
+#~ "Project</a>. Več podrobnosti lahko najdete na <a href=\"http://"
+#~ "translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh "
+#~ "xdg-user-dirs paketov</a>."
 #~ msgid ""
 #~ "Please submit your translation through the <a href=\"http://www.transifex."
 #~ "net/projects/p/accountsservice/\">Transifex platform</a>."
