@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-31 12:27+0000\n"
-"PO-Revision-Date: 2011-04-02 23:22+0200\n"
+"POT-Creation-Date: 2011-04-07 10:08+0000\n"
+"PO-Revision-Date: 2011-04-07 19:01+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1428,12 +1428,14 @@ msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
 #: database-content.py:454
-msgid "GNOME 3.0 (development)"
-msgstr "GNOME 3.0 (vývojové)"
+#| msgid "GNOME 2.32 (stable)"
+msgid "GNOME 3.0 (stable)"
+msgstr "GNOME 3.0 (stabilní)"
 
 #: database-content.py:455
-msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.32 (stabilní)"
+#| msgid "GNOME 2.30 (old stable)"
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (zastaralé)"
 
 #: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
@@ -1966,7 +1968,7 @@ msgstr "Elektronická konference"
 msgid "URL to subscribe"
 msgstr "URL, které se má odebírat"
 
-#: teams/models.py:212 vertimus/models.py:554 vertimus/models.py:604
+#: teams/models.py:212 vertimus/models.py:563 vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Toto je automatická zpráva odeslaná z %s."
@@ -2378,7 +2380,7 @@ msgstr ""
 "prosím stránku patřičného modulu, chcete-li získat informace, kam zasílat "
 "překlady."
 
-#: templates/release_detail.html:19 templates/stats_show.html:45
+#: templates/release_detail.html:19 templates/stats_show.html:47
 msgid "Language"
 msgstr "Jazyk"
 
@@ -2388,7 +2390,7 @@ msgid "User Interface"
 msgstr "Uživatelské rozhraní"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2418,27 +2420,27 @@ msgstr "Starší vydání"
 msgid "This document is written in Mallard documentation format"
 msgstr "Tento dokument je napsán ve formátu dokumentace Mallard"
 
-#: templates/stats_show.html:14 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Stáhnout šablonu POT"
 
-#: templates/stats_show.html:18 templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:93
 msgid "Notices"
 msgstr "Upozornění"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "Vyhledat podobné chyby, než ji nahlásíte"
 
-#: templates/stats_show.html:33
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "Nahlásit tuto chybu"
 
-#: templates/stats_show.html:45 vertimus/models.py:183
+#: templates/stats_show.html:47 vertimus/models.py:183
 msgid "Translated"
 msgstr "Přeloženo"
 
-#: templates/stats_show.html:65 templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:87
 msgid "Display document figures"
 msgstr "Zobrazit obrázky v dokumentaci"
 
@@ -2873,7 +2875,7 @@ msgstr "Kroky"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:862
+#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Zálohované kroky (%(human_level)s série záloh)"
@@ -3033,7 +3035,7 @@ msgstr "Soubor v úložišti"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Soubor nahrán, kým: %(name)s, kdy: %(date)s"
 
-#: vertimus/models.py:539
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3050,15 +3052,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:552 vertimus/models.py:602
+#: vertimus/models.py:561 vertimus/models.py:611
 msgid "Without comment"
 msgstr "Bez komentáře"
 
-#: vertimus/models.py:561
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "Napsat komentář"
 
-#: vertimus/models.py:590
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3075,56 +3077,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:612
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "Rezervovat překlad"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "Nahrát nový překlad"
 
-#: vertimus/models.py:646
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "Rezervovat si kontrolu"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "Nahrát zkontrolovaný překlad"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:674
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "Připraveno na zařazení"
 
-#: vertimus/models.py:690
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "Zařadit do úložiště"
 
-#: vertimus/models.py:707
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Zařazení selhalo. Chyba byla: „%s“"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:715
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "Rezervovat si zařazení"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:728
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "Informovat o zařazení"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:743
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "Vyžadována revize"
 
-#: vertimus/models.py:758
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "Zálohovat kroky"
 
-#: vertimus/models.py:797
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "Vrátit předchozí změnu stavu"
 
@@ -3141,3 +3143,4 @@ msgstr "Poslední zařazený soubor týmu %(lang)s"
 #: vertimus/views.py:188
 msgid "Latest POT file"
 msgstr "Nejnovější šablona POT"
+
