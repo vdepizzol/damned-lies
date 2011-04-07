@@ -61,18 +61,14 @@
         {% endif %}
         {% endwith %}
       </td>
-      <td>{{ line.get_translationstat|safe }}</td>
+      <td>{{ line|num_stats }}</td>
       {% if pot_stat.full_po.fig_count %}
       <td><a href="{% url stats.views.docimages module_name=module.name,potbase=pot_stat.domain.name,branch_name=branch.name,langcode=line.language.locale %}">
           <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
       </td>
       {% endif %}
       <td style="width: 108px; text-align: center;">
-        <div class="graph">
-          <div class="translated" style="width: {{ line.tr_percentage }}px;"></div>
-          <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ line.tr_percentage }}px; width:{{ line.fu_percentage }}px;"></div>
-          <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ line.tr_percentage|add:line.fu_percentage }}px; width: {{ line.un_percentage }}px;"></div>
-        </div>
+        <div class="graph">{{ line|vis_stats }}</div>
       </td>
     </tr>
     {% endif %}

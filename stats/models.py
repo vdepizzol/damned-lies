@@ -1211,9 +1211,6 @@ class PoFile(models.Model):
         else:
             return int(100*self.untranslated/self.pot_size())
 
-    def translation_stat(self):
-        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self.translated, self.fuzzy, self.untranslated)
-
 
 class Statistics(models.Model):
     branch = models.ForeignKey(Branch)
@@ -1305,14 +1302,8 @@ class Statistics(models.Model):
             self.moddescription = self.branch.module.description or self.branch.module.name
         return self.moddescription
 
-    def get_translationstat(self):
-        return self.full_po.translation_stat()
-
     def has_reducedstat(self):
         return bool(self.part_po is not None and self.part_po != self.full_po)
-
-    def get_reducedstat(self):
-        return self.part_po.translation_stat()
 
     def filename(self, potfile=False, reduced=False):
         if not self.is_pot_stats() and not potfile:
@@ -1656,9 +1647,6 @@ class FakeStatistics(object):
         else:
             return "pot file"
 
-    def get_translationstat(self):
-        return "%d%%&nbsp;(%d/%d/%d)" % (self.tr_percentage(), self._translated, self._fuzzy, self._untranslated)
-
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'untranslated':0, 'total':0, 'prc':0}
         for fig in self.get_figures():
@@ -1694,17 +1682,17 @@ class FakeStatistics(object):
 
     def pot_size(self):
         return int(self._translated) + int(self._fuzzy) + int(self._untranslated)
-    def tr_percentage(self):
+    def tr_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self._translated/self.pot_size())
-    def fu_percentage(self):
+    def fu_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self._fuzzy/self.pot_size())
-    def un_percentage(self):
+    def un_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:

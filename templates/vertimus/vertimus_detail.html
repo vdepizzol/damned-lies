@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load humanize %}
+{% load stats_extras %}
 
 {% block title %}
 {% blocktrans with module.get_description as name %}Module Translation: {{ name }}{% endblocktrans %}
@@ -62,22 +63,18 @@ $(document).ready(function() {
     {{ pot_stats.pot_text }}
   </em></div>
   <div style="float:left">
-    <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated:" %}
-    {{ stats.get_translationstat|safe }}&nbsp;
+    <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
+    {% trans "Translated:" %} {{ stats|num_stats:"full" }}&nbsp;
     <div class="graph graphinline">
-      <div class="translated" style="width: {{ stats.tr_percentage }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage }}px; width:{{ stats.fu_percentage }}px;"></div>
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.tr_percentage|add:stats.fu_percentage }}px; width: {{ stats.un_percentage }}px;"></div>
+      {{ stats|vis_stats:"full" }}
     </div>
   </div>
   {% if po_url_reduced %}
   <div style="float:left; margin-left: 150px;">
-    <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a> {% trans "Translated (reduced):" %}
-    {{ stats.get_reducedstat|safe }}&nbsp;
+    <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
+    {% trans "Translated (reduced):" %} {{ stats|num_stats:"part" }}&nbsp;
     <div class="graph graphinline">
-      <div class="translated" style="width: {{ stats.part_po.tr_percentage }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.part_po.tr_percentage }}px; width:{{ stats.part_po.fu_percentage }}px;"></div>
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stats.part_po.tr_percentage|add:stats.part_po.fu_percentage }}px; width: {{ stats.part_po.un_percentage }}px;"></div>
+      {{ stats|vis_stats:"part" }}
     </div>
   </div>
   {% endif %}

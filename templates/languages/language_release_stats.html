@@ -67,15 +67,10 @@
         </td>
           <td><span class="branch">{{ branch }}</span></td>
           <td><span style="display:none;">{{ stat.tr_percentage }}</span>{{ stat|num_stats:scope }}</td>
-          <td style="width: 108px; text-align: center;"><div class="graph">
-              <div class="translated" style="width: {{ stat.tr_percentage }}px;"></div>
-              <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.tr_percentage }}px; width:{{ stat.fu_percentage }}px;"></div>
-              {% with stat.tr_percentage|add:stat.fu_percentage as upos %}
-              <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.un_percentage }}px;"></div>
-              {% endwith %}
-             </div>
-           </td>
-           <td>
+          <td style="width: 108px; text-align: center;">
+             <div class="graph">{{ stat|vis_stats:scope }}</div>
+          </td>
+          <td>
            {% if stat.state.name %}
              {% if stat.state.name != "None" %}
              <em><small>{{ stat.state.get_state }}</small></em></td>
@@ -88,7 +83,7 @@
              {% endif %}
            {% else %} </td><td>
            {% endif %}
-           </td>
+          </td>
         </tr>
       {% endif %}
       {% endwith %}
