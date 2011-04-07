@@ -89,7 +89,7 @@ def team(request, team_slug):
     if team.can_edit(request.user):
         if request.method == 'POST':
             form_type = request.POST['form_type']
-            roles = Role.objects.filter(team=team, role=form_type)
+            roles = Role.objects.filter(team=team, role=form_type, is_active=True)
             form = EditMemberRoleForm(roles, request.POST)
             if form.is_valid():
                 for key, field in form.fields.items():
