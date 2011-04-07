@@ -344,7 +344,7 @@ class Branch(models.Model):
             for domain in stats.keys():
                 if lang not in stats_langs[domain] and stats[domain][0].full_po:
                     fake_stat = FakeStatistics(self.module, self, typ, lang)
-                    fake_stat.untranslated = stats[domain][0].untranslated()
+                    fake_stat._untranslated = stats[domain][0].untranslated()
                     stats[domain].append(fake_stat)
         # Sort
         for key, doms in stats.items():
