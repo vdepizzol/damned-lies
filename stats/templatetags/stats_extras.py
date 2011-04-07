@@ -56,9 +56,9 @@ def vis_stats(stat, scope='full'):
         <div class="untranslated" style="%(dir)s:%(tr_fu)spx; width: %(untrans)spx;"></div>
         """ % {
           'dir'  : get_language_bidi() and "right" or "left",
-          'trans': stat.tr_percentage(scope),
-          'fuzzy': stat.fu_percentage(scope),
-          'tr_fu': stat.tr_percentage(scope) + stat.fu_percentage(scope),
-          'untrans': stat.un_percentage(scope),
+          'trans': trans,
+          'fuzzy': fuzzy,
+          'tr_fu': trans + fuzzy,
+          'untrans': untrans,
         })
 
