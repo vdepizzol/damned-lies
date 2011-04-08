@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-22 10:00+0000\n"
-"PO-Revision-Date: 2011-03-24 18:32+0800\n"
+"POT-Creation-Date: 2011-04-07 10:08+0000\n"
+"PO-Revision-Date: 2011-04-09 06:20+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
@@ -184,6 +184,7 @@ msgstr "宗喀"
 
 #: database-content.py:34
 #: database-content.py:160
+#: settings.py:52
 msgid "Esperanto"
 msgstr "世界語"
 
@@ -1198,10 +1199,9 @@ msgid "Optimization Guide"
 msgstr "最佳化指南"
 
 #: database-content.py:381
-#, fuzzy
 #| msgid "tutorial"
 msgid "Tutorial demos"
-msgstr "教材"
+msgstr "教材展示"
 
 #: database-content.py:382
 msgid "Platform Overview"
@@ -1240,16 +1240,14 @@ msgid "toolbox"
 msgstr "工具箱"
 
 #: database-content.py:391
-#, fuzzy
 #| msgid "toolbox"
 msgid "toolbox (color)"
-msgstr "工具箱"
+msgstr "工具箱 (顏色)"
 
 #: database-content.py:392
-#, fuzzy
 #| msgid "toolbox"
 msgid "toolbox (paint)"
-msgstr "工具箱"
+msgstr "工具箱 (畫具)"
 
 #: database-content.py:393
 msgid "toolbox (selection)"
@@ -1330,7 +1328,6 @@ msgid "GNOME Web Photo"
 msgstr "GNOME 網頁相片"
 
 #: database-content.py:414
-#| msgid "GNOME Library Web site"
 msgid "GNOME 3 Website"
 msgstr "GNOME 3 網站"
 
@@ -1359,153 +1356,119 @@ msgid "WebKitGTK+"
 msgstr "WebKitGTK+"
 
 #: database-content.py:421
-#| msgid ""
-#| "This is not a GNOME-specific module. Please submit your translation "
-#| "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#| "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/accountsservice/resource/accounts-servicepot/\">Transifex platform</a>."
-msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/accountsservice/resource/accounts-servicepot/\">Transifex platform</a> 提交。"
-
-#: database-content.py:422
 msgid "Email client for netbooks"
 msgstr "給小筆電使用的電子郵件客戶端"
 
-#: database-content.py:423
-msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a>."
-msgstr "Avahi 是一套系統，提供透過 mDNS/DNS-SD 通訊協定在本地端網絡探索的好用服務。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/avahi/resource/master-tx-po-avahi-pot/\">Transifex platform</a> 提交。"
+#: database-content.py:422
+msgid "Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite."
+msgstr "Avahi 是一個透過 DNS/DNS-SD 通訊協定探索區域網絡服務的功能套件。"
 
-#: database-content.py:424
+#: database-content.py:423
 msgid "There is a glossary that will help translators in Chronojump localization: <a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 msgstr "這裏有可以協助翻譯 Chronojump 本地化的術語：<a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>。\n"
 
-#: database-content.py:426
+#: database-content.py:425
 msgid "Committed translations are updated manually on l10n.gnome.org from time to time. Be patient :-)"
 msgstr "上傳的翻譯會由 l10n.gnome.org 持續手動更新。要有耐心些 :-)"
 
-#: database-content.py:427
+#: database-content.py:426
 msgid "Evince is a document viewer for multiple document formats."
 msgstr "Evince 是適用於多種文件格式的文件檢視器。"
 
-#: database-content.py:428
-msgid "D-Bus service to access fingerprint readers. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a>."
-msgstr "使用指紋辨識讀取器的 D-Bus 服務。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/\">Transifex platform</a> 提交。"
+#: database-content.py:427
+msgid "D-Bus service to access fingerprint readers."
+msgstr "存取指紋讀取器的 D-Bus 服務。"
 
-#: database-content.py:429
+#: database-content.py:428
 msgid "From GNOME 2.23, GAIL is integrated into GTK+. Don't commit in trunk any more."
 msgstr "從 GNOME 2.23 起，GAIL 已整合至 GTK+。請勿再提交任何檔案到 trunk。"
 
-#: database-content.py:430
-#| msgid ""
-#| "The master branch is currently unmaintained. For other localisation needs "
-#| "of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons"
-#| "\">http://gcompris.net/wiki/Translation_addons</a>."
+#: database-content.py:429
 msgid "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr "有其他關於 GCompris 的本地化需求，請查閱  <a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>。"
 
-#: database-content.py:431
+#: database-content.py:430
 msgid "Graphical frontend for the git directory tracker"
 msgstr "git 目錄追蹤程式的圖形化前端程式"
 
-#: database-content.py:432
+#: database-content.py:431
 msgid "A multimedia converter for the GNOME Desktop"
 msgstr "GNOME 桌面的多媒體轉檔程式"
 
-#: database-content.py:433
+#: database-content.py:432
 msgid "gnome-disk-utility provides libraries and applications for dealing with storage devices."
 msgstr "gnome-disk-utility 提供處理儲存裝置用的程式庫和應用程式。"
 
-#: database-content.py:434
+#: database-content.py:433
 msgid "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end for GNOME."
 msgstr "GNOME Video Arcade 是 MAME (多種大型電玩機臺模擬器) 的 GNOME 前端程式。"
 
-#: database-content.py:435
+#: database-content.py:434
 msgid "To ease localization, gallery of GNOME Video Effects has been set up here: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 msgstr "為了簡化本地化工作，GNOME 視像效果的畫廊在這裏：<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live.gnome.org/GnomeVideoEffects/Effects</a>。"
 
-#: database-content.py:436
+#: database-content.py:435
 msgid "A note taking application"
 msgstr "用來做筆記的應用程式"
 
-#: database-content.py:437
-msgid "GNUCash is not part of the GNOME Git repository. Please check <a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> to see where to send translations."
-msgstr "GNUCash 已經不是 GNOME Git 套件庫的一部分。請查閱 <a href= \"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</a> 以了解要將翻譯成果送至何處。"
-
-#: database-content.py:438
+#: database-content.py:436
 msgid "Useful information on localization of the gnumeric analysis tools can be found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a> file."
 msgstr "關於 gnumeric 分析工具的本地化參考資訊可以在 <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a>檔案找到。"
 
-#: database-content.py:439
+#: database-content.py:437
 msgid "This a low-priority module to translate, as there are currently no user interface that show those strings."
 msgstr "這是翻譯優先權較低的模組，因為目前沒有使用者介面會顯示這些字串。"
 
-#: database-content.py:440
-#: database-content.py:441
-#: database-content.py:442
-#: database-content.py:443
-#: database-content.py:444
-#: database-content.py:465
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>."
-msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://translationproject.org\">Translation Project</a> 提交。"
-
-#: database-content.py:445
+#: database-content.py:438
 msgid "Please note that gtk+ has both po and po-properties UI domains.  If you add a new language in either domain, you have to commit both files in Git even if one of them contains 0 translations, unless GTK+ build will break in /po-properties."
 msgstr "請注意 gtk+ 有 po 及 po-properties 兩個使用者介面域名。如果你要在其中一個域名中加入新的語言，你必須將兩個檔案都提交到 Git 中，即使其中一個沒有任何已翻譯的字詞。否則 GTK+ 在組建的過程中會在 /po-properties 的地方中斷。"
 
-#: database-content.py:446
+#: database-content.py:439
 msgid "A plugin manager library for other GNOME modules"
 msgstr "用於其他 GNOME 模組的外掛程式管理員程式庫"
 
-#: database-content.py:447
+#: database-content.py:440
 msgid "Desktop entries for MESS ROMs"
 msgstr "MESS ROM 桌面項目"
 
-#: database-content.py:448
+#: database-content.py:441
 msgid "moserial is a clean, friendly gtk-based serial terminal for the GNOME desktop. It is written in Vala for extra goodness."
 msgstr "moserial 是一個簡潔、友善且基於 gtk 的 GNOME 桌面序列埠終端機。它是以具有許多優點的 Vala 語言寫成的。"
 
-#: database-content.py:449
+#: database-content.py:442
 msgid "Gnome Parental Control"
 msgstr "Gnome 家長監控"
 
-#: database-content.py:450
+#: database-content.py:443
 msgid "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">create a bug report for NetworkManager on the GNOME Bugzilla</a>. Then, attach your translation file."
 msgstr "要提交你的翻譯，<a href=\"https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=general\">請在 GNOME Bugzilla 建立 NetworkManager 的程式錯誤回報</a>。接着，將你的翻譯做為附加檔案。"
 
-#: database-content.py:451
-msgid "PackageKit is a system designed to make installing and updating software on your computer easier. This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a>."
-msgstr "PackageKit 是一套設計來讓安裝和升級你電腦上的軟件更簡單的系統。這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a> 提交。"
+#: database-content.py:444
+msgid "PackageKit is a system designed to make installing and updating software on your computer easier."
+msgstr "PackageKit 是一套讓安裝與更新你電腦上的軟件更加容易的系統。"
 
-#: database-content.py:452
+#: database-content.py:445
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout 是一個適用於 X 的 DTP 應用程式。"
 
-#: database-content.py:453
-msgid ""
-"PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. \n"
-"Please submit your translation through the <a href=\"\n"
-"http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-pulseaudio-pot/\">Transifex platform</a>."
-msgstr ""
-"PulseAudio 是用於 POSIX OSes 的音效系統，它是音效應用程式的代理伺服器。\n"
-"請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/packagekit/resource/master/\">Transifex platform</a> 提交。"
+#: database-content.py:446
+msgid "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications."
+msgstr "PulseAudio 是 POSIX 作業系統的音效系統，亦即它是你的聲音應用程式的代理程式。"
 
-#: database-content.py:456
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a>."
-msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/efault-po-shared-mime-info-pot_0/\">Transifex platform</a> 提交。"
-
-#: database-content.py:457
+#: database-content.py:447
 msgid "A photo manager for GNOME"
 msgstr "GNOME 相片管理程式"
 
-#: database-content.py:458
+#: database-content.py:448
 msgid "This is a clone of the official system-tools-backends version from the freedesktop.org repository."
 msgstr "這是從 freedesktop.org 檔案庫抓回來官方版 system-tools-backends 的複本。"
 
-#: database-content.py:459
+#: database-content.py:449
 #, fuzzy
 msgid "GNOME Teletext viewer"
 msgstr "GNOME 圖片瀏覽程式。"
 
-#: database-content.py:460
+#: database-content.py:450
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for more."
@@ -1513,83 +1476,81 @@ msgstr ""
 "我們在這裏翻譯了挑選的 GNOME 影片的字幕。\n"
 "請查閱<a href=\"http://live.gnome.org/VideoSubtitles\">影片字幕</a>以獲得更多資訊。"
 
-#: database-content.py:462
+#: database-content.py:452
 msgid "A VNC client for GNOME"
 msgstr "GNOME 的 VNC 客戶端程式"
 
-#: database-content.py:463
+#: database-content.py:453
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "翻譯應該以如同程式錯誤回報的方式提交(請看下列連結)。"
 
-#: database-content.py:464
-msgid "This is not a GNOME-specific module. Please submit your translation through the <a href=\"http://translationproject.org\">Translation Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-user-dirs.html\">the translation page for xdg-user-dirs at the Translation Project</a>."
-msgstr "這並不是屬於 GNOME 的模組。請將你的翻譯送至 <a href=\"http://translationproject.org\">Translation Project</a> 提交。同時也看看<a href=\"http://translationproject.org/domain/xdg-user-dirs.html\"> xdg-user-dirs 在 Translation Project 的翻譯網頁</a>。"
+#: database-content.py:454
+#| msgid "GNOME 2.30 (stable)"
+msgid "GNOME 3.0 (stable)"
+msgstr "GNOME 3.0 (穩定版)"
 
-#: database-content.py:466
-msgid "GNOME 3.0 (development)"
-msgstr "GNOME 3.0 (開發版)"
+#: database-content.py:455
+#| msgid "GNOME 2.30 (old stable)"
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (舊的穩定版)"
 
-#: database-content.py:467
-msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.32 (穩定版)"
-
-#: database-content.py:468
+#: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (舊的穩定版)"
 
-#: database-content.py:469
+#: database-content.py:457
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (舊的穩定版)"
 
-#: database-content.py:470
+#: database-content.py:458
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (舊的穩定版)"
 
-#: database-content.py:471
+#: database-content.py:459
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (舊的穩定版)"
 
-#: database-content.py:472
+#: database-content.py:460
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (舊的穩定版)"
 
-#: database-content.py:473
+#: database-content.py:461
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (舊的穩定版)"
 
-#: database-content.py:474
+#: database-content.py:462
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (舊的穩定版)"
 
-#: database-content.py:475
+#: database-content.py:463
 msgid "External Dependencies (GNOME)"
 msgstr "額外的相根據性 (GNOME)"
 
-#: database-content.py:476
+#: database-content.py:464
 msgid "Obsolete GNOME Applications"
 msgstr "廢棄的 GNOME 應用程式"
 
-#: database-content.py:477
+#: database-content.py:465
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-辦公室生產力應用程式"
 
-#: database-content.py:478
+#: database-content.py:466
 msgid "GNOME Infrastructure"
 msgstr "GNOME 基礎建設"
 
-#: database-content.py:479
+#: database-content.py:467
 msgid "GIMP and Friends"
 msgstr "GIMP 和朋友們"
 
-#: database-content.py:480
+#: database-content.py:468
 msgid "Extra GNOME Applications"
 msgstr "額外的 GNOME 應用程式"
 
-#: database-content.py:481
+#: database-content.py:469
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非-GNOME)"
 
-#: settings.py:75
+#: settings.py:80
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "這個模組並非 GNOME Git 套件庫的一部分。請查閱該模組的網頁以了解要如何送出翻譯。"
 
@@ -1677,7 +1638,6 @@ msgid "Original strings"
 msgstr "原始字串"
 
 #: languages/views.py:87
-#| msgid "UI Translations"
 msgid "UI Translations (reduced)"
 msgstr "使用者介面翻譯 (縮減後)"
 
@@ -1767,60 +1727,63 @@ msgstr "Bugzilla 帳號"
 msgid "This should be an email address, useful if not equal to 'E-mail address' field"
 msgstr "這裏應該是電子郵件位址，用在如果它不等於「E-mail address」欄位時"
 
-#: people/views.py:63
+#: people/views.py:71
 msgid "Sorry, the form is not valid."
 msgstr "抱歉，格式無效。"
 
-#: people/views.py:88
+#: people/views.py:96
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "你已經成功的加入「%s」隊伍。"
 
-#: people/views.py:89
+#: people/views.py:97
 msgid "A new person joined your team"
 msgstr "有新人加入你的隊伍"
 
-#: people/views.py:90
+#: people/views.py:98
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s 已經加入你在 %(site)s 的翻譯隊伍"
 
-#: people/views.py:93
+#: people/views.py:101
 msgid "You are already member of this team."
 msgstr "你已經是這個隊伍的成員了。"
 
-#: people/views.py:115
+#: people/views.py:123
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "你已經從「%s」隊伍中移除。 "
 
-#. Message no i18n'ed, should never happen under normal conditions
-#: people/views.py:118
-#| msgid "You are already member of this team."
+#: people/views.py:126
 msgid "You are not a member of this team."
 msgstr "你已經不是這個隊伍的成員了。"
 
-#: people/views.py:131
+#: people/views.py:139
 msgid "Your password has been changed."
 msgstr "你的密碼已更改。"
 
-#: stats/models.py:247
+#: stats/models.py:100
+#, python-format
+msgid "Translations for this module are externally hosted. Please go to the <a href=\"%(link)s\">external platform</a> to see how you can submit your translation."
+msgstr "這個模組的翻譯是在外部網站進行。請到<a href=\"%(link)s\">外部平臺</a>了解你可以如何提交你的翻譯。"
+
+#: stats/models.py:259
 msgid "This branch is not linked from any release"
 msgstr "這個分支沒有從任何推出版本連結"
 
-#: stats/models.py:420
+#: stats/models.py:432
 msgid "Can't generate POT file, using old one."
 msgstr "無法產生 POT 檔案，改用舊的。"
 
-#: stats/models.py:422
+#: stats/models.py:434
 msgid "Can't generate POT file, statistics aborted."
 msgstr "無法產生 POT 檔案，統計中止。"
 
-#: stats/models.py:441
+#: stats/models.py:453
 msgid "Can't copy new POT file to public location."
 msgstr "無法複製新 POT 檔至公開位置。"
 
-#: stats/models.py:781
+#: stats/models.py:793
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1831,77 +1794,79 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:805
+#: stats/models.py:817
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "這個語言的項目並未出現在 %(file)s 檔案的 %(var)s 中。"
 
-#: stats/models.py:1135
+#: stats/models.py:1147
 msgid "Administration Tools"
 msgstr "管理工具"
 
-#: stats/models.py:1136
+#: stats/models.py:1148
 msgid "Development Tools"
 msgstr "開發工具"
 
-#: stats/models.py:1137
+#: stats/models.py:1149
 msgid "GNOME Desktop"
 msgstr "GNOME 桌面"
 
-#: stats/models.py:1138
+#: stats/models.py:1150
 msgid "GNOME Developer Platform"
 msgstr "GNOME 開發者平臺"
 
-#: stats/models.py:1139
+#: stats/models.py:1151
 msgid "New Module Proposals"
 msgstr "提議的新模組"
 
-#: stats/models.py:1279
-#: stats/models.py:1638
+#: stats/models.py:1291
+#: stats/models.py:1652
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1315
+#: stats/models.py:1325
+msgid "POT file unavailable"
+msgstr "缷少 POT 檔案"
+
+#: stats/models.py:1329
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s 個訊息"
 
-#: stats/models.py:1316
+#: stats/models.py:1330
 #, python-format
 msgid "updated on %(date)s"
 msgstr "更新於 %(date)s"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
-#. Date format syntax is similar to PHP http://www.php.net/date
-#: stats/models.py:1318
+#: stats/models.py:1332
 #: templates/vertimus/vertimus_detail.html:47
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1321
+#: stats/models.py:1335
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s 張圖片"
 
-#: stats/models.py:1322
+#: stats/models.py:1336
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT 檔 (%(messages)s，%(figures)s) — %(updated)s"
 
-#: stats/models.py:1325
+#: stats/models.py:1339
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT 檔案 (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1446
+#: stats/models.py:1460
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "這個 POT 檔案不是透過標準 intltool 方式產生的。"
 
-#: stats/models.py:1447
+#: stats/models.py:1461
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "這個 POT 檔案不是透過標準 gnome-doc-utils 方式產生的。"
 
@@ -1989,7 +1954,6 @@ msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS 列表中沒有包含這個語言。"
 
 #: teams/forms.py:21
-#| msgid "Inactive"
 msgid "Mark as Inactive"
 msgstr "標記為不活躍"
 
@@ -2010,8 +1974,8 @@ msgid "URL to subscribe"
 msgstr "訂閱的 URL"
 
 #: teams/models.py:212
-#: vertimus/models.py:549
-#: vertimus/models.py:599
+#: vertimus/models.py:563
+#: vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "這封郵件是由 %s 自動寄出的。"
@@ -2375,7 +2339,7 @@ msgid "The modules of this release are not part of the GNOME Git repository. Ple
 msgstr "這個推出版本的模組不屬於 GNOME Git 套件庫。請查閱各模組的網頁以了解要將翻譯送至何處。"
 
 #: templates/release_detail.html:19
-#: templates/stats_show.html:45
+#: templates/stats_show.html:47
 msgid "Language"
 msgstr "語言"
 
@@ -2387,7 +2351,7 @@ msgstr "使用者介面"
 
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2395,7 +2359,6 @@ msgstr "圖表"
 
 #: templates/release_detail.html:22
 #: templates/languages/language_release_summary.html:13
-#| msgid "User Interface"
 msgid "User Interface (red.)"
 msgstr "使用者介面 (減)"
 
@@ -2417,31 +2380,30 @@ msgstr "較早的推出版"
 msgid "This document is written in Mallard documentation format"
 msgstr "這份文件是以 Mallard 文件格式編寫"
 
-#: templates/stats_show.html:14
+#: templates/stats_show.html:15
 #: templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "下載所有 POT 檔案"
 
-#: templates/stats_show.html:18
+#: templates/stats_show.html:20
 #: templates/vertimus/vertimus_detail.html:93
 msgid "Notices"
 msgstr "注意事項"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "在回報前先搜尋類似的程式錯誤"
 
-#: templates/stats_show.html:33
-#| msgid "Report a bug"
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "回報程式的錯誤"
 
-#: templates/stats_show.html:45
-#: vertimus/models.py:182
+#: templates/stats_show.html:47
+#: vertimus/models.py:183
 msgid "Translated"
 msgstr "已翻譯"
 
-#: templates/stats_show.html:65
+#: templates/stats_show.html:67
 #: templates/vertimus/vertimus_detail.html:87
 msgid "Display document figures"
 msgstr "顯示文件圖片"
@@ -2488,7 +2450,7 @@ msgid "Download all po files"
 msgstr "下載所有 po 檔案"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "模組"
 
@@ -2501,13 +2463,15 @@ msgid "Status"
 msgstr "狀態"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "日期"
 
 #: templates/languages/language_release_stats.html:32
-msgid "%(categname)s (%(percentage)s% translated)"
-msgstr "%(categname)s (已翻譯 %(percentage)s%)"
+#, python-format
+#| msgid "%(categname)s (%(percentage)s% translated)"
+msgid "%(categname)s (%(percentage)s%% translated)"
+msgstr "%(categname)s (已翻譯 %(percentage)s%% )"
 
 #: templates/languages/language_release_stats.html:105
 msgid "Error summary"
@@ -2534,19 +2498,19 @@ msgstr "加入一個隊伍"
 msgid "Site Language:"
 msgstr "網站語言："
 
-#: templates/people/person_detail.html:37
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "選擇"
 
-#: templates/people/person_detail.html:43
+#: templates/people/person_detail.html:39
 msgid "Module maintenance"
 msgstr "模組維護"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:50
 msgid "Current activity"
 msgstr "目前的活動"
 
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "狀態"
 
@@ -2817,7 +2781,6 @@ msgid "Translated:"
 msgstr "翻譯率："
 
 #: templates/vertimus/vertimus_detail.html:75
-#| msgid "Translated:"
 msgid "Translated (reduced):"
 msgstr "翻譯率 (縮減後)："
 
@@ -2829,11 +2792,10 @@ msgstr "同一模組中正在進行的活動："
 msgid "Actions"
 msgstr "動作"
 
-#. #-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #: templates/vertimus/vertimus_detail.html:120
-#: vertimus/models.py:857
+#: vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "已封存的動作 (%(human_level)s 個封存系列) "
@@ -2883,22 +2845,22 @@ msgstr "&lt;- 回到動作"
 msgid "Note: both files are merged with latest POT file."
 msgstr "注意：兩個檔案都會與最新的 POT 檔案合併。"
 
-#: vertimus/feeds.py:43
+#: vertimus/feeds.py:40
 #, python-format
 msgid "%(site)s - Vertimus actions for the %(lang)s language"
 msgstr "%(site)s - %(lang)s語言的 Vertimus 動作"
 
-#: vertimus/feeds.py:52
+#: vertimus/feeds.py:49
 #, python-format
 msgid "Latest actions of the GNOME Translation Project for the %s language"
 msgstr "GNOME 翻譯專案對%s語言所做的最後動作"
 
-#: vertimus/feeds.py:89
+#: vertimus/feeds.py:84
 #, python-format
 msgid "%(site)s - Vertimus actions of the %(lang)s team"
 msgstr "%(site)s - %(lang)s隊伍的 Vertimus 動作"
 
-#: vertimus/feeds.py:98
+#: vertimus/feeds.py:93
 #, python-format
 msgid "Latest actions made by the %s team of the GNOME Translation Project"
 msgstr "GNOME 翻譯專案的%s隊伍所做的最後動作"
@@ -2947,44 +2909,44 @@ msgstr "這個動作需要有檔案。"
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "請勿在「保留」類的動作中上傳檔案。"
 
-#: vertimus/models.py:156
+#: vertimus/models.py:157
 msgid "Inactive"
 msgstr "未使用"
 
-#: vertimus/models.py:169
+#: vertimus/models.py:170
 msgid "Translating"
 msgstr "正在翻譯"
 
-#: vertimus/models.py:202
+#: vertimus/models.py:203
 msgid "Proofreading"
 msgstr "正在校對"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:217
+#: vertimus/models.py:218
 msgid "Proofread"
 msgstr "校正"
 
-#: vertimus/models.py:232
+#: vertimus/models.py:233
 msgid "To Review"
 msgstr "需要檢閱"
 
-#: vertimus/models.py:244
+#: vertimus/models.py:245
 msgid "To Commit"
 msgstr "需要提交"
 
-#: vertimus/models.py:259
+#: vertimus/models.py:260
 msgid "Committing"
 msgstr "正在提交"
 
-#: vertimus/models.py:273
+#: vertimus/models.py:274
 msgid "Committed"
 msgstr "已提交"
 
-#: vertimus/models.py:318
+#: vertimus/models.py:319
 msgid "File in repository"
 msgstr "套件庫中的檔案"
 
-#: vertimus/models.py:330
+#: vertimus/models.py:331
 #: vertimus/views.py:163
 #: vertimus/views.py:169
 #: vertimus/views.py:179
@@ -2992,7 +2954,7 @@ msgstr "套件庫中的檔案"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "檔案由 %(name)s 於 %(date)s 上傳"
 
-#: vertimus/models.py:534
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3007,16 +2969,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:547
-#: vertimus/models.py:597
+#: vertimus/models.py:561
+#: vertimus/models.py:611
 msgid "Without comment"
 msgstr "沒有備註"
 
-#: vertimus/models.py:556
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "撰寫備註"
 
-#: vertimus/models.py:585
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3031,58 +2993,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:607
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "翻譯中請保留"
 
-#: vertimus/models.py:619
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "上傳新的翻譯"
 
-#: vertimus/models.py:641
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "校對中請保留"
 
-#: vertimus/models.py:653
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "上傳已校對的翻譯"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:669
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "準備完成等待提交"
 
-#: vertimus/models.py:685
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "送出至套件庫"
 
-#. FIXME: somewhere the error should be catched and handled properly
-#. new_state = state
-#: vertimus/models.py:702
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "提交失敗。錯誤為：「%s」"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:710
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "提交中請保留"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:723
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "提交的通知"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:738
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "需要檢閱"
 
-#: vertimus/models.py:753
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "封存此動作"
 
-#: vertimus/models.py:792
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "還原上次的狀態更改"
 
@@ -3101,43 +3061,3 @@ msgstr "%(lang)s最新提交的檔案"
 msgid "Latest POT file"
 msgstr "最新的 POT 檔案"
 
-#~ msgid "GNOME 2.16 (old stable)"
-#~ msgstr "GNOME 2.16 (舊的穩定版)"
-
-#~ msgid "GNOME 2.14 (old stable)"
-#~ msgstr "GNOME 2.14 (舊的穩定版)"
-
-#~ msgid "Window List Applet Manual"
-#~ msgstr "視窗清單面板程式手冊"
-
-#~ msgid "Workspace Switcher Applet Manual"
-#~ msgstr "工作區切換程式 手冊"
-
-#~ msgid "GNOME 2.30 (stable)"
-#~ msgstr "GNOME 2.30 (穩定版)"
-
-#~ msgid "F-Spot Manual"
-#~ msgstr "F-Spot 手冊"
-
-#~ msgid ""
-#~ "This module is not part of the GNOME git repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "這個模組並非 GNOME git 套件庫的一部分。請查閱該模組的網頁以了解要如何送出"
-#~ "翻譯。"
-
-#~ msgid "Maintains:"
-#~ msgstr "維護："
-
-#~ msgid "Working on"
-#~ msgstr "正在處理"
-
-#~ msgid "Member of teams"
-#~ msgstr "團隊成員"
-
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME git repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "這個釋出版本的模組不屬於 GNOME git 套件庫。請查閱各模組的網頁以了解要將翻"
-#~ "譯送至何處。"
