@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-31 12:27+0000\n"
-"PO-Revision-Date: 2011-04-04 10:05+0200\n"
+"POT-Creation-Date: 2011-04-07 10:08+0000\n"
+"PO-Revision-Date: 2011-04-08 15:38+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -1427,12 +1427,12 @@ msgstr ""
 "się poniżej)."
 
 #: database-content.py:454
-msgid "GNOME 3.0 (development)"
-msgstr "GNOME 3.0 (rozwojowe)"
+msgid "GNOME 3.0 (stable)"
+msgstr "GNOME 3.0 (stabilne)"
 
 #: database-content.py:455
-msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.32 (stabilne)"
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (poprzednie stabilne)"
 
 #: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
@@ -1955,7 +1955,7 @@ msgstr "Lista pocztowa"
 msgid "URL to subscribe"
 msgstr "Adres URL subskrypcji"
 
-#: teams/models.py:212 vertimus/models.py:554 vertimus/models.py:604
+#: teams/models.py:212 vertimus/models.py:563 vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "To jest automatyczna wiadomość wysłana przez %s."
@@ -2369,7 +2369,7 @@ msgstr ""
 "odwiedzić stronę danego modułu, aby dowiedzieć się, gdzie wysyłać "
 "tłumaczenia."
 
-#: templates/release_detail.html:19 templates/stats_show.html:45
+#: templates/release_detail.html:19 templates/stats_show.html:47
 msgid "Language"
 msgstr "Język"
 
@@ -2379,7 +2379,7 @@ msgid "User Interface"
 msgstr "Interfejs użytkownika"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2409,27 +2409,27 @@ msgstr "Poprzednie wydania"
 msgid "This document is written in Mallard documentation format"
 msgstr "Ten dokument został napisany w formacie dokumentacji Mallard"
 
-#: templates/stats_show.html:14 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:61
 msgid "Download POT file"
 msgstr "Pobierz plik POT"
 
-#: templates/stats_show.html:18 templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:93
 msgid "Notices"
 msgstr "Uwagi"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "Należy wyszukać podobne błędy przed zgłoszeniem"
 
-#: templates/stats_show.html:33
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "Zgłoś ten błąd"
 
-#: templates/stats_show.html:45 vertimus/models.py:183
+#: templates/stats_show.html:47 vertimus/models.py:183
 msgid "Translated"
 msgstr "Przetłumaczone"
 
-#: templates/stats_show.html:65 templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:87
 msgid "Display document figures"
 msgstr "Wyświetl ilustracje dokumentu"
 
@@ -2862,7 +2862,7 @@ msgstr "Czynności"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:862
+#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Czynności archiwalne (%(human_level)s serii archiwalnych)"
@@ -3027,7 +3027,7 @@ msgstr "Plik w repozytorium"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Wysłano plik o nazwie %(name)s dnia %(date)s"
 
-#: vertimus/models.py:539
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3044,15 +3044,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:552 vertimus/models.py:602
+#: vertimus/models.py:561 vertimus/models.py:611
 msgid "Without comment"
 msgstr "Bez komentarza"
 
-#: vertimus/models.py:561
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "Napisz komentarz"
 
-#: vertimus/models.py:590
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3069,56 +3069,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:612
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "Zarezerwuj tłumaczenie"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "Wyślij nowe tłumaczenie"
 
-#: vertimus/models.py:646
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "Zarezerwuj do skonsultowania recenzji"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "Wyślij przejrzane tłumaczenie"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:674
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "Gotowy do przesłania"
 
-#: vertimus/models.py:690
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "Prześlij do repozytorium"
 
-#: vertimus/models.py:707
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Zatwierdzenie pliku się nie powiodło. Wystąpił błąd: \"%s\""
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:715
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "Zarezerwuj do przesłania"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:728
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "Informuj o przesłaniu"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:743
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "Wymagana recenzja"
 
-#: vertimus/models.py:758
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "Wykonaj kopię zapasową czynności"
 
-#: vertimus/models.py:797
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "Cofnij ostatnią zmianę stanu"
 
