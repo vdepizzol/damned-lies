@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-07 10:08+0000\n"
-"PO-Revision-Date: 2011-04-10 19:37+0200\n"
+"PO-Revision-Date: 2011-04-10 19:38+0200\n"
 "Last-Translator: Sílvia Miranda <silvia@softcatala.cat>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -2502,10 +2502,9 @@ msgid "Date"
 msgstr "Data"
 
 #: templates/languages/language_release_stats.html:32
-#, fuzzy, python-format
-#| msgid "%(categname)s (%(percentage)s% translated)"
+#, python-format
 msgid "%(categname)s (%(percentage)s%% translated)"
-msgstr "%(categname)s (%(percentage)s% traduït)"
+msgstr "%(categname)s (%(percentage)s%% traduït)"
 
 #: templates/languages/language_release_stats.html:105
 msgid "Error summary"
