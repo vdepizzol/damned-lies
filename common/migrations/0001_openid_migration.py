@@ -3,6 +3,7 @@ import datetime
 from south.db import db
 from south.v2 import DataMigration
 from django.db import models
+from django.db.utils import IntegrityError
 
 class Migration(DataMigration):
 
@@ -13,14 +14,17 @@ class Migration(DataMigration):
             from django_openid_auth import models as new_models
         except ImportError:
             # skip migration
-            pass # return
-        import pdb; pdb.set_trace()
-        """for nonce in models.Nonce.objects.all():
+            print "Either old django_openid or new django_openid_auth is absent. Skipping migration."
+            return
+        for nonce in models.Nonce.objects.all():
             new_nonce = new_models.Nonce.objects.create(server_url=nonce.server_url, timestamp=nonce.timestamp, salt=nonce.salt)
         for assoc in models.Association.objects.all():
-            new_assoc = new_models.Association.objects.create(server_url=assoc.server_url, handle=assoc.handle, secret=assoc.secret, issued=assoc.issued, lifetime=assoc.lifetime, assoc_type=assoc.assoc_type)"""
+            new_assoc = new_models.Association.objects.create(server_url=assoc.server_url, handle=assoc.handle, secret=assoc.secret, issued=assoc.issued, lifetime=assoc.lifetime, assoc_type=assoc.assoc_type)
         for user_assoc in models.UserOpenidAssociation.objects.all():
-            new_uassoc = new_models.UserOpenID.objects.create(user=user_assoc.user, claimed_id=user_assoc.openid, display_id=user_assoc.openid)
+            try:
+                new_uassoc = new_models.UserOpenID.objects.create(user=user_assoc.user, claimed_id=user_assoc.openid, display_id=user_assoc.openid)
+            except IntegrityError:
+                pass
 
 
     def backwards(self, orm):
