@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-07 10:08+0000\n"
-"PO-Revision-Date: 2011-04-07 13:43+0100\n"
+"POT-Creation-Date: 2011-04-19 18:24+0000\n"
+"PO-Revision-Date: 2011-04-19 21:08+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -1042,8 +1042,8 @@ msgid "Dasher Manual"
 msgstr "priročnik Dasher"
 
 #: database-content.py:345
-#: languages/views.py:52
-#: languages/views.py:88
+#: languages/views.py:54
+#: languages/views.py:90
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:23
 #: templates/release_detail.html.py:72
@@ -1562,7 +1562,7 @@ msgstr "Račun je bil onemogočen."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Prijava ni uspela. Preverite uporabniško ime in geslo."
 
-#: common/views.py:119
+#: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Račun je dejaven."
 
@@ -1577,7 +1577,7 @@ msgid "Username:"
 msgstr "Uporabniško ime:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20
+#: people/forms.py:21
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Geslo:"
@@ -1595,7 +1595,7 @@ msgid "Or use your OpenID:"
 msgstr "Prijavite se z OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17
+#: people/forms.py:18
 #: templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
@@ -1610,78 +1610,83 @@ msgstr "Prijava z OpenID"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: languages/views.py:51
-#: languages/views.py:86
+#: languages/views.py:52
+#: languages/views.py:88
 msgid "UI Translations"
 msgstr "Prevodi uporabniških vmesnikov"
 
-#: languages/views.py:83
+#: languages/views.py:53
+#: languages/views.py:89
+msgid "UI Translations (reduced)"
+msgstr "Prevodi vmesnikov (obrezani prevodi)"
+
+#: languages/views.py:85
 #: templates/release_detail.html:70
 msgid "Original strings"
 msgstr "Osnovni niz"
 
-#: languages/views.py:87
-msgid "UI Translations (reduced)"
-msgstr "Prevodi vmesnikov (obrezani prevodi)"
-
-#: people/forms.py:14
+#: people/forms.py:15
 msgid "Choose a username:"
 msgstr "Izbor uporabniškega imena:"
 
-#: people/forms.py:15
+#: people/forms.py:16
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Lahko uporabite le črke, številke, vezaj in podčrtaj."
 
-#: people/forms.py:16
+#: people/forms.py:17
 msgid "Email:"
 msgstr "Elektronska pošta:"
 
-#: people/forms.py:21
+#: people/forms.py:22
 msgid "At least 7 characters"
 msgstr "Vsaj 7 znakov"
 
-#: people/forms.py:23
+#: people/forms.py:24
 #: templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Potrdi geslo:"
 
-#: people/forms.py:31
+#: people/forms.py:32
 msgid "This username is already taken. Please choose another."
 msgstr "Uporabniško ime je zasedeno. Izberite drugo uporabniško ime."
 
-#: people/forms.py:39
+#: people/forms.py:42
+msgid "This OpenID URL is already taken by a registered user"
+msgstr "Naslov URL OpenID je že v uporabi pri vpisanem uporabniku"
+
+#: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
 msgstr "Vnesti je treba podatke OpenID ali pa geslo"
 
-#: people/forms.py:42
+#: people/forms.py:55
 msgid "The passwords do not match"
 msgstr "Gesli se ne skladata."
 
-#: people/forms.py:65
+#: people/forms.py:79
 msgid "Account activation"
 msgstr "Vpis računa"
 
-#: people/forms.py:66
+#: people/forms.py:80
 #, python-format
 msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
 msgstr "To sporočilo je potrditev, da je vpis na %s uspel. Za dokončno overitev računa, kliknite na spodnjo povezavo ali pa kopirajte in prilepite naslov v brskalnik."
 
-#: people/forms.py:68
+#: people/forms.py:82
 #, python-format
 msgid "Administrators of %s"
 msgstr "Skrbnik %s"
 
-#: people/forms.py:86
+#: people/forms.py:100
 #, python-format
 msgid "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
 msgstr "Slika je preširoka ali previsoka (%(width)dx%(height)d, največja velikost mora biti 100x100 točk)"
 
-#: people/forms.py:106
+#: people/forms.py:120
 msgid "The URL you provided is not valid"
 msgstr "Naveden naslov URL ni veljaven."
 
-#: people/forms.py:122
+#: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr "Naveden naslov URL ne sovpada z veljavno sliko"
 
@@ -1802,17 +1807,17 @@ msgstr "Razvojno okolje GNOME"
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1291
-#: stats/models.py:1652
+#: stats/models.py:1288
+#: stats/models.py:1643
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1325
+#: stats/models.py:1316
 msgid "POT file unavailable"
 msgstr "Datoteka POT ni na voljo"
 
-#: stats/models.py:1329
+#: stats/models.py:1320
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1821,18 +1826,18 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1330
+#: stats/models.py:1321
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
-#: stats/models.py:1332
-#: templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:145
+#: stats/models.py:1323
+#: templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1335
+#: stats/models.py:1326
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1841,21 +1846,21 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1336
+#: stats/models.py:1327
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1339
+#: stats/models.py:1330
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1460
+#: stats/models.py:1451
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1461
+#: stats/models.py:1452
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
@@ -2370,12 +2375,12 @@ msgid "This document is written in Mallard documentation format"
 msgstr "Dokument je zapisan v zapisu dokumentacije Mallard."
 
 #: templates/stats_show.html:15
-#: templates/vertimus/vertimus_detail.html:61
+#: templates/vertimus/vertimus_detail.html:62
 msgid "Download POT file"
 msgstr "Prenos pot datoteke"
 
 #: templates/stats_show.html:20
-#: templates/vertimus/vertimus_detail.html:93
+#: templates/vertimus/vertimus_detail.html:90
 msgid "Notices"
 msgstr "Obvestila"
 
@@ -2393,7 +2398,7 @@ msgid "Translated"
 msgstr "Prevedeno"
 
 #: templates/stats_show.html:67
-#: templates/vertimus/vertimus_detail.html:87
+#: templates/vertimus/vertimus_detail.html:84
 msgid "Display document figures"
 msgstr "Pokaži sheme dokumentov"
 
@@ -2402,7 +2407,7 @@ msgid "Damned Lies site admin"
 msgstr "Upravljanje spletišča presnetih laži"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:169
 msgid "No comment"
 msgstr "Ni opomb"
 
@@ -2410,6 +2415,7 @@ msgstr "Ni opomb"
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:57
 #: templates/languages/language_release_summary.html:58
+#: templates/languages/language_release_summary.html:59
 msgid "All modules"
 msgstr "Pokaži vse"
 
@@ -2464,7 +2470,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% prevedeno)"
 
-#: templates/languages/language_release_stats.html:105
+#: templates/languages/language_release_stats.html:100
 msgid "Error summary"
 msgstr "Povzetek napak"
 
@@ -2749,25 +2755,25 @@ msgstr "Nadzornik <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Trenutno ni skupin za prevajanje v GNOME. :("
 
-#: templates/vertimus/vertimus_detail.html:6
+#: templates/vertimus/vertimus_detail.html:7
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Prevod modula: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:27
+#: templates/vertimus/vertimus_detail.html:28
 msgid "Used in release(s):"
 msgstr "Uporabljeno v objavah:"
 
-#: templates/vertimus/vertimus_detail.html:45
+#: templates/vertimus/vertimus_detail.html:46
 msgid "State:"
 msgstr "Stanje:"
 
-#: templates/vertimus/vertimus_detail.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Download PO file"
 msgstr "Prenos po datoteke"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:67
 msgid "Translated:"
 msgstr "Prevedeno:"
 
@@ -2775,52 +2781,52 @@ msgstr "Prevedeno:"
 msgid "Translated (reduced):"
 msgstr "Prevedeno (obrezani prevodi)"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
 msgstr "Trenutne dejavnosti modula:"
 
-#: templates/vertimus/vertimus_detail.html:118
+#: templates/vertimus/vertimus_detail.html:115
 msgid "Actions"
 msgstr "Dejanja"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:117
 #: vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arhivirana dejanja (%(human_level)s arhiviran red)"
 
-#: templates/vertimus/vertimus_detail.html:122
+#: templates/vertimus/vertimus_detail.html:119
 msgid "(Return to current actions)"
 msgstr "(Vrni na trenutno dejanje)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:124
 msgid "(Previous action history)"
 msgstr "(Predhodna zgodovina dejanj)"
 
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:158
 msgid "diff with:"
 msgstr "primerjaj z:"
 
-#: templates/vertimus/vertimus_detail.html:180
+#: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
 msgstr "Ni trenutnih dejanj."
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
 msgstr "Novo dejanje"
 
-#: templates/vertimus/vertimus_detail.html:194
+#: templates/vertimus/vertimus_detail.html:191
 msgid "Submit"
 msgstr "Pošlji"
 
-#: templates/vertimus/vertimus_detail.html:199
+#: templates/vertimus/vertimus_detail.html:196
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Pred nadaljevanjem morajo biti vaši podatki overjeni in biti morate član skupine za %(team_name)s jezik."
 
-#: templates/vertimus/vertimus_detail.html:203
+#: templates/vertimus/vertimus_detail.html:200
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Prevajalska skupina ne uporablja orodja Vertimus za vodenje dela."
 
@@ -3054,10 +3060,8 @@ msgstr "Najnovejša POT datoteka"
 
 #~ msgid "GNOME 3.0 (development)"
 #~ msgstr "GNOME 3.0 (razvojna veja)"
-
 #~ msgid "GNOME 2.32 (stable)"
 #~ msgstr "GNOME 2.32 (stabilna različica)"
-
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://www.transifex.net/projects/p/accountsservice/"
@@ -3066,7 +3070,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "Modul ni del osnovnih paketov GNOME. Prevode lahko pošljete preko okolja "
 #~ "<a href=\"http://www.transifex.net/projects/p/accountsservice/resource/"
 #~ "accounts-servicepot/\">Transifex</a>."
-
 #~ msgid ""
 #~ "Avahi is a system which facilitates service discovery on a local network "
 #~ "via the mDNS/DNS-SD protocol suite. Please submit your translation "
@@ -3077,7 +3080,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "protokolov mDNS/DNS-SD. Modul ni privzeto GNOME modul. Prevode lahko "
 #~ "pošljete preko okolja <a href=\"http://www.transifex.net/projects/p/avahi/"
 #~ "resource/master-tx-po-avahi-pot/\">Transifex</a>."
-
 #~ msgid ""
 #~ "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 #~ "module. Please submit your translation through the <a href=\"http://www."
@@ -3088,7 +3090,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href="
 #~ "\"http://www.transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-"
 #~ "pot/\">Transifex</a>."
-
 #~ msgid ""
 #~ "GNUCash is not part of the GNOME Git repository. Please check <a href="
 #~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
@@ -3097,7 +3098,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "Program GNUCash ni vključen v GNOME odložiščih. Preverite <a href="
 #~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> "
 #~ "strani za več podrobnosti o pošiljanju prevodov."
-
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3106,7 +3106,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete "
 #~ "preko projekta <a href=\"http://translationproject.org\">Translation "
 #~ "Project</a>."
-
 #~ msgid ""
 #~ "PackageKit is a system designed to make installing and updating software "
 #~ "on your computer easier. This is not a GNOME-specific module. Please "
@@ -3117,7 +3116,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "privzeto GNOME modul. Prevode lahko pošljete preko okolja <a href="
 #~ "\"http://www.transifex.net/projects/p/packagekit/resource/master/"
 #~ "\">Transifex</a>."
-
 #~ msgid ""
 #~ "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
 #~ "for your sound applications. \n"
@@ -3131,7 +3129,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "href=\"\n"
 #~ "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
 #~ "pulseaudio-pot/\">Transifex</a>."
-
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
@@ -3140,7 +3137,6 @@ msgstr "Najnovejša POT datoteka"
 #~ "Modul ni del osnovnih paketov GNOME prevodov. Prevode lahko pošljete "
 #~ "preko okolja <a href=\"http://www.transifex.net/projects/p/shared-mime-"
 #~ "info/resource/efault-po-shared-mime-info-pot_0/\">Transifex</a>."
-
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3153,58 +3149,45 @@ msgstr "Najnovejša POT datoteka"
 #~ "Project</a>. Več podrobnosti lahko najdete na <a href=\"http://"
 #~ "translationproject.org/domain/xdg-user-dirs.html\">prevajalskih straneh "
 #~ "xdg-user-dirs paketov</a>."
-
 #~ msgid ""
 #~ "Please submit your translation through the <a href=\"http://www.transifex."
 #~ "net/projects/p/accountsservice/\">Transifex platform</a>."
 #~ msgstr ""
 #~ "Prevode pošljite preko okolja <a href=\"http://www.transifex.net/projects/"
 #~ "p/accountsservice/\">Transifex</a>."
-
 #~ msgid "GNOME 2.16 (old stable)"
 #~ msgstr "GNOME 2.16 (stara stabilna različica)"
-
 #~ msgid "GNOME 2.14 (old stable)"
 #~ msgstr "GNOME 2.14 (stara stabilna različica)"
-
 #~ msgid "Window List Applet Manual"
 #~ msgstr "priročnik apleta seznama oken"
-
 #~ msgid "Workspace Switcher Applet Manual"
 #~ msgstr "priročnik preklopnika delovnih površin"
-
 #~ msgid ""
 #~ "This module is not part of the GNOME git repository. Please check the "
 #~ "module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Modul ni objavljen v GNOME Git odložišču. Preverite spletno stran modula "
 #~ "za podrobnosti, kam poslati prevode."
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME git repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME git odložišča. Preverite stran vsakega "
 #~ "modula posebej za podrobnosti o objavljanju prevodov."
-
 #~ msgid "Maintains:"
 #~ msgstr "Vzdrževalec:"
-
 #~ msgid "Working on"
 #~ msgstr "Delo na"
-
 #~ msgid "Member of teams"
 #~ msgstr "Član skupin"
-
 #~ msgid "F-Spot Manual"
 #~ msgstr "priročnik F-Spot"
-
 #~ msgid ""
 #~ "Don't know where to look if this language is actually used, ask the "
 #~ "module maintainer."
 #~ msgstr ""
 #~ "Ni podatkov o uporabi tega jezika. Podrobnosti pozna nadzornik modula."
-
 #~ msgid ""
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
@@ -3212,42 +3195,33 @@ msgstr "Najnovejša POT datoteka"
 #~ "Primeri objavljenih različic so na primer &quot;GNOME Pisarniški "
 #~ "paketi&quot;, &quot;Dodatni paketi&quot; ali pa &quot;GNOME Razvojna "
 #~ "veja&quot;."
-
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
 #~ "them (Bugzilla details, web page, maintainer information,...)."
 #~ msgstr ""
 #~ "Običajno so povzeti iz CVS, ohranjene pa so vse pomembne podrobnosti o "
 #~ "paketih (Bugzilla, spletna stran, nadzornik, ...)."
-
 #~ msgid "Report bugs to Bugzilla"
 #~ msgstr "Poročanje o hroščih preko Bugzillle"
-
 #~ msgid ""
 #~ "The modules of this release are not part of the GNOME SVN repository. "
 #~ "Please check each module's web page to see where to send translations."
 #~ msgstr ""
 #~ "Moduli te objave niso del GNOME SVN odložišč. Preverite spletno stran "
 #~ "modula za podrobnosti o pošiljanju prevodov."
-
 #~ msgid "SVN account:"
 #~ msgstr "SVN račun:"
-
 #~ msgid ""
 #~ "Last actions made by the %(lang)s team of the GNOME translation project"
 #~ msgstr "Zadnje dejanje skupine %(lang)s pri GNOME projektu slovenjenja"
-
 #~ msgid "Action History"
 #~ msgstr "Zgodovina dejanj"
-
 #~ msgid "Backup the actions"
 #~ msgstr "Napravi varnostno kopijo dejanja"
-
 #~ msgid "The Gimp Manual"
 #~ msgstr "priročnik Gimp"
-
 #~ msgid "Git account:"
 #~ msgstr "Git račun:"
-
 #~ msgid "Browse SVN"
 #~ msgstr "Brskanje po SVN"
+
