@@ -34,11 +34,14 @@
     <p>{% trans 'Or use your OpenID:' %}</p>
     <form action="{{ openid_path }}" method="post" id="openid-login-form" class="login">
       <div class="form-row">
-        <label for="id_openid"><img src="{{ openid_path }}logo/" alt=""> {% trans 'OpenID:' %}</label> <input type="text" name="openid_url" id="id_openid" />
+        <label for="id_openid_identifier"><img src="{% url openid-logo %}" alt=""> {% trans 'OpenID:' %}</label> <input type="text" name="openid_identifier" id="id_openid_identifier" />
       </div>
       <div class="submit-row">
         <label>&nbsp;</label><input type="submit" value="{% trans 'Log in with OpenID' %}" />
       </div>
+      {% if next %}
+        <input type="hidden" name="next" value="{{ next }}" />
+      {% endif %}
     </form>
 {% endif %}
 

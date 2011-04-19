@@ -84,11 +84,9 @@ urlpatterns += patterns('stats.views',
         view = 'compare_by_releases'),
 )
 
-if 'django_openid' in settings.INSTALLED_APPS:
-    from django_openid.auth import AuthConsumer
-
+if 'django_openid_auth' in settings.INSTALLED_APPS:
     urlpatterns += patterns('',
-        (r'^openid/(.*)', AuthConsumer()),
+        (r'^openid/', include('django_openid_auth.urls')),
     )
 
 if settings.STATIC_SERVE:

@@ -138,6 +138,7 @@ INSTALLED_APPS = (
 INTERNAL_IPS=('127.0.0.1',)
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from local_settings import *
@@ -149,4 +150,12 @@ if USE_DEBUG_TOOLBAR:
     INSTALLED_APPS += ('debug_toolbar',)
 
 if USE_DJANGO_OPENID:
-    INSTALLED_APPS += ('django_openid',)
+    INSTALLED_APPS += ('django_openid_auth',)
+    AUTHENTICATION_BACKENDS = (
+        'django_openid_auth.auth.OpenIDBackend',
+        'django.contrib.auth.backends.ModelBackend',
+    )
+    OPENID_CREATE_USERS = True
+    OPENID_UPDATE_DETAILS_FROM_SREG = True
+    OPENID_UPDATE_DETAILS_FROM_AX = True
+

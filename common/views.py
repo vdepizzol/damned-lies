@@ -82,12 +82,13 @@ def site_login(request):
     else:
         referer = request.META.get('HTTP_REFERER', None)
 
-    if 'django_openid' in settings.INSTALLED_APPS:
-        openid_path = '/openid/'
+    if 'django_openid_auth' in settings.INSTALLED_APPS:
+        openid_path = '/openid/login/'
     context = {
         'pageSection': 'home',
         'openid_path': openid_path,
         'referer': referer,
+        'next': referer,
     }
     return render_to_response('login.html', context, context_instance=RequestContext(request))
 
@@ -100,7 +101,7 @@ def site_register(request):
             return HttpResponseRedirect(reverse('register_success'))
     else:
         form = RegistrationForm()
-    if 'django_openid' in settings.INSTALLED_APPS:
+    if 'django_openid_auth' in settings.INSTALLED_APPS:
         openid_path = '/openid/'
     context = {
         'pageSection': 'home',
