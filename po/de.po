@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-07 10:08+0000\n"
-"PO-Revision-Date: 2011-04-08 21:26+0100\n"
+"POT-Creation-Date: 2011-04-19 18:03+0000\n"
+"PO-Revision-Date: 2011-04-19 20:21+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1537,7 +1537,7 @@ msgstr ""
 "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihren Benutzernamen und Ihr "
 "Passwort."
 
-#: common/views.py:119
+#: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Ihr Konto wurde aktiviert."
 
@@ -1551,7 +1551,7 @@ msgstr "Mit Benutzername und Passwort anmelden:"
 msgid "Username:"
 msgstr "Benutzername:"
 
-#: django_openid/templates/django_openid/admin_login.html:23 people/forms.py:20
+#: django_openid/templates/django_openid/admin_login.html:23 people/forms.py:21
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Passwort:"
@@ -1567,7 +1567,7 @@ msgstr "Anmelden"
 msgid "Or use your OpenID:"
 msgstr "Oder benutzen Sie Ihre OpenID:"
 
-#: django_openid/templates/django_openid/admin_login.html:34 people/forms.py:17
+#: django_openid/templates/django_openid/admin_login.html:34 people/forms.py:18
 #: templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
@@ -1594,47 +1594,52 @@ msgstr "Originalzeichenketten"
 msgid "UI Translations (reduced)"
 msgstr "Übersetzungen der Benutzeroberflächen (reduziert)"
 
-#: people/forms.py:14
+#: people/forms.py:15
 msgid "Choose a username:"
 msgstr "Wählen Sie einen Benutzernamen:"
 
-#: people/forms.py:15
+#: people/forms.py:16
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr ""
 "Es dürfen nur Buchstaben, Ziffern, Unterstriche und Bindestriche verwenden "
 "werden"
 
-#: people/forms.py:16
+#: people/forms.py:17
 msgid "Email:"
 msgstr "E-Mail:"
 
-#: people/forms.py:21
+#: people/forms.py:22
 msgid "At least 7 characters"
 msgstr "Mindestens 7 Zeichen"
 
-#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: people/forms.py:24 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Passwort bestätigen:"
 
-#: people/forms.py:31
+#: people/forms.py:32
 msgid "This username is already taken. Please choose another."
 msgstr ""
 "Dieser Benutzername ist bereits vergeben. Bitte wählen Sie einen anderen."
 
-#: people/forms.py:39
+#: people/forms.py:42
+msgid "This OpenID URL is already taken by a registered user"
+msgstr ""
+"Diese OpenID-Adresse wird bereits von einem registrierten Benutzer verwendet"
+
+#: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
 msgstr "Sie müssen entweder eine OpenID oder ein  Passwort  angeben"
 
-#: people/forms.py:42
+#: people/forms.py:55
 msgid "The passwords do not match"
 msgstr "Die Passwörter sind unterschiedlich"
 
-#: people/forms.py:65
+#: people/forms.py:79
 msgid "Account activation"
 msgstr "Kontoaktivierung"
 
-#: people/forms.py:66
+#: people/forms.py:80
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1645,12 +1650,12 @@ msgstr ""
 "Klicken Sie auf den Link unten oder kopieren Sie die Adresse in den Browser "
 "und rufen Sie die Adresse auf, um Ihr Konto zu aktivieren."
 
-#: people/forms.py:68
+#: people/forms.py:82
 #, python-format
 msgid "Administrators of %s"
 msgstr "Administratoren von %s"
 
-#: people/forms.py:86
+#: people/forms.py:100
 #, python-format
 msgid ""
 "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
@@ -1658,11 +1663,11 @@ msgstr ""
 "Das Bild ist zu hoch oder zu breit (%(width)dx%(height)d, Maximum ist 100x100 "
 "pixels)"
 
-#: people/forms.py:106
+#: people/forms.py:120
 msgid "The URL you provided is not valid"
 msgstr "Die angegebene Adresse ist ungültig"
 
-#: people/forms.py:122
+#: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr "Die angegebene Adresse bezieht sich nicht auf ein gültiges Bild"
 
@@ -1798,57 +1803,57 @@ msgstr "GNOME-Entwicklerplattform"
 msgid "New Module Proposals"
 msgstr "Neue Module (vorläufig)"
 
-#: stats/models.py:1291 stats/models.py:1652
+#: stats/models.py:1288 stats/models.py:1643
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1325
+#: stats/models.py:1316
 msgid "POT file unavailable"
 msgstr "POT-Datei ist nicht verfügbar"
 
-#: stats/models.py:1329
+#: stats/models.py:1320
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s String"
 msgstr[1] "%(count)s Strings"
 
-#: stats/models.py:1330
+#: stats/models.py:1321
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualisiert am %(date)s"
 
-#: stats/models.py:1332 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:145
+#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "d. F Y G:i O"
 
-#: stats/models.py:1335
+#: stats/models.py:1326
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s Abbildung"
 msgstr[1] "%(count)s Abbildungen"
 
-#: stats/models.py:1336
+#: stats/models.py:1327
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-Datei (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1339
+#: stats/models.py:1330
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-Datei (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1460
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Diese POT-Datei wurde nicht mit der herkömmlichen Methode durch intltool "
 "erstellt."
 
-#: stats/models.py:1461
+#: stats/models.py:1452
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2434,11 +2439,11 @@ msgstr "Ältere Veröffentlichungen"
 msgid "This document is written in Mallard documentation format"
 msgstr "Dieses Dokument wurde im Mallard-Dokumentformat geschrieben"
 
-#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:62
 msgid "Download POT file"
 msgstr "POT-Datei herunterladen"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:90
 msgid "Notices"
 msgstr "Notizen"
 
@@ -2455,7 +2460,7 @@ msgstr "Diesen Fehler melden"
 msgid "Translated"
 msgstr "Übersetzt"
 
-#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:84
 msgid "Display document figures"
 msgstr "Dokumentabbildungen anzeigen"
 
@@ -2464,7 +2469,7 @@ msgid "Damned Lies site admin"
 msgstr "»Verdammte Lügen«-Administrator"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:169
 msgid "No comment"
 msgstr "Kein Kommentar"
 
@@ -2524,7 +2529,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% übersetzt)"
 
-#: templates/languages/language_release_stats.html:105
+#: templates/languages/language_release_stats.html:100
 msgid "Error summary"
 msgstr "Fehler-Zusammenfassung"
 
@@ -2850,25 +2855,25 @@ msgstr "Koordiniert von <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Es gibt momentan keine Übersetzungsteams in GNOME. :("
 
-#: templates/vertimus/vertimus_detail.html:6
+#: templates/vertimus/vertimus_detail.html:7
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Modulübersetzung: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:27
+#: templates/vertimus/vertimus_detail.html:28
 msgid "Used in release(s):"
 msgstr "Genutzt in Veröffentlichung(en):"
 
-#: templates/vertimus/vertimus_detail.html:45
+#: templates/vertimus/vertimus_detail.html:46
 msgid "State:"
 msgstr "Status:"
 
-#: templates/vertimus/vertimus_detail.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Download PO file"
 msgstr "PO-Datei herunterladen"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:67
 msgid "Translated:"
 msgstr "Übersetzt:"
 
@@ -2876,51 +2881,51 @@ msgstr "Übersetzt:"
 msgid "Translated (reduced):"
 msgstr "Übersetzt (reduziert):"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
 msgstr "Laufende Aktivitäten im selben Modul:"
 
-#: templates/vertimus/vertimus_detail.html:118
+#: templates/vertimus/vertimus_detail.html:115
 msgid "Actions"
 msgstr "Aktionen"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:864
+#: templates/vertimus/vertimus_detail.html:117 vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Archivierte Aktionen (%(human_level)s archivierte Gruppen)"
 
-#: templates/vertimus/vertimus_detail.html:122
+#: templates/vertimus/vertimus_detail.html:119
 msgid "(Return to current actions)"
 msgstr "(Zurück zu aktuellen Aktionen)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:124
 msgid "(Previous action history)"
 msgstr "(Chronik früherer Aktionen)"
 
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:158
 msgid "diff with:"
 msgstr "diff erstellen zu:"
 
-#: templates/vertimus/vertimus_detail.html:180
+#: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
 msgstr "Derzeit keine Aktionen."
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
 msgstr "Neue Aktion"
 
-#: templates/vertimus/vertimus_detail.html:194
+#: templates/vertimus/vertimus_detail.html:191
 msgid "Submit"
 msgstr "Abschicken"
 
-#: templates/vertimus/vertimus_detail.html:199
+#: templates/vertimus/vertimus_detail.html:196
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Sie müssen legitimiert und Mitglied des %(team_name)s-Teams sein."
 
-#: templates/vertimus/vertimus_detail.html:203
+#: templates/vertimus/vertimus_detail.html:200
 msgid "This team is not using the Vertimus translation workflow."
 msgstr ""
 "Dieses Team verwendet nicht Vertimus für die Verwaltung von Übersetzungen."
@@ -3158,5 +3163,3 @@ msgstr "Zuletzt eingespielte Datei für %(lang)s"
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
 
-#~ msgid "GNOME 3.0 (development)"
-#~ msgstr "GNOME 3.0 (Entwicklerversion)"
