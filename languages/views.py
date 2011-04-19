@@ -48,8 +48,10 @@ def language_all(request, locale, dtype):
     context = {
         'pageSection': "languages",
         'language': language,
-        'stats_title': {'ui':  _("UI Translations"),
-                        'doc': _("Documentation")}.get(dtype),
+        'stats_title': {
+            'ui':  _("UI Translations"),
+            'ui-part': _("UI Translations (reduced)"),
+            'doc': _("Documentation")}.get(dtype),
         'stats': stats,
         'scope': dtype.endswith('-part') and 'part' or 'full',
         'dateformat': formats.get_format('DATE_FORMAT'),
