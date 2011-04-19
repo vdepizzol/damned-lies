@@ -6,7 +6,7 @@ urlpatterns = patterns('',
         view = 'languages.views.languages',
         name = 'languages'),
     url(
-        regex = r'^(?P<locale>[\w\-@]+)/all/(?P<dtype>(ui|doc)+)/$',
+        regex = r'^(?P<locale>[\w\-@]+)/all/(?P<dtype>(ui|ui-part|doc)+)/$',
         view = 'languages.views.language_all',
         name = 'language_all'),
     url(

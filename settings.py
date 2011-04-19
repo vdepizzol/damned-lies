@@ -155,7 +155,7 @@ if USE_DJANGO_OPENID:
         'django_openid_auth.auth.OpenIDBackend',
         'django.contrib.auth.backends.ModelBackend',
     )
-    OPENID_CREATE_USERS = True
+    OPENID_CREATE_USERS = False
     OPENID_UPDATE_DETAILS_FROM_SREG = True
     OPENID_UPDATE_DETAILS_FROM_AX = True
 

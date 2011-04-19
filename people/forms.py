@@ -2,9 +2,10 @@ import hashlib, random
 
 from django import forms
 from django.conf import settings
-from django.utils.translation import ugettext_lazy, ugettext as _
-from django.core.urlresolvers import reverse
 from django.contrib.sites.models import Site
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext_lazy, ugettext as _
+
 from teams.models import Team
 from people.models import Person
 
@@ -30,6 +31,18 @@ class RegistrationForm(forms.Form):
             return self.cleaned_data['username']
         raise forms.ValidationError(_(u'This username is already taken. Please choose another.'))
 
+    def clean_openid_url(self):
+        """ Check openid url is not already linked to any existing user """
+        if self.cleaned_data['openid_url']:
+            from django_openid_auth.models import UserOpenID
+            try:
+                oid = UserOpenID.objects.get(claimed_id=self.cleaned_data['openid_url'])
+            except UserOpenID.DoesNotExist:
+                return self.cleaned_data['openid_url']
+            raise forms.ValidationError(_(u'This OpenID URL is already taken by a registered user'))
+        else:
+            return self.cleaned_data['openid_url']
+
     def clean(self):
         cleaned_data = self.cleaned_data
         password1 = cleaned_data.get('password1')
@@ -46,14 +59,15 @@ class RegistrationForm(forms.Form):
         """ Create the user """
         username = self.cleaned_data['username']
         email = self.cleaned_data['email']
-
         password = self.cleaned_data['password1']
+
         new_user = Person.objects.create_user(username=username,
                            email=email,
                            password=password or "!")
         openid = self.cleaned_data['openid_url']
         if openid:
-            new_user.openids.create(openid = openid)
+            from django_openid_auth.models import UserOpenID
+            user_oid = UserOpenID.objects.create(user=new_user, claimed_id=openid)
         salt = hashlib.sha1(str(random.random())).hexdigest()[:5]
         activation_key = hashlib.sha1(salt+username).hexdigest()
         new_user.activation_key = activation_key
