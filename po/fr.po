@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-29 10:06+0000\n"
-"PO-Revision-Date: 2011-03-29 12:36+0200\n"
+"POT-Creation-Date: 2011-04-19 18:03+0000\n"
+"PO-Revision-Date: 2011-04-21 16:44+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +149,7 @@ msgstr "néerlandais"
 msgid "Dzongkha"
 msgstr "dzongkha"
 
-#: database-content.py:34 database-content.py:160
+#: database-content.py:34 database-content.py:160 settings.py:52
 msgid "Esperanto"
 msgstr "espéranto"
 
@@ -1230,8 +1230,8 @@ msgid ""
 "chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
 "chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 msgstr ""
-"Il existe un glossaire pour aider à traduire Chronojump : "
-"<a href=\"http://git.gnome.org/browse/chronojump/plain/glossary/"
+"Il existe un glossaire pour aider à traduire Chronojump : <a href=\"http://"
+"git.gnome.org/browse/chronojump/plain/glossary/"
 "chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
 "chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 
@@ -1264,9 +1264,9 @@ msgid ""
 "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/"
 "wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr ""
-"Pour d'autres aspects de la localisation de GCompris, consultez "
-"<a href=\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/"
-"wiki/Translation_addons</a>."
+"Pour d'autres aspects de la localisation de GCompris, consultez <a href="
+"\"http://gcompris.net/wiki/Translation_addons\">http://gcompris.net/wiki/"
+"Translation_addons</a>."
 
 #: database-content.py:430
 msgid "Graphical frontend for the git directory tracker"
@@ -1299,8 +1299,8 @@ msgid ""
 "gnome.org/GnomeVideoEffects/Effects</a>."
 msgstr ""
 "Pour faciliter la traduction, une galerie des effets de GNOME Video peut "
-"être consultée : <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">"
-"http://live.gnome.org/GnomeVideoEffects/Effects</a>."
+"être consultée : <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects"
+"\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 
 #: database-content.py:435
 msgid "A note taking application"
@@ -1313,8 +1313,8 @@ msgid ""
 "analysis\">po/README.analysis</a> file."
 msgstr ""
 "Des informations utiles sur la traduction des outils d'analyse de Gnumeric "
-"peuvent être consultées dans le fichier <a href =\"http://git.gnome.org/browse/"
-"gnumeric/plain/po/README.analysis\">po/README.analysis</a>."
+"peuvent être consultées dans le fichier <a href =\"http://git.gnome.org/"
+"browse/gnumeric/plain/po/README.analysis\">po/README.analysis</a>."
 
 #: database-content.py:437
 msgid ""
@@ -1384,8 +1384,9 @@ msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications."
 msgstr ""
-"PulseAudio est un système audio pour les systèmes d'exploitation POSIX. C'est "
-"une interface intermédiaire pour la gestion du son dans les applications."
+"PulseAudio est un système audio pour les systèmes d'exploitation POSIX. "
+"C'est une interface intermédiaire pour la gestion du son dans les "
+"applications."
 
 #: database-content.py:447
 msgid "A photo manager for GNOME"
@@ -1423,12 +1424,12 @@ msgstr ""
 "lien ci-dessous)."
 
 #: database-content.py:454
-msgid "GNOME 3.0 (development)"
-msgstr "GNOME 3.0 (développement)"
+msgid "GNOME 3.0 (stable)"
+msgstr "GNOME 3.0 (stable)"
 
 #: database-content.py:455
-msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.32 (stable)"
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (ancienne stable)"
 
 #: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
@@ -1486,7 +1487,7 @@ msgstr "Applications GNOME supplémentaires (Extra)"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (non GNOME)"
 
-#: settings.py:75
+#: settings.py:80
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1524,7 +1525,7 @@ msgid "Login unsuccessful. Please verify your username and password."
 msgstr ""
 "Échec de connexion. Vérifiez votre nom d'utilisateur et votre mot de passe."
 
-#: common/views.py:119
+#: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Votre compte a été activé."
 
@@ -1539,7 +1540,7 @@ msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20 templates/login.html:21
+#: people/forms.py:21 templates/login.html:21
 msgid "Password:"
 msgstr "Mot de passe :"
 
@@ -1555,7 +1556,7 @@ msgid "Or use your OpenID:"
 msgstr "Ou utilisez votre OpenID :"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:37
+#: people/forms.py:18 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID :"
 
@@ -1581,46 +1582,50 @@ msgstr "Chaînes originales"
 msgid "UI Translations (reduced)"
 msgstr "Traductions de l'interface utilisateur (réduites)"
 
-#: people/forms.py:14
+#: people/forms.py:15
 msgid "Choose a username:"
 msgstr "Choisissez un nom d'utilisateur :"
 
-#: people/forms.py:15
+#: people/forms.py:16
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr ""
 "Ne peut contenir que des lettres, des chiffres, des soulignés ou des traits "
 "d'union"
 
-#: people/forms.py:16
+#: people/forms.py:17
 msgid "Email:"
 msgstr "Courriel :"
 
-#: people/forms.py:21
+#: people/forms.py:22
 msgid "At least 7 characters"
 msgstr "Au minimum 7 caractères"
 
-#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: people/forms.py:24 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Confirmez le mot de passe :"
 
-#: people/forms.py:31
+#: people/forms.py:32
 msgid "This username is already taken. Please choose another."
 msgstr "Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre."
 
-#: people/forms.py:39
+#: people/forms.py:42
+msgid "This OpenID URL is already taken by a registered user"
+msgstr "Cet URL OpenID est déjà pris par un utilisateur enregistré"
+
+#: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
 msgstr "Vous devez fournir soit un OpenID, soit un mot de passe"
 
-#: people/forms.py:42
+#: people/forms.py:55
 msgid "The passwords do not match"
 msgstr "Les mots de passe ne correspondent pas"
 
-#: people/forms.py:65
+#: people/forms.py:79
 msgid "Account activation"
 msgstr "Activation de compte"
 
-#: people/forms.py:66
+#: people/forms.py:80
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1631,12 +1636,12 @@ msgstr ""
 "votre compte, veuillez cliquer sur le lien ci-dessous ou le copier et le "
 "coller dans un navigateur."
 
-#: people/forms.py:68
+#: people/forms.py:82
 #, python-format
 msgid "Administrators of %s"
 msgstr "Administrateurs de %s"
 
-#: people/forms.py:86
+#: people/forms.py:100
 #, python-format
 msgid ""
 "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
@@ -1644,11 +1649,11 @@ msgstr ""
 "Image trop haute ou trop large (%(width)dx%(height)d, le maximum est de "
 "100x100 pixels)"
 
-#: people/forms.py:106
+#: people/forms.py:120
 msgid "The URL you provided is not valid"
 msgstr "L'URL que vous avez indiqué n'est pas valide"
 
-#: people/forms.py:122
+#: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr ""
 "L'URL que vous avez indiqué ne semble pas correspondre à une image valide"
@@ -1685,38 +1690,38 @@ msgstr ""
 "Ce devrait être une adresse de courriel, compléter si différent du champ "
 "Courriel"
 
-#: people/views.py:63
+#: people/views.py:71
 msgid "Sorry, the form is not valid."
 msgstr "Désolé, le formulaire n'est pas valide."
 
-#: people/views.py:88
+#: people/views.py:96
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Vous faites maintenant partie de l'équipe « %s »."
 
-#: people/views.py:89
+#: people/views.py:97
 msgid "A new person joined your team"
 msgstr "Une nouvelle personne a rejoint votre équipe"
 
-#: people/views.py:90
+#: people/views.py:98
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s vient de rejoindre votre équipe de traduction sur %(site)s"
 
-#: people/views.py:93
+#: people/views.py:101
 msgid "You are already member of this team."
 msgstr "Vous êtes déjà membre de cette équipe."
 
-#: people/views.py:115
+#: people/views.py:123
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Vous ne faites plus partie de l'équipe « %s »."
 
-#: people/views.py:118
+#: people/views.py:126
 msgid "You are not a member of this team."
 msgstr "Vous n'êtes pas membre de cette équipe."
 
-#: people/views.py:131
+#: people/views.py:139
 msgid "Your password has been changed."
 msgstr "Votre mot de passe a été modifié."
 
@@ -1728,8 +1733,8 @@ msgid ""
 "translation."
 msgstr ""
 "Les traductions de ce module sont hébergées sur un système externe. Veuillez "
-"consultez la <a href=\"%(link)s\">plate-forme externe</a> pour savoir comment "
-"soumettre les traductions."
+"consultez la <a href=\"%(link)s\">plate-forme externe</a> pour savoir "
+"comment soumettre les traductions."
 
 #: stats/models.py:259
 msgid "This branch is not linked from any release"
@@ -1787,52 +1792,56 @@ msgstr "Plate-forme de développement GNOME"
 msgid "New Module Proposals"
 msgstr "Propositions de nouveaux modules"
 
-#: stats/models.py:1291 stats/models.py:1650
+#: stats/models.py:1288 stats/models.py:1643
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1327
+#: stats/models.py:1316
+msgid "POT file unavailable"
+msgstr "Fichier POT non disponible"
+
+#: stats/models.py:1320
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s message"
 msgstr[1] "%(count)s messages"
 
-#: stats/models.py:1328
+#: stats/models.py:1321
 #, python-format
 msgid "updated on %(date)s"
 msgstr "mis à jour le %(date)s"
 
-#: stats/models.py:1330 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:145
+#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "d/m/Y H:i O"
 
-#: stats/models.py:1333
+#: stats/models.py:1326
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figure"
 msgstr[1] "%(count)s figures"
 
-#: stats/models.py:1334
+#: stats/models.py:1327
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1337
+#: stats/models.py:1330
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Fichier POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1458
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Ce fichier POT n'a pas été généré à l'aide de la méthode intltool standard."
 
-#: stats/models.py:1459
+#: stats/models.py:1452
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1965,7 +1974,7 @@ msgstr "Liste de diffusion"
 msgid "URL to subscribe"
 msgstr "URL d'abonnement"
 
-#: teams/models.py:212 vertimus/models.py:554 vertimus/models.py:604
+#: teams/models.py:212 vertimus/models.py:563 vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Ceci est un message automatique envoyé par %s."
@@ -2385,7 +2394,7 @@ msgstr ""
 "Consultez la page Web de chaque module pour savoir où envoyer les "
 "traductions."
 
-#: templates/release_detail.html:19 templates/stats_show.html:45
+#: templates/release_detail.html:19 templates/stats_show.html:47
 msgid "Language"
 msgstr "Langue"
 
@@ -2395,7 +2404,7 @@ msgid "User Interface"
 msgstr "Interface utilisateur"
 
 #: templates/release_detail.html:21 templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2425,27 +2434,27 @@ msgstr "Anciennes versions"
 msgid "This document is written in Mallard documentation format"
 msgstr "Ce document est écrit dans le format de documentation Mallard"
 
-#: templates/stats_show.html:14 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:62
 msgid "Download POT file"
 msgstr "Télécharger le fichier POT"
 
-#: templates/stats_show.html:18 templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:90
 msgid "Notices"
 msgstr "Remarques"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "Rechercher des bogues semblables avant de le signaler"
 
-#: templates/stats_show.html:33
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "Signaler cette anomalie"
 
-#: templates/stats_show.html:45 vertimus/models.py:183
+#: templates/stats_show.html:47 vertimus/models.py:183
 msgid "Translated"
 msgstr "Traduit"
 
-#: templates/stats_show.html:65 templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:84
 msgid "Display document figures"
 msgstr "Affiche les figures du document"
 
@@ -2454,7 +2463,7 @@ msgid "Damned Lies site admin"
 msgstr "Site d'administration de Damned Lies"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:169
 msgid "No comment"
 msgstr "Sans commentaire"
 
@@ -2493,7 +2502,7 @@ msgid "Download all po files"
 msgstr "Télécharger tous les fichiers po"
 
 #: templates/languages/language_release_stats.html:21
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Module"
 msgstr "Module"
 
@@ -2506,7 +2515,7 @@ msgid "Status"
 msgstr "État"
 
 #: templates/languages/language_release_stats.html:22
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Date"
 
@@ -2515,7 +2524,7 @@ msgstr "Date"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s %% traduit)"
 
-#: templates/languages/language_release_stats.html:105
+#: templates/languages/language_release_stats.html:100
 msgid "Error summary"
 msgstr "Liste des erreurs"
 
@@ -2540,19 +2549,19 @@ msgstr "Rejoindre une équipe"
 msgid "Site Language:"
 msgstr "Langue du site :"
 
-#: templates/people/person_detail.html:37
+#: templates/people/person_detail.html:33
 msgid "Choose"
 msgstr "Choisir"
 
-#: templates/people/person_detail.html:43
+#: templates/people/person_detail.html:39
 msgid "Module maintenance"
 msgstr "Maintenance de modules"
 
-#: templates/people/person_detail.html:54
+#: templates/people/person_detail.html:50
 msgid "Current activity"
 msgstr "Activité actuelle"
 
-#: templates/people/person_detail.html:58
+#: templates/people/person_detail.html:54
 msgid "State"
 msgstr "État"
 
@@ -2848,25 +2857,25 @@ msgstr "Coordonnée par <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Il n'y a actuellement aucune équipe de traduction dans GNOME. :("
 
-#: templates/vertimus/vertimus_detail.html:6
+#: templates/vertimus/vertimus_detail.html:7
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Traduction de module : %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:27
+#: templates/vertimus/vertimus_detail.html:28
 msgid "Used in release(s):"
 msgstr "Utilisé dans la(les) version(s) :"
 
-#: templates/vertimus/vertimus_detail.html:45
+#: templates/vertimus/vertimus_detail.html:46
 msgid "State:"
 msgstr "État :"
 
-#: templates/vertimus/vertimus_detail.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Download PO file"
 msgstr "Télécharger le fichier PO"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:67
 msgid "Translated:"
 msgstr "Traduction :"
 
@@ -2874,52 +2883,52 @@ msgstr "Traduction :"
 msgid "Translated (reduced):"
 msgstr "Traduction (réduite) :"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
 msgstr "Activités en cours dans le même module :"
 
-#: templates/vertimus/vertimus_detail.html:118
+#: templates/vertimus/vertimus_detail.html:115
 msgid "Actions"
 msgstr "Actions"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:862
+#: templates/vertimus/vertimus_detail.html:117 vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Actions archivées (%(human_level)s historique)"
 
-#: templates/vertimus/vertimus_detail.html:122
+#: templates/vertimus/vertimus_detail.html:119
 msgid "(Return to current actions)"
 msgstr "(retour aux actions en cours)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:124
 msgid "(Previous action history)"
 msgstr "(historique d'actions précédent)"
 
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:158
 msgid "diff with:"
 msgstr "diff avec :"
 
-#: templates/vertimus/vertimus_detail.html:180
+#: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
 msgstr "Aucune action en cours."
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
 msgstr "Nouvelle action"
 
-#: templates/vertimus/vertimus_detail.html:194
+#: templates/vertimus/vertimus_detail.html:191
 msgid "Submit"
 msgstr "Envoyer"
 
-#: templates/vertimus/vertimus_detail.html:199
+#: templates/vertimus/vertimus_detail.html:196
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Vous devez être authentifié et membre de l'équipe %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:203
+#: templates/vertimus/vertimus_detail.html:200
 msgid "This team is not using the Vertimus translation workflow."
 msgstr ""
 "Cette équipe n'utilise pas le système de suivi des traductions Vertimus."
@@ -3050,7 +3059,7 @@ msgstr "Fichier dans le dépôt"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Fichier téléversé par %(name)s le %(date)s"
 
-#: vertimus/models.py:539
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3067,15 +3076,15 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:552 vertimus/models.py:602
+#: vertimus/models.py:561 vertimus/models.py:611
 msgid "Without comment"
 msgstr "Sans commentaire"
 
-#: vertimus/models.py:561
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "Écrire un commentaire"
 
-#: vertimus/models.py:590
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3092,56 +3101,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:612
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "Réserver la traduction"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "Déposer la nouvelle traduction"
 
-#: vertimus/models.py:646
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "Réserver la relecture"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "Déposer la relecture"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:674
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "Prêt pour le commit"
 
-#: vertimus/models.py:690
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "Soumettre au dépôt"
 
-#: vertimus/models.py:707
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "L'opération de « commit » a échoué. L'erreur est : « %s »"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:715
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "Réserver le commit"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:728
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "Informer du commit"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:743
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "À revoir"
 
-#: vertimus/models.py:758
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "Archiver les actions"
 
-#: vertimus/models.py:797
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "Annuler le dernier changement d'état"
 
@@ -3159,26 +3168,8 @@ msgstr "Dernier fichier commité en %(lang)s"
 msgid "Latest POT file"
 msgstr "Dernier fichier POT"
 
-#~ msgid ""
-#~ "This module is not part of the GNOME git repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Ce module ne fait pas partie du dépôt git de GNOME. Consultez la page Web "
-#~ "du module pour savoir où envoyer les traductions."
-
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME git repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "Les modules de cette version ne font pas partie du dépôt git de GNOME. "
-#~ "Consultez la page Web de chaque module pour savoir où envoyer les "
-#~ "traductions."
-
-#~ msgid "F-Spot Manual"
-#~ msgstr "Manuel de F-Spot"
-
-#~ msgid "Language code: %(locale)s"
-#~ msgstr "Code de langue : %(locale)s"
+#~ msgid "GNOME 3.0 (development)"
+#~ msgstr "GNOME 3.0 (développement)"
 
 #~ msgid "Fijian"
 #~ msgstr "fidjien"
