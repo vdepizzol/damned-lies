@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-07 10:08+0000\n"
-"PO-Revision-Date: 2011-04-07 19:01+0200\n"
+"POT-Creation-Date: 2011-04-19 18:03+0000\n"
+"PO-Revision-Date: 2011-04-21 09:21+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1428,12 +1428,10 @@ msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
 #: database-content.py:454
-#| msgid "GNOME 2.32 (stable)"
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (stabilní)"
 
 #: database-content.py:455
-#| msgid "GNOME 2.30 (old stable)"
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (zastaralé)"
 
@@ -1534,7 +1532,7 @@ msgid "Login unsuccessful. Please verify your username and password."
 msgstr ""
 "Přihlášení nebylo úspěšné. Zkontrolujte zadávané uživatelské jméno a heslo."
 
-#: common/views.py:119
+#: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Váš účet byl aktivován."
 
@@ -1549,7 +1547,7 @@ msgid "Username:"
 msgstr "Uživatelské jméno:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20 templates/login.html:21
+#: people/forms.py:21 templates/login.html:21
 msgid "Password:"
 msgstr "Heslo:"
 
@@ -1565,7 +1563,7 @@ msgid "Or use your OpenID:"
 msgstr "Nebo použijte své OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17 templates/login.html:37
+#: people/forms.py:18 templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
 
@@ -1591,44 +1589,48 @@ msgstr "Původní řetězce"
 msgid "UI Translations (reduced)"
 msgstr "Překlady uživatelského rozhraní (redukované)"
 
-#: people/forms.py:14
+#: people/forms.py:15
 msgid "Choose a username:"
 msgstr "Vyberte si uživatelské jméno:"
 
-#: people/forms.py:15
+#: people/forms.py:16
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Může obsahovat písmena, číslice, podtržení a pomlčky"
 
-#: people/forms.py:16
+#: people/forms.py:17
 msgid "Email:"
 msgstr "E-mail:"
 
-#: people/forms.py:21
+#: people/forms.py:22
 msgid "At least 7 characters"
 msgstr "Nejméně 7 znaků"
 
-#: people/forms.py:23 templates/people/person_password_change_form.html:27
+#: people/forms.py:24 templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Potvrdit heslo:"
 
-#: people/forms.py:31
+#: people/forms.py:32
 msgid "This username is already taken. Please choose another."
 msgstr "Toto uživatelské jméno již někdo používá. Zvolte si prosím jiné."
 
-#: people/forms.py:39
+#: people/forms.py:42
+msgid "This OpenID URL is already taken by a registered user"
+msgstr "Tato adresa URL pro OpenID je již zabraná registrovaným uživatelem"
+
+#: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
 msgstr "Je nutné zadat OpenID nebo heslo"
 
-#: people/forms.py:42
+#: people/forms.py:55
 msgid "The passwords do not match"
 msgstr "Heslo nesouhlasí"
 
-#: people/forms.py:65
+#: people/forms.py:79
 msgid "Account activation"
 msgstr "Aktivace účtu"
 
-#: people/forms.py:66
+#: people/forms.py:80
 #, python-format
 msgid ""
 "This is a confirmation that your registration on %s succeeded. To activate "
@@ -1638,12 +1640,12 @@ msgstr ""
 "Toto je potvrzení, že vaše registrace na %s byla úspěšná. Svůj účet "
 "aktivujete klepnutím na odkaz níže nebo jeho vložením do prohlížeče."
 
-#: people/forms.py:68
+#: people/forms.py:82
 #, python-format
 msgid "Administrators of %s"
 msgstr "Správci %s"
 
-#: people/forms.py:86
+#: people/forms.py:100
 #, python-format
 msgid ""
 "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
@@ -1651,11 +1653,11 @@ msgstr ""
 "Obrázek je příliš vysoký nebo příliš široký (%(width)d×%(height)d, maximum "
 "je 100×100 pixelů)"
 
-#: people/forms.py:106
+#: people/forms.py:120
 msgid "The URL you provided is not valid"
 msgstr "Vámi zadané URL není platné"
 
-#: people/forms.py:122
+#: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr "Vámi zadané URL patrně neodpovídá platnému obrázku"
 
@@ -1793,16 +1795,16 @@ msgstr "Vývojářská platforma GNOME"
 msgid "New Module Proposals"
 msgstr "Návrhy nových modulů"
 
-#: stats/models.py:1291 stats/models.py:1652
+#: stats/models.py:1288 stats/models.py:1643
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1325
+#: stats/models.py:1316
 msgid "POT file unavailable"
 msgstr "Soubor POT není dostupný"
 
-#: stats/models.py:1329
+#: stats/models.py:1320
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1810,18 +1812,18 @@ msgstr[0] "%(count)s zpráva"
 msgstr[1] "%(count)s zprávy"
 msgstr[2] "%(count)s zpráv"
 
-#: stats/models.py:1330
+#: stats/models.py:1321
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualizováno %(date)s"
 
 # Was: d. F Y G:i O
-#: stats/models.py:1332 templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:145
+#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i O"
 
-#: stats/models.py:1335
+#: stats/models.py:1326
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1830,23 +1832,23 @@ msgstr[1] "%(count)s obrázky"
 msgstr[2] "%(count)s obrázků"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1336
+#: stats/models.py:1327
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s, %(figures)s) — %(updated)s"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1339
+#: stats/models.py:1330
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1460
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Tento soubor POT nebyl vytvořen pomocí standardní metody intltool."
 
-#: stats/models.py:1461
+#: stats/models.py:1452
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2421,11 +2423,11 @@ msgstr "Starší vydání"
 msgid "This document is written in Mallard documentation format"
 msgstr "Tento dokument je napsán ve formátu dokumentace Mallard"
 
-#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15 templates/vertimus/vertimus_detail.html:62
 msgid "Download POT file"
 msgstr "Stáhnout šablonu POT"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:90
 msgid "Notices"
 msgstr "Upozornění"
 
@@ -2441,7 +2443,7 @@ msgstr "Nahlásit tuto chybu"
 msgid "Translated"
 msgstr "Přeloženo"
 
-#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67 templates/vertimus/vertimus_detail.html:84
 msgid "Display document figures"
 msgstr "Zobrazit obrázky v dokumentaci"
 
@@ -2450,7 +2452,7 @@ msgid "Damned Lies site admin"
 msgstr "Správce stránky Damned Lies"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:169
 msgid "No comment"
 msgstr "Bez komentáře"
 
@@ -2511,7 +2513,7 @@ msgstr "Datum"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (přeloženo %(percentage)s %%)"
 
-#: templates/languages/language_release_stats.html:105
+#: templates/languages/language_release_stats.html:100
 msgid "Error summary"
 msgstr "Souhrn chyb"
 
@@ -2840,25 +2842,25 @@ msgstr "Koordinuje <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "V současné době neexistují žádné překladatelské týmy GNOME :("
 
-#: templates/vertimus/vertimus_detail.html:6
+#: templates/vertimus/vertimus_detail.html:7
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Překlad modulu: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:27
+#: templates/vertimus/vertimus_detail.html:28
 msgid "Used in release(s):"
 msgstr "Součást vydání:"
 
-#: templates/vertimus/vertimus_detail.html:45
+#: templates/vertimus/vertimus_detail.html:46
 msgid "State:"
 msgstr "Stav:"
 
-#: templates/vertimus/vertimus_detail.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Download PO file"
 msgstr "Stáhnout soubor PO"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:67
 msgid "Translated:"
 msgstr "Přeloženo:"
 
@@ -2866,52 +2868,52 @@ msgstr "Přeloženo:"
 msgid "Translated (reduced):"
 msgstr "Přeloženo (redukované):"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
 msgstr "Probíhající kroky ve stejném modulu:"
 
-#: templates/vertimus/vertimus_detail.html:118
+#: templates/vertimus/vertimus_detail.html:115
 msgid "Actions"
 msgstr "Kroky"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120 vertimus/models.py:864
+#: templates/vertimus/vertimus_detail.html:117 vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Zálohované kroky (%(human_level)s série záloh)"
 
-#: templates/vertimus/vertimus_detail.html:122
+#: templates/vertimus/vertimus_detail.html:119
 msgid "(Return to current actions)"
 msgstr "(Návrat na aktuální kroky)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:124
 msgid "(Previous action history)"
 msgstr "(Předchozí historie kroků)"
 
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:158
 msgid "diff with:"
 msgstr "diff vůči:"
 
-#: templates/vertimus/vertimus_detail.html:180
+#: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
 msgstr "Bez aktuálních kroků."
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
 msgstr "Nový krok"
 
-#: templates/vertimus/vertimus_detail.html:194
+#: templates/vertimus/vertimus_detail.html:191
 msgid "Submit"
 msgstr "Odeslat"
 
-#: templates/vertimus/vertimus_detail.html:199
+#: templates/vertimus/vertimus_detail.html:196
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Musíte být ověřeni a členy týmu %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:203
+#: templates/vertimus/vertimus_detail.html:200
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Tento tým nevyužívá postup překladatelských prací systému Vertimus."
 
@@ -3144,4 +3146,3 @@ msgstr "Poslední zařazený soubor týmu %(lang)s"
 #: vertimus/views.py:188
 msgid "Latest POT file"
 msgstr "Nejnovější šablona POT"
-
