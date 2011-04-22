@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-19 18:03+0000\n"
-"PO-Revision-Date: 2011-04-22 12:17+0200\n"
+"POT-Creation-Date: 2011-04-22 10:37+0000\n"
+"PO-Revision-Date: 2011-04-22 12:38+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -916,7 +916,7 @@ msgstr "Manual de Criawips"
 msgid "Dasher Manual"
 msgstr "Manual de Dasher"
 
-#: database-content.py:345 languages/views.py:52 languages/views.py:88
+#: database-content.py:345 languages/views.py:54 languages/views.py:90
 #: templates/branch_detail.html:23 templates/release_detail.html:23
 #: templates/release_detail.html.py:72
 #: templates/languages/language_release_summary.html:14
@@ -1177,8 +1177,9 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-msgid "GNOME 2 User Documentation"
-msgstr "Documentación del usuario de GNOME 2"
+#| msgid "GNOME 2 User Documentation"
+msgid "GNOME User Documentation"
+msgstr "Documentación del usuario de GNOME"
 
 #: database-content.py:413
 msgid "GNOME Web Photo"
@@ -1573,17 +1574,17 @@ msgstr "Iniciar sesión con OpenID"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: languages/views.py:51 languages/views.py:86
+#: languages/views.py:52 languages/views.py:88
 msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
-#: languages/views.py:83 templates/release_detail.html:70
-msgid "Original strings"
-msgstr "Cadenas originales"
-
-#: languages/views.py:87
+#: languages/views.py:53 languages/views.py:89
 msgid "UI Translations (reduced)"
 msgstr "Traducciones de la IU (reducidas)"
+
+#: languages/views.py:85 templates/release_detail.html:70
+msgid "Original strings"
+msgstr "Cadenas originales"
 
 #: people/forms.py:15
 msgid "Choose a username:"
@@ -2454,6 +2455,7 @@ msgstr "Sin comentarios"
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:57
 #: templates/languages/language_release_summary.html:58
+#: templates/languages/language_release_summary.html:59
 msgid "All modules"
 msgstr "Todos los módulos"
 
