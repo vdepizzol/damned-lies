@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-19 18:03+0000\n"
-"PO-Revision-Date: 2011-04-19 20:21+0100\n"
+"POT-Creation-Date: 2011-04-22 10:37+0000\n"
+"PO-Revision-Date: 2011-04-23 17:26+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -919,7 +919,7 @@ msgstr "Criawips-Handbuch"
 msgid "Dasher Manual"
 msgstr "Dasher-Handbuch"
 
-#: database-content.py:345 languages/views.py:52 languages/views.py:88
+#: database-content.py:345 languages/views.py:54 languages/views.py:90
 #: templates/branch_detail.html:23 templates/release_detail.html:23
 #: templates/release_detail.html.py:72
 #: templates/languages/language_release_summary.html:14
@@ -1180,8 +1180,8 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-msgid "GNOME 2 User Documentation"
-msgstr "GNOME 2 Benutzerdokumentation"
+msgid "GNOME User Documentation"
+msgstr "GNOME Benutzerdokumentation"
 
 #: database-content.py:413
 msgid "GNOME Web Photo"
@@ -1582,17 +1582,17 @@ msgstr "Mit OpenID anmelden"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: languages/views.py:51 languages/views.py:86
+#: languages/views.py:52 languages/views.py:88
 msgid "UI Translations"
 msgstr "Übersetzungen der Benutzeroberflächen"
 
-#: languages/views.py:83 templates/release_detail.html:70
-msgid "Original strings"
-msgstr "Originalzeichenketten"
-
-#: languages/views.py:87
+#: languages/views.py:53 languages/views.py:89
 msgid "UI Translations (reduced)"
 msgstr "Übersetzungen der Benutzeroberflächen (reduziert)"
+
+#: languages/views.py:85 templates/release_detail.html:70
+msgid "Original strings"
+msgstr "Originalzeichenketten"
 
 #: people/forms.py:15
 msgid "Choose a username:"
@@ -2477,6 +2477,7 @@ msgstr "Kein Kommentar"
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:57
 #: templates/languages/language_release_summary.html:58
+#: templates/languages/language_release_summary.html:59
 msgid "All modules"
 msgstr "Alle Module"
 
@@ -3162,4 +3163,3 @@ msgstr "Zuletzt eingespielte Datei für %(lang)s"
 #: vertimus/views.py:188
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
-
