@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-31 12:27+0000\n"
-"PO-Revision-Date: 2011-04-02 16:00+0100\n"
+"POT-Creation-Date: 2011-04-22 10:37+0000\n"
+"PO-Revision-Date: 2011-04-24 19:46+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1037,8 +1037,8 @@ msgid "Dasher Manual"
 msgstr "Handbok för Dasher"
 
 #: database-content.py:345
-#: languages/views.py:52
-#: languages/views.py:88
+#: languages/views.py:54
+#: languages/views.py:90
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:23
 #: templates/release_detail.html.py:72
@@ -1183,7 +1183,6 @@ msgid "Optimization Guide"
 msgstr "Optimeringsguide"
 
 #: database-content.py:381
-#| msgid "tutorial"
 msgid "Tutorial demos"
 msgstr "Demonstrationer"
 
@@ -1302,8 +1301,9 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-msgid "GNOME 2 User Documentation"
-msgstr "Användardokumentation för GNOME 2"
+#| msgid "GNOME 2 User Documentation"
+msgid "GNOME User Documentation"
+msgstr "Användardokumentation för GNOME"
 
 #: database-content.py:413
 msgid "GNOME Web Photo"
@@ -1466,12 +1466,14 @@ msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
 #: database-content.py:454
-msgid "GNOME 3.0 (development)"
-msgstr "GNOME 3.0 (utveckling)"
+#| msgid "GNOME 2.32 (stable)"
+msgid "GNOME 3.0 (stable)"
+msgstr "GNOME 3.0 (stabil)"
 
 #: database-content.py:455
-msgid "GNOME 2.32 (stable)"
-msgstr "GNOME 2.32 (stabil)"
+#| msgid "GNOME 2.30 (old stable)"
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (gammal stabil)"
 
 #: database-content.py:456
 msgid "GNOME 2.30 (old stable)"
@@ -1558,7 +1560,7 @@ msgstr "Vi är ledsna men ditt konto har inaktiverats."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Inloggningen misslyckades. Verifiera ditt användarnamn och lösenord."
 
-#: common/views.py:119
+#: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Ditt konto har aktiverats."
 
@@ -1573,7 +1575,7 @@ msgid "Username:"
 msgstr "Användarnamn:"
 
 #: django_openid/templates/django_openid/admin_login.html:23
-#: people/forms.py:20
+#: people/forms.py:21
 #: templates/login.html:21
 msgid "Password:"
 msgstr "Lösenord:"
@@ -1591,7 +1593,7 @@ msgid "Or use your OpenID:"
 msgstr "eller använd ditt OpenID:"
 
 #: django_openid/templates/django_openid/admin_login.html:34
-#: people/forms.py:17
+#: people/forms.py:18
 #: templates/login.html:37
 msgid "OpenID:"
 msgstr "OpenID:"
@@ -1606,79 +1608,83 @@ msgstr "Logga in med OpenID"
 msgid "Unknown"
 msgstr "Okänt"
 
-#: languages/views.py:51
-#: languages/views.py:86
+#: languages/views.py:52
+#: languages/views.py:88
 msgid "UI Translations"
 msgstr "Gränssnittsöversättningar"
 
-#: languages/views.py:83
+#: languages/views.py:53
+#: languages/views.py:89
+msgid "UI Translations (reduced)"
+msgstr "Gränssnittsöversättningar (minskade)"
+
+#: languages/views.py:85
 #: templates/release_detail.html:70
 msgid "Original strings"
 msgstr "Ursprungliga strängar"
 
-#: languages/views.py:87
-#| msgid "UI Translations"
-msgid "UI Translations (reduced)"
-msgstr "Gränssnittsöversättningar (minskade)"
-
-#: people/forms.py:14
+#: people/forms.py:15
 msgid "Choose a username:"
 msgstr "Välj ett användarnamn:"
 
-#: people/forms.py:15
+#: people/forms.py:16
 msgid "May contain only letters, numbers, underscores or hyphens"
 msgstr "Får endast innehålla bokstäver, siffror, understreck eller bindestreck"
 
-#: people/forms.py:16
+#: people/forms.py:17
 msgid "Email:"
 msgstr "E-post:"
 
-#: people/forms.py:21
+#: people/forms.py:22
 msgid "At least 7 characters"
 msgstr "Minst 7 tecken"
 
-#: people/forms.py:23
+#: people/forms.py:24
 #: templates/people/person_password_change_form.html:27
 #: templates/registration/password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
-#: people/forms.py:31
+#: people/forms.py:32
 msgid "This username is already taken. Please choose another."
 msgstr "Detta användarnamn används redan. Välj ett annat."
 
-#: people/forms.py:39
+#: people/forms.py:42
+msgid "This OpenID URL is already taken by a registered user"
+msgstr "Denna OpenID URL används redan av en registrerad användare"
+
+#: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
 msgstr "Du måste antingen tillhandahålla ett OpenID eller ett lösenord"
 
-#: people/forms.py:42
+#: people/forms.py:55
 msgid "The passwords do not match"
 msgstr "Lösenorden stämmer inte överens"
 
-#: people/forms.py:65
+#: people/forms.py:79
 msgid "Account activation"
 msgstr "Kontoaktivering"
 
-#: people/forms.py:66
+#: people/forms.py:80
 #, python-format
 msgid "This is a confirmation that your registration on %s succeeded. To activate your account, please click on the link below or copy and paste it in a browser."
 msgstr "Detta är en bekräftelse på att din registrering på %s har lyckats. Klicka på länken nedan eller kopiera in den i en webbläsare för att aktivera ditt konto."
 
-#: people/forms.py:68
+#: people/forms.py:82
 #, python-format
 msgid "Administrators of %s"
 msgstr "Administratörerna för %s"
 
-#: people/forms.py:86
+#: people/forms.py:100
 #, python-format
 msgid "Image too high or too wide (%(width)dx%(height)d, maximum is 100x100 pixels)"
 msgstr "Bilden är för hög eller för bred (%(width)dx%(height)d, maximalt är 100x100 bildpunkter)"
 
-#: people/forms.py:106
+#: people/forms.py:120
 msgid "The URL you provided is not valid"
 msgstr "URL:en som du angav är inte giltig"
 
-#: people/forms.py:122
+#: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
 msgstr "URL:en som du angav verkar inte vara en giltig bild"
 
@@ -1799,56 +1805,56 @@ msgstr "GNOME-utvecklingsplattform"
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:1291
-#: stats/models.py:1652
+#: stats/models.py:1288
+#: stats/models.py:1643
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1325
+#: stats/models.py:1316
 msgid "POT file unavailable"
 msgstr "POT-filen är inte tillgänglig"
 
-#: stats/models.py:1329
+#: stats/models.py:1320
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:1330
+#: stats/models.py:1321
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:1332
-#: templates/vertimus/vertimus_detail.html:47
-#: templates/vertimus/vertimus_detail.html:145
+#: stats/models.py:1323
+#: templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d H.i O"
 
-#: stats/models.py:1335
+#: stats/models.py:1326
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:1336
+#: stats/models.py:1327
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1339
+#: stats/models.py:1330
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-fil (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1460
+#: stats/models.py:1451
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden intltool."
 
-#: stats/models.py:1461
+#: stats/models.py:1452
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden gnome-doc-utils."
 
@@ -1956,8 +1962,8 @@ msgid "URL to subscribe"
 msgstr "URL för prenumeration"
 
 #: teams/models.py:212
-#: vertimus/models.py:554
-#: vertimus/models.py:604
+#: vertimus/models.py:563
+#: vertimus/models.py:613
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Detta är ett automatiskt skickat meddelande från %s."
@@ -2321,7 +2327,7 @@ msgid "The modules of this release are not part of the GNOME Git repository. Ple
 msgstr "Modulerna i den här utgåvan är inte en del av GNOME:s Git-förråd. Kontrollera webbsidan för varje modul för att se var översättningarna ska skickas."
 
 #: templates/release_detail.html:19
-#: templates/stats_show.html:45
+#: templates/stats_show.html:47
 msgid "Language"
 msgstr "Språk"
 
@@ -2333,7 +2339,7 @@ msgstr "Användargränssnitt"
 
 #: templates/release_detail.html:21
 #: templates/release_detail.html.py:24
-#: templates/stats_show.html:49
+#: templates/stats_show.html:51
 #: templates/languages/language_release_summary.html:12
 #: templates/languages/language_release_summary.html:15
 msgid "Graph"
@@ -2341,7 +2347,6 @@ msgstr "Diagram"
 
 #: templates/release_detail.html:22
 #: templates/languages/language_release_summary.html:13
-#| msgid "User Interface"
 msgid "User Interface (red.)"
 msgstr "Användargränssnitt (minskade)"
 
@@ -2363,32 +2368,31 @@ msgstr "Äldre utgåvor"
 msgid "This document is written in Mallard documentation format"
 msgstr "Detta dokument skrivs i dokumentationsformatet Mallard"
 
-#: templates/stats_show.html:14
-#: templates/vertimus/vertimus_detail.html:61
+#: templates/stats_show.html:15
+#: templates/vertimus/vertimus_detail.html:62
 msgid "Download POT file"
 msgstr "Hämta POT-fil"
 
-#: templates/stats_show.html:18
-#: templates/vertimus/vertimus_detail.html:93
+#: templates/stats_show.html:20
+#: templates/vertimus/vertimus_detail.html:90
 msgid "Notices"
 msgstr "Anteckningar"
 
-#: templates/stats_show.html:28
+#: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
 msgstr "Sök efter liknande fel innan rapportering"
 
-#: templates/stats_show.html:33
-#| msgid "Report a bug"
+#: templates/stats_show.html:35
 msgid "Report this bug"
 msgstr "Rapportera detta fel"
 
-#: templates/stats_show.html:45
+#: templates/stats_show.html:47
 #: vertimus/models.py:183
 msgid "Translated"
 msgstr "Översatt"
 
-#: templates/stats_show.html:65
-#: templates/vertimus/vertimus_detail.html:87
+#: templates/stats_show.html:67
+#: templates/vertimus/vertimus_detail.html:84
 msgid "Display document figures"
 msgstr "Visa dokumentationsbilder"
 
@@ -2397,7 +2401,7 @@ msgid "Damned Lies site admin"
 msgstr "Admin för Förbannade lögner"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:172
+#: templates/vertimus/vertimus_detail.html:169
 msgid "No comment"
 msgstr "Ingen kommentar"
 
@@ -2405,6 +2409,7 @@ msgstr "Ingen kommentar"
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:57
 #: templates/languages/language_release_summary.html:58
+#: templates/languages/language_release_summary.html:59
 msgid "All modules"
 msgstr "Alla moduler"
 
@@ -2454,11 +2459,10 @@ msgstr "Datum"
 
 #: templates/languages/language_release_stats.html:32
 #, python-format
-#| msgid "%(categname)s (%(percentage)s% translated)"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% översatt)"
 
-#: templates/languages/language_release_stats.html:105
+#: templates/languages/language_release_stats.html:100
 msgid "Error summary"
 msgstr "Sammandrag av fel"
 
@@ -2743,79 +2747,78 @@ msgstr "Koordineras av <a href=\"%(url)s\">%(name)s</a>"
 msgid "There are currently no translation teams in GNOME. :("
 msgstr "Det finns för närvarande inga översättningsgrupper i GNOME. :("
 
-#: templates/vertimus/vertimus_detail.html:6
+#: templates/vertimus/vertimus_detail.html:7
 #, python-format
 msgid "Module Translation: %(name)s"
 msgstr "Modulöversättning: %(name)s"
 
-#: templates/vertimus/vertimus_detail.html:27
+#: templates/vertimus/vertimus_detail.html:28
 msgid "Used in release(s):"
 msgstr "Används i utgåvor:"
 
-#: templates/vertimus/vertimus_detail.html:45
+#: templates/vertimus/vertimus_detail.html:46
 msgid "State:"
 msgstr "Tillstånd:"
 
-#: templates/vertimus/vertimus_detail.html:65
-#: templates/vertimus/vertimus_detail.html:75
+#: templates/vertimus/vertimus_detail.html:66
+#: templates/vertimus/vertimus_detail.html:74
 msgid "Download PO file"
 msgstr "Hämta PO-fil"
 
-#: templates/vertimus/vertimus_detail.html:65
+#: templates/vertimus/vertimus_detail.html:67
 msgid "Translated:"
 msgstr "Översatt:"
 
 #: templates/vertimus/vertimus_detail.html:75
-#| msgid "Translated:"
 msgid "Translated (reduced):"
 msgstr "Översatt (minskade):"
 
-#: templates/vertimus/vertimus_detail.html:107
+#: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
 msgstr "Pågående aktiviteter i samma modul:"
 
-#: templates/vertimus/vertimus_detail.html:118
+#: templates/vertimus/vertimus_detail.html:115
 msgid "Actions"
 msgstr "Åtgärder"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
-#: templates/vertimus/vertimus_detail.html:120
-#: vertimus/models.py:862
+#: templates/vertimus/vertimus_detail.html:117
+#: vertimus/models.py:864
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arkiverade åtgärder (%(human_level)s arkiverade serier)"
 
-#: templates/vertimus/vertimus_detail.html:122
+#: templates/vertimus/vertimus_detail.html:119
 msgid "(Return to current actions)"
 msgstr "(Återgå till aktuella åtgärder)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:124
 msgid "(Previous action history)"
 msgstr "(Åtgärdshistorik)"
 
-#: templates/vertimus/vertimus_detail.html:161
+#: templates/vertimus/vertimus_detail.html:158
 msgid "diff with:"
 msgstr "diff med:"
 
-#: templates/vertimus/vertimus_detail.html:180
+#: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
 msgstr "Inga aktuella åtgärder."
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:194
+#: templates/vertimus/vertimus_detail.html:191
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:199
+#: templates/vertimus/vertimus_detail.html:196
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:203
+#: templates/vertimus/vertimus_detail.html:200
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Denna grupp använder inte översättningsmetoden Vertimus."
 
@@ -2940,7 +2943,7 @@ msgstr "Arkivera i förråd"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Uppskickad fil av %(name)s den %(date)s"
 
-#: vertimus/models.py:539
+#: vertimus/models.py:548
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2955,16 +2958,16 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:552
-#: vertimus/models.py:602
+#: vertimus/models.py:561
+#: vertimus/models.py:611
 msgid "Without comment"
 msgstr "Utan kommentar"
 
-#: vertimus/models.py:561
+#: vertimus/models.py:570
 msgid "Write a comment"
 msgstr "Skriv en kommentar"
 
-#: vertimus/models.py:590
+#: vertimus/models.py:599
 #, python-format
 msgid ""
 "Hello,\n"
@@ -2979,56 +2982,56 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:612
+#: vertimus/models.py:621
 msgid "Reserve for translation"
 msgstr "Reservera för översättning"
 
-#: vertimus/models.py:624
+#: vertimus/models.py:633
 msgid "Upload the new translation"
 msgstr "Skicka upp ny översättning"
 
-#: vertimus/models.py:646
+#: vertimus/models.py:648
 msgid "Reserve for proofreading"
 msgstr "Reservera för korrekturläsning"
 
-#: vertimus/models.py:658
+#: vertimus/models.py:660
 msgid "Upload the proofread translation"
 msgstr "Skicka upp granskad översättning"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:674
+#: vertimus/models.py:676
 msgid "Ready for submission"
 msgstr "Färdig för insändning"
 
-#: vertimus/models.py:690
+#: vertimus/models.py:692
 msgid "Submit to repository"
 msgstr "Skicka in till förrådet"
 
-#: vertimus/models.py:707
+#: vertimus/models.py:709
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Verkställningen misslyckades. Felet var: \"%s\""
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:715
+#: vertimus/models.py:717
 msgid "Reserve to submit"
 msgstr "Reservera för insändning"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:728
+#: vertimus/models.py:730
 msgid "Inform of submission"
 msgstr "Informera om insändning"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:743
+#: vertimus/models.py:745
 msgid "Review required"
 msgstr "Granskning krävs"
 
-#: vertimus/models.py:758
+#: vertimus/models.py:760
 msgid "Archive the actions"
 msgstr "Arkivera åtgärderna"
 
-#: vertimus/models.py:797
+#: vertimus/models.py:799
 msgid "Undo the last state change"
 msgstr "Ångra senaste tillståndsändring"
 
@@ -3047,6 +3050,8 @@ msgstr "Senaste insända fil för %(lang)s"
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
+#~ msgid "GNOME 3.0 (development)"
+#~ msgstr "GNOME 3.0 (utveckling)"
 #~ msgid ""
 #~ "Avahi is a system which facilitates service discovery on a local network "
 #~ "via the mDNS/DNS-SD protocol suite. Please submit your translation "
