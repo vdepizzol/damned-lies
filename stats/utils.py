@@ -354,6 +354,12 @@ def get_ui_linguas(module_path, po_path):
     for LINGUAS in [LINGUAShere, LINGUASpo]:
         if os.access(LINGUAS, os.R_OK):
             return read_linguas_file(LINGUAS)
+    # AS_ALL_LINGUAS is a macro that takes all po files by default
+    (status, output, errs) = run_shell_command("grep -qs AS_ALL_LINGUAS %s%sconfigure.*" % (module_path, os.sep))
+    if status == 0:
+        return {'langs': None,
+                'error': ugettext_noop("No need to edit LINGUAS file or variable for this module")}
+
     for configure in [configureac, configurein]:
         found = search_variable_in_file(configure, 'ALL_LINGUAS')
         if found is not None:
