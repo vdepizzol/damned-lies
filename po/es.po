@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 10:37+0000\n"
-"PO-Revision-Date: 2011-04-22 12:38+0200\n"
+"POT-Creation-Date: 2011-04-25 19:39+0000\n"
+"PO-Revision-Date: 2011-04-25 22:57+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1177,7 +1177,6 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-#| msgid "GNOME 2 User Documentation"
 msgid "GNOME User Documentation"
 msgstr "Documentación del usuario de GNOME"
 
@@ -1920,20 +1919,25 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr ""
+"No es necesario editar el archivo o la variable LINGUAS para este módulo"
+
+#: stats/utils.py:370
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1941,7 +1945,7 @@ msgstr ""
 "No se sabe dónde mirar la variable DOC_LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
