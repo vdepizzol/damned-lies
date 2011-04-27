@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 10:37+0000\n"
-"PO-Revision-Date: 2011-04-24 11:44+0200\n"
+"POT-Creation-Date: 2011-04-27 15:08+0000\n"
+"PO-Revision-Date: 2011-04-27 21:58+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1428,66 +1428,71 @@ msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
 #: database-content.py:454
+#| msgid "GNOME 2 Development Documentation"
+msgid "GNOME 3.2 (development)"
+msgstr "GNOME 3.2 (vývojové)"
+
+#: database-content.py:455
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (stabilní)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (zastaralé)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (zastaralé)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (zastaralé)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (zastaralé)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (zastaralé)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (zastaralé)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (zastaralé)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (zastaralé)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "External Dependencies (GNOME)"
 msgstr "Externí závislosti (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "Obsolete GNOME Applications"
 msgstr "Zastaralé aplikace GNOME"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME-Office Productivity Applications"
 msgstr "Kancelářské aplikace GNOME"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GNOME Infrastructure"
 msgstr "Infrastruktura GNOME"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "GIMP and Friends"
 msgstr "GIMP a spol."
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "Extra GNOME Applications"
 msgstr "Další aplikace GNOME"
 
-#: database-content.py:469
+#: database-content.py:470
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
@@ -1928,17 +1933,21 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "V souboru LINGUAS se nenachází záznam tohoto jazyka."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr "Pro tento modul není zapotřebí upravovat soubor nebo proměnnou LINGUAS"
+
+#: stats/utils.py:370
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "V konfiguračním souboru se nenachází záznam ALL_LINGUAS tohoto jazyka."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Nelze zjistit, kde se má hledat proměnná LINGUAS, kontaktujte správce modulu."
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1946,7 +1955,7 @@ msgstr ""
 "Nelze zjistit, kde se má hledat proměnná DOC_LINGUAS, kontaktujte správce "
 "modulu."
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V souboru DOC_LINGUAS se nenachází tento jazyk."
 
