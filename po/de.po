@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 10:37+0000\n"
-"PO-Revision-Date: 2011-04-23 17:26+0100\n"
+"POT-Creation-Date: 2011-04-25 19:39+0000\n"
+"PO-Revision-Date: 2011-04-27 17:06+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1937,19 +1937,25 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Eintrag für diese Sprache ist nicht in der Datei LINGUAS vorhanden."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr ""
+"Für dieses Modul braucht die Datei oder Variable LINGUAS nicht bearbeitet zu "
+"werden"
+
+#: stats/utils.py:370
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Eintrag für diese Sprache ist nicht in ALL_LINGUAS in der Datei configure "
 "vorhanden."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Es ist unbekannt, wo nach der Variable LINGUAS geschaut werden soll, bitte "
 "fragen Sie den Verwalter des Moduls."
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1957,7 +1963,7 @@ msgstr ""
 "Es ist unbekannt, wo nach der Variable DOC_LINGUAS geschaut werden soll, "
 "bitte fragen Sie den Verwalter des Moduls."
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Liste in DOC_LINGUAS enthält nicht diese Sprache."
 
