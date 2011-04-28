@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-19 18:24+0000\n"
-"PO-Revision-Date: 2011-04-19 21:08+0100\n"
+"POT-Creation-Date: 2011-04-27 20:00+0000\n"
+"PO-Revision-Date: 2011-04-28 20:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1306,8 +1306,8 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-msgid "GNOME 2 User Documentation"
-msgstr "GNOME 2 uporabniška dokumentacija"
+msgid "GNOME User Documentation"
+msgstr "Dokumentacija GNOME"
 
 #: database-content.py:413
 msgid "GNOME Web Photo"
@@ -1470,66 +1470,70 @@ msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Prevodi morajo biti poslani kot poročila o hroščih (spodnja povezava)."
 
 #: database-content.py:454
+msgid "GNOME 3.2 (development)"
+msgstr "GNOME 3.2 (razvojna veja)"
+
+#: database-content.py:455
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (stabilna različica)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (stara stabilna različica)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (stara stabilna različica)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (stara stabilna različica)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (stara stabilna različica)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (stara stabilna različica)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (stara stabilna različica)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (stara stabilna različica)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (stara stabilna različica)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "External Dependencies (GNOME)"
 msgstr "Zunanji odvisni paketi (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "Obsolete GNOME Applications"
 msgstr "Zastareli programi GNOME"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME Office (pisarniški paket)"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GNOME Infrastructure"
 msgstr "GNOME Spletne strani"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "Extra GNOME Applications"
 msgstr "Ekstra GNOME programi"
 
-#: database-content.py:469
+#: database-content.py:470
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
@@ -1932,18 +1936,22 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr "Za ta modul urejanje datoteke LINGUAS ni zahtevano"
+
+#: stats/utils.py:370
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
@@ -3058,8 +3066,6 @@ msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
 
-#~ msgid "GNOME 3.0 (development)"
-#~ msgstr "GNOME 3.0 (razvojna veja)"
 #~ msgid "GNOME 2.32 (stable)"
 #~ msgstr "GNOME 2.32 (stabilna različica)"
 #~ msgid ""
