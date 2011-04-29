@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 10:37+0000\n"
-"PO-Revision-Date: 2011-04-22 23:11+0200\n"
+"POT-Creation-Date: 2011-04-27 15:08+0000\n"
+"PO-Revision-Date: 2011-04-29 10:22+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -1427,66 +1427,70 @@ msgstr ""
 "się poniżej)."
 
 #: database-content.py:454
+msgid "GNOME 3.2 (development)"
+msgstr "GNOME 3.2 (rozwojowe)"
+
+#: database-content.py:455
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (stabilne)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (poprzednie stabilne)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (poprzednie stabilne)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (poprzednie stabilne)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (poprzednie stabilne)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (poprzednie stabilne)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (poprzednie stabilne)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (poprzednie stabilne)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (poprzednie stabilne)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "External Dependencies (GNOME)"
 msgstr "Zewnętrzne zależności (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "Obsolete GNOME Applications"
 msgstr "Przestarzałe programy GNOME"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME-Office Productivity Applications"
 msgstr "Programy biurowe GNOME Office"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GNOME Infrastructure"
 msgstr "Infrastruktura GNOME"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "GIMP and Friends"
 msgstr "GIMP"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "Extra GNOME Applications"
 msgstr "Dodatkowe programy GNOME"
 
-#: database-content.py:469
+#: database-content.py:470
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nie-GNOME)"
 
@@ -1920,23 +1924,28 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Wpis dla tego języka nie istnieje w pliku LINGUAS."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr ""
+"Dla tego modułu nie jest wymagana modyfikacja pliku lub zmiennej LINGUAS"
+
+#: stats/utils.py:370
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Wpis dla tego języka nie istnieje w pliku konfiguracyjnym ALL_LINGUAS."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Nie można odnaleźć zmiennej LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
 msgstr ""
 "Nie można znaleźć zmiennej DOC_LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Lista DOC_LINGUAS nie zawiera tego języka."
 
@@ -2268,7 +2277,7 @@ msgstr "Wyświetl istniejące błędy umiędzynaradawiania i lokalizacji"
 
 #: templates/module_detail.html:67
 msgid "Report a bug"
-msgstr "Zgłoszenie błędu"
+msgstr "Zgłoś błąd"
 
 #: templates/module_detail.html:76
 msgid "Branches:"
