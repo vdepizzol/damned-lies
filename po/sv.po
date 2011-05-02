@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 10:37+0000\n"
-"PO-Revision-Date: 2011-04-24 19:46+0100\n"
+"POT-Creation-Date: 2011-04-27 15:08+0000\n"
+"PO-Revision-Date: 2011-05-02 07:55+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -1301,7 +1301,6 @@ msgid "Gnome Specimen"
 msgstr "Gnome Specimen"
 
 #: database-content.py:412
-#| msgid "GNOME 2 User Documentation"
 msgid "GNOME User Documentation"
 msgstr "Användardokumentation för GNOME"
 
@@ -1466,68 +1465,71 @@ msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
 #: database-content.py:454
-#| msgid "GNOME 2.32 (stable)"
+#| msgid "GNOME 3.0 (development)"
+msgid "GNOME 3.2 (development)"
+msgstr "GNOME 3.2 (utveckling)"
+
+#: database-content.py:455
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (stabil)"
 
-#: database-content.py:455
-#| msgid "GNOME 2.30 (old stable)"
+#: database-content.py:456
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (gammal stabil)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (gammal stabil)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (gammal stabil)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (gammal stabil)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (gammal stabil)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (gammal stabil)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (gammal stabil)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (gammal stabil)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "External Dependencies (GNOME)"
 msgstr "Externa beroenden (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "Obsolete GNOME Applications"
 msgstr "Föråldrade GNOME-program"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME-Office produktivitetsprogram"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GNOME Infrastructure"
 msgstr "GNOME-infrastruktur"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "GIMP and Friends"
 msgstr "GIMP med vänner"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "Extra GNOME Applications"
 msgstr "Extra GNOME-program"
 
-#: database-content.py:469
+#: database-content.py:470
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
@@ -1926,18 +1928,22 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Post för det här språket finns inte i filen LINGUAS."
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr "Filen eller variabeln LINGUAS behöver inte redigeras för denna modul"
+
+#: stats/utils.py:370
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Post för det här språket finns inte i ALL_LINGUAS i konfigurationsfilen."
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Vet inte var jag ska leta efter variabeln LINGUAS, fråga modulansvarig. "
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Vet inte var jag ska leta efter variabeln DOC_LINGUAS, fråga modulansvarig. "
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Listan DOC_LINGUAS inkluderar inte det här språket."
 
@@ -3050,8 +3056,6 @@ msgstr "Senaste insända fil för %(lang)s"
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
-#~ msgid "GNOME 3.0 (development)"
-#~ msgstr "GNOME 3.0 (utveckling)"
 #~ msgid ""
 #~ "Avahi is a system which facilitates service discovery on a local network "
 #~ "via the mDNS/DNS-SD protocol suite. Please submit your translation "
@@ -3062,6 +3066,7 @@ msgstr "Senaste POT-fil"
 #~ "tjänster på ett lokalt nätverk via protokollsviten mDNS/DNS-SD. Skicka in "
 #~ "din översättning via <a href=\"http://www.transifex.net/projects/p/avahi/"
 #~ "resource/master-tx-po-avahi-pot/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 #~ "module. Please submit your translation through the <a href=\"http://www."
@@ -3072,6 +3077,7 @@ msgstr "Senaste POT-fil"
 #~ "GNOME-specifik modul. Skicka in din översättning via <a href=\"http://www."
 #~ "transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/"
 #~ "\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "GNUCash is not part of the GNOME Git repository. Please check <a href="
 #~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
@@ -3080,6 +3086,7 @@ msgstr "Senaste POT-fil"
 #~ "GNUCash är inte en del av GNOME:s Git-förråd. Se <a href=\"http://wiki."
 #~ "gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för "
 #~ "information om var översättningar ska skickas."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3087,6 +3094,7 @@ msgstr "Senaste POT-fil"
 #~ msgstr ""
 #~ "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom "
 #~ "<a href=\"http://translationproject.org\">Translation Project</a>."
+
 #~ msgid ""
 #~ "PackageKit is a system designed to make installing and updating software "
 #~ "on your computer easier. This is not a GNOME-specific module. Please "
@@ -3097,6 +3105,7 @@ msgstr "Senaste POT-fil"
 #~ "av programvara enklare på din dator. Detta är inte en GNOME-specifik "
 #~ "modul. Skicka in din översättning via <a href=\"http://www.transifex.net/"
 #~ "projects/p/packagekit/resource/master/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
 #~ "for your sound applications. \n"
@@ -3109,6 +3118,7 @@ msgstr "Senaste POT-fil"
 #~ "Skicka in din översättning via <a href=\"\n"
 #~ "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
 #~ "pulseaudio-pot/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
@@ -3117,6 +3127,7 @@ msgstr "Senaste POT-fil"
 #~ "Det här är inte en GNOME-specifik modul. Skicka in din översättning via "
 #~ "<a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
 #~ "efault-po-shared-mime-info-pot_0/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3128,4 +3139,3 @@ msgstr "Senaste POT-fil"
 #~ "<a href=\"http://translationproject.org\">Translation Project</a>. Se "
 #~ "även <a href=\"http://translationproject.org/domain/xdg-user-dirs.html"
 #~ "\">översättningssidan för xdg-user-dirs hos Translation Project</a>."
-
