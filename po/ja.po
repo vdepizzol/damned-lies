@@ -1,16 +1,17 @@
 # Japanese translation for damned-lies.
-# Copyright (C) 2007-2011 Danilo Šegan
+# Copyright (C) 2007-2011 damned-lies's COPRYRIGHT HOLDER
 # This file is distributed under the same license as the damned-lies package.
 # Satoru SATOH <ss@gnome.gr.jp>, 2007.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2011.
 # OKANO Takayoshi <kano@na.rim.or.jp>, 2010.
+# Jiro Matsuzawa <matsuzawa.jr@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-22 21:34+0000\n"
-"PO-Revision-Date: 2011-04-23 16:01+0900\n"
+"POT-Creation-Date: 2011-05-07 20:00+0000\n"
+"PO-Revision-Date: 2011-05-03 23:08+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -309,7 +310,7 @@ msgstr "低地ドイツ語"
 
 #: database-content.py:73 database-content.py:201
 msgid "Luganda"
-msgstr ""
+msgstr "ルガンダ語"
 
 #: database-content.py:74 database-content.py:203
 msgid "Macedonian"
@@ -800,9 +801,8 @@ msgstr "汎用フィルタ"
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/filters/light-and-shadow.po
 #: database-content.py:308
-#, fuzzy
 msgid "light-and-shadow filter"
-msgstr "ライト効果フィルタ"
+msgstr "照明と投影フィルタ"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/filters/map.po
@@ -1012,7 +1012,7 @@ msgstr "統合ガイド"
 
 #: database-content.py:358
 msgid "introduction"
-msgstr ""
+msgstr "あらまし"
 
 #: database-content.py:359
 msgid "Invest Applet Manual"
@@ -1085,9 +1085,8 @@ msgstr "ファイルメニュー"
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/menus/file.po
 #: database-content.py:372
-#, fuzzy
 msgid "filters menu"
-msgstr "ファイルメニュー"
+msgstr "フィルタメニュー"
 
 # http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/menus/help.po
@@ -1134,9 +1133,8 @@ msgstr "最適化ガイド"
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/tutorial.po
 #: database-content.py:381
-#, fuzzy
 msgid "Tutorial demos"
-msgstr "演習"
+msgstr "演習デモ"
 
 #: database-content.py:382
 msgid "Platform Overview"
@@ -1181,24 +1179,22 @@ msgstr "ツールボックス"
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/toolbox.po
 #: database-content.py:391
-#, fuzzy
 msgid "toolbox (color)"
-msgstr "ツールボックス"
+msgstr "ツールボックス (色)"
 
 # gimp: http://l10n.gnome.org/languages/ja/gnome-gimp/doc/
 # 参考: gimp-help-2/po/ja/toolbox.po
 #: database-content.py:392
-#, fuzzy
 msgid "toolbox (paint)"
-msgstr "ツールボックス"
+msgstr "ツールボックス (描画)"
 
 #: database-content.py:393
 msgid "toolbox (selection)"
-msgstr ""
+msgstr "ツールボックス (選択)"
 
 #: database-content.py:394
 msgid "toolbox (transform)"
-msgstr ""
+msgstr "ツールボックス (変換)"
 
 #: database-content.py:395
 msgid "Panel Trash Manual"
@@ -1312,7 +1308,9 @@ msgstr "ネットブック用メールソフト"
 msgid ""
 "Avahi is a system which facilitates service discovery on a local network via "
 "the mDNS/DNS-SD protocol suite."
-msgstr "Avahi は mDNS/DNS-SD プロトコルでローカルネットワーク上のサービス発見を手助けするシステムです。"
+msgstr ""
+"Avahi は mDNS/DNS-SD プロトコルでローカルネットワーク上のサービス発見を手助け"
+"するシステムです。"
 
 #: database-content.py:423
 msgid ""
@@ -1321,6 +1319,10 @@ msgid ""
 "chronojump_glossary_for_translators.html\">http://git.gnome.org/browse/"
 "chronojump/plain/glossary/chronojump_glossary_for_translators.html</a>.\n"
 msgstr ""
+"Chronojump の翻訳に役立つ用語集があります: <a href=\"http://git.gnome.org/"
+"browse/chronojump/plain/glossary/chronojump_glossary_for_translators.html"
+"\">http://git.gnome.org/browse/chronojump/plain/glossary/"
+"chronojump_glossary_for_translators.html</a>\n"
 
 #: database-content.py:425
 msgid ""
@@ -1335,7 +1337,7 @@ msgstr "Evince は複数の文書形式を表示できるドキュメント・�
 
 #: database-content.py:427
 msgid "D-Bus service to access fingerprint readers."
-msgstr ""
+msgstr "指紋リーダーにアクセスする D-Bus サービス。"
 
 #: database-content.py:428
 msgid ""
@@ -1350,6 +1352,9 @@ msgid ""
 "For other localisation needs of GCompris, see  <a href=\"http://gcompris.net/"
 "wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</a>."
 msgstr ""
+"GCompris でローカライズの必要な他の箇所については <a href=\"http://gcompris."
+"net/wiki/Translation_addons\">http://gcompris.net/wiki/Translation_addons</"
+"a> をご覧ください。"
 
 #: database-content.py:430
 msgid "Graphical frontend for the git directory tracker"
@@ -1381,6 +1386,9 @@ msgid ""
 "<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
 "gnome.org/GnomeVideoEffects/Effects</a>."
 msgstr ""
+"ローカライズを簡単にするために、GNOME のビデオエフェクトのギャラリーが作成さ"
+"れています: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects"
+"\">http://live.gnome.org/GnomeVideoEffects/Effects</a>"
 
 #: database-content.py:435
 msgid "A note taking application"
@@ -1392,12 +1400,17 @@ msgid ""
 "found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README."
 "analysis\">po/README.analysis</a> file."
 msgstr ""
+"gnumeric の分析(解析)ツールのローカライズに有用な情報が、ファイル <a href ="
+"\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README."
+"analysis</a> にあります。"
 
 #: database-content.py:437
 msgid ""
 "This a low-priority module to translate, as there are currently no user "
 "interface that show those strings."
 msgstr ""
+"これらの文字列を表示するユーザーインターフェイスが現在存在しないため、翻訳の"
+"優先順位の低いモジュールです。"
 
 #: database-content.py:438
 msgid ""
@@ -1413,11 +1426,11 @@ msgstr ""
 
 #: database-content.py:439
 msgid "A plugin manager library for other GNOME modules"
-msgstr ""
+msgstr "他の GNOME モジュールのプラグイン管理のライブラリ"
 
 #: database-content.py:440
 msgid "Desktop entries for MESS ROMs"
-msgstr ""
+msgstr "MESS ROM のデスクトップ・エントリ"
 
 #: database-content.py:441
 msgid ""
@@ -1446,6 +1459,8 @@ msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier."
 msgstr ""
+"PackageKit はコンピュータ上にソフトウェアをインストールしたり、更新したりする"
+"のを容易にするようデザインされたシステムです。"
 
 #: database-content.py:445
 msgid "Passepartout is a DTP application for X."
@@ -1456,10 +1471,12 @@ msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications."
 msgstr ""
+"PulseAudio は POSIX OS のためのサウンドシステムです。サウンドのアプリケケー"
+"ションのためのプロキシになります。"
 
 #: database-content.py:447
 msgid "A photo manager for GNOME"
-msgstr "GNOME用写真管理ツール"
+msgstr "GNOME 用写真管理ツール"
 
 #: database-content.py:448
 msgid ""
@@ -1485,73 +1502,77 @@ msgstr ""
 
 #: database-content.py:452
 msgid "A VNC client for GNOME"
-msgstr "GNOME用 VNCクライアント"
+msgstr "GNOME 用 VNCクライアント"
 
 #: database-content.py:453
 msgid "Translations should be submitted as bug reports (see link below)."
-msgstr "翻訳はバグレポートとして送ってください (下記のリンク参照)"
+msgstr "翻訳はバグレポートとして送ってください (下記のリンク参照)。"
 
 #: database-content.py:454
+msgid "GNOME 3.2 (development)"
+msgstr "GNOME 3.2 (開発版)"
+
+#: database-content.py:455
 msgid "GNOME 3.0 (stable)"
 msgstr "GNOME 3.0 (安定版)"
 
-#: database-content.py:455
+#: database-content.py:456
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (旧安定版)"
 
-#: database-content.py:456
+#: database-content.py:457
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (旧安定版)"
 
-#: database-content.py:457
+#: database-content.py:458
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (旧安定版)"
 
-#: database-content.py:458
+#: database-content.py:459
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (旧安定版)"
 
-#: database-content.py:459
+#: database-content.py:460
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (旧安定版)"
 
-#: database-content.py:460
+#: database-content.py:461
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (旧安定版)"
 
-#: database-content.py:461
+#: database-content.py:462
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (旧安定版)"
 
-#: database-content.py:462
+#: database-content.py:463
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (旧安定版)"
 
-#: database-content.py:463
+#: database-content.py:464
 msgid "External Dependencies (GNOME)"
 msgstr "依存する外部モジュール (GNOME)"
 
-#: database-content.py:464
+#: database-content.py:465
 msgid "Obsolete GNOME Applications"
 msgstr "廃止された GNOME アプリケーション"
 
-#: database-content.py:465
+#: database-content.py:466
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME オフィス・生産性アプリケーション"
 
-#: database-content.py:466
+#: database-content.py:467
 msgid "GNOME Infrastructure"
 msgstr "GNOME インフラストラクチャ"
 
-#: database-content.py:467
+#: database-content.py:468
 msgid "GIMP and Friends"
 msgstr "GIMP とその友達"
 
-#: database-content.py:468
+#: database-content.py:469
 msgid "Extra GNOME Applications"
 msgstr "追加の GNOME アプリケーション"
 
-#: database-content.py:469
+#: database-content.py:470
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非 GNOME)"
 
@@ -1569,7 +1590,8 @@ msgstr ""
 "Satoru SATOH <ss@gnome.gr.jp>\n"
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
 "OKANO Takayoshi <kano@na.rim.or.jp>\n"
-"日本GNOMEユーザー会 http://www.gnome.gr.jp/"
+"松澤 二郎 <matsuzawa.jr@gmail.com>\n"
+"日本GNOMEユーザー会 <http://www.gnome.gr.jp/>"
 
 #: common/views.py:60
 msgid "You have been logged out."
@@ -1646,9 +1668,8 @@ msgid "UI Translations"
 msgstr "ユーザーインターフェースの翻訳"
 
 #: languages/views.py:53 languages/views.py:89
-#, fuzzy
 msgid "UI Translations (reduced)"
-msgstr "ユーザーインターフェースの翻訳"
+msgstr "ユーザーインターフェースの翻訳 (縮小版)"
 
 #: languages/views.py:85 templates/release_detail.html:70
 msgid "Original strings"
@@ -1681,7 +1702,7 @@ msgstr "このユーザー名は既に使われています。他のものを指
 
 #: people/forms.py:42
 msgid "This OpenID URL is already taken by a registered user"
-msgstr ""
+msgstr "この OpenID URL は登録されているユーザーに既に結びつけられています"
 
 #: people/forms.py:52
 msgid "You must either provide an OpenID or a password"
@@ -1761,7 +1782,7 @@ msgstr ""
 
 #: people/views.py:71
 msgid "Sorry, the form is not valid."
-msgstr ""
+msgstr "ごめんなさい、フォームへの入力が正しくありません。"
 
 #: people/views.py:96
 #, python-format
@@ -1801,6 +1822,8 @@ msgid ""
 "\"%(link)s\">external platform</a> to see how you can submit your "
 "translation."
 msgstr ""
+"このモジュールの翻訳は外部でホスティングされています。翻訳を送付する方法につ"
+"いては<a href=\"%(link)s\">外部のプラットフォーム</a>を参照してください。"
 
 #: stats/models.py:259
 msgid "This branch is not linked from any release"
@@ -1862,7 +1885,7 @@ msgstr "%(lang_name)s (%(lang_locale)s)"
 
 #: stats/models.py:1316
 msgid "POT file unavailable"
-msgstr ""
+msgstr "POT ファイルは利用できません"
 
 #: stats/models.py:1320
 #, python-format
@@ -1984,18 +2007,23 @@ msgid "Entry for this language is not present in LINGUAS file."
 msgstr "LINGUAS ファイル内にこの言語のエントリがありません。"
 
 #: stats/utils.py:364
+msgid "No need to edit LINGUAS file or variable for this module"
+msgstr ""
+"このモジュールの LINGUAS ファイル、あるいは変数を編集する必要はありません"
+
+#: stats/utils.py:370
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "configure ファイル内の ALL_LINGUAS にこの言語のエントリがありません。"
 
-#: stats/utils.py:366
+#: stats/utils.py:372
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "LINGUAS 変数をどこから探し出せば良いのかわかりません。モジュールのメンテナに"
 "問い合わせてください。"
 
-#: stats/utils.py:373
+#: stats/utils.py:379
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -2003,13 +2031,13 @@ msgstr ""
 "DOC_LINGUAS変数をどこから探し出せば良いのかわかりません。モジュールのメンテナ"
 "に問い合わせてください。"
 
-#: stats/utils.py:375
+#: stats/utils.py:381
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "DOC_LINGUAS リストにこの言語が含まれていません。"
 
 #: teams/forms.py:21
 msgid "Mark as Inactive"
-msgstr ""
+msgstr "活動していないものとする"
 
 #: teams/forms.py:22
 msgid "Remove From Team"
@@ -2179,11 +2207,11 @@ msgstr ""
 #: templates/base.html:98
 #, python-format
 msgid "Hosted by %(link)s."
-msgstr "%(link)s によってホスティングされています"
+msgstr "%(link)s によってホスティングされています。"
 
 #: templates/branch_detail.html:4
 msgid "This branch is currently string-frozen."
-msgstr "このブランチは現在 string-freeze されています"
+msgstr "このブランチは現在 string-freeze されています。"
 
 #: templates/branch_detail.html:13
 msgid "Translation"
@@ -2455,9 +2483,8 @@ msgstr "グラフ"
 
 #: templates/release_detail.html:22
 #: templates/languages/language_release_summary.html:13
-#, fuzzy
 msgid "User Interface (red.)"
-msgstr "ユーザーインターフェース"
+msgstr "ユーザーインターフェース (縮)"
 
 #: templates/release_list.html:4 templates/release_list.html.py:9
 msgid "GNOME Releases"
@@ -2486,12 +2513,11 @@ msgstr "通知"
 
 #: templates/stats_show.html:30
 msgid "Search for similar bugs before reporting it"
-msgstr ""
+msgstr "報告する前に同じようなバグが無いか検索"
 
 #: templates/stats_show.html:35
-#, fuzzy
 msgid "Report this bug"
-msgstr "バグを報告"
+msgstr "このバグを報告"
 
 #: templates/stats_show.html:47 vertimus/models.py:183
 msgid "Translated"
@@ -2859,7 +2885,7 @@ msgstr "変更を適用"
 #: templates/teams/team_detail.html:87
 #, python-format
 msgid "Last login on %(last_login)s"
-msgstr ""
+msgstr "最終ログインは %(last_login)s"
 
 #: templates/teams/team_edit.html:23
 msgid "This team is using the Vertimus translation workflow"
@@ -2913,9 +2939,8 @@ msgid "Translated:"
 msgstr "翻訳:"
 
 #: templates/vertimus/vertimus_detail.html:75
-#, fuzzy
 msgid "Translated (reduced):"
-msgstr "翻訳:"
+msgstr "翻訳 (縮):"
 
 #: templates/vertimus/vertimus_detail.html:104
 msgid "On-going activities in same module:"
@@ -2946,7 +2971,7 @@ msgstr "差分:"
 
 #: templates/vertimus/vertimus_detail.html:177
 msgid "No current actions."
-msgstr "現在、何のアクションもありません"
+msgstr "現在、何のアクションもありません。"
 
 #: templates/vertimus/vertimus_detail.html:181
 msgid "New Action"
@@ -3267,9 +3292,6 @@ msgstr "最新の POT ファイル"
 #~ "href=\"http://translationproject.org/domain/xdg-user-dirs.html"
 #~ "\">Translation Project の xdg-user-dirs の翻訳ページ</a> もご覧ください。"
 
-#~ msgid "GNOME 3.0 (development)"
-#~ msgstr "GNOME 3.0 (開発版)"
-
 #~ msgid "GNOME 2.32 (stable)"
 #~ msgstr "GNOME 2.32 (安定版)"
 
@@ -3489,11 +3511,6 @@ msgstr "最新の POT ファイル"
 #~ msgstr ""
 #~ "情報を集めるモジュールがありません。<a href=\"danilo@gnome.org\">Danilo</"
 #~ "a> にきいてみてください!"
-
-# ?
-#, fuzzy
-#~ msgid "There are no contributors, GNOME turned itself up from nothing."
-#~ msgstr "貢献してくれている人がいません。"
 
 #~ msgid "Browse SVN"
 #~ msgstr "SVN を参照"
