@@ -69,4 +69,4 @@ class Command(BaseCommand):
                         print >> sys.stderr, traceback.format_exc()
                         print "Error while updating stats for %s (branch '%s')" % (mod.name, branch.name)
 
-        return "Update completed."
+        return "Update completed.\n"

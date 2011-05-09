@@ -20,6 +20,7 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import operator
+from django.conf import settings
 from django.utils.translation import ugettext as _, get_language
 try:
     import PyICU
@@ -161,6 +162,9 @@ def imerge_sorted_by_field(object_list1, object_list2, field):
                 while True:
                     yield el1
                     el1 = iter1.next()
+
+def is_site_admin(user):
+    return user.is_superuser or settings.ADMIN_GROUP in [g.name for g in user.groups.all()]
 
 if __name__ == "__main__":
     import doctest

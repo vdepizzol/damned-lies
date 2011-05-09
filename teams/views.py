@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>.
 # Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>.
 #
 # This file is part of Damned Lies.
@@ -19,12 +19,13 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render_to_response, get_object_or_404
-from django.core.urlresolvers import reverse
 from django.template import RequestContext
-from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
+
 from common import utils
 from teams.models import Team, FakeTeam, Role
 from teams.forms import EditMemberRoleForm, EditTeamDetailsForm
@@ -117,11 +118,12 @@ def team(request, team_slug):
         context['can_edit_team'] = True
 
     context['mem_groups'] = mem_groups
+    context['can_edit_details'] = context['can_edit_team'] or utils.is_site_admin(request.user)
     return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
 
 def team_edit(request, team_slug):
     team = get_object_or_404(Team, name=team_slug)
-    if not team.can_edit(request.user):
+    if not (team.can_edit(request.user) or utils.is_site_admin(request.user)):
         return HttpResponseForbidden("You are not allowed to edit this team.")
     form = EditTeamDetailsForm(request.POST or None, instance=team)
     if request.method == 'POST':
@@ -133,4 +135,3 @@ def team_edit(request, team_slug):
         'form': form
     }
     return render_to_response('teams/team_edit.html', context, context_instance=RequestContext(request))
-

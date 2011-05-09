@@ -5,7 +5,7 @@
 <table width="100%"><tr><td valign="top" width="50%">
 
   <h2>{% trans "Details" %}
-      {% if can_edit_team %}<a href="{% url team_edit team.name %}">
+      {% if can_edit_details %}<a href="{% url team_edit team.name %}">
         <img src="{{ MEDIA_URL }}img/edit_small.png" alt="Edit"/></a>
       {% endif %}
   </h2>

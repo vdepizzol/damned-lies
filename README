@@ -50,8 +50,8 @@ Installation
 
 1 - Create a local_settings.py and overwrite settings to match your requirements
     and your configuration layouts. Typical settings to customize include:
-    DATABASES, DEBUG, TEMPLATE_DEBUG, STATIC_SERVE, ADMINS, MANAGERS, SCRATCHDIR and
-    various EMAIL settings.
+    DATABASES, DEBUG, TEMPLATE_DEBUG, STATIC_SERVE, ADMINS, MANAGERS, ADMIN_GROUP,
+    SCRATCHDIR and various EMAIL settings.
     (please refer to Database configuration below for more
     informations).
     SCRATCHDIR should point to an existing directory, writable by

@@ -33,6 +33,7 @@ from django.utils.datastructures import SortedDict
 from django.db import models, connection
 
 from common.fields import DictionaryField
+from common.utils import is_site_admin
 from stats import utils, signals
 from stats.doap import update_doap_infos
 from people.models import Person
@@ -145,9 +146,7 @@ class Module(models.Model):
 
     def can_edit_branches(self, user):
         """ Returns True for superusers, users with adequate permissions or maintainers of the module """
-        if user.is_superuser or \
-           user.has_perms(['stats.delete_branch', 'stats.add_branch', 'stats.change_branch']) or \
-           user.username in [ p.username for p in self.maintainers.all() ]:
+        if is_site_admin(user) or user.username in [ p.username for p in self.maintainers.all() ]:
             return True
         return False
 

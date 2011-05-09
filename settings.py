@@ -140,6 +140,9 @@ INTERNAL_IPS=('127.0.0.1',)
 MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
 LOGIN_REDIRECT_URL = '/'
 
+# Members of this group can edit all team's details
+ADMIN_GROUP = ''
+
 try:
     from local_settings import *
 except ImportError:
