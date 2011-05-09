@@ -125,7 +125,7 @@ def team_edit(request, team_slug):
     team = get_object_or_404(Team, name=team_slug)
     if not (team.can_edit(request.user) or utils.is_site_admin(request.user)):
         return HttpResponseForbidden("You are not allowed to edit this team.")
-    form = EditTeamDetailsForm(request.POST or None, instance=team)
+    form = EditTeamDetailsForm(request.user, request.POST or None, instance=team)
     if request.method == 'POST':
         if form.is_valid():
             form.save()

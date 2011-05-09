@@ -16,7 +16,7 @@ urlpatterns = patterns('',
         view = 'teams.views.teams',
         name = 'teams'),
     url(
-        regex = r'^(?P<team_slug>[\w\-@]+)$',
+        regex = r'^(?P<team_slug>[\w\-@]+)/$',
         view = 'teams.views.team',
         name = 'team_slug'),
     url(

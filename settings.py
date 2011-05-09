@@ -140,7 +140,7 @@ INTERNAL_IPS=('127.0.0.1',)
 MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
 LOGIN_REDIRECT_URL = '/'
 
-# Members of this group can edit all team's details
+# Members of this group can edit all team's details and change team coordinatorship
 ADMIN_GROUP = ''
 
 try:
