@@ -150,14 +150,32 @@ def check_potfiles(po_path):
 def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
 
+    extract_tools = {
+        'xml2po':  {
+            'command' : "cd \"%(dir)s\" && xml2po %(opts)s -o %(potfile)s -e %(files)s",
+            'mod_var' : "DOC_ID",
+            'incl_var': "DOC_PAGES",
+        },
+        'itstool': {
+            'command' : "cd \"%(dir)s\" && itstool -o %(potfile)s %(files)s",
+            'mod_var' : "HELP_ID",
+            'incl_var': "HELP_FILES",
+        },
+    }
     errors = []
-    xml2po_options = ""
+
+    doc_id = read_makefile_variable([vcs_path], "HELP_ID")
+    if doc_id:
+        tool = "itstool"
+    else:
+        tool = "xml2po"
+
+    options = ""
     if os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK):
         # a Mallard document
         files = ["index.page"]
-        includes = read_makefile_variable([vcs_path], "DOC_PAGES")
-        xml2po_options = "-m mallard"
-
+        if tool == "xml2po":
+            options = "-m mallard"
     else:
         modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
         if not modulename:
@@ -175,13 +193,14 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
                     errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
                     return "", errors
         files = [modulename + ".xml"]
-        includes = read_makefile_variable([vcs_path], "DOC_INCLUDES")
+        extract_tools[tool]['incl_var'] = "DOC_INCLUDES"
 
+    includes = read_makefile_variable([vcs_path], extract_tools[tool]['incl_var'])
     if includes:
         files.extend(filter(lambda x:x not in ("", "$(NULL)"), includes.split()))
     files = " ".join([os.path.join("C", f) for f in files])
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
-    command = "cd \"%s\" && xml2po %s -o %s -e %s" % (vcs_path, xml2po_options, potfile, files)
+    command = extract_tools[tool]['command'] % {'dir': vcs_path, 'opts': options, 'potfile': potfile, 'files': files}
     (status, output, errs) = run_shell_command(command)
 
     if status != STATUS_OK:
@@ -370,7 +389,7 @@ def get_ui_linguas(module_path, po_path):
 
 def get_doc_linguas(module_path, po_path):
     """Get language list in one Makefile.am (either path) """
-    linguas = read_makefile_variable([po_path, module_path], "DOC_LINGUAS")
+    linguas = read_makefile_variable([po_path, module_path], "(?:DOC|HELP)_LINGUAS")
     if linguas is None:
         return {'langs':None,
                 'error': ugettext_noop("Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer.") }
