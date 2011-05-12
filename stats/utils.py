@@ -207,7 +207,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
         errors.append(("error",
                        ugettext_noop("Error regenerating POT file for document %(file)s:\n<pre>%(cmd)s\n%(output)s</pre>")
                              % {'file': potbase,
-                                'cmd': command,
+                                'cmd': command.replace(settings.SCRATCHDIR, "&lt;scratchdir&gt;"),
                                 'output': errs})
                      )
         potfile = ""
