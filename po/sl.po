@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 20:00+0000\n"
-"PO-Revision-Date: 2011-05-09 12:44+0100\n"
+"POT-Creation-Date: 2011-05-14 17:15+0000\n"
+"PO-Revision-Date: 2011-05-14 20:43+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1298,8 +1298,8 @@ msgid "GNOME Applets"
 msgstr "GNOME Apleti"
 
 #: database-content.py:410
-msgid "GNOME 2 Development Documentation"
-msgstr "GNOME 2 Razvojna dokumentacija"
+msgid "GNOME Development Documentation"
+msgstr "Razvojna dokumentacija GNOME"
 
 #: database-content.py:411
 msgid "Gnome Specimen"
@@ -1754,28 +1754,28 @@ msgstr "Ni podatkov o članstvu v skupini."
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
-#: stats/models.py:100
+#: stats/models.py:101
 #, python-format
 msgid "Translations for this module are externally hosted. Please go to the <a href=\"%(link)s\">external platform</a> to see how you can submit your translation."
 msgstr "Prevodi za ta modul so objavljeni na <a href=\"%(link)s\">zunanjih strežnikih</a>, kjer je mogoče posodobitve tudi objaviti."
 
-#: stats/models.py:259
+#: stats/models.py:258
 msgid "This branch is not linked from any release"
 msgstr "Ta veja ni vezana nobeno objavljeno različico"
 
-#: stats/models.py:432
+#: stats/models.py:431
 msgid "Can't generate POT file, using old one."
 msgstr "Ni mogoče ustvariti POT datoteke; uporabljena bo stara."
 
-#: stats/models.py:434
+#: stats/models.py:433
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 
-#: stats/models.py:453
+#: stats/models.py:452
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:793
+#: stats/models.py:792
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1786,42 +1786,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:817
+#: stats/models.py:816
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:1147
+#: stats/models.py:1146
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:1148
+#: stats/models.py:1147
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:1149
+#: stats/models.py:1148
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:1150
+#: stats/models.py:1149
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:1151
+#: stats/models.py:1150
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1288
-#: stats/models.py:1643
+#: stats/models.py:1287
+#: stats/models.py:1642
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1316
+#: stats/models.py:1315
 msgid "POT file unavailable"
 msgstr "Datoteka POT ni na voljo"
 
-#: stats/models.py:1320
+#: stats/models.py:1319
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1830,18 +1830,18 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1321
+#: stats/models.py:1320
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
-#: stats/models.py:1323
+#: stats/models.py:1322
 #: templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1326
+#: stats/models.py:1325
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1850,21 +1850,21 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1327
+#: stats/models.py:1326
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1330
+#: stats/models.py:1329
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1451
+#: stats/models.py:1450
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1452
+#: stats/models.py:1451
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
@@ -1882,21 +1882,21 @@ msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: stats/utils.py:167
+#: stats/utils.py:185
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 
-#: stats/utils.py:170
+#: stats/utils.py:188
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
 
-#: stats/utils.py:178
+#: stats/utils.py:196
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
 
-#: stats/utils.py:192
+#: stats/utils.py:211
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1907,59 +1907,65 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:277
+#: stats/utils.py:296
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:297
+#: stats/utils.py:316
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:299
+#: stats/utils.py:318
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:302
+#: stats/utils.py:321
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:330
+#: stats/utils.py:349
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:346
+#: stats/utils.py:365
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:364
+#: stats/utils.py:383
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr "Za ta modul urejanje datoteke LINGUAS ni zahtevano"
 
-#: stats/utils.py:370
+#: stats/utils.py:389
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:372
+#: stats/utils.py:391
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:379
+#: stats/utils.py:398
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:381
+#: stats/utils.py:400
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
-#: teams/forms.py:21
+#: teams/forms.py:30
+#: teams/models.py:253
+#: templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "Nadzornik"
+
+#: teams/forms.py:57
 msgid "Mark as Inactive"
 msgstr "Označi kot ne_dejavno"
 
-#: teams/forms.py:22
+#: teams/forms.py:58
 msgid "Remove From Team"
 msgstr "Odstrani iz skupine"
 
@@ -1999,40 +2005,35 @@ msgstr "Pregledovalec"
 msgid "Committer"
 msgstr "Uveljavitelj"
 
-#: teams/models.py:253
-#: templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "Nadzornik"
-
-#: teams/views.py:57
+#: teams/views.py:58
 msgid "Committers"
 msgstr "Uveljavitelji"
 
-#: teams/views.py:60
+#: teams/views.py:61
 msgid "No committers"
 msgstr "Ni uveljaviteljev"
 
-#: teams/views.py:62
+#: teams/views.py:63
 msgid "Reviewers"
 msgstr "Pregledovalci"
 
-#: teams/views.py:65
+#: teams/views.py:66
 msgid "No reviewers"
 msgstr "Ni prijavljenih pregledovalcev"
 
-#: teams/views.py:67
+#: teams/views.py:68
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: teams/views.py:70
+#: teams/views.py:71
 msgid "No translators"
 msgstr "Ni prijavljenih prevajalcev"
 
-#: teams/views.py:72
+#: teams/views.py:73
 msgid "Inactive members"
 msgstr "Nedejavni člani"
 
-#: teams/views.py:75
+#: teams/views.py:76
 msgid "No inactive members"
 msgstr "Ni nedejavnih članov"
 
@@ -2271,7 +2272,7 @@ msgstr "Kategorija"
 
 #: templates/module_edit_branches.html:23
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
+#: templates/teams/team_edit.html:36
 msgid "Save"
 msgstr "Shrani"
 
@@ -2378,7 +2379,7 @@ msgid "Older Releases"
 msgstr "Starejše objave"
 
 #: templates/stats_show.html:7
-#: templates/languages/language_release_stats.html:65
+#: templates/languages/language_release_stats.html:64
 msgid "This document is written in Mallard documentation format"
 msgstr "Dokument je zapisan v zapisu dokumentacije Mallard."
 
@@ -2460,25 +2461,25 @@ msgstr "Prenos vseh po datotek."
 msgid "Module"
 msgstr "Modul"
 
-#: templates/languages/language_release_stats.html:21
+#: templates/languages/language_release_stats.html:22
 msgid "Statistics"
 msgstr "Statistika"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 msgid "Status"
 msgstr "Stanje"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Datum"
 
-#: templates/languages/language_release_stats.html:32
+#: templates/languages/language_release_stats.html:33
 #, python-format
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% prevedeno)"
 
-#: templates/languages/language_release_stats.html:100
+#: templates/languages/language_release_stats.html:98
 msgid "Error summary"
 msgstr "Povzetek napak"
 
@@ -2737,11 +2738,11 @@ msgstr "Uporabi spremembe"
 msgid "Last login on %(last_login)s"
 msgstr "Zadnja prijava %(last_login)s"
 
-#: templates/teams/team_edit.html:23
+#: templates/teams/team_edit.html:31
 msgid "This team is using the Vertimus translation workflow"
 msgstr "Prevajalska skupina uporablja orodje Vertimus za vodenje dela."
 
-#: templates/teams/team_edit.html:25
+#: templates/teams/team_edit.html:34
 msgid "This content may use <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> syntax"
 msgstr "Mogoče je uporabljati <a href='http://en.wikipedia.org/wiki/Markdown'>Markdown</a> skladnjo</a>"
 
@@ -3105,9 +3106,9 @@ msgstr "Najnovejša POT datoteka"
 #~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
 #~ "a> to see where to send translations."
 #~ msgstr ""
-#~ "Program GNUCash ni vključen v skladišču GNOME. Preverite <a href="
-#~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> "
-#~ "strani za več podrobnosti o pošiljanju prevodov."
+#~ "Program GNUCash ni vključen v skladišču GNOME. Preverite <a href=\"http://"
+#~ "wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash Wiki</a> strani za "
+#~ "več podrobnosti o pošiljanju prevodov."
 
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
