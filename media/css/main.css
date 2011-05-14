@@ -2,6 +2,15 @@ pre {
   white-space: pre-wrap;
 }
 
+#stats-table {
+  border-collapse: collapse;
+}
+
+#stats-table td {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 3px;
+}
+
 #stats-table tr:hover {
   background-color: #f0f0f0;
 }
