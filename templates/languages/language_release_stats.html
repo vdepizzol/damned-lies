@@ -26,13 +26,13 @@
  <tr style="display:none;"><td>mod</td><td>br</td><td>100</td><td></td><td>state</td><td></td></tr>
 {% for catname,categ in modstats.categs.items %}
   {% if catname != "default" %}
-    <tr class="subheader"><td colspan="4" class="leftcell" style="font-weight: bold; padding-top:1em;">
+    <tr class="subheader"><td colspan="6" class="leftcell" style="font-weight: bold; padding-top:1em;">
      {% with categ.cattransperc as percentage %}
      {% with categ.catname as categname %}
      {% blocktrans %}{{ categname }} ({{ percentage }}% translated){% endblocktrans %}
      {% endwith %}
      {% endwith %}
-    </td><td></td></tr>
+    </td></tr>
   {% endif %}
 
   {% for module in categ.modules %}
