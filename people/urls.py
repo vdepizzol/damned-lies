@@ -1,14 +1,15 @@
 from django.conf.urls.defaults import *
+from django.contrib.auth.decorators import login_required
 
-from people.views import PeopleListView, PersonDetailView
+from people import views
 
 
 # Regex order is really important here
 urlpatterns = patterns('people.views',
     url(
-        regex = r'^detail_change/$',
-        view = 'person_detail_change',
-        name='person_detail_change'),
+        r'^detail_change/$',
+        login_required(views.PersonEditView.as_view()),
+        name = 'person_detail_change'),
     url(
         regex = r'^password_change/$',
         view = 'person_password_change',
@@ -23,15 +24,15 @@ urlpatterns = patterns('people.views',
         name='person_team_leave'),
     url(
         r'^(?P<pk>\d+)/$',
-        PersonDetailView.as_view(),
+        views.PersonDetailView.as_view(),
         name = 'person_detail_id'),
     # Equivalent to the previous, but using username instead of user pk
     url(
         r'^(?P<slug>[\w@\.\-]+)/$',
-        PersonDetailView.as_view(),
+        views.PersonDetailView.as_view(),
         name = 'person_detail_username'),
 )
 
 urlpatterns += patterns('',
-    url(r'^$', PeopleListView.as_view(), name='people'),
+    url(r'^$', views.PeopleListView.as_view(), name='people'),
 )

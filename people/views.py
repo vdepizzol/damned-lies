@@ -33,7 +33,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils import formats
 from django.utils.translation import ugettext_lazy, ugettext as _
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 
 from people.models import Person
 from teams.models import Team, Role
@@ -68,27 +68,25 @@ class PersonDetailView(DetailView):
         })
         return context
 
-@login_required
-def person_detail_change(request):
-    """Handle the form to change the details"""
-    person = get_object_or_404(Person, username=request.user.username)
-    if request.method == 'POST':
-        form = DetailForm(request.POST, instance=person)
-        if form.is_valid():
-            form.save()
-        else:
-            messages.error(request, _("Sorry, the form is not valid."))
-    else:
-        form = DetailForm(instance=person)
+class PersonEditView(UpdateView):
+    model = Person
+    slug_field = 'username'
+    form_class = DetailForm
+    template_name = 'people/person_detail_change_form.html'
 
-    context = {
-        'pageSection': "teams",
-        'person': person,
-        'on_own_page': person.username == request.user.username,
-        'form': form,
-    }
-    return render_to_response('people/person_detail_change_form.html', context,
-            context_instance=RequestContext(request))
+    def get_object(self):
+        self.kwargs['slug'] = self.request.user.username
+        return super(PersonEditView, self).get_object()
+
+    def get_context_data(self, **kwargs):
+        context = super(PersonEditView, self).get_context_data(**kwargs)
+        context['pageSection'] = "teams"
+        context['on_own_page'] = self.object.username == self.request.user.username,
+        return context
+
+    def form_invalid(self, form):
+        messages.error(self.request, _("Sorry, the form is not valid."))
+        return super(PersonEditView, self).form_invalid(form)
 
 @login_required
 def person_team_join(request):
