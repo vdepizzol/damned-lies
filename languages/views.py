@@ -24,7 +24,6 @@ import tarfile
 from datetime import date, datetime
 from django.shortcuts import render_to_response, get_object_or_404
 from django.utils.translation import ugettext as _
-from django.utils import formats
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
@@ -54,7 +53,6 @@ def language_all(request, locale, dtype):
             'doc': _("Documentation")}.get(dtype),
         'stats': stats,
         'scope': dtype.endswith('-part') and 'part' or 'full',
-        'dateformat': formats.get_format('DATE_FORMAT'),
     }
     return render_to_response('languages/language_all_modules.html', context,
                               context_instance=RequestContext(request))
@@ -91,7 +89,6 @@ def language_release(request, locale, release_name, dtype):
         'stats': stats,
         'dtype': dtype,
         'scope': dtype.endswith('-part') and 'part' or 'full',
-        'dateformat': formats.get_format('DATE_FORMAT'),
     }
     return render_to_response('languages/language_release.html', context,
                               context_instance=RequestContext(request))

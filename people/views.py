@@ -31,7 +31,6 @@ from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
-from django.utils import formats
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.views.generic import ListView, DetailView, UpdateView
 
@@ -64,7 +63,6 @@ class PersonDetailView(DetailView):
             'all_languages': all_languages,
             'on_own_page': self.request.user.is_authenticated() and self.object.username == self.request.user.username,
             'states': states,
-            'dateformat': formats.get_format('DATE_FORMAT'),
         })
         return context
 

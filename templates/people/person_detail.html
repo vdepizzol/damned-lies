@@ -56,7 +56,7 @@ $(document).ready(function()
 <tbody>
 {% for state in states %}
 <tr>
-  <td><span style="display: none;">{{ state.updated|date:"c" }}</span>{{ state.updated|naturalday:dateformat }}</td>
+  <td><span style="display: none;">{{ state.updated|date:"c" }}</span>{{ state.updated|naturalday:"DATE_FORMAT" }}</td>
   <td><a href="{{ state.get_absolute_url }}">{{ state.branch.module.get_description }} - {{ state.branch.name }} - {{ state.domain.get_description }} - {{ state.language.get_name }}</a></td>
   <td>{{ state.get_state }}</td>
 </tr>
