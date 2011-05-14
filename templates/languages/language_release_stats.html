@@ -18,8 +18,10 @@
 
 <table class="tablesorter" name="stats-table" id="stats-table">
 <thead>
-  <tr><th>{% trans "Module" %}</th><th>{% trans "Branch" %}&nbsp;&nbsp;&nbsp;</th><th >{% trans "Statistics" %}</th>
-      <th></th><th>{% trans "Status" %}&nbsp;&nbsp;&nbsp;</th><th>{% trans "Date" %}&nbsp;&nbsp;&nbsp;</th></tr>
+  <tr><th>{% trans "Module" %}</th><th>{% trans "Branch" %}</th>
+      <th colspan="2">{% trans "Statistics" %}</th>
+      <th>{% trans "Status" %}</th><th>{% trans "Date" %}</th>
+  </tr>
 </thead>
 <tbody>
  {# empty line to not disturb tablesorter if 1st line is a colspan #}
@@ -27,10 +29,8 @@
 {% for catname,categ in modstats.categs.items %}
   {% if catname != "default" %}
     <tr class="subheader"><td colspan="6" class="leftcell" style="font-weight: bold; padding-top:1em;">
-     {% with categ.cattransperc as percentage %}
-     {% with categ.catname as categname %}
+     {% with categ.cattransperc as percentage and categ.catname as categname %}
      {% blocktrans %}{{ categname }} ({{ percentage }}% translated){% endblocktrans %}
-     {% endwith %}
      {% endwith %}
     </td></tr>
   {% endif %}
@@ -39,8 +39,7 @@
     {% with module.0 as modname %}
     {% for branch, doms in module.1.items %}
      {% for dom in doms %}
-      {% with dom.0 as domname %}
-      {% with dom.1 as stat %}
+      {% with dom.0 as domname and dom.1 as stat %}
       {% if stat and not stat.is_fake %}
         {% if stat.tr_percentage == 100 %}
           <tr id="{{ modname }}-{{ stat.domain.id }}-complete">
@@ -86,7 +85,6 @@
           </td>
         </tr>
       {% endif %}
-      {% endwith %}
       {% endwith %}
      {% endfor %}
     {% endfor %}
