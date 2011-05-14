@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 15:08+0000\n"
-"PO-Revision-Date: 2011-04-27 20:28+0200\n"
+"POT-Creation-Date: 2011-05-14 15:56+0000\n"
+"PO-Revision-Date: 2011-05-14 18:15+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1169,8 +1169,9 @@ msgid "GNOME Applets"
 msgstr "Miniaplicaciones de GNOME"
 
 #: database-content.py:410
-msgid "GNOME 2 Development Documentation"
-msgstr "Documentación del desarrollador de GNOME 2"
+#| msgid "GNOME 2 Development Documentation"
+msgid "GNOME Development Documentation"
+msgstr "Documentación del desarrollador de GNOME"
 
 #: database-content.py:411
 msgid "Gnome Specimen"
@@ -1426,7 +1427,6 @@ msgstr ""
 "inferior)."
 
 #: database-content.py:454
-#| msgid "GNOME 3.0 (development)"
 msgid "GNOME 3.2 (development)"
 msgstr "GNOME 3.2 (desarrollo)"
 
@@ -1730,7 +1730,7 @@ msgstr "Usted no es miembro de este equipo."
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
-#: stats/models.py:100
+#: stats/models.py:101
 #, python-format
 msgid ""
 "Translations for this module are externally hosted. Please go to the <a href="
@@ -1740,23 +1740,23 @@ msgstr ""
 "Las traducciones de este módulo se almacenan externamente. Visite la <a href="
 "\"%(link)s\">platforma externa</a> para ver cómo puede enviar su traducción."
 
-#: stats/models.py:259
+#: stats/models.py:258
 msgid "This branch is not linked from any release"
 msgstr "Esta rama no está enlazada en ninguna publicación"
 
-#: stats/models.py:432
+#: stats/models.py:431
 msgid "Can't generate POT file, using old one."
 msgstr "No se puede general el archivo POT, usando el antiguo."
 
-#: stats/models.py:434
+#: stats/models.py:433
 msgid "Can't generate POT file, statistics aborted."
 msgstr "No se puede general el archivo POT, estadísticas abortadas."
 
-#: stats/models.py:453
+#: stats/models.py:452
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:793
+#: stats/models.py:792
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1767,7 +1767,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:817
+#: stats/models.py:816
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1775,76 +1775,76 @@ msgstr ""
 "La entrada para este idioma no está presente en la variable %(var)s del "
 "archivo %(file)s."
 
-#: stats/models.py:1147
+#: stats/models.py:1146
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:1148
+#: stats/models.py:1147
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:1149
+#: stats/models.py:1148
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:1150
+#: stats/models.py:1149
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:1151
+#: stats/models.py:1150
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1288 stats/models.py:1643
+#: stats/models.py:1287 stats/models.py:1642
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1316
+#: stats/models.py:1315
 msgid "POT file unavailable"
 msgstr "Archivo POT no disponible"
 
-#: stats/models.py:1320
+#: stats/models.py:1319
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1321
+#: stats/models.py:1320
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1322 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1326
+#: stats/models.py:1325
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1327
+#: stats/models.py:1326
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:1330
+#: stats/models.py:1329
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/models.py:1451
+#: stats/models.py:1450
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1452
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1870,21 +1870,21 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: stats/utils.py:167
+#: stats/utils.py:185
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
-#: stats/utils.py:170
+#: stats/utils.py:188
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE no resuelve a un archivo real, usando «%s.xml»."
 
-#: stats/utils.py:178
+#: stats/utils.py:196
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE no apunta a un archivo real, probablemente es un macro."
 
-#: stats/utils.py:192
+#: stats/utils.py:211
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1895,54 +1895,54 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:277
+#: stats/utils.py:296
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: stats/utils.py:297
+#: stats/utils.py:316
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: stats/utils.py:299
+#: stats/utils.py:318
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: stats/utils.py:302
+#: stats/utils.py:321
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: stats/utils.py:330
+#: stats/utils.py:349
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: stats/utils.py:346
+#: stats/utils.py:365
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: stats/utils.py:364
+#: stats/utils.py:383
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "No es necesario editar el archivo o la variable LINGUAS para este módulo"
 
-#: stats/utils.py:370
+#: stats/utils.py:389
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:372
+#: stats/utils.py:391
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:379
+#: stats/utils.py:398
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1950,15 +1950,19 @@ msgstr ""
 "No se sabe dónde mirar la variable DOC_LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:381
+#: stats/utils.py:400
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: teams/forms.py:21
+#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "Coordinador"
+
+#: teams/forms.py:57
 msgid "Mark as Inactive"
 msgstr "Marcar como inactivo"
 
-#: teams/forms.py:22
+#: teams/forms.py:58
 msgid "Remove From Team"
 msgstr "Quitar del equipo"
 
@@ -1996,39 +2000,35 @@ msgstr "Revisor"
 msgid "Committer"
 msgstr "Efectúa cambios en Git"
 
-#: teams/models.py:253 templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "Coordinador"
-
-#: teams/views.py:57
+#: teams/views.py:58
 msgid "Committers"
 msgstr "Personas que efectúan cambios en Git"
 
-#: teams/views.py:60
+#: teams/views.py:61
 msgid "No committers"
 msgstr "No hay ninguna persona que efectúe cambios en Git"
 
-#: teams/views.py:62
+#: teams/views.py:63
 msgid "Reviewers"
 msgstr "Revisores"
 
-#: teams/views.py:65
+#: teams/views.py:66
 msgid "No reviewers"
 msgstr "No hay ningún revisor"
 
-#: teams/views.py:67
+#: teams/views.py:68
 msgid "Translators"
 msgstr "Traductores"
 
-#: teams/views.py:70
+#: teams/views.py:71
 msgid "No translators"
 msgstr "No traductores"
 
-#: teams/views.py:72
+#: teams/views.py:73
 msgid "Inactive members"
 msgstr "Miembros inactivos"
 
-#: teams/views.py:75
+#: teams/views.py:76
 msgid "No inactive members"
 msgstr "No hay miembros inactivos"
 
@@ -2310,7 +2310,7 @@ msgstr "Categoría"
 
 #: templates/module_edit_branches.html:23
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
+#: templates/teams/team_edit.html:36
 msgid "Save"
 msgstr "Guardar"
 
@@ -2815,11 +2815,11 @@ msgstr "Aplicar modificaciones"
 msgid "Last login on %(last_login)s"
 msgstr "Último inicio de sesión en %(last_login)s"
 
-#: templates/teams/team_edit.html:23
+#: templates/teams/team_edit.html:31
 msgid "This team is using the Vertimus translation workflow"
 msgstr "Este elemento está usando el flujo de trabajo de Vertimus"
 
-#: templates/teams/team_edit.html:25
+#: templates/teams/team_edit.html:34
 msgid ""
 "This content may use <a href='http://en.wikipedia.org/wiki/"
 "Markdown'>Markdown</a> syntax"
