@@ -33,11 +33,22 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils import formats
 from django.utils.translation import ugettext_lazy, ugettext as _
+from django.views.generic import ListView
 
 from people.models import Person
 from teams.models import Team, Role
 from people.forms import TeamJoinForm, DetailForm
 from vertimus.models import StateDb
+
+
+class PeopleListView(ListView):
+    model = Person
+
+    def get_context_data(self, **kwargs):
+        context = super(PeopleListView, self).get_context_data(**kwargs)
+        context['pageSection'] = "teams"
+        return context
+
 
 def person_detail(request, person_id=None, person_username=None):
     if person_id:

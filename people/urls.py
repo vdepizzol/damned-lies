@@ -1,13 +1,7 @@
 from django.conf.urls.defaults import *
-from people.models import Person
 
-info_dict_list = {
-    'queryset': Person.objects.all(),
-    'template_object_name': 'person',
-    'extra_context': {
-        'pageSection': "teams"
-    }
-}
+from people.views import PeopleListView
+
 
 # Regex order is really important here
 urlpatterns = patterns('people.views',
@@ -38,10 +32,6 @@ urlpatterns = patterns('people.views',
         name='person_detail_username'),
 )
 
-urlpatterns += patterns('django.views.generic.list_detail',
-    url(
-        regex = r'^$',
-        view = 'object_list',
-        kwargs = dict(info_dict_list),
-        name = 'people'),
+urlpatterns += patterns('',
+    url(r'^$', PeopleListView.as_view(), name='people'),
 )

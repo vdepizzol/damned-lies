@@ -28,6 +28,13 @@ from people import forms
 
 class PeopleTestCase(TestCase):
 
+    def _create_person(self):
+        pn = Person(first_name='John', last_name='Nothing',
+            email='jn@devnull.com', username= 'jn')
+        pn.set_password('password')
+        pn.save()
+        return pn
+
     def test_register(self):
         response = self.client.post(reverse('register'),
                           {'username': u'test01', 'password1': u'1234567',
@@ -35,11 +42,14 @@ class PeopleTestCase(TestCase):
         self.assertRedirects(response, reverse('register_success'))
         self.assertEqual(Person.objects.filter(username=u'test01').count(), 1)
 
+    def test_person_list(self):
+        self.pn = self._create_person()
+        response = self.client.get(reverse('people'))
+        self.assertContains(response, "GNOME is being developed by following people:")
+        self.assertContains(response, "John Nothing")
+
     def test_edit_details(self):
-        self.pn = Person(first_name='John', last_name='Nothing',
-            email='jn@devnull.com', username= 'jn')
-        self.pn.set_password('password')
-        self.pn.save()
+        self.pn = self._create_person()
         self.client.login(username='jn', password='password')
         post_data = {
             'first_name': "Johnny", 'last_name': "Nothing", 'email': u'test02@example.org',
