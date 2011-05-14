@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 
-from people.views import PeopleListView
+from people.views import PeopleListView, PersonDetailView
 
 
 # Regex order is really important here
@@ -22,14 +22,14 @@ urlpatterns = patterns('people.views',
         view = 'person_team_leave',
         name='person_team_leave'),
     url(
-        regex = r'^(?P<person_id>\d+)/$',
-        view = 'person_detail',
-        name='person_detail_id'),
+        r'^(?P<pk>\d+)/$',
+        PersonDetailView.as_view(),
+        name = 'person_detail_id'),
     # Equivalent to the previous, but using username instead of user pk
     url(
-        regex = r'^(?P<person_username>[\w@\.\-]+)/$',
-        view = 'person_detail',
-        name='person_detail_username'),
+        r'^(?P<slug>[\w@\.\-]+)/$',
+        PersonDetailView.as_view(),
+        name = 'person_detail_username'),
 )
 
 urlpatterns += patterns('',

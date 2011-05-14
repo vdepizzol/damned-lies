@@ -33,7 +33,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils import formats
 from django.utils.translation import ugettext_lazy, ugettext as _
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from people.models import Person
 from teams.models import Team, Role
@@ -49,26 +49,24 @@ class PeopleListView(ListView):
         context['pageSection'] = "teams"
         return context
 
+class PersonDetailView(DetailView):
+    model = Person
+    slug_field = 'username'
+    context_object_name = 'person'
 
-def person_detail(request, person_id=None, person_username=None):
-    if person_id:
-        person = get_object_or_404(Person, pk=person_id)
-    else:
-        person = get_object_or_404(Person, username=person_username)
-
-    states = StateDb.objects.filter(actiondb__person=person).distinct()
-    all_languages = [(lg[0], LANG_INFO.get(lg[0], {'name_local': lg[1]})['name_local']) for lg in settings.LANGUAGES]
-    all_languages.sort(key=itemgetter(1))
-    context = {
-        'pageSection': "teams",
-        'all_languages': all_languages,
-        'person': person,
-        'on_own_page': request.user.is_authenticated() and person.username == request.user.username,
-        'states': states,
-        'dateformat': formats.get_format('DATE_FORMAT'),
-    }
-    return render_to_response('people/person_detail.html', context,
-            context_instance=RequestContext(request))
+    def get_context_data(self, **kwargs):
+        context = super(PersonDetailView, self).get_context_data(**kwargs)
+        states = StateDb.objects.filter(actiondb__person=self.object).distinct()
+        all_languages = [(lg[0], LANG_INFO.get(lg[0], {'name_local': lg[1]})['name_local']) for lg in settings.LANGUAGES]
+        all_languages.sort(key=itemgetter(1))
+        context.update({
+            'pageSection': "teams",
+            'all_languages': all_languages,
+            'on_own_page': self.request.user.is_authenticated() and self.object.username == self.request.user.username,
+            'states': states,
+            'dateformat': formats.get_format('DATE_FORMAT'),
+        })
+        return context
 
 @login_required
 def person_detail_change(request):
