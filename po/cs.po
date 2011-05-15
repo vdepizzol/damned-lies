@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 15:08+0000\n"
-"PO-Revision-Date: 2011-04-27 21:58+0200\n"
+"POT-Creation-Date: 2011-05-14 17:15+0000\n"
+"PO-Revision-Date: 2011-05-15 19:44+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1173,8 +1173,9 @@ msgid "GNOME Applets"
 msgstr "Applety GNOME"
 
 #: database-content.py:410
-msgid "GNOME 2 Development Documentation"
-msgstr "Vývojářská dokumentace ke GNOME 2"
+#| msgid "GNOME 2 Development Documentation"
+msgid "GNOME Development Documentation"
+msgstr "Vývojářská dokumentace GNOME"
 
 #: database-content.py:411
 msgid "Gnome Specimen"
@@ -1428,7 +1429,6 @@ msgstr ""
 "Překlady by měly být odevzdávány jako hlášení o chybě (viz odkaz níže)."
 
 #: database-content.py:454
-#| msgid "GNOME 2 Development Documentation"
 msgid "GNOME 3.2 (development)"
 msgstr "GNOME 3.2 (vývojové)"
 
@@ -1735,7 +1735,7 @@ msgstr "Nejste členem tohoto týmu."
 msgid "Your password has been changed."
 msgstr "Vaše heslo bylo změněno."
 
-#: stats/models.py:100
+#: stats/models.py:101
 #, python-format
 msgid ""
 "Translations for this module are externally hosted. Please go to the <a href="
@@ -1746,23 +1746,23 @@ msgstr ""
 "<a href=\"%(link)s\">externí stránku</a>, kde se dozvíte podrobnosti o tom, "
 "jak můžete přidat svůj překlad."
 
-#: stats/models.py:259
+#: stats/models.py:258
 msgid "This branch is not linked from any release"
 msgstr "Tato větev není odkazována z žádného vydání"
 
-#: stats/models.py:432
+#: stats/models.py:431
 msgid "Can't generate POT file, using old one."
 msgstr "Nelze vytvořit šablonu POT. Používá se stará."
 
-#: stats/models.py:434
+#: stats/models.py:433
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Nelze vytvořit šablonu POT, statistika přerušena."
 
-#: stats/models.py:453
+#: stats/models.py:452
 msgid "Can't copy new POT file to public location."
 msgstr "Nepodařilo se zkopírovat novou šablonu POT do veřejného umístění."
 
-#: stats/models.py:793
+#: stats/models.py:792
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1773,43 +1773,43 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:817
+#: stats/models.py:816
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr ""
 "V proměnné %(var)s v souboru %(file)s se nenachází záznam tohoto jazyka."
 
-#: stats/models.py:1147
+#: stats/models.py:1146
 msgid "Administration Tools"
 msgstr "Nástroje na správu systému"
 
-#: stats/models.py:1148
+#: stats/models.py:1147
 msgid "Development Tools"
 msgstr "Vývojářské nástroje"
 
-#: stats/models.py:1149
+#: stats/models.py:1148
 msgid "GNOME Desktop"
 msgstr "Pracovní prostředí GNOME"
 
-#: stats/models.py:1150
+#: stats/models.py:1149
 msgid "GNOME Developer Platform"
 msgstr "Vývojářská platforma GNOME"
 
-#: stats/models.py:1151
+#: stats/models.py:1150
 msgid "New Module Proposals"
 msgstr "Návrhy nových modulů"
 
-#: stats/models.py:1288 stats/models.py:1643
+#: stats/models.py:1287 stats/models.py:1642
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1316
+#: stats/models.py:1315
 msgid "POT file unavailable"
 msgstr "Soubor POT není dostupný"
 
-#: stats/models.py:1320
+#: stats/models.py:1319
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1817,18 +1817,18 @@ msgstr[0] "%(count)s zpráva"
 msgstr[1] "%(count)s zprávy"
 msgstr[2] "%(count)s zpráv"
 
-#: stats/models.py:1321
+#: stats/models.py:1320
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualizováno %(date)s"
 
 # Was: d. F Y G:i O
-#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1322 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d G:i O"
 
-#: stats/models.py:1326
+#: stats/models.py:1325
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1837,23 +1837,23 @@ msgstr[1] "%(count)s obrázky"
 msgstr[2] "%(count)s obrázků"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1327
+#: stats/models.py:1326
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s, %(figures)s) — %(updated)s"
 
 # tady nevím co s těma figures, ten formát je nějakej divnej, protože na webu se to zobrazuje nějak takhle: POT file (2318 messages, 82 figures) *** Upraveno dle ostatních jazyků.
-#: stats/models.py:1330
+#: stats/models.py:1329
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Šablona POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1451
+#: stats/models.py:1450
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr "Tento soubor POT nebyl vytvořen pomocí standardní metody intltool."
 
-#: stats/models.py:1452
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1878,22 +1878,22 @@ msgstr ""
 "Na následující soubory je odkazováno v souborech POTFILES.in nebo POTFILES."
 "skip, avšak tyto soubory neexistují: %s"
 
-#: stats/utils.py:167
+#: stats/utils.py:185
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s nevypadá jako modul gnome-doc-utils."
 
-#: stats/utils.py:170
+#: stats/utils.py:188
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr "DOC_MODULE neodkazuje na reálný objekt, použije se „%s.xml“."
 
-#: stats/utils.py:178
+#: stats/utils.py:196
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr ""
 "DOC_MODULE neodkazuje na reálný objekt, pravděpodobně se jedná o makro."
 
-#: stats/utils.py:192
+#: stats/utils.py:211
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1904,50 +1904,50 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:277
+#: stats/utils.py:296
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Soubor PO „%s“ neexistuje nebo jej nelze přečíst."
 
-#: stats/utils.py:297
+#: stats/utils.py:316
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Soubor PO „%s“ neprošel kontrolou msgfmt: neaktualizuje se."
 
-#: stats/utils.py:299
+#: stats/utils.py:318
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Nepodařilo se získat statistiky souboru PO „%s“."
 
-#: stats/utils.py:302
+#: stats/utils.py:321
 msgid "This PO file has an executable bit set."
 msgstr "Tento soubor PO je spustitelný."
 
-#: stats/utils.py:330
+#: stats/utils.py:349
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Soubor PO „%s“ není kódován v UTF-8."
 
-#: stats/utils.py:346
+#: stats/utils.py:365
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "V souboru LINGUAS se nenachází záznam tohoto jazyka."
 
-#: stats/utils.py:364
+#: stats/utils.py:383
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr "Pro tento modul není zapotřebí upravovat soubor nebo proměnnou LINGUAS"
 
-#: stats/utils.py:370
+#: stats/utils.py:389
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "V konfiguračním souboru se nenachází záznam ALL_LINGUAS tohoto jazyka."
 
-#: stats/utils.py:372
+#: stats/utils.py:391
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Nelze zjistit, kde se má hledat proměnná LINGUAS, kontaktujte správce modulu."
 
-#: stats/utils.py:379
+#: stats/utils.py:398
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1955,15 +1955,19 @@ msgstr ""
 "Nelze zjistit, kde se má hledat proměnná DOC_LINGUAS, kontaktujte správce "
 "modulu."
 
-#: stats/utils.py:381
+#: stats/utils.py:400
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V souboru DOC_LINGUAS se nenachází tento jazyk."
 
-#: teams/forms.py:21
+#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "Koordinátor"
+
+#: teams/forms.py:57
 msgid "Mark as Inactive"
 msgstr "Označit jako neaktivní"
 
-#: teams/forms.py:22
+#: teams/forms.py:58
 msgid "Remove From Team"
 msgstr "Odebrat z týmu"
 
@@ -2001,39 +2005,35 @@ msgstr "Korektor"
 msgid "Committer"
 msgstr "Zařazující"
 
-#: teams/models.py:253 templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "Koordinátor"
-
-#: teams/views.py:57
+#: teams/views.py:58
 msgid "Committers"
 msgstr "Zařazující"
 
-#: teams/views.py:60
+#: teams/views.py:61
 msgid "No committers"
 msgstr "Bez zařazujících"
 
-#: teams/views.py:62
+#: teams/views.py:63
 msgid "Reviewers"
 msgstr "Korektoři"
 
-#: teams/views.py:65
+#: teams/views.py:66
 msgid "No reviewers"
 msgstr "Bez korektorů"
 
-#: teams/views.py:67
+#: teams/views.py:68
 msgid "Translators"
 msgstr "Překladatelé"
 
-#: teams/views.py:70
+#: teams/views.py:71
 msgid "No translators"
 msgstr "Bez překladatelů"
 
-#: teams/views.py:72
+#: teams/views.py:73
 msgid "Inactive members"
 msgstr "Neaktivní členové"
 
-#: teams/views.py:75
+#: teams/views.py:76
 msgid "No inactive members"
 msgstr "Bez neaktivních členů"
 
@@ -2314,7 +2314,7 @@ msgstr "Kategorie"
 
 #: templates/module_edit_branches.html:23
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
+#: templates/teams/team_edit.html:36
 msgid "Save"
 msgstr "Uložit"
 
@@ -2428,7 +2428,7 @@ msgid "Older Releases"
 msgstr "Starší vydání"
 
 #: templates/stats_show.html:7
-#: templates/languages/language_release_stats.html:65
+#: templates/languages/language_release_stats.html:64
 msgid "This document is written in Mallard documentation format"
 msgstr "Tento dokument je napsán ve formátu dokumentace Mallard"
 
@@ -2505,25 +2505,25 @@ msgstr "Stáhnout všechny soubory PO"
 msgid "Module"
 msgstr "Modul"
 
-#: templates/languages/language_release_stats.html:21
+#: templates/languages/language_release_stats.html:22
 msgid "Statistics"
 msgstr "Statistiky"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 msgid "Status"
 msgstr "Stav"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Datum"
 
-#: templates/languages/language_release_stats.html:32
+#: templates/languages/language_release_stats.html:33
 #, python-format
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (přeloženo %(percentage)s %%)"
 
-#: templates/languages/language_release_stats.html:100
+#: templates/languages/language_release_stats.html:98
 msgid "Error summary"
 msgstr "Souhrn chyb"
 
@@ -2821,11 +2821,11 @@ msgstr "Použít změny"
 msgid "Last login on %(last_login)s"
 msgstr "Naposledy přihlášen %(last_login)s"
 
-#: templates/teams/team_edit.html:23
+#: templates/teams/team_edit.html:31
 msgid "This team is using the Vertimus translation workflow"
 msgstr "Tento tým využívá postup překladatelských prací systému Vertimus"
 
-#: templates/teams/team_edit.html:25
+#: templates/teams/team_edit.html:34
 msgid ""
 "This content may use <a href='http://en.wikipedia.org/wiki/"
 "Markdown'>Markdown</a> syntax"
