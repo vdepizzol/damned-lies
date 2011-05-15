@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 15:08+0000\n"
-"PO-Revision-Date: 2011-04-29 10:22+0200\n"
+"POT-Creation-Date: 2011-05-14 17:15+0000\n"
+"PO-Revision-Date: 2011-05-15 16:46+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -1170,8 +1170,8 @@ msgid "GNOME Applets"
 msgstr "Aplety GNOME"
 
 #: database-content.py:410
-msgid "GNOME 2 Development Documentation"
-msgstr "Dokumentacja programisty GNOME 2"
+msgid "GNOME Development Documentation"
+msgstr "Dokumentacja programisty GNOME"
 
 #: database-content.py:411
 msgid "Gnome Specimen"
@@ -1729,7 +1729,7 @@ msgstr "Użytkownik nie jest członkiem tego zespołu."
 msgid "Your password has been changed."
 msgstr "Hasło zostało zmienione."
 
-#: stats/models.py:100
+#: stats/models.py:101
 #, python-format
 msgid ""
 "Translations for this module are externally hosted. Please go to the <a href="
@@ -1739,23 +1739,23 @@ msgstr ""
 "Tłumaczenia tego modułu są przechowywane na zewnętrznym serwerze. Proszę "
 "wysyłać tłumaczenia przez <a href=\"%(link)s\">zewnętrzną platformę</a>."
 
-#: stats/models.py:259
+#: stats/models.py:258
 msgid "This branch is not linked from any release"
 msgstr "Ta gałąź nie jest używana w żadnym wydaniu"
 
-#: stats/models.py:432
+#: stats/models.py:431
 msgid "Can't generate POT file, using old one."
 msgstr "Nie można utworzyć pliku POT, użyto poprzedniego."
 
-#: stats/models.py:434
+#: stats/models.py:433
 msgid "Can't generate POT file, statistics aborted."
 msgstr "Nie można utworzyć pliku POT, przerwano tworzenie statystyk."
 
-#: stats/models.py:453
+#: stats/models.py:452
 msgid "Can't copy new POT file to public location."
 msgstr "Nie można skopiować nowego pliku POT do położenia publicznego."
 
-#: stats/models.py:793
+#: stats/models.py:792
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1766,42 +1766,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:817
+#: stats/models.py:816
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Wpis dla tego języka nie istnieje w zmiennej %(var)s w pliku %(file)s."
 
-#: stats/models.py:1147
+#: stats/models.py:1146
 msgid "Administration Tools"
 msgstr "Narzędzia administracyjne"
 
-#: stats/models.py:1148
+#: stats/models.py:1147
 msgid "Development Tools"
 msgstr "Narzędzia programistyczne"
 
-#: stats/models.py:1149
+#: stats/models.py:1148
 msgid "GNOME Desktop"
 msgstr "Środowisko GNOME"
 
-#: stats/models.py:1150
+#: stats/models.py:1149
 msgid "GNOME Developer Platform"
 msgstr "Platforma programistyczna GNOME"
 
-#: stats/models.py:1151
+#: stats/models.py:1150
 msgid "New Module Proposals"
 msgstr "Nowe propozycje modułów"
 
-#: stats/models.py:1288 stats/models.py:1643
+#: stats/models.py:1287 stats/models.py:1642
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1316
+#: stats/models.py:1315
 msgid "POT file unavailable"
 msgstr "Plik POT jest niedostępny"
 
-#: stats/models.py:1320
+#: stats/models.py:1319
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1809,17 +1809,17 @@ msgstr[0] "%(count)s ciąg znaków"
 msgstr[1] "%(count)s ciągi znaków"
 msgstr[2] "%(count)s ciągów znaków"
 
-#: stats/models.py:1321
+#: stats/models.py:1320
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zaktualizowano %(date)s"
 
-#: stats/models.py:1323 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1322 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1326
+#: stats/models.py:1325
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1827,23 +1827,23 @@ msgstr[0] "%(count)s ilustracja"
 msgstr[1] "%(count)s ilustracje"
 msgstr[2] "%(count)s ilustracji"
 
-#: stats/models.py:1327
+#: stats/models.py:1326
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Plik POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1330
+#: stats/models.py:1329
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Plik POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1451
+#: stats/models.py:1450
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Ten plik POT nie został utworzony za pomocą standardowej metody intltool."
 
-#: stats/models.py:1452
+#: stats/models.py:1451
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1869,22 +1869,22 @@ msgstr ""
 "Następujące pliki są wymienione w POTFILES.in lub POTFILES.skip, lecz nie "
 "istnieją: %s"
 
-#: stats/utils.py:167
+#: stats/utils.py:185
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Moduł %s wydaje się nie być modułem gnome-doc-utils."
 
-#: stats/utils.py:170
+#: stats/utils.py:188
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "DOC_MODULE nie odnosi się do prawdziwego pliku, używanie &quot;%s.xml&quot;."
 
-#: stats/utils.py:178
+#: stats/utils.py:196
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE nie wskazuje na prawdziwy plik, a prawdopodobnie makro."
 
-#: stats/utils.py:192
+#: stats/utils.py:211
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1895,65 +1895,69 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:277
+#: stats/utils.py:296
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Plik PO &quot;%s&quot; nie istnieje lub nie może być odczytany."
 
-#: stats/utils.py:297
+#: stats/utils.py:316
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Plik PO &quot;%s&quot; nie przeszedł testu msgfmt: bez aktualizacji."
 
-#: stats/utils.py:299
+#: stats/utils.py:318
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Nie można uzyskać statystyk dla pliku POT &quot;%s&quot;."
 
-#: stats/utils.py:302
+#: stats/utils.py:321
 msgid "This PO file has an executable bit set."
 msgstr "Ten plik PO ma ustawiony bit wykonywalny."
 
-#: stats/utils.py:330
+#: stats/utils.py:349
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Plik PO &quot;%s&quot; nie jest kodowany w UTF-8."
 
-#: stats/utils.py:346
+#: stats/utils.py:365
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Wpis dla tego języka nie istnieje w pliku LINGUAS."
 
-#: stats/utils.py:364
+#: stats/utils.py:383
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "Dla tego modułu nie jest wymagana modyfikacja pliku lub zmiennej LINGUAS"
 
-#: stats/utils.py:370
+#: stats/utils.py:389
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Wpis dla tego języka nie istnieje w pliku konfiguracyjnym ALL_LINGUAS."
 
-#: stats/utils.py:372
+#: stats/utils.py:391
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Nie można odnaleźć zmiennej LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:379
+#: stats/utils.py:398
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
 msgstr ""
 "Nie można znaleźć zmiennej DOC_LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:381
+#: stats/utils.py:400
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Lista DOC_LINGUAS nie zawiera tego języka."
 
-#: teams/forms.py:21
+#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:36
+msgid "Coordinator"
+msgstr "Koordynator"
+
+#: teams/forms.py:57
 msgid "Mark as Inactive"
 msgstr "Oznacz jako nieaktywny"
 
-#: teams/forms.py:22
+#: teams/forms.py:58
 msgid "Remove From Team"
 msgstr "Usuń z zespołu"
 
@@ -1991,39 +1995,35 @@ msgstr "Recenzent"
 msgid "Committer"
 msgstr "Zatwierdzający"
 
-#: teams/models.py:253 templates/teams/team_base.html:36
-msgid "Coordinator"
-msgstr "Koordynator"
-
-#: teams/views.py:57
+#: teams/views.py:58
 msgid "Committers"
 msgstr "Zatwierdzający"
 
-#: teams/views.py:60
+#: teams/views.py:61
 msgid "No committers"
 msgstr "Brak zatwierdzających"
 
-#: teams/views.py:62
+#: teams/views.py:63
 msgid "Reviewers"
 msgstr "Recenzenci"
 
-#: teams/views.py:65
+#: teams/views.py:66
 msgid "No reviewers"
 msgstr "Brak recenzentów"
 
-#: teams/views.py:67
+#: teams/views.py:68
 msgid "Translators"
 msgstr "Tłumacze"
 
-#: teams/views.py:70
+#: teams/views.py:71
 msgid "No translators"
 msgstr "Brak tłumaczy"
 
-#: teams/views.py:72
+#: teams/views.py:73
 msgid "Inactive members"
 msgstr "Nieaktywni członkowie"
 
-#: teams/views.py:75
+#: teams/views.py:76
 msgid "No inactive members"
 msgstr "Brak nieaktywnych członków"
 
@@ -2303,7 +2303,7 @@ msgstr "Kategoria"
 
 #: templates/module_edit_branches.html:23
 #: templates/people/person_detail_change_form.html:13
-#: templates/teams/team_edit.html:27
+#: templates/teams/team_edit.html:36
 msgid "Save"
 msgstr "Zapisz"
 
@@ -2419,7 +2419,7 @@ msgid "Older Releases"
 msgstr "Poprzednie wydania"
 
 #: templates/stats_show.html:7
-#: templates/languages/language_release_stats.html:65
+#: templates/languages/language_release_stats.html:64
 msgid "This document is written in Mallard documentation format"
 msgstr "Ten dokument został napisany w formacie dokumentacji Mallard"
 
@@ -2497,25 +2497,25 @@ msgstr "Pobierz wszystkie pliki PO"
 msgid "Module"
 msgstr "Moduł"
 
-#: templates/languages/language_release_stats.html:21
+#: templates/languages/language_release_stats.html:22
 msgid "Statistics"
 msgstr "Statystyki"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 msgid "Status"
 msgstr "Stan"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "Data"
 
-#: templates/languages/language_release_stats.html:32
+#: templates/languages/language_release_stats.html:33
 #, python-format
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (przetłumaczono %(percentage)s%%)"
 
-#: templates/languages/language_release_stats.html:100
+#: templates/languages/language_release_stats.html:98
 msgid "Error summary"
 msgstr "Podsumowanie błędów"
 
@@ -2812,11 +2812,11 @@ msgstr "Zastosuj zmiany"
 msgid "Last login on %(last_login)s"
 msgstr "Ostatnie logowanie: %(last_login)s"
 
-#: templates/teams/team_edit.html:23
+#: templates/teams/team_edit.html:31
 msgid "This team is using the Vertimus translation workflow"
 msgstr "Ten zespół używa programu do tłumaczeń Vertimus"
 
-#: templates/teams/team_edit.html:25
+#: templates/teams/team_edit.html:34
 msgid ""
 "This content may use <a href='http://en.wikipedia.org/wiki/"
 "Markdown'>Markdown</a> syntax"
