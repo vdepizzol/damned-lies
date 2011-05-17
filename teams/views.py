@@ -22,8 +22,7 @@
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponseForbidden
-from django.shortcuts import render_to_response, get_object_or_404
-from django.template import RequestContext
+from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext_lazy as _
 
 from common import utils
@@ -35,20 +34,16 @@ def teams(request, format='html'):
     teams = Team.objects.all_with_coordinator()
     format = request.GET.get('format') or format
     if format == 'xml':
-        return render_to_response(
-            'teams/team_list.xml',
-            { 'teams' : teams },
-            context_instance=RequestContext(request),
-            mimetype=utils.MIME_TYPES[format]
-            )
+        return render(request, 'teams/team_list.xml', { 'teams' : teams },
+            content_type=utils.MIME_TYPES[format]
+        )
     else:
         context = {
             'pageSection': 'teams',
             'teams': utils.trans_sort_object_list(teams, 'description'),
             'bug_url': settings.ENTER_BUG_URL,
         }
-        return render_to_response('teams/team_list.html', context,
-                                  context_instance=RequestContext(request))
+        return render(request, 'teams/team_list.html', context)
 
 def team(request, team_slug):
     try:
@@ -119,7 +114,7 @@ def team(request, team_slug):
 
     context['mem_groups'] = mem_groups
     context['can_edit_details'] = context['can_edit_team'] or utils.is_site_admin(request.user)
-    return render_to_response('teams/team_detail.html', context, context_instance=RequestContext(request))
+    return render(request, 'teams/team_detail.html', context)
 
 def team_edit(request, team_slug):
     team = get_object_or_404(Team, name=team_slug)
@@ -134,4 +129,4 @@ def team_edit(request, team_slug):
         'team': team,
         'form': form
     }
-    return render_to_response('teams/team_edit.html', context, context_instance=RequestContext(request))
+    return render(request, 'teams/team_edit.html', context)

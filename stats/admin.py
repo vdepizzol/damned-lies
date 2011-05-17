@@ -20,8 +20,7 @@
 
 from django.contrib import admin
 from django.contrib.admin import helpers
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.shortcuts import render
 from django.utils.encoding import force_unicode
 from django import forms
 from stats.models import Statistics, Information, Module, Branch, Domain, Category, Release
@@ -112,7 +111,7 @@ class ReleaseAdmin(admin.ModelAdmin):
             "model_label": self.model._meta.verbose_name_plural,
             "action_checkbox_name": helpers.ACTION_CHECKBOX_NAME,
         }
-        return render_to_response('admin/delete_release_confirmation.html', context, context_instance=RequestContext(request))
+        return render(request, 'admin/delete_release_confirmation.html', context)
     delete_release.short_description = "Delete release (and associated branches)"
 
 class InformationInline(admin.TabularInline):

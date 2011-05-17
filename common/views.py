@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>.
 #
 # This file is part of Damned Lies.
 #
@@ -18,14 +18,14 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
-from django.template import RequestContext
-from django.utils.translation import ugettext as _
+from django.conf import settings
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
-from django.conf import settings
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.utils.translation import ugettext as _
+
 from people.models import Person
 from teams.models import Role
 from people.forms import RegistrationForm
@@ -48,7 +48,7 @@ def index(request):
         'user_language': curlang,
         'translator_credits': translator_credits
     }
-    return render_to_response('index.html', context, context_instance=RequestContext(request))
+    return render(request, 'index.html', context)
 
 def site_login(request):
     """ Site-specific login page. Not named 'login' to not confuse with auth.login """
@@ -90,7 +90,7 @@ def site_login(request):
         'referer': referer,
         'next': referer,
     }
-    return render_to_response('login.html', context, context_instance=RequestContext(request))
+    return render(request, 'login.html', context)
 
 def site_register(request):
     openid_path = ''
@@ -108,14 +108,14 @@ def site_register(request):
         'form': form,
         'openid_path': openid_path,
     }
-    return render_to_response('registration/register.html', context, context_instance=RequestContext(request))
+    return render(request, 'registration/register.html', context)
 
 def activate_account(request, key):
     """ Activate an account through the link a requestor has received by email """
     try:
         person = Person.objects.get(activation_key=key)
     except Person.DoesNotExist:
-        return render_to_response('error.html', {'error':"Sorry, the key you provided is not valid."})
+        return render(request, 'error.html', {'error': _("Sorry, the key you provided is not valid.")})
     person.activate()
     messages.success(request, _("Your account has been activated."))
     return site_login(request)

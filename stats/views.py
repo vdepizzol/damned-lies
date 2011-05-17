@@ -21,12 +21,11 @@ from datetime import date
 import os
 
 from django.conf import settings
-from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core import serializers
 from django.http import HttpResponse, Http404
-from django.template import RequestContext
+from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 
 from common.utils import MIME_TYPES
@@ -46,7 +45,7 @@ def modules(request, format='html'):
         'modules': utils.sort_object_list(all_modules, 'get_description'),
         'bug_url': settings.ENTER_BUG_URL,
     }
-    return render_to_response('module_list.html', context, context_instance=RequestContext(request))
+    return render(request, 'module_list.html', context)
 
 def module(request, module_name):
     mod = get_object_or_404(Module, name=module_name)
@@ -65,7 +64,7 @@ def module(request, module_name):
         'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'can_edit_branches': mod.can_edit_branches(request.user),
     }
-    return render_to_response('module_detail.html', context, context_instance=RequestContext(request))
+    return render(request, 'module_detail.html', context)
 
 def module_branch(request, module_name, branch_name):
     """ This view is used to dynamically load a specific branch stats (jquery.load) """
@@ -75,7 +74,7 @@ def module_branch(request, module_name, branch_name):
         'module': mod,
         'branch': branch,
     }
-    return render_to_response('branch_detail.html', context, context_instance=RequestContext(request))
+    return render(request, 'branch_detail.html', context)
 
 @login_required
 def module_edit_branches(request, module_name):
@@ -143,7 +142,7 @@ def module_edit_branches(request, module_name):
         'module': mod,
         'form': form,
     }
-    return render_to_response('module_edit_branches.html', context, context_instance=RequestContext(request))
+    return render(request, 'module_edit_branches.html', context)
 
 def docimages(request, module_name, potbase, branch_name, langcode):
     mod = get_object_or_404(Module, name=module_name)
@@ -161,7 +160,7 @@ def docimages(request, module_name, potbase, branch_name, langcode):
         'module': mod,
         'stat': stat
     }
-    return render_to_response('module_images.html', context, context_instance=RequestContext(request))
+    return render(request, 'module_images.html', context)
 
 def dynamic_po(request, filename):
     """ Generates a dynamic po file from the POT file of a branch """
@@ -237,18 +236,18 @@ def releases(request, format='html'):
         'old_releases'   : old_releases,
         'bug_url'        : settings.ENTER_BUG_URL,
     }
-    return render_to_response('release_list.html', context, context_instance=RequestContext(request))
+    return render(request, 'release_list.html', context)
 
 def release(request, release_name, format='html'):
     release = get_object_or_404(Release, name=release_name)
     if format == 'xml':
-        return render_to_response('release_detail.xml', { 'release' : release },
-                                  mimetype=MIME_TYPES[format])
+        return render(request, 'release_detail.xml', { 'release' : release },
+                                  content_type=MIME_TYPES[format])
     context = {
         'pageSection': "releases",
         'release': release
     }
-    return render_to_response('release_detail.html', context, context_instance=RequestContext(request))
+    return render(request, 'release_detail.html', context)
 
 def compare_by_releases(request, dtype, rels_to_compare):
     releases = []
@@ -265,4 +264,4 @@ def compare_by_releases(request, dtype, rels_to_compare):
         'releases': releases,
         'stats': stats
     }
-    return render_to_response('release_compare.html', context, context_instance=RequestContext(request))
+    return render(request, 'release_compare.html', context)

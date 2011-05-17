@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>
-# Copyright (c) 2008 Claude Paroz <claude@2xlibre.net>
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -19,14 +19,15 @@
 # along with Damned Lies; if not, write to the Free Software Foundation, Inc.,
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from datetime import date, datetime
 import os
 import tarfile
-from datetime import date, datetime
-from django.shortcuts import render_to_response, get_object_or_404
-from django.utils.translation import ugettext as _
-from django.template import RequestContext
-from django.http import HttpResponse, HttpResponseRedirect
+
 from django.conf import settings
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
+from django.utils.translation import ugettext as _
+
 from common import utils
 from languages.models import Language
 from stats.models import Release, Statistics
@@ -38,8 +39,7 @@ def languages(request):
         'languages': utils.trans_sort_object_list(languages, 'name'),
         'bug_url': settings.ENTER_BUG_URL,
     }
-    return render_to_response('languages/language_list.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'languages/language_list.html', context)
 
 def language_all(request, locale, dtype):
     language = get_object_or_404(Language, locale=locale)
@@ -54,8 +54,7 @@ def language_all(request, locale, dtype):
         'stats': stats,
         'scope': dtype.endswith('-part') and 'part' or 'full',
     }
-    return render_to_response('languages/language_all_modules.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'languages/language_all_modules.html', context)
 
 def release_archives(request, locale):
     """ This view is used to display archive release stats through Ajax call
@@ -67,8 +66,7 @@ def release_archives(request, locale):
         'stats': language.get_release_stats(archives=True),
         'show_all_modules_line': False,
     }
-    return render_to_response('languages/language_release_summary.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'languages/language_release_summary.html', context)
 
 def language_release(request, locale, release_name, dtype):
     if locale == 'C':
@@ -90,8 +88,7 @@ def language_release(request, locale, release_name, dtype):
         'dtype': dtype,
         'scope': dtype.endswith('-part') and 'part' or 'full',
     }
-    return render_to_response('languages/language_release.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'languages/language_release.html', context)
 
 def language_release_tar(request, locale, release_name, dtype):
     release = get_object_or_404(Release, name=release_name)

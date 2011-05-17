@@ -29,8 +29,7 @@ from django.contrib.sites.models import Site
 from django.core import urlresolvers
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response, get_object_or_404
-from django.template import RequestContext
+from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.views.generic import ListView, DetailView, UpdateView
 
@@ -113,10 +112,7 @@ def person_team_join(request):
         'on_own_page': person.username == request.user.username,
         'form': form,
     }
-
-    context_instance = RequestContext(request)
-    return render_to_response('people/person_team_join_form.html', context,
-            context_instance=context_instance)
+    return render(request, 'people/person_team_join_form.html', context)
 
 @login_required
 def person_team_leave(request, team_slug):
@@ -152,5 +148,4 @@ def person_password_change(request):
         'on_own_page': person.username == request.user.username,
         'form': form,
     }
-    return render_to_response('people/person_password_change_form.html', context,
-            context_instance=RequestContext(request))
+    return render(request, 'people/person_password_change_form.html', context)

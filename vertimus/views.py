@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2008 Stéphane Raimbault <stephane.raimbault@gmail.com>
+# Copyright (c) 2011 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -19,11 +20,10 @@
 # 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 from django.conf import settings
-from django.utils.translation import ugettext as _
-from django.shortcuts import render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect, Http404
-from django.template import RequestContext
 from django.core import urlresolvers
+from django.http import HttpResponseRedirect, Http404
+from django.shortcuts import render, get_object_or_404
+from django.utils.translation import ugettext as _
 
 from stats.models import Statistics, Module, Branch, Domain, Language
 from stats.utils import is_po_reduced
@@ -138,8 +138,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
         'level': level,
         'grandparent_level': grandparent_level,
     }
-    return render_to_response('vertimus/vertimus_detail.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'vertimus/vertimus_detail.html', context)
 
 
 def vertimus_diff(request, action_id_1, action_id_2, level):
@@ -158,8 +157,8 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     try:
         content_1 = [l.decode('utf-8') for l in open(file_path_1, 'U').readlines()]
     except UnicodeDecodeError:
-        return render_to_response('error.html',
-                                  {'error': _("Error: The file %s contains invalid characters.") % file_path_1.split('/')[-1]})
+        return render(request, 'error.html',
+                      {'error': _("Error: The file %s contains invalid characters.") % file_path_1.split('/')[-1]})
     descr_1 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_1.person.name,
                                                              'date': action_1.created }
     if action_id_2 not in (None, "0"):
@@ -190,8 +189,8 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     try:
         content_2 = [l.decode('utf-8') for l in open(file_path_2, 'U').readlines()]
     except UnicodeDecodeError:
-        return render_to_response('error.html',
-                                  {'error': _("Error: The file %s contains invalid characters.") % file_path_2.split('/')[-1]})
+        return render(request, 'error.html',
+                      {'error': _("Error: The file %s contains invalid characters.") % file_path_2.split('/')[-1]})
     d = difflib.HtmlDiff(wrapcolumn=80)
     diff_content = d.make_table(content_2, content_1,
                                 descr_2, descr_1, context=True)
@@ -200,8 +199,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
         'diff_content': diff_content,
         'state': state,
     }
-    return render_to_response('vertimus/vertimus_diff.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'vertimus/vertimus_diff.html', context)
 
 def latest_uploaded_po(request, module_name, branch_name, domain_name, locale_name):
     """ Redirect to the latest uploaded po for a module/branch/language """
