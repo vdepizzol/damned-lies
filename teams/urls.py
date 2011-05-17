@@ -1,31 +1,16 @@
-from django.conf.urls.defaults import *
-from teams.models import Team
+from django.conf.urls.defaults import patterns, url
 
-info_dict = {
-    'queryset': Team.objects.all(),
-    'template_object_name': 'team',
-    'slug_field': 'name',
-    'extra_context': {
-        'pageSection': "teams"
-    }
-}
-
-urlpatterns = patterns('',
+urlpatterns = patterns('teams.views',
     url(
         regex = r'^(?P<format>(xml))?/?$',
-        view = 'teams.views.teams',
+        view = 'teams',
         name = 'teams'),
     url(
         regex = r'^(?P<team_slug>[\w\-@]+)/$',
-        view = 'teams.views.team',
+        view = 'team',
         name = 'team_slug'),
     url(
         regex = r'^(?P<team_slug>[\w\-@]+)/edit/',
-        view = 'teams.views.team_edit',
+        view = 'team_edit',
         name = 'team_edit'),
-    url(
-        regex = r'^(?P<object_id>\d+)',
-        view = 'django.views.generic.list_detail.object_detail',
-        kwargs = dict(info_dict),
-        name = 'team')
 )

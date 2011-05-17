@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 admin.autodiscover()
 
@@ -19,8 +20,7 @@ urlpatterns = patterns('',
         name = 'register'),
     url(
         regex = r'^register/success$',
-        view = 'django.views.generic.simple.direct_to_template',
-        kwargs = {'template': 'registration/register_success.html'},
+        view = TemplateView.as_view(template_name="registration/register_success.html"),
         name = 'register_success'),
     url(
         regex = r'^register/activate/(?P<key>\w+)$',
