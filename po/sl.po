@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-17 07:14+0000\n"
-"PO-Revision-Date: 2011-05-18 11:56+0100\n"
+"POT-Creation-Date: 2011-05-18 15:10+0000\n"
+"PO-Revision-Date: 2011-05-18 18:04+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -1047,8 +1047,8 @@ msgid "Dasher Manual"
 msgstr "priročnik Dasher"
 
 #: database-content.py:347
-#: languages/views.py:54
-#: languages/views.py:90
+#: languages/views.py:53
+#: languages/views.py:86
 #: templates/branch_detail.html:23
 #: templates/release_detail.html:23
 #: templates/release_detail.html.py:72
@@ -1571,6 +1571,10 @@ msgstr "Račun je bil onemogočen."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Prijava ni uspela. Preverite uporabniško ime in geslo."
 
+#: common/views.py:118
+msgid "Sorry, the key you provided is not valid."
+msgstr "Naveden ključ ni veljaven."
+
 #: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Račun je dejaven."
@@ -1619,17 +1623,17 @@ msgstr "Prijava z OpenID"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: languages/views.py:52
-#: languages/views.py:88
+#: languages/views.py:51
+#: languages/views.py:84
 msgid "UI Translations"
 msgstr "Prevodi uporabniških vmesnikov"
 
-#: languages/views.py:53
-#: languages/views.py:89
+#: languages/views.py:52
+#: languages/views.py:85
 msgid "UI Translations (reduced)"
 msgstr "Prevodi vmesnikov (obrezani prevodi)"
 
-#: languages/views.py:85
+#: languages/views.py:81
 #: templates/release_detail.html:70
 msgid "Original strings"
 msgstr "Osnovni niz"
@@ -1724,38 +1728,38 @@ msgstr "Račun Bugzilla"
 msgid "This should be an email address, useful if not equal to 'E-mail address' field"
 msgstr "To je elektronski naslov, ki je uporaben, če ni enak polju 'elektronskega naslova'."
 
-#: people/views.py:88
+#: people/views.py:85
 msgid "Sorry, the form is not valid."
 msgstr "Obrazec ni veljaven."
 
-#: people/views.py:103
+#: people/views.py:100
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Uspešno ste pridruženi skupini '%s'."
 
-#: people/views.py:104
+#: people/views.py:101
 msgid "A new person joined your team"
 msgstr "Nova oseba se je pridružila skupini."
 
-#: people/views.py:105
+#: people/views.py:102
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s se je pridružil prevajalski skupini preko %(site)s"
 
-#: people/views.py:108
+#: people/views.py:105
 msgid "You are already member of this team."
 msgstr "Ste že član te prevajalske skupine."
 
-#: people/views.py:130
+#: people/views.py:124
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Članstvo v skupini za '%s' jezik je preklicano."
 
-#: people/views.py:133
+#: people/views.py:127
 msgid "You are not a member of this team."
 msgstr "Ni podatkov o članstvu v skupini."
 
-#: people/views.py:146
+#: people/views.py:140
 msgid "Your password has been changed."
 msgstr "Geslo je bilo spremenjeno."
 
@@ -2010,35 +2014,35 @@ msgstr "Pregledovalec"
 msgid "Committer"
 msgstr "Uveljavitelj"
 
-#: teams/views.py:58
+#: teams/views.py:53
 msgid "Committers"
 msgstr "Uveljavitelji"
 
-#: teams/views.py:61
+#: teams/views.py:56
 msgid "No committers"
 msgstr "Ni uveljaviteljev"
 
-#: teams/views.py:63
+#: teams/views.py:58
 msgid "Reviewers"
 msgstr "Pregledovalci"
 
-#: teams/views.py:66
+#: teams/views.py:61
 msgid "No reviewers"
 msgstr "Ni prijavljenih pregledovalcev"
 
-#: teams/views.py:68
+#: teams/views.py:63
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: teams/views.py:71
+#: teams/views.py:66
 msgid "No translators"
 msgstr "Ni prijavljenih prevajalcev"
 
-#: teams/views.py:73
+#: teams/views.py:68
 msgid "Inactive members"
 msgstr "Nedejavni člani"
 
-#: teams/views.py:76
+#: teams/views.py:71
 msgid "No inactive members"
 msgstr "Ni nedejavnih članov"
 
@@ -2958,9 +2962,9 @@ msgid "File in repository"
 msgstr "Datoteka v skladišču"
 
 #: vertimus/models.py:331
-#: vertimus/views.py:163
-#: vertimus/views.py:169
-#: vertimus/views.py:179
+#: vertimus/views.py:162
+#: vertimus/views.py:168
+#: vertimus/views.py:178
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Poslal %(name)s dne %(date)s"
@@ -3057,18 +3061,18 @@ msgstr "Arhiviraj dejanja."
 msgid "Undo the last state change"
 msgstr "Razveljavi zadnjo spremembo stanja"
 
-#: vertimus/views.py:162
-#: vertimus/views.py:194
+#: vertimus/views.py:161
+#: vertimus/views.py:193
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Napaka: Datoteka %s vsebuje neveljavne znake."
 
-#: vertimus/views.py:185
+#: vertimus/views.py:184
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 
-#: vertimus/views.py:188
+#: vertimus/views.py:187
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
 
