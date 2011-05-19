@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-17 07:14+0000\n"
-"PO-Revision-Date: 2011-05-17 15:51+0200\n"
+"POT-Creation-Date: 2011-05-18 17:13+0000\n"
+"PO-Revision-Date: 2011-05-19 11:47+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -376,7 +376,6 @@ msgid "Oriya"
 msgstr "Oriya"
 
 #: database-content.py:90 database-content.py:221
-#| msgid "Russian"
 msgid "Ossetian"
 msgstr "Osetio"
 
@@ -921,7 +920,7 @@ msgstr "Manual de Criawips"
 msgid "Dasher Manual"
 msgstr "Manual de Dasher"
 
-#: database-content.py:347 languages/views.py:54 languages/views.py:90
+#: database-content.py:347 languages/views.py:53 languages/views.py:86
 #: templates/branch_detail.html:23 templates/release_detail.html:23
 #: templates/release_detail.html.py:72
 #: templates/languages/language_release_summary.html:14
@@ -1537,6 +1536,11 @@ msgstr "Su cuenta ha sido desactivada."
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Ha fallado el inicio de sesión. Compruebe su usuario y su contraseña."
 
+#: common/views.py:118
+#| msgid "The URL you provided is not valid"
+msgid "Sorry, the key you provided is not valid."
+msgstr "La clave que ha proporcionado no es válida."
+
 #: common/views.py:120
 msgid "Your account has been activated."
 msgstr "Su cuenta ha sido activada."
@@ -1582,15 +1586,15 @@ msgstr "Iniciar sesión con OpenID"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: languages/views.py:52 languages/views.py:88
+#: languages/views.py:51 languages/views.py:84
 msgid "UI Translations"
 msgstr "Traducciones de la IU"
 
-#: languages/views.py:53 languages/views.py:89
+#: languages/views.py:52 languages/views.py:85
 msgid "UI Translations (reduced)"
 msgstr "Traducciones de la IU (reducidas)"
 
-#: languages/views.py:85 templates/release_detail.html:70
+#: languages/views.py:81 templates/release_detail.html:70
 msgid "Original strings"
 msgstr "Cadenas originales"
 
@@ -1698,38 +1702,38 @@ msgid ""
 msgstr ""
 "Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
 
-#: people/views.py:88
+#: people/views.py:85
 msgid "Sorry, the form is not valid."
 msgstr "Disculpe, el formulario no es válido."
 
-#: people/views.py:103
+#: people/views.py:100
 #, python-format
 msgid "You have successfully joined the team '%s'."
 msgstr "Se ha unido satisfactoriamente al equipo «%s»."
 
-#: people/views.py:104
+#: people/views.py:101
 msgid "A new person joined your team"
 msgstr "Se unió una persona nueva a su equipo"
 
-#: people/views.py:105
+#: people/views.py:102
 #, python-format
 msgid "%(name)s has just joined your translation team on %(site)s"
 msgstr "%(name)s se acaba de unir a su equipo de traducción en %(site)s"
 
-#: people/views.py:108
+#: people/views.py:105
 msgid "You are already member of this team."
 msgstr "Ya es miembro de este equipo."
 
-#: people/views.py:130
+#: people/views.py:124
 #, python-format
 msgid "You have been removed from the team '%s'."
 msgstr "Ha sido eliminado del equipo «%s»."
 
-#: people/views.py:133
+#: people/views.py:127
 msgid "You are not a member of this team."
 msgstr "Usted no es miembro de este equipo."
 
-#: people/views.py:146
+#: people/views.py:140
 msgid "Your password has been changed."
 msgstr "Se cambió su contraseña."
 
@@ -2003,35 +2007,35 @@ msgstr "Revisor"
 msgid "Committer"
 msgstr "Efectúa cambios en Git"
 
-#: teams/views.py:58
+#: teams/views.py:53
 msgid "Committers"
 msgstr "Personas que efectúan cambios en Git"
 
-#: teams/views.py:61
+#: teams/views.py:56
 msgid "No committers"
 msgstr "No hay ninguna persona que efectúe cambios en Git"
 
-#: teams/views.py:63
+#: teams/views.py:58
 msgid "Reviewers"
 msgstr "Revisores"
 
-#: teams/views.py:66
+#: teams/views.py:61
 msgid "No reviewers"
 msgstr "No hay ningún revisor"
 
-#: teams/views.py:68
+#: teams/views.py:63
 msgid "Translators"
 msgstr "Traductores"
 
-#: teams/views.py:71
+#: teams/views.py:66
 msgid "No translators"
 msgstr "No traductores"
 
-#: teams/views.py:73
+#: teams/views.py:68
 msgid "Inactive members"
 msgstr "Miembros inactivos"
 
-#: teams/views.py:76
+#: teams/views.py:71
 msgid "No inactive members"
 msgstr "No hay miembros inactivos"
 
@@ -3039,8 +3043,8 @@ msgstr "Subido"
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:331 vertimus/views.py:163 vertimus/views.py:169
-#: vertimus/views.py:179
+#: vertimus/models.py:331 vertimus/views.py:162 vertimus/views.py:168
+#: vertimus/views.py:178
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
@@ -3140,17 +3144,17 @@ msgstr "Archivar las acciones"
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
-#: vertimus/views.py:162 vertimus/views.py:194
+#: vertimus/views.py:161 vertimus/views.py:193
 #, python-format
 msgid "Error: The file %s contains invalid characters."
 msgstr "Error: el archivo %s contiene caracteres no válidos."
 
-#: vertimus/views.py:185
+#: vertimus/views.py:184
 #, python-format
 msgid "Latest committed file for %(lang)s"
 msgstr "Último archivo subido para el %(lang)s"
 
-#: vertimus/views.py:188
+#: vertimus/views.py:187
 msgid "Latest POT file"
 msgstr "Último archivo POT"
 
