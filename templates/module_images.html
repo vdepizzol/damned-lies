@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n stats_extras %}
 
 {% block title %} {% blocktrans with module.description as name %}Module Doc Figure Status: {{ name }}{% endblocktrans %} {% endblock %}
 
@@ -8,15 +8,12 @@
 
 <h1><a href="{% url stats.views.module module.name %}">{{ module.description }}</a> {% trans stat.domain.description %} ({% trans stat.language.name %})</h1>
 
-{% with stat.fig_stats as figstat %}
 <h2>{% trans "Figures translation status" %} &mdash; 
-    <small>{{ figstat.prc }}% ({{ figstat.translated }}/{{ figstat.fuzzy}}/{{ figstat.untranslated }})</small></h2>
-{% endwith %}
+    <small>{{ figstats|num_stats }}</small></h2>
 
 <table class="stats">
 <thead><tr><th width="50%">{% trans "Original" %}</th><th width="50%">{% trans stat.language.name %}</th></tr></thead>
 {% for fig in stat.get_figures %}
-  {% with stat.language.locale as locale %}
   <tr><td valign="top">
     <a href="{{ fig.orig_remote_url }}"><span class="path">C/{{ fig.path }}</span><br/></a>
     {% if fig.video %}<video src="{{ fig.orig_remote_url }}" controls></video>
@@ -51,7 +48,6 @@
     {% endif %}
     </td>
   </tr>
-  {% endwith %}
 {% endfor %}
 </table>
 

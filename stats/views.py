@@ -156,9 +156,11 @@ def docimages(request, module_name, potbase, branch_name, langcode):
         branch = get_object_or_404(Branch, module__pk=mod.id, name=branch_name)
         stat   = FakeStatistics(mod, branch, 'doc', lang)
     context = {
-        'pageSection':  "module",
-        'module': mod,
-        'stat': stat
+        'pageSection': "module",
+        'module':   mod,
+        'stat':     stat,
+        'locale':   stat.language.locale,
+        'figstats': stat.fig_stats(),
     }
     return render(request, 'module_images.html', context)
 
