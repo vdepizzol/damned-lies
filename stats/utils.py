@@ -150,6 +150,7 @@ def check_potfiles(po_path):
 def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
     """ Return the pot file for a document-type domain, and the error if any """
 
+    itstool_path = getattr(settings, 'ITSTOOL_PATH', '')
     extract_tools = {
         'xml2po':  {
             'command' : "cd \"%(dir)s\" && xml2po %(opts)s -o %(potfile)s -e %(files)s",
@@ -157,7 +158,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
             'incl_var': "DOC_PAGES",
         },
         'itstool': {
-            'command' : "cd \"%(dir)s\" && itstool -o %(potfile)s %(files)s",
+            'command' : "cd \"%%(dir)s\" && %sitstool -o %%(potfile)s %%(files)s" % itstool_path,
             'mod_var' : "HELP_ID",
             'incl_var': "HELP_FILES",
         },
