@@ -469,7 +469,7 @@ class ActionAbstract(object):
 
     @property
     def state(self):
-        return self._action_db.state_db.get_state()
+        return self._action_db.state_db
 
     def get_previous_action_with_po(self):
         """
