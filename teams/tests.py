@@ -37,7 +37,7 @@ class TeamsAndRolesTests(TestCase):
         self.pcoo.set_password('password')
         self.pcoo.save()
 
-        self.t = Team(name='fr', description='French')
+        self.t = Team(name='fr', description='French', mailing_list='nowhere@example.org')
         self.t.save()
 
         self.t2 = Team(name='pt', description='Portuguese')

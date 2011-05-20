@@ -42,11 +42,8 @@ from teams.models import Role
 # States
 #
 
-# Sadly, the Django ORM isn't as powerful than SQLAlchemy :-(
-# So we need to use composition with StateDB and State to obtain
-# the desired behaviour.
-class StateDb(models.Model):
-    """Database storage of a State"""
+class State(models.Model):
+    """State of a module translation"""
     branch = models.ForeignKey(Branch)
     domain = models.ForeignKey(Domain)
     language = models.ForeignKey(Language)
@@ -60,10 +57,21 @@ class StateDb(models.Model):
         verbose_name = 'state'
         unique_together = ('branch', 'domain', 'language')
 
-    def get_state(self):
-        state = eval('State'+self.name)()
-        state._state_db = self
-        return state
+    def __init__(self, *args, **kwargs):
+        super(State, self).__init__(*args, **kwargs)
+        if self.name == 'None' and getattr(self.__class__, 'name', 'None') != 'None':
+            self.name = self.__class__.name
+        self.__class__ = {
+            'None'        : StateNone,
+            'Translating' : StateTranslating,
+            'Translated'  : StateTranslated,
+            'Proofreading': StateProofreading,
+            'Proofread'   : StateProofread,
+            'ToReview'    : StateToReview,
+            'ToCommit'    : StateToCommit,
+            'Committing'  : StateCommitting,
+            'Committed'   : StateCommitted,
+        }.get(self.name, State)
 
     def __unicode__(self):
         return "%s: %s %s (%s - %s)" % (self.name, self.branch.module.name,
@@ -73,37 +81,10 @@ class StateDb(models.Model):
     def get_absolute_url(self):
         return ('vertimus_by_ids', [self.branch.id, self.domain.id, self.language.id])
 
-class StateAbstract(object):
-    """Abstract class"""
-
-    @property
-    def branch(self):
-        return self._state_db.branch
-
-    @property
-    def domain(self):
-        return self._state_db.domain
-
-    @property
-    def language(self):
-        return self._state_db.language
-
-    def get_person(self):
-        return self._state_db.person
-
-    def set_person(self, person):
-        self._state_db.person = person
-    person = property(get_person, set_person)
-
-    @property
-    def updated(self):
-        return self._state_db.updated
-
-    def get_state_db(self):
-        return self._state_db
-
-    def __unicode__(self):
-        return unicode(self.description)
+    def change_state(self, state_class):
+        self.name = state_class.name
+        self.__class__ = state_class
+        self.save()
 
     def _get_available_actions(self, person, action_names):
         action_names.append('WC')
@@ -116,24 +97,14 @@ class StateAbstract(object):
     def apply_action(self, action, person, comment=None, file=None):
         # Check the permission to use this action
         if action.name in (a.name for a in self.get_available_actions(person)):
-            new_state = action.apply(self, person, comment, file)
-            if new_state != None:
-                # Reuse the current state_db
-                new_state._state_db = self._state_db
-                # Only the name and the person change
-                new_state._state_db.name = new_state.name
-                new_state._state_db.person = person
+            action.apply(self, person, comment, file)
+            if not isinstance(self, StateNone):
+                self.person = person
+                self.save()
 
-                if isinstance(new_state, StateCommitted):
-                    # Committed is the last state of the workflow
-                    new_state.save()
-
-                    # Archive actions
-                    return new_state.apply_action(ActionAA(), person)
-
-                return new_state
-            else:
-                return self
+                if isinstance(self, StateCommitted):
+                    # Committed is the last state of the workflow, archive actions
+                    self.apply_action(ActionAA(), person)
         else:
             raise Exception('Not allowed')
 
@@ -142,19 +113,19 @@ class StateAbstract(object):
            The first level is 1."""
         assert level > 0, "Level must be greater than 0"
 
-        query = ActionDbArchived.objects.filter(state_db=self._state_db).values('sequence').distinct().order_by('-sequence')[level-1:level]
+        query = self.actiondbarchived_set.all().values('sequence').distinct().order_by('-sequence')[level-1:level]
         sequence = None
         if len(query) > 0:
             sequence = query[0]['sequence']
         return sequence
 
-    def save(self):
-        self._state_db.save()
 
-
-class StateNone(StateAbstract):
+class StateNone(State):
     name = 'None'
     description = _('Inactive')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -165,9 +136,12 @@ class StateNone(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateTranslating(StateAbstract):
+class StateTranslating(State):
     name = 'Translating'
     description = _('Translating')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -178,9 +152,12 @@ class StateTranslating(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateTranslated(StateAbstract):
+class StateTranslated(State):
     name = 'Translated'
     description = _('Translated')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -198,9 +175,12 @@ class StateTranslated(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateProofreading(StateAbstract):
+class StateProofreading(State):
     name = 'Proofreading'
     description = _('Proofreading')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -212,10 +192,13 @@ class StateProofreading(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateProofread(StateAbstract):
+class StateProofread(State):
     name = 'Proofread'
     # Translators: This is a status, not a verb
     description = _('Proofread')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         if person.is_reviewer(self.language.team):
@@ -228,9 +211,12 @@ class StateProofread(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateToReview(StateAbstract):
+class StateToReview(State):
     name = 'ToReview'
     description = _('To Review')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -240,9 +226,12 @@ class StateToReview(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateToCommit(StateAbstract):
+class StateToCommit(State):
     name = 'ToCommit'
     description = _('To Commit')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
@@ -255,9 +244,12 @@ class StateToCommit(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateCommitting(StateAbstract):
+class StateCommitting(State):
     name = 'Committing'
     description = _('Committing')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         action_names = []
@@ -269,9 +261,12 @@ class StateCommitting(StateAbstract):
         return self._get_available_actions(person, action_names)
 
 
-class StateCommitted(StateAbstract):
+class StateCommitted(State):
     name = 'Committed'
     description = _('Committed')
+
+    class Meta:
+        proxy = True
 
     def get_available_actions(self, person):
         if person.is_committer(self.language.team):
@@ -280,6 +275,7 @@ class StateCommitted(StateAbstract):
             action_names = []
 
         return self._get_available_actions(person, action_names)
+
 
 #
 # Actions
@@ -335,7 +331,7 @@ def action_db_get_action_history(cls, state_db=None, sequence=None):
     return history
 
 class ActionDb(models.Model):
-    state_db = models.ForeignKey(StateDb)
+    state_db = models.ForeignKey(State)
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
@@ -395,7 +391,7 @@ def generate_archive_filename(instance, original_filename):
     return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
 
 class ActionDbArchived(models.Model):
-    state_db = models.ForeignKey(StateDb)
+    state_db = models.ForeignKey(State)
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
@@ -488,8 +484,8 @@ class ActionAbstract(object):
 
     def save_action_db(self, state, person, comment=None, file=None):
         """Used by apply"""
-        self._action_db = ActionDb(state_db=state._state_db,
-            person=person, name=self.name, comment=comment, file=file)
+        self._action_db = ActionDb(state_db=state, person=person,
+            name=self.name, comment=comment, file=file)
         if file:
             self._action_db.file.save(file.name, file, save=False)
         self._action_db.save()
@@ -529,33 +525,33 @@ class ActionAbstract(object):
         except:
             return False
 
-    def send_mail_new_state(self, old_state, new_state, recipient_list):
+    def send_mail_new_state(self, state, recipient_list):
         # Remove None and empty string items from the list
         recipient_list = filter(lambda x: x and x is not None, recipient_list)
 
         if recipient_list:
             current_lang = get_language()
-            activate(old_state.language.locale)
+            activate(state.language.locale)
             current_site = Site.objects.get_current()
             url = "http://%s%s" % (current_site.domain, urlresolvers.reverse(
                 'vertimus_by_names',
                  args = (
-                    old_state.branch.module.name,
-                    old_state.branch.name,
-                    old_state.domain.name,
-                    old_state.language.locale)))
-            subject = old_state.branch.module.name + u' - ' + old_state.branch.name
+                    state.branch.module.name,
+                    state.branch.name,
+                    state.domain.name,
+                    state.language.locale)))
+            subject = state.branch.module.name + u' - ' + state.branch.name
             message = _(u"""Hello,
 
 The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(new_state)s'.
 %(url)s
 
 """) % {
-                'module': old_state.branch.module.name,
-                'branch': old_state.branch.name,
-                'domain': old_state.domain.name,
-                'language': old_state.language.get_name(),
-                'new_state': new_state,
+                'module': state.branch.module.name,
+                'branch': state.branch.name,
+                'domain': state.domain.name,
+                'language': state.language.get_name(),
+                'new_state': state,
                 'url': url
             }
             message += self.comment or ugettext("Without comment")
@@ -570,15 +566,12 @@ class ActionWC(ActionAbstract):
     description = _('Write a comment')
     comment_is_required = True
 
-    def _new_state(self):
-        return None
-
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
         # Send an email to all translators of the page
         translator_emails = set()
-        for d in Person.objects.filter(actiondb__state_db=state.get_state_db()).values('email'):
+        for d in Person.objects.filter(actiondb__state_db=state).values('email'):
             translator_emails.add(d['email'])
 
         # Remove None items from the list
@@ -614,158 +607,129 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
             mail.send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, translator_emails)
             activate(current_lang)
 
-        return self._new_state()
-
 class ActionRT(ActionAbstract):
     name = 'RT'
     description = _('Reserve for translation')
+    target_state = StateTranslating
     file_is_prohibited = True
-
-    def _new_state(self):
-        return StateTranslating()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
-        return self._new_state()
+        state.change_state(self.target_state)
 
 class ActionUT(ActionAbstract):
     name = 'UT'
     description = _('Upload the new translation')
+    target_state = StateTranslated
     file_is_required = True
-
-    def _new_state(self):
-        return StateTranslated()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        new_state = self._new_state()
-        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-        return new_state
+        state.change_state(self.target_state)
+        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionRP(ActionAbstract):
     name = 'RP'
     description = _('Reserve for proofreading')
+    target_state = StateProofreading
     file_is_prohibited = True
-
-    def _new_state(self):
-        return StateProofreading()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
-        return self._new_state()
+        state.change_state(self.target_state)
 
 class ActionUP(ActionAbstract):
     name = 'UP'
     description = _('Upload the proofread translation')
+    target_state = StateProofread
     file_is_required = True
-
-    def _new_state(self):
-        return StateProofread()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        new_state = self._new_state()
-        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-        return new_state
+        state.change_state(self.target_state)
+        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionTC(ActionAbstract):
     name = 'TC'
     # Translators: this means the file is ready to be committed in repository
     description = _('Ready for submission')
-
-    def _new_state(self):
-        return StateToCommit()
+    target_state = StateToCommit
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        new_state = self._new_state()
+        state.change_state(self.target_state)
         # Send an email to all committers of the team
         committers = [c.email for c in state.language.team.get_committers()]
-        self.send_mail_new_state(state, new_state, committers)
-        return new_state
+        self.send_mail_new_state(state, committers)
 
 class ActionCI(ActionAbstract):
     name = 'CI'
     description = _('Submit to repository')
+    target_state = StateCommitted
     file_is_prohibited = True
-
-    def _new_state(self):
-        return StateCommitted()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
         action_with_po = self.get_previous_action_with_po()
         try:
             state.branch.commit_po(action_with_po.file.path, state.domain, state.language, person)
-            new_state = self._new_state()
+            state.change_state(self.target_state)
         except:
             # Commit failed, state unchanged
             self._action_db.delete()
             # FIXME: somewhere the error should be catched and handled properly
-            #new_state = state
             raise Exception(_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
-        if state != new_state:
-            self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-        return new_state
+
+        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionRC(ActionAbstract):
     name = 'RC'
     # Translators: this indicates a committer is going to commit the file in the repository
     description = _('Reserve to submit')
+    target_state = StateCommitting
     file_is_prohibited = True
-
-    def _new_state(self):
-        return StateCommitting()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
-        return self._new_state()
+        state.change_state(self.target_state)
 
 class ActionIC(ActionAbstract):
     name = 'IC'
     # Translators: this is used to indicate the file has been committed in the repository
     description = _('Inform of submission')
-
-    def _new_state(self):
-        return StateCommitted()
+    target_state = StateCommitted
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        new_state = self._new_state()
-        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-        return new_state
+        state.change_state(self.target_state)
+        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionTR(ActionAbstract):
     name = 'TR'
     # Translators: regardless of the translation completion, this file need to be reviewed
     description = _('Review required')
+    target_state = StateToReview
     arg_is_required = True
-
-    def _new_state(self):
-        return StateToReview()
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        new_state = self._new_state()
-        self.send_mail_new_state(state, new_state, (state.language.team.mailing_list,))
-        return new_state
+        state.change_state(self.target_state)
+        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionAA(ActionAbstract):
     name = 'AA'
     description = _('Archive the actions')
-
-    def _new_state(self):
-        return StateNone()
+    target_state = StateNone
 
     def apply(self, state, person, comment=None, file=None):
         self.save_action_db(state, person, comment, file)
 
-        actions_db = ActionDb.objects.filter(state_db=state._state_db).order_by('id').all()
+        actions_db = ActionDb.objects.filter(state_db=state).order_by('id').all()
 
         sequence = None
         for action_db in actions_db:
@@ -791,8 +755,7 @@ class ActionAA(ActionAbstract):
             action_db_archived.save()
 
             action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere
-
-        return self._new_state()
+        state.change_state(self.target_state)
 
 class ActionUNDO(ActionAbstract):
     name = 'UNDO'
@@ -802,7 +765,7 @@ class ActionUNDO(ActionAbstract):
         self.save_action_db(state, person, comment, file)
 
         # Exclude WC because this action is a noop on State
-        actions_db = ActionDb.objects.filter(state_db__id=state._state_db.id).exclude(name='WC').order_by('-id')
+        actions_db = ActionDb.objects.filter(state_db__id=state.id).exclude(name='WC').order_by('-id')
         i = 0
         while (i < len(actions_db)):
             if actions_db[i].name == 'UNDO':
@@ -811,8 +774,9 @@ class ActionUNDO(ActionAbstract):
             else:
                 # Found
                 action = actions_db[i].get_action()
-                return action._new_state()
-        return StateNone()
+                state.change_state(action.target_state)
+                return
+        state.change_state(StateNone)
 
 class ActionSeparator(object):
     """ Fake action to add a separator in action menu """

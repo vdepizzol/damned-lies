@@ -27,7 +27,7 @@ from django.utils.translation import ugettext as _
 
 from stats.models import Statistics, Module, Branch, Domain, Language
 from stats.utils import is_po_reduced
-from vertimus.models import StateDb, ActionDb, ActionDbArchived, ActionAbstract
+from vertimus.models import State, ActionDb, ActionDbArchived, ActionAbstract
 from vertimus.forms import ActionForm
 
 def vertimus_by_stats_id(request, stats_id, lang_id):
@@ -71,17 +71,16 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
         po_url = stats.po_url()
 
     # Get the state of the translation
-    (state_db, created) = StateDb.objects.get_or_create(
+    (state, created) = State.objects.get_or_create(
         branch=branch,
         domain=domain,
         language=language)
-    other_branch_states = StateDb.objects.filter(
+    other_branch_states = State.objects.filter(
         domain=domain, language=language).exclude(branch=branch.pk).exclude(name='None')
 
-    state = state_db.get_state()
     if level == 0:
         # Current actions
-        action_history = ActionDb.get_action_history(state_db)
+        action_history = ActionDb.get_action_history(state)
     else:
         sequence = state.get_action_sequence_from_level(level)
         action_history = ActionDbArchived.get_action_history(sequence)
@@ -107,9 +106,8 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
                 comment = action_form.cleaned_data['comment']
 
                 action = ActionAbstract.new_by_name(action)
-                new_state = state.apply_action(action, person, comment,
-                                               request.FILES.get('file', None))
-                new_state.save()
+                state.apply_action(action, person, comment,
+                                   request.FILES.get('file', None))
 
                 return HttpResponseRedirect(
                     urlresolvers.reverse('vertimus_by_names',

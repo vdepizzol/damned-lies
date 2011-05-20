@@ -1496,7 +1496,8 @@ class Statistics(models.Model):
                 'all_errors':[]
             }
         """
-        from vertimus.models import StateDb, ActionDb # import here to prevent a circular dependency
+        # Import here to prevent a circular dependency
+        from vertimus.models import State, ActionDb
 
         if dtype.endswith('-part'):
             dtype = dtype[:-5]
@@ -1523,15 +1524,15 @@ class Statistics(models.Model):
 
         infos_dict = Information.get_info_dict(lang)
 
-        # Prepare StateDb objects in a dict (with "branch_id-domain_id" as key), to save database queries later
-        vt_states = StateDb.objects.select_related('branch','domain')
+        # Prepare State objects in a dict (with "branch_id-domain_id" as key), to save database queries later
+        vt_states = State.objects.select_related('branch','domain')
         if release:
             vt_states = vt_states.filter(language=lang, branch__releases=release, domain__dtype=dtype)
         else:
             vt_states = vt_states.filter(language=lang, domain__dtype=dtype)
         vt_states_dict = dict([("%d-%d" % (vt.branch.id, vt.domain.id),vt) for vt in vt_states])
 
-        # Get comments from last action of StateDb objects
+        # Get comments from last action of State objects
         actions = ActionDb.objects.filter(state_db__in=vt_states, comment__isnull=False).order_by('created')
         actions_dict = dict([(act.state_db_id, act) for act in actions])
         for vt_state in vt_states_dict.values():
