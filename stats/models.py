@@ -1497,7 +1497,7 @@ class Statistics(models.Model):
             }
         """
         # Import here to prevent a circular dependency
-        from vertimus.models import State, ActionDb
+        from vertimus.models import State, Action
 
         if dtype.endswith('-part'):
             dtype = dtype[:-5]
@@ -1533,7 +1533,7 @@ class Statistics(models.Model):
         vt_states_dict = dict([("%d-%d" % (vt.branch.id, vt.domain.id),vt) for vt in vt_states])
 
         # Get comments from last action of State objects
-        actions = ActionDb.objects.filter(state_db__in=vt_states, comment__isnull=False).order_by('created')
+        actions = Action.objects.filter(state_db__in=vt_states, comment__isnull=False).order_by('created')
         actions_dict = dict([(act.state_db_id, act) for act in actions])
         for vt_state in vt_states_dict.values():
             if vt_state.id in actions_dict:

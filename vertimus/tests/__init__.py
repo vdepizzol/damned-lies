@@ -190,8 +190,8 @@ class VertimusTest(TeamsAndRolesTests):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('WC')
-        state.apply_action(action, self.pt, "Hi!", None)
+        action = Action.new_by_name('WC', person=self.pt, comment="Hi!")
+        action.apply_on(state)
         # Test that submitting a comment without text generates a validation error
         form = ActionForm([('WC', u'Write a comment')], QueryDict('action=WC&comment='))
         self.assertTrue("A comment is needed" in str(form.errors))
@@ -200,8 +200,8 @@ class VertimusTest(TeamsAndRolesTests):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Reserved!", None)
+        action = Action.new_by_name('RT', person=self.pt, comment="Reserved!")
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateTranslating))
 
     def test_action_ut(self):
@@ -216,8 +216,8 @@ class VertimusTest(TeamsAndRolesTests):
         test_file = ContentFile('test content')
         test_file.name = 'mytestfile.po'
         
-        action = ActionAbstract.new_by_name('UT')
-        state.apply_action(action, self.pt, "Done by translator.", test_file)
+        action = Action.new_by_name('UT', person=self.pt, comment="Done by translator.", file=test_file)
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateTranslated))
         # Mail sent to mailing list
         self.assertEquals(len(mail.outbox), 1)
@@ -232,8 +232,8 @@ class VertimusTest(TeamsAndRolesTests):
         state = StateTranslated(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('RP')
-        state.apply_action(action, self.pr, "Reserved by a reviewer!")
+        action = Action.new_by_name('RP', person=self.pr, comment="Reserved by a reviewer!")
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateProofreading))
 
     def test_action_up(self):
@@ -243,24 +243,24 @@ class VertimusTest(TeamsAndRolesTests):
         test_file = ContentFile('test content')
         test_file.name = 'mytestfile.po'
 
-        action = ActionAbstract.new_by_name('UP')
-        state.apply_action(action, self.pr, "Done.", test_file)
+        action = Action.new_by_name('UP', person=self.pr, comment="Done.", file=test_file)
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateProofread))
 
     def test_action_tc(self):
         state = StateProofread(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('TC')
-        state.apply_action(action, self.pr, "Ready!")
+        action = Action.new_by_name('TC', person=self.pr, comment="Ready!")
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateToCommit))
 
     def test_action_rc(self):
         state = StateToCommit(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('RC')
-        state.apply_action(action, self.pc, "This work is mine!")
+        action = Action.new_by_name('RC', person=self.pc, comment="This work is mine!")
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateCommitting))
 
     def test_action_ic(self):
@@ -271,84 +271,85 @@ class VertimusTest(TeamsAndRolesTests):
         test_file = ContentFile('test content')
         test_file.name = 'mytestfile.po'
 
-        action = ActionAbstract.new_by_name('UP')
-        state.apply_action(action, self.pr, "Done.", test_file)
+        action = Action.new_by_name('UP', person=self.pr, comment="Done.", file=test_file)
+        action.apply_on(state)
 
         file_path = os.path.join(settings.MEDIA_ROOT, action.file.name)
         self.assertTrue(os.access(file_path, os.W_OK))
 
-        action = ActionAbstract.new_by_name('TC')
-        state.apply_action(action, self.pc, "To commit.")
+        action = Action.new_by_name('TC', person=self.pc, comment="To commit.")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('RC')
-        state.apply_action(action, self.pc, "Reserved commit.")
+        action = Action.new_by_name('RC', person=self.pc, comment="Reserved commit.")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('IC')
-        state.apply_action(action, self.pc, "Committed.")
+        action = Action.new_by_name('IC', person=self.pc, comment="Committed.")
+        action.apply_on(state)
 
         self.assertTrue(not os.access(file_path, os.F_OK), "%s not deleted" % file_path)
 
         # Remove test file
-        action_db_archived = ActionDbArchived.objects.get(comment="Done.")
-        filename_archived = os.path.join(settings.MEDIA_ROOT, action_db_archived.file.name)
-        action_db_archived.delete()
+        action_archived = ActionArchived.objects.get(comment="Done.")
+        filename_archived = os.path.join(settings.MEDIA_ROOT, action_archived.file.name)
+        action_archived.delete()
         self.assertTrue(not os.access(filename_archived, os.F_OK), "%s not deleted" % filename_archived)
 
     def test_action_tr(self):
         state = StateTranslated(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('TR')
-        state.apply_action(action, self.pc, "Bad work :-/")
+        action = Action.new_by_name('TR', person=self.pc, comment="Bad work :-/")
+        action.apply_on(state)
         self.assertTrue(isinstance(state, StateToReview))
 
-    def test_action_ba(self):
+    def test_action_aa(self):
         state = StateCommitted(branch=self.b, domain=self.d, language=self.l, person=self.pr)
         state.save()
 
-        action = ActionAbstract.new_by_name('AA')
-        state.apply_action(action, self.pc, comment="I don't want to disappear :)")
+        action = Action.new_by_name('AA', person=self.pc, comment="I don't want to disappear :)")
+        action.apply_on(state)
 
         state = State.objects.get(branch=self.b, domain=self.d, language=self.l)
         self.assertTrue(isinstance(state, StateNone))
+        self.assertEquals(state.action_set.count(), 0)
 
     def test_action_undo(self):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Reserved!")
+        action = Action.new_by_name('RT', person=self.pt, comment="Reserved!")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pt, "Ooops! I don't want to do that. Sorry.")
+        action = Action.new_by_name('UNDO', person=self.pt, comment="Ooops! I don't want to do that. Sorry.")
+        action.apply_on(state)
 
         self.assertEqual(state.name, 'None')
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Translating")
+        action = Action.new_by_name('RT', person=self.pt, comment="Translating")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UT')
-        state.apply_action(action, self.pt, "Translated")
+        action = Action.new_by_name('UT', person=self.pt, comment="Translated")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Reserved!")
+        action = Action.new_by_name('RT', person=self.pt, comment="Reserved!")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pt, "Ooops! I don't want to do that. Sorry.")
+        action = Action.new_by_name('UNDO', person=self.pt, comment="Ooops! I don't want to do that. Sorry.")
+        action.apply_on(state)
 
         self.assertEqual(state.name, 'Translated')
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Translating 1")
+        action = Action.new_by_name('RT', person=self.pt, comment="Translating 1")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pt, "Undo 1")
+        action = Action.new_by_name('UNDO', person=self.pt, comment="Undo 1")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pt, "Translating 2")
+        action = Action.new_by_name('RT', person=self.pt, comment="Translating 2")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pt, "Undo 2")
+        action = Action.new_by_name('UNDO', person=self.pt, comment="Undo 2")
+        action.apply_on(state)
 
         self.assertEqual(state.name, 'Translated')
 
@@ -388,29 +389,29 @@ class VertimusTest(TeamsAndRolesTests):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
         state.save()
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pr, "Reserved!")
+        action = Action.new_by_name('RT', person=self.pr, comment="Reserved!")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pr, "Ooops! I don't want to do that. Sorry.")
+        action = Action.new_by_name('UNDO', person=self.pr, comment="Ooops! I don't want to do that. Sorry.")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('RT')
-        state.apply_action(action, self.pr, "Translating")
+        action = Action.new_by_name('RT', person=self.pr, comment="Translating")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UT')
-        state.apply_action(action, self.pr, "Translated")
+        action = Action.new_by_name('UT', person=self.pr, comment="Translated")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('RP')
-        state.apply_action(action, self.pr, "Proofreading")
+        action = Action.new_by_name('RP', person=self.pr, comment="Proofreading")
+        action.apply_on(state)
 
-        action = ActionAbstract.new_by_name('UNDO')
-        state.apply_action(action, self.pr, "Ooops! I don't want to do that. Sorry.")
+        action = Action.new_by_name('UNDO', person=self.pr, comment="Ooops! I don't want to do that. Sorry.")
+        action.apply_on(state)
 
-        actions_db = ActionDb.objects.filter(state_db__id=state.id).exclude(name='WC').order_by('-id')
+        actions_db = Action.objects.filter(state_db__id=state.id).exclude(name='WC').order_by('-id')
 
         # So the last action is UNDO
-        self.assert_(isinstance(actions_db[0].get_action(), ActionUNDO))
+        self.assert_(isinstance(actions_db[0], ActionUNDO))
 
         # Here be dragons! A call to len() workaround the Django/MySQL bug!
         len(actions_db)
-        self.assert_(isinstance(actions_db[0].get_action(), ActionUNDO))
+        self.assert_(isinstance(actions_db[0], ActionUNDO))

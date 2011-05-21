@@ -27,7 +27,7 @@ from django.utils.translation import ugettext as _
 
 from stats.models import Statistics, Module, Branch, Domain, Language
 from stats.utils import is_po_reduced
-from vertimus.models import State, ActionDb, ActionDbArchived, ActionAbstract
+from vertimus.models import State, Action, ActionArchived
 from vertimus.forms import ActionForm
 
 def vertimus_by_stats_id(request, stats_id, lang_id):
@@ -80,10 +80,10 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
 
     if level == 0:
         # Current actions
-        action_history = ActionDb.get_action_history(state)
+        action_history = Action.get_action_history(state=state)
     else:
         sequence = state.get_action_sequence_from_level(level)
-        action_history = ActionDbArchived.get_action_history(sequence)
+        action_history = ActionArchived.get_action_history(sequence=sequence)
 
     # Get the sequence of the grandparent to know if exists a previous action
     # history
@@ -105,9 +105,9 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
                 action = action_form.cleaned_data['action']
                 comment = action_form.cleaned_data['comment']
 
-                action = ActionAbstract.new_by_name(action)
-                state.apply_action(action, person, comment,
-                                   request.FILES.get('file', None))
+                action = Action.new_by_name(action, person=person, comment=comment,
+                    file=request.FILES.get('file', None))
+                action.apply_on(state)
 
                 return HttpResponseRedirect(
                     urlresolvers.reverse('vertimus_by_names',
@@ -143,10 +143,10 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     """Show a diff between current action po file and previous file"""
     import difflib
     if int(level) != 0:
-        ActionDbReal = ActionDbArchived
+        ActionReal = ActionArchived
     else:
-        ActionDbReal = ActionDb
-    action_1 = get_object_or_404(ActionDbReal, pk=action_id_1).get_action()
+        ActionReal = Action
+    action_1 = get_object_or_404(ActionReal, pk=action_id_1)
     state = action_1.state
 
     file_path_1 = action_1.merged_file()['path'] or action_1.file.path
@@ -161,7 +161,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
                                                              'date': action_1.created }
     if action_id_2 not in (None, "0"):
         # 1) id_2 specified in URL
-        action_2 = get_object_or_404(ActionDbReal, pk=action_id_2).get_action()
+        action_2 = get_object_or_404(ActionReal, pk=action_id_2)
         file_path_2 = action_2.merged_file()['path'] or action_2.file.path
         descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                  'date': action_2.created }
@@ -204,11 +204,11 @@ def latest_uploaded_po(request, module_name, branch_name, domain_name, locale_na
     branch = get_object_or_404(Branch, module__name=module_name, name=branch_name)
     domain = get_object_or_404(Domain, module__name=module_name, name=domain_name)
     lang   = get_object_or_404(Language, locale=locale_name)
-    latest_upload = ActionDb.objects.filter(state_db__branch=branch,
-                                            state_db__domain=domain,
-                                            state_db__language=lang,
-                                            file__endswith=".po").order_by('-created')[:1]
+    latest_upload = Action.objects.filter(state_db__branch=branch,
+                                          state_db__domain=domain,
+                                          state_db__language=lang,
+                                          file__endswith=".po").order_by('-created')[:1]
     if not latest_upload:
         raise Http404
-    merged_file = latest_upload[0].get_action().merged_file()
+    merged_file = latest_upload[0].merged_file()
     return HttpResponseRedirect(merged_file['url'])

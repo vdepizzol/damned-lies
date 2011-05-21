@@ -23,7 +23,7 @@ import os
 
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-from vertimus.models import ActionAbstract
+from vertimus.models import Action
 from stats.utils import po_file_stats
 
 class ActionWidget(forms.Select):
@@ -69,9 +69,9 @@ class ActionForm(forms.Form):
         action_code = cleaned_data.get('action')
         if action_code is None:
             raise forms.ValidationError(_("Invalid action. Someone probably posted another action just before you."))
-        action = ActionAbstract.new_by_name(action_code)
         comment = cleaned_data.get('comment')
         file = cleaned_data.get('file')
+        action = Action.new_by_name(action_code, comment=comment, file=file)
 
         if action.comment_is_required and not comment:
             raise forms.ValidationError(_("A comment is needed for this action."))

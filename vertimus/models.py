@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2008-2009 Stéphane Raimbault <stephane.raimbault@gmail.com>
+# Copyright (c) 2011 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -81,8 +82,9 @@ class State(models.Model):
     def get_absolute_url(self):
         return ('vertimus_by_ids', [self.branch.id, self.domain.id, self.language.id])
 
-    def change_state(self, state_class):
+    def change_state(self, state_class, person=None):
         self.name = state_class.name
+        self.person = person
         self.__class__ = state_class
         self.save()
 
@@ -94,26 +96,12 @@ class State(models.Model):
                 action_names.append('AA')
         return [eval('Action' + action_name)() for action_name in action_names]
 
-    def apply_action(self, action, person, comment=None, file=None):
-        # Check the permission to use this action
-        if action.name in (a.name for a in self.get_available_actions(person)):
-            action.apply(self, person, comment, file)
-            if not isinstance(self, StateNone):
-                self.person = person
-                self.save()
-
-                if isinstance(self, StateCommitted):
-                    # Committed is the last state of the workflow, archive actions
-                    self.apply_action(ActionAA(), person)
-        else:
-            raise Exception('Not allowed')
-
     def get_action_sequence_from_level(self, level):
         """Get the sequence corresponding to the requested level.
            The first level is 1."""
         assert level > 0, "Level must be greater than 0"
 
-        query = self.actiondbarchived_set.all().values('sequence').distinct().order_by('-sequence')[level-1:level]
+        query = ActionArchived.objects.filter(state_db=self).values('sequence').distinct().order_by('-sequence')[level-1:level]
         sequence = None
         if len(query) > 0:
             sequence = query[0]['sequence']
@@ -282,14 +270,27 @@ class StateCommitted(State):
 #
 
 ACTION_NAMES = (
-    'WC',
-    'RT', 'UT',
-    'RP', 'UP',
-    'TC', 'CI', 'RC',
-    'IC', 'TR',
-    'AA', 'UNDO')
+    ('WC', _('Write a comment')),
+    ('RT', _('Reserve for translation')),
+    ('UT', _('Upload the new translation')),
+    ('RP', _('Reserve for proofreading')),
+    ('UP', _('Upload the proofread translation')),
+    # Translators: this means the file is ready to be committed in repository
+    ('TC', _('Ready for submission')),
+    ('CI', _('Submit to repository')),
+    # Translators: this indicates a committer is going to commit the file in the repository
+    ('RC', _('Reserve to submit')),
+    # Translators: this is used to indicate the file has been committed in the repository
+    ('IC', _('Inform of submission')),
+    # Translators: regardless of the translation completion, this file need to be reviewed
+    ('TR', _('Review required')),
+    ('AA', _('Archive the actions')),
+    ('UNDO', _('Undo the last state change')),
+)
 
 def generate_upload_filename(instance, filename):
+    if isinstance(instance, ActionArchived):
+        return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(filename))
     # Extract the first extension (with the point)
     root, ext = os.path.splitext(filename)
     # Check if a second extension is present
@@ -304,66 +305,132 @@ def generate_upload_filename(instance, filename):
         ext)
     return "%s/%s" % (settings.UPLOAD_DIR, new_filename)
 
-def action_db_get_action_history(cls, state_db=None, sequence=None):
-    """
-    Return action history as a list of tuples (action, file_history),
-    file_history is a list of previous po files, used in vertimus view to
-    generate diff links
-    """
-    history = []
-    if state_db or sequence:
-        file_history = [{'action_id':0, 'title': ugettext("File in repository")}]
-        if not sequence:
-            query = cls.objects.filter(state_db__id=state_db.id)
-        else:
-            # Not necessary to filter on state_db with a sequence (unique)
-            query = cls.objects.filter(sequence=sequence)
-        for action_db in query.order_by('id'):
-            history.append((action_db.get_action(), list(file_history)))
-            if action_db.file and action_db.file.path.endswith('.po'):
-                # Action.id and ActionDb.id are identical (inheritance)
-                file_history.insert(0, {
-                    'action_id': action_db.id,
-                    'title': ugettext("Uploaded file by %(name)s on %(date)s") % {
-                        'name': action_db.person.name,
-                        'date': action_db.created },
-                    })
-    return history
-
-class ActionDb(models.Model):
+class ActionAbstract(models.Model):
+    """ Common model for Action and ActionArchived """
     state_db = models.ForeignKey(State)
     person = models.ForeignKey(Person)
 
     name = models.SlugField(max_length=8)
-    description = None
-    created = models.DateTimeField(auto_now_add=True, editable=False)
+    created = models.DateTimeField(editable=False)
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_upload_filename, blank=True, null=True)
     #up_file     = models.OneToOneField(PoFile, null=True, related_name='action_p')
     #merged_file = models.OneToOneField(PoFile, null=True, related_name='action_m')
 
+    # A comment or a file is required
+    arg_is_required = False
+    comment_is_required = False
+    file_is_required = False
+    file_is_prohibited = False
+
+    class Meta:
+        abstract = True
+
+    def __unicode__(self):
+        return u"%s (%s) - %s" % (self.name, self.description, self.id)
+
+    @property
+    def description(self):
+        return dict(ACTION_NAMES).get(self.name, None)
+
+    def get_filename(self):
+        if self.file:
+            return os.path.basename(self.file.name)
+        else:
+            return None
+
+    def has_po_file(self):
+        try:
+            return self.file.name[-3:] == ".po"
+        except:
+            return False
+
+    @classmethod
+    def get_action_history(cls, state=None, sequence=None):
+        """
+        Return action history as a list of tuples (action, file_history),
+        file_history is a list of previous po files, used in vertimus view to
+        generate diff links
+        sequence argument is only valid on ActionArchived instances
+        """
+        history = []
+        if state or sequence:
+            file_history = [{'action_id':0, 'title': ugettext("File in repository")}]
+            if not sequence:
+                query = cls.objects.filter(state_db__id=state.id)
+            else:
+                # Not necessary to filter on state with a sequence (unique)
+                query = cls.objects.filter(sequence=sequence)
+            for action in query.order_by('id'):
+                history.append((action, list(file_history)))
+                if action.file and action.file.path.endswith('.po'):
+                    file_history.insert(0, {
+                        'action_id': action.id,
+                        'title': ugettext("Uploaded file by %(name)s on %(date)s") % {
+                            'name': action.person.name,
+                            'date': action.created },
+                        })
+        return history
+
+
+class Action(ActionAbstract):
     class Meta:
         db_table = 'action'
         verbose_name = 'action'
 
-    def __unicode__(self):
-        return "%s (%s)" % (self.name, self.id)
+    def __init__(self, *args, **kwargs):
+        super(Action, self).__init__(*args, **kwargs)
+        if self.name:
+            self.__class__ = eval('Action' + self.name)
+        else:
+            if getattr(self.__class__, 'name'):
+                self.name = self.__class__.name
 
-    def get_action(self):
-        action = eval('Action' + self.name)()
-        action._action_db = self
-        return action
+    @classmethod
+    def new_by_name(cls, action_name, **kwargs):
+         return eval('Action' + action_name)(**kwargs)
 
-    def get_previous_action_db_with_po(self):
+    def save(self, *args, **kwargs):
+        if not self.id and not self.created:
+            self.created = datetime.today()
+        super(Action, self).save(*args, **kwargs)
+
+    def apply_on(self, state):
+        if not self in state.get_available_actions(self.person):
+            raise Exception('Not allowed')
+        self.state_db = state
+        if self.file:
+            self.file.save(self.file.name, self.file, save=False)
+        self.save()
+        if not isinstance(self, ActionWC):
+            # All actions change state except Writing a comment
+            self.state_db.change_state(self.target_state, self.person)
+            if self.target_state == StateCommitted:
+                # Committed is the last state of the workflow, archive actions
+                arch_action = self.new_by_name('AA', person=self.person)
+                arch_action.apply_on(self.state_db)
+
+    def merged_file(self):
+        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
+        mfile_url = mfile_path = mfile_name = None
+        if self.file:
+            mfile_url = self.file.url[:-3] + ".merged.po"
+            mfile_path = self.file.path[:-3] + ".merged.po"
+            mfile_name = os.path.basename(mfile_path)
+            if not os.access(mfile_path, os.R_OK):
+                mfile_url = mfile_path = mfile_name = None
+        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
+
+    def get_previous_action_with_po(self):
         """
-        Return the previous ActionDb with an uploaded file related to the
+        Return the previous Action with an uploaded file related to the
         same state.
         """
         try:
-            action_db = ActionDb.objects.filter(file__endswith=".po", state_db=self.state_db,
+            action = Action.objects.filter(file__endswith=".po", state_db=self.state_db,
                 id__lt=self.id).latest('id')
-            return action_db
-        except ActionDb.DoesNotExist:
+            return action
+        except Action.DoesNotExist:
             return None
 
     def merge_file_with_pot(self, pot_file):
@@ -382,148 +449,6 @@ class ActionDb(models.Model):
                 shutil.copy(merged_path, temp_path)
                 po_grep(temp_path, merged_path, self.state_db.domain.red_filter)
                 os.remove(temp_path)
-
-    @classmethod
-    def get_action_history(cls, state_db):
-        return action_db_get_action_history(cls, state_db=state_db)
-
-def generate_archive_filename(instance, original_filename):
-    return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
-
-class ActionDbArchived(models.Model):
-    state_db = models.ForeignKey(State)
-    person = models.ForeignKey(Person)
-
-    name = models.SlugField(max_length=8)
-    # Datetime copied from ActionDb
-    created = models.DateTimeField(editable=False)
-    comment = models.TextField(blank=True, null=True)
-    file = models.FileField(upload_to=generate_archive_filename, blank=True, null=True)
-    # The first element of each cycle is null at creation time (and defined
-    # afterward).
-    sequence = models.IntegerField(null=True)
-
-    class Meta:
-        db_table = 'action_archived'
-
-    def __unicode__(self):
-        return "%s (%s)" % (self.name, self.id)
-
-    def get_action(self):
-        action = eval('Action' + self.name)()
-        action._action_db = self
-        return action
-
-    @classmethod
-    def get_action_history(cls, sequence):
-        return action_db_get_action_history(cls, state_db=None, sequence=sequence)
-
-    @classmethod
-    def clean_old_actions(cls, days):
-        """ Delete old archived actions after some (now-days) time """
-        # In each sequence, test date of the latest action, to delete whole sequences instead of individual actions
-        for action in ActionDbArchived.objects.values('sequence'
-            ).annotate(max_created=Max('created')
-            ).filter(max_created__lt=datetime.now()-timedelta(days=days)):
-            # Call each action delete() so as file is also deleted
-            for act in ActionDbArchived.objects.filter(sequence=action['sequence']):
-                act.delete()
-
-class ActionAbstract(object):
-    """Abstract class"""
-
-    # A comment or a file is required
-    arg_is_required = False
-    comment_is_required = False
-    file_is_required = False
-    file_is_prohibited = False
-
-    @classmethod
-    def new_by_name(cls, action_name):
-         return eval('Action' + action_name)()
-
-    @classmethod
-    def get_all(cls):
-        """Reserved to the admins to access all actions"""
-        return [eval('Action' + action_name)() for action_name in ACTION_NAMES]
-
-    @property
-    def id(self):
-        return self._action_db.id
-
-    @property
-    def person(self):
-        return self._action_db.person
-
-    @property
-    def comment(self):
-        return self._action_db.comment
-
-    @property
-    def created(self):
-        return self._action_db.created
-
-    @property
-    def file(self):
-        return self._action_db.file
-
-    @property
-    def state(self):
-        return self._action_db.state_db
-
-    def get_previous_action_with_po(self):
-        """
-        Return the previous Action with an uploaded file related to the same
-        state.
-        """
-        action_db = self._action_db.get_previous_action_db_with_po()
-        if action_db:
-            return action_db.get_action()
-        else:
-            return None
-
-    def save_action_db(self, state, person, comment=None, file=None):
-        """Used by apply"""
-        self._action_db = ActionDb(state_db=state, person=person,
-            name=self.name, comment=comment, file=file)
-        if file:
-            self._action_db.file.save(file.name, file, save=False)
-        self._action_db.save()
-
-        # Reactivating the role if needed
-        try:
-            role = person.role_set.get(team=state.language.team)
-            if not role.is_active:
-                role.is_active = True
-                role.save()
-        except Role.DoesNotExist:
-            pass
-
-    def __unicode__(self):
-        return unicode(self.description) # needs unicode() because description is lazy
-
-    def get_filename(self):
-        if self._action_db.file:
-            return os.path.basename(self._action_db.file.name)
-        else:
-            return None
-
-    def merged_file(self):
-        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
-        mfile_url = mfile_path = mfile_name = None
-        if self._action_db.file:
-            mfile_url = self._action_db.file.url[:-3] + ".merged.po"
-            mfile_path = self._action_db.file.path[:-3] + ".merged.po"
-            mfile_name = os.path.basename(mfile_path)
-            if not os.access(mfile_path, os.R_OK):
-                mfile_url = mfile_path =  mfile_name = None
-        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
-
-    def has_po_file(self):
-        try:
-            return self._action_db.file.name[-3:] == ".po"
-        except:
-            return False
 
     def send_mail_new_state(self, state, recipient_list):
         # Remove None and empty string items from the list
@@ -551,7 +476,7 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
                 'branch': state.branch.name,
                 'domain': state.domain.name,
                 'language': state.language.get_name(),
-                'new_state': state,
+                'new_state': state.description,
                 'url': url
             }
             message += self.comment or ugettext("Without comment")
@@ -561,17 +486,42 @@ The new state of %(module)s - %(branch)s - %(domain)s (%(language)s) is now '%(n
             activate(current_lang)
 
 
-class ActionWC(ActionAbstract):
+def generate_archive_filename(instance, original_filename):
+    return "%s/%s" % (settings.UPLOAD_ARCHIVED_DIR, os.path.basename(original_filename))
+
+class ActionArchived(ActionAbstract):
+    # The first element of each cycle is null at creation time (and defined
+    # afterward).
+    sequence = models.IntegerField(null=True)
+
+    class Meta:
+        db_table = 'action_archived'
+
+    @classmethod
+    def clean_old_actions(cls, days):
+        """ Delete old archived actions after some (now-days) time """
+        # In each sequence, test date of the latest action, to delete whole sequences instead of individual actions
+        for action in ActionArchived.objects.values('sequence'
+            ).annotate(max_created=Max('created')
+            ).filter(max_created__lt=datetime.now()-timedelta(days=days)):
+            # Call each action delete() so as file is also deleted
+            for act in ActionArchived.objects.filter(sequence=action['sequence']):
+                act.delete()
+
+
+class ActionWC(Action):
     name = 'WC'
-    description = _('Write a comment')
     comment_is_required = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
+
+    def apply_on(self, state):
+        super(ActionWC, self).apply_on(state)
 
         # Send an email to all translators of the page
         translator_emails = set()
-        for d in Person.objects.filter(actiondb__state_db=state).values('email'):
+        for d in Person.objects.filter(action__state_db=state).values('email'):
             translator_emails.add(d['email'])
 
         # Remove None items from the list
@@ -601,181 +551,179 @@ A new comment has been left on %(module)s - %(branch)s - %(domain)s (%(language)
                 'language': state.language.get_name(),
                 'url': url
             }
-            message += comment or ugettext("Without comment")
-            message += "\n\n" + person.name
+            message += self.comment or ugettext("Without comment")
+            message += "\n\n" + self.person.name
             message += "\n--\n" + _(u"This is an automated message sent from %s.") % current_site.domain
             mail.send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, translator_emails)
             activate(current_lang)
 
-class ActionRT(ActionAbstract):
+class ActionRT(Action):
     name = 'RT'
-    description = _('Reserve for translation')
     target_state = StateTranslating
     file_is_prohibited = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
-        state.change_state(self.target_state)
+    class Meta:
+        proxy = True
 
-class ActionUT(ActionAbstract):
+class ActionUT(Action):
     name = 'UT'
-    description = _('Upload the new translation')
     target_state = StateTranslated
     file_is_required = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        state.change_state(self.target_state)
+    def apply_on(self, state):
+        super(ActionUT, self).apply_on(state)
         self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
-class ActionRP(ActionAbstract):
+class ActionRP(Action):
     name = 'RP'
-    description = _('Reserve for proofreading')
     target_state = StateProofreading
     file_is_prohibited = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
-        state.change_state(self.target_state)
+    class Meta:
+        proxy = True
 
-class ActionUP(ActionAbstract):
+class ActionUP(Action):
     name = 'UP'
-    description = _('Upload the proofread translation')
     target_state = StateProofread
     file_is_required = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        state.change_state(self.target_state)
+    def apply_on(self, state):
+        super(ActionUP, self).apply_on(state)
         self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
-class ActionTC(ActionAbstract):
+class ActionTC(Action):
     name = 'TC'
-    # Translators: this means the file is ready to be committed in repository
-    description = _('Ready for submission')
     target_state = StateToCommit
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        state.change_state(self.target_state)
+    def apply_on(self, state):
+        super(ActionTC, self).apply_on(state)
         # Send an email to all committers of the team
         committers = [c.email for c in state.language.team.get_committers()]
         self.send_mail_new_state(state, committers)
 
-class ActionCI(ActionAbstract):
+class ActionCI(Action):
     name = 'CI'
-    description = _('Submit to repository')
     target_state = StateCommitted
     file_is_prohibited = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
+
+    def apply_on(self, state):
         action_with_po = self.get_previous_action_with_po()
         try:
-            state.branch.commit_po(action_with_po.file.path, state.domain, state.language, person)
-            state.change_state(self.target_state)
+            state.branch.commit_po(action_with_po.file.path, state.domain, state.language, self.person)
         except:
             # Commit failed, state unchanged
-            self._action_db.delete()
             # FIXME: somewhere the error should be catched and handled properly
             raise Exception(_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
 
+        super(ActionCI, self).apply_on(state)
         self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
-class ActionRC(ActionAbstract):
+class ActionRC(Action):
     name = 'RC'
-    # Translators: this indicates a committer is going to commit the file in the repository
-    description = _('Reserve to submit')
     target_state = StateCommitting
     file_is_prohibited = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
-        state.change_state(self.target_state)
+    class Meta:
+        proxy = True
 
-class ActionIC(ActionAbstract):
+class ActionIC(Action):
     name = 'IC'
-    # Translators: this is used to indicate the file has been committed in the repository
-    description = _('Inform of submission')
     target_state = StateCommitted
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        state.change_state(self.target_state)
+    def apply(self, state):
+        super(ActionIC, self).apply_on(state)
         self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
-class ActionTR(ActionAbstract):
+class ActionTR(Action):
     name = 'TR'
-    # Translators: regardless of the translation completion, this file need to be reviewed
-    description = _('Review required')
     target_state = StateToReview
     arg_is_required = True
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        state.change_state(self.target_state)
+    def apply_on(self, state):
+        super(ActionTR, self).apply_on(state)
         self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
-class ActionAA(ActionAbstract):
+class ActionAA(Action):
     name = 'AA'
-    description = _('Archive the actions')
     target_state = StateNone
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
 
-        actions_db = ActionDb.objects.filter(state_db=state).order_by('id').all()
+    def apply_on(self, state):
+        super(ActionAA, self).apply_on(state)
+        all_actions = Action.objects.filter(state_db=state).order_by('id').all()
 
         sequence = None
-        for action_db in actions_db:
+        for action in all_actions:
             file_to_archive = None
-            if action_db.file:
-                file_to_archive = action_db.file.file # get a file object, not a filefield
-            action_db_archived = ActionDbArchived(
-                state_db=action_db.state_db,
-                person=action_db.person,
-                name=action_db.name,
-                created=action_db.created,
-                comment=action_db.comment,
+            if action.file:
+                try:
+                    file_to_archive = action.file.file # get a file object, not a filefield
+                except IOError:
+                    pass
+            action_archived = ActionArchived(
+                state_db=action.state_db,
+                person=action.person,
+                name=action.name,
+                created=action.created,
+                comment=action.comment,
                 file=file_to_archive)
             if file_to_archive:
-                action_db_archived.file.save(action_db.file.name, file_to_archive, save=False)
+                action_archived.file.save(action.file.name, file_to_archive, save=False)
 
-            if sequence == None:
+            if sequence is None:
                 # The ID is available after the save()
-                action_db_archived.save()
-                sequence = action_db_archived.id
+                action_archived.save()
+                sequence = action_archived.id
 
-            action_db_archived.sequence = sequence
-            action_db_archived.save()
+            action_archived.sequence = sequence
+            action_archived.save()
 
-            action_db.delete() # The file is also automatically deleted, if it is not referenced elsewhere
-        state.change_state(self.target_state)
+            action.delete() # The file is also automatically deleted, if it is not referenced elsewhere
 
-class ActionUNDO(ActionAbstract):
+class ActionUNDO(Action):
     name = 'UNDO'
-    description = _('Undo the last state change')
 
-    def apply(self, state, person, comment=None, file=None):
-        self.save_action_db(state, person, comment, file)
+    class Meta:
+        proxy = True
+
+    def apply_on(self, state):
+        self.state_db = state
+        self.save()
 
         # Exclude WC because this action is a noop on State
-        actions_db = ActionDb.objects.filter(state_db__id=state.id).exclude(name='WC').order_by('-id')
-        i = 0
-        while (i < len(actions_db)):
-            if actions_db[i].name == 'UNDO':
+        actions = Action.objects.filter(state_db__id=state.id).exclude(name='WC').order_by('-id')
+        skip_next = False
+        for action in actions:
+            if skip_next:
+                skip_next = False
+                continue
+            if action.name == 'UNDO':
                 # Skip Undo and the associated action
-                i = i + 2
-            else:
-                # Found
-                action = actions_db[i].get_action()
-                state.change_state(action.target_state)
-                return
+                skip_next = True
+                continue
+            # Found action to revert
+            state.change_state(action.target_state, action.person)
+            return
         state.change_state(StateNone)
 
 class ActionSeparator(object):
@@ -783,20 +731,25 @@ class ActionSeparator(object):
     name = None
     description = "--------"
 
+#
+# Signal actions
+#
 def update_uploaded_files(sender, **kwargs):
     """Callback to handle pot_file_changed signal"""
-    actions = ActionDb.objects.filter(state_db__branch=kwargs['branch'],
-                                      state_db__domain=kwargs['domain'],
-                                      file__endswith=".po")
+    actions = Action.objects.filter(state_db__branch=kwargs['branch'],
+                                    state_db__domain=kwargs['domain'],
+                                    file__endswith=".po")
     for action in actions:
         action.merge_file_with_pot(kwargs['potfile'])
 pot_has_changed.connect(update_uploaded_files)
 
 def merge_uploaded_file(sender, instance, **kwargs):
     """
-    post_save callback for ActionDb that automatically merge uploaded file
+    post_save callback for Action that automatically merge uploaded file
     with latest pot file.
     """
+    if not isinstance(instance, Action):
+        return
     if instance.file and instance.file.path.endswith('.po'):
         try:
             stat = Statistics.objects.get(branch=instance.state_db.branch, domain=instance.state_db.domain, language=None)
@@ -804,22 +757,34 @@ def merge_uploaded_file(sender, instance, **kwargs):
             return
         potfile = stat.po_path()
         instance.merge_file_with_pot(potfile)
-post_save.connect(merge_uploaded_file, sender=ActionDb)
+post_save.connect(merge_uploaded_file)
 
 def delete_action_files(sender, instance, **kwargs):
     """
-    post_delete callback for ActionDb that deletes the file + the merged file from upload
+    post_delete callback for Action that deletes the file + the merged file from upload
     directory.
     """
-    if instance.file:
-        if instance.file.path.endswith('.po'):
-            merged_file = instance.file.path[:-3] + ".merged.po"
-            if os.access(merged_file, os.W_OK):
-                 os.remove(merged_file)
-        if os.access(instance.file.path, os.W_OK):
-             os.remove(instance.file.path)
-post_delete.connect(delete_action_files, sender=ActionDb)
-post_delete.connect(delete_action_files, sender=ActionDbArchived)
+    if not isinstance(instance, ActionAbstract) or not getattr(instance, 'file'):
+        return
+    if instance.file.path.endswith('.po'):
+        merged_file = instance.file.path[:-3] + ".merged.po"
+        if os.access(merged_file, os.W_OK):
+             os.remove(merged_file)
+    if os.access(instance.file.path, os.W_OK):
+         os.remove(instance.file.path)
+post_delete.connect(delete_action_files)
+
+def reactivate_role(sender, instance, **kwargs):
+    # Reactivating the role if needed
+    if not isinstance(instance, Action):
+        return
+    try:
+        role = instance.person.role_set.get(team=instance.state_db.language.team, is_active=False)
+        role.is_active = True
+        role.save()
+    except Role.DoesNotExist:
+        pass
+post_save.connect(reactivate_role)
 
 """ The following string is just reproduced from a template so as a translator comment
     can be added (comments are not supported in templates) """

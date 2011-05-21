@@ -54,7 +54,7 @@ class PersonDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PersonDetailView, self).get_context_data(**kwargs)
-        states = State.objects.filter(actiondb__person=self.object).distinct()
+        states = State.objects.filter(action__person=self.object).distinct()
         all_languages = [(lg[0], LANG_INFO.get(lg[0], {'name_local': lg[1]})['name_local']) for lg in settings.LANGUAGES]
         all_languages.sort(key=itemgetter(1))
         context.update({

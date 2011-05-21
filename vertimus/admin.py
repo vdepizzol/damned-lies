@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from vertimus.models import State, ActionDb
+from vertimus.models import State, Action
 
 class StateAdmin(admin.ModelAdmin):
     raw_id_fields = ('branch', 'domain', 'person',)
 
-class ActionDbAdmin(admin.ModelAdmin):
+class ActionAdmin(admin.ModelAdmin):
     list_display = ('__unicode__', 'state_db')
+    raw_id_fields = ('state_db', 'person')
+    search_fields = ('comment',)
 
 admin.site.register(State, StateAdmin)
-admin.site.register(ActionDb, ActionDbAdmin)
+admin.site.register(Action, ActionAdmin)

@@ -139,7 +139,7 @@ $(document).ready(function() {
       {% endif %}
       </div>
       <a href="{{ action.person.get_absolute_url }}">{{ action.person.name }}</a>
-      , <strong>{{ action }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
+      , <strong>{{ action.description }}</strong>, {{ action.created|date:_("Y-m-d g:i a O") }}
     </div>
     <div class="vertimus_action_content">
       {% if action.file %}
