@@ -384,6 +384,25 @@ class VertimusTest(TeamsAndRolesTests):
         form = ActionForm([('WC', u'Write a comment')], post_content)
         self.assert_(form.is_valid())
 
+    def test_feeds(self):
+        state = StateNone(branch=self.b, domain=self.d, language=self.l)
+        state.save()
+
+        action = Action.new_by_name('RT', person=self.pt, comment="Translating")
+        action.apply_on(state)
+
+        response = self.client.get(reverse('lang_feed', args=[self.l.locale]))
+        self.assertContains(response,
+            """<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">""")
+        self.assertContains(response,
+            """<title>po (gedit/User Interface) - gedit (gnome-2-24) - Reserve for translation\n</title>""")
+        self.assertContains(response,
+            """<guid>http://example.com/vertimus/gedit/gnome-2-24/po/fr#1</guid>""")
+
+        response = self.client.get(reverse('team_feed', args=[self.l.team.name]))
+        self.assertContains(response,
+            """<title>po (gedit/User Interface) - gedit (gnome-2-24) - Reserve for translation\n</title>""")
+
     def test_mysql(self):
         # Copied from test_action_undo() with minor changes
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
