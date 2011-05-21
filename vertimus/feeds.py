@@ -59,10 +59,10 @@ class LatestActionsByLanguage(Feed):
 
     def item_link(self, item):
         link = urlresolvers.reverse('vertimus_by_names',
-                                    args=(item.state.branch.module.name,
-                                          item.state.branch.name,
-                                          item.state.domain.name,
-                                          item.state.language.locale))
+                                    args=(item.state_db.branch.module.name,
+                                          item.state_db.branch.name,
+                                          item.state_db.domain.name,
+                                          item.state_db.language.locale))
         return "%s#%d" % (link, item.id)
 
     def item_pubdate(self, item):
@@ -103,10 +103,10 @@ class LatestActionsByTeam(Feed):
 
     def item_link(self, item):
         link = urlresolvers.reverse('vertimus_by_names',
-                                    args=(item.state.branch.module.name,
-                                          item.state.branch.name,
-                                          item.state.domain.name,
-                                          item.state.language.locale))
+                                    args=(item.state_db.branch.module.name,
+                                          item.state_db.branch.name,
+                                          item.state_db.domain.name,
+                                          item.state_db.language.locale))
         return "%s#%d" % (link, item.id)
 
     def item_pubdate(self, item):

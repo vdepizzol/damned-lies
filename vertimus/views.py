@@ -147,7 +147,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     else:
         ActionReal = Action
     action_1 = get_object_or_404(ActionReal, pk=action_id_1)
-    state = action_1.state
+    state = action_1.state_db
 
     file_path_1 = action_1.merged_file()['path'] or action_1.file.path
     reduced = is_po_reduced(file_path_1)

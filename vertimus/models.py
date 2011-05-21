@@ -345,6 +345,17 @@ class ActionAbstract(models.Model):
         except:
             return False
 
+    def merged_file(self):
+        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
+        mfile_url = mfile_path = mfile_name = None
+        if self.file:
+            mfile_url = self.file.url[:-3] + ".merged.po"
+            mfile_path = self.file.path[:-3] + ".merged.po"
+            mfile_name = os.path.basename(mfile_path)
+            if not os.access(mfile_path, os.R_OK):
+                mfile_url = mfile_path = mfile_name = None
+        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
+
     @classmethod
     def get_action_history(cls, state=None, sequence=None):
         """
@@ -409,17 +420,6 @@ class Action(ActionAbstract):
                 # Committed is the last state of the workflow, archive actions
                 arch_action = self.new_by_name('AA', person=self.person)
                 arch_action.apply_on(self.state_db)
-
-    def merged_file(self):
-        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
-        mfile_url = mfile_path = mfile_name = None
-        if self.file:
-            mfile_url = self.file.url[:-3] + ".merged.po"
-            mfile_path = self.file.path[:-3] + ".merged.po"
-            mfile_name = os.path.basename(mfile_path)
-            if not os.access(mfile_path, os.R_OK):
-                mfile_url = mfile_path = mfile_name = None
-        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
 
     def get_previous_action_with_po(self):
         """
