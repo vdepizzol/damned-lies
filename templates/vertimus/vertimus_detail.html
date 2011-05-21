@@ -163,12 +163,12 @@ $(document).ready(function() {
         {% endif %}
       </div>
       {% endif %}
-      <p>{% if action.comment %}
-        {{ action.comment|linebreaksbr|urlize }}
-        {% else %}
-        <em>{% trans "No comment" %}</em>
-        {% endif %}
-      </p><br/>
+      {% if action.comment %}
+        <p class="vertimus_action_comment">{{ action.comment|urlize|linebreaksbr }}</p>
+      {% else %}
+        <p><em>{% trans "No comment" %}</em></p>
+      {% endif %}
+      <br/>
     </div>
   </div>
   {% endfor %}
