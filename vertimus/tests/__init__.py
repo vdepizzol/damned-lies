@@ -397,7 +397,7 @@ class VertimusTest(TeamsAndRolesTests):
         self.assertContains(response,
             """<title>po (gedit/User Interface) - gedit (gnome-2-24) - Reserve for translation\n</title>""")
         self.assertContains(response,
-            """<guid>http://example.com/vertimus/gedit/gnome-2-24/po/fr#1</guid>""")
+            """<guid>http://example.com/vertimus/gedit/gnome-2-24/po/fr#%d</guid>""" % action.id)
 
         response = self.client.get(reverse('team_feed', args=[self.l.team.name]))
         self.assertContains(response,
