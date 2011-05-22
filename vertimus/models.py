@@ -417,6 +417,7 @@ class Action(ActionAbstract):
             # All actions change state except Writing a comment
             self.state_db.change_state(self.target_state, self.person)
             if self.target_state == StateCommitted:
+                self.send_mail_new_state(state, (state.language.team.mailing_list,))
                 # Committed is the last state of the workflow, archive actions
                 arch_action = self.new_by_name('AA', person=self.person)
                 arch_action.apply_on(self.state_db)
@@ -627,8 +628,7 @@ class ActionCI(Action):
             # FIXME: somewhere the error should be catched and handled properly
             raise Exception(_("The commit failed. The error was: '%s'") % sys.exc_info()[1])
 
-        super(ActionCI, self).apply_on(state)
-        self.send_mail_new_state(state, (state.language.team.mailing_list,))
+        super(ActionCI, self).apply_on(state) # Mail sent in super
 
 class ActionRC(Action):
     name = 'RC'
@@ -644,10 +644,6 @@ class ActionIC(Action):
 
     class Meta:
         proxy = True
-
-    def apply(self, state):
-        super(ActionIC, self).apply_on(state)
-        self.send_mail_new_state(state, (state.language.team.mailing_list,))
 
 class ActionTR(Action):
     name = 'TR'

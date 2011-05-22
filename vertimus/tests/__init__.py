@@ -273,19 +273,28 @@ class VertimusTest(TeamsAndRolesTests):
 
         action = Action.new_by_name('UP', person=self.pr, comment="Done.", file=test_file)
         action.apply_on(state)
+        self.assertEquals(len(mail.outbox), 1) # Mail sent to mailing list
+        mail.outbox = []
 
         file_path = os.path.join(settings.MEDIA_ROOT, action.file.name)
         self.assertTrue(os.access(file_path, os.W_OK))
 
         action = Action.new_by_name('TC', person=self.pc, comment="To commit.")
         action.apply_on(state)
+        self.assertEquals(len(mail.outbox), 1) # Mail sent to committers
+        mail.outbox = []
 
         action = Action.new_by_name('RC', person=self.pc, comment="Reserved commit.")
         action.apply_on(state)
 
         action = Action.new_by_name('IC', person=self.pc, comment="Committed.")
         action.apply_on(state)
+        # Mail sent to mailing list
+        self.assertEquals(len(mail.outbox), 1)
+        self.assertEquals(mail.outbox[0].recipients(), [self.l.team.mailing_list])
+        self.assertTrue(u'Commité' in mail.outbox[0].body) # Team is French
 
+        self.assertTrue(isinstance(state, StateNone))
         self.assertTrue(not os.access(file_path, os.F_OK), "%s not deleted" % file_path)
 
         # Remove test file
