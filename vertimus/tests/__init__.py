@@ -362,6 +362,17 @@ class VertimusTest(TeamsAndRolesTests):
 
         self.assertEqual(state.name, 'Translated')
 
+    def test_delete(self):
+        """ Test that a whole module tree can be properly deleted """
+        state = StateNone(branch=self.b, domain=self.d, language=self.l)
+        state.save()
+
+        action = Action.new_by_name('WC', person=self.pt, comment="Hi!")
+        action.apply_on(state)
+
+        self.m.delete()
+        self.assertEqual(Action.objects.all().count(), 0)
+
     def test_vertimus_view(self):
         pot_stat = Statistics(language=None, branch=self.b, domain=self.d)
         pot_stat.save()

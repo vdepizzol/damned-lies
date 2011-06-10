@@ -120,6 +120,7 @@ class InformationInline(admin.TabularInline):
 
 class StatisticsAdmin(admin.ModelAdmin):
     search_fields = ('language__name', 'branch__module__name')
+    raw_id_fields = ('branch', 'domain', 'language', 'full_po', 'part_po')
     inlines = [ InformationInline ]
 
 admin.site.register(Statistics, StatisticsAdmin)
