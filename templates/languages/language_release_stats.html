@@ -19,7 +19,8 @@
 <table class="tablesorter" name="stats-table" id="stats-table">
 <thead>
   <tr><th>{% trans "Module" %}</th><th>{% trans "Branch" %}</th>
-      <th colspan="2">{% trans "Statistics" %}</th>
+      {# colspan=2 for Statistics is causing offset in sort effect for following columns #}
+      <th>{% trans "Statistics" %}</th><th class="headerNoSort"></th>
       <th>{% trans "Status" %}</th><th>{% trans "Date" %}</th>
   </tr>
 </thead>
