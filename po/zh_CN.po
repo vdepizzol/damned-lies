@@ -4,14 +4,15 @@
 # 甘露(Lu Gan) <rhythm.gan@gmail.com>, 2008, 2010.
 # Funda Wang <fundawang@gmail.com>, 2008.
 # Aron Xu <aronmalache@163.com>, 2008, 2009.
+# Richard Ma <richard.ma.19850509@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-23 08:59+0000\n"
-"PO-Revision-Date: 2011-05-16 17:47+0800\n"
-"Last-Translator: Yinghua Wang <wantinghard@gmail.com>\n"
+"POT-Creation-Date: 2011-06-29 09:26+0000\n"
+"PO-Revision-Date: 2011-07-26 22:08+0800\n"
+"Last-Translator: Richard Ma <richard.ma.19850509@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -375,10 +376,8 @@ msgid "Oriya"
 msgstr "奥里雅语"
 
 #: database-content.py:90 database-content.py:221
-#, fuzzy
-#| msgid "Russian"
 msgid "Ossetian"
-msgstr "俄罗斯语"
+msgstr "奥塞梯语"
 
 #: database-content.py:91 database-content.py:222
 msgid "Pashto"
@@ -1517,7 +1516,6 @@ msgstr "登录失败。请检查您的用户名和密码。"
 
 #: common/views.py:118
 #, fuzzy
-#| msgid "The URL you provided is not valid"
 msgid "Sorry, the key you provided is not valid."
 msgstr "您提供的 URL 无效"
 
@@ -2370,7 +2368,7 @@ msgid "Older Releases"
 msgstr "老发行版本"
 
 #: templates/stats_show.html:7
-#: templates/languages/language_release_stats.html:64
+#: templates/languages/language_release_stats.html:65
 msgid "This document is written in Mallard documentation format"
 msgstr "此文档以 Mallard 文档格式编写"
 
@@ -2445,25 +2443,25 @@ msgstr "下载全部 po 文件"
 msgid "Module"
 msgstr "模块"
 
-#: templates/languages/language_release_stats.html:22
+#: templates/languages/language_release_stats.html:23
 msgid "Statistics"
 msgstr "统计信息"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release_stats.html:24
 msgid "Status"
 msgstr "状态"
 
-#: templates/languages/language_release_stats.html:23
+#: templates/languages/language_release_stats.html:24
 #: templates/people/person_detail.html:54
 msgid "Date"
 msgstr "日期"
 
-#: templates/languages/language_release_stats.html:33
+#: templates/languages/language_release_stats.html:34
 #, python-format
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% 已翻译)"
 
-#: templates/languages/language_release_stats.html:98
+#: templates/languages/language_release_stats.html:99
 msgid "Error summary"
 msgstr "错误摘要"
 
