@@ -23,7 +23,7 @@ from django.contrib.admin import helpers
 from django.shortcuts import render
 from django.utils.encoding import force_unicode
 from django import forms
-from stats.models import Statistics, Information, Module, Branch, Domain, Category, Release
+from stats.models import Statistics, Information, PoFile, Module, Branch, Domain, Category, Release
 
 class BranchInline(admin.TabularInline):
     model = Branch
@@ -123,7 +123,11 @@ class StatisticsAdmin(admin.ModelAdmin):
     raw_id_fields = ('branch', 'domain', 'language', 'full_po', 'part_po')
     inlines = [ InformationInline ]
 
+class PoFileAdmin(admin.ModelAdmin):
+    search_fields = ('path',)
+
 admin.site.register(Statistics, StatisticsAdmin)
+admin.site.register(PoFile, PoFileAdmin)
 admin.site.register(Branch, BranchAdmin)
 admin.site.register(Domain, DomainAdmin)
 admin.site.register(Category, CategoryAdmin)
