@@ -68,3 +68,6 @@ def vis_stats(stat, scope='full'):
           'untrans': untrans,
         })
 
+@register.filter
+def is_video(fig):
+    return fig['path'].endswith('.ogv')
