@@ -166,8 +166,8 @@ class ModuleTestCase(TestCase):
     def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """
         self.b.checkout()
-        orig_figure = os.path.join(self.b.co_path(), "help", "C", "figures", "gnome-hello.png")
-        shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "fr", "figures", "gnome-hello.png"))
+        orig_figure = os.path.join(self.b.co_path(), "help", "C", "figures", "gnome-hello-new.png")
+        shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "fr", "figures", "gnome-hello-new.png"))
         self.b.update_stats(force=True, checkout=False)
         doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
         warn_infos = Information.objects.filter(statistics=doc_stat, type='warn-ext')
