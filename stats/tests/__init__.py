@@ -62,29 +62,26 @@ class ModuleTestCase(TestCase):
     def setUp(self):
         # TODO: load bulk data from fixtures
         Branch.checkout_on_creation = False
-        self.mod = Module(name="gnome-hello",
-                  bugs_base="http://bugzilla.gnome.org",
-                  bugs_product="test", # This product really exists
-                  bugs_component="test",
-                  vcs_type="git",
-                  vcs_root="git://git.gnome.org/gnome-hello",
-                  vcs_web="http://git.gnome.org/browse/gnome-hello/")
+        self.mod = Module.objects.create(
+            name="gnome-hello",
+            bugs_base="http://bugzilla.gnome.org",
+            bugs_product="test", # This product really exists
+            bugs_component="test",
+            vcs_type="git",
+            vcs_root="git://git.gnome.org/gnome-hello",
+            vcs_web="http://git.gnome.org/browse/gnome-hello/")
         self.mod.save()
-        dom = Domain(module=self.mod, name='po', description='UI Translations', dtype='ui', directory='po')
-        dom.save()
-        dom = Domain(module=self.mod, name='help', description='User Guide', dtype='doc', directory='help')
-        dom.save()
+        dom = Domain.objects.create(module=self.mod, name='po', description='UI Translations', dtype='ui', directory='po')
+        dom = Domain.objects.create(module=self.mod, name='help', description='User Guide', dtype='doc', directory='help')
 
         self.b = Branch(name='master', module=self.mod)
         self.b.save(update_statistics=False)
 
-        self.rel = Release(name='gnome-2-24', status='official',
-                      description='GNOME 2.24 (stable)',
-                      string_frozen=True)
-        self.rel.save()
+        self.rel = Release.objects.create(
+            name='gnome-2-24', status='official',
+            description='GNOME 2.24 (stable)', string_frozen=True)
 
-        self.cat = Category(release=self.rel, branch=self.b, name='desktop')
-        self.cat.save()
+        self.cat = Category.objects.create(release=self.rel, branch=self.b, name='desktop')
 
     def tearDown(self):
         if os.access(self.co_path, os.X_OK):
@@ -174,6 +171,15 @@ class ModuleTestCase(TestCase):
         res = get_fig_stats(pot_path, image_method='itstool')
         self.assertEqual(len(res), 2)
         self.assertEqual(res[0]['path'], "figures/gnome.png")
+
+    def testHttpPot(self):
+        dom = Domain.objects.create(
+            module=self.mod, name='http-po',
+            description='UI Translations', dtype='ui',
+            pot_method='http://l10n.gnome.org/POT/damned-lies.master/damned-lies.master.pot')
+        self.b.checkout()
+        potfile, errs = dom.generate_pot_file(self.b)
+        self.assertTrue(os.path.exists(potfile))
 
     def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """

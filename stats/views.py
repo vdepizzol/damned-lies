@@ -152,7 +152,7 @@ def docimages(request, module_name, potbase, branch_name, langcode):
                                       domain__name=potbase,
                                       language__locale=langcode)
     except Statistics.DoesNotExist:
-        pot_stat = Statistics.objects.get(
+        pot_stat = get_object_or_404(Statistics,
             branch__module=mod.id,
             branch__name=branch_name,
             domain__name=potbase,

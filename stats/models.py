@@ -778,10 +778,23 @@ class Domain(models.Model):
         if not self.pot_method: # default is intltool
             env = {"XGETTEXT_ARGS": "\"--msgid-bugs-address=%s\"" % self.module.get_bugs_enter_url()}
             pot_command = "intltool-update -g '%(domain)s' -p" % {'domain': self.potbase()}
+        elif self.pot_method.startswith('http://'):
+            # Get POT from URL and save file locally
+            import urllib2
+            req = urllib2.Request(self.pot_method)
+            try:
+                handle = urllib2.urlopen(req)
+            except URLError, e:
+                return "", (("error", ugettext_noop("Error retrieving pot file from URL.")),)
+            potfile = os.path.join(vcs_path, self.potbase() + ".pot")
+            with open(potfile, 'w') as f:
+                f.write(handle.read())
+            pot_command = ":" # noop
         elif self.module.name == 'damned-lies':
             # special case for d-l, pot file should be generated from running instance dir
             podir = "."
             vcs_path = "./po"
+
         command = "cd \"%(dir)s\" && %(pot_command)s" % {
             "dir" : podir,
             "pot_command" : pot_command,
