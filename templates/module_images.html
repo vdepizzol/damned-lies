@@ -16,7 +16,7 @@
 {% for fig in stat.get_figures %}
   <tr><td valign="top">
     <a href="{{ fig.orig_remote_url }}"><span class="path">C/{{ fig.path }}</span><br/></a>
-    {% if fig|video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+    {% if fig|is_video %}<video src="{{ fig.orig_remote_url }}" controls></video>
     {% else %}<a href="{{ fig.orig_remote_url }}"><img class="screenshot" src="{{ fig.orig_remote_url }}"/></a>
     {% endif %}
     </td>
@@ -24,7 +24,7 @@
     {% if fig.translated %}
       {% if fig.translated_file %}
         <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
-        {% if fig|video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+        {% if fig|is_video %}<video src="{{ fig.orig_remote_url }}" controls></video>
         {% else %}<a href="{{ fig.trans_remote_url }}"><img class="screenshot" src="{{ fig.trans_remote_url }}"/></a>
         {% endif %}
       {% else %}
@@ -35,7 +35,7 @@
         <em>{% trans "Fuzzy" %}</em><br/>
         {% if fig.translated_file %}
           <a href="{{ fig.trans_remote_url }}"><span class="path">{{ locale }}/{{ fig.path }}</span></a><br/>
-          {% if fig|video %}<video src="{{ fig.orig_remote_url }}" controls></video>
+          {% if fig|is_video %}<video src="{{ fig.orig_remote_url }}" controls></video>
           {% else %}<a href="{{ fig.trans_remote_url }}"><img class="screenshot" src="{{ fig.trans_remote_url }}"/></a>
           {% endif %}
         {% else %}

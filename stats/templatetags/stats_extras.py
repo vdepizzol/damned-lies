@@ -2,7 +2,7 @@ from django import template
 from django.utils.safestring import mark_safe
 from django.utils.translation import get_language_bidi
 
-from stats.models import PoFile, Statistics, FakeStatistics
+from stats.models import PoFile, Statistics, FakeLangStatistics, FakeSummaryStatistics
 
 register = template.Library()
 
@@ -38,7 +38,7 @@ def browse_bugs(module, content):
 @register.filter
 def num_stats(stat, scope='full'):
     """ Produce stat numbers as in: 85% (1265/162/85) """
-    if isinstance(stat, (Statistics, FakeStatistics)):
+    if isinstance(stat, (Statistics, FakeLangStatistics, FakeSummaryStatistics)):
         stats = {
             'prc':          stat.tr_percentage(scope),
             'translated':   stat.translated(scope),

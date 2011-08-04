@@ -342,9 +342,7 @@ class Branch(models.Model):
         for lang in mandatory_langs:
             for domain in stats.keys():
                 if lang not in stats_langs[domain] and stats[domain][0].full_po:
-                    fake_stat = FakeStatistics(self.module, self, typ, lang)
-                    fake_stat._untranslated = stats[domain][0].untranslated()
-                    stats[domain].append(fake_stat)
+                    stats[domain].append(FakeLangStatistics(stats[domain][0], lang))
         # Sort
         for key, doms in stats.items():
             doms.sort(self.compare_stats)
@@ -1340,12 +1338,12 @@ class Statistics(models.Model):
                                        self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
             for fig in self.figures:
                 fig['orig_remote_url'] = url_model % ('C', fig['path'])
-                fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
                 fig['translated_file'] = False
-                if self.language:
-                    # Check if a translated figure really exists or if the English one is used
-                    if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
-                        fig['translated_file'] = True
+                # Check if a translated figure really exists or if the English one is used
+                if (self.language and
+                   os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path']))):
+                    fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
+                    fig['translated_file'] = True
         return self.figures
 
     def fig_stats(self):
@@ -1486,7 +1484,7 @@ class Statistics(models.Model):
                             <modname>: {
                                 <branchname>:
                                     [(<domname>, <stat>), ...], # List of tuples (domain name, Statistics object)
-                                           # First element is a placeholder for a FakeStatistics object
+                                           # First element is a placeholder for a FakeSummaryStatistics object
                                            # only used for summary if module has more than 1 domain
                                 }
                             }
@@ -1578,7 +1576,7 @@ class Statistics(models.Model):
                 # Here we add the 2nd or more stat to the same module-branch
                 if len(stats['categs'][categdescr]['modules'][modname][branchname]) == 2:
                     # Create a fake statistics object for module summary
-                    stats['categs'][categdescr]['modules'][modname][branchname][0][1] = FakeStatistics(stat.domain.module, stat.branch, dtype)
+                    stats['categs'][categdescr]['modules'][modname][branchname][0][1] = FakeSummaryStatistics(stat.domain.module, stat.branch, dtype)
                     stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stats['categs'][categdescr]['modules'][modname][branchname][1][1])
                 stats['categs'][categdescr]['modules'][modname][branchname].append((domname, stat))
                 stats['categs'][categdescr]['modules'][modname][branchname][0][1].trans(stat)
@@ -1606,19 +1604,36 @@ class Statistics(models.Model):
         stats['all_errors'].sort()
         return stats
 
-class FakeStatistics(object):
-    """ This is a fake statistics class where a summary value is needed for a multi-domain module
-        This is used in get_lang_stats for the language-release-stats template """
-    def __init__(self, module, branch, dtype, lang=None):
+
+class FakeLangStatistics(object):
+    """ Statistics class for a non existing lang stats """
+    is_fake = True
+    def __init__(self, pot_stat, lang):
+        self.stat = pot_stat
+        self.language = lang
+
+    def __getattr__(self, attr):
+        # Wrap all unexisting attribute access to self.stat
+        return getattr(self.stat, attr)
+
+    def get_lang(self):
+        return _("%(lang_name)s (%(lang_locale)s)") % {
+            'lang_name': _(self.language.name),
+            'lang_locale': self.language.locale
+        }
+
+
+class FakeSummaryStatistics(object):
+    """ Statistics class that sums up an entire module stats """
+    is_fake = True
+    def __init__(self, module, branch, dtype):
         self.module = module
         self.branch = branch
         self.domain = module.domain_set.filter(dtype=dtype)[0]
-        self.language = lang
         self._translated = 0
         self._fuzzy      = 0
         self._untranslated = 0
         self.partial_po = False
-        self.figures = None
 
     def translated(self, scope=None):
         return self._translated
@@ -1635,74 +1650,27 @@ class FakeStatistics(object):
         self._untranslated += stat.untranslated()
         stat.partial_po = True
 
-    def is_fake(self):
-        return True
-
-    def get_lang(self):
-        if self.language:
-            return _("%(lang_name)s (%(lang_locale)s)") % {
-                'lang_name': _(self.language.name),
-                'lang_locale': self.language.locale
-            }
-        else:
-            return "pot file"
-
-    def fig_stats(self):
-        stats = {'fuzzy':0, 'translated':0, 'untranslated':0, 'total':0, 'prc':0}
-        for fig in self.get_figures():
-            stats['total'] += 1
-            stats['untranslated'] += 1
-        return stats
-
-    def get_figures(self):
-        """ self.figures is a list of dicts:
-            [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
-        if self.figures is None and self.domain.dtype == 'doc':
-            self.figures = utils.get_fig_stats(self.po_path())
-            # something like: "http://git.gnome.org/browse/vinagre / plain / help / %s / %s ?h=master"
-            url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
-                                       self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
-            for fig in self.figures:
-                fig['orig_remote_url'] = url_model % ('C', fig['path'])
-                fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
-                fig['translated_file'] = False
-                if self.language:
-                    # Check if a translated figure really exists or if the English one is used
-                    if os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path'])):
-                        fig['translated_file'] = True
-        return self.figures
-
-    def po_path(self):
-        """ Return path of pot file on local filesystem """
-        subdir = ""
-        if self.domain.dtype == "doc":
-            subdir = "docs"
-        filename = "%s.%s.pot" % (self.domain.potbase(), self.branch.name)
-        return os.path.join(settings.POTDIR, self.module_name()+'.'+self.branch.name, subdir, filename)
-
     def pot_size(self):
         return int(self._translated) + int(self._fuzzy) + int(self._untranslated)
+
     def tr_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self._translated/self.pot_size())
+
     def fu_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self._fuzzy/self.pot_size())
+
     def un_percentage(self, scope='full'):
         if self.pot_size() == 0:
             return 0
         else:
             return int(100*self._untranslated/self.pot_size())
-    def module_name(self):
-        return self.module.name
-    def module_description(self):
-        return self.module.description
-    def most_important_message(self):
-        return None
+
 
 class StatisticsArchived(models.Model):
     module = models.TextField()

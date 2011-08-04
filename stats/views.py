@@ -29,7 +29,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 
 from common.utils import MIME_TYPES
-from stats.models import Statistics, FakeStatistics, Module, Branch, Category, Release
+from stats.models import Statistics, FakeLangStatistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
 from stats import utils
 from languages.models import Language
@@ -152,9 +152,13 @@ def docimages(request, module_name, potbase, branch_name, langcode):
                                       domain__name=potbase,
                                       language__locale=langcode)
     except Statistics.DoesNotExist:
-        lang   = get_object_or_404(Language, locale=langcode)
-        branch = get_object_or_404(Branch, module__pk=mod.id, name=branch_name)
-        stat   = FakeStatistics(mod, branch, 'doc', lang)
+        pot_stat = Statistics.objects.get(
+            branch__module=mod.id,
+            branch__name=branch_name,
+            domain__name=potbase,
+            language__isnull=True)
+        lang = get_object_or_404(Language, locale=langcode)
+        stat = FakeLangStatistics(pot_stat, lang)
     context = {
         'pageSection': "module",
         'module':   mod,

@@ -24,9 +24,10 @@ from django.test import TestCase
 from django.test.client import Client
 from django.core import mail
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse
 from django.conf import settings
 
-from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
+from stats.models import Module, Domain, Branch, Category, Release, Language, Statistics, Information
 from stats.utils import check_program_presence, run_shell_command
 from languages.models import Language
 
@@ -189,6 +190,17 @@ class ModuleTestCase(TestCase):
         figs = stat.get_figures()
         self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello-new.png?h=master')
         self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/fr/figures/gnome-hello-new.png?h=master')
+
+    def testFigureView(self):
+        self.b.update_stats(force=True)
+        url = reverse('stats.views.docimages', args=[self.mod.name, 'help', self.b.name, 'fr'])
+        response = self.client.get(url)
+        self.assertContains(response, "gnome-hello-new.png")
+        # Same for a non-existing language
+        Language.objects.create(name='Afrikaans', locale='af')
+        url = reverse('stats.views.docimages', args=[self.mod.name, 'help', self.b.name, 'af'])
+        response = self.client.get(url)
+        self.assertContains(response, "gnome-hello-new.png")
 
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """
