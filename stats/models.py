@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008-2010 Claude Paroz <claude@2xlibre.net>.
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>.
 # Copyright (c) 2008 Stephane Raimbault <stephane.raimbault@gmail.com>.
 #
 # This file is part of Damned Lies.
@@ -27,12 +27,13 @@ from datetime import datetime
 
 from django.conf import settings
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse
 from django.utils.translation import ungettext, ugettext as _, ugettext_noop
 from django.utils import dateformat
 from django.utils.datastructures import SortedDict
 from django.db import models, connection
 
-from common.fields import DictionaryField
+from common.fields import DictionaryField, JSONField
 from common.utils import is_site_admin
 from stats import utils, signals
 from stats.doap import update_doap_infos
@@ -394,6 +395,7 @@ class Branch(models.Model):
 
                 # 3. Generate a fresh pot file
                 # ****************************
+                pot_method = dom.pot_method
                 if dom.dtype == 'ui':
                     potfile, errs = dom.generate_pot_file(self)
                 elif dom.dtype == 'doc':
@@ -401,7 +403,8 @@ class Branch(models.Model):
                         potfile, errs = dom.generate_pot_file(self)
                     else:
                         # Standard gnome-doc-utils pot generation
-                        potfile, errs = utils.generate_doc_pot_file(domain_path, dom.potbase(), self.module.name, settings.DEBUG)
+                        potfile, errs, pot_method = utils.generate_doc_pot_file(
+                            domain_path, dom.potbase(), self.module.name)
                 else:
                     print >> sys.stderr, "Unknown domain type '%s', ignoring domain '%s'" % (dom.dtype, dom.name)
                     continue
@@ -444,12 +447,17 @@ class Branch(models.Model):
 
                 # 6. Generate pot stats and update DB
                 # ***********************************
-                pot_stats = utils.po_file_stats(potfile, False)
+                pot_stats = utils.po_file_stats(potfile, msgfmt_checks=False)
+                fig_stats = utils.get_fig_stats(potfile, pot_method, trans_stats=False)
                 errors.extend(pot_stats['errors'])
                 if potfile != previous_pot and not utils.copy_file(potfile, previous_pot):
                     errors.append(('error', ugettext_noop("Can't copy new POT file to public location.")))
 
-                pot_stat.set_translation_stats(previous_pot, untranslated=int(pot_stats['untranslated']), num_figures=int(pot_stats['num_figures']))
+                pot_stat.set_translation_stats(
+                    previous_pot,
+                    untranslated=int(pot_stats['untranslated']),
+                    figstats = fig_stats,
+                )
                 pot_stat.set_errors(errors)
 
                 # Send pot_has_changed signal
@@ -475,11 +483,12 @@ class Branch(models.Model):
                         }
                     utils.run_shell_command(realcmd)
 
-                    langstats = utils.po_file_stats(outpo, msgfmt_checks=True, count_images=(dom.dtype == "doc"))
+                    langstats = utils.po_file_stats(outpo, msgfmt_checks=True)
                     if linguas['langs'] is not None and lang not in linguas['langs']:
                         langstats['errors'].append(("warn-ext", linguas['error']))
+                    fig_stats = None
                     if dom.dtype == "doc":
-                        fig_stats = utils.get_fig_stats(outpo)
+                        fig_stats = utils.get_fig_stats(outpo, pot_method)
                         for fig in fig_stats:
                             trans_path = os.path.join(domain_path, lang, fig['path'])
                             if os.access(trans_path, os.R_OK):
@@ -509,7 +518,7 @@ class Branch(models.Model):
                                                translated = int(langstats['translated']),
                                                fuzzy = int(langstats['fuzzy']),
                                                untranslated = int(langstats['untranslated']),
-                                               num_figures = int(langstats.get('num_figures', 0)))
+                                               figstats=fig_stats)
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
             # Check if doap file changed
@@ -1174,8 +1183,8 @@ class PoFile(models.Model):
     translated   = models.IntegerField(default=0)
     fuzzy        = models.IntegerField(default=0)
     untranslated = models.IntegerField(default=0)
-    # Number of figures in doc templates
-    num_figures  = models.IntegerField(default=0)
+    # List of figure dict
+    figures      = JSONField(blank=True, null=True)
 
     class Meta:
         db_table = 'pofile'
@@ -1188,7 +1197,7 @@ class PoFile(models.Model):
 
     def fig_count(self):
         """ If stat of a document type, get the number of figures in the document """
-        return self.num_figures
+        return len(self.figures)
 
     def tr_percentage(self):
         if self.pot_size() == 0:
@@ -1219,8 +1228,6 @@ class Statistics(models.Model):
     old_translated   = models.IntegerField(default=0) # obsolete
     old_fuzzy        = models.IntegerField(default=0) # obsolete
     old_untranslated = models.IntegerField(default=0) # obsolete
-    # Number of figures in doc templates
-    old_num_figures = models.IntegerField(default=0) # obsolete
 
     full_po = models.OneToOneField(PoFile, null=True, related_name='stat_f')
     part_po = models.OneToOneField(PoFile, null=True, related_name='stat_p')
@@ -1233,7 +1240,6 @@ class Statistics(models.Model):
 
     def __init__(self, *args, **kwargs):
         models.Model.__init__(self, *args, **kwargs)
-        self.figures = None
         self.modname = None
         self.moddescription = None
         self.partial_po = False # True if part of a multiple po module
@@ -1329,30 +1335,32 @@ class Statistics(models.Model):
         return text
 
     def get_figures(self):
-        """ self.figures is a list of dicts:
+        """ Return an enriched list of figure dicts (used in module_images.html):
             [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
-        if self.figures is None and self.domain.dtype == 'doc':
-            self.figures = utils.get_fig_stats(self.po_path())
+        figures = []
+        if self.full_po and self.domain.dtype == 'doc':
             # something like: "http://git.gnome.org/browse/vinagre / plain / help / %s / %s ?h=master"
             url_model = utils.url_join(self.branch.get_vcs_web_url(), self.branch.img_url_prefix,
                                        self.domain.directory, '%s', '%s') + self.branch.img_url_suffix
-            for fig in self.figures:
-                fig['orig_remote_url'] = url_model % ('C', fig['path'])
-                fig['translated_file'] = False
+            for fig in self.full_po.figures:
+                fig2 = fig.copy()
+                fig2['orig_remote_url'] = url_model % ('C', fig['path'])
+                fig2['translated_file'] = False
                 # Check if a translated figure really exists or if the English one is used
                 if (self.language and
                    os.path.exists(os.path.join(self.branch.co_path(), self.domain.directory, self.language.locale, fig['path']))):
-                    fig['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
-                    fig['translated_file'] = True
-        return self.figures
+                    fig2['trans_remote_url'] = url_model % (self.language.locale, fig['path'])
+                    fig2['translated_file'] = True
+                figures.append(fig2)
+        return figures
 
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'total':0, 'prc':0}
-        for fig in self.get_figures():
+        for fig in self.full_po.figures:
             stats['total'] += 1
-            if fig['fuzzy']: stats['fuzzy'] += 1
+            if fig.get('fuzzy', 0): stats['fuzzy'] += 1
             else:
-                if fig['translated']: stats['translated'] += 1
+                if fig.get('translated', 0): stats['translated'] += 1
         stats['untranslated'] = stats['total'] - (stats['translated'] + stats['fuzzy'])
         if stats['total'] > 0:
             stats['prc'] = 100*stats['translated']/stats['total']
@@ -1386,7 +1394,7 @@ class Statistics(models.Model):
     def pot_url(self):
         return self.po_url(potfile=True)
 
-    def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, num_figures=0):
+    def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, figstats=None):
         if not self.full_po:
             self.full_po = PoFile.objects.create(path=po_path)
             self.save()
@@ -1394,7 +1402,7 @@ class Statistics(models.Model):
         self.full_po.translated = translated
         self.full_po.fuzzy = fuzzy
         self.full_po.untranslated = untranslated
-        self.full_po.num_figures = num_figures
+        self.full_po.figures = figstats
         self.full_po.updated = datetime.now()
         self.full_po.save()
         if self.domain.dtype == "ui":
@@ -1413,7 +1421,7 @@ class Statistics(models.Model):
                 else:
                     part_po_path = self.full_po.path[:-3] + ".reduced.po"
                 utils.po_grep(self.full_po.path, part_po_path, self.domain.red_filter)
-                part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False, count_images=False)
+                part_stats = utils.po_file_stats(part_po_path, msgfmt_checks=False)
                 if part_stats['translated'] + part_stats['fuzzy'] + part_stats['untranslated'] == translated + fuzzy + untranslated:
                     # No possible gain, set part_po = full_po so it is possible to compute complete stats at database level
                     part_po_equals_full_po()
@@ -1622,6 +1630,11 @@ class FakeLangStatistics(object):
             'lang_locale': self.language.locale
         }
 
+    def po_url(self, potfile=False, reduced=False):
+        return reverse(
+            'dynamic_po',
+            args=("%s.%s.%s.%s.po" % (self.branch.module.name, self.domain.name, self.branch.name, self.language.locale),)
+        )
 
 class FakeSummaryStatistics(object):
     """ Statistics class that sums up an entire module stats """

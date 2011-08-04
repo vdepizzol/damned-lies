@@ -31,11 +31,11 @@ try:
 except ImportError:
     has_toolkit = False
 
-from django.utils.translation import ugettext_noop
-from django.contrib.sites.models import Site
-from django.core.mail import send_mail
-from django.core.files.base import File
 from django.conf import settings
+from django.contrib.sites.models import Site
+from django.core.files.base import File
+from django.core.mail import send_mail
+from django.utils.translation import ugettext_noop
 
 import potdiff
 
@@ -45,6 +45,24 @@ NOT_CHANGED = 0
 CHANGED_ONLY_FORMATTING = 1
 CHANGED_WITH_ADDITIONS  = 2
 CHANGED_NO_ADDITIONS    = 3
+
+ITSTOOL_PATH = getattr(settings, 'ITSTOOL_PATH', '')
+extract_tools = {
+    'xml2po':  {
+        'command' : "cd \"%(dir)s\" && xml2po %(opts)s -o %(potfile)s -e %(files)s",
+        'mod_var' : "DOC_ID",
+        'incl_var': "DOC_PAGES",
+        'img_grep': "^msgid \"@@image:",
+        'img_regex': re.compile("^msgid \"@@image: \'(?P<path>[^\']*)\'; md5=(?P<hash>[^\"]*)\""),
+    },
+    'itstool': {
+        'command' : "cd \"%%(dir)s\" && %sitstool -o %%(potfile)s %%(files)s" % ITSTOOL_PATH,
+        'mod_var' : "HELP_ID",
+        'incl_var': "HELP_FILES",
+        'img_grep': "^msgid \"external ref=",
+        'img_regex': re.compile("^msgid \"external ref=\'(?P<path>[^\']*)\'; md5=\'(?P<hash>[^\']*)\'\""),
+    },
+}
 
 def sort_object_list(lst, sort_meth):
     """ Sort an object list with sort_meth (which should return a translated string) """
@@ -147,22 +165,8 @@ def check_potfiles(po_path):
                        + "</li>\n</ul>")))
     return errors
 
-def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
+def generate_doc_pot_file(vcs_path, potbase, moduleid):
     """ Return the pot file for a document-type domain, and the error if any """
-
-    itstool_path = getattr(settings, 'ITSTOOL_PATH', '')
-    extract_tools = {
-        'xml2po':  {
-            'command' : "cd \"%(dir)s\" && xml2po %(opts)s -o %(potfile)s -e %(files)s",
-            'mod_var' : "DOC_ID",
-            'incl_var': "DOC_PAGES",
-        },
-        'itstool': {
-            'command' : "cd \"%%(dir)s\" && %sitstool -o %%(potfile)s %%(files)s" % itstool_path,
-            'mod_var' : "HELP_ID",
-            'incl_var': "HELP_FILES",
-        },
-    }
     errors = []
 
     doc_id = read_makefile_variable([vcs_path], "HELP_ID")
@@ -192,7 +196,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
                     modulename = os.path.basename(xml_files[0])[:-4]
                 else:
                     errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
-                    return "", errors
+                    return "", errors, tool
         files = [modulename + ".xml"]
         extract_tools[tool]['incl_var'] = "DOC_INCLUDES"
 
@@ -214,9 +218,9 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid, verbose):
         potfile = ""
 
     if not os.access(potfile, os.R_OK):
-        return "", errors
+        return "", errors, tool
     else:
-        return potfile, errors
+        return potfile, errors, tool
 
 def read_makefile_variable(vcs_paths, variable):
     """ vcs_paths is a list of potential path where Makefile.am could be found """
@@ -276,13 +280,12 @@ def pot_diff_status(pota, potb):
     else:
         return CHANGED_NO_ADDITIONS, result_all
 
-def po_file_stats(pofile, msgfmt_checks=True, count_images=True):
+def po_file_stats(pofile, msgfmt_checks=True):
     """ Compute pofile translation statistics, and proceed to some validity checks if msgfmt_checks is True """
     res = {
         'translated' : 0,
         'fuzzy' : 0,
         'untranslated' : 0,
-        'num_figures' : 0,
         'errors' : [],
         }
     c_env = {"LC_ALL": "C", "LANG": "C", "LANGUAGE": "C"}
@@ -345,12 +348,6 @@ def po_file_stats(pofile, msgfmt_checks=True, count_images=True):
         if status != STATUS_OK:
             res['errors'].append(("warn",
                               ugettext_noop("PO file '%s' is not UTF-8 encoded.") % (filename)))
-    # Count number of figures in PO(T) file
-    if count_images:
-        command = "grep '^msgid \"@@image:' \"%s\" | wc -l" % pofile
-        (status, output, errs) = run_shell_command(command)
-        res['num_figures'] = int(output)
-
     return res
 
 def read_linguas_file(full_path):
@@ -397,11 +394,15 @@ def get_doc_linguas(module_path, po_path):
     return {'langs': linguas.split(),
             'error': ugettext_noop("DOC_LINGUAS list doesn't include this language.") }
 
-def get_fig_stats(pofile):
+def get_fig_stats(pofile, image_method, trans_stats=True):
     """ Extract image strings from pofile and return a list of figures dict:
         [{'path':, 'hash':, 'fuzzy':, 'translated':}, ...] """
+    if image_method not in ('xml2po', 'itstool'):
+        return []
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
-    command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '^msgid \"@@image:'" % locals()
+    command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '%(grep)s'" % {
+        'pofile': pofile, 'grep': extract_tools[image_method]['img_grep']
+    }
     (status, output, errs) = run_shell_command(command)
     if status != STATUS_OK:
         # FIXME: something should be logged here
@@ -409,20 +410,18 @@ def get_fig_stats(pofile):
     lines = output.split('\n')
     while lines[0][0] != "#":
         lines = lines[1:] # skip warning messages at the top of the output
-    re_path = re.compile('^msgid \"@@image: \'([^\']*)\'')
-    re_hash = re.compile('.*md5=(.*)\"')
-    figures = []
 
+    figures = []
     for i, line in islice(enumerate(lines), 0, None, 4):
-        fig = {'path': '', 'hash': ''}
-        fig['fuzzy'] = (line=='#, fuzzy' or line[:8]=='#| msgid')
-        path_match = re_path.match(lines[i+1])
-        if path_match and len(path_match.groups()):
-            fig['path'] = path_match.group(1)
-        hash_match = re_hash.match(lines[i+1])
-        if hash_match and len(hash_match.groups()):
-            fig['hash'] = hash_match.group(1)
-        fig['translated'] = len(lines[i+2])>9 and not fig['fuzzy']
+        # TODO: add image size
+        fig = {"path": '', "hash": ''}
+        m = extract_tools[image_method]['img_regex'].match(lines[i+1])
+        if m:
+            fig["path"] = m.group('path')
+            fig["hash"] = m.group('hash')
+        if trans_stats:
+            fig["fuzzy"] = (line=='#, fuzzy' or line[:8]=='#| msgid')
+            fig["translated"] = len(lines[i+2])>9 and not fig['fuzzy']
         figures.append(fig)
     return figures
 

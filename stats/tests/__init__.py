@@ -160,12 +160,14 @@ class ModuleTestCase(TestCase):
         self.assertEquals(var_content.split(), ['rnusers.xml', 'rnlookingforward.xml', '$(NULL)'])
 
     def testGenerateDocPotfile(self):
-        from stats.utils import generate_doc_pot_file
+        from stats.utils import generate_doc_pot_file, get_fig_stats
         # Docbook-style help
         help_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_docbook")
-        generate_doc_pot_file(help_path, 'release-notes', 'release-notes', None)
+        generate_doc_pot_file(help_path, 'release-notes', 'release-notes')
         pot_path = os.path.join(help_path, "C", "release-notes.pot")
         self.assertTrue(os.access(pot_path, os.R_OK))
+        res = get_fig_stats(pot_path, image_method='xml2po')
+        self.assertEqual(len(res), 1)
         os.remove(pot_path)
         # TODO: Mallard-style help
 
@@ -173,23 +175,23 @@ class ModuleTestCase(TestCase):
         """ Detect warning if translated figure is identical to original figure """
         self.b.checkout()
         orig_figure = os.path.join(self.b.co_path(), "help", "C", "figures", "gnome-hello-new.png")
-        shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "fr", "figures", "gnome-hello-new.png"))
+        shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "cs", "figures", "gnome-hello-new.png"))
         self.b.update_stats(force=True, checkout=False)
-        doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
+        doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='cs')
         warn_infos = Information.objects.filter(statistics=doc_stat, type='warn-ext')
         self.assertEquals(len(warn_infos), 1);
-        ui_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
-        self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.fr.po");
+        ui_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='cs')
+        self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.cs.po");
         self.assertEquals(ui_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot");
-        self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.fr.po");
+        self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.cs.po");
 
     def testFigureURLs(self):
         """ Test if figure urls are properly constructed """
         self.b.update_stats(force=True)
-        stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='fr')
+        stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='cs')
         figs = stat.get_figures()
         self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello-new.png?h=master')
-        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/fr/figures/gnome-hello-new.png?h=master')
+        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/cs/figures/gnome-hello-new.png?h=master')
 
     def testFigureView(self):
         self.b.update_stats(force=True)

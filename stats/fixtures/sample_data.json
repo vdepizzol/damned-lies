@@ -9,12 +9,12 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2011-02-17 22:15:33", 
+   "last_login": "2011-08-04 12:03:53", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "bob@example.org", 
-   "date_joined": "2011-02-17 22:15:33"
+   "date_joined": "2011-08-04 12:03:53"
   }
  }, 
  {
@@ -27,12 +27,12 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2011-02-17 22:15:33", 
+   "last_login": "2011-08-04 12:03:53", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "coord@example.org", 
-   "date_joined": "2011-02-17 22:15:33"
+   "date_joined": "2011-08-04 12:03:53"
   }
  }, 
  {
@@ -45,12 +45,12 @@
    "is_active": true, 
    "is_superuser": false, 
    "is_staff": false, 
-   "last_login": "2011-02-17 22:15:33", 
+   "last_login": "2011-08-04 12:03:53", 
    "groups": [], 
    "user_permissions": [], 
    "password": "!", 
    "email": "alessio@example.org", 
-   "date_joined": "2011-02-17 22:15:33"
+   "date_joined": "2011-08-04 12:03:53"
   }
  }, 
  {
@@ -190,6 +190,7 @@
    "name": "gnome-hello", 
    "vcs_root": "git://git.gnome.org/gnome-hello", 
    "bugs_product": "gnome-hello", 
+   "ext_platform": null, 
    "maintainers": [], 
    "bugs_component": "test", 
    "bugs_base": "http://bugzilla.gnome.org", 
@@ -207,6 +208,7 @@
    "name": "shared-mime-info", 
    "vcs_root": "git://anongit.freedesktop.org/xdg/shared-mime-info", 
    "bugs_product": "shared-mime-info", 
+   "ext_platform": null, 
    "maintainers": [], 
    "bugs_component": "general", 
    "bugs_base": "https://bugs.freedesktop.org/", 
@@ -224,6 +226,7 @@
    "name": "zenity", 
    "vcs_root": "git://git.gnome.org/zenity", 
    "bugs_product": "zenity", 
+   "ext_platform": null, 
    "maintainers": [], 
    "bugs_component": "general", 
    "bugs_base": "http://bugzilla.gnome.org", 
@@ -284,8 +287,8 @@
    "dtype": "ui", 
    "pot_method": null, 
    "module": 1, 
-   "linguas_location": null,
-   "red_filter": null,
+   "linguas_location": null, 
+   "red_filter": null, 
    "directory": "po", 
    "description": "UI Translations"
   }
@@ -299,7 +302,7 @@
    "pot_method": null, 
    "module": 2, 
    "linguas_location": null, 
-   "red_filter": null,
+   "red_filter": null, 
    "directory": "po", 
    "description": "UI Translations"
   }
@@ -313,7 +316,7 @@
    "pot_method": null, 
    "module": 3, 
    "linguas_location": null, 
-   "red_filter": null,
+   "red_filter": null, 
    "directory": "po", 
    "description": "UI Translations"
   }
@@ -327,7 +330,7 @@
    "pot_method": null, 
    "module": 1, 
    "linguas_location": null, 
-   "red_filter": null,
+   "red_filter": null, 
    "directory": "help", 
    "description": "User Guide"
   }
@@ -341,7 +344,7 @@
    "pot_method": null, 
    "module": 2, 
    "linguas_location": null, 
-   "red_filter": null,
+   "red_filter": null, 
    "directory": "help", 
    "description": "User Guide"
   }
@@ -355,7 +358,7 @@
    "pot_method": null, 
    "module": 3, 
    "linguas_location": null, 
-   "red_filter": null,
+   "red_filter": null, 
    "directory": "help", 
    "description": "User Guide"
   }
@@ -433,9 +436,9 @@
   "pk": 1, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 47, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -445,9 +448,9 @@
   "pk": 2, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 47, 
    "path": null
@@ -457,9 +460,9 @@
   "pk": 3, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 7, 
+   "figures": null, 
    "fuzzy": 10, 
    "translated": 30, 
    "path": null
@@ -469,9 +472,9 @@
   "pk": 4, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 1, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 20, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -481,9 +484,9 @@
   "pk": 5, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 20, 
    "path": null
@@ -493,9 +496,9 @@
   "pk": 6, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 20, 
    "path": null
@@ -505,9 +508,9 @@
   "pk": 7, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 136, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -517,9 +520,9 @@
   "pk": 8, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 136, 
    "path": null
@@ -529,9 +532,9 @@
   "pk": 9, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 6, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 130, 
    "path": null
@@ -541,9 +544,9 @@
   "pk": 10, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 11, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 259, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -553,9 +556,9 @@
   "pk": 11, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 259, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -565,9 +568,9 @@
   "pk": 12, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 259, 
    "path": null
@@ -577,9 +580,9 @@
   "pk": 13, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 149, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -589,9 +592,9 @@
   "pk": 14, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 4, 
    "translated": 255, 
    "path": null
@@ -601,9 +604,9 @@
   "pk": 15, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 259, 
    "path": null
@@ -613,9 +616,9 @@
   "pk": 16, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 11, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 259, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -625,9 +628,9 @@
   "pk": 17, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 259, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -637,9 +640,9 @@
   "pk": 18, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 259, 
    "path": null
@@ -649,9 +652,9 @@
   "pk": 19, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 626, 
+   "figures": null, 
    "fuzzy": 0, 
    "translated": 0, 
    "path": null
@@ -661,9 +664,9 @@
   "pk": 20, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 2, 
+   "figures": null, 
    "fuzzy": 20, 
    "translated": 598, 
    "path": null
@@ -673,9 +676,9 @@
   "pk": 21, 
   "model": "stats.pofile", 
   "fields": {
-   "updated": "2011-03-23 13:47:59", 
-   "num_figures": 0, 
+   "updated": "2011-08-04 12:03:53", 
    "untranslated": 0, 
+   "figures": null, 
    "fuzzy": 6, 
    "translated": 620, 
    "path": null
@@ -687,10 +690,9 @@
   "fields": {
    "domain": 1, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 1, 
    "language": null, 
    "part_po": null, 
@@ -703,10 +705,9 @@
   "fields": {
    "domain": 1, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 2, 
    "language": 2, 
    "part_po": null, 
@@ -719,10 +720,9 @@
   "fields": {
    "domain": 1, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 3, 
    "language": 3, 
    "part_po": null, 
@@ -735,10 +735,9 @@
   "fields": {
    "domain": 2, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 4, 
    "language": null, 
    "part_po": null, 
@@ -751,10 +750,9 @@
   "fields": {
    "domain": 2, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 5, 
    "language": 2, 
    "part_po": null, 
@@ -767,10 +765,9 @@
   "fields": {
    "domain": 2, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 6, 
    "language": 3, 
    "part_po": null, 
@@ -783,10 +780,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 7, 
    "language": null, 
    "part_po": null, 
@@ -799,10 +795,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 8, 
    "language": 2, 
    "part_po": null, 
@@ -815,10 +810,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 9, 
    "language": 3, 
    "part_po": null, 
@@ -831,10 +825,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 10, 
    "language": null, 
    "part_po": null, 
@@ -847,10 +840,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 11, 
    "language": 2, 
    "part_po": null, 
@@ -863,10 +855,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 12, 
    "language": 3, 
    "part_po": null, 
@@ -879,10 +870,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 13, 
    "language": null, 
    "part_po": null, 
@@ -895,10 +885,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 14, 
    "language": 2, 
    "part_po": null, 
@@ -911,10 +900,9 @@
   "fields": {
    "domain": 3, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 15, 
    "language": 3, 
    "part_po": null, 
@@ -927,10 +915,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 16, 
    "language": null, 
    "part_po": null, 
@@ -943,10 +930,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 17, 
    "language": 2, 
    "part_po": null, 
@@ -959,10 +945,9 @@
   "fields": {
    "domain": 4, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 18, 
    "language": 3, 
    "part_po": null, 
@@ -975,10 +960,9 @@
   "fields": {
    "domain": 5, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 19, 
    "language": null, 
    "part_po": null, 
@@ -991,10 +975,9 @@
   "fields": {
    "domain": 5, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 20, 
    "language": 2, 
    "part_po": null, 
@@ -1007,10 +990,9 @@
   "fields": {
    "domain": 5, 
    "old_translated": 0, 
-   "old_date": "2011-03-23 13:47:59", 
+   "old_date": "2011-08-04 12:03:53", 
    "old_fuzzy": 0, 
    "old_untranslated": 0, 
-   "old_num_figures": 0, 
    "full_po": 21, 
    "language": 3, 
    "part_po": null, 

@@ -25,7 +25,7 @@ from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 
-from stats.models import Statistics, Module, Branch, Domain, Language
+from stats.models import Statistics, FakeLangStatistics, Module, Branch, Domain, Language
 from stats.utils import is_po_reduced
 from vertimus.models import State, Action, ActionArchived
 from vertimus.forms import ActionForm
@@ -62,13 +62,8 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
     if not stats:
         try:
             stats = Statistics.objects.get(branch=branch, domain=domain, language=language)
-            po_url = stats.po_url()
         except Statistics.DoesNotExist:
-            stats = pot_stats
-            po_url = urlresolvers.reverse('dynamic_po',
-                        args=("%s.%s.%s.%s.po" % (branch.module.name, domain.name, branch.name, language.locale),))
-    else:
-        po_url = stats.po_url()
+            stats = FakeLangStatistics(pot_stats, language)
 
     # Get the state of the translation
     (state, created) = State.objects.get_or_create(
@@ -122,7 +117,7 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
         'pageSection': 'module',
         'stats': stats,
         'pot_stats': pot_stats,
-        'po_url': po_url,
+        'po_url': stats.po_url(),
         'po_url_reduced': stats.has_reducedstat() and stats.po_url(reduced=True) or '',
         'branch': branch,
         'other_states': other_branch_states,
