@@ -1347,6 +1347,9 @@ class Statistics(models.Model):
                               {'messages': msg_text, 'updated': upd_text}
         return text
 
+    def has_figures(self):
+        return bool(self.full_po and self.full_po.figures)
+
     def get_figures(self):
         """ Return an enriched list of figure dicts (used in module_images.html):
             [{'path':, 'hash':, 'fuzzy':, 'translated':, 'translated_file':}, ...] """
