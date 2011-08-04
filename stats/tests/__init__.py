@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2008-2009 Claude Paroz <claude@2xlibre.net>
+# Copyright (c) 2008-2011 Claude Paroz <claude@2xlibre.net>
 #
 # This file is part of Damned Lies.
 #
@@ -27,7 +27,7 @@ from django.core.exceptions import ValidationError
 from django.conf import settings
 
 from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
-from stats.utils import check_program_presence
+from stats.utils import check_program_presence, run_shell_command
 from languages.models import Language
 
 from fixture_factory import *
@@ -54,9 +54,9 @@ class ModuleTestCase(TestCase):
             if not check_program_presence(prog):
                 raise Exception("You are missing a required system package needed by Damned Lies (%s)" % package)
         # Delete the checkout if it exists prior to running the test suite
-        path = os.path.join(settings.SCRATCHDIR, 'git', 'gnome-hello')
-        if os.access(path, os.X_OK):
-            shutil.rmtree(path)
+        self.co_path = os.path.join(settings.SCRATCHDIR, 'git', 'gnome-hello')
+        if os.access(self.co_path, os.X_OK):
+            shutil.rmtree(self.co_path)
 
     def setUp(self):
         # TODO: load bulk data from fixtures
@@ -85,6 +85,11 @@ class ModuleTestCase(TestCase):
         self.cat = Category(release=self.rel, branch=self.b, name='desktop')
         self.cat.save()
 
+    def tearDown(self):
+        if os.access(self.co_path, os.X_OK):
+            command = "cd \"%s\" && git reset --hard origin/master" % self.co_path
+            run_shell_command(command, raise_on_error=True)
+
     def testModuleFunctions(self):
         self.assertEquals(self.mod.get_description(), 'gnome-hello')
 
@@ -97,9 +102,9 @@ class ModuleTestCase(TestCase):
         # Check stats
         self.b.update_stats(force=True)
         fr_po_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
-        self.assertEquals(fr_po_stat.translated, 47)
+        self.assertEqual(fr_po_stat.translated(), 44)
         fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
-        self.assertEquals(fr_doc_stat.translated, 20)
+        self.assertEqual(fr_doc_stat.translated(), 16)
 
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True
@@ -182,8 +187,8 @@ class ModuleTestCase(TestCase):
         self.b.update_stats(force=True)
         stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='fr')
         figs = stat.get_figures()
-        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello.png?h=master')
-        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/fr/figures/gnome-hello.png?h=master')
+        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello-new.png?h=master')
+        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/fr/figures/gnome-hello-new.png?h=master')
 
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """
