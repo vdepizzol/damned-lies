@@ -1197,7 +1197,7 @@ class PoFile(models.Model):
 
     def fig_count(self):
         """ If stat of a document type, get the number of figures in the document """
-        return len(self.figures)
+        return self.figures and len(self.figures) or 0
 
     def tr_percentage(self):
         if self.pot_size() == 0:

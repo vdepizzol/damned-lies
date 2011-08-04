@@ -78,10 +78,10 @@ $(document).ready(function() {
     </div>
   </div>
   {% endif %}
-  {% if pot_stats.full_po.fig_count and stats.language %}
+  {% if fig_stats and stats.language %}
   <div class="docimages">
-    <a href="{% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale %}">
-    <img src="{{ MEDIA_URL }}img/figure.png" alt="{% trans "Display document figures" %}"></a>
+    {% url stats.views.docimages module_name=module.name,potbase=stats.domain.name,branch_name=branch.name,langcode=stats.language.locale as img_url %}
+    {% blocktrans with stats=fig_stats|num_stats count total=fig_stats.total %} including <a href="{{ img_url }}">{{ stats }} image</a>{% plural %} including <a href="{{ img_url }}">{{ stats }} images</a>{% endblocktrans %}
   </div>
   {% endif %}
 </div>

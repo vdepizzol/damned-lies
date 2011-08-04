@@ -47,7 +47,11 @@ def num_stats(stat, scope='full'):
         }
     else:
         stats = stat
-    return mark_safe("%(prc)s%%&nbsp;(%(translated)s/%(fuzzy)s/%(untranslated)s)" % stats)
+    if 'prc' in stats:
+        model = "%(prc)s%%&nbsp;(%(translated)s/%(fuzzy)s/%(untranslated)s)"
+    else:
+        model = "(%(translated)s/%(fuzzy)s/%(untranslated)s)"
+    return mark_safe(model % stats)
 
 @register.filter
 def vis_stats(stat, scope='full'):

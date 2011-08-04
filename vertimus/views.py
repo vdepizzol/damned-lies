@@ -113,10 +113,13 @@ def vertimus(request, branch, domain, language, stats=None, level="0"):
     else:
         action_form = None
 
+    fig_stats = stats.fig_stats()
+    del fig_stats['prc']
     context = {
         'pageSection': 'module',
         'stats': stats,
         'pot_stats': pot_stats,
+        'fig_stats': fig_stats,
         'po_url': stats.po_url(),
         'po_url_reduced': stats.has_reducedstat() and stats.po_url(reduced=True) or '',
         'branch': branch,
