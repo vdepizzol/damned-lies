@@ -1356,11 +1356,12 @@ class Statistics(models.Model):
 
     def fig_stats(self):
         stats = {'fuzzy':0, 'translated':0, 'total':0, 'prc':0}
-        for fig in self.full_po.figures:
-            stats['total'] += 1
-            if fig.get('fuzzy', 0): stats['fuzzy'] += 1
-            else:
-                if fig.get('translated', 0): stats['translated'] += 1
+        if self.full_po and self.full_po.figures:
+            for fig in self.full_po.figures:
+                stats['total'] += 1
+                if fig.get('fuzzy', 0): stats['fuzzy'] += 1
+                else:
+                    if fig.get('translated', 0): stats['translated'] += 1
         stats['untranslated'] = stats['total'] - (stats['translated'] + stats['fuzzy'])
         if stats['total'] > 0:
             stats['prc'] = 100*stats['translated']/stats['total']

@@ -53,6 +53,8 @@ extract_tools = {
         'mod_var' : "DOC_ID",
         'incl_var': "DOC_PAGES",
         'img_grep': "^msgid \"@@image:",
+        # Lines to keep before matched grep to catch the ,fuzzy or #|msgid line
+        'bef_line': 1,
         'img_regex': re.compile("^msgid \"@@image: \'(?P<path>[^\']*)\'; md5=(?P<hash>[^\"]*)\""),
     },
     'itstool': {
@@ -60,7 +62,8 @@ extract_tools = {
         'mod_var' : "HELP_ID",
         'incl_var': "HELP_FILES",
         'img_grep': "^msgid \"external ref=",
-        'img_regex': re.compile("^msgid \"external ref=\'(?P<path>[^\']*)\'; md5=\'(?P<hash>[^\']*)\'\""),
+        'bef_line': 2,
+        'img_regex': re.compile("^msgid \"external ref=\'(?P<path>[^\']*)\' md5=\'(?P<hash>[^\']*)\'\""),
     },
 }
 
@@ -400,8 +403,9 @@ def get_fig_stats(pofile, image_method, trans_stats=True):
     if image_method not in ('xml2po', 'itstool'):
         return []
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
-    command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B 1 '%(grep)s'" % {
-        'pofile': pofile, 'grep': extract_tools[image_method]['img_grep']
+    before_lines = extract_tools[image_method]['bef_line']
+    command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B %(before)s '%(grep)s'" % {
+        'pofile': pofile, 'grep': extract_tools[image_method]['img_grep'], 'before': before_lines,
     }
     (status, output, errs) = run_shell_command(command)
     if status != STATUS_OK:
@@ -412,16 +416,16 @@ def get_fig_stats(pofile, image_method, trans_stats=True):
         lines = lines[1:] # skip warning messages at the top of the output
 
     figures = []
-    for i, line in islice(enumerate(lines), 0, None, 4):
+    for i, line in islice(enumerate(lines), 0, None, 3+before_lines):
         # TODO: add image size
         fig = {"path": '', "hash": ''}
-        m = extract_tools[image_method]['img_regex'].match(lines[i+1])
+        m = extract_tools[image_method]['img_regex'].match(lines[i+before_lines])
         if m:
             fig["path"] = m.group('path')
             fig["hash"] = m.group('hash')
         if trans_stats:
             fig["fuzzy"] = (line=='#, fuzzy' or line[:8]=='#| msgid')
-            fig["translated"] = len(lines[i+2])>9 and not fig['fuzzy']
+            fig["translated"] = len(lines[i+before_lines+1])>9 and not fig['fuzzy']
         figures.append(fig)
     return figures
 

@@ -169,7 +169,11 @@ class ModuleTestCase(TestCase):
         res = get_fig_stats(pot_path, image_method='xml2po')
         self.assertEqual(len(res), 1)
         os.remove(pot_path)
-        # TODO: Mallard-style help
+        # Mallard-style help (with itstool)
+        pot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_mallard", "gnome-help-itstool.pot")
+        res = get_fig_stats(pot_path, image_method='itstool')
+        self.assertEqual(len(res), 2)
+        self.assertEqual(res[0]['path'], "figures/gnome.png")
 
     def testIdenticalFigureWarning(self):
         """ Detect warning if translated figure is identical to original figure """
