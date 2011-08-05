@@ -152,10 +152,10 @@ class StateTranslated(State):
 
         if person.is_reviewer(self.language.team):
             action_names.append('RP')
+            action_names.append('TR')
 
         if person.is_translator(self.language.team):
             action_names.append('RT')
-            action_names.append('TR')
 
         if person.is_committer(self.language.team):
             action_names.append('TC')

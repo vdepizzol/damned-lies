@@ -99,14 +99,14 @@ class VertimusTest(TeamsAndRolesTests):
         self.assertEqual(action_names, ['WC'])
 
         action_names = [a.name for a in state.get_available_actions(self.pt)]
-        self.assertEqual(action_names, ['RT', 'TR', 'WC'])
+        self.assertEqual(action_names, ['RT', 'WC'])
 
         action_names = [a.name for a in state.get_available_actions(self.pr)]
-        self.assertEqual(action_names, ['RP', 'RT', 'TR', 'WC'])
+        self.assertEqual(action_names, ['RP', 'TR', 'RT', 'WC'])
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RP', 'RT', 'TR', 'TC', 'WC', None, 'IC', 'AA'])
+            self.assertEqual(action_names, ['RP', 'TR', 'RT', 'TC', 'WC', None, 'IC', 'AA'])
 
     def test_state_proofreading(self):
         state = StateProofreading(branch=self.b, domain=self.d, language=self.l, person=self.pr)
