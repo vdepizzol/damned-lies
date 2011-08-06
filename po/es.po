@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 19:39+0000\n"
-"PO-Revision-Date: 2011-08-05 18:26+0200\n"
+"POT-Creation-Date: 2011-08-06 10:30+0000\n"
+"PO-Revision-Date: 2011-08-06 12:52+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1518,8 +1518,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1695,7 +1695,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -1758,7 +1759,11 @@ msgstr "No se puede general el archivo POT, estadísticas abortadas."
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:799
+#: stats/models.py:788
+msgid "Error retrieving pot file from URL."
+msgstr "Error al obtener el archivo POT desde el URL."
+
+#: stats/models.py:812
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1769,7 +1774,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:823
+#: stats/models.py:836
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1777,76 +1782,76 @@ msgstr ""
 "La entrada para este idioma no está presente en la variable %(var)s del "
 "archivo %(file)s."
 
-#: stats/models.py:1153
+#: stats/models.py:1166
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:1154
+#: stats/models.py:1167
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:1155
+#: stats/models.py:1168
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:1156
+#: stats/models.py:1169
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:1157
+#: stats/models.py:1170
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1291 stats/models.py:1629
+#: stats/models.py:1304 stats/models.py:1645
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1319
+#: stats/models.py:1332
 msgid "POT file unavailable"
 msgstr "Archivo POT no disponible"
 
-#: stats/models.py:1323
+#: stats/models.py:1336
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1324
+#: stats/models.py:1337
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:1326 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1339 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:142
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1329
+#: stats/models.py:1342
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1330
+#: stats/models.py:1343
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:1333
+#: stats/models.py:1346
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/models.py:1457
+#: stats/models.py:1473
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1458
+#: stats/models.py:1474
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2257,8 +2262,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2874,7 +2879,6 @@ msgstr "Traducido (reducido):"
 
 #: templates/vertimus/vertimus_detail.html:84
 #, python-format
-#| msgid "Coordinates <a href=\"%(team_url)s\">%(team_desc)s</a>"
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
 msgstr[0] " incluyendo <a href=\"%(img_url)s\">%(stats)s imagen</a>"
@@ -3130,15 +3134,15 @@ msgstr "Sin comentarios"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3328,8 +3332,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
