@@ -10,6 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         Person.clean_unactivated_accounts()
+        Person.clean_obsolete_accounts()
         Role.inactivate_unused_roles()
         ActionArchived.clean_old_actions(365)
         clean_tar_files()

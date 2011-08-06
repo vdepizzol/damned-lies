@@ -56,6 +56,23 @@ class Person(User):
             account.delete()
 
     @classmethod
+    def clean_obsolete_accounts(cls):
+        """ Remove accounts that:
+            - last login is more than 2 years
+            - is not coordinator
+            - is not module maintainer
+            - has no reserved module
+        """
+        accounts = cls.objects.annotate(num_modules=models.Count('maintains_modules')
+            ).annotate(num_states=models.Count('state')
+            ).filter(last_login__lt=(datetime.datetime.now()-datetime.timedelta(days=730))
+            ).exclude(role__role='coordinator'
+            ).exclude(num_modules__gt=0
+            ).exclude(num_states__gt=0)
+        for account in accounts:
+            account.delete()
+
+    @classmethod
     def get_by_user(cls, user):
         if user.is_anonymous():
             return None
