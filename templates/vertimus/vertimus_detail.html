@@ -114,6 +114,9 @@ $(document).ready(function() {
     {% if level == 0 %}
       {% trans "Actions" %}
     {% else %}
+      {% comment %}Translators: human_level is an ordinal expression ('1st',' 2nd',...)
+                   which should be localized in Django itself
+      {% endcomment %}
       {% blocktrans with level|ordinal|safe as human_level %}Archived Actions ({{ human_level }} archived series){% endblocktrans %}
       <a href="{% url vertimus_by_names module.name,branch.name,domain.name,language.locale %}">
         {% trans "(Return to current actions)" %}

@@ -781,9 +781,3 @@ def reactivate_role(sender, instance, **kwargs):
     except Role.DoesNotExist:
         pass
 post_save.connect(reactivate_role)
-
-""" The following string is just reproduced from a template so as a translator comment
-    can be added (comments are not supported in templates) """
-# Translators: human_level is an ordinal expression ('1st',' 2nd',...)
-# which should be localized in Django itself
-dummy = ugettext("Archived Actions (%(human_level)s archived series)" % {'human_level':0})
