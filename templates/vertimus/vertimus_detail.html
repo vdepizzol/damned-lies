@@ -154,9 +154,8 @@ $(document).ready(function() {
         {% if action.has_po_file %}
           {% if action.merged_file.url %}
             <a href="{{ action.merged_file.url }}">
-              <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}
-            </a>
-            <br/>
+              <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}</a>
+            {{ action.merged_file|num_stats:'short' }}<br/>
           {% endif %}
           <div class="right_actions">{% trans "diff with:" %}
             {% for f in files %}

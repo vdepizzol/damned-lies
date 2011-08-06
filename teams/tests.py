@@ -203,7 +203,7 @@ class RoleTest(TeamsAndRolesTests):
         self.assertTrue(self.role.is_active)
         self.assertTrue(self.role2.is_active)
         self.assertTrue(self.role_limit_date.is_active)
-        self.assertTrue(self.role_inactive.is_active)        
+        self.assertTrue(self.role_inactive.is_active)
 
         Role.inactivate_unused_roles()
 

@@ -28,7 +28,7 @@ from django.contrib.sites.models import Site
 from django.core import mail, urlresolvers
 from django.db import models
 from django.db.models import Max
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_save, pre_delete
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
 from stats.models import Branch, Domain, Statistics, PoFile
@@ -315,7 +315,7 @@ class ActionAbstract(models.Model):
     comment = models.TextField(blank=True, null=True)
     file = models.FileField(upload_to=generate_upload_filename, blank=True, null=True)
     #up_file     = models.OneToOneField(PoFile, null=True, related_name='action_p')
-    #merged_file = models.OneToOneField(PoFile, null=True, related_name='action_m')
+    merged_file = models.OneToOneField(PoFile, null=True) #, related_name='action_m')
 
     # A comment or a file is required
     arg_is_required = False
@@ -344,17 +344,6 @@ class ActionAbstract(models.Model):
             return self.file.name[-3:] == ".po"
         except:
             return False
-
-    def merged_file(self):
-        """If available, returns the merged file as a dict: {'url':'path':'filename'}"""
-        mfile_url = mfile_path = mfile_name = None
-        if self.file:
-            mfile_url = self.file.url[:-3] + ".merged.po"
-            mfile_path = self.file.path[:-3] + ".merged.po"
-            mfile_name = os.path.basename(mfile_path)
-            if not os.access(mfile_path, os.R_OK):
-                mfile_url = mfile_path = mfile_name = None
-        return {'url': mfile_url, 'path': mfile_path, 'filename': mfile_name}
 
     @classmethod
     def get_action_history(cls, state=None, sequence=None):
@@ -436,20 +425,27 @@ class Action(ActionAbstract):
 
     def merge_file_with_pot(self, pot_file):
         """Merge the uploaded translated file with current pot."""
-        if self.file:
+        if not self.file:
+            return
+        if not self.merged_file:
             merged_path = "%s.merged.po" % self.file.path[:-3]
-            command = "msgmerge --previous -o %(out_po)s %(po_file)s %(pot_file)s" % {
-                'out_po':   merged_path,
-                'po_file':  self.file.path,
-                'pot_file': pot_file
-            }
-            run_shell_command(command)
-            # If uploaded file is reduced, run po_grep *after* merge
-            if is_po_reduced(self.file):
-                temp_path = "%s.temp.po" % self.file.path[:-3]
-                shutil.copy(merged_path, temp_path)
-                po_grep(temp_path, merged_path, self.state_db.domain.red_filter)
-                os.remove(temp_path)
+            self.merged_file = PoFile.objects.create(path=merged_path)
+            self.save()
+            return # post_save will call merge_file_with_pot again
+        merged_path = self.merged_file.path
+        command = "msgmerge --previous -o %(out_po)s %(po_file)s %(pot_file)s" % {
+            'out_po':   merged_path,
+            'po_file':  self.file.path,
+            'pot_file': pot_file
+        }
+        run_shell_command(command)
+        # If uploaded file is reduced, run po_grep *after* merge
+        if is_po_reduced(self.file):
+            temp_path = "%s.temp.po" % self.file.path[:-3]
+            shutil.copy(merged_path, temp_path)
+            po_grep(temp_path, merged_path, self.state_db.domain.red_filter)
+            os.remove(temp_path)
+        self.merged_file.update_stats()
 
     def send_mail_new_state(self, state, recipient_list):
         # Remove None and empty string items from the list
@@ -757,18 +753,18 @@ post_save.connect(merge_uploaded_file)
 
 def delete_action_files(sender, instance, **kwargs):
     """
-    post_delete callback for Action that deletes the file + the merged file from upload
+    pre_delete callback for Action that deletes the file + the merged file from upload
     directory.
     """
     if not isinstance(instance, ActionAbstract) or not getattr(instance, 'file'):
         return
     if instance.file.path.endswith('.po'):
-        merged_file = instance.file.path[:-3] + ".merged.po"
-        if os.access(merged_file, os.W_OK):
-             os.remove(merged_file)
+        if instance.merged_file:
+            if os.access(instance.merged_file.path, os.W_OK):
+                 os.remove(instance.merged_file.path)
     if os.access(instance.file.path, os.W_OK):
          os.remove(instance.file.path)
-post_delete.connect(delete_action_files)
+pre_delete.connect(delete_action_files)
 
 def reactivate_role(sender, instance, **kwargs):
     # Reactivating the role if needed

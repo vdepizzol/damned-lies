@@ -45,6 +45,14 @@ def num_stats(stat, scope='full'):
             'fuzzy':        stat.fuzzy(scope),
             'untranslated': stat.untranslated(scope),
         }
+    elif isinstance(stat, PoFile):
+        stats = {
+            'translated':   stat.translated,
+            'fuzzy':        stat.fuzzy,
+            'untranslated': stat.untranslated,
+        }
+        if scope != 'short':
+            stats['prc'] = stat.tr_percentage()
     else:
         stats = stat
     if 'prc' in stats:

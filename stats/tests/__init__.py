@@ -37,9 +37,12 @@ def test_scratchdir(test_func):
     """ Decorator to temporarily use the scratchdir inside the test directory """
     def decorator(self):
         old_SCRATCHDIR = settings.SCRATCHDIR
+        old_POTDIR = settings.POTDIR
         settings.SCRATCHDIR = os.path.dirname(os.path.abspath(__file__))
+        settings.POTDIR = os.path.join(settings.SCRATCHDIR, "POT")
         test_func(self)
         settings.SCRATCHDIR = old_SCRATCHDIR
+        settings.POTDIR = old_POTDIR
     return decorator
 
 

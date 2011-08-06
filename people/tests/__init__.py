@@ -93,6 +93,5 @@ class PeopleTestCase(TestCase):
         # Test only p5 should be deleted
         self.assertEqual(Person.objects.all().count(), 5)
         Person.clean_obsolete_accounts()
-        import pdb; pdb.set_trace()
         self.assertEqual(Person.objects.all().count(), 4)
         self.assertEqual(set(Person.objects.all()), set([p1, p2, p3, p4]))

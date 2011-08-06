@@ -1205,6 +1205,12 @@ class PoFile(models.Model):
     def __unicode__(self):
         return "%s (%s/%s/%s)" % (self.path, self.translated, self.fuzzy, self.untranslated)
 
+    def url(self):
+        return utils.url_join(settings.MEDIA_URL, settings.UPLOAD_DIR, os.path.basename(self.path))
+
+    def filename(self):
+        return os.path.basename(self.path)
+
     def pot_size(self):
         return self.translated + self.fuzzy + self.untranslated
 
@@ -1229,6 +1235,13 @@ class PoFile(models.Model):
             return 0
         else:
             return int(100*self.untranslated/self.pot_size())
+
+    def update_stats(self):
+        stats = utils.po_file_stats(self.path, msgfmt_checks=False)
+        self.translated   = stats['translated']
+        self.fuzzy        = stats['fuzzy']
+        self.untranslated = stats['untranslated']
+        self.save()
 
 
 class Statistics(models.Model):

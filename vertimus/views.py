@@ -147,7 +147,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     action_1 = get_object_or_404(ActionReal, pk=action_id_1)
     state = action_1.state_db
 
-    file_path_1 = action_1.merged_file()['path'] or action_1.file.path
+    file_path_1 = action_1.merged_file and action_1.merged_file.path or action_1.file.path
     reduced = is_po_reduced(file_path_1)
 
     try:
@@ -160,7 +160,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
     if action_id_2 not in (None, "0"):
         # 1) id_2 specified in URL
         action_2 = get_object_or_404(ActionReal, pk=action_id_2)
-        file_path_2 = action_2.merged_file()['path'] or action_2.file.path
+        file_path_2 = action_2.merged_file and action_2.merged_file.path or action_2.file.path
         descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                  'date': action_2.created }
     else:
@@ -170,7 +170,7 @@ def vertimus_diff(request, action_id_1, action_id_2, level):
             action_2 = action_1.get_previous_action_with_po()
 
         if action_2:
-            file_path_2 = action_2.merged_file()['path'] or action_2.file.path
+            file_path_2 = action_2.merged_file and action_2.merged_file.path or action_2.file.path
             descr_2 = _("Uploaded file by %(name)s on %(date)s") % { 'name': action_2.person.name,
                                                                      'date': action_2.created }
         else:
@@ -208,5 +208,4 @@ def latest_uploaded_po(request, module_name, branch_name, domain_name, locale_na
                                           file__endswith=".po").order_by('-created')[:1]
     if not latest_upload:
         raise Http404
-    merged_file = latest_upload[0].merged_file()
-    return HttpResponseRedirect(merged_file['url'])
+    return HttpResponseRedirect(latest_upload[0].merged_file.url())

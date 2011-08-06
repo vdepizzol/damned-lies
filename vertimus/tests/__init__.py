@@ -30,6 +30,7 @@ from django.utils.datastructures import MultiValueDict
 
 from teams.tests import TeamsAndRolesTests
 from stats.models import Module, Branch, Release, Category, Domain, Statistics
+from stats.tests import test_scratchdir
 from vertimus.models import *
 from vertimus.forms import ActionForm
 
@@ -38,30 +39,32 @@ class VertimusTest(TeamsAndRolesTests):
     def setUp(self):
         super(VertimusTest, self).setUp()
 
-        self.m = Module(name='gedit', description='GNOME Editor',
+        self.m = Module.objects.create(name='gedit', description='GNOME Editor',
             bugs_base="http://bugzilla.gnome.org/",
             bugs_product='gedit', bugs_component='general',
             vcs_type='svn', vcs_root="http://svn.gnome.org/svn",
             vcs_web="http://svn.gnome.org/viewvc/gedit")
-        self.m.save()
 
         Branch.checkout_on_creation = False
         self.b = Branch(name='gnome-2-24', module=self.m)
         # Block the update of Statistics by the thread
         self.b.save(update_statistics=False)
 
-        self.r = Release(name='gnome-2-24', status='official',
+        self.r = Release.objects.create(name='gnome-2-24', status='official',
             description='GNOME 2.24 (stable)',
             string_frozen=True)
-        self.r.save()
 
-        self.c = Category(release=self.r, branch=self.b, name='desktop')
-        self.c.save()
+        self.c = Category.objects.create(release=self.r, branch=self.b, name='desktop')
 
-        self.d = Domain(module=self.m, name='po',
+        self.d = Domain.objects.create(module=self.m, name='po',
             description='UI translations',
             dtype='ui', directory='po')
-        self.d.save()
+        pot_stat = Statistics.objects.create(language=None, branch=self.b, domain=self.d)
+        self.files_to_clean = []
+
+    def tearDown(self):
+        for path in self.files_to_clean:
+            os.remove(path)
 
     def test_state_none(self):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
@@ -204,6 +207,7 @@ class VertimusTest(TeamsAndRolesTests):
         action.apply_on(state)
         self.assertTrue(isinstance(state, StateTranslating))
 
+    @test_scratchdir
     def test_action_ut(self):
         # Disabling the role
         role = Role.objects.get(person=self.pt, team=self.l.team)
@@ -213,11 +217,14 @@ class VertimusTest(TeamsAndRolesTests):
         state = StateTranslating(branch=self.b, domain=self.d, language=self.l, person=self.pt)
         state.save()
 
-        test_file = ContentFile('test content')
-        test_file.name = 'mytestfile.po'
-        
-        action = Action.new_by_name('UT', person=self.pt, comment="Done by translator.", file=test_file)
+        test_file = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "valid_po.po"), 'r')
+
+        action = Action.new_by_name('UT', person=self.pt, comment="Done by translator.", file=File(test_file))
         action.apply_on(state)
+        self.assertEqual(action.file.url, '/media/upload/gedit-gnome-2-24-po-fr-%d.po' % state.id)
+        self.assertEqual(action.merged_file.url(), '/media/upload/gedit-gnome-2-24-po-fr-%d.merged.po' % state.id)
+        self.files_to_clean.extend([action.file.path, action.merged_file.path])
+
         self.assertTrue(isinstance(state, StateTranslated))
         # Mail sent to mailing list
         self.assertEquals(len(mail.outbox), 1)
@@ -245,6 +252,7 @@ class VertimusTest(TeamsAndRolesTests):
 
         action = Action.new_by_name('UP', person=self.pr, comment="Done.", file=test_file)
         action.apply_on(state)
+        self.files_to_clean.append(action.file.path)
         self.assertTrue(isinstance(state, StateProofread))
 
     def test_action_tc(self):
@@ -374,9 +382,6 @@ class VertimusTest(TeamsAndRolesTests):
         self.assertEqual(Action.objects.all().count(), 0)
 
     def test_vertimus_view(self):
-        pot_stat = Statistics(language=None, branch=self.b, domain=self.d)
-        pot_stat.save()
-
         url = reverse('vertimus_by_ids', args=[self.b.id, self.d.id, self.l.id])
         response = self.client.get(url)
         self.assertNotContains(response, '<option value="WC">')
@@ -397,7 +402,6 @@ class VertimusTest(TeamsAndRolesTests):
         f = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "valid_po.po"), 'r')
         post_file = MultiValueDict({'file': [File(f)]})
         form = ActionForm([('WC', u'Write a comment')], post_content, post_file)
-
         self.assert_(form.is_valid())
 
         # Test form without file
