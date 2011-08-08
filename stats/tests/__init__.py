@@ -27,7 +27,7 @@ from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.conf import settings
 
-from stats.models import Module, Domain, Branch, Category, Release, Language, Statistics, Information
+from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
 from stats.utils import check_program_presence, run_shell_command
 from languages.models import Language
 
@@ -261,3 +261,12 @@ class ModuleTestCase(TestCase):
         update_doap_infos(self.mod)
         self.assertEquals(self.mod.homepage, "http://git.gnome.org/browse/gnome-hello")
 
+
+class StatisticsTests(TestCase):
+    fixtures = ['sample_data.json']
+    def testTotalStatsForLang(self):
+        rel  = Release.objects.get(name="gnome-2-30")
+        total_for_lang = rel.total_for_lang(Language.objects.get(locale='fr'))
+        self.assertEqual(total_for_lang['uitotal'], total_for_lang['uitotal_part'])
+        total_for_lang = rel.total_for_lang(Language.objects.get(locale='bem'))
+        self.assertEqual(total_for_lang['uitotal'], total_for_lang['uitotal_part'])

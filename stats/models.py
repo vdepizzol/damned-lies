@@ -964,10 +964,10 @@ class Release(models.Model):
         stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
                         st['part_po__translated'] + st['part_po__fuzzy'] + st['part_po__untranslated']) for st in all_ui_stats])
         for lang in Language.objects.all():
-            total_part_ui_strings[lang.locale] = self.total_part_for_lang(lang.locale, all_ui_pots, stats_d)
+            total_part_ui_strings[lang.locale] = self.total_part_for_lang(lang, all_ui_pots, stats_d)
         return total_part_ui_strings
 
-    def total_part_for_lang(self, locale, all_pots=None, all_stats_d=None):
+    def total_part_for_lang(self, lang, all_pots=None, all_stats_d=None):
         """ For partial UI stats, the total number can differ from lang to lang, so we
             are bound to iterate each stats to sum it """
         if all_pots is None:
@@ -980,7 +980,7 @@ class Release(models.Model):
                                 st['part_po__translated'] + st['part_po__fuzzy'] + st['part_po__untranslated']) for st in all_stats])
         total = 0
         for stat in all_pots:
-            key = "%d-%d-%s" % (stat.branch_id, stat.domain_id, locale)
+            key = "%d-%d-%s" % (stat.branch_id, stat.domain_id, lang.locale)
             total += all_stats_d.get(key, stat.part_po.untranslated)
         return total
 
@@ -989,7 +989,7 @@ class Release(models.Model):
             language """
 
         total_doc, total_ui = self.total_strings()
-        total_ui_part = 0
+        total_ui_part = self.total_part_for_lang(lang)
         query = """
             SELECT domain.dtype,
                    SUM(pofull.translated) AS trans,
@@ -1024,7 +1024,6 @@ class Release(models.Model):
             if res[0] == 'ui':
                 stats['uitrans'] = res[1]
                 stats['uifuzzy'] = res[2]
-                total_ui_part = res[3] + res[4] + res[5]
                 stats['uitrans_part'] = res[3]
                 stats['uifuzzy_part'] = res[4]
             if res[0] == 'doc':
