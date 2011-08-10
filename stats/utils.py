@@ -184,6 +184,7 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
         files = ["index.page"]
         if tool == "xml2po":
             options = "-m mallard"
+        incl_var = extract_tools[tool]['incl_var']
     else:
         modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
         if not modulename:
@@ -201,9 +202,9 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
                     errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
                     return "", errors, tool
         files = [modulename + ".xml"]
-        extract_tools[tool]['incl_var'] = "DOC_INCLUDES"
+        incl_var = "DOC_INCLUDES"
 
-    includes = read_makefile_variable([vcs_path], extract_tools[tool]['incl_var'])
+    includes = read_makefile_variable([vcs_path], incl_var)
     if includes:
         files.extend(filter(lambda x:x not in ("", "$(NULL)"), includes.split()))
     files = " ".join([os.path.join("C", f) for f in files])
