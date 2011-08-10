@@ -60,8 +60,11 @@ Installation
 2b- If you want to populate the database with sample data, run:
     ./manage.py loaddata sample_data
 
-3 - Configure Sites in admin interface to define the 'View on site'
-    link.
+3 - You should now be able to launch the server to check if all is running well:
+    ./manage.py runserver
+
+4 - Configure Sites in admin interface ('View on site' link, site address in sent
+    mail).
 
 Maintenance tasks
 =================
