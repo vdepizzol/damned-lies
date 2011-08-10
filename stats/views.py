@@ -172,6 +172,10 @@ def dynamic_po(request, filename):
     """ Generates a dynamic po file from the POT file of a branch """
     try:
         module, domain, branch, locale, ext = filename.split(".")
+        if locale.endswith('-reduced'):
+            locale, reduced = locale[:-8], True
+        else:
+            reduced = False
         language = Language.objects.select_related('team').get(locale=locale)
     except:
         raise Http404
@@ -180,7 +184,7 @@ def dynamic_po(request, filename):
                              branch__name=branch,
                              domain__name=domain,
                              language=None)
-    file_path = potfile.po_path().encode('ascii')
+    file_path = potfile.po_path(reduced=reduced).encode('ascii')
     if not os.access(file_path, os.R_OK):
         raise Http404
 

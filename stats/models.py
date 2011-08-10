@@ -1660,9 +1660,13 @@ class FakeLangStatistics(object):
         }
 
     def po_url(self, potfile=False, reduced=False):
+        if reduced:
+            locale = "%s-reduced" % self.language.locale
+        else:
+            locale = self.language.locale
         return reverse(
             'dynamic_po',
-            args=("%s.%s.%s.%s.po" % (self.branch.module.name, self.domain.name, self.branch.name, self.language.locale),)
+            args=("%s.%s.%s.%s.po" % (self.branch.module.name, self.domain.name, self.branch.name, locale),)
         )
 
 class FakeSummaryStatistics(object):

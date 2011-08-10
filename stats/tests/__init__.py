@@ -27,7 +27,7 @@ from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.conf import settings
 
-from stats.models import Module, Domain, Branch, Category, Release, Statistics, Information
+from stats.models import Module, Domain, Branch, Category, Release, Statistics, FakeLangStatistics, Information
 from stats.utils import check_program_presence, run_shell_command
 from languages.models import Language
 
@@ -226,16 +226,16 @@ class ModuleTestCase(TestCase):
 
     def testDynamicPO(self):
         """ Test the creation of a blank po file for a new language """
-        lang = Language(name="Tamil", locale="ta")
-        lang.save()
+        lang = Language.objects.create(name="Tamil", locale="ta")
         self.b.update_stats(force=True) # At least POT stats needed
-        c = Client()
-        response = c.get('/module/po/gnome-hello.po.master.ta.po')
+        response = self.client.get('/module/po/gnome-hello.po.master.ta.po')
         self.assertContains(response, """# Tamil translation for gnome-hello.
 # Copyright (C) %s gnome-hello's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-hello package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""" % date.today().year)
         self.assertContains(response, "Language-Team: Tamil <ta@li.org>")
+        response = self.client.get('/module/po/gnome-hello.po.master.ta-reduced.po')
+        self.assertContains(response, """# Tamil translation for gnome-hello.""")
 
     @test_scratchdir
     def testBranchFileChanged(self):
@@ -267,6 +267,21 @@ class StatisticsTests(TestCase):
     def testTotalStatsForLang(self):
         rel  = Release.objects.get(name="gnome-2-30")
         total_for_lang = rel.total_for_lang(Language.objects.get(locale='fr'))
-        self.assertEqual(total_for_lang['uitotal'], total_for_lang['uitotal_part'])
+        self.assertEqual(total_for_lang['uitotal']-8, total_for_lang['uitotal_part'])
         total_for_lang = rel.total_for_lang(Language.objects.get(locale='bem'))
-        self.assertEqual(total_for_lang['uitotal'], total_for_lang['uitotal_part'])
+        self.assertEqual(total_for_lang['uitotal']-8, total_for_lang['uitotal_part'])
+
+    def testStatsLinks(self):
+        pot_stats = Statistics.objects.get(
+            branch__module__name='zenity', branch__name='gnome-2-30',
+            domain__name='po', language__isnull=True)
+        self.assertEqual(pot_stats.po_url(), "/POT/zenity.gnome-2-30/zenity.gnome-2-30.pot")
+        stats = Statistics.objects.get(
+            branch__module__name='zenity', branch__name='gnome-2-30',
+            domain__name='po', language__locale='it')
+        self.assertEqual(stats.po_url(), "/POT/zenity.gnome-2-30/zenity.gnome-2-30.it.po")
+        self.assertEqual(stats.po_url(reduced=True), "/POT/zenity.gnome-2-30/zenity.gnome-2-30.it.reduced.po")
+        # Same for a fake stats
+        stats = FakeLangStatistics(pot_stats, Language.objects.get(locale='bem'))
+        self.assertEqual(stats.po_url(), "/module/po/zenity.po.gnome-2-30.bem.po")
+        self.assertEqual(stats.po_url(reduced=True), "/module/po/zenity.po.gnome-2-30.bem-reduced.po")
