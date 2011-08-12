@@ -974,7 +974,7 @@ class Release(models.Model):
             all_pots = Statistics.objects.select_related('part_po').filter(language__isnull=True, branch__releases=self, domain__dtype='ui')
         if all_stats_d is None:
             all_stats = Statistics.objects.select_related('part_po', 'language'
-                ).filter(language__locale=lang, branch__releases=self, domain__dtype='ui'
+                ).filter(language=lang, branch__releases=self, domain__dtype='ui'
                 ).values('branch_id', 'domain_id', 'language__locale', 'part_po__translated', 'part_po__fuzzy', 'part_po__untranslated')
             all_stats_d = dict([("%d-%d-%s" % (st['branch_id'], st['domain_id'], st['language__locale']),
                                 st['part_po__translated'] + st['part_po__fuzzy'] + st['part_po__untranslated']) for st in all_stats])
