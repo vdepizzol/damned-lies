@@ -180,6 +180,9 @@ $(document).ready(function() {
 {% endif %}
 
 {% if level == 0 %}
+  <div class="float_right">
+    <a href="{% url help 'vertimus_workflow' %}"><img src="{{ MEDIA_URL }}img/help.png" alt="help icon"></a>
+  </div>
   <h2>{% trans "New Action" %}</h2>
 
   {% if action_form %}

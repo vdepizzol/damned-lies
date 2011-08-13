@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Help" %}{% endblock %}
+
+{% block content %}
+<div class="mainpage">
+<p>
+{% trans "The figure below describes the various states and actions available during the translation process of a module." %}
+</p>
+
+<img src="{{ MEDIA_URL }}img/workflow-translation.png">
+</div>
+{% endblock %}

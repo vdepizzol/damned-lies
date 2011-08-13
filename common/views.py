@@ -22,8 +22,9 @@ from django.conf import settings
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render
+from django.template.loader import get_template, TemplateDoesNotExist
 from django.utils.translation import ugettext as _
 
 from people.models import Person
@@ -119,3 +120,11 @@ def activate_account(request, key):
     person.activate()
     messages.success(request, _("Your account has been activated."))
     return site_login(request)
+
+def help(request, topic):
+    template = 'help/%s.html' % topic
+    try:
+        t = get_template(template)
+    except TemplateDoesNotExist:
+        raise Http404
+    return render(request, template, {})

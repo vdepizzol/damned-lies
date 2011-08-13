@@ -19,6 +19,10 @@ urlpatterns = patterns('',
         view = 'common.views.site_register',
         name = 'register'),
     url(
+        regex = r'^help/(?P<topic>\w+)/$',
+        view = 'common.views.help',
+        name = 'help'),
+    url(
         regex = r'^register/success$',
         view = TemplateView.as_view(template_name="registration/register_success.html"),
         name = 'register_success'),
