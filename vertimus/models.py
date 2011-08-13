@@ -283,7 +283,7 @@ ACTION_NAMES = (
     # Translators: this is used to indicate the file has been committed in the repository
     ('IC', _('Inform of submission')),
     # Translators: regardless of the translation completion, this file need to be reviewed
-    ('TR', _('Review required')),
+    ('TR', _('Rework needed')),
     ('AA', _('Archive the actions')),
     ('UNDO', _('Undo the last state change')),
 )
