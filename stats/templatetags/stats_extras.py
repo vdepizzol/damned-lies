@@ -1,4 +1,5 @@
 from django import template
+from django.conf import settings
 from django.utils.safestring import mark_safe
 from django.utils.translation import get_language_bidi
 
@@ -83,3 +84,20 @@ def vis_stats(stat, scope='full'):
 @register.filter
 def is_video(fig):
     return fig['path'].endswith('.ogv')
+
+@register.filter
+def as_tr(field):
+    help_html = u''
+    if field.help_text:
+        help_html = u'<br /><span class="helptext">%s</span>' % field.help_text
+    help_link = u''
+    # This is a custom attribute possibly set in forms.py
+    if hasattr(field.field, 'help_link'):
+        help_link = '<span class="help_link"><a href="%s"><img src="%simg/help.png" alt="help icon" width="26"></a></span>' % (
+            field.field.help_link, settings.MEDIA_URL)
+    errors_html = u''
+    if field.errors:
+        errors_html = u'<ul class="errorlist">%s</ul>' % u''.join(["<li>%s</li>" % err for err in field.errors])
+    return mark_safe(u'<tr><th>%s:</th><td>%s%s%s%s</td></tr>' % (
+        field.label_tag(), errors_html, field.as_widget(), help_link, help_html)
+    )

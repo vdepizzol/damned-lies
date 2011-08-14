@@ -180,9 +180,6 @@ $(document).ready(function() {
 {% endif %}
 
 {% if level == 0 %}
-  <div class="float_right">
-    <a href="{% url help 'vertimus_workflow' %}"><img src="{{ MEDIA_URL }}img/help.png" alt="help icon"></a>
-  </div>
   <h2>{% trans "New Action" %}</h2>
 
   {% if action_form %}
@@ -190,7 +187,9 @@ $(document).ready(function() {
         action="{% url vertimus_by_stats_id stats.id,language.id %}"
         method="POST">
     <table class="djform">
-      {{ action_form.as_table }}
+      {% for field in action_form %}
+        {{ field|as_tr }}
+      {% endfor %}
       <tr>
         <td></td>
         <td><input type="submit" value="{% trans "Submit" %}"></td>

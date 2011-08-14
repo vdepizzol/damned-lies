@@ -22,6 +22,7 @@
 import os
 
 from django import forms
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from vertimus.models import Action
 from stats.utils import po_file_stats
@@ -50,6 +51,7 @@ class ActionForm(forms.Form):
     def __init__(self, available_actions, *args, **kwargs):
         super(ActionForm, self).__init__(*args, **kwargs)
         self.fields['action'].choices = available_actions
+        self.fields['action'].help_link = reverse('help', args=['vertimus_workflow'])
 
     def clean_file(self):
         data = self.cleaned_data['file']
