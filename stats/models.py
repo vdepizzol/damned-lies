@@ -1143,7 +1143,8 @@ class Release(models.Model):
         partial = False
         if dtype == "ui-part":
             dtype, partial = "ui", True
-        pot_stats = Statistics.objects.filter(language=None, branch__releases=self, domain__dtype=dtype)
+        pot_stats = Statistics.objects.filter(
+            language=None, branch__releases=self, domain__dtype=dtype, full_po__isnull=False)
         po_stats = dict([("%s-%s" % (st.branch_id, st.domain_id), st)
                          for st in Statistics.objects.filter(language=lang, branch__releases=self, domain__dtype=dtype)])
         lang_files = []
