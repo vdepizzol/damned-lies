@@ -7,7 +7,7 @@
 <script type="text/javascript">
 $(document).ready(function() 
     { 
-        $("#stats-table").tablesorter({headers: {3:{sorter: false}}});
+        $("#stats-table").tablesorter({headers: {3:{sorter: false}, 5:{sorter:"text"}}});
         $("#stats-table").bind("sortStart",function() { 
             /* Hide category subheaders when sorting */
             $("tr.subheader").hide(); 
