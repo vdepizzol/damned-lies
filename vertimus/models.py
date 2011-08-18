@@ -29,6 +29,7 @@ from django.core import mail, urlresolvers
 from django.db import models
 from django.db.models import Max
 from django.db.models.signals import post_save, pre_delete
+from django.dispatch import receiver
 from django.utils.translation import get_language, activate, ugettext, ugettext_lazy as _
 
 from stats.models import Branch, Domain, Statistics, PoFile
@@ -729,6 +730,7 @@ class ActionSeparator(object):
 #
 # Signal actions
 #
+@receiver(pot_has_changed)
 def update_uploaded_files(sender, **kwargs):
     """Callback to handle pot_file_changed signal"""
     actions = Action.objects.filter(state_db__branch=kwargs['branch'],
@@ -736,8 +738,8 @@ def update_uploaded_files(sender, **kwargs):
                                     file__endswith=".po")
     for action in actions:
         action.merge_file_with_pot(kwargs['potfile'])
-pot_has_changed.connect(update_uploaded_files)
 
+@receiver(post_save)
 def merge_uploaded_file(sender, instance, **kwargs):
     """
     post_save callback for Action that automatically merge uploaded file
@@ -752,8 +754,8 @@ def merge_uploaded_file(sender, instance, **kwargs):
             return
         potfile = stat.po_path()
         instance.merge_file_with_pot(potfile)
-post_save.connect(merge_uploaded_file)
 
+@receiver(pre_delete)
 def delete_action_files(sender, instance, **kwargs):
     """
     pre_delete callback for Action that deletes the file + the merged file from upload
@@ -767,8 +769,12 @@ def delete_action_files(sender, instance, **kwargs):
                  os.remove(instance.merged_file.path)
     if os.access(instance.file.path, os.W_OK):
          os.remove(instance.file.path)
-pre_delete.connect(delete_action_files)
 
+@receiver(pre_delete, sender=Statistics)
+def clean_dangling_states(sender, instance, **kwargs):
+    State.objects.filter(branch=instance.branch, domain=instance.domain, language=instance.language).delete()
+
+@receiver(post_save)
 def reactivate_role(sender, instance, **kwargs):
     # Reactivating the role if needed
     if not isinstance(instance, Action):
@@ -779,4 +785,3 @@ def reactivate_role(sender, instance, **kwargs):
         role.save()
     except Role.DoesNotExist:
         pass
-post_save.connect(reactivate_role)

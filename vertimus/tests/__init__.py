@@ -383,6 +383,18 @@ class VertimusTest(TeamsAndRolesTests):
         self.m.delete()
         self.assertEqual(Action.objects.all().count(), 0)
 
+    def test_delete_domain(self):
+        state = StateTranslating.objects.create(branch=self.b, domain=self.d, language=self.l, person=self.pt)
+        self.d.delete()
+        self.assertEqual(State.objects.all().count(), 0)
+
+    def test_delete_statistics(self):
+        """ Test clean_dangling_states receiver """
+        po_stat = Statistics.objects.create(branch=self.b, domain=self.d, language=self.l)
+        state = StateTranslating.objects.create(branch=self.b, domain=self.d, language=self.l, person=self.pt)
+        po_stat.delete()
+        self.assertEqual(State.objects.all().count(), 0)
+
     def test_vertimus_view(self):
         url = reverse('vertimus_by_ids', args=[self.b.id, self.d.id, self.l.id])
         response = self.client.get(url)
