@@ -410,6 +410,9 @@ class Action(ActionAbstract):
                 # Committed is the last state of the workflow, archive actions
                 arch_action = self.new_by_name('AA', person=self.person)
                 arch_action.apply_on(self.state_db)
+        else:
+            # Force updated state date to be updated
+            self.state_db.save()
 
     def get_previous_action_with_po(self):
         """

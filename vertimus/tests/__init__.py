@@ -192,12 +192,14 @@ class VertimusTest(TeamsAndRolesTests):
     def test_action_wc(self):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
         state.save()
+        prev_updated = state.updated
 
         action = Action.new_by_name('WC', person=self.pt, comment="Hi!")
         action.apply_on(state)
         # Test that submitting a comment without text generates a validation error
         form = ActionForm([('WC', u'Write a comment')], QueryDict('action=WC&comment='))
         self.assertTrue("A comment is needed" in str(form.errors))
+        self.assertNotEqual(state.updated, prev_updated)
 
     def test_action_rt(self):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
