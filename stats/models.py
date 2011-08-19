@@ -456,6 +456,7 @@ class Branch(models.Model):
                 pot_stat.set_translation_stats(
                     previous_pot,
                     untranslated=int(pot_stats['untranslated']),
+                    untranslated_words = int(pot_stats['untranslated_words']),
                     figstats = fig_stats,
                 )
                 pot_stat.set_errors(errors)
@@ -518,6 +519,9 @@ class Branch(models.Model):
                                                translated = int(langstats['translated']),
                                                fuzzy = int(langstats['fuzzy']),
                                                untranslated = int(langstats['untranslated']),
+                                               translated_words = int(langstats['translated_words']),
+                                               fuzzy_words = int(langstats['fuzzy_words']),
+                                               untranslated_words = int(langstats['untranslated_words']),
                                                figstats=fig_stats)
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
@@ -1198,6 +1202,10 @@ class PoFile(models.Model):
     untranslated = models.IntegerField(default=0)
     # List of figure dict
     figures      = JSONField(blank=True, null=True)
+    # words statistics
+    translated_words   = models.IntegerField(default=0)
+    fuzzy_words        = models.IntegerField(default=0)
+    untranslated_words = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'pofile'
@@ -1241,6 +1249,11 @@ class PoFile(models.Model):
         self.translated   = stats['translated']
         self.fuzzy        = stats['fuzzy']
         self.untranslated = stats['untranslated']
+
+        self.translated_words   = stats['translated_words']
+        self.fuzzy_words        = stats['fuzzy_words']
+        self.untranslated_words = stats['untranslated_words']
+
         self.save()
 
 
@@ -1424,7 +1437,7 @@ class Statistics(models.Model):
     def pot_url(self):
         return self.po_url(potfile=True)
 
-    def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, figstats=None):
+    def set_translation_stats(self, po_path, translated=0, fuzzy=0, untranslated=0, translated_words=0, fuzzy_words=0, untranslated_words=0, figstats=None):
         if not self.full_po:
             self.full_po = PoFile.objects.create(path=po_path)
             self.save()
@@ -1432,6 +1445,9 @@ class Statistics(models.Model):
         self.full_po.translated = translated
         self.full_po.fuzzy = fuzzy
         self.full_po.untranslated = untranslated
+        self.full_po.translated_words = translated_words
+        self.full_po.fuzzy_words = fuzzy_words
+        self.full_po.untranslated_words = untranslated_words
         self.full_po.figures = figstats
         self.full_po.updated = datetime.now()
         self.full_po.save()
@@ -1465,6 +1481,9 @@ class Statistics(models.Model):
                 self.part_po.translated = part_stats['translated']
                 self.part_po.fuzzy = part_stats['fuzzy']
                 self.part_po.untranslated = part_stats['untranslated']
+                self.part_po.translated_words = part_stats['translated_words']
+                self.part_po.fuzzy_words = part_stats['fuzzy_words']
+                self.part_po.untranslated_words = part_stats['untranslated_words']
                 self.part_po.updated = datetime.now()
                 self.part_po.save()
             else:
