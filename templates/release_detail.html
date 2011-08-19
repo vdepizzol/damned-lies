@@ -30,7 +30,7 @@
   <td class="leftcell">
     <a href="{% url team_slug lstats.lang_locale %}">{% trans lstats.lang_name %}</a>
   </td>
-  
+
   <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
       {{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</a>
   </td>
@@ -53,7 +53,7 @@
   {% else %}
   <td>-</td>
   {% endif %}
-  
+
   <td style="width: 108px; text-align: center;">
     <div class="graph">
       <div class="translated" style="width: {{ lstats.doc_percent }}px;"></div>
@@ -63,7 +63,7 @@
       {% endwith %}
      </div>
    </td>
-  
+
 </tr>
 {% endfor %}
 <tr><td colspan="5"><hr></td></tr>

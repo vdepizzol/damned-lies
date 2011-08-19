@@ -8,7 +8,7 @@
 
 <h1><a href="{% url stats.views.module module.name %}">{{ module.description }}</a> {% trans stat.domain.description %} ({% trans stat.language.name %})</h1>
 
-<h2>{% trans "Figures translation status" %} &mdash; 
+<h2>{% trans "Figures translation status" %} &mdash;
     <small>{{ figstats|num_stats }}</small></h2>
 
 <table class="stats">

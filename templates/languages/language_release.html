@@ -5,12 +5,12 @@
 {% block extrahead %}
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function() 
-    { 
+$(document).ready(function()
+    {
         $("#stats-table").tablesorter({headers: {3:{sorter: false}, 5:{sorter:"text"}}});
-        $("#stats-table").bind("sortStart",function() { 
+        $("#stats-table").bind("sortStart",function() {
             /* Hide category subheaders when sorting */
-            $("tr.subheader").hide(); 
+            $("tr.subheader").hide();
         })
     }
 );
