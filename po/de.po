@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-10 18:05+0000\n"
-"PO-Revision-Date: 2011-08-10 20:04+0100\n"
+"POT-Creation-Date: 2011-08-14 18:13+0000\n"
+"PO-Revision-Date: 2011-08-19 11:59+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1502,7 +1502,7 @@ msgstr ""
 "die Webseite des Moduls um herauszufinden, wohin Sie Übersetzungen senden "
 "können."
 
-#: common/views.py:36
+#: common/views.py:37
 msgid "translator-credits"
 msgstr ""
 "Andre Klapper <ak-47@gmx.net>\n"
@@ -1510,15 +1510,15 @@ msgstr ""
 "Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>"
 
-#: common/views.py:60
+#: common/views.py:61
 msgid "You have been logged out."
 msgstr "Sie wurden abgemeldet."
 
-#: common/views.py:68
+#: common/views.py:69
 msgid "You have been successfully logged in."
 msgstr "Sie haben sich erfolgreich angemeldet."
 
-#: common/views.py:70
+#: common/views.py:71
 #, python-format
 msgid ""
 "You have not joined any translation team yet. You can do it from <a href="
@@ -1527,21 +1527,21 @@ msgstr ""
 "Sie sind dem Übersetzungsteam noch nicht beigetreten. Sie können das über Ihr "
 "<a href=\"%(url)s\">Profil</a> tun."
 
-#: common/views.py:79
+#: common/views.py:80
 msgid "We're sorry, but your account has been disabled."
 msgstr "Ihr Konto wurde deaktiviert."
 
-#: common/views.py:81
+#: common/views.py:82
 msgid "Login unsuccessful. Please verify your username and password."
 msgstr ""
 "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihren Benutzernamen und Ihr "
 "Passwort."
 
-#: common/views.py:118
+#: common/views.py:119
 msgid "Sorry, the key you provided is not valid."
 msgstr "Die von Ihnen angegebene Schlüssel ist ungültig."
 
-#: common/views.py:120
+#: common/views.py:121
 msgid "Your account has been activated."
 msgstr "Ihr Konto wurde aktiviert."
 
@@ -1791,77 +1791,77 @@ msgstr ""
 "Eintrag für diese Sprache ist nicht in der Variable %(var)s in der Datei "
 "%(file)s vorhanden."
 
-#: stats/models.py:1165
+#: stats/models.py:1166
 msgid "Administration Tools"
 msgstr "Administrationswerkzeuge"
 
-#: stats/models.py:1166
+#: stats/models.py:1167
 msgid "Development Tools"
 msgstr "Entwicklungswerkzeuge"
 
-#: stats/models.py:1167
+#: stats/models.py:1168
 msgid "GNOME Desktop"
 msgstr "GNOME-Desktop"
 
-#: stats/models.py:1168
+#: stats/models.py:1169
 msgid "GNOME Developer Platform"
 msgstr "GNOME-Entwicklerplattform"
 
-#: stats/models.py:1169
+#: stats/models.py:1170
 msgid "New Module Proposals"
 msgstr "Neue Module (vorläufig)"
 
-#: stats/models.py:1316 stats/models.py:1657
+#: stats/models.py:1317 stats/models.py:1658
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1344
+#: stats/models.py:1345
 msgid "POT file unavailable"
 msgstr "POT-Datei ist nicht verfügbar"
 
-#: stats/models.py:1348
+#: stats/models.py:1349
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s String"
 msgstr[1] "%(count)s Strings"
 
-#: stats/models.py:1349
+#: stats/models.py:1350
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualisiert am %(date)s"
 
-#: stats/models.py:1351 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1352 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "d. F Y G:i O"
 
-#: stats/models.py:1354
+#: stats/models.py:1355
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s Abbildung"
 msgstr[1] "%(count)s Abbildungen"
 
-#: stats/models.py:1355
+#: stats/models.py:1356
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT-Datei (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1358
+#: stats/models.py:1359
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT-Datei (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1485
+#: stats/models.py:1486
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Diese POT-Datei wurde nicht mit der herkömmlichen Methode durch intltool "
 "erstellt."
 
-#: stats/models.py:1486
+#: stats/models.py:1487
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1887,23 +1887,23 @@ msgstr ""
 "Folgende Dateien werden entweder in POTFILES.in oder POTFILES.skip "
 "aufgelistet, existieren aber nicht: %s"
 
-#: stats/utils.py:193
+#: stats/utils.py:194
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s scheint kein gnome-doc-utils-Modul zu sein."
 
-#: stats/utils.py:196
+#: stats/utils.py:197
 #, python-format
 msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgstr ""
 "DOC_MODULE kann nicht zu einer echten Datei aufgelöst werden, es wird »%s."
 "xml« benutzt."
 
-#: stats/utils.py:204
+#: stats/utils.py:205
 msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgstr "DOC_MODULE zeigt nicht auf eine echte Datei, wahrscheinlich ein Makro."
 
-#: stats/utils.py:219
+#: stats/utils.py:220
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1914,56 +1914,56 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:303
+#: stats/utils.py:304
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO-Datei »%s« existiert nicht oder konnte nicht gelesen werden."
 
-#: stats/utils.py:323
+#: stats/utils.py:324
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr ""
 "PO-Datei »%s« bestand nicht die Prüfung durch msgfmt, daher keine "
 "Aktualisierung."
 
-#: stats/utils.py:325
+#: stats/utils.py:326
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Statistiken für POT-Datei »%s« konnten nicht erhalten werden."
 
-#: stats/utils.py:328
+#: stats/utils.py:329
 msgid "This PO file has an executable bit set."
 msgstr "Diese PO-Datei hat das Ausführbar-Bit gesetzt."
 
-#: stats/utils.py:356
+#: stats/utils.py:357
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "PO-Datei »%s« ist nicht als UTF-8 kodiert."
 
-#: stats/utils.py:366
+#: stats/utils.py:367
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Eintrag für diese Sprache ist nicht in der Datei LINGUAS vorhanden."
 
-#: stats/utils.py:384
+#: stats/utils.py:385
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "Für dieses Modul braucht die Datei oder Variable LINGUAS nicht bearbeitet zu "
 "werden"
 
-#: stats/utils.py:390
+#: stats/utils.py:391
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "Eintrag für diese Sprache ist nicht in ALL_LINGUAS in der Datei configure "
 "vorhanden."
 
-#: stats/utils.py:392
+#: stats/utils.py:393
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Es ist unbekannt, wo nach der Variable LINGUAS geschaut werden soll, bitte "
 "fragen Sie den Verwalter des Moduls."
 
-#: stats/utils.py:399
+#: stats/utils.py:400
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1971,7 +1971,7 @@ msgstr ""
 "Es ist unbekannt, wo nach der Variable DOC_LINGUAS geschaut werden soll, "
 "bitte fragen Sie den Verwalter des Moduls."
 
-#: stats/utils.py:401
+#: stats/utils.py:402
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Liste in DOC_LINGUAS enthält nicht diese Sprache."
 
@@ -2487,6 +2487,18 @@ msgstr "»Verdammte Lügen«-Administrator"
 msgid "No comment"
 msgstr "Kein Kommentar"
 
+#: templates/help/vertimus_workflow.html:4
+msgid "Help"
+msgstr "Hilfe"
+
+#: templates/help/vertimus_workflow.html:9
+msgid ""
+"The figure below describes the various states and actions available during "
+"the translation process of a module."
+msgstr ""
+"Die nachfolgende Abbildung stellt die verschiedenen Zustände und Aktionen "
+"während des Übersetzungsprozesses eines Moduls dar."
+
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:20
 #: templates/languages/language_release_summary.html:57
@@ -2935,20 +2947,20 @@ msgstr "diff erstellen zu:"
 msgid "No current actions."
 msgstr "Derzeit keine Aktionen."
 
-#: templates/vertimus/vertimus_detail.html:183
+#: templates/vertimus/vertimus_detail.html:186
 msgid "New Action"
 msgstr "Neue Aktion"
 
-#: templates/vertimus/vertimus_detail.html:193
+#: templates/vertimus/vertimus_detail.html:196
 msgid "Submit"
 msgstr "Abschicken"
 
-#: templates/vertimus/vertimus_detail.html:198
+#: templates/vertimus/vertimus_detail.html:201
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Sie müssen legitimiert und Mitglied des %(team_name)s-Teams sein."
 
-#: templates/vertimus/vertimus_detail.html:202
+#: templates/vertimus/vertimus_detail.html:205
 msgid "This team is not using the Vertimus translation workflow."
 msgstr ""
 "Dieses Team verwendet nicht Vertimus für die Verwaltung von Übersetzungen."
@@ -3108,8 +3120,8 @@ msgstr "Über Einbringung informieren"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
 #: vertimus/models.py:286
-msgid "Review required"
-msgstr "Überarbeitung ist erforderlich"
+msgid "Rework needed"
+msgstr "Neubearbeitung erforderlich"
 
 #: vertimus/models.py:287
 msgid "Archive the actions"
@@ -3185,6 +3197,9 @@ msgstr "Zuletzt eingespielte Datei für %(lang)s"
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
+
+#~ msgid "Review required"
+#~ msgstr "Überarbeitung ist erforderlich"
 
 #~ msgid "Criawips Manual"
 #~ msgstr "Criawips-Handbuch"
