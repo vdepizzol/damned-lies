@@ -5,19 +5,19 @@ from south.v2 import SchemaMigration
 from django.db import models
 
 class Migration(SchemaMigration):
-    
+
     def forwards(self, orm):
-        
+
         # Adding field 'Branch.file_hashes'
         db.add_column('branch', 'file_hashes', self.gf('common.fields.DictionaryField')(default='', blank=True), keep_default=False)
-    
-    
+
+
     def backwards(self, orm):
-        
+
         # Deleting field 'Branch.file_hashes'
         db.delete_column('branch', 'file_hashes')
-    
-    
+
+
     models = {
         'auth.group': {
             'Meta': {'object_name': 'Group'},
@@ -184,5 +184,5 @@ class Migration(SchemaMigration):
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['stats']

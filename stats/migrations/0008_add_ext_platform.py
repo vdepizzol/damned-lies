@@ -7,13 +7,13 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
+
         # Adding field 'Module.ext_platform'
         db.add_column('module', 'ext_platform', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
-        
+
         # Deleting field 'Module.ext_platform'
         db.delete_column('module', 'ext_platform')
 

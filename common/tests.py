@@ -46,7 +46,7 @@ class CommonTest(TestCase):
 
         self.t1 = Team(name='fr', description='French')
         self.t1.save()
-   
+
         self.t2 = Team(name='fr2', description='French')
         self.t2.save()
 
@@ -54,8 +54,8 @@ class CommonTest(TestCase):
         self.r1.save()
 
         self.r2 = Role(team=self.t2, person=self.pt)
-        self.r2.save() 
-        
+        self.r2.save()
+
 
     def test_activate_account(self):
         # Testing if is_active is False by default
@@ -65,14 +65,14 @@ class CommonTest(TestCase):
 
         self.newu = Person.objects.get(username='newuser')
         self.assertFalse(self.newu.is_active)
-        
+
         # Testing with a invalid activation key
         response = self.client.get('/register/activate/a_invalid_key')
-        self.assertContains(response, 'Sorry, the key you provided is not valid.')        
+        self.assertContains(response, 'Sorry, the key you provided is not valid.')
 
         response = self.client.get('/register/activate/%s' % self.newu.activation_key)
         self.assertContains(response,  'Your account has been activated.')
-        
+
         self.newu = Person.objects.get(username='newuser')
         self.assertTrue(self.newu.is_active)
 
@@ -85,7 +85,7 @@ class CommonTest(TestCase):
 
         # Testing if the non-activated accounts were deleted
         jn = Person.objects.filter(first_name='John', last_name='Note')
-        self.assertEqual(jn.count(), 1)       
+        self.assertEqual(jn.count(), 1)
 
         jr = Person.objects.filter(first_name='John', last_name='Reviewer')
         self.assertEqual(jr.count(), 0)
@@ -94,4 +94,3 @@ class CommonTest(TestCase):
         jt = Person.objects.get(first_name='John', last_name='Translator')
         for role in Role.objects.filter(person=jt):
             self.assertFalse(role.is_active)
-

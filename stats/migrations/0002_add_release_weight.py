@@ -5,21 +5,21 @@ from django.db import models
 from stats.models import *
 
 class Migration:
-    
+
     def forwards(self, orm):
-        
+
         # Adding field 'Release.weight'
         db.add_column('release', 'weight', orm['stats.release:weight'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting field 'Release.weight'
         db.delete_column('release', 'weight')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -173,5 +173,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['stats']

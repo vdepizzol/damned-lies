@@ -32,7 +32,7 @@ class Migration(DataMigration):
 
 
     models = {
-        
+
     }
 
     complete_apps = ['common']

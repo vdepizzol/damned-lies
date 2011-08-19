@@ -5,13 +5,13 @@ from django.db import models
 from teams.models import *
 
 class Migration:
-    
+
     depends_on = (
         ("people", "0001_initial"),
     )
 
     def forwards(self, orm):
-        
+
         # Adding model 'Team'
         db.create_table('team', (
             ('id', orm['teams.Team:id']),
@@ -22,7 +22,7 @@ class Migration:
             ('mailing_list_subscribe', orm['teams.Team:mailing_list_subscribe']),
         ))
         db.send_create_signal('teams', ['Team'])
-        
+
         # Adding model 'Role'
         db.create_table('role', (
             ('id', orm['teams.Role:id']),
@@ -31,25 +31,25 @@ class Migration:
             ('role', orm['teams.Role:role']),
         ))
         db.send_create_signal('teams', ['Role'])
-        
+
         # Creating unique_together for [team, person] on Role.
         db.create_unique('role', ['team_id', 'person_id'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting unique_together for [team, person] on Role.
         db.delete_unique('role', ['team_id', 'person_id'])
-        
+
         # Deleting model 'Team'
         db.delete_table('team')
-        
+
         # Deleting model 'Role'
         db.delete_table('role')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -113,5 +113,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['teams']

@@ -5,9 +5,9 @@ from django.db import models
 from people.models import *
 
 class Migration:
-    
+
     def forwards(self, orm):
-        
+
         # Adding model 'Person'
         db.create_table('person', (
             ('user_ptr', orm['people.Person:user_ptr']),
@@ -19,16 +19,16 @@ class Migration:
             ('activation_key', orm['people.Person:activation_key']),
         ))
         db.send_create_signal('people', ['Person'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting model 'Person'
         db.delete_table('person')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -75,5 +75,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['people']

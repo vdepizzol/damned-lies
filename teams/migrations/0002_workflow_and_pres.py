@@ -5,27 +5,27 @@ from django.db import models
 from teams.models import *
 
 class Migration:
-    
+
     def forwards(self, orm):
-        
+
         # Adding field 'Team.presentation'
         db.add_column('team', 'presentation', orm['teams.team:presentation'])
-        
+
         # Adding field 'Team.use_workflow'
         db.add_column('team', 'use_workflow', orm['teams.team:use_workflow'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting field 'Team.presentation'
         db.delete_column('team', 'presentation')
-        
+
         # Deleting field 'Team.use_workflow'
         db.delete_column('team', 'use_workflow')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -91,5 +91,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['teams']

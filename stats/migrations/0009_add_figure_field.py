@@ -7,7 +7,7 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
+
         # Deleting field 'PoFile.num_figures'
         db.delete_column('pofile', 'num_figures')
 
@@ -19,7 +19,7 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        
+
         # Adding field 'PoFile.num_figures'
         db.add_column('pofile', 'num_figures', self.gf('django.db.models.fields.IntegerField')(default=0), keep_default=False)
 

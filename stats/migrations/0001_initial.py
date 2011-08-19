@@ -5,9 +5,9 @@ from django.db import models
 from stats.models import *
 
 class Migration:
-    
+
     def forwards(self, orm):
-        
+
         # Adding model 'Category'
         db.create_table('category', (
             ('id', orm['stats.Category:id']),
@@ -16,7 +16,7 @@ class Migration:
             ('name', orm['stats.Category:name']),
         ))
         db.send_create_signal('stats', ['Category'])
-        
+
         # Adding model 'Release'
         db.create_table('release', (
             ('id', orm['stats.Release:id']),
@@ -26,7 +26,7 @@ class Migration:
             ('status', orm['stats.Release:status']),
         ))
         db.send_create_signal('stats', ['Release'])
-        
+
         # Adding model 'Statistics'
         db.create_table('statistics', (
             ('id', orm['stats.Statistics:id']),
@@ -40,7 +40,7 @@ class Migration:
             ('num_figures', orm['stats.Statistics:num_figures']),
         ))
         db.send_create_signal('stats', ['Statistics'])
-        
+
         # Adding model 'InformationArchived'
         db.create_table('information_archived', (
             ('id', orm['stats.InformationArchived:id']),
@@ -49,7 +49,7 @@ class Migration:
             ('description', orm['stats.InformationArchived:description']),
         ))
         db.send_create_signal('stats', ['InformationArchived'])
-        
+
         # Adding model 'Branch'
         db.create_table('branch', (
             ('id', orm['stats.Branch:id']),
@@ -58,7 +58,7 @@ class Migration:
             ('module', orm['stats.Branch:module']),
         ))
         db.send_create_signal('stats', ['Branch'])
-        
+
         # Adding model 'Domain'
         db.create_table('domain', (
             ('id', orm['stats.Domain:id']),
@@ -71,7 +71,7 @@ class Migration:
             ('linguas_location', orm['stats.Domain:linguas_location']),
         ))
         db.send_create_signal('stats', ['Domain'])
-        
+
         # Adding model 'StatisticsArchived'
         db.create_table('statistics_archived', (
             ('id', orm['stats.StatisticsArchived:id']),
@@ -86,7 +86,7 @@ class Migration:
             ('untranslated', orm['stats.StatisticsArchived:untranslated']),
         ))
         db.send_create_signal('stats', ['StatisticsArchived'])
-        
+
         # Adding model 'Information'
         db.create_table('information', (
             ('id', orm['stats.Information:id']),
@@ -95,7 +95,7 @@ class Migration:
             ('description', orm['stats.Information:description']),
         ))
         db.send_create_signal('stats', ['Information'])
-        
+
         # Adding model 'Module'
         db.create_table('module', (
             ('id', orm['stats.Module:id']),
@@ -111,68 +111,68 @@ class Migration:
             ('vcs_web', orm['stats.Module:vcs_web']),
         ))
         db.send_create_signal('stats', ['Module'])
-        
+
         # Adding ManyToManyField 'Module.maintainers'
         db.create_table('module_maintainer', (
             ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
             ('module', models.ForeignKey(orm.Module, null=False)),
             ('person', models.ForeignKey(orm['people.Person'], null=False))
         ))
-        
+
         # Creating unique_together for [name, module] on Branch.
         db.create_unique('branch', ['name', 'module_id'])
-        
+
         # Creating unique_together for [branch, domain, language] on Statistics.
         db.create_unique('statistics', ['branch_id', 'domain_id', 'language_id'])
-        
+
         # Creating unique_together for [release, branch] on Category.
         db.create_unique('category', ['release_id', 'branch_id'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting unique_together for [release, branch] on Category.
         db.delete_unique('category', ['release_id', 'branch_id'])
-        
+
         # Deleting unique_together for [branch, domain, language] on Statistics.
         db.delete_unique('statistics', ['branch_id', 'domain_id', 'language_id'])
-        
+
         # Deleting unique_together for [name, module] on Branch.
         db.delete_unique('branch', ['name', 'module_id'])
-        
+
         # Deleting model 'Category'
         db.delete_table('category')
-        
+
         # Deleting model 'Release'
         db.delete_table('release')
-        
+
         # Deleting model 'Statistics'
         db.delete_table('statistics')
-        
+
         # Deleting model 'InformationArchived'
         db.delete_table('information_archived')
-        
+
         # Deleting model 'Branch'
         db.delete_table('branch')
-        
+
         # Deleting model 'Domain'
         db.delete_table('domain')
-        
+
         # Deleting model 'StatisticsArchived'
         db.delete_table('statistics_archived')
-        
+
         # Deleting model 'Information'
         db.delete_table('information')
-        
+
         # Deleting model 'Module'
         db.delete_table('module')
-        
+
         # Dropping ManyToManyField 'Module.maintainers'
         db.delete_table('module_maintainer')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -325,5 +325,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['stats']

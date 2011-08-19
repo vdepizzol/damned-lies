@@ -4,13 +4,13 @@ from django.db import models
 from languages.models import *
 
 class Migration:
-    
+
     depends_on = (
         ("teams", "0001_initial"),
     )
 
     def forwards(self, orm):
-        
+
         # Adding model 'Language'
         db.create_table('language', (
             ('id', orm['languages.Language:id']),
@@ -20,16 +20,16 @@ class Migration:
             ('plurals', orm['languages.Language:plurals']),
         ))
         db.send_create_signal('languages', ['Language'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting model 'Language'
         db.delete_table('language')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -94,5 +94,5 @@ class Migration:
             'webpage_url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['languages']

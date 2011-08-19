@@ -5,9 +5,9 @@ from django.db import models
 from vertimus.models import *
 
 class Migration:
-    
+
     def forwards(self, orm):
-        
+
         # Adding model 'StateDb'
         db.create_table('state', (
             ('id', orm['vertimus.StateDb:id']),
@@ -19,7 +19,7 @@ class Migration:
             ('updated', orm['vertimus.StateDb:updated']),
         ))
         db.send_create_signal('vertimus', ['StateDb'])
-        
+
         # Adding model 'ActionDbArchived'
         db.create_table('action_archived', (
             ('id', orm['vertimus.ActionDbArchived:id']),
@@ -32,7 +32,7 @@ class Migration:
             ('sequence', orm['vertimus.ActionDbArchived:sequence']),
         ))
         db.send_create_signal('vertimus', ['ActionDbArchived'])
-        
+
         # Adding model 'ActionDb'
         db.create_table('action', (
             ('id', orm['vertimus.ActionDb:id']),
@@ -44,28 +44,28 @@ class Migration:
             ('file', orm['vertimus.ActionDb:file']),
         ))
         db.send_create_signal('vertimus', ['ActionDb'])
-        
+
         # Creating unique_together for [branch, domain, language] on StateDb.
         db.create_unique('state', ['branch_id', 'domain_id', 'language_id'])
-        
-    
-    
+
+
+
     def backwards(self, orm):
-        
+
         # Deleting unique_together for [branch, domain, language] on StateDb.
         db.delete_unique('state', ['branch_id', 'domain_id', 'language_id'])
-        
+
         # Deleting model 'StateDb'
         db.delete_table('state')
-        
+
         # Deleting model 'ActionDbArchived'
         db.delete_table('action_archived')
-        
+
         # Deleting model 'ActionDb'
         db.delete_table('action')
-        
-    
-    
+
+
+
     models = {
         'auth.group': {
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -194,5 +194,5 @@ class Migration:
             'updated': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'auto_now_add': 'True', 'blank': 'True'})
         }
     }
-    
+
     complete_apps = ['vertimus']

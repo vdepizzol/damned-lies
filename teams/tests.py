@@ -74,10 +74,10 @@ class TeamTest(TeamsAndRolesTests):
         role = Role.objects.get(person=self.pc, team=t)
         role.is_active = False
         role.save()
-    
+
         members = self.t.get_members_by_role_exact('committer')
         self.assertEqual(len(members), 0)
-        
+
     def test_get_inactive_members(self):
         members = self.t.get_inactive_members()
         self.assertEqual(len(members), 0)
@@ -86,11 +86,11 @@ class TeamTest(TeamsAndRolesTests):
         role = Role.objects.get(person=self.pc, team=t)
         role.is_active = False
         role.save()
-        
+
         members = self.t.get_inactive_members()
         self.assertEqual(len(members), 1)
         self.assertEqual(members[0], self.pc)
-    
+
     def run_roles_exact_test(self, team):
         pcoo = team.get_coordinator()
         self.assertEqual(pcoo, self.pcoo)
@@ -215,6 +215,5 @@ class RoleTest(TeamsAndRolesTests):
 
         self.assertTrue(self.role.is_active)
         self.assertTrue(self.role2.is_active)
-        self.assertTrue(self.role_limit_date.is_active)         
+        self.assertTrue(self.role_limit_date.is_active)
         self.assertFalse(self.role_inactive.is_active)
-

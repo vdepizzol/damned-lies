@@ -215,7 +215,7 @@ class VertimusTest(TeamsAndRolesTests):
         role = Role.objects.get(person=self.pt, team=self.l.team)
         role.is_active = False
         role.save()
-        
+
         state = StateTranslating(branch=self.b, domain=self.d, language=self.l, person=self.pt)
         state.save()
 

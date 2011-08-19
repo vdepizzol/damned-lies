@@ -7,7 +7,7 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
+
         # Adding field 'ActionArchived.merged_file'
         db.add_column('action_archived', 'merged_file', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['stats.PoFile'], unique=True, null=True), keep_default=False)
 
@@ -16,7 +16,7 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        
+
         # Deleting field 'ActionArchived.merged_file'
         db.delete_column('action_archived', 'merged_file_id')
 

@@ -196,7 +196,7 @@ class Team(models.Model):
     def get_inactive_members(self):
         """ Return the inactive members """
         members = list(Person.objects.filter(role__team__id=self.id,
-                                             role__is_active=False)) 
+                                             role__is_active=False))
         return members
 
     def send_mail_to_coordinator(self, subject, message, messagekw={}):
