@@ -26,7 +26,7 @@ from subprocess import Popen, PIPE
 import errno
 
 try:
-    from translate.tools import pogrep
+    from translate.tools import pogrep, pocount
     has_toolkit = True
 except ImportError:
     has_toolkit = False
@@ -290,6 +290,9 @@ def po_file_stats(pofile, msgfmt_checks=True):
         'translated' : 0,
         'fuzzy' : 0,
         'untranslated' : 0,
+        'translated_words': 0,
+        'fuzzy_words': 0,
+        'untranslated_words': 0,
         'errors' : [],
         }
     c_env = {"LC_ALL": "C", "LANG": "C", "LANGUAGE": "C"}
@@ -302,6 +305,13 @@ def po_file_stats(pofile, msgfmt_checks=True):
             return res
         input_data = None
         input_file = pofile
+
+        if has_toolkit:
+            status = pocount.calcstats(pofile)
+            res['fuzzy_words'] = status['fuzzysourcewords']
+            res['translated_words'] = status['translatedsourcewords']
+            res['untranslated_words'] = status['untranslatedsourcewords']
+
     elif isinstance(pofile, File):
         filename = pofile.name
         input_data = pofile.read()
