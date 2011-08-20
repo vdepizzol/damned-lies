@@ -8,51 +8,52 @@
 
 <h1>{% trans "Damned Lies about GNOME" %}</h1>
 
-<table><tr><td width="50%" valign="top">
-
-<h2><a href="{% url teams %}">{% trans "Teams" %}</a></h2>
-<p>{% trans "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information." %}
+<div class="bloc50">
+  <h2><a href="{% url teams %}">{% trans "Teams" %}</a></h2>
+  <p>{% trans "List of all GNOME Translation Teams, with full information such as primary contact (coordinator), web pages and mailing list information." %}
   {% trans "If there is no team for your language, you can easily <a href='http://live.gnome.org/TranslationProject/StartingATeam/'>start your own team</a>." %}
-{% if user_language %}
-  {% with user_language.get_team_url as team_url %}
-  {% with user_language.get_name as language_name %}
-  <br /><strong>{% blocktrans %}Go to the <a href='{{ team_url }}'>{{ language_name }} team page</a> and help us to translate GNOME!{% endblocktrans %}</strong>
-  {% endwith %}
-  {% endwith %}
-{% endif %}
-</p>
+  {% if user_language %}
+    {% with user_language.get_team_url as team_url %}
+    {% with user_language.get_name as language_name %}
+    <br><strong>{% blocktrans %}Go to the <a href='{{ team_url }}'>{{ language_name }} team page</a> and help us to translate GNOME!{% endblocktrans %}</strong>
+    {% endwith %}
+    {% endwith %}
+  {% endif %}
+  </p>
+</div>
 
-</td><td valign="top">
-
-<h2><a href="{% url languages %}">{% trans "Languages" %}</a></h2>
-{% url teams as teams_url %}
-<p>{% blocktrans %}List of all languages there are <a href='{{ teams_url }}'>Translation Teams</a> for.{% endblocktrans %}
+<div class="bloc50">
+  <h2><a href="{% url languages %}">{% trans "Languages" %}</a></h2>
+  {% url teams as teams_url %}
+  <p>{% blocktrans %}List of all languages there are <a href='{{ teams_url }}'>Translation Teams</a> for.{% endblocktrans %}
   {% trans "Some teams manage more than one language (usually just simple variants), and here you can see all the languages GNOME is being translated to." %}</p>
+</div>
 
-</td></tr><tr><td valign="top">
+<div class="bloc50 reset">
+  <h2><a href="{% url releases %}">{% trans "Release Sets" %}</a></h2>
+  <p>{% trans "List of all GNOME release sets and releases we gather stats for." %}</p>
 
-<h2><a href="{% url releases %}">{% trans "Release Sets" %}</a></h2>
-<p>{% trans "List of all GNOME release sets and releases we gather stats for." %}</p>
-
-<p>{% trans "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME 2.26&quot;." %}
+  <p>{% trans "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME 2.26&quot;." %}
   {% trans "Official GNOME release sets are further divided into categories such as &quot;Desktop Applications&quot; and &quot;Developer Platform&quot;." %}</p>
 
-<p>{% trans "Look here if you want to compare language support in any of these release sets." %}</p>
-</td><td valign="top">
+  <p>{% trans "Look here if you want to compare language support in any of these release sets." %}</p>
+</div>
 
-<h2><a href="{% url modules %}">{% trans "Modules" %}</a></h2>
-<p>{% trans "List of all modules with statistics in here." %}</p>
+<div class="bloc50">
+  <h2><a href="{% url modules %}">{% trans "Modules" %}</a></h2>
+  <p>{% trans "List of all modules with statistics in here." %}</p>
 
-<p>{% trans "Modules are separate libraries or applications, with one or more branches of development included." %}
+  <p>{% trans "Modules are separate libraries or applications, with one or more branches of development included." %}
   {% trans "They are usually taken from the Git repository, and we keep all relevant information on them (Bugzilla details, web page, maintainer information,...)." %}</p>
+</div>
 
-</td></tr></table>
-
+<div class="reset">
 {% if translator_credits %}
-<p class="footnote">
-  {% trans "Translated by:" %} {{ translator_credits|join:", " }}
-</p>
+  <p class="footnote">
+    {% trans "Translated by:" %} {{ translator_credits|join:", " }}
+  </p>
 {% endif %}
+</div>
 
 </div>
 {% endblock %}

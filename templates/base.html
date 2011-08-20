@@ -1,18 +1,16 @@
 {% load i18n %}
 {% load stats_extras %}
-<!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta charset="UTF-8">
   <title>{% block title %}page title{% endblock %}</title>
-  <link rel="icon" type="image/png" href="/media/img/foot-16.png"/>
-  <link rel="stylesheet" href="/media/css/main.css"/>
-  <link rel="stylesheet" href="/media/css/layout.css"/>
-  <link rel="stylesheet" href="/media/css/style.css"/>
+  <link rel="icon" type="image/png" href="/media/img/foot-16.png">
+  <link rel="stylesheet" href="/media/css/main.css">
+  <link rel="stylesheet" href="/media/css/layout.css">
+  <link rel="stylesheet" href="/media/css/style.css">
 {% if LANGUAGE_BIDI %}
-  <link rel="stylesheet" href="/media/css/rtl.css"/>
+  <link rel="stylesheet" href="/media/css/rtl.css">
 {% endif %}
   <script type="text/javascript" src="{{ MEDIA_URL }}js/main.js"></script>
   <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script>
@@ -69,9 +67,9 @@
   <div id="authenticated">
     {% if user.is_authenticated %}
     <form action="{% url login %}" method="post">
-      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person"/>&nbsp;{{ user.person }}</a> &bull;
-      <input type="hidden" name="logout" value="1" />
-      <input type="submit" value="{% trans 'Log out' %}" />
+      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person">&nbsp;{{ user.person }}</a> &bull;
+      <input type="hidden" name="logout" value="1">
+      <input type="submit" value="{% trans 'Log out' %}">
     </form>
     {% else %}
     <a href="{% url login %}">{% trans "Log in" %}</a>
@@ -92,9 +90,9 @@
 
   <div id="footer">
     {% trans "Copyright &copy; 2006-2009" %} <a href="http://www.gnome.org/">{% trans "The GNOME Project" %}</a>.
-    <br />
-{% trans "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>" %}
- <br />
+    <br>
+    {% trans "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>" %}
+    <br>
     {% blocktrans with "<a href='http://www.canonical.com/'>Canonical</a>" as link %}Hosted by {{ link }}.{% endblocktrans %}
   </div>
 
