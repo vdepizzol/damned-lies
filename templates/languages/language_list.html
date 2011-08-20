@@ -22,7 +22,7 @@
       <li>
         <a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a>
         <a href="/rss/languages/{{ lang.locale }}">
-          <img width="10" height="10" border="0" src="{{ MEDIA_URL }}img/feed-icon-10x10.png"/>
+          <img width="10" height="10" border="0" src="{{ MEDIA_URL }}img/feed-icon-10x10.png" alt="{% blocktrans %}RSS feed for {{ lang.get_name }}{% endblocktrans %}"/>
         </a>
       </li>
       {% endfor %}
