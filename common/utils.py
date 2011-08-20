@@ -22,6 +22,7 @@
 import operator
 from django.conf import settings
 from django.utils.translation import ugettext as _, get_language
+from languages.models import Language
 try:
     import PyICU
     pyicu_present = True
@@ -165,6 +166,12 @@ def imerge_sorted_by_field(object_list1, object_list2, field):
 
 def is_site_admin(user):
     return user.is_superuser or settings.ADMIN_GROUP in [g.name for g in user.groups.all()]
+
+def get_user_locale(request):
+    curlang = Language.get_language_from_ianacode(request.LANGUAGE_CODE)
+    if curlang and curlang.locale == 'en':
+        curlang = None
+    return curlang
 
 if __name__ == "__main__":
     import doctest

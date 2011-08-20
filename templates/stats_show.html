@@ -54,7 +54,14 @@
     {% for line in stat %}
     {% if not forloop.first %}
     <tr>
-      <td class="leftcell"><a href="{% url vertimus_by_names module.name,branch.name,pot_stat.domain.name,line.language.locale %}">{{ line.get_lang }}</a>
+      <td class="leftcell">
+        <a href="{% url vertimus_by_names module.name,branch.name,pot_stat.domain.name,line.language.locale %}">
+          {% if user_language.locale == line.language.locale %}
+            <b>{{ line.get_lang }}</b>
+          {% else %}
+            {{ line.get_lang }}
+          {% endif %}
+        </a>
         {% with line.most_important_message as msg %}
         {% if msg %}
         <img src="{{ msg.get_icon }}" title="{{ msg.get_description }}" alt="{{ msg.type }}" />

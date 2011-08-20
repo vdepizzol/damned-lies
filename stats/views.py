@@ -28,7 +28,7 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 
-from common.utils import MIME_TYPES
+from common.utils import MIME_TYPES, get_user_locale
 from stats.models import Statistics, FakeLangStatistics, Module, Branch, Category, Release
 from stats.forms import ModuleBranchForm
 from stats import utils
@@ -63,6 +63,7 @@ def module(request, module_name):
         'branches': branches,
         'non_standard_repo_msg' : _(settings.VCS_HOME_WARNING),
         'can_edit_branches': mod.can_edit_branches(request.user),
+        'user_language': get_user_locale(request)
     }
     return render(request, 'module_detail.html', context)
 
@@ -255,6 +256,7 @@ def release(request, release_name, format='html'):
                                   content_type=MIME_TYPES[format])
     context = {
         'pageSection': "releases",
+        'user_language': get_user_locale(request),
         'release': release
     }
     return render(request, 'release_detail.html', context)

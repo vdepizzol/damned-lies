@@ -31,6 +31,7 @@ from people.models import Person
 from teams.models import Role
 from people.forms import RegistrationForm
 from languages.models import Language
+from common.utils import get_user_locale
 
 def index(request):
     """ Homepage view """
@@ -40,9 +41,7 @@ def index(request):
     else:
         translator_credits = translator_credits.split('\n')
 
-    curlang = Language.get_language_from_ianacode(request.LANGUAGE_CODE)
-    if curlang and curlang.locale == 'en':
-        curlang = None
+    curlang = get_user_locale(request)
 
     context = {
         'pageSection': 'home',
