@@ -35,6 +35,14 @@ table.stats {
   color: black;
 }
 
+.stats td.counter {
+  background-color: transparent;
+  border-bottom: 1px solid #f0f0f0;
+  color: gray;
+  font-size: 80%;
+  font-style: italic;
+}
+
 .stats td.leftcell {
   text-align: left;
 }

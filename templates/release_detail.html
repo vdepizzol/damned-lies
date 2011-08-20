@@ -16,6 +16,7 @@
 <table class="stats">
   <thead>
     <tr>
+      <th style="background-color:transparent;"></th>
       <th>{% trans "Language" %}</th>
       <th>{% trans "User Interface" %}</th>
       <th>{% trans "Graph" %}</th>
@@ -27,6 +28,7 @@
 
 {% for lstats in release.get_global_stats %}
 <tr>
+  <td class="counter">{{ forloop.counter }}</td>
   <td class="leftcell">
     <a href="{% url team_slug lstats.lang_locale %}">
       {% if user_language.locale == lstats.lang_locale  %}
@@ -72,10 +74,11 @@
 
 </tr>
 {% endfor %}
-<tr><td colspan="5"><hr></td></tr>
-<tr><td class="leftcell"><i><small>{% trans "Original strings" %}</small></i></td>
-    <td><i><small><a href="{% url language_release "C" release.name "ui" %}">{% trans "User Interface" %}</a></small></i></td><td></td>
-    <td><i><small><a href="{% url language_release "C" release.name "doc" %}">{% trans "Documentation" %}</a></small></i></td><td></td>
+<tr><td class="counter"><td colspan="6"><hr></td></tr>
+<tr><td class="counter"></td>
+    <td class="leftcell"><i><small>{% trans "Original strings" %}</small></i></td>
+    <td colspan="3"><i><small><a href="{% url language_release "C" release.name "ui" %}">{% trans "User Interface" %}</a></small></i></td>
+    <td colspan="2"><i><small><a href="{% url language_release "C" release.name "doc" %}">{% trans "Documentation" %}</a></small></i></td>
 </tr>
 </table>
 
