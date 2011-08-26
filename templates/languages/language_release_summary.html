@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n stats_extras %}
 {% comment %}
 Following variables should be set:
    lang : current language
@@ -22,31 +22,21 @@ Following variables should be set:
       </td>
 
     <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"ui" %}">
-        {{ stat.uitransperc }}% ({{ stat.uitrans }}/{{ stat.uifuzzy }}/{{ stat.uiuntrans }})</a>
+        {{ stat.ui|num_stats }}</a>
     </td>
-    <td style="width: 108px; text-align: center;"><div class="graph">
-      <div class="translated" style="width:{{ stat.uitransperc }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.uitransperc }}px; width:{{ stat.uifuzzyperc }}px;"></div>
-      {% with stat.uitransperc|add:stat.uifuzzyperc as upos %}
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.uiuntransperc }}px;"></div>
-      {% endwith %}
-      </div>
+    <td style="width: 108px; text-align: center;">
+        <div class="graph">{{ stat.ui|vis_stats }}</div>
     </td>
     <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"ui-part" %}">
-        {{ stat.uitransperc_part }}% ({{ stat.uitrans_part }}/{{ stat.uifuzzy_part }}/{{ stat.uiuntrans_part }})</a>
+        {{ stat.ui_part|num_stats }}</a>
     </td>
 
-    {% if stat.doctotal %}
+    {% if stat.doc.total %}
       <td class="stats_numb"><a href="{% url language_release lang.locale,stat.name,"doc" %}">
-          {{ stat.doctransperc }}% ({{ stat.doctrans }}/{{ stat.docfuzzy }}/{{ stat.docuntrans }})</a>
+          {{ stat.doc|num_stats }}</a>
       </td>
-      <td style="width: 108px; text-align: center;"><div class="graph">
-        <div class="translated" style="width:{{ stat.doctransperc }}px;"></div>
-        <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ stat.doctransperc }}px; width:{{ stat.docfuzzyperc }}px;"></div>
-        {% with stat.doctransperc|add:stat.docfuzzyperc as upos %}
-        <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width:{{ stat.docuntransperc }}px;"></div>
-        {% endwith %}
-        </div>
+      <td style="width: 108px; text-align: center;">
+          <div class="graph">{{ stat.doc|vis_stats }}</div>
       </td>
     {% else %}
       <td>-</td><td></td>
@@ -54,8 +44,8 @@ Following variables should be set:
     </tr>
   {% endfor %}
   {% if show_all_modules_line %}
-  <tr><td></td><td><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
-      <td></td><td><a href="{% url language_all lang.locale,"ui-part" %}">{% trans "All modules" %}</a></td>
-      <td><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
+  <tr style="border-top: 1px solid gray;"><td></td><td class="stats_numb"><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
+      <td></td><td class="stats_numb"><a href="{% url language_all lang.locale,"ui-part" %}">{% trans "All modules" %}</a></td>
+      <td class="stats_numb"><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
   {% endif %}
 </table>

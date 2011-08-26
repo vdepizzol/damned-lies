@@ -1018,43 +1018,45 @@ class Release(models.Model):
         cursor = connection.cursor()
         cursor.execute(query, (lang.id, self.id))
         stats = {'id': self.id, 'name': self.name, 'description': _(self.description),
-                 'uitrans': 0, 'uifuzzy': 0, 'uitotal': total_ui,
-                 'uitrans_part': 0, 'uifuzzy_part': 0,
-                 'doctrans': 0, 'docfuzzy': 0, 'doctotal': total_doc,
-                 'uitransperc': 0, 'uifuzzyperc': 0, 'uiuntransperc': 0,
-                 'uitransperc_part': 0, 'uifuzzyperc_part': 0, 'uiuntransperc_part': 0,
-                 'doctransperc': 0, 'docfuzzyperc': 0, 'docuntransperc': 0}
+                 'ui':  {'translated': 0, 'fuzzy': 0, 'total': total_ui,
+                         'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 0,
+                        },
+                 'ui_part': {'translated': 0, 'fuzzy': 0, 'total': total_ui_part,
+                         'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 0,
+                        },
+                 'doc': {'translated': 0, 'fuzzy': 0, 'total': total_doc,
+                         'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 0
+                        },
+                }
         for res in cursor.fetchall():
             if res[0] == 'ui':
-                stats['uitrans'] = res[1]
-                stats['uifuzzy'] = res[2]
-                stats['uitrans_part'] = res[3]
-                stats['uifuzzy_part'] = res[4]
+                stats['ui']['translated'] = res[1]
+                stats['ui']['fuzzy'] = res[2]
+                stats['ui_part']['translated'] = res[3]
+                stats['ui_part']['fuzzy'] = res[4]
             if res[0] == 'doc':
-                stats['doctrans'] = res[1]
-                stats['docfuzzy'] = res[2]
-        stats['uitotal_part'] = total_ui_part
-        stats['uiuntrans'] = total_ui - (stats['uitrans'] + stats['uifuzzy'])
-        stats['uiuntrans_part'] = total_ui_part - (stats['uitrans_part'] + stats['uifuzzy_part'])
+                stats['doc']['translated'] = res[1]
+                stats['doc']['fuzzy'] = res[2]
+        stats['ui']['untranslated'] = total_ui - (stats['ui']['translated'] + stats['ui']['fuzzy'])
+        stats['ui_part']['untranslated'] = total_ui_part - (stats['ui_part']['translated'] + stats['ui_part']['fuzzy'])
         if total_ui > 0:
-            stats['uitransperc'] = int(100*stats['uitrans']/total_ui)
-            stats['uifuzzyperc'] = int(100*stats['uifuzzy']/total_ui)
-            stats['uiuntransperc'] = int(100*stats['uiuntrans']/total_ui)
+            stats['ui']['translated_perc'] = int(100*stats['ui']['translated']/total_ui)
+            stats['ui']['fuzzy_perc'] = int(100*stats['ui']['fuzzy']/total_ui)
+            stats['ui']['untranslated_perc'] = int(100*stats['ui']['untranslated']/total_ui)
         if total_ui_part > 0:
-            stats['uitransperc_part'] = int(100*stats['uitrans_part']/total_ui_part)
-            stats['uifuzzyperc_part'] = int(100*stats['uifuzzy_part']/total_ui_part)
-            stats['uiuntransperc_part'] = int(100*stats['uiuntrans_part']/total_ui_part)
-        stats['docuntrans'] = total_doc - (stats['doctrans'] + stats['docfuzzy'])
+            stats['ui_part']['translated_perc'] = int(100*stats['ui_part']['translated']/total_ui_part)
+            stats['ui_part']['fuzzy_perc'] = int(100*stats['ui_part']['fuzzy']/total_ui_part)
+            stats['ui_part']['untranslated_perc'] = int(100*stats['ui_part']['untranslated']/total_ui_part)
+        stats['doc']['untranslated'] = total_doc - (stats['doc']['translated'] + stats['doc']['fuzzy'])
         if total_doc > 0:
-            stats['doctransperc'] = int(100*stats['doctrans']/total_doc)
-            stats['docfuzzyperc'] = int(100*stats['docfuzzy']/total_doc)
-            stats['docuntransperc'] = int(100*stats['docuntrans']/total_doc)
+            stats['doc']['translated_perc'] = int(100*stats['doc']['translated']/total_doc)
+            stats['doc']['fuzzy_perc'] = int(100*stats['doc']['fuzzy']/total_doc)
+            stats['doc']['untranslated_perc'] = int(100*stats['doc']['untranslated']/total_doc)
         return stats
 
     def get_global_stats(self):
         """ Get statistics for all languages in a release, grouped by language
-            Returns a sorted list: (language, doc_trans, doc_fuzzy,
-            doc_untrans, ui_trans, ui_fuzzy, ui_untrans) """
+            Returns a sorted list: (language name and locale, ui, ui-part and doc stats dictionaries) """
 
         query = """
             SELECT MIN(lang.name),
@@ -1091,33 +1093,36 @@ class Release(models.Model):
                 # Initialize stats dict
                 stats[locale] = {
                     'lang_name': lang_name, 'lang_locale': locale,
-                    'doc_trans': 0, 'doc_fuzzy': 0, 'doc_untrans': total_docstrings,
-                    'doc_percent': 0, 'doc_percentfuzzy': 0, 'doc_percentuntrans': 100,
-                    'ui_trans': 0, 'ui_fuzzy': 0, 'ui_untrans': total_uistrings,
-                    'ui_percent': 0, 'ui_percentfuzzy': 0, 'ui_percentuntrans': 100}
+                    'ui' : {'translated': 0, 'fuzzy': 0, 'untranslated': total_uistrings,
+                            'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 100},
+                    'ui_part' : {'translated': 0, 'fuzzy': 0, 'untranslated': total_uistrings_part[locale],
+                            'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 100},
+                    'doc': {'translated': 0, 'fuzzy': 0, 'untranslated': total_docstrings,
+                            'translated_perc': 0, 'fuzzy_perc': 0, 'untranslated_perc': 100,},
+                }
             if dtype == 'doc':
-                stats[locale]['doc_trans'] = trans
-                stats[locale]['doc_fuzzy'] = fuzzy
-                stats[locale]['doc_untrans'] = total_docstrings - (trans + fuzzy)
+                stats[locale]['doc']['translated'] = trans
+                stats[locale]['doc']['fuzzy'] = fuzzy
+                stats[locale]['doc']['untranslated'] = total_docstrings - (trans + fuzzy)
                 if total_docstrings > 0:
-                    stats[locale]['doc_percent'] = int(100*trans/total_docstrings)
-                    stats[locale]['doc_percentfuzzy'] = int(100*fuzzy/total_docstrings)
-                    stats[locale]['doc_percentuntrans'] = int(100*stats[locale]['doc_untrans']/total_docstrings)
+                    stats[locale]['doc']['translated_perc'] = int(100*trans/total_docstrings)
+                    stats[locale]['doc']['fuzzy_perc'] = int(100*fuzzy/total_docstrings)
+                    stats[locale]['doc']['untranslated_perc'] = int(100*stats[locale]['doc']['untranslated']/total_docstrings)
             if dtype == 'ui':
-                stats[locale]['ui_trans'] = trans
-                stats[locale]['ui_fuzzy'] = fuzzy
-                stats[locale]['ui_untrans'] = total_uistrings - (trans + fuzzy)
-                stats[locale]['ui_trans_part'] = trans_p
-                stats[locale]['ui_fuzzy_part'] = fuzzy_p
-                stats[locale]['ui_untrans_part'] = total_uistrings_part[locale] - (trans_p + fuzzy_p)
+                stats[locale]['ui']['translated'] = trans
+                stats[locale]['ui']['fuzzy'] = fuzzy
+                stats[locale]['ui']['untranslated'] = total_uistrings - (trans + fuzzy)
+                stats[locale]['ui_part']['translated'] = trans_p
+                stats[locale]['ui_part']['fuzzy'] = fuzzy_p
+                stats[locale]['ui_part']['untranslated'] = total_uistrings_part[locale] - (trans_p + fuzzy_p)
                 if total_uistrings > 0:
-                    stats[locale]['ui_percent'] = int(100*trans/total_uistrings)
-                    stats[locale]['ui_percentfuzzy'] = int(100*fuzzy/total_uistrings)
-                    stats[locale]['ui_percentuntrans'] = int(100*stats[locale]['ui_untrans']/total_uistrings)
+                    stats[locale]['ui']['translated_perc'] = int(100*trans/total_uistrings)
+                    stats[locale]['ui']['fuzzy_perc'] = int(100*fuzzy/total_uistrings)
+                    stats[locale]['ui']['untranslated_perc'] = int(100*stats[locale]['ui']['untranslated']/total_uistrings)
                 if total_uistrings_part.get(locale, 0) > 0:
-                    stats[locale]['ui_percent_part'] = int(100*trans_p/total_uistrings_part[locale])
-                    stats[locale]['ui_percentfuzzy_part'] = int(100*fuzzy_p/total_uistrings_part[locale])
-                    stats[locale]['ui_percentuntrans_part'] = int(100*stats[locale]['ui_untrans_part']/total_uistrings_part[locale])
+                    stats[locale]['ui_part']['translated_perc'] = int(100*trans_p/total_uistrings_part[locale])
+                    stats[locale]['ui_part']['fuzzy_perc'] = int(100*fuzzy_p/total_uistrings_part[locale])
+                    stats[locale]['ui_part']['untranslated_perc'] = int(100*stats[locale]['ui_part']['untranslated']/total_uistrings_part[locale])
         cursor.close()
 
         results = stats.values()
@@ -1125,9 +1130,9 @@ class Release(models.Model):
         return results
 
     def compare_stats(self, a, b):
-        res = cmp(b['ui_trans'], a['ui_trans'])
+        res = cmp(b['ui']['translated'], a['ui']['translated'])
         if not res:
-            res = cmp(b['doc_trans'], a['doc_trans'])
+            res = cmp(b['doc']['translated'], a['doc']['translated'])
             if not res:
                 res = cmp(b['lang_name'], a['lang_name'])
         return res

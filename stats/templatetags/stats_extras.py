@@ -56,8 +56,10 @@ def num_stats(stat, scope='full'):
             stats['prc'] = stat.tr_percentage()
     else:
         stats = stat
+    if 'translated_perc' in stats:
+        stats['prc'] = stats['translated_perc']
     if 'prc' in stats:
-        model = "%(prc)s%%&nbsp;(%(translated)s/%(fuzzy)s/%(untranslated)s)"
+        model = '<pre class="stats"><b>%(prc)3s%%</b> (%(translated)s/%(fuzzy)s/%(untranslated)s)</pre>'
     else:
         model = "(%(translated)s/%(fuzzy)s/%(untranslated)s)"
     return mark_safe(model % stats)
@@ -65,10 +67,12 @@ def num_stats(stat, scope='full'):
 @register.filter
 def vis_stats(stat, scope='full'):
     """ Produce visual stats with green/red bar """
-    if isinstance(stat, PoFile):
+    if isinstance(stat, (Statistics, FakeLangStatistics, FakeSummaryStatistics)):
+        trans, fuzzy, untrans = stat.tr_percentage(scope), stat.fu_percentage(scope), stat.un_percentage(scope)
+    elif isinstance(stat, PoFile):
         trans, fuzzy, untrans = stat.tr_percentage(), stat.fu_percentage(), stat.un_percentage()
     else:
-        trans, fuzzy, untrans = stat.tr_percentage(scope), stat.fu_percentage(scope), stat.un_percentage(scope)
+        trans, fuzzy, untrans = stat['translated_perc'], stat['fuzzy_perc'], stat['untranslated_perc']
     return mark_safe("""
         <div class="translated" style="width: %(trans)spx;"></div>
         <div class="fuzzy" style="%(dir)s:%(trans)spx; width:%(fuzzy)spx;"></div>

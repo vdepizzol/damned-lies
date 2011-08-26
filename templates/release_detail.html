@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n stats_extras %}
 
 {% block title %} {% trans release.description %} {% endblock %}
 
@@ -40,36 +40,25 @@
   </td>
 
   <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
-      {{ lstats.ui_percent }}% ({{ lstats.ui_trans }}/{{ lstats.ui_fuzzy }}/{{ lstats.ui_untrans }})</a>
+      {{ lstats.ui|num_stats }}</a>
   </td>
-  <td style="width: 108px; text-align: center;"><div class="graph">
-      <div class="translated" style="width: {{ lstats.ui_percent }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ lstats.ui_percent }}px; width:{{ lstats.ui_percentfuzzy }}px;"></div>
-      {% with lstats.ui_percent|add:lstats.ui_percentfuzzy as upos %}
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width: {{ lstats.ui_percentuntrans }}px;"></div>
-      {% endwith %}
-     </div>
+  <td style="width: 108px; text-align: center;">
+      <div class="graph">{{ lstats.ui|vis_stats }}</div>
   </td>
   <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui-part" %}">
-      {{ lstats.ui_percent_part }}% ({{ lstats.ui_trans_part }}/{{ lstats.ui_fuzzy_part }}/{{ lstats.ui_untrans_part }})</a>
+      {{ lstats.ui_part|num_stats }}</a>
   </td>
 
-  {% if lstats.doc_trans|add:lstats.doc_fuzzy != "0" %}
+  {% if lstats.doc.translated|add:lstats.doc.fuzzy != "0" %}
   <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
-      {{ lstats.doc_percent }}% ({{ lstats.doc_trans }}/{{ lstats.doc_fuzzy }}/{{ lstats.doc_untrans }})</a>
+      {{ lstats.doc|num_stats }}</a>
   </td>
   {% else %}
   <td>-</td>
   {% endif %}
 
   <td style="width: 108px; text-align: center;">
-    <div class="graph">
-      <div class="translated" style="width: {{ lstats.doc_percent }}px;"></div>
-      <div class="fuzzy" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ lstats.doc_percent }}px; width:{{ lstats.doc_percentfuzzy }}px;"></div>
-      {% with lstats.doc_percent|add:lstats.doc_percentfuzzy as upos %}
-      <div class="untranslated" style="{{ LANGUAGE_BIDI|yesno:"right,left" }}:{{ upos }}px; width: {{ lstats.doc_percentuntrans }}px;"></div>
-      {% endwith %}
-     </div>
+    <div class="graph">{{ lstats.doc|vis_stats }}</div>
    </td>
 
 </tr>
