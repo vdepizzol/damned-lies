@@ -267,12 +267,12 @@ class StatisticsTests(TestCase):
     def testTotalStatsForLang(self):
         rel  = Release.objects.get(name="gnome-2-30")
         total_for_lang = rel.total_for_lang(Language.objects.get(locale='fr'))
-        self.assertEqual(total_for_lang['uitotal'], total_for_lang['uitotal_part'])
-        self.assertTrue(total_for_lang['uiuntrans'] == total_for_lang['uiuntrans_part'] == 0)
+        self.assertEqual(total_for_lang['ui']['total'], total_for_lang['ui_part']['total'])
+        self.assertTrue(total_for_lang['ui']['untranslated'] == total_for_lang['ui_part']['untranslated'] == 0)
         total_for_lang = rel.total_for_lang(Language.objects.get(locale='bem'))
-        self.assertEqual(total_for_lang['uitotal']-8, total_for_lang['uitotal_part'])
-        self.assertEqual(total_for_lang['uiuntrans'], 183)
-        self.assertEqual(total_for_lang['uiuntrans_part'], 175)
+        self.assertEqual(total_for_lang['ui']['total']-8, total_for_lang['ui_part']['total'])
+        self.assertEqual(total_for_lang['ui']['untranslated'], 183)
+        self.assertEqual(total_for_lang['ui_part']['untranslated'], 175)
 
     def testStatsLinks(self):
         pot_stats = Statistics.objects.get(
