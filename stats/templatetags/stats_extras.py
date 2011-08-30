@@ -59,10 +59,11 @@ def num_stats(stat, scope='full'):
     if 'translated_perc' in stats:
         stats['prc'] = stats['translated_perc']
     if 'prc' in stats:
-        model = '<pre class="stats"><b>%(prc)3s%%</b> (%(translated)s/%(fuzzy)s/%(untranslated)s)</pre>'
+        result = '<pre class="stats"><b>%(prc)3s%%</b> %(translated)6s %(fuzzy)5s %(untranslated)5s </pre>' % stats
+        result = result.replace(" 0 ", '<span class="zero"> 0 </span>')
     else:
-        model = "(%(translated)s/%(fuzzy)s/%(untranslated)s)"
-    return mark_safe(model % stats)
+        result = "(%(translated)s/%(fuzzy)s/%(untranslated)s)"
+    return mark_safe(result)
 
 @register.filter
 def vis_stats(stat, scope='full'):

@@ -12,7 +12,14 @@ pre.stats {
   display: inline;
   margin: 0;
   white-space: pre;
-  font-size: 0.9em;
+  font-size: 0.8em;
+}
+pre.stats b {
+  font-size: 1.2em;
+}
+
+span.zero {
+  color: #ccc;
 }
 
 #stats-table {
@@ -52,7 +59,7 @@ table.stats {
   background-color: transparent;
   border-bottom: 1px solid #f0f0f0;
   color: gray;
-  font-size: 80%;
+  font-size: 0.7em;
   font-style: italic;
 }
 
