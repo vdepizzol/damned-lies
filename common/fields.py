@@ -87,6 +87,9 @@ class JSONField(models.TextField):
 
         return super(JSONField, self).get_db_prep_save(value, connection=connection)
 
+    def value_to_string(self, obj):
+        return simplejson.dumps(self._get_val_from_obj(obj), cls=DjangoJSONEncoder)
+
 
 # rules for South migrations tool (for version >= 0.7)
 try:

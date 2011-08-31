@@ -490,13 +490,8 @@ class Branch(models.Model):
                     fig_stats = None
                     if dom.dtype == "doc":
                         fig_stats = utils.get_fig_stats(outpo, pot_method)
-                        for fig in fig_stats:
-                            trans_path = os.path.join(domain_path, lang, fig['path'])
-                            if os.access(trans_path, os.R_OK):
-                                fig_file = open(trans_path, 'rb').read()
-                                trans_hash = hashlib.md5(fig_file).hexdigest()
-                                if fig['hash'] == trans_hash:
-                                    langstats['errors'].append(("warn-ext", "Figures should not be copied when identical to original (%s)." % trans_path))
+                        fig_errors = utils.check_identical_figures(fig_stats, domain_path, lang)
+                        langstats['errors'].extend(fig_errors)
 
                     if settings.DEBUG: print >>sys.stderr, lang + ":\n" + str(langstats)
                     # Save in DB

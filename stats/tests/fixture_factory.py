@@ -55,7 +55,7 @@ class FixtureFactory(TestCase):
             vcs_root="git://git.gnome.org/gnome-hello",
             vcs_web="http://git.gnome.org/browse/gnome-hello/",
             bugs_base="http://bugzilla.gnome.org",
-            bugs_product="gnome-hello",
+            bugs_product="test", # This product really exists
             bugs_component="test")
         zenity = Module.objects.create(name="zenity", vcs_type="git",
             vcs_root="git://git.gnome.org/zenity",
@@ -114,9 +114,11 @@ class FixtureFactory(TestCase):
         Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_fr, full_po=pofile, part_po=pofile)
         pofile = PoFile.objects.create(translated=30, fuzzy=10, untranslated=7)
         Statistics.objects.create(branch=b1, domain=dom['gnome-hello-ui'], language=l_it, full_po=pofile, part_po=pofile)
-        pofile = PoFile.objects.create(untranslated=20)
+        pofile = PoFile.objects.create(untranslated=20,
+            figures = [{"path": "figures/gnome-hello-new.png", "hash": "8a1fcc6f46a22a1f500cfef9ca51b481"}, {"path": "figures/gnome-hello-logo.png", "hash": "1ae47b7a7c4fbeb1f6bb72c0cf18d389"}])
         Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=None, full_po=pofile, part_po=pofile)
-        pofile = PoFile.objects.create(translated=20)
+        pofile = PoFile.objects.create(translated=20,
+            figures = [{"translated": False, "path": "figures/gnome-hello-new.png", "hash": "8a1fcc6f46a22a1f500cfef9ca51b481", "fuzzy": True}, {"translated": False, "path": "figures/gnome-hello-logo.png", "hash": "1ae47b7a7c4fbeb1f6bb72c0cf18d389", "fuzzy": False}])
         Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_fr, full_po=pofile, part_po=pofile)
         pofile = PoFile.objects.create(translated=20)
         Statistics.objects.create(branch=b1, domain=dom['gnome-hello-doc'], language=l_it, full_po=pofile, part_po=pofile)

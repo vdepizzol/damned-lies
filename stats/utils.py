@@ -47,25 +47,61 @@ CHANGED_WITH_ADDITIONS  = 2
 CHANGED_NO_ADDITIONS    = 3
 
 ITSTOOL_PATH = getattr(settings, 'ITSTOOL_PATH', '')
-extract_tools = {
-    'xml2po':  {
-        'command' : "cd \"%(dir)s\" && xml2po %(opts)s -o %(potfile)s -e %(files)s",
-        'mod_var' : "DOC_ID",
-        'incl_var': "DOC_PAGES",
-        'img_grep': "^msgid \"@@image:",
+
+class DocFormat(object):
+    itstool_regex = re.compile("^msgid \"external ref=\'(?P<path>[^\']*)\' md5=\'(?P<hash>[^\']*)\'\"")
+    xml2po_regex = re.compile("^msgid \"@@image: \'(?P<path>[^\']*)\'; md5=(?P<hash>[^\"]*)\"")
+    def __init__(self, is_itstool, is_mallard):
+        self.format = is_mallard and "mallard" or "docbook"
+        self.tool = is_itstool and "itstool" or "xml2po"
+
+    @property
+    def command(self):
+        if self.tool == "itstool":
+            return "cd \"%%(dir)s\" && %sitstool -o %%(potfile)s %%(files)s" % ITSTOOL_PATH
+        elif self.format == "mallard":
+            return "cd \"%(dir)s\" && xml2po -m mallard -o %(potfile)s -e %(files)s"
+        else:
+            return "cd \"%(dir)s\" && xml2po -o %(potfile)s -e %(files)s"
+
+    @property
+    def module_var(self):
+        if self.tool == "itstool":
+            return "HELP_ID"
+        elif self.format == "mallard":
+            return "DOC_ID"
+        else:
+            return "DOC_MODULE"
+
+    @property
+    def include_var(self):
+        if self.tool == "itstool":
+            return "HELP_FILES"
+        elif self.format == "mallard":
+            return "DOC_PAGES"
+        else:
+            return "DOC_INCLUDES"
+
+    @property
+    def img_grep(self):
+        if self.tool == "itstool":
+            return "^msgid \"external ref="
+        else:
+            return "^msgid \"@@image:"
+
+    @property
+    def img_grep(self):
+        return self.tool == "itstool" and "^msgid \"external ref=" or "^msgid \"@@image:"
+
+    @property
+    def bef_line(self):
         # Lines to keep before matched grep to catch the ,fuzzy or #|msgid line
-        'bef_line': 1,
-        'img_regex': re.compile("^msgid \"@@image: \'(?P<path>[^\']*)\'; md5=(?P<hash>[^\"]*)\""),
-    },
-    'itstool': {
-        'command' : "cd \"%%(dir)s\" && %sitstool -o %%(potfile)s %%(files)s" % ITSTOOL_PATH,
-        'mod_var' : "HELP_ID",
-        'incl_var': "HELP_FILES",
-        'img_grep': "^msgid \"external ref=",
-        'bef_line': 2,
-        'img_regex': re.compile("^msgid \"external ref=\'(?P<path>[^\']*)\' md5=\'(?P<hash>[^\']*)\'\""),
-    },
-}
+        return self.tool == "itstool" and 2 or 1
+
+    @property
+    def img_regex(self):
+        return self.tool == "itstool" and self.itstool_regex or self.xml2po_regex
+
 
 def sort_object_list(lst, sort_meth):
     """ Sort an object list with sort_meth (which should return a translated string) """
@@ -173,25 +209,18 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
     errors = []
 
     doc_id = read_makefile_variable([vcs_path], "HELP_ID")
-    if doc_id:
-        tool = "itstool"
-    else:
-        tool = "xml2po"
+    has_index_page = os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK)
+    doc_format = DocFormat(bool(doc_id), has_index_page)
 
-    options = ""
-    if os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK):
-        # a Mallard document
+    if doc_format.format == "mallard":
         files = ["index.page"]
-        if tool == "xml2po":
-            options = "-m mallard"
-        incl_var = extract_tools[tool]['incl_var']
     else:
-        modulename = read_makefile_variable([vcs_path], "DOC_MODULE")
+        modulename = read_makefile_variable([vcs_path], doc_format.module_var)
         if not modulename:
-            return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),), tool
+            return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),), doc_format
         if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
             if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
-                errors.append(("warn", ugettext_noop("DOC_MODULE doesn't resolve to a real file, using '%s.xml'.") % (moduleid)))
+                errors.append(("warn", ugettext_noop("%s doesn't resolve to a real file, using '%s.xml'.") % (doc_format.module_var, moduleid)))
                 modulename = moduleid
             else:
                 # Last try: only one xml file in C/...
@@ -199,17 +228,16 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
                 if len(xml_files) == 1:
                     modulename = os.path.basename(xml_files[0])[:-4]
                 else:
-                    errors.append(("error", ugettext_noop("DOC_MODULE doesn't point to a real file, probably a macro.")))
-                    return "", errors, tool
+                    errors.append(("error", ugettext_noop("%s doesn't point to a real file, probably a macro.") % doc_format.module_var))
+                    return "", errors, doc_format
         files = [modulename + ".xml"]
-        incl_var = "DOC_INCLUDES"
 
-    includes = read_makefile_variable([vcs_path], incl_var)
+    includes = read_makefile_variable([vcs_path], doc_format.include_var)
     if includes:
         files.extend(filter(lambda x:x not in ("", "$(NULL)"), includes.split()))
     files = " ".join([os.path.join("C", f) for f in files])
     potfile = os.path.join(vcs_path, "C", potbase + ".pot")
-    command = extract_tools[tool]['command'] % {'dir': vcs_path, 'opts': options, 'potfile': potfile, 'files': files}
+    command = doc_format.command % {'dir': vcs_path, 'potfile': potfile, 'files': files}
     (status, output, errs) = run_shell_command(command)
 
     if status != STATUS_OK:
@@ -222,9 +250,9 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
         potfile = ""
 
     if not os.access(potfile, os.R_OK):
-        return "", errors, tool
+        return "", errors, doc_format
     else:
-        return potfile, errors, tool
+        return potfile, errors, doc_format
 
 def read_makefile_variable(vcs_paths, variable):
     """ vcs_paths is a list of potential path where Makefile.am could be found """
@@ -408,15 +436,15 @@ def get_doc_linguas(module_path, po_path):
     return {'langs': linguas.split(),
             'error': ugettext_noop("DOC_LINGUAS list doesn't include this language.") }
 
-def get_fig_stats(pofile, image_method, trans_stats=True):
+def get_fig_stats(pofile, doc_format, trans_stats=True):
     """ Extract image strings from pofile and return a list of figures dict:
         [{'path':, 'hash':, 'fuzzy':, 'translated':}, ...] """
-    if image_method not in ('xml2po', 'itstool'):
+    if not isinstance(doc_format, DocFormat):
         return []
     # Extract image strings: beforeline/msgid/msgstr/grep auto output a fourth line
-    before_lines = extract_tools[image_method]['bef_line']
+    before_lines = doc_format.bef_line
     command = "msgcat --no-wrap %(pofile)s| grep -A 1 -B %(before)s '%(grep)s'" % {
-        'pofile': pofile, 'grep': extract_tools[image_method]['img_grep'], 'before': before_lines,
+        'pofile': pofile, 'grep': doc_format.img_grep, 'before': before_lines,
     }
     (status, output, errs) = run_shell_command(command)
     if status != STATUS_OK:
@@ -430,7 +458,7 @@ def get_fig_stats(pofile, image_method, trans_stats=True):
     for i, line in islice(enumerate(lines), 0, None, 3+before_lines):
         # TODO: add image size
         fig = {"path": '', "hash": ''}
-        m = extract_tools[image_method]['img_regex'].match(lines[i+before_lines])
+        m = doc_format.img_regex.match(lines[i+before_lines])
         if m:
             fig["path"] = m.group('path')
             fig["hash"] = m.group('hash')
@@ -439,6 +467,17 @@ def get_fig_stats(pofile, image_method, trans_stats=True):
             fig["translated"] = len(lines[i+before_lines+1])>9 and not fig['fuzzy']
         figures.append(fig)
     return figures
+
+def check_identical_figures(fig_stats, base_path, lang):
+    errors = []
+    for fig in fig_stats:
+        trans_path = os.path.join(base_path, lang, fig['path'])
+        if os.access(trans_path, os.R_OK):
+            fig_file = open(trans_path, 'rb').read()
+            trans_hash = hashlib.md5(fig_file).hexdigest()
+            if fig['hash'] == trans_hash:
+                errors.append(("warn-ext", "Figures should not be copied when identical to original (%s)." % trans_path))
+    return errors
 
 def add_custom_header(po_path, header, value):
     """ Add a custom po file header """

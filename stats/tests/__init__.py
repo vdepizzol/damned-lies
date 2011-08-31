@@ -47,6 +47,7 @@ def test_scratchdir(test_func):
 
 
 class ModuleTestCase(TestCase):
+    fixtures = ['sample_data.json']
     SYS_DEPENDENCIES = (
         ('gettext', 'msgfmt'),
         ('intltool', 'intltool-update'),
@@ -63,28 +64,9 @@ class ModuleTestCase(TestCase):
             shutil.rmtree(self.co_path)
 
     def setUp(self):
-        # TODO: load bulk data from fixtures
         Branch.checkout_on_creation = False
-        self.mod = Module.objects.create(
-            name="gnome-hello",
-            bugs_base="http://bugzilla.gnome.org",
-            bugs_product="test", # This product really exists
-            bugs_component="test",
-            vcs_type="git",
-            vcs_root="git://git.gnome.org/gnome-hello",
-            vcs_web="http://git.gnome.org/browse/gnome-hello/")
-        self.mod.save()
-        dom = Domain.objects.create(module=self.mod, name='po', description='UI Translations', dtype='ui', directory='po')
-        dom = Domain.objects.create(module=self.mod, name='help', description='User Guide', dtype='doc', directory='help')
-
-        self.b = Branch(name='master', module=self.mod)
-        self.b.save(update_statistics=False)
-
-        self.rel = Release.objects.create(
-            name='gnome-2-24', status='official',
-            description='GNOME 2.24 (stable)', string_frozen=True)
-
-        self.cat = Category.objects.create(release=self.rel, branch=self.b, name='desktop')
+        self.mod = Module.objects.get(name="gnome-hello")
+        self.branch = self.mod.branch_set.get(name="master")
 
     def tearDown(self):
         if os.access(self.co_path, os.X_OK):
@@ -92,20 +74,23 @@ class ModuleTestCase(TestCase):
             run_shell_command(command, raise_on_error=True)
 
     def testModuleFunctions(self):
-        self.assertEquals(self.mod.get_description(), 'gnome-hello')
+        self.assertEqual(self.mod.get_description(), 'gnome-hello')
 
     def testBranchFunctions(self):
-        self.assertTrue(self.b.is_head())
-        self.assertEquals(self.b.get_vcs_url(), "git://git.gnome.org/gnome-hello")
-        self.assertEquals(self.b.get_vcs_web_url(), "http://git.gnome.org/browse/gnome-hello/")
+        self.assertTrue(self.branch.is_head())
+        self.assertEqual(self.branch.get_vcs_url(), "git://git.gnome.org/gnome-hello")
+        self.assertEqual(self.branch.get_vcs_web_url(), "http://git.gnome.org/browse/gnome-hello/")
 
     def testBranchStats(self):
         # Check stats
-        self.b.update_stats(force=True)
-        fr_po_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='fr')
+        self.branch.update_stats(force=True)
+        fr_po_stat = Statistics.objects.get(branch=self.branch, domain__name='po', language__locale='fr')
         self.assertEqual(fr_po_stat.translated(), 44)
-        fr_doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='fr')
+        fr_doc_stat = Statistics.objects.get(branch=self.branch, domain__name='help', language__locale='fr')
         self.assertEqual(fr_doc_stat.translated(), 16)
+        self.assertEqual(fr_po_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.fr.po")
+        self.assertEqual(fr_po_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot")
+        self.assertEqual(fr_doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.fr.po")
 
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True
@@ -124,54 +109,52 @@ class ModuleTestCase(TestCase):
         b1.save(update_statistics=False)
         b2 = Branch(name='p-branch', module=self.mod)
         b2.save(update_statistics=False)
-        self.assertEquals([b.name for b in sorted(self.mod.branch_set.all())], ['master','p-branch','a-branch'])
+        self.assertEqual([b.name for b in sorted(self.mod.branch_set.all())], ['master','p-branch','a-branch'])
         b1.weight = -1
         b1.save(update_statistics=False)
-        self.assertEquals([b.name for b in sorted(self.mod.branch_set.all())], ['master','a-branch','p-branch'])
+        self.assertEqual([b.name for b in sorted(self.mod.branch_set.all())], ['master','a-branch','p-branch'])
 
     def testStringFrozenMail(self):
         """ String change for a module of a string_frozen release should generate a message """
         mail.outbox = []
-        self.rel.string_frozen = True
-        self.rel.save()
-        self.b.update_stats(force=False)
+        self.branch.update_stats(force=False)
 
         # Create a new file with translation
-        new_file_path = os.path.join(self.b.co_path(), "dummy_file.py")
+        new_file_path = os.path.join(self.branch.co_path(), "dummy_file.py")
         new_string = "Dummy string for D-L tests"
         f = open(new_file_path,'w')
         f.write("a = _('%s')\n" % new_string)
         f.close()
         # Add the new file to POTFILES.in
-        f = open(os.path.join(self.b.co_path(), "po", "POTFILES.in"), 'a')
+        f = open(os.path.join(self.branch.co_path(), "po", "POTFILES.in"), 'a')
         f.write("dummy_file.py\n")
         f.close()
         # Regenerate stats (mail should be sent)
-        self.b.update_stats(force=False, checkout=False)
+        self.branch.update_stats(force=False, checkout=False)
         # Assertions
-        self.assertEquals(len(mail.outbox), 1);
-        self.assertEquals(mail.outbox[0].subject, "String additions to 'gnome-hello.master'")
+        self.assertEqual(len(mail.outbox), 1);
+        self.assertEqual(mail.outbox[0].subject, "String additions to 'gnome-hello.master'")
         self.assertTrue(mail.outbox[0].message().as_string().find(new_string)>-1)
 
     def testReadFileVariable(self):
         from stats.utils import search_variable_in_file
         file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_docbook", "Makefile.am")
         var_content = search_variable_in_file(file_path, "DOC_INCLUDES")
-        self.assertEquals(var_content.split(), ['rnusers.xml', 'rnlookingforward.xml', '$(NULL)'])
+        self.assertEqual(var_content.split(), ['rnusers.xml', 'rnlookingforward.xml', '$(NULL)'])
 
     def testGenerateDocPotfile(self):
-        from stats.utils import generate_doc_pot_file, get_fig_stats
+        from stats.utils import generate_doc_pot_file, get_fig_stats, DocFormat
         # Docbook-style help
         help_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_docbook")
-        generate_doc_pot_file(help_path, 'release-notes', 'release-notes')
+        potfile, errs, doc_format = generate_doc_pot_file(help_path, 'release-notes', 'release-notes')
         pot_path = os.path.join(help_path, "C", "release-notes.pot")
         self.assertTrue(os.access(pot_path, os.R_OK))
-        res = get_fig_stats(pot_path, image_method='xml2po')
+        res = get_fig_stats(pot_path, doc_format=doc_format)
         self.assertEqual(len(res), 1)
         os.remove(pot_path)
         # Mallard-style help (with itstool)
         pot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "help_mallard", "gnome-help-itstool.pot")
-        res = get_fig_stats(pot_path, image_method='itstool')
+        res = get_fig_stats(pot_path, doc_format=DocFormat(True, True))
         self.assertEqual(len(res), 2)
         self.assertEqual(res[0]['path'], "figures/gnome.png")
 
@@ -180,42 +163,9 @@ class ModuleTestCase(TestCase):
             module=self.mod, name='http-po',
             description='UI Translations', dtype='ui',
             pot_method='http://l10n.gnome.org/POT/damned-lies.master/damned-lies.master.pot')
-        self.b.checkout()
-        potfile, errs = dom.generate_pot_file(self.b)
+        self.branch.checkout()
+        potfile, errs = dom.generate_pot_file(self.branch)
         self.assertTrue(os.path.exists(potfile))
-
-    def testIdenticalFigureWarning(self):
-        """ Detect warning if translated figure is identical to original figure """
-        self.b.checkout()
-        orig_figure = os.path.join(self.b.co_path(), "help", "C", "figures", "gnome-hello-new.png")
-        shutil.copy(orig_figure, os.path.join(self.b.co_path(), "help", "cs", "figures", "gnome-hello-new.png"))
-        self.b.update_stats(force=True, checkout=False)
-        doc_stat = Statistics.objects.get(branch=self.b, domain__name='help', language__locale='cs')
-        warn_infos = Information.objects.filter(statistics=doc_stat, type='warn-ext')
-        self.assertEquals(len(warn_infos), 1);
-        ui_stat = Statistics.objects.get(branch=self.b, domain__name='po', language__locale='cs')
-        self.assertEquals(ui_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.cs.po");
-        self.assertEquals(ui_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot");
-        self.assertEquals(doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.cs.po");
-
-    def testFigureURLs(self):
-        """ Test if figure urls are properly constructed """
-        self.b.update_stats(force=True)
-        stat = Statistics.objects.get(branch=self.b, domain__dtype='doc', language__locale='cs')
-        figs = stat.get_figures()
-        self.assertEquals(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello-new.png?h=master')
-        self.assertEquals(figs[0]['trans_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/cs/figures/gnome-hello-new.png?h=master')
-
-    def testFigureView(self):
-        self.b.update_stats(force=True)
-        url = reverse('stats.views.docimages', args=[self.mod.name, 'help', self.b.name, 'fr'])
-        response = self.client.get(url)
-        self.assertContains(response, "gnome-hello-new.png")
-        # Same for a non-existing language
-        Language.objects.create(name='Afrikaans', locale='af')
-        url = reverse('stats.views.docimages', args=[self.mod.name, 'help', self.b.name, 'af'])
-        response = self.client.get(url)
-        self.assertContains(response, "gnome-hello-new.png")
 
     def testCreateUnexistingBranch(self):
         """ Try to create a non-existing branch """
@@ -227,7 +177,7 @@ class ModuleTestCase(TestCase):
     def testDynamicPO(self):
         """ Test the creation of a blank po file for a new language """
         lang = Language.objects.create(name="Tamil", locale="ta")
-        self.b.update_stats(force=True) # At least POT stats needed
+        self.branch.update_stats(force=False) # At least POT stats needed
         response = self.client.get('/module/po/gnome-hello.po.master.ta.po')
         self.assertContains(response, """# Tamil translation for gnome-hello.
 # Copyright (C) %s gnome-hello's COPYRIGHT HOLDER
@@ -251,15 +201,15 @@ class ModuleTestCase(TestCase):
         pers.save()
         self.mod.maintainers.add(pers)
         update_doap_infos(self.mod)
-        self.assertEquals(self.mod.maintainers.count(), 6)
+        self.assertEqual(self.mod.maintainers.count(), 6)
         claude = self.mod.maintainers.get(email='claude@2xlibre.net')
-        self.assertEquals(claude.username, 'claudep')
+        self.assertEqual(claude.username, 'claudep')
 
     @test_scratchdir
     def testUpdateDoapInfos(self):
         from stats.doap import update_doap_infos
         update_doap_infos(self.mod)
-        self.assertEquals(self.mod.homepage, "http://git.gnome.org/browse/gnome-hello")
+        self.assertEqual(self.mod.homepage, "http://git.gnome.org/browse/gnome-hello")
 
 
 class StatisticsTests(TestCase):
@@ -288,3 +238,32 @@ class StatisticsTests(TestCase):
         stats = FakeLangStatistics(pot_stats, Language.objects.get(locale='bem'))
         self.assertEqual(stats.po_url(), "/module/po/zenity.po.gnome-2-30.bem.po")
         self.assertEqual(stats.po_url(reduced=True), "/module/po/zenity.po.gnome-2-30.bem-reduced.po")
+
+class FigureTests(TestCase):
+    fixtures = ['sample_data.json']
+    def testFigureView(self):
+        url = reverse('stats.views.docimages', args=['gnome-hello', 'help', 'master', 'fr'])
+        response = self.client.get(url)
+        self.assertContains(response, "gnome-hello-new.png")
+        # Same for a non-existing language
+        Language.objects.create(name='Afrikaans', locale='af')
+        url = reverse('stats.views.docimages', args=['gnome-hello', 'help', 'master', 'af'])
+        response = self.client.get(url)
+        self.assertContains(response, "gnome-hello-new.png")
+
+    def testFigureURLs(self):
+        """ Test if figure urls are properly constructed """
+        stat = Statistics.objects.get(branch__module__name='gnome-hello', branch__name='master', domain__dtype='doc', language__locale='fr')
+        figs = stat.get_figures()
+        self.assertEqual(figs[0]['orig_remote_url'], 'http://git.gnome.org/browse/gnome-hello/plain/help/C/figures/gnome-hello-new.png?h=master')
+        self.assertFalse('trans_remote_url' in figs[0])
+
+    @test_scratchdir
+    def testIdenticalFigureWarning(self):
+        """ Detect warning if translated figure is identical to original figure """
+        from stats.utils import check_identical_figures
+        branch = Branch.objects.get(module__name='gnome-hello', name='master')
+        doc_stat = Statistics.objects.get(branch=branch, domain__name='help', language__locale='fr')
+        errs = check_identical_figures(doc_stat.get_figures(), os.path.join(branch.co_path(), 'help'), 'fr')
+        self.assertEqual(len(errs), 1)
+        self.assertTrue(errs[0][1].startswith("Figures should not be copied"))

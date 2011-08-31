@@ -187,7 +187,7 @@ class RoleTest(TeamsAndRolesTests):
         self.pt.last_login = datetime.now()-timedelta(days=10) # active person
         self.pt.save()
 
-        self.pr.last_login = datetime.now()-timedelta(days=30*6) # inactive person
+        self.pr.last_login = datetime.now()-timedelta(days=30*6+1) # inactive person
         self.pr.save()
 
         self.pc.last_login = datetime.now()-timedelta(days=30*6-1) #active person, but in limit date

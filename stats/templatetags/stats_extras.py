@@ -62,7 +62,7 @@ def num_stats(stat, scope='full'):
         result = '<pre class="stats"><b>%(prc)3s%%</b> %(translated)6s %(fuzzy)5s %(untranslated)5s </pre>' % stats
         result = result.replace(" 0 ", '<span class="zero"> 0 </span>')
     else:
-        result = "(%(translated)s/%(fuzzy)s/%(untranslated)s)"
+        result = "(%(translated)s/%(fuzzy)s/%(untranslated)s)" % stats
     return mark_safe(result)
 
 @register.filter
