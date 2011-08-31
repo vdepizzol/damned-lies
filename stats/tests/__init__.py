@@ -82,6 +82,8 @@ class ModuleTestCase(TestCase):
         self.assertEqual(self.branch.get_vcs_web_url(), "http://git.gnome.org/browse/gnome-hello/")
 
     def testBranchStats(self):
+        lang = Language.objects.create(name='xxx', locale='xxx')
+        ghost_stat = Statistics.objects.create(branch=self.branch, domain=self.mod.domain_set.get(name='po'), language=lang)
         # Check stats
         self.branch.update_stats(force=True)
         fr_po_stat = Statistics.objects.get(branch=self.branch, domain__name='po', language__locale='fr')
@@ -91,6 +93,7 @@ class ModuleTestCase(TestCase):
         self.assertEqual(fr_po_stat.po_url(), u"/POT/gnome-hello.master/gnome-hello.master.fr.po")
         self.assertEqual(fr_po_stat.pot_url(), u"/POT/gnome-hello.master/gnome-hello.master.pot")
         self.assertEqual(fr_doc_stat.po_url(), u"/POT/gnome-hello.master/docs/gnome-hello-help.master.fr.po")
+        self.assertRaises(Statistics.DoesNotExist, Statistics.objects.get, pk=ghost_stat.pk)
 
     def testCreateAndDeleteBranch(self):
         Branch.checkout_on_creation = True

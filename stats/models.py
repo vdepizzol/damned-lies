@@ -470,7 +470,8 @@ class Branch(models.Model):
                 command = "msgmerge --previous -o %(outpo)s %(pofile)s %(potfile)s"
                 stats_with_ext_errors = Statistics.objects.filter(branch=self, domain=dom, information__type__endswith='-ext')
                 langs_with_ext_errors = [stat.language.locale for stat in stats_with_ext_errors]
-                for lang, pofile in dom.get_lang_files(self.co_path()):
+                dom_langs = dom.get_lang_files(self.co_path())
+                for lang, pofile in dom_langs:
                     outpo = os.path.join(self.output_dir(dom.dtype), dom.potbase() + "." + self.name + "." + lang + ".po")
 
                     if not force and changed_status in (utils.NOT_CHANGED, utils.CHANGED_ONLY_FORMATTING) and os.access(outpo, os.R_OK) \
@@ -520,6 +521,10 @@ class Branch(models.Model):
                                                figstats=fig_stats)
                     for err in langstats['errors']:
                         stat.information_set.add(Information(type=err[0], description=err[1]))
+                # Delete stats for unexisting langs
+                Statistics.objects.filter(branch=self, domain=dom
+                    ).exclude(models.Q(language__isnull=True) | models.Q(language__locale__in=[dl[0] for dl in dom_langs])
+                    ).delete()
             # Check if doap file changed
             if self.is_head() and self.file_changed("%s.doap" % self.module.name):
                 update_doap_infos(self.module)
