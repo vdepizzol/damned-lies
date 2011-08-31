@@ -335,7 +335,7 @@ def po_file_stats(pofile, msgfmt_checks=True):
         input_file = pofile
 
         if has_toolkit:
-            status = pocount.calcstats(pofile)
+            status = pocount.calcstats_old(pofile)
             res['fuzzy_words'] = status['fuzzysourcewords']
             res['translated_words'] = status['translatedsourcewords']
             res['untranslated_words'] = status['untranslatedsourcewords']
