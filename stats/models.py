@@ -754,8 +754,7 @@ class Domain(models.Model):
         flist = []
         dom_path = os.path.join(base_path, self.directory)
         for item in os.listdir(dom_path):
-            # FIXME: temporary fix for ooo-build module (see #551328)
-            if item[-3:] == ".po" and item[:4] != "ooo-":
+            if item[-3:] == ".po":
                 lang = item[:-3]
                 pofile = os.path.join(dom_path, item)
                 flist.append((lang, pofile))
