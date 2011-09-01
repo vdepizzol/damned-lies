@@ -59,10 +59,10 @@ def num_stats(stat, scope='full'):
     if 'translated_perc' in stats:
         stats['prc'] = stats['translated_perc']
     if 'prc' in stats:
-        result = '<pre class="stats"><b>%(prc)3s%%</b> %(translated)6s %(fuzzy)5s %(untranslated)5s </pre>' % stats
-        result = result.replace(" 0 ", '<span class="zero"> 0 </span>')
+        result = '<pre class="stats"><b>%(prc)3s%%</b> <span class="num1">%(translated)6s</span> <span class="num2">%(fuzzy)5s</span> <span class="num3">%(untranslated)5s</span> </pre>' % stats
+        result = result.replace('">0</span>', ' zero">0</span>')
     else:
-        result = "(%(translated)s/%(fuzzy)s/%(untranslated)s)" % stats
+        result = "%(translated)s/%(fuzzy)s/%(untranslated)s" % stats
     return mark_safe(result)
 
 @register.filter
