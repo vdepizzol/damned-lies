@@ -2,21 +2,21 @@
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-20 20:48+0000\n"
-"PO-Revision-Date: 2011-08-22 09:56+0200\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2011-08-22 18:30+0000\n"
+"PO-Revision-Date: 2011-09-04 15:30+0200\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: database-content.py:1 database-content.py:125
@@ -1061,7 +1061,7 @@ msgstr "Guía de optimización"
 
 #: database-content.py:382
 msgid "Tutorial demos"
-msgstr "Demostraciones de tutoriales"
+msgstr "Tutoriales de demostración"
 
 #: database-content.py:383
 msgid "Platform Overview"
@@ -1139,7 +1139,7 @@ msgstr "Reproductor de música Banshee"
 msgid "Beagle Desktop Search"
 msgstr "Búsquedas de escritorio Beagle"
 
-#: database-content.py:404 templates/base.html:35
+#: database-content.py:404 templates/base.html:33
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Malditas mentiras"
@@ -1514,8 +1514,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1552,7 +1552,7 @@ msgid "Password:"
 msgstr "Contraseña:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77 templates/login.html:29
+#: templates/base.html:75 templates/login.html:29
 #: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Iniciar sesión"
@@ -1691,7 +1691,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -2054,69 +2055,69 @@ msgstr "Error del servidor"
 msgid "We're sorry but a server error has occurred."
 msgstr "Ocurrió un error en el servidor."
 
-#: templates/base.html:26 templates/base.html.py:42
+#: templates/base.html:24 templates/base.html.py:40
 #: templates/admin/delete_release_confirmation.html:6
 msgid "Home"
 msgstr "Principal"
 
-#: templates/base.html:27
+#: templates/base.html:25
 msgid "News"
 msgstr "Noticias"
 
-#: templates/base.html:28
+#: templates/base.html:26
 msgid "Projects"
 msgstr "Proyectos"
 
-#: templates/base.html:29
+#: templates/base.html:27
 msgid "Art"
 msgstr "Arte"
 
-#: templates/base.html:30
+#: templates/base.html:28
 msgid "Support"
 msgstr "Soporte"
 
-#: templates/base.html:31
+#: templates/base.html:29
 msgid "Development"
 msgstr "Desarrollo"
 
-#: templates/base.html:32
+#: templates/base.html:30
 msgid "Community"
 msgstr "Comunidad"
 
-#: templates/base.html:42
+#: templates/base.html:40
 msgid "Back to Damned Lies home page"
 msgstr "Volver a la página principal de Malditas Mentiras"
 
-#: templates/base.html:48 templates/index.html:13
+#: templates/base.html:46 templates/index.html:12
 msgid "Teams"
 msgstr "Equipos"
 
-#: templates/base.html:53 templates/index.html:27
+#: templates/base.html:51 templates/index.html:26
 #: templates/release_compare.html:25
 msgid "Languages"
 msgstr "Idiomas"
 
-#: templates/base.html:58
+#: templates/base.html:56
 msgid "Release sets"
 msgstr "Publicaciones"
 
-#: templates/base.html:63 templates/index.html:43
+#: templates/base.html:61 templates/index.html:43
 msgid "Modules"
 msgstr "Módulos"
 
-#: templates/base.html:74
+#: templates/base.html:72
 msgid "Log out"
 msgstr "Salir de la sesión"
 
-#: templates/base.html:94
+#: templates/base.html:92
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
 
-#: templates/base.html:94
+#: templates/base.html:92
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
-#: templates/base.html:96
+#: templates/base.html:94
 msgid ""
 "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -2124,7 +2125,7 @@ msgstr ""
 "Mantenido en el módulo <a href='http://git.gnome.org/browse/damned-"
 "lies/'>damned-lies</a> en <a href='http://git.gnome.org/'>git.gnome.org</a>"
 
-#: templates/base.html:98
+#: templates/base.html:96
 #, python-format
 msgid "Hosted by %(link)s."
 msgstr "Hospedado por %(link)s."
@@ -2147,7 +2148,7 @@ msgstr "Malditas mentiras acerca de GNOME"
 msgid "Error:"
 msgstr "Error:"
 
-#: templates/index.html:14
+#: templates/index.html:13
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -2155,7 +2156,7 @@ msgstr ""
 "Lista de todos los equipos de traducción de GNOME, con información completa "
 "tal como el contacto primario (coordinador), páginas web y listas de correo."
 
-#: templates/index.html:15
+#: templates/index.html:14
 msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
@@ -2163,7 +2164,7 @@ msgstr ""
 "Si no hay un equipo para su idioma puede <a href='http://live.gnome.org/"
 "TranslationProject/StartingATeam/'>iniciar su propio equipo</a> fácilmente."
 
-#: templates/index.html:19
+#: templates/index.html:18
 #, python-format
 msgid ""
 "Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us "
@@ -2172,7 +2173,7 @@ msgstr ""
 "Vaya a la <a href='%(team_url)s'>página del equipo %(language_name)s</a> y "
 "ayúdenos a traducir GNOME."
 
-#: templates/index.html:29
+#: templates/index.html:28
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
@@ -2181,7 +2182,7 @@ msgstr ""
 "Lista de todos los idiomas para los que hay <a href='%(teams_url)s'>equipos "
 "de traducción</a>."
 
-#: templates/index.html:30
+#: templates/index.html:29
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -2190,17 +2191,17 @@ msgstr ""
 "sencillas), y aquí puede ver todos los idiomas a los que se está traduciendo "
 "GNOME."
 
-#: templates/index.html:34
+#: templates/index.html:33
 msgid "Release Sets"
 msgstr "Publicaciones"
 
-#: templates/index.html:35
+#: templates/index.html:34
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
 "Lista de todos las publicaciones de GNOME y publicaciones para los que "
 "coleccionamos estadísticas."
 
-#: templates/index.html:37
+#: templates/index.html:36
 msgid ""
 "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
 "2.26&quot;."
@@ -2208,7 +2209,7 @@ msgstr ""
 "Algunos ejemplos de publicaciones son «Infraestructura de GNOME» o «GNOME "
 "2.26»."
 
-#: templates/index.html:38
+#: templates/index.html:37
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
@@ -2216,7 +2217,7 @@ msgstr ""
 "Las publicaciones oficiales de GNOME están divididos en varias categorías "
 "tales como «Aplicaciones del escritorio» y «Plataforma de desarrollo»."
 
-#: templates/index.html:40
+#: templates/index.html:39
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -2257,8 +2258,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2475,19 +2476,19 @@ msgstr ""
 "durante el proceso de traducción de un módulo."
 
 #: templates/languages/language_all_modules.html:4
-#: templates/languages/language_all_modules.html:20
+#: templates/languages/language_all_modules.html:23
 #: templates/languages/language_release_summary.html:57
 #: templates/languages/language_release_summary.html:58
 #: templates/languages/language_release_summary.html:59
 msgid "All modules"
 msgstr "Todos los módulos"
 
-#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_all_modules.html:26
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
 msgstr "Ocultar los módulos completados"
 
-#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_all_modules.html:30
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
 msgstr "Mostrar los módulos completados"
@@ -3147,15 +3148,15 @@ msgstr "Sin comentarios"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3351,8 +3352,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
