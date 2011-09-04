@@ -60,7 +60,7 @@ def num_stats(stat, scope='full'):
         stats['prc'] = stats['translated_perc']
     if 'prc' in stats:
         result = '<pre class="stats"><b>%(prc)3s%%</b> <span class="num1">%(translated)6s</span> <span class="num2">%(fuzzy)5s</span> <span class="num3">%(untranslated)5s</span> </pre>' % stats
-        result = result.replace('">0</span>', ' zero">0</span>')
+        result = result.replace(' 0</span>', ' <span class="zero">0</span></span>')
     else:
         result = "%(translated)s/%(fuzzy)s/%(untranslated)s" % stats
     return mark_safe(result)

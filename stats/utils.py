@@ -220,7 +220,8 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
             return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),), doc_format
         if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
             if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
-                errors.append(("warn", ugettext_noop("%s doesn't resolve to a real file, using '%s.xml'.") % (doc_format.module_var, moduleid)))
+                errors.append(("warn", ugettext_noop("%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'.") % {
+                    'name1': doc_format.module_var, 'name2': moduleid}))
                 modulename = moduleid
             else:
                 # Last try: only one xml file in C/...
