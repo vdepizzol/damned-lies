@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-20 20:48+0000\n"
-"PO-Revision-Date: 2011-08-24 23:32+0200\n"
+"POT-Creation-Date: 2011-09-04 19:53+0000\n"
+"PO-Revision-Date: 2011-09-04 22:43+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -919,7 +919,7 @@ msgstr "Podręcznik programu Dasher"
 
 #: database-content.py:346 languages/views.py:53 languages/views.py:86
 #: templates/branch_detail.html:23 templates/release_detail.html:24
-#: templates/release_detail.html.py:81
+#: templates/release_detail.html.py:70
 #: templates/languages/language_release_summary.html:14
 msgid "Documentation"
 msgstr "Dokumentacja"
@@ -1140,7 +1140,7 @@ msgstr "Odtwarzacz muzyki Banshee"
 msgid "Beagle Desktop Search"
 msgstr "Wyszukiwanie Beagle Desktop"
 
-#: database-content.py:404 templates/base.html:35
+#: database-content.py:404 templates/base.html:33
 #: templates/admin/base_site.html:7
 msgid "Damned Lies"
 msgstr "Przeklęte kłamstwa"
@@ -1552,7 +1552,7 @@ msgid "Password:"
 msgstr "Hasło:"
 
 #: django_openid/templates/django_openid/admin_login.html:28
-#: templates/base.html:77 templates/login.html:29
+#: templates/base.html:75 templates/login.html:29
 #: templates/registration/password_reset_complete.html:12
 msgid "Log in"
 msgstr "Zaloguj"
@@ -1585,7 +1585,7 @@ msgstr "Tłumaczenia interfejsu użytkownika"
 msgid "UI Translations (reduced)"
 msgstr "Tłumaczenia interfejsu użytkownika (zmniejszone)"
 
-#: languages/views.py:81 templates/release_detail.html:79
+#: languages/views.py:81 templates/release_detail.html:68
 msgid "Original strings"
 msgstr "Pierwotne ciągi"
 
@@ -1691,8 +1691,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"To powinien być adres e-mail, przydatne jeśli jest inny niż pole \"adres e-"
-"mail\""
+"To powinien być adres e-mail, przydatne jeśli jest inny niż pole &quot;adres "
+"e-mail&quot;"
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -1701,7 +1701,7 @@ msgstr "Formularz jest nieprawidłowy."
 #: people/views.py:100
 #, python-format
 msgid "You have successfully joined the team '%s'."
-msgstr "Pomyślnie dołączono do zespołu \"%s\"."
+msgstr "Pomyślnie dołączono do zespołu &quot;%s&quot;."
 
 #: people/views.py:101
 msgid "A new person joined your team"
@@ -1719,7 +1719,7 @@ msgstr "Użytkownik jest już członkiem tego zespołu."
 #: people/views.py:124
 #, python-format
 msgid "You have been removed from the team '%s'."
-msgstr "Użytkownik został usunięty z zespołu \"%s\"."
+msgstr "Użytkownik został usunięty z zespołu &quot;%s&quot;."
 
 #: people/views.py:127
 msgid "You are not a member of this team."
@@ -1755,11 +1755,11 @@ msgstr "Nie można utworzyć pliku POT, przerwano tworzenie statystyk."
 msgid "Can't copy new POT file to public location."
 msgstr "Nie można skopiować nowego pliku POT do położenia publicznego."
 
-#: stats/models.py:792
+#: stats/models.py:791
 msgid "Error retrieving pot file from URL."
 msgstr "Błąd podczas pobierania pliku POT z adresu URL."
 
-#: stats/models.py:816
+#: stats/models.py:815
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1770,42 +1770,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:840
+#: stats/models.py:839
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Wpis dla tego języka nie istnieje w zmiennej %(var)s w pliku %(file)s."
 
-#: stats/models.py:1170
+#: stats/models.py:1174
 msgid "Administration Tools"
 msgstr "Narzędzia administracyjne"
 
-#: stats/models.py:1171
+#: stats/models.py:1175
 msgid "Development Tools"
 msgstr "Narzędzia programistyczne"
 
-#: stats/models.py:1172
+#: stats/models.py:1176
 msgid "GNOME Desktop"
 msgstr "Środowisko GNOME"
 
-#: stats/models.py:1173
+#: stats/models.py:1177
 msgid "GNOME Developer Platform"
 msgstr "Platforma programistyczna GNOME"
 
-#: stats/models.py:1174
+#: stats/models.py:1178
 msgid "New Module Proposals"
 msgstr "Nowe propozycje modułów"
 
-#: stats/models.py:1330 stats/models.py:1677
+#: stats/models.py:1334 stats/models.py:1681
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1358
+#: stats/models.py:1362
 msgid "POT file unavailable"
 msgstr "Plik POT jest niedostępny"
 
-#: stats/models.py:1362
+#: stats/models.py:1366
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1813,17 +1813,17 @@ msgstr[0] "%(count)s ciąg znaków"
 msgstr[1] "%(count)s ciągi znaków"
 msgstr[2] "%(count)s ciągów znaków"
 
-#: stats/models.py:1363
+#: stats/models.py:1367
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zaktualizowano %(date)s"
 
-#: stats/models.py:1365 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1369 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1368
+#: stats/models.py:1372
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1831,23 +1831,23 @@ msgstr[0] "%(count)s ilustracja"
 msgstr[1] "%(count)s ilustracje"
 msgstr[2] "%(count)s ilustracji"
 
-#: stats/models.py:1369
+#: stats/models.py:1373
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Plik POT (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1372
+#: stats/models.py:1376
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Plik POT (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1505
+#: stats/models.py:1509
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Ten plik POT nie został utworzony za pomocą standardowej metody intltool."
 
-#: stats/models.py:1506
+#: stats/models.py:1510
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1855,16 +1855,16 @@ msgstr ""
 "Ten plik POT nie został utworzony za pomocą standardowej metody gnome-doc-"
 "utils."
 
-#: stats/utils.py:153
+#: stats/utils.py:189
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Błąd podczas wykonywania &quot;intltool-update -m&quot;."
 
-#: stats/utils.py:159
+#: stats/utils.py:195
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Brakuje pewnych plików w POTFILES.in: %s"
 
-#: stats/utils.py:168
+#: stats/utils.py:204
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1873,22 +1873,24 @@ msgstr ""
 "Następujące pliki są wymienione w POTFILES.in lub POTFILES.skip, lecz nie "
 "istnieją: %s"
 
-#: stats/utils.py:194
+#: stats/utils.py:223
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Moduł %s wydaje się nie być modułem gnome-doc-utils."
 
-#: stats/utils.py:197
+#: stats/utils.py:226
 #, python-format
-msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
 msgstr ""
-"DOC_MODULE nie odnosi się do prawdziwego pliku, używanie &quot;%s.xml&quot;."
+"%(name1)s nie odnosi się do prawdziwego pliku, używanie "
+"&quot;%(name2)s.xml&quot;."
 
-#: stats/utils.py:205
-msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr "DOC_MODULE nie wskazuje na prawdziwy plik, a prawdopodobnie makro."
+#: stats/utils.py:235
+#, python-format
+msgid "%s doesn't point to a real file, probably a macro."
+msgstr "%s nie wskazuje na prawdziwy plik, a prawdopodobnie makro."
 
-#: stats/utils.py:220
+#: stats/utils.py:249
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1899,57 +1901,57 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:307
+#: stats/utils.py:336
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Plik PO &quot;%s&quot; nie istnieje lub nie może być odczytany."
 
-#: stats/utils.py:334
+#: stats/utils.py:363
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Plik PO &quot;%s&quot; nie przeszedł testu msgfmt: bez aktualizacji."
 
-#: stats/utils.py:336
+#: stats/utils.py:365
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Nie można uzyskać statystyk dla pliku POT &quot;%s&quot;."
 
-#: stats/utils.py:339
+#: stats/utils.py:368
 msgid "This PO file has an executable bit set."
 msgstr "Ten plik PO ma ustawiony bit wykonywalny."
 
-#: stats/utils.py:367
+#: stats/utils.py:396
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Plik PO &quot;%s&quot; nie jest kodowany w UTF-8."
 
-#: stats/utils.py:377
+#: stats/utils.py:406
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Wpis dla tego języka nie istnieje w pliku LINGUAS."
 
-#: stats/utils.py:395
+#: stats/utils.py:424
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "Dla tego modułu nie jest wymagana modyfikacja pliku lub zmiennej LINGUAS"
 
-#: stats/utils.py:401
+#: stats/utils.py:430
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Wpis dla tego języka nie istnieje w pliku konfiguracyjnym ALL_LINGUAS."
 
-#: stats/utils.py:403
+#: stats/utils.py:432
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Nie można odnaleźć zmiennej LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:410
+#: stats/utils.py:439
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
 msgstr ""
 "Nie można znaleźć zmiennej DOC_LINGUAS. Proszę zapytać opiekuna modułu."
 
-#: stats/utils.py:412
+#: stats/utils.py:441
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Lista DOC_LINGUAS nie zawiera tego języka."
 
@@ -2051,69 +2053,69 @@ msgstr "Błąd serwera"
 msgid "We're sorry but a server error has occurred."
 msgstr "Wystąpił błąd serwera."
 
-#: templates/base.html:26 templates/base.html.py:42
+#: templates/base.html:24 templates/base.html.py:40
 #: templates/admin/delete_release_confirmation.html:6
 msgid "Home"
 msgstr "Strona główna"
 
-#: templates/base.html:27
+#: templates/base.html:25
 msgid "News"
 msgstr "Aktualności"
 
-#: templates/base.html:28
+#: templates/base.html:26
 msgid "Projects"
 msgstr "Projekty"
 
-#: templates/base.html:29
+#: templates/base.html:27
 msgid "Art"
 msgstr "Wygląd"
 
-#: templates/base.html:30
+#: templates/base.html:28
 msgid "Support"
 msgstr "Pomoc techniczna"
 
-#: templates/base.html:31
+#: templates/base.html:29
 msgid "Development"
 msgstr "Programowanie"
 
-#: templates/base.html:32
+#: templates/base.html:30
 msgid "Community"
 msgstr "Społeczność"
 
-#: templates/base.html:42
+#: templates/base.html:40
 msgid "Back to Damned Lies home page"
 msgstr "Powrót do strony głównej Przeklętych kłamstw"
 
-#: templates/base.html:48 templates/index.html:13
+#: templates/base.html:46 templates/index.html:12
 msgid "Teams"
 msgstr "Zespoły"
 
-#: templates/base.html:53 templates/index.html:27
+#: templates/base.html:51 templates/index.html:26
 #: templates/release_compare.html:25
 msgid "Languages"
 msgstr "Języki"
 
-#: templates/base.html:58
+#: templates/base.html:56
 msgid "Release sets"
 msgstr "Zestawy wydań"
 
-#: templates/base.html:63 templates/index.html:43
+#: templates/base.html:61 templates/index.html:43
 msgid "Modules"
 msgstr "Moduły"
 
-#: templates/base.html:74
+#: templates/base.html:72
 msgid "Log out"
 msgstr "Wyloguj się"
 
-#: templates/base.html:94
+#: templates/base.html:92
 msgid "Copyright &copy; 2006-2009"
 msgstr "Copyright &copy; 2006-2009"
 
-#: templates/base.html:94
+#: templates/base.html:92
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: templates/base.html:96
+#: templates/base.html:94
 msgid ""
 "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-"
 "lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>"
@@ -2122,7 +2124,7 @@ msgstr ""
 "lies/'>damned-lies</a> na serwerze <a href='http://git.gnome.org/'>git.gnome."
 "org</a>"
 
-#: templates/base.html:98
+#: templates/base.html:96
 #, python-format
 msgid "Hosted by %(link)s."
 msgstr "Serwis utrzymywany przez firmę %(link)s."
@@ -2145,7 +2147,7 @@ msgstr "Przeklęte kłamstwa o GNOME"
 msgid "Error:"
 msgstr "Błąd:"
 
-#: templates/index.html:14
+#: templates/index.html:13
 msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
@@ -2153,7 +2155,7 @@ msgstr ""
 "Lista wszystkich zespołów tłumaczy GNOME wraz z pełnymi informacjami, jak "
 "główny kontakt (koordynator), strony WWW i listy pocztowe."
 
-#: templates/index.html:15
+#: templates/index.html:14
 msgid ""
 "If there is no team for your language, you can easily <a href='http://live."
 "gnome.org/TranslationProject/StartingATeam/'>start your own team</a>."
@@ -2162,7 +2164,7 @@ msgstr ""
 "href='http://live.gnome.org/TranslationProject/StartingATeam/'>założyć "
 "własny zespół</a>."
 
-#: templates/index.html:19
+#: templates/index.html:18
 #, python-format
 msgid ""
 "Go to the <a href='%(team_url)s'>%(language_name)s team page</a> and help us "
@@ -2171,7 +2173,7 @@ msgstr ""
 "Proszę przejść do strony <a href='%(team_url)s'>zespołu dla języka %"
 "(language_name)s</a> i pomóc w tłumaczeniu środowiska GNOME."
 
-#: templates/index.html:29
+#: templates/index.html:28
 #, python-format
 msgid ""
 "List of all languages there are <a href='%(teams_url)s'>Translation Teams</"
@@ -2180,7 +2182,7 @@ msgstr ""
 "Lista wszystkich języków, dla których istnieją <a href='%(teams_url)"
 "s'>zespoły tłumaczy</a>."
 
-#: templates/index.html:30
+#: templates/index.html:29
 msgid ""
 "Some teams manage more than one language (usually just simple variants), and "
 "here you can see all the languages GNOME is being translated to."
@@ -2189,17 +2191,17 @@ msgstr ""
 "drobnymi wariantami). Tutaj można zobaczyć wszystkie języki, na jakie "
 "środowisko GNOME jest tłumaczone."
 
-#: templates/index.html:34
+#: templates/index.html:33
 msgid "Release Sets"
 msgstr "Zestawy wydań"
 
-#: templates/index.html:35
+#: templates/index.html:34
 msgid "List of all GNOME release sets and releases we gather stats for."
 msgstr ""
 "Lista wszystkich zestawów wydań i wydań GNOME, dla których zbierane są "
 "statystyki."
 
-#: templates/index.html:37
+#: templates/index.html:36
 msgid ""
 "Examples of release sets are &quot;GNOME Infrastructure&quot; or &quot;GNOME "
 "2.26&quot;."
@@ -2207,7 +2209,7 @@ msgstr ""
 "Przykładowe zestawy wydań to &quot;Infrastruktura GNOME&quot; lub &quot;"
 "GNOME 2.26&quot;."
 
-#: templates/index.html:38
+#: templates/index.html:37
 msgid ""
 "Official GNOME release sets are further divided into categories such as "
 "&quot;Desktop Applications&quot; and &quot;Developer Platform&quot;."
@@ -2215,7 +2217,7 @@ msgstr ""
 "Oficjalne zestawy wydań GNOME są podzielone na kategorie, takie jak &quot;"
 "Programy środowiska&quot; i &quot;Platforma programistyczna&quot;."
 
-#: templates/index.html:40
+#: templates/index.html:39
 msgid ""
 "Look here if you want to compare language support in any of these release "
 "sets."
@@ -2391,7 +2393,7 @@ msgstr ""
 msgid "Language"
 msgstr "Język"
 
-#: templates/release_detail.html:21 templates/release_detail.html.py:80
+#: templates/release_detail.html:21 templates/release_detail.html.py:69
 #: templates/languages/language_release_summary.html:11
 msgid "User Interface"
 msgstr "Interfejs użytkownika"
@@ -2473,19 +2475,19 @@ msgstr ""
 "tłumaczenia modułu."
 
 #: templates/languages/language_all_modules.html:4
-#: templates/languages/language_all_modules.html:20
-#: templates/languages/language_release_summary.html:57
-#: templates/languages/language_release_summary.html:58
-#: templates/languages/language_release_summary.html:59
+#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
+#: templates/languages/language_release_summary.html:49
 msgid "All modules"
 msgstr "Wszystkie moduły"
 
-#: templates/languages/language_all_modules.html:23
+#: templates/languages/language_all_modules.html:26
 #: templates/languages/language_release.html:25
 msgid "Hide completed modules"
 msgstr "Ukryj ukończone moduły"
 
-#: templates/languages/language_all_modules.html:27
+#: templates/languages/language_all_modules.html:30
 #: templates/languages/language_release.html:29
 msgid "Show completed modules"
 msgstr "Wyświetl ukończone moduły"
@@ -3027,7 +3029,8 @@ msgstr "Do tej czynności wymagany jest plik."
 #: vertimus/forms.py:88
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr ""
-"Proszę nie przesyłać plików z wybraną czynnością \"Zarezerwuj tłumaczenie\"."
+"Proszę nie przesyłać plików z wybraną czynnością &quot;Zarezerwuj "
+"tłumaczenie&quot;."
 
 #: vertimus/models.py:114
 msgid "Inactive"
@@ -3137,7 +3140,7 @@ msgstr ""
 "Witamy,\n"
 "\n"
 "Moduł %(module)s - %(branch)s - %(domain)s (%(language)s) jest teraz w nowym "
-"stanie - \"%(new_state)s\".\n"
+"stanie - &quot;%(new_state)s&quot;.\n"
 "%(url)s\n"
 "\n"
 
@@ -3165,7 +3168,7 @@ msgstr ""
 #: vertimus/models.py:629
 #, python-format
 msgid "The commit failed. The error was: '%s'"
-msgstr "Zatwierdzenie pliku się nie powiodło. Wystąpił błąd: \"%s\""
+msgstr "Zatwierdzenie pliku się nie powiodło. Wystąpił błąd: &quot;%s&quot;"
 
 #: vertimus/views.py:157 vertimus/views.py:189
 #, python-format
