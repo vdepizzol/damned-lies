@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-04 19:53+0000\n"
-"PO-Revision-Date: 2011-09-04 22:43+0200\n"
+"POT-Creation-Date: 2011-09-05 17:24+0000\n"
+"PO-Revision-Date: 2011-09-05 21:02+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -1882,8 +1882,8 @@ msgstr "Moduł %s wydaje się nie być modułem gnome-doc-utils."
 #, python-format
 msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
 msgstr ""
-"%(name1)s nie odnosi się do prawdziwego pliku, używanie "
-"&quot;%(name2)s.xml&quot;."
+"%(name1)s nie odnosi się do prawdziwego pliku, używanie &quot;%(name2)s."
+"xml&quot;."
 
 #: stats/utils.py:235
 #, python-format
@@ -1955,7 +1955,7 @@ msgstr ""
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Lista DOC_LINGUAS nie zawiera tego języka."
 
-#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:36
+#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:35
 msgid "Coordinator"
 msgstr "Koordynator"
 
@@ -2795,6 +2795,19 @@ msgstr "Wyślij wiadomość e-mail na listę"
 #: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "Subskrybuj"
+
+#: templates/teams/team_base.html:41
+msgid "This team has currently no coordinator."
+msgstr "Ten zespół nie posiada obecnie koordynatora."
+
+#: templates/teams/team_base.html:42
+#, python-format
+msgid ""
+"See <a href=\"%(link)s\">the GTP Wiki</a> for more information about "
+"coordinatorship."
+msgstr ""
+"Więcej informacji o koordynowaniu można znaleźć na <a href=\"%(link)s\">Wiki "
+"projektu GTP</a>."
 
 #: templates/teams/team_detail.html:7
 #, python-format
