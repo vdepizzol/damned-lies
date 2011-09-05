@@ -2,21 +2,21 @@
 # Spanish translation for Damned Lies
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-22 18:30+0000\n"
-"PO-Revision-Date: 2011-09-04 15:30+0200\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+"POT-Creation-Date: 2011-09-04 19:53+0000\n"
+"PO-Revision-Date: 2011-09-05 13:51+0200\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: database-content.py:1 database-content.py:125
@@ -918,7 +918,7 @@ msgstr "Manual de Dasher"
 
 #: database-content.py:346 languages/views.py:53 languages/views.py:86
 #: templates/branch_detail.html:23 templates/release_detail.html:24
-#: templates/release_detail.html.py:81
+#: templates/release_detail.html.py:70
 #: templates/languages/language_release_summary.html:14
 msgid "Documentation"
 msgstr "Documentación"
@@ -1514,8 +1514,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href="
-"\"%(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href=\"%"
+"(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1585,7 +1585,7 @@ msgstr "Traducciones de la IU"
 msgid "UI Translations (reduced)"
 msgstr "Traducciones de la IU (reducidas)"
 
-#: languages/views.py:81 templates/release_detail.html:79
+#: languages/views.py:81 templates/release_detail.html:68
 msgid "Original strings"
 msgstr "Cadenas originales"
 
@@ -1691,8 +1691,7 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
-"e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -1755,11 +1754,11 @@ msgstr "No se puede general el archivo POT, estadísticas abortadas."
 msgid "Can't copy new POT file to public location."
 msgstr "No se puede copiar el nuevo archivo POT a la ubicación pública."
 
-#: stats/models.py:792
+#: stats/models.py:791
 msgid "Error retrieving pot file from URL."
 msgstr "Error al obtener el archivo POT desde el URL."
 
-#: stats/models.py:816
+#: stats/models.py:815
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1770,7 +1769,7 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:840
+#: stats/models.py:839
 #, python-format
 msgid ""
 "Entry for this language is not present in %(var)s variable in %(file)s file."
@@ -1778,76 +1777,76 @@ msgstr ""
 "La entrada para este idioma no está presente en la variable %(var)s del "
 "archivo %(file)s."
 
-#: stats/models.py:1170
+#: stats/models.py:1174
 msgid "Administration Tools"
 msgstr "Herramientas de administración"
 
-#: stats/models.py:1171
+#: stats/models.py:1175
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: stats/models.py:1172
+#: stats/models.py:1176
 msgid "GNOME Desktop"
 msgstr "Escritorio GNOME"
 
-#: stats/models.py:1173
+#: stats/models.py:1177
 msgid "GNOME Developer Platform"
 msgstr "Plataforma de desarrollo de GNOME"
 
-#: stats/models.py:1174
+#: stats/models.py:1178
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1330 stats/models.py:1677
+#: stats/models.py:1334 stats/models.py:1681
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1358
+#: stats/models.py:1362
 msgid "POT file unavailable"
 msgstr "Archivo POT no disponible"
 
-#: stats/models.py:1362
+#: stats/models.py:1366
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1363
+#: stats/models.py:1367
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:1365 templates/vertimus/vertimus_detail.html:48
+#: stats/models.py:1369 templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1368
+#: stats/models.py:1372
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1369
+#: stats/models.py:1373
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
 
-#: stats/models.py:1372
+#: stats/models.py:1376
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "Archivo POT (%(messages)s): %(updated)s"
 
-#: stats/models.py:1505
+#: stats/models.py:1509
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1506
+#: stats/models.py:1510
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1855,16 +1854,16 @@ msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de gnome-doc-"
 "utils."
 
-#: stats/utils.py:153
+#: stats/utils.py:189
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Hubo errores al ejecutar la comprobación «intltool-update -m»."
 
-#: stats/utils.py:159
+#: stats/utils.py:195
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Faltan algunos archivos en el archivo POTFILES.in: %s"
 
-#: stats/utils.py:168
+#: stats/utils.py:204
 #, python-format
 msgid ""
 "Following files are referenced in either POTFILES.in or POTFILES.skip, yet "
@@ -1873,21 +1872,24 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: stats/utils.py:194
+#: stats/utils.py:223
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
-#: stats/utils.py:197
+#: stats/utils.py:226
 #, python-format
-msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr "DOC_MODULE no resuelve a un archivo real, usando «%s.xml»."
+#| msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
+msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
+msgstr "%(name1)s no resuelve a un archivo real, usando «%(name2)s.xml»."
 
-#: stats/utils.py:205
-msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr "DOC_MODULE no apunta a un archivo real, probablemente es un macro."
+#: stats/utils.py:235
+#, python-format
+#| msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+msgid "%s doesn't point to a real file, probably a macro."
+msgstr "%s no apunta a un archivo real, probablemente es un macro."
 
-#: stats/utils.py:220
+#: stats/utils.py:249
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1898,54 +1900,54 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:307
+#: stats/utils.py:336
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: stats/utils.py:334
+#: stats/utils.py:363
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: stats/utils.py:336
+#: stats/utils.py:365
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: stats/utils.py:339
+#: stats/utils.py:368
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: stats/utils.py:367
+#: stats/utils.py:396
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: stats/utils.py:377
+#: stats/utils.py:406
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: stats/utils.py:395
+#: stats/utils.py:424
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "No es necesario editar el archivo o la variable LINGUAS para este módulo"
 
-#: stats/utils.py:401
+#: stats/utils.py:430
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:403
+#: stats/utils.py:432
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:410
+#: stats/utils.py:439
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1953,7 +1955,7 @@ msgstr ""
 "No se sabe dónde mirar la variable DOC_LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:412
+#: stats/utils.py:441
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
@@ -2258,8 +2260,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a "
-"href='%(link)s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a href='%(link)"
+"s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2396,7 +2398,7 @@ msgstr ""
 msgid "Language"
 msgstr "Idioma"
 
-#: templates/release_detail.html:21 templates/release_detail.html.py:80
+#: templates/release_detail.html:21 templates/release_detail.html.py:69
 #: templates/languages/language_release_summary.html:11
 msgid "User Interface"
 msgstr "Interfaz de usuario"
@@ -2477,9 +2479,9 @@ msgstr ""
 
 #: templates/languages/language_all_modules.html:4
 #: templates/languages/language_all_modules.html:23
-#: templates/languages/language_release_summary.html:57
-#: templates/languages/language_release_summary.html:58
-#: templates/languages/language_release_summary.html:59
+#: templates/languages/language_release_summary.html:47
+#: templates/languages/language_release_summary.html:48
+#: templates/languages/language_release_summary.html:49
 msgid "All modules"
 msgstr "Todos los módulos"
 
@@ -3148,15 +3150,15 @@ msgstr "Sin comentarios"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
-"(%(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
-"(%(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
+"(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3352,8 +3354,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
-#~ "«GNOME 2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
+#~ "2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
