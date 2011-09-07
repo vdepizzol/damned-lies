@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-04 19:53+0000\n"
-"PO-Revision-Date: 2011-09-05 13:51+0200\n"
+"POT-Creation-Date: 2011-09-05 17:24+0000\n"
+"PO-Revision-Date: 2011-09-07 13:00+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1879,13 +1879,11 @@ msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
 
 #: stats/utils.py:226
 #, python-format
-#| msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
 msgstr "%(name1)s no resuelve a un archivo real, usando «%(name2)s.xml»."
 
 #: stats/utils.py:235
 #, python-format
-#| msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgid "%s doesn't point to a real file, probably a macro."
 msgstr "%s no apunta a un archivo real, probablemente es un macro."
 
@@ -1959,7 +1957,7 @@ msgstr ""
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
-#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:36
+#: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:35
 msgid "Coordinator"
 msgstr "Coordinador"
 
@@ -2796,6 +2794,20 @@ msgstr "Enviar un correo electrónico a la lista"
 #: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "Suscribirse"
+
+#: templates/teams/team_base.html:41
+#| msgid "This branch is currently string-frozen."
+msgid "This team has currently no coordinator."
+msgstr "Actualmente este equipo no tiene coordinador."
+
+#: templates/teams/team_base.html:42
+#, python-format
+msgid ""
+"See <a href=\"%(link)s\">the GTP Wiki</a> for more information about "
+"coordinatorship."
+msgstr ""
+"Consulte el <a href=\"%(link)s\">wiki de GTP</a> para obtener más "
+"información sobre la coordinación."
 
 #: templates/teams/team_detail.html:7
 #, python-format
