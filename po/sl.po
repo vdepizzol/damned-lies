@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-31 08:18+0000\n"
-"PO-Revision-Date: 2011-09-02 20:43+0100\n"
+"POT-Creation-Date: 2011-09-07 11:01+0000\n"
+"PO-Revision-Date: 2011-09-07 15:35+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1776,11 +1776,11 @@ msgstr "Ni mogoče ustvariti datoteke POT, izpis statistike je preklican."
 msgid "Can't copy new POT file to public location."
 msgstr "Ni mogoče kopirati nove POT datoteke na javno mesto."
 
-#: stats/models.py:792
+#: stats/models.py:791
 msgid "Error retrieving pot file from URL."
 msgstr "Napaka pridobivanja datoteke pot z naslova URL."
 
-#: stats/models.py:816
+#: stats/models.py:815
 #, python-format
 msgid ""
 "Error regenerating POT file for %(file)s:\n"
@@ -1791,42 +1791,42 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/models.py:840
+#: stats/models.py:839
 #, python-format
 msgid "Entry for this language is not present in %(var)s variable in %(file)s file."
 msgstr "Vnos za ta jezik ni določen s spremenljivko %(var)s v datoteki %(file)s."
 
-#: stats/models.py:1175
+#: stats/models.py:1174
 msgid "Administration Tools"
 msgstr "Skrbniška orodja"
 
-#: stats/models.py:1176
+#: stats/models.py:1175
 msgid "Development Tools"
 msgstr "Razvojna orodja"
 
-#: stats/models.py:1177
+#: stats/models.py:1176
 msgid "GNOME Desktop"
 msgstr "GNOME namizje"
 
-#: stats/models.py:1178
+#: stats/models.py:1177
 msgid "GNOME Developer Platform"
 msgstr "Razvojno okolje GNOME"
 
-#: stats/models.py:1179
+#: stats/models.py:1178
 msgid "New Module Proposals"
 msgstr "Predlogi novih prevodov"
 
-#: stats/models.py:1335
-#: stats/models.py:1682
+#: stats/models.py:1334
+#: stats/models.py:1681
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1363
+#: stats/models.py:1362
 msgid "POT file unavailable"
 msgstr "Datoteka POT ni na voljo"
 
-#: stats/models.py:1367
+#: stats/models.py:1366
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1835,18 +1835,18 @@ msgstr[1] "%(count)s sporočilo"
 msgstr[2] "%(count)s sporočili"
 msgstr[3] "%(count)s sporočila"
 
-#: stats/models.py:1368
+#: stats/models.py:1367
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zadnjič posodobljeno %(date)s"
 
-#: stats/models.py:1370
+#: stats/models.py:1369
 #: templates/vertimus/vertimus_detail.html:48
 #: templates/vertimus/vertimus_detail.html:145
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1373
+#: stats/models.py:1372
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1855,53 +1855,54 @@ msgstr[1] "%(count)s shema"
 msgstr[2] "%(count)s shemi"
 msgstr[3] "%(count)s sheme"
 
-#: stats/models.py:1374
+#: stats/models.py:1373
 #, python-format
 msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1376
 #, python-format
 msgid "POT file (%(messages)s) — %(updated)s"
 msgstr "POT datoteka (%(messages)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1509
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Datoteka POT ni bila ustvarjena preko običajnega intltool načina."
 
-#: stats/models.py:1511
+#: stats/models.py:1510
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Datoteka POT ni ustvarjena preko običajnega gnome-doc-utils načina."
 
-#: stats/utils.py:153
+#: stats/utils.py:189
 msgid "Errors while running 'intltool-update -m' check."
 msgstr "Napaka med zagonom ukaza 'intltool-update -m'."
 
-#: stats/utils.py:159
+#: stats/utils.py:195
 #, python-format
 msgid "There are some missing files from POTFILES.in: %s"
 msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 
-#: stats/utils.py:168
+#: stats/utils.py:204
 #, python-format
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: stats/utils.py:194
+#: stats/utils.py:223
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
 
-#: stats/utils.py:197
+#: stats/utils.py:226
 #, python-format
-msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-msgstr "Podatki DOC_MODULE ne razrešijo podatkov o pravi datoteki; uporabljeno bo ime '%s.xml'."
+msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
+msgstr "%(name1)s ne razreši poti do prave datoteke; uporabljeno bo ime '%(name2)s.xml'."
 
-#: stats/utils.py:205
-msgid "DOC_MODULE doesn't point to a real file, probably a macro."
-msgstr "Podatki DOC_MODULE ne določajo prave datoteke; najverjetneje je priklican makro."
+#: stats/utils.py:235
+#, python-format
+msgid "%s doesn't point to a real file, probably a macro."
+msgstr "%s ne določa prave datoteke; najverjetneje je makro."
 
-#: stats/utils.py:220
+#: stats/utils.py:249
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1912,57 +1913,57 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:307
+#: stats/utils.py:336
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:334
+#: stats/utils.py:363
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:336
+#: stats/utils.py:365
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:339
+#: stats/utils.py:368
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:367
+#: stats/utils.py:396
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:377
+#: stats/utils.py:406
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:395
+#: stats/utils.py:424
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr "Za ta modul urejanje datoteke LINGUAS ni zahtevano"
 
-#: stats/utils.py:401
+#: stats/utils.py:430
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:403
+#: stats/utils.py:432
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:410
+#: stats/utils.py:439
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:412
+#: stats/utils.py:441
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
 #: teams/forms.py:30
 #: teams/models.py:253
-#: templates/teams/team_base.html:36
+#: templates/teams/team_base.html:35
 msgid "Coordinator"
 msgstr "Nadzornik"
 
@@ -2722,6 +2723,15 @@ msgstr "Pošlji sporočilo na dopisni seznam"
 #: templates/teams/team_base.html:29
 msgid "Subscribe"
 msgstr "Naroči se na dopisni seznam"
+
+#: templates/teams/team_base.html:41
+msgid "This team has currently no coordinator."
+msgstr "Skupine trenutno nima določenega nadzornika."
+
+#: templates/teams/team_base.html:42
+#, python-format
+msgid "See <a href=\"%(link)s\">the GTP Wiki</a> for more information about coordinatorship."
+msgstr "Poglejte si <a href=\"%(link)s\">Projekt GTP Wiki</a> za več podrobnosti o nadzornikih in njihovih nalogah."
 
 #: templates/teams/team_detail.html:7
 #, python-format
