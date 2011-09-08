@@ -383,7 +383,8 @@ class Branch(models.Model):
                 # *******************
                 domain_path = os.path.join(self.co_path(), dom.directory)
                 if not os.access(domain_path, os.X_OK):
-                    # TODO: should check if existing stats, and delete (archive) them in this case
+                    # Delete existing stats, if any
+                    Statistics.objects.filter(branch=self, domain=dom).delete()
                     continue
                 errors = []
 
