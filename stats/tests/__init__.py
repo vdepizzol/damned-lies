@@ -242,6 +242,21 @@ class StatisticsTests(TestCase):
         self.assertEqual(stats.po_url(), "/module/po/zenity.po.gnome-2-30.bem.po")
         self.assertEqual(stats.po_url(reduced=True), "/module/po/zenity.po.gnome-2-30.bem-reduced.po")
 
+    def testSetTranslationStats(self):
+        from vertimus.models import State, StateTranslating
+        # Get a stat that has full_po and part_po
+        stat = Statistics.objects.get(branch__module__name='zenity', branch__name='gnome-2-30', language__locale='it', domain__dtype='ui')
+        pers = Person.objects.create(username="toto")
+        state = StateTranslating.objects.create(branch=stat.branch, domain=stat.domain, language=stat.language, person=pers)
+        # Mark file completely translated
+        self.assertNotEqual(stat.part_po, stat.full_po)
+        stat.set_translation_stats('dummy', 136, 0, 0)
+        self.assertEqual(stat.part_po, stat.full_po)
+        # Check state is still translating
+        state = State.objects.filter(branch=stat.branch, domain=stat.domain, language=stat.language)
+        self.assertEqual(len(state), 1)
+        self.assertTrue(isinstance(state[0], StateTranslating))
+
 class FigureTests(TestCase):
     fixtures = ['sample_data.json']
     def testFigureView(self):

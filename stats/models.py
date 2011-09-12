@@ -1273,8 +1273,8 @@ class Statistics(models.Model):
     old_fuzzy        = models.IntegerField(default=0) # obsolete
     old_untranslated = models.IntegerField(default=0) # obsolete
 
-    full_po = models.OneToOneField(PoFile, null=True, related_name='stat_f')
-    part_po = models.OneToOneField(PoFile, null=True, related_name='stat_p')
+    full_po = models.OneToOneField(PoFile, null=True, related_name='stat_f', on_delete=models.SET_NULL)
+    part_po = models.OneToOneField(PoFile, null=True, related_name='stat_p', on_delete=models.SET_NULL)
 
     class Meta:
         db_table = 'statistics'
