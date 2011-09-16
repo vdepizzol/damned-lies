@@ -10,7 +10,9 @@ Following variables should be set:
     <th>{% trans "Release" %}</th>
     <th>{% trans "User Interface" %}</th>
     <th>{% trans "Graph" %}</th>
-    <th>{% trans "User Interface (red.)" %}</th>
+    <th>{% trans "User Interface (red.)" %}
+        <a href="{% url help 'reduced_po' %}"><img src="{{ MEDIA_URL }}img/help.png" alt="help icon" width="26"></a>
+    </th>
     <th>{% trans "Documentation" %}</th>
     <th>{% trans "Graph" %}</th>
     </tr>

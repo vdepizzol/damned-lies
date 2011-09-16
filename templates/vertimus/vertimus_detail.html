@@ -62,7 +62,7 @@ $(document).ready(function() {
       <img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
     {{ pot_stats.pot_text }}
   </em></div>
-  <div style="float:left">
+  <div style="display: inline-block">
     <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
     {% trans "Translated:" %} {{ stats|num_stats:"full" }}&nbsp;
     <div class="graph graphinline">
@@ -70,11 +70,16 @@ $(document).ready(function() {
     </div>
   </div>
   {% if po_url_reduced %}
-  <div style="float:left; margin-left: 150px;">
+  <div style="display: inline-block; margin-left: 2em;">
     <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
     {% trans "Translated (reduced):" %} {{ stats|num_stats:"part" }}&nbsp;
     <div class="graph graphinline">
       {{ stats|vis_stats:"part" }}
+    </div>
+    <div style="display: inline-block;">
+      <span class="help_link"><a href="{% url help 'reduced_po' %}">
+        <img src="{{ MEDIA_URL }}img/help.png" alt="help icon" width="26">
+      </a></span>
     </div>
   </div>
   {% endif %}
