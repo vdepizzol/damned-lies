@@ -37,7 +37,6 @@ def languages(request):
     context = {
         'pageSection': "languages",
         'languages': utils.trans_sort_object_list(languages, 'name'),
-        'bug_url': settings.ENTER_BUG_URL,
     }
     return render(request, 'languages/language_list.html', context)
 

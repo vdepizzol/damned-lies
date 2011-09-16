@@ -43,7 +43,6 @@ def modules(request, format='html'):
     context = {
         'pageSection':  "module",
         'modules': utils.sort_object_list(all_modules, 'get_description'),
-        'bug_url': settings.ENTER_BUG_URL,
     }
     return render(request, 'module_list.html', context)
 
@@ -245,7 +244,6 @@ def releases(request, format='html'):
         'pageSection'    : "releases",
         'active_releases': active_releases,
         'old_releases'   : old_releases,
-        'bug_url'        : settings.ENTER_BUG_URL,
     }
     return render(request, 'release_list.html', context)
 

@@ -41,7 +41,6 @@ def teams(request, format='html'):
         context = {
             'pageSection': 'teams',
             'teams': utils.trans_sort_object_list(teams, 'description'),
-            'bug_url': settings.ENTER_BUG_URL,
         }
         return render(request, 'teams/team_list.html', context)
 
