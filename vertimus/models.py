@@ -92,9 +92,7 @@ class State(models.Model):
     def _get_available_actions(self, person, action_names):
         action_names.append('WC')
         if person.is_committer(self.language.team) and 'IC' not in action_names:
-            action_names.extend(('Separator', 'IC'))
-            if self.name not in ('None', 'Committed'):
-                action_names.append('AA')
+            action_names.extend(('Separator', 'IC', 'AA'))
         return [eval('Action' + action_name)() for action_name in action_names]
 
     def get_action_sequence_from_level(self, level):

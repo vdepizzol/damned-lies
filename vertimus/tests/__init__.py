@@ -78,7 +78,7 @@ class VertimusTest(TeamsAndRolesTests):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['RT', 'WC', None, 'IC'])
+            self.assertEqual(action_names, ['RT', 'WC', None, 'IC', 'AA'])
 
     def test_state_translating(self):
         state = StateTranslating(branch=self.b, domain=self.d, language=self.l, person=self.pt)
@@ -187,7 +187,7 @@ class VertimusTest(TeamsAndRolesTests):
 
         for p in (self.pc, self.pcoo):
             action_names = [a.name for a in state.get_available_actions(p)]
-            self.assertEqual(action_names, ['AA', 'WC', None, 'IC'])
+            self.assertEqual(action_names, ['AA', 'WC', None, 'IC', 'AA'])
 
     def test_action_wc(self):
         state = StateNone(branch=self.b, domain=self.d, language=self.l)
