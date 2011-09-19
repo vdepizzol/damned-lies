@@ -212,26 +212,25 @@ def generate_doc_pot_file(vcs_path, potbase, moduleid):
     has_index_page = os.access(os.path.join(vcs_path, "C", "index.page"), os.R_OK)
     doc_format = DocFormat(bool(doc_id), has_index_page)
 
+    files = []
     if doc_format.format == "mallard":
-        files = ["index.page"]
+        files.append("index.page")
     else:
         modulename = read_makefile_variable([vcs_path], doc_format.module_var)
         if not modulename:
             return "", (("error", ugettext_noop("Module %s doesn't look like gnome-doc-utils module.") % moduleid),), doc_format
-        if not os.access(os.path.join(vcs_path, "C", modulename + ".xml"), os.R_OK):
-            if os.access(os.path.join(vcs_path, "C", moduleid + ".xml"), os.R_OK):
-                errors.append(("warn", ugettext_noop("%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'.") % {
-                    'name1': doc_format.module_var, 'name2': moduleid}))
-                modulename = moduleid
+        for index_page in ("index.docbook", modulename + ".xml", moduleid + ".xml"):
+            if os.access(os.path.join(vcs_path, "C", index_page), os.R_OK):
+                files.append(index_page)
+                break
+        if not files:
+            # Last try: only one xml file in C/...
+            xml_files = [f for f in os.listdir(os.path.join(vcs_path, "C")) if f.endswith(".xml")]
+            if len(xml_files) == 1:
+                files.append(os.path.basename(xml_files[0]))
             else:
-                # Last try: only one xml file in C/...
-                xml_files = [f for f in os.listdir(os.path.join(vcs_path, "C")) if f.endswith(".xml")]
-                if len(xml_files) == 1:
-                    modulename = os.path.basename(xml_files[0])[:-4]
-                else:
-                    errors.append(("error", ugettext_noop("%s doesn't point to a real file, probably a macro.") % doc_format.module_var))
-                    return "", errors, doc_format
-        files = [modulename + ".xml"]
+                errors.append(("error", ugettext_noop("%s doesn't point to a real file, probably a macro.") % doc_format.module_var))
+                return "", errors, doc_format
 
     includes = read_makefile_variable([vcs_path], doc_format.include_var)
     if includes:
