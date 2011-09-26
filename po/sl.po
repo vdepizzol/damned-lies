@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-17 18:55+0000\n"
-"PO-Revision-Date: 2011-09-17 21:40+0100\n"
+"POT-Creation-Date: 2011-09-26 12:09+0000\n"
+"PO-Revision-Date: 2011-09-26 15:45+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -1528,10 +1528,14 @@ msgid "GIMP and Friends"
 msgstr "GIMP in sorodni paketi"
 
 #: database-content.py:470
+msgid "Extra GNOME Applications (stable)"
+msgstr "Dodatni programi GNOME (stabilna različica)"
+
+#: database-content.py:471
 msgid "Extra GNOME Applications"
 msgstr "Dodatni programi GNOME"
 
-#: database-content.py:471
+#: database-content.py:472
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (zunanji programi)"
 
@@ -1888,22 +1892,17 @@ msgstr "Manjkajo navedbe datotek v datoteki POTFILES.in: %s"
 msgid "Following files are referenced in either POTFILES.in or POTFILES.skip, yet they don't exist: %s"
 msgstr "Navedene datoteke imajo določen sklic v POTFILES.in ali POTFILES.skip, vendar ne obstajajo: %s"
 
-#: stats/utils.py:223
+#: stats/utils.py:224
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s ni videti kot gnome-doc-utils modul."
-
-#: stats/utils.py:226
-#, python-format
-msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
-msgstr "%(name1)s ne razreši poti do prave datoteke; uporabljeno bo ime '%(name2)s.xml'."
 
 #: stats/utils.py:235
 #, python-format
 msgid "%s doesn't point to a real file, probably a macro."
 msgstr "%s ne določa prave datoteke; najverjetneje je makro."
 
-#: stats/utils.py:249
+#: stats/utils.py:248
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1914,51 +1913,51 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:336
+#: stats/utils.py:335
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "PO datoteka '%s' ne obstaja ali pa je ni mogoče prebrati."
 
-#: stats/utils.py:363
+#: stats/utils.py:362
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "S msgfmt preverjanjem so zaznane napake v PO datoteki '%s': datoteka ni sprejeta."
 
-#: stats/utils.py:365
+#: stats/utils.py:364
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Ni mogoče pridobiti podatkov statistike za POT datoteko '%s'."
 
-#: stats/utils.py:368
+#: stats/utils.py:367
 msgid "This PO file has an executable bit set."
 msgstr "Datoteka PO ima določen izvedljivi bit."
 
-#: stats/utils.py:396
+#: stats/utils.py:395
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Datoteka '%s' ni kodirana v UTF-8."
 
-#: stats/utils.py:406
+#: stats/utils.py:405
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "Koda jezika ni določena v datoteki LINGUAS."
 
-#: stats/utils.py:424
+#: stats/utils.py:423
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr "Za ta modul urejanje datoteke LINGUAS ni zahtevano"
 
-#: stats/utils.py:430
+#: stats/utils.py:429
 msgid "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "Vnos za jezik ni vpisan v nastavitveni datoteki ALL_LINGUAS."
 
-#: stats/utils.py:432
+#: stats/utils.py:431
 msgid "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:439
+#: stats/utils.py:438
 msgid "Don't know where to look for the DOC_LINGUAS variable, ask the module maintainer."
 msgstr "Ni mogoče določiti mesta spremenljivke DOC_LINGUAS, podrobnosti lahko zahtevate pri nadzorniku modula."
 
-#: stats/utils.py:441
+#: stats/utils.py:440
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V seznamu DOC_LINGUAS ni zavedene kratice jezika."
 
@@ -1989,8 +1988,8 @@ msgid "URL to subscribe"
 msgstr "URL za naročanje"
 
 #: teams/models.py:212
-#: vertimus/models.py:485
-#: vertimus/models.py:557
+#: vertimus/models.py:483
+#: vertimus/models.py:555
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "To je samodejno ustvarjeno sporočilo poslano preko %s."
@@ -2409,7 +2408,7 @@ msgid "Report this bug"
 msgstr "Poročanje o hroščih"
 
 #: templates/stats_show.html:47
-#: vertimus/models.py:146
+#: vertimus/models.py:144
 msgid "Translated"
 msgstr "Prevedeno"
 
@@ -2975,96 +2974,96 @@ msgstr "Za dejanje je treba izbrati tudi datoteko."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Ne pošiljajte datotek z dejanjem 'Pridrži'."
 
-#: vertimus/models.py:114
+#: vertimus/models.py:112
 msgid "Inactive"
 msgstr "Nedejavno"
 
-#: vertimus/models.py:130
+#: vertimus/models.py:128
 msgid "Translating"
 msgstr "Prevajanje"
 
-#: vertimus/models.py:169
+#: vertimus/models.py:167
 msgid "Proofreading"
 msgstr "Jezikovno pregledovanje"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:187
+#: vertimus/models.py:185
 msgid "Proofread"
 msgstr "Jezikovno pregledano"
 
-#: vertimus/models.py:205
+#: vertimus/models.py:203
 msgid "To Review"
 msgstr "Za pregled"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:218
 msgid "To Commit"
 msgstr "Za uveljavitev"
 
-#: vertimus/models.py:238
+#: vertimus/models.py:236
 msgid "Committing"
 msgstr "Uveljavljanje"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:253
 msgid "Committed"
 msgstr "Uveljavljeno"
 
-#: vertimus/models.py:274
+#: vertimus/models.py:272
 msgid "Write a comment"
 msgstr "Zapiši opombo"
 
-#: vertimus/models.py:275
+#: vertimus/models.py:273
 msgid "Reserve for translation"
 msgstr "Pridrži za prevajanje"
 
-#: vertimus/models.py:276
+#: vertimus/models.py:274
 msgid "Upload the new translation"
 msgstr "Pošlji novi prevod"
 
-#: vertimus/models.py:277
+#: vertimus/models.py:275
 msgid "Reserve for proofreading"
 msgstr "Pridrži za jezikovni pregled"
 
-#: vertimus/models.py:278
+#: vertimus/models.py:276
 msgid "Upload the proofread translation"
 msgstr "Naloži jezikovno pregledan prevod"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:280
+#: vertimus/models.py:278
 msgid "Ready for submission"
 msgstr "Pripravljeno za pošiljanje"
 
-#: vertimus/models.py:281
+#: vertimus/models.py:279
 msgid "Submit to repository"
 msgstr "Pošlji v skladišče"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:283
+#: vertimus/models.py:281
 msgid "Reserve to submit"
 msgstr "Pridržano za pošiljanje"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:285
+#: vertimus/models.py:283
 msgid "Inform of submission"
 msgstr "Obvesti o pošiljanju"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:287
+#: vertimus/models.py:285
 msgid "Rework needed"
 msgstr "Ponoven pregled"
 
-#: vertimus/models.py:288
+#: vertimus/models.py:286
 msgid "Archive the actions"
 msgstr "Arhiviraj dejanja."
 
-#: vertimus/models.py:289
+#: vertimus/models.py:287
 msgid "Undo the last state change"
 msgstr "Razveljavi zadnjo spremembo stanja"
 
-#: vertimus/models.py:359
+#: vertimus/models.py:357
 msgid "File in repository"
 msgstr "Datoteka v skladišču"
 
-#: vertimus/models.py:370
+#: vertimus/models.py:368
 #: vertimus/views.py:158
 #: vertimus/views.py:164
 #: vertimus/views.py:174
@@ -3072,7 +3071,7 @@ msgstr "Datoteka v skladišču"
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Poslal %(name)s dne %(date)s"
 
-#: vertimus/models.py:470
+#: vertimus/models.py:468
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3087,12 +3086,12 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:483
-#: vertimus/models.py:555
+#: vertimus/models.py:481
+#: vertimus/models.py:553
 msgid "Without comment"
 msgstr "Brez opomb"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:541
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3107,7 +3106,7 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:629
+#: vertimus/models.py:627
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Neuspešna uveljavitev. Napaka je: '%s'"
@@ -3126,6 +3125,11 @@ msgstr "Zadnje uveljavljena datoteka za %(lang)s jezik"
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Najnovejša POT datoteka"
+
+#~ msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
+#~ msgstr ""
+#~ "%(name1)s ne razreši poti do prave datoteke; uporabljeno bo ime "
+#~ "'%(name2)s.xml'."
 
 #~ msgid "Criawips Manual"
 #~ msgstr "priročnik Criawips"
