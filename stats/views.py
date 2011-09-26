@@ -168,10 +168,10 @@ def docimages(request, module_name, potbase, branch_name, langcode):
     }
     return render(request, 'module_images.html', context)
 
-def dynamic_po(request, filename):
+def dynamic_po(request, module_name, domain, branch_name, filename):
     """ Generates a dynamic po file from the POT file of a branch """
     try:
-        module, domain, branch, locale, ext = filename.split(".")
+        locale, ext = filename.split(".")
         if locale.endswith('-reduced'):
             locale, reduced = locale[:-8], True
         else:
@@ -180,8 +180,8 @@ def dynamic_po(request, filename):
     except:
         raise Http404
     potfile = get_object_or_404(Statistics,
-                             branch__module__name=module,
-                             branch__name=branch,
+                             branch__module__name=module_name,
+                             branch__name=branch_name,
                              domain__name=domain,
                              language=None)
     file_path = potfile.po_path(reduced=reduced).encode('ascii')
@@ -192,7 +192,7 @@ def dynamic_po(request, filename):
 # Copyright (C) %(year)s %(pack)s's COPYRIGHT HOLDER
 # This file is distributed under the same license as the %(pack)s package.\n""" % {
         'lang': language.name,
-        'pack': module,
+        'pack': module_name,
         'year': date.today().year
     }
     if request.user.is_authenticated():
@@ -216,7 +216,7 @@ def dynamic_po(request, filename):
             continue
         # Transformations
         new_line = {
-            '"Project-Id-': u"\"Project-Id-Version: %s %s\\n\"" % (module, branch),
+            '"Project-Id-': u"\"Project-Id-Version: %s %s\\n\"" % (module_name, branch_name),
             '"Last-Transl': u"\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"",
             '"Language-Te': u"\"Language-Team: %s <%s>\\n\"" % (
                 language.name, language.team and language.team.mailing_list or "%s@li.org" % locale),

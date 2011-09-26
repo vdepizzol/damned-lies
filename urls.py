@@ -61,7 +61,7 @@ urlpatterns += patterns('stats.views',
         view = 'modules',
         name = 'modules'),
     url(
-        regex = r'^module/po/(?P<filename>.*)$',
+        regex = r'^module/po/(?P<module_name>[\w\-\+]+)/(?P<domain>\w+)/(?P<branch_name>[\w\-\.]+)/(?P<filename>.*)$',
         view = 'dynamic_po',
         name = 'dynamic_po'),
     url(

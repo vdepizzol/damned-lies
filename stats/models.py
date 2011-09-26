@@ -1691,7 +1691,7 @@ class FakeLangStatistics(object):
             locale = self.language.locale
         return reverse(
             'dynamic_po',
-            args=("%s.%s.%s.%s.po" % (self.branch.module.name, self.domain.name, self.branch.name, locale),)
+            args=(self.branch.module.name, self.domain.name, self.branch.name, "%s.po" % locale)
         )
 
 class FakeSummaryStatistics(object):

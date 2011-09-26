@@ -181,13 +181,13 @@ class ModuleTestCase(TestCase):
         """ Test the creation of a blank po file for a new language """
         lang = Language.objects.create(name="Tamil", locale="ta")
         self.branch.update_stats(force=False) # At least POT stats needed
-        response = self.client.get('/module/po/gnome-hello.po.master.ta.po')
+        response = self.client.get('/module/po/gnome-hello/po/master/ta.po')
         self.assertContains(response, """# Tamil translation for gnome-hello.
 # Copyright (C) %s gnome-hello's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-hello package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.""" % date.today().year)
         self.assertContains(response, "Language-Team: Tamil <ta@li.org>")
-        response = self.client.get('/module/po/gnome-hello.po.master.ta-reduced.po')
+        response = self.client.get('/module/po/gnome-hello/po/master/ta-reduced.po')
         self.assertContains(response, """# Tamil translation for gnome-hello.""")
 
     @test_scratchdir
