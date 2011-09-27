@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-17 18:55+0000\n"
-"PO-Revision-Date: 2011-09-17 21:49+0200\n"
+"POT-Creation-Date: 2011-09-26 12:09+0000\n"
+"PO-Revision-Date: 2011-09-27 07:57+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -1484,10 +1484,15 @@ msgid "GIMP and Friends"
 msgstr "GIMP a spol."
 
 #: database-content.py:470
+#| msgid "Extra GNOME Applications"
+msgid "Extra GNOME Applications (stable)"
+msgstr "Další aplikace GNOME (stabilní)"
+
+#: database-content.py:471
 msgid "Extra GNOME Applications"
 msgstr "Další aplikace GNOME"
 
-#: database-content.py:471
+#: database-content.py:472
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nepatří do GNOME)"
 
@@ -1881,22 +1886,17 @@ msgstr ""
 "Na následující soubory je odkazováno v souborech POTFILES.in nebo POTFILES."
 "skip, avšak tyto soubory neexistují: %s"
 
-#: stats/utils.py:223
+#: stats/utils.py:224
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "Modul %s nevypadá jako modul gnome-doc-utils."
-
-#: stats/utils.py:226
-#, python-format
-msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
-msgstr "%(name1)s neodkazuje na reálný soubor, použije se „%(name2)s.xml“."
 
 #: stats/utils.py:235
 #, python-format
 msgid "%s doesn't point to a real file, probably a macro."
 msgstr "%s neodkazuje na reálný soubor, pravděpodobně se jedná o makro."
 
-#: stats/utils.py:249
+#: stats/utils.py:248
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1907,50 +1907,50 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:336
+#: stats/utils.py:335
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "Soubor PO „%s“ neexistuje nebo jej nelze přečíst."
 
-#: stats/utils.py:363
+#: stats/utils.py:362
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "Soubor PO „%s“ neprošel kontrolou msgfmt: neaktualizuje se."
 
-#: stats/utils.py:365
+#: stats/utils.py:364
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "Nepodařilo se získat statistiky souboru PO „%s“."
 
-#: stats/utils.py:368
+#: stats/utils.py:367
 msgid "This PO file has an executable bit set."
 msgstr "Tento soubor PO je spustitelný."
 
-#: stats/utils.py:396
+#: stats/utils.py:395
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "Soubor PO „%s“ není kódován v UTF-8."
 
-#: stats/utils.py:406
+#: stats/utils.py:405
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "V souboru LINGUAS se nenachází záznam tohoto jazyka."
 
-#: stats/utils.py:424
+#: stats/utils.py:423
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr "Pro tento modul není zapotřebí upravovat soubor nebo proměnnou LINGUAS"
 
-#: stats/utils.py:430
+#: stats/utils.py:429
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr "V konfiguračním souboru se nenachází záznam ALL_LINGUAS tohoto jazyka."
 
-#: stats/utils.py:432
+#: stats/utils.py:431
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "Nelze zjistit, kde se má hledat proměnná LINGUAS, kontaktujte správce modulu."
 
-#: stats/utils.py:439
+#: stats/utils.py:438
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1958,7 +1958,7 @@ msgstr ""
 "Nelze zjistit, kde se má hledat proměnná DOC_LINGUAS, kontaktujte správce "
 "modulu."
 
-#: stats/utils.py:441
+#: stats/utils.py:440
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "V souboru DOC_LINGUAS se nenachází tento jazyk."
 
@@ -1986,7 +1986,7 @@ msgstr "Elektronická konference"
 msgid "URL to subscribe"
 msgstr "URL, které se má odebírat"
 
-#: teams/models.py:212 vertimus/models.py:485 vertimus/models.py:557
+#: teams/models.py:212 vertimus/models.py:483 vertimus/models.py:555
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Toto je automatická zpráva odeslaná z %s."
@@ -2451,7 +2451,7 @@ msgstr "Vyhledat podobné chyby, než ji nahlásíte"
 msgid "Report this bug"
 msgstr "Nahlásit tuto chybu"
 
-#: templates/stats_show.html:47 vertimus/models.py:146
+#: templates/stats_show.html:47 vertimus/models.py:144
 msgid "Translated"
 msgstr "Přeloženo"
 
@@ -2510,9 +2510,6 @@ msgstr ""
 
 #: templates/help/reduced_po.html:16
 #, python-format
-#| msgid ""
-#| "If anything should be changed on this page, please <a href=\"%(bug_url)s"
-#| "\">submit a bug report</a>."
 msgid ""
 "If you think you found a better filter for a specific module, please <a href="
 "\"%(bug_url)s\">submit a bug report</a> with your proposal."
@@ -3095,102 +3092,102 @@ msgstr "Tento krok vyžaduje soubor."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "Neodesílejte soubor spolu s kroky typu „Rezervace“."
 
-#: vertimus/models.py:114
+#: vertimus/models.py:112
 msgid "Inactive"
 msgstr "Neaktivní"
 
-#: vertimus/models.py:130
+#: vertimus/models.py:128
 msgid "Translating"
 msgstr "Překládá se"
 
-#: vertimus/models.py:169
+#: vertimus/models.py:167
 msgid "Proofreading"
 msgstr "Kontroluje se"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:187
+#: vertimus/models.py:185
 msgid "Proofread"
 msgstr "Zkontrolováno"
 
-#: vertimus/models.py:205
+#: vertimus/models.py:203
 msgid "To Review"
 msgstr "Na revizi"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:218
 msgid "To Commit"
 msgstr "K zařazení"
 
-#: vertimus/models.py:238
+#: vertimus/models.py:236
 msgid "Committing"
 msgstr "Zařazuje se"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:253
 msgid "Committed"
 msgstr "Zařazeno"
 
-#: vertimus/models.py:274
+#: vertimus/models.py:272
 msgid "Write a comment"
 msgstr "Napsat komentář"
 
-#: vertimus/models.py:275
+#: vertimus/models.py:273
 msgid "Reserve for translation"
 msgstr "Rezervovat překlad"
 
-#: vertimus/models.py:276
+#: vertimus/models.py:274
 msgid "Upload the new translation"
 msgstr "Nahrát nový překlad"
 
-#: vertimus/models.py:277
+#: vertimus/models.py:275
 msgid "Reserve for proofreading"
 msgstr "Rezervovat si kontrolu"
 
-#: vertimus/models.py:278
+#: vertimus/models.py:276
 msgid "Upload the proofread translation"
 msgstr "Nahrát zkontrolovaný překlad"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:280
+#: vertimus/models.py:278
 msgid "Ready for submission"
 msgstr "Připraveno na zařazení"
 
-#: vertimus/models.py:281
+#: vertimus/models.py:279
 msgid "Submit to repository"
 msgstr "Zařadit do úložiště"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:283
+#: vertimus/models.py:281
 msgid "Reserve to submit"
 msgstr "Rezervovat si zařazení"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:285
+#: vertimus/models.py:283
 msgid "Inform of submission"
 msgstr "Informovat o zařazení"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:287
+#: vertimus/models.py:285
 msgid "Rework needed"
 msgstr "Vyžaduje přepracování"
 
-#: vertimus/models.py:288
+#: vertimus/models.py:286
 msgid "Archive the actions"
 msgstr "Zálohovat kroky"
 
-#: vertimus/models.py:289
+#: vertimus/models.py:287
 msgid "Undo the last state change"
 msgstr "Vrátit předchozí změnu stavu"
 
-#: vertimus/models.py:359
+#: vertimus/models.py:357
 msgid "File in repository"
 msgstr "Soubor v úložišti"
 
-#: vertimus/models.py:370 vertimus/views.py:158 vertimus/views.py:164
+#: vertimus/models.py:368 vertimus/views.py:158 vertimus/views.py:164
 #: vertimus/views.py:174
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Soubor nahrán, kým: %(name)s, kdy: %(date)s"
 
-#: vertimus/models.py:470
+#: vertimus/models.py:468
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3207,11 +3204,11 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:483 vertimus/models.py:555
+#: vertimus/models.py:481 vertimus/models.py:553
 msgid "Without comment"
 msgstr "Bez komentáře"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:541
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3228,7 +3225,7 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:629
+#: vertimus/models.py:627
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Zařazení selhalo. Chyba byla: „%s“"
