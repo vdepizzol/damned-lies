@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-18 03:56+0000\n"
-"PO-Revision-Date: 2011-09-18 19:52+0200\n"
+"POT-Creation-Date: 2011-09-26 12:09+0000\n"
+"PO-Revision-Date: 2011-09-28 09:57+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: database-content.py:1 database-content.py:126
@@ -1482,10 +1482,15 @@ msgid "GIMP and Friends"
 msgstr "GIMP y amigos"
 
 #: database-content.py:470
+#| msgid "Extra GNOME Applications"
+msgid "Extra GNOME Applications (stable)"
+msgstr "Aplicaciones adicionales para GNOME (estables)"
+
+#: database-content.py:471
 msgid "Extra GNOME Applications"
 msgstr "Aplicaciones adicionales para GNOME"
 
-#: database-content.py:471
+#: database-content.py:472
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
@@ -1514,8 +1519,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1691,7 +1696,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -1872,22 +1878,17 @@ msgstr ""
 "Los siguientes archivos están referenciados en POTFILES.in o POTFILES.skip, "
 "pero todavía no existen: %s"
 
-#: stats/utils.py:223
+#: stats/utils.py:224
 #, python-format
 msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "El módulo %s no parece ser el módulo gnome-doc-utils."
-
-#: stats/utils.py:226
-#, python-format
-msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
-msgstr "%(name1)s no resuelve a un archivo real, usando «%(name2)s.xml»."
 
 #: stats/utils.py:235
 #, python-format
 msgid "%s doesn't point to a real file, probably a macro."
 msgstr "%s no apunta a un archivo real, probablemente es un macro."
 
-#: stats/utils.py:249
+#: stats/utils.py:248
 #, python-format
 msgid ""
 "Error regenerating POT file for document %(file)s:\n"
@@ -1898,54 +1899,54 @@ msgstr ""
 "<pre>%(cmd)s\n"
 "%(output)s</pre>"
 
-#: stats/utils.py:336
+#: stats/utils.py:335
 #, python-format
 msgid "PO file '%s' does not exist or cannot be read."
 msgstr "El archivo PO «%s» no existe o no se puede leer."
 
-#: stats/utils.py:363
+#: stats/utils.py:362
 #, python-format
 msgid "PO file '%s' doesn't pass msgfmt check: not updating."
 msgstr "El archivo PO «%s» no pasa la comprobación msgfmt: no se actualizará."
 
-#: stats/utils.py:365
+#: stats/utils.py:364
 #, python-format
 msgid "Can't get statistics for POT file '%s'."
 msgstr "No se pueden obtener las estadísticas para el archivo POT «%s»."
 
-#: stats/utils.py:368
+#: stats/utils.py:367
 msgid "This PO file has an executable bit set."
 msgstr "Este archivo PO tiene el bit de ejecución establecido."
 
-#: stats/utils.py:396
+#: stats/utils.py:395
 #, python-format
 msgid "PO file '%s' is not UTF-8 encoded."
 msgstr "El archivo PO %s no está codificaco en UTF-8."
 
-#: stats/utils.py:406
+#: stats/utils.py:405
 msgid "Entry for this language is not present in LINGUAS file."
 msgstr "La entrada para este idioma no está presente en el archivo LINGUAS."
 
-#: stats/utils.py:424
+#: stats/utils.py:423
 msgid "No need to edit LINGUAS file or variable for this module"
 msgstr ""
 "No es necesario editar el archivo o la variable LINGUAS para este módulo"
 
-#: stats/utils.py:430
+#: stats/utils.py:429
 msgid ""
 "Entry for this language is not present in ALL_LINGUAS in configure file."
 msgstr ""
 "La entrada para este idioma no está presente en el archivo de configuración "
 "ALL_LINGUAS."
 
-#: stats/utils.py:432
+#: stats/utils.py:431
 msgid ""
 "Don't know where to look for the LINGUAS variable, ask the module maintainer."
 msgstr ""
 "No se sabe dónde mirar la variable LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:439
+#: stats/utils.py:438
 msgid ""
 "Don't know where to look for the DOC_LINGUAS variable, ask the module "
 "maintainer."
@@ -1953,7 +1954,7 @@ msgstr ""
 "No se sabe dónde mirar la variable DOC_LINGUAS, pregunta al mantenedor del "
 "módulo."
 
-#: stats/utils.py:441
+#: stats/utils.py:440
 msgid "DOC_LINGUAS list doesn't include this language."
 msgstr "Este idioma no está incluido en DOC_LINGUAS."
 
@@ -1981,7 +1982,7 @@ msgstr "Lista de correo"
 msgid "URL to subscribe"
 msgstr "URL al que suscribirse"
 
-#: teams/models.py:212 vertimus/models.py:485 vertimus/models.py:557
+#: teams/models.py:212 vertimus/models.py:483 vertimus/models.py:555
 #, python-format
 msgid "This is an automated message sent from %s."
 msgstr "Este es un mensaje automático enviado desde %s."
@@ -2258,8 +2259,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2446,7 +2447,7 @@ msgstr "Buscar errores similares antes de informar de este error"
 msgid "Report this bug"
 msgstr "Informar de este error"
 
-#: templates/stats_show.html:47 vertimus/models.py:146
+#: templates/stats_show.html:47 vertimus/models.py:144
 msgid "Translated"
 msgstr "Traducido"
 
@@ -2485,8 +2486,8 @@ msgstr ""
 msgid ""
 "The most typical case is the strings from schema files, hence the default "
 "filter is filtering out strings which come from files having \"gschema.xml.in"
-"\" in their name. Technically speaking, the filter is using the <a href=\"%"
-"(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
+"\" in their name. Technically speaking, the filter is using the <a href="
+"\"%(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
 msgstr ""
 "El caso más típico es el de las cadenas de los archivos de esquema, por ello "
 "el filtro predeterminado omite las cadenas que vienen de archivos con "
@@ -2496,8 +2497,9 @@ msgstr ""
 
 #: templates/help/reduced_po.html:14
 msgid ""
-"When you see a po file or a table header containing \"(red.)\" or \"(reduced)"
-"\", it means that the target files have been filtered as stated above."
+"When you see a po file or a table header containing \"(red.)\" or "
+"\"(reduced)\", it means that the target files have been filtered as stated "
+"above."
 msgstr ""
 "Cuando ve un archivo po o una cabecera de tabla que contenga «(red.)» o "
 "«(reducido)» significa que los archivos en ella se han filtrado como se "
@@ -3086,102 +3088,102 @@ msgstr "Se necesita un archivo para esta acción."
 msgid "Please, don't send a file with a 'Reserve' action."
 msgstr "No envíe un archivo con la acción «Reservar»."
 
-#: vertimus/models.py:114
+#: vertimus/models.py:112
 msgid "Inactive"
 msgstr "Inactivo"
 
-#: vertimus/models.py:130
+#: vertimus/models.py:128
 msgid "Translating"
 msgstr "Traduciéndose"
 
-#: vertimus/models.py:169
+#: vertimus/models.py:167
 msgid "Proofreading"
 msgstr "En revisión"
 
 #. Translators: This is a status, not a verb
-#: vertimus/models.py:187
+#: vertimus/models.py:185
 msgid "Proofread"
 msgstr "Revisado"
 
-#: vertimus/models.py:205
+#: vertimus/models.py:203
 msgid "To Review"
 msgstr "Para revisar"
 
-#: vertimus/models.py:220
+#: vertimus/models.py:218
 msgid "To Commit"
 msgstr "Para subir"
 
-#: vertimus/models.py:238
+#: vertimus/models.py:236
 msgid "Committing"
 msgstr "Subiéndose"
 
-#: vertimus/models.py:255
+#: vertimus/models.py:253
 msgid "Committed"
 msgstr "Subido"
 
-#: vertimus/models.py:274
+#: vertimus/models.py:272
 msgid "Write a comment"
 msgstr "Escribir un comentario"
 
-#: vertimus/models.py:275
+#: vertimus/models.py:273
 msgid "Reserve for translation"
 msgstr "Reservar para traducir"
 
-#: vertimus/models.py:276
+#: vertimus/models.py:274
 msgid "Upload the new translation"
 msgstr "Subir una traducción nueva"
 
-#: vertimus/models.py:277
+#: vertimus/models.py:275
 msgid "Reserve for proofreading"
 msgstr "Reservar para revisar"
 
-#: vertimus/models.py:278
+#: vertimus/models.py:276
 msgid "Upload the proofread translation"
 msgstr "Subir la traducción revisada"
 
 #. Translators: this means the file is ready to be committed in repository
-#: vertimus/models.py:280
+#: vertimus/models.py:278
 msgid "Ready for submission"
 msgstr "Listo para enviar"
 
-#: vertimus/models.py:281
+#: vertimus/models.py:279
 msgid "Submit to repository"
 msgstr "Enviar al repositorio"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
-#: vertimus/models.py:283
+#: vertimus/models.py:281
 msgid "Reserve to submit"
 msgstr "Reservar para enviar"
 
 #. Translators: this is used to indicate the file has been committed in the repository
-#: vertimus/models.py:285
+#: vertimus/models.py:283
 msgid "Inform of submission"
 msgstr "Informar de envío"
 
 #. Translators: regardless of the translation completion, this file need to be reviewed
-#: vertimus/models.py:287
+#: vertimus/models.py:285
 msgid "Rework needed"
 msgstr "Necesita revisión"
 
-#: vertimus/models.py:288
+#: vertimus/models.py:286
 msgid "Archive the actions"
 msgstr "Archivar las acciones"
 
-#: vertimus/models.py:289
+#: vertimus/models.py:287
 msgid "Undo the last state change"
 msgstr "Deshacer el cambio del último estado"
 
-#: vertimus/models.py:359
+#: vertimus/models.py:357
 msgid "File in repository"
 msgstr "Archivo en el repositorio"
 
-#: vertimus/models.py:370 vertimus/views.py:158 vertimus/views.py:164
+#: vertimus/models.py:368 vertimus/views.py:158 vertimus/views.py:164
 #: vertimus/views.py:174
 #, python-format
 msgid "Uploaded file by %(name)s on %(date)s"
 msgstr "Archivo subido por %(name)s en %(date)s"
 
-#: vertimus/models.py:470
+#: vertimus/models.py:468
 #, python-format
 msgid ""
 "Hello,\n"
@@ -3198,28 +3200,28 @@ msgstr ""
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:483 vertimus/models.py:555
+#: vertimus/models.py:481 vertimus/models.py:553
 msgid "Without comment"
 msgstr "Sin comentarios"
 
-#: vertimus/models.py:543
+#: vertimus/models.py:541
 #, python-format
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
-#: vertimus/models.py:629
+#: vertimus/models.py:627
 #, python-format
 msgid "The commit failed. The error was: '%s'"
 msgstr "Falló la carga. El error fue: «%s»"
@@ -3237,6 +3239,9 @@ msgstr "Último archivo subido para el %(lang)s"
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Último archivo POT"
+
+#~ msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
+#~ msgstr "%(name1)s no resuelve a un archivo real, usando «%(name2)s.xml»."
 
 #~ msgid "gnome-utils-master-po-sk-15637_2.merged"
 #~ msgstr "gnome-utils-master-po-sk-15637_2.merged"
@@ -3411,8 +3416,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
