@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-26 12:09+0000\n"
-"PO-Revision-Date: 2011-09-27 16:42+0200\n"
+"POT-Creation-Date: 2011-10-07 07:20+0000\n"
+"PO-Revision-Date: 2011-10-07 13:29+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -1280,13 +1280,23 @@ msgstr ""
 
 #: database-content.py:433
 msgid ""
+"gnome-utils has been split into new modules after GNOME 3.2: baobab, gnome-"
+"font-viewer, gnome-dictionary, gnome-screenshot, gnome-search-tool and gnome-"
+"system-log"
+msgstr ""
+"Moduł gnome-utils został rozdzielony na nowe moduły po wydaniu środowiska "
+"GNOME 3.2: baobab, gnome-font-viewer, gnome-dictionary, gnome-screenshot, "
+"gnome-search-tool i gnome-system-log"
+
+#: database-content.py:434
+msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
 msgstr ""
 "Program GNOME Video Arcade jest nakładką na MAME (Multiple Arcade Machine "
 "Emulator) dla środowiska GNOME."
 
-#: database-content.py:434
+#: database-content.py:435
 msgid ""
 "To ease localization, gallery of GNOME Video Effects has been set up here: "
 "<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
@@ -1296,11 +1306,11 @@ msgstr ""
 "środowiska GNOME: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects"
 "\">http://live.gnome.org/GnomeVideoEffects/Effects</a>."
 
-#: database-content.py:435
+#: database-content.py:436
 msgid "A note taking application"
 msgstr "Program do robienia notatek."
 
-#: database-content.py:436
+#: database-content.py:437
 msgid ""
 "Useful information on localization of the gnumeric analysis tools can be "
 "found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README."
@@ -1310,7 +1320,7 @@ msgstr ""
 "można znaleźć w pliku <a href =\"http://git.gnome.org/browse/gnumeric/plain/"
 "po/README.analysis\">po/README.analysis</a>."
 
-#: database-content.py:437
+#: database-content.py:438
 msgid ""
 "This a low-priority module to translate, as there are currently no user "
 "interface that show those strings."
@@ -1318,7 +1328,7 @@ msgstr ""
 "Jest to moduł do tłumaczenia o niskim priorytecie, ponieważ obecnie nie ma "
 "żadnego interfejsu użytkownika, który wyświetla te ciągi."
 
-#: database-content.py:438
+#: database-content.py:439
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1331,15 +1341,15 @@ msgstr ""
 "tłumaczeń. W innym przypadku budowanie GTK+ zakończy się błędem w katalogu /"
 "po-properties."
 
-#: database-content.py:439
+#: database-content.py:440
 msgid "A plugin manager library for other GNOME modules"
 msgstr "Biblioteka menedżera wtyczek dla innych modułów GNOME"
 
-#: database-content.py:440
+#: database-content.py:441
 msgid "Desktop entries for MESS ROMs"
 msgstr "Wpisy .desktop dla ROM-ów MESS"
 
-#: database-content.py:441
+#: database-content.py:442
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1347,11 +1357,11 @@ msgstr ""
 "Program moserial jest przyjaznym, opartym na GTK+ emulatorem terminala dla "
 "środowiska GNOME. Został napisany w języku Vala."
 
-#: database-content.py:442
+#: database-content.py:443
 msgid "Gnome Parental Control"
 msgstr "Kontrola rodzicielska dla środowiska GNOME"
 
-#: database-content.py:443
+#: database-content.py:444
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1362,7 +1372,7 @@ msgstr ""
 "\">zgłoszenie błędu</a> dla programu NetworkManager w systemie śledzenia "
 "błędów GNOME Bugzilla. Następnie należy dołączyć plik z tłumaczeniem."
 
-#: database-content.py:444
+#: database-content.py:445
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier."
@@ -1370,11 +1380,11 @@ msgstr ""
 "PackageKit to system zaprojektowany, aby ułatwić instalowanie i "
 "aktualizowanie oprogramowania na komputerze."
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout jest programem DTP dla środowiska X."
 
-#: database-content.py:446
+#: database-content.py:447
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications."
@@ -1382,11 +1392,11 @@ msgstr ""
 "PulseAudio jest systemem dźwięku dla systemów operacyjnych zgodnych ze "
 "standardem POSIX, co oznacza, że jest pośrednikiem dla programów dźwiękowych."
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "A photo manager for GNOME"
 msgstr "Menedżer zdjęć dla środowiska GNOME"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1394,11 +1404,11 @@ msgstr ""
 "Jest to kopia oficjalnej wersji programu system-tools-backends z "
 "repozytorium freedesktop.org."
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME Teletext viewer"
 msgstr "Przeglądarka teletekstu dla środowiska GNOME"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
@@ -1408,89 +1418,93 @@ msgstr ""
 "Na stronie <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</"
 "a> można znaleźć więcej informacji."
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "A VNC client for GNOME"
 msgstr "Klient VNC dla środowiska GNOME"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 "Tłumaczenia powinny być wysyłane jako zgłoszenia błędów (odnośnik znajduje "
 "się poniżej)."
 
-#: database-content.py:454
-msgid "GNOME 3.2 (development)"
-msgstr "GNOME 3.2 (rozwojowe)"
-
 #: database-content.py:455
-msgid "GNOME 3.0 (stable)"
-msgstr "GNOME 3.0 (stabilne)"
+msgid "GNOME 3.4 (development)"
+msgstr "GNOME 3.4 (rozwojowe)"
 
 #: database-content.py:456
+msgid "GNOME 3.2 (stable)"
+msgstr "GNOME 3.2 (stabilne)"
+
+#: database-content.py:457
+msgid "GNOME 3.0 (old stable)"
+msgstr "GNOME 3.0 (poprzednie stabilne)"
+
+#: database-content.py:458
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (poprzednie stabilne)"
 
-#: database-content.py:457
+#: database-content.py:459
 msgid "GNOME 2.30 (old stable)"
 msgstr "GNOME 2.30 (poprzednie stabilne)"
 
-#: database-content.py:458
+#: database-content.py:460
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (poprzednie stabilne)"
 
-#: database-content.py:459
+#: database-content.py:461
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (poprzednie stabilne)"
 
-#: database-content.py:460
+#: database-content.py:462
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (poprzednie stabilne)"
 
-#: database-content.py:461
+#: database-content.py:463
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (poprzednie stabilne)"
 
-#: database-content.py:462
+#: database-content.py:464
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (poprzednie stabilne)"
 
-#: database-content.py:463
+#: database-content.py:465
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (poprzednie stabilne)"
 
-#: database-content.py:464
+#: database-content.py:466
 msgid "External Dependencies (GNOME)"
 msgstr "Zewnętrzne zależności (GNOME)"
 
-#: database-content.py:465
+#: database-content.py:467
 msgid "OLPC"
 msgstr "OLPC"
 
-#: database-content.py:466
+#: database-content.py:468
 msgid "Obsolete GNOME Applications"
 msgstr "Przestarzałe programy GNOME"
 
-#: database-content.py:467
+#: database-content.py:469
 msgid "GNOME-Office Productivity Applications"
 msgstr "Programy biurowe GNOME Office"
 
-#: database-content.py:468
+#: database-content.py:470
 msgid "GNOME Infrastructure"
 msgstr "Infrastruktura GNOME"
 
-#: database-content.py:469
+#: database-content.py:471
 msgid "GIMP and Friends"
 msgstr "GIMP"
 
-#: database-content.py:470
+#: database-content.py:472
 msgid "Extra GNOME Applications (stable)"
 msgstr "Dodatkowe programy GNOME (stabilne)"
 
-#: database-content.py:471
+#: database-content.py:473
 msgid "Extra GNOME Applications"
 msgstr "Dodatkowe programy GNOME"
 
-#: database-content.py:472
+#: database-content.py:474
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nie-GNOME)"
 
@@ -2482,13 +2496,13 @@ msgid ""
 "The most typical case is the strings from schema files, hence the default "
 "filter is filtering out strings which come from files having \"gschema.xml.in"
 "\" in their name. Technically speaking, the filter is using the <a href=\"%"
-"(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
+"(pogrep_url)s\">pogrep command from the Translate Toolkit</a>."
 msgstr ""
 "Funkcja ta jest najczęściej używana w przypadku ciągów pochodzących z plików "
 "schematów, i z tego powodu domyślnie filtrowane są ciągi pochodzące z plików "
 "posiadających \"gschema.xml.in\" w nazwie. Z technicznego punktu widzenia "
-"filtr używa <a href=\"%(pogrep_url)s\">polecenia pogrep</a> z programu "
-"Translate Toolkit."
+"filtr używa <a href=\"%(pogrep_url)s\">polecenia pogrep z programu Translate "
+"Toolkit</a>."
 
 #: templates/help/reduced_po.html:14
 msgid ""
