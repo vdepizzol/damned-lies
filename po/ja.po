@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 14:48+0000\n"
-"PO-Revision-Date: 2011-08-23 17:44+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
+"POT-Creation-Date: 2011-10-07 07:20+0000\n"
+"PO-Revision-Date: 2011-10-06 00:24+0900\n"
+"Last-Translator: Yasumichi Akahoshi <yasumichi@vinelinux.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1366,13 +1366,20 @@ msgstr ""
 
 #: database-content.py:433
 msgid ""
+"gnome-utils has been split into new modules after GNOME 3.2: baobab, gnome-"
+"font-viewer, gnome-dictionary, gnome-screenshot, gnome-search-tool and gnome-"
+"system-log"
+msgstr ""
+
+#: database-content.py:434
+msgid ""
 "GNOME Video Arcade is a MAME (Multiple Arcade Machine Emulator) front-end "
 "for GNOME."
 msgstr ""
 "GNOME Video Arcade は GNOME 用の MAME (Multiple Arcade Machine Emulator) のフ"
 "ロントエンドです。"
 
-#: database-content.py:434
+#: database-content.py:435
 msgid ""
 "To ease localization, gallery of GNOME Video Effects has been set up here: "
 "<a href=\"http://live.gnome.org/GnomeVideoEffects/Effects\">http://live."
@@ -1382,11 +1389,11 @@ msgstr ""
 "れています: <a href=\"http://live.gnome.org/GnomeVideoEffects/Effects"
 "\">http://live.gnome.org/GnomeVideoEffects/Effects</a>"
 
-#: database-content.py:435
+#: database-content.py:436
 msgid "A note taking application"
 msgstr "ノートを取るアプリケーション"
 
-#: database-content.py:436
+#: database-content.py:437
 msgid ""
 "Useful information on localization of the gnumeric analysis tools can be "
 "found in the <a href =\"http://git.gnome.org/browse/gnumeric/plain/po/README."
@@ -1396,7 +1403,7 @@ msgstr ""
 "\"http://git.gnome.org/browse/gnumeric/plain/po/README.analysis\">po/README."
 "analysis</a> にあります。"
 
-#: database-content.py:437
+#: database-content.py:438
 msgid ""
 "This a low-priority module to translate, as there are currently no user "
 "interface that show those strings."
@@ -1404,7 +1411,7 @@ msgstr ""
 "これらの文字列を表示するユーザーインターフェイスが現在存在しないため、翻訳の"
 "優先順位の低いモジュールです。"
 
-#: database-content.py:438
+#: database-content.py:439
 msgid ""
 "Please note that gtk+ has both po and po-properties UI domains.  If you add "
 "a new language in either domain, you have to commit both files in Git even "
@@ -1416,15 +1423,15 @@ msgstr ""
 "方ともコミットしてください。そうしないと、 GTK+ は /po-properties でコンパイ"
 "ルに失敗してしまいます。"
 
-#: database-content.py:439
+#: database-content.py:440
 msgid "A plugin manager library for other GNOME modules"
 msgstr "他の GNOME モジュールのプラグイン管理のライブラリ"
 
-#: database-content.py:440
+#: database-content.py:441
 msgid "Desktop entries for MESS ROMs"
 msgstr "MESS ROM のデスクトップ・エントリ"
 
-#: database-content.py:441
+#: database-content.py:442
 msgid ""
 "moserial is a clean, friendly gtk-based serial terminal for the GNOME "
 "desktop. It is written in Vala for extra goodness."
@@ -1432,11 +1439,11 @@ msgstr ""
 "moserial はすっきりとして、親しみやすい GTK ベースの GNOME デスクトップ用のシ"
 "リアル端末です。さらに善きことに、Vala を使って書かれています。"
 
-#: database-content.py:442
+#: database-content.py:443
 msgid "Gnome Parental Control"
 msgstr "GNOME ペアレンタルコントロール"
 
-#: database-content.py:443
+#: database-content.py:444
 msgid ""
 "To submit your translation, <a href=\"https://bugzilla.gnome.org/enter_bug."
 "cgi?product=NetworkManager&component=general\">create a bug report for "
@@ -1446,7 +1453,7 @@ msgstr ""
 "product=NetworkManager&component=general\">GNOME Bugzilla で NetworkManager "
 "のバグレポートを作成</a> してください。そして、翻訳ファイルを添付します。"
 
-#: database-content.py:444
+#: database-content.py:445
 msgid ""
 "PackageKit is a system designed to make installing and updating software on "
 "your computer easier."
@@ -1454,11 +1461,11 @@ msgstr ""
 "PackageKit はコンピュータ上にソフトウェアをインストールしたり、更新したりする"
 "のを容易にするようデザインされたシステムです。"
 
-#: database-content.py:445
+#: database-content.py:446
 msgid "Passepartout is a DTP application for X."
 msgstr "Passepartout は X 用の DTP アプリケーションです。"
 
-#: database-content.py:446
+#: database-content.py:447
 msgid ""
 "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for "
 "your sound applications."
@@ -1466,11 +1473,11 @@ msgstr ""
 "PulseAudio は POSIX OS のためのサウンドシステムです。サウンドのアプリケケー"
 "ションのためのプロキシになります。"
 
-#: database-content.py:447
+#: database-content.py:448
 msgid "A photo manager for GNOME"
 msgstr "GNOME 用写真管理ツール"
 
-#: database-content.py:448
+#: database-content.py:449
 msgid ""
 "This is a clone of the official system-tools-backends version from the "
 "freedesktop.org repository."
@@ -1478,97 +1485,111 @@ msgstr ""
 "これは freedesktop.org リポジトリ上の公式な system-tools-backends のクローン"
 "です。"
 
-#: database-content.py:449
+#: database-content.py:450
 msgid "GNOME Teletext viewer"
 msgstr "GNOME テレテキストビューア"
 
-#: database-content.py:450
+#: database-content.py:451
 msgid ""
 "Here we translate the subtitles of selected GNOME videos.\n"
 "See <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> for "
 "more."
 msgstr ""
-"ここで選ばれた GNOME のビデオのサブタイトルを翻訳します。\n"
+"ここで選ばれた GNOME のビデオの字幕を翻訳します。\n"
 "詳細は <a href=\"http://live.gnome.org/VideoSubtitles\">Video Subtitles</a> "
 "をみてください。"
 
-#: database-content.py:452
+#: database-content.py:453
 msgid "A VNC client for GNOME"
 msgstr "GNOME 用 VNCクライアント"
 
-#: database-content.py:453
+#: database-content.py:454
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "翻訳はバグレポートとして送ってください (下記のリンク参照)。"
 
-#: database-content.py:454
-msgid "GNOME 3.2 (development)"
+#: database-content.py:455
+#, fuzzy
+#| msgid "GNOME 3.2 (development)"
+msgid "GNOME 3.4 (development)"
 msgstr "GNOME 3.2 (開発版)"
 
-#: database-content.py:455
-msgid "GNOME 3.0 (stable)"
+#: database-content.py:456
+#, fuzzy
+#| msgid "GNOME 3.0 (stable)"
+msgid "GNOME 3.2 (stable)"
 msgstr "GNOME 3.0 (安定版)"
 
-#: database-content.py:456
-msgid "GNOME 2.32 (old stable)"
-msgstr "GNOME 2.32 (旧安定版)"
-
 #: database-content.py:457
-msgid "GNOME 2.30 (old stable)"
+#, fuzzy
+#| msgid "GNOME 2.30 (old stable)"
+msgid "GNOME 3.0 (old stable)"
 msgstr "GNOME 2.30 (旧安定版)"
 
 #: database-content.py:458
+msgid "GNOME 2.32 (old stable)"
+msgstr "GNOME 2.32 (旧安定版)"
+
+#: database-content.py:459
+msgid "GNOME 2.30 (old stable)"
+msgstr "GNOME 2.30 (旧安定版)"
+
+#: database-content.py:460
 msgid "GNOME 2.28 (old stable)"
 msgstr "GNOME 2.28 (旧安定版)"
 
-#: database-content.py:459
+#: database-content.py:461
 msgid "GNOME 2.26 (old stable)"
 msgstr "GNOME 2.26 (旧安定版)"
 
-#: database-content.py:460
+#: database-content.py:462
 msgid "GNOME 2.24 (old stable)"
 msgstr "GNOME 2.24 (旧安定版)"
 
-#: database-content.py:461
+#: database-content.py:463
 msgid "GNOME 2.22 (old stable)"
 msgstr "GNOME 2.22 (旧安定版)"
 
-#: database-content.py:462
+#: database-content.py:464
 msgid "GNOME 2.20 (old stable)"
 msgstr "GNOME 2.20 (旧安定版)"
 
-#: database-content.py:463
+#: database-content.py:465
 msgid "GNOME 2.18 (old stable)"
 msgstr "GNOME 2.18 (旧安定版)"
 
-#: database-content.py:464
+#: database-content.py:466
 msgid "External Dependencies (GNOME)"
 msgstr "依存する外部モジュール (GNOME)"
 
-#: database-content.py:465
+#: database-content.py:467
 msgid "OLPC"
 msgstr "OLPC"
 
-#: database-content.py:466
+#: database-content.py:468
 msgid "Obsolete GNOME Applications"
 msgstr "廃止された GNOME アプリケーション"
 
-#: database-content.py:467
+#: database-content.py:469
 msgid "GNOME-Office Productivity Applications"
 msgstr "GNOME オフィス・生産性アプリケーション"
 
-#: database-content.py:468
+#: database-content.py:470
 msgid "GNOME Infrastructure"
 msgstr "GNOME インフラストラクチャ"
 
-#: database-content.py:469
+#: database-content.py:471
 msgid "GIMP and Friends"
 msgstr "GIMP とその友達"
 
-#: database-content.py:470
+#: database-content.py:472
+msgid "Extra GNOME Applications (stable)"
+msgstr "追加の GNOME アプリケーション (安定版)"
+
+#: database-content.py:473
 msgid "Extra GNOME Applications"
 msgstr "追加の GNOME アプリケーション"
 
-#: database-content.py:471
+#: database-content.py:474
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (非 GNOME)"
 
@@ -1723,7 +1744,7 @@ msgid ""
 "your account, please click on the link below or copy and paste it in a "
 "browser."
 msgstr ""
-"これは、あなたの %s への登録が成功したことの確認するものです。あなたのアカウ"
+"これは、あなたの %s への登録が成功したことを確認するものです。あなたのアカウ"
 "ントをアクティベートするには、下のリンクをクリックするか、ブラウザにコピー・"
 "アンド・ペーストしてください。"
 
@@ -1746,7 +1767,7 @@ msgstr "指定した URL が正しくありません"
 
 #: people/forms.py:136
 msgid "The URL you provided seems not to correspond to a valid image"
-msgstr "指定した画像が正しい画像とは関連しないようです"
+msgstr "指定した URL は有効な画像を指すものではないようです"
 
 #: people/models.py:36
 msgid "Image"
@@ -1962,10 +1983,9 @@ msgid "Module %s doesn't look like gnome-doc-utils module."
 msgstr "モジュール %s は gnome-doc-utils モジュールではないようです。"
 
 #: stats/utils.py:235
-#, fuzzy, python-format
-#| msgid "DOC_MODULE doesn't point to a real file, probably a macro."
+#, python-format
 msgid "%s doesn't point to a real file, probably a macro."
-msgstr "DOC_MODULE は実ファイルを参照していません。おそらくマクロです。"
+msgstr "%s は実ファイルを指していません。おそらくマクロです。"
 
 #: stats/utils.py:248
 #, python-format
@@ -2038,7 +2058,7 @@ msgstr "DOC_LINGUAS リストにこの言語が含まれていません。"
 
 #: teams/forms.py:30 teams/models.py:253 templates/teams/team_base.html:35
 msgid "Coordinator"
-msgstr "取りまとめ"
+msgstr "コーディネーター"
 
 #: teams/forms.py:57
 msgid "Mark as Inactive"
@@ -2235,8 +2255,8 @@ msgid ""
 "List of all GNOME Translation Teams, with full information such as primary "
 "contact (coordinator), web pages and mailing list information."
 msgstr ""
-"すべての GNOME の翻訳チームの一覧です。一次の連絡先 (取りまとめ役) やウェブ"
-"ページ、メーリングリストなどの完全な情報を含んでいます。"
+"すべての GNOME の翻訳チームの一覧です。一次の連絡先 (コーディネーター) やウェ"
+"ブページ、メーリングリストなどの完全な情報を含んでいます。"
 
 #: templates/index.html:14
 msgid ""
@@ -2544,40 +2564,51 @@ msgstr "ヘルプ"
 
 #: templates/help/reduced_po.html:8
 msgid "Reduced po files"
-msgstr ""
+msgstr "縮小版 po ファイル"
 
 #: templates/help/reduced_po.html:10
 msgid ""
 "Damned Lies is able to filter strings which are seldom visible in user "
 "interfaces, so as translation teams can concentrate on most visible strings."
 msgstr ""
+"翻訳ステータスでは、ユーザーインターフェースで滅多に表示されない文字列を取り"
+"除くことができるため、翻訳チームはよく表示される文字列に集中することができま"
+"す。"
 
 #: templates/help/reduced_po.html:12
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "The most typical case is the strings from schema files, hence the default "
+#| "filter is filtering out strings which come from files having \"gschema."
+#| "xml.in\" in their name. Technically speaking, the filter is using the <a "
+#| "href=\"%(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
 msgid ""
 "The most typical case is the strings from schema files, hence the default "
 "filter is filtering out strings which come from files having \"gschema.xml.in"
 "\" in their name. Technically speaking, the filter is using the <a href=\"%"
-"(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
+"(pogrep_url)s\">pogrep command from the Translate Toolkit</a>."
 msgstr ""
+"最も典型的なケースは schema ファイルの文字列です。このため、デフォルトのフィ"
+"ルターは \"gschema.xml.in\" という名前が含まれるファイルから来る文字列を取り"
+"除きます。技術的な話をすると、このフィルターは Translate Toolkit の <a href="
+"\"%(pogrep_url)s\">pogrep コマンド</a>を利用しています。"
 
 #: templates/help/reduced_po.html:14
 msgid ""
 "When you see a po file or a table header containing \"(red.)\" or \"(reduced)"
 "\", it means that the target files have been filtered as stated above."
 msgstr ""
+"\"(縮)\" または \"(縮小版)\" が含まれる po ファイルや 表のヘッダーは、目的の"
+"ファイルが上記のようにフィルターをかけられていることを意味します。"
 
 #: templates/help/reduced_po.html:16
-#, fuzzy, python-format
-#| msgid ""
-#| "If anything should be changed on this page, please <a href=\"%(bug_url)s"
-#| "\">submit a bug report</a>."
+#, python-format
 msgid ""
 "If you think you found a better filter for a specific module, please <a href="
 "\"%(bug_url)s\">submit a bug report</a> with your proposal."
 msgstr ""
-"このページ上で修正すべきものがあれば、<a href=\"%(bug_url)s\">バグレポートを"
-"送って</a>ください。"
+"特定のモジュール向けにより良いフィルターを見つけたと思う場合、あなたの提案を"
+"添えて<a href=\"%(bug_url)s\">バグレポートを送って</a>ください。"
 
 #: templates/help/vertimus_workflow.html:9
 msgid ""
@@ -2817,7 +2848,7 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll e-mail "
 "instructions for setting a new one."
 msgstr ""
-"パスワードを忘れてしましましたか? メールアドレスを以下に入力すれば、新しいパ"
+"パスワードを忘れてしまいましたか? メールアドレスを以下に入力すれば、新しいパ"
 "スワードを設定する手順を書いたメールを送ります。"
 
 #: templates/registration/password_reset_form.html:15
@@ -2906,10 +2937,8 @@ msgid "Subscribe"
 msgstr "購読"
 
 #: templates/teams/team_base.html:41
-#, fuzzy
-#| msgid "This branch is currently string-frozen."
 msgid "This team has currently no coordinator."
-msgstr "このブランチは現在 string-freeze されています。"
+msgstr "このチームは現在、コーディネーターが不在です。"
 
 #: templates/teams/team_base.html:42
 #, python-format
@@ -2917,6 +2946,8 @@ msgid ""
 "See <a href=\"%(link)s\">the GTP Wiki</a> for more information about "
 "coordinatorship."
 msgstr ""
+"コーディネーターの役割について詳しい情報は、<a href=\"%(link)s\">the GTP "
+"Wiki</a> をご覧ください。"
 
 #: templates/teams/team_detail.html:7
 #, python-format
@@ -2936,7 +2967,7 @@ msgid ""
 msgstr ""
 "現在のところ、この言語にはチームが作られていません。新しい翻訳チームを始める"
 "ための手順についての情報は、<a href=\"http://live.gnome.org/"
-"TranslationProject/StartingATeam/\">GTP Wiki</a> を参照してください。"
+"TranslationProject/StartingATeam/\">the GTP Wiki</a> を参照してください。"
 
 #: templates/teams/team_detail.html:58
 msgid "Plural forms:"
@@ -3298,220 +3329,3 @@ msgstr "%(lang)s にコミットされた最新のファイル"
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "最新の POT ファイル"
-
-#~ msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
-#~ msgstr "DOC_MODULE が実ファイルに解決されません。'%s.xml' を使います。"
-
-#~ msgid "Criawips Manual"
-#~ msgstr "Criawips マニュアル"
-
-#~ msgid "Deskbar Applet"
-#~ msgstr "Deskbar アプレット"
-
-#~ msgid "Email client for netbooks"
-#~ msgstr "ネットブック用メールソフト"
-
-#~ msgid "Review required"
-#~ msgstr "査読待ち"
-
-#~ msgid "Window List Applet Manual"
-#~ msgstr "ウィンドウ一覧アプレットのマニュアル"
-
-#~ msgid "Workspace Switcher Applet Manual"
-#~ msgstr "ワークスペース切り替え器のマニュアル"
-
-#~ msgid ""
-#~ "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
-#~ "module. Please submit your translation through the <a href=\"http://www."
-#~ "transifex.net/projects/p/fprintd/c/fprintd/\">Transifex platform</a>."
-#~ msgstr ""
-#~ "指紋読取装置にアクセスするための D-Bus サービスです。これはGNOME固有のモ"
-#~ "ジュールではありません。翻訳は <a href=\"http://www.transifex.net/"
-#~ "projects/p/fprintd/c/fprintd/\">Transifex プラットフォーム</a>から送付して"
-#~ "ください。"
-
-#~ msgid ""
-#~ "GNUCash is not part of the GNOME Git repository. Please check <a href="
-#~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
-#~ "a> to see where to send translations."
-#~ msgstr ""
-#~ "GNUCash は GNOME Git リポジトリの一部ではありません。翻訳の送付先について"
-#~ "は<a href=\"http://wiki.gnucash.org/wiki/Translation#Submitting\">GNUCash "
-#~ "の Wiki</a>を参照してください。"
-
-#~ msgid ""
-#~ "This is not a GNOME-specific module. Please submit your translation "
-#~ "through the <a href=\"http://translationproject.org\">Translation "
-#~ "Project</a>."
-#~ msgstr ""
-#~ "これはGNOME固有のモジュールではありません。<a href=\"http://"
-#~ "translationproject.org\">Translation Project</a>から翻訳を送付してくださ"
-#~ "い。"
-
-#~ msgid ""
-#~ "PackageKit is a system designed to make installing and updating software "
-#~ "on your computer easier. This is not a GNOME-specific module. Please "
-#~ "submit your translation through the <a href=\"https://translate."
-#~ "fedoraproject.org/projects/p/packagekit/c/master/\">Fedora project's "
-#~ "Transifex platform</a>."
-#~ msgstr ""
-#~ "PackageKit はコンピュータにソフトウェアをインストールしたり、それを更新し"
-#~ "たりするのを簡単にするために設計されたシステムです。これはGNOME固有のモ"
-#~ "ジュールではありません。翻訳は <a href=\"https://translate.fedoraproject."
-#~ "org/projects/p/packagekit/c/master/\">Fedora プロジェクトの Transifex プ"
-#~ "ラットフォーム</a>から送付してください。"
-
-#~ msgid ""
-#~ "This is not a GNOME-specific module. Please submit your translation "
-#~ "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
-#~ "info/c/default/\">Transifex platform</a>."
-#~ msgstr ""
-#~ "これはGNOME固有のモジュールではありません。<a href=\"http://www.transifex."
-#~ "net/projects/p/shared-mime-info/c/default/\">Transifex platform</a>から翻"
-#~ "訳を送付してください。"
-
-#~ msgid ""
-#~ "This is not a GNOME-specific module. Please submit your translation "
-#~ "through the <a href=\"http://translationproject.org\">Translation "
-#~ "Project</a>. See also <a href=\"http://translationproject.org/domain/xdg-"
-#~ "user-dirs.html\">the translation page for xdg-user-dirs at the "
-#~ "Translation Project</a>."
-#~ msgstr ""
-#~ "これはGNOME固有のモジュールではありません。翻訳は <a href=\"http://"
-#~ "translationproject.org\">Translation Project</a> に送ってください。 <a "
-#~ "href=\"http://translationproject.org/domain/xdg-user-dirs.html"
-#~ "\">Translation Project の xdg-user-dirs の翻訳ページ</a> もご覧ください。"
-
-#~ msgid "GNOME 2.32 (stable)"
-#~ msgstr "GNOME 2.32 (安定版)"
-
-#~ msgid "GNOME 2.16 (old stable)"
-#~ msgstr "GNOME 2.16 (旧安定版)"
-
-#~ msgid "GNOME 2.14 (old stable)"
-#~ msgstr "GNOME 2.14 (旧安定版)"
-
-#~ msgid ""
-#~ "This module is not part of the GNOME git repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "このモジュールは GNOME Git リポジトリの一部ではありません。モジュールの"
-#~ "ウェブページで翻訳の送り先を確認してみてください。"
-
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME git repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "モジュールのこのリリースは GNOME Git リポジトリの一部ではありません。各モ"
-#~ "ジュールのウェブページで翻訳の送り先を確認してみてください。"
-
-#~ msgid "Maintains:"
-#~ msgstr "保守:"
-
-#~ msgid "Working on"
-#~ msgstr "作業中"
-
-#~ msgid "Member of teams"
-#~ msgstr "参加中のチーム"
-
-#~ msgid "F-Spot Manual"
-#~ msgstr "F-Spot マニュアル"
-
-#~ msgid ""
-#~ "Don't know where to look if this language is actually used, ask the "
-#~ "module maintainer."
-#~ msgstr ""
-#~ "この言語が実際に使われているかどうか確認するためのファイルがありません。モ"
-#~ "ジュールを保守されている方にたずねてみてください。"
-
-#~ msgid ""
-#~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
-#~ "Toe&quot; or &quot;GNOME 2.14&quot;."
-#~ msgstr ""
-#~ "リリースセットは例えば \"GNOME オフィス\", \"Fifth Toe\", \"GNOME 2.14\" "
-#~ "などです。"
-
-#~ msgid ""
-#~ "They are usually taken from CVS, and we keep all relevant information on "
-#~ "them (Bugzilla details, web page, maintainer information,...)."
-#~ msgstr ""
-#~ "これらは通常 CVS から取得して、Bugzilla の詳細やウェブページ、保守している"
-#~ "人など、すべての関連情報を保っておきます。"
-
-#~ msgid "Report bugs to Bugzilla"
-#~ msgstr "Bugzilla にバグ報告"
-
-#~ msgid ""
-#~ "The modules of this release are not part of the GNOME SVN repository. "
-#~ "Please check each module's web page to see where to send translations."
-#~ msgstr ""
-#~ "モジュールのこのリリースは GNOME SVN リポジトリの一部ではありません。各モ"
-#~ "ジュールのウェブページで翻訳の送り先を確認してみてください。"
-
-#~ msgid "SVN account:"
-#~ msgstr "SVN アカウント:"
-
-#~ msgid ""
-#~ "Last actions made by the %(lang)s team of the GNOME translation project"
-#~ msgstr "GNOME翻訳プロジェクトの%(lang)sチームの最新のアクション"
-
-#~ msgid "Action History"
-#~ msgstr "活動履歴"
-
-#~ msgid "Backup the actions"
-#~ msgstr "アクションをバックアップ"
-
-#~ msgid "The Gimp Manual"
-#~ msgstr "GIMP マニュアル"
-
-#~ msgid "Git account:"
-#~ msgstr "Git アカウント:"
-
-#~ msgid "Low German and Saxon"
-#~ msgstr "低地ドイツ語とザクセン語"
-
-#~ msgid "Low Saxon, Germany"
-#~ msgstr "低ザクセン語 (ドイツ)"
-
-#~ msgid "Valencian (Southern Catalan)"
-#~ msgstr "バレンシア語 (南カタロニア)"
-
-#~ msgid ""
-#~ "This module is not part of the GNOME SVN repository. Please check the "
-#~ "module's web page to see where to send translations."
-#~ msgstr ""
-#~ "このモジュールは GNOME SVN リポジトリの一部ではありません。モジュールの"
-#~ "ウェブページで翻訳の送り先を確認してみてください。"
-
-#~ msgid "%(module/id)"
-#~ msgstr "%(module/id)"
-
-#~ msgid "Bug Buddy Manual"
-#~ msgstr "Bug Buddy マニュアル"
-
-#~ msgid "GLib"
-#~ msgstr "GLib"
-
-#~ msgid "GNOME 2.18 release notes"
-#~ msgstr "GNOME 2.18 リリースノート"
-
-#~ msgid "Gtk+"
-#~ msgstr "Gtk+"
-
-#~ msgid "Sabayon"
-#~ msgstr "Sabayon"
-
-#~ msgid "Stock Ticker Manual"
-#~ msgstr "株価ティッカーのマニュアル"
-
-#~ msgid "XKeyboard-Config"
-#~ msgstr "X キーボード設定"
-
-#~ msgid "Development Platform"
-#~ msgstr "開発用プラットフォーム"
-
-#~ msgid "GNOME Fifth Toe (Extra software)"
-#~ msgstr "GNOME Fifth Toe (追加のソフトウェア)"
-
-#~ msgid "System Administration"
-#~ msgstr "システム管理"
