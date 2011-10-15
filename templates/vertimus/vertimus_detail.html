@@ -64,22 +64,33 @@ $(document).ready(function() {
   </em></div>
   <div style="display: inline-block">
     <a href="{{ po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
-    {% trans "Translated:" %} {{ stats|num_stats:"full" }}&nbsp;
+    {% trans "PO file statistics:" %} <br />
+    {% trans "Strings:" %} {{ stats|num_stats:"full" }}&nbsp;
     <div class="graph graphinline">
       {{ stats|vis_stats:"full" }}
     </div>
+    {% trans "Words:" %} {{ stats|num_word_stats:"full" }}&nbsp;
+    <div class="graph graphinline">
+      {{ stats|vis_word_stats:"full" }}
+    </div>
   </div>
   {% if po_url_reduced %}
-  <div style="display: inline-block; margin-left: 2em;">
+  <div style="display: inline-block;">
     <a href="{{ po_url_reduced }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download PO file" %}" /></a>
-    {% trans "Translated (reduced):" %} {{ stats|num_stats:"part" }}&nbsp;
-    <div class="graph graphinline">
-      {{ stats|vis_stats:"part" }}
-    </div>
+    {% trans "PO file statistics (reduced):" %}
     <div style="display: inline-block;">
       <span class="help_link"><a href="{% url help 'reduced_po' %}">
         <img src="{{ MEDIA_URL }}img/help.png" alt="help icon" width="26">
       </a></span>
+    </div>
+    <br />
+    {% trans "Strings:" %} {{ stats|num_stats:"part" }}&nbsp;
+    <div class="graph graphinline">
+      {{ stats|vis_stats:"part" }}
+    </div>
+    {% trans "Words:" %} {{ stats|num_word_stats:"part" }}&nbsp;
+    <div class="graph graphinline">
+      {{ stats|vis_word_stats:"part" }}
     </div>
   </div>
   {% endif %}
