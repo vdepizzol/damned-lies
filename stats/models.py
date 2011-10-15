@@ -1734,15 +1734,27 @@ class FakeSummaryStatistics(object):
         self._fuzzy      = 0
         self._untranslated = 0
         self.partial_po = False
+        self._translated_words = 0
+        self._fuzzy_words      = 0
+        self._untranslated_words = 0
 
     def translated(self, scope=None):
         return self._translated
 
+    def translated_words(self, scope=None):
+        return self._translated_words
+
     def fuzzy(self, scope=None):
         return self._fuzzy
 
+    def fuzzy_words(self, scope=None):
+        return self._fuzzy_words
+
     def untranslated(self, scope=None):
         return self._untranslated
+
+    def untranslated_words(self, scope=None):
+        return self._untranslated_words
 
     def trans(self, stat):
         self._translated   += stat.translated()
