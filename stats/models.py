@@ -1224,8 +1224,11 @@ class PoFile(models.Model):
     def filename(self):
         return os.path.basename(self.path)
 
-    def pot_size(self):
-        return self.translated + self.fuzzy + self.untranslated
+    def pot_size(self, words=False):
+        if words:
+            return self.translated_words + self.fuzzy_words + self.untranslated_words
+        else:
+            return self.translated + self.fuzzy + self.untranslated
 
     def fig_count(self):
         """ If stat of a document type, get the number of figures in the document """
@@ -1362,6 +1365,7 @@ class Statistics(models.Model):
         if not self.full_po:
             return _("POT file unavailable")
         pot_size = self.full_po.pot_size()
+        pot_words_size = self.full_po.pot_size(words=True)
         fig_count = self.full_po.fig_count()
         """ Return stat table header: 'POT file (n messages) - updated on ??-??-???? tz' """
         msg_text = ungettext(u"%(count)s message", "%(count)s messages", pot_size) % {'count': pot_size}
@@ -1369,13 +1373,14 @@ class Statistics(models.Model):
                         # Date format syntax is similar to PHP http://www.php.net/date
                         'date': dateformat.format(self.full_po.updated, _("Y-m-d g:i a O"))
                         }
+        words_text = ungettext(u"%(count)s word", "%(count)s words", pot_words_size) % {'count': pot_words_size}
         if fig_count:
             fig_text = ungettext(u"%(count)s figure", "%(count)s figures", fig_count) % {'count': fig_count}
-            text = _(u"POT file (%(messages)s, %(figures)s) — %(updated)s") % \
-                              {'messages': msg_text, 'figures': fig_text, 'updated': upd_text}
+            text = _(u"POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s") % \
+                              {'messages': msg_text, 'figures': fig_text, 'updated': upd_text, 'words': words_text }
         else:
-            text = _(u"POT file (%(messages)s) — %(updated)s") % \
-                              {'messages': msg_text, 'updated': upd_text}
+            text = _(u"POT file (%(messages)s — %(words)s) — %(updated)s") % \
+                              {'messages': msg_text, 'updated': upd_text, 'words': words_text }
         return text
 
     def has_figures(self):
