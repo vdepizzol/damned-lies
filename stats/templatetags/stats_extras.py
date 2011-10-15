@@ -66,12 +66,62 @@ def num_stats(stat, scope='full'):
     return mark_safe(result)
 
 @register.filter
+def num_word_stats(stat, scope='full'):
+    """ Produce stat numbers as in: 85% (1265/162/85) """
+    if isinstance(stat, (Statistics, FakeLangStatistics, FakeSummaryStatistics)):
+        stats = {
+            'prc':          stat.tr_word_percentage(scope),
+            'translated':   stat.translated_words(scope),
+            'fuzzy':        stat.fuzzy_words(scope),
+            'untranslated': stat.untranslated_words(scope),
+        }
+    elif isinstance(stat, PoFile):
+        stats = {
+            'translated':   stat.translated_words,
+            'fuzzy':        stat.fuzzy_words,
+            'untranslated': stat.untranslated_words,
+        }
+        if scope != 'short':
+            stats['prc'] = stat.tr_word_percentage()
+    else:
+        stats = stat
+    if 'translated_perc' in stats:
+        stats['prc'] = stats['translated_perc']
+    if 'prc' in stats:
+        result = '<pre class="stats"><b>%(prc)3s%%</b> <span class="num1">%(translated)6s</span> <span class="num2">%(fuzzy)5s</span> <span class="num3">%(untranslated)5s</span> </pre>' % stats
+        result = result.replace(' 0</span>', ' <span class="zero">0</span></span>')
+    else:
+        result = "%(translated)s/%(fuzzy)s/%(untranslated)s" % stats
+    return mark_safe(result)
+
+@register.filter
 def vis_stats(stat, scope='full'):
     """ Produce visual stats with green/red bar """
     if isinstance(stat, (Statistics, FakeLangStatistics, FakeSummaryStatistics)):
         trans, fuzzy, untrans = stat.tr_percentage(scope), stat.fu_percentage(scope), stat.un_percentage(scope)
     elif isinstance(stat, PoFile):
         trans, fuzzy, untrans = stat.tr_percentage(), stat.fu_percentage(), stat.un_percentage()
+    else:
+        trans, fuzzy, untrans = stat['translated_perc'], stat['fuzzy_perc'], stat['untranslated_perc']
+    return mark_safe("""
+        <div class="translated" style="width: %(trans)spx;"></div>
+        <div class="fuzzy" style="%(dir)s:%(trans)spx; width:%(fuzzy)spx;"></div>
+        <div class="untranslated" style="%(dir)s:%(tr_fu)spx; width: %(untrans)spx;"></div>
+        """ % {
+          'dir'  : get_language_bidi() and "right" or "left",
+          'trans': trans,
+          'fuzzy': fuzzy,
+          'tr_fu': trans + fuzzy,
+          'untrans': untrans,
+        })
+
+@register.filter
+def vis_word_stats(stat, scope='full'):
+    """ Produce visual stats with green/red bar """
+    if isinstance(stat, (Statistics, FakeLangStatistics, FakeSummaryStatistics)):
+        trans, fuzzy, untrans = stat.tr_word_percentage(scope), stat.fu_word_percentage(scope), stat.un_word_percentage(scope)
+    elif isinstance(stat, PoFile):
+        trans, fuzzy, untrans = stat.tr_word_percentage(), stat.fu_word_percentage(), stat.un_word_percentage()
     else:
         trans, fuzzy, untrans = stat['translated_perc'], stat['fuzzy_perc'], stat['untranslated_perc']
     return mark_safe("""
