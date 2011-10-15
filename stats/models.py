@@ -1241,6 +1241,13 @@ class PoFile(models.Model):
         else:
             return int(100*self.translated/pot_size)
 
+    def tr_word_percentage(self):
+        pot_size = self.pot_size(words=True)
+        if pot_size == 0:
+            return 0
+        else:
+            return int(100*self.translated_words/pot_size)
+
     def fu_percentage(self):
         pot_size = self.pot_size()
         if pot_size == 0:
@@ -1248,12 +1255,26 @@ class PoFile(models.Model):
         else:
             return int(100*self.fuzzy/pot_size)
 
+    def fu_word_percentage(self):
+        pot_size = self.pot_size(words=True)
+        if pot_size == 0:
+            return 0
+        else:
+            return int(100*self.fuzzy_words/pot_size)
+
     def un_percentage(self):
         pot_size = self.pot_size()
         if pot_size == 0:
             return 0
         else:
             return int(100*self.untranslated/pot_size)
+
+    def un_word_percentage(self):
+        pot_size = self.pot_size(words=True)
+        if pot_size == 0:
+            return 0
+        else:
+            return int(100*self.untranslated_words/pot_size)
 
     def update_stats(self):
         stats = utils.po_file_stats(self.path, msgfmt_checks=False)
