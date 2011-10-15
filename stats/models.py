@@ -1324,11 +1324,20 @@ class Statistics(models.Model):
     def translated(self, scope='full'):
         return getattr(scope=='part' and self.part_po or self.full_po, 'translated', 0)
 
+    def translated_words(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'translated_words', 0)
+
     def fuzzy(self, scope='full'):
         return getattr(scope=='part' and self.part_po or self.full_po, 'fuzzy', 0)
 
+    def fuzzy_words(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'fuzzy_words', 0)
+
     def untranslated(self, scope='full'):
         return getattr(scope=='part' and self.part_po or self.full_po, 'untranslated', 0)
+
+    def untranslated_words(self, scope='full'):
+        return getattr(scope=='part' and self.part_po or self.full_po, 'untranslated_words', 0)
 
     def is_fake(self):
         return False
@@ -1343,6 +1352,13 @@ class Statistics(models.Model):
             return self.part_po.tr_percentage()
         return 0
 
+    def tr_word_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.tr_word_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.tr_word_percentage()
+        return 0
+
     def fu_percentage(self, scope='full'):
         if scope == 'full' and self.full_po:
             return self.full_po.fu_percentage()
@@ -1350,11 +1366,25 @@ class Statistics(models.Model):
             return self.part_po.fu_percentage()
         return 0
 
+    def fu_word_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.fu_word_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.fu_word_percentage()
+        return 0
+
     def un_percentage(self, scope='full'):
         if scope == 'full' and self.full_po:
             return self.full_po.un_percentage()
         elif scope == 'part' and self.part_po:
             return self.part_po.un_percentage()
+        return 0
+
+    def un_word_percentage(self, scope='full'):
+        if scope == 'full' and self.full_po:
+            return self.full_po.un_word_percentage()
+        elif scope == 'part' and self.part_po:
+            return self.part_po.un_word_percentage()
         return 0
 
     def get_lang(self):
