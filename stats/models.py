@@ -1235,22 +1235,25 @@ class PoFile(models.Model):
         return self.figures and len(self.figures) or 0
 
     def tr_percentage(self):
-        if self.pot_size() == 0:
+        pot_size = self.pot_size()
+        if pot_size == 0:
             return 0
         else:
-            return int(100*self.translated/self.pot_size())
+            return int(100*self.translated/pot_size)
 
     def fu_percentage(self):
-        if self.pot_size() == 0:
+        pot_size = self.pot_size()
+        if pot_size == 0:
             return 0
         else:
-            return int(100*self.fuzzy/self.pot_size())
+            return int(100*self.fuzzy/pot_size)
 
     def un_percentage(self):
-        if self.pot_size() == 0:
+        pot_size = self.pot_size()
+        if pot_size == 0:
             return 0
         else:
-            return int(100*self.untranslated/self.pot_size())
+            return int(100*self.untranslated/pot_size)
 
     def update_stats(self):
         stats = utils.po_file_stats(self.path, msgfmt_checks=False)
