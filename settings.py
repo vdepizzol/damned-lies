@@ -49,7 +49,8 @@ TIME_ZONE = 'Europe/Zurich'
 LANGUAGE_CODE = 'en-US'
 LANGUAGES = list(global_settings.LANGUAGES) + [
     # Add here languages with translations for D-L but not for Django
-    ('eo', gettext_noop('Esperanto'))
+    ('eo', gettext_noop('Esperanto')),
+    ('ku', gettext_noop('Kurdish')),
 ]
 
 SITE_ID = 1
