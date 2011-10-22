@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-07 07:20+0000\n"
-"PO-Revision-Date: 2011-10-07 13:29+0200\n"
+"POT-Creation-Date: 2011-10-22 08:19+0000\n"
+"PO-Revision-Date: 2011-10-22 17:59+0200\n"
 "Last-Translator: Piotr Drąg <piotdrag@gmail.com>\n"
 "Language-Team: polski <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
@@ -280,7 +280,7 @@ msgstr "kirgiski"
 msgid "Korean"
 msgstr "koreański"
 
-#: database-content.py:66 database-content.py:196
+#: database-content.py:66 database-content.py:196 settings.py:53
 msgid "Kurdish"
 msgstr "kurdyjski"
 
@@ -1508,7 +1508,7 @@ msgstr "Dodatkowe programy GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nie-GNOME)"
 
-#: settings.py:80
+#: settings.py:81
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1814,16 +1814,16 @@ msgstr "Platforma programistyczna GNOME"
 msgid "New Module Proposals"
 msgstr "Nowe propozycje modułów"
 
-#: stats/models.py:1335 stats/models.py:1682
+#: stats/models.py:1392 stats/models.py:1741
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1363
+#: stats/models.py:1420
 msgid "POT file unavailable"
 msgstr "Plik POT jest niedostępny"
 
-#: stats/models.py:1367
+#: stats/models.py:1425
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
@@ -1831,17 +1831,25 @@ msgstr[0] "%(count)s ciąg znaków"
 msgstr[1] "%(count)s ciągi znaków"
 msgstr[2] "%(count)s ciągów znaków"
 
-#: stats/models.py:1368
+#: stats/models.py:1426
 #, python-format
 msgid "updated on %(date)s"
 msgstr "zaktualizowano %(date)s"
 
-#: stats/models.py:1370 templates/vertimus/vertimus_detail.html:48
-#: templates/vertimus/vertimus_detail.html:150
+#: stats/models.py:1428 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Y-m-d g:i a O"
 msgstr "d.m.Y G:i O"
 
-#: stats/models.py:1373
+#: stats/models.py:1430
+#, python-format
+msgid "%(count)s word"
+msgid_plural "%(count)s words"
+msgstr[0] "%(count)s wyraz"
+msgstr[1] "%(count)s wyrazy"
+msgstr[2] "%(count)s wyrazów"
+
+#: stats/models.py:1432
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
@@ -1849,23 +1857,23 @@ msgstr[0] "%(count)s ilustracja"
 msgstr[1] "%(count)s ilustracje"
 msgstr[2] "%(count)s ilustracji"
 
-#: stats/models.py:1374
+#: stats/models.py:1433
 #, python-format
-msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "Plik POT (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
+msgstr "Plik POT (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1436
 #, python-format
-msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "Plik POT (%(messages)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s) — %(updated)s"
+msgstr "Plik POT (%(messages)s — %(words)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1569
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Ten plik POT nie został utworzony za pomocą standardowej metody intltool."
 
-#: stats/models.py:1511
+#: stats/models.py:1570
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2444,7 +2452,7 @@ msgstr "Ten dokument został napisany w formacie dokumentacji Mallard"
 msgid "Download POT file"
 msgstr "Pobierz plik POT"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:95
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:106
 msgid "Notices"
 msgstr "Uwagi"
 
@@ -2469,7 +2477,7 @@ msgid "Damned Lies site admin"
 msgstr "Administrator witryny Przeklęte kłamstwa"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:187
 msgid "No comment"
 msgstr "Brak komentarzy"
 
@@ -2946,19 +2954,29 @@ msgid "State:"
 msgstr "Stan:"
 
 #: templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:79
 msgid "Download PO file"
 msgstr "Pobierz plik PO"
 
 #: templates/vertimus/vertimus_detail.html:67
-msgid "Translated:"
-msgstr "Przetłumaczone:"
+msgid "PO file statistics:"
+msgstr "Statystyki pliku PO:"
 
-#: templates/vertimus/vertimus_detail.html:75
-msgid "Translated (reduced):"
-msgstr "Przetłumaczone (zmniejszone):"
+#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:87
+msgid "Strings:"
+msgstr "Ciągi:"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:72
+#: templates/vertimus/vertimus_detail.html:91
+msgid "Words:"
+msgstr "Wyrazy:"
+
+#: templates/vertimus/vertimus_detail.html:80
+msgid "PO file statistics (reduced):"
+msgstr "Statystyki pliku PO (zmniejszonego):"
+
+#: templates/vertimus/vertimus_detail.html:100
 #, python-format
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
@@ -2966,53 +2984,53 @@ msgstr[0] " w tym <a href=\"%(img_url)s\">%(stats)s obraz</a>"
 msgstr[1] " w tym <a href=\"%(img_url)s\">%(stats)s obrazy</a>"
 msgstr[2] " w tym <a href=\"%(img_url)s\">%(stats)s obrazów</a>"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:120
 msgid "On-going activities in same module:"
 msgstr "Trwające czynności w obecnym module:"
 
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:131
 msgid "Actions"
 msgstr "Czynności"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #.
-#: templates/vertimus/vertimus_detail.html:125
+#: templates/vertimus/vertimus_detail.html:136
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Czynności archiwalne (%(human_level)s serii archiwalnych)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:138
 msgid "(Return to current actions)"
 msgstr "(Powrót do bieżącej czynności)"
 
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:143
 msgid "(Previous action history)"
 msgstr "(Poprzednie czynności archiwalne)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:176
 msgid "diff with:"
 msgstr "różnica z:"
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:195
 msgid "No current actions."
 msgstr "Brak bieżących czynności."
 
-#: templates/vertimus/vertimus_detail.html:188
+#: templates/vertimus/vertimus_detail.html:199
 msgid "New Action"
 msgstr "Nowa czynność"
 
-#: templates/vertimus/vertimus_detail.html:200
+#: templates/vertimus/vertimus_detail.html:211
 msgid "Submit"
 msgstr "Prześlij"
 
-#: templates/vertimus/vertimus_detail.html:205
+#: templates/vertimus/vertimus_detail.html:216
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Wymagane jest uwierzytelnienie i członkostwo w zespole %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:209
+#: templates/vertimus/vertimus_detail.html:220
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Ten zespół nie korzysta z programu do tłumaczeń Vertimus."
 
