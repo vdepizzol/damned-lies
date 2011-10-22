@@ -116,7 +116,7 @@ def get_image_size(url):
 
     try:
         file = urllib.urlopen(url)
-    except (IOError, UnicodeError, InvalidURL):
+    except (IOError, UnicodeError, InvalidURL, EOFError):
         raise forms.ValidationError(_(u"The URL you provided is not valid"))
     size = None
     p = ImageFile.Parser()

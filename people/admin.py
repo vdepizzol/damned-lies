@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from people.models import Person
 
 class PersonAdmin(admin.ModelAdmin):
-    search_fields = ('username', 'first_name', 'last_name')
+    search_fields = ('username', 'first_name', 'last_name', 'email')
     list_display = ('username', 'first_name', 'last_name', 'email')
 
 UserAdmin.list_display = ('username', 'email', 'last_name', 'first_name', 'is_active', 'last_login')
