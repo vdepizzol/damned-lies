@@ -2,7 +2,7 @@
 # Copyright (C) 2005, 2007 Free Software Foundation, Inc.
 #
 # Andre Klapper <ak-47@gmx.net>, 2007, 2008.
-# Mario Blättermann <mariobl@freenet.de>, 2008-2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2011.
 # Christian Kirbach  <Christian.Kirbach@googlemail.com>, 2009, 2010.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de, 2010.
 #
@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-07 07:20+0000\n"
-"PO-Revision-Date: 2011-10-08 20:21+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
+"POT-Creation-Date: 2011-10-22 08:19+0000\n"
+"PO-Revision-Date: 2011-10-23 11:49+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,7 +200,7 @@ msgstr "Griechisch"
 
 #: database-content.py:45 database-content.py:173
 msgid "Guarani"
-msgstr "Guaraní"
+msgstr "Guarani"
 
 #: database-content.py:46 database-content.py:174
 msgid "Gujarati"
@@ -282,7 +282,7 @@ msgstr "Kirgisisch"
 msgid "Korean"
 msgstr "Koreanisch"
 
-#: database-content.py:66 database-content.py:196
+#: database-content.py:66 database-content.py:196 settings.py:53
 msgid "Kurdish"
 msgstr "Kurdisch"
 
@@ -1361,7 +1361,7 @@ msgstr ""
 
 #: database-content.py:443
 msgid "Gnome Parental Control"
-msgstr "Gnome Elternkontrolle"
+msgstr "GNOME Elternkontrolle"
 
 #: database-content.py:444
 msgid ""
@@ -1511,7 +1511,7 @@ msgstr "Zusätzliche GNOME-Anwendungen"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (nicht-GNOME)"
 
-#: settings.py:80
+#: settings.py:81
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1524,7 +1524,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Andre Klapper <ak-47@gmx.net>\n"
-"Mario Blättermann <mariobl@freenet.de>\n"
+"Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>"
 
@@ -1829,57 +1829,64 @@ msgstr "GNOME-Entwicklerplattform"
 msgid "New Module Proposals"
 msgstr "Neue Module (vorläufig)"
 
-#: stats/models.py:1335 stats/models.py:1682
+#: stats/models.py:1392 stats/models.py:1741
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1363
+#: stats/models.py:1420
 msgid "POT file unavailable"
 msgstr "POT-Datei ist nicht verfügbar"
 
-#: stats/models.py:1367
+#: stats/models.py:1425
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s String"
 msgstr[1] "%(count)s Strings"
 
-#: stats/models.py:1368
+#: stats/models.py:1426
 #, python-format
 msgid "updated on %(date)s"
 msgstr "aktualisiert am %(date)s"
 
-#: stats/models.py:1370 templates/vertimus/vertimus_detail.html:48
-#: templates/vertimus/vertimus_detail.html:150
+#: stats/models.py:1428 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Y-m-d g:i a O"
 msgstr "d. F Y G:i O"
 
-#: stats/models.py:1373
+#: stats/models.py:1430
+#, python-format
+msgid "%(count)s word"
+msgid_plural "%(count)s words"
+msgstr[0] "%(count)s Wort"
+msgstr[1] "%(count)s Wörter"
+
+#: stats/models.py:1432
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s Abbildung"
 msgstr[1] "%(count)s Abbildungen"
 
-#: stats/models.py:1374
+#: stats/models.py:1433
 #, python-format
-msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "POT-Datei (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
+msgstr "POT-Datei (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1436
 #, python-format
-msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "POT-Datei (%(messages)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s) — %(updated)s"
+msgstr "POT-Datei (%(messages)s — %(words)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1569
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Diese POT-Datei wurde nicht mit der herkömmlichen Methode durch intltool "
 "erstellt."
 
-#: stats/models.py:1511
+#: stats/models.py:1570
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2469,7 +2476,7 @@ msgstr "Dieses Dokument wurde im Mallard-Dokumentformat geschrieben"
 msgid "Download POT file"
 msgstr "POT-Datei herunterladen"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:95
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:106
 msgid "Notices"
 msgstr "Notizen"
 
@@ -2495,7 +2502,7 @@ msgid "Damned Lies site admin"
 msgstr "»Verdammte Lügen«-Administrator"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:187
 msgid "No comment"
 msgstr "Kein Kommentar"
 
@@ -2972,71 +2979,81 @@ msgid "State:"
 msgstr "Status:"
 
 #: templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:79
 msgid "Download PO file"
 msgstr "PO-Datei herunterladen"
 
 #: templates/vertimus/vertimus_detail.html:67
-msgid "Translated:"
-msgstr "Übersetzt:"
+msgid "PO file statistics:"
+msgstr "Statistiken zur po-Datei:"
 
-#: templates/vertimus/vertimus_detail.html:75
-msgid "Translated (reduced):"
-msgstr "Übersetzt (reduziert):"
+#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:87
+msgid "Strings:"
+msgstr "Zeichenketten:"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:72
+#: templates/vertimus/vertimus_detail.html:91
+msgid "Words:"
+msgstr "Wörter:"
+
+#: templates/vertimus/vertimus_detail.html:80
+msgid "PO file statistics (reduced):"
+msgstr "Statistiken zur po-Datei (reduziert):"
+
+#: templates/vertimus/vertimus_detail.html:100
 #, python-format
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
 msgstr[0] " enthält <a href=\"%(img_url)s\">%(stats)s Abbildung</a>"
 msgstr[1] " enthält <a href=\"%(img_url)s\">%(stats)s Abbildungen</a>"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:120
 msgid "On-going activities in same module:"
 msgstr "Laufende Aktivitäten im selben Modul:"
 
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:131
 msgid "Actions"
 msgstr "Aktionen"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #.
-#: templates/vertimus/vertimus_detail.html:125
+#: templates/vertimus/vertimus_detail.html:136
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Archivierte Aktionen (%(human_level)s archivierte Gruppen)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:138
 msgid "(Return to current actions)"
 msgstr "(Zurück zu aktuellen Aktionen)"
 
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:143
 msgid "(Previous action history)"
 msgstr "(Chronik früherer Aktionen)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:176
 msgid "diff with:"
 msgstr "diff erstellen zu:"
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:195
 msgid "No current actions."
 msgstr "Derzeit keine Aktionen."
 
-#: templates/vertimus/vertimus_detail.html:188
+#: templates/vertimus/vertimus_detail.html:199
 msgid "New Action"
 msgstr "Neue Aktion"
 
-#: templates/vertimus/vertimus_detail.html:200
+#: templates/vertimus/vertimus_detail.html:211
 msgid "Submit"
 msgstr "Abschicken"
 
-#: templates/vertimus/vertimus_detail.html:205
+#: templates/vertimus/vertimus_detail.html:216
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Sie müssen legitimiert und Mitglied des %(team_name)s-Teams sein."
 
-#: templates/vertimus/vertimus_detail.html:209
+#: templates/vertimus/vertimus_detail.html:220
 msgid "This team is not using the Vertimus translation workflow."
 msgstr ""
 "Dieses Team verwendet nicht Vertimus für die Verwaltung von Übersetzungen."
@@ -3274,19 +3291,3 @@ msgstr "Zuletzt eingespielte Datei für %(lang)s"
 msgid "Latest POT file"
 msgstr "Neueste POT-Datei"
 
-#~ msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
-#~ msgstr ""
-#~ "%(name1)s kann nicht zu einer echten Datei aufgelöst werden, es wird "
-#~ "»%(name2)s.xml« benutzt."
-
-#~ msgid "Review required"
-#~ msgstr "Überarbeitung ist erforderlich"
-
-#~ msgid "Criawips Manual"
-#~ msgstr "Criawips-Handbuch"
-
-#~ msgid "Deskbar Applet"
-#~ msgstr "Deskbar-Applet"
-
-#~ msgid "Email client for netbooks"
-#~ msgstr "E-Mail-Client für Netbooks"
