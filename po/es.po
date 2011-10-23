@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-07 07:20+0000\n"
-"PO-Revision-Date: 2011-10-07 10:56+0200\n"
+"POT-Creation-Date: 2011-10-22 08:19+0000\n"
+"PO-Revision-Date: 2011-10-23 20:39+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -279,7 +279,7 @@ msgstr "Kirguís"
 msgid "Korean"
 msgstr "Coreano"
 
-#: database-content.py:66 database-content.py:196
+#: database-content.py:66 database-content.py:196 settings.py:53
 msgid "Kurdish"
 msgstr "Kurdo"
 
@@ -1428,17 +1428,14 @@ msgstr ""
 "inferior)."
 
 #: database-content.py:455
-#| msgid "GNOME 3.2 (development)"
 msgid "GNOME 3.4 (development)"
 msgstr "GNOME 3.4 (desarrollo)"
 
 #: database-content.py:456
-#| msgid "GNOME 3.0 (stable)"
 msgid "GNOME 3.2 (stable)"
 msgstr "GNOME 3.2 (estable)"
 
 #: database-content.py:457
-#| msgid "GNOME 2.30 (old stable)"
 msgid "GNOME 3.0 (old stable)"
 msgstr "GNOME 3.0 (estable, antigua)"
 
@@ -1510,7 +1507,7 @@ msgstr "Aplicaciones adicionales para GNOME"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (no GNOME)"
 
-#: settings.py:80
+#: settings.py:81
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1535,8 +1532,8 @@ msgstr "Ha iniciado la sesión correctamente."
 #: common/views.py:70
 #, python-format
 msgid ""
-"You have not joined any translation team yet. You can do it from <a href=\"%"
-"(url)s\">your profile</a>."
+"You have not joined any translation team yet. You can do it from <a href="
+"\"%(url)s\">your profile</a>."
 msgstr ""
 "Aún no se ha unido a ningún equipo de traducción. Puede hacerlo desde <a "
 "href=\"%(url)s\">su perfil</a>."
@@ -1712,7 +1709,8 @@ msgid ""
 "This should be an email address, useful if not equal to 'E-mail address' "
 "field"
 msgstr ""
-"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-e»."
+"Esto debe ser un correo electrónico, útil si es distinto del campo «correo-"
+"e»."
 
 #: people/views.py:85
 msgid "Sorry, the form is not valid."
@@ -1818,56 +1816,67 @@ msgstr "Plataforma de desarrollo de GNOME"
 msgid "New Module Proposals"
 msgstr "Nuevas propuestas de módulos"
 
-#: stats/models.py:1335 stats/models.py:1682
+#: stats/models.py:1392 stats/models.py:1741
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1363
+#: stats/models.py:1420
 msgid "POT file unavailable"
 msgstr "Archivo POT no disponible"
 
-#: stats/models.py:1367
+#: stats/models.py:1425
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mensaje"
 msgstr[1] "%(count)s mensajes"
 
-#: stats/models.py:1368
+#: stats/models.py:1426
 #, python-format
 msgid "updated on %(date)s"
 msgstr "actualizado el %(date)s"
 
-#: stats/models.py:1370 templates/vertimus/vertimus_detail.html:48
-#: templates/vertimus/vertimus_detail.html:150
+#: stats/models.py:1428 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1373
+#: stats/models.py:1430
+#, python-format
+#| msgid "%(count)s figure"
+#| msgid_plural "%(count)s figures"
+msgid "%(count)s word"
+msgid_plural "%(count)s words"
+msgstr[0] "%(count)s palabra"
+msgstr[1] "%(count)s palabras"
+
+#: stats/models.py:1432
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s figura"
 msgstr[1] "%(count)s figuras"
 
-#: stats/models.py:1374
+#: stats/models.py:1433
 #, python-format
-msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "Archivo POT (%(messages)s, %(figures)s): %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
+msgstr "Archivo POT (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1436
 #, python-format
-msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "Archivo POT (%(messages)s): %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s) — %(updated)s"
+msgstr "Archivo POT (%(messages)s — %(words)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1569
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 "Este archivo POT no se ha generado a través del método estándar de intltool."
 
-#: stats/models.py:1511
+#: stats/models.py:1570
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -2274,8 +2283,8 @@ msgstr "Está registrado como %(username)s."
 #: templates/login.html:13
 #, python-format
 msgid ""
-"If you do not own an account on this site, you can <a href='%(link)"
-"s'>register</a> for a new account."
+"If you do not own an account on this site, you can <a "
+"href='%(link)s'>register</a> for a new account."
 msgstr ""
 "Si no tiene una cuenta en este sitio puede <a href='%(link)s'>registrarse</"
 "a> para obtener una."
@@ -2450,7 +2459,7 @@ msgstr "Este documento está escrito en el formato de documentación Mallard"
 msgid "Download POT file"
 msgstr "Descargar el archivo POT"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:95
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:106
 msgid "Notices"
 msgstr "Notas"
 
@@ -2475,7 +2484,7 @@ msgid "Damned Lies site admin"
 msgstr "Administrador de Malditas mentiras"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:187
 msgid "No comment"
 msgstr "Sin comentarios"
 
@@ -2498,16 +2507,11 @@ msgstr ""
 
 #: templates/help/reduced_po.html:12
 #, python-format
-#| msgid ""
-#| "The most typical case is the strings from schema files, hence the default "
-#| "filter is filtering out strings which come from files having \"gschema."
-#| "xml.in\" in their name. Technically speaking, the filter is using the <a "
-#| "href=\"%(pogrep_url)s\">pogrep command</a> from the Translate Toolkit."
 msgid ""
 "The most typical case is the strings from schema files, hence the default "
 "filter is filtering out strings which come from files having \"gschema.xml.in"
-"\" in their name. Technically speaking, the filter is using the <a href=\"%"
-"(pogrep_url)s\">pogrep command from the Translate Toolkit</a>."
+"\" in their name. Technically speaking, the filter is using the <a href="
+"\"%(pogrep_url)s\">pogrep command from the Translate Toolkit</a>."
 msgstr ""
 "El caso más típico es el de las cadenas de los archivos de esquema, por ello "
 "el filtro predeterminado omite las cadenas que vienen de archivos con "
@@ -2517,8 +2521,9 @@ msgstr ""
 
 #: templates/help/reduced_po.html:14
 msgid ""
-"When you see a po file or a table header containing \"(red.)\" or \"(reduced)"
-"\", it means that the target files have been filtered as stated above."
+"When you see a po file or a table header containing \"(red.)\" or "
+"\"(reduced)\", it means that the target files have been filtered as stated "
+"above."
 msgstr ""
 "Cuando ve un archivo po o una cabecera de tabla que contenga «(red.)» o "
 "«(reducido)» significa que los archivos en ella se han filtrado como se "
@@ -2958,72 +2963,84 @@ msgid "State:"
 msgstr "Estado:"
 
 #: templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:79
 msgid "Download PO file"
 msgstr "Descargar el archivo PO"
 
 #: templates/vertimus/vertimus_detail.html:67
-msgid "Translated:"
-msgstr "Traducido:"
+#| msgid "Statistics"
+msgid "PO file statistics:"
+msgstr "Estadísticas del archivo PO:"
 
-#: templates/vertimus/vertimus_detail.html:75
-msgid "Translated (reduced):"
-msgstr "Traducido (reducido):"
+#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:87
+msgid "Strings:"
+msgstr "Cadenas:"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:72
+#: templates/vertimus/vertimus_detail.html:91
+msgid "Words:"
+msgstr "Palabras:"
+
+#: templates/vertimus/vertimus_detail.html:80
+#| msgid "Can't generate POT file, statistics aborted."
+msgid "PO file statistics (reduced):"
+msgstr "Estadísticas del archivo PO (reducido):"
+
+#: templates/vertimus/vertimus_detail.html:100
 #, python-format
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
 msgstr[0] " incluyendo <a href=\"%(img_url)s\">%(stats)s imagen</a>"
 msgstr[1] " incluyendo <a href=\"%(img_url)s\">%(stats)s imágenes</a>"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:120
 msgid "On-going activities in same module:"
 msgstr "Actividades en desarrollo sobre el mismo módulo:"
 
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:131
 msgid "Actions"
 msgstr "Acciones"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #.
-#: templates/vertimus/vertimus_detail.html:125
+#: templates/vertimus/vertimus_detail.html:136
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Acciones archivadas (series archivadas de %(human_level)s)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:138
 msgid "(Return to current actions)"
 msgstr "(Volver a las acciones actuales)"
 
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:143
 msgid "(Previous action history)"
 msgstr "(Histórico de acciones anteriores)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:176
 msgid "diff with:"
 msgstr "diff con:"
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:195
 msgid "No current actions."
 msgstr "Sin acción actual."
 
-#: templates/vertimus/vertimus_detail.html:188
+#: templates/vertimus/vertimus_detail.html:199
 msgid "New Action"
 msgstr "Acción nueva"
 
-#: templates/vertimus/vertimus_detail.html:200
+#: templates/vertimus/vertimus_detail.html:211
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/vertimus/vertimus_detail.html:205
+#: templates/vertimus/vertimus_detail.html:216
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Debe estar autenticado y ser miembro del equipo %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:209
+#: templates/vertimus/vertimus_detail.html:220
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Este elemento no está usando el flujo de trabajo de Vertimus."
 
@@ -3228,15 +3245,15 @@ msgstr "Sin comentarios"
 msgid ""
 "Hello,\n"
 "\n"
-"A new comment has been left on %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"A new comment has been left on %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 msgstr ""
 "Hola:\n"
 "\n"
-"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s (%"
-"(language)s).\n"
+"Se ha escrito un nuevo comentario en %(module)s - %(branch)s - %(domain)s "
+"(%(language)s).\n"
 "%(url)s\n"
 "\n"
 
@@ -3258,6 +3275,15 @@ msgstr "Último archivo subido para el %(lang)s"
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Último archivo POT"
+
+#~ msgid "POT file (%(messages)s) — %(updated)s"
+#~ msgstr "Archivo POT (%(messages)s): %(updated)s"
+
+#~ msgid "Translated:"
+#~ msgstr "Traducido:"
+
+#~ msgid "Translated (reduced):"
+#~ msgstr "Traducido (reducido):"
 
 #~ msgid "%(name1)s doesn't resolve to a real file, using '%(name2)s.xml'."
 #~ msgstr "%(name1)s no resuelve a un archivo real, usando «%(name2)s.xml»."
@@ -3435,8 +3461,8 @@ msgstr "Último archivo POT"
 #~ "Examples of release sets are &quot;GNOME Office&quot;, &quot;Fifth "
 #~ "Toe&quot; or &quot;GNOME 2.14&quot;."
 #~ msgstr ""
-#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o «GNOME "
-#~ "2.14»."
+#~ "Algunos ejemplos de publicaciones son «GNOME Office», «Quinto dedo» o "
+#~ "«GNOME 2.14»."
 
 #~ msgid ""
 #~ "They are usually taken from CVS, and we keep all relevant information on "
