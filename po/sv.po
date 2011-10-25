@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-07 07:20+0000\n"
-"PO-Revision-Date: 2011-10-07 11:27+0100\n"
+"POT-Creation-Date: 2011-10-22 08:19+0000\n"
+"PO-Revision-Date: 2011-10-25 21:39+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -343,6 +343,7 @@ msgstr "Koreanska"
 
 #: database-content.py:66
 #: database-content.py:196
+#: settings.py:53
 msgid "Kurdish"
 msgstr "Kurdiska"
 
@@ -461,7 +462,6 @@ msgstr "Oriya"
 
 #: database-content.py:90
 #: database-content.py:222
-#| msgid "Russian"
 msgid "Ossetian"
 msgstr "Ossetiska"
 
@@ -1292,7 +1292,6 @@ msgid "GNOME Applets"
 msgstr "GNOME-panelprogram"
 
 #: database-content.py:411
-#| msgid "GNOME 2 Development Documentation"
 msgid "GNOME Development Documentation"
 msgstr "Utvecklardokumentation för GNOME"
 
@@ -1465,17 +1464,14 @@ msgid "Translations should be submitted as bug reports (see link below)."
 msgstr "Översättningar ska skickas in som felrapporter (se länk nedan)."
 
 #: database-content.py:455
-#| msgid "GNOME 3.2 (development)"
 msgid "GNOME 3.4 (development)"
 msgstr "GNOME 3.4 (utveckling)"
 
 #: database-content.py:456
-#| msgid "GNOME 3.0 (stable)"
 msgid "GNOME 3.2 (stable)"
 msgstr "GNOME 3.2 (stabil)"
 
 #: database-content.py:457
-#| msgid "GNOME 2.30 (old stable)"
 msgid "GNOME 3.0 (old stable)"
 msgstr "GNOME 3.0 (gammal stabil)"
 
@@ -1536,7 +1532,6 @@ msgid "GIMP and Friends"
 msgstr "GIMP med vänner"
 
 #: database-content.py:472
-#| msgid "Extra GNOME Applications"
 msgid "Extra GNOME Applications (stable)"
 msgstr "Extra GNOME-program (stabil)"
 
@@ -1548,7 +1543,7 @@ msgstr "Extra GNOME-program"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (icke-GNOME)"
 
-#: settings.py:80
+#: settings.py:81
 msgid "This module is not part of the GNOME Git repository. Please check the module's web page to see where to send translations."
 msgstr "Den här modulen är inte en del av GNOME:s Git-förråd. Kontrollera modulens webbsida för information om var översättningarna ska skickas."
 
@@ -1578,7 +1573,6 @@ msgid "Login unsuccessful. Please verify your username and password."
 msgstr "Inloggningen misslyckades. Verifiera ditt användarnamn och lösenord."
 
 #: common/views.py:118
-#| msgid "The URL you provided is not valid"
 msgid "Sorry, the key you provided is not valid."
 msgstr "Tyvärr, nyckeln som du angav är inte giltig."
 
@@ -1831,56 +1825,67 @@ msgstr "GNOME-utvecklingsplattform"
 msgid "New Module Proposals"
 msgstr "Nya modulförslag"
 
-#: stats/models.py:1335
-#: stats/models.py:1682
+#: stats/models.py:1392
+#: stats/models.py:1741
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr "%(lang_name)s (%(lang_locale)s)"
 
-#: stats/models.py:1363
+#: stats/models.py:1420
 msgid "POT file unavailable"
 msgstr "POT-filen är inte tillgänglig"
 
-#: stats/models.py:1367
+#: stats/models.py:1425
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s meddelande"
 msgstr[1] "%(count)s meddelanden"
 
-#: stats/models.py:1368
+#: stats/models.py:1426
 #, python-format
 msgid "updated on %(date)s"
 msgstr "uppdaterad den %(date)s"
 
-#: stats/models.py:1370
+#: stats/models.py:1428
 #: templates/vertimus/vertimus_detail.html:48
-#: templates/vertimus/vertimus_detail.html:150
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d H.i O"
 
-#: stats/models.py:1373
+#: stats/models.py:1430
+#, python-format
+#| msgid "%(count)s figure"
+#| msgid_plural "%(count)s figures"
+msgid "%(count)s word"
+msgid_plural "%(count)s words"
+msgstr[0] "%(count)s ord"
+msgstr[1] "%(count)s ord"
+
+#: stats/models.py:1432
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] "%(count)s bild"
 msgstr[1] "%(count)s bilder"
 
-#: stats/models.py:1374
+#: stats/models.py:1433
 #, python-format
-msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "POT-fil (%(messages)s, %(figures)s) — %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
+msgstr "POT-fil (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1436
 #, python-format
-msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "POT-fil (%(messages)s) — %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s) — %(updated)s"
+msgstr "POT-fil (%(messages)s — %(words)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1569
 msgid "This POT file has not been generated through the standard intltool method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden intltool."
 
-#: stats/models.py:1511
+#: stats/models.py:1570
 msgid "This POT file has not been generated through the standard gnome-doc-utils method."
 msgstr "Denna POT-fil har inte genererats med standardmetoden gnome-doc-utils."
 
@@ -1905,7 +1910,6 @@ msgstr "Modulen %s ser inte ut som en modul som använder gnome-doc-utils."
 
 #: stats/utils.py:235
 #, python-format
-#| msgid "DOC_MODULE doesn't point to a real file, probably a macro."
 msgid "%s doesn't point to a real file, probably a macro."
 msgstr "%s pekar inte till en verklig fil, antagligen ett makro."
 
@@ -2402,7 +2406,7 @@ msgid "Download POT file"
 msgstr "Hämta POT-fil"
 
 #: templates/stats_show.html:20
-#: templates/vertimus/vertimus_detail.html:95
+#: templates/vertimus/vertimus_detail.html:106
 msgid "Notices"
 msgstr "Anteckningar"
 
@@ -2428,7 +2432,7 @@ msgid "Damned Lies site admin"
 msgstr "Admin för Förbannade lögner"
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:187
 msgid "No comment"
 msgstr "Ingen kommentar"
 
@@ -2456,9 +2460,6 @@ msgstr "När du ser en po-fil eller ett tabellhuvud som innehåller \"(red.)\" e
 
 #: templates/help/reduced_po.html:16
 #, python-format
-#| msgid ""
-#| "If anything should be changed on this page, please <a href=\"%(bug_url)s"
-#| "\">submit a bug report</a>."
 msgid "If you think you found a better filter for a specific module, please <a href=\"%(bug_url)s\">submit a bug report</a> with your proposal."
 msgstr "<a href=\"%(bug_url)s\">Skicka in en felrapport</a> med ditt förslag om du tror dig ha hittat ett bättre filter för en specifik modul."
 
@@ -2756,7 +2757,6 @@ msgid "Subscribe"
 msgstr "Prenumerera"
 
 #: templates/teams/team_base.html:41
-#| msgid "This branch is currently string-frozen."
 msgid "This team has currently no coordinator."
 msgstr "Denna grupp har för närvarande ingen koordinator."
 
@@ -2837,72 +2837,83 @@ msgid "State:"
 msgstr "Tillstånd:"
 
 #: templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:79
 msgid "Download PO file"
 msgstr "Hämta PO-fil"
 
 #: templates/vertimus/vertimus_detail.html:67
-msgid "Translated:"
-msgstr "Översatt:"
+#| msgid "Statistics"
+msgid "PO file statistics:"
+msgstr "Statistik för PO-fil:"
 
-#: templates/vertimus/vertimus_detail.html:75
-msgid "Translated (reduced):"
-msgstr "Översatt (minskade):"
+#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:87
+msgid "Strings:"
+msgstr "Strängar:"
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:72
+#: templates/vertimus/vertimus_detail.html:91
+msgid "Words:"
+msgstr "Ord:"
+
+#: templates/vertimus/vertimus_detail.html:80
+#| msgid "Can't generate POT file, statistics aborted."
+msgid "PO file statistics (reduced):"
+msgstr "Statistik för PO-fil (reducerad):"
+
+#: templates/vertimus/vertimus_detail.html:100
 #, python-format
-#| msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
 msgstr[0] " inklusive <a href=\"%(img_url)s\">%(stats)s bild</a>"
 msgstr[1] " inklusive <a href=\"%(img_url)s\">%(stats)s bilder</a>"
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:120
 msgid "On-going activities in same module:"
 msgstr "Pågående aktiviteter i samma modul:"
 
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:131
 msgid "Actions"
 msgstr "Åtgärder"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #.
-#: templates/vertimus/vertimus_detail.html:125
+#: templates/vertimus/vertimus_detail.html:136
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr "Arkiverade åtgärder (%(human_level)s arkiverade serier)"
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:138
 msgid "(Return to current actions)"
 msgstr "(Återgå till aktuella åtgärder)"
 
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:143
 msgid "(Previous action history)"
 msgstr "(Åtgärdshistorik)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:176
 msgid "diff with:"
 msgstr "diff med:"
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:195
 msgid "No current actions."
 msgstr "Inga aktuella åtgärder."
 
-#: templates/vertimus/vertimus_detail.html:188
+#: templates/vertimus/vertimus_detail.html:199
 msgid "New Action"
 msgstr "Ny åtgärd"
 
-#: templates/vertimus/vertimus_detail.html:200
+#: templates/vertimus/vertimus_detail.html:211
 msgid "Submit"
 msgstr "Skicka"
 
-#: templates/vertimus/vertimus_detail.html:205
+#: templates/vertimus/vertimus_detail.html:216
 #, python-format
 msgid "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr "Du måste vara autentiserad och vara medlem av gruppen %(team_name)s."
 
-#: templates/vertimus/vertimus_detail.html:209
+#: templates/vertimus/vertimus_detail.html:220
 msgid "This team is not using the Vertimus translation workflow."
 msgstr "Denna grupp använder inte översättningsmetoden Vertimus."
 
@@ -3134,16 +3145,30 @@ msgstr "Senaste insända fil för %(lang)s"
 msgid "Latest POT file"
 msgstr "Senaste POT-fil"
 
+#~ msgid "POT file (%(messages)s) — %(updated)s"
+#~ msgstr "POT-fil (%(messages)s) — %(updated)s"
+
+#~ msgid "Translated:"
+#~ msgstr "Översatt:"
+
+#~ msgid "Translated (reduced):"
+#~ msgstr "Översatt (minskade):"
+
 #~ msgid "Criawips Manual"
 #~ msgstr "Handbok för Criawips"
+
 #~ msgid "Deskbar Applet"
 #~ msgstr "Panelprogrammet Skrivbordsrad"
+
 #~ msgid "Email client for netbooks"
 #~ msgstr "E-postklient för ultraportabla datorer"
+
 #~ msgid "DOC_MODULE doesn't resolve to a real file, using '%s.xml'."
 #~ msgstr "DOC_MODULE pekar inte till en verklig fil, använder \"%s.xml\"."
+
 #~ msgid "Review required"
 #~ msgstr "Granskning krävs"
+
 #~ msgid ""
 #~ "Avahi is a system which facilitates service discovery on a local network "
 #~ "via the mDNS/DNS-SD protocol suite. Please submit your translation "
@@ -3154,6 +3179,7 @@ msgstr "Senaste POT-fil"
 #~ "tjänster på ett lokalt nätverk via protokollsviten mDNS/DNS-SD. Skicka in "
 #~ "din översättning via <a href=\"http://www.transifex.net/projects/p/avahi/"
 #~ "resource/master-tx-po-avahi-pot/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "D-Bus service to access fingerprint readers. This is not a GNOME-specific "
 #~ "module. Please submit your translation through the <a href=\"http://www."
@@ -3164,6 +3190,7 @@ msgstr "Senaste POT-fil"
 #~ "GNOME-specifik modul. Skicka in din översättning via <a href=\"http://www."
 #~ "transifex.net/projects/p/fprintd/resource/fprintd-po-fprintd-pot/"
 #~ "\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "GNUCash is not part of the GNOME Git repository. Please check <a href="
 #~ "\"http://wiki.gnucash.org/wiki/Translation#Submitting\">the GNUCash Wiki</"
@@ -3172,6 +3199,7 @@ msgstr "Senaste POT-fil"
 #~ "GNUCash är inte en del av GNOME:s Git-förråd. Se <a href=\"http://wiki."
 #~ "gnucash.org/wiki/Translation#Submitting\">GNUCash wiki</a> för "
 #~ "information om var översättningar ska skickas."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3179,6 +3207,7 @@ msgstr "Senaste POT-fil"
 #~ msgstr ""
 #~ "Det här är inte en GNOME-specifik modul. Skicka in din översättning genom "
 #~ "<a href=\"http://translationproject.org\">Translation Project</a>."
+
 #~ msgid ""
 #~ "PackageKit is a system designed to make installing and updating software "
 #~ "on your computer easier. This is not a GNOME-specific module. Please "
@@ -3189,6 +3218,7 @@ msgstr "Senaste POT-fil"
 #~ "av programvara enklare på din dator. Detta är inte en GNOME-specifik "
 #~ "modul. Skicka in din översättning via <a href=\"http://www.transifex.net/"
 #~ "projects/p/packagekit/resource/master/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy "
 #~ "for your sound applications. \n"
@@ -3201,6 +3231,7 @@ msgstr "Senaste POT-fil"
 #~ "Skicka in din översättning via <a href=\"\n"
 #~ "http://www.transifex.net/projects/p/pulseaudio/resource/master-tx-po-"
 #~ "pulseaudio-pot/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://www.transifex.net/projects/p/shared-mime-"
@@ -3209,6 +3240,7 @@ msgstr "Senaste POT-fil"
 #~ "Det här är inte en GNOME-specifik modul. Skicka in din översättning via "
 #~ "<a href=\"http://www.transifex.net/projects/p/shared-mime-info/resource/"
 #~ "efault-po-shared-mime-info-pot_0/\">Transifex-plattformen</a>."
+
 #~ msgid ""
 #~ "This is not a GNOME-specific module. Please submit your translation "
 #~ "through the <a href=\"http://translationproject.org\">Translation "
@@ -3220,4 +3252,3 @@ msgstr "Senaste POT-fil"
 #~ "<a href=\"http://translationproject.org\">Translation Project</a>. Se "
 #~ "även <a href=\"http://translationproject.org/domain/xdg-user-dirs.html"
 #~ "\">översättningssidan för xdg-user-dirs hos Translation Project</a>."
-
