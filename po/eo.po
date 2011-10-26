@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: damned-lies master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-07 07:20+0000\n"
-"PO-Revision-Date: 2011-10-16 20:40+0200\n"
+"POT-Creation-Date: 2011-10-22 08:19+0000\n"
+"PO-Revision-Date: 2011-10-26 09:30+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <ubuntu-l10n-eo@lists.launchpad.net>\n"
 "MIME-Version: 1.0\n"
@@ -276,7 +276,7 @@ msgstr "Kirgiza"
 msgid "Korean"
 msgstr "Korea"
 
-#: database-content.py:66 database-content.py:196
+#: database-content.py:66 database-content.py:196 settings.py:53
 msgid "Kurdish"
 msgstr "Kurda"
 
@@ -373,7 +373,6 @@ msgid "Oriya"
 msgstr "Orija"
 
 #: database-content.py:90 database-content.py:222
-#| msgid "Russian"
 msgid "Ossetian"
 msgstr "Oseta"
 
@@ -587,7 +586,7 @@ msgstr "Uzbeka (latina)"
 
 #: database-content.py:264
 msgid "Weather Applet Locations"
-msgstr ""
+msgstr "Lokoj por la veter-aplikaĵeto"
 
 #: database-content.py:265
 msgid "Nelly Kroes on Open Source"
@@ -679,7 +678,7 @@ msgstr ""
 
 #: database-content.py:288
 msgid "Browser Help"
-msgstr ""
+msgstr "Folimulo-helpo"
 
 #: database-content.py:289
 msgid "Character Palette Manual"
@@ -1022,7 +1021,6 @@ msgid "file menu"
 msgstr "dosier-menuo"
 
 #: database-content.py:374
-#| msgid "file menu"
 msgid "filters menu"
 msgstr "filtrilo-menuo"
 
@@ -1059,7 +1057,6 @@ msgid "Optimization Guide"
 msgstr ""
 
 #: database-content.py:383
-#| msgid "tutorial"
 msgid "Tutorial demos"
 msgstr ""
 
@@ -1100,12 +1097,10 @@ msgid "toolbox"
 msgstr "ilaro"
 
 #: database-content.py:393
-#| msgid "toolbox"
 msgid "toolbox (color)"
 msgstr "ilaro (koloro)"
 
 #: database-content.py:394
-#| msgid "toolbox"
 msgid "toolbox (paint)"
 msgstr "ilaro (desegni)"
 
@@ -1175,7 +1170,6 @@ msgid "Gnome Specimen"
 msgstr ""
 
 #: database-content.py:413
-#| msgid "Documentation"
 msgid "GNOME User Documentation"
 msgstr ""
 
@@ -1184,7 +1178,6 @@ msgid "GNOME Web Photo"
 msgstr ""
 
 #: database-content.py:415
-#| msgid "GNOME 2.32 (stable)"
 msgid "GNOME 3 Website"
 msgstr "Retejo de GNOME 3"
 
@@ -1375,29 +1368,25 @@ msgstr ""
 
 #: database-content.py:453
 msgid "A VNC client for GNOME"
-msgstr "VNC-kliento por GNOM"
+msgstr "VNC-kliento por GNOME"
 
 #: database-content.py:454
 msgid "Translations should be submitted as bug reports (see link below)."
 msgstr ""
 
 #: database-content.py:455
-#| msgid "GNOME 3.0 (development)"
 msgid "GNOME 3.4 (development)"
-msgstr "GNOME 3.2 (konstruado)"
+msgstr "GNOME 3.4 (konstruado)"
 
 #: database-content.py:456
-#| msgid "GNOME 2.32 (stable)"
 msgid "GNOME 3.2 (stable)"
-msgstr "GNOME 3.2 (stabile)"
+msgstr "GNOME 3.2 (stabilaĵo)"
 
 #: database-content.py:457
-#| msgid "GNOME 2.30 (old stable)"
 msgid "GNOME 3.0 (old stable)"
 msgstr "GNOME 3.0 (malnova stabilaĵo)"
 
 #: database-content.py:458
-#| msgid "GNOME 2.30 (old stable)"
 msgid "GNOME 2.32 (old stable)"
 msgstr "GNOME 2.32 (malnova stabilaĵo)"
 
@@ -1454,9 +1443,8 @@ msgid "GIMP and Friends"
 msgstr "GIMP kaj amikoj"
 
 #: database-content.py:472
-#| msgid "Extra GNOME Applications"
 msgid "Extra GNOME Applications (stable)"
-msgstr "Kromaj GNOME-aplikaĵoj (stabile)"
+msgstr "Kromaj GNOME-aplikaĵoj (stabilaĵo)"
 
 #: database-content.py:473
 msgid "Extra GNOME Applications"
@@ -1466,7 +1454,7 @@ msgstr "Kromaj GNOME-aplikaĵoj"
 msgid "freedesktop.org (non-GNOME)"
 msgstr "freedesktop.org (ne-GNOME)"
 
-#: settings.py:80
+#: settings.py:81
 msgid ""
 "This module is not part of the GNOME Git repository. Please check the "
 "module's web page to see where to send translations."
@@ -1553,7 +1541,6 @@ msgid "UI Translations"
 msgstr "UI-tradukoj"
 
 #: languages/views.py:51 languages/views.py:84
-#| msgid "UI Translations"
 msgid "UI Translations (reduced)"
 msgstr ""
 
@@ -1685,7 +1672,6 @@ msgid "You have been removed from the team '%s'."
 msgstr "Vi estas forigita de la skipo '%s'."
 
 #: people/views.py:127
-#| msgid "You are already member of this team."
 msgid "You are not a member of this team."
 msgstr "Vi ne estas membro de ĉi tiu skipo."
 
@@ -1755,55 +1741,66 @@ msgstr ""
 msgid "New Module Proposals"
 msgstr ""
 
-#: stats/models.py:1335 stats/models.py:1682
+#: stats/models.py:1392 stats/models.py:1741
 #, python-format
 msgid "%(lang_name)s (%(lang_locale)s)"
 msgstr ""
 
-#: stats/models.py:1363
+#: stats/models.py:1420
 msgid "POT file unavailable"
 msgstr "POT-dosiero ne estas disponebla"
 
-#: stats/models.py:1367
+#: stats/models.py:1425
 #, python-format
 msgid "%(count)s message"
 msgid_plural "%(count)s messages"
 msgstr[0] "%(count)s mesaĝo"
 msgstr[1] "%(count)s mesaĝoj"
 
-#: stats/models.py:1368
+#: stats/models.py:1426
 #, python-format
 msgid "updated on %(date)s"
 msgstr "ĝisdatigite %(date)s"
 
-#: stats/models.py:1370 templates/vertimus/vertimus_detail.html:48
-#: templates/vertimus/vertimus_detail.html:150
+#: stats/models.py:1428 templates/vertimus/vertimus_detail.html:48
+#: templates/vertimus/vertimus_detail.html:161
 msgid "Y-m-d g:i a O"
 msgstr "Y-m-d g:i a O"
 
-#: stats/models.py:1373
+#: stats/models.py:1430
+#, python-format
+#| msgid "%(count)s message"
+#| msgid_plural "%(count)s messages"
+msgid "%(count)s word"
+msgid_plural "%(count)s words"
+msgstr[0] "%(count)s vorto"
+msgstr[1] "%(count)s vortoj"
+
+#: stats/models.py:1432
 #, python-format
 msgid "%(count)s figure"
 msgid_plural "%(count)s figures"
 msgstr[0] ""
 msgstr[1] ""
 
-#: stats/models.py:1374
+#: stats/models.py:1433
 #, python-format
-msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
-msgstr "POT-dosiero (%(messages)s, %(figures)s) — %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
+msgstr "POT-dosiero (%(messages)s — %(words)s, %(figures)s) — %(updated)s"
 
-#: stats/models.py:1377
+#: stats/models.py:1436
 #, python-format
-msgid "POT file (%(messages)s) — %(updated)s"
-msgstr "POT-dosiero (%(messages)s) — %(updated)s"
+#| msgid "POT file (%(messages)s, %(figures)s) — %(updated)s"
+msgid "POT file (%(messages)s — %(words)s) — %(updated)s"
+msgstr "POT-dosiero (%(messages)s — %(words)s) — %(updated)s"
 
-#: stats/models.py:1510
+#: stats/models.py:1569
 msgid ""
 "This POT file has not been generated through the standard intltool method."
 msgstr ""
 
-#: stats/models.py:1511
+#: stats/models.py:1570
 msgid ""
 "This POT file has not been generated through the standard gnome-doc-utils "
 "method."
@@ -1900,7 +1897,6 @@ msgid "Coordinator"
 msgstr "Kunordiganto"
 
 #: teams/forms.py:57
-#| msgid "Inactive"
 msgid "Mark as Inactive"
 msgstr "Marki kiel neaktive"
 
@@ -1967,7 +1963,6 @@ msgid "No translators"
 msgstr "Neniu tradukanto"
 
 #: teams/views.py:67
-#| msgid "Inactive"
 msgid "Inactive members"
 msgstr "Neaktivaj membro"
 
@@ -2314,7 +2309,6 @@ msgstr ""
 
 #: templates/release_detail.html:23
 #: templates/languages/language_release_summary.html:13
-#| msgid "User Interface"
 msgid "User Interface (red.)"
 msgstr ""
 
@@ -2339,7 +2333,7 @@ msgstr ""
 msgid "Download POT file"
 msgstr "Elŝuti POT-dosieron"
 
-#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:95
+#: templates/stats_show.html:20 templates/vertimus/vertimus_detail.html:106
 msgid "Notices"
 msgstr "Rimarkoj"
 
@@ -2348,7 +2342,6 @@ msgid "Search for similar bugs before reporting it"
 msgstr ""
 
 #: templates/stats_show.html:35
-#| msgid "Report a bug"
 msgid "Report this bug"
 msgstr "Raporti tiun cimon"
 
@@ -2365,7 +2358,7 @@ msgid "Damned Lies site admin"
 msgstr ""
 
 #: templates/feeds/actions_description.html:6
-#: templates/vertimus/vertimus_detail.html:176
+#: templates/vertimus/vertimus_detail.html:187
 msgid "No comment"
 msgstr "Neniu komento"
 
@@ -2471,7 +2464,6 @@ msgstr "Dato"
 
 #: templates/languages/language_release_stats.html:34
 #, python-format
-#| msgid "%(categname)s (%(percentage)s% translated)"
 msgid "%(categname)s (%(percentage)s%% translated)"
 msgstr "%(categname)s (%(percentage)s%% tradukite)"
 
@@ -2803,74 +2795,83 @@ msgid "State:"
 msgstr "Stato:"
 
 #: templates/vertimus/vertimus_detail.html:66
-#: templates/vertimus/vertimus_detail.html:74
+#: templates/vertimus/vertimus_detail.html:79
 msgid "Download PO file"
 msgstr "Elŝuti PO-dosieron"
 
 #: templates/vertimus/vertimus_detail.html:67
-msgid "Translated:"
-msgstr "Tradukite:"
+#| msgid "Statistics"
+msgid "PO file statistics:"
+msgstr "Statistikoj pri la PO-dosiero"
 
-#: templates/vertimus/vertimus_detail.html:75
-#| msgid "Translated:"
-msgid "Translated (reduced):"
+#: templates/vertimus/vertimus_detail.html:68
+#: templates/vertimus/vertimus_detail.html:87
+msgid "Strings:"
+msgstr "Ĉenoj:"
+
+#: templates/vertimus/vertimus_detail.html:72
+#: templates/vertimus/vertimus_detail.html:91
+msgid "Words:"
+msgstr "Vortoj:"
+
+#: templates/vertimus/vertimus_detail.html:80
+msgid "PO file statistics (reduced):"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:89
+#: templates/vertimus/vertimus_detail.html:100
 #, python-format
-#| msgid "Coordinated by <a href=\"%(url)s\">%(name)s</a>"
 msgid " including <a href=\"%(img_url)s\">%(stats)s image</a>"
 msgid_plural " including <a href=\"%(img_url)s\">%(stats)s images</a>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/vertimus/vertimus_detail.html:109
+#: templates/vertimus/vertimus_detail.html:120
 msgid "On-going activities in same module:"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:120
+#: templates/vertimus/vertimus_detail.html:131
 msgid "Actions"
 msgstr "Agoj"
 
 #. Translators: human_level is an ordinal expression ('1st',' 2nd',...)
 #. which should be localized in Django itself
 #.
-#: templates/vertimus/vertimus_detail.html:125
+#: templates/vertimus/vertimus_detail.html:136
 #, python-format
 msgid "Archived Actions (%(human_level)s archived series)"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:127
+#: templates/vertimus/vertimus_detail.html:138
 msgid "(Return to current actions)"
 msgstr "(Reen al aktuala agoj)"
 
-#: templates/vertimus/vertimus_detail.html:132
+#: templates/vertimus/vertimus_detail.html:143
 msgid "(Previous action history)"
 msgstr "(Antaŭa ago-historio)"
 
-#: templates/vertimus/vertimus_detail.html:165
+#: templates/vertimus/vertimus_detail.html:176
 msgid "diff with:"
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:184
+#: templates/vertimus/vertimus_detail.html:195
 msgid "No current actions."
 msgstr "Neniu aktuala ago."
 
-#: templates/vertimus/vertimus_detail.html:188
+#: templates/vertimus/vertimus_detail.html:199
 msgid "New Action"
 msgstr "Nova ago"
 
-#: templates/vertimus/vertimus_detail.html:200
+#: templates/vertimus/vertimus_detail.html:211
 msgid "Submit"
 msgstr "Transsendi"
 
-#: templates/vertimus/vertimus_detail.html:205
+#: templates/vertimus/vertimus_detail.html:216
 #, python-format
 msgid ""
 "You need to be authenticated and to be member of the %(team_name)s team."
 msgstr ""
 
-#: templates/vertimus/vertimus_detail.html:209
+#: templates/vertimus/vertimus_detail.html:220
 msgid "This team is not using the Vertimus translation workflow."
 msgstr ""
 
@@ -3007,11 +3008,11 @@ msgstr "Alŝuti la provlegitan tradukaĵon"
 #. Translators: this means the file is ready to be committed in repository
 #: vertimus/models.py:278
 msgid "Ready for submission"
-msgstr ""
+msgstr "Preta por transsendo"
 
 #: vertimus/models.py:279
 msgid "Submit to repository"
-msgstr ""
+msgstr "Transsendi al la deponejo"
 
 #. Translators: this indicates a committer is going to commit the file in the repository
 #: vertimus/models.py:281
@@ -3038,7 +3039,7 @@ msgstr "Malfari la lastan statŝanĝon"
 
 #: vertimus/models.py:357
 msgid "File in repository"
-msgstr ""
+msgstr "Dosiero en la deponejo"
 
 #: vertimus/models.py:368 vertimus/views.py:158 vertimus/views.py:164
 #: vertimus/views.py:174
@@ -3090,6 +3091,12 @@ msgstr ""
 #: vertimus/views.py:183
 msgid "Latest POT file"
 msgstr "Lasta POT-dosiero"
+
+#~ msgid "POT file (%(messages)s) — %(updated)s"
+#~ msgstr "POT-dosiero (%(messages)s) — %(updated)s"
+
+#~ msgid "Translated:"
+#~ msgstr "Tradukite:"
 
 #~ msgid "Deskbar Applet"
 #~ msgstr "Labortablobret-apleto"
