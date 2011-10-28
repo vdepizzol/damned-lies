@@ -3,81 +3,62 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-  <meta charset="UTF-8">
-  <title>{% block title %}page title{% endblock %}</title>
-  <link rel="icon" type="image/png" href="/media/img/foot-16.png">
-  <link rel="stylesheet" href="/media/css/main.css">
-  <link rel="stylesheet" href="/media/css/layout.css">
-  <link rel="stylesheet" href="/media/css/style.css">
-{% if LANGUAGE_BIDI %}
-  <link rel="stylesheet" href="/media/css/rtl.css">
-{% endif %}
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/main.js"></script>
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script>
-  {% block extrahead %}
-  {% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}page title{% endblock %}</title>
+    <link rel="icon" type="image/png" href="/media/img/foot-16.png">
+    <link rel="stylesheet" type="text/css" href="/media/newcss/reset.css">
+    <link rel="stylesheet" type="text/css" href="/media/newcss/text.css">
+    <link rel="stylesheet" type="text/css" href="/media/newcss/template.css">
+    {% if LANGUAGE_BIDI %}
+    <link rel="stylesheet" href="/media/css/rtl.css">
+    {% endif %}
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/main.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script>
+    {% block extrahead %}
+    {% endblock %}
 </head>
 
 <body>
-  <div id="page">
-    <ul id="general">
-      <li id="siteaction-gnome_home" class="home"><a href="http://www.gnome.org/">{% trans "Home" %}</a></li>
-      <li id="siteaction-gnome_news"><a href="http://news.gnome.org">{% trans "News" %}</a></li>
-      <li id="siteaction-gnome_projects"><a href="http://www.gnome.org/projects/">{% trans "Projects" %}</a></li>
-      <li id="siteaction-gnome_art"><a href="http://art.gnome.org">{% trans "Art" %}</a></li>
-      <li id="siteaction-gnome_support"><a href="http://www.gnome.org/support/">{% trans "Support" %}</a></li>
-      <li id="siteaction-gnome_development"><a href="http://developer.gnome.org">{% trans "Development" %}</a></li>
-      <li id="siteaction-gnome_community"><a href="http://www.gnome.org/community/">{% trans "Community" %}</a></li>
-    </ul>
-    <div id="header">
-      <h1>{% trans "Damned Lies" %}</h1>
-      <div id="tabs">
-        <ul id="portal-globalnav">
-          <li
-{% if pageSection == "home" %}
-      class="selected"
-{% endif %}
-            ><a href="{% url home %}" title="{% trans "Back to Damned Lies home page" %}"><span>{% trans "Home" %}</span></a>
-          </li>
-      <li
-{% if pageSection == "teams" %}
-      class="selected"
-{% endif %}
-       ><a href="{% url teams %}"><span>{% trans "Teams" %}</span></a></li>
-      <li
-{% if pageSection == "languages" %}
-      class="selected"
-{% endif %}
-       ><a href="{% url languages %}"><span>{% trans "Languages" %}</span></a></li>
-      <li
-{% if pageSection == "releases" %}
-      class="selected"
-{% endif %}
-       ><a href="{% url releases %}"><span>{% trans "Release sets" %}</span></a></li>
-      <li
-{% if pageSection == "module" %}
-      class="selected"
-{% endif %}
-       ><a href="{% url modules %}"><span>{% trans "Modules" %}</span></a></li>
-        </ul>
-      </div> <!-- end of #tabs -->
-    </div> <!-- end of #header -->
-  </div>
-  <!-- end site header -->
-  <div id="authenticated">
-    {% if user.is_authenticated %}
-    <form action="{% url login %}" method="post">
-      <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person">&nbsp;{{ user.person }}</a> &bull;
-      <input type="hidden" name="logout" value="1">
-      <input type="submit" value="{% trans 'Log out' %}">
-    </form>
-    {% else %}
-    <a href="{% url login %}">{% trans "Log in" %}</a>
-    {% endif %}
-  </div>
+
+    <!-- global gnome.org domain bar -->
+    <div id="global_domain_bar">
+        <div class="maxwidth">
+            <div class="tab">
+                <a class="root" href="/">GNOME.org</a>
+                {% if user.is_authenticated %}
+                    <form action="{% url login %}" method="post">
+                        <a href="{{ user.get_absolute_url }}"><img src="{{ MEDIA_URL }}img/nobody-16.png" alt="Person">&nbsp;{{ user.person }}</a> &bull;
+                        <input type="hidden" name="logout" value="1">
+                        <input type="submit" value="{% trans 'Log out' %}">
+                    </form>
+                {% else %}
+                    <a href="{% url login %}">{% trans "Log in" %}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div id="gnome_header">
+    
+        <div class="maxwidth">
+    
+            <h1><a href="{% url home %}" title="{% trans "Back to Damned Lies home page" %}"><img src="{{ MEDIA_URL }}newimg/foot.png" alt="GNOME" /> {% trans "Damned Lies" %}</a></h1>
+            
+            <ul id="globalnav">
+                <li{% if pageSection == "home" %} class="active"{% endif %}><a href="{% url home %}"><span>{% trans "Home" %}</span></a></li>
+                <li{% if pageSection == "teams" %} class="active"{% endif %}><a href="{% url teams %}"><span>{% trans "Teams" %}</span></a></li>
+                <li{% if pageSection == "languages" %} class="active"{% endif %}><a href="{% url languages %}"><span>{% trans "Languages" %}</span></a></li>
+                <li{% if pageSection == "releases" %} class="active"{% endif %}><a href="{% url releases %}"><span>{% trans "Release sets" %}</span></a></li>
+                <li{% if pageSection == "module" %} class="active"{% endif %}><a href="{% url modules %}"><span>{% trans "Modules" %}</span></a></li>
+            </ul>
+            
+            <div class="clear"></div>
+        </div>
+    
+    </div>
 
   <div class="body">
-    <div id="content">
+    <div id="content" class="maxwidth">
     {% if messages %}
         {% for message in messages %}
         <p class="errornote">{{ message|safe }}</p>
@@ -85,16 +66,28 @@
     {% endif %}
 
     {% block content %}
+    
     {% endblock %}
     </div>
 
-  <div id="footer">
-    {% trans "Copyright &copy; 2006-2009" %} <a href="http://www.gnome.org/">{% trans "The GNOME Project" %}</a>.
-    <br>
-    {% trans "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>" %}
-    <br>
-    {% blocktrans with "<a href='http://www.canonical.com/'>Canonical</a>" as link %}Hosted by {{ link }}.{% endblocktrans %}
-  </div>
+    <div id="footer_art" class="default">
+    </div>
+    
+    <div id="footer_grass">
+    </div>
+
+    <div id="footer">
+        <div class="maxwidth">
+            <div class="links">
+                
+            </div>
+            <div id="footnotes">
+                {% trans "Copyright &copy; 2006-2009" %} <strong><a href="http://www.gnome.org/">{% trans "The GNOME Project" %}</strong></a>.<br>
+                {% trans "Maintained in the <a href='http://git.gnome.org/browse/damned-lies/'>damned-lies</a> module on <a href='http://git.gnome.org/'>git.gnome.org</a>" %}
+                {% blocktrans with "<a href='http://www.canonical.com/'>Canonical</a>" as link %}Hosted by {{ link }}.{% endblocktrans %}
+            </div>
+        </div>
+    </div>
 
 </div> <!-- end of div.body -->
 </body>
