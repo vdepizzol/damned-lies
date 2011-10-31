@@ -12,24 +12,17 @@
 {% plural %}GNOME is being translated to following {{ numb }} languages.
 {% endblocktrans %}</p>
 
-{% load list_to_columns %}
-<div class="col3_container">
-  {% list_to_columns languages as columns 3 %}
-  {% for column in columns %}
-  <div class="col3_column">
-    <ul class="foot">
-      {% for lang in column %}
-      <li>
-        <a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a>
-        <a href="/rss/languages/{{ lang.locale }}">
-          <img width="10" height="10" border="0" src="{{ MEDIA_URL }}img/feed-icon-10x10.png" alt="{% blocktrans %}RSS feed for {{ lang.get_name }}{% endblocktrans %}"/>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+
+<ul class="multi_column_list">
+  {% for lang in languages %}
+  <li>
+    <a href="{{ lang.get_team_url }}">{{ lang.get_name }}</a>
+    <a href="/rss/languages/{{ lang.locale }}">
+      <img width="10" height="10" border="0" src="{{ MEDIA_URL }}img/feed-icon-10x10.png" alt="{% blocktrans %}RSS feed for {{ lang.get_name }}{% endblocktrans %}"/>
+    </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 <p class="comment" style="clear:both">
   {% blocktrans %}If anything should be changed on this page, please <a href="{{ bug_url }}">submit a bug report</a>.{% endblocktrans %}

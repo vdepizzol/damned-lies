@@ -80,7 +80,7 @@ $(document).ready(function() {
     {% trans "PO file statistics (reduced):" %}
     <div style="display: inline-block;">
       <span class="help_link"><a href="{% url help 'reduced_po' %}">
-        <img src="{{ MEDIA_URL }}img/help.png" alt="help icon" width="26">
+        <img src="{{ MEDIA_URL }}img/help.png" alt="help icon">
       </a></span>
     </div>
     <br />
@@ -163,14 +163,15 @@ $(document).ready(function() {
     <div class="vertimus_action_content">
       {% if action.file %}
       <div class="uploaded_file">
-        <a href="{{ action.file.url }}">
-          <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.get_filename }}
+        <a href="{{ action.file.url }}" class="download_button">
+          {{ action.get_filename }}
         </a>
         <br/>
         {% if action.has_po_file %}
           {% if action.merged_file.url %}
-            <a href="{{ action.merged_file.url }}">
-              <img src="{{ MEDIA_URL }}img/download.png"/>&nbsp;{{ action.merged_file.filename }}</a>
+            <a href="{{ action.merged_file.url }}" class="download_button">
+              {{ action.merged_file.filename }}
+            </a>
             {{ action.merged_file|num_stats:'short' }}<br/>
           {% endif %}
           <div class="right_actions">{% trans "diff with:" %}
