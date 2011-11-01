@@ -279,6 +279,8 @@ a:visited {
 
 table.stats {
     width: 100%;
+    margin: 10px 0;
+    background: #fff;
     border: 1px solid #ccc;
     border-collapse: collapse;
     -moz-border-radius: 4px;
@@ -290,32 +292,48 @@ table.stats thead th {
     padding-top: 5px;
     padding-bottom: 5px;
     background: -moz-linear-gradient(top, #f9f9f9, #ececec);
+    white-space: nowrap;
 }
 table.stats th,
 table.stats td {
     border: 1px solid #ccc;
     border-left: 0;
     border-right: 0;
-    padding: 3px 8px;
+    padding: 5px 8px;
+}
+table.stats tbody tr:hover {
+    background: #ececec;
 }
 table.stats th img,
 table.stats td img {
     vertical-align: middle;
 }
+table.stats tfoot {
+    background: #f4f4f4;
+    background: -moz-linear-gradient(top, #f4f4f4, #fff);
+    background: -webkit-linear-gradient(top, #f4f4f4, #fff);
+    background: linear-gradient(top, #f4f4f4, #fff);
+}
 
 /* Compact text stats */
 
+.stats_numb a {
+    text-decoration: none;
+}
 pre.stats {
     color: #333;
     display: inline;
-    white-space: normal;
-    font: inherit;
+    white-space: pre;
+    font-size: 10px;
+}
+pre.stats * {
+
 }
 pre.stats .num1 {
     color: #4e9a06;
 }
 pre.stats .num2 {
-    color: #204a87;
+    color: #ce5c00;
 }
 pre.stats .num3 {
     color: #a40000;
@@ -327,19 +345,24 @@ pre.stats .zero {
 /* Graphic stats */
 
 .graph {
-    width: 100px;
-    height: 13px;
+    width: 100%;
+    height: 9px;
     background: #ccc;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
-    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    position: relative;
+    
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 .graph div {
     display: block;
     float: left;
-    height: 13px;
+    height: 9px;
 }
 .graph .translated {
     background: #73d216;
@@ -347,7 +370,7 @@ pre.stats .zero {
 }
 .graph .fuzzy {
     background: #5688c9;
-    background: -moz-linear-gradient(top, #5688c9, #33629f);
+    background: -moz-linear-gradient(top, #ff840d, #e37000);
 }
 .graph .untranslated {
     background: #ff1b1b;
@@ -367,9 +390,14 @@ pre.stats .zero {
 }
 .multi_column_list li {
     border: 1px solid #ccc;
+    background: #fff;
     padding: 4px 8px;
     list-style: none;
-    margin: 6px 0;
+    margin: 8px 0;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 

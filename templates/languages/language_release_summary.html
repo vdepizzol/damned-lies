@@ -17,6 +17,7 @@ Following variables should be set:
     <th>{% trans "Graph" %}</th>
     </tr>
   </thead>
+  <tbody>
   {% for stat in stats %}
     <tr>
       <td class="leftcell">
@@ -45,9 +46,12 @@ Following variables should be set:
     {% endif %}
     </tr>
   {% endfor %}
+  </tbody>
+  <tfoot>
   {% if show_all_modules_line %}
-  <tr style="border-top: 1px solid gray;"><td></td><td class="stats_numb"><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
+  <tr><td></td><td class="stats_numb"><a href="{% url language_all lang.locale,"ui" %}">{% trans "All modules" %}</a></td>
       <td></td><td class="stats_numb"><a href="{% url language_all lang.locale,"ui-part" %}">{% trans "All modules" %}</a></td>
       <td class="stats_numb"><a href="{% url language_all lang.locale,"doc" %}">{% trans "All modules" %}</a></td><td></td></tr>
   {% endif %}
+  </tfoot>
 </table>
