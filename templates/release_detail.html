@@ -10,67 +10,80 @@
 <h1>{% blocktrans with release.get_description as name %}{{ name }} Release{% endblocktrans %}</h1>
 
 {% if release.status == "external" %}
-  <p><i>{% trans "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations." %}</i></p>
+    <p><i>{% trans "The modules of this release are not part of the GNOME Git repository. Please check each module's web page to see where to send translations." %}</i></p>
 {% endif %}
 
 <table class="stats">
-  <thead>
-    <tr>
-      <th style="background-color:transparent;"></th>
-      <th>{% trans "Language" %}</th>
-      <th>{% trans "User Interface" %}</th>
-      <th>{% trans "Graph" %}</th>
-      <th>{% trans "User Interface (red.)" %}
-          <a href="{% url help 'reduced_po' %}"><img src="{{ MEDIA_URL }}img/help.png" alt="help icon"></a>
-      </th>
-      <th>{% trans "Documentation" %}</th>
-      <th>{% trans "Graph" %}</th>
-  </tr>
-  </thead>
+    <thead>
+        <tr>
+        <th style="background-color:transparent;"></th>
+        <th>{% trans "Language" %}</th>
+        <th>{% trans "User Interface" %}</th>
+        <th>{% trans "Graph" %}</th>
+        <th>{% trans "User Interface (red.)" %}
+            <a href="{% url help 'reduced_po' %}"><img src="{{ MEDIA_URL }}img/help.png" alt="help icon"></a>
+        </th>
+        <th>{% trans "Documentation" %}</th>
+        <th>{% trans "Graph" %}</th>
+        </tr>
+    </thead>
 
-{% for lstats in release.get_global_stats %}
-<tr>
-  <td class="counter">{{ forloop.counter }}</td>
-  <td class="leftcell">
-    <a href="{% url team_slug lstats.lang_locale %}">
-      {% if user_language.locale == lstats.lang_locale  %}
-        <b>{% trans lstats.lang_name %}</b>
-      {% else %}
-        {% trans lstats.lang_name %}
-      {% endif %}
-    </a>
-  </td>
+    <tbody>
+    {% for lstats in release.get_global_stats %}
+        <tr>
+            <td class="counter">{{ forloop.counter }}</td>
+            <td class="leftcell">
+                <a href="{% url team_slug lstats.lang_locale %}">
+                    {% if user_language.locale == lstats.lang_locale  %}
+                        <b>{% trans lstats.lang_name %}</b>
+                    {% else %}
+                        {% trans lstats.lang_name %}
+                    {% endif %}
+                </a>
+            </td>
 
-  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui" %}">
-      {{ lstats.ui|num_stats }}</a>
-  </td>
-  <td style="width: 108px; text-align: center;">
-      <div class="graph">{{ lstats.ui|vis_stats }}</div>
-  </td>
-  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "ui-part" %}">
-      {{ lstats.ui_part|num_stats }}</a>
-  </td>
+            <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name 'ui' %}">
+              {{ lstats.ui|num_stats }}</a>
+            </td>
 
-  {% if lstats.doc.translated|add:lstats.doc.fuzzy != "0" %}
-  <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name "doc" %}">
-      {{ lstats.doc|num_stats }}</a>
-  </td>
-  {% else %}
-  <td>-</td>
-  {% endif %}
+            <td style="width: 108px; text-align: center;">
+              <div class="graph">{{ lstats.ui|vis_stats }}</div>
+            </td>
 
-  <td style="width: 108px; text-align: center;">
-    <div class="graph">{{ lstats.doc|vis_stats }}</div>
-   </td>
+            <td class="stats_numb"><a href="{% url language_release lstats.lang_locale release.name 'ui-part' %}">
+              {{ lstats.ui_part|num_stats }}</a>
+            </td>
 
-</tr>
-{% endfor %}
-<tr><td class="counter"><td colspan="6"><hr></td></tr>
-<tr><td class="counter"></td>
-    <td class="leftcell"><i><small>{% trans "Original strings" %}</small></i></td>
-    <td colspan="3"><i><small><a href="{% url language_release "C" release.name "ui" %}">{% trans "User Interface" %}</a></small></i></td>
-    <td colspan="2"><i><small><a href="{% url language_release "C" release.name "doc" %}">{% trans "Documentation" %}</a></small></i></td>
-</tr>
+            {% if lstats.doc.translated|add:lstats.doc.fuzzy != "0" %}
+                <td class="stats_numb">
+                    <a href="{% url language_release lstats.lang_locale release.name 'doc' %}">
+                        {{ lstats.doc|num_stats }}
+                    </a>
+                </td>
+            {% else %}
+                <td>&ndash;</td>
+            {% endif %}
+
+            <td style="width: 108px; text-align: center;">
+                <div class="graph">{{ lstats.doc|vis_stats }}</div>
+            </td>
+
+        </tr>
+        
+    {% endfor %}
+    
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td class="counter"></td>
+            <td class="leftcell"><i><small>{% trans "Original strings" %}</small></i></td>
+            <td colspan="3"><i><small><a href="{% url language_release "C" release.name "ui" %}">{% trans "User Interface" %}</a></small></i></td>
+            <td colspan="2"><i><small><a href="{% url language_release "C" release.name "doc" %}">{% trans "Documentation" %}</a></small></i></td>
+        </tr>
+    </tfoot>
+
+
 </table>
 
 </div>

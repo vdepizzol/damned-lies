@@ -2,45 +2,58 @@
 {% load i18n %}
 
 {% with team.get_description as lang %}
-<table width="100%"><tr><td valign="top" width="50%">
+<div class="columns">
 
-  <h2>{% trans "Details" %}
-      {% if can_edit_details %}<a href="{% url team_edit team.name %}">
-        <img src="{{ MEDIA_URL }}img/edit_small.png" alt="Edit"/></a>
-      {% endif %}
-  </h2>
+    <div class="bloc first half">
+        <h2>{% trans "Details" %}
+            {% if can_edit_details %}
+                <a href="{% url team_edit team.name %}">
+                    <img src="{{ MEDIA_URL }}img/edit_small.png" alt="Edit"/>
+                </a>
+            {% endif %}
+        </h2>
+        
+        <dl>
+        {% if team.webpage_url %}
+          <dt>{% blocktrans %}{{ lang }} Translation Team Page:{% endblocktrans %}</dt>
+          <dd><a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a></dd>
+        {% endif %}
+        </dl>
 
-  {% if team.webpage_url %}
-  <h3>{% blocktrans %}{{ lang }} Translation Team Page:{% endblocktrans %}</h3>
-  <a href="{{ team.webpage_url }}">{{ team.webpage_url }}</a>
-  {% endif %}
+        <dt>{% trans "Bugzilla:" %}</dt>
+        <dd>
+            <ul>
+                <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
+                <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
+            </ul>
+        </dd>
 
-  <h3>{% trans "Bugzilla:" %}</h3>
-  <ul class="smallspacing">
-    <li><a href="{{ language.bugs_url_enter|safe }}">{% trans "Report Bug in Translation" %}</a></li>
-    <li><a href="{{ language.bugs_url_show|safe }}">{% trans "Show Existing Bugs" %}</a></li>
-  </ul>
+        {% if team.mailing_list %}
+        <dt>{% trans "Mailing List:" %}</dt>
+        <dd>
+            <ul>
+                <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
+                {% if team.mailing_list_subscribe %}
+                    <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
+                {% endif %}
+            </ul>
+        </dd>
+        {% endif %}
+      
+    </div>
 
-  {% if team.mailing_list %}
-  <h3>{% trans "Mailing List:" %}</h3>
-  <ul class="smallspacing">
-    <li><a href="mailto:{{ team.mailing_list }}">{% trans "Send e-mail to the list" %}</a></li>
-    {% if team.mailing_list_subscribe %}
-    <li><a href="{{ team.mailing_list_subscribe }}">{% trans "Subscribe" %}</a></li>
-    {% endif %}
-  </ul>
-  {% endif %}
+    <div class="bloc half">
+        <h2>{% trans "Coordinator" %}</h2>
+        {% if team.get_coordinator %}
+          {% with team.get_coordinator as person %}
+          {% include "people/person_overview.html" %}
+          {% endwith %}
+        {% else %}
+          <p><em>{% trans "This team has currently no coordinator." %}<br>
+             {% blocktrans with link="http://live.gnome.org/TranslationProject/TeamCoordinatorResponsibilities" %}See <a href="{{ link }}">the GTP Wiki</a> for more information about coordinatorship.{% endblocktrans %}</em></p>
+        {% endif %}
+    </div>
 
-  </td><td valign="top">
-    <h2>{% trans "Coordinator" %}</h2>
-    {% if team.get_coordinator %}
-      {% with team.get_coordinator as person %}
-      {% include "people/person_overview.html" %}
-      {% endwith %}
-    {% else %}
-      <p><em>{% trans "This team has currently no coordinator." %}<br>
-         {% blocktrans with link="http://live.gnome.org/TranslationProject/TeamCoordinatorResponsibilities" %}See <a href="{{ link }}">the GTP Wiki</a> for more information about coordinatorship.{% endblocktrans %}</em></p>
-    {% endif %}
-</td></tr></table>
+</div>
 {% endwith %}
 

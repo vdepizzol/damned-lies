@@ -37,36 +37,48 @@ $(document).ready(function() {
 <div class="mainpage">
 
 {% if not team.fake %}
-  <h1>{% blocktrans with team.get_description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
-  {% if team.presentation %}<p>{{ team.presentation|markdown }}</p>{% endif %}
 
-  {% with team.get_languages.0 as language %}
-  {% include "teams/team_base.html" %}
-  {% endwith %}
+    <h1>{% blocktrans with team.get_description as lang %}{{ lang }} Translation Team{% endblocktrans %}</h1>
+    {% if team.presentation %}
+        <div>{{ team.presentation|markdown }}</div>
+        <hr />
+    {% endif %}
+
+    {% with team.get_languages.0 as language %}
+        {% include "teams/team_base.html" %}
+    {% endwith %}
+    
 {% else %}
-  <h1>{{ team.get_description }}</h1>
-  <p><em>{% blocktrans %}There is currently no established team for this language. See <a href="http://live.gnome.org/TranslationProject/StartingATeam">the GTP Wiki</a> to get more information about the process of building a new translation team.{% endblocktrans %}</em></p>
+
+    <h1>{{ team.get_description }}</h1>
+    <p><em>{% blocktrans %}There is currently no established team for this language. See <a href="http://live.gnome.org/TranslationProject/StartingATeam">the GTP Wiki</a> to get more information about the process of building a new translation team.{% endblocktrans %}</em></p>
+
 {% endif %}
 
 {% for lang in team.get_languages %}
-  <h2>{{ lang.get_name }} ({{ lang.locale }})</h2>
-  {% with 1 as show_all_modules_line %}
-  {% with lang.get_release_stats as stats %}
-  {% include "languages/language_release_summary.html" %}
-  {% endwith %}
-  {% endwith %}
-<p><strong>{% trans "Plural forms:" %}</strong> {{ lang.get_plurals }}</p>
 
-<h3><a href="." class="archives" id="{{ lang.locale|escapeat }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>&nbsp;{% trans "Archives" %}</h3>
-<div id="div-rel-archives-{{ lang.locale|escapeat }}" class="empty" style="display:none;"></div>
+    <h2>{{ lang.get_name }} <code style="font-weight: normal;">({{ lang.locale }})</code></h2>
+    
+    {% with 1 as show_all_modules_line %}
+        {% with lang.get_release_stats as stats %}
+            {% include "languages/language_release_summary.html" %}
+        {% endwith %}
+    {% endwith %}
+    
+    <p><strong>{% trans "Plural forms:" %}</strong> {{ lang.get_plurals }}</p>
+
+    <h3><a href="." class="archives" id="{{ lang.locale|escapeat }}"><img src="{{ MEDIA_URL }}img/closed.png" /></a>&nbsp;{% trans "Archives" %}</h3>
+    <div id="div-rel-archives-{{ lang.locale|escapeat }}" class="empty" style="display:none;"></div>
 
 {% endfor %}
 
 {% if not team.fake %}
-<h2>{% trans "Team membership" %}</h2>
-{% for group in mem_groups %}
-    <h3>{{ group.title }}</h3>
-    {% if group.form %}
+    <h2>{% trans "Team membership" %}</h2>
+    
+    {% for group in mem_groups %}
+        <h3>{{ group.title }}</h3>
+        
+        {% if group.form %}
         <form action="#" method="POST">
         <ul>
         {% for field in group.form.get_fields %}
@@ -74,7 +86,7 @@ $(document).ready(function() {
         {% endfor %}
         </ul>
         {{ group.form.form_type }}
-        <input type="submit" value="{% trans "Apply modifications" %}">
+        <input type="submit" value="{% trans 'Apply modifications' %}">
         </form>
     {% else %}
       {% if not group.members %}

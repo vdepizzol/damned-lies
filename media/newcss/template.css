@@ -260,7 +260,7 @@ a:visited {
 /* ========================================================================== */
 
 .columns {
-    
+    overflow: hidden;
 }
 .columns .bloc {
     width: 135px;
@@ -310,6 +310,33 @@ a:visited {
 .columns .bloc.offset_five {
     margin-left: 825px !important;
 }
+
+
+/* Separators */
+/* ========================================================================== */
+
+hr {
+    border: 0 #ccc solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+    margin: 20px 0;
+}
+
+hr.top_shadow,
+hr.bottom_shadow {
+    height: 25px;
+    background: url(../newimg/hr-shadow.png) no-repeat bottom;
+    background-size: contain;
+    border: 0;
+    margin: 40px 0;
+}
+hr.bottom_shadow {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 
 /* Specific stylesheet for Damned-lies */
 /* ========================================================================== */
@@ -373,7 +400,9 @@ table.stats tfoot {
 
 .stats_numb a {
     text-decoration: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
 }
+
 pre.stats {
     color: #333;
     display: inline;
@@ -454,6 +483,30 @@ pre.stats .zero {
     border-radius: 3px;
 }
 
+
+/* Person details */
+
+.person_detail {
+    display: table-row;
+}
+.person_detail .image,
+.person_detail .txt {
+    display: table-cell;
+    vertical-align: top;
+}
+.person_detail .image {
+    padding-right: 15px;
+}
+.person_detail .txt .name {
+    font-weight: bold;
+}
+.person_detail .txt .email {
+    color: #999;
+    text-decoration: none;
+}
+.person_detail .txt .email:hover {
+    text-decoration: underline;
+}
 
 
 /* Footer */

@@ -4,35 +4,33 @@
 {% load i18n %}
 
 <div class="person_detail">
-  <div class="image">
-  {% if person.image %}
-  <img src="{{ person.image }}" alt="{{ person.name }}" />
-  {% else %}
-  <img src="{{ MEDIA_URL }}img/nobody.png" alt="" />
-  {% endif %}
-  </div>
-  <div class="txt">
-  <a class="name" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
+    <div class="image">
+    {% if person.image %}
+        <img src="{{ person.image }}" alt="{{ person.name }}" />
+    {% else %}
+        <img src="{{ MEDIA_URL }}img/nobody.png" alt="" />
+    {% endif %}
+    </div>
+    
+    <div class="txt">
+        <a class="name" href="{{ person.get_absolute_url }}">{{ person.name }}</a><br />
+        
+        {% if person.no_spam_email %}
+            <a class="email" href="mailto:{{ person.no_spam_email }}">{{ person.no_spam_email }}</a><br />
+        {% endif %}
 
-  {% if person.no_spam_email %}
-  <a href="mailto:{{ person.no_spam_email }}">{{ person.no_spam_email }}</a><br />
-  {% endif %}
+        {% if person.webpage_url %}
+            <a class="url" href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
+        {% endif %}
+        
+        {% if person.irc_nick %}
+            <span class="label">{% trans "Instant messaging:" %}</span>
+            <span class="value">{{ person.irc_nick }}</em> (IRC)</span>
+        {% endif %}
 
-  {% if person.webpage_url %}
-  <a href="{{ person.webpage_url }}">{{ person.webpage_url }}</a><br />
-  {% endif %}
+        {% if person.no_spam_bugzilla_account %}
+        <strong>{% trans "Bugzilla account:" %}</strong> {{ person.no_spam_bugzilla_account }}<br />
+        {% endif %}
 
-  <br />
-  {% if person.irc_nick %}
-  <strong>{% trans "Instant messaging:" %}</strong>
-  <ul>
-    <li><em>{{ person.irc_nick }}</em> (IRC)</li>
-  </ul>
-  {% endif %}
-
-  {% if person.no_spam_bugzilla_account %}
-  <strong>{% trans "Bugzilla account:" %}</strong> {{ person.no_spam_bugzilla_account }}<br />
-  {% endif %}
-
-  </div>
+    </div>
 </div>
