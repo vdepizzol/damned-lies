@@ -13,7 +13,7 @@ $(document).ready(function() {
             branch_div = $("#div-"+this.id.replace(".","\\."));
             is_visible = branch_div.is(':visible');
             if (is_visible) {
-                branch_div.hide();
+                branch_div.slideUp();
                 $(this).children('img').attr("src", "{{ MEDIA_URL }}img/closed.png");
             } else {
                 if (branch_div.attr("class") == "empty") {
@@ -21,7 +21,7 @@ $(document).ready(function() {
                     branch_div.load("/module/{{ module.name }}/branch/"+this.id+"/");
                     branch_div.attr("class", "loaded");
                 }
-                branch_div.show();
+                branch_div.slideDown();
                 $(this).children('img').attr("src", "{{ MEDIA_URL }}img/open.png");
             }
         });
@@ -47,17 +47,17 @@ $(document).ready(function() {
   <p><a href="{{ module.homepage }}">{{ module.homepage }}</a></p>
 {% endif %}
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
+<div class="columns">
+    <div class="bloc half first">
       {% if module.maintainers.all %}
       <h2>{% trans "Maintainers" %}</h2>
       {% for person in module.maintainers.all %}
         {% include "people/person_overview.html" %}
       {% endfor %}
       {% endif %}
-    </td>
-    <td width="50%" valign="top">
+    </div>
+    
+    <div class="bloc half">
       {% if module.bugs_base %}
       <h2>{% trans "Bug reporting" %}</h2>
       <ul>
@@ -67,9 +67,8 @@ $(document).ready(function() {
         <li><a href="{{ module.get_bugs_enter_url }}">{% trans "Report a bug" %}</a></li>
       </ul>
       {% endif %}
-    </td>
-  </tr>
-</table>
+    </div>
+</div>
 
 {% if branches %}
   <!-- Links to branches of module -->
@@ -88,6 +87,7 @@ $(document).ready(function() {
 
   <!-- Main loop through branches -->
   {% for branch in branches %}
+    <hr />
     <h2><a href="." class="branch" id="{{ branch.name }}">
     {% if forloop.counter < 3 %}
       <img src="{{ MEDIA_URL }}img/open.png" /></a>
@@ -96,12 +96,12 @@ $(document).ready(function() {
     {% endif %}
      <a name="{{ branch.name }}"></a>{{ branch.name }}
     {% if branch.get_vcs_web_url %}
-      <small>(<a href="{{ branch.get_vcs_web_url }}">{% trans "Browse Repository" %}</a>)</small>
+      <a href="{{ branch.get_vcs_web_url }}" title="{% trans 'Browse Repository' %}"><img src="{{ MEDIA_URL }}newimg/repository-icon.png" /></a>
     {% endif %}
     </h2>
     {% if forloop.counter < 3 %}
       <div id="div-{{ branch.name }}" class="loaded">
-      {% include "branch_detail.html" %}
+        {% include "branch_detail.html" %}
       </div>
     {% else %}
       <div id="div-{{ branch.name }}" class="empty" style="display:none;"></div>

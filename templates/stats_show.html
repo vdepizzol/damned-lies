@@ -1,48 +1,54 @@
 {% load i18n stats_extras %}
 
 {% for dname, stat in stats.items %}
-  {% with stat|first as pot_stat %}
-  <h3>{% trans pot_stat.domain.get_description %}
-  {% if pot_stat|domain_type == "mallard" %}
-    <img src="{{ MEDIA_URL }}img/mallard.png" width="18" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
-  {% endif %}
-  {% if pot_stat.domain.directory != 'help' and pot_stat.domain.directory != 'po' %}
-    <br />
-    <span class="path">{{ pot_stat.domain.directory }}</span>
-  {% endif %}
-  </h3>
-  {% if pot_stat.full_po %}
-  <a href="{{ pot_stat.po_url }}"><img src="{{ MEDIA_URL }}img/download.png" alt="{% trans "Download POT file" %}" /></a>
-  {% endif %}
-  {{ pot_stat.pot_text }}
-  <!-- This is the title of the section that lists notices about a module -->
-  {% if pot_stat.informations %}
-  <h4>{% trans "Notices" %}</h4>
-  <table>
-    {% for msg in pot_stat.informations %}
-    <tr>
-      <td valign="top"><img src="{{ msg.get_icon }}" alt="{{ msg.type }}" /></td>
-      <td>{{ msg.get_description|safe }}</td>
-      {% if user.is_authenticated %}
-        {% if msg.type == 'error' or msg.type == 'error-ext' %}
-        <td>
-           <a href='{{ module|browse_bugs:"error+pot+file" }}' target='_blank'>
-             <img src="{{ MEDIA_URL }}img/search.png" alt="{% trans "Search for similar bugs before reporting it" %}" title="{% trans "Search for similar bugs before reporting it" %}"/>
-           </a>
-        </td>
-        <td>
-          <a href='{{ msg.report_bug_url }}' target='_blank'>
-            <img src="{{ MEDIA_URL }}img/bug.png" alt="{% trans "Report this bug" %}" title="{% trans "Report this bug" %}"/>
-          </a>
-        </td>
+    {% with stat|first as pot_stat %}
+    
+    <div class="stats_show">
+    
+    <h3>{% trans pot_stat.domain.get_description %}
+        
+        {% if pot_stat|domain_type == "mallard" %}
+            <img src="{{ MEDIA_URL }}img/mallard.png" title="{% trans "This document is written in Mallard documentation format" %}" alt="mallard icon"/>
         {% endif %}
-      {% endif %}
-    </tr>
-    {% endfor %}
-  </table>
-  {% endif %}
 
-  <table class="stats">
+        {% if pot_stat.full_po %}
+            <a href="{{ pot_stat.po_url }}" class="icon_button" title="{% trans 'Download POT file' %}"><img src="{{ MEDIA_URL }}newimg/download-icon.png" alt="{% trans 'Download POT file' %}" /></a>
+        {% endif %}
+    
+    </h3>
+    
+    {% if pot_stat.domain.directory != 'help' and pot_stat.domain.directory != 'po' %}
+    <p class="path">{{ pot_stat.domain.directory }}</p>
+    {% endif %}
+
+    <p class="pot_information">{{ pot_stat.pot_text }}</p>
+
+    <!-- This is the title of the section that lists notices about a module -->
+    {% if pot_stat.informations %}
+        <div class="notices">
+            <h4>{% trans "Notices" %}</h4>
+            {% for msg in pot_stat.informations %}
+                <div class="item">
+                    {{ msg.get_description|safe }}
+                    
+                    {% if user.is_authenticated %}
+                        {% if msg.type == 'error' or msg.type == 'error-ext' %}
+                        <div class="actions">
+                            <a href="{{ module|browse_bugs:'error+pot+file' }}" target="_blank">
+                                <img src="{{ MEDIA_URL }}img/search.png" alt="{% trans 'Search for similar bugs before reporting it' %}" title="{% trans 'Search for similar bugs before reporting it' %}"/>
+                            </a>
+                            <a href="{{ msg.report_bug_url }}" target="_blank">
+                                <img src="{{ MEDIA_URL }}img/bug.png" alt="{% trans 'Report this bug' %}" title="{% trans 'Report this bug' %}" />
+                            </a>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <table class="stats">
     <thead><tr>
         <th>{% trans "Language" %}</th><th>{% trans "Translated" %}</th>
         {% if pot_stat.full_po.fig_count %}
@@ -80,6 +86,9 @@
     </tr>
     {% endif %}
     {% endfor %}
-  </table>
-  {% endwith %}
+    </table>
+    
+    </div>
+    
+    {% endwith %}
 {% endfor %}
